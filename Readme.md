@@ -2,6 +2,19 @@ Este é o repositório do projeto EditalFinder, uma plataforma web/mobile que pe
 
 
 
+Contato
+lorenzozajaczkowskimartins@gmail.com
+
+gabrielkinast5@gmail.com
+
+onpcdicas@gmail.com
+
+ermoraes1388@gmail.com
+
+paulinhogued@gmail.com
+
+
+
 Para rodar esse projeto você precisa:
 
 
