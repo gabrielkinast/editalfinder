@@ -10,6 +10,7 @@ export default function Dashboard() {
   const [filteredEditais, setFilteredEditais] = useState([]);
   const [loading, setLoading] = useState(true);
   const [globalSearch, setGlobalSearch] = useState('');
+  const [showFiltersMobile, setShowFiltersMobile] = useState(false);
 
   useEffect(() => {
     const loadData = async () => {
@@ -32,7 +33,14 @@ export default function Dashboard() {
 
     // Filtro de estado
     if (filters.state) {
-      result = result.filter(e => e.estado === filters.state);
+      result = result.filter(e => {
+        const stateMatch = e.estado === filters.state;
+        // Se o filtro for Rio Grande do Sul, também mostra editais da FAPERGS
+        if (filters.state === 'Rio Grande do Sul') {
+          return stateMatch || e.orgao.toUpperCase().includes('FAPERGS');
+        }
+        return stateMatch;
+      });
     }
 
     // Filtro de localidade
@@ -129,7 +137,17 @@ export default function Dashboard() {
     <>
       <Header onSearch={setGlobalSearch} />
       <div className="dashboard-container">
-        <Filters onFilterChange={handleFilterChange} />
+        <button 
+          className="filter-toggle-mobile" 
+          onClick={() => setShowFiltersMobile(!showFiltersMobile)}
+        >
+          {showFiltersMobile ? '✕ Fechar Filtros' : '🔍 Abrir Filtros'}
+        </button>
+        
+        <div className={`sidebar ${!showFiltersMobile ? 'mobile-hidden' : ''}`}>
+          <Filters onFilterChange={handleFilterChange} />
+        </div>
+        
         <main className="main-content">
           <div className="content-header">
             <h2>Editais Disponíveis</h2>

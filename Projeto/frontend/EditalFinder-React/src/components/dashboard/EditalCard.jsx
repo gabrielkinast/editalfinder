@@ -16,8 +16,8 @@ export default function EditalCard({ edital }) {
           <span className="edital-value">{formatCurrency(edital.valor)}</span>
         </div>
         <div className="edital-meta-row">
-          <span className="edital-meta-label">Localidade:</span>
-          <span>{edital.localidade}</span>
+          <span className="edital-meta-label">Estado:</span>
+          <span>{edital.estado || 'Nacional'}</span>
         </div>
         <div className="edital-meta-row">
           <span className="edital-meta-label">Tipo:</span>

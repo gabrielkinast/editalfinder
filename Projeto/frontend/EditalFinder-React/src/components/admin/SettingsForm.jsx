@@ -1,9 +1,15 @@
 import { useState } from 'react';
 import { useSettings } from '../../contexts/SettingsContext';
+import { usePermissions } from '../../hooks/usePermissions';
 
 export default function SettingsForm({ onCancel }) {
   const { settings, updateSettings } = useSettings();
+  const permissions = usePermissions();
   const [formData, setFormData] = useState(settings);
+
+  if (!permissions.canManageUsers) {
+    return <p>Você não tem permissão para alterar as configurações.</p>;
+  }
 
   const handleChange = (e) => {
     const { name, value } = e.target;

@@ -41,11 +41,11 @@ export const dataService = {
     const manuaisFormatados = manuais.map(m => ({
         id: `manual-${m.id_edital}`,
         titulo: m.titulo,
-        orgao: m.organizacao ? m.organizacao.nome : (m.fonte_recurso || 'Manual'),
+        orgao: m.fonte_recurso || (m.organizacao ? m.organizacao.nome : 'Manual'),
         area: m.temas || 'Geral',
         valor: m.valor_maximo || 0,
         localidade: 'Nacional',
-        estado: '',
+        estado: m.estado || '',
         dataLimite: m.prazo_envio,
         tipoRecurso: m.situacao || 'Edital',
         isManual: true,

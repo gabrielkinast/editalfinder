@@ -19,7 +19,7 @@ export default function AppRoutes() {
       <Route 
         path="/cadastros" 
         element={
-          <ProtectedRoute>
+          <ProtectedRoute requiredPermission="canViewCadastros">
             <Cadastros />
           </ProtectedRoute>
         } 

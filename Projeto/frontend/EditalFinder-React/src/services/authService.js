@@ -17,6 +17,7 @@ export const authService = {
         email: usuario.nome_email,
         nome: usuario.nome,
         tipo: usuario.tipo_usuario,
+        nivel: usuario.nivel_acesso,
       };
       localStorage.setItem('editalFinderUser', JSON.stringify(userData));
       return userData;
@@ -24,6 +25,8 @@ export const authService = {
         const userData = {
             email: email,
             nome: 'Administrador',
+            tipo: 'Administrador',
+            nivel: 1,
         };
         localStorage.setItem('editalFinderUser', JSON.stringify(userData));
         return userData;

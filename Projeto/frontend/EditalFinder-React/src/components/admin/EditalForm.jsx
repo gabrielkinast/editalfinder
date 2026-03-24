@@ -18,9 +18,41 @@ export default function EditalForm({ initialData, onSave, onCancel }) {
     link: '',
     status: 'Ativo',
     id_organizacao: '',
+    estado: '',
   });
 
   const [orgs, setOrgs] = useState([]);
+
+  const estados = [
+    { uf: 'AC', nome: 'Acre' },
+    { uf: 'AL', nome: 'Alagoas' },
+    { uf: 'AP', nome: 'Amapá' },
+    { uf: 'AM', nome: 'Amazonas' },
+    { uf: 'BA', nome: 'Bahia' },
+    { uf: 'CE', nome: 'Ceará' },
+    { uf: 'DF', nome: 'Distrito Federal' },
+    { uf: 'ES', nome: 'Espírito Santo' },
+    { uf: 'GO', nome: 'Goiás' },
+    { uf: 'MA', nome: 'Maranhão' },
+    { uf: 'MT', nome: 'Mato Grosso' },
+    { uf: 'MS', nome: 'Mato Grosso do Sul' },
+    { uf: 'MG', nome: 'Minas Gerais' },
+    { uf: 'PA', nome: 'Pará' },
+    { uf: 'PB', nome: 'Paraíba' },
+    { uf: 'PR', nome: 'Paraná' },
+    { uf: 'PE', nome: 'Pernambuco' },
+    { uf: 'PI', nome: 'Piauí' },
+    { uf: 'RJ', nome: 'Rio de Janeiro' },
+    { uf: 'RN', nome: 'Rio Grande do Norte' },
+    { uf: 'RS', nome: 'Rio Grande do Sul' },
+    { uf: 'RO', nome: 'Rondônia' },
+    { uf: 'RR', nome: 'Roraima' },
+    { uf: 'SC', nome: 'Santa Catarina' },
+    { uf: 'SP', nome: 'São Paulo' },
+    { uf: 'SE', nome: 'Sergipe' },
+    { uf: 'TO', nome: 'Tocantins' },
+    { uf: 'EX', nome: 'Exterior' }
+  ];
 
   useEffect(() => {
     dataService.getOrganizations().then(setOrgs);
@@ -39,7 +71,12 @@ export default function EditalForm({ initialData, onSave, onCancel }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onSave(formData);
+    
+    // Removemos o campo 'organizacao' que vem do Supabase via relacionamento,
+    // pois ele causa erro ao tentar salvar (o Supabase espera apenas colunas reais da tabela).
+    const { organizacao, ...dataToSave } = formData;
+    
+    onSave(dataToSave);
   };
 
   return (
@@ -82,6 +119,15 @@ export default function EditalForm({ initialData, onSave, onCancel }) {
             <option value="">Selecione uma organização...</option>
             {orgs.map(org => (
               <option key={org.id_organizacao} value={org.id_organizacao}>{org.nome}</option>
+            ))}
+          </select>
+        </div>
+        <div className="form-group">
+          <label>Estado (UF)</label>
+          <select name="estado" value={formData.estado} onChange={handleChange}>
+            <option value="">Selecione o estado...</option>
+            {estados.map(est => (
+              <option key={est.uf} value={est.nome}>{est.nome}</option>
             ))}
           </select>
         </div>
