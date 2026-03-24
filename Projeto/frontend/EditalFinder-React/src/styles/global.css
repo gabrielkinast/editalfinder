@@ -62,11 +62,18 @@ html, body {
     background: var(--bg-white);
     border-radius: 12px;
     box-shadow: var(--shadow-medium);
-    padding: 48px;
-    width: 100%;
+    padding: 32px; /* Reduzido de 48px para mobile */
+    width: 90%; /* Ajustado para mobile */
     max-width: 420px;
     z-index: 1;
     animation: slideUp 400ms ease-out;
+}
+
+@media (min-width: 768px) {
+    .login-card {
+        padding: 48px;
+        width: 100%;
+    }
 }
 
 @keyframes slideUp {
@@ -396,10 +403,21 @@ html, body {
     width: 100%;
     height: 6px;
     border-radius: 3px;
-    background: var(--border-light);
+    background: #e0e0e0; /* Fundo cinza suave para a trilha */
     outline: none;
     -webkit-appearance: none;
     appearance: none;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+/* Removemos o fundo padrão que alguns browsers aplicam */
+.range-slider::-webkit-slider-runnable-track {
+    background: transparent;
+}
+
+.range-slider::-moz-range-track {
+    background: transparent;
 }
 
 .range-slider::-webkit-slider-thumb {
@@ -666,12 +684,27 @@ html, body {
 .modal-content {
     background-color: var(--bg-white);
     border-radius: 12px;
-    width: 100%;
-    max-width: 450px;
+    width: 95%;
+    max-width: 600px; /* Aumentado de 450px */
     padding: 32px;
     box-shadow: var(--shadow-medium);
     position: relative;
     animation: slideUp 400ms ease-out;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+/* Modais Largos (como o de Edital) */
+.modal-large {
+    max-width: 1000px !important; /* Aumentado de 1200px para um valor mais equilibrado, ou mantido largo conforme necessidade */
+    width: 95% !important;
+    padding: 25px 30px !important;
+}
+
+@media (min-width: 1200px) {
+    .modal-large {
+        max-width: 1100px !important;
+    }
 }
 
 .modal-header {
@@ -989,31 +1022,430 @@ html, body {
     width: 200px;
 }
 
-/* Modais Largos */
-.modal-large {
-    max-width: 1200px !important;
-    width: 95% !important;
-    padding: 20px 25px !important;
-    max-height: 95vh;
+/* Header Mobile specific fixes */
+.header-top-mobile {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.menu-toggle-mobile {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: var(--primary-blue);
+    cursor: pointer;
+    padding: 8px;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle-mobile {
+        display: block;
+    }
+
+    .main-nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        padding: 16px 0;
+        border-top: 1px solid var(--border-light);
+    }
+
+    .main-nav.open {
+        display: flex;
+    }
+
+    .header-right {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        padding-bottom: 16px;
+    }
+
+    .header-right.open {
+        display: flex;
+    }
+
+    .nav-item {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .btn-logout {
+        width: 100%;
+        padding: 12px;
+    }
+}
+
+/* Dashboard Filter Toggle */
+.filter-toggle-mobile {
+    display: none;
+    width: 100%;
+    padding: 12px;
+    background: var(--primary-blue);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+@media (max-width: 768px) {
+    .filter-toggle-mobile {
+        display: block;
+    }
+
+    .sidebar.mobile-hidden {
+        display: none;
+    }
+}
+
+/* ============================================
+   RESPONSIVIDADE (MOBILE-FIRST)
+   ============================================ */
+
+/* Estilos base (Mobile < 768px) */
+
+body {
+    font-size: 16px; /* Aumenta fonte base para mobile */
+}
+
+button, input:not([type="range"]), select, textarea {
+    min-height: 44px; /* Altura mínima touch-friendly */
+}
+
+.header-content {
+    flex-direction: column;
+    padding: 12px 16px;
+    gap: 12px;
+}
+
+.main-nav {
+    margin-left: 0;
+    width: 100%;
+    justify-content: center;
+    gap: 8px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+}
+
+.header-right {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.search-input-header {
+    width: 100%;
+}
+
+.dashboard-container {
     flex-direction: column;
 }
 
+.sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid var(--border-light);
+    max-height: 300px;
+}
+
+.main-content {
+    padding: 16px;
+}
+
+.content-header h2 {
+    font-size: 20px;
+}
+
+.editais-grid {
+    grid-template-columns: 1fr;
+}
+
+.admin-container {
+    flex-direction: column;
+}
+
+.admin-sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid var(--border-light);
+    padding: 8px 0; /* Reduzido de 12px */
+}
+
+.sidebar-title {
+    padding: 0 12px; /* Reduzido de 24px */
+    font-size: 16px; /* Reduzido de 18px */
+    margin-bottom: 12px; /* Reduzido de 24px */
+}
+
+.sidebar-nav {
+    flex-direction: row;
+    overflow-x: auto;
+    padding: 0 8px; /* Reduzido de 12px */
+    gap: 4px; /* Adicionado um pequeno gap entre as abas */
+}
+
+.sidebar-link {
+    padding: 8px 12px; /* Reduzido de 10px 16px */
+    font-size: 13px; /* Reduzido de 14px */
+    white-space: nowrap;
+    border-right: none;
+    background: #f8f9fb;
+    border: 1px solid var(--border-light);
+    border-radius: 6px;
+    margin-right: 4px;
+}
+
+.sidebar-link .icon {
+    font-size: 14px; /* Reduzido de 18px */
+}
+
+.sidebar-link.active {
+    border-right: 1px solid var(--border-light);
+    border-bottom: 3px solid var(--primary-blue);
+}
+
+.admin-main {
+    padding: 16px;
+}
+
+.section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.filters-bar {
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.filter-select-small {
+    width: 100%;
+}
+
+/* Tabelas Responsivas */
+@media (max-width: 768px) {
+    .admin-table thead {
+        display: none;
+    }
+
+    .admin-table, .admin-table tbody, .admin-table tr, .admin-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .admin-table tr {
+        margin-bottom: 16px;
+        background: white;
+        border: 1px solid var(--border-light);
+        border-radius: 12px;
+        padding: 12px;
+        box-shadow: var(--shadow-soft);
+    }
+
+    .admin-table td {
+        text-align: right;
+        padding: 8px 0;
+        position: relative;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .admin-table td:last-child {
+        border-bottom: none;
+        text-align: center;
+        margin-top: 8px;
+    }
+
+    .admin-table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        text-align: left;
+        font-weight: 600;
+        color: var(--text-light);
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+}
+
+.modal-content {
+    width: 95%;
+    padding: 20px;
+    margin: 10px;
+}
+
+.modal-large {
+    width: 98% !important;
+    padding: 16px !important;
+}
+
+/* Tablet (md: 768px) */
+@media (min-width: 768px) {
+    .header-content {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 24px; /* Removido padding vertical para alinhar melhor */
+        height: 70px;
+        gap: 32px;
+    }
+
+    .header-top-mobile {
+        width: auto;
+    }
+
+    .main-nav {
+        display: flex; /* Garante que aparece no desktop */
+        margin-left: 0;
+        width: auto;
+        justify-content: center;
+        padding-bottom: 0;
+        gap: 16px;
+        overflow-x: visible;
+        flex: 1; /* Faz o nav ocupar o espaço central */
+    }
+
+    .header-right {
+        display: flex; /* Garante que aparece no desktop */
+        width: auto;
+        justify-content: flex-end;
+        gap: 12px;
+        padding-bottom: 0;
+        flex-wrap: nowrap;
+        min-width: fit-content;
+    }
+
+    .search-input-header {
+        width: 200px;
+    }
+
+    .nav-item {
+        width: auto;
+        padding: 8px 12px;
+    }
+
+    .btn-logout {
+        width: auto;
+        padding: 10px 18px;
+    }
+
+    .dashboard-container {
+        flex-direction: row;
+    }
+
+    .sidebar {
+        width: 280px;
+        max-height: none;
+        border-bottom: none;
+        border-right: 1px solid var(--border-light);
+    }
+
+    .main-content {
+        padding: 24px;
+    }
+
+    .editais-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .admin-container {
+        flex-direction: row;
+    }
+
+    .admin-sidebar {
+        width: 240px;
+        border-bottom: none;
+        border-right: 1px solid var(--border-light);
+        padding: 24px 0;
+    }
+
+    .sidebar-title {
+        padding: 0 24px;
+        font-size: 18px;
+        margin-bottom: 24px;
+    }
+
+    .sidebar-nav {
+        flex-direction: column;
+        padding: 0;
+        gap: 0;
+    }
+
+    .sidebar-link {
+        padding: 14px 24px;
+        font-size: 14px;
+        background: transparent;
+        border: none;
+        border-radius: 0;
+        margin-right: 0;
+    }
+
+    .sidebar-link .icon {
+        font-size: 18px;
+    }
+
+    .sidebar-link.active {
+        border-right: 3px solid var(--primary-blue);
+        border-bottom: none;
+    }
+
+    .admin-main {
+        padding: 32px;
+    }
+
+    .section-header {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .filters-bar {
+        flex-direction: row;
+    }
+}
+
+/* Desktop (lg: 1024px) */
+@media (min-width: 1024px) {
+    .editais-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .main-content {
+        padding: 32px;
+    }
+
+    .admin-main {
+        padding: 40px;
+    }
+}
+
+/* Large Desktop (xl: 1280px) */
+@media (min-width: 1440px) {
+    .editais-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
 .modal-large .modal-header {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .modal-large .modal-actions {
-    margin-top: 15px;
+    margin-top: 20px;
 }
 
 .form-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    max-height: 60vh;
+    gap: 20px; /* Aumentado de 15px */
+    max-height: 70vh; /* Aumentado de 60vh */
     overflow-y: auto;
-    padding: 10px 10px 10px 0;
+    padding: 10px 15px 10px 0;
 }
 
 @media (max-width: 1100px) {

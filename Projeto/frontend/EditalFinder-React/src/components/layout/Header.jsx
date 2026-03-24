@@ -1,35 +1,66 @@
 import { NavLink, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
-import { authService } from '../../services/authService';
+import { useAuth } from '../../contexts/AuthContext';
+import { usePermissions } from '../../hooks/usePermissions';
 import { useSettings } from '../../contexts/SettingsContext';
 import Modal from '../ui/Modal';
 import SettingsForm from '../admin/SettingsForm';
 
 export default function Header({ onSearch }) {
   const navigate = useNavigate();
+  const { logout } = useAuth();
+  const permissions = usePermissions();
   const { settings } = useSettings();
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleLogout = () => {
-    authService.logout();
+    logout();
     navigate('/login');
   };
 
   return (
     <header className="header">
       <div className="header-content">
-        <div className="logo-header" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-          {settings.logoImage ? (
-            <img src={settings.logoImage} alt="Logo" style={{ maxHeight: '45px' }} />
-          ) : (
-            <span>{settings.logoText}</span>
-          )}
+        <div className="header-top-mobile">
+          <div className="logo-header" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+            {settings.logoImage ? (
+              <img src={settings.logoImage} alt="Logo" style={{ maxHeight: '45px' }} />
+            ) : (
+              <span>{settings.logoText}</span>
+            )}
+          </div>
+          
+          <button 
+            className="menu-toggle-mobile" 
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Menu"
+          >
+            {isMenuOpen ? '✕' : '☰'}
+          </button>
         </div>
-        <nav className="main-nav">
-          <NavLink to="/dashboard" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>Editais</NavLink>
-          <NavLink to="/cadastros" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>Cadastros</NavLink>
+
+        <nav className={`main-nav ${isMenuOpen ? 'open' : ''}`}>
+          <NavLink 
+            to="/dashboard" 
+            className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Editais
+          </NavLink>
+          {/* Permissão para acessar a página de cadastros */}
+          {permissions.canViewCadastros && (
+            <NavLink 
+              to="/cadastros" 
+              className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Cadastros
+            </NavLink>
+          )}
         </nav>
-        <div className="header-right">
+
+        <div className={`header-right ${isMenuOpen ? 'open' : ''}`}>
           {onSearch && (
             <input
               type="text"
@@ -39,13 +70,18 @@ export default function Header({ onSearch }) {
               onChange={(e) => onSearch(e.target.value)}
             />
           )}
-          <button 
-            onClick={() => setIsSettingsOpen(true)} 
-            className="btn-logout" 
-            style={{ borderColor: 'var(--primary-blue)', color: 'var(--primary-blue)' }}
-          >
-            ⚙️ Configurações
-          </button>
+          {permissions.canManageUsers && (
+            <button 
+              onClick={() => {
+                setIsSettingsOpen(true);
+                setIsMenuOpen(false);
+              }} 
+              className="btn-logout" 
+              style={{ borderColor: 'var(--primary-blue)', color: 'var(--primary-blue)' }}
+            >
+              ⚙️ Configurações
+            </button>
+          )}
           <button onClick={handleLogout} className="btn-logout">Sair</button>
         </div>
       </div>

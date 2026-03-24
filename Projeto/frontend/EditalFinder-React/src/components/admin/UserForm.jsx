@@ -18,7 +18,21 @@ export default function UserForm({ initialData, onSave, onCancel }) {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    
+    if (name === 'tipo_usuario') {
+      const niveis = {
+        'Administrador': 1,
+        'Consultor': 2,
+        'Funcionário': 3
+      };
+      setFormData(prev => ({ 
+        ...prev, 
+        [name]: value,
+        nivel_acesso: niveis[value] || 3
+      }));
+    } else {
+      setFormData(prev => ({ ...prev, [name]: value }));
+    }
   };
 
   const handleSubmit = (e) => {
@@ -70,22 +84,22 @@ export default function UserForm({ initialData, onSave, onCancel }) {
           onChange={handleChange} 
           required
         >
-          <option value="Consultor">Consultor</option>
           <option value="Administrador">Administrador</option>
+          <option value="Consultor">Consultor</option>
+          <option value="Funcionário">Funcionário</option>
         </select>
       </div>
       <div className="form-group">
-        <label htmlFor="nivel_acesso">Nível de Acesso (1-10)</label>
+        <label htmlFor="nivel_acesso">Nível de Acesso</label>
         <input 
           type="number" 
           id="nivel_acesso" 
           name="nivel_acesso" 
-          min="1" 
-          max="10" 
           value={formData.nivel_acesso} 
-          onChange={handleChange} 
-          required 
+          readOnly 
+          disabled
         />
+        <small>O nível é definido pelo tipo de usuário</small>
       </div>
       <div className="form-group">
         <label htmlFor="status">Status</label>

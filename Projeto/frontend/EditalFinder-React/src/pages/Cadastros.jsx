@@ -8,9 +8,12 @@ import EditalForm from '../components/admin/EditalForm';
 import Modal from '../components/ui/Modal';
 import { dataService } from '../services/dataService';
 import { formatCurrency, formatDate } from '../utils/formatters';
+import { usePermissions } from '../hooks/usePermissions';
 
 export default function Cadastros() {
-  const [activeTab, setActiveTab] = useState('usuarios');
+  const permissions = usePermissions();
+  // Se não puder gerenciar usuários, começa na aba de clientes
+  const [activeTab, setActiveTab] = useState(permissions.canManageUsers ? 'usuarios' : 'clientes');
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -152,9 +155,11 @@ export default function Cadastros() {
         <aside className="admin-sidebar">
           <h2 className="sidebar-title">Cadastros</h2>
           <nav className="sidebar-nav">
-            <button className={`sidebar-link ${activeTab === 'usuarios' ? 'active' : ''}`} onClick={() => setActiveTab('usuarios')}>
-              <span className="icon">👤</span> Usuários
-            </button>
+            {permissions.canManageUsers && (
+              <button className={`sidebar-link ${activeTab === 'usuarios' ? 'active' : ''}`} onClick={() => setActiveTab('usuarios')}>
+                <span className="icon">👤</span> Usuários
+              </button>
+            )}
             <button className={`sidebar-link ${activeTab === 'clientes' ? 'active' : ''}`} onClick={() => setActiveTab('clientes')}>
               <span className="icon">🏢</span> Clientes
             </button>
@@ -170,9 +175,12 @@ export default function Cadastros() {
           <section className="admin-section active">
             <div className="section-header">
               <h2>{activeTab === 'usuarios' ? 'Cadastro de Usuários' : activeTab === 'clientes' ? 'Cadastro de Clientes' : activeTab === 'organizacoes' ? 'Cadastro de Organizações' : 'Cadastro de Editais Manuais'}</h2>
-              <button className="btn-primary" onClick={() => { setEditingItem(null); setIsModalOpen(true); }}>
-                + Novo {activeTab === 'usuarios' ? 'Usuário' : activeTab === 'clientes' ? 'Cliente' : activeTab === 'organizacoes' ? 'Organização' : 'Edital'}
-              </button>
+              {/* Somente exibe o botão Novo se tiver permissão de criação. Se for na aba usuários, precisa de permissão canManageUsers */}
+              {permissions.canCreate && (activeTab !== 'usuarios' || permissions.canManageUsers) && (
+                <button className="btn-primary" onClick={() => { setEditingItem(null); setIsModalOpen(true); }}>
+                  + Novo {activeTab === 'usuarios' ? 'Usuário' : activeTab === 'clientes' ? 'Cliente' : activeTab === 'organizacoes' ? 'Organização' : 'Edital'}
+                </button>
+              )}
             </div>
 
             <div className="filters-bar">
@@ -186,8 +194,9 @@ export default function Cadastros() {
               {activeTab === 'usuarios' && (
                 <select className="filter-select-small" value={filterType} onChange={(e) => setFilterType(e.target.value)}>
                   <option value="">Todos os tipos</option>
-                  <option value="Consultor">Consultor</option>
                   <option value="Administrador">Administrador</option>
+                  <option value="Consultor">Consultor</option>
+                  <option value="Funcionário">Funcionário</option>
                 </select>
               )}
               <select className="filter-select-small" value={filterStatus} onChange={(e) => setFilterStatus(e.target.value)}>
