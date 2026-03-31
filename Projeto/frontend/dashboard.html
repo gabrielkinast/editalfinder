@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edital Finder - Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <h1 class="logo-header">Edital Finder</h1>
+            <nav class="main-nav">
+                <a href="dashboard.html" class="nav-item active">Editais</a>
+                <a href="cadastros.html" class="nav-item">Cadastros</a>
+                
+            </nav>
+            <div class="header-right">
+                <input 
+                    type="text" 
+                    id="globalSearch" 
+                    placeholder="Buscar editais..."
+                    class="search-input-header"
+                >
+                <button id="logoutBtn" class="btn-logout">Sair</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="dashboard-container">
+        <!-- Sidebar de Filtros -->
+        <aside class="sidebar">
+            <div class="filters-section">
+                <div class="filters-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: -10px;">
+                    <h2 class="filter-title" style="margin: 0;">Filtros</h2>
+                    <button id="clearFiltersBtn" class="btn-clear-filters" style="width: auto; margin-top: 0; padding: 6px 12px; font-size: 11px;">Limpar Filtros</button>
+                </div>
+
+                <!-- Localidade -->
+                <div class="filter-group">
+                    <h3 class="filter-label">Localidade</h3>
+                    <select id="stateFilter" class="filter-select">
+                        <option value="">Todos os estados</option>
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                    </select>
+
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="nacionalFilter" value="Nacional">
+                            <span>Nacional</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="internacionalFilter" value="Internacional">
+                            <span>Internacional</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Pesquisa por Palavras -->
+                <div class="filter-group">
+                    <h3 class="filter-label">Pesquisa</h3>
+                    <input 
+                        type="text" 
+                        id="keywordFilter" 
+                        placeholder="Ex: agro, saúde, energia"
+                        class="filter-input"
+                    >
+                </div>
+
+                <!-- Tipo de Recurso -->
+                <div class="filter-group">
+                    <h3 class="filter-label">Tipo de Recurso</h3>
+                    <select id="resourceTypeFilter" class="filter-select">
+                        <option value="">Todos os tipos</option>
+                        <option value="Subvenção econômica">Subvenção econômica</option>
+                        <option value="Linha de crédito">Linha de crédito</option>
+                        <option value="Investimento">Investimento</option>
+                        <option value="Fomento à inovação">Fomento à inovação</option>
+                        <option value="Bolsa pesquisa">Bolsa pesquisa</option>
+                    </select>
+                </div>
+
+                <!-- Faixa de Crédito -->
+                <div class="filter-group">
+                    <h3 class="filter-label">Faixa de Crédito</h3>
+                    <div class="range-container">
+                        <input 
+                            type="range" 
+                            id="creditRange" 
+                            min="100000" 
+                            max="100000000" 
+                            value="100000000"
+                            class="range-slider"
+                        >
+                        <div class="range-display">
+                            <span>Até: <strong id="creditDisplay">R$ 100 mi</strong></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Filtro por Datas -->
+                <div class="filter-group">
+                    <h3 class="filter-label">Datas</h3>
+                    <input 
+                        type="date" 
+                        id="startDateFilter" 
+                        class="filter-input"
+                    >
+                    <input 
+                        type="date" 
+                        id="endDateFilter" 
+                        class="filter-input"
+                    >
+                </div>
+
+                <!-- Área -->
+                <div class="filter-group">
+                    <h3 class="filter-label">Área</h3>
+                    <select id="areaFilter" class="filter-select">
+                        <option value="">Todas as áreas</option>
+                        <option value="Saúde">Saúde</option>
+                        <option value="Agro">Agro</option>
+                        <option value="Educação">Educação</option>
+                        <option value="Tecnologia">Tecnologia</option>
+                        <option value="Energia">Energia</option>
+                        <option value="Indústria">Indústria</option>
+                    </select>
+                </div>
+
+                <!-- Órgão Financiador -->
+                <div class="filter-group">
+                    <h3 class="filter-label">Órgão Financiador</h3>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="fapergFilter" value="FAPERGS">
+                            <span>FAPERGS</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="finepFilter" value="FINEP">
+                            <span>FINEP</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="bndesFilter" value="BNDES">
+                            <span>BNDES</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="cordisFilter" value="CORDIS">
+                            <span>CORDIS</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Conteúdo Principal -->
+        <main class="main-content">
+            <div class="content-header">
+                <h2>Editais Disponíveis</h2>
+                <div class="content-actions">
+                    <span id="editalsCount" class="editals-count">Mostrando 0 editais</span>
+                    <button id="exportBtn" class="btn-export">📥 Exportar CSV</button>
+                </div>
+            </div>
+
+            <div id="editaisList" class="editais-grid">
+                <!-- Cards de editais serão inseridos aqui via JavaScript -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal de Cadastro de Usuário -->
+    <div id="userModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Cadastrar Novo Usuário</h2>
+                <span class="close-modal">&times;</span>
+            </div>
+            <form id="userForm" class="modal-form">
+                <div class="form-group">
+                    <label for="newUserName">Nome Completo</label>
+                    <input type="text" id="newUserName" placeholder="Digite o nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="newUserEmail">E-mail</label>
+                    <input type="email" id="newUserEmail" placeholder="Digite o e-mail" required>
+                </div>
+                <div class="form-group">
+                    <label for="newUserPassword">Senha</label>
+                    <input type="password" id="newUserPassword" placeholder="Digite a senha" required>
+                </div>
+                <div class="form-group">
+                    <label for="newUserRole">Tipo de Acesso</label>
+                    <select id="newUserRole" class="filter-select" required>
+                        <option value="Consultor">Consultor</option>
+                        <option value="Administrador">Administrador</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="newUserLevel">Nível de Acesso (1-10)</label>
+                    <input type="number" id="newUserLevel" min="1" max="10" value="1" required>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn-cancel" id="cancelBtn">Cancelar</button>
+                    <button type="submit" class="btn-save">Salvar Usuário</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Supabase SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="script.js?v=1.3"></script>
+</body>
+</html>

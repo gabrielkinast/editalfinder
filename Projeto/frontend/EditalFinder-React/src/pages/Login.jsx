@@ -30,8 +30,8 @@ export default function Login() {
         <div className="login-header" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
           {settings.logoImage ? (
             <>
-              <img src={settings.logoImage} alt="Logo" style={{ maxHeight: '60px', marginBottom: '10px' }} />
-              <h1 className="logo" style={{ fontSize: '24px', marginBottom: '0' }}>EditalFinder</h1>
+              <img src={settings.logoImage} alt="Logo" style={{ maxHeight: '100px', width: 'auto', marginBottom: '15px' }} />
+              <h1 className="logo" style={{ fontSize: '28px', marginBottom: '0' }}>EditalFinder</h1>
             </>
           ) : (
             <h1 className="logo">{settings.logoText}</h1>

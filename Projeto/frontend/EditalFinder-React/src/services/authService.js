@@ -13,11 +13,16 @@ export const authService = {
     }
 
     if (usuario && usuario.senha === password) {
+      if (usuario.status === 'Inativo') {
+        throw new Error('Este usuário está inativo e não pode realizar login.');
+      }
+
       const userData = {
         email: usuario.nome_email,
         nome: usuario.nome,
         tipo: usuario.tipo_usuario,
         nivel: usuario.nivel_acesso,
+        status: usuario.status,
       };
       localStorage.setItem('editalFinderUser', JSON.stringify(userData));
       return userData;

@@ -63,6 +63,18 @@ export default function EditalForm({ initialData, onSave, onCancel }) {
 
   const handleChange = (e) => {
     const { name, value, type } = e.target;
+    
+    // Se mudar a fonte de recurso, tenta encontrar a organização correspondente
+    if (name === 'fonte_recurso') {
+      const matchedOrg = orgs.find(o => o.nome.toLowerCase() === value.toLowerCase());
+      setFormData(prev => ({
+        ...prev,
+        fonte_recurso: value,
+        id_organizacao: matchedOrg ? matchedOrg.id_organizacao : prev.id_organizacao
+      }));
+      return;
+    }
+
     setFormData(prev => ({
       ...prev,
       [name]: type === 'number' || type === 'range' ? parseFloat(value) : value

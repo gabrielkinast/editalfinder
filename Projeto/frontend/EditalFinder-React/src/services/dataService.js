@@ -10,7 +10,9 @@ const staticEditais = [
         localidade: "Nacional",
         estado: "SP",
         dataLimite: "2026-10-30",
-        tipoRecurso: "Subvenção econômica"
+        tipoRecurso: "Subvenção econômica",
+        linkOriginal: "https://www.finep.gov.br",
+        pdfUrl: "https://www.finep.gov.br"
     },
     {
         id: 2,
@@ -21,7 +23,9 @@ const staticEditais = [
         localidade: "Nacional",
         estado: "RJ",
         dataLimite: "2026-09-15",
-        tipoRecurso: "Bolsa pesquisa"
+        tipoRecurso: "Bolsa pesquisa",
+        linkOriginal: "https://www.bndes.gov.br",
+        pdfUrl: "https://www.bndes.gov.br"
     },
 ];
 
@@ -32,26 +36,32 @@ export const dataService = {
       .from('edital')
       .select(`
           *,
-          organizacao ( nome )
+          organizacao ( nome, site )
       `)
       .eq('status', 'Ativo');
 
     if (error) throw error;
 
-    const manuaisFormatados = manuais.map(m => ({
-        id: `manual-${m.id_edital}`,
-        titulo: m.titulo,
-        orgao: m.fonte_recurso || (m.organizacao ? m.organizacao.nome : 'Manual'),
-        area: m.temas || 'Geral',
-        valor: m.valor_maximo || 0,
-        localidade: 'Nacional',
-        estado: m.estado || '',
-        dataLimite: m.prazo_envio,
-        tipoRecurso: m.situacao || 'Edital',
-        isManual: true,
-        linkOriginal: m.link,
-        pdfUrl: m.pdf_url
-    }));
+    const manuaisFormatados = manuais.map(m => {
+        const estado = m.estado || '';
+        const isInternacional = estado.toLowerCase().includes('internacional') || estado === 'Exterior';
+        
+        return {
+            id: `manual-${m.id_edital}`,
+            titulo: m.titulo,
+            orgao: m.fonte_recurso || (m.organizacao ? m.organizacao.nome : 'Manual'),
+            area: m.temas || 'Geral',
+            valor: m.valor_maximo || 0,
+            localidade: isInternacional ? 'Internacional' : 'Nacional',
+            estado: estado,
+            dataLimite: m.prazo_envio,
+            tipoRecurso: m.situacao || 'Edital',
+            isManual: true,
+            linkOriginal: m.link,
+            pdfUrl: m.pdf_url,
+            orgSite: m.organizacao ? m.organizacao.site : null
+        };
+    });
 
     return [...staticEditais, ...manuaisFormatados];
   },
