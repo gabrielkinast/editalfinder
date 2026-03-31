@@ -1,4 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
+import { jsPDF } from 'jspdf';
+import autoTable from 'jspdf-autotable';
+import * as XLSX from 'xlsx';
 import Header from '../components/layout/Header';
 import EditalCard from '../components/dashboard/EditalCard';
 import { dataService } from '../services/dataService';
@@ -31,10 +34,24 @@ export default function Dashboard() {
   const handleFilterChange = useCallback((filters) => {
     let result = [...allEditais];
 
+    const stateMap = {
+      'AC': 'Acre', 'AL': 'Alagoas', 'AP': 'Amapá', 'AM': 'Amazonas', 'BA': 'Bahia',
+      'CE': 'Ceará', 'DF': 'Distrito Federal', 'ES': 'Espírito Santo', 'GO': 'Goiás',
+      'MA': 'Maranhão', 'MT': 'Mato Grosso', 'MS': 'Mato Grosso do Sul', 'MG': 'Minas Gerais',
+      'PA': 'Pará', 'PB': 'Paraíba', 'PR': 'Paraná', 'PE': 'Pernambuco', 'PI': 'Piauí',
+      'RJ': 'Rio de Janeiro', 'RN': 'Rio Grande do Norte', 'RS': 'Rio Grande do Sul',
+      'RO': 'Rondônia', 'RR': 'Roraima', 'SC': 'Santa Catarina', 'SP': 'São Paulo',
+      'SE': 'Sergipe', 'TO': 'Tocantins'
+    };
+
     // Filtro de estado
     if (filters.state) {
       result = result.filter(e => {
-        const stateMatch = e.estado === filters.state;
+        const editalState = e.estado || '';
+        const editalStateFull = stateMap[editalState.toUpperCase()] || editalState;
+        
+        const stateMatch = editalStateFull === filters.state || editalState.toUpperCase() === filters.state.toUpperCase();
+        
         // Se o filtro for Rio Grande do Sul, também mostra editais da FAPERGS
         if (filters.state === 'Rio Grande do Sul') {
           return stateMatch || e.orgao.toUpperCase().includes('FAPERGS');
@@ -43,27 +60,39 @@ export default function Dashboard() {
       });
     }
 
-    // Filtro de localidade
+    // Filtro de localidade (Nacional / Internacional)
     if (filters.nacional || filters.internacional) {
-      result = result.filter(e => 
-        (filters.nacional && e.localidade === 'Nacional') || 
-        (filters.internacional && e.localidade === 'Internacional')
-      );
+      result = result.filter(e => {
+        const locality = (e.localidade || '').toLowerCase();
+        const state = (e.estado || '').toLowerCase();
+        
+        // Internacional: Se a localidade for internacional OR o estado for internacional OR o estado for 'Exterior'
+        const isActuallyInternacional = locality === 'internacional' || state === 'internacional' || state === 'exterior' || state === 'ex';
+
+        // Nacional: Se não for internacional, e tiver localidade nacional ou um estado brasileiro preenchido
+        const isActuallyNacional = !isActuallyInternacional && (locality === 'nacional' || state !== '');
+        
+        const matchesNacional = filters.nacional && isActuallyNacional;
+        const matchesInternacional = filters.internacional && isActuallyInternacional;
+        
+        return matchesNacional || matchesInternacional;
+      });
     }
 
     // Filtro de palavras-chave
     if (filters.keyword) {
       const kw = filters.keyword.toLowerCase();
       result = result.filter(e => 
-        e.titulo.toLowerCase().includes(kw) || 
-        e.area.toLowerCase().includes(kw) ||
-        e.orgao.toLowerCase().includes(kw)
+        (e.titulo || '').toLowerCase().includes(kw) || 
+        (e.area || '').toLowerCase().includes(kw) ||
+        (e.orgao || '').toLowerCase().includes(kw)
       );
     }
 
     // Filtro de tipo de recurso
     if (filters.resourceType) {
-      result = result.filter(e => e.tipoRecurso === filters.resourceType);
+      const typeFilter = filters.resourceType.toLowerCase();
+      result = result.filter(e => (e.tipoRecurso || '').toLowerCase() === typeFilter);
     }
 
     // Filtro de crédito
@@ -84,7 +113,17 @@ export default function Dashboard() {
 
     // Filtro de área
     if (filters.area) {
-      result = result.filter(e => e.area === filters.area);
+      const areaFilter = filters.area.toLowerCase();
+      result = result.filter(e => {
+        // Verifica se a área está explicitamente listada no campo de área
+        const editalAreas = (e.area || '').split(/[,;]/).map(a => a.trim().toLowerCase());
+        const hasDirectArea = editalAreas.includes(areaFilter);
+        
+        // Verifica se o termo da área está presente no título (sincronizando com a busca por texto)
+        const hasInTitle = (e.titulo || '').toLowerCase().includes(areaFilter);
+        
+        return hasDirectArea || hasInTitle;
+      });
     }
 
     // Filtro de órgão
@@ -112,25 +151,104 @@ export default function Dashboard() {
     setFilteredEditais(result);
   }, [allEditais, globalSearch]);
 
-  const handleExportCSV = () => {
-    if (filteredEditais.length === 0) {
-      alert('Nenhum edital para exportar.');
-      return;
+  const handleExportPDF = () => {
+    try {
+      console.log('Iniciando exportação PDF...');
+      if (filteredEditais.length === 0) {
+        alert('Nenhum edital para exportar.');
+        return;
+      }
+
+      const doc = new jsPDF('l', 'mm', 'a4');
+      
+      doc.setFontSize(18);
+      doc.text('Relatório de Editais Encontrados', 14, 20);
+      doc.setFontSize(11);
+      doc.text(`Data de geração: ${new Date().toLocaleDateString('pt-BR')}`, 14, 30);
+      doc.text(`Total de editais: ${filteredEditais.length}`, 14, 36);
+
+      const tableColumn = ["Nome do Edital", "Órgão Financiador", "Área", "Valor", "Estado", "Tipo", "Limite"];
+      const tableRows = [];
+
+      filteredEditais.forEach(e => {
+        tableRows.push([
+          e.titulo,
+          e.orgao,
+          e.area,
+          formatCurrency(e.valor),
+          e.estado || 'Nacional',
+          e.tipoRecurso,
+          e.dataLimite ? formatDate(e.dataLimite) : 'N/A'
+        ]);
+      });
+
+      autoTable(doc, {
+        head: [tableColumn],
+        body: tableRows,
+        startY: 45,
+        styles: { fontSize: 8, cellPadding: 2 },
+        headStyles: { fillColor: [74, 108, 247], textColor: [255, 255, 255] },
+        columnStyles: {
+          0: { cellWidth: 70 },
+          1: { cellWidth: 40 },
+          2: { cellWidth: 35 },
+          3: { cellWidth: 30 },
+          4: { cellWidth: 25 },
+          5: { cellWidth: 35 },
+          6: { cellWidth: 25 },
+        }
+      });
+
+      console.log('Salvando PDF...');
+      doc.save(`editais_encontrados_${new Date().toISOString().split('T')[0]}.pdf`);
+      console.log('PDF salvo com sucesso!');
+    } catch (error) {
+      console.error('Erro ao gerar PDF:', error);
+      alert('Erro ao gerar PDF. Verifique o console para mais detalhes.');
     }
+  };
 
-    let csv = 'Título,Órgão,Área,Valor,Localidade,Data Limite,Tipo de Recurso\n';
-    filteredEditais.forEach(e => {
-      csv += `"${e.titulo}","${e.orgao}","${e.area}","${formatCurrency(e.valor)}","${e.localidade}","${e.dataLimite ? formatDate(e.dataLimite) : 'N/A'}","${e.tipoRecurso}"\n`;
-    });
+  const handleExportExcel = () => {
+    try {
+      if (filteredEditais.length === 0) {
+        alert('Nenhum edital para exportar.');
+        return;
+      }
 
-    const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement('a');
-    link.setAttribute('href', url);
-    link.setAttribute('download', `editais_${new Date().toISOString().split('T')[0]}.csv`);
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+      // Preparar os dados para a planilha
+      const data = filteredEditais.map(e => ({
+        "Nome do Edital": e.titulo,
+        "Órgão Financiador": e.orgao,
+        "Área": e.area,
+        "Valor": formatCurrency(e.valor),
+        "Estado": e.estado || 'Nacional',
+        "Tipo": e.tipoRecurso,
+        "Limite": e.dataLimite ? formatDate(e.dataLimite) : 'N/A'
+      }));
+
+      // Criar a planilha
+      const worksheet = XLSX.utils.json_to_sheet(data);
+      const workbook = XLSX.utils.book_new();
+      XLSX.utils.book_append_sheet(workbook, worksheet, "Editais");
+
+      // Ajustar a largura das colunas automaticamente
+      const wscols = [
+        { wch: 50 }, // Nome
+        { wch: 25 }, // Órgão
+        { wch: 20 }, // Área
+        { wch: 15 }, // Valor
+        { wch: 15 }, // Estado
+        { wch: 20 }, // Tipo
+        { wch: 12 }, // Limite
+      ];
+      worksheet['!cols'] = wscols;
+
+      // Gerar o arquivo Excel e disparar o download
+      XLSX.writeFile(workbook, `editais_encontrados_${new Date().toISOString().split('T')[0]}.xlsx`);
+    } catch (error) {
+      console.error('Erro ao gerar Excel:', error);
+      alert('Erro ao gerar planilha. Verifique o console para mais detalhes.');
+    }
   };
 
   return (
@@ -145,15 +263,16 @@ export default function Dashboard() {
         </button>
         
         <div className={`sidebar ${!showFiltersMobile ? 'mobile-hidden' : ''}`}>
-          <Filters onFilterChange={handleFilterChange} />
+          <Filters onFilterChange={handleFilterChange} allEditais={allEditais} />
         </div>
         
         <main className="main-content">
           <div className="content-header">
             <h2>Editais Disponíveis</h2>
-            <div className="content-actions">
+            <div className="content-actions" style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
               <span className="editals-count">Mostrando {filteredEditais.length} editais</span>
-              <button onClick={handleExportCSV} className="btn-export">📥 Exportar CSV</button>
+              <button onClick={handleExportPDF} className="btn-export">📄 PDF</button>
+              <button onClick={handleExportExcel} className="btn-export" style={{ backgroundColor: '#27ae60' }}>📊 Planilha</button>
             </div>
           </div>
 

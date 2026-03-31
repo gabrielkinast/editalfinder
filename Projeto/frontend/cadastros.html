@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edital Finder - Cadastros</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="admin-body">
+    <!-- Header Superior -->
+    <header class="header">
+        <div class="header-content">
+            <h1 class="logo-header">Edital Finder</h1>
+            <nav class="main-nav">
+                <a href="dashboard.html" class="nav-item">Editais</a>
+                <a href="cadastros.html" class="nav-item active">Cadastros</a>
+                
+            </nav>
+            <div class="header-right">
+                <button id="logoutBtn" class="btn-logout">Sair</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="admin-container">
+        <!-- Sidebar de Cadastros -->
+        <aside class="admin-sidebar">
+            <h2 class="sidebar-title">Cadastros</h2>
+            <nav class="sidebar-nav">
+                <a href="#" class="sidebar-link active" data-target="usuarios">
+                    <span class="icon">👤</span> Usuários
+                </a>
+                <a href="#" class="sidebar-link" data-target="clientes">
+                    <span class="icon">🏢</span> Clientes
+                </a>
+                <a href="#" class="sidebar-link" data-target="organizacoes">
+                    <span class="icon">🏛️</span> Organizações
+                </a>
+                <a href="#" class="sidebar-link" data-target="editais-manuais">
+                    <span class="icon">📄</span> Editais
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Área de Conteúdo -->
+        <main class="admin-main">
+            <!-- Seção de Usuários -->
+            <section id="section-usuarios" class="admin-section active">
+                <div class="section-header">
+                    <h2>Cadastro de Usuários</h2>
+                    <button id="userRegisterLink" class="btn-primary">+ Novo Usuário</button>
+                </div>
+
+                <div class="filters-bar">
+                    <input type="text" id="searchUser" placeholder="Buscar por nome..." class="filter-input-large">
+                    <select id="filterType" class="filter-select-small">
+                        <option value="">Todos os tipos</option>
+                        <option value="Consultor">Consultor</option>
+                        <option value="Administrador">Administrador</option>
+                    </select>
+                    <select id="filterUserStatus" class="filter-select-small">
+                        <option value="">Todos os status</option>
+                        <option value="Ativo">Ativo</option>
+                        <option value="Inativo">Inativo</option>
+                    </select>
+                </div>
+
+                <div class="table-container">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nome</th>
+                                <th>Email</th>
+                                <th>Tipo</th>
+                                <th>Nível</th>
+                                <th>Status</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody id="userTableBody">
+                            <!-- Preenchido via JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Seção de Clientes -->
+            <section id="section-clientes" class="admin-section">
+                <div class="section-header">
+                    <h2>Cadastro de Clientes</h2>
+                    <button id="btnOpenClientModal" class="btn-primary">+ Novo Cliente</button>
+                </div>
+                
+                
+
+                <div class="table-container">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Empresa</th>
+                                <th>CNPJ</th>
+                                <th>Cidade/UF</th>
+                                <th>Setor</th>
+                                <th>Status</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody id="clientTableBody">
+                            <!-- Preenchido via JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Seção de Organizações -->
+            <section id="section-organizacoes" class="admin-section">
+                <div class="section-header">
+                    <h2>Cadastro de Organizações</h2>
+                    <button id="btnOpenOrgModal" class="btn-primary">+ Nova Organização</button>
+                </div>
+                
+                <div class="filters-bar">
+                    <input type="text" id="searchOrg" placeholder="Buscar por nome ou tipo..." class="filter-input-large">
+                    <select id="filterOrgStatus" class="filter-select-small">
+                        <option value="">Todos os status</option>
+                        <option value="Ativo">Ativo</option>
+                        <option value="Inativo">Inativo</option>
+                    </select>
+                </div>
+
+                <div class="table-container">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nome</th>
+                                <th>Tipo</th>
+                                <th>Localização</th>
+                                <th>Site</th>
+                                <th>Status</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody id="orgTableBody">
+                            <!-- Preenchido via JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Seção de Editais Manuais -->
+            <section id="section-editais-manuais" class="admin-section">
+                <div class="section-header">
+                    <h2>Cadastro de Editais</h2>
+                    <button id="btnOpenEditalModal" class="btn-primary">+ Novo Edital</button>
+                </div>
+                
+                <div class="filters-bar">
+                    <input type="text" id="searchEdital" placeholder="Buscar por título ou fonte..." class="filter-input-large">
+                    <select id="filterEditalStatus" class="filter-select-small">
+                        <option value="">Todos os status</option>
+                        <option value="Ativo">Ativo</option>
+                        <option value="Inativo">Inativo</option>
+                    </select>
+                </div>
+
+                <div class="table-container">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Título</th>
+                                <th>Fonte</th>
+                                <th>Valor Máx.</th>
+                                <th>Prazo</th>
+                                <th>Status</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody id="editalTableBody">
+                            <!-- Preenchido via JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Modal de Cadastro/Edição de Usuário -->
+    <div id="userModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="userModalTitle">Cadastrar Novo Usuário</h2>
+                <span class="close-modal" id="closeUserModal">&times;</span>
+            </div>
+            <form id="userForm" class="modal-form">
+                <input type="hidden" id="editUserId">
+                
+                <div class="form-group">
+                    <label for="newUserName">Nome Completo</label>
+                    <input type="text" id="newUserName" required>
+                </div>
+                <div class="form-group">
+                    <label for="newUserEmail">Email</label>
+                    <input type="email" id="newUserEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="newUserPassword">Senha</label>
+                    <input type="password" id="newUserPassword" required>
+                </div>
+                <div class="form-group">
+                    <label for="newUserType">Tipo de Usuário</label>
+                    <select id="newUserType" required>
+                        <option value="Consultor">Consultor</option>
+                        <option value="Administrador">Administrador</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="newUserLevel">Nível de Acesso (1-10)</label>
+                    <input type="number" id="newUserLevel" min="1" max="10" value="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="newUserStatus">Status</label>
+                    <select id="newUserStatus" class="filter-select" required>
+                        <option value="Ativo">Ativo</option>
+                        <option value="Inativo">Inativo</option>
+                    </select>
+                </div>
+
+                <div class="modal-actions">
+                    <button type="button" class="btn-cancel" id="cancelUserBtn">Cancelar</button>
+                    <button type="submit" class="btn-save" id="btnSaveUser">Salvar Usuário</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal de Cadastro/Edição de Cliente -->
+    <div id="clientModal" class="modal">
+        <div class="modal-content modal-large">
+            <div class="modal-header">
+                <h2 id="clientModalTitle">Cadastrar Novo Cliente</h2>
+                <span class="close-modal" id="closeClientModal">&times;</span>
+            </div>
+            <form id="clientForm" class="modal-form">
+                <input type="hidden" id="editClientId">
+                
+                <div class="form-grid">
+                    <!-- Informações Básicas -->
+                    <div class="form-section-title">Informações Básicas</div>
+                    <div class="form-group">
+                        <label for="nome_empresa">Nome da Empresa</label>
+                        <input type="text" id="nome_empresa" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="razao_social">Razão Social</label>
+                        <input type="text" id="razao_social" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cnpj">CNPJ</label>
+                        <input type="text" id="cnpj" placeholder="00.000.000/0000-00" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="data_abertura">Data de Abertura</label>
+                        <input type="date" id="data_abertura">
+                    </div>
+
+                    <!-- Classificação -->
+                    <div class="form-section-title">Classificação e Localização</div>
+                    <div class="form-group">
+                        <label for="natureza_juridica">Natureza Jurídica</label>
+                        <input type="text" id="natureza_juridica">
+                    </div>
+                    <div class="form-group">
+                        <label for="porte_empresa">Porte da Empresa</label>
+                        <select id="porte_empresa">
+                            <option value="MEI">MEI</option>
+                            <option value="ME">ME</option>
+                            <option value="EPP">EPP</option>
+                            <option value="Média">Média</option>
+                            <option value="Grande">Grande</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="setor">Setor</label>
+                        <input type="text" id="setor">
+                    </div>
+                    <div class="form-group">
+                        <label for="cnae_principal">CNAE Principal</label>
+                        <input type="text" id="cnae_principal">
+                    </div>
+                    <div class="form-group">
+                        <label for="pais">País</label>
+                        <input type="text" id="pais" value="Brasil">
+                    </div>
+                    <div class="form-group">
+                        <label for="estado">Estado (UF)</label>
+                        <input type="text" id="estado" maxlength="2">
+                    </div>
+                    <div class="form-group">
+                        <label for="cidade">Cidade</label>
+                        <input type="text" id="cidade">
+                    </div>
+                    <div class="form-group">
+                        <label for="regiao">Região</label>
+                        <input type="text" id="regiao">
+                    </div>
+
+                    <!-- Dados Financeiros -->
+                    <div class="form-section-title">Dados Financeiros e Inovação</div>
+                    <div class="form-group">
+                        <label for="faturamento_anual">Faturamento Anual: <span id="display_faturamento">R$ 0</span></label>
+                        <input type="range" id="faturamento_anual" min="0" max="100000000" step="1000" value="0">
+                    </div>
+                    <div class="form-group">
+                        <label for="numero_funcionarios">Nº de Funcionários</label>
+                        <input type="number" id="numero_funcionarios">
+                    </div>
+                    <div class="form-group">
+                        <label for="capital_social">Capital Social: <span id="display_capital">R$ 0</span></label>
+                        <input type="range" id="capital_social" min="0" max="100000000" step="1000" value="0">
+                    </div>
+                    <div class="form-group">
+                        <label for="area_inovacao">Área de Inovação</label>
+                        <input type="text" id="area_inovacao">
+                    </div>
+                    <div class="form-group checkbox-row">
+                        <input type="checkbox" id="tem_projeto_inovacao">
+                        <label for="tem_projeto_inovacao">Tem projeto de inovação?</label>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="descricao_projeto">Descrição do Projeto</label>
+                        <textarea id="descricao_projeto" rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="nivel_maturidade">Nível de Maturidade</label>
+                        <select id="nivel_maturidade">
+                            <option value="Ideação">Ideação</option>
+                            <option value="Validação">Validação</option>
+                            <option value="Operação">Operação</option>
+                            <option value="Escala">Escala</option>
+                        </select>
+                    </div>
+
+                    <!-- Regularidade -->
+                    <div class="form-section-title">Regularidade e Interesses</div>
+                    <div class="form-group checkbox-row">
+                        <input type="checkbox" id="possui_certidao_negativa">
+                        <label for="possui_certidao_negativa">Certidão Negativa</label>
+                    </div>
+                    <div class="form-group checkbox-row">
+                        <input type="checkbox" id="regular_fiscal">
+                        <label for="regular_fiscal">Regular Fiscal</label>
+                    </div>
+                    <div class="form-group checkbox-row">
+                        <input type="checkbox" id="regular_trabalhista">
+                        <label for="regular_trabalhista">Regular Trabalhista</label>
+                    </div>
+                    <div class="form-group checkbox-row">
+                        <input type="checkbox" id="disponibilidade_contrapartida">
+                        <label for="disponibilidade_contrapartida">Disponibilidade de Contrapartida</label>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="interesse_temas">Temas de Interesse</label>
+                        <input type="text" id="interesse_temas" placeholder="Ex: Sustentabilidade, IA, Agro">
+                    </div>
+                    <div class="form-group">
+                        <label for="interesse_valor_min">Valor Mínimo Interesse: <span id="display_min">R$ 0</span></label>
+                        <input type="range" id="interesse_valor_min" min="0" max="10000000" step="5000" value="0">
+                    </div>
+                    <div class="form-group">
+                        <label for="interesse_valor_max">Valor Máximo Interesse: <span id="display_max">R$ 0</span></label>
+                        <input type="range" id="interesse_valor_max" min="0" max="10000000" step="5000" value="0">
+                    </div>
+                    <div class="form-group">
+                        <label for="newClientStatus">Status</label>
+                        <select id="newClientStatus" required>
+                            <option value="Ativo">Ativo</option>
+                            <option value="Inativo">Inativo</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="modal-actions">
+                    <button type="button" class="btn-cancel" id="cancelClientBtn">Cancelar</button>
+                    <button type="submit" class="btn-save" id="btnSaveClient">Salvar Cliente</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal de Cadastro/Edição de Organização -->
+    <div id="orgModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="orgModalTitle">Cadastrar Nova Organização</h2>
+                <span class="close-modal" id="closeOrgModal">&times;</span>
+            </div>
+            <form id="orgForm" class="modal-form">
+                <input type="hidden" id="editOrgId">
+                
+                <div class="form-group">
+                    <label for="org_nome">Nome da Organização</label>
+                    <input type="text" id="org_nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="org_tipo">Tipo (ex: Pública, Privada, ONG)</label>
+                    <input type="text" id="org_tipo">
+                </div>
+                <div class="form-group">
+                    <label for="org_pais">País</label>
+                    <input type="text" id="org_pais" value="Brasil">
+                </div>
+                <div class="form-group">
+                    <label for="org_estado">Estado (UF)</label>
+                    <input type="text" id="org_estado" maxlength="2">
+                </div>
+                <div class="form-group">
+                    <label for="org_site">Site Oficial</label>
+                    <input type="url" id="org_site" placeholder="https://exemplo.com">
+                </div>
+                <div class="form-group">
+                    <label for="org_status">Status</label>
+                    <select id="org_status" required>
+                        <option value="Ativo">Ativo</option>
+                        <option value="Inativo">Inativo</option>
+                    </select>
+                </div>
+
+                <div class="modal-actions">
+                    <button type="button" class="btn-cancel" id="cancelOrgBtn">Cancelar</button>
+                    <button type="submit" class="btn-save" id="btnSaveOrg">Salvar Organização</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal de Cadastro/Edição de Edital Manual -->
+    <div id="editalModal" class="modal">
+        <div class="modal-content modal-large">
+            <div class="modal-header">
+                <h2 id="editalModalTitle">Cadastrar Novo Edital</h2>
+                <span class="close-modal" id="closeEditalModal">&times;</span>
+            </div>
+            <form id="editalForm" class="modal-form">
+                <input type="hidden" id="editEditalId">
+                
+                <div class="form-grid">
+                    <!-- Informações Principais -->
+                    <div class="form-section-title">Informações Principais</div>
+                    <div class="form-group full-width">
+                        <label for="edital_titulo">Título do Edital</label>
+                        <input type="text" id="edital_titulo" required>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="edital_descricao">Descrição</label>
+                        <textarea id="edital_descricao" rows="3"></textarea>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="edital_objetivo">Objetivo</label>
+                        <textarea id="edital_objetivo" rows="2"></textarea>
+                    </div>
+
+                    <!-- Detalhes Técnicos -->
+                    <div class="form-section-title">Detalhes e Classificação</div>
+                    <div class="form-group">
+                        <label for="edital_temas">Temas</label>
+                        <input type="text" id="edital_temas" placeholder="Ex: IA, Saúde, Sustentabilidade">
+                    </div>
+                    <div class="form-group">
+                        <label for="edital_publico">Público Alvo</label>
+                        <input type="text" id="edital_publico" placeholder="Ex: Startups, MEI, Indústrias">
+                    </div>
+                    <div class="form-group">
+                        <label for="edital_fonte">Fonte de Recurso</label>
+                        <input type="text" id="edital_fonte" placeholder="Ex: FINEP, BNDES, FAPESP">
+                    </div>
+                    <div class="form-group">
+                        <label for="edital_valor_max">Valor Máximo: <span id="display_edital_valor">R$ 0</span></label>
+                        <input type="range" id="edital_valor_max" min="0" max="50000000" step="100000" value="0">
+                    </div>
+                    <div class="form-group">
+                        <label for="edital_id_org">Organização Responsável</label>
+                        <select id="edital_id_org" required>
+                            <option value="">Selecione uma organização...</option>
+                        </select>
+                    </div>
+
+                    <!-- Datas e Links -->
+                    <div class="form-section-title">Datas e Links</div>
+                    <div class="form-group">
+                        <label for="edital_data_pub">Data de Publicação</label>
+                        <input type="date" id="edital_data_pub">
+                    </div>
+                    <div class="form-group">
+                        <label for="edital_prazo">Prazo de Envio</label>
+                        <input type="date" id="edital_prazo">
+                    </div>
+                    <div class="form-group">
+                        <label for="edital_situacao">Situação</label>
+                        <select id="edital_situacao">
+                            <option value="Aberto">Aberto</option>
+                            <option value="Em análise">Em análise</option>
+                            <option value="Encerrado">Encerrado</option>
+                            <option value="Suspenso">Suspenso</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="edital_status">Status</label>
+                        <select id="edital_status" required>
+                            <option value="Ativo">Ativo</option>
+                            <option value="Inativo">Inativo</option>
+                        </select>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="edital_url_pdf">URL do PDF</label>
+                        <input type="url" id="edital_url_pdf" placeholder="https://exemplo.com/edital.pdf">
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="edital_link">Link do Edital</label>
+                        <input type="url" id="edital_link" placeholder="https://exemplo.com/pagina-edital">
+                    </div>
+                </div>
+
+                <div class="modal-actions">
+                    <button type="button" class="btn-cancel" id="cancelEditalBtn">Cancelar</button>
+                    <button type="submit" class="btn-save" id="btnSaveEdital">Salvar Edital</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Supabase SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="script.js?v=3.1"></script>
+</body>
+</html>

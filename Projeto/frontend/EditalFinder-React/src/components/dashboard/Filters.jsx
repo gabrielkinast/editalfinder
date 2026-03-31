@@ -1,8 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { dataService } from '../../services/dataService';
 
-export default function Filters({ onFilterChange }) {
-  const [orgsFromDb, setOrgsFromDb] = useState([]);
+export default function Filters({ onFilterChange, allEditais = [] }) {
   const [filters, setFilters] = useState({
     state: '',
     nacional: false,
@@ -16,36 +15,90 @@ export default function Filters({ onFilterChange }) {
     orgs: {}, // Inicialmente vazio, será preenchido dinamicamente
   });
 
-  // Carregar organizações do banco
-  useEffect(() => {
-    const loadOrgs = async () => {
-      try {
-        const data = await dataService.getOrganizations();
-        setOrgsFromDb(data);
-        
-        // Inicializa o estado dos filtros com as orgs do banco
-        const initialOrgsState = {};
-        data.forEach(org => {
-          initialOrgsState[org.nome.toLowerCase()] = false;
-        });
-        
-        setFilters(prev => ({
-          ...prev,
-          orgs: {
-            ...initialOrgsState,
-            cnpq: false,
-            fapergs: false,
-            finep: false,
-            bndes: false,
-            cordis: false,
+  // Extrair todas as áreas únicas dos editais carregados
+  const availableAreas = useMemo(() => {
+    const areas = new Set();
+    
+    // Adiciona áreas padrão
+    ['Agro', 'Saúde', 'Energia', 'Tecnologia', 'Educação'].forEach(a => areas.add(a));
+    
+    // Adiciona todas as áreas encontradas nos editais
+    allEditais.forEach(edital => {
+      if (edital.area) {
+        // Suporta vírgula (,) e ponto e vírgula (;) como separadores
+        const parts = edital.area.split(/[,;]/).map(p => p.trim());
+        parts.forEach(p => {
+          // Ignora textos vazios, muito longos (provavelmente descrições) ou que contenham "manual" (provavelmente erro de cadastro)
+          if (p && p.length < 50 && !p.toLowerCase().includes('manual')) {
+            // Capitaliza a primeira letra para manter o padrão
+            const capitalized = p.charAt(0).toUpperCase() + p.slice(1).toLowerCase();
+            areas.add(capitalized);
           }
-        }));
-      } catch (error) {
-        console.error('Erro ao carregar organizações para filtros:', error);
+        });
       }
-    };
-    loadOrgs();
-  }, []);
+    });
+    
+    return Array.from(areas).sort();
+  }, [allEditais]);
+
+  // Extrair todos os tipos de recursos únicos dos editais carregados
+  const availableResourceTypes = useMemo(() => {
+    const types = new Set();
+    
+    // Adiciona tipos padrão que sempre devem aparecer
+    ['Subvenção econômica', 'Linha de crédito', 'Investimento', 'Fomento à inovação', 'Bolsa pesquisa'].forEach(t => types.add(t));
+    
+    // Adiciona todos os tipos encontrados nos editais
+    allEditais.forEach(edital => {
+      if (edital.tipoRecurso) {
+        // Normaliza para manter o padrão (primeira letra maiúscula)
+        const tr = edital.tipoRecurso.trim();
+        const formatted = tr.charAt(0).toUpperCase() + tr.slice(1).toLowerCase();
+        types.add(formatted);
+      }
+    });
+    
+    return Array.from(types).sort();
+  }, [allEditais]);
+
+  // Extrair todos os órgãos financiadores únicos dos editais carregados
+  const availableOrgs = useMemo(() => {
+    const orgs = new Set();
+    
+    // Adiciona órgãos padrão que sempre devem aparecer
+    ['CNPQ', 'FAPERGS', 'FINEP', 'BNDES', 'CORDIS'].forEach(o => orgs.add(o));
+    
+    // Adiciona todos os órgãos encontrados nos editais
+    allEditais.forEach(edital => {
+      if (edital.orgao && edital.orgao !== 'Manual') {
+        // Normaliza para maiúsculas para evitar duplicatas (ex: cnpq e CNPq)
+        orgs.add(edital.orgao.toUpperCase());
+      }
+    });
+    
+    return Array.from(orgs).sort();
+  }, [allEditais]);
+
+  // Atualiza o estado dos filtros quando novos órgãos são descobertos
+  useEffect(() => {
+    setFilters(prev => {
+      const newOrgsState = { ...prev.orgs };
+      let changed = false;
+      
+      availableOrgs.forEach(org => {
+        const key = org.toLowerCase();
+        if (newOrgsState[key] === undefined) {
+          newOrgsState[key] = false;
+          changed = true;
+        }
+      });
+      
+      if (changed) {
+        return { ...prev, orgs: newOrgsState };
+      }
+      return prev;
+    });
+  }, [availableOrgs]);
 
   useEffect(() => {
     onFilterChange(filters);
@@ -90,13 +143,21 @@ export default function Filters({ onFilterChange }) {
   };
 
   const formatCurrency = (value) => {
-    if (value >= 1000000) return `R$ ${value / 1000000} mi`;
-    return `R$ ${value.toLocaleString('pt-BR')}`;
+    return `R$ ${Number(value).toLocaleString('pt-BR')}`;
   };
 
   return (
     <div className="filters-section">
-      <h2 className="filter-title">Filtros</h2>
+      <div className="filters-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '-10px' }}>
+        <h2 className="filter-title" style={{ margin: 0 }}>Filtros</h2>
+        <button 
+          className="btn-clear-filters" 
+          onClick={clearFilters}
+          style={{ width: 'auto', marginTop: 0, padding: '6px 12px', fontSize: '11px' }}
+        >
+          Limpar Filtros
+        </button>
+      </div>
 
       {/* Localidade */}
       <div className="filter-group">
@@ -182,11 +243,9 @@ export default function Filters({ onFilterChange }) {
           onChange={handleChange}
         >
           <option value="">Todos os tipos</option>
-          <option value="Subvenção econômica">Subvenção econômica</option>
-          <option value="Linha de crédito">Linha de crédito</option>
-          <option value="Investimento">Investimento</option>
-          <option value="Fomento à inovação">Fomento à inovação</option>
-          <option value="Bolsa pesquisa">Bolsa pesquisa</option>
+          {availableResourceTypes.map(type => (
+            <option key={type} value={type}>{type}</option>
+          ))}
         </select>
       </div>
 
@@ -199,7 +258,7 @@ export default function Filters({ onFilterChange }) {
             id="creditMaxFilter" 
             min="100000" 
             max="100000000" 
-            step="100000"
+            step="5000"
             value={filters.creditMax}
             onChange={handleChange}
             className="range-slider"
@@ -213,20 +272,28 @@ export default function Filters({ onFilterChange }) {
       {/* Filtro por Datas */}
       <div className="filter-group">
         <h3 className="filter-label">Datas</h3>
-        <input 
-          type="date" 
-          id="startDateFilter" 
-          className="filter-input"
-          value={filters.startDate}
-          onChange={handleChange}
-        />
-        <input 
-          type="date" 
-          id="endDateFilter" 
-          className="filter-input"
-          value={filters.endDate}
-          onChange={handleChange}
-        />
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+          <div>
+            <label style={{ fontSize: '11px', color: 'var(--text-light)', marginBottom: '4px', display: 'block' }}>Data Início</label>
+            <input 
+              type="date" 
+              id="startDateFilter" 
+              className="filter-input"
+              value={filters.startDate}
+              onChange={handleChange}
+            />
+          </div>
+          <div>
+            <label style={{ fontSize: '11px', color: 'var(--text-light)', marginBottom: '4px', display: 'block' }}>Data Fim</label>
+            <input 
+              type="date" 
+              id="endDateFilter" 
+              className="filter-input"
+              value={filters.endDate}
+              onChange={handleChange}
+            />
+          </div>
+        </div>
       </div>
 
       {/* Área */}
@@ -239,11 +306,9 @@ export default function Filters({ onFilterChange }) {
           onChange={handleChange}
         >
           <option value="">Todas as áreas</option>
-          <option value="Agro">Agro</option>
-          <option value="Saúde">Saúde</option>
-          <option value="Energia">Energia</option>
-          <option value="Tecnologia">Tecnologia</option>
-          <option value="Educação">Educação</option>
+          {availableAreas.map(area => (
+            <option key={area} value={area}>{area}</option>
+          ))}
         </select>
       </div>
 
@@ -251,8 +316,7 @@ export default function Filters({ onFilterChange }) {
       <div className="filter-group">
         <h3 className="filter-label">Órgão Financiador</h3>
         <div className="checkbox-list">
-          {/* Órgãos Estáticos */}
-          {['CNPQ', 'FAPERGS', 'FINEP', 'BNDES', 'CORDIS'].map(org => (
+          {availableOrgs.map(org => (
             <label key={org} className="checkbox-label">
               <input 
                 type="checkbox" 
@@ -263,28 +327,8 @@ export default function Filters({ onFilterChange }) {
               <span>{org}</span>
             </label>
           ))}
-          
-          {/* Órgãos Dinâmicos do Banco */}
-          {orgsFromDb.map(org => (
-            // Evita duplicar se já estiver na lista estática
-            !['CNPQ', 'FAPERGS', 'FINEP', 'BNDES', 'CORDIS'].includes(org.nome.toUpperCase()) && (
-              <label key={org.id_organizacao} className="checkbox-label">
-                <input 
-                  type="checkbox" 
-                  id={`org-${org.nome.toLowerCase()}`}
-                  checked={filters.orgs[org.nome.toLowerCase()] || false}
-                  onChange={handleChange}
-                />
-                <span>{org.nome}</span>
-              </label>
-            )
-          ))}
         </div>
       </div>
-
-      <button className="btn-clear-filters" onClick={clearFilters}>
-        Limpar Filtros
-      </button>
     </div>
   );
 }

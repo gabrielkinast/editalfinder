@@ -25,7 +25,7 @@ export default function Header({ onSearch }) {
         <div className="header-top-mobile">
           <div className="logo-header" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
             {settings.logoImage ? (
-              <img src={settings.logoImage} alt="Logo" style={{ maxHeight: '45px' }} />
+              <img src={settings.logoImage} alt="Logo" style={{ maxHeight: '70px', width: 'auto' }} />
             ) : (
               <span>{settings.logoText}</span>
             )}

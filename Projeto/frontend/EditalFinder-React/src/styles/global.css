@@ -484,6 +484,14 @@ html, body {
     overflow-y: auto;
 }
 
+@media (max-width: 768px) {
+    .main-content {
+        padding: 15px;
+        width: 100%;
+        overflow-x: hidden;
+    }
+}
+
 .content-header {
     display: flex;
     justify-content: space-between;
@@ -491,6 +499,21 @@ html, body {
     margin-bottom: 28px;
     flex-wrap: wrap;
     gap: 16px;
+}
+
+@media (max-width: 768px) {
+    .content-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        margin-bottom: 20px;
+    }
+
+    .content-actions {
+        width: 100%;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+    }
 }
 
 .content-header h2 {
@@ -513,12 +536,15 @@ html, body {
 }
 
 .btn-export {
-    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
     background: var(--primary-yellow);
     color: var(--text-dark);
     border: none;
     border-radius: var(--border-radius);
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 600;
     cursor: pointer;
     transition: all var(--transition);
@@ -534,21 +560,42 @@ html, body {
 /* Grid de Editais */
 .editais-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 20px;
+    justify-content: start;
+    width: 100%;
+}
+
+@media (max-width: 480px) {
+    .editais-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
 }
 
 .edital-card {
     background: var(--bg-white);
-    border-radius: var(--border-radius);
+    border-radius: 10px;
     padding: 20px;
     box-shadow: var(--shadow-soft);
     transition: all var(--transition-slow);
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 14px;
     border: 1px solid var(--border-light);
     animation: fadeIn 300ms ease-out;
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    min-width: 0; /* Importante para não estourar no flex/grid */
+}
+
+@media (max-width: 768px) {
+    .edital-card {
+        padding: 18px;
+        gap: 14px;
+        max-width: 100%;
+    }
 }
 
 @keyframes fadeIn {
@@ -570,37 +617,66 @@ html, body {
 
 .edital-title {
     font-family: 'Poppins', sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 700;
     color: var(--text-dark);
-    line-height: 1.4;
+    line-height: 1.3;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: 55px;
+    margin-bottom: 4px;
+}
+
+@media (max-width: 768px) {
+    .edital-title {
+        font-size: 15px;
+        min-height: auto;
+        -webkit-line-clamp: 4;
+    }
 }
 
 .edital-badge {
     display: inline-block;
     background: var(--primary-blue);
     color: white;
-    padding: 6px 12px;
+    padding: 4px 10px;
     border-radius: 20px;
-    font-size: 11px;
+    font-size: 10px;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.3px;
     width: fit-content;
+    margin-bottom: 8px;
 }
 
 .edital-meta {
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    font-size: 13px;
+    gap: 6px;
+    font-size: 12px;
     color: var(--text-light);
 }
 
 .edital-meta-row {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+@media (max-width: 768px) {
+    .edital-meta-row {
+        justify-content: flex-start;
+        gap: 4px;
+    }
+
+    .edital-meta-row span:last-child {
+        text-align: left;
+        font-weight: 600;
+        color: var(--text-dark);
+    }
 }
 
 .edital-meta-label {
@@ -614,39 +690,125 @@ html, body {
 }
 
 .edital-date {
-    background: rgba(30, 136, 229, 0.08);
+    background: #F0F7FF;
     color: var(--primary-blue);
-    padding: 8px 12px;
-    border-radius: 6px;
+    padding: 10px 12px;
+    border-radius: 8px;
     font-weight: 600;
     text-align: center;
     font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: auto;
+}
+
+@media (max-width: 768px) {
+    .edital-date {
+        padding: 6px 10px;
+        font-size: 10px;
+        width: fit-content;
+        align-self: flex-start;
+        justify-content: flex-start;
+        box-sizing: border-box;
+    }
+}
+
+@media (max-width: 480px) {
+    .edital-date {
+        padding: 4px 8px;
+        font-size: 9px;
+        gap: 4px;
+    }
 }
 
 .edital-actions {
     display: flex;
     gap: 8px;
-    margin-top: 8px;
+    margin-top: 12px;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .edital-actions {
+        margin-top: 8px;
+        align-self: flex-start;
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    .edital-actions {
+        margin-top: 6px;
+    }
 }
 
 .btn-view {
-    flex: 1;
-    padding: 10px 14px;
-    background: var(--primary-yellow);
-    color: var(--text-dark);
+    padding: 12px 24px;
+    background: var(--primary-blue);
+    color: white;
     border: none;
     border-radius: var(--border-radius);
-    font-size: 13px;
-    font-weight: 600;
+    font-size: 14px;
+    font-weight: 700;
     cursor: pointer;
     transition: all var(--transition);
     box-shadow: var(--shadow-soft);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: fit-content;
 }
 
 .btn-view:hover {
+    filter: brightness(90%);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-medium);
+}
+
+.btn-pdf {
+    padding: 12px 24px;
+    background: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all var(--transition);
+    box-shadow: var(--shadow-soft);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: fit-content;
+}
+
+.btn-pdf:hover {
     filter: brightness(95%);
     transform: translateY(-2px);
     box-shadow: var(--shadow-medium);
+}
+
+@media (max-width: 768px) {
+    .btn-pdf {
+        padding: 10px 22px;
+        font-size: 13px;
+        min-height: 40px;
+        flex: none;
+        width: fit-content;
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn-pdf {
+        padding: 8px 18px;
+        font-size: 12px;
+        min-height: 36px;
+    }
 }
 
 .empty-state {
@@ -685,25 +847,25 @@ html, body {
     background-color: var(--bg-white);
     border-radius: 12px;
     width: 95%;
-    max-width: 600px; /* Aumentado de 450px */
+    max-width: 700px; /* Aumentado de 600px */
     padding: 32px;
     box-shadow: var(--shadow-medium);
     position: relative;
     animation: slideUp 400ms ease-out;
-    max-height: 90vh;
+    max-height: 95vh; /* Aumentado de 90vh */
     overflow-y: auto;
 }
 
 /* Modais Largos (como o de Edital) */
 .modal-large {
-    max-width: 1000px !important; /* Aumentado de 1200px para um valor mais equilibrado, ou mantido largo conforme necessidade */
+    max-width: 1100px !important; /* Aumentado de 1000px */
     width: 95% !important;
-    padding: 25px 30px !important;
+    padding: 30px 40px !important; /* Aumentado o padding */
 }
 
 @media (min-width: 1200px) {
     .modal-large {
-        max-width: 1100px !important;
+        max-width: 1200px !important; /* Aumentado de 1100px */
     }
 }
 
@@ -964,8 +1126,22 @@ html, body {
     border: 1px solid #FFD0D0;
 }
 
+.btn-open-link {
+    background: #FFFDE7;
+    color: #FBC02D;
+    border: 1px solid #FFF59D;
+}
+
+.btn-open-pdf {
+    background: #E0F7FA;
+    color: #00ACC1;
+    border: 1px solid #B2EBF2;
+}
+
 .btn-edit:hover { background: #E0EFFF; }
 .btn-delete:hover { background: #FFE0E0; }
+.btn-open-link:hover { background: #FFF9C4; }
+.btn-open-pdf:hover { background: #B2EBF2; }
 
 .status-select {
     padding: 6px 10px;
@@ -1351,7 +1527,7 @@ button, input:not([type="range"]), select, textarea {
     }
 
     .editais-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     }
 
     .admin-container {
@@ -1412,7 +1588,7 @@ button, input:not([type="range"]), select, textarea {
 /* Desktop (lg: 1024px) */
 @media (min-width: 1024px) {
     .editais-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     }
 
     .main-content {
@@ -1427,7 +1603,7 @@ button, input:not([type="range"]), select, textarea {
 /* Large Desktop (xl: 1280px) */
 @media (min-width: 1440px) {
     .editais-grid {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     }
 }
 
