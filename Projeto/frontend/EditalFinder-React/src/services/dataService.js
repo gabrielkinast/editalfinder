@@ -1,4 +1,5 @@
 import { supabase } from './api';
+import { classificarEdital } from './classificationService';
 
 const staticEditais = [
     {
@@ -45,21 +46,36 @@ export const dataService = {
     const manuaisFormatados = manuais.map(m => {
         const estado = m.estado || '';
         const isInternacional = estado.toLowerCase().includes('internacional') || estado === 'Exterior';
-        
+        const classificacao = classificarEdital(m);
+
         return {
             id: `manual-${m.id_edital}`,
             titulo: m.titulo,
             orgao: m.fonte_recurso || (m.organizacao ? m.organizacao.nome : 'Manual'),
-            area: m.temas || 'Geral',
+            area: m.temas || classificacao.area.join(', '),
             valor: m.valor_maximo || 0,
             localidade: isInternacional ? 'Internacional' : 'Nacional',
             estado: estado,
             dataLimite: m.prazo_envio,
-            tipoRecurso: m.situacao || 'Edital',
+            tipoRecurso: classificacao.tipo,
             isManual: true,
             linkOriginal: m.link,
             pdfUrl: m.pdf_url,
-            orgSite: m.organizacao ? m.organizacao.site : null
+            orgSite: m.organizacao ? m.organizacao.site : null,
+            // Campos inteligentes do banco
+            score:          m.score || 0,
+            scoreDetalhado: m.score_detalhado || {},
+            justificativa:  m.justificativa || null,
+            compatibilidade: m.compatibilidade || {},
+            recomendacao:   m.recomendacao || null,
+            valorMinimo:    m.valor_minimo || 0,
+            valorMaximo:    m.valor_maximo || 0,
+            elegibilidade:  m.elegibilidade || null,
+            contrapartida:  m.contrapartida || null,
+            ods:            m.ods || null,
+            contato:        m.contato || null,
+            linkInscricao:  m.link_inscricao || null,
+            regiao:         m.regiao || null,
         };
     });
 
@@ -79,6 +95,26 @@ export const dataService = {
   async deleteEdital(id) {
     const { error } = await supabase.from('edital').delete().eq('id_edital', id);
     if (error) throw error;
+  },
+
+  async getEditalById(idEdital) {
+    const { data, error } = await supabase
+      .from('edital')
+      .select(`*, organizacao ( nome, site )`)
+      .eq('id_edital', idEdital)
+      .single();
+    if (error) throw error;
+    return data;
+  },
+
+  async getAnexosByEdital(idEdital) {
+    const { data, error } = await supabase
+      .from('edital_anexo')
+      .select('*')
+      .eq('id_edital', idEdital)
+      .order('criado_em', { ascending: true });
+    if (error) throw error;
+    return data || [];
   },
 
   async getAllEditaisAdmin() {

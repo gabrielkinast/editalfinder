@@ -1,18 +1,19 @@
 import { useState, useEffect, useMemo } from 'react';
 import { dataService } from '../../services/dataService';
 
+const PERFIS = ['Startup', 'ONG', 'Universidade', 'Empresa Industrial', 'Pesquisador', 'MEI', 'Cooperativa', 'Escola', 'Hospital', 'Governo'];
+const REGIOES = ['Nacional', 'Sul', 'Sudeste', 'Nordeste', 'Centro-Oeste', 'Norte'];
+const COMPAT_THRESHOLD = 70;
+
 export default function Filters({ onFilterChange, allEditais = [] }) {
   const [filters, setFilters] = useState({
-    state: '',
-    nacional: false,
-    internacional: false,
-    keyword: '',
     resourceType: '',
-    creditMax: 100000000,
-    startDate: '',
-    endDate: '',
-    area: '',
-    orgs: {}, // Inicialmente vazio, será preenchido dinamicamente
+    areas: {},
+    orgs: {},
+    perfil: '',
+    regiao: '',
+    valorMin: '',
+    valorMax: '',
   });
 
   // Extrair todas as áreas únicas dos editais carregados
@@ -41,25 +42,8 @@ export default function Filters({ onFilterChange, allEditais = [] }) {
     return Array.from(areas).sort();
   }, [allEditais]);
 
-  // Extrair todos os tipos de recursos únicos dos editais carregados
-  const availableResourceTypes = useMemo(() => {
-    const types = new Set();
-    
-    // Adiciona tipos padrão que sempre devem aparecer
-    ['Subvenção econômica', 'Linha de crédito', 'Investimento', 'Fomento à inovação', 'Bolsa pesquisa'].forEach(t => types.add(t));
-    
-    // Adiciona todos os tipos encontrados nos editais
-    allEditais.forEach(edital => {
-      if (edital.tipoRecurso) {
-        // Normaliza para manter o padrão (primeira letra maiúscula)
-        const tr = edital.tipoRecurso.trim();
-        const formatted = tr.charAt(0).toUpperCase() + tr.slice(1).toLowerCase();
-        types.add(formatted);
-      }
-    });
-    
-    return Array.from(types).sort();
-  }, [allEditais]);
+  // Tipos de recurso fixos
+  const availableResourceTypes = ['Linha de crédito', 'Subvenção econômica'];
 
   // Extrair todos os órgãos financiadores únicos dos editais carregados
   const availableOrgs = useMemo(() => {
@@ -78,6 +62,27 @@ export default function Filters({ onFilterChange, allEditais = [] }) {
     
     return Array.from(orgs).sort();
   }, [allEditais]);
+
+  // Atualiza o estado das áreas quando novas áreas são descobertas
+  useEffect(() => {
+    setFilters(prev => {
+      const newAreasState = { ...prev.areas };
+      let changed = false;
+
+      availableAreas.forEach(area => {
+        const key = area.toLowerCase();
+        if (newAreasState[key] === undefined) {
+          newAreasState[key] = false;
+          changed = true;
+        }
+      });
+
+      if (changed) {
+        return { ...prev, areas: newAreasState };
+      }
+      return prev;
+    });
+  }, [availableAreas]);
 
   // Atualiza o estado dos filtros quando novos órgãos são descobertos
   useEffect(() => {
@@ -114,6 +119,12 @@ export default function Filters({ onFilterChange, allEditais = [] }) {
           ...prev,
           orgs: { ...prev.orgs, [orgKey]: checked }
         }));
+      } else if (id.startsWith('area-')) {
+        const areaKey = id.replace('area-', '');
+        setFilters(prev => ({
+          ...prev,
+          areas: { ...prev.areas, [areaKey]: checked }
+        }));
       } else {
         setFilters(prev => ({ ...prev, [id.replace('Filter', '')]: checked }));
       }
@@ -124,27 +135,26 @@ export default function Filters({ onFilterChange, allEditais = [] }) {
 
   const clearFilters = () => {
     const resetOrgs = {};
-    Object.keys(filters.orgs).forEach(key => {
-      resetOrgs[key] = false;
-    });
+    Object.keys(filters.orgs).forEach(key => { resetOrgs[key] = false; });
+
+    const resetAreas = {};
+    Object.keys(filters.areas).forEach(key => { resetAreas[key] = false; });
 
     setFilters({
-      state: '',
-      nacional: false,
-      internacional: false,
-      keyword: '',
       resourceType: '',
-      creditMax: 100000000,
-      startDate: '',
-      endDate: '',
-      area: '',
+      areas: resetAreas,
       orgs: resetOrgs,
+      perfil: '',
+      regiao: '',
+      valorMin: '',
+      valorMax: '',
     });
   };
 
-  const formatCurrency = (value) => {
-    return `R$ ${Number(value).toLocaleString('pt-BR')}`;
+  const togglePerfil = (perfil) => {
+    setFilters(prev => ({ ...prev, perfil: prev.perfil === perfil ? '' : perfil }));
   };
+
 
   return (
     <div className="filters-section">
@@ -157,80 +167,6 @@ export default function Filters({ onFilterChange, allEditais = [] }) {
         >
           Limpar Filtros
         </button>
-      </div>
-
-      {/* Localidade */}
-      <div className="filter-group">
-        <h3 className="filter-label">Localidade</h3>
-        <select 
-          id="stateFilter" 
-          className="filter-select"
-          value={filters.state}
-          onChange={handleChange}
-        >
-          <option value="">Todos os estados</option>
-          <option value="Acre">Acre</option>
-          <option value="Alagoas">Alagoas</option>
-          <option value="Amapá">Amapá</option>
-          <option value="Amazonas">Amazonas</option>
-          <option value="Bahia">Bahia</option>
-          <option value="Ceará">Ceará</option>
-          <option value="Distrito Federal">Distrito Federal</option>
-          <option value="Espírito Santo">Espírito Santo</option>
-          <option value="Goiás">Goiás</option>
-          <option value="Maranhão">Maranhão</option>
-          <option value="Mato Grosso">Mato Grosso</option>
-          <option value="Mato Grosso do Sul">Mato Grosso do Sul</option>
-          <option value="Minas Gerais">Minas Gerais</option>
-          <option value="Pará">Pará</option>
-          <option value="Paraíba">Paraíba</option>
-          <option value="Paraná">Paraná</option>
-          <option value="Pernambuco">Pernambuco</option>
-          <option value="Piauí">Piauí</option>
-          <option value="Rio de Janeiro">Rio de Janeiro</option>
-          <option value="Rio Grande do Norte">Rio Grande do Norte</option>
-          <option value="Rio Grande do Sul">Rio Grande do Sul</option>
-          <option value="Rondônia">Rondônia</option>
-          <option value="Roraima">Roraima</option>
-          <option value="Santa Catarina">Santa Catarina</option>
-          <option value="São Paulo">São Paulo</option>
-          <option value="Sergipe">Sergipe</option>
-          <option value="Tocantins">Tocantins</option>
-        </select>
-
-        <div className="checkbox-group">
-          <label className="checkbox-label">
-            <input 
-              type="checkbox" 
-              id="nacionalFilter" 
-              checked={filters.nacional}
-              onChange={handleChange}
-            />
-            <span>Nacional</span>
-          </label>
-          <label className="checkbox-label">
-            <input 
-              type="checkbox" 
-              id="internacionalFilter" 
-              checked={filters.internacional}
-              onChange={handleChange}
-            />
-            <span>Internacional</span>
-          </label>
-        </div>
-      </div>
-
-      {/* Pesquisa por Palavras */}
-      <div className="filter-group">
-        <h3 className="filter-label">Pesquisa</h3>
-        <input 
-          type="text" 
-          id="keywordFilter" 
-          placeholder="Ex: agro, saúde, energia"
-          className="filter-input"
-          value={filters.keyword}
-          onChange={handleChange}
-        />
       </div>
 
       {/* Tipo de Recurso */}
@@ -249,67 +185,64 @@ export default function Filters({ onFilterChange, allEditais = [] }) {
         </select>
       </div>
 
-      {/* Faixa de Crédito */}
+      {/* Região */}
       <div className="filter-group">
-        <h3 className="filter-label">Faixa de Crédito</h3>
-        <div className="range-container">
-          <input 
-            type="range" 
-            id="creditMaxFilter" 
-            min="100000" 
-            max="100000000" 
-            step="5000"
-            value={filters.creditMax}
-            onChange={handleChange}
-            className="range-slider"
-          />
-          <div className="range-display">
-            <span>Até: <strong>{formatCurrency(filters.creditMax)}</strong></span>
-          </div>
-        </div>
+        <h3 className="filter-label">Região</h3>
+        <select
+          id="regiaoFilter"
+          className="filter-select"
+          value={filters.regiao}
+          onChange={handleChange}
+        >
+          <option value="">Todas as regiões</option>
+          {REGIOES.map(r => (
+            <option key={r} value={r}>{r}</option>
+          ))}
+        </select>
       </div>
 
-      {/* Filtro por Datas */}
+      {/* Faixa de Valor */}
       <div className="filter-group">
-        <h3 className="filter-label">Datas</h3>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-          <div>
-            <label style={{ fontSize: '11px', color: 'var(--text-light)', marginBottom: '4px', display: 'block' }}>Data Início</label>
-            <input 
-              type="date" 
-              id="startDateFilter" 
-              className="filter-input"
-              value={filters.startDate}
-              onChange={handleChange}
-            />
-          </div>
-          <div>
-            <label style={{ fontSize: '11px', color: 'var(--text-light)', marginBottom: '4px', display: 'block' }}>Data Fim</label>
-            <input 
-              type="date" 
-              id="endDateFilter" 
-              className="filter-input"
-              value={filters.endDate}
-              onChange={handleChange}
-            />
-          </div>
+        <h3 className="filter-label">Faixa de Valor (R$)</h3>
+        <div className="valor-range">
+          <input
+            type="number"
+            id="valorMinFilter"
+            className="filter-input-valor"
+            placeholder="Mínimo"
+            value={filters.valorMin}
+            onChange={handleChange}
+            min="0"
+          />
+          <span className="valor-range-sep">até</span>
+          <input
+            type="number"
+            id="valorMaxFilter"
+            className="filter-input-valor"
+            placeholder="Máximo"
+            value={filters.valorMax}
+            onChange={handleChange}
+            min="0"
+          />
         </div>
       </div>
 
       {/* Área */}
       <div className="filter-group">
         <h3 className="filter-label">Área</h3>
-        <select 
-          id="areaFilter" 
-          className="filter-select"
-          value={filters.area}
-          onChange={handleChange}
-        >
-          <option value="">Todas as áreas</option>
+        <div className="checkbox-list">
           {availableAreas.map(area => (
-            <option key={area} value={area}>{area}</option>
+            <label key={area} className="checkbox-label">
+              <input
+                type="checkbox"
+                id={`area-${area.toLowerCase()}`}
+                checked={filters.areas[area.toLowerCase()] || false}
+                onChange={handleChange}
+              />
+              <span>{area}</span>
+            </label>
           ))}
-        </select>
+        </div>
       </div>
 
       {/* Órgão Financiador */}

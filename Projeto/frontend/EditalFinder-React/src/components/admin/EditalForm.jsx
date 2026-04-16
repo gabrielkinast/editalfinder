@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { formatCurrency } from '../../utils/formatters';
 import { dataService } from '../../services/dataService';
+import { classificarEdital } from '../../services/classificationService';
 
 export default function EditalForm({ initialData, onSave, onCancel }) {
   const [formData, setFormData] = useState({
@@ -22,6 +23,7 @@ export default function EditalForm({ initialData, onSave, onCancel }) {
   });
 
   const [orgs, setOrgs] = useState([]);
+  const [classificacao, setClassificacao] = useState(null);
 
   const estados = [
     { uf: 'AC', nome: 'Acre' },
@@ -81,6 +83,18 @@ export default function EditalForm({ initialData, onSave, onCancel }) {
     }));
   };
 
+  const handleAutoClassify = () => {
+    const resultado = classificarEdital(formData);
+    setClassificacao(resultado);
+
+    // Aplica temas automaticamente se o campo estiver vazio
+    setFormData(prev => ({
+      ...prev,
+      temas: prev.temas || resultado.area.join(', '),
+      fonte_recurso: prev.fonte_recurso || resultado.orgao || prev.fonte_recurso,
+    }));
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     
@@ -109,6 +123,64 @@ export default function EditalForm({ initialData, onSave, onCancel }) {
         </div>
 
         <div className="form-section-title">Detalhes e Classificação</div>
+
+        {/* Classificação automática */}
+        <div className="form-group full-width" style={{ marginBottom: 0 }}>
+          <button
+            type="button"
+            onClick={handleAutoClassify}
+            style={{
+              background: 'linear-gradient(135deg, #6c47ff, #a07cff)',
+              color: '#fff',
+              border: 'none',
+              borderRadius: '8px',
+              padding: '8px 16px',
+              fontSize: '13px',
+              fontWeight: '600',
+              cursor: 'pointer',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '6px',
+            }}
+          >
+            ✦ Classificar automaticamente
+          </button>
+        </div>
+
+        {classificacao && (
+          <div
+            className="form-group full-width"
+            style={{
+              background: '#f4f1ff',
+              border: '1px solid #c9b8ff',
+              borderRadius: '10px',
+              padding: '12px 16px',
+              fontSize: '13px',
+              lineHeight: '1.6',
+            }}
+          >
+            <strong>Resultado da classificação</strong>
+            <div style={{ marginTop: '8px', display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+              <span style={{ background: '#6c47ff', color: '#fff', borderRadius: '6px', padding: '2px 10px' }}>
+                Tipo: {classificacao.tipo}
+              </span>
+              {classificacao.orgao && (
+                <span style={{ background: '#3b82f6', color: '#fff', borderRadius: '6px', padding: '2px 10px' }}>
+                  Órgão: {classificacao.orgao}
+                </span>
+              )}
+              <span style={{ background: '#10b981', color: '#fff', borderRadius: '6px', padding: '2px 10px' }}>
+                Confiança: {classificacao.nivel_confianca}%
+              </span>
+            </div>
+            <div style={{ marginTop: '6px', color: '#555' }}>
+              <strong>Áreas:</strong> {classificacao.area.join(', ')}
+            </div>
+            <div style={{ marginTop: '4px', color: '#777', fontStyle: 'italic' }}>
+              {classificacao.justificativa}
+            </div>
+          </div>
+        )}
         <div className="form-group">
           <label>Temas</label>
           <input type="text" name="temas" value={formData.temas} onChange={handleChange} placeholder="Ex: IA, Saúde, Sustentabilidade" />

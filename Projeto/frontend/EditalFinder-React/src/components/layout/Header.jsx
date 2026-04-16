@@ -58,6 +58,13 @@ export default function Header({ onSearch }) {
               Cadastros
             </NavLink>
           )}
+          <NavLink
+            to="/radar-fomento"
+            className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}
+            onClick={() => setIsMenuOpen(false)}
+          >
+            🎯 Radar de Fomento
+          </NavLink>
         </nav>
 
         <div className={`header-right ${isMenuOpen ? 'open' : ''}`}>
