@@ -9,7 +9,8 @@ from extrair_informações import FinepScraper
 from models import EditalFinep
 from utils import normalize_ascii
 
-OUTPUT_DIR = Path("outputs")
+BASE_DIR = Path(__file__).parent
+OUTPUT_DIR = BASE_DIR / "outputs"
 OUTPUT_DIR.mkdir(exist_ok=True)
 CSV_PATH = OUTPUT_DIR / "finep_editais.csv"
 JSON_PATH = OUTPUT_DIR / "finep_editais.json"
