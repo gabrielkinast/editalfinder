@@ -34,106 +34,61 @@ export default function Dashboard() {
   const handleFilterChange = useCallback((filters) => {
     let result = [...allEditais];
 
-    const stateMap = {
-      'AC': 'Acre', 'AL': 'Alagoas', 'AP': 'Amapá', 'AM': 'Amazonas', 'BA': 'Bahia',
-      'CE': 'Ceará', 'DF': 'Distrito Federal', 'ES': 'Espírito Santo', 'GO': 'Goiás',
-      'MA': 'Maranhão', 'MT': 'Mato Grosso', 'MS': 'Mato Grosso do Sul', 'MG': 'Minas Gerais',
-      'PA': 'Pará', 'PB': 'Paraíba', 'PR': 'Paraná', 'PE': 'Pernambuco', 'PI': 'Piauí',
-      'RJ': 'Rio de Janeiro', 'RN': 'Rio Grande do Norte', 'RS': 'Rio Grande do Sul',
-      'RO': 'Rondônia', 'RR': 'Roraima', 'SC': 'Santa Catarina', 'SP': 'São Paulo',
-      'SE': 'Sergipe', 'TO': 'Tocantins'
-    };
-
-    // Filtro de estado
-    if (filters.state) {
-      result = result.filter(e => {
-        const editalState = e.estado || '';
-        const editalStateFull = stateMap[editalState.toUpperCase()] || editalState;
-        
-        const stateMatch = editalStateFull === filters.state || editalState.toUpperCase() === filters.state.toUpperCase();
-        
-        // Se o filtro for Rio Grande do Sul, também mostra editais da FAPERGS
-        if (filters.state === 'Rio Grande do Sul') {
-          return stateMatch || e.orgao.toUpperCase().includes('FAPERGS');
-        }
-        return stateMatch;
-      });
-    }
-
-    // Filtro de localidade (Nacional / Internacional)
-    if (filters.nacional || filters.internacional) {
-      result = result.filter(e => {
-        const locality = (e.localidade || '').toLowerCase();
-        const state = (e.estado || '').toLowerCase();
-        
-        // Internacional: Se a localidade for internacional OR o estado for internacional OR o estado for 'Exterior'
-        const isActuallyInternacional = locality === 'internacional' || state === 'internacional' || state === 'exterior' || state === 'ex';
-
-        // Nacional: Se não for internacional, e tiver localidade nacional ou um estado brasileiro preenchido
-        const isActuallyNacional = !isActuallyInternacional && (locality === 'nacional' || state !== '');
-        
-        const matchesNacional = filters.nacional && isActuallyNacional;
-        const matchesInternacional = filters.internacional && isActuallyInternacional;
-        
-        return matchesNacional || matchesInternacional;
-      });
-    }
-
-    // Filtro de palavras-chave
-    if (filters.keyword) {
-      const kw = filters.keyword.toLowerCase();
-      result = result.filter(e => 
-        (e.titulo || '').toLowerCase().includes(kw) || 
-        (e.area || '').toLowerCase().includes(kw) ||
-        (e.orgao || '').toLowerCase().includes(kw)
-      );
-    }
-
     // Filtro de tipo de recurso
     if (filters.resourceType) {
       const typeFilter = filters.resourceType.toLowerCase();
       result = result.filter(e => (e.tipoRecurso || '').toLowerCase() === typeFilter);
     }
 
-    // Filtro de crédito
-    if (filters.creditMax) {
-      result = result.filter(e => e.valor <= filters.creditMax);
-    }
-
-    // Filtro de datas
-    if (filters.startDate || filters.endDate) {
+    // Filtro de perfil (compatibilidade JSONB > threshold)
+    if (filters.perfil) {
       result = result.filter(e => {
-        if (!e.dataLimite) return false;
-        const editalDate = new Date(e.dataLimite);
-        if (filters.startDate && new Date(filters.startDate) > editalDate) return false;
-        if (filters.endDate && new Date(filters.endDate) < editalDate) return false;
-        return true;
+        const comp = e.compatibilidade || {};
+        const val = parseFloat(comp[filters.perfil] ?? comp[filters.perfil?.toLowerCase()] ?? -1);
+        return val >= 70;
       });
     }
 
-    // Filtro de área
-    if (filters.area) {
-      const areaFilter = filters.area.toLowerCase();
+    // Filtro de região
+    if (filters.regiao) {
       result = result.filter(e => {
-        // Verifica se a área está explicitamente listada no campo de área
+        const regiao = (e.regiao || e.localidade || '').toLowerCase();
+        return regiao.includes(filters.regiao.toLowerCase());
+      });
+    }
+
+    // Filtro de faixa de valor — compara com o valor real do edital
+    if (filters.valorMin !== '' && filters.valorMin !== undefined) {
+      const min = parseFloat(filters.valorMin);
+      if (!isNaN(min)) result = result.filter(e => (e.valor || e.valorMaximo || 0) >= min);
+    }
+    if (filters.valorMax !== '' && filters.valorMax !== undefined) {
+      const max = parseFloat(filters.valorMax);
+      if (!isNaN(max)) result = result.filter(e => (e.valor || e.valorMaximo || 0) <= max);
+    }
+
+    // Filtro de área
+    const activeAreas = Object.entries(filters.areas || {})
+      .filter(([_, active]) => active)
+      .map(([name]) => name.toLowerCase());
+
+    if (activeAreas.length > 0) {
+      result = result.filter(e => {
         const editalAreas = (e.area || '').split(/[,;]/).map(a => a.trim().toLowerCase());
-        const hasDirectArea = editalAreas.includes(areaFilter);
-        
-        // Verifica se o termo da área está presente no título (sincronizando com a busca por texto)
-        const hasInTitle = (e.titulo || '').toLowerCase().includes(areaFilter);
-        
+        const hasDirectArea = activeAreas.some(a => editalAreas.includes(a));
+        const hasInTitle = activeAreas.some(a => (e.titulo || '').toLowerCase().includes(a));
         return hasDirectArea || hasInTitle;
       });
     }
 
     // Filtro de órgão
-    const activeOrgs = Object.entries(filters.orgs)
+    const activeOrgs = Object.entries(filters.orgs || {})
       .filter(([_, active]) => active)
       .map(([name]) => name.toUpperCase());
 
     if (activeOrgs.length > 0) {
       result = result.filter(e => {
-        const orgaoUpper = e.orgao.toUpperCase();
+        const orgaoUpper = (e.orgao || '').toUpperCase();
         return activeOrgs.some(org => orgaoUpper.includes(org));
       });
     }
@@ -142,11 +97,14 @@ export default function Dashboard() {
     if (globalSearch) {
       const gs = globalSearch.toLowerCase();
       result = result.filter(e => 
-        e.titulo.toLowerCase().includes(gs) ||
-        e.orgao.toLowerCase().includes(gs) ||
-        e.area.toLowerCase().includes(gs)
+        (e.titulo || '').toLowerCase().includes(gs) ||
+        (e.orgao || '').toLowerCase().includes(gs) ||
+        (e.area || '').toLowerCase().includes(gs)
       );
     }
+
+    // Ordenar por score decrescente
+    result.sort((a, b) => (b.score || 0) - (a.score || 0));
 
     setFilteredEditais(result);
   }, [allEditais, globalSearch]);
