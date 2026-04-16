@@ -1,14 +1,12 @@
-from __future__ import annotations
-
 from dataclasses import dataclass, asdict
-from datetime import date
 from typing import Optional
+from datetime import date
 
-
-@dataclass(slots=True)
+@dataclass
 class EditalFinep:
     titulo: str
     url: str
+    fonte: str
     situacao: Optional[str] = None
     data_publicacao: Optional[date] = None
     prazo_envio: Optional[date] = None
@@ -22,6 +20,7 @@ class EditalFinep:
     def to_dict(self) -> dict:
         data = asdict(self)
         for key in ("data_publicacao", "prazo_envio"):
-            if data[key] is not None:
-                data[key] = data[key].isoformat()
+            if data.get(key) is not None:
+                if isinstance(data[key], date):
+                    data[key] = data[key].isoformat()
         return data

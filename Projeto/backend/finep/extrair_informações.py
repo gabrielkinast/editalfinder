@@ -116,10 +116,12 @@ class FinepScraper:
         campos = self._extract_fields(text)
         descricao = self._extract_description(soup, text)
         pdf_url = self._extract_pdf_url(soup, url, html)
+        fonte = self._detect_source(text, titulo)
 
         edital = EditalFinep(
             titulo=titulo,
             url=url,
+            fonte=fonte,
             situacao=campos.get("situacao"),
             data_publicacao=parse_br_date(campos.get("data_publicacao")),
             prazo_envio=parse_br_date(campos.get("prazo_envio")),
@@ -132,6 +134,18 @@ class FinepScraper:
         )
 
         return self._normalize_edital(edital)
+
+    def _detect_source(self, text: str, title: str) -> str:
+        full_text = f"{title} {text}".lower()
+        
+        if "fndct" in full_text:
+            return "FNDCT"
+        if "funttel" in full_text:
+            return "FUNTTEL"
+        if "bndes" in full_text or "funtec" in full_text:
+            return "BNDES Funtec"
+            
+        return "Finep"
 
     def _extract_title(self, soup: BeautifulSoup, text: str) -> str:
         for selector in ("h1", "h2", ".page-header h2", ".item-page h2", ".contentheading"):
