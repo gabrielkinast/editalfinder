@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom';
+import { CRITERIOS } from '../../services/matchService';
 
 const COR = {
   Alta:  '#22c55e',
@@ -6,19 +7,19 @@ const COR = {
   Baixa: '#ef4444',
 };
 
-const CRITERIO_LABEL = {
-  area:         'Área/Temas',
-  localizacao:  'Localização',
-  porte:        'Porte',
-  valor:        'Faixa de Valor',
-  regularidade: 'Regularidade',
-};
-
-const CRITERIO_MAX = {
-  area: 35, localizacao: 20, porte: 20, valor: 15, regularidade: 10,
-};
-
-export default function CardEditalRadar({ edital, score, compatibilidade, razoes = [], detalhes = {}, favorito, onFavoritar }) {
+export default function CardEditalRadar({
+  edital,
+  score,
+  compatibilidade,
+  razoes = [],
+  detalhes = {},
+  matchLinha,
+  fonteMatch,
+  prazoInfo,
+  expirado,
+  favorito,
+  onFavoritar,
+}) {
   const navigate    = useNavigate();
   const idNumerico  = String(edital.id).replace('manual-', '');
 
@@ -30,9 +31,13 @@ export default function CardEditalRadar({ edital, score, compatibilidade, razoes
   const cor      = COR[compatibilidade] || COR.Baixa;
   const siteLink = edital.linkInscricao || edital.linkOriginal || edital.orgSite || null;
   const pdfLink  = edital.pdfUrl || null;
+  const scorePct = Number.isFinite(Number(score)) ? Math.min(100, Math.max(0, Math.round(Number(score)))) : 0;
+
+  const mostraCriterios = detalhes && CRITERIOS.some(c => Number.isFinite(detalhes[c.key]));
+  const rotuloPrazo = prazoInfo?.rotulo;
 
   return (
-    <div className={`radar-card ${compatibilidade === 'Alta' ? 'radar-card-destaque' : ''}`}>
+    <div className={`radar-card ${compatibilidade === 'Alta' ? 'radar-card-destaque' : ''} ${expirado ? 'radar-card-expirado' : ''}`}>
       {/* Cabeçalho */}
       <div className="radar-card-header">
         <div className="radar-card-titulo-wrap">
@@ -49,41 +54,79 @@ export default function CardEditalRadar({ edital, score, compatibilidade, razoes
         </button>
       </div>
 
+      {/* Linha de badges de situação temporal */}
+      {(expirado || rotuloPrazo === 'curto') && (
+        <div className="radar-card-flags">
+          {expirado && (
+            <span
+              className="radar-badge radar-badge-expirado"
+              title="Edital com prazo expirado ou status inativo"
+            >
+              ⏳ Expirado
+            </span>
+          )}
+          {!expirado && rotuloPrazo === 'curto' && (
+            <span
+              className="radar-badge radar-badge-prazo-curto"
+              title={`Faltam ${prazoInfo?.dias ?? '?'} dia(s) para o prazo de envio`}
+            >
+              ⚡ Prazo curto
+            </span>
+          )}
+        </div>
+      )}
+
       {/* Barra de score geral */}
       <div className="radar-score-row">
         <div className="radar-score-bar-wrap">
-          <div className="radar-score-bar" style={{ width: `${score}%`, background: cor }} />
+          <div className="radar-score-bar" style={{ width: `${scorePct}%`, background: cor }} />
         </div>
-        <span className="radar-score-pct">{score}%</span>
+        <span className="radar-score-pct">{scorePct}%</span>
         <span className={`radar-badge ${badgeClass}`}>{compatibilidade}</span>
       </div>
 
-      {/* Detalhamento por critério */}
-      {Object.keys(detalhes).length > 0 && (
+      {matchLinha && (
+        <p
+          className="radar-match-linha"
+          title={
+            fonteMatch === 'hibrido'
+              ? 'Índice combina o JSON compatibilidade do edital (perfil que bate no cliente) com o cálculo dos 8 critérios do cadastro'
+              : fonteMatch === 'json'
+                ? 'Percentual vindo do JSON compatibilidade do edital'
+                : 'Estimativa pelos 8 critérios do cadastro (sem JSON aplicável)'
+          }
+        >
+          {matchLinha}
+        </p>
+      )}
+
+      {/* Mini-barras por critério (8 critérios do novo índice) */}
+      {mostraCriterios && (
         <div className="radar-criterios">
-          {Object.entries(detalhes).map(([chave, pts]) => {
-            const max = CRITERIO_MAX[chave] || 10;
-            const pct = Math.round((pts / max) * 100);
+          {CRITERIOS.map(c => {
+            const pts = Number.isFinite(detalhes[c.key]) ? detalhes[c.key] : 0;
+            const pct = c.max > 0 ? Math.min(100, Math.max(0, Math.round((pts / c.max) * 100))) : 0;
+            const nivel = pct >= 75 ? 'alto' : pct >= 40 ? 'medio' : 'baixo';
             return (
-              <div key={chave} className="radar-criterio-row">
-                <span className="radar-criterio-nome">{CRITERIO_LABEL[chave]}</span>
+              <div key={c.key} className="radar-criterio-row" title={`${c.label}: ${pts}/${c.max} pts`}>
+                <span className="radar-criterio-nome">{c.label}</span>
                 <div className="radar-criterio-barra-wrap">
                   <div
-                    className="radar-criterio-barra"
-                    style={{ width: `${pct}%`, background: pct >= 75 ? '#22c55e' : pct >= 45 ? '#f59e0b' : '#ef4444' }}
+                    className={`radar-criterio-barra radar-criterio-barra-${nivel}`}
+                    style={{ width: `${pct}%` }}
                   />
                 </div>
-                <span className="radar-criterio-pts">{pts}/{max}</span>
+                <span className="radar-criterio-pts">{pts}/{c.max}</span>
               </div>
             );
           })}
         </div>
       )}
 
-      {/* Motivos do match */}
+      {/* Razões (tags curtas) */}
       {razoes.length > 0 && (
         <div className="radar-razoes">
-          {razoes.map((r, i) => (
+          {razoes.slice(0, 6).map((r, i) => (
             <span key={i} className="radar-razao-tag">✓ {r}</span>
           ))}
         </div>
@@ -110,13 +153,13 @@ export default function CardEditalRadar({ edital, score, compatibilidade, razoes
         ) : (
           <span className="radar-btn-pdf disabled">📄 PDF</span>
         )}
-        {edital.isManual && (
+        {edital.isManual && edital.temAnexos && (
           <button
             className="radar-btn-anexos"
             onClick={() => navigate(`/edital/${idNumerico}`)}
             title="Ver documentos e detalhes completos"
           >
-            📋 Anexos
+            📋 Detalhes
           </button>
         )}
       </div>

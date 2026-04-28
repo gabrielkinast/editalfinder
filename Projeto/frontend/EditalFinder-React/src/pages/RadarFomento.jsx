@@ -3,7 +3,7 @@ import Header from '../components/layout/Header';
 import ListaClientes from '../components/radar/ListaClientes';
 import CardEditalRadar from '../components/radar/CardEditalRadar';
 import { dataService } from '../services/dataService';
-import { recomendarEditais } from '../services/matchService';
+import { recomendarEditais, tiposRecursoEditaisNaAreaDoCliente } from '../services/matchService';
 
 // Favoritos persistidos no localStorage por cliente: { [clienteId]: [editalId, ...] }
 function carregarFavoritos() {
@@ -23,6 +23,7 @@ export default function RadarFomento() {
   const [editais, setEditais]                 = useState([]);
   const [clienteSelecionado, setClienteSeleo] = useState(null);
   const [loading, setLoading]                 = useState(true);
+  const [loadError, setLoadError]             = useState(null);
   const [recalcKey, setRecalcKey]             = useState(0);
 
   // { [clienteId]: Set<editalId> }
@@ -43,6 +44,7 @@ export default function RadarFomento() {
   useEffect(() => {
     async function load() {
       try {
+        setLoadError(null);
         const [cls, eds] = await Promise.all([
           dataService.getClients(),
           dataService.getEditais(),
@@ -51,6 +53,7 @@ export default function RadarFomento() {
         setEditais(eds);
       } catch (e) {
         console.error('Erro ao carregar dados:', e);
+        setLoadError('Não foi possível carregar clientes ou editais. Verifique a conexão e tente recarregar a página.');
       } finally {
         setLoading(false);
       }
@@ -58,20 +61,55 @@ export default function RadarFomento() {
     load();
   }, []);
 
-  // Favoritos do cliente selecionado (Set)
+  // Conjunto de IDs de editais realmente existentes (carregados agora)
+  const editaisIdsExistentes = useMemo(
+    () => new Set(editais.map(e => e.id)),
+    [editais]
+  );
+
+  // Limpa favoritos órfãos (IDs de editais que não existem mais) quando os editais
+  // terminam de carregar. Também persiste a limpeza no localStorage.
+  useEffect(() => {
+    if (loading || editais.length === 0) return;
+    setFavoritos(prev => {
+      let mudou = false;
+      const next = {};
+      Object.entries(prev).forEach(([cid, set]) => {
+        const filtrado = new Set();
+        set.forEach(id => {
+          if (editaisIdsExistentes.has(id)) filtrado.add(id);
+        });
+        if (filtrado.size !== set.size) mudou = true;
+        if (filtrado.size > 0) next[cid] = filtrado;
+        else if (set.size > 0) mudou = true;
+      });
+      if (!mudou) return prev;
+      const raw = {};
+      Object.entries(next).forEach(([k, s]) => { raw[k] = [...s]; });
+      salvarFavoritos(raw);
+      return next;
+    });
+  }, [loading, editais, editaisIdsExistentes]);
+
+  // Favoritos do cliente selecionado (Set) — apenas IDs que ainda existem
   const favoritosCliente = useMemo(() => {
     if (!clienteSelecionado) return new Set();
-    return favoritos[clienteSelecionado.id_cliente] || new Set();
-  }, [favoritos, clienteSelecionado]);
+    const bruto = favoritos[clienteSelecionado.id_cliente] || new Set();
+    const valido = new Set();
+    bruto.forEach(id => { if (editaisIdsExistentes.has(id)) valido.add(id); });
+    return valido;
+  }, [favoritos, clienteSelecionado, editaisIdsExistentes]);
 
-  // Contagem de favoritos por cliente (para o painel esquerdo)
+  // Contagem de favoritos por cliente (painel esquerdo) — apenas editais existentes
   const favoritosCount = useMemo(() => {
     const counts = {};
     Object.entries(favoritos).forEach(([cid, ids]) => {
-      counts[cid] = ids.size;
+      let n = 0;
+      ids.forEach(id => { if (editaisIdsExistentes.has(id)) n++; });
+      counts[cid] = n;
     });
     return counts;
-  }, [favoritos]);
+  }, [favoritos, editaisIdsExistentes]);
 
   const toggleFavorito = (editalId) => {
     if (!clienteSelecionado) return;
@@ -104,6 +142,17 @@ export default function RadarFomento() {
     () => [...new Set(editais.map(e => e.orgao).filter(Boolean))].sort(),
     [editais]
   );
+
+  // Tipos de recurso só entre editais cuja área/tema cruza com o perfil do cliente
+  const tiposRecursoDisponiveis = useMemo(() => {
+    if (!clienteSelecionado) return [];
+    return tiposRecursoEditaisNaAreaDoCliente(clienteSelecionado, editais);
+  }, [clienteSelecionado, editais]);
+
+  useEffect(() => {
+    if (!filtroTipo) return;
+    if (!tiposRecursoDisponiveis.includes(filtroTipo)) setFiltroTipo('');
+  }, [filtroTipo, tiposRecursoDisponiveis]);
 
   // Aplica filtros
   const recomendacoesFiltradas = useMemo(() => {
@@ -158,55 +207,11 @@ export default function RadarFomento() {
         {/* ── Painel direito: recomendações ── */}
         <div className="radar-resultado-panel">
 
-          {/* Legenda do índice de compatibilidade */}
-          <div className="radar-legenda-box">
-            <div className="radar-legenda-titulo">📊 Como funciona o Índice de Compatibilidade</div>
-            <p className="radar-legenda-descricao">
-              Cada edital recebe uma pontuação de <strong>0 a 100 pontos</strong> com base no perfil do cliente, calculada em 5 critérios:
-            </p>
-            <div className="radar-legenda-criterios">
-              <div className="radar-legenda-criterio">
-                <span className="radar-legenda-pts">até 35 pts</span>
-                <div>
-                  <strong>Área e Temas</strong>
-                  <span>Cruza área de inovação, setor, temas de interesse e descrição do projeto do cliente com os temas, título, objetivo, público-alvo e elegibilidade do edital. +7 por palavra em comum.</span>
-                </div>
-              </div>
-              <div className="radar-legenda-criterio">
-                <span className="radar-legenda-pts">até 20 pts</span>
-                <div>
-                  <strong>Localização</strong>
-                  <span>20 pts se o edital é nacional ou está no mesmo estado do cliente. 15 pts se mesma região. 10 pts se sem restrição geográfica.</span>
-                </div>
-              </div>
-              <div className="radar-legenda-criterio">
-                <span className="radar-legenda-pts">até 20 pts</span>
-                <div>
-                  <strong>Porte / Elegibilidade</strong>
-                  <span>20 pts se o porte do cliente (MEI, ME, EPP, Média, Grande) é explicitamente compatível com o público-alvo do edital. 15 pts se o edital não restringe porte.</span>
-                </div>
-              </div>
-              <div className="radar-legenda-criterio">
-                <span className="radar-legenda-pts">até 15 pts</span>
-                <div>
-                  <strong>Faixa de Valor</strong>
-                  <span>15 pts se o valor do edital está dentro da faixa de interesse do cliente. 8 pts se há sobreposição parcial. 10 pts se o cliente não definiu faixa (neutro).</span>
-                </div>
-              </div>
-              <div className="radar-legenda-criterio">
-                <span className="radar-legenda-pts">até 10 pts</span>
-                <div>
-                  <strong>Regularidade</strong>
-                  <span>Bônus por regularidade fiscal e trabalhista (+4 pts), certidão negativa (+3 pts) e disponibilidade de contrapartida (+3 pts).</span>
-                </div>
-              </div>
+          {loadError && !loading && (
+            <div className="radar-load-erro" role="alert">
+              {loadError}
             </div>
-            <div className="radar-legenda-cores">
-              <span className="radar-legenda-cor radar-legenda-cor-alta">● Alta — 75 a 100 pts</span>
-              <span className="radar-legenda-cor radar-legenda-cor-media">● Média — 45 a 74 pts</span>
-              <span className="radar-legenda-cor radar-legenda-cor-baixa">● Baixa — 0 a 44 pts</span>
-            </div>
-          </div>
+          )}
 
           {!clienteSelecionado ? (
             <div className="radar-placeholder">
@@ -252,10 +257,20 @@ export default function RadarFomento() {
                     <button className="radar-busca-clear" onClick={() => setFiltroBusca('')} title="Limpar busca">✕</button>
                   )}
                 </div>
-                <select value={filtroTipo} onChange={e => setFiltroTipo(e.target.value)} className="radar-select">
+                <select
+                  value={filtroTipo}
+                  onChange={e => setFiltroTipo(e.target.value)}
+                  className="radar-select"
+                  title={
+                    tiposRecursoDisponiveis.length === 0
+                      ? 'Nenhum edital com tipo definido combina com áreas/temas do cadastro. Ajuste temas de interesse ou área de inovação.'
+                      : 'Tipos de recurso presentes em editais alinhados às áreas e temas do cliente'
+                  }
+                >
                   <option value="">Todos os tipos</option>
-                  <option value="Linha de crédito">Linha de crédito</option>
-                  <option value="Subvenção econômica">Subvenção econômica</option>
+                  {tiposRecursoDisponiveis.map(t => (
+                    <option key={t} value={t}>{t}</option>
+                  ))}
                 </select>
                 <select value={filtroOrgao} onChange={e => setFiltroOrgao(e.target.value)} className="radar-select">
                   <option value="">Todos os órgãos</option>
@@ -294,13 +309,18 @@ export default function RadarFomento() {
                 <section className="radar-secao">
                   <h3 className="radar-secao-titulo">⭐ Melhores Oportunidades</h3>
                   <div className="radar-grid">
-                    {melhoresOportunidades.map(({ edital, score, compatibilidade, razoes }) => (
+                    {melhoresOportunidades.map(({ edital, score, compatibilidade, razoes, detalhes, matchLinha, fonteMatch, prazoInfo, expirado }) => (
                       <CardEditalRadar
                         key={edital.id}
                         edital={edital}
                         score={score}
                         compatibilidade={compatibilidade}
                         razoes={razoes}
+                        detalhes={detalhes}
+                        matchLinha={matchLinha}
+                        fonteMatch={fonteMatch}
+                        prazoInfo={prazoInfo}
+                        expirado={expirado}
                         favorito={favoritosCliente.has(edital.id)}
                         onFavoritar={toggleFavorito}
                       />
@@ -316,13 +336,18 @@ export default function RadarFomento() {
                     <h3 className="radar-secao-titulo">Outros Editais</h3>
                   )}
                   <div className="radar-grid">
-                    {demais.map(({ edital, score, compatibilidade, razoes }) => (
+                    {demais.map(({ edital, score, compatibilidade, razoes, detalhes, matchLinha, fonteMatch, prazoInfo, expirado }) => (
                       <CardEditalRadar
                         key={edital.id}
                         edital={edital}
                         score={score}
                         compatibilidade={compatibilidade}
                         razoes={razoes}
+                        detalhes={detalhes}
+                        matchLinha={matchLinha}
+                        fonteMatch={fonteMatch}
+                        prazoInfo={prazoInfo}
+                        expirado={expirado}
                         favorito={favoritosCliente.has(edital.id)}
                         onFavoritar={toggleFavorito}
                       />

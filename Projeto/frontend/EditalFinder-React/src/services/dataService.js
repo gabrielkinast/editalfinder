@@ -1,45 +1,13 @@
 import { supabase } from './api';
 import { classificarEdital } from './classificationService';
 
-const staticEditais = [
-    {
-        id: 1,
-        titulo: "Edital de Inovação Agro 2026",
-        orgao: "FINEP",
-        area: "Agro",
-        valor: 5000000,
-        localidade: "Nacional",
-        estado: "SP",
-        dataLimite: "2026-10-30",
-        tipoRecurso: "Subvenção econômica",
-        linkOriginal: "https://www.finep.gov.br",
-        pdfUrl: "https://www.finep.gov.br"
-    },
-    {
-        id: 2,
-        titulo: "Fomento à Pesquisa em Saúde",
-        orgao: "BNDES",
-        area: "Saúde",
-        valor: 8500000,
-        localidade: "Nacional",
-        estado: "RJ",
-        dataLimite: "2026-09-15",
-        tipoRecurso: "Bolsa pesquisa",
-        linkOriginal: "https://www.bndes.gov.br",
-        pdfUrl: "https://www.bndes.gov.br"
-    },
-];
-
 export const dataService = {
   // --- EDITAIS ---
   async getEditais() {
     const { data: manuais, error } = await supabase
       .from('edital')
-      .select(`
-          *,
-          organizacao ( nome, site )
-      `)
-      .eq('status', 'Ativo');
+      .select('*')
+      .order('id_edital', { ascending: false });
 
     if (error) throw error;
 
@@ -51,7 +19,7 @@ export const dataService = {
         return {
             id: `manual-${m.id_edital}`,
             titulo: m.titulo,
-            orgao: m.fonte_recurso || (m.organizacao ? m.organizacao.nome : 'Manual'),
+            orgao: m.fonte_recurso || 'Manual',
             area: m.temas || classificacao.area.join(', '),
             valor: m.valor_maximo || 0,
             localidade: isInternacional ? 'Internacional' : 'Nacional',
@@ -61,12 +29,17 @@ export const dataService = {
             isManual: true,
             linkOriginal: m.link,
             pdfUrl: m.pdf_url,
-            orgSite: m.organizacao ? m.organizacao.site : null,
+            orgSite: null,
+            // Campos brutos do edital (Radar / calcularScore)
+            temas:         m.temas || null,
+            objetivo:      m.objetivo || null,
+            publico_alvo:  m.publico_alvo || null,
+            descricao:     m.descricao || null,
             // Campos inteligentes do banco
             score:          m.score || 0,
             scoreDetalhado: m.score_detalhado || {},
             justificativa:  m.justificativa || null,
-            compatibilidade: m.compatibilidade || {},
+            compatibilidade: m.compatibilidade != null ? m.compatibilidade : null,
             recomendacao:   m.recomendacao || null,
             valorMinimo:    m.valor_minimo || 0,
             valorMaximo:    m.valor_maximo || 0,
@@ -76,10 +49,13 @@ export const dataService = {
             contato:        m.contato || null,
             linkInscricao:  m.link_inscricao || null,
             regiao:         m.regiao || null,
+            situacao:       m.situacao || null,
+            status:         m.status || null,
+            temAnexos:      !!(m.pdf_url),
         };
     });
 
-    return [...staticEditais, ...manuaisFormatados];
+    return manuaisFormatados;
   },
 
   async createEdital(data) {
@@ -100,7 +76,7 @@ export const dataService = {
   async getEditalById(idEdital) {
     const { data, error } = await supabase
       .from('edital')
-      .select(`*, organizacao ( nome, site )`)
+      .select('*')
       .eq('id_edital', idEdital)
       .single();
     if (error) throw error;
@@ -120,7 +96,7 @@ export const dataService = {
   async getAllEditaisAdmin() {
     const { data, error } = await supabase
       .from('edital')
-      .select(`*, organizacao ( nome )`)
+      .select('*')
       .order('id_edital', { ascending: true });
     if (error) throw error;
     return data;

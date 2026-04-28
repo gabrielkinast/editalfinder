@@ -1,8 +1,94 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import Header from '../components/layout/Header';
 import { dataService } from '../services/dataService';
 import { formatDate, formatCurrency } from '../utils/formatters';
+import { calcularScore } from '../services/matchService';
+
+// Perfis representativos para cálculo dinâmico de compatibilidade
+// Campos alinhados com os nomes esperados pelo matchService.js
+const PERFIS_MOCK = {
+  'Startup': {
+    setor: 'Tecnologia', area_inovacao: 'startup inovação tecnologia software',
+    interesse_temas: 'inovação tecnologia digital empreendedorismo',
+    descricao_projeto: 'desenvolvimento de produto tecnológico inovador',
+    porte_empresa: 'ME', estado: 'SP', regiao: 'Sudeste',
+    regular_fiscal: true, regular_trabalhista: true,
+    possui_certidao_negativa: true, disponibilidade_contrapartida: false,
+  },
+  'MEI': {
+    setor: 'Comércio', area_inovacao: 'mei microempreendedor serviços comércio',
+    interesse_temas: 'empreendedorismo negócio microempresa',
+    descricao_projeto: 'pequeno negócio individual de serviços',
+    porte_empresa: 'MEI', estado: 'SP', regiao: 'Sudeste',
+    regular_fiscal: true, regular_trabalhista: false,
+    possui_certidao_negativa: false, disponibilidade_contrapartida: false,
+  },
+  'Universidade': {
+    setor: 'Educação', area_inovacao: 'pesquisa ciência educação universidade laboratório',
+    interesse_temas: 'pesquisa científica inovação acadêmica bolsa graduação pós-graduação',
+    descricao_projeto: 'pesquisa e desenvolvimento científico em ambiente universitário',
+    porte_empresa: 'Grande', estado: 'SP', regiao: 'Sudeste',
+    regular_fiscal: true, regular_trabalhista: true,
+    possui_certidao_negativa: true, disponibilidade_contrapartida: true,
+  },
+  'Pesquisador': {
+    setor: 'Pesquisa', area_inovacao: 'pesquisa ciência laboratório desenvolvimento',
+    interesse_temas: 'pesquisa desenvolvimento científico inovação tecnológica',
+    descricao_projeto: 'projeto de pesquisa aplicada e desenvolvimento experimental',
+    porte_empresa: 'ME', estado: 'SP', regiao: 'Sudeste',
+    regular_fiscal: true, regular_trabalhista: true,
+    possui_certidao_negativa: true, disponibilidade_contrapartida: false,
+  },
+  'ONG': {
+    setor: 'Terceiro Setor', area_inovacao: 'ong social impacto comunidade sustentabilidade',
+    interesse_temas: 'impacto social sustentabilidade inclusão ambiental',
+    descricao_projeto: 'organização sem fins lucrativos de impacto social',
+    porte_empresa: 'ME', estado: 'SP', regiao: 'Sudeste',
+    regular_fiscal: true, regular_trabalhista: true,
+    possui_certidao_negativa: true, disponibilidade_contrapartida: false,
+  },
+  'Empresa Industrial': {
+    setor: 'Indústria', area_inovacao: 'indústria manufatura produção industrial automação',
+    interesse_temas: 'processo produtivo automação indústria 4.0 manufatura',
+    descricao_projeto: 'empresa de médio/grande porte no setor industrial',
+    porte_empresa: 'Grande', estado: 'SP', regiao: 'Sudeste',
+    regular_fiscal: true, regular_trabalhista: true,
+    possui_certidao_negativa: true, disponibilidade_contrapartida: true,
+  },
+  'Cooperativa': {
+    setor: 'Agronegócio', area_inovacao: 'cooperativa agro rural agrícola agricultura',
+    interesse_temas: 'cooperativismo agronegócio rural pecuária alimentos',
+    descricao_projeto: 'cooperativa agrícola do sul do Brasil',
+    porte_empresa: 'Média', estado: 'PR', regiao: 'Sul',
+    regular_fiscal: true, regular_trabalhista: true,
+    possui_certidao_negativa: true, disponibilidade_contrapartida: true,
+  },
+  'Escola': {
+    setor: 'Educação', area_inovacao: 'escola educação ensino aluno aprendizagem',
+    interesse_temas: 'educação ensino básico formação pedagógica',
+    descricao_projeto: 'instituição de ensino básico ou médio',
+    porte_empresa: 'ME', estado: 'SP', regiao: 'Sudeste',
+    regular_fiscal: true, regular_trabalhista: true,
+    possui_certidao_negativa: true, disponibilidade_contrapartida: false,
+  },
+  'Hospital': {
+    setor: 'Saúde', area_inovacao: 'saúde hospital medicina clínica tratamento',
+    interesse_temas: 'saúde medicina pesquisa clínica hospitalar',
+    descricao_projeto: 'hospital ou clínica de saúde de grande porte',
+    porte_empresa: 'Grande', estado: 'SP', regiao: 'Sudeste',
+    regular_fiscal: true, regular_trabalhista: true,
+    possui_certidao_negativa: true, disponibilidade_contrapartida: true,
+  },
+  'Governo': {
+    setor: 'Governo', area_inovacao: 'governo público municipal estadual federal',
+    interesse_temas: 'gestão pública políticas públicas infraestrutura social',
+    descricao_projeto: 'órgão público municipal ou estadual',
+    porte_empresa: 'Grande', estado: 'SP', regiao: 'Sudeste',
+    regular_fiscal: true, regular_trabalhista: true,
+    possui_certidao_negativa: true, disponibilidade_contrapartida: true,
+  },
+};
 
 const ICONE_TIPO = {
   pdf:   '📄',
@@ -19,6 +105,13 @@ function iconeAnexo(tipo = '', nome = '') {
   return ICONE_TIPO[ext] || '📎';
 }
 
+/** Retorna string de URL pronta para href, ou null se inválida/vazia */
+function urlDisponivel(val) {
+  if (val == null || typeof val !== 'string') return null;
+  const t = val.trim();
+  return t.length > 0 ? t : null;
+}
+
 
 export default function EditalDetalhes() {
   const { id } = useParams();
@@ -28,6 +121,31 @@ export default function EditalDetalhes() {
   const [anexos, setAnexos]   = useState([]);
   const [loading, setLoading] = useState(true);
   const [erro, setErro]       = useState(null);
+
+  // ⚠️ Todos os hooks ANTES dos early returns (Regras de Hooks)
+  const perfisCompativeis = useMemo(() => {
+    if (!edital) return [];
+    const editalFormatado = {
+      titulo:       edital.titulo,
+      temas:        edital.temas,
+      objetivo:     edital.objetivo,
+      descricao:    edital.descricao,
+      publico_alvo: edital.publico_alvo,
+      elegibilidade: edital.elegibilidade,
+      estado:       edital.estado,
+      regiao:       edital.regiao,
+      valor:        edital.valor_maximo,
+      valorMinimo:  edital.valor_minimo,
+      valorMaximo:  edital.valor_maximo,
+      tipoRecurso:  edital.fonte_recurso,
+    };
+    return Object.entries(PERFIS_MOCK)
+      .map(([nomePerfil, mockCliente]) => {
+        const { score, compatibilidade: compat } = calcularScore(mockCliente, editalFormatado);
+        return { perfil: nomePerfil, score, compatibilidade: compat };
+      })
+      .sort((a, b) => b.score - a.score);
+  }, [edital]);
 
   useEffect(() => {
     async function load() {
@@ -73,12 +191,6 @@ export default function EditalDetalhes() {
     ? edital.recomendacao.split(/[,;]/).map(t => t.trim()).filter(Boolean)
     : [];
 
-  // Compatibilidade por perfil (JSONB do banco)
-  const compatibilidade = edital.compatibilidade || {};
-  const perfisCompativeis = Object.entries(compatibilidade)
-    .filter(([, v]) => parseFloat(v) > 0)
-    .sort(([, a], [, b]) => parseFloat(b) - parseFloat(a));
-
   // Áreas temáticas do edital
   const areasTags = (edital.temas || edital.objetivo || '')
     .split(/[,;]/)
@@ -91,6 +203,13 @@ export default function EditalDetalhes() {
     if (v >= 50) return '#d97706';
     return '#dc2626';
   };
+
+  // Links externos validados (não renderizar href vazio ou só espaços)
+  const linkInscricao = urlDisponivel(edital.link_inscricao);
+  const linkEdital    = urlDisponivel(edital.link);
+  const linkSite      = linkEdital && linkInscricao && linkEdital === linkInscricao ? null : linkEdital;
+  const pdfUrl        = urlDisponivel(edital.pdf_url);
+  const temAcoesLaterais = !!(linkInscricao || linkSite || pdfUrl);
 
   return (
     <div className="page-wrapper">
@@ -107,9 +226,6 @@ export default function EditalDetalhes() {
           <div className="detalhes-hero-info">
             <span className="detalhes-orgao-badge">{edital.fonte_recurso || (edital.organizacao?.nome) || '—'}</span>
             <h1 className="detalhes-titulo">{edital.titulo}</h1>
-            {edital.justificativa && (
-              <p className="detalhes-justificativa">"{edital.justificativa}"</p>
-            )}
           </div>
         </div>
 
@@ -179,8 +295,8 @@ export default function EditalDetalhes() {
             <section className="detalhes-secao">
               <h2 className="detalhes-secao-titulo">📎 Documentos e PDFs</h2>
 
-              {/* PDF principal */}
-              {edital.pdf_url ? (
+              {/* PDF principal — href só com URL válida */}
+              {pdfUrl ? (
                 <div className="detalhes-doc-principal">
                   <div className="detalhes-doc-icon">📄</div>
                   <div className="detalhes-doc-info">
@@ -188,7 +304,7 @@ export default function EditalDetalhes() {
                     <span className="detalhes-doc-tipo">Documento oficial do edital</span>
                   </div>
                   <a
-                    href={edital.pdf_url}
+                    href={pdfUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="detalhes-doc-btn detalhes-doc-btn-pdf"
@@ -204,7 +320,9 @@ export default function EditalDetalhes() {
               {anexos.length > 0 ? (
                 <div className="detalhes-anexos-lista">
                   <h3 className="detalhes-anexos-subtitulo">Documentos Anexos ({anexos.length})</h3>
-                  {anexos.map(anx => (
+                  {anexos.map(anx => {
+                    const urlAnexo = urlDisponivel(anx.url);
+                    return (
                     <div key={anx.id_anexo} className="detalhes-doc-item">
                       <div className="detalhes-doc-icon">{iconeAnexo(anx.tipo, anx.nome || '')}</div>
                       <div className="detalhes-doc-info">
@@ -216,9 +334,9 @@ export default function EditalDetalhes() {
                           </span>
                         )}
                       </div>
-                      {anx.url ? (
+                      {urlAnexo ? (
                         <a
-                          href={anx.url}
+                          href={urlAnexo}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="detalhes-doc-btn"
@@ -229,7 +347,8 @@ export default function EditalDetalhes() {
                         <span className="detalhes-doc-btn-disabled">Sem link</span>
                       )}
                     </div>
-                  ))}
+                    );
+                  })}
                 </div>
               ) : (
                 <p className="detalhes-sem-doc" style={{ marginTop: '12px' }}>
@@ -242,48 +361,68 @@ export default function EditalDetalhes() {
           {/* ── Coluna lateral ── */}
           <div className="detalhes-coluna-lateral">
 
-            {/* Ações rápidas */}
-            <div className="detalhes-acoes">
-              {edital.link_inscricao && (
-                <a href={edital.link_inscricao} target="_blank" rel="noopener noreferrer" className="detalhes-btn-inscricao">
-                  ✅ Ir para Inscrição
-                </a>
-              )}
-              {edital.link && (
-                <a href={edital.link} target="_blank" rel="noopener noreferrer" className="detalhes-btn-site">
-                  🌐 Acessar Site do Edital
-                </a>
-              )}
-              {edital.pdf_url && (
-                <a href={edital.pdf_url} target="_blank" rel="noopener noreferrer" className="detalhes-btn-pdf">
-                  📄 Baixar PDF Principal
-                </a>
-              )}
-            </div>
+            {/* Ações rápidas: ordem Inscrição → Site → PDF; href só com URL válida */}
+            {temAcoesLaterais ? (
+              <div className="detalhes-acoes">
+                {linkInscricao && (
+                  <a
+                    href={linkInscricao}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="detalhes-btn-inscricao"
+                  >
+                    ✅ Ir para Inscrição
+                  </a>
+                )}
+                {linkSite && (
+                  <a
+                    href={linkSite}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="detalhes-btn-site"
+                  >
+                    🌐 Acessar Site do Edital
+                  </a>
+                )}
+                {pdfUrl && (
+                  <a
+                    href={pdfUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="detalhes-btn-pdf"
+                  >
+                    📄 Baixar PDF Principal
+                  </a>
+                )}
+              </div>
+            ) : (
+              <p className="detalhes-sem-doc detalhes-acoes-vazio">
+                Nenhum link externo cadastrado (site, inscrição ou PDF).
+              </p>
+            )}
 
 
             {/* Compatibilidade por Perfil */}
-            {perfisCompativeis.length > 0 && (
-              <div className="detalhes-card-lateral">
-                <h3 className="detalhes-card-lateral-titulo">👥 Compatibilidade por Perfil</h3>
-                {perfisCompativeis.map(([perfil, pct]) => {
-                  const cor = corCompatibilidade(pct);
-                  const pctNum = Math.min(Math.round(parseFloat(pct)), 100);
-                  return (
-                    <div key={perfil} className="detalhes-perfil-row">
-                      <span className="detalhes-perfil-nome">{perfil}</span>
-                      <div className="detalhes-score-barra-wrap">
-                        <div
-                          className="detalhes-score-barra"
-                          style={{ width: `${pctNum}%`, background: cor }}
-                        />
-                      </div>
-                      <span className="detalhes-perfil-pct" style={{ color: cor }}>{pctNum}%</span>
+            <div className="detalhes-card-lateral">
+              <h3 className="detalhes-card-lateral-titulo">👥 Compatibilidade por Perfil</h3>
+              {perfisCompativeis.map(({ perfil, score, compatibilidade: compat }) => {
+                const cor = corCompatibilidade(score);
+                const badgeClass = compat === 'Alta' ? 'radar-badge-alta' : compat === 'Média' ? 'radar-badge-media' : 'radar-badge-baixa';
+                return (
+                  <div key={perfil} className="detalhes-perfil-row">
+                    <span className="detalhes-perfil-nome">{perfil}</span>
+                    <div className="detalhes-score-barra-wrap">
+                      <div
+                        className="detalhes-score-barra"
+                        style={{ width: `${score}%`, background: cor }}
+                      />
                     </div>
-                  );
-                })}
-              </div>
-            )}
+                    <span className="detalhes-perfil-pct" style={{ color: cor }}>{score}%</span>
+                    <span className={`radar-badge ${badgeClass}`} style={{ fontSize: '10px', padding: '2px 6px' }}>{compat}</span>
+                  </div>
+                );
+              })}
+            </div>
 
             {/* Áreas Temáticas */}
             {areasTags.length > 0 && (
