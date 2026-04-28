@@ -7,7 +7,8 @@ function App() {
   return (
     <AuthProvider>
       <SettingsProvider>
-        <BrowserRouter>
+        {/* Adicione o basename aqui em baixo! */}
+        <BrowserRouter basename="/editalfinder">
           <AppRoutes />
         </BrowserRouter>
       </SettingsProvider>
