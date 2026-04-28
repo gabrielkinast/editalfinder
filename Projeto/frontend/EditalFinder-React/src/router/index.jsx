@@ -3,6 +3,7 @@ import Login from '../pages/Login';
 import Dashboard from '../pages/Dashboard';
 import Cadastros from '../pages/Cadastros';
 import RadarFomento from '../pages/RadarFomento';
+import IndiceCompatibilidade from '../pages/IndiceCompatibilidade';
 import EditalDetalhes from '../pages/EditalDetalhes';
 import ProtectedRoute from './ProtectedRoute';
 
@@ -33,6 +34,14 @@ export default function AppRoutes() {
             <RadarFomento />
           </ProtectedRoute>
         } 
+      />
+      <Route
+        path="/indice"
+        element={
+          <ProtectedRoute>
+            <IndiceCompatibilidade />
+          </ProtectedRoute>
+        }
       />
       <Route
         path="/edital/:id"

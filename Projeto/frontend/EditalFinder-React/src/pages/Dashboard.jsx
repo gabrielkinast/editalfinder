@@ -22,8 +22,7 @@ export default function Dashboard() {
         setAllEditais(data);
         setFilteredEditais(data);
       } catch (error) {
-        console.error('Erro ao carregar editais:', error);
-        alert('Não foi possível carregar os editais.');
+        console.error('Erro ao carregar editais:', error?.message || error);
       } finally {
         setLoading(false);
       }

@@ -115,14 +115,14 @@ export default function EditalCard({ edital }) {
           </span>
         )}
 
-        {/* Botão Ver Detalhes — só para editais do banco (com ID numérico) */}
-        {edital.isManual && (
+        {/* Botão Anexos — apenas para editais do banco que possuem PDF/documentos */}
+        {edital.isManual && edital.temAnexos && (
           <button
             className="btn-detalhes"
             onClick={() => navigate(`/edital/${idNumerico}`)}
             title="Ver documentos e detalhes completos"
           >
-            📋 Anexos
+            📋 Detalhes
           </button>
         )}
       </div>

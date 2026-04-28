@@ -2061,6 +2061,16 @@ button, input:not([type="range"]), select, textarea {
     gap: 20px;
 }
 
+.radar-load-erro {
+    padding: 12px 14px;
+    border-radius: 8px;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    color: #991b1b;
+    font-size: 14px;
+    line-height: 1.45;
+}
+
 /* ══════════════════════════════════════════════════════════════════════════════
    PÁGINA DE DETALHES DO EDITAL
 ══════════════════════════════════════════════════════════════════════════════ */
@@ -2328,8 +2338,8 @@ button, input:not([type="range"]), select, textarea {
     gap: 8px;
     font-size: 12px;
 }
-.detalhes-score-criterio-nome,
-.detalhes-perfil-nome { flex-shrink: 0; width: 90px; color: var(--text-secondary); font-weight: 500; }
+.detalhes-score-criterio-nome { flex-shrink: 0; width: 90px; color: var(--text-secondary); font-weight: 500; }
+.detalhes-perfil-nome { flex-shrink: 0; width: 130px; color: var(--text-secondary); font-weight: 500; }
 .detalhes-score-barra-wrap {
     flex: 1;
     height: 6px;
@@ -2400,6 +2410,15 @@ button, input:not([type="range"]), select, textarea {
     gap: 10px;
 }
 
+.indice-page {
+    max-width: 1100px;
+    margin: 24px auto;
+    padding: 0 20px;
+}
+.indice-legenda-box {
+    padding: 24px 28px;
+}
+
 .radar-legenda-titulo {
     font-size: 14px;
     font-weight: 700;
@@ -2440,10 +2459,12 @@ button, input:not([type="range"]), select, textarea {
     margin-top: 1px;
 }
 
-.radar-legenda-criterio div {
+.radar-legenda-criterio > div {
     display: flex;
     flex-direction: column;
     gap: 1px;
+    flex: 1;
+    min-width: 0;
 }
 
 .radar-legenda-criterio strong {
@@ -2710,6 +2731,14 @@ button, input:not([type="range"]), select, textarea {
     gap: 8px;
 }
 
+.radar-match-linha {
+    margin: 8px 0 0;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--primary-blue);
+    line-height: 1.35;
+}
+
 .radar-score-bar-wrap {
     flex: 1;
     height: 6px;
@@ -2745,6 +2774,22 @@ button, input:not([type="range"]), select, textarea {
 .radar-badge-media { background: #fef9c3; color: #a16207; }
 .radar-badge-baixa { background: #fee2e2; color: #b91c1c; }
 
+.radar-badge-expirado    { background: #e5e7eb; color: #4b5563; }
+.radar-badge-prazo-curto { background: #fde68a; color: #92400e; }
+
+.radar-card-flags {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-top: -4px;
+}
+
+.radar-card-expirado {
+    opacity: 0.65;
+    border-left: 3px solid #9ca3af;
+}
+.radar-card-expirado .radar-card-titulo { color: #6b7280; }
+
 /* Motivos */
 /* ── Critérios detalhados do score ────────────────────────────────────────── */
 .radar-criterios {
@@ -2777,7 +2822,17 @@ button, input:not([type="range"]), select, textarea {
 .radar-criterio-barra {
     height: 100%;
     border-radius: 99px;
-    transition: width 0.3s ease;
+    background: #9ca3af;
+    transition: width 0.3s ease, background 0.3s ease;
+}
+.radar-criterio-barra-alto {
+    background: linear-gradient(90deg, #22c55e, #16a34a);
+}
+.radar-criterio-barra-medio {
+    background: linear-gradient(90deg, #fbbf24, #f59e0b);
+}
+.radar-criterio-barra-baixo {
+    background: linear-gradient(90deg, #f87171, #ef4444);
 }
 .radar-criterio-pts {
     flex-shrink: 0;
