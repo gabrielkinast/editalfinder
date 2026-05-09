@@ -1,28 +1,113 @@
-import { useState, useEffect, useCallback } from 'react';
-import { jsPDF } from 'jspdf';
-import autoTable from 'jspdf-autotable';
+import { useState, useEffect, useCallback, useMemo } from 'react';
 import * as XLSX from 'xlsx';
 import Header from '../components/layout/Header';
 import EditalCard from '../components/dashboard/EditalCard';
+import EditaisFiltersSidebar from '../components/dashboard/EditaisFiltersSidebar';
+import EditaisStatsBar from '../components/dashboard/EditaisStatsBar';
+import ActiveFiltersChips from '../components/dashboard/ActiveFiltersChips';
+import EditalDetailsModal from '../components/dashboard/EditalDetailsModal';
 import { dataService } from '../services/dataService';
-import Filters from '../components/dashboard/Filters';
-import { formatCurrency, formatDate } from '../utils/formatters';
+import { formatCurrency, formatDateLoose } from '../utils/formatters';
+import { useSettings } from '../contexts/SettingsContext';
+import { exportLandscapeTablePdf, formatDashboardFiltersForPdf } from '../services/pdfExportService';
+import {
+  filterCatalog,
+  INITIAL_SIDEBAR_FILTERS,
+  loosenSidebarForFacet,
+  rollupFacet,
+  summarizeCatalogFlags,
+} from '../utils/edital/filtersEngine';
+import { tokenizeSearchQuery } from '../utils/edital/search';
+import { SORT_OPTIONS, sortEditais } from '../utils/edital/scoring';
+import { coerceStringArray } from '../utils/edital/coerceArrays';
+import { getFonte } from '../utils/edital/editalFieldHelpers';
+import { useDebouncedValue } from '../hooks/useDebouncedValue';
+import { useEditaisPagePrefs } from '../hooks/useEditaisPagePrefs';
+
+const FAVORITES_LS = 'editais_favoritos_v1';
+
+function loadFavoriteIds() {
+  try {
+    const raw = JSON.parse(localStorage.getItem(FAVORITES_LS) || '[]');
+    return new Set(Array.isArray(raw) ? raw.map(String) : []);
+  } catch {
+    return new Set();
+  }
+}
+
+function saveFavoriteIds(set) {
+  localStorage.setItem(FAVORITES_LS, JSON.stringify([...set]));
+}
+
+function buildFilterSuggestions(totalOriginal, dbg, _filters, searchQuery = '') {
+  const out = [];
+  if (totalOriginal === 0) {
+    out.push(
+      'Nenhum edital recebido do banco. Verifique a conexão ou a view public.vw_editais_front.',
+    );
+    return out;
+  }
+  if (!dbg) return out;
+
+  const t = (k) => Number(dbg[k] ?? 0);
+
+  if (t('removedBy_toggleSoPdf') > 80)
+    out.push('Desative “Mostrar apenas com PDF” na barra lateral.');
+  if (t('removedBy_toggleAltaQualidade') > 80)
+    out.push('Desative “Apenas alta qualidade” na barra lateral.');
+  if (t('removedBy_prazoVencido') > 800) out.push('Ative “Incluir encerrados” na barra lateral.');
+  if (t('removedBy_suspeito') > totalOriginal * 0.5) out.push('Ative “Incluir suspeitos” na barra lateral.');
+  if (t('removedBy_tituloRuidoso') > totalOriginal * 0.8)
+    out.push('Em preferências, marque “Mostrar títulos ruidosos…” para rever itens ocultos como ruído.');
+  if (t('removedBy_advancedSidebar') > 400)
+    out.push('Limpe filtros específicos (tipo, fonte, área, valores) ou use “Relaxar filtros”.');
+  if (String(searchQuery).trim() && t('removedBy_buscaTokens') > totalOriginal * 0.5) {
+    out.push('A busca no topo está excluindo muitos itens; esvazie o campo ou use termos mais amplos.');
+  }
+
+  const rest = dbg.final ?? 0;
+  if (rest === 0 && totalOriginal > 50 && !out.length) {
+    out.push('Reveja filtros rápidos na sidebar e o campo de busca no topo.');
+  }
+  return out;
+}
 
 export default function Dashboard() {
+  const { settings } = useSettings();
+  const { prefs, updatePrefs } = useEditaisPagePrefs();
+
   const [allEditais, setAllEditais] = useState([]);
-  const [filteredEditais, setFilteredEditais] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [globalSearch, setGlobalSearch] = useState('');
+  const [globalSearchRaw, setGlobalSearchRaw] = useState('');
   const [showFiltersMobile, setShowFiltersMobile] = useState(false);
+  const [filters, setFilters] = useState(() => INITIAL_SIDEBAR_FILTERS());
+  const [sortId, setSortId] = useState('relevantes');
+  const [visibleCount, setVisibleCount] = useState(() => prefs.pageSize || 40);
+  const [detailEdital, setDetailEdital] = useState(null);
+  const [exportScope, setExportScope] = useState('filtered');
+  const [favIds, setFavIds] = useState(loadFavoriteIds);
+  const [showPipelineDebugPanel, setShowPipelineDebugPanel] = useState(false);
+
+  const debouncedSearch = useDebouncedValue(globalSearchRaw, 300);
+  const searchTokens = useMemo(() => tokenizeSearchQuery(debouncedSearch), [debouncedSearch]);
+
+  useEffect(() => {
+    setVisibleCount(Number(prefs.pageSize) || 40);
+  }, [prefs.pageSize]);
 
   useEffect(() => {
     const loadData = async () => {
       try {
         const data = await dataService.getEditais();
-        setAllEditais(data);
-        setFilteredEditais(data);
+        const arr = Array.isArray(data) ? data : [];
+        setAllEditais(arr);
+        if (import.meta.env.DEV) {
+          console.info('[Editais] recebidos do banco:', arr.length);
+          console.info('[Editais] amostra:', arr.slice(0, 3).map((e) => ({ id: e?.id, titulo: e?.titulo?.slice?.(0, 60), ativo: e?.ativo })));
+        }
       } catch (error) {
         console.error('Erro ao carregar editais:', error?.message || error);
+        setAllEditais([]);
       } finally {
         setLoading(false);
       }
@@ -30,229 +115,575 @@ export default function Dashboard() {
     loadData();
   }, []);
 
-  const handleFilterChange = useCallback((filters) => {
-    let result = [...allEditais];
+  const pagePrefs = useMemo(() => ({
+    showRuidos: !!prefs.showRuidos,
+  }), [prefs.showRuidos]);
 
-    // Filtro de tipo de recurso
-    if (filters.resourceType) {
-      const typeFilter = filters.resourceType.toLowerCase();
-      result = result.filter(e => (e.tipoRecurso || '').toLowerCase() === typeFilter);
+  const filteredOut = useMemo(
+    () =>
+      filterCatalog({
+        catalog: allEditais,
+        sidebar: filters,
+        searchTokens,
+        pagePrefs,
+      }),
+    [allEditais, filters, searchTokens, pagePrefs],
+  );
+
+  const filteredEditaisRaw = filteredOut.filtered;
+  const hiddenMetaBaseline = filteredOut.hiddenMeta ?? {};
+  const filterPipelineDebug = filteredOut.filterDebug ?? {};
+
+  const emptySuggestions = useMemo(
+    () =>
+      buildFilterSuggestions(
+        allEditais.length,
+        filterPipelineDebug,
+        filters,
+        debouncedSearch,
+      ),
+    [allEditais.length, filterPipelineDebug, filters, debouncedSearch],
+  );
+
+  useEffect(() => {
+    if (!import.meta.env.DEV || loading) return;
+    const dbg = filterPipelineDebug;
+    const d = dbg || {};
+    console.table({
+      totalOriginal: d.totalOriginal,
+      depoisAtivo: d.after_ativo,
+      removedByAtivo: d.removedBy_ativo,
+      depoisSuspeitos: d.after_suspeito,
+      depoisEncerrados: d.after_prazoVencido,
+      depoisTituloRuidoso: d.after_tituloRuidoso,
+      depoisTogglePdf: d.after_toggleSoPdf,
+      depoisAltaQualidade: d.after_toggleAltaQualidade,
+      depoisBusca: d.after_buscaTokens,
+      final: d.final,
+    });
+    if (typeof filterPipelineDebug.final === 'number' && filterPipelineDebug.totalOriginal > 0) {
+      console.info('[Editais] filterDebug objeto:', filterPipelineDebug);
     }
+  }, [loading, filters, debouncedSearch, filterPipelineDebug, allEditais.length]);
 
-    // Filtro de perfil (compatibilidade JSONB > threshold)
-    if (filters.perfil) {
-      result = result.filter(e => {
-        const comp = e.compatibilidade || {};
-        const val = parseFloat(comp[filters.perfil] ?? comp[filters.perfil?.toLowerCase()] ?? -1);
-        return val >= 70;
+  const sortedFiltered = useMemo(
+    () => sortEditais(filteredEditaisRaw, sortId, prefs),
+    [filteredEditaisRaw, sortId, prefs],
+  );
+
+  const visibleEditais = useMemo(
+    () => sortedFiltered.slice(0, visibleCount),
+    [sortedFiltered, visibleCount],
+  );
+
+  const statsFiltered = useMemo(() => summarizeCatalogFlags(filteredEditaisRaw), [filteredEditaisRaw]);
+
+  const facetTipoPool = useMemo(
+    () =>
+      filterCatalog({
+        catalog: allEditais,
+        sidebar: loosenSidebarForFacet(filters, 'tipoRecurso'),
+        searchTokens,
+        pagePrefs,
+      }).filtered,
+    [allEditais, filters, searchTokens, pagePrefs],
+  );
+  const facetFontePool = useMemo(
+    () =>
+      filterCatalog({
+        catalog: allEditais,
+        sidebar: loosenSidebarForFacet(filters, 'fontes'),
+        searchTokens,
+        pagePrefs,
+      }).filtered,
+    [allEditais, filters, searchTokens, pagePrefs],
+  );
+  const facetAreaPool = useMemo(
+    () =>
+      filterCatalog({
+        catalog: allEditais,
+        sidebar: loosenSidebarForFacet(filters, 'areas'),
+        searchTokens,
+        pagePrefs,
+      }).filtered,
+    [allEditais, filters, searchTokens, pagePrefs],
+  );
+
+  const facetTipoCounts = useMemo(() => {
+    const m = new Map();
+    for (const [lbl, cnt] of rollupFacet(
+      facetTipoPool,
+      (e) => String(e.tipo_recurso_raw || 'sem_tipo').toLowerCase(),
+    )) {
+      m.set(String(lbl).toLowerCase(), cnt);
+    }
+    return m;
+  }, [facetTipoPool]);
+
+  const facets = useMemo(
+    () => ({
+      tipoRecurso: rollupFacet(facetTipoPool, (e) =>
+        String(e.tipo_recurso_raw ?? 'sem_tipo').toLowerCase(),
+      ),
+      tipoRecursoCounts: facetTipoCounts,
+      fonte: rollupFacet(facetFontePool, (e) =>
+        String(getFonte(e)).trim() === 'Fonte não informada' ? '— não informado' : getFonte(e),
+      ),
+      area: rollupFacet(facetAreaPool, (e) => {
+        const a = coerceStringArray(e.area);
+        return a.length ? a[0].trim().slice(0, 42) : '— não informado';
+      }),
+    }),
+    [facetTipoPool, facetFontePool, facetAreaPool, facetTipoCounts],
+  );
+
+  const dynamicAreas = useMemo(() => {
+    const capped = facets.area.slice(0, 40);
+    return capped.map(([label, count]) => ({ label: label === '— não informado' ? 'Sem área texto' : label, count }));
+  }, [facets.area]);
+
+  const uniquePaises = useMemo(() => {
+    const s = new Set();
+    allEditais.forEach((e) => {
+      const p = String(e.pais_raw ?? '').trim();
+      if (p) s.add(p);
+    });
+    return [...s].sort((a, b) => a.localeCompare(b, 'pt-BR'));
+  }, [allEditais]);
+
+  const uniqueUFs = useMemo(() => {
+    const s = new Set();
+    allEditais.forEach((e) => {
+      const u = String(e.uf_raw ?? '').trim().toUpperCase();
+      if (u.length === 2) s.add(u);
+    });
+    return [...s].sort();
+  }, [allEditais]);
+
+  const resetFilters = useCallback(() => {
+    setFilters(INITIAL_SIDEBAR_FILTERS());
+  }, []);
+
+  /** Relaxa só PDF/qualidade/busca conforme UX — mantém incluir encerrados/suspeitos e filtros avançados como estão */
+  const relaxFilters = useCallback(() => {
+    setGlobalSearchRaw('');
+    setFilters((f) => ({
+      ...f,
+      toggleSoPdf: false,
+      toggleAltaQualidade: false,
+    }));
+  }, []);
+
+  const mostrarTudoPossivel = useCallback(() => {
+    setGlobalSearchRaw('');
+    setFilters(() => ({
+      ...INITIAL_SIDEBAR_FILTERS(),
+      toggleIncluirEncerrados: true,
+      toggleIncluirSuspeitos: true,
+      toggleMostrarInativos: true,
+      toggleSoPdf: false,
+      toggleAltaQualidade: false,
+    }));
+    updatePrefs({ showRuidos: true });
+  }, [updatePrefs]);
+
+  const toggleFavorite = useCallback((id) => {
+    setFavIds((prev) => {
+      const next = new Set(prev);
+      const k = String(id);
+      next.has(k) ? next.delete(k) : next.add(k);
+      saveFavoriteIds(next);
+      return next;
+    });
+  }, []);
+
+  /* Chips removíveis -------------------------------------------------------- */
+  const chips = useMemo(() => {
+    const out = [];
+    const rm = (fn) => () => fn();
+
+    if (filters.toggleIncluirEncerrados) {
+      out.push({
+        key: 'enc',
+        label: 'Incluir encerrados',
+        onRemove: rm(() => setFilters((f) => ({ ...f, toggleIncluirEncerrados: false }))),
       });
     }
-
-    // Filtro de região
-    if (filters.regiao) {
-      result = result.filter(e => {
-        const regiao = (e.regiao || e.localidade || '').toLowerCase();
-        return regiao.includes(filters.regiao.toLowerCase());
+    if (filters.toggleIncluirSuspeitos) {
+      out.push({
+        key: 'sus',
+        label: 'Incluir suspeitos',
+        onRemove: rm(() => setFilters((f) => ({ ...f, toggleIncluirSuspeitos: false }))),
       });
     }
-
-    // Filtro de faixa de valor — compara com o valor real do edital
-    if (filters.valorMin !== '' && filters.valorMin !== undefined) {
-      const min = parseFloat(filters.valorMin);
-      if (!isNaN(min)) result = result.filter(e => (e.valor || e.valorMaximo || 0) >= min);
-    }
-    if (filters.valorMax !== '' && filters.valorMax !== undefined) {
-      const max = parseFloat(filters.valorMax);
-      if (!isNaN(max)) result = result.filter(e => (e.valor || e.valorMaximo || 0) <= max);
-    }
-
-    // Filtro de área
-    const activeAreas = Object.entries(filters.areas || {})
-      .filter(([_, active]) => active)
-      .map(([name]) => name.toLowerCase());
-
-    if (activeAreas.length > 0) {
-      result = result.filter(e => {
-        const editalAreas = (e.area || '').split(/[,;]/).map(a => a.trim().toLowerCase());
-        const hasDirectArea = activeAreas.some(a => editalAreas.includes(a));
-        const hasInTitle = activeAreas.some(a => (e.titulo || '').toLowerCase().includes(a));
-        return hasDirectArea || hasInTitle;
+    if (filters.toggleMostrarInativos) {
+      out.push({
+        key: 'ina',
+        label: 'Mostrar inativos',
+        onRemove: rm(() => setFilters((f) => ({ ...f, toggleMostrarInativos: false }))),
       });
     }
-
-    // Filtro de órgão
-    const activeOrgs = Object.entries(filters.orgs || {})
-      .filter(([_, active]) => active)
-      .map(([name]) => name.toUpperCase());
-
-    if (activeOrgs.length > 0) {
-      result = result.filter(e => {
-        const orgaoUpper = (e.orgao || '').toUpperCase();
-        return activeOrgs.some(org => orgaoUpper.includes(org));
+    if (filters.toggleSoPdf) {
+      out.push({
+        key: 'pdf',
+        label: 'Apenas com PDF',
+        onRemove: rm(() => setFilters((f) => ({ ...f, toggleSoPdf: false }))),
       });
     }
-
-    // Filtro global
-    if (globalSearch) {
-      const gs = globalSearch.toLowerCase();
-      result = result.filter(e => 
-        (e.titulo || '').toLowerCase().includes(gs) ||
-        (e.orgao || '').toLowerCase().includes(gs) ||
-        (e.area || '').toLowerCase().includes(gs)
+    if (filters.toggleAltaQualidade) {
+      out.push({
+        key: 'q',
+        label: 'Apenas alta qualidade',
+        onRemove: rm(() => setFilters((f) => ({ ...f, toggleAltaQualidade: false }))),
+      });
+    }
+    if (filters.tipoRecurso) {
+      out.push({
+        key: 'tipoR',
+        label: `Tipo: ${filters.tipoRecurso}`,
+        onRemove: rm(() => setFilters((f) => ({ ...f, tipoRecurso: '' }))),
+      });
+    }
+    if (filters.tipoOportunidade) {
+      out.push({
+        key: 'tipoOp',
+        label: `Oport.: ${filters.tipoOportunidade}`,
+        onRemove: rm(() => setFilters((f) => ({ ...f, tipoOportunidade: '' }))),
+      });
+    }
+    if (filters.fonteBusca || Object.values(filters.fontesSelectedKeys || {}).some(Boolean)) {
+      out.push({
+        key: 'fonte',
+        label: 'Fonte filtrada',
+        onRemove: rm(() =>
+          setFilters((f) => ({
+            ...f,
+            fonteBusca: '',
+            fontesSelectedKeys: {},
+          })),
+        ),
+      });
+    }
+    Object.entries(filters.areas || {})
+      .filter(([, v]) => v)
+      .forEach(([k]) =>
+        out.push({
+          key: `ar-${k}`,
+          label: `Área: ${k}`,
+          onRemove: rm(() =>
+            setFilters((f) => ({
+              ...f,
+              areas: { ...f.areas, [k]: false },
+            })),
+          ),
+        }),
       );
+    if (filters.regiaoLegacy) {
+      out.push({
+        key: 'rg',
+        label: `Região: ${filters.regiaoLegacy}`,
+        onRemove: rm(() => setFilters((f) => ({ ...f, regiaoLegacy: '' }))),
+      });
     }
+    return out;
+  }, [filters]);
 
-    // Ordenar por score decrescente
-    result.sort((a, b) => (b.score || 0) - (a.score || 0));
+  /** Linhas extras no PDF sobre ordenação / escopo. */
+  function buildExportFilterLines() {
+    const base = formatDashboardFiltersForPdf({ ...filters, resourceType: filters.resourceTypeLegacy, regiao: filters.regiaoLegacy }, debouncedSearch);
+    const extras = [`Ordenação: ${sortId}`, `Exportação: ${exportScope}`];
+    return [...extras, ...base.filter((ln) => !extras.includes(ln))];
+  }
 
-    setFilteredEditais(result);
-  }, [allEditais, globalSearch]);
+  function resolveExportDataset() {
+    if (exportScope === 'filtered') return sortedFiltered;
+    if (exportScope === 'favorites') return sortedFiltered.filter((e) => favIds.has(String(e.id)));
+    /* all carregados */
+    return allEditais;
+  }
 
-  const handleExportPDF = () => {
+  const handleExportPDF = async () => {
     try {
-      console.log('Iniciando exportação PDF...');
-      if (filteredEditais.length === 0) {
+      const rows = resolveExportDataset();
+      if (!rows.length) {
         alert('Nenhum edital para exportar.');
         return;
       }
+      const cols = [
+        'Título',
+        'Fonte',
+        'Tipo oport.',
+        'Tipo recurso',
+        'Perfil',
+        'Setor',
+        'Área tecnológica',
+        'Prazo',
+        'Valor',
+        'Status',
+        'Qualidade',
+        'Link',
+        'PDF',
+      ];
+      const tableRows = rows.map((e) => [
+        e.titulo,
+        getFonte(e),
+        e.tipo_oportunidade_raw || '',
+        e.tipo_recurso_raw || e.tipoRecurso || '',
+        coerceStringArray(e.perfil_ideal_raw).slice(0, 4).join('; '),
+        coerceStringArray(e.setor_estrategico_raw).slice(0, 4).join('; '),
+        coerceStringArray(e.area_tecnologica_raw).slice(0, 4).join('; '),
+        (e.prazo_envio_raw || e.dataLimite) ? formatDateLoose(e.prazo_envio_raw || e.dataLimite) : '',
+        formatCurrency(Number(e.valor_principal_num ?? e.valor ?? 0)),
+        [e.validacao_status_raw, e.situacao_raw].filter(Boolean).join(' / ') || '—',
+        e.qualidade_dado_raw != null ? `${e.qualidade_dado_raw}` : '—',
+        e.link_original || e.linkOriginal || '',
+        e.pdf_url_raw || e.pdfUrl || '',
+      ]);
 
-      const doc = new jsPDF('l', 'mm', 'a4');
-      
-      doc.setFontSize(18);
-      doc.text('Relatório de Editais Encontrados', 14, 20);
-      doc.setFontSize(11);
-      doc.text(`Data de geração: ${new Date().toLocaleDateString('pt-BR')}`, 14, 30);
-      doc.text(`Total de editais: ${filteredEditais.length}`, 14, 36);
+      alert(`Exportando ${rows.length} editais (${exportScope}).`);
 
-      const tableColumn = ["Nome do Edital", "Órgão Financiador", "Área", "Valor", "Estado", "Tipo", "Limite"];
-      const tableRows = [];
-
-      filteredEditais.forEach(e => {
-        tableRows.push([
-          e.titulo,
-          e.orgao,
-          e.area,
-          formatCurrency(e.valor),
-          e.estado || 'Nacional',
-          e.tipoRecurso,
-          e.dataLimite ? formatDate(e.dataLimite) : 'N/A'
-        ]);
+      await exportLandscapeTablePdf({
+        fileNameStem: `editais_${exportScope}`,
+        reportTitle: 'Relatório de editais',
+        brandName: settings.logoText,
+        logoImage: settings.logoImage,
+        filterLines: buildExportFilterLines(),
+        totalExported: rows.length,
+        totalInDataset: allEditais.length,
+        tableHead: [cols],
+        tableBody: tableRows,
+        autoTableOptions: {},
       });
-
-      autoTable(doc, {
-        head: [tableColumn],
-        body: tableRows,
-        startY: 45,
-        styles: { fontSize: 8, cellPadding: 2 },
-        headStyles: { fillColor: [74, 108, 247], textColor: [255, 255, 255] },
-        columnStyles: {
-          0: { cellWidth: 70 },
-          1: { cellWidth: 40 },
-          2: { cellWidth: 35 },
-          3: { cellWidth: 30 },
-          4: { cellWidth: 25 },
-          5: { cellWidth: 35 },
-          6: { cellWidth: 25 },
-        }
-      });
-
-      console.log('Salvando PDF...');
-      doc.save(`editais_encontrados_${new Date().toISOString().split('T')[0]}.pdf`);
-      console.log('PDF salvo com sucesso!');
     } catch (error) {
       console.error('Erro ao gerar PDF:', error);
-      alert('Erro ao gerar PDF. Verifique o console para mais detalhes.');
+      alert('Erro ao gerar PDF.');
     }
   };
 
   const handleExportExcel = () => {
     try {
-      if (filteredEditais.length === 0) {
+      const rows = resolveExportDataset();
+      if (!rows.length) {
         alert('Nenhum edital para exportar.');
         return;
       }
-
-      // Preparar os dados para a planilha
-      const data = filteredEditais.map(e => ({
-        "Nome do Edital": e.titulo,
-        "Órgão Financiador": e.orgao,
-        "Área": e.area,
-        "Valor": formatCurrency(e.valor),
-        "Estado": e.estado || 'Nacional',
-        "Tipo": e.tipoRecurso,
-        "Limite": e.dataLimite ? formatDate(e.dataLimite) : 'N/A'
+      alert(`Exportando ${rows.length} editais (${exportScope}).`);
+      const data = rows.map((e) => ({
+        Título: e.titulo,
+        Fonte: getFonte(e),
+        tipo_oportunidade: e.tipo_oportunidade_raw || '',
+        tipo_recurso: e.tipo_recurso_raw || e.tipoRecurso || '',
+        perfil_ideal: coerceStringArray(e.perfil_ideal_raw).join('; '),
+        setor_estrategico: coerceStringArray(e.setor_estrategico_raw).join('; '),
+        area_tecnologica: coerceStringArray(e.area_tecnologica_raw).join('; '),
+        prazo_envio: e.prazo_envio_raw || e.dataLimite || '',
+        valor: Number(e.valor_principal_num ?? 0),
+        situacao_validacao:
+          `${e.validacao_status_raw ?? ''}${e.validacao_status_raw && e.situacao_raw ? ' · ' : ''}${e.situacao_raw ?? ''}`.trim() ||
+          '—',
+        qualidade_dado: e.qualidade_dado_raw ?? '',
+        link: e.link_original || e.linkOriginal || '',
+        pdf_url: e.pdf_url_raw || e.pdfUrl || '',
       }));
-
-      // Criar a planilha
       const worksheet = XLSX.utils.json_to_sheet(data);
       const workbook = XLSX.utils.book_new();
-      XLSX.utils.book_append_sheet(workbook, worksheet, "Editais");
-
-      // Ajustar a largura das colunas automaticamente
-      const wscols = [
-        { wch: 50 }, // Nome
-        { wch: 25 }, // Órgão
-        { wch: 20 }, // Área
-        { wch: 15 }, // Valor
-        { wch: 15 }, // Estado
-        { wch: 20 }, // Tipo
-        { wch: 12 }, // Limite
-      ];
-      worksheet['!cols'] = wscols;
-
-      // Gerar o arquivo Excel e disparar o download
-      XLSX.writeFile(workbook, `editais_encontrados_${new Date().toISOString().split('T')[0]}.xlsx`);
+      XLSX.utils.book_append_sheet(workbook, worksheet, 'Editais');
+      XLSX.writeFile(workbook, `editais_${exportScope}_${new Date().toISOString().slice(0, 10)}.xlsx`);
     } catch (error) {
       console.error('Erro ao gerar Excel:', error);
-      alert('Erro ao gerar planilha. Verifique o console para mais detalhes.');
+      alert('Erro ao gerar planilha.');
     }
   };
 
+  const hasMoreOnPage = visibleCount < sortedFiltered.length;
+
   return (
     <>
-      <Header onSearch={setGlobalSearch} />
-      <div className="dashboard-container">
-        <button 
-          className="filter-toggle-mobile" 
+      <Header onSearch={setGlobalSearchRaw} />
+
+      <div className={`dashboard-container editais-dash-v2 prefs-density-${prefs.density || 'normal'}`}>
+        <button
+          type="button"
+          className="filter-toggle-mobile"
           onClick={() => setShowFiltersMobile(!showFiltersMobile)}
         >
           {showFiltersMobile ? '✕ Fechar Filtros' : '🔍 Abrir Filtros'}
         </button>
-        
+
         <div className={`sidebar ${!showFiltersMobile ? 'mobile-hidden' : ''}`}>
-          <Filters onFilterChange={handleFilterChange} allEditais={allEditais} />
+          <EditaisFiltersSidebar
+            filters={filters}
+            setFilters={setFilters}
+            facets={facets}
+            prefs={prefs}
+            updatePrefs={updatePrefs}
+            uniquePaises={uniquePaises}
+            uniqueUFs={uniqueUFs}
+            dynamicAreas={dynamicAreas}
+            onReset={resetFilters}
+          />
         </div>
-        
+
         <main className="main-content">
-          <div className="content-header">
+          <div className="content-header editai-dash-header">
             <h2>Editais Disponíveis</h2>
-            <div className="content-actions" style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
-              <span className="editals-count">Mostrando {filteredEditais.length} editais</span>
-              <button onClick={handleExportPDF} className="btn-export">📄 PDF</button>
-              <button onClick={handleExportExcel} className="btn-export" style={{ backgroundColor: '#27ae60' }}>📊 Planilha</button>
+            <div className="content-actions editai-dash-actions">
+              <EditaisStatsBar
+                filteredCount={sortedFiltered.length}
+                catalogCount={allEditais.length}
+                abertosNaLista={statsFiltered.abertos}
+                comPdfNaLista={statsFiltered.comPdf}
+                altaQualNaLista={statsFiltered.altaQualidade}
+                showPdfToggle={!!filters.toggleSoPdf}
+                showQualToggle={!!filters.toggleAltaQualidade}
+                semPdfOcultos={hiddenMetaBaseline.semPdfOcultos}
+                baixaQualOcultos={hiddenMetaBaseline.baixaQualOcultos}
+                encerradosOcultosHint={
+                  !filters.toggleIncluirEncerrados ? hiddenMetaBaseline.encerradosOcultos : 0
+                }
+                suspeitosOcultosHint={
+                  !filters.toggleIncluirSuspeitos ? hiddenMetaBaseline.suspOcultos : 0
+                }
+                ruidosOcultosHint={!prefs.showRuidos ? hiddenMetaBaseline.ruidosOcultos : 0}
+              />
+
+              <div className="editais-quick-actions" aria-label="Ações rápidas de filtro">
+                <button type="button" className="btn-relax-filters" onClick={relaxFilters}>
+                  Relaxar filtros
+                </button>
+                {import.meta.env.DEV ? (
+                  <>
+                    <button type="button" className="btn-show-all-debug" onClick={mostrarTudoPossivel}>
+                      Mostrar tudo
+                    </button>
+                    <button
+                      type="button"
+                      className="btn-pipeline-debug-toggle"
+                      onClick={() => setShowPipelineDebugPanel((v) => !v)}
+                    >
+                      {showPipelineDebugPanel ? 'Ocultar' : 'Ver'} debug do pipeline
+                    </button>
+                  </>
+                ) : null}
+              </div>
+
+              <div className="export-toolbar-row">
+                <label className="export-scope-label">
+                  Exportar:&nbsp;
+                  <select value={exportScope} onChange={(e) => setExportScope(e.target.value)}>
+                    <option value="filtered">Só lista filtrada</option>
+                    <option value="all">Todos carregados</option>
+                    <option value="favorites">Somente favoritos (na lista atual)</option>
+                  </select>
+                </label>
+              </div>
+
+              <div className="export-toolbar-row align-end">
+                <label className="sort-label">
+                  Ordenar:&nbsp;
+                  <select value={sortId} onChange={(e) => setSortId(e.target.value)}>
+                    {SORT_OPTIONS.map((s) => (
+                      <option key={s.id} value={s.id}>
+                        {s.label}
+                      </option>
+                    ))}
+                  </select>
+                </label>
+                <button type="button" onClick={handleExportPDF} className="btn-export">
+                  📄 PDF
+                </button>
+                <button
+                  type="button"
+                  onClick={handleExportExcel}
+                  className="btn-export btn-export-sheet"
+                  style={{ backgroundColor: '#27ae60' }}
+                >
+                  📊 Planilha
+                </button>
+              </div>
             </div>
           </div>
 
+          <ActiveFiltersChips chips={chips} onClearAll={resetFilters} />
+
+          {import.meta.env.DEV && showPipelineDebugPanel ? (
+            <div className="editais-pipeline-debug-panel">
+              <pre tabIndex={0}>{JSON.stringify(filterPipelineDebug, null, 2)}</pre>
+            </div>
+          ) : null}
+
           {loading ? (
-            <div style={{ textAlign: 'center', padding: '50px' }}>
-              <h3>Carregando editais...</h3>
+            <div className="dashboard-skel-wrap">
+              <div className="dashboard-skeleton-grid">
+                {[1, 2, 3, 4, 5, 6].map((n) => (
+                  <div key={n} className="dashboard-skeleton-card" />
+                ))}
+              </div>
             </div>
           ) : (
-            <div className="editais-grid">
-              {filteredEditais.map(edital => (
-                <EditalCard key={edital.id} edital={edital} />
-              ))}
-              {filteredEditais.length === 0 && (
-                <div className="empty-state">
-                  <h3>Nenhum edital encontrado</h3>
-                  <p>Tente ajustar seus filtros para encontrar mais oportunidades.</p>
+            <>
+              <div className="editais-grid">
+                {visibleEditais.map((edital) => (
+                  <EditalCard
+                    key={edital.id}
+                    edital={edital}
+                    searchTokensNorm={searchTokens}
+                    isFavorite={favIds.has(String(edital.id))}
+                    onToggleFavorite={toggleFavorite}
+                    density={prefs.density}
+                    onOpenDetails={setDetailEdital}
+                  />
+                ))}
+              </div>
+
+              {!sortedFiltered.length && (
+                <div className="empty-state editais-empty-state">
+                  <h3>Nenhum edital encontrado com os filtros atuais.</h3>
+                  {emptySuggestions.length > 0 ? (
+                    <ul className="empty-state-suggestions">
+                      {emptySuggestions.map((s, i) => (
+                        <li key={i}>{s}</li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <p>Ajuste os filtros na barra lateral ou as preferências de ruídos.</p>
+                  )}
+                  <div className="editais-empty-actions">
+                    <button type="button" className="btn-view btn-relax-filters-empty" onClick={relaxFilters}>
+                      Relaxar filtros
+                    </button>
+                    {import.meta.env.DEV ? (
+                      <button type="button" className="btn-view" onClick={mostrarTudoPossivel}>
+                        Mostrar tudo
+                      </button>
+                    ) : null}
+                  </div>
                 </div>
               )}
-            </div>
+
+              {hasMoreOnPage && (
+                <div className="load-more-dash">
+                  <button
+                    type="button"
+                    className="btn-view"
+                    onClick={() =>
+                      setVisibleCount((v) =>
+                        Math.min(sortedFiltered.length, v + (prefs.pageSize || 40)),
+                      )
+                    }
+                  >
+                    Carregar mais ({sortedFiltered.length - visibleCount} restantes)
+                  </button>
+                </div>
+              )}
+            </>
           )}
         </main>
+
+        {detailEdital != null && (
+          <EditalDetailsModal edital={detailEdital} onClose={() => setDetailEdital(null)} />
+        )}
       </div>
     </>
   );
 }
-

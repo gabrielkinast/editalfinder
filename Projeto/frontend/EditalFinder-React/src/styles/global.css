@@ -1293,6 +1293,860 @@ html, body {
 .btn-open-link:hover { background: #FFF9C4; }
 .btn-open-pdf:hover { background: #B2EBF2; }
 
+.btn-precad {
+    background: #EDE7F6;
+    color: #5E35B1;
+    border: 1px solid #D1C4E9;
+}
+
+.btn-precad:hover {
+    background: #D1C4E9;
+}
+
+/* Pré-cadastro projeto — modal scroll + grid */
+.modal-content.modal-large.modal-precad {
+    display: flex;
+    flex-direction: column;
+    max-height: 94vh;
+    overflow: hidden;
+    padding-bottom: 20px !important;
+}
+
+.modal-precad .precad-wrap {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+}
+
+.modal-precad .precad-modal-header {
+    flex-shrink: 0;
+}
+
+.precad-scroll {
+    overflow-y: auto;
+    flex: 1;
+    min-height: 0;
+    max-height: min(62vh, 620px);
+    padding-right: 8px;
+    margin-bottom: 8px;
+}
+
+.precad-section {
+    border: 1px solid var(--border-light);
+    border-radius: var(--border-radius);
+    margin-bottom: 12px;
+    padding: 0 12px 12px;
+    background: #fafbfd;
+}
+
+.precad-summary {
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 12px 0 8px;
+    list-style: none;
+}
+
+.precad-summary::-webkit-details-marker {
+    display: none;
+}
+
+.precad-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 4px;
+}
+
+.form-grid-two {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    width: 100%;
+}
+
+@media (max-width: 640px) {
+    .form-grid-two {
+        grid-template-columns: 1fr;
+    }
+}
+
+.form-grid-two .full-width {
+    grid-column: 1 / -1;
+}
+
+.checkbox-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.precad-row-box {
+    border: 1px dashed var(--border-light);
+    border-radius: var(--border-radius);
+    padding: 12px;
+    margin-bottom: 10px;
+    background: var(--bg-white);
+}
+
+.precad-footer {
+    flex-shrink: 0;
+    border-top: 1px solid var(--border-light);
+    padding-top: 12px;
+    margin-top: 4px;
+}
+
+.precad-ref-link {
+    display: inline-block;
+    font-size: 12px;
+    color: var(--text-light);
+    margin-bottom: 10px;
+    text-decoration: underline;
+}
+
+.precad-ref-link:hover {
+    color: var(--primary-blue);
+}
+
+.precad-actions {
+    flex-wrap: wrap;
+}
+
+/* Pré-cadastro profissional (assistente) */
+.modal-precad .precad-scroll.precad-prof-scroll {
+    max-height: min(72vh, 720px);
+}
+
+.precad-prof-wrap {
+    --precad-primary: #1e3a5f;
+    --precad-secondary: #0f766e;
+    --precad-accent: #134e4a;
+    --precad-on-primary: #ffffff;
+    --precad-on-secondary: #ffffff;
+}
+
+.precad-header-prof {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 16px;
+    align-items: flex-start;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+    margin-bottom: 10px;
+}
+
+.precad-header-logo {
+    width: 56px;
+    height: 56px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    background: #fff;
+    flex-shrink: 0;
+}
+
+.precad-header-logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.precad-header-titles {
+    min-width: 0;
+}
+
+.precad-header-h2 {
+    margin: 0;
+    font-size: 20px;
+    color: var(--precad-primary);
+}
+
+.precad-header-meta {
+    margin: 4px 0 0;
+    font-size: 13px;
+    color: #64748b;
+}
+
+.precad-header-empresa {
+    font-weight: 600;
+    color: #0f172a;
+}
+
+.precad-header-id {
+    margin-left: 6px;
+    color: #94a3b8;
+}
+
+.precad-header-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 8px;
+}
+
+.precad-chip {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 999px;
+    background: #f1f5f9;
+    color: #475569;
+    max-width: 100%;
+}
+
+.precad-chip-edital {
+    background: color-mix(in srgb, var(--precad-primary) 14%, white);
+    color: color-mix(in srgb, var(--precad-primary) 92%, black);
+}
+
+.precad-chip-fit {
+    background: color-mix(in srgb, var(--precad-secondary) 16%, white);
+    color: color-mix(in srgb, var(--precad-secondary) 90%, black);
+}
+
+.precad-chip-status {
+    background: #ecfeff;
+    color: #0e7490;
+}
+
+.precad-chip-muted {
+    background: #f8fafc;
+    color: #94a3b8;
+}
+
+.precad-header-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: flex-end;
+}
+
+.precad-btn {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 8px 14px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.precad-btn-ghost {
+    background: #fff;
+    border-color: #e2e8f0;
+    color: #475569;
+}
+
+.precad-btn-primary {
+    background: var(--precad-primary);
+    color: var(--precad-on-primary);
+    border-color: color-mix(in srgb, var(--precad-primary) 70%, black);
+}
+
+.precad-btn-secondary {
+    background: #fff;
+    border-color: color-mix(in srgb, var(--precad-primary) 35%, #e2e8f0);
+    color: var(--precad-primary);
+}
+
+.precad-btn-accent {
+    background: linear-gradient(135deg, var(--precad-secondary), color-mix(in srgb, var(--precad-secondary) 75%, black));
+    color: var(--precad-on-secondary);
+}
+
+.precad-nav-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 12px;
+}
+
+.precad-nav-tab {
+    border: 1px solid #e2e8f0;
+    background: #fff;
+    color: #475569;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 8px 14px;
+    border-radius: 999px;
+    cursor: pointer;
+}
+
+.precad-nav-tab.is-active {
+    border-color: var(--precad-primary);
+    background: color-mix(in srgb, var(--precad-primary) 10%, white);
+    color: var(--precad-primary);
+}
+
+.precad-tab-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.precad-card {
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 14px 16px;
+    background: #fff;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+}
+
+.precad-card-hero {
+    border-color: color-mix(in srgb, var(--precad-primary) 22%, #e2e8f0);
+    background: linear-gradient(180deg, color-mix(in srgb, var(--precad-primary) 6%, white) 0%, #fff 54%);
+}
+
+.precad-card-title {
+    margin: 0 0 8px;
+    font-size: 15px;
+    color: var(--precad-primary);
+}
+
+.precad-card-lead {
+    margin: 0 0 12px;
+    font-size: 13px;
+    color: #64748b;
+    line-height: 1.45;
+}
+
+.precad-dl {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.precad-dl dt {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #64748b;
+}
+
+.precad-dl dd {
+    margin: 2px 0 0;
+    font-size: 13px;
+    line-height: 1.45;
+    color: #0f172a;
+}
+
+.precad-pre-wrap {
+    white-space: pre-wrap;
+}
+
+.precad-reco-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+@media (max-width: 920px) {
+    .precad-reco-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .precad-header-prof {
+        grid-template-columns: 1fr;
+    }
+
+    .precad-header-actions {
+        justify-content: flex-start;
+    }
+}
+
+.precad-field-row {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 10px;
+}
+
+.precad-field-row.full {
+    grid-column: 1 / -1;
+}
+
+.precad-field-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: #64748b;
+}
+
+.precad-field-hint {
+    font-weight: 500;
+    text-transform: none;
+    color: #94a3b8;
+    margin-left: 6px;
+}
+
+.precad-input,
+.precad-textarea,
+.precad-select {
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 8px 10px;
+    font-size: 13px;
+    width: 100%;
+    font-family: inherit;
+}
+
+.precad-textarea {
+    resize: vertical;
+}
+
+.precad-muted {
+    color: #64748b;
+}
+
+.precad-muted.small {
+    font-size: 12px;
+}
+
+.precad-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 14px;
+}
+
+@media (max-width: 720px) {
+    .precad-form-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.precad-tag {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-left: 6px;
+}
+
+.precad-tag.sug {
+    background: #e0f2fe;
+    color: #0369a1;
+}
+
+.precad-tag.important {
+    background: #fef3c7;
+    color: #b45309;
+}
+
+.precad-lines-section .precad-line-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.precad-line-card {
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 12px 14px;
+    cursor: pointer;
+    background: #fafafa;
+}
+
+.precad-line-card.is-selected {
+    border-color: var(--precad-primary);
+    background: color-mix(in srgb, var(--precad-primary) 8%, white);
+}
+
+.precad-line-card-head {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.precad-line-title-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+}
+
+.precad-line-title {
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.precad-line-sub {
+    display: block;
+    font-size: 12px;
+    color: #64748b;
+    margin-top: 2px;
+}
+
+.precad-line-body {
+    margin: 8px 0 0;
+    font-size: 12px;
+    line-height: 1.45;
+    color: #475569;
+}
+
+.precad-line-motivo {
+    margin: 6px 0 0;
+    font-size: 11px;
+    color: #64748b;
+    font-style: italic;
+}
+
+.precad-line-badge {
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 999px;
+}
+
+.precad-line-badge.primary {
+    background: #ede9fe;
+    color: #5b21b6;
+}
+
+.precad-line-badge.ok {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.precad-line-badge.alt {
+    background: #f1f5f9;
+    color: #475569;
+}
+
+.precad-line-badge.muted {
+    background: #f8fafc;
+    color: #94a3b8;
+}
+
+.precad-line-ader {
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--precad-secondary);
+}
+
+.precad-scope-section .precad-section-title,
+.precad-lines-section .precad-section-title,
+.precad-fit-section .precad-section-title,
+.precad-obs-section .precad-section-title {
+    margin: 0 0 6px;
+    font-size: 16px;
+    color: var(--precad-primary);
+}
+
+.precad-context-stack > section {
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 14px 16px;
+    background: #fff;
+}
+
+.precad-complete-intro {
+    margin: 0 0 8px;
+}
+
+.precad-visao-grid {
+    display: grid;
+    grid-template-columns: 1fr 220px;
+    gap: 12px;
+}
+
+@media (max-width: 800px) {
+    .precad-visao-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.precad-completion {
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 12px 14px;
+    background: #fff;
+}
+
+.precad-completion-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.precad-completion-title {
+    font-weight: 700;
+    color: var(--precad-primary);
+}
+
+.precad-completion-badge {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 10px;
+    border-radius: 999px;
+    background: #f1f5f9;
+    color: #475569;
+}
+
+.precad-completion-badge.level-pronto {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.precad-completion-badge.level-bom {
+    background: #dbeafe;
+    color: #1d4ed8;
+}
+
+.precad-completion-badge.level-basico {
+    background: #fef9c3;
+    color: #a16207;
+}
+
+.precad-completion-badge.level-incompleto {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.precad-completion-pct {
+    margin-left: auto;
+    font-weight: 800;
+    color: var(--precad-secondary);
+}
+
+.precad-completion-bar {
+    height: 6px;
+    background: #e2e8f0;
+    border-radius: 999px;
+    margin: 8px 0 10px;
+    overflow: hidden;
+}
+
+.precad-completion-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--precad-secondary), var(--precad-primary));
+    border-radius: 999px;
+    transition: width 0.3s ease;
+}
+
+.precad-completion-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 12px;
+    color: #475569;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.precad-completion-list li.ok {
+    color: #15803d;
+}
+
+.precad-completion-list li.pendente {
+    color: #b45309;
+}
+
+.precad-completion-list .hint {
+    margin-left: 6px;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.precad-co-strip {
+    border: 1px dashed color-mix(in srgb, var(--precad-primary) 28%, #e2e8f0);
+    border-radius: 10px;
+    padding: 10px 14px;
+    background: color-mix(in srgb, var(--precad-primary) 5%, white);
+}
+
+.precad-co-strip-inner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 8px;
+}
+
+.precad-co-strip .k {
+    display: block;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: #64748b;
+}
+
+.precad-co-strip .v {
+    font-size: 13px;
+    font-weight: 600;
+    color: #0f172a;
+}
+
+.co-hint {
+    margin: 8px 0 0;
+}
+
+.precad-complete-summary {
+    margin: 4px 0 8px;
+}
+
+.precad-intel-toolbar {
+    margin: 0 0 12px;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid color-mix(in srgb, var(--precad-primary) 22%, #e2e8f0);
+    background: #fbfcfe;
+}
+
+.precad-intel-lead {
+    margin: 0 0 8px !important;
+}
+
+.precad-intel-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.precad-field-meta {
+    margin-top: 6px;
+}
+
+.precad-intel-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-items: center;
+}
+
+.precad-chip-intel.precad-chip-src-manual {
+    background: color-mix(in srgb, var(--precad-primary) 18%, #f1f5f9);
+    color: #0f172a;
+}
+
+.precad-chip-intel.precad-chip-src-auto {
+    background: #fff7ed;
+    color: #9a3412;
+}
+
+.precad-chip-intel.precad-chip-src-cliente {
+    background: #ecfdf5;
+    color: #065f46;
+}
+
+.precad-chip-intel.precad-chip-src-edital {
+    background: #eff6ff;
+    color: #1e40af;
+}
+
+.precad-chip-intel.precad-chip-src-radar {
+    background: #eef2ff;
+    color: #3730a3;
+}
+
+.precad-chip-alert {
+    border: 1px solid #fcd34d;
+    background: #fffbeb;
+    color: #92400e;
+}
+
+.precad-intel-expl {
+    margin: 4px 0 0;
+    font-size: 11px;
+    color: #64748b;
+    line-height: 1.4;
+}
+
+.precad-subtitle {
+    margin: 0 0 6px;
+    font-size: 15px;
+}
+
+.precad-pend-panel {
+    border: 1px solid var(--border-light);
+    border-radius: 12px;
+    padding: 12px 14px;
+    margin-bottom: 14px;
+    background: #fff;
+}
+
+.precad-pend-block h4 {
+    margin: 8px 0 4px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #64748b;
+}
+
+.precad-pend-list {
+    margin: 4px 0 0;
+    padding-left: 18px;
+    font-size: 13px;
+    color: #334155;
+}
+
+.precad-pend-jumps {
+    margin-top: 10px;
+}
+
+.precad-pend-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 6px;
+}
+
+.precad-mini-btn {
+    font-size: 11px;
+    padding: 4px 8px;
+    border-radius: 6px;
+    border: 1px solid #cbd5e1;
+    background: #f8fafc;
+    cursor: pointer;
+}
+
+.precad-mini-btn:hover {
+    border-color: var(--precad-primary);
+}
+
+.precad-impact-hints {
+    border: 1px dashed #cbd5e1;
+    border-radius: 10px;
+    padding: 10px 12px;
+    margin-bottom: 12px;
+    background: #fafafa;
+}
+
+.precad-impact-hint-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.precad-impact-hint-col h4 {
+    margin: 0 0 4px;
+    font-size: 12px;
+    color: #475569;
+}
+
+.precad-impact-hint-col ul {
+    margin: 0;
+    padding-left: 16px;
+    font-size: 12px;
+    color: #64748b;
+}
+
+.precad-footer-prof {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
 .status-select {
     padding: 6px 10px;
     border-radius: 6px;
@@ -1958,11 +2812,20 @@ button, input:not([type="range"]), select, textarea {
 .radar-clientes-panel {
     width: 280px;
     min-width: 220px;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 2;
     border-right: 1px solid var(--border-light);
     display: flex;
     flex-direction: column;
     background: #fafafa;
     overflow: hidden;
+}
+
+.radar-cliente-li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .radar-panel-header {
@@ -1993,17 +2856,38 @@ button, input:not([type="range"]), select, textarea {
     overflow-y: auto;
     flex: 1;
     padding: 8px 0;
+    position: relative;
+    z-index: 3;
+    pointer-events: auto;
 }
 
 .radar-cliente-item {
     padding: 12px 16px;
     cursor: pointer;
+    border: none;
     border-bottom: 1px solid #f0f0f0;
+    border-left: 3px solid transparent;
     transition: background var(--transition);
+    background: transparent;
+    width: 100%;
+    text-align: left;
+    font: inherit;
+    color: inherit;
+    display: block;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .radar-cliente-item:hover { background: #f0f5ff; }
-.radar-cliente-item.ativo { background: #e8f0fe; border-left: 3px solid var(--primary-blue); }
+.radar-cliente-item.ativo {
+    background: #e8f0fe;
+    border-left-color: var(--primary-blue);
+}
+
+.radar-cliente-item:focus-visible {
+    outline: 2px solid var(--primary-blue);
+    outline-offset: -2px;
+}
 
 .radar-cliente-nome-row {
     display: flex;
@@ -2053,12 +2937,19 @@ button, input:not([type="range"]), select, textarea {
 
 /* ── Painel direito ── */
 .radar-resultado-panel {
-    flex: 1;
+    flex: 1 1 0;
+    min-width: 0;
+    min-height: 120px;
     overflow-y: auto;
     padding: 24px;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    background: var(--bg-white, #fff);
+    color: var(--text-dark, #1e293b);
+    position: relative;
+    z-index: 0;
+    pointer-events: auto;
 }
 
 .radar-load-erro {
@@ -2503,6 +3394,73 @@ button, input:not([type="range"]), select, textarea {
 .radar-placeholder h3   { font-size: 20px; font-weight: 700; color: var(--text-dark); margin-bottom: 8px; }
 .radar-placeholder p    { font-size: 14px; max-width: 320px; margin: 0 auto; }
 
+/* Loading do Radar (cálculo assíncrono) */
+.radar-loading {
+    margin: 28px auto 40px;
+    max-width: 420px;
+    text-align: center;
+    padding: 24px 20px;
+    background: var(--surface, #fafbfc);
+    border-radius: 12px;
+    border: 1px solid var(--border-light, #e2e8f0);
+}
+.radar-loading-spinner {
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 16px;
+    border-radius: 50%;
+    border: 3px solid rgba(43, 95, 197, 0.15);
+    border-top-color: var(--primary-blue, #2b5fc5);
+    animation: radar-spin 0.75s linear infinite;
+}
+@keyframes radar-spin {
+    to { transform: rotate(360deg); }
+}
+.radar-loading-titulo {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin: 0 0 8px;
+}
+.radar-loading-sub {
+    font-size: 13px;
+    color: var(--text-light);
+    margin: 0 0 16px;
+    line-height: 1.45;
+}
+.radar-loading-bar-wrap {
+    height: 8px;
+    border-radius: 999px;
+    background: rgba(43, 95, 197, 0.1);
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+.radar-loading-bar {
+    height: 100%;
+    border-radius: 999px;
+    background: var(--primary-blue, #2b5fc5);
+    transition: width 0.2s ease;
+}
+.radar-load-erro-banner {
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    color: #b91c1c;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    margin-bottom: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    justify-content: space-between;
+}
+.radar-loading-pct {
+    font-size: 12px;
+    color: var(--text-muted, #64748b);
+    margin: 0;
+}
+
 .radar-resultado-header {
     display: flex;
     align-items: flex-start;
@@ -2776,6 +3734,16 @@ button, input:not([type="range"]), select, textarea {
 
 .radar-badge-expirado    { background: #e5e7eb; color: #4b5563; }
 .radar-badge-prazo-curto { background: #fde68a; color: #92400e; }
+.radar-badge-aviso       { background: #fef9c3; color: #854d0e; font-weight: 500; font-size: 11px; }
+
+.radar-criterio-row-ausente .radar-criterio-nome {
+    color: #94a3b8;
+}
+
+.radar-criterio-barra-ausente {
+    background: #e2e8f0 !important;
+    opacity: 0.85;
+}
 
 .radar-card-flags {
     display: flex;
@@ -2918,8 +3886,342 @@ button, input:not([type="range"]), select, textarea {
 
 /* Responsivo */
 @media (max-width: 768px) {
-    .radar-page { flex-direction: column; height: auto; }
+    .radar-page {
+        flex-direction: column;
+        min-height: calc(100vh - 64px);
+        height: auto;
+    }
     .radar-clientes-panel { width: 100%; height: 220px; border-right: none; border-bottom: 1px solid var(--border-light); }
-    .radar-resultado-panel { padding: 16px; }
+    .radar-resultado-panel { flex: 1 1 auto; min-height: 45vh; padding: 16px; }
     .radar-grid { grid-template-columns: 1fr; }
 }
+
+/* ─── Dashboard Editais v2 (filtros densos / cards inteligentes) ───────────── */
+.editais-dash-v2 .editai-dash-header {
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.editais-dash-v2 .editai-dash-actions {
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: flex-end;
+}
+
+.editais-stats-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    max-width: 520px;
+    font-size: 13px;
+    color: var(--text-dark);
+}
+
+.editais-stats-default-hint {
+    margin: 0;
+    font-size: 11px;
+    line-height: 1.35;
+    color: #64748b;
+}
+
+.editais-stats-default-hint code {
+    font-size: 10px;
+    background: #f1f5f9;
+    padding: 0 4px;
+    border-radius: 4px;
+}
+
+.editais-stats-mini {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.editais-stat-pill {
+    border-radius: 999px;
+    padding: 2px 10px;
+    font-size: 11px;
+    font-weight: 600;
+    background: #f1f5f9;
+    color: #475569;
+}
+
+.editais-stat-pill.stat-open { background: #dcfce7; color: #15803d; }
+.editais-stat-pill.stat-pdf  { background: #dbeafe; color: #1d4ed8; }
+.editais-stat-pill.stat-q   { background: #fef9c3; color: #a16207; }
+.editais-stat-pill.stat-muted { background: #f8fafc; color: #94a3b8; border: 1px solid #e2e8f0; }
+.editais-stat-pill.stat-plain { background: #f1f5f9; color: #475569; }
+.editais-stat-pill.stat-warn { background: #fff7ed; color: #c2410c; border: 1px solid #fed7aa; }
+
+.editais-quick-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    margin-top: 4px;
+}
+
+.editais-quick-actions button {
+    font-size: 12px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: 1px solid #cbd5e1;
+    background: #fff;
+    color: #334155;
+    cursor: pointer;
+}
+
+.editais-quick-actions button:hover {
+    background: #f8fafc;
+}
+
+.editais-quick-actions .btn-show-all-debug {
+    border-color: #94a3b8;
+    background: #f8fafc;
+}
+
+.editais-pipeline-debug-panel {
+    margin: 8px 0 12px;
+    padding: 10px 12px;
+    max-height: 220px;
+    overflow: auto;
+    font-size: 11px;
+    background: #0f172a;
+    color: #e2e8f0;
+    border-radius: 8px;
+    border: 1px solid #334155;
+}
+
+.editais-pipeline-debug-panel pre {
+    margin: 0;
+    white-space: pre-wrap;
+    word-break: break-word;
+    font-family: ui-monospace, monospace;
+}
+
+.editais-empty-state .empty-state-suggestions {
+    margin: 8px 0 12px;
+    padding-left: 1.2rem;
+    color: var(--text-muted, #64748b);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.editais-empty-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.export-toolbar-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+}
+.export-toolbar-row.align-end { justify-content: flex-end; }
+.export-scope-label select,
+.sort-label select {
+    font-size: 12px;
+    padding: 6px 8px;
+    border-radius: 6px;
+}
+
+.active-filters-chips {
+    margin: 8px 0 16px;
+}
+.active-filters-inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-items: center;
+}
+
+.filter-chip {
+    border-radius: 999px;
+    border: 1px solid var(--primary-blue);
+    background: #eff6ff;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--primary-blue);
+    cursor: pointer;
+    padding: 4px 10px;
+}
+
+.filter-chip-x { opacity: 0.7; margin-left: 2px; }
+.filter-chip-clear {
+    border: none;
+    background: none;
+    color: var(--text-light);
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.editai-filter-collapse {
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    margin-bottom: 8px;
+    background: var(--bg-white);
+}
+.editai-filter-summary {
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 13px;
+    padding: 8px 12px;
+    list-style-position: outside;
+}
+
+.editai-filter-collapse-body {
+    padding: 0 12px 10px;
+    border-top: 1px solid #f1f5f9;
+}
+
+.editai-help { font-size: 11px; color: var(--text-light); margin: 6px 0; }
+.editai-muted { opacity: 0.9; align-items: center; gap: 6px; }
+.filter-subhdr { font-size: 11px; color: var(--text-light); margin: 10px 0 4px; }
+
+.checkbox-scroll,
+.fonte-checkbox-scroll {
+    max-height: 220px;
+    overflow-y: auto;
+    padding-right: 6px;
+    margin-top: 8px;
+}
+
+.edital-search-hit {
+    background: #fef9c3;
+    border-radius: 2px;
+    padding: 0 1px;
+}
+
+.edital-card-top-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 10px;
+}
+.edital-fav-star {
+    border: none;
+    background: none;
+    font-size: 20px;
+    line-height: 1;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+.edital-fav-star.on { color: #f59e0b; }
+
+.edital-badges-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    align-items: center;
+}
+.edital-badge-fonte { margin-bottom: 0; text-transform: none; letter-spacing: 0; }
+.edital-badge-mini {
+    font-size: 9px;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 999px;
+    text-transform: uppercase;
+}
+.edital-b-ok   { background: #dcfce7; color: #166534; }
+.edital-b-warn { background: #fef9c3; color: #854d0e; }
+.edital-b-bad  { background: #fee2e2; color: #b91c1c; }
+.edital-b-info { background: #dbeafe; color: #1d4ed8; }
+.edital-b-muted{ background: #f1f5f9; color: #475569; }
+
+.edital-muted-soft { font-size: 11px; color: #94a3b8; font-weight: 500; }
+
+.edital-card-desc {
+    font-size: 12px;
+    color: #64748b;
+    line-height: 1.45;
+    margin: 0;
+}
+.edital-card-desc.clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.edital-card-desc.clamp-4 {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.edital-intel-sum {
+    font-size: 11px;
+    color: #64748b;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.edital-prazo-chip.deadline-empty {
+    background: #f8fafc;
+    color: #94a3b8;
+    font-weight: 500;
+}
+.edital-prazo-chip.deadline-exp {
+    background: #fef2f2;
+    color: #b91c1c;
+}
+
+.edital-actions-balanced {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: flex-start;
+}
+.dash-action { flex: 1 1 80px; text-align: center; text-decoration: none; font-size: 13px; padding: 10px 10px; }
+.dash-action-outline {
+    flex: 1 1 80px;
+    font-size: 13px;
+    padding: 10px 10px;
+    border-radius: var(--border-radius);
+    border: 1.5px solid var(--border-color);
+    background: #fff;
+    cursor: pointer;
+}
+.dash-action-muted { flex: 1; text-align: center; font-size: 12px; color: #94a3b8; padding: 10px 4px; }
+
+.edital-card-density-compact .edital-meta { gap: 4px; }
+.edital-card-density-compact { padding: 16px; gap: 10px; }
+.edital-card-density-detailed .edital-title { min-height: 44px; }
+
+.dashboard-skel-wrap { padding: 16px 0; }
+.dashboard-skeleton-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 16px;
+}
+.dashboard-skeleton-card {
+    height: 280px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #f1f5f9 0%, #e2e8f0 50%, #f1f5f9 100%);
+    background-size: 200% 100%;
+    animation: sk 1.2s linear infinite;
+}
+@keyframes sk { 0% { background-position: 100% 0; } 100% { background-position: -100% 0; } }
+
+.load-more-dash { text-align: center; margin: 28px 0 40px; }
+
+/* Modal detalhes edital */
+.edital-detail-scroll { max-height: 70vh; overflow-y: auto; padding: 0 4px; }
+.edital-detail-title { font-size: 16px; margin: 0 0 8px; }
+.edital-detail-desc { font-size: 13px; color: #64748b; margin: 0 0 16px; }
+.edital-detail-grid { display: flex; flex-direction: column; gap: 8px; }
+.edital-detail-row { display: grid; grid-template-columns: 160px 1fr; gap: 8px; font-size: 13px; }
+.edital-detail-k { color: #64748b; font-weight: 600; }
+.edital-detail-v { color: var(--text-dark); word-break: break-word; }
+.edital-detail-alerts { display: flex; flex-direction: column; gap: 6px; margin-bottom: 12px; }
+.edital-alert { border-radius: 8px; padding: 8px 10px; font-size: 12px; font-weight: 600; }
+.edital-alert-erro { background: #fee2e2; color: #991b1b; }
+.edital-alert-aviso { background: #fef9c3; color: #854d0e; }
+.edital-alert-info { background: #e0f2fe; color: #0369a1; }
+.edital-extras-pre { font-size: 11px; max-height: 180px; overflow: auto; background: #f8fafc; padding: 8px; border-radius: 6px; }
+.edital-detail-footer { margin-top: 16px; text-align: right; }

@@ -5,6 +5,8 @@ import Cadastros from '../pages/Cadastros';
 import RadarFomento from '../pages/RadarFomento';
 import IndiceCompatibilidade from '../pages/IndiceCompatibilidade';
 import EditalDetalhes from '../pages/EditalDetalhes';
+import Noticias from '../pages/Noticias';
+import Pesquisas from '../pages/Pesquisas';
 import ProtectedRoute from './ProtectedRoute';
 
 export default function AppRoutes() {
@@ -40,6 +42,22 @@ export default function AppRoutes() {
         element={
           <ProtectedRoute>
             <IndiceCompatibilidade />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/noticias"
+        element={
+          <ProtectedRoute>
+            <Noticias />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/pesquisas"
+        element={
+          <ProtectedRoute>
+            <Pesquisas />
           </ProtectedRoute>
         }
       />

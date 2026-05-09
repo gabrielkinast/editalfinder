@@ -3,7 +3,7 @@ import Header from '../components/layout/Header';
 import AdminTable from '../components/admin/AdminTable';
 import UserForm from '../components/admin/UserForm';
 import ClientForm from '../components/admin/ClientForm';
-import OrgForm from '../components/admin/OrgForm';
+import ProjetoPrecadastroForm from '../components/admin/ProjetoPrecadastroForm';
 import EditalForm from '../components/admin/EditalForm';
 import Modal from '../components/ui/Modal';
 import { dataService } from '../services/dataService';
@@ -17,6 +17,8 @@ export default function Cadastros() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isPrecadModalOpen, setIsPrecadModalOpen] = useState(false);
+  const [precadCliente, setPrecadCliente] = useState(null);
   const [editingItem, setEditingItem] = useState(null);
   const [searchTerm, setSearchTerm] = useState('');
   const [filterType, setFilterType] = useState('');
@@ -26,13 +28,32 @@ export default function Cadastros() {
   const [filterMaxInteresse, setFilterMaxInteresse] = useState(100000000);
   const [filterPorte, setFilterPorte] = useState('');
 
+  /** Contexto opcional vindo do radar (sessionStorage `precadastro_context_<id_cliente>` JSON: titulo, scorePct). */
+  const precadContext = useMemo(() => {
+    const id = precadCliente?.id_cliente;
+    if (id == null) return { editalAssociado: null, radarMatch: null };
+    try {
+      const raw = sessionStorage.getItem(`precadastro_context_${id}`);
+      if (!raw) return { editalAssociado: null, radarMatch: null };
+      const j = JSON.parse(raw);
+      const titulo = j.titulo || j.titulo_edital || j.tituloEdital;
+      return {
+        editalAssociado: titulo ? { titulo: String(titulo) } : null,
+        radarMatch: titulo
+          ? { tituloEdital: String(titulo), scorePct: typeof j.scorePct === 'number' ? j.scorePct : undefined }
+          : null,
+      };
+    } catch {
+      return { editalAssociado: null, radarMatch: null };
+    }
+  }, [precadCliente?.id_cliente]);
+
   const loadData = async () => {
     setLoading(true);
     try {
       let result = [];
       if (activeTab === 'usuarios') result = await dataService.getUsers();
       else if (activeTab === 'clientes') result = await dataService.getClients();
-      else if (activeTab === 'organizacoes') result = await dataService.getOrganizations();
       else if (activeTab === 'editais-cadastrados') result = await dataService.getAllEditaisAdmin();
       setData(result);
     } catch (error) {
@@ -74,8 +95,6 @@ export default function Cadastros() {
         matchesSearch = (item.nome?.toLowerCase() || '').includes(s) || (item.nome_email?.toLowerCase() || '').includes(s);
       } else if (activeTab === 'clientes') {
         matchesSearch = (item.nome_empresa?.toLowerCase() || '').includes(s) || (item.cnpj || '').includes(s);
-      } else if (activeTab === 'organizacoes') {
-        matchesSearch = (item.nome?.toLowerCase() || '').includes(s) || (item.tipo?.toLowerCase() || '').includes(s);
       } else if (activeTab === 'editais-cadastrados') {
         matchesSearch = (item.titulo?.toLowerCase() || '').includes(s) || (item.fonte_recurso?.toLowerCase() || '').includes(s);
       }
@@ -108,9 +127,6 @@ export default function Cadastros() {
       } else if (activeTab === 'clientes') {
         if (editingItem) await dataService.updateClient(editingItem.id_cliente, formData);
         else await dataService.createClient(formData);
-      } else if (activeTab === 'organizacoes') {
-        if (editingItem) await dataService.updateOrganization(editingItem.id_organizacao, formData);
-        else await dataService.createOrganization(formData);
       } else if (activeTab === 'editais-cadastrados') {
         if (editingItem) await dataService.updateEdital(editingItem.id_edital, formData);
         else await dataService.createEdital(formData);
@@ -128,7 +144,6 @@ export default function Cadastros() {
     try {
       if (activeTab === 'usuarios') await dataService.deleteUser(id);
       else if (activeTab === 'clientes') await dataService.deleteClient(id);
-      else if (activeTab === 'organizacoes') await dataService.deleteOrganization(id);
       else if (activeTab === 'editais-cadastrados') await dataService.deleteEdital(id);
       loadData();
     } catch (error) {
@@ -153,13 +168,6 @@ export default function Cadastros() {
       { key: 'porte_empresa', label: 'Porte' },
       { key: 'status', label: 'Status' },
     ];
-    if (activeTab === 'organizacoes') return [
-      { key: 'id_organizacao', label: 'ID' },
-      { key: 'nome', label: 'Nome' },
-      { key: 'tipo', label: 'Tipo' },
-      { key: 'estado', label: 'UF' },
-      { key: 'status', label: 'Status' },
-    ];
     if (activeTab === 'editais-cadastrados') return [
       { key: 'id_edital', label: 'ID' },
       { key: 'titulo', label: 'Título' },
@@ -175,7 +183,6 @@ export default function Cadastros() {
     const props = { initialData: editingItem, onSave: handleSave, onCancel: () => setIsModalOpen(false) };
     if (activeTab === 'usuarios') return <UserForm {...props} />;
     if (activeTab === 'clientes') return <ClientForm {...props} />;
-    if (activeTab === 'organizacoes') return <OrgForm {...props} />;
     if (activeTab === 'editais-cadastrados') return <EditalForm {...props} />;
     return null;
   };
@@ -195,9 +202,6 @@ export default function Cadastros() {
             <button className={`sidebar-link ${activeTab === 'clientes' ? 'active' : ''}`} onClick={() => setActiveTab('clientes')}>
               <span className="icon">🏢</span> Clientes
             </button>
-            <button className={`sidebar-link ${activeTab === 'organizacoes' ? 'active' : ''}`} onClick={() => setActiveTab('organizacoes')}>
-              <span className="icon">🏛️</span> Organizações
-            </button>
             <button className={`sidebar-link ${activeTab === 'editais-cadastrados' ? 'active' : ''}`} onClick={() => setActiveTab('editais-cadastrados')}>
               <span className="icon">📄</span> Editais
             </button>
@@ -206,11 +210,11 @@ export default function Cadastros() {
         <main className="admin-main">
           <section className="admin-section active">
             <div className="section-header">
-              <h2>{activeTab === 'usuarios' ? 'Cadastro de Usuários' : activeTab === 'clientes' ? 'Cadastro de Clientes' : activeTab === 'organizacoes' ? 'Cadastro de Organizações' : 'Cadastro de Editais'}</h2>
+              <h2>{activeTab === 'usuarios' ? 'Cadastro de Usuários' : activeTab === 'clientes' ? 'Cadastro de Clientes' : 'Cadastro de Editais'}</h2>
               {/* Somente exibe o botão Novo se tiver permissão de criação. Se for na aba usuários, precisa de permissão canManageUsers */}
               {permissions.canCreate && (activeTab !== 'usuarios' || permissions.canManageUsers) && (
                 <button className="btn-primary" onClick={() => { setEditingItem(null); setIsModalOpen(true); }}>
-                  + Novo {activeTab === 'usuarios' ? 'Usuário' : activeTab === 'clientes' ? 'Cliente' : activeTab === 'organizacoes' ? 'Organização' : 'Edital'}
+                  + Novo {activeTab === 'usuarios' ? 'Usuário' : activeTab === 'clientes' ? 'Cliente' : 'Edital'}
                 </button>
               )}
             </div>
@@ -303,7 +307,23 @@ export default function Cadastros() {
                 columns={columns} 
                 data={filteredData} 
                 onEdit={(item) => { setEditingItem(item); setIsModalOpen(true); }} 
-                onDelete={handleDelete} 
+                onDelete={handleDelete}
+                extraRowActions={
+                  activeTab === 'clientes' && (permissions.canEdit || permissions.canCreate)
+                    ? (item) => (
+                        <button
+                          type="button"
+                          className="btn-action btn-precad"
+                          onClick={() => {
+                            setPrecadCliente(item);
+                            setIsPrecadModalOpen(true);
+                          }}
+                        >
+                          Pré-cadastro projeto
+                        </button>
+                      )
+                    : undefined
+                }
               />
             )}
           </section>
@@ -315,9 +335,23 @@ export default function Cadastros() {
           className={activeTab === 'clientes' || activeTab === 'editais-manuais' ? 'modal-large' : ''}
         >
           <div className="modal-header">
-            <h2>{editingItem ? 'Editar' : 'Cadastrar'} {activeTab === 'usuarios' ? 'Usuário' : activeTab === 'clientes' ? 'Cliente' : activeTab === 'organizacoes' ? 'Organização' : 'Edital'}</h2>
+            <h2>{editingItem ? 'Editar' : 'Cadastrar'} {activeTab === 'usuarios' ? 'Usuário' : activeTab === 'clientes' ? 'Cliente' : 'Edital'}</h2>
           </div>
           {renderForm()}
+        </Modal>
+      )}
+      {isPrecadModalOpen && precadCliente && (
+        <Modal
+          onClose={() => { setIsPrecadModalOpen(false); setPrecadCliente(null); }}
+          className="modal-large modal-precad"
+        >
+          <ProjetoPrecadastroForm
+            key={precadCliente.id_cliente}
+            cliente={precadCliente}
+            editalAssociado={precadContext.editalAssociado}
+            radarMatch={precadContext.radarMatch}
+            onCancel={() => { setIsPrecadModalOpen(false); setPrecadCliente(null); }}
+          />
         </Modal>
       )}
     </>

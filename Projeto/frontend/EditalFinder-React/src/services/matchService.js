@@ -1,3 +1,17 @@
+import {
+  recomendarOportunidadesRadar,
+  radarMatchToCardPayload,
+  toLegacyRadarPayload,
+  scoreAfinidadeTematica,
+  toRadarCliente,
+  toRadarOportunidade,
+  debugRadarCliente,
+  diasAtePrazo,
+  filtrarEditaisPreScoreRadar,
+  avaliarEditalRadarLinha,
+  finalizarRankingOportunidadesRadar,
+} from '../utils/radarMatch';
+
 // ─── Helpers de texto ────────────────────────────────────────────────────────
 
 // Palavras muito genéricas que aparecem em quase todo edital e não ajudam a diferenciar afinidade temática.
@@ -108,87 +122,6 @@ function tokenizarComSinonimos(texto) {
   return [...set];
 }
 
-// ─── Helpers de avaliação temporal / maturidade / idade ──────────────────────
-
-function idadeAnos(dataAbertura) {
-  if (!dataAbertura) return null;
-  const d = new Date(dataAbertura);
-  if (Number.isNaN(d.getTime())) return null;
-  return (Date.now() - d.getTime()) / (365.25 * 24 * 3600 * 1000);
-}
-
-function diasParaPrazo(edital) {
-  const p = edital.dataLimite || edital.prazo_envio;
-  if (!p) return null;
-  const d = new Date(p);
-  if (Number.isNaN(d.getTime())) return null;
-  return Math.floor((d.getTime() - Date.now()) / (24 * 3600 * 1000));
-}
-
-/**
- * Avalia viabilidade temporal do edital.
- * @returns {{ pts: number, rotulo: ('expirado'|'curto'|'medio'|'longo'|null), expirado: boolean, dias: (number|null) }}
- */
-export function avaliarPrazo(edital) {
-  const dias = diasParaPrazo(edital);
-  const status = (edital.status || '').toLowerCase();
-  const situacao = (edital.situacao || '').toLowerCase();
-  const statusInativo = status && status !== 'ativo';
-  const situacaoEncerrada = /encerr|finaliz|fechad|concluid/.test(situacao);
-
-  if (statusInativo || situacaoEncerrada) {
-    return { pts: 0, rotulo: 'expirado', expirado: true, dias };
-  }
-  if (dias == null) return { pts: 3, rotulo: null, expirado: false, dias: null };
-  if (dias < 0)     return { pts: 0, rotulo: 'expirado', expirado: true, dias };
-  if (dias < 7)     return { pts: 1, rotulo: 'curto',   expirado: false, dias };
-  if (dias <= 30)   return { pts: 3, rotulo: 'medio',   expirado: false, dias };
-  return               { pts: 5, rotulo: 'longo',   expirado: false, dias };
-}
-
-const MATURIDADE_TERMOS = {
-  'Ideação':   ['ideacao', 'ideia', 'concepcao', 'pre-seed', 'preseed', 'incubacao', 'incubadora', 'prototipacao'],
-  'Validação': ['validacao', 'prova de conceito', 'mvp', 'poc', 'prototipo', 'piloto', 'teste'],
-  'Operação':  ['operacao', 'crescimento', 'tracao', 'aceleracao', 'seed', 'acelera'],
-  'Escala':    ['escala', 'scale', 'scaleup', 'internacionalizacao', 'series a', 'series b'],
-};
-
-function avaliarMaturidade(cliente, edital) {
-  const nivel = cliente.nivel_maturidade;
-  const termos = MATURIDADE_TERMOS[nivel] || null;
-  const textoE = [
-    edital.objetivo, edital.publico_alvo, edital.elegibilidade, edital.descricao, edital.titulo,
-  ].filter(Boolean).join(' ');
-
-  let pts = 5; // neutro se não houver referência explícita
-  let matched = false;
-  if (termos && textoContem(textoE, termos)) {
-    pts = 10;
-    matched = true;
-  }
-  if (cliente.tem_projeto_inovacao && textoContem(textoE, ['inovacao', 'pesquisa', 'p&d', 'pd', 'desenvolvimento', 'inovador'])) {
-    pts += 3;
-  }
-  return { pts: Math.min(pts, 10), matched };
-}
-
-function avaliarIdade(cliente, edital) {
-  const textoE = [edital.elegibilidade, edital.publico_alvo, edital.descricao]
-    .filter(Boolean)
-    .join(' ')
-    .toLowerCase()
-    .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '');
-  const match = textoE.match(/m[ií]?nim[oa]\s+de?\s+(\d+)\s+anos?/);
-  if (!match) return { pts: 3, exigencia: null, cumpre: null };
-  const exig = parseInt(match[1], 10);
-  if (!Number.isFinite(exig)) return { pts: 3, exigencia: null, cumpre: null };
-  const idade = idadeAnos(cliente.data_abertura);
-  if (idade == null) return { pts: 1, exigencia: exig, cumpre: null };
-  if (idade >= exig) return { pts: 5, exigencia: exig, cumpre: true };
-  return { pts: 0, exigencia: exig, cumpre: false };
-}
-
 // ─── JSON `compatibilidade` do edital ─────────────────────────────────────────
 
 /**
@@ -259,28 +192,6 @@ function escolherPerfilNoMapa(cliente, mapa) {
   return bestHits > 0 ? bestKey : null;
 }
 
-/** Pesos do índice final do Radar (JSON × cálculo do cadastro). */
-const RADAR_PESO_JSON = 0.35;
-const RADAR_PESO_CADASTRO = 0.65;
-
-// ─── Mapeamento de porte ─────────────────────────────────────────────────────
-
-const PORTE_TERMOS = {
-  'MEI':    ['mei', 'micro empreendedor', 'microempreendedor', 'empreendedor individual'],
-  'ME':     ['micro empresa', 'microempresa', 'pequena empresa', 'mpe'],
-  'EPP':    ['epp', 'empresa pequeno porte', 'pequeno porte', 'pequena', 'mpe'],
-  'Média':  ['media empresa', 'empresa media', 'medio porte'],
-  'Grande': ['grande empresa', 'grande porte', 'grande'],
-};
-
-const PORTE_EXCLUSOES = {
-  'MEI':    ['grande', 'media empresa', 'grande porte', 'medio porte'],
-  'ME':     ['grande', 'media empresa', 'grande porte'],
-  'EPP':    ['grande', 'grande porte'],
-  'Média':  ['mei', 'microempreendedor'],
-  'Grande': ['mei', 'micro', 'pequena'],
-};
-
 // ─── Texto base: área / temas (cliente × edital) ─────────────────────────────
 
 function textoClienteAreaTemas(cliente) {
@@ -315,303 +226,268 @@ export function editalTemSobreposicaoAreaComCliente(cliente, edital) {
 }
 
 export function tiposRecursoEditaisNaAreaDoCliente(cliente, editais) {
+  const cr = toRadarCliente(cliente);
   const tipos = new Set();
   for (const e of editais) {
-    if (!editalTemSobreposicaoAreaComCliente(cliente, e)) continue;
+    const aff = scoreAfinidadeTematica(cr, toRadarOportunidade(e));
+    if (aff.pontos < 4 && editalTemSobreposicaoAreaComCliente(cliente, e) === false) continue;
+    if (aff.pontos < 2) continue;
     const t = (e.tipoRecurso || '').trim();
     if (t) tipos.add(t);
   }
   return [...tipos].sort((a, b) => a.localeCompare(b, 'pt-BR'));
 }
 
-// ─── Novo motor de score: 8 critérios (100 pts) ──────────────────────────────
-
-/**
- * Rótulos e pesos máximos dos critérios (usados na UI como legenda/mini-barras).
- */
+/** Pesos máximos do novo índice (100 pts via motor em radarMatch.js). */
 export const CRITERIOS = [
-  { key: 'afinidade',    label: 'Afinidade temática',    max: 30 },
-  { key: 'localizacao',  label: 'Localização',            max: 15 },
-  { key: 'porte',        label: 'Porte e elegibilidade',  max: 15 },
-  { key: 'maturidade',   label: 'Maturidade do projeto',  max: 10 },
-  { key: 'valor',        label: 'Faixa de valor',         max: 10 },
-  { key: 'regularidade', label: 'Regularidade',           max: 10 },
-  { key: 'prazo',        label: 'Prazo e situação',       max: 5  },
-  { key: 'idade',        label: 'Idade da empresa',       max: 5  },
+  { key: 'afinidade', label: 'Afinidade temática', max: 30 },
+  { key: 'perfil', label: 'Perfil e elegibilidade', max: 20 },
+  { key: 'tipo', label: 'Tipo de recurso', max: 15 },
+  { key: 'localizacao', label: 'Localização', max: 10 },
+  { key: 'prazo', label: 'Prazo e situação', max: 10 },
+  { key: 'qualidade', label: 'Qualidade e confiança', max: 10 },
+  { key: 'valor', label: 'Faixa de valor', max: 5 },
 ];
 
+/** Retorno “zerado” com chaves esperadas pela UI quando o par não pode ser avaliado. */
+function radarDetalhesZerados() {
+  const o = {};
+  CRITERIOS.forEach((c) => { o[c.key] = 0; });
+  return o;
+}
+
 /**
- * Calcula o score do cadastro (cliente × edital) com 8 critérios, total 100 pts.
- *
- * @param {Object} cliente  Registro da tabela `cliente`
- * @param {Object} edital   Objeto formatado pelo dataService
- * @returns {{ score: number, compatibilidade: string, razoes: string[], detalhes: Object, prazoInfo: Object, expirado: boolean }}
+ * Índice de compatibilidade (cliente × edital).
+ * Delega ao motor estruturado em `radarMatch.js`.
  */
 export function calcularScore(cliente, edital) {
-  let score = 0;
-  const razoes = [];
-  const detalhes = {
-    afinidade: 0, localizacao: 0, porte: 0, maturidade: 0,
-    valor: 0, regularidade: 0, prazo: 0, idade: 0,
-  };
-
-  // C1. AFINIDADE TEMÁTICA (até 30 pts)
-  // Estratégia em duas camadas para ter ordenação mais precisa:
-  //   (a) Núcleo conceitual: tokens do SETOR/ÁREA do cliente (setor + cnae_principal + area_inovacao)
-  //       cruzam com os campos centrais do edital (temas + titulo + area + objetivo + publico_alvo).
-  //       Cada casamento único vale mais (até 20 pts).
-  //   (b) Interesses e descrição do projeto vs. descrição/elegibilidade do edital (até 10 pts).
-  const kwNucleoCli = tokenizarComSinonimos(
-    [cliente.setor, cliente.cnae_principal, cliente.area_inovacao].filter(Boolean).join(' ')
-  );
-  const kwNucleoEd  = tokenizarComSinonimos(
-    [edital.temas, edital.titulo, edital.area, edital.objetivo, edital.publico_alvo].filter(Boolean).join(' ')
-  );
-  const matchNucleo = [...new Set(intersecaoForte(kwNucleoCli, kwNucleoEd))];
-
-  const kwInterCli = tokenizarComSinonimos(
-    [cliente.interesse_temas, cliente.descricao_projeto].filter(Boolean).join(' ')
-  );
-  const kwInterEd  = tokenizarComSinonimos(
-    [edital.descricao, edital.elegibilidade, edital.publico_alvo, edital.objetivo].filter(Boolean).join(' ')
-  );
-  const matchInter = [...new Set(intersecaoForte(kwInterCli, kwInterEd))];
-
-  let ptNucleo  = Math.min(20, matchNucleo.length * 5);
-  let ptInteres = Math.min(10, matchInter.length * 2);
-
-  // Bônus ODS ×interesse_temas (máx +3, dentro do teto de 30)
-  let bonusOds = 0;
-  const odsEd    = (edital.ods || '').toString();
-  const temasCli = (cliente.interesse_temas || '').toString();
-  if (odsEd && temasCli) {
-    const odsTokens = tokenizar(odsEd).filter(t => !STOPWORDS.has(t));
-    const temasNorm = normalizarChave(temasCli);
-    if (odsTokens.some(t => t.length >= 4 && temasNorm.includes(t))) bonusOds = 3;
-  }
-
-  let ptAfin = Math.min(30, ptNucleo + ptInteres + bonusOds);
-  detalhes.afinidade = ptAfin;
-  score += ptAfin;
-
-  const razoesAfin = [...matchNucleo, ...matchInter.filter(t => !matchNucleo.includes(t))].slice(0, 3);
-  if (razoesAfin.length > 0) razoes.push(`Afinidade: ${razoesAfin.join(', ')}`);
-  else if (ptAfin === 0) razoes.push('Sem afinidade direta com a área do cliente');
-
-  // C2. LOCALIZAÇÃO (até 15 pts)
-  const estadoCli = (cliente.estado || '').toLowerCase().trim();
-  const regiaoCli = (cliente.regiao || '').toLowerCase().trim();
-  const estadoEd  = (edital.estado || '').toLowerCase().trim();
-  const regiaoEd  = (edital.regiao || '').toLowerCase().trim();
-  const localEd   = (edital.localidade || '').toLowerCase().trim();
-
-  const isNacional  = !estadoEd || estadoEd === 'nacional' || localEd === 'nacional' || regiaoEd === 'nacional';
-  const mesmoEstado = estadoCli && estadoEd && (estadoCli === estadoEd || estadoEd.includes(estadoCli));
-  const mesmaRegiao = regiaoCli && regiaoEd && (regiaoEd.includes(regiaoCli) || regiaoCli.includes(regiaoEd));
-
-  let ptLocal = 0;
-  if (isNacional || mesmoEstado) {
-    ptLocal = 15;
-    razoes.push(isNacional ? 'Abrangência nacional' : `Estado: ${cliente.estado?.toUpperCase?.()}`);
-  } else if (mesmaRegiao) {
-    ptLocal = 10;
-    razoes.push(`Região: ${cliente.regiao}`);
-  } else if (!estadoEd && !regiaoEd) {
-    ptLocal = 10;
-  }
-  detalhes.localizacao = ptLocal;
-  score += ptLocal;
-
-  // C3. PORTE E ELEGIBILIDADE (até 15 pts)
-  const porte = (cliente.porte_empresa || '').trim();
-  const textoElegib = [
-    edital.elegibilidade, edital.publico_alvo, edital.temas,
-    edital.objetivo, edital.titulo, edital.area,
-  ].filter(Boolean).join(' ');
-  const termosPorte    = PORTE_TERMOS[porte]    || [];
-  const termosExclusao = PORTE_EXCLUSOES[porte] || [];
-  const porteBate      = termosPorte.length > 0 && textoContem(textoElegib, termosPorte);
-  const porteExcluido  = termosExclusao.length > 0 && textoContem(textoElegib, termosExclusao);
-  const semRestricao   = !textoContem(textoElegib, [
-    'mei', 'micro', 'pequena', 'grande', 'medio porte', 'grande porte',
-  ]);
-
-  let ptPorte = 0;
-  if (porteExcluido && !porteBate) {
-    ptPorte = 0;
-  } else if (porteBate) {
-    ptPorte = 15;
-    razoes.push(`Porte ${porte} compatível`);
-  } else if (semRestricao) {
-    ptPorte = 10;
-  } else {
-    ptPorte = 10;
-  }
-  const cnae = (cliente.cnae_principal || '').trim();
-  if (cnae && textoElegib && textoElegib.toLowerCase().includes(cnae.toLowerCase())) {
-    ptPorte = Math.min(15, ptPorte + 5);
-    razoes.push(`CNAE ${cnae} citado`);
-  }
-  detalhes.porte = ptPorte;
-  score += ptPorte;
-
-  // C4. MATURIDADE DO PROJETO (até 10 pts)
-  const matur = avaliarMaturidade(cliente, edital);
-  detalhes.maturidade = matur.pts;
-  score += matur.pts;
-  if (matur.matched && cliente.nivel_maturidade) {
-    razoes.push(`Maturidade «${cliente.nivel_maturidade}» alinhada`);
-  }
-
-  // C5. FAIXA DE VALOR (até 10 pts)
-  const cliMin = parseFloat(cliente.interesse_valor_min) || 0;
-  const cliMax = parseFloat(cliente.interesse_valor_max) || 0;
-  const edMin  = parseFloat(edital.valorMinimo)          || 0;
-  const edMax  = parseFloat(edital.valorMaximo || edital.valor) || 0;
-
-  let ptValor = 0;
-  if (cliMin === 0 && cliMax === 0)      ptValor = 5;
-  else if (edMin === 0 && edMax === 0)   ptValor = 5;
-  else {
-    const overlapMin = Math.max(cliMin, edMin);
-    const overlapMax = Math.min(cliMax > 0 ? cliMax : Infinity, edMax > 0 ? edMax : Infinity);
-    if (overlapMax >= overlapMin) {
-      const rangeCliente = (cliMax > 0 ? cliMax : edMax) - cliMin;
-      const overlapSize  = overlapMax - overlapMin;
-      const cobertura    = rangeCliente > 0 ? overlapSize / rangeCliente : 1;
-      ptValor = cobertura >= 0.5 ? 8 : 5;
-      if (ptValor === 8) razoes.push('Valor dentro da faixa de interesse');
-    }
-  }
-  const fatAnual = parseFloat(cliente.faturamento_anual) || 0;
-  if (fatAnual > 0 && edMax > 0 && fatAnual >= edMax * 0.33) {
-    ptValor = Math.min(10, ptValor + 2);
-  }
-  detalhes.valor = ptValor;
-  score += ptValor;
-
-  // C6. REGULARIDADE E CONTRAPARTIDA (até 10 pts)
-  let ptReg = 0;
-  if (cliente.regular_fiscal && cliente.regular_trabalhista) ptReg += 4;
-  else if (cliente.regular_fiscal || cliente.regular_trabalhista) ptReg += 2;
-  if (cliente.possui_certidao_negativa) ptReg += 3;
-  const editalExigeContrapartida = textoContem(edital.contrapartida || '', ['sim', 'obrigatoria', 'exigida', 'requerida']);
-  if (cliente.disponibilidade_contrapartida) ptReg += editalExigeContrapartida ? 3 : 1;
-  ptReg = Math.min(ptReg, 10);
-  detalhes.regularidade = ptReg;
-  score += ptReg;
-  if (ptReg >= 7) razoes.push('Regularidade completa');
-
-  // C7. PRAZO E SITUAÇÃO (até 5 pts)
-  const prazo = avaliarPrazo(edital);
-  detalhes.prazo = prazo.pts;
-  score += prazo.pts;
-  if (prazo.expirado)                razoes.push('Edital expirado');
-  else if (prazo.rotulo === 'longo') razoes.push('Prazo confortável');
-  else if (prazo.rotulo === 'curto') razoes.push('Prazo curto — urgência');
-
-  // C8. IDADE DA EMPRESA (até 5 pts)
-  const idade = avaliarIdade(cliente, edital);
-  detalhes.idade = idade.pts;
-  score += idade.pts;
-  if (idade.cumpre === true)       razoes.push(`Idade ≥ ${idade.exigencia} anos cumprida`);
-  else if (idade.cumpre === false) razoes.push(`Edital exige ${idade.exigencia}+ anos de CNPJ`);
-
-  score = Math.min(Math.round(score), 100);
-
-  // Teto por afinidade: sem sobreposição com a área do cliente, o edital não pode ser "Alta".
-  // Garante que a ordenação reflita o perfil da empresa mesmo quando o edital tem prazo longo,
-  // abrangência nacional e faixa de valor aberta.
-  const temInputAfinidade = (
-    (cliente.setor || cliente.cnae_principal || cliente.area_inovacao ||
-     cliente.interesse_temas || cliente.descricao_projeto || '').toString().trim().length > 0
-  );
-  if (temInputAfinidade) {
-    if (ptAfin === 0)      score = Math.min(score, 40);
-    else if (ptAfin < 10)  score = Math.min(score, 70);
-  }
-
-  let compatibilidade;
-  if      (score >= 75) compatibilidade = 'Alta';
-  else if (score >= 45) compatibilidade = 'Média';
-  else                  compatibilidade = 'Baixa';
-
-  return {
-    score,
-    compatibilidade,
-    razoes,
-    detalhes,
-    prazoInfo: prazo,
-    expirado: prazo.expirado,
-  };
-}
-
-/**
- * Radar: combina o percentual do perfil no JSON `compatibilidade` do edital com o cálculo do cadastro.
- * Só usa o JSON quando existe uma chave correspondente ao perfil do cliente.
- */
-export function resolverRadarMatch(cliente, edital) {
-  const mapa   = parseCompatibilidadePerfis(edital.compatibilidade);
-  const legado = calcularScore(cliente, edital);
-  const leg    = Number.isFinite(legado.score) ? legado.score : 0;
-
-  const classif = (s) => (s >= 75 ? 'Alta' : s >= 45 ? 'Média' : 'Baixa');
-
-  if (mapa) {
-    const perfil = escolherPerfilNoMapa(cliente, mapa);
-    if (perfil == null) {
-      return {
-        ...legado,
-        score: leg,
-        compatibilidade: classif(leg),
-        matchLinha: `Match de ${leg}% pelo seu cadastro (o edital traz índices por perfil, mas nenhum corresponde ao seu cadastro)`,
-        perfilMatch: null,
-        fonteMatch: 'calculado',
-      };
-    }
-    const jRaw = mapa[perfil];
-    const jNum = Math.min(100, Math.max(0, Math.round(Number.isFinite(jRaw) ? jRaw : 0)));
-    const scoreRounded = Math.min(
-      100,
-      Math.max(0, Math.round(RADAR_PESO_JSON * jNum + RADAR_PESO_CADASTRO * leg))
-    );
+  const p = toLegacyRadarPayload(cliente, edital, {
+    incluirSuspeitos: true,
+    incluirEncerrados: true,
+    incluirAproximados: true,
+    scoreMinimoExibir: 0,
+  });
+  if (p.excluido) {
     return {
-      ...legado,
-      score: scoreRounded,
-      compatibilidade: classif(scoreRounded),
-      matchLinha: `Match de ${scoreRounded}% — perfil «${perfil}» no edital (${jNum}%) + cadastro (${leg}%)`,
-      perfilMatch: perfil,
-      fonteMatch: 'hibrido',
+      score: 0,
+      compatibilidade: 'Baixa',
+      razoes: ['Cadastro incompleto ou dados do edital insuficientes (ex.: falta link)'],
+      detalhes: radarDetalhesZerados(),
+      criterioMeta: {},
+      prazoInfo: { dias: null, rotulo: null, expirado: false },
+      expirado: false,
     };
   }
-
   return {
-    ...legado,
-    score: leg,
-    compatibilidade: classif(leg),
-    matchLinha: `Match de ${leg}% estimado pelo seu cadastro`,
-    perfilMatch: null,
-    fonteMatch: 'calculado',
+    score: p.score,
+    compatibilidade: p.compatibilidade,
+    razoes: p.razoes,
+    detalhes: p.detalhes,
+    criterioMeta: p.criterioMeta,
+    prazoInfo: p.prazoInfo,
+    expirado: p.expirado,
   };
 }
 
 /**
- * Lista editais ordenada por compatibilidade.
- * Desempate: prazo mais próximo entre editais válidos; expirados ficam no final.
+ * Radar (UI): mesma política da análise em etapas (`radarMatch.js`). Sem mistura artificial com JSON de perfil.
  */
-export function recomendarEditais(cliente, editais) {
+export function resolverRadarMatch(cliente, edital, options = {}) {
+  const p = toLegacyRadarPayload(cliente, edital, {
+    incluirSuspeitos: options.incluirSuspeitos ?? false,
+    incluirEncerrados: options.incluirEncerrados ?? false,
+    incluirAproximados: options.incluirAproximados ?? false,
+    scoreMinimoExibir: options.scoreMinimoExibir ?? 22,
+    ...options,
+  });
+  if (p.excluido) {
+    return {
+      score: 0,
+      compatibilidade: 'Baixa',
+      razoes: [],
+      detalhes: radarDetalhesZerados(),
+      prazoInfo: { dias: null, rotulo: null, expirado: false },
+      expirado: false,
+      matchLinha: 'Oportunidade excluída pelos filtros do radar ou dados insuficientes.',
+      perfilMatch: null,
+      fonteMatch: 'radar_v2',
+    };
+  }
+  return {
+    score: p.score,
+    compatibilidade: p.compatibilidade,
+    razoes: p.razoes,
+    detalhes: p.detalhes,
+    criterioMeta: p.criterioMeta,
+    prazoInfo: p.prazoInfo,
+    expirado: p.expirado,
+    matchLinha: p.matchLinha,
+    radar_badges: p.radar_badges,
+    radar_penalidades: p.radar_penalidades,
+    perfilMatch: null,
+    fonteMatch: 'radar_v2',
+  };
+}
+
+const DEFAULT_RADAR_ASYNC_CHUNK = 72;
+
+/** Chave superficial para memoizar radar (lista enorme igual + mesmas flags). */
+export function buildRadarCacheKey(clienteRow, totalEditais, headId, tailId, options) {
+  const cid = String(clienteRow?.id_cliente ?? clienteRow?.id ?? '');
+  return [
+    cid,
+    totalEditais,
+    headId ?? '',
+    tailId ?? '',
+    options.incluirSuspeitos ? 'S' : 's',
+    options.incluirEncerrados ? 'E' : 'e',
+    options.incluirAproximados ? 'A' : 'a',
+    options.cortePrincipal ?? '',
+    options.corteFallback ?? '',
+    options.scoreMinimoExibir ?? '',
+  ].join('|');
+}
+
+/** Ordenação final igual a `recomendarEditais` (expirados depois). */
+export function ordenarLinhasRadarUi(rows, nowMs = Date.now()) {
+  return [...rows].sort((a, b) => {
+    const expA = a.expirado ? 1 : 0;
+    const expB = b.expirado ? 1 : 0;
+    if (expA !== expB) return expA - expB;
+    if (b.score !== a.score) return b.score - a.score;
+    const diaA = diasAtePrazo(a.edital.dataLimite);
+    const diaB = diasAtePrazo(b.edital.dataLimite);
+    const tA = new Date(a.edital.dataLimite || 0).getTime();
+    const tB = new Date(b.edital.dataLimite || 0).getTime();
+    const vA = diaA != null && diaA >= 0 ? tA - nowMs : Number.POSITIVE_INFINITY;
+    const vB = diaB != null && diaB >= 0 ? tB - nowMs : Number.POSITIVE_INFINITY;
+    return vA - vB;
+  });
+}
+
+function enriquecerLinhasRadarOrdenadas(linhasRadar, nowMs = Date.now()) {
+  const enriquecidas = linhasRadar
+    .map((row) => {
+      if (!row?.edital || !row?.radar_match) return null;
+      const p = radarMatchToCardPayload(row.edital, row.radar_match);
+      if (p.excluido) return null;
+      return { edital: row.edital, ...p };
+    })
+    .filter(Boolean);
+  return ordenarLinhasRadarUi(enriquecidas, nowMs);
+}
+
+/**
+ * Radar em lotes: pré-filtro barato + `calcularMatchRadar` em chunks + mesmo ranking da versão síncrona.
+ */
+export async function recomendarEditaisAsync(cliente, editais, options = {}, asyncOpts = {}) {
+  const chunkSize = asyncOpts.chunkSize ?? DEFAULT_RADAR_ASYNC_CHUNK;
+  const signal = asyncOpts.signal;
+  const onProgress = asyncOpts.onProgress;
+
+  const eds = Array.isArray(editais) ? editais : [];
+  const merged = {
+    incluirSuspeitos: options.incluirSuspeitos ?? false,
+    incluirEncerrados: options.incluirEncerrados ?? false,
+    incluirAproximados: options.incluirAproximados ?? false,
+    cortePrincipal: options.cortePrincipal ?? 52,
+    corteFallback: options.corteFallback ?? 30,
+    limite: options.limite ?? 3000,
+    scoreMinimoExibir: options.scoreMinimoExibir ?? (options.incluirAproximados ? 12 : 24),
+    ...options,
+  };
+
+  const { passed, totalIn, excludedPreScore } = filtrarEditaisPreScoreRadar(eds, merged);
+  const radarCliente = toRadarCliente(cliente);
+  const scoreMin = merged.scoreMinimoExibir ?? (merged.incluirAproximados ? 15 : 24);
+
+  const avaliadas = [];
+  const n = passed.length;
+  for (let i = 0; i < n; i += chunkSize) {
+    if (signal?.aborted) {
+      const err = new DOMException('Radar cancelado', 'AbortError');
+      throw err;
+    }
+    const slice = passed.slice(i, i + chunkSize);
+    for (let j = 0; j < slice.length; j++) {
+      avaliadas.push(avaliarEditalRadarLinha(radarCliente, slice[j], merged, scoreMin));
+    }
+    const processed = Math.min(i + chunkSize, n);
+    onProgress?.({
+      processed,
+      total: n,
+      originalTotal: totalIn,
+      excludedPreScore,
+    });
+    await new Promise((r) => setTimeout(r, 0));
+  }
+
+  const linhas = finalizarRankingOportunidadesRadar(avaliadas, merged);
   const now = Date.now();
-  return editais
-    .map(edital => ({ edital, ...resolverRadarMatch(cliente, edital) }))
-    .sort((a, b) => {
+  const rows = enriquecerLinhasRadarOrdenadas(linhas, now);
+
+  return {
+    rows,
+    meta: {
+      totalIn,
+      afterPreFilter: n,
+      excludedPreScore,
+      chunkSize,
+    },
+  };
+}
+
+/**
+ * Lista de editais com score e metadados — diversificação e cortes no motor.
+ */
+export function recomendarEditais(cliente, editais, options = {}) {
+  const eds = Array.isArray(editais) ? editais : [];
+
+  const merged = {
+    incluirSuspeitos: options.incluirSuspeitos ?? false,
+    incluirEncerrados: options.incluirEncerrados ?? false,
+    incluirAproximados: options.incluirAproximados ?? false,
+    cortePrincipal: options.cortePrincipal ?? 52,
+    corteFallback: options.corteFallback ?? 30,
+    limite: options.limite ?? 3000,
+    scoreMinimoExibir: options.scoreMinimoExibir ??
+      (options.incluirAproximados ? 12 : 24),
+    ...options,
+  };
+
+  try {
+    const linhas = recomendarOportunidadesRadar(cliente, eds, merged);
+
+    const now = Date.now();
+    const enriquecidas = linhas
+      .map((row) => {
+        if (!row?.edital || !row?.radar_match) return null;
+        const p = radarMatchToCardPayload(row.edital, row.radar_match);
+        if (p.excluido) return null;
+        return { edital: row.edital, ...p };
+      })
+      .filter(Boolean);
+
+    return enriquecidas.sort((a, b) => {
       const expA = a.expirado ? 1 : 0;
       const expB = b.expirado ? 1 : 0;
       if (expA !== expB) return expA - expB;
       if (b.score !== a.score) return b.score - a.score;
+      const diaA = diasAtePrazo(a.edital.dataLimite);
+      const diaB = diasAtePrazo(b.edital.dataLimite);
       const tA = new Date(a.edital.dataLimite || 0).getTime();
       const tB = new Date(b.edital.dataLimite || 0).getTime();
-      const vA = tA >= now ? tA - now : Number.POSITIVE_INFINITY;
-      const vB = tB >= now ? tB - now : Number.POSITIVE_INFINITY;
+      const vA = diaA != null && diaA >= 0 ? tA - now : Number.POSITIVE_INFINITY;
+      const vB = diaB != null && diaB >= 0 ? tB - now : Number.POSITIVE_INFINITY;
       return vA - vB;
     });
+  } catch (e) {
+    console.error('[matchService] recomendarEditais:', e);
+    return [];
+  }
+}
+
+/** Debug do radar (principalmente modo desenvolvimento). */
+export function debugRadar({ cliente, editais, options }) {
+  return debugRadarCliente(cliente, editais, options || {});
 }
