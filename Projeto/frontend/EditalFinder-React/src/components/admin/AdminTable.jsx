@@ -1,10 +1,45 @@
 import { usePermissions } from '../../hooks/usePermissions';
 
-export default function AdminTable({ columns, data, onEdit, onDelete }) {
+function formatCell(raw) {
+  if (raw == null || raw === '') return '—';
+  const t = typeof raw;
+  if (t === 'string' || t === 'number' || t === 'boolean') return String(raw);
+  if (t === 'bigint') return raw.toString();
+  if (t === 'object') {
+    if (Array.isArray(raw)) return raw.length ? raw.join(', ') : '—';
+    try {
+      const s = JSON.stringify(raw);
+      return s.length > 80 ? `${s.slice(0, 77)}…` : s;
+    } catch {
+      return '—';
+    }
+  }
+  return '—';
+}
+
+/** @param {(item: object) => import('react').ReactNode | null} [extraRowActions] */
+export default function AdminTable({ columns, data, onEdit, onDelete, extraRowActions }) {
   const permissions = usePermissions();
   
   // A primeira coluna é SEMPRE o ID nas tabelas de cadastro
   const idKey = columns[0]?.key;
+
+  const showsActionsColumn =
+    permissions.canEdit ||
+    permissions.canDelete ||
+    typeof extraRowActions === 'function' ||
+    data.some((item) => {
+      const link = typeof item.link === 'string' && item.link.trim().length > 0;
+      const pdf = typeof item.pdf_url === 'string' && item.pdf_url.trim().length > 0;
+      return link || pdf;
+    });
+
+  const rowNeedsExternalActions = (item) => {
+    if (!item || typeof item !== 'object') return false;
+    const link = typeof item.link === 'string' && item.link.trim().length > 0;
+    const pdf = typeof item.pdf_url === 'string' && item.pdf_url.trim().length > 0;
+    return link || pdf;
+  };
 
   return (
     <div className="table-container">
@@ -12,13 +47,13 @@ export default function AdminTable({ columns, data, onEdit, onDelete }) {
         <thead>
           <tr>
             {columns.map((col) => <th key={col.key}>{col.label}</th>)}
-            {(permissions.canEdit || permissions.canDelete || data.some(item => item.link)) && <th>Ações</th>}
+            {showsActionsColumn && <th>Ações</th>}
           </tr>
         </thead>
         <tbody>
           {data.length === 0 ? (
             <tr>
-              <td colSpan={columns.length + ((permissions.canEdit || permissions.canDelete || data.some(item => item.link)) ? 1 : 0)} style={{ textAlign: 'center', padding: '20px' }}>
+              <td colSpan={columns.length + (showsActionsColumn ? 1 : 0)} style={{ textAlign: 'center', padding: '20px' }}>
                 Nenhum item encontrado.
               </td>
             </tr>
@@ -27,13 +62,19 @@ export default function AdminTable({ columns, data, onEdit, onDelete }) {
               <tr key={item[idKey] || idx}>
                 {columns.map((col) => (
                   <td key={col.key} data-label={col.label}>
-                    {col.render ? col.render(item[col.key], item) : item[col.key]}
+                    {col.render
+                      ? col.render(item[col.key], item)
+                      : formatCell(item[col.key])}
                   </td>
                 ))}
-                {(permissions.canEdit || permissions.canDelete || item.link || item.pdf_url) && (
+                {(permissions.canEdit ||
+                  permissions.canDelete ||
+                  typeof extraRowActions === 'function' ||
+                  rowNeedsExternalActions(item)) && (
                   <td>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
-                      {item.pdf_url && (
+                      {typeof extraRowActions === 'function' ? extraRowActions(item) : null}
+                      {typeof item.pdf_url === 'string' && item.pdf_url.trim() && (
                         <button 
                           className="btn-action btn-open-pdf" 
                           onClick={() => window.open(item.pdf_url, '_blank')}
@@ -41,7 +82,7 @@ export default function AdminTable({ columns, data, onEdit, onDelete }) {
                           Abrir PDF
                         </button>
                       )}
-                      {item.link && (
+                      {typeof item.link === 'string' && item.link.trim() && (
                         <button 
                           className="btn-action btn-open-link" 
                           onClick={() => window.open(item.link, '_blank')}

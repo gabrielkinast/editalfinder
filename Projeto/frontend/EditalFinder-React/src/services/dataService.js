@@ -1,61 +1,77 @@
 import { supabase } from './api';
-import { classificarEdital } from './classificationService';
+import { normalizeClienteRow } from '../utils/normalizeCliente';
+import { mapRawEditalRow } from '../utils/edital/editalRowMapper';
+
+/** Supabase limita respostas; busca em páginas até esgotar linhas (respeitando RLS). */
+async function fetchAllTableRows(tableName, orderColumn = 'criado_em', ascending = false) {
+  const PAGE = 800;
+  const all = [];
+  let from = 0;
+  for (;;) {
+    const { data, error } = await supabase
+      .from(tableName)
+      .select('*')
+      .order(orderColumn, { ascending, nullsFirst: false })
+      .range(from, from + PAGE - 1);
+
+    if (error) throw error;
+    if (!data?.length) break;
+    all.push(...data);
+    if (data.length < PAGE) break;
+    from += PAGE;
+  }
+  return all;
+}
 
 export const dataService = {
   // --- EDITAIS ---
   async getEditais() {
-    const { data: manuais, error } = await supabase
-      .from('edital')
-      .select('*')
-      .order('id_edital', { ascending: false });
+    const PAGE = 1000;
+    const fetchPaged = async (table, orderCol) => {
+      const all = [];
+      let from = 0;
+      for (;;) {
+        const q = await supabase
+          .from(table)
+          .select('*')
+          .order(orderCol, { ascending: false, nullsFirst: false })
+          .range(from, from + PAGE - 1);
 
-    if (error) throw error;
+        if (q.error) throw q.error;
+        if (!q.data?.length) break;
+        all.push(...q.data);
+        if (q.data.length < PAGE) break;
+        from += PAGE;
+      }
+      return all;
+    };
 
-    const manuaisFormatados = manuais.map(m => {
-        const estado = m.estado || '';
-        const isInternacional = estado.toLowerCase().includes('internacional') || estado === 'Exterior';
-        const classificacao = classificarEdital(m);
+    let rows;
+    try {
+      rows = await fetchPaged('vw_editais_front', 'atualizado_em');
+    } catch (viewErrAtualizado) {
+      try {
+        rows = await fetchPaged('vw_editais_front', 'id_edital');
+      } catch (viewErr) {
+        rows = [];
+        console.warn('[dataService.getEditais] vw_editais_front:', viewErrAtualizado?.message || viewErrAtualizado);
+      }
+    }
 
-        return {
-            id: `manual-${m.id_edital}`,
-            titulo: m.titulo,
-            orgao: m.fonte_recurso || 'Manual',
-            area: m.temas || classificacao.area.join(', '),
-            valor: m.valor_maximo || 0,
-            localidade: isInternacional ? 'Internacional' : 'Nacional',
-            estado: estado,
-            dataLimite: m.prazo_envio,
-            tipoRecurso: classificacao.tipo,
-            isManual: true,
-            linkOriginal: m.link,
-            pdfUrl: m.pdf_url,
-            orgSite: null,
-            // Campos brutos do edital (Radar / calcularScore)
-            temas:         m.temas || null,
-            objetivo:      m.objetivo || null,
-            publico_alvo:  m.publico_alvo || null,
-            descricao:     m.descricao || null,
-            // Campos inteligentes do banco
-            score:          m.score || 0,
-            scoreDetalhado: m.score_detalhado || {},
-            justificativa:  m.justificativa || null,
-            compatibilidade: m.compatibilidade != null ? m.compatibilidade : null,
-            recomendacao:   m.recomendacao || null,
-            valorMinimo:    m.valor_minimo || 0,
-            valorMaximo:    m.valor_maximo || 0,
-            elegibilidade:  m.elegibilidade || null,
-            contrapartida:  m.contrapartida || null,
-            ods:            m.ods || null,
-            contato:        m.contato || null,
-            linkInscricao:  m.link_inscricao || null,
-            regiao:         m.regiao || null,
-            situacao:       m.situacao || null,
-            status:         m.status || null,
-            temAnexos:      !!(m.pdf_url),
-        };
-    });
+    if (!rows?.length) {
+      try {
+        rows = await fetchPaged('edital', 'atualizado_em');
+      } catch {
+        try {
+          rows = await fetchPaged('edital', 'id_edital');
+        } catch (e2) {
+          console.warn('[dataService.getEditais] edital fallback:', e2?.message || e2);
+          rows = [];
+        }
+      }
+    }
 
-    return manuaisFormatados;
+    return (rows || []).map(mapRawEditalRow);
   },
 
   async createEdital(data) {
@@ -128,7 +144,7 @@ export const dataService = {
   async getClients() {
     const { data, error } = await supabase.from('cliente').select('*').order('id_cliente', { ascending: true });
     if (error) throw error;
-    return data;
+    return (data || []).map(normalizeClienteRow);
   },
 
   async createClient(data) {
@@ -166,5 +182,15 @@ export const dataService = {
   async deleteOrganization(id) {
     const { error } = await supabase.from('organizacao').delete().eq('id_organizacao', id);
     if (error) throw error;
+  },
+
+  // --- NOTÍCIAS (tabela public.noticia) — carrega todas as linhas visíveis por RLS ---
+  async getNoticias() {
+    return fetchAllTableRows('noticia', 'criado_em', false);
+  },
+
+  // --- PESQUISAS (tabela public.pesquisa — ver pesquisas.txt / DDL no Supabase) ---
+  async getPesquisas() {
+    return fetchAllTableRows('pesquisa', 'criado_em', false);
   },
 };

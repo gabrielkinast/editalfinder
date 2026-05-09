@@ -3,7 +3,9 @@ import { useParams, useNavigate } from 'react-router-dom';
 import Header from '../components/layout/Header';
 import { dataService } from '../services/dataService';
 import { formatDate, formatCurrency } from '../utils/formatters';
+import { getDisplayTitle } from '../utils/displayTitle';
 import { calcularScore } from '../services/matchService';
+import { classificarEdital } from '../services/classificationService';
 
 // Perfis representativos para cálculo dinâmico de compatibilidade
 // Campos alinhados com os nomes esperados pelo matchService.js
@@ -125,6 +127,7 @@ export default function EditalDetalhes() {
   // ⚠️ Todos os hooks ANTES dos early returns (Regras de Hooks)
   const perfisCompativeis = useMemo(() => {
     if (!edital) return [];
+    const clf = classificarEdital(edital);
     const editalFormatado = {
       titulo:       edital.titulo,
       temas:        edital.temas,
@@ -137,7 +140,14 @@ export default function EditalDetalhes() {
       valor:        edital.valor_maximo,
       valorMinimo:  edital.valor_minimo,
       valorMaximo:  edital.valor_maximo,
-      tipoRecurso:  edital.fonte_recurso,
+      tipoRecurso:  clf?.tipo ?? 'Subvenção econômica',
+      linkOriginal: edital.link || edital.link_inscricao || '',
+      situacao:     edital.situacao,
+      status:       edital.status,
+      compatibilidade: edital.compatibilidade,
+      validacao_status: edital.validacao_status,
+      qualidade_dado: edital.qualidade_dado,
+      dataLimite:   edital.prazo_envio,
     };
     return Object.entries(PERFIS_MOCK)
       .map(([nomePerfil, mockCliente]) => {
@@ -191,6 +201,15 @@ export default function EditalDetalhes() {
     ? edital.recomendacao.split(/[,;]/).map(t => t.trim()).filter(Boolean)
     : [];
 
+  const tituloPagina = getDisplayTitle({
+    titulo: edital.titulo,
+    link: edital.link,
+    descricao: edital.descricao,
+    objetivo: edital.objetivo,
+    temas: edital.temas,
+    fonte_recurso: edital.fonte_recurso,
+  });
+
   // Áreas temáticas do edital
   const areasTags = (edital.temas || edital.objetivo || '')
     .split(/[,;]/)
@@ -225,7 +244,7 @@ export default function EditalDetalhes() {
         <div className="detalhes-hero">
           <div className="detalhes-hero-info">
             <span className="detalhes-orgao-badge">{edital.fonte_recurso || (edital.organizacao?.nome) || '—'}</span>
-            <h1 className="detalhes-titulo">{edital.titulo}</h1>
+            <h1 className="detalhes-titulo">{tituloPagina}</h1>
           </div>
         </div>
 

@@ -1,9 +1,27 @@
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo, useCallback } from 'react';
 import Header from '../components/layout/Header';
 import ListaClientes from '../components/radar/ListaClientes';
 import CardEditalRadar from '../components/radar/CardEditalRadar';
+import RadarLoading from '../components/radar/RadarLoading';
+import { useRadarMatches } from '../hooks/useRadarMatches';
+import { useDebouncedValue } from '../hooks/useDebouncedValue';
 import { dataService } from '../services/dataService';
-import { recomendarEditais, tiposRecursoEditaisNaAreaDoCliente } from '../services/matchService';
+import { tiposRecursoEditaisNaAreaDoCliente, debugRadar } from '../services/matchService';
+
+function idClienteKey(c, idx = 0) {
+  const v = c?.id_cliente ?? c?.id;
+  return v !== undefined && v !== null ? String(v) : `idx-${idx}`;
+}
+
+function clientePorIdNaLista(clientes, idOuKey) {
+  if (idOuKey == null || clientes?.length === 0) return null;
+  const want = String(idOuKey);
+  return (
+    clientes.find((c, i) => idClienteKey(c, i) === want) ??
+    clientes.find((c) => String(c?.id_cliente ?? c?.id ?? '') === want) ??
+    null
+  );
+}
 
 // Favoritos persistidos no localStorage por cliente: { [clienteId]: [editalId, ...] }
 function carregarFavoritos() {
@@ -14,6 +32,17 @@ function carregarFavoritos() {
   }
 }
 
+/** Evita crash do React se o JSON estiver corrompido ou não for lista (new Set(null) ou Set(obj) quebra). */
+function favoritosParaEstado(raw) {
+  const obj = {};
+  if (!raw || typeof raw !== 'object') return obj;
+  for (const [cid, ids] of Object.entries(raw)) {
+    const arr = Array.isArray(ids) ? ids.filter((x) => x != null) : [];
+    obj[cid] = new Set(arr);
+  }
+  return obj;
+}
+
 function salvarFavoritos(favs) {
   localStorage.setItem('radar_favoritos', JSON.stringify(favs));
 }
@@ -21,18 +50,16 @@ function salvarFavoritos(favs) {
 export default function RadarFomento() {
   const [clientes, setClientes]               = useState([]);
   const [editais, setEditais]                 = useState([]);
-  const [clienteSelecionado, setClienteSeleo] = useState(null);
+  /** ID estável — evita perder seleção com referências diferentes / hidratação. */
+  const [clienteIdSelecionado, setClienteIdSelecionado] = useState(null);
   const [loading, setLoading]                 = useState(true);
   const [loadError, setLoadError]             = useState(null);
-  const [recalcKey, setRecalcKey]             = useState(0);
+
+  /** Listagem progressiva dos cards após o cálculo (evita pintar ~900 elementos de uma vez). */
+  const [visibleCap, setVisibleCap] = useState(40);
 
   // { [clienteId]: Set<editalId> }
-  const [favoritos, setFavoritos] = useState(() => {
-    const raw = carregarFavoritos();
-    const obj = {};
-    Object.entries(raw).forEach(([cid, ids]) => { obj[cid] = new Set(ids); });
-    return obj;
-  });
+  const [favoritos, setFavoritos] = useState(() => favoritosParaEstado(carregarFavoritos()));
 
   // Filtros
   const [filtroTipo, setFiltroTipo]         = useState('');
@@ -40,6 +67,11 @@ export default function RadarFomento() {
   const [filtroComp, setFiltroComp]         = useState('');
   const [filtroFavs, setFiltroFavs]         = useState(false);
   const [filtroBusca, setFiltroBusca]       = useState('');
+  const [radarOpts, setRadarOpts] = useState({
+    incluirEncerrados: false,
+    incluirSuspeitos: false,
+    incluirAproximados: false,
+  });
 
   useEffect(() => {
     async function load() {
@@ -49,7 +81,7 @@ export default function RadarFomento() {
           dataService.getClients(),
           dataService.getEditais(),
         ]);
-        setClientes(cls.filter(c => c.status === 'Ativo'));
+        setClientes(cls.filter((c) => String(c.status || '').toLowerCase() === 'ativo'));
         setEditais(eds);
       } catch (e) {
         console.error('Erro ao carregar dados:', e);
@@ -60,6 +92,23 @@ export default function RadarFomento() {
     }
     load();
   }, []);
+
+  const clienteSelecionado = useMemo(
+    () => clientePorIdNaLista(clientes, clienteIdSelecionado),
+    [clientes, clienteIdSelecionado],
+  );
+
+  useEffect(() => {
+    if (loading) return;
+    if (clienteIdSelecionado == null) return;
+    if (clientes.length === 0) {
+      setClienteIdSelecionado(null);
+      return;
+    }
+    if (!clientePorIdNaLista(clientes, clienteIdSelecionado)) {
+      setClienteIdSelecionado(null);
+    }
+  }, [loading, clientes, clienteIdSelecionado]);
 
   // Conjunto de IDs de editais realmente existentes (carregados agora)
   const editaisIdsExistentes = useMemo(
@@ -75,6 +124,7 @@ export default function RadarFomento() {
       let mudou = false;
       const next = {};
       Object.entries(prev).forEach(([cid, set]) => {
+        if (!(set instanceof Set)) return;
         const filtrado = new Set();
         set.forEach(id => {
           if (editaisIdsExistentes.has(id)) filtrado.add(id);
@@ -94,7 +144,9 @@ export default function RadarFomento() {
   // Favoritos do cliente selecionado (Set) — apenas IDs que ainda existem
   const favoritosCliente = useMemo(() => {
     if (!clienteSelecionado) return new Set();
-    const bruto = favoritos[clienteSelecionado.id_cliente] || new Set();
+    const cidKey = String(clienteSelecionado.id_cliente ?? '');
+    const raw = favoritos[cidKey] ?? favoritos[clienteSelecionado.id_cliente];
+    const bruto = raw instanceof Set ? raw : new Set();
     const valido = new Set();
     bruto.forEach(id => { if (editaisIdsExistentes.has(id)) valido.add(id); });
     return valido;
@@ -104,6 +156,7 @@ export default function RadarFomento() {
   const favoritosCount = useMemo(() => {
     const counts = {};
     Object.entries(favoritos).forEach(([cid, ids]) => {
+      if (!(ids instanceof Set)) return;
       let n = 0;
       ids.forEach(id => { if (editaisIdsExistentes.has(id)) n++; });
       counts[cid] = n;
@@ -113,11 +166,11 @@ export default function RadarFomento() {
 
   const toggleFavorito = (editalId) => {
     if (!clienteSelecionado) return;
-    const cid = clienteSelecionado.id_cliente;
+    const cid = String(clienteSelecionado.id_cliente ?? '');
 
     setFavoritos(prev => {
       const next = { ...prev };
-      const set  = new Set(next[cid] || []);
+      const set = new Set(next[cid] || []);
       set.has(editalId) ? set.delete(editalId) : set.add(editalId);
       next[cid] = set;
 
@@ -130,23 +183,59 @@ export default function RadarFomento() {
     });
   };
 
-  // Calcula recomendações
-  const recomendacoes = useMemo(() => {
-    if (!clienteSelecionado) return [];
-    void recalcKey;
-    return recomendarEditais(clienteSelecionado, editais);
-  }, [clienteSelecionado, editais, recalcKey]);
+  const {
+    results: recomendacoes,
+    isCalculating: recoCalculando,
+    progress: radarProgress,
+    progressPct: radarProgressPct,
+    error: radarError,
+    recalculate: radarRecalculate,
+    reloadNonce: radarReloadNonce,
+  } = useRadarMatches({
+    cliente: clienteSelecionado,
+    editais: editais ?? [],
+    options: radarOpts,
+    chunkSize: 72,
+    enabled: Boolean(clienteSelecionado) && !loading,
+  });
+
+  useEffect(() => {
+    setVisibleCap(40);
+  }, [
+    clienteIdSelecionado,
+    radarReloadNonce,
+    radarOpts.incluirSuspeitos,
+    radarOpts.incluirEncerrados,
+    radarOpts.incluirAproximados,
+  ]);
+
+  useEffect(() => {
+    if (!import.meta.env?.DEV || !clienteSelecionado || editais.length === 0) return;
+    if (recoCalculando) return;
+    try {
+      debugRadar({ cliente: clienteSelecionado, editais, options: radarOpts });
+    } catch (e) {
+      console.warn('[RadarFomento] debugRadar:', e);
+    }
+  }, [clienteSelecionado, editais, radarOpts, recoCalculando]);
+
+  const filtroBuscaDebounced = useDebouncedValue(filtroBusca, 320);
 
   // Órgãos disponíveis para filtro
   const orgaosDisponiveis = useMemo(
-    () => [...new Set(editais.map(e => e.orgao).filter(Boolean))].sort(),
+    () => [...new Set((editais ?? []).map(e => e.orgao).filter(Boolean))].sort(),
     [editais]
   );
 
   // Tipos de recurso só entre editais cuja área/tema cruza com o perfil do cliente
   const tiposRecursoDisponiveis = useMemo(() => {
     if (!clienteSelecionado) return [];
-    return tiposRecursoEditaisNaAreaDoCliente(clienteSelecionado, editais);
+    try {
+      return tiposRecursoEditaisNaAreaDoCliente(clienteSelecionado, editais ?? []);
+    } catch (e) {
+      console.warn('[RadarFomento] tiposRecurso disponíveis:', e);
+      return [];
+    }
   }, [clienteSelecionado, editais]);
 
   useEffect(() => {
@@ -156,13 +245,14 @@ export default function RadarFomento() {
 
   // Aplica filtros
   const recomendacoesFiltradas = useMemo(() => {
-    return recomendacoes.filter(r => {
+    return recomendacoes.filter((r) => {
+      if (!r?.edital?.id) return false;
       if (filtroTipo  && r.edital.tipoRecurso?.toLowerCase() !== filtroTipo.toLowerCase()) return false;
       if (filtroOrgao && r.edital.orgao?.toUpperCase() !== filtroOrgao.toUpperCase())      return false;
       if (filtroComp  && r.compatibilidade !== filtroComp)                                  return false;
       if (filtroFavs  && !favoritosCliente.has(r.edital.id))                               return false;
-      if (filtroBusca) {
-        const termo = filtroBusca.toLowerCase();
+      if (filtroBuscaDebounced) {
+        const termo = filtroBuscaDebounced.toLowerCase();
         const bate  =
           (r.edital.titulo  || '').toLowerCase().includes(termo) ||
           (r.edital.orgao   || '').toLowerCase().includes(termo) ||
@@ -171,21 +261,36 @@ export default function RadarFomento() {
       }
       return true;
     });
-  }, [recomendacoes, filtroTipo, filtroOrgao, filtroComp, filtroFavs, favoritosCliente, filtroBusca]);
+  }, [recomendacoes, filtroTipo, filtroOrgao, filtroComp, filtroFavs, favoritosCliente, filtroBuscaDebounced]);
 
-  const limparFiltros = () => {
+  const limparFiltros = useCallback(() => {
     setFiltroTipo('');
     setFiltroOrgao('');
     setFiltroComp('');
     setFiltroFavs(false);
     setFiltroBusca('');
-  };
+  }, []);
+
+  const handleSelecionarCliente = useCallback(
+    (c, idx = 0) => {
+      if (!c) return;
+      setClienteIdSelecionado(idClienteKey(c, idx));
+      limparFiltros();
+    },
+    [limparFiltros],
+  );
 
   const algumFiltroAtivo = filtroTipo || filtroOrgao || filtroComp || filtroFavs || filtroBusca;
 
   // Separar melhores oportunidades (Alta compatibilidade)
   const melhoresOportunidades = recomendacoesFiltradas.filter(r => r.compatibilidade === 'Alta');
   const demais = recomendacoesFiltradas.filter(r => r.compatibilidade !== 'Alta');
+
+  let capRest = visibleCap;
+  const melhoresOportunidadesVis = melhoresOportunidades.slice(0, Math.min(capRest, melhoresOportunidades.length));
+  capRest -= melhoresOportunidadesVis.length;
+  const demaisVis = capRest > 0 ? demais.slice(0, capRest) : [];
+  const podeMostrarMaisOp = visibleCap < recomendacoesFiltradas.length;
 
   return (
     <div className="page-wrapper">
@@ -195,12 +300,9 @@ export default function RadarFomento() {
         {/* ── Painel esquerdo: clientes ── */}
         <ListaClientes
           clientes={clientes}
-          clienteSelecionado={clienteSelecionado}
           favoritosCount={favoritosCount}
-          onSelecionar={c => {
-            setClienteSeleo(c);
-            limparFiltros();
-          }}
+          clienteIdSelecionado={clienteIdSelecionado}
+          onSelecionar={handleSelecionarCliente}
           loading={loading}
         />
 
@@ -228,8 +330,16 @@ export default function RadarFomento() {
                     Radar: <span>{clienteSelecionado.nome_empresa}</span>
                   </h2>
                   <p className="radar-resultado-sub">
-                    {recomendacoesFiltradas.length} edital(is) encontrado(s)
-                    {melhoresOportunidades.length > 0 && (
+                    {recoCalculando && (
+                      <>Calculando melhores oportunidades… · catálogo: {radarProgress.originalTotal || editais.length} editais</>
+                    )}
+                    {!recoCalculando && radarError === null && (
+                      <>{recomendacoesFiltradas.length} edital(is) encontrado(s)</>
+                    )}
+                    {!recoCalculando && radarError !== null && (
+                      <>Radar indisponível no momento.</>
+                    )}
+                    {!recoCalculando && melhoresOportunidades.length > 0 && (
                       <> · <strong style={{ color: '#22c55e' }}>{melhoresOportunidades.length} alta compatibilidade</strong></>
                     )}
                     {favoritosCliente.size > 0 && (
@@ -237,10 +347,30 @@ export default function RadarFomento() {
                     )}
                   </p>
                 </div>
-                <button className="radar-btn-recalc" onClick={() => setRecalcKey(k => k + 1)}>
+                <button type="button" className="radar-btn-recalc" onClick={radarRecalculate}>
                   🔄 Recalcular
                 </button>
               </div>
+
+              {radarError && (
+                <div className="radar-load-erro-banner" role="alert">
+                  <span>{radarError}</span>
+                  <button type="button" className="radar-btn-recalc" onClick={radarRecalculate}>
+                    Tentar novamente
+                  </button>
+                </div>
+              )}
+
+              {recoCalculando && (
+                <RadarLoading
+                  nomeCliente={clienteSelecionado.nome_empresa}
+                  processed={radarProgress.processed}
+                  total={radarProgress.total}
+                  originalTotal={radarProgress.originalTotal}
+                  excludedPreScore={radarProgress.excludedPreScore}
+                  progressPct={radarProgressPct}
+                />
+              )}
 
               {/* Filtros */}
               <div className="radar-filtros">
@@ -304,24 +434,55 @@ export default function RadarFomento() {
                 )}
               </div>
 
+              <div className="radar-opcoes-avancadas" style={{ marginTop: '12px', display: 'flex', flexWrap: 'wrap', gap: '16px', alignItems: 'center', padding: '10px 12px', background: '#f8fafc', borderRadius: '8px', border: '1px solid var(--border-light)', fontSize: '13px' }}>
+                <span style={{ fontWeight: 600, color: '#64748b' }}>Radar avançado</span>
+                <label style={{ display: 'flex', alignItems: 'center', gap: '6px', cursor: 'pointer' }}>
+                  <input
+                    type="checkbox"
+                    checked={radarOpts.incluirEncerrados}
+                    onChange={(e) => setRadarOpts((o) => ({ ...o, incluirEncerrados: e.target.checked }))}
+                  />
+                  Incluir encerrados
+                </label>
+                <label style={{ display: 'flex', alignItems: 'center', gap: '6px', cursor: 'pointer' }}>
+                  <input
+                    type="checkbox"
+                    checked={radarOpts.incluirSuspeitos}
+                    onChange={(e) => setRadarOpts((o) => ({ ...o, incluirSuspeitos: e.target.checked }))}
+                  />
+                  Incluir suspeitos (validação)
+                </label>
+                <label style={{ display: 'flex', alignItems: 'center', gap: '6px', cursor: 'pointer' }}>
+                  <input
+                    type="checkbox"
+                    checked={radarOpts.incluirAproximados}
+                    onChange={(e) => setRadarOpts((o) => ({ ...o, incluirAproximados: e.target.checked }))}
+                  />
+                  Incluir oportunidades aproximadas (score menor)
+                </label>
+              </div>
+
               {/* Melhores oportunidades */}
-              {melhoresOportunidades.length > 0 && (
+              {!recoCalculando && melhoresOportunidadesVis.length > 0 && (
                 <section className="radar-secao">
                   <h3 className="radar-secao-titulo">⭐ Melhores Oportunidades</h3>
                   <div className="radar-grid">
-                    {melhoresOportunidades.map(({ edital, score, compatibilidade, razoes, detalhes, matchLinha, fonteMatch, prazoInfo, expirado }) => (
+                    {melhoresOportunidadesVis.map((row) => (
                       <CardEditalRadar
-                        key={edital.id}
-                        edital={edital}
-                        score={score}
-                        compatibilidade={compatibilidade}
-                        razoes={razoes}
-                        detalhes={detalhes}
-                        matchLinha={matchLinha}
-                        fonteMatch={fonteMatch}
-                        prazoInfo={prazoInfo}
-                        expirado={expirado}
-                        favorito={favoritosCliente.has(edital.id)}
+                        key={row.edital.id}
+                        edital={row.edital}
+                        score={row.score}
+                        compatibilidade={row.compatibilidade}
+                        razoes={row.razoes}
+                        detalhes={row.detalhes}
+                        criterioMeta={row.criterioMeta}
+                        matchLinha={row.matchLinha}
+                        fonteMatch={row.fonteMatch}
+                        radarBadges={row.radar_badges}
+                        radarPenalidades={row.radar_penalidades}
+                        prazoInfo={row.prazoInfo}
+                        expirado={row.expirado}
+                        favorito={favoritosCliente.has(row.edital.id)}
                         onFavoritar={toggleFavorito}
                       />
                     ))}
@@ -330,25 +491,28 @@ export default function RadarFomento() {
               )}
 
               {/* Demais editais */}
-              {demais.length > 0 && (
+              {!recoCalculando && demaisVis.length > 0 && (
                 <section className="radar-secao">
                   {melhoresOportunidades.length > 0 && (
                     <h3 className="radar-secao-titulo">Outros Editais</h3>
                   )}
                   <div className="radar-grid">
-                    {demais.map(({ edital, score, compatibilidade, razoes, detalhes, matchLinha, fonteMatch, prazoInfo, expirado }) => (
+                    {demaisVis.map((row) => (
                       <CardEditalRadar
-                        key={edital.id}
-                        edital={edital}
-                        score={score}
-                        compatibilidade={compatibilidade}
-                        razoes={razoes}
-                        detalhes={detalhes}
-                        matchLinha={matchLinha}
-                        fonteMatch={fonteMatch}
-                        prazoInfo={prazoInfo}
-                        expirado={expirado}
-                        favorito={favoritosCliente.has(edital.id)}
+                        key={row.edital.id}
+                        edital={row.edital}
+                        score={row.score}
+                        compatibilidade={row.compatibilidade}
+                        razoes={row.razoes}
+                        detalhes={row.detalhes}
+                        criterioMeta={row.criterioMeta}
+                        matchLinha={row.matchLinha}
+                        fonteMatch={row.fonteMatch}
+                        radarBadges={row.radar_badges}
+                        radarPenalidades={row.radar_penalidades}
+                        prazoInfo={row.prazoInfo}
+                        expirado={row.expirado}
+                        favorito={favoritosCliente.has(row.edital.id)}
                         onFavoritar={toggleFavorito}
                       />
                     ))}
@@ -356,11 +520,32 @@ export default function RadarFomento() {
                 </section>
               )}
 
-              {recomendacoesFiltradas.length === 0 && (
+              {!recoCalculando && podeMostrarMaisOp && (
+                <div style={{ textAlign: 'center', marginTop: 20 }}>
+                  <button
+                    type="button"
+                    className="radar-btn-recalc"
+                    onClick={() => setVisibleCap((c) => c + 40)}
+                  >
+                    Mostrar mais oportunidades
+                  </button>
+                </div>
+              )}
+
+              {!recoCalculando && !radarError && recomendacoesFiltradas.length === 0 && (
                 <div className="radar-empty">
-                  {filtroFavs && favoritosCliente.size === 0
-                    ? 'Nenhum edital favoritado ainda. Clique em ☆ nos cards para favoritar.'
-                    : 'Nenhum edital encontrado com os filtros aplicados.'}
+                  {(() => {
+                    if (recomendacoes.length === 0) {
+                      if (!algumFiltroAtivo) {
+                        return 'Nenhuma oportunidade forte encontrada. Tente incluir oportunidades aproximadas no radar avançado.';
+                      }
+                      return 'Nenhum edital encontrado com os filtros aplicados.';
+                    }
+                    if (filtroFavs && favoritosCliente.size === 0) {
+                      return 'Nenhum edital favoritado ainda. Clique em ☆ nos cards para favoritar.';
+                    }
+                    return 'Nenhum edital encontrado com os filtros aplicados.';
+                  })()}
                 </div>
               )}
             </>

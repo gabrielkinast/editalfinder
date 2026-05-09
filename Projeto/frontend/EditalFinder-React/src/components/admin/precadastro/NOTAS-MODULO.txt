@@ -1,0 +1,25 @@
+Pré-cadastro de projeto — notas rápidas
+========================================
+
+Componentes (`precadastro/`)
+- PrecadastroHeader — ações Salvar/PDF/pré-visualizar + chips de contexto (edital / aderência).
+- PrecadNavTabs — Visão geral | Contexto e projeto | Formulário completo.
+- PrecadCompletionStatus — barra de completude (usa `computeCompletion` em utils).
+- PrecadRecommendationCard — cartão consultivo + campos estratégicos (`bloco_estr_*`).
+- PrecadCompanyStrip — mini resumo empresa (cadastro já no formulário completo).
+- PrecadProductLines — linhas de crédito com badges (recomendada / compatível / alternativa).
+- PrecadProjectScope / PrecadFitSection / PrecadObservations — escopo e aderência.
+- PrecadLegacyFormBody — todos os campos técnicos originais.
+
+Helpers (`utils/precadastro/`)
+- `getClientTheme` / `themeToCssVars` — cores e logo opcionais no cliente (`cor_primaria`, `cor_secundaria`, `logo_url`, `logo_data_url` para PDF).
+- `buildProjectSuggestions` / `buildProjectSummary` — preenchimento sugerido a partir do cadastro (+ edital / radar opcionais).
+- `mapFormToPdfModel` — modelo de dados para PDF executivo.
+
+PDF (`precadastroProjetoPdf.js`)
+- Capa com faixa nas cores da empresa + resumo estruturado + anexo com formulário longo compactado.
+
+Contexto Radar (opcional)
+- Ao abrir o pré-cadastro a partir da aba Clientes, pode existir JSON em sessionStorage na chave
+  `precadastro_context_<id_cliente>` ex.: `{ "titulo": "Nome do edital", "scorePct": 73 }`.
+  Cadastros.jsx repassa isso como `editalAssociado` e `radarMatch`.

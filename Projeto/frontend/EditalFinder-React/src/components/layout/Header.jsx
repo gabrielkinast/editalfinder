@@ -6,7 +6,7 @@ import { useSettings } from '../../contexts/SettingsContext';
 import Modal from '../ui/Modal';
 import SettingsForm from '../admin/SettingsForm';
 
-export default function Header({ onSearch }) {
+export default function Header({ onSearch, searchPlaceholder = 'Buscar editais...' }) {
   const navigate = useNavigate();
   const { logout } = useAuth();
   const permissions = usePermissions();
@@ -72,6 +72,20 @@ export default function Header({ onSearch }) {
           >
             📊 Índice
           </NavLink>
+          <NavLink
+            to="/noticias"
+            className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}
+            onClick={() => setIsMenuOpen(false)}
+          >
+            📰 Notícias
+          </NavLink>
+          <NavLink
+            to="/pesquisas"
+            className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}
+            onClick={() => setIsMenuOpen(false)}
+          >
+            🔬 Pesquisas
+          </NavLink>
         </nav>
 
         <div className={`header-right ${isMenuOpen ? 'open' : ''}`}>
@@ -79,7 +93,7 @@ export default function Header({ onSearch }) {
             <input
               type="text"
               id="globalSearch"
-              placeholder="Buscar editais..."
+              placeholder={searchPlaceholder}
               className="search-input-header"
               onChange={(e) => onSearch(e.target.value)}
             />

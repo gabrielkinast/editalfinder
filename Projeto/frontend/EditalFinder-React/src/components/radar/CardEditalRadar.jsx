@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { CRITERIOS } from '../../services/matchService';
+import { getDisplayTitle } from '../../utils/displayTitle';
 
 const COR = {
   Alta:  '#22c55e',
@@ -13,8 +14,10 @@ export default function CardEditalRadar({
   compatibilidade,
   razoes = [],
   detalhes = {},
+  criterioMeta = {},
   matchLinha,
   fonteMatch,
+  radarBadges = [],
   prazoInfo,
   expirado,
   favorito,
@@ -22,6 +25,14 @@ export default function CardEditalRadar({
 }) {
   const navigate    = useNavigate();
   const idNumerico  = String(edital.id).replace('manual-', '');
+  const tituloCard = getDisplayTitle({
+    titulo: edital.titulo,
+    link: edital.linkOriginal || edital.linkInscricao,
+    descricao: edital.descricao,
+    objetivo: edital.objetivo,
+    temas: edital.area || edital.temas,
+    fonte_recurso: edital.orgao,
+  });
 
   const badgeClass =
     compatibilidade === 'Alta'  ? 'radar-badge-alta'  :
@@ -41,7 +52,7 @@ export default function CardEditalRadar({
       {/* Cabeçalho */}
       <div className="radar-card-header">
         <div className="radar-card-titulo-wrap">
-          <h3 className="radar-card-titulo">{edital.titulo}</h3>
+          <h3 className="radar-card-titulo">{tituloCard}</h3>
           <span className="radar-card-orgao">{edital.orgao}</span>
         </div>
         <button
@@ -55,7 +66,7 @@ export default function CardEditalRadar({
       </div>
 
       {/* Linha de badges de situação temporal */}
-      {(expirado || rotuloPrazo === 'curto') && (
+      {(expirado || rotuloPrazo === 'curto' || radarBadges.length > 0) && (
         <div className="radar-card-flags">
           {expirado && (
             <span
@@ -73,6 +84,11 @@ export default function CardEditalRadar({
               ⚡ Prazo curto
             </span>
           )}
+          {radarBadges.map((b) => (
+            <span key={b.key} className="radar-badge radar-badge-aviso" title={b.label}>
+              {b.label}
+            </span>
+          ))}
         </div>
       )}
 
@@ -89,34 +105,44 @@ export default function CardEditalRadar({
         <p
           className="radar-match-linha"
           title={
-            fonteMatch === 'hibrido'
-              ? 'Índice combina o JSON compatibilidade do edital (perfil que bate no cliente) com o cálculo dos 8 critérios do cadastro'
-              : fonteMatch === 'json'
-                ? 'Percentual vindo do JSON compatibilidade do edital'
-                : 'Estimativa pelos 8 critérios do cadastro (sem JSON aplicável)'
+            fonteMatch === 'radar_v2'
+              ? 'Radar v2 — sete dimensoes (afinidade, perfil/tipo/localizacao, prazo, qualidade da fonte e valor), com penalidades e filtros sobre texto e metadados do edital.'
+              : 'Estimativa a partir dos critérios do cadastro.'
           }
         >
           {matchLinha}
         </p>
       )}
 
-      {/* Mini-barras por critério (8 critérios do novo índice) */}
       {mostraCriterios && (
         <div className="radar-criterios">
-          {CRITERIOS.map(c => {
+          {CRITERIOS.map((c) => {
+            const ausente = !!(criterioMeta && criterioMeta[c.key]?.ausente);
             const pts = Number.isFinite(detalhes[c.key]) ? detalhes[c.key] : 0;
-            const pct = c.max > 0 ? Math.min(100, Math.max(0, Math.round((pts / c.max) * 100))) : 0;
-            const nivel = pct >= 75 ? 'alto' : pct >= 40 ? 'medio' : 'baixo';
+            const pct = ausente
+              ? 0
+              : c.max > 0
+                ? Math.min(100, Math.max(0, Math.round((pts / c.max) * 100)))
+                : 0;
+            const nivel = ausente ? 'ausente' : pct >= 75 ? 'alto' : pct >= 40 ? 'medio' : 'baixo';
             return (
-              <div key={c.key} className="radar-criterio-row" title={`${c.label}: ${pts}/${c.max} pts`}>
+              <div
+                key={c.key}
+                className={`radar-criterio-row${ausente ? ' radar-criterio-row-ausente' : ''}`}
+                title={
+                  ausente
+                    ? `${c.label}: dado não informado ou não avaliado — não conta como match pleno`
+                    : `${c.label}: ${pts}/${c.max}`
+                }
+              >
                 <span className="radar-criterio-nome">{c.label}</span>
                 <div className="radar-criterio-barra-wrap">
                   <div
-                    className={`radar-criterio-barra radar-criterio-barra-${nivel}`}
-                    style={{ width: `${pct}%` }}
+                    className={`radar-criterio-barra radar-criterio-barra-${nivel}${ausente ? ' radar-criterio-barra-ausente' : ''}`}
+                    style={{ width: ausente ? '6%' : `${pct}%` }}
                   />
                 </div>
-                <span className="radar-criterio-pts">{pts}/{c.max}</span>
+                <span className="radar-criterio-pts">{ausente ? 'n/d' : `${pts}/${c.max}`}</span>
               </div>
             );
           })}
