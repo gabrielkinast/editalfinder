@@ -1,0 +1,10 @@
+{
+  "timestamp": "2026-05-10T04:45:00Z",
+  "opcao_recomendada": 1,
+  "titulo_opcao": "Pode aplicar staging — banco_da_amazonia e dod_sbir_sttr",
+  "justificativa": "Loader dry-run oficial: sources_selected=2, would_upsert_total=32, mapping_errors_total=0, critical_empty_items_total=0, documentos_perdidos_no_payload_total=0. Auditoria semântica: critérios Recovery A (setor>3, titulo ruidoso, login, API/docs, institucional) todos a zero no scan. publico_alvo_sem_evidencia=1 (baixo, documentado). DoD depende de HTML quando API retorna 429 — não é ruído crítico, mas convém revisão humana dos incompletos antes de apply.",
+  "executar_apply": false,
+  "nota": "Nenhum apply executado nesta tarefa; recomendação apenas para decisão humana.",
+  "alternativa_opcao_2": "Aplicar só BASA se a equipa quiser adiar DoD até a API sbir.gov responder sem 429 (enriquecimento de prazos/títulos).",
+  "alternativa_opcao_3": "Não aplicar se surgirem novos gates ou conteúdo institucional após re-crawl — não é o caso neste dry-run."
+}

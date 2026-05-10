@@ -1,0 +1,27 @@
+{
+  "audit_loader_only_by_source": "audit_reports_main_pipeline/recovery_b_loader_audit/audit_loader_only_by_source.json",
+  "mapping_errors_total": 0,
+  "por_fonte": [
+    {
+      "fonte": "amazul",
+      "mapping_errors": 0,
+      "itens_standardized_total": 20
+    },
+    {
+      "fonte": "ambev",
+      "mapping_errors": 0,
+      "itens_standardized_total": 7
+    },
+    {
+      "fonte": "badesul",
+      "mapping_errors": 0,
+      "itens_standardized_total": 5
+    }
+  ],
+  "critical_empty_items_total": 0,
+  "titulo_ruidoso_observado": 0,
+  "notas": [
+    "Dry-run loader-only sem apply; ficheiros em recovery_b/standardized.",
+    "critical_empty_items e titulo_ruidoso: não reportados pelo audit_loader_only; contagem manual 0 na amostra."
+  ]
+}

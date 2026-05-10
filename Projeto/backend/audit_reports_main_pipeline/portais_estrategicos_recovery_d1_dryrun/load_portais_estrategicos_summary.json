@@ -1,0 +1,66 @@
+{
+  "data_execucao": "2026-05-10T22:26:37Z",
+  "modo": "dry_run",
+  "staging_flag": false,
+  "apply_requested": false,
+  "input_dir": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_main_pipeline\\recovery_d1_fornecedores_final\\standardized",
+  "output_dir": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_main_pipeline\\portais_estrategicos_recovery_d1_dryrun",
+  "sources_selected": [
+    "bae_systems_suppliers",
+    "general_dynamics_suppliers",
+    "lockheed_martin_suppliers"
+  ],
+  "total_items": 26,
+  "would_upsert_total": 26,
+  "inserted": 0,
+  "updated": 0,
+  "upserted_total": 0,
+  "skipped": 0,
+  "errors_count": 0,
+  "map_errors_count": 0,
+  "apply_errors_count": 0,
+  "errors_total_written": 0,
+  "by_source": {
+    "bae_systems_suppliers": {
+      "would_upsert": 2,
+      "errors": 0
+    },
+    "general_dynamics_suppliers": {
+      "would_upsert": 6,
+      "errors": 0
+    },
+    "lockheed_martin_suppliers": {
+      "would_upsert": 18,
+      "errors": 0
+    }
+  },
+  "portal_tipo_counts": {
+    "registration": 2,
+    "access_limited": 1,
+    "procurement": 3,
+    "hub": 2,
+    "supplier_resource": 7,
+    "documentation": 11
+  },
+  "validacao_status_counts": {
+    "incompleto": 24,
+    "acesso_limitado": 2
+  },
+  "frontend_section_counts": {
+    "fornecedores": 26
+  },
+  "mostrar_no_radar_true_count": 0,
+  "mostrar_em_fornecedores_true_count": 26,
+  "environment_guard": {
+    "editalfinder_env": "staging",
+    "has_supabase_url": true,
+    "has_service_key": true,
+    "has_anon_key": true,
+    "has_allow_staging_apply": false,
+    "url_host_masked": "dof***.co",
+    "block_reason": ""
+  },
+  "apply_status": "dry_run_only",
+  "apply_block_reason": "",
+  "nota": "Nenhuma escrita no Supabase."
+}

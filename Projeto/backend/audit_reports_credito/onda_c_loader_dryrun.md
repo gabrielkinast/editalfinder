@@ -1,0 +1,642 @@
+# Onda C — loader dry-run (isolado)
+
+- **Exit:** 0
+- **Comando:** `C:\Program Files\Python312\python.exe D:\Computational_Physics\My Projects\edital\scripts\load_ready_sources.py --dry-run --sources ukri_funding,eit,esa_osip --exclude-blocked --input-dir audit_reports_credito/onda_c_dryrun_standardized --readiness audit_reports_credito/onda_c_readiness_for_dryrun.json`
+
+## Métricas (load_ready_summary embutido)
+
+- **sources_selected:** 3
+- **itens_standardized_total:** 45
+- **would_upsert_total:** 45
+- **would_ignore_total:** 0
+- **mapping_errors_total:** 0
+- **critical_empty_items_total:** 0
+- **documentos_perdidos_no_payload_total:** 0
+- **mode:** dry-run
+
+```json
+{
+  "id_execucao": "fd7a6be1-4a4c-49bc-8027-e84c49013cc9",
+  "data_auditoria": "2026-05-10T03:14:24Z",
+  "mode": "dry-run",
+  "staging_flag": false,
+  "apply_requested": false,
+  "input_dir": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_credito\\onda_c_dryrun_standardized",
+  "readiness_path": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_credito\\onda_c_readiness_for_dryrun.json",
+  "source_readiness_config_disk_path": "D:\\Computational_Physics\\My Projects\\edital\\config\\source_readiness.json",
+  "readiness_derived_slice_path": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_loader_ready\\readiness_derived_slice.json",
+  "readiness_curated_overlay": {
+    "applied": true,
+    "curated_sources_total": 102,
+    "changes_total": 102,
+    "changes": [
+      {
+        "fonte": "abdi",
+        "from": "unclassified",
+        "to": "ready"
+      },
+      {
+        "fonte": "afwerx",
+        "from": "unclassified",
+        "to": "ready"
+      },
+      {
+        "fonte": "amazul",
+        "from": "unclassified",
+        "to": "ready_with_notes"
+      },
+      {
+        "fonte": "ambev",
+        "from": "unclassified",
+        "to": "ready_with_notes"
+      },
+      {
+        "fonte": "aneel",
+        "from": "unclassified",
+        "to": "ready"
+      },
+      {
+        "fonte": "anp",
+        "from": "unclassified",
+        "to": "ready"
+      },
+      {
+        "fonte": "apex",
+        "from": "unclassified",
+        "to": "ready_with_notes"
+      },
+      {
+        "fonte": "badesul",
+        "from": "unclassified",
+        "to": "ready_with_notes"
+      },
+      {
+        "fonte": "bae_systems_suppliers",
+        "from": "unclassified",
+        "to": "ready_with_notes"
+      },
+      {
+        "fonte": "banco_da_amazonia",
+        "from": "unclassified",
+        "to": "ready_with_notes"
+      },
+      {
+        "fonte": "bdmg",
+        "from": "unclassified",
+        "to": "ready_with_notes"
+      },
+      {
+        "fonte": "bid_lab",
+        "from": "unclassified",
+        "to": "blocked"
+      },
+      {
+        "fonte": "bnb",
+        "from": "unclassified",
+        "to": "ready_with_notes"
+      },
+      {
+        "fonte": "bndes",
+        "from": "unclassified",
+        "to": "ready"
+      },
+      {
+        "fonte": "brde",
+        "from": "unclassified",
+        "to": "ready"
+      },
+      {
+        "fonte": "caf",
+        "from": "unclassified",
+        "to": "blocked"
+      },
+      {
+        "fonte": "caixa",
+        "from": "unclassified",
+        "to": "ready"
+      },
+      {
+        "fonte": "capes",
+        "from": "unclassified",
+        "to": "ready"
+      },
+      {
+        "fonte": "cbpf",
+        "from": "unclassified",
+        "to": "ready"
+      },
+      {
+        "fonte": "china_avic",
+        "from": "unclassified",
+        "to": "needs_manual_review"
+      },
+      {
+        "fonte": "china_caea",
+        "from": "unclassified",
+        "to": "ready"
+      },
+      {
+        "fonte": "china_cas",
+        "from": "unclassified",
+        "to": "ready"
+      },
+      {
+        "fonte": "china_cgn",
+        "from": "unclassified",
+        "to": "ready"
+      },
+      {
+        "fonte": "china_cnnc",
+        "from": "unclassified",
+        "to": "blocked"
+      },
+      {
+        "fonte": "china_mod_public",
+        "from": "unclassified",
+        "to": "ready"
+      },
+      {
+        "fonte": "china_mofcom_tendering",
+        "from": "unclassified",
+        "to": "ready"
+      },
+      {
+        "fonte": "china_most",
+        "from": "unclassified",
+        "to": "ready"
+      },
+      {
+        "fonte": "china_norinco",
+        "from": "unclassified",
+        "to": "needs_manual_review"
+      },
+      {
+        "fonte": "china_nsfc",
+        "from": "unclassified",
+        "to": "ready_with_notes"
+      },
+      {
+        "fonte": "china_tendering_bidding",
+        "from": "unclassified",
+        "to": "ready"
+      },
+      {
+        "fonte": "china_university_procurement",
+        "from": "unclassified",
+        "to": "ready_with_notes"
+      },
+      {
+        "fonte": "cnen",
+        "from": "unclassified",
+        "to": "ready"
+      },
+      {
+        "fonte": "cnpq",
+        "from": "unclassified",
+        "to": "ready"
+      },
+      {
+        "fonte": "compras_defesa",
+        "from": "unclassified",
+        "to": "ready"
+      },
+      {
+        "fonte": "confap",
+        "from": "unclassified",
+        "to": "ready"
+      },
+      {
+        "fonte": "darpa_opportunities",
+        "from": "unclassified",
+        "to": "ready"
+      },
+      {
+        "fonte": "dcta_ita_iae",
+        "from": "unclassified",
+        "to": "blocked"
+      },
+      {
+        "fonte": "defesa",
+        "from": "unclassified",
+        "to": "ready"
+      },
+      {
+        "fonte": "diu",
+        "from": "unclassified",
+        "to": "ready"
+      },
+      {
+        "fonte": "dod_sbir_sttr",
+        "from": "unclassified",
+        "to": "ready"
+      },
+      {
+        "fonte": "doe_arpae",
+        "from": "unclassified",
+        "to": "ready_with_notes"
+      },
+      {
+        "fonte": "eic",
+        "from": "unclassified",
+        "to": "ready_with_notes"
+      },
+      {
+        "fonte": "eletronuclear",
+        "from": "unclassified",
+        "to": "ready"
+      },
+      {
+        "fonte": "embrapii",
+        "from": "unclassified",
+        "to": "ready"
+      },
+      {
+        "fonte": "erc",
+        "from": "unclassified",
+        "to": "ready_with_notes"
+      },
+      {
+        "fonte": "eureka_network",
+        "from": "unclassified",
+        "to": "ready_with_notes"
+      },
+      {
+        "fonte": "european_defence_fund",
+        "from": "unclassified",
+        "to": "ready"
+      },
+      {
+        "fonte": "fapemig",
+        "from": "unclassified",
+        "to": "ready"
+      },
+      {
+        "fonte": "faperg",
+        "from": "unclassified",
+        "to": "ready_with_notes"
+      },
+      {
+        "fonte": "fapergs",
+        "from": "unclassified",
+        "to": "ready"
+      },
+      {
+        "fonte": "fapesc",
+        "from": "unclassified",
+        "to": "ready"
+      },
+      {
+        "fonte": "fapesp",
+        "from": "unclassified",
+        "to": "ready"
+      },
+      {
+        "fonte": "fappr",
+        "from": "unclassified",
+        "to": "ready"
+      },
+      {
+        "fonte": "finep",
+        "from": "unclassified",
+        "to": "ready"
+      },
+      {
+        "fonte": "fnde",
+        "from": "unclassified",
+        "to": "ready"
+      },
+      {
+        "fonte": "fonplata",
+        "from": "unclassified",
+        "to": "needs_manual_review"
+      },
+      {
+        "fonte": "general_dynamics_suppliers",
+        "from": "unclassified",
+        "to": "ready"
+      },
+      {
+        "fonte": "grants_gov",
+        "from": "unclassified",
+        "to": "ready"
+      },
+      {
+        "fonte": "horizon_europe",
+        "from": "unclassified",
+        "to": "ready_with_notes"
+      },
+      {
+        "fonte": "iarpa",
+        "from": "unclassified",
+        "to": "ready_with_notes"
+      },
+      {
+        "fonte": "impa",
+        "from": "unclassified",
+        "to": "ready"
+      },
+      {
+        "fonte": "inb",
+        "from": "unclassified",
+        "to": "ready"
+      },
+      {
+        "fonte": "ipen",
+        "from": "unclassified",
+        "to": "ready"
+      },
+      {
+        "fonte": "japan_aist",
+        "from": "unclassified",
+        "to": "ready"
+      },
+      {
+        "fonte": "japan_atla",
+        "from": "unclassified",
+        "to": "ready"
+      },
+      {
+        "fonte": "japan_e_rad",
+        "from": "unclassified",
+        "to": "blocked"
+      },
+      {
+        "fonte": "japan_ihi",
+        "from": "unclassified",
+        "to": "ready"
+      },
+      {
+        "fonte": "japan_jaea",
+        "from": "unclassified",
+        "to": "needs_manual_review"
+      },
+      {
+        "fonte": "japan_jaxa",
+        "from": "unclassified",
+        "to": "blocked"
+      },
+      {
+        "fonte": "japan_jetro_procurement",
+        "from": "unclassified",
+        "to": "ready"
+      },
+      {
+        "fonte": "japan_jsps",
+        "from": "unclassified",
+        "to": "ready"
+      },
+      {
+        "fonte": "japan_jst",
+        "from": "unclassified",
+        "to": "needs_manual_review"
+      },
+      {
+        "fonte": "japan_kakenhi",
+        "from": "unclassified",
+        "to": "ready"
+      },
+      {
+        "fonte": "japan_kawasaki_heavy",
+        "from": "unclassified",
+        "to": "needs_manual_review"
+      },
+      {
+        "fonte": "japan_kek",
+        "from": "unclassified",
+        "to": "ready"
+      },
+      {
+        "fonte": "japan_mext",
+        "from": "unclassified",
+        "to": "ready"
+      },
+      {
+        "fonte": "japan_mitsubishi_heavy",
+        "from": "unclassified",
+        "to": "ready"
+      },
+      {
+        "fonte": "japan_mod",
+        "from": "unclassified",
+        "to": "ready"
+      },
+      {
+        "fonte": "japan_nedo",
+        "from": "unclassified",
+        "to": "ready"
+      },
+      {
+        "fonte": "japan_nims",
+        "from": "unclassified",
+        "to": "ready"
+      },
+      {
+        "fonte": "japan_qst",
+        "from": "unclassified",
+        "to": "ready"
+      },
+      {
+        "fonte": "japan_riken",
+        "from": "unclassified",
+        "to": "ready"
+      },
+      {
+        "fonte": "lockheed_martin_suppliers",
+        "from": "unclassified",
+        "to": "ready"
+      },
+      {
+        "fonte": "mapa",
+        "from": "unclassified",
+        "to": "ready_with_notes"
+      },
+      {
+        "fonte": "marinha",
+        "from": "unclassified",
+        "to": "blocked"
+      },
+      {
+        "fonte": "mcti",
+        "from": "unclassified",
+        "to": "ready_with_notes"
+      },
+      {
+        "fonte": "mma",
+        "from": "unclassified",
+        "to": "ready_with_notes"
+      },
+      {
+        "fonte": "nato_diana",
+        "from": "unclassified",
+        "to": "ready_with_notes"
+      },
+      {
+        "fonte": "nsf",
+        "from": "unclassified",
+        "to": "ready_with_notes"
+      },
+      {
+        "fonte": "nuclep",
+        "from": "unclassified",
+        "to": "ready_with_notes"
+      },
+      {
+        "fonte": "petrobras",
+        "from": "unclassified",
+        "to": "ready_with_notes"
+      },
+      {
+        "fonte": "plataforma_industria",
+        "from": "unclassified",
+        "to": "ready_with_notes"
+      },
+      {
+        "fonte": "pncp",
+        "from": "unclassified",
+        "to": "ready_with_notes"
+      },
+      {
+        "fonte": "pncp_defesa",
+        "from": "unclassified",
+        "to": "ready_with_notes"
+      },
+      {
+        "fonte": "rheinmetall_suppliers",
+        "from": "unclassified",
+        "to": "ready_with_notes"
+      },
+      {
+        "fonte": "sam_gov",
+        "from": "unclassified",
+        "to": "blocked"
+      },
+      {
+        "fonte": "saude",
+        "from": "unclassified",
+        "to": "ready_with_notes"
+      },
+      {
+        "fonte": "science_scraper",
+        "from": "unclassified",
+        "to": "blocked"
+      },
+      {
+        "fonte": "senai",
+        "from": "unclassified",
+        "to": "ready_with_notes"
+      },
+      {
+        "fonte": "softex",
+        "from": "unclassified",
+        "to": "ready_with_notes"
+      },
+      {
+        "fonte": "thales_suppliers",
+        "from": "unclassified",
+        "to": "ready_with_notes"
+      },
+      {
+        "fonte": "wellcome",
+        "from": "unclassified",
+        "to": "ready_with_notes"
+      }
+    ],
+    "policy": "config/source_readiness.json overrides derived readiness for sources explicitly listed there."
+  },
+  "readiness_config_write": {
+    "written": false,
+    "path": "",
+    "merge_mode": "none"
+  },
+  "sources_selected": 3,
+  "sources_excluded": 0,
+  "itens_standardized_total": 45,
+  "would_upsert_total": 45,
+  "would_ignore_total": 0,
+  "mapping_errors_total": 0,
+  "critical_empty_items_total": 0,
+  "docs_input_items_total": 13,
+  "docs_preserved_items_total": 13,
+  "documentos_perdidos_no_payload_total": 0,
+  "standardized_com_documentos_nao_pdf_total": 4,
+  "payload_com_documentos_nao_pdf_total": 4,
+  "perda_documentos_nao_pdf_total": 0,
+  "pdf_input_items_total": 12,
+  "pdf_preserved_items_total": 12,
+  "validacao_status_preserved_items_total": 45,
+  "qualidade_dado_preserved_items_total": 45,
+  "fields_input_non_empty_total": {
+    "area": 24,
+    "tipo_oportunidade": 45,
+    "tipo_recurso": 45,
+    "perfil_ideal": 45,
+    "publico_alvo": 45,
+    "setor_economico": 40,
+    "setor_estrategico": 40,
+    "validacao_status": 45,
+    "qualidade_dado": 45,
+    "area_tecnologica": 8
+  },
+  "fields_payload_non_empty_total": {
+    "area": 24,
+    "tipo_oportunidade": 45,
+    "tipo_recurso": 45,
+    "perfil_ideal": 45,
+    "publico_alvo": 45,
+    "setor_economico": 40,
+    "setor_estrategico": 40,
+    "validacao_status": 45,
+    "qualidade_dado": 45,
+    "area_tecnologica": 8
+  },
+  "fields_preserved_non_empty_total": {
+    "area": 24,
+    "tipo_oportunidade": 45,
+    "tipo_recurso": 45,
+    "perfil_ideal": 45,
+    "publico_alvo": 45,
+    "setor_economico": 40,
+    "setor_estrategico": 40,
+    "validacao_status": 45,
+    "qualidade_dado": 45,
+    "area_tecnologica": 8
+  },
+  "destination_counts_total": {
+    "edital": 45
+  },
+  "canonical_skipped_total": 0,
+  "canonicalization_config_path": "D:\\Computational_Physics\\My Projects\\edital\\config\\source_canonicalization.json",
+  "canonical_skip_examples": [],
+  "canonical_claimed_links_by_group": {},
+  "official_link_only_total": 0,
+  "access_limited_total": 0,
+  "official_link_only_by_source": {},
+  "official_link_only_examples": [],
+  "access_reason_counts": {},
+  "environment_guard": {
+    "editalfinder_env": "staging",
+    "has_supabase_url": true,
+    "has_service_key": true,
+    "has_anon_key": true,
+    "has_allow_staging_apply": false,
+    "url_host_masked": "dof***.co",
+    "block_reason": "missing_staging_flag"
+  },
+  "db_connection_diag": {
+    "url_masked": "https://dof***.co",
+    "key_name_selected": "SUPABASE_SERVICE_ROLE_KEY",
+    "key_exists": true,
+    "key_len": 219,
+    "key_prefix_masked": "eyJ***zg",
+    "env_sources_found": [
+      "D:\\Computational_Physics\\My Projects\\edital\\.env.staging",
+      "D:\\Computational_Physics\\My Projects\\edital\\CORE\\.env"
+    ]
+  },
+  "apply_status": "not_requested",
+  "carga_execucao_db": {
+    "saved": true,
+    "error": ""
+  }
+}
+```

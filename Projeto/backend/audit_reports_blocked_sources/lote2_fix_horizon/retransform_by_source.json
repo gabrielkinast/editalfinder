@@ -1,0 +1,84 @@
+[
+  {
+    "fonte": "horizon_europe",
+    "raw_output_path": "horizon_europe/outputs/horizon_europe_editais.json",
+    "old_standardized_path": "CORE/transformer/horizon_europe_standardized.json",
+    "new_standardized_path": "audit_reports_blocked_sources/lote2_fix_horizon/standardized/horizon_europe_standardized.json",
+    "itens_brutos_encontrados": 25,
+    "itens_transformados": 25,
+    "itens_rejeitados": 0,
+    "itens_incompletos": 0,
+    "itens_suspeitos": 25,
+    "documentos_preservados": 0,
+    "pdf_url_preservado": 0,
+    "area_preenchida": 0,
+    "tipo_oportunidade_preenchido": 25,
+    "tipo_recurso_preenchido": 25,
+    "perfil_ideal_preenchido": 0,
+    "qualidade_dado_media": 53.0,
+    "motivos_rejeicao_principais": {},
+    "quick_audit": {
+      "ruido_passou": 0,
+      "duplicatas_link": 0,
+      "campos_preenchidos_pct": {
+        "area": 0.0,
+        "tipo_oportunidade": 100.0,
+        "tipo_recurso": 100.0,
+        "perfil_ideal": 0.0,
+        "documentos": 0.0,
+        "pdf_url": 0.0
+      }
+    },
+    "old_vs_new": {
+      "old_count": 0,
+      "new_count": 25,
+      "delta_count": 25,
+      "old_links_now_missing": [],
+      "new_links_before_missing": [
+        "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl2-2021-democracy-01-01",
+        "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl2-2021-democracy-01-02",
+        "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl2-2021-democracy-01-03",
+        "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl2-2021-democracy-01-04",
+        "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl2-2021-democracy-01-05",
+        "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl2-2021-heritage-01-01",
+        "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl2-2021-heritage-01-02",
+        "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl2-2021-heritage-01-03",
+        "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl2-2021-heritage-01-04",
+        "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl2-2021-heritage-02-01",
+        "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl2-2021-heritage-02-02",
+        "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl2-2021-transformations-01-01",
+        "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl2-2021-transformations-01-02",
+        "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl2-2021-transformations-01-03",
+        "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl2-2021-transformations-01-04",
+        "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl2-2021-transformations-01-05",
+        "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl2-2021-transformations-01-06",
+        "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl2-2021-transformations-01-07",
+        "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl2-2022-democracy-01-01",
+        "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl2-2022-democracy-01-02",
+        "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl2-2022-democracy-01-03",
+        "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl2-2022-democracy-01-04",
+        "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl2-2022-democracy-01-05",
+        "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl2-2022-democracy-01-06",
+        "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl2-2022-democracy-01-07"
+      ],
+      "core_fields_improved": {
+        "tipo_oportunidade": {
+          "old": 0,
+          "new": 25,
+          "delta": 25
+        },
+        "tipo_recurso": {
+          "old": 0,
+          "new": 25,
+          "delta": 25
+        }
+      },
+      "core_fields_worsened": {},
+      "old_documents_count": 0,
+      "new_documents_count": 0,
+      "old_pdf_count": 0,
+      "new_pdf_count": 0
+    },
+    "risk_notes": []
+  }
+]

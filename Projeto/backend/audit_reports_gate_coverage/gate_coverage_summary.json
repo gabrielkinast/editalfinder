@@ -1,0 +1,18 @@
+{
+  "data_auditoria": "2026-05-01T08:20:44Z",
+  "fontes_total": 94,
+  "fontes_calls_transform_generic": 94,
+  "fontes_calls_opportunity_gate": 94,
+  "fontes_calls_noise_filter": 94,
+  "fontes_normalizes_documents": 94,
+  "fontes_applies_validation": 94,
+  "fontes_go_loader": 94,
+  "fontes_bypassing_gate": 0,
+  "risk_distribution": {
+    "medio": 94
+  },
+  "synthetic_expectation": {
+    "noise_should_reject_all": true,
+    "valid_should_keep_or_marked": true
+  }
+}

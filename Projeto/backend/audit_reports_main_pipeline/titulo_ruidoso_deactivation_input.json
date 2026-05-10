@@ -1,0 +1,73 @@
+{
+  "timestamp": "2026-05-09",
+  "source_report": "audit_reports_main_pipeline/titulo_ruidoso_curadoria.json",
+  "table": "edital",
+  "removed_candidates": [
+    {
+      "table": "edital",
+      "source": "BASA",
+      "link": "https://www.bancoamazonia.com.br/empresas/conta-pj",
+      "titulo": "Conta PJ",
+      "motivo": "Curadoria titulo_ruidoso: página de produto bancário/conta, não oportunidade acionável.",
+      "existe_no_banco": true,
+      "existe_no_payload_atual": false,
+      "recomendacao": "deactivate",
+      "confidence": "high"
+    },
+    {
+      "table": "edital",
+      "source": "BDMG",
+      "link": "https://www.bdmg.mg.gov.br/investimento",
+      "titulo": "Entre em contato",
+      "motivo": "Curadoria titulo_ruidoso: página genérica de contato/investimento, sem chamada específica.",
+      "existe_no_banco": true,
+      "existe_no_payload_atual": false,
+      "recomendacao": "deactivate",
+      "confidence": "high"
+    },
+    {
+      "table": "edital",
+      "source": "General Dynamics Suppliers",
+      "link": "https://www.gd.com/suppliers/supplier-faqs",
+      "titulo": "Supplier FAQs",
+      "motivo": "Curadoria titulo_ruidoso: FAQ de fornecedor, não oportunidade acionável.",
+      "existe_no_banco": true,
+      "existe_no_payload_atual": false,
+      "recomendacao": "deactivate",
+      "confidence": "high"
+    },
+    {
+      "table": "edital",
+      "source": "KAKENHI",
+      "link": "https://www.jsps.go.jp/j-grantsinaid/01_seido/05_faq/index.html",
+      "titulo": "科研費FAQ",
+      "motivo": "Curadoria titulo_ruidoso: FAQ institucional do programa, não chamada específica.",
+      "existe_no_banco": true,
+      "existe_no_payload_atual": false,
+      "recomendacao": "deactivate",
+      "confidence": "high"
+    },
+    {
+      "table": "edital",
+      "source": "NATO DIANA",
+      "link": "https://www.diana.nato.int/faq.html",
+      "titulo": "NATO DIANA — Programme FAQ (challenges, eligibility, portal)",
+      "motivo": "Curadoria titulo_ruidoso: FAQ do programa, não edital ativo.",
+      "existe_no_banco": true,
+      "existe_no_payload_atual": false,
+      "recomendacao": "deactivate",
+      "confidence": "high"
+    },
+    {
+      "table": "edital",
+      "source": "NUCLEP",
+      "link": "https://www.nuclep.gov.br/quem-somos",
+      "titulo": "Quem Somos",
+      "motivo": "Curadoria titulo_ruidoso: página institucional, não licitação/chamada.",
+      "existe_no_banco": true,
+      "existe_no_payload_atual": false,
+      "recomendacao": "deactivate",
+      "confidence": "high"
+    }
+  ]
+}

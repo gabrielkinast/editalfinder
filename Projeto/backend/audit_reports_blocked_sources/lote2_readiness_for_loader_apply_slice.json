@@ -1,0 +1,25 @@
+{
+  "data_auditoria": "2026-05-02T12:00:00Z",
+  "nota": "DEPRECATED 2026-05-02: o readiness canónico e retransform_by_source.json foram alinhados (merge parcial + build_loader_readiness). Não usar este slice para produção — manter só como histórico.",
+  "fontes_total": 5,
+  "status_distribution": {
+    "pronto_para_loader": 5,
+    "pronto_com_observacoes": 0,
+    "bloquear_temporariamente": 1,
+    "precisa_revisao_manual": 0,
+    "reprocessar_depois_de_ajuste": 0
+  },
+  "fontes_prontas_para_loader": [
+    "horizon_europe",
+    "erc",
+    "doe_arpae",
+    "nato_diana",
+    "iarpa"
+  ],
+  "fontes_bloqueadas_temporariamente": [
+    "sam_gov"
+  ],
+  "fontes_para_revisao": [],
+  "top20_problemas_semanticos": [],
+  "top20_ajustes_recomendados": []
+}

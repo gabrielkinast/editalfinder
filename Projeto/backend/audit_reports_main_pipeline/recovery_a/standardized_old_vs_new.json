@@ -1,0 +1,169 @@
+{
+  "data_auditoria": "2026-05-10T04:20:00Z",
+  "fontes": [
+    {
+      "fonte": "banco_da_amazonia",
+      "old_vs_new": {
+        "old_count": 0,
+        "new_count": 26,
+        "delta_count": 26,
+        "old_links_now_missing": [],
+        "new_links_before_missing": [
+          "https://www.bancoamazonia.com.br/empresas/credito-e-financiamentos",
+          "https://www.bancoamazonia.com.br/empresas/credito-e-financiamentos/amazonia-rural-verde",
+          "https://www.bancoamazonia.com.br/empresas/credito-e-financiamentos/antecipacao-de-cartao",
+          "https://www.bancoamazonia.com.br/empresas/credito-e-financiamentos/capital-de-giro",
+          "https://www.bancoamazonia.com.br/empresas/credito-e-financiamentos/capital-de-giro-produtor-rural",
+          "https://www.bancoamazonia.com.br/empresas/credito-e-financiamentos/energia-verde-nao-rural",
+          "https://www.bancoamazonia.com.br/empresas/credito-e-financiamentos/fundo-marinha",
+          "https://www.bancoamazonia.com.br/fundo-constitucional-financiamento",
+          "https://www.bancoamazonia.com.br/fundo-constitucional-financiamento/relatorios-fno",
+          "https://www.bancoamazonia.com.br/linhas-de-fomento",
+          "https://www.bancoamazonia.com.br/linhas-de-fomento/bndes-automatico-rural",
+          "https://www.bancoamazonia.com.br/linhas-de-fomento/bndes-automatico-urbano",
+          "https://www.bancoamazonia.com.br/linhas-de-fomento/bndes-finame",
+          "https://www.bancoamazonia.com.br/linhas-de-fomento/fno/amazonia-empresarial",
+          "https://www.bancoamazonia.com.br/linhas-de-fomento/fno/amazonia-rural",
+          "https://www.bancoamazonia.com.br/linhas-de-fomento/fno/energia-verde",
+          "https://www.bancoamazonia.com.br/linhas-de-fomento/fno/fno-biodiversidade",
+          "https://www.bancoamazonia.com.br/linhas-de-fomento/fungetur",
+          "https://www.bancoamazonia.com.br/linhas-de-fomento/plano-safra",
+          "https://www.bancoamazonia.com.br/linhas-de-fomento/pronaf",
+          "https://www.bancoamazonia.com.br/rural/credito-e-financiamento-agro",
+          "https://www.bancoamazonia.com.br/rural/credito-e-financiamento-agro/capital-de-giro-produtor-rural",
+          "https://www.bancoamazonia.com.br/rural/credito-e-financiamento-agro/financiamento-veiculo-produtor-rural",
+          "https://www.bancoamazonia.com.br/rural/credito-e-financiamento-agro/maquinas-equipamentos",
+          "https://www.bancoamazonia.com.br/rural/credito-e-financiamento-agro/pronaf",
+          "https://www.bancoamazonia.com.br/rural/credito-e-financiamento-agro/pronaf/pronaf-a"
+        ],
+        "core_fields_improved": {
+          "area": {
+            "old": 0,
+            "new": 25,
+            "delta": 25
+          },
+          "tipo_oportunidade": {
+            "old": 0,
+            "new": 26,
+            "delta": 26
+          },
+          "tipo_recurso": {
+            "old": 0,
+            "new": 26,
+            "delta": 26
+          },
+          "perfil_ideal": {
+            "old": 0,
+            "new": 15,
+            "delta": 15
+          },
+          "documentos": {
+            "old": 0,
+            "new": 4,
+            "delta": 4
+          },
+          "pdf_url": {
+            "old": 0,
+            "new": 4,
+            "delta": 4
+          }
+        },
+        "core_fields_worsened": {},
+        "old_documents_count": 0,
+        "new_documents_count": 4,
+        "old_pdf_count": 0,
+        "new_pdf_count": 4
+      }
+    },
+    {
+      "fonte": "dod_sbir_sttr",
+      "old_vs_new": {
+        "old_count": 25,
+        "new_count": 6,
+        "delta_count": -19,
+        "old_links_now_missing": [
+          "https://www.sbir.gov/about/policies",
+          "https://www.sbir.gov/api",
+          "https://www.sbir.gov/awards",
+          "https://www.sbir.gov/community/fast",
+          "https://www.sbir.gov/community/gafc",
+          "https://www.sbir.gov/data-resources",
+          "https://www.sbir.gov/data-resources/data-dictionary",
+          "https://www.sbir.gov/events-listing",
+          "https://www.sbir.gov/faq",
+          "https://www.sbir.gov/impact",
+          "https://www.sbir.gov/impact/impact-reports",
+          "https://www.sbir.gov/impact/impact-reports/archive",
+          "https://www.sbir.gov/lab2market",
+          "https://www.sbir.gov/participating-agencies",
+          "https://www.sbir.gov/portfolio",
+          "https://www.sbir.gov/success-stories",
+          "https://www.sbir.gov/topics",
+          "https://www.sbir.gov/topics/1012233",
+          "https://www.sbir.gov/topics/1012236",
+          "https://www.sbir.gov/topics/1012237",
+          "https://www.sbir.gov/topics/1012239",
+          "https://www.sbir.gov/topics/1012269",
+          "https://www.sbir.gov/topics/1012281",
+          "https://www.sbir.gov/topics/1012286"
+        ],
+        "new_links_before_missing": [
+          "https://www.sbir.gov/topics/1012228",
+          "https://www.sbir.gov/topics/1012232",
+          "https://www.sbir.gov/topics/1012246",
+          "https://www.sbir.gov/topics/1012248",
+          "https://www.sbir.gov/topics/1012257"
+        ],
+        "core_fields_improved": {
+          "documentos": {
+            "old": 0,
+            "new": 6,
+            "delta": 6
+          }
+        },
+        "core_fields_worsened": {
+          "area": {
+            "old": 25,
+            "new": 6,
+            "delta": -19
+          },
+          "tipo_oportunidade": {
+            "old": 25,
+            "new": 6,
+            "delta": -19
+          },
+          "tipo_recurso": {
+            "old": 25,
+            "new": 6,
+            "delta": -19
+          },
+          "pdf_url": {
+            "old": 5,
+            "new": 0,
+            "delta": -5
+          }
+        },
+        "old_documents_count": 0,
+        "new_documents_count": 6,
+        "old_pdf_count": 5,
+        "new_pdf_count": 0
+      }
+    },
+    {
+      "fonte": "esa_star",
+      "old_vs_new": {
+        "old_count": 0,
+        "new_count": 0,
+        "delta_count": 0,
+        "old_links_now_missing": [],
+        "new_links_before_missing": [],
+        "core_fields_improved": {},
+        "core_fields_worsened": {},
+        "old_documents_count": 0,
+        "new_documents_count": 0,
+        "old_pdf_count": 0,
+        "new_pdf_count": 0
+      }
+    }
+  ]
+}

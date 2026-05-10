@@ -1,0 +1,39 @@
+{
+  "titulo": "Preservação taxonómica no loader — diagnóstico Recovery C",
+  "campos_rastreados_dry_run": [
+    "area",
+    "tipo_oportunidade",
+    "tipo_recurso",
+    "perfil_ideal",
+    "publico_alvo",
+    "setor_economico",
+    "area_cientifica",
+    "area_tecnologica",
+    "setor_estrategico",
+    "validacao_status",
+    "qualidade_dado"
+  ],
+  "evidencia_fields_preserved": {
+    "fonte": "audit_reports_loader_ready/staging_load_summary.json (apply Recovery C)",
+    "fields_preserved_non_empty_total_setor_estrategico": 41,
+    "nota": "No dry-run de load_ready_sources, 'preservado' = campo não vazio no standardized (extras) E no payload mapeado — não mede merge com linha existente na BD."
+  },
+  "apply_recovery_c": {
+    "fontes": ["embrapii", "nuclep"],
+    "itens": 41,
+    "input_dir": "audit_reports_main_pipeline/recovery_c_setores/standardized",
+    "standardized": "setor_estrategico capped (<=3) nos JSON locais"
+  },
+  "motivo_banco_nao_refletiu_payload": "_rebuild_merged_extras usa merge_extras_dict: listas em extras são unidas (união deduplicada), não substituídas. O setor_estrategico antigo na BD + fragmentos + payload novo produz lista mais longa que o cap do standardized. extras_to_filter_columns reflecte merged_extras na coluna espelho.",
+  "ficheiros_codigo": {
+    "merge_listas": "CORE/merge_utils.py — merge_extras_dict",
+    "merge_extras_loader": "CORE/loader.py — _rebuild_merged_extras",
+    "colunas_espelho": "CORE/taxonomy_filtros.py — extras_to_filter_columns",
+    "orquestracao": "scripts/load_ready_sources.py — _simulate_source / _apply_source"
+  },
+  "remedio_implementado": {
+    "flag_cli": "--overwrite-fields setor_estrategico",
+    "requisitos": ["combinar com --sources", "apply real: --apply --staging"],
+    "comportamento": "Após merge normal, substituir chaves listadas pelo valor não vazio do payload novo (taxonomy_replace_keys em _rebuild_merged_extras)."
+  }
+}

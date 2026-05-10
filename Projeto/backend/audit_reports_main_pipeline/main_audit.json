@@ -1,0 +1,28 @@
+{
+  "titulo": "Auditoria do orquestrador main.py",
+  "versao_logica": "2026-05-05",
+  "ficheiro": "main.py",
+  "regras_seguranca": [
+    "Sem subcomando: apenas ajuda; nada executa.",
+    "daily --apply-staging: fase 1 dry-run completo (edital + news); apply só se ambos limpos e ambiente staging válido.",
+    "EDITALFINDER_ENV production/prod aborta check_staging_apply_environment (validate-staging, apply).",
+    "Sem DELETE/TRUNCATE/DROP no orquestrador; limpeza via scripts que só atualizam ativo=false.",
+    "Loaders chamados com --test-db-before-apply em apply."
+  ],
+  "comandos": [
+    "status",
+    "list-readiness",
+    "daily (--dry-run | --apply-staging)",
+    "validate-staging",
+    "apply-edital",
+    "apply-news",
+    "clean-staging"
+  ],
+  "relatorios_padrao": [
+    "audit_reports_main_pipeline/last_run_summary.md",
+    "audit_reports_main_pipeline/last_run_summary.json",
+    "audit_reports_main_pipeline/last_run_steps.json",
+    "audit_reports_main_pipeline/last_run_errors.json"
+  ],
+  "legado": "main_legacy_pipeline.py (crawler + transformer + loader CORE)"
+}

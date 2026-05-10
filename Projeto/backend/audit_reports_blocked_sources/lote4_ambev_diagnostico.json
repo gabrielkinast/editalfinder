@@ -1,0 +1,59 @@
+{
+  "fonte": "ambev",
+  "data_auditoria": "2026-05-03T04:25:00Z",
+  "contexto_lote4": "Fonte listada em needs_manual_review em audit_reports_blocked_sources/lote4_brasil_legado_diagnostico.json (7 brutos, 0 transformados, 7 rejeitados por gate).",
+  "crawler": {
+    "roda": true,
+    "comando_verificado": "python ambev/main_ambev.py",
+    "saida_tipica": "7 itens gravados em ambev/outputs/ambev_editais.json (100accelerator challenges + filtro _is_relevant_item)."
+  },
+  "bruto": {
+    "path": "ambev/outputs/ambev_editais.json",
+    "qtd": 7,
+    "listagem_principal": "https://www.100accelerator.com/challenges",
+    "secundaria": "https://www.ambev.com.br/startups (sem itens adicionais no último run)"
+  },
+  "transformacao_pos_correcao_local": {
+    "nota": "Calibração e relaxamento só em CORE (taxonomy_filtros.calibrate_ambev_extras, transformer._ambev_soft_continue). opportunity_gate global não alterado.",
+    "dry_run_dir": "audit_reports_blocked_sources/lote4_fix_ambev",
+    "qtd_transformados": 7,
+    "qtd_rejeitados": 0,
+    "itens_suspeitos_validacao": 7,
+    "motivos_principais_suspeito": [
+      "prazo_ausente",
+      "valor_ausente",
+      "opportunity_gate_trusted_br_relaxed"
+    ]
+  },
+  "natureza_conteudo": {
+    "classificacao_produto": "Oportunidade real no sentido de open innovation / programa corporativo de desafios (100+ Accelerator), não marketing institucional genérico nem notícia.",
+    "nao_e": [
+      "newsroom",
+      "página de produto",
+      "evento genérico isolado",
+      "sustentabilidade sem chamada (os itens atuais são páginas de desafio temático)"
+    ],
+    "marcadores_texto": "Inglês corporativo (Help build…, solutions, supply chains); sem edital/licitação pública clássica.",
+    "inscricao_chamada_edital_prazo_formulario": "No JSON bruto: fim_inscricao null; sem PDFs/anexos na extração curada. Prazo e formulário residem no site 100+ (não inventados no pipeline).",
+    "documentos_anexos": "extras.anexos vazio; audit_docs sem perdas (nada a preservar no bruto)."
+  },
+  "escopo_modulo_edital": {
+    "faz_sentido": "Sim, se o módulo incluir corporate innovation / aceleração / open innovation com startups; não se o escopo for apenas editais públicos governamentais.",
+    "readiness_recomendado": "ready_with_notes",
+    "notas_readiness": [
+      "Texto principalmente em EN; qualidade_dado médio por ausência de prazo/valor no bruto.",
+      "Gate global relaxado apenas com opportunity_gate_relax_scope=ambev_local (documentar para curadoria).",
+      "Auditoria semântica: flag publico_alvo_sem_evidencia em 7/7 (regra genérica do audit; perfil_ideal foi preenchido por calibração)."
+    ]
+  },
+  "artefatos_gerados": {
+    "retransform_summary": "audit_reports_blocked_sources/lote4_fix_ambev/retransform_summary.json",
+    "standardized": "audit_reports_blocked_sources/lote4_fix_ambev/standardized/ambev_standardized.json",
+    "semantic": "audit_reports_blocked_sources/lote4_fix_ambev_semantic/audit_semantic_summary.json",
+    "docs": "audit_reports_blocked_sources/lote4_fix_ambev_docs/audit_docs_summary.json"
+  },
+  "codigo_alterado": [
+    "CORE/taxonomy_filtros.py — calibrate_ambev_extras",
+    "CORE/transformer.py — _ambev_soft_continue, import, ramo gate e calibração por fonte"
+  ]
+}

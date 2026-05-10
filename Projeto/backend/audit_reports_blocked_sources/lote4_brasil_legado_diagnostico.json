@@ -1,0 +1,136 @@
+{
+  "meta": {
+    "lote": 4,
+    "titulo": "Diagnóstico — fontes Brasil / legado (blocked / needs_manual_review)",
+    "data_auditoria": "2026-05-01",
+    "restricoes_respeitadas": [
+      "Não executar loader apply",
+      "Não alterar Supabase",
+      "Não aplicar migration",
+      "Não alterar opportunity_gate global",
+      "Não atualizar source_readiness automaticamente"
+    ],
+    "evidencias": {
+      "retransform_relatorio": "audit_reports_blocked_sources/lote4_brasil_legado_retransform/retransform_by_source.json",
+      "smoke_crawlers": "Executados em 2026-05-01: python amazul/main_amazul.py; marinha; dcta_ita_iae; faperg; apex; ambev; science_scraper/main_science.py (primeiras linhas de log). science_scraper registrou 404 em URL gov.br AEB."
+    },
+    "totais": {
+      "itens_brutos": 22,
+      "itens_transformados": 0,
+      "itens_rejeitados": 22
+    }
+  },
+  "recomendacoes_agregadas": {
+    "corrigir_agora": ["apex (seletores/listagem de programas reais, filtrar eventos/menu)", "faperg (URLs e extração de editais RS)", "amazul_marinha_dcta (mapear portais atuais de licitações/editais sem índice genérico)"],
+    "manter_blocked": ["science_scraper no pipeline de editais até decisão de produto (notícias vs oportunidade)"],
+    "needs_manual_review": ["ambev (definir se open calls corporativos entram no escopo; calibração por fonte sem gate global)", "apex (confirmar quais URLs são chamadas vs marketing)"],
+    "fora_escopo_pipeline_atual": ["science_scraper como fonte principal de edital BR (conteúdo agenda EC/internacional)"]
+  },
+  "fontes": [
+    {
+      "id": "amazul",
+      "perguntas": {
+        "1_crawler_roda": "Sim (smoke exit 0).",
+        "2_existe_output_bruto": "Sim: amazul/outputs/amazul_editais.json",
+        "3_qtd_brutos": 0,
+        "4_qtd_transformam": 0,
+        "5_qtd_rejeitados": 0,
+        "6_motivos_rejeicao": "N/A (sem itens).",
+        "7_oportunidade_real": "Não observada no bruto atual.",
+        "8_relevante_escopo": "Sim em princípio (nuclear/defesa/licitações).",
+        "9_tipo_problema": "Crawler/heurística: nenhum item com evidência; link antigo de índice de licitações ausente no bruto.",
+        "10_continuar_projeto": "Sim, com correção de fonte/URLs ou revisão manual de readiness."
+      }
+    },
+    {
+      "id": "marinha",
+      "perguntas": {
+        "1_crawler_roda": "Sim.",
+        "2_existe_output_bruto": "Sim: marinha/outputs/marinha_editais.json",
+        "3_qtd_brutos": 0,
+        "4_qtd_transformam": 0,
+        "5_qtd_rejeitados": 0,
+        "6_motivos_rejeicao": "N/A.",
+        "7_oportunidade_real": "Não observada.",
+        "8_relevante_escopo": "Sim (licitações, concursos).",
+        "9_tipo_problema": "Crawler/heurística; URL editais institucional não gera item.",
+        "10_continuar_projeto": "Sim, após mapear páginas reais de chamadas."
+      }
+    },
+    {
+      "id": "dcta_ita_iae",
+      "perguntas": {
+        "1_crawler_roda": "Sim.",
+        "2_existe_output_bruto": "Sim: dcta_ita_iae/outputs/dcta_ita_iae_editais.json",
+        "3_qtd_brutos": 0,
+        "4_qtd_transformam": 0,
+        "5_qtd_rejeitados": 0,
+        "6_motivos_rejeicao": "N/A.",
+        "7_oportunidade_real": "Não observada.",
+        "8_relevante_escopo": "Sim (editais acadêmicos, licitações).",
+        "9_tipo_problema": "Crawler/heurística sem fallback de índice.",
+        "10_continuar_projeto": "Sim, com alvos explícitos por instituição."
+      }
+    },
+    {
+      "id": "faperg",
+      "perguntas": {
+        "1_crawler_roda": "Sim.",
+        "2_existe_output_bruto": "Sim: faperg/outputs/faperg_editais.json",
+        "3_qtd_brutos": 0,
+        "4_qtd_transformam": 0,
+        "5_qtd_rejeitados": 0,
+        "6_motivos_rejeicao": "N/A.",
+        "7_oportunidade_real": "Não observada no bruto.",
+        "8_relevante_escopo": "Sim (fomento estadual RS).",
+        "9_tipo_problema": "Crawler/acesso a páginas de editais.",
+        "10_continuar_projeto": "Sim; prioridade de correção se RS for requisito de cobertura."
+      }
+    },
+    {
+      "id": "apex",
+      "perguntas": {
+        "1_crawler_roda": "Sim.",
+        "2_existe_output_bruto": "Sim: apex/outputs/apex_editais.json",
+        "3_qtd_brutos": 1,
+        "4_qtd_transformam": 0,
+        "5_qtd_rejeitados": 1,
+        "6_motivos_rejeicao": "titulo_ruido_exato (1).",
+        "7_oportunidade_real": "Não; item é página de eventos com título de navegação.",
+        "8_relevante_escopo": "Parcial — Apex pode ter programas; atual bruto não os evidencia.",
+        "9_tipo_problema": "Crawler + ruído de título + possível confusão eventos vs chamadas.",
+        "10_continuar_projeto": "Sim, após refinar extração para chamadas/programas e excluir calendário genérico."
+      }
+    },
+    {
+      "id": "ambev",
+      "perguntas": {
+        "1_crawler_roda": "Sim.",
+        "2_existe_output_bruto": "Sim: ambev/outputs/ambev_editais.json",
+        "3_qtd_brutos": 7,
+        "4_qtd_transformam": 0,
+        "5_qtd_rejeitados": 7,
+        "6_motivos_rejeicao": "Pontuação abaixo do mínimo (6); relevância limite (1).",
+        "7_oportunidade_real": "Parcial — desafios de inovação aberta; não licitação pública clássica.",
+        "8_relevante_escopo": "Parcial — depende de política de incluir corporate open innovation.",
+        "9_tipo_problema": "Gate + idioma EN + taxonomia de oportunidade.",
+        "10_continuar_projeto": "Condicional; definir escopo e eventual calibração só na fonte (sem gate global)."
+      }
+    },
+    {
+      "id": "science_scraper",
+      "perguntas": {
+        "1_crawler_roda": "Sim (com erro HTTP 404 em uma seed AEB).",
+        "2_existe_output_bruto": "Sim: science_scraper/outputs/science_editais.json",
+        "3_qtd_brutos": 14,
+        "4_qtd_transformam": 0,
+        "5_qtd_rejeitados": 14,
+        "6_motivos_rejeicao": "Pontuação abaixo do mínimo (14).",
+        "7_oportunidade_real": "Majoritariamente eventos/agenda; não editais.",
+        "8_relevante_escopo": "Fraco para pipeline edital BR atual.",
+        "9_tipo_problema": "Ruído (agenda), gate, idioma, URL quebrada (AEB).",
+        "10_continuar_projeto": "Rever produto: migrar para camada de notícias/agenda ou excluir do módulo edital."
+      }
+    }
+  ]
+}

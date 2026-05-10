@@ -1,0 +1,15 @@
+{
+  "executar_apply": false,
+  "fonte": "amazul",
+  "justificativa": "Recovery B.1 ajusta calibração AMAZUL (reembolsavel=false em compra pública, cap setor≤3, validacao incompleto para detalhes de licitação em vez de suspeito). O dry-run local tem mapping_errors=0, 20 editais, sem suspeito no standardized gerado.",
+  "comando_sugerido_pos_validacao": "python scripts/load_ready_sources.py --apply --staging --test-db-before-apply --sources amazul --exclude-blocked --input-dir audit_reports_main_pipeline/recovery_b1_amazul/standardized --readiness <readiness_operacional_acordado> --output-dir audit_reports_main_pipeline/recovery_b1_amazul_loader_apply",
+  "pre_condicoes": [
+    "Rever recovery_b1_amazul_diagnostico.md",
+    "Correr validate_full_staging_after_daily.py --staging após apply",
+    "Não alterar readiness oficial nem opportunity_gate global neste passo"
+  ],
+  "riscos_residuais": [
+    "prazo_vencido_ativo_true pode continuar para linhas com prazo_envio ultrapassado e ativo=true (comportamento esperado)",
+    "fonte_defesa_sem_defesa (2) no audit semântico — refinável depois"
+  ]
+}

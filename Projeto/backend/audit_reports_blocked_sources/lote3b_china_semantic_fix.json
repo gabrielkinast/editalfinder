@@ -1,0 +1,99 @@
+{
+  "gerado_em_utc": "2026-05-02T21:52:33Z",
+  "contexto": "Correção das 4 flags oportunidade_fomento_sem_fomento no lote China curado; apenas calibrações locais em CORE/taxonomy_filtros.py (sem gate global, Supabase, migrations, loader).",
+  "antes": {
+    "audit_dir": "audit_reports_blocked_sources/lote3b_china_curated_semantic",
+    "flags_totais": {
+      "oportunidade_fomento_sem_fomento": 4
+    },
+    "itens_com_flag": [
+      {
+        "fonte": "china_nsfc",
+        "titulo": "国家自然科学基金委员会医学科学部青年科学基金项目（A类）（原国家杰出青年科学基金项目）注意事项补充说明 03-12",
+        "link": "https://www.nsfc.gov.cn/p1/3381/2822/120883.html",
+        "tipo_oportunidade_antes": "chamada_publica",
+        "tipo_recurso_antes_padronizado": "Oportunidade Publica",
+        "evidencia_textual": "Texto zh com 基金, 科研, 申报, 青年科学基金; guia oficial NSFC.",
+        "causa_raiz": "Auditoria exige tokens PT/EN (grant, funding, …) no blob quando tipo_op contém substring 'chamada' (chamada_publica) ou tipo_rec contém 'fomento'; blob zh não casava com a lista fixa."
+      },
+      {
+        "fonte": "china_nsfc",
+        "titulo": "2026年度国家自然科学基金改革举措",
+        "link": "https://www.nsfc.gov.cn/p1/2931/3971/3973/2026ndgjzrkxjjggjc.html",
+        "tipo_oportunidade_antes": "chamada_publica",
+        "tipo_recurso_antes_padronizado": "Oportunidade Publica",
+        "evidencia_textual": "Conteúdo do guia 2026 (改革举措, 申请规定, 资助领域).",
+        "causa_raiz": "Mesmo padrão chamada_publica + ausência de token PT no blob para o ramo da auditoria."
+      },
+      {
+        "fonte": "china_nsfc",
+        "titulo": "国家自然科学基金申请代码",
+        "link": "https://www.nsfc.gov.cn/p1/2931/3971/4002/gjzrkxjjsqdm2026.html",
+        "tipo_oportunidade_antes": "chamada_publica",
+        "tipo_recurso_antes_padronizado": "Oportunidade Publica",
+        "evidencia_textual": "Tabela de códigos de candidatura NSFC 2026.",
+        "causa_raiz": "Mesmo padrão."
+      },
+      {
+        "fonte": "china_avic",
+        "titulo": "中国航空工业集团2026年纪检监察人员校园招聘公告",
+        "link": "http://www.avic.com/c/2026-04-22/642825.shtml",
+        "tipo_oportunidade_antes": "chamada_publica",
+        "tipo_recurso_antes_padronizado": "Comunicado / Procurement Publico",
+        "evidencia_textual": "校园招聘, 报名, 资格审查 — processo seletivo / RH, não grant.",
+        "causa_raiz": "chamada_publica dispara o mesmo ramo sem 'grant/funding' no blob em PT/EN."
+      }
+    ],
+    "classificacao_real": [
+      "NSFC (3 itens): oportunidade de fomento / guia / referência de candidatura, não notícia política.",
+      "AVIC (1 item): processo seletivo público (recrutamento), não fomento nem compra pública de objeto militar com evidência no texto do anúncio."
+    ]
+  },
+  "ajustes_calibracao": {
+    "ficheiro": "CORE/taxonomy_filtros.py",
+    "calibrate_china_nsfc_extras": "Ramo não-procurement: mapear chamada_publica → grant (manter funding_opportunity); tipo_recurso = 'Grant para pesquisa competitiva' (sem substring 'fomento' que reativasse o filtro com blob zh).",
+    "calibrate_china_avic_extras": "Deteção de 校园招聘 + 纪检监察 + 招聘: tipo_oportunidade = processo_seletivo, tipo_recurso = Seleção / emprego público, remoção de setores defesa/aero impulsionados pelo menu do site; return antecipado.",
+    "calibrate_china_university_procurement_extras": "Procurement só com sinal forte (招标/投标/tender/bid/竞价 ou 采购 com 公开招标|采购公告|中标|政府采购); caso contrário grant + Grant para pesquisa competitiva; origem_portal USTC quando ustc.edu.cn."
+  },
+  "depois": {
+    "retransform_output": "audit_reports_blocked_sources/lote3b_china_curated_semantic_fix",
+    "audit_output": "audit_reports_blocked_sources/lote3b_china_curated_semantic_fix_audit",
+    "retransform_summary": {
+      "data_auditoria": "2026-05-02T21:52:30Z",
+      "dry_run": true,
+      "fontes_processadas": 3,
+      "itens_brutos_total": 14,
+      "itens_transformados_total": 14,
+      "itens_rejeitados_total": 0
+    },
+    "audit_semantic_summary": {
+      "data_auditoria": "2026-05-02T21:52:33Z",
+      "fontes": 3,
+      "itens_total": 14,
+      "flags_totais": {},
+      "oportunidade_fomento_sem_fomento": 0
+    }
+  },
+  "nao_alterado": [
+    "opportunity_gate global",
+    "source_readiness.json",
+    "Supabase",
+    "migrations",
+    "loader apply",
+    "brutos curados (china_*_editais.json)"
+  ],
+  "readiness_recomendado_final_manual": {
+    "china_nsfc": "ready_with_notes",
+    "china_avic": "needs_manual_review",
+    "china_university_procurement": "ready_with_notes",
+    "china_cnnc": "blocked",
+    "china_norinco": "needs_manual_review"
+  },
+  "readiness_notas": {
+    "china_nsfc": "Flags semânticas zeradas após calibração; conjunto pequeno (9 brutos) focado em guias/fundos; monitorizar páginas EN e guia anual.",
+    "china_avic": "Um único item útil (processo seletivo); ausência de procurement ou oportunidade técnica explícita na lista curada.",
+    "china_university_procurement": "USTC com avisos de fundos; Tsinghua/PKU com falhas de listagem fora deste fix.",
+    "china_cnnc": "Listagem ainda bloqueada por rede/acesso.",
+    "china_norinco": "Bruto legado fraco; sem mudança nesta tarefa."
+  }
+}

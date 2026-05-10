@@ -1,0 +1,31 @@
+{
+  "titulo": "Dry-run com canonização — senai + plataforma_industria",
+  "comando": "python scripts/load_ready_sources.py --dry-run --sources senai,plataforma_industria --exclude-blocked",
+  "id_execucao_referencia": "5c388ae9-2669-43ed-8e3b-04dd6474085c",
+  "data_auditoria": "2026-05-02T00:58:39Z",
+  "config_canonizacao": "config/source_canonicalization.json",
+  "ordem_processamento": "senai (canónico) antes de plataforma_industria (alias), por config/source_canonicalization.json",
+  "totais": {
+    "fontes_selecionadas": 2,
+    "itens_standardized_brutos": 45,
+    "would_upsert_simulado": 23,
+    "canonical_skipped": 22,
+    "would_ignore_mapeamento": 0,
+    "links_reivindicados_grupo_plataforma_inovacao": 22
+  },
+  "por_fonte": {
+    "senai": {
+      "itens_standardized": 22,
+      "would_upsert": 22,
+      "canonical_skipped": 0
+    },
+    "plataforma_industria": {
+      "itens_standardized": 23,
+      "would_upsert": 1,
+      "canonical_skipped": 22
+    }
+  },
+  "interpretacao": "22 URLs duplicadas foram ignoradas na alias; 1 URL exclusiva da plataforma_industria (ex.: inova-mes) segue para upsert simulado.",
+  "recomendacao": "Com esta política: carregar ambas as fontes no mesmo job é seguro — o efeito líquido é SENAI + 1 item exclusivo da plataforma_industria. Alternativa equivalente: carregar só SENAI e acrescentar o crawl da plataforma só para URLs não presentes no SENAI.",
+  "artefacto_loader_completo": "audit_reports_loader_ready/load_ready_summary.json"
+}

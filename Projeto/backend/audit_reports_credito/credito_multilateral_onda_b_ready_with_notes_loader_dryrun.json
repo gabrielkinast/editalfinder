@@ -1,0 +1,191 @@
+{
+  "titulo": "Dry-run loader — Crédito multilateral Onda B (ready_with_notes: eic, eureka_network)",
+  "data_referencia": "2026-05-05",
+  "lote": "audit_reports_credito/lote_credito_multilateral_onda_b_fix",
+  "comando": "python scripts/load_ready_sources.py --dry-run --sources eureka_network,eic --exclude-blocked --input-dir audit_reports_retransform/standardized --readiness audit_reports_retransform/readiness_for_loader.json",
+  "fontes_promovidas": [
+    "eic",
+    "eureka_network"
+  ],
+  "fontes_nao_promovidas": {
+    "needs_manual_review": [
+      "fonplata"
+    ],
+    "blocked": [
+      "bid_lab",
+      "caf"
+    ]
+  },
+  "standardized_copiados": [
+    "audit_reports_retransform/standardized/eureka_network_standardized.json",
+    "audit_reports_retransform/standardized/eic_standardized.json"
+  ],
+  "resumo_loader": {
+    "sources_selected": 2,
+    "itens_standardized_total": 35,
+    "would_upsert_total": 35,
+    "would_ignore_total": 0,
+    "mapping_errors_total": 0,
+    "critical_empty_items_total": 0,
+    "documentos_perdidos_no_payload_total": 0
+  },
+  "verificacao_tarefa_6": {
+    "sources_selected_eq_2": true,
+    "would_upsert_total_gt_0": true,
+    "mapping_errors_total_eq_0": true,
+    "critical_empty_items_total_eq_0": true,
+    "documentos_perdidos_no_payload_total_eq_0": true,
+    "all_gate_checks_pass": true
+  },
+  "classificacao_standardized": {
+    "eureka_network": "tipo_oportunidade=call_for_proposals em todos os itens (amostragem grep)",
+    "eic": "tipo_oportunidade=funding_opportunity em todos os itens (amostragem grep)",
+    "programa_agregado": "campo programa_agregado não presente nos JSON analisados; nenhum hub agregador explícito sinalizado."
+  },
+  "nota_contagem": "O standardized em disco para eureka_network tem 21 itens (lista na raiz do JSON); o lote reportou 23 brutos — a diferença é etapa crawl/transform antes do standardized final.",
+  "por_fonte": [
+    {
+      "fonte": "eic",
+      "standardized_path": "audit_reports_retransform/standardized/eic_standardized.json",
+      "itens_standardized": 14,
+      "would_upsert": 14,
+      "would_ignore": 0,
+      "mapping_errors": 0,
+      "critical_empty_items": 0,
+      "critical_empty_fields": {},
+      "docs_input_items": 14,
+      "docs_preserved_items": 14,
+      "documentos_perdidos_no_payload": 0,
+      "standardized_com_documentos_nao_pdf": 4,
+      "payload_com_documentos_nao_pdf": 4,
+      "perda_documentos_nao_pdf": 0,
+      "pdf_input_items": 14,
+      "pdf_preserved_items": 14,
+      "validacao_status_preserved_items": 14,
+      "qualidade_dado_preserved_items": 14,
+      "semantic_fields_present_items": 14,
+      "docs_loss_examples": [],
+      "field_input_non_empty": {
+        "area": 14,
+        "tipo_oportunidade": 14,
+        "tipo_recurso": 14,
+        "perfil_ideal": 13,
+        "publico_alvo": 12,
+        "setor_economico": 14,
+        "area_tecnologica": 5,
+        "setor_estrategico": 14,
+        "validacao_status": 14,
+        "qualidade_dado": 14,
+        "area_cientifica": 1
+      },
+      "field_payload_non_empty": {
+        "area": 14,
+        "tipo_oportunidade": 14,
+        "tipo_recurso": 14,
+        "perfil_ideal": 13,
+        "publico_alvo": 12,
+        "setor_economico": 14,
+        "area_tecnologica": 5,
+        "setor_estrategico": 14,
+        "validacao_status": 14,
+        "qualidade_dado": 14,
+        "area_cientifica": 1
+      },
+      "field_preserved_non_empty": {
+        "area": 14,
+        "tipo_oportunidade": 14,
+        "tipo_recurso": 14,
+        "perfil_ideal": 13,
+        "publico_alvo": 12,
+        "setor_economico": 14,
+        "area_tecnologica": 5,
+        "setor_estrategico": 14,
+        "validacao_status": 14,
+        "qualidade_dado": 14,
+        "area_cientifica": 1
+      },
+      "canonical_skipped": 0,
+      "canonical_skip_examples": [],
+      "official_link_only_standardized": 0,
+      "official_link_only_payload": 0,
+      "access_limited_items": 0,
+      "official_link_only_access_reasons": {},
+      "official_link_only_examples": [],
+      "destination_counts": {
+        "edital": 14
+      },
+      "content_route_examples": []
+    },
+    {
+      "fonte": "eureka_network",
+      "standardized_path": "audit_reports_retransform/standardized/eureka_network_standardized.json",
+      "itens_standardized": 21,
+      "would_upsert": 21,
+      "would_ignore": 0,
+      "mapping_errors": 0,
+      "critical_empty_items": 0,
+      "critical_empty_fields": {},
+      "docs_input_items": 5,
+      "docs_preserved_items": 5,
+      "documentos_perdidos_no_payload": 0,
+      "standardized_com_documentos_nao_pdf": 0,
+      "payload_com_documentos_nao_pdf": 0,
+      "perda_documentos_nao_pdf": 0,
+      "pdf_input_items": 5,
+      "pdf_preserved_items": 5,
+      "validacao_status_preserved_items": 21,
+      "qualidade_dado_preserved_items": 21,
+      "semantic_fields_present_items": 21,
+      "docs_loss_examples": [],
+      "field_input_non_empty": {
+        "area": 12,
+        "tipo_oportunidade": 21,
+        "tipo_recurso": 21,
+        "perfil_ideal": 16,
+        "publico_alvo": 10,
+        "setor_economico": 21,
+        "setor_estrategico": 21,
+        "validacao_status": 21,
+        "qualidade_dado": 21
+      },
+      "field_payload_non_empty": {
+        "area": 12,
+        "tipo_oportunidade": 21,
+        "tipo_recurso": 21,
+        "perfil_ideal": 16,
+        "publico_alvo": 10,
+        "setor_economico": 21,
+        "setor_estrategico": 21,
+        "validacao_status": 21,
+        "qualidade_dado": 21
+      },
+      "field_preserved_non_empty": {
+        "area": 12,
+        "tipo_oportunidade": 21,
+        "tipo_recurso": 21,
+        "perfil_ideal": 16,
+        "publico_alvo": 10,
+        "setor_economico": 21,
+        "setor_estrategico": 21,
+        "validacao_status": 21,
+        "qualidade_dado": 21
+      },
+      "canonical_skipped": 0,
+      "canonical_skip_examples": [],
+      "official_link_only_standardized": 0,
+      "official_link_only_payload": 0,
+      "access_limited_items": 0,
+      "official_link_only_access_reasons": {},
+      "official_link_only_examples": [],
+      "destination_counts": {
+        "edital": 21
+      },
+      "content_route_examples": []
+    }
+  ],
+  "artefatos_loader": [
+    "audit_reports_loader_ready/load_ready_summary.json",
+    "audit_reports_loader_ready/load_ready_by_source.json"
+  ],
+  "apply_executado": false
+}

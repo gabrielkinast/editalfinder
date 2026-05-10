@@ -25,7 +25,7 @@ def _load_module(filename: str, module_name: str):
 
 _load_module("models_fapergs.py", "models_fapergs")
 _load_module("utils_fapergs.py", "utils_fapergs")
-extrair_mod = _load_module("extrair_informações-fapergs.py", "extrair_informações_fapergs")
+extrair_mod = _load_module("extrair_informacoes_fapergs.py", "extrair_informacoes_fapergs")
 
 FapergsScraper = extrair_mod.FapergsScraper
 

@@ -1,0 +1,47 @@
+{
+  "data_auditoria": "2026-05-10T04:43:21Z",
+  "fontes": 2,
+  "itens_total": 32,
+  "flags_totais": {
+    "publico_alvo_sem_evidencia": 1
+  },
+  "top20_problemas_semanticos": [
+    [
+      "publico_alvo_sem_evidencia",
+      1
+    ]
+  ],
+  "top20_ajustes_recomendados": [
+    "Restringir perfil_ideal genérico por evidência textual mínima.",
+    "Separar regras de crédito vs fomento por fonte + palavras-chave obrigatórias.",
+    "Exigir marcador de licitação para tipo_oportunidade=licitacao/compra_publica.",
+    "Reduzir classificação ampla quando classficacao_confianca=baixa.",
+    "Para fontes nucleares/defesa: usar peso institucional + objeto para evitar over/under tag.",
+    "Fortalecer extração de publico_alvo por entidades explícitas.",
+    "Adicionar fallback de área para itens com tipo_recurso definido e área vazia.",
+    "Revisar taxonomia em fontes com flag_rate > 100%."
+  ],
+  "recovery_a_official_semantic": {
+    "timestamp": "2026-05-10T04:44:30Z",
+    "recovery_a_checks": {
+      "setor_estrategico_gt3_count": 0,
+      "setor_estrategico_gt3_examples": [],
+      "titulo_ruidoso_count": 0,
+      "titulo_ruidoso_examples": [],
+      "login_isolado_count": 0,
+      "login_isolado_examples": [],
+      "api_docs_or_noise_sbir_paths_count": 0,
+      "api_docs_or_noise_sbir_paths_examples": [],
+      "institucional_titulo_generico_count": 0,
+      "publico_alvo_sem_evidencia": 1,
+      "nota_publico_alvo": "1 ocorrência no conjunto oficial — baixo; reforçar extração de público-alvo se promover a staging."
+    },
+    "criterios_pedidos": {
+      "setor_estrategico_gt3_eq_0": true,
+      "titulo_ruidoso_eq_0": true,
+      "login_isolado_eq_0": true,
+      "api_docs_eq_0": true,
+      "paginas_institucionais_genericas_eq_0": true
+    }
+  }
+}

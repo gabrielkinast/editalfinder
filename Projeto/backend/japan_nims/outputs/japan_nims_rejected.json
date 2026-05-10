@@ -1,0 +1,131 @@
+[
+  {
+    "titulo": "Research Integrity",
+    "link": "https://www.nims.go.jp/eng/nims/compliance/index.html",
+    "fonte": "NIMS",
+    "access_status": "restricted_login",
+    "rejection_reason": "Pagina de login ou autenticacao",
+    "opportunity_intent": "invalid",
+    "opportunity_score": -50,
+    "detected_terms": [
+      "Accounts"
+    ],
+    "status_code": 200
+  },
+  {
+    "titulo": "Research",
+    "link": "https://www.nims.go.jp/eng/research/index.html",
+    "fonte": "NIMS",
+    "access_status": "restricted_login",
+    "rejection_reason": "Pagina de login ou autenticacao",
+    "opportunity_intent": "invalid",
+    "opportunity_score": -50,
+    "detected_terms": [
+      "account"
+    ],
+    "status_code": 200
+  },
+  {
+    "titulo": "Main Equipment and Facilities",
+    "link": "https://www.nims.go.jp/eng/research/equipment/index.html",
+    "fonte": "NIMS",
+    "access_status": "restricted_login",
+    "rejection_reason": "Pagina de login ou autenticacao",
+    "opportunity_intent": "invalid",
+    "opportunity_score": -50,
+    "detected_terms": [
+      "Accounts"
+    ],
+    "status_code": 200
+  },
+  {
+    "titulo": "Technology Sharing",
+    "link": "https://www.nims.go.jp/eng/business/joint-research.html",
+    "fonte": "NIMS",
+    "access_status": "restricted_login",
+    "rejection_reason": "Pagina de login ou autenticacao",
+    "opportunity_intent": "invalid",
+    "opportunity_score": -50,
+    "detected_terms": [
+      "Accounts"
+    ],
+    "status_code": 200
+  },
+  {
+    "titulo": "Procurement",
+    "link": "https://www.nims.go.jp/eng/news/procurance.html",
+    "fonte": "NIMS",
+    "access_status": "restricted_login",
+    "rejection_reason": "Pagina de login ou autenticacao",
+    "opportunity_intent": "invalid",
+    "opportunity_score": -50,
+    "detected_terms": [
+      "Accounts"
+    ],
+    "status_code": 200
+  },
+  {
+    "titulo": "装置・設備紹介",
+    "link": "https://www.nims.go.jp/research/equipment/index.html",
+    "fonte": "NIMS",
+    "access_status": "public_access",
+    "rejection_reason": "Relevancia limite: poucos sinais de oportunidade",
+    "opportunity_intent": "funding",
+    "opportunity_score": 3,
+    "detected_terms": [
+      "grant",
+      "pdf_or_docs",
+      "url_noise:/index.htm"
+    ],
+    "status_code": 200
+  },
+  {
+    "titulo": "学術連携",
+    "link": "https://www.nims.go.jp/research/collaboration/index.html",
+    "fonte": "NIMS",
+    "access_status": "public_access",
+    "rejection_reason": "Pontuacao abaixo do minimo (oportunidade nao evidenciada)",
+    "opportunity_intent": "funding",
+    "opportunity_score": 1,
+    "detected_terms": [
+      "grant",
+      "pdf_or_docs",
+      "desc_long",
+      "generic_title",
+      "url_noise:/index.htm"
+    ],
+    "status_code": 200
+  },
+  {
+    "titulo": "技術提供",
+    "link": "https://www.nims.go.jp/business/joint-research.html",
+    "fonte": "NIMS",
+    "access_status": "public_access",
+    "rejection_reason": "Relevancia limite: poucos sinais de oportunidade",
+    "opportunity_intent": "funding",
+    "opportunity_score": 2,
+    "detected_terms": [
+      "grant",
+      "pdf_or_docs",
+      "generic_title"
+    ],
+    "status_code": 200
+  },
+  {
+    "titulo": "共同研究",
+    "link": "https://www.nims.go.jp/business/collaboration/index.html",
+    "fonte": "NIMS",
+    "access_status": "public_access",
+    "rejection_reason": "Pontuacao abaixo do minimo (oportunidade nao evidenciada)",
+    "opportunity_intent": "funding",
+    "opportunity_score": 1,
+    "detected_terms": [
+      "grant",
+      "pdf_or_docs",
+      "desc_long",
+      "generic_title",
+      "url_noise:/index.htm"
+    ],
+    "status_code": 200
+  }
+]

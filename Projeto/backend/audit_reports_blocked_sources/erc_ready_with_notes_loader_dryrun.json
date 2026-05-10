@@ -1,0 +1,100 @@
+{
+  "meta": {
+    "fonte": "erc",
+    "readiness_alvo": "ready_with_notes",
+    "data_relatorio": "2026-05-02",
+    "id_execucao_loader": "2fda3404-9ba0-44ae-9932-b56f82203a3c",
+    "comando": "python scripts/load_ready_sources.py --dry-run --sources erc --exclude-blocked --input-dir audit_reports_retransform/standardized --readiness audit_reports_retransform/readiness_for_loader.json"
+  },
+  "readiness_diff": {
+    "config_source_readiness_json": {
+      "blocked_removido": ["erc"],
+      "ready_with_notes_adicionado": ["erc"],
+      "nota": "O loader regrava config/source_readiness.json a partir de readiness_for_loader.json (split 54 + 16); erc fica em ready_with_notes ordenado alfabeticamente."
+    },
+    "audit_reports_retransform_readiness_for_loader_json": {
+      "fontes_bloqueadas_temporariamente_removido": ["erc"],
+      "fontes_prontas_para_loader_adicionado": ["erc"],
+      "status_distribution_ajustes": {
+        "pronto_com_observacoes": "15 → 16",
+        "bloquear_temporariamente": "16 → 15"
+      }
+    },
+    "standardized_copiado": {
+      "origem": "CORE/transformer/erc_standardized.json",
+      "destino": "audit_reports_retransform/standardized/erc_standardized.json"
+    }
+  },
+  "dry_run_resumo": {
+    "sources_selected": 1,
+    "sources_excluded": 93,
+    "itens_standardized_total": 8,
+    "would_upsert_total": 8,
+    "would_ignore_total": 0,
+    "mapping_errors_total": 0,
+    "critical_empty_items_total": 0,
+    "docs_input_items_total": 8,
+    "docs_preserved_items_total": 8,
+    "documentos_perdidos_no_payload_total": 0,
+    "pdf_input_items_total": 8,
+    "pdf_preserved_items_total": 8,
+    "validacao_status_preserved_items_total": 8,
+    "qualidade_dado_preserved_items_total": 8,
+    "canonical_skipped_total": 0
+  },
+  "verificacao_por_fonte": {
+    "erc": {
+      "itens_standardized": 8,
+      "would_upsert": 8,
+      "mapping_errors": 0,
+      "critical_empty_items": 0,
+      "critical_empty_fields": {},
+      "tipo_recurso": {
+        "payload_non_empty": 8,
+        "valor_observado": "fomento em todos os exemplos de payload"
+      },
+      "tipo_oportunidade": {
+        "payload_non_empty": 8,
+        "valores": "grant (6 itens) e chamada_publica (2: non-european-researchers, additional-opportunities) conforme load_ready_payload_examples.json"
+      },
+      "perfil_ideal": {
+        "payload_non_empty": 8
+      },
+      "publico_alvo": {
+        "input_non_empty": 7,
+        "nota": "Um item sem publico_alvo preenchido no contador do loader."
+      },
+      "pdf_url": {
+        "preservados": 8,
+        "nota": "URLs absolutas Horizon/ERC ou PDF satélite (ex. Estonia) conforme item."
+      },
+      "validacao_status": {
+        "exemplos": "todos incompleto (prazo estruturado ausente ao nível do registo)"
+      },
+      "qualidade_dado": {
+        "exemplos": "82 a 90 nos primeiros exemplos do payload"
+      },
+      "codigo_oportunidade_valor_prazo": {
+        "fim_inscricao": "null nos itens verificados no standardized (prazo não estruturado)",
+        "valor": "mistura de null e heurística R$ (ruído conhecido; não bloqueou critical_empty)",
+        "codigo_oportunidade": "fragmento entifier ou vazio em amostras — ruído conhecido"
+      }
+    }
+  },
+  "environment_guard": {
+    "editalfinder_env": "staging",
+    "has_allow_staging_apply": false,
+    "block_reason": "missing_staging_flag",
+    "nota": "Dry-run não pediu apply; guard impede apply sem flags explícitas de staging."
+  },
+  "recomendacao_staging": {
+    "pode_aplicar_em_staging": "condicional",
+    "texto": "O dry-run mapeou 8 upserts simulados sem erros nem critical_empty. Para apply real em staging: usar o mesmo comando com `--apply --staging` (ou o fluxo documentado no projeto), garantir variáveis de ambiente e `EDITALFINDER_ALLOW_STAGING_APPLY` conforme o guard do loader. Não promover a produção até rever ruídos de valor (R$), codigo_oportunidade e perfil_ideal/setores, e até alinhar prazos se forem obrigatórios no produto.",
+    "apply_nao_executado": true
+  },
+  "referencias": {
+    "load_ready_summary": "audit_reports_loader_ready/load_ready_summary.json",
+    "load_ready_by_source": "audit_reports_loader_ready/load_ready_by_source.json",
+    "load_ready_payload_examples": "audit_reports_loader_ready/load_ready_payload_examples.json"
+  }
+}

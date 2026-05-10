@@ -1,0 +1,268 @@
+[
+  {
+    "fonte": "banco_da_amazonia",
+    "raw_output_path": "banco_da_amazonia/outputs/banco_da_amazonia_editais.json",
+    "old_standardized_path": "",
+    "new_standardized_path": "audit_reports_main_pipeline/recovery_a/standardized/banco_da_amazonia_standardized.json",
+    "itens_brutos_encontrados": 26,
+    "itens_transformados": 26,
+    "itens_rejeitados": 0,
+    "itens_incompletos": 26,
+    "itens_suspeitos": 0,
+    "itens_acesso_limitado": 0,
+    "documentos_preservados": 4,
+    "pdf_url_preservado": 4,
+    "area_preenchida": 25,
+    "tipo_oportunidade_preenchido": 26,
+    "tipo_recurso_preenchido": 26,
+    "perfil_ideal_preenchido": 15,
+    "qualidade_dado_media": 57.5,
+    "motivos_rejeicao_principais": {},
+    "quick_audit": {
+      "ruido_passou": 0,
+      "duplicatas_link": 0,
+      "campos_preenchidos_pct": {
+        "area": 96.15,
+        "tipo_oportunidade": 100.0,
+        "tipo_recurso": 100.0,
+        "perfil_ideal": 57.69,
+        "documentos": 15.38,
+        "pdf_url": 15.38
+      },
+      "official_link_only_total": 0,
+      "access_limited_total": 0,
+      "access_reason_counts": {},
+      "access_limited_examples": []
+    },
+    "old_vs_new": {
+      "old_count": 0,
+      "new_count": 26,
+      "delta_count": 26,
+      "old_links_now_missing": [],
+      "new_links_before_missing": [
+        "https://www.bancoamazonia.com.br/empresas/credito-e-financiamentos",
+        "https://www.bancoamazonia.com.br/empresas/credito-e-financiamentos/amazonia-rural-verde",
+        "https://www.bancoamazonia.com.br/empresas/credito-e-financiamentos/antecipacao-de-cartao",
+        "https://www.bancoamazonia.com.br/empresas/credito-e-financiamentos/capital-de-giro",
+        "https://www.bancoamazonia.com.br/empresas/credito-e-financiamentos/capital-de-giro-produtor-rural",
+        "https://www.bancoamazonia.com.br/empresas/credito-e-financiamentos/energia-verde-nao-rural",
+        "https://www.bancoamazonia.com.br/empresas/credito-e-financiamentos/fundo-marinha",
+        "https://www.bancoamazonia.com.br/fundo-constitucional-financiamento",
+        "https://www.bancoamazonia.com.br/fundo-constitucional-financiamento/relatorios-fno",
+        "https://www.bancoamazonia.com.br/linhas-de-fomento",
+        "https://www.bancoamazonia.com.br/linhas-de-fomento/bndes-automatico-rural",
+        "https://www.bancoamazonia.com.br/linhas-de-fomento/bndes-automatico-urbano",
+        "https://www.bancoamazonia.com.br/linhas-de-fomento/bndes-finame",
+        "https://www.bancoamazonia.com.br/linhas-de-fomento/fno/amazonia-empresarial",
+        "https://www.bancoamazonia.com.br/linhas-de-fomento/fno/amazonia-rural",
+        "https://www.bancoamazonia.com.br/linhas-de-fomento/fno/energia-verde",
+        "https://www.bancoamazonia.com.br/linhas-de-fomento/fno/fno-biodiversidade",
+        "https://www.bancoamazonia.com.br/linhas-de-fomento/fungetur",
+        "https://www.bancoamazonia.com.br/linhas-de-fomento/plano-safra",
+        "https://www.bancoamazonia.com.br/linhas-de-fomento/pronaf",
+        "https://www.bancoamazonia.com.br/rural/credito-e-financiamento-agro",
+        "https://www.bancoamazonia.com.br/rural/credito-e-financiamento-agro/capital-de-giro-produtor-rural",
+        "https://www.bancoamazonia.com.br/rural/credito-e-financiamento-agro/financiamento-veiculo-produtor-rural",
+        "https://www.bancoamazonia.com.br/rural/credito-e-financiamento-agro/maquinas-equipamentos",
+        "https://www.bancoamazonia.com.br/rural/credito-e-financiamento-agro/pronaf",
+        "https://www.bancoamazonia.com.br/rural/credito-e-financiamento-agro/pronaf/pronaf-a"
+      ],
+      "core_fields_improved": {
+        "area": {
+          "old": 0,
+          "new": 25,
+          "delta": 25
+        },
+        "tipo_oportunidade": {
+          "old": 0,
+          "new": 26,
+          "delta": 26
+        },
+        "tipo_recurso": {
+          "old": 0,
+          "new": 26,
+          "delta": 26
+        },
+        "perfil_ideal": {
+          "old": 0,
+          "new": 15,
+          "delta": 15
+        },
+        "documentos": {
+          "old": 0,
+          "new": 4,
+          "delta": 4
+        },
+        "pdf_url": {
+          "old": 0,
+          "new": 4,
+          "delta": 4
+        }
+      },
+      "core_fields_worsened": {},
+      "old_documents_count": 0,
+      "new_documents_count": 4,
+      "old_pdf_count": 0,
+      "new_pdf_count": 4
+    },
+    "risk_notes": []
+  },
+  {
+    "fonte": "dod_sbir_sttr",
+    "raw_output_path": "dod_sbir_sttr/outputs/dod_sbir_sttr_editais.json",
+    "old_standardized_path": "CORE/transformer/dod_sbir_sttr_standardized.json",
+    "new_standardized_path": "audit_reports_main_pipeline/recovery_a/standardized/dod_sbir_sttr_standardized.json",
+    "itens_brutos_encontrados": 6,
+    "itens_transformados": 6,
+    "itens_rejeitados": 0,
+    "itens_incompletos": 6,
+    "itens_suspeitos": 0,
+    "itens_acesso_limitado": 0,
+    "documentos_preservados": 6,
+    "pdf_url_preservado": 0,
+    "area_preenchida": 6,
+    "tipo_oportunidade_preenchido": 6,
+    "tipo_recurso_preenchido": 6,
+    "perfil_ideal_preenchido": 0,
+    "qualidade_dado_media": 72.0,
+    "motivos_rejeicao_principais": {},
+    "quick_audit": {
+      "ruido_passou": 0,
+      "duplicatas_link": 0,
+      "campos_preenchidos_pct": {
+        "area": 100.0,
+        "tipo_oportunidade": 100.0,
+        "tipo_recurso": 100.0,
+        "perfil_ideal": 0.0,
+        "documentos": 100.0,
+        "pdf_url": 0.0
+      },
+      "official_link_only_total": 0,
+      "access_limited_total": 0,
+      "access_reason_counts": {},
+      "access_limited_examples": []
+    },
+    "old_vs_new": {
+      "old_count": 25,
+      "new_count": 6,
+      "delta_count": -19,
+      "old_links_now_missing": [
+        "https://www.sbir.gov/about/policies",
+        "https://www.sbir.gov/api",
+        "https://www.sbir.gov/awards",
+        "https://www.sbir.gov/community/fast",
+        "https://www.sbir.gov/community/gafc",
+        "https://www.sbir.gov/data-resources",
+        "https://www.sbir.gov/data-resources/data-dictionary",
+        "https://www.sbir.gov/events-listing",
+        "https://www.sbir.gov/faq",
+        "https://www.sbir.gov/impact",
+        "https://www.sbir.gov/impact/impact-reports",
+        "https://www.sbir.gov/impact/impact-reports/archive",
+        "https://www.sbir.gov/lab2market",
+        "https://www.sbir.gov/participating-agencies",
+        "https://www.sbir.gov/portfolio",
+        "https://www.sbir.gov/success-stories",
+        "https://www.sbir.gov/topics",
+        "https://www.sbir.gov/topics/1012233",
+        "https://www.sbir.gov/topics/1012236",
+        "https://www.sbir.gov/topics/1012237",
+        "https://www.sbir.gov/topics/1012239",
+        "https://www.sbir.gov/topics/1012269",
+        "https://www.sbir.gov/topics/1012281",
+        "https://www.sbir.gov/topics/1012286"
+      ],
+      "new_links_before_missing": [
+        "https://www.sbir.gov/topics/1012228",
+        "https://www.sbir.gov/topics/1012232",
+        "https://www.sbir.gov/topics/1012246",
+        "https://www.sbir.gov/topics/1012248",
+        "https://www.sbir.gov/topics/1012257"
+      ],
+      "core_fields_improved": {
+        "documentos": {
+          "old": 0,
+          "new": 6,
+          "delta": 6
+        }
+      },
+      "core_fields_worsened": {
+        "area": {
+          "old": 25,
+          "new": 6,
+          "delta": -19
+        },
+        "tipo_oportunidade": {
+          "old": 25,
+          "new": 6,
+          "delta": -19
+        },
+        "tipo_recurso": {
+          "old": 25,
+          "new": 6,
+          "delta": -19
+        },
+        "pdf_url": {
+          "old": 5,
+          "new": 0,
+          "delta": -5
+        }
+      },
+      "old_documents_count": 0,
+      "new_documents_count": 6,
+      "old_pdf_count": 5,
+      "new_pdf_count": 0
+    },
+    "risk_notes": []
+  },
+  {
+    "fonte": "esa_star",
+    "raw_output_path": "esa_star/outputs/esa_star_editais.json",
+    "old_standardized_path": "",
+    "new_standardized_path": "audit_reports_main_pipeline/recovery_a/standardized/esa_star_standardized.json",
+    "itens_brutos_encontrados": 0,
+    "itens_transformados": 0,
+    "itens_rejeitados": 0,
+    "itens_incompletos": 0,
+    "itens_suspeitos": 0,
+    "itens_acesso_limitado": 0,
+    "documentos_preservados": 0,
+    "pdf_url_preservado": 0,
+    "area_preenchida": 0,
+    "tipo_oportunidade_preenchido": 0,
+    "tipo_recurso_preenchido": 0,
+    "perfil_ideal_preenchido": 0,
+    "qualidade_dado_media": null,
+    "motivos_rejeicao_principais": {},
+    "quick_audit": {
+      "ruido_passou": 0,
+      "duplicatas_link": 0,
+      "campos_preenchidos_pct": {
+        "area": 0.0,
+        "tipo_oportunidade": 0.0,
+        "tipo_recurso": 0.0,
+        "perfil_ideal": 0.0,
+        "documentos": 0.0,
+        "pdf_url": 0.0
+      },
+      "official_link_only_total": 0,
+      "access_limited_total": 0,
+      "access_reason_counts": {},
+      "access_limited_examples": []
+    },
+    "old_vs_new": {
+      "old_count": 0,
+      "new_count": 0,
+      "delta_count": 0,
+      "old_links_now_missing": [],
+      "new_links_before_missing": [],
+      "core_fields_improved": {},
+      "core_fields_worsened": {},
+      "old_documents_count": 0,
+      "new_documents_count": 0,
+      "old_pdf_count": 0,
+      "new_pdf_count": 0
+    },
+    "risk_notes": []
+  }
+]

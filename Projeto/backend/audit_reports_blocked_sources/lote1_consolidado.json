@@ -1,0 +1,202 @@
+{
+  "titulo": "Lote 1 — fontes bloqueadas / desbloqueadas (fecho)",
+  "data_relatorio": "2026-05-02T12:00:00Z",
+  "fontes_lote1": [
+    "badesul",
+    "pncp",
+    "senai",
+    "softex",
+    "plataforma_industria",
+    "petrobras",
+    "marinha",
+    "amazul",
+    "dcta_ita_iae"
+  ],
+  "lista_prontas_para_staging": [
+    "badesul",
+    "pncp",
+    "senai",
+    "softex",
+    "plataforma_industria",
+    "petrobras"
+  ],
+  "lista_permanecem_bloqueadas": [
+    "marinha",
+    "amazul",
+    "dcta_ita_iae"
+  ],
+  "canonizacao_plataforma": {
+    "canonical_source": "senai",
+    "alias": "plataforma_industria",
+    "config_path": "config/source_canonicalization.json",
+    "policy": "skip_alias_if_canonical_exists",
+    "nota_loader": "Quando o mesmo URL já foi reclamado pelo crawl canónico (SENAI), o loader ignora o item do alias (plataforma_industria)."
+  },
+  "dry_run_combinado": {
+    "relatorio_json": "audit_reports_blocked_sources/lote1_ready_sources_loader_dryrun.json",
+    "relatorio_md": "audit_reports_blocked_sources/lote1_ready_sources_loader_dryrun.md",
+    "input_dir_recomendado": "audit_reports_retransform/standardized",
+    "id_execucao": "a8e9a2d0-d98c-4c65-8914-4d0f683f5caf",
+    "resumo": {
+      "itens_standardized_total": 89,
+      "would_upsert_total": 67,
+      "mapping_errors_total": 0,
+      "canonical_skipped_total": 22,
+      "docs_preserved_items_total": 48,
+      "pdf_input_items_total": 25,
+      "pdf_preserved_items_total": 25,
+      "validacao_status_preserved_items_total": 67,
+      "qualidade_dado_preserved_items_total": 67,
+      "critical_empty_items_total": 0,
+      "fontes_excluidas_do_glob": 88
+    }
+  },
+  "readiness_atualizado": {
+    "ficheiro": "audit_reports_retransform/readiness_for_loader.json",
+    "alteracao_lote1_fecho": "badesul retirado de fontes_bloqueadas_temporariamente e acrescentado a fontes_prontas_para_loader (ready_with_notes); contagens status_distribution ajustadas (+1 pronto_com_observacoes, -1 bloquear_temporariamente)."
+  },
+  "por_fonte": [
+    {
+      "fonte": "badesul",
+      "estado_antes": "blocked / gate agressivo; rejeições em massa no diagnóstico inicial",
+      "estado_depois": "ready_with_notes; gate e taxonomia calibrados localmente (linhas de crédito Badesul)",
+      "standardized_itens": 10,
+      "problemas_corrigidos": [
+        "Relaxamento local opportunity_gate (badesul)",
+        "Calibração tipo_oportunidade / perfil para linhas de crédito"
+      ],
+      "readiness_recomendado": "ready_with_notes",
+      "carregado_staging": true,
+      "pode_aplicar_agora": true,
+      "observacoes": "Já consta em histórico de cargas staging; dry-run confirma 10 itens mapeáveis sem erros."
+    },
+    {
+      "fonte": "pncp",
+      "estado_antes": "blocked / itens com raiz PNCP ou gate",
+      "estado_depois": "ready_with_notes; calibração PNCP + soft continue local",
+      "standardized_itens": 1,
+      "problemas_corrigidos": [
+        "Correção de links raiz PNCP para /app/editais/{id} no transformer",
+        "calibrate_pncp_extras"
+      ],
+      "readiness_recomendado": "ready_with_notes",
+      "carregado_staging": false,
+      "pode_aplicar_agora": true,
+      "observacoes": "Dry-run: 1 would_upsert; validar volume real quando o crawler PNCP tiver mais itens."
+    },
+    {
+      "fonte": "senai",
+      "estado_antes": "blocked / gate Portal Indústria",
+      "estado_depois": "ready_with_notes; gate local SENAI + programa agregado / categoria Plataforma Inovação",
+      "standardized_itens": 1,
+      "problemas_corrigidos": [
+        "opportunity_gate_senai_soft / plataforma_industria_soft",
+        "calibrate_portal_plataforma_inovacao_extras"
+      ],
+      "readiness_recomendado": "ready_with_notes",
+      "carregado_staging": false,
+      "pode_aplicar_agora": true,
+      "observacoes": "Fonte canónica para URLs partilhados com plataforma_industria."
+    },
+    {
+      "fonte": "softex",
+      "estado_antes": "blocked / texto curto ou gate",
+      "estado_depois": "ready_with_notes; chamadas reais; possíveis alertas de texto curto",
+      "standardized_itens": 2,
+      "problemas_corrigidos": [
+        "Gate local Softex",
+        "calibrate_softex_extras"
+      ],
+      "readiness_recomendado": "ready_with_notes",
+      "carregado_staging": false,
+      "pode_aplicar_agora": true,
+      "observacoes": "Rever auditoria semântica se flag de suspeito/texto curto persistir."
+    },
+    {
+      "fonte": "plataforma_industria",
+      "estado_antes": "blocked / mesmo ecossistema SENAI",
+      "estado_depois": "ready_with_notes; alias canonizado com SENAI",
+      "standardized_itens": 1,
+      "problemas_corrigidos": [
+        "Gate local partilhado com SENAI",
+        "Canonização em source_canonicalization.json"
+      ],
+      "readiness_recomendado": "ready_with_notes",
+      "carregado_staging": false,
+      "pode_aplicar_agora": true,
+      "observacoes": "Loader pode ignorar duplicados de URL já presentes em senai (canonical_skipped)."
+    },
+    {
+      "fonte": "petrobras",
+      "estado_antes": "blocked / Bússola + PDFs",
+      "estado_depois": "ready_with_notes; dry-run limpo",
+      "standardized_itens": 5,
+      "problemas_corrigidos": [
+        "Gate local Petrobras (Bússola / documents PDF)",
+        "calibrate_petrobras_extras"
+      ],
+      "readiness_recomendado": "ready_with_notes",
+      "carregado_staging": false,
+      "pode_aplicar_agora": true,
+      "observacoes": "2 itens com pdf_url preservados no dry-run combinado."
+    },
+    {
+      "fonte": "marinha",
+      "estado_antes": "fallback de índice + defaults forçados",
+      "estado_depois": "needs_manual_review; sem brutos reais úteis (crawler sem fallback)",
+      "standardized_itens": 1,
+      "brutos_reais": 0,
+      "nota_contagem_standardized": "Ficheiro CORE/transformer pode ainda ter 1 linha legada até novo transform com bruto vazio.",
+      "problemas_corrigidos": [
+        "Remoção fallback_public_index",
+        "Filtros de URL e profundidade",
+        "Gate relax local + calibrate_marinha_extras; fora de build_defense_extras"
+      ],
+      "readiness_recomendado": "blocked / needs_manual_review",
+      "carregado_staging": false,
+      "pode_aplicar_agora": false,
+      "observacoes": "Reexecutar crawler com rede; standardized pode ainda reflectir estado antigo até novo transform."
+    },
+    {
+      "fonte": "amazul",
+      "estado_antes": "idem Marinha",
+      "estado_depois": "needs_manual_review; brutos vazios",
+      "standardized_itens": 1,
+      "brutos_reais": 0,
+      "nota_contagem_standardized": "Idem Marinha — possível resíduo no standardized até reprocessar.",
+      "problemas_corrigidos": [
+        "Remoção fallback",
+        "Filtros AMAZUL",
+        "Gate relax local + calibrate_amazul_extras"
+      ],
+      "readiness_recomendado": "blocked / needs_manual_review",
+      "carregado_staging": false,
+      "pode_aplicar_agora": false,
+      "observacoes": "Nova coleta necessária."
+    },
+    {
+      "fonte": "dcta_ita_iae",
+      "estado_antes": "fallback gov.br/dcta/pt-br",
+      "estado_depois": "needs_manual_review; standardized 0 após fecho",
+      "standardized_itens": 0,
+      "brutos_reais": 0,
+      "problemas_corrigidos": [
+        "Remoção fallback",
+        "Listagens secção editais/chamamentos",
+        "Gate relax local DCTA + calibrate_dcta_ita_iae_extras; fora de build_defense_extras"
+      ],
+      "readiness_recomendado": "blocked / needs_manual_review",
+      "carregado_staging": false,
+      "pode_aplicar_agora": false,
+      "observacoes": "Ver lote1_dcta_ita_iae_diagnostico.*"
+    }
+  ],
+  "proximos_passos_lote2": [
+    "Priorizar fontes ainda em fontes_bloqueadas_temporariamente fora do lote 1 (ex.: ambev, apex, china_*, doe_arpae, erc, horizon_europe, iarpa, sam_gov, science_scraper) com o mesmo fluxo: diagnóstico → correções locais → retransform → auditorias → readiness.",
+    "Revisar fontes_para_revisao (bae_systems_suppliers, faperg, japan_*, rheinmetall, thales) como candidatas a lote 2 ou triagem rápida.",
+    "Sincronizar config/source_readiness.json com audit_reports_retransform/readiness_for_loader.json após cada fecho de lote (o script load_ready_sources regera source_readiness a partir do JSON de readiness passado por --readiness).",
+    "Para Marinha / AMAZUL / DCTA: após nova coleta com itens reais, repetir dry-run e subir readiness antes de incluir em --sources de staging."
+  ],
+  "comando_apply_staging_recomendado": "PowerShell: definir EDITALFINDER_ALLOW_STAGING_APPLY e EDITALFINDER_ENV=staging; depois: python scripts/load_ready_sources.py --apply --staging --sources badesul,pncp,senai,softex,plataforma_industria,petrobras --exclude-blocked --input-dir audit_reports_retransform/standardized --readiness audit_reports_retransform/readiness_for_loader.json",
+  "nota_apply": "Não executar sem confirmar variáveis de ambiente de staging; o apply grava no Supabase configurado no .env."
+}

@@ -1,0 +1,34 @@
+{
+  "titulo": "Investimentos Wave 1 — payloads portal_estrategico",
+  "versao": "2026-05-10",
+  "pasta_payloads": "audit_reports_main_pipeline/investimentos_wave1_portais/standardized",
+  "fontes": ["apex", "bndes", "eic"],
+  "itens_por_fonte": 5,
+  "total_itens": 15,
+  "dry_run": {
+    "output_dir": "audit_reports_main_pipeline/investimentos_wave1_portais_dryrun",
+    "resumo_ficheiro": "load_portais_estrategicos_summary.json",
+    "metricas": {
+      "total_items": 15,
+      "would_upsert_total": 15,
+      "errors_count": 0,
+      "mostrar_no_radar_true_count": 0,
+      "mostrar_em_investimentos_true_count": 15,
+      "mostrar_em_fornecedores_true_count": 0,
+      "validacao_status_suspeito": 0,
+      "portal_tipo_preenchido_todos": true
+    }
+  },
+  "portal_tipo_counts": {
+    "internationalization": 2,
+    "market_access": 1,
+    "funding_hub": 4,
+    "accelerator": 2,
+    "development_agency": 1,
+    "startup_program": 1,
+    "corporate_venture": 1,
+    "investment": 3
+  },
+  "loader": "scripts/load_portais_estrategicos.py",
+  "nota": "O loader foi alargado para aceitar categoria investimentos, portal_tipo da Wave 1 e regras de validação por frontend_section (investimentos vs fornecedores)."
+}

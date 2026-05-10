@@ -1,0 +1,30 @@
+{
+  "data_execucao": "2026-05-09T13:10:46.532144+00:00",
+  "group": "removed_items",
+  "deactivate_removed_items": {
+    "timestamp": "2026-05-09T13:10:46Z",
+    "mode": "dry_run",
+    "environment": "staging",
+    "env_files_loaded": [
+      "D:\\Computational_Physics\\My Projects\\edital\\.env.staging",
+      "D:\\Computational_Physics\\My Projects\\edital\\CORE\\.env"
+    ],
+    "input": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_main_pipeline\\removed_items_candidates.json",
+    "candidates_read": 0,
+    "candidates_filtered": 0,
+    "changed": 0,
+    "not_found": 0,
+    "errors": [],
+    "guards": {
+      "editalfinder_env": "staging",
+      "has_supabase_url": true,
+      "has_service_key": true,
+      "has_allow_staging_apply": false,
+      "allow_deactivate_removed_items": false,
+      "url_host_masked": "dof***.co",
+      "block_reason": ""
+    },
+    "dry_run_examples": [],
+    "warnings": []
+  }
+}

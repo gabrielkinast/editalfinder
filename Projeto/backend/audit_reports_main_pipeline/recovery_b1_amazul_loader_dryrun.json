@@ -1,0 +1,24 @@
+{
+  "titulo": "Recovery B.1 — loader dry-run AMAZUL (isolado)",
+  "data": "2026-05-10T06:16:56Z",
+  "bundle_completo": "audit_reports_main_pipeline/recovery_b1_amazul_loader_dryrun/load_ready_summary.json",
+  "comando": "python scripts/load_ready_sources.py --dry-run --sources amazul --exclude-blocked --input-dir audit_reports_main_pipeline/recovery_b1_amazul/standardized --readiness audit_reports_main_pipeline/recovery_b_readiness_official_dryrun.json --output-dir audit_reports_main_pipeline/recovery_b1_amazul_loader_dryrun",
+  "resumo": {
+    "sources_selected": 1,
+    "would_upsert_total": 20,
+    "mapping_errors_total": 0,
+    "critical_empty_items_total": 0,
+    "documentos_perdidos_no_payload_total": 0,
+    "destination_counts_total": { "edital": 20 },
+    "itens_standardized_total": 20
+  },
+  "criterios_recovery_b1": {
+    "mapping_errors_total": 0,
+    "critical_empty_items_total": 0,
+    "titulo_ruidoso": 0,
+    "institucional_generico": 0,
+    "credito_tipo_recurso_incoerente": "Esperado reduzir no próximo post_daily após apply: calibração define reembolsavel=false em compras públicas AMAZUL (evita falso positivo quando o objeto menciona 'crédito' no sentido operacional).",
+    "suspeito_ativo_true": "0 no standardized local; staging ainda pode listar suspeitos até reloader aplicar.",
+    "prazo_vencido_ativo_true": "Mantém-se possível com prazo_envio real vencido e ativo=true — documentado no diagnóstico; não inventar datas."
+  }
+}

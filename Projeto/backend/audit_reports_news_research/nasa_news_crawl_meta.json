@@ -1,0 +1,38 @@
+{
+  "source_id": "nasa_news",
+  "source_name": "NASA News (multi-feed)",
+  "method": "rss",
+  "seed_urls_used": [
+    "https://www.nasa.gov/rss/dyn/breaking_news.rss",
+    "https://www.nasa.gov/rss/dyn/educationnews.rss",
+    "https://www.nasa.gov/rss/dyn/aeronautics.rss",
+    "https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss",
+    "https://www.nasa.gov/technology/feed/",
+    "https://www.nasa.gov/earth/feed/",
+    "https://www.nasa.gov/missions/feed/",
+    "https://www.nasa.gov/news-release/feed/",
+    "https://science.nasa.gov/feed/"
+  ],
+  "max_items": 95,
+  "time_window_months": 12,
+  "raw_total": 95,
+  "within_window_total": 95,
+  "without_date_total": 0,
+  "raw_by_seed_kind": {
+    "mixed": 95
+  },
+  "feed_kind_caps_applied": {},
+  "page_enrich_fetch_total": 0,
+  "errors": [],
+  "theme_filter_stats": {
+    "extracted_total": 98,
+    "skipped_duplicate_link": 3,
+    "rejected_exclude_keyword": 0,
+    "rejected_exclude_medical_generic": 0,
+    "rejected_require_any_keyword": 0,
+    "rejected_feed_kind_cap": 0,
+    "passed_theme_filters": 95,
+    "matched_keyword_counts": {},
+    "reject_samples": []
+  }
+}

@@ -1,0 +1,204 @@
+{
+  "timestamp_geracao": "2026-05-10T08:50:00Z",
+  "fontes_onda": [
+    "bae_systems_suppliers",
+    "general_dynamics_suppliers",
+    "lockheed_martin_suppliers"
+  ],
+  "suspeito_ativo_true_total_staging": 47,
+  "ranking_suspeito_por_fonte_display": [
+    {
+      "fonte_display": "AMAZUL",
+      "total": 19,
+      "prazo_vencido_ativo_true": 7,
+      "suspeito_ativo_true": 12
+    },
+    {
+      "fonte_display": "General Dynamics Suppliers",
+      "total": 6,
+      "suspeito_ativo_true": 6
+    },
+    {
+      "fonte_display": "Apex Brasil",
+      "total": 5,
+      "prazo_vencido_ativo_true": 1,
+      "suspeito_ativo_true": 4
+    },
+    {
+      "fonte_display": "Petrobras",
+      "total": 4,
+      "suspeito_ativo_true": 4
+    },
+    {
+      "fonte_display": "BASA",
+      "total": 3,
+      "suspeito_ativo_true": 3
+    },
+    {
+      "fonte_display": "Lockheed Martin Suppliers",
+      "total": 3,
+      "suspeito_ativo_true": 3
+    },
+    {
+      "fonte_display": "SENAI",
+      "total": 3,
+      "setor_estrategico_muito_amplo": 1,
+      "suspeito_ativo_true": 2
+    },
+    {
+      "fonte_display": "BADESUL",
+      "total": 2,
+      "suspeito_ativo_true": 2
+    },
+    {
+      "fonte_display": "BAE Systems Suppliers",
+      "total": 2,
+      "suspeito_ativo_true": 2
+    },
+    {
+      "fonte_display": "EIT",
+      "total": 2,
+      "suspeito_ativo_true": 2
+    },
+    {
+      "fonte_display": "Rheinmetall Suppliers",
+      "total": 2,
+      "suspeito_ativo_true": 2
+    },
+    {
+      "fonte_display": "Softex",
+      "total": 2,
+      "suspeito_ativo_true": 2
+    },
+    {
+      "fonte_display": "ESA OSIP",
+      "total": 1,
+      "suspeito_ativo_true": 1
+    },
+    {
+      "fonte_display": "Thales Suppliers",
+      "total": 1,
+      "suspeito_ativo_true": 1
+    },
+    {
+      "fonte_display": "UKRI Funding",
+      "total": 1,
+      "suspeito_ativo_true": 1
+    }
+  ],
+  "exemplos_post_daily_tres_fontes": [
+    {
+      "fonte_recurso": "BAE Systems Suppliers",
+      "titulo": "Login to your account",
+      "link": "https://baesystems.hicx.net/bae/hicxesm-portal/app/index.html",
+      "tipo_oportunidade": "supplier_portal"
+    },
+    {
+      "fonte_recurso": "BAE Systems Suppliers",
+      "titulo": "New supplier registration (HICX)",
+      "link": "https://baesystems.hicx.net/bae/hicxesm-portal/app/discovery-login.html"
+    },
+    {
+      "fonte_recurso": "General Dynamics Suppliers",
+      "titulo": "ETHICS & CONDUCT BLUE BOOK (v7)",
+      "link": "https://www.gdls.com/wp-content/uploads/2025/12/GDLS-Supplier-Code-of-Conduct-Ethics-7th-Edition.pdf"
+    },
+    {
+      "fonte_recurso": "General Dynamics Suppliers",
+      "titulo": "Mentor-Protégé Program",
+      "link": "https://www.gd.com/suppliers/mentor-protege-program"
+    },
+    {
+      "fonte_recurso": "General Dynamics Suppliers",
+      "titulo": "SUPPLIERS",
+      "link": "https://www.gdls.com/suppliers/"
+    },
+    {
+      "fonte_recurso": "General Dynamics Suppliers",
+      "titulo": "iSUPPLIER",
+      "link": "https://www.gdls.com/suppliers/isupplier"
+    },
+    {
+      "fonte_recurso": "General Dynamics Suppliers",
+      "titulo": "QUALITY",
+      "link": "https://www.gdls.com/suppliers/quality/"
+    },
+    {
+      "fonte_recurso": "General Dynamics Suppliers",
+      "titulo": "SUPPLIER PERFORMANCE",
+      "link": "https://www.gdls.com/wp-content/uploads/2026/01/GDLS-Global-Supplier-Performance-Scorecard-2025-12-external.pdf"
+    },
+    {
+      "fonte_recurso": "Lockheed Martin Suppliers",
+      "titulo": "Suppliers",
+      "link": "https://www.lockheedmartin.com/en-us/suppliers.html"
+    },
+    {
+      "fonte_recurso": "Lockheed Martin Suppliers",
+      "titulo": "Doing Business",
+      "link": "https://www.lockheedmartin.com/en-us/suppliers/information.html"
+    },
+    {
+      "fonte_recurso": "Lockheed Martin Suppliers",
+      "titulo": "Supplier Documentation",
+      "link": "https://www.lockheedmartin.com/en-us/suppliers/documentation.html"
+    }
+  ],
+  "classificacao_itens_parte2": [
+    {
+      "fonte": "general_dynamics_suppliers",
+      "titulo": "Mentor-Protégé Program",
+      "link": "https://www.gd.com/suppliers/mentor-protege-program",
+      "classificacao": "supplier_registration_real",
+      "tratamento": "Conteudo publico programa fornecedor; manter incompleto se faltar prazo/valor."
+    },
+    {
+      "fonte": "general_dynamics_suppliers",
+      "titulo": "SUPPLIERS (landing gdls)",
+      "link": "https://www.gdls.com/suppliers/",
+      "classificacao": "institucional_generico",
+      "tratamento": "Hub ethics/blue book; candidato ativo=false ou revisao manual."
+    },
+    {
+      "fonte": "general_dynamics_suppliers",
+      "titulo": "iSUPPLIER",
+      "link": "https://www.gdls.com/suppliers/isupplier",
+      "classificacao": "supplier_registration_real",
+      "tratamento": "Portal Oracle; acesso_limitado."
+    },
+    {
+      "fonte": "lockheed_martin_suppliers",
+      "titulo": "Doing Business",
+      "link": "https://www.lockheedmartin.com/en-us/suppliers/information.html",
+      "classificacao": "supplier_registration_real",
+      "tratamento": "Informacao publica procurement."
+    },
+    {
+      "fonte": "lockheed_martin_suppliers",
+      "titulo": "C4ISR / capabilities",
+      "link": "https://www.lockheedmartin.com/en-us/capabilities/c4isr.html",
+      "classificacao": "institucional_generico",
+      "tratamento": "Produto/capability; nao cadastro — candidato ativo=false."
+    },
+    {
+      "fonte": "bae_systems_suppliers",
+      "titulo": "New supplier registration (HICX)",
+      "link": "https://baesystems.hicx.net/bae/hicxesm-portal/app/discovery-login.html",
+      "classificacao": "supplier_registration_real",
+      "tratamento": "Registo self-service com contexto publico; incompleto/acesso_limitado."
+    },
+    {
+      "fonte": "bae_systems_suppliers",
+      "titulo": "Login index (removido crawl)",
+      "link": "https://baesystems.hicx.net/bae/hicxesm-portal/app/index.html",
+      "classificacao": "login_isolado",
+      "tratamento": "Removido do harvest; se reaparecer manter suspeito + ocultar frontend."
+    }
+  ],
+  "causa_provavel": "Classificacao supplier_portal + validacao suspeito por falta de prazo/valor e mistura de landings e PDFs de politica.",
+  "leituras_consolidadas": [
+    "audit_reports_main_pipeline/recovery_a_consolidado.json",
+    "audit_reports_main_pipeline/recovery_b_consolidado.json",
+    "audit_reports_main_pipeline/recovery_c_setores_consolidado.json"
+  ]
+}

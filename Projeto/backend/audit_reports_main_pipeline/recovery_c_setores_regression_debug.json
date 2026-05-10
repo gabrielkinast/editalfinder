@@ -1,0 +1,154 @@
+{
+  "titulo": "Diagnóstico — regressão setor_estrategico_muito_amplo após Recovery C (apply)",
+  "gerado_em": "2026-05-10T12:00:00Z",
+  "hipotese_principal": "O apply usou o input_dir correto, mas o merge de `extras` no loader faz união de listas para `setor_estrategico`. O valor fundido (BD antiga + payload Recovery C) pode ter mais entradas únicas que cada lado isolado. A coluna espelho `setor_estrategico` é preenchida a partir de `merged_extras` via `extras_to_filter_columns`, pelo que o staging continua com >3 setores mesmo com standardized local capped a 3.",
+  "conclusao_operacional": "Não foi erro de path nem de fontes; a política de merge list→união explica o aumento global (72→85) e o aumento por EMBRAPII/NUCLEP (13→19 e 12→19). Correção recomendada: opção B (política explícita para campos taxonómicos em update), não refazer apply só com o mesmo código.",
+  "evidencia_apply": {
+    "input_dir": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_main_pipeline\\recovery_c_setores\\standardized",
+    "fonte_load_ready_summary": "audit_reports_loader_ready/load_ready_summary.json",
+    "id_execucao": "c6ae1239-3bbe-4585-a1e7-bf41e3ef0e14",
+    "modo": "apply",
+    "staging": true,
+    "data_apply_inicio_fim": "2026-05-10T07:00:47Z / 2026-05-10T07:07:52Z",
+    "fontes": ["embrapii", "nuclep"],
+    "itens_processados": 41,
+    "inseridos": 0,
+    "atualizados": 41,
+    "erros": 0,
+    "load_execution_history_linha": "audit_reports_loader_ready/load_execution_history.jsonl (entrada com id_execucao c6ae1239...)"
+  },
+  "metricas_globais": {
+    "referencia_pre_apply": {
+      "fonte": "recovery_c_setores_consolidado.json / baseline utilizador",
+      "setor_estrategico_muito_amplo": 72,
+      "prazo_vencido_ativo_true": 48
+    },
+    "pos_validacao": {
+      "fonte": "post_daily_validation.json timestamp 2026-05-10T07:08:09Z",
+      "setor_estrategico_muito_amplo": 85,
+      "delta": 13,
+      "prazo_vencido_ativo_true": 49,
+      "credito_tipo_recurso_incoerente": 4,
+      "suspeito_ativo_true": 47
+    }
+  },
+  "tabela_delta_por_fonte_setor_amplo": [
+    {
+      "fonte": "EMBRAPII",
+      "antes": 13,
+      "depois": 19,
+      "delta": 6
+    },
+    {
+      "fonte": "NUCLEP",
+      "antes": 12,
+      "depois": 19,
+      "delta": 7
+    }
+  ],
+  "nota_sobre_soma_delta": "A soma dos deltas por estas duas fontes (+13) coincide com o delta global (+13), coerente com o foco do apply apenas em embrapii e nuclep.",
+  "standardized_recovery_c": {
+    "embrapii_path": "audit_reports_main_pipeline/recovery_c_setores/standardized/embrapii_standardized.json",
+    "nuclep_path": "audit_reports_main_pipeline/recovery_c_setores/standardized/nuclep_standardized.json",
+    "validacao_local_previa": "0 itens com extras.setor_estrategico length > 3 (bundle consolidado)",
+    "exemplo_cruzado": {
+      "link": "https://embrapii.org.br/chamadas-publicas/chamada-publica-01-2017-resultado-final/",
+      "standardized_extras_setor_estrategico_len": 3,
+      "standardized_extras_setor_estrategico_amostra": [
+        "ciencia_tecnologia",
+        "energia",
+        "defesa_industrial"
+      ],
+      "post_daily_exemplo_id_835_setor_estrategico_len": 5,
+      "post_daily_exemplo_id_835_setor_estrategico": [
+        "defesa_industrial",
+        "aeroespacial",
+        "energia",
+        "industria",
+        "ciencia_tecnologia"
+      ],
+      "interpretacao": "O JSON local está capped; a linha no staging após merge tem união de etiquetas antigas com novas."
+    }
+  },
+  "codigo_relevante": {
+    "merge_extras_dict": {
+      "arquivo": "CORE/merge_utils.py",
+      "comportamento_listas": "Para chaves com lista em base e no incremento, faz _dedupe_list(cur + v) — união, não substituição."
+    },
+    "_rebuild_merged_extras": {
+      "arquivo": "CORE/loader.py",
+      "sequencia": "merge_extras_dict(fragmentos_antigos, extras_json_existente); depois merge_extras_dict(base, extras_novo)"
+    },
+    "coluna_espelho": {
+      "arquivo": "CORE/taxonomy_filtros.py",
+      "funcao": "extras_to_filter_columns",
+      "setor": "Lê merged_extras['setor_estrategico'] e escreve em out['setor_estrategico']"
+    },
+    "loader_resumo": "_merge_db_row aplica mapped + merged_extras; _apply_filter_columns atualiza colunas espelho a partir de merged_extras."
+  },
+  "staging_load_summary_campo": {
+    "fields_preserved_non_empty_total_setor_estrategico": 41,
+    "nota": "Em load_ready_sources, 'preservado' significa entrada e saída não vazias para o campo (vin e vout), não igualdade byte-a-byte. Com merge por união, ambos os lados podem permanecer não vazios com lista crescente."
+  },
+  "exemplos_warning_ate_30": {
+    "fonte": "audit_reports_main_pipeline/post_daily_warning_examples.json (secção edital.setor_estrategico_muito_amplo)",
+    "amostras": [
+      {
+        "id": 835,
+        "fonte_recurso": "EMBRAPII",
+        "titulo": "Chamada Pública 01/2017 – RESULTADO FINAL",
+        "link": "https://embrapii.org.br/chamadas-publicas/chamada-publica-01-2017-resultado-final/",
+        "n_setores_db": 5,
+        "link_no_standardized_recovery_c": true,
+        "setor_no_standardized_capped": true
+      },
+      {
+        "id": 842,
+        "fonte_recurso": "EMBRAPII",
+        "titulo": "CHAMADA PÚBLICA CENTRO DE COMPETÊNCIA 02/2022",
+        "link": "https://embrapii.org.br/chamadas-publicas/chamada-publica-centro-de-competencia-02-2022/",
+        "n_setores_db": 4,
+        "link_no_standardized_recovery_c": true,
+        "setor_no_standardized_capped": true
+      },
+      {
+        "id": 1430,
+        "fonte_recurso": "NUCLEP",
+        "titulo": "NUCLEP",
+        "link": "https://www.nuclep.gov.br/index.php/",
+        "n_setores_db": 4,
+        "link_no_standardized_recovery_c": true,
+        "setor_no_standardized_capped": "inferido_bundle_local_20_itens"
+      }
+    ],
+    "padrao": "EMBRAPII/NUCLEP nos exemplos mostram 4–5 setores na tabela validada; alinhado com merge união + coluna derivada de merged_extras."
+  },
+  "opcoes_recomendadas": {
+    "A_apply_input_errado": {
+      "valido": false,
+      "motivo": "load_ready_summary.json e histórico c6ae1239 confirmam recovery_c_setores/standardized e apenas embrapii,nuclep."
+    },
+    "B_loader_merge_taxonomia": {
+      "valido": true,
+      "prioridade": "alta",
+      "acoes_exemplos": [
+        "Para recovery apply ou fontes específicas: tratar setor_estrategico com wins-new (substituir lista) em vez de união em merge_extras_dict.",
+        "Ou aplicar cap final pós-merge antes de extras_to_filter_columns para estas cargas.",
+        "Garantir que fragments antigos de setor_estrategico não reentram via fetch_extras_fragments se a intenção é substituir por payload curado."
+      ]
+    },
+    "C_nuclep_institucional": {
+      "valido": "parcial",
+      "motivo": "Páginas institucionais NUCLEP continuam a gerar ruído de classificação; não explica sozinho o salto +13 se o cap local tivesse sido aplicado como substituição. Ajuda como eixo C.2 separado."
+    },
+    "D_validacao_fora_escopo": {
+      "valido": false,
+      "motivo": "O validador mede len(setor_estrategico) na linha lida do staging; o problema é o estado persistido após merge, não o critério de aviso."
+    }
+  },
+  "restricoes_respeitadas": [
+    "Nenhum novo apply executado",
+    "Nenhum UPDATE/INSERT Supabase pelo diagnóstico",
+    "Schema, readiness oficial, opportunity_gate global inalterados"
+  ]
+}

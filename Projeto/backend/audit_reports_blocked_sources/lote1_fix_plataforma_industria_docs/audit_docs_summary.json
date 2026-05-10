@@ -1,0 +1,41 @@
+{
+  "data_auditoria": "2026-05-02T00:43:56Z",
+  "fontes": [
+    "plataforma_industria"
+  ],
+  "max_items_por_fonte": 30,
+  "pdf_skip": true,
+  "itens_analisados": 23,
+  "raw_com_pdf_url": 23,
+  "raw_com_documentos": 23,
+  "transformado_com_pdf_url": 23,
+  "transformado_com_documentos": 23,
+  "payload_com_pdf_url": 23,
+  "payload_com_documentos": 23,
+  "bruto_com_documentos_pdf": 23,
+  "bruto_com_documentos_nao_pdf": 22,
+  "transformado_com_documentos_pdf": 23,
+  "transformado_com_documentos_nao_pdf": 22,
+  "payload_com_documentos_pdf": 23,
+  "payload_com_documentos_nao_pdf": 22,
+  "perdas_pdf": 0,
+  "perdas_nao_pdf": 0,
+  "downloads_falharam": 23,
+  "downloads_sucesso": 0,
+  "links_invalidos": 0,
+  "links_relativos_restantes": 0,
+  "links_quebrados": 0,
+  "duplicados_documentos": 0,
+  "perdas_total": 0,
+  "fontes_pior_preservacao": [
+    {
+      "fonte": "plataforma_industria",
+      "score_perda": 0.0
+    }
+  ],
+  "formatos_detectados": {
+    "pdf": 204,
+    "docx": 104,
+    "xlsx": 20
+  }
+}

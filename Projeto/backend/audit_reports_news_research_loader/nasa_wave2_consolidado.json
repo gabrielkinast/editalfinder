@@ -1,0 +1,107 @@
+{
+  "titulo": "NASA Wave 2 — primeira carga validada do módulo notícia/pesquisa",
+  "versao_consolidado": "2026-05-05",
+  "ambiente": "staging",
+  "fonte_logica": "nasa_news",
+  "onda": "nasa_wave2",
+  "status": "validada",
+  "metricas_negocio": {
+    "noticia_payload_total": 78,
+    "pesquisa_payload_total": 17,
+    "review_for_edital": 0,
+    "itens_public_edital_pela_wave2": 0
+  },
+  "metricas_apply_staging": {
+    "data_execucao": "2026-05-05T00:52:04Z",
+    "apply_executado": true,
+    "apply_status": "applied",
+    "errors_count": 0,
+    "skipped": 0,
+    "review_candidates_ignored": 0,
+    "inserted_noticia": 69,
+    "updated_noticia": 9,
+    "inserted_pesquisa": 13,
+    "updated_pesquisa": 4,
+    "would_upsert_noticia": 78,
+    "would_upsert_pesquisa": 17
+  },
+  "dry_run": {
+    "descricao": "Dry-run do loader sem erros antes do apply; payloads gerados sem review_for_edital.",
+    "referencia_build": "audit_reports_news_research_loader/nasa_wave2_dry_run.json",
+    "resumo_build": {
+      "gerado_em": "2026-05-05T00:29:38Z",
+      "payload_noticia_count": 78,
+      "payload_pesquisa_count": 17,
+      "review_candidates_count": 0,
+      "rejected_routing_count": 0,
+      "excluded_validation_count": 0
+    },
+    "comando_loader_dry_run": "python scripts/load_news_research_sources.py --dry-run --staging --wave nasa_wave2"
+  },
+  "validacao_pos_carga": {
+    "referencia": "audit_reports_news_research_loader/nasa_wave2_post_load_validation.json",
+    "gerado_em": "2026-05-05T00:58:43Z",
+    "ok": true,
+    "destaques": [
+      "78 linhas em public.noticia com links do payload",
+      "17 linhas em public.pesquisa com links do payload",
+      "nenhum link da Wave 2 em public.edital",
+      "vw_noticias_front e vw_pesquisas_front com dados"
+    ]
+  },
+  "fluxo_executado": [
+    {
+      "passo": 1,
+      "nome": "Crawl / standardized (expansão NASA)",
+      "nota": "Fonte nasa_news; artefatos em audit_reports_news_research/"
+    },
+    {
+      "passo": 2,
+      "nome": "Build payloads Wave 2",
+      "comando": "python scripts/build_nasa_wave2_payloads.py",
+      "saida": [
+        "nasa_wave2_payload_noticia.json",
+        "nasa_wave2_payload_pesquisa.json",
+        "nasa_wave2_review_candidates.json (vazio)",
+        "nasa_wave2_dry_run.json / .md"
+      ]
+    },
+    {
+      "passo": 3,
+      "nome": "Dry-run loader (sem escrita)",
+      "comando": "python scripts/load_news_research_sources.py --dry-run --staging --wave nasa_wave2"
+    },
+    {
+      "passo": 4,
+      "nome": "Apply staging (guardas: EDITALFINDER_ENV + ALLOW_STAGING_APPLY + --test-db-before-apply)",
+      "comando": "python scripts/load_news_research_sources.py --apply --staging --test-db-before-apply --wave nasa_wave2"
+    },
+    {
+      "passo": 5,
+      "nome": "Validação pós-carga",
+      "comando": "python scripts/validate_news_research_after_load.py --staging --source nasa_news --wave nasa_wave2"
+    }
+  ],
+  "artefactos_chave": {
+    "payloads": [
+      "audit_reports_news_research_loader/nasa_wave2_payload_noticia.json",
+      "audit_reports_news_research_loader/nasa_wave2_payload_pesquisa.json"
+    ],
+    "loader_summary": "audit_reports_news_research_loader/load_news_research_summary.json",
+    "validacao": "audit_reports_news_research_loader/nasa_wave2_post_load_validation.json",
+    "build_wave2": "audit_reports_news_research_loader/nasa_wave2_dry_run.json"
+  },
+  "governanca": {
+    "nada_enviado_para_public_edital": true,
+    "review_for_edital_nao_carregado_pelo_loader": true,
+    "modulo_isolado_do_pipeline_edital": true
+  },
+  "proximos_passos": {
+    "onda_3": "DARPA News (darpa_news)",
+    "notas": [
+      "Seguir o plano em audit_reports_news_research/expansion_plan.md / expansion_plan.json.",
+      "Manter dry-run + validação pós-carga antes de qualquer novo apply.",
+      "Não executar novo apply nesta consolidação."
+    ]
+  }
+}

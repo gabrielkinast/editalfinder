@@ -1,0 +1,22 @@
+{
+  "output_path": "D:\\Computational_Physics\\My Projects\\edital\\japan_kawasaki_heavy\\outputs\\japan_kawasaki_heavy_editais.json",
+  "message": "todas_as_listagens_falharam_ou_rede",
+  "failure_kind": "falha_de_coleta",
+  "failure_reason": "todas_as_listagens_falharam_ou_rede",
+  "collection_failed": true,
+  "listing_events": [
+    {
+      "url": "https://global.kawasaki.com/en/corp/profile/procurement/",
+      "ok": false,
+      "status_code": null
+    },
+    {
+      "url": "https://www.khi.co.jp/procurement/",
+      "ok": false,
+      "status_code": null
+    }
+  ],
+  "previous_item_count": 0,
+  "tipo_resultado": "falha_de_coleta",
+  "rejected_count": 0
+}

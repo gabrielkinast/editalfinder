@@ -1,0 +1,49 @@
+{
+  "data_auditoria": "2026-05-03T04:10:59Z",
+  "alteracao_codigo": {
+    "ficheiro": "CORE/taxonomy_filtros.py",
+    "funcao": "calibrate_amazul_extras",
+    "resumo": [
+      "procurement_hit: tokens de compra/licitação + heurística de URL /licitacoes-e-contratos/ com slug de dispensa/pregão/contrato/UASG/NUP/edital.",
+      "Ramificação compra: item['tipo_recurso'] = 'licitação' sempre (substitui ruído DOU/PDF do transformer).",
+      "Concurso: só se evidência explícita e sem procurement_hit; tipo_recurso forçado a 'Seleção / emprego público'.",
+      "Chamada/fomento por texto: ignorada quando lk_licit_hub (evita subven/fomento espúrios no hub de licitações).",
+      "Ramificação else: se lk_licit_hub, assume licitação + licitação tipo_recurso + perfil fornecedor."
+    ]
+  },
+  "retransform": {
+    "comando": "python scripts/retransform_all.py --sources amazul --dry-run --output-dir audit_reports_blocked_sources/lote4_fix_amazul_tipo_recurso",
+    "standardized_gerado": "audit_reports_blocked_sources/lote4_fix_amazul_tipo_recurso/standardized/amazul_standardized.json"
+  },
+  "verificacao_pos_retransform": {
+    "itens": 19,
+    "tipo_recurso_distribuicao": {
+      "licitação": 19
+    },
+    "tipo_oportunidade_distribuicao": {
+      "licitacao": 19
+    },
+    "rotulos_proibidos_residuais": {
+      "Prêmio / Concurso": 0,
+      "Subvenção (Não Reembolsável)": 0,
+      "Reembolsável (Financiamento)": 0
+    }
+  },
+  "copia_standardized_loader": {
+    "origem": "audit_reports_blocked_sources/lote4_fix_amazul_tipo_recurso/standardized/amazul_standardized.json",
+    "destino": "audit_reports_retransform/standardized/amazul_standardized.json"
+  },
+  "loader_dry_run": {
+    "comando": "python scripts/load_ready_sources.py --dry-run --sources amazul --exclude-blocked --input-dir audit_reports_retransform/standardized --readiness audit_reports_retransform/readiness_for_loader.json",
+    "artefactos": "audit_reports_loader_ready/load_ready_summary.json",
+    "itens_standardized_total": 19,
+    "would_upsert_total": 19,
+    "would_ignore_total": 0,
+    "mapping_errors_total": 0,
+    "critical_empty_items_total": 0,
+    "docs_preserved_itens": 19,
+    "pdf_preserved_itens": 19,
+    "documentos_perdidos_no_payload_total": 0
+  },
+  "apply": "nao_executado"
+}

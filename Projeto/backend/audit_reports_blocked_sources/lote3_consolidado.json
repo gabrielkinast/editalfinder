@@ -1,0 +1,238 @@
+{
+  "meta": {
+    "titulo": "Lote 3 — relatório consolidado (3A Japão + 3B China)",
+    "gerado_em_utc": "2026-05-02T22:15:00Z",
+    "nota": "Consolidação administrativa/técnica apenas; sem misturar datasets entre sub-lotes. Nenhum apply, Supabase, migrations ou gate global alterados nesta geração.",
+    "referencias": [
+      "audit_reports_blocked_sources/lote3a_japan_diagnostico.json",
+      "audit_reports_blocked_sources/lote3b_china_diagnostico.json",
+      "audit_reports_blocked_sources/lote3b_china_curadoria.md",
+      "audit_reports_blocked_sources/lote3b_china_semantic_fix.md",
+      "audit_reports_blocked_sources/china_ready_with_notes_loader_dryrun.json",
+      "config/source_readiness.json",
+      "crawler_output_safe.py",
+      "CORE/taxonomy_filtros.py"
+    ]
+  },
+  "resumo_executivo": {
+    "lote_3a_japao": "Quatro fontes (JST, JAEA, JAXA, e-Rad): crawlers concluíram sem crash operacional, mas listagens falharam ou não produziram itens úteis; brutos efetivos = 0; retransformação 0→0; calibrações locais em taxonomy/transformer preparadas; readiness permanece needs_manual_review (JST/JAEA) ou blocked (JAXA/e-Rad) até coleta com dados reais e rede estável.",
+    "lote_3b_china": "Política save_output_safely preservou JSONs em falhas (exit 2 = preservação); curadoria e calibrações semânticas locais produziram 13 itens standardized (9 NSFC + 4 USTC) sem flags na auditoria final; dry-run loader 13 would_upsert, zero erros críticos; duas fontes candidatas a staging (ready_with_notes); AVIC/NORINCO em revisão manual; CNNC bloqueada.",
+    "fontes_liberadas_staging": [
+      "china_nsfc",
+      "china_university_procurement"
+    ],
+    "fontes_pendentes": [
+      "japan_jst",
+      "japan_jaea",
+      "japan_jaxa",
+      "japan_e_rad",
+      "china_avic",
+      "china_norinco",
+      "china_cnnc"
+    ]
+  },
+  "protecao_output": {
+    "modulos": [
+      "crawler_output_safe.py — save_output_safely e fluxos Asia (save_outputs_asia) com regras explícitas para não apagar dados anteriores."
+    ],
+    "mecanismos": [
+      "Backup do *_editais.json anterior quando há escrita bem-sucedida com itens.",
+      "latest_error.json no diretório outputs/ por fonte quando há falha ou vazio sem confirmação.",
+      "audit_reports_crawler_failures/failures.jsonl para registo auditável.",
+      "Exit code 2 nos mains Asia: preservação intencional do JSON principal — não tratar como crash."
+    ],
+    "tipos_resultado": {
+      "falha_de_coleta": "collection_failed ou failure_reason explícito; listagens/rede não obtiveram dados válidos.",
+      "coleta_vazia_pos_filtros": "HTTP/listagens OK mas zero itens após filtros ou opportunity_gate local ao crawl.",
+      "coleta_vazia_sem_confirmacao": "Vazio sem falha explícita nem confirmed_no_items; política pode preservar ficheiro anterior.",
+      "confirmed_no_items": "Lista vazia confirmada com motivo explícito (allow_empty + empty_confirmed_reason)."
+    }
+  },
+  "lote_3a_japao": {
+    "fontes": [
+      "japan_jst",
+      "japan_jaea",
+      "japan_jaxa",
+      "japan_e_rad"
+    ],
+    "tabela": [
+      {
+        "fonte": "japan_jst",
+        "estado_antes_ciclo": "Calibrações locais preparadas; crawlers executados.",
+        "estado_depois_ciclo": "Output bruto 0 itens; retransform 0 brutos → 0 transformados; 0 rejeitados.",
+        "brutos": 0,
+        "transformados": 0,
+        "rejeitados": 0,
+        "documentos_preservados": "N/A (sem itens no ciclo)",
+        "problemas": "Falha de listagem/rede ou bloqueio; sem dados úteis para pipeline.",
+        "correcoes": "Calibração local (ex.: calibrate_japan_jst_extras) preparada; sem dados para validar transform end-to-end.",
+        "readiness_recomendado": "needs_manual_review",
+        "readiness_config_snapshot": "needs_manual_review"
+      },
+      {
+        "fonte": "japan_jaea",
+        "estado_antes_ciclo": "Idem JST.",
+        "estado_depois_ciclo": "Bruto 0; 0→0 transformados.",
+        "brutos": 0,
+        "transformados": 0,
+        "rejeitados": 0,
+        "documentos_preservados": "N/A",
+        "problemas": "Listagens inacessíveis neste ambiente; histórico canónico com ruído quando havia dados antigos.",
+        "correcoes": "Calibrações locais JAEA preparadas.",
+        "readiness_recomendado": "needs_manual_review",
+        "readiness_config_snapshot": "needs_manual_review"
+      },
+      {
+        "fonte": "japan_jaxa",
+        "estado_antes_ciclo": "Idem.",
+        "estado_depois_ciclo": "Bruto 0; 0→0.",
+        "brutos": 0,
+        "transformados": 0,
+        "rejeitados": 0,
+        "documentos_preservados": "N/A",
+        "problemas": "Índice institucional / imprensa sem chamada útil quando havia exemplos antigos.",
+        "correcoes": "Calibrações locais JAXA preparadas.",
+        "readiness_recomendado": "blocked",
+        "readiness_config_snapshot": "blocked"
+      },
+      {
+        "fonte": "japan_e_rad",
+        "estado_antes_ciclo": "Idem.",
+        "estado_depois_ciclo": "Bruto 0; 0→0.",
+        "brutos": 0,
+        "transformados": 0,
+        "rejeitados": 0,
+        "documentos_preservados": "N/A",
+        "problemas": "Procedimento de registo vs grant; listagens falharam no crawl.",
+        "correcoes": "Calibrações locais e-Rad preparadas.",
+        "readiness_recomendado": "blocked",
+        "readiness_config_snapshot": "blocked"
+      }
+    ],
+    "observacoes_japao": [
+      "Reexecutar crawlers em ambiente com acesso HTTP estável e robots/respeito a rate limits.",
+      "Para Japão, outputs vazios [] podem resultar de falha de coleta; política Asia evita sobrescrever dados anteriores não vazios quando aplicável (paridade conceitual com China).",
+      "Não promover readiness com JSON bruto vazio sem novo ciclo com dados reais."
+    ]
+  },
+  "lote_3b_china": {
+    "fontes": [
+      "china_nsfc",
+      "china_cnnc",
+      "china_avic",
+      "china_norinco",
+      "china_university_procurement"
+    ],
+    "tabela": [
+      {
+        "fonte": "china_nsfc",
+        "estado_antes_curadoria": "28 brutos coletados; algumas flags semânticas (oportunidade_fomento_sem_fomento) antes do ajuste de calibração.",
+        "estado_depois": "9 brutos curados; standardized 9; calibração NSFC + auditoria sem flags.",
+        "brutos_curados": 9,
+        "transformados": 9,
+        "rejeitados": 0,
+        "documentos_preservados_no_loader_dryrun": "5/5 na fonte; agregado China ver secao dry_run",
+        "problemas": "Ruído político/institucional removido na curadoria; falsos positivos semânticos corrigidos por calibrate_china_nsfc_extras.",
+        "correcoes": "Curadoria manual assistida (script apply_lote3b_china_curadoria.py); calibração tipo_recurso/tipo_oportunidade; cópia standardized para audit_reports_retransform.",
+        "readiness_recomendado": "ready_with_notes",
+        "readiness_config_snapshot": "ready_with_notes"
+      },
+      {
+        "fonte": "china_university_procurement",
+        "estado_antes_curadoria": "6 brutos (USTC + falhas parciais Tsinghua/PKU nos logs).",
+        "estado_depois": "4 brutos curados; standardized 4.",
+        "brutos_curados": 4,
+        "transformados": 4,
+        "rejeitados": 0,
+        "documentos_preservados_no_loader_dryrun": "4/4",
+        "problemas": "Classificação procurement vs fundos corrigida na calibração; nuclear sem evidência removido na curadoria.",
+        "correcoes": "calibrate_china_university_procurement_extras; curadoria USTC.",
+        "readiness_recomendado": "ready_with_notes",
+        "readiness_config_snapshot": "ready_with_notes"
+      },
+      {
+        "fonte": "china_avic",
+        "estado_antes": "15 brutos mistos (hubs, military EN, duplicados).",
+        "estado_depois": "1 item (recrutamento campus); processo_seletivo na calibração.",
+        "brutos_curados": 1,
+        "transformados": 1,
+        "rejeitados": 0,
+        "documentos_preservados": "Ver retransform lote semantic fix",
+        "problemas": "Predominância de páginas institucionais antes da curadoria.",
+        "correcoes": "Curadoria agressiva + calibrate_china_avic_extras (ramo recrutamento).",
+        "readiness_recomendado": "needs_manual_review",
+        "readiness_config_snapshot": "needs_manual_review"
+      },
+      {
+        "fonte": "china_norinco",
+        "estado_antes": "Preservação exit 2; bruto legado fraco.",
+        "estado_depois": "Sem alteração de bruto neste consolidado.",
+        "brutos": 1,
+        "transformados": null,
+        "rejeitados": null,
+        "problemas": "Listagens EN falhando; vazio pós-filtros no crawl.",
+        "correcoes": "Nenhuma no fecho deste relatório.",
+        "readiness_recomendado": "needs_manual_review",
+        "readiness_config_snapshot": "needs_manual_review",
+        "nota": "Fora do dry-run loader das duas fontes ready_with_notes."
+      },
+      {
+        "fonte": "china_cnnc",
+        "estado_antes": "Falha total de listagem (rede/bloqueio).",
+        "estado_depois": "JSON anterior preservado (exit 2); sem novos dados.",
+        "brutos_preservados": 1,
+        "transformados": null,
+        "rejeitados": null,
+        "problemas": "todas_as_listagens_falharam_ou_rede",
+        "correcoes": "Preservação save_output_safely.",
+        "readiness_recomendado": "blocked",
+        "readiness_config_snapshot": "blocked"
+      }
+    ],
+    "auditoria_semantica_pos_correcao": {
+      "flags_totais": "vazio",
+      "oportunidade_fomento_sem_fomento": 0,
+      "referencia": "audit_reports_blocked_sources/lote3b_china_curated_semantic_fix_audit"
+    },
+    "dry_run_loader_china": {
+      "fontes": [
+        "china_nsfc",
+        "china_university_procurement"
+      ],
+      "itens_standardized_total": 13,
+      "would_upsert_total": 13,
+      "mapping_errors_total": 0,
+      "critical_empty_items_total": 0,
+      "documentos_input_vs_preservados": "9/9",
+      "pdfs_input_vs_preservados": "3/3",
+      "referencia": "audit_reports_loader_ready/load_ready_summary.json"
+    }
+  },
+  "apply_staging_comandos_recomendados_nao_executados": {
+    "powershell_apply": [
+      "$env:EDITALFINDER_ALLOW_STAGING_APPLY=\"true\"",
+      "$env:EDITALFINDER_ENV=\"staging\"",
+      "python scripts/load_ready_sources.py --apply --staging --sources china_nsfc,china_university_procurement --exclude-blocked --input-dir audit_reports_retransform/standardized --readiness audit_reports_retransform/readiness_for_loader.json --test-db-before-apply"
+    ],
+    "validacao_pos_apply": [
+      "python scripts/validate_database_after_load.py --staging --source china_nsfc",
+      "python scripts/validate_database_after_load.py --staging --source china_university_procurement"
+    ]
+  },
+  "pode_aplicar_em_staging": {
+    "china_nsfc_e_university": "sim_condicional",
+    "condicoes": [
+      "Aprovação explícita após revisão humana (itens incompletos / prazos).",
+      "Variáveis de ambiente de staging e test-db-before-apply conforme política interna.",
+      "Não executado nesta entrega."
+    ],
+    "japao": "nao_ate_novo_crawl_com_bruto_real"
+  },
+  "proximos_passos": [
+    "Aplicar china_nsfc e china_university_procurement em staging se aceite política e QA.",
+    "Reexecutar lote 3A Japão com rede/acesso HTTP fiável.",
+    "Revisão manual china_avic e china_norinco (URLs, listagens, calibração).",
+    "Novas seeds ou proxies para china_cnnc quando viável.",
+    "Planear próximo lote de fontes asiáticas restantes após fecho operacional do lote 3."
+  ]
+}

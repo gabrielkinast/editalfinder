@@ -1,0 +1,61 @@
+{
+  "titulo": "SENAI e Softex — loader dry-run após ready_with_notes",
+  "data_auditoria_loader": "2026-05-02T00:00:43Z",
+  "id_execucao": "215f7952-5b51-4dd8-92a5-4134c9bb75d0",
+  "readiness": {
+    "readiness_for_loader": "audit_reports_retransform/readiness_for_loader.json",
+    "alteracoes": [
+      "senai e softex removidos de fontes_bloqueadas_temporariamente",
+      "senai e softex acrescentados ao fim de fontes_prontas_para_loader",
+      "status_distribution: pronto_com_observacoes 9→11, bloquear_temporariamente 22→20"
+    ],
+    "config_source_readiness": "config/source_readiness.json",
+    "nota": "O script load_ready_sources reescreve source_readiness.json a partir do readiness; senai e softex ficam em ready_with_notes (ordenado alfabeticamente)."
+  },
+  "comando": "python scripts/load_ready_sources.py --dry-run --sources senai,softex --exclude-blocked",
+  "input_dir": "audit_reports_retransform/standardized",
+  "metricas_loader_summary": {
+    "itens_standardized_total": 24,
+    "would_upsert_total": 24,
+    "would_ignore_total": 0,
+    "mapping_errors_total": 0,
+    "critical_empty_items_total": 0,
+    "docs_input_items_total": 22,
+    "docs_preserved_items_total": 22,
+    "documentos_perdidos_no_payload_total": 0,
+    "pdf_input_items_total": 22,
+    "pdf_preserved_items_total": 22,
+    "validacao_status_preserved_items_total": 24,
+    "qualidade_dado_preserved_items_total": 24,
+    "perfil_ideal_no_resumo_loader": "campo não listado nos totais de fields_* (itens com perfil_ideal vazio no standardized verificado localmente)"
+  },
+  "verificacao_standardized_local": {
+    "senai": {
+      "n": 22,
+      "links_todos_categoria_plataforma": true,
+      "urls_com_categoria": 22,
+      "validacao_status": { "incompleto": 22 },
+      "tipo_oportunidade": { "licitacao": 18, "supplier_portal": 4 },
+      "tipo_recurso": "Subvenção (Não Reembolsável) em 22",
+      "perfil_ideal_preenchido": 0,
+      "pdf_url_preenchido": 22,
+      "nota_pdf": "PDFs derivados de links na página de categoria (não URL inventada sem página)",
+      "descricao": "textos longos (média ~25k chars) — agregado de listagem"
+    },
+    "softex": {
+      "n": 2,
+      "validacao_status": { "suspeito": 2 },
+      "tipo_oportunidade": { "noticia_institucional": 2 },
+      "tipo_recurso": { "fomento": 2 },
+      "perfil_ideal_preenchido": 0,
+      "pdf_url_preenchido": 0,
+      "descricao_len_min_med_max": [82, 100, 118],
+      "nota_descricao": "Texto curto; alinhado a ready_with_notes"
+    }
+  },
+  "apply": {
+    "executado": false,
+    "environment_guard": "missing_staging_flag",
+    "recomendacao_staging": "Dry-run técnico OK (24 would_upsert, 0 erros, documentos SENAI preservados). Recomenda-se apply em staging só após revisão: (1) SENAI tipo_oportunidade licitação/supplier_portal vs categoria de inovação; (2) Softex tipo_oportunidade noticia_institucional + descrição curta + suspeito; (3) perfil_ideal vazio nas duas fontes. Usar flag explícita de staging quando for aplicar."
+  }
+}

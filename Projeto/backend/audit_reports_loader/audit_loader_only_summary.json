@@ -1,0 +1,253 @@
+{
+  "modo": "only_loader",
+  "data_auditoria": "2026-05-01T06:08:48Z",
+  "max_items_por_ficheiro": 50,
+  "standardized_dirs": "CORE/transformer",
+  "ficheiros_standardized_encontrados": 94,
+  "ficheiros_processados": 94,
+  "itens_analisados_total": 1093,
+  "itens_com_alerta_payload": 1093,
+  "erros_audit_exception": 0,
+  "ranking_fontes_perda": [
+    {
+      "fonte": "china_mofcom_tendering",
+      "arquivo": "CORE\\transformer\\china_mofcom_tendering_standardized.json",
+      "problemas_payload": 50,
+      "itens_amostra": 50,
+      "readiness_loader_score": 0.0,
+      "riscos_sobrescrita_por_vazio": 47
+    },
+    {
+      "fonte": "european_defence_fund",
+      "arquivo": "CORE\\transformer\\european_defence_fund_standardized.json",
+      "problemas_payload": 50,
+      "itens_amostra": 50,
+      "readiness_loader_score": 0.0,
+      "riscos_sobrescrita_por_vazio": 27
+    },
+    {
+      "fonte": "fappr",
+      "arquivo": "CORE\\transformer\\fappr_standardized.json",
+      "problemas_payload": 50,
+      "itens_amostra": 50,
+      "readiness_loader_score": 0.0,
+      "riscos_sobrescrita_por_vazio": 0
+    },
+    {
+      "fonte": "grants_gov",
+      "arquivo": "CORE\\transformer\\grants_gov_standardized.json",
+      "problemas_payload": 50,
+      "itens_amostra": 50,
+      "readiness_loader_score": 0.0,
+      "riscos_sobrescrita_por_vazio": 49
+    },
+    {
+      "fonte": "japan_jsps",
+      "arquivo": "CORE\\transformer\\japan_jsps_standardized.json",
+      "problemas_payload": 50,
+      "itens_amostra": 50,
+      "readiness_loader_score": 0.0,
+      "riscos_sobrescrita_por_vazio": 36
+    },
+    {
+      "fonte": "china_cas",
+      "arquivo": "CORE\\transformer\\china_cas_standardized.json",
+      "problemas_payload": 35,
+      "itens_amostra": 35,
+      "readiness_loader_score": 0.0,
+      "riscos_sobrescrita_por_vazio": 35
+    },
+    {
+      "fonte": "darpa_opportunities",
+      "arquivo": "CORE\\transformer\\darpa_opportunities_standardized.json",
+      "problemas_payload": 34,
+      "itens_amostra": 34,
+      "readiness_loader_score": 0.0,
+      "riscos_sobrescrita_por_vazio": 30
+    },
+    {
+      "fonte": "japan_jaea",
+      "arquivo": "CORE\\transformer\\japan_jaea_standardized.json",
+      "problemas_payload": 30,
+      "itens_amostra": 30,
+      "readiness_loader_score": 0.0,
+      "riscos_sobrescrita_por_vazio": 18
+    },
+    {
+      "fonte": "japan_kakenhi",
+      "arquivo": "CORE\\transformer\\japan_kakenhi_standardized.json",
+      "problemas_payload": 30,
+      "itens_amostra": 30,
+      "readiness_loader_score": 0.0,
+      "riscos_sobrescrita_por_vazio": 15
+    },
+    {
+      "fonte": "japan_kek",
+      "arquivo": "CORE\\transformer\\japan_kek_standardized.json",
+      "problemas_payload": 30,
+      "itens_amostra": 30,
+      "readiness_loader_score": 0.0,
+      "riscos_sobrescrita_por_vazio": 7
+    },
+    {
+      "fonte": "japan_nedo",
+      "arquivo": "CORE\\transformer\\japan_nedo_standardized.json",
+      "problemas_payload": 30,
+      "itens_amostra": 30,
+      "readiness_loader_score": 0.0,
+      "riscos_sobrescrita_por_vazio": 15
+    },
+    {
+      "fonte": "china_cgn",
+      "arquivo": "CORE\\transformer\\china_cgn_standardized.json",
+      "problemas_payload": 28,
+      "itens_amostra": 28,
+      "readiness_loader_score": 0.0,
+      "riscos_sobrescrita_por_vazio": 28
+    },
+    {
+      "fonte": "aneel",
+      "arquivo": "CORE\\transformer\\aneel_standardized.json",
+      "problemas_payload": 27,
+      "itens_amostra": 27,
+      "readiness_loader_score": 0.0,
+      "riscos_sobrescrita_por_vazio": 15
+    },
+    {
+      "fonte": "china_most",
+      "arquivo": "CORE\\transformer\\china_most_standardized.json",
+      "problemas_payload": 27,
+      "itens_amostra": 27,
+      "readiness_loader_score": 0.0,
+      "riscos_sobrescrita_por_vazio": 26
+    },
+    {
+      "fonte": "china_tendering_bidding",
+      "arquivo": "CORE\\transformer\\china_tendering_bidding_standardized.json",
+      "problemas_payload": 25,
+      "itens_amostra": 25,
+      "readiness_loader_score": 0.0,
+      "riscos_sobrescrita_por_vazio": 23
+    },
+    {
+      "fonte": "dod_sbir_sttr",
+      "arquivo": "CORE\\transformer\\dod_sbir_sttr_standardized.json",
+      "problemas_payload": 25,
+      "itens_amostra": 25,
+      "readiness_loader_score": 0.0,
+      "riscos_sobrescrita_por_vazio": 20
+    },
+    {
+      "fonte": "pncp_defesa",
+      "arquivo": "CORE\\transformer\\pncp_defesa_standardized.json",
+      "problemas_payload": 25,
+      "itens_amostra": 25,
+      "readiness_loader_score": 0.0,
+      "riscos_sobrescrita_por_vazio": 25
+    },
+    {
+      "fonte": "embrapii",
+      "arquivo": "CORE\\transformer\\embrapii_standardized.json",
+      "problemas_payload": 23,
+      "itens_amostra": 23,
+      "readiness_loader_score": 0.0,
+      "riscos_sobrescrita_por_vazio": 1
+    },
+    {
+      "fonte": "china_mod_public",
+      "arquivo": "CORE\\transformer\\china_mod_public_standardized.json",
+      "problemas_payload": 20,
+      "itens_amostra": 20,
+      "readiness_loader_score": 0.0,
+      "riscos_sobrescrita_por_vazio": 20
+    },
+    {
+      "fonte": "fapemig",
+      "arquivo": "CORE\\transformer\\fapemig_standardized.json",
+      "problemas_payload": 20,
+      "itens_amostra": 20,
+      "readiness_loader_score": 0.0,
+      "riscos_sobrescrita_por_vazio": 18
+    },
+    {
+      "fonte": "japan_atla",
+      "arquivo": "CORE\\transformer\\japan_atla_standardized.json",
+      "problemas_payload": 20,
+      "itens_amostra": 20,
+      "readiness_loader_score": 0.0,
+      "riscos_sobrescrita_por_vazio": 7
+    },
+    {
+      "fonte": "japan_mitsubishi_heavy",
+      "arquivo": "CORE\\transformer\\japan_mitsubishi_heavy_standardized.json",
+      "problemas_payload": 20,
+      "itens_amostra": 20,
+      "readiness_loader_score": 0.0,
+      "riscos_sobrescrita_por_vazio": 0
+    },
+    {
+      "fonte": "japan_mod",
+      "arquivo": "CORE\\transformer\\japan_mod_standardized.json",
+      "problemas_payload": 20,
+      "itens_amostra": 20,
+      "readiness_loader_score": 0.0,
+      "riscos_sobrescrita_por_vazio": 8
+    },
+    {
+      "fonte": "lockheed_martin_suppliers",
+      "arquivo": "CORE\\transformer\\lockheed_martin_suppliers_standardized.json",
+      "problemas_payload": 20,
+      "itens_amostra": 20,
+      "readiness_loader_score": 0.0,
+      "riscos_sobrescrita_por_vazio": 0
+    },
+    {
+      "fonte": "nuclep",
+      "arquivo": "CORE\\transformer\\nuclep_standardized.json",
+      "problemas_payload": 20,
+      "itens_amostra": 20,
+      "readiness_loader_score": 0.0,
+      "riscos_sobrescrita_por_vazio": 0
+    },
+    {
+      "fonte": "bndes",
+      "arquivo": "CORE\\transformer\\bndes_standardized.json",
+      "problemas_payload": 19,
+      "itens_amostra": 19,
+      "readiness_loader_score": 0.0,
+      "riscos_sobrescrita_por_vazio": 19
+    },
+    {
+      "fonte": "china_caea",
+      "arquivo": "CORE\\transformer\\china_caea_standardized.json",
+      "problemas_payload": 18,
+      "itens_amostra": 18,
+      "readiness_loader_score": 0.0,
+      "riscos_sobrescrita_por_vazio": 17
+    },
+    {
+      "fonte": "general_dynamics_suppliers",
+      "arquivo": "CORE\\transformer\\general_dynamics_suppliers_standardized.json",
+      "problemas_payload": 17,
+      "itens_amostra": 17,
+      "readiness_loader_score": 0.0,
+      "riscos_sobrescrita_por_vazio": 5
+    },
+    {
+      "fonte": "ipen",
+      "arquivo": "CORE\\transformer\\ipen_standardized.json",
+      "problemas_payload": 15,
+      "itens_amostra": 15,
+      "readiness_loader_score": 0.0,
+      "riscos_sobrescrita_por_vazio": 0
+    },
+    {
+      "fonte": "japan_qst",
+      "arquivo": "CORE\\transformer\\japan_qst_standardized.json",
+      "problemas_payload": 15,
+      "itens_amostra": 15,
+      "readiness_loader_score": 0.0,
+      "riscos_sobrescrita_por_vazio": 13
+    }
+  ]
+}

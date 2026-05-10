@@ -1,130 +1,164 @@
-import re
 from datetime import datetime
 from urllib.parse import urljoin
-from typing import List, Optional
-from utils_anp import get_soup, normalize_text, extract_date, is_deadline_valid
+from typing import List, Optional, Set, Tuple
+
+from utils_anp import get_soup, normalize_text, extract_date, extract_deadline_iso
 from models_anp import EditalANP
 
 BASE_URL_GOV = "https://www.gov.br"
-BASE_URL_FAPESP = "https://fapesp.br"
 
-URLS = [
+# Apenas páginas-índice de PRH, editais e participação social (sem notícias genéricas / FAPESP).
+LISTING_URLS: List[str] = [
     "https://www.gov.br/anp/pt-br/assuntos/tecnologia-meio-ambiente/prh-anp-programa-de-formacao-de-recursos-humanos-1",
-    "https://www.gov.br/anp/pt-br/assuntos/tecnologia-meio-ambiente/pdi",
-    "https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados",
-    "https://fapesp.br/anp"
+    "https://www.gov.br/anp/pt-br/assuntos/tecnologia-meio-ambiente/prh-anp-programa-de-formacao-de-recursos-humanos/eixo-academico/edital-de-chamada-publica",
+    "https://www.gov.br/anp/pt-br/acesso-a-informacao/participacao-social",
 ]
+
+PATH_DENY = (
+    "noticias",
+    "imprensa",
+    "galeria",
+    "estagio",
+    "estágio",
+    "forum-de-tecnologia",
+    "acoes-e-programas",
+    "metas-institucionais",
+    "plano-de-comunicacao",
+    "plano-de-gestao",
+    "plano-diretor",
+    "politica-de-diversidade",
+    "governanca",
+    "reclamacoes",
+    "denuncias",
+    "dados-abertos",
+    "canais_atendimento/imprensa",
+    "manual-do",
+    "programas-ativos",
+    "iniciativas-parcerias",
+    "dados-prestacao",
+    "encontro-nacional",
+    "padroes-perguntas",
+    "perguntas-frequentes",
+    "arquivos-",
+    "rodadas-anp",
+    "oferta-permanente",
+    "resolucao",
+)
+
+# Não usar só "prh" (pega manual, FAQ etc.). Exige sinal de chamada/edital/consulta.
+PATH_ALLOW_SUBSTR = (
+    "edital",
+    "chamada",
+    "chamamento",
+    "consulta-publica",
+    "consulta_publica",
+    "consulta-audiencia",
+    "audiencia-publica",
+    "selecao",
+    "seleção",
+)
+
+
+def _is_anp_gov_url(url: str) -> bool:
+    u = url.lower()
+    return "gov.br/anp" in u
+
+
+def _listing_candidate(url: str, titulo: str) -> bool:
+    if not _is_anp_gov_url(url):
+        return False
+    low = f"{url} {titulo}".lower()
+    if any(d in low for d in PATH_DENY):
+        return False
+    if not any(a in low for a in PATH_ALLOW_SUBSTR):
+        return False
+    if url.lower().endswith((".png", ".jpg", ".jpeg", ".gif", ".svg", ".zip", ".mp4", ".doc", ".docx", ".xls", ".xlsx")):
+        return False
+    avoid_t = ("licitação", "licitacao", "pregão", "pregao", "contratação", "contratacao", "mapa do site")
+    if any(k in titulo.lower() for k in avoid_t):
+        return False
+    return True
+
 
 class ANPScraper:
     def __init__(self):
         self.base_url_gov = BASE_URL_GOV
-        self.base_url_fapesp = BASE_URL_FAPESP
 
     def extract_editais(self) -> List[EditalANP]:
-        all_editais = []
-        seen_links = set()
+        all_editais: List[EditalANP] = []
+        seen_links: Set[str] = set()
 
-        for url in URLS:
-            print(f"Iniciando extração ANP em: {url}")
-            soup = get_soup(url)
+        for listing_url in LISTING_URLS:
+            print(f"Iniciando extração ANP em: {listing_url}")
+            soup = get_soup(listing_url)
             if not soup:
                 continue
-
-            if "fapesp.br" in url:
-                self._extract_from_fapesp(soup, all_editais, seen_links)
-            else:
-                self._extract_from_gov(soup, all_editais, seen_links)
+            self._collect_from_listing(soup, listing_url, all_editais, seen_links)
 
         return all_editais
 
-    def _extract_from_fapesp(self, soup, editais_list, seen_links):
-        # Na FAPESP, procurar por links de chamadas ou editais que mencionem ANP
-        links = soup.select("a[href]")
-        for a in links:
-            href = a.get("href")
-            titulo = normalize_text(a.get_text())
-            
-            if not href.startswith("http"):
-                href = urljoin(self.base_url_fapesp, href)
-            
-            full_url = href.split("#", 1)[0]
-            if full_url in seen_links:
-                continue
-
-            # Critérios de relevância para fapesp.br/anp
-            is_relevant = any(kw in full_url.lower() or kw in titulo.lower() for kw in ["edital", "chamada", "anp", "prh"])
-            
-            if is_relevant:
-                seen_links.add(full_url)
-                edital = self.process_detail_page(full_url, titulo, source="FAPESP/ANP")
-                if edital:
-                    editais_list.append(edital)
-
-    def _extract_from_gov(self, soup, editais_list, seen_links):
-        # No gov.br/anp, procurar em todo o conteúdo principal
+    def _collect_from_listing(
+        self, soup, listing_url: str, editais_list: List[EditalANP], seen_links: Set[str]
+    ) -> None:
         main_content = soup.select_one("#content-core") or soup.select_one("article") or soup
-        links = main_content.select("a[href]")
-        
-        for a in links:
+        for a in main_content.select("a[href]"):
             href = a.get("href")
             titulo = normalize_text(a.get_text())
-            
+            if not href:
+                continue
             if not href.startswith("http"):
                 href = urljoin(self.base_url_gov, href)
-            
-            full_url = href.split("#", 1)[0]
+            full_url = href.split("#", 1)[0].split("?", 1)[0]
             if full_url in seen_links:
                 continue
+            if not _listing_candidate(full_url, titulo):
+                continue
+            seen_links.add(full_url)
+            edital = self.process_detail_page(full_url, titulo, listing_url=listing_url)
+            if edital:
+                editais_list.append(edital)
 
-            # Filtra por palavras-chave de fomento/editais
-            keywords = ["edital", "chamada", "fomento", "programa", "projeto", "seleção", "prh", "pdi"]
-            is_relevant = any(kw in full_url.lower() or kw in titulo.lower() for kw in keywords)
-            
-            # Exclui extensões irrelevantes (imagens, etc.)
-            irrelevant_ext = [".png", ".jpg", ".jpeg", ".gif", ".svg", ".mp4", ".mp3"]
-            is_irrelevant_ext = any(full_url.lower().endswith(ext) for ext in irrelevant_ext)
+    def process_detail_page(self, url: str, titulo: str, listing_url: str) -> Optional[EditalANP]:
+        if not _is_anp_gov_url(url):
+            return None
 
-            # Exclui licitações (conforme pedido anterior do usuário para outras agências)
-            avoid = ["licitação", "pregão", "concurso", "contratação de serviços", "aquisição de bens"]
-            is_avoid = any(kw in full_url.lower() or kw in titulo.lower() for kw in avoid)
-
-            if is_relevant and not is_avoid and not is_irrelevant_ext:
-                seen_links.add(full_url)
-                edital = self.process_detail_page(full_url, titulo, source="ANP gov.br")
-                if edital:
-                    editais_list.append(edital)
-
-    def process_detail_page(self, url: str, titulo: str, source: str) -> Optional[EditalANP]:
         if url.lower().endswith(".pdf"):
             return EditalANP(
                 titulo=titulo or "Edital ANP (PDF)",
                 link=url,
                 descricao=titulo,
                 situacao="Aberto",
-                extras={"anexos": [{"nome": "Edital PDF", "url": url}], "fonte_original": source}
+                extras={
+                    "anexos": [{"nome": "Edital PDF", "url": url}],
+                    "fonte_original": "ANP gov.br",
+                    "url_listagem": listing_url,
+                    "metodo_extracao": "curated_listing_pdf",
+                },
             )
 
         soup = get_soup(url)
         if not soup:
             return None
 
-        content = soup.select_one("#content") or soup.select_one("#content-core") or soup.select_one("article") or soup
-        text = content.get_text()
-        
         print(f"Processando página detalhe ANP: {url}")
 
-        # Título mais preciso se disponível
+        content = soup.select_one("#content") or soup.select_one("#content-core") or soup.select_one("article") or soup
+        text = content.get_text()
+
         h1 = soup.select_one("h1") or soup.select_one("h2")
         if h1:
             h1_text = normalize_text(h1.get_text())
             if h1_text and len(h1_text) > 3:
                 titulo = h1_text
 
-        # Filtro final: se o título for muito curto ou genérico (como "Ops..."), pular
-        if not titulo or len(titulo) < 4 or any(kw in titulo.lower() for kw in ["ops...", "erro", "not found", "404"]):
+        if not titulo or len(titulo) < 4 or any(kw in titulo.lower() for kw in ("ops...", "erro", "not found", "404")):
             return None
 
-        # Descrição (primeiros parágrafos)
+        combined = f"{titulo} {text}".lower()
+        if any(k in combined for k in ("resultado final", "resultado preliminar", "homologação", "homologacao")):
+            if "edital" not in combined and "chamada" not in combined:
+                return None
+
         paragraphs = content.select("p")
         descricao = ""
         count = 0
@@ -133,49 +167,34 @@ class ANPScraper:
             if len(p_text) > 40:
                 descricao += p_text + " "
                 count += 1
-            if count >= 4: break
-        
-        # Datas
-        data_pub = extract_date(text)
-        
-        # Prazo (deadline)
-        prazo = None
-        prazo_patterns = [
-            r'(?:prazo|vencimento|término|até|submissão|propostas|inscrições|encerramento|entrega)\s*:?\s*(\d{2}/\d{2}/\d{4})',
-            r'(?:prazo|vencimento|término|até|submissão|propostas|inscrições|encerramento|entrega)\s+até\s+(\d{1,2}\s+de\s+[a-zA-Zç]+\s+de\s+\d{4})',
-            r'(\d{2}/\d{2}/\d{4})'
-        ]
-        
-        for pattern in prazo_patterns:
-            matches = re.findall(pattern, text, re.I)
-            for m in matches:
-                extracted = extract_date(m)
-                if extracted:
-                    # Se encontrarmos múltiplas datas, tentamos pegar a maior (geralmente o prazo final)
-                    if not prazo or extracted > prazo:
-                        prazo = extracted
+            if count >= 5:
+                break
 
-        # Anexos
+        data_pub = extract_date(text)
+        prazo = extract_deadline_iso(text)
+
         anexos = []
         for a in content.select("a[href]"):
             a_href = a.get("href")
             a_text = normalize_text(a.get_text())
-            if any(ext in a_href.lower() for ext in [".pdf", ".doc", ".zip", ".rar"]):
+            if any(ext in (a_href or "").lower() for ext in (".pdf", ".doc", ".docx", ".zip")):
                 if not a_href.startswith("http"):
-                    base = self.base_url_fapesp if "fapesp.br" in url else self.base_url_gov
-                    a_href = urljoin(base, a_href)
+                    a_href = urljoin(self.base_url_gov, a_href)
                 anexos.append({"nome": a_text or "Documento", "url": a_href})
 
         return EditalANP(
-            titulo=titulo,
+            titulo=titulo[:250],
             link=url,
-            descricao=descricao.strip() or titulo,
+            descricao=(descricao.strip() or titulo)[:4000],
             data_publicacao=data_pub,
             fim_inscricao=prazo,
             situacao="Aberto",
             extras={
                 "anexos": anexos,
-                "fonte_original": source,
-                "data_extracao": datetime.now().strftime("%Y-%m-%d")
-            }
+                "fonte_original": "ANP gov.br",
+                "data_extracao": datetime.now().strftime("%Y-%m-%d"),
+                "url_listagem": listing_url,
+                "url_detalhe": url,
+                "metodo_extracao": "curated_listing_detail",
+            },
         )

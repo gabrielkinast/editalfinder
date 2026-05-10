@@ -1,0 +1,41 @@
+{
+  "data_auditoria": "2026-05-09T14:00:39Z",
+  "input_dir": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_news_research\\standardized",
+  "rows_total": 152,
+  "sources_total": 5,
+  "flags_totais": {
+    "pesquisa_com_sinal_noticia": 10,
+    "noticia_com_sinal_pesquisa": 8
+  },
+  "links_quebrados_ou_invalidos": 0,
+  "fontes_ruidosas": [
+    {
+      "source_id": "darpa_opportunities_research",
+      "total": 1,
+      "within_12m": 1,
+      "without_date": 0,
+      "generic": 0,
+      "noise_ratio": 0.0,
+      "reason": "alto_ruido_ou_baixo_volume"
+    },
+    {
+      "source_id": "eurekalert_science_filtered",
+      "total": 1,
+      "within_12m": 1,
+      "without_date": 0,
+      "generic": 0,
+      "noise_ratio": 0.0,
+      "reason": "alto_ruido_ou_baixo_volume"
+    }
+  ],
+  "recomendacao_fontes_ativar_primeiro": [
+    "darpa_news",
+    "iaea_news_publications",
+    "nasa_news"
+  ],
+  "proximos_passos_integracao_loader": [
+    "Adicionar job dedicado com --apply-content-routed para carregar apenas noticia/pesquisa em staging.",
+    "Reforcar infer_content_type com features por fonte (NASA/DARPA/IAEA/EurekAlert).",
+    "Criar whitelist de seeds por fonte e threshold minimo de data_publicacao para ativacao."
+  ]
+}

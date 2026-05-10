@@ -1,0 +1,763 @@
+[
+  {
+    "fonte": "eit",
+    "policy_entry": {},
+    "policy_notes": null,
+    "seed_urls": [
+      "https://www.eit.europa.eu/our-activities/opportunities",
+      "https://www.eit.europa.eu/opportunities",
+      "https://www.eit.europa.eu/work-with-us/procurement/calls"
+    ],
+    "primary_classification": "ok_html_publico",
+    "recommended_method": "usar_sitemap",
+    "readiness_access_tag": "ok",
+    "interpretacao_crawler": "crawler_nao_evidenciado_como_quebrado_por_acesso",
+    "probes": [
+      {
+        "seed_url": "https://www.eit.europa.eu/our-activities/opportunities",
+        "robots": {
+          "ok": true,
+          "status_code": 200,
+          "url": "https://www.eit.europa.eu/robots.txt",
+          "lines": [
+            "User-agent: *",
+            "Allow: /core/*.css$",
+            "Allow: /core/*.css?",
+            "Allow: /core/*.js$",
+            "Allow: /core/*.js?",
+            "Allow: /core/*.gif",
+            "Allow: /core/*.jpg",
+            "Allow: /core/*.jpeg",
+            "Allow: /core/*.png",
+            "Allow: /core/*.svg",
+            "Allow: /profiles/*.css$",
+            "Allow: /profiles/*.css?",
+            "Allow: /profiles/*.js$",
+            "Allow: /profiles/*.js?",
+            "Allow: /profiles/*.gif",
+            "Allow: /profiles/*.jpg",
+            "Allow: /profiles/*.jpeg",
+            "Allow: /profiles/*.png",
+            "Allow: /profiles/*.svg",
+            "Disallow: /core/",
+            "Disallow: /profiles/",
+            "Disallow: /README.md",
+            "Disallow: /composer/Metapackage/README.txt",
+            "Disallow: /composer/Plugin/ProjectMessage/README.md",
+            "Disallow: /composer/Plugin/Scaffold/README.md",
+            "Disallow: /composer/Plugin/VendorHardening/README.txt",
+            "Disallow: /composer/Template/README.txt",
+            "Disallow: /modules/README.txt",
+            "Disallow: /sites/README.txt",
+            "Disallow: /themes/README.txt",
+            "Disallow: /web.config",
+            "Disallow: /admin/",
+            "Disallow: /comment/reply/",
+            "Disallow: /filter/tips",
+            "Disallow: /node/add/",
+            "Disallow: /search/",
+            "Disallow: /user/register",
+            "Disallow: /user/password",
+            "Disallow: /user/login",
+            "Disallow: /user/logout",
+            "Disallow: /media/oembed",
+            "Disallow: /*/media/oembed",
+            "Disallow: /index.php/admin/",
+            "Disallow: /index.php/comment/reply/",
+            "Disallow: /index.php/filter/tips",
+            "Disallow: /index.php/node/add/",
+            "Disallow: /index.php/search/",
+            "Disallow: /index.php/user/password",
+            "Disallow: /index.php/user/register",
+            "Disallow: /index.php/user/login",
+            "Disallow: /index.php/user/logout",
+            "Disallow: /index.php/media/oembed",
+            "Disallow: /index.php/*/media/oembed"
+          ],
+          "sitemap_hints": []
+        },
+        "robots_disallows_url": false,
+        "primary_probe": {
+          "status_code": 200,
+          "final_url": "https://www.eit.europa.eu/our-activities/opportunities",
+          "bytes": 111284,
+          "cloudflare_headers": false,
+          "fetch_error": null
+        },
+        "primary_classification": "ok_html_publico",
+        "feeds": [],
+        "sitemap": {
+          "checked": [
+            {
+              "url": "https://www.eit.europa.eu/sitemap.xml",
+              "ok": true,
+              "status_code": 200,
+              "loc_count_sample": 70,
+              "loc_samples": [
+                "https://www.eit.europa.eu/",
+                "https://www.eit.europa.eu/about-us",
+                "https://www.eit.europa.eu/about-us/eit-glance",
+                "https://www.eit.europa.eu/about-us/eit-governance-flexible-and-accountable",
+                "https://www.eit.europa.eu/about-us/eit-governance/eit-director",
+                "https://www.eit.europa.eu/about-us/eit-governance/eit-governing-board",
+                "https://www.eit.europa.eu/activities",
+                "https://www.eit.europa.eu/activities/eit-entrepreneurial-education-learn-leaders-european-innovation",
+                "https://www.eit.europa.eu/activities/business-creation",
+                "https://www.eit.europa.eu/about-us/contact-us",
+                "https://www.eit.europa.eu/legal-notice",
+                "https://www.eit.europa.eu/opportunities/about-eu-public-procurement",
+                "https://www.eit.europa.eu/global-challenges/about-our-knowledge-and-innovation-communities",
+                "https://www.eit.europa.eu/activities/eit-awards-our-prime-innovation-competition",
+                "https://www.eit.europa.eu/eit-and-knowledge-and-innovation-community-contractual-relations"
+              ]
+            }
+          ]
+        },
+        "json_ld_sample": [],
+        "meta_sample": {
+          "generator": "Drupal 10 (https://www.drupal.org)",
+          "handheldfriendly": "true",
+          "mobileoptimized": "width",
+          "viewport": "width=device-width, initial-scale=1, shrink-to-fit=no"
+        },
+        "open_graph_sample": {},
+        "document_links_sample": [],
+        "signals": {
+          "rss_found": false,
+          "sitemap_ok": true,
+          "json_ld_types": [],
+          "meta_keys": [
+            "generator",
+            "handheldfriendly",
+            "mobileoptimized",
+            "viewport"
+          ],
+          "open_graph_keys": [],
+          "document_links_n": 0
+        },
+        "probe_alternatives": []
+      }
+    ],
+    "optional_probes": [],
+    "allowed_methods_policy": [],
+    "disallowed_methods_policy": []
+  },
+  {
+    "fonte": "esa_osip",
+    "policy_entry": {},
+    "policy_notes": null,
+    "seed_urls": [
+      "https://ideas.esa.int/core/servlet/hype/IMT?templateName=MenuItem&userAction=BrowseCurrentUser",
+      "https://www.esa.int/Enabling_Support/Preparing_for_the_Future/Discovery_and_Preparation/The_Open_Space_Innovation_Platform_OSIP"
+    ],
+    "primary_classification": "ok_html_publico",
+    "recommended_method": "usar_meta_tags",
+    "readiness_access_tag": "ok",
+    "interpretacao_crawler": "crawler_nao_evidenciado_como_quebrado_por_acesso",
+    "probes": [
+      {
+        "seed_url": "https://ideas.esa.int/core/servlet/hype/IMT?templateName=MenuItem&userAction=BrowseCurrentUser",
+        "robots": {
+          "ok": false,
+          "status_code": 404,
+          "url": "https://ideas.esa.int/robots.txt",
+          "lines": [
+            "{\"path\":\"/io/robots.txt\",\"timestamp\":\"2026-05-09T15:13:26.868583008Z\",\"status\":404}"
+          ],
+          "sitemap_hints": []
+        },
+        "robots_disallows_url": false,
+        "primary_probe": {
+          "status_code": 200,
+          "final_url": "https://ideas.esa.int/core/servlet/hype/IMT?templateName=MenuItem&userAction=BrowseCurrentUser",
+          "bytes": 128196,
+          "cloudflare_headers": false,
+          "fetch_error": null
+        },
+        "primary_classification": "ok_html_publico",
+        "feeds": [],
+        "sitemap": {
+          "checked": [
+            {
+              "url": "https://ideas.esa.int/sitemap.xml",
+              "ok": false,
+              "status_code": 404,
+              "loc_count_sample": 0,
+              "loc_samples": []
+            },
+            {
+              "url": "https://ideas.esa.int/sitemap_index.xml",
+              "ok": false,
+              "status_code": 404,
+              "loc_count_sample": 0,
+              "loc_samples": []
+            },
+            {
+              "url": "https://ideas.esa.int/wp-sitemap.xml",
+              "ok": false,
+              "status_code": 404,
+              "loc_count_sample": 0,
+              "loc_samples": []
+            }
+          ]
+        },
+        "json_ld_sample": [],
+        "meta_sample": {
+          "viewport": "width=device-width, initial-scale=1"
+        },
+        "open_graph_sample": {},
+        "document_links_sample": [
+          "https://ideas.esa.int/core/apps/IMT/UploadedFiles/00/f_0b9ce3c92654836b4a18f2931c8f0b9b/OSIP_Privacy_Notice_-_v1.3.pdf?v=1778112389",
+          "https://ideas.esa.int/core/apps/IMT/UploadedFiles/00/f_1abe18e86876a481f295ae4e98b3e7bb/OSIP-Terms-and-Conditions_v5.1.pdf?v=1778112389"
+        ],
+        "signals": {
+          "rss_found": false,
+          "sitemap_ok": false,
+          "json_ld_types": [],
+          "meta_keys": [
+            "viewport"
+          ],
+          "open_graph_keys": [],
+          "document_links_n": 2
+        },
+        "probe_alternatives": []
+      }
+    ],
+    "optional_probes": [],
+    "allowed_methods_policy": [],
+    "disallowed_methods_policy": []
+  },
+  {
+    "fonte": "esa_star",
+    "policy_entry": {},
+    "policy_notes": null,
+    "seed_urls": [
+      "https://www.esa.int/About_Us/Business_with_ESA/How_to_do/Open_Invitations_to_Tender",
+      "https://www.esa.int/About_Us/Business_with_ESA/How_to_do/Intended_Invitations_To_Tender",
+      "https://esastar-publication-ext.sso.esa.int"
+    ],
+    "primary_classification": "ok_html_publico",
+    "recommended_method": "usar_meta_tags",
+    "readiness_access_tag": "ok",
+    "interpretacao_crawler": "crawler_nao_evidenciado_como_quebrado_por_acesso",
+    "probes": [
+      {
+        "seed_url": "https://www.esa.int/About_Us/Business_with_ESA/How_to_do/Open_Invitations_to_Tender",
+        "robots": {
+          "ok": true,
+          "status_code": 200,
+          "url": "https://www.esa.int/robots.txt",
+          "lines": [
+            "User-agent: *",
+            "Crawl-delay: 2",
+            "Allow: /",
+            "Disallow: /spaceinvideos/layout/set",
+            "Disallow: /spaceinimages/layout/set",
+            "Disallow: /esatv/layout/set",
+            "Disallow: /layout/set",
+            "Disallow: /*/layout/set",
+            "Disallow: /ger/layout/set",
+            "Disallow: /fre/layout/set",
+            "Disallow: /dut/layout/set",
+            "Disallow: /dan/layout/set",
+            "Disallow: /esl/layout/set",
+            "Disallow: /fin/layout/set",
+            "Disallow: /ell/layout/set",
+            "Disallow: /ita/layout/set",
+            "Disallow: /nor/layout/set",
+            "Disallow: /pol/layout/set",
+            "Disallow: /por/layout/set",
+            "Disallow: /cze/layout/set",
+            "Disallow: /ron/layout/set",
+            "Disallow: /swe/layout/set",
+            "Disallow: /esearch",
+            "User-agent: YahooCacheSystem",
+            "User-agent: Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)",
+            "Crawl-delay: 2",
+            "User-agent: YandexBot",
+            "User-agent: YandexMedia",
+            "User-agent: YandexImages",
+            "User-agent: YandexCatalog",
+            "User-agent: YaDirectFetcher",
+            "User-agent: YandexBlogs",
+            "User-agent: YandexNews",
+            "User-agent: YandexPagechecker",
+            "User-agent: YandexMetrika",
+            "User-agent: YandexMarket",
+            "User-agent: YandexCalendar",
+            "User-agent: sentibot",
+            "Crawl-delay: 2",
+            "User-agent: bingbot",
+            "Crawl-delay: 2"
+          ],
+          "sitemap_hints": []
+        },
+        "robots_disallows_url": false,
+        "primary_probe": {
+          "status_code": 200,
+          "final_url": "https://www.esa.int/About_Us/Business_with_ESA/How_to_do/Open_Invitations_to_Tender",
+          "bytes": 14771,
+          "cloudflare_headers": false,
+          "fetch_error": null
+        },
+        "primary_classification": "ok_html_publico",
+        "feeds": [],
+        "sitemap": {
+          "checked": [
+            {
+              "url": "https://www.esa.int/sitemap.xml",
+              "ok": false,
+              "status_code": 404,
+              "loc_count_sample": 0,
+              "loc_samples": []
+            },
+            {
+              "url": "https://www.esa.int/sitemap_index.xml",
+              "ok": false,
+              "status_code": 404,
+              "loc_count_sample": 0,
+              "loc_samples": []
+            },
+            {
+              "url": "https://www.esa.int/wp-sitemap.xml",
+              "ok": false,
+              "status_code": 404,
+              "loc_count_sample": 0,
+              "loc_samples": []
+            }
+          ]
+        },
+        "json_ld_sample": [],
+        "meta_sample": {
+          "keywords": "ITT, invitation to tender, Industry, EMITS, esa-star Publication",
+          "og:image": "https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2021/01/esa-star_publication/22515753-3-eng-GB/esa-star_Publication_pillars.png",
+          "og:title": "Open Invitations to Tender",
+          "twitter:card": "summary_large_image",
+          "twitter:site": "@esa",
+          "viewport": "width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"
+        },
+        "open_graph_sample": {
+          "og:title": "Open Invitations to Tender",
+          "og:image": "https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2021/01/esa-star_publication/22515753-3-eng-GB/esa-star_Publication_pillars.png"
+        },
+        "document_links_sample": [],
+        "signals": {
+          "rss_found": false,
+          "sitemap_ok": false,
+          "json_ld_types": [],
+          "meta_keys": [
+            "keywords",
+            "og:image",
+            "og:title",
+            "twitter:card",
+            "twitter:site",
+            "viewport"
+          ],
+          "open_graph_keys": [
+            "og:image",
+            "og:title"
+          ],
+          "document_links_n": 0
+        },
+        "probe_alternatives": []
+      }
+    ],
+    "optional_probes": [],
+    "allowed_methods_policy": [],
+    "disallowed_methods_policy": []
+  },
+  {
+    "fonte": "eurostars",
+    "policy_entry": {},
+    "policy_notes": null,
+    "seed_urls": [
+      "https://www.eurekanetwork.org/programmes/eurostars/",
+      "https://www.eurekanetwork.org/programmes-and-calls/?programme=eurostars&status=open",
+      "https://www.eurekanetwork.org/programmes-and-calls/?status=upcoming"
+    ],
+    "primary_classification": "ok_html_publico",
+    "recommended_method": "usar_rss",
+    "readiness_access_tag": "ok",
+    "interpretacao_crawler": "crawler_nao_evidenciado_como_quebrado_por_acesso",
+    "probes": [
+      {
+        "seed_url": "https://www.eurekanetwork.org/programmes/eurostars/",
+        "robots": {
+          "ok": true,
+          "status_code": 200,
+          "url": "https://www.eurekanetwork.org/robots.txt",
+          "lines": [
+            "<?xml encoding=\"UTF-8\"><p># START YOAST BLOCK",
+            "User-agent: *",
+            "Disallow:",
+            "Sitemap: https://www.eurekanetwork.org/sitemap_index.xml"
+          ],
+          "sitemap_hints": [
+            "https://www.eurekanetwork.org/sitemap_index.xml"
+          ]
+        },
+        "robots_disallows_url": false,
+        "primary_probe": {
+          "status_code": 200,
+          "final_url": "https://www.eurekanetwork.org/programmes-and-calls/eurostars/",
+          "bytes": 338131,
+          "cloudflare_headers": true,
+          "fetch_error": null
+        },
+        "primary_classification": "ok_html_publico",
+        "feeds": [
+          {
+            "href": "https://www.eurekanetwork.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.eurekanetwork.org%2Fprogrammes-and-calls%2Feurostars%2F&format=xml",
+            "type": "text/xml+oembed"
+          }
+        ],
+        "sitemap": {
+          "checked": [
+            {
+              "url": "https://www.eurekanetwork.org/sitemap_index.xml",
+              "ok": true,
+              "status_code": 200,
+              "loc_count_sample": 7,
+              "loc_samples": [
+                "https://www.eurekanetwork.org/post-sitemap.xml",
+                "https://www.eurekanetwork.org/page-sitemap.xml",
+                "https://www.eurekanetwork.org/programmes-sitemap.xml",
+                "https://www.eurekanetwork.org/programm-resources-sitemap.xml",
+                "https://www.eurekanetwork.org/impact-sitemap.xml",
+                "https://www.eurekanetwork.org/resources-sitemap.xml",
+                "https://www.eurekanetwork.org/country-sitemap.xml"
+              ]
+            }
+          ]
+        },
+        "json_ld_sample": [
+          {
+            "@type": null,
+            "keys": [
+              "@context",
+              "@graph"
+            ]
+          }
+        ],
+        "meta_sample": {
+          "article:modified_time": "2025-11-14T15:05:29+00:00",
+          "article:publisher": "https://www.facebook.com/TheRealEureka/",
+          "description": "Eurostars is the world's largest international funding programme for collaborative R&D projects led by innovative SMEs.",
+          "generator": "WP Rocket 3.19.3",
+          "msapplication-tileimage": "https://www.eurekanetwork.org/wp-content/uploads/2025/08/cropped-favicon-eureka-270x270.png",
+          "og:description": "Eurostars is the world's largest international funding programme for collaborative R&D projects led by innovative SMEs.",
+          "og:image": "https://www.eurekanetwork.org/wp-content/uploads/2025/06/background-eurostars.jpg",
+          "og:image:height": "1080",
+          "og:image:type": "image/jpeg",
+          "og:image:width": "1920",
+          "og:locale": "en_GB",
+          "og:site_name": "Eureka Network",
+          "og:title": "Eurostars",
+          "og:type": "article",
+          "og:url": "https://www.eurekanetwork.org/programmes-and-calls/eurostars/",
+          "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+          "twitter:card": "summary_large_image",
+          "twitter:data1": "4 minutes",
+          "twitter:label1": "Estimated reading time",
+          "twitter:site": "@eureka_network"
+        },
+        "open_graph_sample": {
+          "og:locale": "en_GB",
+          "og:type": "article",
+          "og:title": "Eurostars",
+          "og:description": "Eurostars is the world's largest international funding programme for collaborative R&D projects led by innovative SMEs.",
+          "og:url": "https://www.eurekanetwork.org/programmes-and-calls/eurostars/",
+          "og:site_name": "Eureka Network",
+          "og:image": "https://www.eurekanetwork.org/wp-content/uploads/2025/06/background-eurostars.jpg",
+          "og:image:width": "1920",
+          "og:image:height": "1080",
+          "og:image:type": "image/jpeg"
+        },
+        "document_links_sample": [],
+        "signals": {
+          "rss_found": true,
+          "sitemap_ok": true,
+          "json_ld_types": [],
+          "meta_keys": [
+            "article:modified_time",
+            "article:publisher",
+            "description",
+            "generator",
+            "msapplication-tileimage",
+            "og:description",
+            "og:image",
+            "og:image:height",
+            "og:image:type",
+            "og:image:width",
+            "og:locale",
+            "og:site_name",
+            "og:title",
+            "og:type",
+            "og:url",
+            "robots",
+            "twitter:card",
+            "twitter:data1",
+            "twitter:label1",
+            "twitter:site",
+            "viewport"
+          ],
+          "open_graph_keys": [
+            "og:description",
+            "og:image",
+            "og:image:height",
+            "og:image:type",
+            "og:image:width",
+            "og:locale",
+            "og:site_name",
+            "og:title",
+            "og:type",
+            "og:url"
+          ],
+          "document_links_n": 0
+        },
+        "probe_alternatives": []
+      }
+    ],
+    "optional_probes": [],
+    "allowed_methods_policy": [],
+    "disallowed_methods_policy": []
+  },
+  {
+    "fonte": "innovate_uk",
+    "policy_entry": {},
+    "policy_notes": null,
+    "seed_urls": [
+      "https://www.ukri.org/opportunity/?lang=en-gb",
+      "https://www.gov.uk/apply-funding-innovation"
+    ],
+    "primary_classification": "ok_html_publico",
+    "recommended_method": "usar_rss",
+    "readiness_access_tag": "ok",
+    "interpretacao_crawler": "crawler_nao_evidenciado_como_quebrado_por_acesso",
+    "probes": [
+      {
+        "seed_url": "https://www.ukri.org/opportunity/?lang=en-gb",
+        "robots": {
+          "ok": true,
+          "status_code": 200,
+          "url": "https://www.ukri.org/robots.txt",
+          "lines": [
+            "User-agent: *",
+            "Disallow: /wp-admin/",
+            "Allow: /wp-admin/admin-ajax.php",
+            "Sitemap: https://www.ukri.org/sitemap.xml"
+          ],
+          "sitemap_hints": [
+            "https://www.ukri.org/sitemap.xml"
+          ]
+        },
+        "robots_disallows_url": false,
+        "primary_probe": {
+          "status_code": 200,
+          "final_url": "https://www.ukri.org/opportunity/?lang=en-gb",
+          "bytes": 100530,
+          "cloudflare_headers": false,
+          "fetch_error": null
+        },
+        "primary_classification": "ok_html_publico",
+        "feeds": [
+          {
+            "href": "https://www.ukri.org/opportunity/feed/",
+            "type": "guess"
+          },
+          {
+            "href": "https://www.ukri.org/feedback/",
+            "type": "guess"
+          }
+        ],
+        "sitemap": {
+          "checked": [
+            {
+              "url": "https://www.ukri.org/sitemap.xml",
+              "ok": true,
+              "status_code": 200,
+              "loc_count_sample": 12,
+              "loc_samples": [
+                "https://www.ukri.org/sitemap-misc.xml",
+                "https://www.ukri.org/council-sitemap.xml",
+                "https://www.ukri.org/news-sitemap.xml",
+                "https://www.ukri.org/event-sitemap.xml",
+                "https://www.ukri.org/publication-sitemap.xml",
+                "https://www.ukri.org/publication-sitemap2.xml",
+                "https://www.ukri.org/opportunity-sitemap.xml",
+                "https://www.ukri.org/opportunity-sitemap2.xml",
+                "https://www.ukri.org/post-sitemap.xml",
+                "https://www.ukri.org/page-sitemap.xml",
+                "https://www.ukri.org/page-sitemap2.xml",
+                "https://www.ukri.org/page-sitemap3.xml"
+              ]
+            }
+          ]
+        },
+        "json_ld_sample": [],
+        "meta_sample": {
+          "description": "Search current funding opportunities from across UKRI, research councils and Innovate UK.",
+          "msapplication-tileimage": "https://www.ukri.org/wp-content/uploads/2020/12/cropped-ukri-site-icon-270x270.png",
+          "og:image": "https://www.ukri.org/wp-content/themes/ukri/assets/img/sm-swirl.jpg",
+          "og:title": "Funding finder",
+          "og:url": "https://www.ukri.org/opportunity/",
+          "robots": "max-image-preview:large",
+          "twitter:card": "summary_large_image",
+          "viewport": "width=device-width,initial-scale=1"
+        },
+        "open_graph_sample": {
+          "og:url": "https://www.ukri.org/opportunity/",
+          "og:title": "Funding finder",
+          "og:description": "Search current funding opportunities from across UKRI, research councils and Innovate UK.",
+          "og:image": "https://www.ukri.org/wp-content/themes/ukri/assets/img/sm-swirl.jpg"
+        },
+        "document_links_sample": [],
+        "signals": {
+          "rss_found": true,
+          "sitemap_ok": true,
+          "json_ld_types": [],
+          "meta_keys": [
+            "description",
+            "msapplication-tileimage",
+            "og:image",
+            "og:title",
+            "og:url",
+            "robots",
+            "twitter:card",
+            "viewport"
+          ],
+          "open_graph_keys": [
+            "og:description",
+            "og:image",
+            "og:title",
+            "og:url"
+          ],
+          "document_links_n": 0
+        },
+        "probe_alternatives": []
+      }
+    ],
+    "optional_probes": [],
+    "allowed_methods_policy": [],
+    "disallowed_methods_policy": []
+  },
+  {
+    "fonte": "ukri_funding",
+    "policy_entry": {},
+    "policy_notes": null,
+    "seed_urls": [
+      "https://www.ukri.org/opportunity/?lang=en-gb",
+      "https://www.ukri.org/opportunity/?sort_by=closing_date"
+    ],
+    "primary_classification": "ok_html_publico",
+    "recommended_method": "usar_rss",
+    "readiness_access_tag": "ok",
+    "interpretacao_crawler": "crawler_nao_evidenciado_como_quebrado_por_acesso",
+    "probes": [
+      {
+        "seed_url": "https://www.ukri.org/opportunity/?lang=en-gb",
+        "robots": {
+          "ok": true,
+          "status_code": 200,
+          "url": "https://www.ukri.org/robots.txt",
+          "lines": [
+            "User-agent: *",
+            "Disallow: /wp-admin/",
+            "Allow: /wp-admin/admin-ajax.php",
+            "Sitemap: https://www.ukri.org/sitemap.xml"
+          ],
+          "sitemap_hints": [
+            "https://www.ukri.org/sitemap.xml"
+          ]
+        },
+        "robots_disallows_url": false,
+        "primary_probe": {
+          "status_code": 200,
+          "final_url": "https://www.ukri.org/opportunity/?lang=en-gb",
+          "bytes": 100532,
+          "cloudflare_headers": false,
+          "fetch_error": null
+        },
+        "primary_classification": "ok_html_publico",
+        "feeds": [
+          {
+            "href": "https://www.ukri.org/opportunity/feed/",
+            "type": "guess"
+          },
+          {
+            "href": "https://www.ukri.org/feedback/",
+            "type": "guess"
+          }
+        ],
+        "sitemap": {
+          "checked": [
+            {
+              "url": "https://www.ukri.org/sitemap.xml",
+              "ok": true,
+              "status_code": 200,
+              "loc_count_sample": 12,
+              "loc_samples": [
+                "https://www.ukri.org/sitemap-misc.xml",
+                "https://www.ukri.org/council-sitemap.xml",
+                "https://www.ukri.org/news-sitemap.xml",
+                "https://www.ukri.org/event-sitemap.xml",
+                "https://www.ukri.org/publication-sitemap.xml",
+                "https://www.ukri.org/publication-sitemap2.xml",
+                "https://www.ukri.org/opportunity-sitemap.xml",
+                "https://www.ukri.org/opportunity-sitemap2.xml",
+                "https://www.ukri.org/post-sitemap.xml",
+                "https://www.ukri.org/page-sitemap.xml",
+                "https://www.ukri.org/page-sitemap2.xml",
+                "https://www.ukri.org/page-sitemap3.xml"
+              ]
+            }
+          ]
+        },
+        "json_ld_sample": [],
+        "meta_sample": {
+          "description": "Search current funding opportunities from across UKRI, research councils and Innovate UK.",
+          "msapplication-tileimage": "https://www.ukri.org/wp-content/uploads/2020/12/cropped-ukri-site-icon-270x270.png",
+          "og:image": "https://www.ukri.org/wp-content/themes/ukri/assets/img/sm-mineral.jpg",
+          "og:title": "Funding finder",
+          "og:url": "https://www.ukri.org/opportunity/",
+          "robots": "max-image-preview:large",
+          "twitter:card": "summary_large_image",
+          "viewport": "width=device-width,initial-scale=1"
+        },
+        "open_graph_sample": {
+          "og:url": "https://www.ukri.org/opportunity/",
+          "og:title": "Funding finder",
+          "og:description": "Search current funding opportunities from across UKRI, research councils and Innovate UK.",
+          "og:image": "https://www.ukri.org/wp-content/themes/ukri/assets/img/sm-mineral.jpg"
+        },
+        "document_links_sample": [],
+        "signals": {
+          "rss_found": true,
+          "sitemap_ok": true,
+          "json_ld_types": [],
+          "meta_keys": [
+            "description",
+            "msapplication-tileimage",
+            "og:image",
+            "og:title",
+            "og:url",
+            "robots",
+            "twitter:card",
+            "viewport"
+          ],
+          "open_graph_keys": [
+            "og:description",
+            "og:image",
+            "og:title",
+            "og:url"
+          ],
+          "document_links_n": 0
+        },
+        "probe_alternatives": []
+      }
+    ],
+    "optional_probes": [],
+    "allowed_methods_policy": [],
+    "disallowed_methods_policy": []
+  }
+]

@@ -1,0 +1,64 @@
+{
+  "fonte": "petrobras",
+  "raw_path": "petrobras\\outputs\\petrobras_editais.json",
+  "historico_correcao": {
+    "bruto_anterior": "5 itens (duplicata http/https em incentivados2023.2)",
+    "bruto_atual": "4 itens deduplicados; links Bússola em https",
+    "transformer": "Relaxamento local _petrobras_soft_continue + calibrate_petrobras_extras; build_defense_extras desativado para petrobras; sem alteração ao opportunity_gate global"
+  },
+  "n_bruto": 4,
+  "n_transformados": 4,
+  "n_rejeitados": 0,
+  "motivos_rejeicao": {},
+  "rejeitados_exemplos": [],
+  "transformados_resumo": [
+    {
+      "titulo": "Inscrições Projetos Não Incentivados",
+      "link": "https://investidor.bussolasocial.com.br/petrobras/editais/naoincentivados2023.2",
+      "tipo_url": "chamada_publica_patrocinio_bussola",
+      "rejected": false,
+      "reason": "",
+      "content_type": "oportunidade",
+      "tipo_op": "chamada_publica"
+    },
+    {
+      "titulo": "Inscrições Projetos Incentivados",
+      "link": "https://investidor.bussolasocial.com.br/petrobras/editais/incentivados2023.2",
+      "tipo_url": "chamada_publica_patrocinio_bussola",
+      "rejected": false,
+      "reason": "",
+      "content_type": "oportunidade",
+      "tipo_op": "chamada_publica"
+    },
+    {
+      "titulo": "Regulamento Seleção Pública 2023.1 – Projetos Incentivados",
+      "link": "https://petrobras.com.br/documents/2677942/7444258/SP+2023.1+-+Regulamento+Incentivados.pdf/c175c3b8-d4ca-a0f9-85ce-8a75d836a0ac",
+      "tipo_url": "regulamento_pdf_selecao",
+      "rejected": false,
+      "reason": "",
+      "content_type": "licitacao",
+      "tipo_op": "chamada_publica"
+    },
+    {
+      "titulo": "Regulamento Seleção Pública 2023.1 – Projetos Não Incentivados",
+      "link": "https://petrobras.com.br/documents/2677942/7444258/SP+2023.1+-+Regulamento+Nao+Incentivados.pdf/04e566d0-35dc-f269-ee71-bdaed0b5b0ff",
+      "tipo_url": "regulamento_pdf_selecao",
+      "rejected": false,
+      "reason": "",
+      "content_type": "licitacao",
+      "tipo_op": "chamada_publica"
+    }
+  ],
+  "classificacao_tipos_possiveis": {
+    "licitacao_contratacao": "URLs com pregao/licitacao explicita (nao presente no lote atual)",
+    "fornecedor_cadastro": "nao aplicavel ao lote",
+    "chamada_publica": "inscricoes na Bussola Social",
+    "patrocinio": "selecoes incentivadas / nao incentivadas",
+    "pd_inovacao": "nao predominante neste lote",
+    "programa": "pode sobrepor-se a chamada de patrocinio",
+    "noticia_institucional": "excluida no crawler (DENY_PATH)",
+    "pagina_generica": "filtrada por _listing_candidate",
+    "contato_menu": "filtrada"
+  },
+  "nota_gate": "Antes do relaxamento local, opportunity_gate rejeitava por pontuacao baixa; apos _petrobras_soft_continue + calibrate_petrobras_extras os itens deste bruto passam."
+}

@@ -1,0 +1,34 @@
+{
+  "data": "2026-05-01",
+  "fonte": "iarpa",
+  "respostas": {
+    "1_crawler_roda": true,
+    "2_output_bruto_existe": true,
+    "3_quantidade_itens_brutos_pos_correcao": 8,
+    "4_links_sao_oportunidades_reais": "Sim, na versão corrigida: registros Grants.gov (oppId) com título/código/prazos; nenhum item é apenas o hub /research-programs.",
+    "5_research_programs_como_fallback": "Antes sim: o código antigo usava _fallback_items() com URL exata https://www.iarpa.gov/research-programs (fallback_public_index), gerando 1 item hub. Após correção, o fallback hub foi removido.",
+    "6_links_detalhe_em_research_programs": "A listagem HTML contém âncoras (ex. engage-with-us/proposers-days); páginas com slug /research-programs/<programa> são o alvo do scrape, mas o feed estável veio da API Grants.gov.",
+    "7_opportunities_solicitations_baa_funding": "Sim no catálogo público Grants.gov: synopsis/FOA com palavras-chave IARPA e programas IC (ex. ICCAE ODNI). O site iarpa.gov descreve BAAs e Proposers' Days; oportunidades ativas/arquivadas aparecem em Grants.gov.",
+    "8_sitemap_rss": "Não foi integrado sitemap/RSS no crawler; Grants.gov search2 e listagem research-programs foram usados como fontes controladas.",
+    "9_documentos_anexos": "Itens Grants.gov: metadado docType (synopsis etc.); PDFs adicionais costumam estar na página view-opportunity no Grants.gov ou SAM.gov quando referenciado. O scrape HTML pode anexar links em documentos[] quando existem na página de detalhe.",
+    "10_por_que_opportunity_gate_rejeitou": "O item único era o hub /research-programs (ou conteúdo genérico sem oportunidade concreta): pouca evidência de chamada/BAA/código, classificável como índice institucional — o gate marcou oportunidade não evidenciada / pontuação abaixo do mínimo."
+  },
+  "causa_raiz": [
+    "Parse incorreto da resposta Grants.gov (campos opportunityTitle vs title).",
+    "Fallback que gravava https://www.iarpa.gov/research-programs como único item."
+  ],
+  "pastas_audit": {
+    "retransform_official_link_only_test": "audit_reports_access/retransform_official_link_only_test (existia no repo; resumo de teste anterior com nato_diana+iarpa)",
+    "lote2_fix_iarpa": "audit_reports_blocked_sources/lote2_fix_iarpa (gerado após correção)"
+  },
+  "readiness_recomendacao": "ready_with_notes",
+  "readiness_justificativa": "Transformados > 0; itens são oportunidades reais no Grants.gov (códigos, datas, agência); hub /research-programs não é salvo; classificação local iarpa calibra taxonomia; revisar manualmente mistura Army Materiel Command vs marca IARPA no texto da agência; archived/posted conforme Grants.gov; official_link_only só deve aparecer com barreira técnica — com HTML+metadados dos Grants, tende a não ser necessário.",
+  "nao_executado_por_pedido": ["loader_apply", "supabase", "migration", "opportunity_gate_global"],
+  "pipeline_local_2026_05_02": {
+    "retransform_lote2_fix_iarpa": {"itens_brutos": 8, "itens_transformados": 8, "rejeitados": 0},
+    "audit_semantic_flags_totais": 0,
+    "audit_docs": {"itens_analisados": 8, "perdas_total": 0, "raw_com_documentos": 0},
+    "audit_official_link_only_total": 0,
+    "calibrate_iarpa": "Aplica-se a todos os itens `programa=IARPA` em ligações Grants.gov, mesmo sem a substring «iarpa» no título (ex. TEI-REX)."
+  }
+}

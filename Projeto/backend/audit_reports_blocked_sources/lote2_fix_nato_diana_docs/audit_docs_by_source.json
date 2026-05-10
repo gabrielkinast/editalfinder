@@ -1,0 +1,63 @@
+[
+  {
+    "fonte": "nato_diana",
+    "arquivo": "nato_diana\\outputs\\nato_diana_editais.json",
+    "itens_amostra": 2,
+    "transformados": 2,
+    "rejeitados": 0,
+    "raw_com_pdf_url": 0,
+    "raw_com_documentos": 0,
+    "transformado_com_pdf_url": 0,
+    "transformado_com_documentos": 0,
+    "payload_com_pdf_url": 0,
+    "payload_com_documentos": 0,
+    "bruto_com_documentos_pdf": 0,
+    "bruto_com_documentos_nao_pdf": 0,
+    "transformado_com_documentos_pdf": 0,
+    "transformado_com_documentos_nao_pdf": 0,
+    "payload_com_documentos_pdf": 0,
+    "payload_com_documentos_nao_pdf": 0,
+    "perdas_pdf": 0,
+    "perdas_nao_pdf": 0,
+    "downloads_falharam": 0,
+    "downloads_sucesso": 0,
+    "links_invalidos": 0,
+    "links_relativos_restantes": 0,
+    "links_quebrados": 0,
+    "duplicados_documentos": 0,
+    "formatos_detectados": {},
+    "losses": [],
+    "download_failures": [],
+    "examples": [
+      {
+        "fonte": "nato_diana",
+        "titulo": "Decision Superiority for NATO Warfighters — DIANA challenge call",
+        "link": "https://www.diana.nato.int/challenges.html",
+        "raw_pdf_url": "",
+        "transformado_pdf_url": "",
+        "payload_pdf_url": "",
+        "raw_docs_n": 0,
+        "transformado_docs_n": 0,
+        "payload_docs_n": 0,
+        "status_download": "nao_baixado",
+        "erro_download": "sem_pdf_url",
+        "docs_transformado_amostra": []
+      },
+      {
+        "fonte": "nato_diana",
+        "titulo": "NATO DIANA — Programme FAQ (challenges, eligibility, portal)",
+        "link": "https://www.diana.nato.int/faq.html",
+        "raw_pdf_url": "",
+        "transformado_pdf_url": "",
+        "payload_pdf_url": "",
+        "raw_docs_n": 0,
+        "transformado_docs_n": 0,
+        "payload_docs_n": 0,
+        "status_download": "nao_baixado",
+        "erro_download": "sem_pdf_url",
+        "docs_transformado_amostra": []
+      }
+    ],
+    "timestamp_utc": "2026-05-02T08:54:39Z"
+  }
+]

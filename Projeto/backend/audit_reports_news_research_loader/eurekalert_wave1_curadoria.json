@@ -1,0 +1,76 @@
+{
+  "gerado_em": "2026-05-05T03:22:00Z",
+  "fonte": "eurekalert_science_filtered",
+  "wave": "eurekalert_wave1",
+  "politica": {
+    "defesa_biologica": "Itens com 'defense' em contexto biológico/agro são válidos para public.pesquisa como pesquisa científica; não são automaticamente ruído e não devem ser marcados como defesa militar sem evidência.",
+    "defesa_militar": "Marcar setor_estrategico/defesa apenas com âncoras explícitas (military, missiles, DARPA, national security, dual-use, etc.).",
+    "defense_ambiguo": "Se só existir a keyword 'defense' como match de interesse e o texto não for nem biológico nem militar → review_manual (build), não rejeição automática no crawl."
+  },
+  "implementacao": {
+    "crawler": "scripts/crawl_news_research_sources.py — removido filtro que rejeitava defense biológico antes do require_any.",
+    "build_taxonomia": "scripts/build_eurekalert_wave1_payloads.py — _apply_eurekalert_wave1_taxonomy, _blob_bio_defense_context, _blob_military_strategic_context, _defense_solo_ambiguous_review"
+  },
+  "itens": [
+    {
+      "link": "https://www.eurekalert.org/news-releases/1126804",
+      "titulo_curto": "New AI model reads DNA sequences to reconstruct ancestry",
+      "data_publicacao": "2026-05-04",
+      "matched_keywords": ["artificial intelligence"],
+      "motivo_passou_filtro": "Keyword forte artificial intelligence + texto sobre IA e genómica.",
+      "classificacao_curadoria": "pesquisa_util",
+      "tipo_pesquisa": "pesquisa_cientifica",
+      "taxonomia_aplicada": {
+        "area_cientifica": ["biologia"],
+        "area_tecnologica": ["ia", "computacao", "biotecnologia"],
+        "setor_estrategico": ["bioeconomia"],
+        "extras.defense_semantica": "nao_aplicavel"
+      },
+      "nota": "Sem marcadores de defesa militar; foco IA/bioinformática."
+    },
+    {
+      "link": "https://www.eurekalert.org/news-releases/1126830",
+      "titulo_curto": "Plants walk a fine line between growth and defense",
+      "data_publicacao": "2026-05-04",
+      "matched_keywords": ["defense"],
+      "motivo_passou_filtro": "Keyword defense no título; contexto salicylic acid / plant immunity / growth.",
+      "classificacao_curadoria": "pesquisa_util",
+      "tipo_pesquisa": "pesquisa_cientifica",
+      "taxonomia_aplicada": {
+        "area_cientifica": ["ciencias_agrarias"],
+        "area_tecnologica": ["agrobiotecnologia", "biotecnologia"],
+        "setor_estrategico": ["agricultura", "bioeconomia"],
+        "extras.defense_semantica": "biologica_agro"
+      },
+      "nota": "Defesa biológica de plantas — mantido no payload; não é defesa militar/dual-use."
+    },
+    {
+      "link": "https://www.eurekalert.org/news-releases/1126833",
+      "titulo_curto": "Flight angles, turbulence, vortex formation (Journal of Aircraft)",
+      "data_publicacao": "2026-05-04",
+      "matched_keywords": ["aircraft", "engineering"],
+      "motivo_passou_filtro": "Aeronáutica / engenharia; texto menciona mísseis e aeronaves rápidas.",
+      "classificacao_curadoria": "pesquisa_util",
+      "tipo_pesquisa": "pesquisa_cientifica",
+      "taxonomia_aplicada": {
+        "area_cientifica": ["engenharia"],
+        "area_tecnologica": ["aeroespacial", "engenharia", "defesa"],
+        "setor_estrategico": ["aeroespacial", "defesa"],
+        "extras.defense_semantica": "militar_dual_use"
+      },
+      "nota": "Âncoras militares/dual-use (missiles) justificam defesa/aeroespacial."
+    }
+  ],
+  "contagens_payload": {
+    "pesquisa": 3,
+    "noticia": 0,
+    "rejected": 0,
+    "review_manual_pipeline": 0
+  },
+  "recomendacao_final": {
+    "apply_staging_ok": true,
+    "justificativa": "Três pesquisas com taxonomia corrigida; plant defense permanece como ciências agrárias/agrobiotech, não como ruído; aeronáutica com mísseis mantém defesa dual-use de forma explícita.",
+    "manter_fonte_experimental": true,
+    "nota": "Sem apply neste repositório; validar dry-run (errors_count=0) antes de qualquer upsert manual."
+  }
+}

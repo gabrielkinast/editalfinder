@@ -1,0 +1,39 @@
+{
+  "data": "2026-05-01",
+  "nota": "Exemplos ilustrativos (bruto + campos-chave após transformação).",
+  "senai": {
+    "exemplo_bruto_listagem": {
+      "titulo": "Smart Factory BNDES (SENAI)",
+      "link": "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/smart-factory-bndes-senai/",
+      "metodo_extracao": "html_listing_detail",
+      "nota": "Item típico: página de categoria com múltiplos editais/chamadas no corpo."
+    },
+    "exemplo_standardizado_campos": {
+      "link": "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/chamada-regional-senai/",
+      "extras_chaves": [
+        "tipo_oportunidade",
+        "tipo_recurso",
+        "documentos",
+        "pdf_url",
+        "opportunity_gate_relaxed",
+        "opportunity_gate_relax_scope"
+      ]
+    }
+  },
+  "softex": {
+    "exemplo_bruto_1": {
+      "titulo": "Inscrições abertas para o Amazônia Geek, programa de formação de talentos em games",
+      "link": "https://softex.br/inscricoes-abertas-para-o-amazonia-geek-programa-de-formacao-de-talentos-em-games/",
+      "descricao_len": 86
+    },
+    "exemplo_bruto_2": {
+      "titulo": "Softex e CAIXA lançam Programa Amazônia Geek para capacitar jovens e mulheres em vulnerabilidade na indústria de games",
+      "link": "https://softex.br/softex-e-caixa-lancam-programa-amazonia-geek-para-capacitar-jovens-e-mulheres-em-vulnerabilidade-na-industria-de-games/",
+      "descricao_len": 118
+    },
+    "exemplo_standardizado": {
+      "validacao_esperada": "itens marcados suspeito / qualidade média ~53 com descrição curta",
+      "documentos": "vazio no bruto; pipeline preserva lista vazia sem perda artificial"
+    }
+  }
+}

@@ -1,0 +1,652 @@
+[
+  {
+    "fonte": "bid_lab",
+    "policy_entry": {},
+    "policy_notes": null,
+    "seed_urls": [
+      "https://bidlab.org/en/call-for-proposals",
+      "https://bidlab.org/en/calls",
+      "https://bidlab.org/en/innovation"
+    ],
+    "primary_classification": "cloudflare_403",
+    "recommended_method": "blocked_access_limited",
+    "readiness_access_tag": "blocked_access_limited",
+    "interpretacao_crawler": "acesso_limitado_waf_ou_robots",
+    "probes": [
+      {
+        "seed_url": "https://bidlab.org/en/call-for-proposals",
+        "robots": {
+          "ok": false,
+          "status_code": 403,
+          "url": "https://bidlab.org/robots.txt",
+          "lines": [
+            "<!DOCTYPE html>",
+            "<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->",
+            "<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]-->",
+            "<!--[if IE 8]>    <html class=\"no-js ie8 oldie\" lang=\"en-US\"> <![endif]-->",
+            "<!--[if gt IE 8]><!--> <html class=\"no-js\" lang=\"en-US\"> <!--<![endif]-->",
+            "<head>",
+            "<title>Attention Required! | Cloudflare</title>",
+            "<meta charset=\"UTF-8\" />",
+            "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />",
+            "<meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\" />",
+            "<meta name=\"robots\" content=\"noindex, nofollow\" />",
+            "<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\" />",
+            "<link rel=\"stylesheet\" id=\"cf_styles-css\" href=\"/cdn-cgi/styles/cf.errors.css\" />",
+            "<!--[if lt IE 9]><link rel=\"stylesheet\" id='cf_styles-ie-css' href=\"/cdn-cgi/styles/cf.errors.ie.css\" /><![endif]-->",
+            "<style>body{margin:0;padding:0}</style>",
+            "<!--[if gte IE 10]><!-->",
+            "<script>",
+            "if (!navigator.cookieEnabled) {",
+            "window.addEventListener('DOMContentLoaded', function () {",
+            "var cookieEl = document.getElementById('cookie-alert');",
+            "cookieEl.style.display = 'block';",
+            "})",
+            "}",
+            "</script>",
+            "<!--<![endif]-->",
+            "</head>",
+            "<body>",
+            "<div id=\"cf-wrapper\">",
+            "<div class=\"cf-alert cf-alert-error cf-cookie-error\" id=\"cookie-alert\" data-translate=\"enable_cookies\">Please enable cookies.</div>",
+            "<div id=\"cf-error-details\" class=\"cf-error-details-wrapper\">",
+            "<div class=\"cf-wrapper cf-header cf-error-overview\">",
+            "<h1 data-translate=\"block_headline\">Sorry, you have been blocked</h1>",
+            "<h2 class=\"cf-subheadline\"><span data-translate=\"unable_to_access\">You are unable to access</span> bidlab.org</h2>",
+            "</div><!-- /.header -->",
+            "<div class=\"cf-section cf-highlight\">",
+            "<div class=\"cf-wrapper\">",
+            "<div class=\"cf-screenshot-container cf-screenshot-full\">",
+            "<span class=\"cf-no-screenshot error\"></span>",
+            "</div>",
+            "</div>",
+            "</div><!-- /.captcha-container -->",
+            "<div class=\"cf-section cf-wrapper\">",
+            "<div class=\"cf-columns two\">",
+            "<div class=\"cf-column\">",
+            "<h2 data-translate=\"blocked_why_headline\">Why have I been blocked?</h2>",
+            "<p data-translate=\"blocked_why_detail\">This website is using a security service to protect itself from online attacks. The action you just performed triggered the security solution. There are several actions that could trigger this block including submitting a certain word or phrase, a SQL command or malformed data.</p>",
+            "</div>",
+            "<div class=\"cf-column\">",
+            "<h2 data-translate=\"blocked_resolve_headline\">What can I do to resolve this?</h2>",
+            "<p data-translate=\"blocked_resolve_detail\">You can email the site owner to let them know you were blocked. Please include what you were doing when this page came up and the Cloudflare Ray ID found at the bottom of this page.</p>",
+            "</div>",
+            "</div>",
+            "</div><!-- /.section -->",
+            "<div class=\"cf-error-footer cf-wrapper w-240 lg:w-full py-10 sm:py-4 sm:px-8 mx-auto text-center sm:text-left border-solid border-0 border-t border-gray-300\">",
+            "<p class=\"text-13\">",
+            "<span class=\"cf-footer-item sm:block sm:mb-1\">Cloudflare Ray ID: <strong class=\"font-semibold\">9f731c3c7ae8b5a4</strong></span>",
+            "<span class=\"cf-footer-separator sm:hidden\">&bull;</span>",
+            "<span id=\"cf-footer-item-ip\" class=\"cf-footer-item hidden sm:block sm:mb-1\">",
+            "Your IP:",
+            "<button type=\"button\" id=\"cf-footer-ip-reveal\" class=\"cf-footer-ip-reveal-btn\">Click to reveal</button>",
+            "<span class=\"hidden\" id=\"cf-footer-ip\">187.60.192.241</span>",
+            "<span class=\"cf-footer-separator sm:hidden\">&bull;</span>",
+            "</span>",
+            "<span class=\"cf-footer-item sm:block sm:mb-1\"><span>Performance &amp; security by</span> <a rel=\"noopener noreferrer\" href=\"https://www.cloudflare.com/5xx-error-landing\" id=\"brand_link\" target=\"_blank\">Cloudflare</a></span>",
+            "</p>",
+            "<script>(function(){function d(){var b=a.getElementById(\"cf-footer-item-ip\"),c=a.getElementById(\"cf-footer-ip-reveal\");b&&\"classList\"in b&&(b.classList.remove(\"hidden\"),c.addEventListener(\"click\",function(){c.classList.add(\"hidden\");a.getElementById(\"cf-footer-ip\").classList.remove(\"hidden\")}))}var a=document;document.addEventListener&&a.addEventListener(\"DOMContentLoaded\",d)})();</script>",
+            "</div><!-- /.error-footer -->",
+            "</div><!-- /#cf-error-details -->",
+            "</div><!-- /#cf-wrapper -->",
+            "<script>",
+            "window._cf_translation = {};",
+            "</script>",
+            "</body>",
+            "</html>"
+          ],
+          "sitemap_hints": []
+        },
+        "robots_disallows_url": false,
+        "primary_probe": {
+          "status_code": 403,
+          "final_url": "https://bidlab.org/en/call-for-proposals",
+          "bytes": 0,
+          "cloudflare_headers": false,
+          "fetch_error": null
+        },
+        "primary_classification": "cloudflare_403",
+        "feeds": [],
+        "sitemap": {},
+        "json_ld_sample": [],
+        "meta_sample": {},
+        "open_graph_sample": {},
+        "document_links_sample": [],
+        "signals": {
+          "rss_found": false,
+          "sitemap_ok": false,
+          "json_ld_types": [],
+          "meta_keys": [],
+          "open_graph_keys": [],
+          "document_links_n": 0
+        },
+        "probe_alternatives": []
+      }
+    ],
+    "optional_probes": [],
+    "allowed_methods_policy": [],
+    "disallowed_methods_policy": []
+  },
+  {
+    "fonte": "caf",
+    "policy_entry": {},
+    "policy_notes": null,
+    "seed_urls": [
+      "https://www.caf.com/es/trabaja-con-nosotros/convocatorias/",
+      "https://www.caf.com/es/actualidad/convocatorias/",
+      "https://www.caf.com/es/oportunidades-laborales-y-procurement/"
+    ],
+    "primary_classification": "endpoint_quebrado",
+    "recommended_method": "revisar_manualmente",
+    "readiness_access_tag": "ok",
+    "interpretacao_crawler": "crawler_nao_evidenciado_como_quebrado_por_acesso",
+    "probes": [
+      {
+        "seed_url": "https://www.caf.com/es/trabaja-con-nosotros/convocatorias/",
+        "robots": {
+          "ok": false,
+          "error": "HTTPSConnectionPool(host='www.caf.com', port=443): Max retries exceeded with url: /robots.txt (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify faile",
+          "url": "https://www.caf.com/robots.txt",
+          "lines": []
+        },
+        "robots_disallows_url": null,
+        "primary_probe": {
+          "status_code": null,
+          "final_url": null,
+          "bytes": 0,
+          "cloudflare_headers": false,
+          "fetch_error": "HTTPSConnectionPool(host='www.caf.com', port=443): Max retries exceeded with url: /es/trabaja-con-nosotros/convocatorias/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAIL"
+        },
+        "primary_classification": "endpoint_quebrado",
+        "feeds": [],
+        "sitemap": {},
+        "json_ld_sample": [],
+        "meta_sample": {},
+        "open_graph_sample": {},
+        "document_links_sample": [],
+        "signals": {
+          "rss_found": false,
+          "sitemap_ok": false,
+          "json_ld_types": [],
+          "meta_keys": [],
+          "open_graph_keys": [],
+          "document_links_n": 0
+        },
+        "probe_alternatives": []
+      }
+    ],
+    "optional_probes": [],
+    "allowed_methods_policy": [],
+    "disallowed_methods_policy": []
+  },
+  {
+    "fonte": "eic",
+    "policy_entry": {},
+    "policy_notes": null,
+    "seed_urls": [
+      "https://eic.ec.europa.eu/eic-funding-opportunities_en",
+      "https://eic.ec.europa.eu/eic-funding-opportunities/eic-accelerator_en",
+      "https://eic.ec.europa.eu/eic-funding-opportunities/eic-pathfinder_en"
+    ],
+    "primary_classification": "ok_html_publico",
+    "recommended_method": "usar_sitemap",
+    "readiness_access_tag": "ok",
+    "interpretacao_crawler": "crawler_nao_evidenciado_como_quebrado_por_acesso",
+    "probes": [
+      {
+        "seed_url": "https://eic.ec.europa.eu/eic-funding-opportunities_en",
+        "robots": {
+          "ok": true,
+          "status_code": 200,
+          "url": "https://eic.ec.europa.eu/robots.txt",
+          "lines": [
+            "User-agent: *",
+            "Allow: /core/*.css$",
+            "Allow: /core/*.css?",
+            "Allow: /core/*.js$",
+            "Allow: /core/*.js?",
+            "Allow: /core/*.gif",
+            "Allow: /core/*.jpg",
+            "Allow: /core/*.jpeg",
+            "Allow: /core/*.png",
+            "Allow: /core/*.svg",
+            "Allow: /profiles/*.css$",
+            "Allow: /profiles/*.css?",
+            "Allow: /profiles/*.js$",
+            "Allow: /profiles/*.js?",
+            "Allow: /profiles/*.gif",
+            "Allow: /profiles/*.jpg",
+            "Allow: /profiles/*.jpeg",
+            "Allow: /profiles/*.png",
+            "Allow: /profiles/*.svg",
+            "Disallow: /core/",
+            "Disallow: /profiles/",
+            "Disallow: /README.txt",
+            "Disallow: /web.config",
+            "Disallow: /admin/",
+            "Disallow: /comment/reply/",
+            "Disallow: /filter/tips",
+            "Disallow: /node/add/",
+            "Disallow: /search/",
+            "Disallow: /user/register/",
+            "Disallow: /user/password/",
+            "Disallow: /user/login/",
+            "Disallow: /user/logout/",
+            "Disallow: /index.php/admin/",
+            "Disallow: /index.php/comment/reply/",
+            "Disallow: /index.php/filter/tips",
+            "Disallow: /index.php/node/add/",
+            "Disallow: /index.php/search/",
+            "Disallow: /index.php/user/password/",
+            "Disallow: /index.php/user/register/",
+            "Disallow: /index.php/user/login/",
+            "Disallow: /index.php/user/logout/",
+            "Sitemap: https://eic.ec.europa.eu/sitemap.xml"
+          ],
+          "sitemap_hints": [
+            "https://eic.ec.europa.eu/sitemap.xml"
+          ]
+        },
+        "robots_disallows_url": false,
+        "primary_probe": {
+          "status_code": 200,
+          "final_url": "https://eic.ec.europa.eu/eic-funding-opportunities_en",
+          "bytes": 77744,
+          "cloudflare_headers": false,
+          "fetch_error": null
+        },
+        "primary_classification": "ok_html_publico",
+        "feeds": [],
+        "sitemap": {
+          "checked": [
+            {
+              "url": "https://eic.ec.europa.eu/sitemap.xml",
+              "ok": true,
+              "status_code": 200,
+              "loc_count_sample": 1618,
+              "loc_samples": [
+                "https://eic.ec.europa.eu/index_en",
+                "https://eic.ec.europa.eu/news/eic-fund-requests-offers-ai-tool-2020-09-17_en",
+                "https://eic.ec.europa.eu/eic-prizes/eic-horizon-prizes/fuel-sun-artificial-photosynthesis_en",
+                "https://eic.ec.europa.eu/eic-summit-2024/speakers/miet-van-dael_en",
+                "https://eic.ec.europa.eu/eic-summit-2024/speakers/bertrand-wert_en",
+                "https://eic.ec.europa.eu/eic-summit-2024/speakers/vassilis-tsanidis_en",
+                "https://eic.ec.europa.eu/eic-summit-2024/speakers/nathalie-noupadja_en",
+                "https://eic.ec.europa.eu/eic-summit-2024/speakers/mandy-chan_en",
+                "https://eic.ec.europa.eu/eic-summit-2024/speakers/rob-van-riet_en",
+                "https://eic.ec.europa.eu/eic-summit-2024/speakers/samira-nik_en",
+                "https://eic.ec.europa.eu/franc-mouwen_en",
+                "https://eic.ec.europa.eu/success-stories/catcher_en",
+                "https://eic.ec.europa.eu/news/ten-finalists-are-running-2024-european-prize-women-innovators-2024-02-20_en",
+                "https://eic.ec.europa.eu/events/webinar-meet-eic-programme-managers-visions-and-paths-under-european-innovation-council-2021-03-26_en",
+                "https://eic.ec.europa.eu/stella-tkatchova_en"
+              ]
+            }
+          ]
+        },
+        "json_ld_sample": [
+          {
+            "@type": "BreadcrumbList",
+            "keys": [
+              "@context",
+              "@type",
+              "itemListElement"
+            ]
+          },
+          {
+            "@type": "CreativeWork",
+            "keys": [
+              "@context",
+              "@type",
+              "about",
+              "description",
+              "name",
+              "publisher",
+              "url"
+            ]
+          }
+        ],
+        "meta_sample": {
+          "description": "EIC funding opportunities",
+          "generator": "Drupal 11 (https://www.drupal.org)",
+          "handheldfriendly": "true",
+          "keywords": "innovation",
+          "mobileoptimized": "width",
+          "og:description": "EIC funding opportunities",
+          "og:determiner": "auto",
+          "og:image": "https://eic.ec.europa.eu/profiles/contrib/ewcms/modules/ewcms_seo/assets/images/ec-socialmedia-fallback.png",
+          "og:image:alt": "European Innovation Council",
+          "og:site_name": "European Innovation Council",
+          "og:title": "EIC Funding opportunities",
+          "og:type": "website",
+          "og:url": "https://eic.ec.europa.eu/eic-funding-opportunities_en",
+          "twitter:card": "summary_large_image",
+          "twitter:description": "EIC funding opportunities",
+          "twitter:image": "https://eic.ec.europa.eu/profiles/contrib/ewcms/modules/ewcms_seo/assets/images/ec-socialmedia-fallback.png",
+          "twitter:image:alt": "European Innovation Council",
+          "twitter:title": "EIC Funding opportunities",
+          "viewport": "width=device-width, initial-scale=1.0"
+        },
+        "open_graph_sample": {
+          "og:determiner": "auto",
+          "og:site_name": "European Innovation Council",
+          "og:type": "website",
+          "og:url": "https://eic.ec.europa.eu/eic-funding-opportunities_en",
+          "og:title": "EIC Funding opportunities",
+          "og:description": "EIC funding opportunities",
+          "og:image": "https://eic.ec.europa.eu/profiles/contrib/ewcms/modules/ewcms_seo/assets/images/ec-socialmedia-fallback.png",
+          "og:image:alt": "European Innovation Council"
+        },
+        "document_links_sample": [],
+        "signals": {
+          "rss_found": false,
+          "sitemap_ok": true,
+          "json_ld_types": [
+            "BreadcrumbList",
+            "CreativeWork"
+          ],
+          "meta_keys": [
+            "description",
+            "generator",
+            "handheldfriendly",
+            "keywords",
+            "mobileoptimized",
+            "og:description",
+            "og:determiner",
+            "og:image",
+            "og:image:alt",
+            "og:site_name",
+            "og:title",
+            "og:type",
+            "og:url",
+            "twitter:card",
+            "twitter:description",
+            "twitter:image",
+            "twitter:image:alt",
+            "twitter:title",
+            "viewport"
+          ],
+          "open_graph_keys": [
+            "og:description",
+            "og:determiner",
+            "og:image",
+            "og:image:alt",
+            "og:site_name",
+            "og:title",
+            "og:type",
+            "og:url"
+          ],
+          "document_links_n": 0
+        },
+        "probe_alternatives": []
+      }
+    ],
+    "optional_probes": [],
+    "allowed_methods_policy": [],
+    "disallowed_methods_policy": []
+  },
+  {
+    "fonte": "eureka_network",
+    "policy_entry": {},
+    "policy_notes": null,
+    "seed_urls": [
+      "https://www.eurekanetwork.org/open-calls/",
+      "https://www.eurekanetwork.org/programmes/eurostars/",
+      "https://www.eurekanetwork.org/programmes/globalstars/"
+    ],
+    "primary_classification": "ok_html_publico",
+    "recommended_method": "usar_rss",
+    "readiness_access_tag": "ok",
+    "interpretacao_crawler": "crawler_nao_evidenciado_como_quebrado_por_acesso",
+    "probes": [
+      {
+        "seed_url": "https://www.eurekanetwork.org/open-calls/",
+        "robots": {
+          "ok": true,
+          "status_code": 200,
+          "url": "https://www.eurekanetwork.org/robots.txt",
+          "lines": [
+            "<?xml encoding=\"UTF-8\"><p># START YOAST BLOCK",
+            "User-agent: *",
+            "Disallow:",
+            "Sitemap: https://www.eurekanetwork.org/sitemap_index.xml"
+          ],
+          "sitemap_hints": [
+            "https://www.eurekanetwork.org/sitemap_index.xml"
+          ]
+        },
+        "robots_disallows_url": false,
+        "primary_probe": {
+          "status_code": 200,
+          "final_url": "https://www.eurekanetwork.org/programmes-and-calls/",
+          "bytes": 287193,
+          "cloudflare_headers": true,
+          "fetch_error": null
+        },
+        "primary_classification": "ok_html_publico",
+        "feeds": [
+          {
+            "href": "https://www.eurekanetwork.org/programmes-and-calls/feed/",
+            "type": "application/rss+xml"
+          }
+        ],
+        "sitemap": {
+          "checked": [
+            {
+              "url": "https://www.eurekanetwork.org/sitemap_index.xml",
+              "ok": true,
+              "status_code": 200,
+              "loc_count_sample": 7,
+              "loc_samples": [
+                "https://www.eurekanetwork.org/post-sitemap.xml",
+                "https://www.eurekanetwork.org/page-sitemap.xml",
+                "https://www.eurekanetwork.org/programmes-sitemap.xml",
+                "https://www.eurekanetwork.org/programm-resources-sitemap.xml",
+                "https://www.eurekanetwork.org/impact-sitemap.xml",
+                "https://www.eurekanetwork.org/resources-sitemap.xml",
+                "https://www.eurekanetwork.org/country-sitemap.xml"
+              ]
+            }
+          ]
+        },
+        "json_ld_sample": [
+          {
+            "@type": null,
+            "keys": [
+              "@context",
+              "@graph"
+            ]
+          }
+        ],
+        "meta_sample": {
+          "description": "Eureka",
+          "generator": "WP Rocket 3.19.3",
+          "msapplication-tileimage": "https://www.eurekanetwork.org/wp-content/uploads/2025/08/cropped-favicon-eureka-270x270.png",
+          "og:image": "https://www.eurekanetwork.org/wp-content/uploads/2025/08/Untitled-design.png",
+          "og:image:height": "627",
+          "og:image:type": "image/png",
+          "og:image:width": "1200",
+          "og:locale": "en_GB",
+          "og:site_name": "Eureka Network",
+          "og:title": "Programmes Archive",
+          "og:type": "website",
+          "og:url": "https://www.eurekanetwork.org/programmes-and-calls/",
+          "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+          "twitter:card": "summary_large_image",
+          "twitter:site": "@eureka_network",
+          "viewport": "width=device-width, initial-scale=1"
+        },
+        "open_graph_sample": {
+          "og:locale": "en_GB",
+          "og:type": "website",
+          "og:title": "Programmes Archive",
+          "og:url": "https://www.eurekanetwork.org/programmes-and-calls/",
+          "og:site_name": "Eureka Network",
+          "og:image": "https://www.eurekanetwork.org/wp-content/uploads/2025/08/Untitled-design.png",
+          "og:image:width": "1200",
+          "og:image:height": "627",
+          "og:image:type": "image/png"
+        },
+        "document_links_sample": [],
+        "signals": {
+          "rss_found": true,
+          "sitemap_ok": true,
+          "json_ld_types": [],
+          "meta_keys": [
+            "description",
+            "generator",
+            "msapplication-tileimage",
+            "og:image",
+            "og:image:height",
+            "og:image:type",
+            "og:image:width",
+            "og:locale",
+            "og:site_name",
+            "og:title",
+            "og:type",
+            "og:url",
+            "robots",
+            "twitter:card",
+            "twitter:site",
+            "viewport"
+          ],
+          "open_graph_keys": [
+            "og:image",
+            "og:image:height",
+            "og:image:type",
+            "og:image:width",
+            "og:locale",
+            "og:site_name",
+            "og:title",
+            "og:type",
+            "og:url"
+          ],
+          "document_links_n": 0
+        },
+        "probe_alternatives": []
+      }
+    ],
+    "optional_probes": [],
+    "allowed_methods_policy": [],
+    "disallowed_methods_policy": []
+  },
+  {
+    "fonte": "fonplata",
+    "policy_entry": {},
+    "policy_notes": null,
+    "seed_urls": [
+      "https://www.fonplata.org/es/oportunidades",
+      "https://www.fonplata.org/es/oportunidades/reclutamiento-de-personal",
+      "https://www.fonplata.org/es/adquisiciones"
+    ],
+    "primary_classification": "captcha",
+    "recommended_method": "usar_meta_tags",
+    "readiness_access_tag": "blocked_access_limited",
+    "interpretacao_crawler": "destino_exige_login_ou_captcha_publico",
+    "probes": [
+      {
+        "seed_url": "https://www.fonplata.org/es/oportunidades",
+        "robots": {
+          "ok": false,
+          "status_code": 403,
+          "url": "https://www.fonplata.org/robots.txt",
+          "lines": [
+            "<html>",
+            "<head><title>403 Forbidden</title></head>",
+            "<body>",
+            "<center><h1>403 Forbidden</h1></center>",
+            "<hr><center>nginx</center>",
+            "</body>",
+            "</html>",
+            "<!-- a padding to disable MSIE and Chrome friendly error page -->",
+            "<!-- a padding to disable MSIE and Chrome friendly error page -->",
+            "<!-- a padding to disable MSIE and Chrome friendly error page -->",
+            "<!-- a padding to disable MSIE and Chrome friendly error page -->",
+            "<!-- a padding to disable MSIE and Chrome friendly error page -->",
+            "<!-- a padding to disable MSIE and Chrome friendly error page -->"
+          ],
+          "sitemap_hints": []
+        },
+        "robots_disallows_url": false,
+        "primary_probe": {
+          "status_code": 200,
+          "final_url": "https://www.fonplata.org/es/oportunidades",
+          "bytes": 81545,
+          "cloudflare_headers": false,
+          "fetch_error": null
+        },
+        "primary_classification": "captcha",
+        "feeds": [],
+        "sitemap": {
+          "checked": [
+            {
+              "url": "https://www.fonplata.org/sitemap.xml",
+              "ok": false,
+              "status_code": 404,
+              "loc_count_sample": 0,
+              "loc_samples": []
+            },
+            {
+              "url": "https://www.fonplata.org/sitemap_index.xml",
+              "ok": false,
+              "status_code": 404,
+              "loc_count_sample": 0,
+              "loc_samples": []
+            },
+            {
+              "url": "https://www.fonplata.org/wp-sitemap.xml",
+              "ok": false,
+              "status_code": 404,
+              "loc_count_sample": 0,
+              "loc_samples": []
+            }
+          ]
+        },
+        "json_ld_sample": [],
+        "meta_sample": {
+          "abstract": "FONPLATA es un Banco de Desarrollo conformado por cinco países: Argentina, Bolivia, Brasil, Paraguay y Uruguay, cuya principal misión es apoyar la integración de los países miembros para lograr un desarrollo armónico e inclusivo, mediante operaciones de crédito y recursos no reembolsables del sector público.",
+          "description": "FONPLATA es un Banco de Desarrollo conformado por cinco países: Argentina, Bolivia, Brasil, Paraguay y Uruguay, cuya principal misión es apoyar la integración de los países miembros para lograr un desarrollo armónico e inclusivo, mediante operaciones de crédito y recursos no reembolsables del sector público.",
+          "handheldfriendly": "true",
+          "mobileoptimized": "width",
+          "twitter:card": "summary_large_image",
+          "twitter:creator": "@fonplata",
+          "twitter:description": "FONPLATA es un Banco de Desarrollo conformado por cinco países: Argentina, Bolivia, Brasil, Paraguay y Uruguay, cuya principal misión es apoyar la integración de los países miembros para lograr un desarrollo armónico e inclusivo, mediante operaciones de crédito y recursos no reembolsables del sector público.",
+          "twitter:image": "https://www.fonplata.org/sites/default/files/glazed-cms-media/institucional.jpg",
+          "twitter:image:alt": "FONPLATA",
+          "twitter:site:id": "@Fonplata",
+          "twitter:title": "Oportunidades | FONPLATA",
+          "twitter:url": "https://www.fonplata.org/es/oportunidades",
+          "viewport": "width=device-width, initial-scale=1.0"
+        },
+        "open_graph_sample": {},
+        "document_links_sample": [],
+        "signals": {
+          "rss_found": false,
+          "sitemap_ok": false,
+          "json_ld_types": [],
+          "meta_keys": [
+            "abstract",
+            "description",
+            "handheldfriendly",
+            "mobileoptimized",
+            "twitter:card",
+            "twitter:creator",
+            "twitter:description",
+            "twitter:image",
+            "twitter:image:alt",
+            "twitter:site:id",
+            "twitter:title",
+            "twitter:url",
+            "viewport"
+          ],
+          "open_graph_keys": [],
+          "document_links_n": 0
+        },
+        "probe_alternatives": []
+      }
+    ],
+    "optional_probes": [],
+    "allowed_methods_policy": [],
+    "disallowed_methods_policy": []
+  }
+]

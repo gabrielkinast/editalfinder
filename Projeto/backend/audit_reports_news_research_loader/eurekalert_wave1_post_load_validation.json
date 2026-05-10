@@ -1,0 +1,284 @@
+{
+  "gerado_em": "2026-05-09T06:13:35Z",
+  "staging_flag": true,
+  "source": "eurekalert_science_filtered",
+  "wave": "eurekalert_wave1",
+  "payload_paths": {
+    "noticia": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_news_research_loader\\eurekalert_wave1_payload_noticia.json",
+    "pesquisa": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_news_research_loader\\eurekalert_wave1_payload_pesquisa.json",
+    "review": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_news_research_loader\\eurekalert_wave1_review_candidates.json",
+    "rejected": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_news_research_loader\\eurekalert_wave1_rejected.json"
+  },
+  "expected_counts": {
+    "noticia": 0,
+    "pesquisa": 1,
+    "review_candidates_json": 0,
+    "rejected_json": 0
+  },
+  "ok": false,
+  "checks": [
+    {
+      "name": "payload_links_noticia_unicos",
+      "ok": true,
+      "detail": {
+        "count": 0,
+        "unique": 0
+      }
+    },
+    {
+      "name": "payload_links_pesquisa_unicos",
+      "ok": true,
+      "detail": {
+        "count": 1,
+        "unique": 1
+      }
+    },
+    {
+      "name": "payload_sem_overlap_noticia_pesquisa",
+      "ok": true,
+      "detail": {
+        "overlap": []
+      }
+    },
+    {
+      "name": "review_payload_legivel",
+      "ok": true,
+      "detail": {
+        "path": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_news_research_loader\\eurekalert_wave1_review_candidates.json",
+        "count": 0
+      }
+    },
+    {
+      "name": "rejected_payload_legivel",
+      "ok": true,
+      "detail": {
+        "path": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_news_research_loader\\eurekalert_wave1_rejected.json",
+        "count": 0
+      }
+    },
+    {
+      "name": "supabase_conexao",
+      "ok": true,
+      "detail": "cliente criado (apenas leituras)"
+    },
+    {
+      "name": "noticia_count_igual_esperado",
+      "ok": true,
+      "detail": {
+        "esperado": 0,
+        "encontrados": 0,
+        "missing": [],
+        "missing_total": 0
+      }
+    },
+    {
+      "name": "pesquisa_count_igual_esperado",
+      "ok": true,
+      "detail": {
+        "esperado": 1,
+        "encontrados": 1,
+        "missing": [],
+        "missing_total": 0
+      }
+    },
+    {
+      "name": "noticia_data_publicacao_preenchida",
+      "ok": true,
+      "detail": {
+        "bad": [],
+        "count": 0
+      }
+    },
+    {
+      "name": "noticia_resumo_preenchido",
+      "ok": true,
+      "detail": {
+        "bad": [],
+        "count": 0
+      }
+    },
+    {
+      "name": "noticia_extras_jsonb_objeto",
+      "ok": true,
+      "detail": {
+        "bad": [],
+        "count": 0
+      }
+    },
+    {
+      "name": "noticia_arrays_nao_string",
+      "ok": true,
+      "detail": {
+        "bad": [],
+        "count": 0
+      }
+    },
+    {
+      "name": "noticia_sem_tipo_pesquisa_incoerente_em_extras",
+      "ok": true,
+      "detail": {
+        "bad": [],
+        "count": 0
+      }
+    },
+    {
+      "name": "pesquisa_data_publicacao_preenchida",
+      "ok": true,
+      "detail": {
+        "bad": [],
+        "count": 0
+      }
+    },
+    {
+      "name": "pesquisa_descricao_preenchida",
+      "ok": true,
+      "detail": {
+        "bad": [],
+        "count": 0
+      }
+    },
+    {
+      "name": "pesquisa_extras_jsonb_objeto",
+      "ok": true,
+      "detail": {
+        "bad": [],
+        "count": 0
+      }
+    },
+    {
+      "name": "pesquisa_arrays_nao_string",
+      "ok": true,
+      "detail": {
+        "bad": [],
+        "count": 0
+      }
+    },
+    {
+      "name": "nenhum_link_payload_em_public_edital",
+      "ok": true,
+      "detail": {
+        "edital_rows_matching_links": 0
+      }
+    },
+    {
+      "name": "review_candidates_nao_sobrepoe_payload_de_carga",
+      "ok": true,
+      "detail": {
+        "overlap": []
+      }
+    },
+    {
+      "name": "rejected_nao_sobrepoe_payload_de_carga",
+      "ok": true,
+      "detail": {
+        "overlap": []
+      }
+    },
+    {
+      "name": "review_candidates_ignorados_sem_linha_noticia_nem_pesquisa",
+      "ok": true,
+      "detail": {
+        "presentes_na_bd_indevidamente": [],
+        "count": 0
+      }
+    },
+    {
+      "name": "rejected_ignorados_sem_linha_noticia_nem_pesquisa",
+      "ok": true,
+      "detail": {
+        "presentes_na_bd_indevidamente": [],
+        "count": 0
+      }
+    },
+    {
+      "name": "eurekalert_esperado_0_noticia_3_pesquisa_0_review_0_rejected",
+      "ok": false,
+      "detail": {
+        "noticia_payload": 0,
+        "pesquisa_payload": 1,
+        "review_json": 0,
+        "rejected_json": 0
+      }
+    },
+    {
+      "name": "eurekalert_fonte_experimental_em_config",
+      "ok": true,
+      "detail": {
+        "status": "experimental_wave",
+        "config": "D:\\Computational_Physics\\My Projects\\edital\\config\\news_research_sources.json"
+      }
+    },
+    {
+      "name": "eurekalert_bio_agro_sem_defesa_militar_indevida",
+      "ok": true,
+      "detail": {
+        "links": [],
+        "nota": "Quando extras.defense_semantica=biologica_agro, setor/area não devem conter defesa militar/dual-use/Pentagon/etc."
+      }
+    },
+    {
+      "name": "eurekalert_fonte_recurso_bd",
+      "ok": true,
+      "detail": {
+        "esperado": "eurekalert_science_filtered",
+        "links_errados": []
+      }
+    },
+    {
+      "name": "eurekalert_extras_eurekalert_filtered",
+      "ok": true,
+      "detail": {
+        "sem_flag": []
+      }
+    },
+    {
+      "name": "vw_noticias_front_contem_todos_links_noticia",
+      "ok": true,
+      "detail": {
+        "detail": "sem_links_noticia_no_payload"
+      }
+    },
+    {
+      "name": "vw_pesquisas_front_contem_todos_links_pesquisa",
+      "ok": true,
+      "detail": {
+        "esperado_links": 1,
+        "vistos_na_view": 1,
+        "missing": []
+      }
+    },
+    {
+      "name": "vw_noticias_front_consultavel",
+      "ok": true,
+      "detail": {
+        "ok": true,
+        "erro": "",
+        "amostra_rows": 5
+      }
+    },
+    {
+      "name": "vw_pesquisas_front_consultavel",
+      "ok": true,
+      "detail": {
+        "ok": true,
+        "erro": "",
+        "amostra_rows": 5
+      }
+    }
+  ],
+  "loader_summary_alignment": {
+    "path": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_news_research_loader\\load_news_research_summary.json",
+    "alinhado": true,
+    "wave_ficheiro": "eurekalert_wave1",
+    "source_ficheiro": "eurekalert_science_filtered",
+    "would_upsert_noticia": 0,
+    "would_upsert_pesquisa": 1,
+    "expected_noticia": 0,
+    "expected_pesquisa": 1,
+    "nota": "Referência ao último load_news_research_summary.json; pode não coincidir se a última execução foi outra fonte/onda."
+  },
+  "output_paths": {
+    "json": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_news_research_loader\\eurekalert_wave1_post_load_validation.json",
+    "markdown": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_news_research_loader\\eurekalert_wave1_post_load_validation.md"
+  }
+}

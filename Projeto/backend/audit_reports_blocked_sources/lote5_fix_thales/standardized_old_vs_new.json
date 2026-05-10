@@ -1,0 +1,57 @@
+{
+  "data_auditoria": "2026-05-03T22:33:08Z",
+  "fontes": [
+    {
+      "fonte": "thales_suppliers",
+      "old_vs_new": {
+        "old_count": 0,
+        "new_count": 4,
+        "delta_count": 4,
+        "old_links_now_missing": [],
+        "new_links_before_missing": [
+          "https://www.thalesgroup.com/en/supplier",
+          "https://www.thalesgroup.com/sites/default/files/2025-06/87212869-ACQ-GRP-EN-006%20-%20Matrice%20EGAPE%20-%20GRAEP%20Matrix%20%283%29.pdf",
+          "https://www.thalesgroup.com/sites/default/files/2025-06/SECURITY%20REQUIREMENTS%20PURCHASING%20T%26Cs%20%281%29_0.pdf",
+          "https://www.thalesgroup.com/sites/default/files/2025-09/THALES%20GENERAL%20TERMS%20AND%20CONDITIONS%20OF%20PURCHASE%20-%2005.05.2025%20%282%29.pdf"
+        ],
+        "core_fields_improved": {
+          "area": {
+            "old": 0,
+            "new": 1,
+            "delta": 1
+          },
+          "tipo_oportunidade": {
+            "old": 0,
+            "new": 4,
+            "delta": 4
+          },
+          "tipo_recurso": {
+            "old": 0,
+            "new": 4,
+            "delta": 4
+          },
+          "perfil_ideal": {
+            "old": 0,
+            "new": 4,
+            "delta": 4
+          },
+          "documentos": {
+            "old": 0,
+            "new": 3,
+            "delta": 3
+          },
+          "pdf_url": {
+            "old": 0,
+            "new": 3,
+            "delta": 3
+          }
+        },
+        "core_fields_worsened": {},
+        "old_documents_count": 0,
+        "new_documents_count": 3,
+        "old_pdf_count": 0,
+        "new_pdf_count": 3
+      }
+    }
+  ]
+}

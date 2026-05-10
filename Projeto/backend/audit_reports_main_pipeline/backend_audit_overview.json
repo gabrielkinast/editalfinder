@@ -1,0 +1,307 @@
+{
+  "audit": {
+    "project": "EditalFinder backend",
+    "generated_at": "2026-05-09",
+    "mode": "read_only_diagnostic",
+    "scope": [
+      "main.py",
+      "main_legacy_pipeline.py",
+      "CORE",
+      "scripts",
+      "config",
+      "migrations",
+      "docs/sql",
+      "audit reports recentes"
+    ],
+    "explicitly_not_done": [
+      "no Supabase access",
+      "no SQL execution",
+      "no migrations",
+      "no crawler execution",
+      "no apply/update/delete",
+      "no schema change",
+      "no opportunity_gate change"
+    ]
+  },
+  "backend_map": {
+    "source_directories_detected": 104,
+    "crawler_pattern": "Diretórios de fonte na raiz, normalmente com main_<fonte>.py ou main-<fonte>.py e outputs/<fonte>_editais.json.",
+    "raw_outputs": "<fonte>/outputs/*.json e *.csv",
+    "legacy_standardized": "CORE/transformer/*_standardized.json",
+    "canonical_loader_standardized": "audit_reports_retransform/standardized/*_standardized.json",
+    "daily_standardized": "audit_reports_main_pipeline/retransform_daily/standardized/*_standardized.json",
+    "news_research_raw": "audit_reports_news_research/raw/*_raw.json",
+    "news_research_standardized": "audit_reports_news_research/standardized/*_standardized.json",
+    "news_research_payloads": "audit_reports_news_research_loader/*_payload_*.json, *_review_candidates.json, *_rejected.json",
+    "loaders": [
+      "CORE/loader.py",
+      "scripts/load_ready_sources.py",
+      "scripts/load_news_research_sources.py"
+    ],
+    "audits": [
+      "scripts/audit_semantic_classification.py",
+      "scripts/audit_docs_pipeline.py",
+      "scripts/audit_source_access_methods.py",
+      "scripts/audit_news_research_pipeline.py",
+      "scripts/validate_database_after_load.py",
+      "scripts/validate_news_research_after_load.py"
+    ],
+    "readiness_config": "config/source_readiness.json",
+    "pipeline_policy_config": "config/pipeline_sources.json",
+    "news_research_config": "config/news_research_sources.json",
+    "schema_and_migrations": [
+      "migrations/*.sql",
+      "docs/sql/schema_consolidado_editalfinder.sql",
+      "docs/sql/check_edital_payload_columns.sql",
+      "migrations/DANGER_RESET_STAGING_SCHEMA.sql"
+    ]
+  },
+  "main_py": {
+    "subcommands": [
+      "status",
+      "list-readiness",
+      "daily",
+      "validate-staging",
+      "apply-edital",
+      "apply-news",
+      "clean-staging"
+    ],
+    "no_args_behavior": "Imprime ajuda e não executa pipeline.",
+    "env_loading": [
+      ".env.staging",
+      ".env.local",
+      ".env",
+      "CORE/.env"
+    ],
+    "env_loading_override": false,
+    "production_guard": "abort_if_production bloqueia EDITALFINDER_ENV=production/prod.",
+    "apply_guard": "Apply exige env staging/local, SUPABASE_URL, service key e EDITALFINDER_ALLOW_STAGING_APPLY truthy; loaders também exigem --staging.",
+    "daily_dry_run": "Seleciona fontes elegíveis, pode rodar crawlers, retransform, auditorias, loader dry-run e news/research dry-run; grava last_run_*.",
+    "daily_apply_staging": "Faz fase dry-run/gates primeiro; se OK e guard seguro, roda loaders com --apply --staging e validações pós-carga por fonte/onda.",
+    "apply_edital": "Pipeline edital isolado; exige --sources e modo --dry-run ou --apply-staging.",
+    "apply_news": "Pipeline news/research para uma fonte/onda; exige --source, --wave e modo.",
+    "validate_staging": "Chama scripts/validate_database_after_load.py por fonte ou corrida única; é leitura no banco, mas requer DB.",
+    "clean_staging": "Hoje só aceita group=credito_onda_a e chama deactivate_removed_credito_onda_a_staging.py.",
+    "flags": [
+      "--report-dir",
+      "--fail-fast",
+      "--continue-on-warning",
+      "--skip-crawl",
+      "--skip-transform",
+      "--sources",
+      "--skip-edital",
+      "--skip-news",
+      "--news-source",
+      "--skip-experimental-news",
+      "--update-canonical-standardized",
+      "--deactivate-removed",
+      "--skip-edital-audits",
+      "--filter-sources",
+      "--source",
+      "--wave",
+      "--group"
+    ],
+    "implementation_style": "Orquestra scripts existentes por subprocess; não reimplementa loader/transformer, mas implementa seleção de fontes, guards e resumo.",
+    "reports": "audit_reports_main_pipeline/last_run_summary.json, last_run_steps.json, last_run_errors.json e last_run_summary.md.",
+    "stable_apply_sources_empty_semantics": "Vazio significa sem restrição adicional: todas as fontes ready + ready_with_notes, menos blocked/review/reprocess e exclude_from_daily.",
+    "stable_apply_sources_empty_risk": "Alto para apply diário porque promoção em source_readiness entra automaticamente no universo de apply."
+  },
+  "edital_pipeline": {
+    "flow": [
+      "Crawler grava <fonte>/outputs/<fonte>_editais.json.",
+      "CORE/transformer.py ou scripts/retransform_all.py normaliza para *_standardized.json.",
+      "taxonomy_filtros, opportunity_gate e official_link_only enriquecem/classificam/bloqueiam ruído.",
+      "scripts/load_ready_sources.py simula ou aplica payloads de audit_reports_retransform/standardized.",
+      "CORE/loader.py mapeia item para public.edital, public.noticia ou public.pesquisa conforme content_routing."
+    ],
+    "upsert": "public.edital faz upsert por link; public.noticia/public.pesquisa também usam link como conflito.",
+    "readiness_policy": {
+      "ready_count": 54,
+      "ready_with_notes_count": 33,
+      "needs_manual_review_count": 6,
+      "blocked_count": 9,
+      "reprocess_after_fix_count": 0,
+      "allowed_for_daily_count": 87
+    },
+    "recently_added_sources": {
+      "bnb": "ready_with_notes",
+      "banco_da_amazonia": "ready_with_notes",
+      "bdmg": "ready_with_notes",
+      "eureka_network": "ready_with_notes",
+      "eic": "ready_with_notes"
+    },
+    "credit_fields_support": "Loader tem pacote EXTENDED_SCHEMA e migration 20260505_add_missing_edital_columns_from_loader_payload.sql cobre campos de crédito como taxa_juros, carencia, prazo_pagamento, linha_credito, modalidade_financiamento, garantias.",
+    "schema_alignment": "Há check SQL específico para colunas do payload, mas depende de execução manual; há risco de docs/schema consolidado ficar atrás do payload real.",
+    "known_fragility": [
+      "EXTENDED_SCHEMA depende de variável de ambiente; sem ela, muitos campos ficam só em extras ou são removidos do payload de upsert.",
+      "CORE/loader.save_detail_tables usa delete nas tabelas auxiliares edital_anexo/edital_extra_campo para reinserção; não apaga public.edital, mas conflita com política geral de evitar DELETE se entendida literalmente.",
+      "content_routing pode mandar itens de standardized de edital para noticia/pesquisa se content_type/hints indicarem conteúdo informativo.",
+      "Crawler failures podem virar warning quando continue_on_warning está ativo; último run teve erros de crawler e ainda recomendação final OK."
+    ]
+  },
+  "news_research_pipeline": {
+    "collection": "scripts/crawl_news_research_sources.py lê config/news_research_sources.json, usa RSS/listing limitado, filtros por data, keywords e enriquecimento HTML controlado.",
+    "payload_builders": [
+      "scripts/build_nasa_wave2_payloads.py",
+      "scripts/build_darpa_news_wave_payloads.py",
+      "scripts/build_iaea_wave1_payloads.py",
+      "scripts/build_eurekalert_wave1_payloads.py"
+    ],
+    "loader": "scripts/load_news_research_sources.py carrega apenas public.noticia e public.pesquisa; review candidates são contados e ignorados.",
+    "prevents_edital": [
+      "Loader dedicado não escreve em public.edital.",
+      "validate_news_research_after_load.py checa nenhum link de payload em public.edital.",
+      "config/news_research_sources.json declara no_edital_from_news_module=true."
+    ],
+    "active_waves": [
+      "nasa_news/nasa_wave2",
+      "darpa_news/darpa_news_wave1",
+      "iaea_news_publications/iaea_wave1",
+      "eurekalert_science_filtered/eurekalert_wave1"
+    ],
+    "experimental": [
+      "eurekalert_science_filtered/eurekalert_wave1"
+    ],
+    "review_for_edital": "Mantido em *_review_candidates.json e não carregado automaticamente.",
+    "rejected": "Opcional em validação pós-carga; IAEA e EurekAlert têm checks de rejected não sobrepor payload e não aparecer em notícia/pesquisa.",
+    "global_validation_gap": "Validação atual é por onda; falta agregador global para noticia, pesquisa, edital e views no mesmo resumo operacional."
+  },
+  "cleanup": {
+    "current_script": "scripts/deactivate_removed_credito_onda_a_staging.py",
+    "input": "audit_reports_credito/credito_brasil_onda_a_removed_links.json",
+    "behavior": "Dry-run por padrão; com --apply --staging faz UPDATE public.edital set ativo=false para pares fonte/link.",
+    "uses_delete": false,
+    "guards": [
+      "--staging",
+      "EDITALFINDER_ENV staging/local",
+      "SUPABASE_URL",
+      "service key",
+      "EDITALFINDER_ALLOW_STAGING_APPLY",
+      "ALLOW_CREDITO_ONDA_A_DEACTIVATE"
+    ],
+    "limitation": "Limitado operacionalmente ao lote credito_onda_a; main.py ainda chama fontes fixas banco_da_amazonia,bdmg.",
+    "risks": [
+      "Filtro do script usa eq('fonte', fonte), enquanto loader canônico usa fonte_recurso em public.edital; pode haver no_match dependendo do schema/view.",
+      "Lista de resíduos é gerada por relatório estático, não por comparação global automática banco ativo vs payload atual.",
+      "Sem rotina geral por fonte/onda, resíduos de outros lotes permanecem manuais."
+    ]
+  },
+  "schema_migrations": {
+    "expected_tables": [
+      "public.edital",
+      "public.noticia",
+      "public.pesquisa",
+      "public.edital_anexo",
+      "public.edital_extra_campo",
+      "public.carga_execucao",
+      "public.edital_historico"
+    ],
+    "views_expected": [
+      "vw_editais_front",
+      "vw_editais_admin",
+      "vw_noticias_front",
+      "vw_pesquisas_front"
+    ],
+    "important_migrations": [
+      "20260430_add_edital_filter_columns.sql",
+      "20260501_create_carga_execucao_and_edital_historico.sql",
+      "20260504_create_noticia_pesquisa_tables.sql",
+      "20260504_add_missing_columns_for_consolidated_schema.sql",
+      "20260504_align_supabase_backend_contract.sql",
+      "20260504_recreate_front_views_staging.sql",
+      "20260505_add_missing_edital_columns_from_loader_payload.sql",
+      "20260505_recreate_edital_views_credito_staging.sql",
+      "DANGER_RESET_STAGING_SCHEMA.sql"
+    ],
+    "reset_exists": true,
+    "reset_risk": "DANGER_RESET_STAGING_SCHEMA.sql contém DROP de tabelas e deve permanecer fora de automação diária.",
+    "check_scripts": [
+      "docs/sql/check_edital_payload_columns.sql",
+      "docs/sql/check_existing_schema.sql",
+      "docs/sql/check_reset_schema.sql"
+    ],
+    "documentation_drift_risk": "Alto/médio: schema_consolidado é documentação e migrations posteriores adicionam campos que podem não estar refletidos com a mesma fidelidade."
+  },
+  "recent_reports": {
+    "last_main_run": {
+      "timestamp": "2026-05-09T01:11:26.095994+00:00",
+      "mode": "apply-staging",
+      "recommendation": "OK",
+      "steps_total": 199,
+      "steps_success": 195,
+      "steps_error": 4,
+      "last_run_errors_json_count": 0,
+      "edital_sources": 87,
+      "edital_would_upsert_total": 1219,
+      "edital_apply_inserted": 957,
+      "edital_apply_updated": 128,
+      "loader_destination_counts": {
+        "edital": 1139,
+        "noticia": 60,
+        "pesquisa": 20
+      },
+      "warnings": [
+        "Crawler falhou: bae_systems_suppliers",
+        "Crawler falhou: china_nsfc",
+        "Crawler falhou: fapergs"
+      ],
+      "failed_steps": [
+        "crawl:bae_systems_suppliers",
+        "crawl:china_nsfc",
+        "crawl:fapergs",
+        "validate_news_research_after_load:eurekalert_science_filtered:eurekalert_wave1"
+      ]
+    },
+    "news_research_latest_loader_summary": {
+      "timestamp": "2026-05-09T06:09:48Z",
+      "mode": "apply",
+      "source": "eurekalert_science_filtered",
+      "wave": "eurekalert_wave1",
+      "apply_status": "applied",
+      "would_upsert_noticia": 0,
+      "would_upsert_pesquisa": 1,
+      "errors_count": 0
+    },
+    "credit_reports": {
+      "onda_a_removed_links_total": 22,
+      "onda_a_major_removed_source": "bdmg",
+      "multilateral_onda_b_dryrun_apply": false,
+      "multilateral_onda_b_ready_with_notes_sources_seen": [
+        "eic",
+        "eureka_network"
+      ]
+    }
+  },
+  "priority_recommendations": [
+    {
+      "priority": 1,
+      "title": "Validação global pós-carga",
+      "reason": "Último main teve recomendação OK mesmo com validação EurekAlert falhando e errors.json vazio."
+    },
+    {
+      "priority": 2,
+      "title": "Detector geral de resíduos",
+      "reason": "Hoje só há diff manual/estático para crédito Onda A."
+    },
+    {
+      "priority": 3,
+      "title": "Desativação segura geral",
+      "reason": "Generalizar ativo=false por fonte/link, corrigindo fonte_recurso vs fonte e mantendo guard extra."
+    },
+    {
+      "priority": 4,
+      "title": "Travar stable_apply_sources vazio",
+      "reason": "Vazio como 'todas as fontes elegíveis' é perigoso para apply automático."
+    },
+    {
+      "priority": 5,
+      "title": "Relatório operacional diário único",
+      "reason": "Precisa destacar falhas, warnings, applies, validações, resíduos e saúde por tabela."
+    },
+    {
+      "priority": 6,
+      "title": "Contrato de qualidade para frontend",
+      "reason": "Views devem ocultar ativo=false, suspeitos e prazos vencidos ou expor flags claras para badges/filtros."
+    }
+  ]
+}

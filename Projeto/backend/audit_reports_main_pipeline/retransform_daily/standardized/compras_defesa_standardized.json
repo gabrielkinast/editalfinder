@@ -1,0 +1,128 @@
+[
+  {
+    "titulo": "Compras.gov Defesa - Índice de Licitações",
+    "descricao": "Página pública de referência para licitações e compras governamentais com possível escopo de defesa.",
+    "link": "https://www.gov.br/compras/pt-br",
+    "fonte": "Compras.gov Defesa",
+    "data_publicacao": null,
+    "fim_inscricao": null,
+    "situacao": "Em andamento",
+    "valor": null,
+    "programa": "contratacoes_publicas_defesa",
+    "acao": "licitacao",
+    "tipo_recurso": "contrato_publico",
+    "regiao": "Sudeste",
+    "extras": {
+      "regiao": "brasil",
+      "setor_estrategico": [
+        "defesa_industrial",
+        "aeroespacial",
+        "defesa"
+      ],
+      "subtema": [
+        "licitacoes_defesa"
+      ],
+      "area_cientifica": [],
+      "area_tecnologica": [],
+      "tipo_oportunidade": "licitacao",
+      "empresa_prime": "",
+      "orgao_contratante": "Governo Federal",
+      "pais": "Brasil",
+      "idioma_original": "",
+      "titulo_original": "",
+      "descricao_original": "",
+      "titulo_traduzido": "",
+      "descricao_traduzida": "",
+      "orgao_responsavel": "",
+      "instituicao": "",
+      "numero_edital": "",
+      "numero_chamada": "",
+      "numero_processo": "",
+      "codigo_oportunidade": "",
+      "modalidade": "",
+      "publico_alvo": [],
+      "elegibilidade": "",
+      "objetivo": "",
+      "escopo": "",
+      "itens_financiaveis": [],
+      "itens_nao_financiaveis": [],
+      "valor_total": "",
+      "valor_por_projeto": "",
+      "contrapartida": "",
+      "prazo_execucao": "",
+      "cronograma": [],
+      "documentos": [],
+      "pdf_url": "",
+      "pdf_texto_extraido": "",
+      "pdf_resumo": "",
+      "data_publicacao_original": "",
+      "fim_inscricao_original": "",
+      "prazo_submissao_original": "",
+      "metodo_extracao": "fallback_public_index",
+      "url_listagem": "https://www.gov.br/compras/pt-br",
+      "url_detalhe": "https://www.gov.br/compras/pt-br",
+      "nivel_sensibilidade": "publico_institucional",
+      "contexto_sensivel_detectado": false,
+      "marcadores_contexto_sensivel": [],
+      "origem": "https://www.gov.br/compras/pt-br",
+      "palavras_chave_detectadas": [
+        "edital",
+        "licitacao"
+      ],
+      "necessita_traducao": false,
+      "observacoes": "Dataset de dados abertos indisponível ou sem itens no momento.",
+      "tipo_recurso": "contrato_publico",
+      "natureza_recurso": "contratacao_publica",
+      "opportunity_gate_category": "pagina_generica",
+      "content_type": "edital",
+      "destination_table": "edital",
+      "thematic_tags": [
+        "aeroespacial",
+        "defesa",
+        "industria"
+      ],
+      "thematic_confidence": 0.65,
+      "public_investment_scope": true,
+      "content_hash": "70171ada4017611c7e7114f4771572a3956f6a1a1cffc51003bd360e8c36f353",
+      "area": [],
+      "setor_economico": [
+        "aeroespacial",
+        "defesa"
+      ],
+      "classificacao_confianca": "media",
+      "metodo_classificacao": "transformer_keyword",
+      "qualidade_dado": 53,
+      "qualidade_nivel": "medio",
+      "qualidade_flags": [
+        "titulo_ok",
+        "link_http",
+        "tipo_recurso"
+      ],
+      "qualidade_problemas": [
+        "descricao_curta",
+        "prazo_ausente",
+        "valor_ausente"
+      ],
+      "validacao_status": "incompleto",
+      "validacao_warnings": [
+        "descricao_curta",
+        "prazo_ausente",
+        "valor_ausente"
+      ],
+      "validacao_erros": [],
+      "field_confidence": {
+        "titulo": 0.95,
+        "descricao": 0.55,
+        "prazo": 0.0,
+        "valor": 0.0,
+        "documentos": 0.0,
+        "orgao": 0.85,
+        "tipo_recurso": 0.8,
+        "pdf_enrichment": 0.0
+      },
+      "extraction_richness": 0.394,
+      "content_type_detectado": "licitacao"
+    },
+    "content_type": "edital"
+  }
+]

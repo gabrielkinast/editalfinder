@@ -1,0 +1,63 @@
+{
+  "data_execucao": "2026-05-10T22:57:27Z",
+  "modo": "dry_run",
+  "staging_flag": false,
+  "apply_requested": false,
+  "input_dir": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_main_pipeline\\investimentos_wave1_portais\\standardized",
+  "output_dir": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_main_pipeline\\investimentos_wave1_portais_dryrun",
+  "sources_selected": [
+    "apex",
+    "bndes",
+    "eic"
+  ],
+  "total_items": 15,
+  "would_upsert_total": 15,
+  "inserted": 0,
+  "updated": 0,
+  "upserted_total": 0,
+  "skipped": 0,
+  "errors_count": 0,
+  "map_errors_count": 0,
+  "apply_errors_count": 0,
+  "errors_total_written": 0,
+  "by_source": {
+    "apex": {
+      "would_upsert": 5,
+      "errors": 0
+    },
+    "bndes": {
+      "would_upsert": 5,
+      "errors": 0
+    },
+    "eic": {
+      "would_upsert": 5,
+      "errors": 0
+    }
+  },
+  "portal_tipo_counts": {
+    "hub": 11,
+    "procurement": 3,
+    "registration": 1
+  },
+  "validacao_status_counts": {
+    "incompleto": 15
+  },
+  "frontend_section_counts": {
+    "investimentos": 15
+  },
+  "mostrar_no_radar_true_count": 0,
+  "mostrar_em_fornecedores_true_count": 0,
+  "mostrar_em_investimentos_true_count": 15,
+  "environment_guard": {
+    "editalfinder_env": "staging",
+    "has_supabase_url": true,
+    "has_service_key": true,
+    "has_anon_key": true,
+    "has_allow_staging_apply": false,
+    "url_host_masked": "dof***.co",
+    "block_reason": ""
+  },
+  "apply_status": "dry_run_only",
+  "apply_block_reason": "",
+  "nota": "Nenhuma escrita no Supabase."
+}

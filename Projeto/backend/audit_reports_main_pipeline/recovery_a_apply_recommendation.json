@@ -1,0 +1,10 @@
+{
+  "timestamp": "2026-05-10T04:17:44Z",
+  "executar_apply": false,
+  "motivo": "Recovery A apenas dry-run local; sem Supabase",
+  "proximos_passos_sugeridos": [
+    "Repetir crawl dod_sbir_sttr quando API sbir.gov deixar de responder 429 para enriquecer prazos/titulos",
+    "Pesquisar sitemap/listagem procurement.esa.int para esa_star sem SSO",
+    "Dry-run loader oficial sobre standardized canónico quando decidir promover (sem --apply)"
+  ]
+}

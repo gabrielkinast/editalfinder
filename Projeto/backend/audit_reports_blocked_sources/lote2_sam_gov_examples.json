@@ -1,0 +1,40 @@
+{
+  "nota": "Exemplos ilustrativos. O bruto atual no repo pode estar vazio ([]); os dois primeiros blocos descrevem o estado legado antes da reescrita do crawler.",
+  "aceitos_esperados_apos_api_filtrada": [
+    {
+      "descricao": "Registo típico devolvido pela API após filtros locais (shape esperado).",
+      "titulo": "(ex.) Broad Agency Announcement — Advanced Sensors for …",
+      "link": "https://sam.gov/opp/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/view",
+      "notice_id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+      "metodo_extracao": "sam_gov_opportunities_api_v2",
+      "campos": [
+        "sam_gov_department",
+        "sam_gov_notice_type",
+        "sam_gov_naics",
+        "sam_gov_relevance",
+        "documentos (resourceLinks)"
+      ]
+    }
+  ],
+  "rejeitados_por_ruido_ou_sem_notice": [
+    {
+      "titulo": "SAM.gov Contract Opportunities",
+      "link": "https://sam.gov/content/opportunities",
+      "motivo": "Hub/listagem institucional, sem noticeId nem /opp/ — não é oportunidade atómica."
+    }
+  ],
+  "rejeitados_por_compra_generica": [
+    {
+      "descricao": "Itens que passem na API mas caiam em termos negativos dominantes (ex. custodial + ausência de marcadores P&D) são descartados em passes_acceptance / classify_sam_gov_relevance em scope_policy.py.",
+      "exemplo_titulo_ficticio": "Custodial Services — Region 3",
+      "motivo": "negative_terms_strong + sem termo positivo suficiente"
+    }
+  ],
+  "rejeitados_por_pagina_busca_ou_listagem": [
+    {
+      "titulo": "DoD Strategic Capital and Investment Programs",
+      "link": "https://www.business.defense.gov/Programs/",
+      "motivo": "Fallback legado (não-SAM notice); URL fora do padrão sam.gov/opp/ e sem metadados de notice federal."
+    }
+  ]
+}

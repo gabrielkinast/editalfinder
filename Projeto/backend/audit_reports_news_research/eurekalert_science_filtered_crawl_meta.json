@@ -1,0 +1,33 @@
+{
+  "source_id": "eurekalert_science_filtered",
+  "source_name": "EurekAlert (tópicos filtrados, volume baixo)",
+  "method": "rss_or_listing",
+  "seed_urls_used": [
+    "https://www.eurekalert.org/news-releases/browse"
+  ],
+  "max_items": 30,
+  "time_window_months": 12,
+  "raw_total": 1,
+  "within_window_total": 1,
+  "without_date_total": 0,
+  "raw_by_seed_kind": {
+    "mixed": 1
+  },
+  "feed_kind_caps_applied": {},
+  "page_enrich_fetch_total": 1,
+  "errors": [],
+  "theme_filter_stats": {
+    "extracted_total": 1,
+    "skipped_duplicate_link": 0,
+    "rejected_exclude_keyword": 0,
+    "rejected_exclude_medical_generic": 0,
+    "rejected_require_any_keyword": 0,
+    "rejected_feed_kind_cap": 0,
+    "passed_theme_filters": 1,
+    "matched_keyword_counts": {
+      "radiation": 1,
+      "material": 1
+    },
+    "reject_samples": []
+  }
+}

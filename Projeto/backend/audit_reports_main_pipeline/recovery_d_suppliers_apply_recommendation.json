@@ -1,0 +1,15 @@
+{
+  "apply": false,
+  "motivo": "Restrições Recovery D — sem apply automatizado até QA humano.",
+  "pre_checks_ok": true,
+  "recomendacao": [
+    "Aplicar `retransform_all` + payload loader apenas após sinalização em staging.",
+    "Tratar primeiro candidatos deactivate `confianca=high`.",
+    "Não usar DELETE; apenas PATCH ativo onde necessário."
+  ],
+  "nao_executar": [
+    "alterar opportunity_gate global",
+    "mudar readiness oficial em disco nesta ferramenta",
+    "scraping aggressivo ou bypass SSO"
+  ]
+}

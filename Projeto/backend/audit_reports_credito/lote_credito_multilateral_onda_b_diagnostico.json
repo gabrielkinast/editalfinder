@@ -1,0 +1,224 @@
+{
+  "titulo": "Lote Credito/Desenvolvimento — Onda B Multilaterais e Inovacao Internacional",
+  "data": "2026-05-05T22:20Z",
+  "fontes": [
+    "bid_lab",
+    "caf",
+    "fonplata",
+    "eureka_network",
+    "eic"
+  ],
+  "restricoes": "Sem apply, sem Supabase, sem alteracao de schema, sem alterar opportunity_gate global (apenas soft-continue local em transformer para este lote), sem atualizar source_readiness.json.",
+  "pipeline": {
+    "retransform_dir": "audit_reports_credito/lote_credito_multilateral_onda_b_fix",
+    "semantic_dir": "audit_reports_credito/lote_credito_multilateral_onda_b_semantic",
+    "docs_dir": "audit_reports_credito/lote_credito_multilateral_onda_b_docs",
+    "access_dir": "audit_reports_credito/lote_credito_multilateral_onda_b_access"
+  },
+  "resumo_transformacao": {
+    "itens_brutos": 44,
+    "itens_transformados": 40,
+    "itens_rejeitados": 4,
+    "fontes_com_erro_retransform": 0,
+    "nota_ambiente": "retransform_all registou aviso ao carregar perfis Supabase (coluna ausente); dry-run prosseguiu."
+  },
+  "resumo_auditoria_semantica": {
+    "itens_total": 40,
+    "flags_totais_destaque": {
+      "classificacao_muito_ampla": 1
+    },
+    "arquivo": "audit_reports_credito/lote_credito_multilateral_onda_b_semantic/audit_semantic_summary.json"
+  },
+  "resumo_auditoria_docs": {
+    "itens_analisados": 44,
+    "downloads_sucesso": 0,
+    "downloads_falharam": 19,
+    "pdf_skip": true,
+    "arquivo": "audit_reports_credito/lote_credito_multilateral_onda_b_docs/audit_docs_summary.json"
+  },
+  "classificacao_escopo_parte2": {
+    "tipos_oportunidade": [
+      "funding_opportunity",
+      "chamada_publica",
+      "call_for_proposals",
+      "innovation_programme",
+      "startup_programme",
+      "accelerator",
+      "grant",
+      "financiamento",
+      "credito",
+      "procurement",
+      "technical_cooperation",
+      "project_financing",
+      "programa_agregado"
+    ],
+    "tipos_recurso": [
+      "fomento",
+      "grant",
+      "credito",
+      "financiamento",
+      "reembolsavel",
+      "nao_reembolsavel",
+      "equity",
+      "venture",
+      "apoio_inovacao",
+      "cooperacao_tecnica",
+      "oportunidade_fornecedor",
+      "apoio_internacionalizacao"
+    ],
+    "perfil_ideal": [
+      "startup",
+      "empresa",
+      "pequena_empresa",
+      "media_empresa",
+      "universidade",
+      "ICT",
+      "pesquisador",
+      "consorcio",
+      "governo",
+      "municipio",
+      "organizacao_internacional",
+      "instituicao_publica",
+      "fornecedor"
+    ],
+    "setores": [
+      "inovacao",
+      "ciencia_tecnologia",
+      "desenvolvimento_regional",
+      "energia",
+      "sustentabilidade",
+      "clima",
+      "infraestrutura",
+      "cidades",
+      "industria",
+      "digital"
+    ],
+    "regras": [
+      "Edital/public.edital apenas com acao concreta (apply, deadline, formulario, selecao, procurement formal).",
+      "Nao classificar grant/fomento em pagina institucional sem chamada.",
+      "Nao inventar prazo, valor, pais ou status.",
+      "area_tecnologica/setor_estrategico apenas com evidencia textual.",
+      "Pagina agregadora de chamadas: programa_agregado com notas.",
+      "Noticia sobre call encerrada: nao tratar como oportunidade ativa sem evidencia."
+    ]
+  },
+  "calibracao_local": {
+    "taxonomy_filtros": [
+      "_calibrate_multilateral_innovation_core",
+      "calibrate_bid_lab_extras",
+      "calibrate_caf_extras",
+      "calibrate_fonplata_extras",
+      "calibrate_eureka_network_extras",
+      "calibrate_eic_extras"
+    ],
+    "transformer": "opportunity_gate_multilateral_onda_b_soft + dispatch por fonte (sem alterar opportunity_gate global)."
+  },
+  "por_fonte": {
+    "bid_lab": {
+      "crawler": "bid_lab/main_bid_lab.py",
+      "output": "bid_lab/outputs/bid_lab_editais.json",
+      "standardized": "audit_reports_credito/lote_credito_multilateral_onda_b_fix/standardized/bid_lab_standardized.json",
+      "existe_crawler": true,
+      "urls_uteis": [
+        "https://bidlab.org/en/call-for-proposals",
+        "https://bidlab.org/en/calls",
+        "https://bidlab.org/en/innovation",
+        "https://bidlab.org/en/venture",
+        "https://www.iadb.org/en/who-we-are/departments/bid-lab"
+      ],
+      "excluir": [
+        "/news",
+        "/blog",
+        "/events",
+        "/about",
+        "/press",
+        "annual report sem chamada"
+      ],
+      "diagnostico_coleta": "HTTP 403 Cloudflare em seeds; 0 itens brutos.",
+      "readiness_recomendado": "blocked",
+      "readiness_motivo": "WAF bloqueia scraper; necessario feed oficial, export manual ou acordo com o site — sem bypass."
+    },
+    "caf": {
+      "crawler": "caf/main_caf.py",
+      "output": "caf/outputs/caf_editais.json",
+      "standardized": "audit_reports_credito/lote_credito_multilateral_onda_b_fix/standardized/caf_standardized.json",
+      "existe_crawler": true,
+      "urls_uteis": [
+        "https://www.caf.com/es/trabaja-con-nosotros/convocatorias/",
+        "https://www.caf.com/es/actualidad/convocatorias/",
+        "https://www.caf.com/es/oportunidades-laborales-y-procurement/"
+      ],
+      "excluir": [
+        "sala de prensa",
+        "noticias",
+        "eventos sem inscricao",
+        "paginas genericas de producto sin convocatoria"
+      ],
+      "diagnostico_coleta": "Incapsula bloqueia conteudo util; HTML de erro em fetch leve; probes com SSL verify falhando no ambiente.",
+      "readiness_recomendado": "blocked",
+      "readiness_motivo": "0 itens uteis na coleta automatizada segura; curadoria manual de convocatorias oficiais."
+    },
+    "fonplata": {
+      "crawler": "fonplata/main_fonplata.py",
+      "output": "fonplata/outputs/fonplata_editais.json",
+      "standardized": "audit_reports_credito/lote_credito_multilateral_onda_b_fix/standardized/fonplata_standardized.json",
+      "existe_crawler": true,
+      "urls_uteis": [
+        "https://www.fonplata.org/es/oportunidades",
+        "https://www.fonplata.org/es/oportunidades/reclutamiento-de-personal",
+        "https://www.fonplata.org/es/adquisiciones"
+      ],
+      "excluir": [
+        "pagina institucional 'que hacemos'",
+        "financiamiento generico sin convocatoria",
+        "solo contacto"
+      ],
+      "diagnostico_coleta": "7 brutos; gate removeu 2 (registro consultores, listagem RH) por baixa relevancia; 5 transformados com flag suspeito.",
+      "readiness_recomendado": "needs_manual_review",
+      "readiness_motivo": "Fonte util mas ruido RH/roster; falta documentos; validar cada URL para edital vs pesquisa vs procurement."
+    },
+    "eureka_network": {
+      "crawler": "eureka_network/main_eureka_network.py",
+      "output": "eureka_network/outputs/eureka_network_editais.json",
+      "standardized": "audit_reports_credito/lote_credito_multilateral_onda_b_fix/standardized/eureka_network_standardized.json",
+      "existe_crawler": true,
+      "urls_uteis": [
+        "https://www.eurekanetwork.org/open-calls/",
+        "https://www.eurekanetwork.org/programmes-and-calls/",
+        "https://www.eurekanetwork.org/programmes-and-calls/feed/",
+        "https://www.eurekanetwork.org/programmes/eurostars/",
+        "https://www.eurekanetwork.org/programmes/globalstars/"
+      ],
+      "excluir": [
+        "resource library generica",
+        "noticias sem submissao",
+        "eventos sin convocatoria"
+      ],
+      "diagnostico_coleta": "23 brutos; 21 transformados; 2 rejeitados (Eurostars hub e resource library) por heuristica de login.",
+      "readiness_recomendado": "ready_with_notes",
+      "readiness_motivo": "Chamadas colaborativas reais; revisar hubs vs calls; PDFs nem sempre extraidos."
+    },
+    "eic": {
+      "crawler": "eic/main_eic.py",
+      "output": "eic/outputs/eic_editais.json",
+      "standardized": "audit_reports_credito/lote_credito_multilateral_onda_b_fix/standardized/eic_standardized.json",
+      "existe_crawler": true,
+      "urls_uteis": [
+        "https://eic.ec.europa.eu/eic-funding-opportunities_en",
+        "https://eic.ec.europa.eu/eic-funding-opportunities/eic-pathfinder_en",
+        "https://eic.ec.europa.eu/eic-funding-opportunities/eic-transition_en",
+        "https://eic.ec.europa.eu/eic-funding-opportunities/eic-accelerator_en",
+        "https://eic.ec.europa.eu/eic-funding-opportunities/calls-proposals/eic-accelerator-2026_en",
+        "https://eic.ec.europa.eu/sitemap.xml"
+      ],
+      "excluir": [
+        "news sem call",
+        "eventos webinar sin aplicacao",
+        "success stories"
+      ],
+      "diagnostico_coleta": "14 brutos; 14 transformados; qualidade media alta; todos incompletos em algum campo (prazo estruturado).",
+      "readiness_recomendado": "ready_with_notes",
+      "readiness_motivo": "Fonte oficial EU; distinguir pagina de programa vs call ativa; validar valores extraidos de PDF."
+    }
+  }
+}

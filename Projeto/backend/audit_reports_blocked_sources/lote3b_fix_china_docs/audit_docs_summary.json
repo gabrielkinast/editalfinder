@@ -1,0 +1,61 @@
+{
+  "data_auditoria": "2026-05-02T21:28:29Z",
+  "fontes": [
+    "china_nsfc",
+    "china_cnnc",
+    "china_avic",
+    "china_norinco",
+    "china_university_procurement"
+  ],
+  "max_items_por_fonte": 25,
+  "pdf_skip": true,
+  "itens_analisados": 48,
+  "raw_com_pdf_url": 4,
+  "raw_com_documentos": 21,
+  "transformado_com_pdf_url": 4,
+  "transformado_com_documentos": 21,
+  "payload_com_pdf_url": 4,
+  "payload_com_documentos": 21,
+  "bruto_com_documentos_pdf": 4,
+  "bruto_com_documentos_nao_pdf": 20,
+  "transformado_com_documentos_pdf": 4,
+  "transformado_com_documentos_nao_pdf": 20,
+  "payload_com_documentos_pdf": 4,
+  "payload_com_documentos_nao_pdf": 20,
+  "perdas_pdf": 0,
+  "perdas_nao_pdf": 0,
+  "downloads_falharam": 3,
+  "downloads_sucesso": 0,
+  "links_invalidos": 0,
+  "links_relativos_restantes": 0,
+  "links_quebrados": 0,
+  "duplicados_documentos": 0,
+  "perdas_total": 9,
+  "fontes_pior_preservacao": [
+    {
+      "fonte": "china_cnnc",
+      "score_perda": 1.0
+    },
+    {
+      "fonte": "china_norinco",
+      "score_perda": 1.0
+    },
+    {
+      "fonte": "china_nsfc",
+      "score_perda": 0.0
+    },
+    {
+      "fonte": "china_avic",
+      "score_perda": 0.0
+    },
+    {
+      "fonte": "china_university_procurement",
+      "score_perda": 0.0
+    }
+  ],
+  "formatos_detectados": {
+    "html": 42,
+    "outro": 15,
+    "pdf": 14
+  }
+}

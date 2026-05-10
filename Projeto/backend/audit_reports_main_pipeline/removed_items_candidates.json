@@ -1,0 +1,29 @@
+{
+  "timestamp": "2026-05-09T13:10:07Z",
+  "environment": "staging",
+  "env_files_loaded": [
+    "D:\\Computational_Physics\\My Projects\\edital\\.env.staging",
+    "D:\\Computational_Physics\\My Projects\\edital\\CORE\\.env"
+  ],
+  "table": "edital",
+  "sources": [
+    "banco_da_amazonia",
+    "bdmg",
+    "bnb"
+  ],
+  "wave": "",
+  "removed_candidates": [],
+  "errors": [],
+  "environment_guard": {
+    "editalfinder_env": "staging",
+    "has_supabase_url": true,
+    "has_key": true,
+    "url_host_masked": "dof***.co",
+    "block_reason": ""
+  },
+  "mode": "select_only",
+  "recommendations": [
+    "Revisar candidatos high antes de apply.",
+    "Nunca usar DELETE; usar deactivate_removed_items.py para ativo=false."
+  ]
+}

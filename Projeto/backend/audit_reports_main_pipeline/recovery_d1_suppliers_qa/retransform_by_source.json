@@ -1,0 +1,278 @@
+[
+  {
+    "fonte": "bae_systems_suppliers",
+    "raw_output_path": "bae_systems_suppliers/outputs/bae_systems_suppliers_editais.json",
+    "old_standardized_path": "CORE/transformer/bae_systems_suppliers_standardized.json",
+    "new_standardized_path": "audit_reports_main_pipeline/recovery_d1_suppliers_qa/standardized/bae_systems_suppliers_standardized.json",
+    "itens_brutos_encontrados": 2,
+    "itens_transformados": 2,
+    "itens_rejeitados": 0,
+    "itens_incompletos": 0,
+    "itens_suspeitos": 1,
+    "itens_acesso_limitado": 1,
+    "documentos_preservados": 0,
+    "pdf_url_preservado": 0,
+    "area_preenchida": 0,
+    "tipo_oportunidade_preenchido": 2,
+    "tipo_recurso_preenchido": 2,
+    "perfil_ideal_preenchido": 2,
+    "qualidade_dado_media": 64.0,
+    "motivos_rejeicao_principais": {},
+    "quick_audit": {
+      "ruido_passou": 0,
+      "duplicatas_link": 0,
+      "campos_preenchidos_pct": {
+        "area": 0.0,
+        "tipo_oportunidade": 100.0,
+        "tipo_recurso": 100.0,
+        "perfil_ideal": 100.0,
+        "documentos": 0.0,
+        "pdf_url": 0.0
+      },
+      "official_link_only_total": 1,
+      "access_limited_total": 1,
+      "access_reason_counts": {
+        "cloudflare_or_403": 1
+      },
+      "access_limited_examples": [
+        {
+          "titulo": "Responsible supply chain | BAE Systems UK suppliers",
+          "link": "https://www.baesystems.com/en-uk/suppliers/responsible-supply-chain",
+          "access_reason": "cloudflare_or_403",
+          "extraction_mode": "official_link_only"
+        }
+      ]
+    },
+    "old_vs_new": {
+      "old_count": 0,
+      "new_count": 2,
+      "delta_count": 2,
+      "old_links_now_missing": [],
+      "new_links_before_missing": [
+        "https://baesystems.hicx.net/bae/hicxesm-portal/app/discovery-login.html",
+        "https://www.baesystems.com/en-uk/suppliers/responsible-supply-chain"
+      ],
+      "core_fields_improved": {
+        "tipo_oportunidade": {
+          "old": 0,
+          "new": 2,
+          "delta": 2
+        },
+        "tipo_recurso": {
+          "old": 0,
+          "new": 2,
+          "delta": 2
+        },
+        "perfil_ideal": {
+          "old": 0,
+          "new": 2,
+          "delta": 2
+        }
+      },
+      "core_fields_worsened": {},
+      "old_documents_count": 0,
+      "new_documents_count": 0,
+      "old_pdf_count": 0,
+      "new_pdf_count": 0
+    },
+    "risk_notes": []
+  },
+  {
+    "fonte": "general_dynamics_suppliers",
+    "raw_output_path": "general_dynamics_suppliers/outputs/general_dynamics_suppliers_editais.json",
+    "old_standardized_path": "CORE/transformer/general_dynamics_suppliers_standardized.json",
+    "new_standardized_path": "audit_reports_main_pipeline/recovery_d1_suppliers_qa/standardized/general_dynamics_suppliers_standardized.json",
+    "itens_brutos_encontrados": 7,
+    "itens_transformados": 6,
+    "itens_rejeitados": 1,
+    "itens_incompletos": 2,
+    "itens_suspeitos": 4,
+    "itens_acesso_limitado": 0,
+    "documentos_preservados": 5,
+    "pdf_url_preservado": 5,
+    "area_preenchida": 5,
+    "tipo_oportunidade_preenchido": 6,
+    "tipo_recurso_preenchido": 6,
+    "perfil_ideal_preenchido": 6,
+    "qualidade_dado_media": 77.67,
+    "motivos_rejeicao_principais": {
+      "Relevancia limite: poucos sinais de oportunidade": 1
+    },
+    "quick_audit": {
+      "ruido_passou": 0,
+      "duplicatas_link": 0,
+      "campos_preenchidos_pct": {
+        "area": 83.33,
+        "tipo_oportunidade": 100.0,
+        "tipo_recurso": 100.0,
+        "perfil_ideal": 100.0,
+        "documentos": 83.33,
+        "pdf_url": 83.33
+      },
+      "official_link_only_total": 0,
+      "access_limited_total": 0,
+      "access_reason_counts": {},
+      "access_limited_examples": []
+    },
+    "old_vs_new": {
+      "old_count": 17,
+      "new_count": 6,
+      "delta_count": -11,
+      "old_links_now_missing": [
+        "https://app.gdls.com/supplieronboarding/index.jsp",
+        "https://www.gd.com/our-businesses/aerospace",
+        "https://www.gd.com/suppliers/supplier-faqs",
+        "https://www.gdls.com/careers/transitioning-military/",
+        "https://www.gdls.com/cdn-cgi/l/email-protection",
+        "https://www.gdls.com/lav/",
+        "https://www.gdls.com/suppliers/?page=2",
+        "https://www.gdls.com/suppliers/terms-conditions/",
+        "https://www.gdls.com/wp-content/uploads/2025/12/Eng-SCM-MANUALSCM046-rev11.pdf",
+        "https://www.gdls.com/wp-content/uploads/2025/12/GDLS-Supplier-Code-of-Conduct-Ethics-7th-Edition.pdf",
+        "https://www.gdls.com/wp-content/uploads/2026/01/GDLS-Global-Supplier-Performance-Scorecard-2025-12-external.pdf"
+      ],
+      "new_links_before_missing": [],
+      "core_fields_improved": {
+        "perfil_ideal": {
+          "old": 0,
+          "new": 6,
+          "delta": 6
+        },
+        "documentos": {
+          "old": 0,
+          "new": 5,
+          "delta": 5
+        }
+      },
+      "core_fields_worsened": {
+        "area": {
+          "old": 17,
+          "new": 5,
+          "delta": -12
+        },
+        "tipo_oportunidade": {
+          "old": 17,
+          "new": 6,
+          "delta": -11
+        },
+        "tipo_recurso": {
+          "old": 17,
+          "new": 6,
+          "delta": -11
+        },
+        "pdf_url": {
+          "old": 12,
+          "new": 5,
+          "delta": -7
+        }
+      },
+      "old_documents_count": 0,
+      "new_documents_count": 5,
+      "old_pdf_count": 12,
+      "new_pdf_count": 5
+    },
+    "risk_notes": []
+  },
+  {
+    "fonte": "lockheed_martin_suppliers",
+    "raw_output_path": "lockheed_martin_suppliers/outputs/lockheed_martin_suppliers_editais.json",
+    "old_standardized_path": "CORE/transformer/lockheed_martin_suppliers_standardized.json",
+    "new_standardized_path": "audit_reports_main_pipeline/recovery_d1_suppliers_qa/standardized/lockheed_martin_suppliers_standardized.json",
+    "itens_brutos_encontrados": 20,
+    "itens_transformados": 18,
+    "itens_rejeitados": 2,
+    "itens_incompletos": 14,
+    "itens_suspeitos": 4,
+    "itens_acesso_limitado": 0,
+    "documentos_preservados": 18,
+    "pdf_url_preservado": 18,
+    "area_preenchida": 18,
+    "tipo_oportunidade_preenchido": 18,
+    "tipo_recurso_preenchido": 18,
+    "perfil_ideal_preenchido": 18,
+    "qualidade_dado_media": 90.0,
+    "motivos_rejeicao_principais": {
+      "Pontuacao abaixo do minimo (oportunidade nao evidenciada)": 2
+    },
+    "quick_audit": {
+      "ruido_passou": 0,
+      "duplicatas_link": 0,
+      "campos_preenchidos_pct": {
+        "area": 100.0,
+        "tipo_oportunidade": 100.0,
+        "tipo_recurso": 100.0,
+        "perfil_ideal": 100.0,
+        "documentos": 100.0,
+        "pdf_url": 100.0
+      },
+      "official_link_only_total": 0,
+      "access_limited_total": 0,
+      "access_reason_counts": {},
+      "access_limited_examples": []
+    },
+    "old_vs_new": {
+      "old_count": 20,
+      "new_count": 18,
+      "delta_count": -2,
+      "old_links_now_missing": [
+        "https://www.lockheedmartin.com/en-us/capabilities/c4isr.html",
+        "https://www.lockheedmartin.com/en-us/capabilities/electronic-warfare.html",
+        "https://www.lockheedmartin.com/en-us/capabilities/missile-defense.html",
+        "https://www.lockheedmartin.com/en-us/capabilities/sensors.html",
+        "https://www.lockheedmartin.com/en-us/capabilities/space.html",
+        "https://www.lockheedmartin.com/en-us/capabilities/space/strategic-missile-defense.html",
+        "https://www.lockheedmartin.com/en-us/innovation-defense-technology.html",
+        "https://www.lockheedmartin.com/en-us/suppliers/faqs.html",
+        "https://www.lockheedmartin.com/en-us/who-we-are/communities/military-veteran-support.html"
+      ],
+      "new_links_before_missing": [
+        "https://www.lockheedmartin.com/en-us/suppliers/news/features/2025/annual-eeo-cps-003.html",
+        "https://www.lockheedmartin.com/en-us/suppliers/news/features/2025/csco-message-focus.html",
+        "https://www.lockheedmartin.com/en-us/suppliers/news/features/2025/cybersecurity-cmmc-exostar-status.html",
+        "https://www.lockheedmartin.com/en-us/suppliers/news/features/2025/cybersecurity-cmmc-upcoming-requirements.html",
+        "https://www.lockheedmartin.com/en-us/suppliers/news/features/2025/cybersecurity-discontinuation-phone-otp.html",
+        "https://www.lockheedmartin.com/en-us/suppliers/news/features/2026/cybersecurity-cmmc.html",
+        "https://www.lockheedmartin.com/en-us/suppliers/news/features/2026/supplier-training-lmeinvoicing.html"
+      ],
+      "core_fields_improved": {
+        "perfil_ideal": {
+          "old": 0,
+          "new": 18,
+          "delta": 18
+        },
+        "documentos": {
+          "old": 0,
+          "new": 18,
+          "delta": 18
+        }
+      },
+      "core_fields_worsened": {
+        "area": {
+          "old": 20,
+          "new": 18,
+          "delta": -2
+        },
+        "tipo_oportunidade": {
+          "old": 20,
+          "new": 18,
+          "delta": -2
+        },
+        "tipo_recurso": {
+          "old": 20,
+          "new": 18,
+          "delta": -2
+        },
+        "pdf_url": {
+          "old": 20,
+          "new": 18,
+          "delta": -2
+        }
+      },
+      "old_documents_count": 0,
+      "new_documents_count": 18,
+      "old_pdf_count": 20,
+      "new_pdf_count": 18
+    },
+    "risk_notes": []
+  }
+]

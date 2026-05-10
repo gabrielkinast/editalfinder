@@ -1,5 +1,8 @@
 from datetime import datetime
 
+from merge_utils import sanitize_for_postgres
+
+
 def parse_date(date_str):
     if not date_str:
         return None
@@ -29,7 +32,6 @@ def modelo_base():
         "programa": None,
         "acao": None,
         "tipo_recurso": None,
-        "estado": None,
         "regiao": None,
         "publico_alvo": None,
         "temas": None,
@@ -44,13 +46,31 @@ def modelo_base():
 
 def normalizar(item_transformado):
     base = modelo_base()
+    known = set(base.keys())
+    # Campos fora do modelo base são preservados dentro de extras (não perdem no ETL).
+    orphan = {}
+    if isinstance(item_transformado, dict):
+        for k, v in item_transformado.items():
+            if k not in known:
+                orphan[k] = v
 
     for key in base:
         if key in item_transformado:
             base[key] = item_transformado[key]
 
+    if orphan:
+        ex = base.get("extras")
+        if not isinstance(ex, dict):
+            ex = {}
+        for k, v in orphan.items():
+            if k == "extras" and isinstance(v, dict):
+                ex = {**v, **ex}
+            else:
+                ex.setdefault(k, v)
+        base["extras"] = ex
+
     # normalização de datas
     base["data_publicacao"] = parse_date(base["data_publicacao"])
     base["fim_inscricao"] = parse_date(base["fim_inscricao"])
 
-    return base
+    return sanitize_for_postgres(base)

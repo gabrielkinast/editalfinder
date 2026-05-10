@@ -1,0 +1,107 @@
+{
+  "amazul": {
+    "crawler_roda": true,
+    "existe_output_bruto": true,
+    "caminho_output_bruto": "amazul/outputs/amazul_editais.json",
+    "itens_brutos": 0,
+    "itens_transformados": 0,
+    "itens_rejeitados": 0,
+    "motivos_rejeicao": {},
+    "oportunidade_real_observada": false,
+    "relevante_escopo_atual": true,
+    "tipo_problema": ["crawler", "acesso_heuristica", "ruido_zero_itens"],
+    "continuar_no_projeto": true,
+    "notas": "Smoke: exit 0, mensagem de ausência de evidência de licitação/chamada. old_vs_new: link índice amazul/licitacoes deixou de existir no bruto atual."
+  },
+  "marinha": {
+    "crawler_roda": true,
+    "existe_output_bruto": true,
+    "caminho_output_bruto": "marinha/outputs/marinha_editais.json",
+    "itens_brutos": 0,
+    "itens_transformados": 0,
+    "itens_rejeitados": 0,
+    "motivos_rejeicao": {},
+    "oportunidade_real_observada": false,
+    "relevante_escopo_atual": true,
+    "tipo_problema": ["crawler", "acesso_heuristica", "ruido_zero_itens"],
+    "continuar_no_projeto": true,
+    "notas": "Smoke: exit 0. old_vs_new: link marinha/editais ausente no bruto atual."
+  },
+  "dcta_ita_iae": {
+    "crawler_roda": true,
+    "existe_output_bruto": true,
+    "caminho_output_bruto": "dcta_ita_iae/outputs/dcta_ita_iae_editais.json",
+    "itens_brutos": 0,
+    "itens_transformados": 0,
+    "itens_rejeitados": 0,
+    "motivos_rejeicao": {},
+    "oportunidade_real_observada": false,
+    "relevante_escopo_atual": true,
+    "tipo_problema": ["crawler", "acesso_heuristica", "ruido_zero_itens"],
+    "continuar_no_projeto": true,
+    "notas": "Smoke: exit 0, sem fallback de índice institucional."
+  },
+  "faperg": {
+    "crawler_roda": true,
+    "existe_output_bruto": true,
+    "caminho_output_bruto": "faperg/outputs/faperg_editais.json",
+    "itens_brutos": 0,
+    "itens_transformados": 0,
+    "itens_rejeitados": 0,
+    "motivos_rejeicao": {},
+    "oportunidade_real_observada": false,
+    "relevante_escopo_atual": true,
+    "tipo_problema": ["crawler", "acesso_heuristica", "ruido_zero_itens"],
+    "continuar_no_projeto": true,
+    "notas": "FAPERG é fomento estadual (RS); 0 registros exige revisão de URLs/seletores ou bloqueio temporário até correção."
+  },
+  "apex": {
+    "crawler_roda": true,
+    "existe_output_bruto": true,
+    "caminho_output_bruto": "apex/outputs/apex_editais.json",
+    "itens_brutos": 1,
+    "itens_transformados": 0,
+    "itens_rejeitados": 1,
+    "motivos_rejeicao": {
+      "titulo_ruido_exato": 1
+    },
+    "oportunidade_real_observada": false,
+    "relevante_escopo_atual": "parcial",
+    "tipo_problema": ["crawler", "ruido", "taxonomia_titulo"],
+    "continuar_no_projeto": true,
+    "notas": "Único item: título 'Menu', página de eventos — não é edital/chamada; crawler captura navegação em vez de programas."
+  },
+  "ambev": {
+    "crawler_roda": true,
+    "existe_output_bruto": true,
+    "caminho_output_bruto": "ambev/outputs/ambev_editais.json",
+    "itens_brutos": 7,
+    "itens_transformados": 0,
+    "itens_rejeitados": 7,
+    "motivos_rejeicao": {
+      "Pontuacao abaixo do minimo (oportunidade nao evidenciada)": 6,
+      "Relevancia limite: poucos sinais de oportunidade": 1
+    },
+    "oportunidade_real_observada": "parcial",
+    "relevante_escopo_atual": "parcial",
+    "tipo_problema": ["gate", "taxonomia", "idioma_en"],
+    "continuar_no_projeto": true,
+    "notas": "100accelerator challenges: open innovation corporativo; gate atual não evidencia 'edital' no sentido do pipeline."
+  },
+  "science_scraper": {
+    "crawler_roda": true,
+    "existe_output_bruto": true,
+    "caminho_output_bruto": "science_scraper/outputs/science_editais.json",
+    "itens_brutos": 14,
+    "itens_transformados": 0,
+    "itens_rejeitados": 14,
+    "motivos_rejeicao": {
+      "Pontuacao abaixo do minimo (oportunidade nao evidenciada)": 14
+    },
+    "oportunidade_real_observada": false,
+    "relevante_escopo_atual": false,
+    "tipo_problema": ["gate", "ruido", "idioma_en", "agenda_eventos"],
+    "continuar_no_projeto": "rever_produto",
+    "notas": "Predominância EC eventos/agenda e páginas temáticas; 404 em URL AEB no log de smoke. Melhor encaixe futuro: notícias/agenda, não tabela edital BR."
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "titulo": "Plano de expansão news/research — EditalFinder",
+  "versao": "2026-05-05",
+  "objetivo": "Expandir cobertura por ondas (NASA → DARPA → IAEA → EurekAlert) sem misturar com edital, sem scraping agressivo e sem apply automático.",
+  "governanca": {
+    "proibicoes": [
+      "Não enviar notícia/pesquisa deste módulo para public.edital.",
+      "Não enviar review_for_edital automaticamente para edital.",
+      "Não fazer apply sem dry-run explícito e validação humana quando aplicável.",
+      "Não contornar bloqueios de fonte ou robots.",
+      "Não rastrear site inteiro: apenas seeds declarados + descoberta limitada de feeds RSS no crawl existente.",
+      "Não remover filtros de qualidade (data, resumo mínimo, validação_status)."
+    ]
+  },
+  "ondas": [
+    {
+      "id": "wave_2_nasa",
+      "nome": "NASA ampliada",
+      "prioridade": 1,
+      "acoes": [
+        "Incluir feeds oficiais adicionais: breaking, education, aeronautics, image of the day, technology/feed, earth/feed, missions/feed, news-release/feed, science.nasa.gov/feed.",
+        "Manter janela de 12 meses (time_window_months).",
+        "Aumentar max_items com teto seguro (ex.: 95) e dedupe por link no crawl.",
+        "Manter exigência de data e resumo via _std_item + page_enrich opcional (page_enrich_max aumentado só na NASA).",
+        "Dedupe global no dry_run e no loader por link."
+      ],
+      "fontes_config": ["nasa_news"],
+      "metricas_alvo": {
+        "min_itens_standardized": 60,
+        "max_sem_data_ratio": 0.15
+      }
+    },
+    {
+      "id": "wave_3_darpa",
+      "nome": "DARPA — notícias vs oportunidades",
+      "prioridade": 2,
+      "acoes": [
+        "Limpar darpa_news: remover hub HTML; usar apenas RSS news.xml.",
+        "Manter darpa_opportunities_research separado com opportunities.xml.",
+        "Itens com sinais fortes de solicitation/BAA/RFI/RFP no título/URL → review_for_edital no dry_run (já implementado em dry_run_news_research_loader.py); nunca rota automática para public.edital.",
+        "Notícias técnicas reais → public.noticia; programas/relatórios sem chamada aberta → public.pesquisa (heurística _detect_content_type + revisão manual pontual)."
+      ],
+      "fontes_config": ["darpa_news", "darpa_opportunities_research"]
+    },
+    {
+      "id": "wave_4_iaea",
+      "nome": "IAEA — RSS estáveis",
+      "prioridade": 3,
+      "acoes": [
+        "Substituir seeds que devolvem 403 (homepage) por feeds RSS oficiais: /feeds/topnews, /feeds/news, /feeds/publications.",
+        "Coletar notícias e publicações recentes; foco nuclear, energia, segurança nuclear, aplicações nucleares.",
+        "Janela 12 meses para notícias na primeira fase; opcional 24 meses só para publicações técnicas (pesquisa) em ciclo futuro com campo time_window separado ou fonte duplicada filtrada."
+      ],
+      "fontes_config": ["iaea_news_publications"]
+    },
+    {
+      "id": "wave_5_eurekalert",
+      "nome": "EurekAlert filtrado",
+      "prioridade": 4,
+      "acoes": [
+        "max_items baixo por execução (ex.: 12).",
+        "Filtros por palavras-chave de inclusão (require_any_keyword) e exclusão médica genérica (exclude_keywords) no crawl.",
+        "Temas alvo: nuclear, aerospace, energy, materials, quantum, AI, defense, space.",
+        "Monitorar ruído: status noisy até estabilizar taxa de falsos positivos."
+      ],
+      "fontes_config": ["eurekalert_science_filtered"]
+    }
+  ],
+  "status_por_fonte_enum": [
+    "ready_for_wave",
+    "active_candidate",
+    "needs_cleanup",
+    "blocked_access",
+    "noisy"
+  ],
+  "artefactos_pipeline": [
+    "python scripts/crawl_news_research_sources.py",
+    "python scripts/audit_news_research_pipeline.py",
+    "python scripts/dry_run_news_research_loader.py"
+  ],
+  "nota_apply": "Nenhuma onda deste plano autoriza apply automático; usar dry_run e revisão antes de load_news_research_sources.py --apply em staging."
+}

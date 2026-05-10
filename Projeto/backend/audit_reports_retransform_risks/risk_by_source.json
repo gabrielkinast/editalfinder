@@ -1,0 +1,1091 @@
+[
+  {
+    "fonte": "amazul",
+    "bruto_total": 1,
+    "transformados": 0,
+    "rejeitados": 1,
+    "motivos_rejeicao": {
+      "Pontuacao abaixo do minimo (oportunidade nao evidenciada)": 1
+    },
+    "tipos_rejeitados_estimados": {
+      "licitacao_compra_publica": 1
+    },
+    "exemplos_rejeitados": [
+      {
+        "fonte": "amazul",
+        "titulo": "AMAZUL - Página de Licitações e Chamadas",
+        "link": "https://www.amazul.mar.mil.br/licitacoes",
+        "motivo_rejeicao": "Pontuacao abaixo do minimo (oportunidade nao evidenciada)",
+        "tipo_estimado": "licitacao_compra_publica",
+        "descricao_curta": "Índice público para oportunidades da AMAZUL em defesa e nuclear."
+      }
+    ],
+    "diagnostico": "gate_agressivo",
+    "recomendacao": "Aplicar ajuste local por fonte com critérios objetivos e logs de relaxamento.",
+    "parece_problema_crawler": false,
+    "parece_problema_gate_transformer": true,
+    "parece_sem_oportunidade_real": false
+  },
+  {
+    "fonte": "ambev",
+    "bruto_total": 7,
+    "transformados": 0,
+    "rejeitados": 7,
+    "motivos_rejeicao": {
+      "Pontuacao abaixo do minimo (oportunidade nao evidenciada)": 6,
+      "Relevancia limite: poucos sinais de oportunidade": 1
+    },
+    "tipos_rejeitados_estimados": {
+      "duvidoso": 7
+    },
+    "exemplos_rejeitados": [
+      {
+        "fonte": "ambev",
+        "titulo": "Water Stewardship",
+        "link": "https://www.100accelerator.com/challenges/water-stewardship",
+        "motivo_rejeicao": "Pontuacao abaixo do minimo (oportunidade nao evidenciada)",
+        "tipo_estimado": "duvidoso",
+        "descricao_curta": "Help build a more water-secure world with solutions that optimize water use across our operations or enhance water quality and availability in high-stress communities."
+      },
+      {
+        "fonte": "ambev",
+        "titulo": "Climate",
+        "link": "https://www.100accelerator.com/challenges/climate",
+        "motivo_rejeicao": "Pontuacao abaixo do minimo (oportunidade nao evidenciada)",
+        "tipo_estimado": "duvidoso",
+        "descricao_curta": "Help supply chains reach net zero carbon emissions by finding affordable technologies to decarbonize our value chains."
+      },
+      {
+        "fonte": "ambev",
+        "titulo": "Circular Economy",
+        "link": "https://www.100accelerator.com/challenges/circular-economy",
+        "motivo_rejeicao": "Relevancia limite: poucos sinais de oportunidade",
+        "tipo_estimado": "duvidoso",
+        "descricao_curta": "Help close the loop and create a circular global economy where waste is eliminated, resources are continually circulated and nature is regenerated through new packaging systems, recycling infrastructure, and alternative food supply options."
+      },
+      {
+        "fonte": "ambev",
+        "titulo": "Sustainable Agriculture",
+        "link": "https://www.100accelerator.com/challenges/sustainable-agriculture",
+        "motivo_rejeicao": "Pontuacao abaixo do minimo (oportunidade nao evidenciada)",
+        "tipo_estimado": "duvidoso",
+        "descricao_curta": "Help farmers produce sustainable and regenerative high-yielding, high-quality crops by leveraging science, technology, and financing."
+      },
+      {
+        "fonte": "ambev",
+        "titulo": "Nature And Biodiversity",
+        "link": "https://www.100accelerator.com/challenges/nature-and-biodiversity",
+        "motivo_rejeicao": "Pontuacao abaixo do minimo (oportunidade nao evidenciada)",
+        "tipo_estimado": "duvidoso",
+        "descricao_curta": "Help protect, renew, and grow the biodiversity of all ecosystems to sustain life on Earth, and maintain the foundation of our supply chains and businesses."
+      }
+    ],
+    "diagnostico": "crawler_fraco",
+    "recomendacao": "Rever extração do crawler (título/descrição/link detalhe) antes de mexer no gate.",
+    "parece_problema_crawler": true,
+    "parece_problema_gate_transformer": false,
+    "parece_sem_oportunidade_real": false
+  },
+  {
+    "fonte": "apex",
+    "bruto_total": 1,
+    "transformados": 0,
+    "rejeitados": 1,
+    "motivos_rejeicao": {
+      "titulo_ruido_exato": 1
+    },
+    "tipos_rejeitados_estimados": {
+      "duvidoso": 1
+    },
+    "exemplos_rejeitados": [
+      {
+        "fonte": "apex",
+        "titulo": "Menu",
+        "link": "https://apexbrasil.com.br/content/apexbrasil/br/pt/eventos.html",
+        "motivo_rejeicao": "titulo_ruido_exato",
+        "tipo_estimado": "duvidoso",
+        "descricao_curta": "Confira aqui o calendário de eventos da ApexBrasil"
+      }
+    ],
+    "diagnostico": "crawler_fraco",
+    "recomendacao": "Rever extração do crawler (título/descrição/link detalhe) antes de mexer no gate.",
+    "parece_problema_crawler": true,
+    "parece_problema_gate_transformer": false,
+    "parece_sem_oportunidade_real": false
+  },
+  {
+    "fonte": "badesul",
+    "bruto_total": 10,
+    "transformados": 0,
+    "rejeitados": 10,
+    "motivos_rejeicao": {
+      "Relevancia limite: poucos sinais de oportunidade": 10
+    },
+    "tipos_rejeitados_estimados": {
+      "duvidoso": 6,
+      "oportunidade_real": 4
+    },
+    "exemplos_rejeitados": [
+      {
+        "fonte": "badesul",
+        "titulo": "Badesul divulga projetos contemplados",
+        "link": "https://www.badesul.com.br/fas/transparencia/download?idPublicacao=29016",
+        "motivo_rejeicao": "Relevancia limite: poucos sinais de oportunidade",
+        "tipo_estimado": "duvidoso",
+        "descricao_curta": "Badesul divulga projetos contemplados"
+      },
+      {
+        "fonte": "badesul",
+        "titulo": "Lista de entidades inscritas",
+        "link": "https://www.badesul.com.br/fas/transparencia/download?idPublicacao=29015",
+        "motivo_rejeicao": "Relevancia limite: poucos sinais de oportunidade",
+        "tipo_estimado": "duvidoso",
+        "descricao_curta": "Relação por ordem de inscrição"
+      },
+      {
+        "fonte": "badesul",
+        "titulo": "Resultado - Seleção Pública de Subvenção Econômica",
+        "link": "https://www.badesul.com.br/fas/transparencia/download?idPublicacao=29014",
+        "motivo_rejeicao": "Relevancia limite: poucos sinais de oportunidade",
+        "tipo_estimado": "duvidoso",
+        "descricao_curta": "Entidades Contempladas"
+      },
+      {
+        "fonte": "badesul",
+        "titulo": "Edital Subvenção Econ. Projetos de Impacto Social",
+        "link": "https://www.badesul.com.br/fas/transparencia/download?idPublicacao=29012",
+        "motivo_rejeicao": "Relevancia limite: poucos sinais de oportunidade",
+        "tipo_estimado": "oportunidade_real",
+        "descricao_curta": "Retificado - Entidades inscritas"
+      },
+      {
+        "fonte": "badesul",
+        "titulo": "Inscrições abertas - Edital de Subvenção+Social",
+        "link": "https://www.badesul.com.br/fas/transparencia/download?idPublicacao=29010",
+        "motivo_rejeicao": "Relevancia limite: poucos sinais de oportunidade",
+        "tipo_estimado": "oportunidade_real",
+        "descricao_curta": "Concessão: Subvenção a Projetos de Impacto Social"
+      }
+    ],
+    "diagnostico": "gate_agressivo",
+    "recomendacao": "Aplicar ajuste local por fonte com critérios objetivos e logs de relaxamento.",
+    "parece_problema_crawler": false,
+    "parece_problema_gate_transformer": true,
+    "parece_sem_oportunidade_real": false
+  },
+  {
+    "fonte": "china_avic",
+    "bruto_total": 1,
+    "transformados": 0,
+    "rejeitados": 1,
+    "motivos_rejeicao": {
+      "Relevancia limite: poucos sinais de oportunidade": 1
+    },
+    "tipos_rejeitados_estimados": {
+      "licitacao_compra_publica": 1
+    },
+    "exemplos_rejeitados": [
+      {
+        "fonte": "china_avic",
+        "titulo": "AVIC Public News and Procurement Index",
+        "link": "http://www.avic.com/",
+        "motivo_rejeicao": "Relevancia limite: poucos sinais de oportunidade",
+        "tipo_estimado": "licitacao_compra_publica",
+        "descricao_curta": "Página pública institucional da AVIC para comunicados e compras públicas."
+      }
+    ],
+    "diagnostico": "gate_agressivo",
+    "recomendacao": "Aplicar ajuste local por fonte com critérios objetivos e logs de relaxamento.",
+    "parece_problema_crawler": false,
+    "parece_problema_gate_transformer": true,
+    "parece_sem_oportunidade_real": false
+  },
+  {
+    "fonte": "china_cnnc",
+    "bruto_total": 1,
+    "transformados": 0,
+    "rejeitados": 1,
+    "motivos_rejeicao": {
+      "Relevancia limite: poucos sinais de oportunidade": 1
+    },
+    "tipos_rejeitados_estimados": {
+      "licitacao_compra_publica": 1
+    },
+    "exemplos_rejeitados": [
+      {
+        "fonte": "china_cnnc",
+        "titulo": "CNNC Public Procurement and Notices",
+        "link": "https://www.cnnc.com.cn/",
+        "motivo_rejeicao": "Relevancia limite: poucos sinais de oportunidade",
+        "tipo_estimado": "licitacao_compra_publica",
+        "descricao_curta": "Página institucional pública para avisos e compras da CNNC."
+      }
+    ],
+    "diagnostico": "gate_agressivo",
+    "recomendacao": "Aplicar ajuste local por fonte com critérios objetivos e logs de relaxamento.",
+    "parece_problema_crawler": false,
+    "parece_problema_gate_transformer": true,
+    "parece_sem_oportunidade_real": false
+  },
+  {
+    "fonte": "china_mofcom_tendering",
+    "bruto_total": 80,
+    "transformados": 24,
+    "rejeitados": 56,
+    "motivos_rejeicao": {
+      "Relevancia limite: poucos sinais de oportunidade": 30,
+      "Pagina de login ou autenticacao": 26
+    },
+    "tipos_rejeitados_estimados": {
+      "erro_login_restrito": 26,
+      "duvidoso": 30
+    },
+    "exemplos_rejeitados": [
+      {
+        "fonte": "china_mofcom_tendering",
+        "titulo": "举报信箱",
+        "link": "http://www.chinabidding.com/",
+        "motivo_rejeicao": "Pagina de login ou autenticacao",
+        "tipo_estimado": "erro_login_restrito",
+        "descricao_curta": "您好，欢迎来到机电产品招标投标电子交易平台 请登录注册 首页|English|必联网 客服：400-0606-000 投标投诉：010-58851111转8672 举报信箱 网站地图 国家发展改革委等部门关于印发《招标人主体责任履行指引》的通知 国家发展改革委新闻发言人就《招标人主体责任履行指引》答记者问 中招协《电线电缆采购技术评审指南》第1部分标准首发仪式在京举... 关于加快推广远程异地评标的通知(发改办法规〔2025〕807号) 国务院办公厅关于在政府采购中实施本国产品标准及相关政策的通知 财政部 公安部 市场监管总局关于开展2025年政府采购领域“四类”... 中国招标投标协会成立2"
+      },
+      {
+        "fonte": "china_mofcom_tendering",
+        "titulo": "网站地图",
+        "link": "https://www.chinabidding.com/bid/tool/map.htm",
+        "motivo_rejeicao": "Pagina de login ou autenticacao",
+        "tipo_estimado": "erro_login_restrito",
+        "descricao_curta": "您好，欢迎来到机电产品招标投标电子交易平台 请登录注册 首页|English|必联网 客服：400-0606-000 投标投诉：010-58851111转8672 举报信箱 网站地图 ©2001--2026 必联网 必联公司 版权所有 京ICP备12040737号-1 京公网安备 11010802032803号 营业执照"
+      },
+      {
+        "fonte": "china_mofcom_tendering",
+        "titulo": "机电产品招标投标电子交易平台",
+        "link": "https://www.chinabidding.com",
+        "motivo_rejeicao": "Pagina de login ou autenticacao",
+        "tipo_estimado": "erro_login_restrito",
+        "descricao_curta": "您好，欢迎来到机电产品招标投标电子交易平台 请登录注册 首页|English|必联网 客服：400-0606-000 投标投诉：010-58851111转8672 举报信箱 网站地图 国家发展改革委等部门关于印发《招标人主体责任履行指引》的通知 国家发展改革委新闻发言人就《招标人主体责任履行指引》答记者问 中招协《电线电缆采购技术评审指南》第1部分标准首发仪式在京举... 关于加快推广远程异地评标的通知(发改办法规〔2025〕807号) 国务院办公厅关于在政府采购中实施本国产品标准及相关政策的通知 财政部 公安部 市场监管总局关于开展2025年政府采购领域“四类”... 中国招标投标协会成立2"
+      },
+      {
+        "fonte": "china_mofcom_tendering",
+        "titulo": "招标项目",
+        "link": "https://www.chinabidding.com/tender",
+        "motivo_rejeicao": "Pagina de login ou autenticacao",
+        "tipo_estimado": "erro_login_restrito",
+        "descricao_curta": "您好，欢迎来到机电产品招标投标电子交易平台 请登录注册 首页|English|必联网 客服：400-0606-000 投标投诉：010-58851111转8672 举报信箱 网站地图 04-30 广合科技真空层压机采购项目国际招标公告(1) 还剩19天 广东省 04-30 广合科技水平除胶沉铜线采购项目国际招标公告(1) 还剩19天 广东省 04-30 广合科技钢板打磨水洗烘干线采购项目国际招标公告(1) 还剩19天 广东省 04-30 陕西电子芯业时代科技有限公司8吋炉管设备采购项目（第2包：... 还剩24天 陕西省 04-30 陕西电子芯业时代科技有限公司8吋炉管设备采购项目（第1包：."
+      },
+      {
+        "fonte": "china_mofcom_tendering",
+        "titulo": "国际招标",
+        "link": "https://www.chinabidding.com/search/proj.htm?poClass=BidResult&infoClassCodes=0107&rangeType=1",
+        "motivo_rejeicao": "Pagina de login ou autenticacao",
+        "tipo_estimado": "erro_login_restrito",
+        "descricao_curta": "您好，欢迎来到机电产品招标投标电子交易平台 请登录注册 首页|English|必联网 客服：400-0606-000 投标投诉：010-58851111转8672 举报信箱 网站地图 项目分类： 招标公告 招标变更公告 评标结果公示中标结果公告 所有行业 农产品 能源(石油/石化/煤炭/新能源) 食品饮料烟草 纺织服装皮革 包装 工艺礼品玩具 化工 医药 五金 电子 机械设备 交通运输 办公用品 仪器仪表 IT、通讯及信息技术 工程建筑行业 安全防护 传媒、广电 家居行业 橡胶塑胶 印刷 冶金矿产 家用电器 电气 建筑建材 电力 运动、休闲 居民服务和其它服务业 商业贸易(综合类企业) 纸业 "
+      }
+    ],
+    "diagnostico": "pronta_para_ajuste_local",
+    "recomendacao": "Ajuste local pequeno no transformer sem mexer no gate global.",
+    "parece_problema_crawler": false,
+    "parece_problema_gate_transformer": true,
+    "parece_sem_oportunidade_real": false
+  },
+  {
+    "fonte": "china_norinco",
+    "bruto_total": 1,
+    "transformados": 0,
+    "rejeitados": 1,
+    "motivos_rejeicao": {
+      "Pontuacao abaixo do minimo (oportunidade nao evidenciada)": 1
+    },
+    "tipos_rejeitados_estimados": {
+      "duvidoso": 1
+    },
+    "exemplos_rejeitados": [
+      {
+        "fonte": "china_norinco",
+        "titulo": "Defense Product",
+        "link": "http://en.norincogroup.com.cn/col/col441/index.html",
+        "motivo_rejeicao": "Pontuacao abaixo do minimo (oportunidade nao evidenciada)",
+        "tipo_estimado": "duvidoso",
+        "descricao_curta": "Defense Product"
+      }
+    ],
+    "diagnostico": "crawler_fraco",
+    "recomendacao": "Rever extração do crawler (título/descrição/link detalhe) antes de mexer no gate.",
+    "parece_problema_crawler": true,
+    "parece_problema_gate_transformer": false,
+    "parece_sem_oportunidade_real": false
+  },
+  {
+    "fonte": "china_university_procurement",
+    "bruto_total": 11,
+    "transformados": 2,
+    "rejeitados": 9,
+    "motivos_rejeicao": {
+      "Relevancia limite: poucos sinais de oportunidade": 5,
+      "Pontuacao abaixo do minimo (oportunidade nao evidenciada)": 3,
+      "Acesso restrito (IP/campus/intranet)": 1
+    },
+    "tipos_rejeitados_estimados": {
+      "duvidoso": 7,
+      "erro_login_restrito": 1,
+      "noticia": 1
+    },
+    "exemplos_rejeitados": [
+      {
+        "fonte": "china_university_procurement",
+        "titulo": "科研概况",
+        "link": "https://www.ustc.edu.cn/kxyj/kygk.htm",
+        "motivo_rejeicao": "Pontuacao abaixo do minimo (oportunidade nao evidenciada)",
+        "tipo_estimado": "duvidoso",
+        "descricao_curta": "中国科学技术大学致力于科学前沿探索和高新技术创新，同时注重发展特色管理和人文领域。学校围绕“四个面向”，聚焦重大基础性、战略性科技问题，加强前瞻部署和系统布局，推进重大科研创新平台建设，提升卓越创新体系效能，加快科技管理能力现代化，营造持续向好的创新环境，支撑学校成为重要的国家战略科技力量。 中国科大拥有一支高素质的师资队伍。截至2025年12月共有教学与科研人员3375人，其中教授1221人（含相当专业技术职务人员），副教授1220人（含相当专业技术职务人员）。其中，两院院士等高层次人才不重复统计共有846人，占固定教师总数的49%。同时，人才队伍朝气蓬勃。45岁及以下青年教师约占教师总数的"
+      },
+      {
+        "fonte": "china_university_procurement",
+        "titulo": "科研项目",
+        "link": "http://kyb.ustc.edu.cn/6049/list.htm",
+        "motivo_rejeicao": "Acesso restrito (IP/campus/intranet)",
+        "tipo_estimado": "erro_login_restrito",
+        "descricao_curta": "提示信息 提示：您当前ip并非校内地址，该信息仅允许校内地址访问 首页 关闭此页"
+      },
+      {
+        "fonte": "china_university_procurement",
+        "titulo": "科研机构",
+        "link": "https://www.ustc.edu.cn/jianj.jsp?urltype=tree.TreeTempUrl&wbtreeid=1021",
+        "motivo_rejeicao": "Pontuacao abaixo do minimo (oportunidade nao evidenciada)",
+        "tipo_estimado": "duvidoso",
+        "descricao_curta": "8c0e5b5e-79db-450b-8707-926d09d86910_H4sIAAAAAAAAAN08DXAU13kr8S/+MSZ2UlNZgP8C96c7nQQmziEEOnxCsk7CjmyK93afTgt7u8vunnRnjA1JsI0DBieGxkAa05DEcTC447S2kX+SSWfSduLONE3aJh132kQnwXSatJ226TSdSb/vvf27093pBIZkqrGP3bff+973vvf973t7/l+4WYbOPazqaR+vEZ2oPkPTJSXtGyGpQVkd8WlyNi0pvnZZIoq5BVo6ckTImpKq9BJNNSRT1fOrk0SXeFl"
+      },
+      {
+        "fonte": "china_university_procurement",
+        "titulo": "科研特色",
+        "link": "https://www.ustc.edu.cn/kxyj/kyts.htm",
+        "motivo_rejeicao": "Pontuacao abaixo do minimo (oportunidade nao evidenciada)",
+        "tipo_estimado": "noticia",
+        "descricao_curta": "学校一贯坚持科学前沿探索，注重原始创新。近年来在量子信息、单分子科学、高温超导、纳米科学、地球环境、生命与健康等前沿领域取得了一批具有世界水平的科研成果。研究成果先后入选世界十大科技进展新闻1次，中国十大科技进展新闻23次，中国科学十大进展19次，入选次数居全国高校前列。先后17次入选国际重大进展，多自由度量子隐形传态荣登英国物理学会2015年度国际物理学领域十大突破榜首。 中国科技大学C60纳米材料与纳米结构研究获重要进展 Entanglement breaks new record New High-Temperature Superconductors Slow but sure pro"
+      },
+      {
+        "fonte": "china_university_procurement",
+        "titulo": "科研亮点",
+        "link": "https://www.ustc.edu.cn/kxyj/kyld.htm",
+        "motivo_rejeicao": "Relevancia limite: poucos sinais de oportunidade",
+        "tipo_estimado": "duvidoso",
+        "descricao_curta": "在单分子结构高分辨表征和操控的理论和实验研究领域取得一系列重要进展，在国际上首次获得具有化学键分辨率的C60单分子图像，并发现二维C60点阵的一种新型取向畴结构（2001）；首次实现了单个分子内部的化学反应，并利用局域的化学反应来改变和控制分子的物理性质，从而实现重要的物理效应，为单分子功能器件的制备提供了一个极为重要的新方法，揭示了单分子科学研究的广阔前景（2005）；首次演示了在单分子器件上的双功能集成，为单分子器件的多功能化开辟了新的思路（2009）；首次展示亚波长尺度下的纳腔等离激元可以作为一种频率可调的近场相干光源，有效控制分子的发光特性，实现新奇的电光效应（2010）。相关研究成果"
+      }
+    ],
+    "diagnostico": "fonte_ruidosa",
+    "recomendacao": "Aumentar filtro no crawler/listagem e reduzir URLs institucionais sem chamada.",
+    "parece_problema_crawler": false,
+    "parece_problema_gate_transformer": false,
+    "parece_sem_oportunidade_real": false
+  },
+  {
+    "fonte": "dcta_ita_iae",
+    "bruto_total": 1,
+    "transformados": 0,
+    "rejeitados": 1,
+    "motivos_rejeicao": {
+      "Pontuacao abaixo do minimo (oportunidade nao evidenciada)": 1
+    },
+    "tipos_rejeitados_estimados": {
+      "duvidoso": 1
+    },
+    "exemplos_rejeitados": [
+      {
+        "fonte": "dcta_ita_iae",
+        "titulo": "DCTA/ITA/IAE - Página de Oportunidades",
+        "link": "https://www.gov.br/dcta/pt-br",
+        "motivo_rejeicao": "Pontuacao abaixo do minimo (oportunidade nao evidenciada)",
+        "tipo_estimado": "duvidoso",
+        "descricao_curta": "Índice público de oportunidades nas instituições aeroespaciais de defesa."
+      }
+    ],
+    "diagnostico": "crawler_fraco",
+    "recomendacao": "Rever extração do crawler (título/descrição/link detalhe) antes de mexer no gate.",
+    "parece_problema_crawler": true,
+    "parece_problema_gate_transformer": false,
+    "parece_sem_oportunidade_real": false
+  },
+  {
+    "fonte": "doe_arpae",
+    "bruto_total": 1,
+    "transformados": 0,
+    "rejeitados": 1,
+    "motivos_rejeicao": {
+      "Relevancia limite: poucos sinais de oportunidade": 1
+    },
+    "tipos_rejeitados_estimados": {
+      "oportunidade_real": 1
+    },
+    "exemplos_rejeitados": [
+      {
+        "fonte": "doe_arpae",
+        "titulo": "DOE/ARPA-E - Open Funding Opportunities",
+        "link": "https://arpa-e.energy.gov/funding-opportunities",
+        "motivo_rejeicao": "Relevancia limite: poucos sinais de oportunidade",
+        "tipo_estimado": "oportunidade_real",
+        "descricao_curta": "Índice público de oportunidades abertas de funding da DOE/ARPA-E."
+      }
+    ],
+    "diagnostico": "gate_agressivo",
+    "recomendacao": "Aplicar ajuste local por fonte com critérios objetivos e logs de relaxamento.",
+    "parece_problema_crawler": false,
+    "parece_problema_gate_transformer": true,
+    "parece_sem_oportunidade_real": false
+  },
+  {
+    "fonte": "erc",
+    "bruto_total": 1,
+    "transformados": 0,
+    "rejeitados": 1,
+    "motivos_rejeicao": {
+      "Relevancia limite: poucos sinais de oportunidade": 1
+    },
+    "tipos_rejeitados_estimados": {
+      "oportunidade_real": 1
+    },
+    "exemplos_rejeitados": [
+      {
+        "fonte": "erc",
+        "titulo": "ERC - Open Funding Opportunities",
+        "link": "https://erc.europa.eu/funding",
+        "motivo_rejeicao": "Relevancia limite: poucos sinais de oportunidade",
+        "tipo_estimado": "oportunidade_real",
+        "descricao_curta": "Página de oportunidades abertas de grant do European Research Council."
+      }
+    ],
+    "diagnostico": "gate_agressivo",
+    "recomendacao": "Aplicar ajuste local por fonte com critérios objetivos e logs de relaxamento.",
+    "parece_problema_crawler": false,
+    "parece_problema_gate_transformer": true,
+    "parece_sem_oportunidade_real": false
+  },
+  {
+    "fonte": "fapemig",
+    "bruto_total": 20,
+    "transformados": 5,
+    "rejeitados": 15,
+    "motivos_rejeicao": {
+      "titulo_ruido_exato": 7,
+      "Pontuacao abaixo do minimo (oportunidade nao evidenciada)": 4,
+      "Relevancia limite: poucos sinais de oportunidade": 3,
+      "Pagina de login ou autenticacao": 1
+    },
+    "tipos_rejeitados_estimados": {
+      "oportunidade_real": 12,
+      "duvidoso": 2,
+      "erro_login_restrito": 1
+    },
+    "exemplos_rejeitados": [
+      {
+        "fonte": "fapemig",
+        "titulo": "Oportunidades",
+        "link": "https://fapemig.br/oportunidades",
+        "motivo_rejeicao": "Pontuacao abaixo do minimo (oportunidade nao evidenciada)",
+        "tipo_estimado": "oportunidade_real",
+        "descricao_curta": "Oportunidades Explore mais sobre Oportunidades Parcerias Estratégicas Saiba mais Programas Institucionais (ICTs e Governo) Saiba mais Chamadas e Editais Saiba mais Por Público-Alvo Saiba mais"
+      },
+      {
+        "fonte": "fapemig",
+        "titulo": "Difusão do Conhecimento",
+        "link": "https://fapemig.br/difusao-do-conhecimento",
+        "motivo_rejeicao": "Relevancia limite: poucos sinais de oportunidade",
+        "tipo_estimado": "oportunidade_real",
+        "descricao_curta": "Difusão do Conhecimento A FAPEMIG entende que a produção científica e tecnológica só alcança sua plenitude quando acompanhada por ações de difusão do conhecimento voltadas a diferentes públicos. Por isso, a comunicação dos resultados de pesquisas não se restringe à comunidade acadêmica, mas deve tam"
+      },
+      {
+        "fonte": "fapemig",
+        "titulo": "FAQ (Perguntas Frequentes)",
+        "link": "https://fapemig.br/central-de-ajuda",
+        "motivo_rejeicao": "Pontuacao abaixo do minimo (oportunidade nao evidenciada)",
+        "tipo_estimado": "oportunidade_real",
+        "descricao_curta": "FAQ (Perguntas Frequentes) Acesse tutoriais completos para cada etapa do processo: da submissão de propostas à prestação de contas. Acesse tutoriais completos para cada etapa do processo: da submissão de propostas à prestação de contas. A FAPEMIG apoia propostas em diversas modalidades, incluindo bo"
+      },
+      {
+        "fonte": "fapemig",
+        "titulo": "Explorar Chamadas",
+        "link": "https://fapemig.br/oportunidades/chamadas-e-editais?status=aberta",
+        "motivo_rejeicao": "Pontuacao abaixo do minimo (oportunidade nao evidenciada)",
+        "tipo_estimado": "oportunidade_real",
+        "descricao_curta": "Explorar Chamadas Todas (174) Abertas (9) Em Análise (2) Resultados (30) Encerradas (133) Filtros Todos Ambiente de Inovação Empresas Governo ICT Pesquisadores"
+      },
+      {
+        "fonte": "fapemig",
+        "titulo": "Saiba Mais",
+        "link": "https://fapemig.br/oportunidades/chamadas-e-editais/chamada-004-2026-participacao-coletiva-em-eventos-tecnicos-no-pais-1a-entrada",
+        "motivo_rejeicao": "titulo_ruido_exato",
+        "tipo_estimado": "oportunidade_real",
+        "descricao_curta": "Saiba Mais Acompanhe as principais datas: submissão, avaliação, divulgação de resultados e outros marcos importantes. a partir: 15 de jul. de 2026 - 15 de jul. de 2026 As propostas devem ser enviadas exclusivamente pelo sistema Everest. Acesse o sistema Everest, plataforma da FAPEMIG para submissão "
+      }
+    ],
+    "diagnostico": "pronta_para_ajuste_local",
+    "recomendacao": "Ajuste local pequeno no transformer sem mexer no gate global.",
+    "parece_problema_crawler": false,
+    "parece_problema_gate_transformer": true,
+    "parece_sem_oportunidade_real": false
+  },
+  {
+    "fonte": "general_dynamics_suppliers",
+    "bruto_total": 17,
+    "transformados": 4,
+    "rejeitados": 13,
+    "motivos_rejeicao": {
+      "Relevancia limite: poucos sinais de oportunidade": 9,
+      "Pontuacao abaixo do minimo (oportunidade nao evidenciada)": 3,
+      "Pagina de login ou autenticacao": 1
+    },
+    "tipos_rejeitados_estimados": {
+      "duvidoso": 11,
+      "pagina_generica": 1,
+      "erro_login_restrito": 1
+    },
+    "exemplos_rejeitados": [
+      {
+        "fonte": "general_dynamics_suppliers",
+        "titulo": "Aerospace",
+        "link": "https://www.gd.com/our-businesses/aerospace",
+        "motivo_rejeicao": "Pontuacao abaixo do minimo (oportunidade nao evidenciada)",
+        "tipo_estimado": "duvidoso",
+        "descricao_curta": "Our Aerospace segment is recognized as a leading producer of business jets and the standard bearer in aircraft repair, support and completion services. We have earned our reputation through superior aircraft design, quality, performance, safety and reliability; technologically advanced flight deck a"
+      },
+      {
+        "fonte": "general_dynamics_suppliers",
+        "titulo": "Supplier FAQs",
+        "link": "https://www.gd.com/suppliers/supplier-faqs",
+        "motivo_rejeicao": "Relevancia limite: poucos sinais de oportunidade",
+        "tipo_estimado": "duvidoso",
+        "descricao_curta": "1. How does a supplier do business with General Dynamics? 2. How can we get on General Dynamics' approved supplier list? 3. How does a small business contact General Dynamics? 5. What does General Dynamics look for in a supplier? 6. How do I find out which General Dynamics’ division is working on a "
+      },
+      {
+        "fonte": "general_dynamics_suppliers",
+        "titulo": "Mentor-Protégé Program",
+        "link": "https://www.gd.com/suppliers/mentor-protege-program",
+        "motivo_rejeicao": "Relevancia limite: poucos sinais de oportunidade",
+        "tipo_estimado": "pagina_generica",
+        "descricao_curta": "The Mentor-Protégé Program is designed to improve the performance of contracts and subcontracts, foster the establishment of long-term business relationships between large prime contractors and small business subcontractors, and increase subcontracting opportunities and accomplishments. Ultimately, "
+      },
+      {
+        "fonte": "general_dynamics_suppliers",
+        "titulo": "SUPPLIERS",
+        "link": "https://www.gdls.com/suppliers/",
+        "motivo_rejeicao": "Relevancia limite: poucos sinais de oportunidade",
+        "tipo_estimado": "duvidoso",
+        "descricao_curta": "General Dynamics Land Systems’ Supply Chain Management organization is committed to managing the supply chain to consistently deliver on-time, high-quality, and cost-effective materials and services to our customers. This is achieved by fostering best-in-class relationships and implementing core pro"
+      },
+      {
+        "fonte": "general_dynamics_suppliers",
+        "titulo": "ETHICS & CONDUCT BLUE BOOK (v7)",
+        "link": "https://www.gdls.com/wp-content/uploads/2025/12/GDLS-Supplier-Code-of-Conduct-Ethics-7th-Edition.pdf",
+        "motivo_rejeicao": "Relevancia limite: poucos sinais de oportunidade",
+        "tipo_estimado": "duvidoso",
+        "descricao_curta": "%PDF-1.6 %���� 155 0 obj < > endobj 171 0 obj < >/Filter/FlateDecode/ID[<9A6DDA51357F409BA6E86AEC546441E1><377F71CC9CEF4234AE3447A53B4ACE82>]/Index[155 27]/Info 154 0 R/Length 83/Prev 333419/Root 156 0 R/Size 182/Type/XRef/W[1 2 1]>>stream h�bbd\u0010``b`�\u0001\u0012 E@�9\u0018D�\u0005\u0012��@� ��\u0003\"����\u0001\u0012l� �W\u0010� HpE\u0002 �\\ ��\u0001$z$"
+      }
+    ],
+    "diagnostico": "fonte_ruidosa",
+    "recomendacao": "Aumentar filtro no crawler/listagem e reduzir URLs institucionais sem chamada.",
+    "parece_problema_crawler": false,
+    "parece_problema_gate_transformer": false,
+    "parece_sem_oportunidade_real": false
+  },
+  {
+    "fonte": "horizon_europe",
+    "bruto_total": 1,
+    "transformados": 0,
+    "rejeitados": 1,
+    "motivos_rejeicao": {
+      "Pontuacao abaixo do minimo (oportunidade nao evidenciada)": 1
+    },
+    "tipos_rejeitados_estimados": {
+      "licitacao_compra_publica": 1
+    },
+    "exemplos_rejeitados": [
+      {
+        "fonte": "horizon_europe",
+        "titulo": "Horizon Europe - Open Calls",
+        "link": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-search",
+        "motivo_rejeicao": "Pontuacao abaixo do minimo (oportunidade nao evidenciada)",
+        "tipo_estimado": "licitacao_compra_publica",
+        "descricao_curta": "Índice de chamadas abertas no portal Funding & Tenders da União Europeia."
+      }
+    ],
+    "diagnostico": "gate_agressivo",
+    "recomendacao": "Aplicar ajuste local por fonte com critérios objetivos e logs de relaxamento.",
+    "parece_problema_crawler": false,
+    "parece_problema_gate_transformer": true,
+    "parece_sem_oportunidade_real": false
+  },
+  {
+    "fonte": "iarpa",
+    "bruto_total": 1,
+    "transformados": 0,
+    "rejeitados": 1,
+    "motivos_rejeicao": {
+      "Pontuacao abaixo do minimo (oportunidade nao evidenciada)": 1
+    },
+    "tipos_rejeitados_estimados": {
+      "duvidoso": 1
+    },
+    "exemplos_rejeitados": [
+      {
+        "fonte": "iarpa",
+        "titulo": "IARPA Research Programs and BAA",
+        "link": "https://www.iarpa.gov/research-programs",
+        "motivo_rejeicao": "Pontuacao abaixo do minimo (oportunidade nao evidenciada)",
+        "tipo_estimado": "duvidoso",
+        "descricao_curta": "Programas e BAAs públicos da IARPA para P&D estratégico em inteligência e defesa tecnológica."
+      }
+    ],
+    "diagnostico": "crawler_fraco",
+    "recomendacao": "Rever extração do crawler (título/descrição/link detalhe) antes de mexer no gate.",
+    "parece_problema_crawler": true,
+    "parece_problema_gate_transformer": false,
+    "parece_sem_oportunidade_real": false
+  },
+  {
+    "fonte": "japan_e_rad",
+    "bruto_total": 1,
+    "transformados": 0,
+    "rejeitados": 1,
+    "motivos_rejeicao": {
+      "Pagina de login ou autenticacao": 1
+    },
+    "tipos_rejeitados_estimados": {
+      "erro_login_restrito": 1
+    },
+    "exemplos_rejeitados": [
+      {
+        "fonte": "japan_e_rad",
+        "titulo": "（研究機関向け）新規登録の方法",
+        "link": "https://www.e-rad.go.jp/organ/procedure.html",
+        "motivo_rejeicao": "Pagina de login ou autenticacao",
+        "tipo_estimado": "erro_login_restrito",
+        "descricao_curta": "研究機関の名称や法人格が変更となった場合の変更申請 研究機関事務代表者のログインID又はパスワードが分からなくなった場合の再発行申請"
+      }
+    ],
+    "diagnostico": "fonte_quebrada",
+    "recomendacao": "Validar acesso/fetch (login/restrição/erro) e robustez de coleta.",
+    "parece_problema_crawler": true,
+    "parece_problema_gate_transformer": false,
+    "parece_sem_oportunidade_real": false
+  },
+  {
+    "fonte": "japan_jaea",
+    "bruto_total": 30,
+    "transformados": 3,
+    "rejeitados": 27,
+    "motivos_rejeicao": {
+      "Pontuacao abaixo do minimo (oportunidade nao evidenciada)": 24,
+      "Relevancia limite: poucos sinais de oportunidade": 3
+    },
+    "tipos_rejeitados_estimados": {
+      "pagina_generica": 3,
+      "duvidoso": 24
+    },
+    "exemplos_rejeitados": [
+      {
+        "fonte": "japan_jaea",
+        "titulo": "R&D Results",
+        "link": "https://www.jaea.go.jp/english/study_results/",
+        "motivo_rejeicao": "Pontuacao abaixo do minimo (oportunidade nao evidenciada)",
+        "tipo_estimado": "pagina_generica",
+        "descricao_curta": "We have prepared the Japan Atomic Energy Agency Annual Report 2025 to report the activities of the Japan Atomic Energy Agency (JAEA) comprehensively.This publication reports on the details of our operations and the status of our R&D for fiscal 2024 (April 2024 - March 2025), and also explains the ou"
+      },
+      {
+        "fonte": "japan_jaea",
+        "titulo": "R&D Base/Department",
+        "link": "https://www.jaea.go.jp/english/centers/",
+        "motivo_rejeicao": "Relevancia limite: poucos sinais de oportunidade",
+        "tipo_estimado": "duvidoso",
+        "descricao_curta": "Fukushima Research and Engineering Institute Fukushima Research and Engineering Institute Collaborative Laboratories for Advanced Decommissioning Science Naraha Center for Remote Control Technology Development Okuma Analysis and Research Center Fukushima Research and Engineering Institute Collaborat"
+      },
+      {
+        "fonte": "japan_jaea",
+        "titulo": "Announcement of Research and Development Purpose Plutonium Utilization Plan at the Japan Atomic Energy Agency throughout Fiscal Year 2026",
+        "link": "https://www.jaea.go.jp/english/news/press/2026/022002/",
+        "motivo_rejeicao": "Pontuacao abaixo do minimo (oportunidade nao evidenciada)",
+        "tipo_estimado": "duvidoso",
+        "descricao_curta": "February 20, 2026 National Research and Development Institute Japan Atomic Energy Agency The Japan Atomic Energy Agency (JAEA) hereby announces the Research and Development (R&D) purpose plutonium utilization plan throughout Fiscal Year (FY) 2026 as follows: \"Research and Development Purpose Plutoni"
+      },
+      {
+        "fonte": "japan_jaea",
+        "titulo": "Annual Report Japan Atomic Energy Agency 2025",
+        "link": "https://www.jaea.go.jp/english/about/annual_report.html",
+        "motivo_rejeicao": "Pontuacao abaixo do minimo (oportunidade nao evidenciada)",
+        "tipo_estimado": "duvidoso",
+        "descricao_curta": "We have prepared the Japan Atomic Energy Agency Annual Report 2025 to report the activities of the Japan Atomic Energy Agency (JAEA) comprehensively. This publication reports on the details of our operations and the status of our R&D for fiscal 2024 (April 2024 - March 2025), and also explains the o"
+      },
+      {
+        "fonte": "japan_jaea",
+        "titulo": "Report on the IAEA General Conference Side Event! -Expanding New Horizon through Synergy with Renewables, Sustainability, and Ubiquitous Use of Nuclear Science & Technology -",
+        "link": "https://www.jaea.go.jp/english/news/newsbox/2025/100201/",
+        "motivo_rejeicao": "Pontuacao abaixo do minimo (oportunidade nao evidenciada)",
+        "tipo_estimado": "duvidoso",
+        "descricao_curta": "On September 16, in the margin of the IAEA General Conference held in Vienna, Austria, we held a side event under the theme “Expanding New Horizon through Synergy with Renewables, Sustainability, and Ubiquitous Use of Nuclear Science & Technology.” This year marks the 20th anniversary of JAEA which "
+      }
+    ],
+    "diagnostico": "fonte_ruidosa",
+    "recomendacao": "Aumentar filtro no crawler/listagem e reduzir URLs institucionais sem chamada.",
+    "parece_problema_crawler": false,
+    "parece_problema_gate_transformer": false,
+    "parece_sem_oportunidade_real": false
+  },
+  {
+    "fonte": "japan_jaxa",
+    "bruto_total": 1,
+    "transformados": 0,
+    "rejeitados": 1,
+    "motivos_rejeicao": {
+      "Relevancia limite: poucos sinais de oportunidade": 1
+    },
+    "tipos_rejeitados_estimados": {
+      "licitacao_compra_publica": 1
+    },
+    "exemplos_rejeitados": [
+      {
+        "fonte": "japan_jaxa",
+        "titulo": "JAXA Public Calls and Procurement Index",
+        "link": "https://global.jaxa.jp/press/",
+        "motivo_rejeicao": "Relevancia limite: poucos sinais de oportunidade",
+        "tipo_estimado": "licitacao_compra_publica",
+        "descricao_curta": "Página pública institucional da JAXA com comunicados e oportunidades abertas."
+      }
+    ],
+    "diagnostico": "gate_agressivo",
+    "recomendacao": "Aplicar ajuste local por fonte com critérios objetivos e logs de relaxamento.",
+    "parece_problema_crawler": false,
+    "parece_problema_gate_transformer": true,
+    "parece_sem_oportunidade_real": false
+  },
+  {
+    "fonte": "marinha",
+    "bruto_total": 1,
+    "transformados": 0,
+    "rejeitados": 1,
+    "motivos_rejeicao": {
+      "Pontuacao abaixo do minimo (oportunidade nao evidenciada)": 1
+    },
+    "tipos_rejeitados_estimados": {
+      "licitacao_compra_publica": 1
+    },
+    "exemplos_rejeitados": [
+      {
+        "fonte": "marinha",
+        "titulo": "Marinha do Brasil - Página de Editais e Licitações",
+        "link": "https://www.marinha.mil.br/editais",
+        "motivo_rejeicao": "Pontuacao abaixo do minimo (oportunidade nao evidenciada)",
+        "tipo_estimado": "licitacao_compra_publica",
+        "descricao_curta": "Índice público para oportunidades da Marinha do Brasil."
+      }
+    ],
+    "diagnostico": "gate_agressivo",
+    "recomendacao": "Aplicar ajuste local por fonte com critérios objetivos e logs de relaxamento.",
+    "parece_problema_crawler": false,
+    "parece_problema_gate_transformer": true,
+    "parece_sem_oportunidade_real": false
+  },
+  {
+    "fonte": "nato_diana",
+    "bruto_total": 2,
+    "transformados": 0,
+    "rejeitados": 2,
+    "motivos_rejeicao": {
+      "Pontuacao abaixo do minimo (oportunidade nao evidenciada)": 2
+    },
+    "tipos_rejeitados_estimados": {
+      "oportunidade_real": 1,
+      "duvidoso": 1
+    },
+    "exemplos_rejeitados": [
+      {
+        "fonte": "nato_diana",
+        "titulo": "NATO DIANA Challenges and Program Updates",
+        "link": "https://www.diana.nato.int/challenges.html",
+        "motivo_rejeicao": "Pontuacao abaixo do minimo (oportunidade nao evidenciada)",
+        "tipo_estimado": "oportunidade_real",
+        "descricao_curta": "Hub oficial da OTAN para chamadas e atualizações do programa DIANA."
+      },
+      {
+        "fonte": "nato_diana",
+        "titulo": "NATO Innovation Fund (NIF) - Dual-use Investments",
+        "link": "https://www.nif.fund/",
+        "motivo_rejeicao": "Pontuacao abaixo do minimo (oportunidade nao evidenciada)",
+        "tipo_estimado": "duvidoso",
+        "descricao_curta": "Fundo de investimento da OTAN para tecnologias estratégicas dual-use."
+      }
+    ],
+    "diagnostico": "gate_agressivo",
+    "recomendacao": "Aplicar ajuste local por fonte com critérios objetivos e logs de relaxamento.",
+    "parece_problema_crawler": false,
+    "parece_problema_gate_transformer": true,
+    "parece_sem_oportunidade_real": false
+  },
+  {
+    "fonte": "petrobras",
+    "bruto_total": 5,
+    "transformados": 0,
+    "rejeitados": 5,
+    "motivos_rejeicao": {
+      "Pontuacao abaixo do minimo (oportunidade nao evidenciada)": 5
+    },
+    "tipos_rejeitados_estimados": {
+      "duvidoso": 5
+    },
+    "exemplos_rejeitados": [
+      {
+        "fonte": "petrobras",
+        "titulo": "Inscrições Projetos Não Incentivados",
+        "link": "http://investidor.bussolasocial.com.br/petrobras/editais/naoincentivados2023.2",
+        "motivo_rejeicao": "Pontuacao abaixo do minimo (oportunidade nao evidenciada)",
+        "tipo_estimado": "duvidoso",
+        "descricao_curta": "Inscrições Projetos Não Incentivados"
+      },
+      {
+        "fonte": "petrobras",
+        "titulo": "Inscrições Projetos Incentivados",
+        "link": "https://investidor.bussolasocial.com.br/petrobras/editais/incentivados2023.2",
+        "motivo_rejeicao": "Pontuacao abaixo do minimo (oportunidade nao evidenciada)",
+        "tipo_estimado": "duvidoso",
+        "descricao_curta": "Inscrições Projetos Incentivados"
+      },
+      {
+        "fonte": "petrobras",
+        "titulo": "Inscrições Projetos incentivados",
+        "link": "http://investidor.bussolasocial.com.br/petrobras/editais/incentivados2023.2",
+        "motivo_rejeicao": "Pontuacao abaixo do minimo (oportunidade nao evidenciada)",
+        "tipo_estimado": "duvidoso",
+        "descricao_curta": "Inscrições Projetos incentivados"
+      },
+      {
+        "fonte": "petrobras",
+        "titulo": "Regulamento Seleção Pública 2023.1 – Projetos Incentivados",
+        "link": "https://petrobras.com.br/documents/2677942/7444258/SP+2023.1+-+Regulamento+Incentivados.pdf/c175c3b8-d4ca-a0f9-85ce-8a75d836a0ac",
+        "motivo_rejeicao": "Pontuacao abaixo do minimo (oportunidade nao evidenciada)",
+        "tipo_estimado": "duvidoso",
+        "descricao_curta": "Regulamento Seleção Pública 2023.1 – Projetos Incentivados"
+      },
+      {
+        "fonte": "petrobras",
+        "titulo": "Regulamento Seleção Pública 2023.1 – Projetos Não Incentivados",
+        "link": "https://petrobras.com.br/documents/2677942/7444258/SP+2023.1+-+Regulamento+Nao+Incentivados.pdf/04e566d0-35dc-f269-ee71-bdaed0b5b0ff",
+        "motivo_rejeicao": "Pontuacao abaixo do minimo (oportunidade nao evidenciada)",
+        "tipo_estimado": "duvidoso",
+        "descricao_curta": "Regulamento Seleção Pública 2023.1 – Projetos Não Incentivados"
+      }
+    ],
+    "diagnostico": "crawler_fraco",
+    "recomendacao": "Rever extração do crawler (título/descrição/link detalhe) antes de mexer no gate.",
+    "parece_problema_crawler": true,
+    "parece_problema_gate_transformer": false,
+    "parece_sem_oportunidade_real": false
+  },
+  {
+    "fonte": "plataforma_industria",
+    "bruto_total": 1,
+    "transformados": 0,
+    "rejeitados": 1,
+    "motivos_rejeicao": {
+      "Pontuacao abaixo do minimo (oportunidade nao evidenciada)": 1
+    },
+    "tipos_rejeitados_estimados": {
+      "oportunidade_real": 1
+    },
+    "exemplos_rejeitados": [
+      {
+        "fonte": "plataforma_industria",
+        "titulo": "Plataforma Indústria - Índice de Chamadas",
+        "link": "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/",
+        "motivo_rejeicao": "Pontuacao abaixo do minimo (oportunidade nao evidenciada)",
+        "tipo_estimado": "oportunidade_real",
+        "descricao_curta": "Página pública de referência para chamadas e editais de inovação industrial."
+      }
+    ],
+    "diagnostico": "gate_agressivo",
+    "recomendacao": "Aplicar ajuste local por fonte com critérios objetivos e logs de relaxamento.",
+    "parece_problema_crawler": false,
+    "parece_problema_gate_transformer": true,
+    "parece_sem_oportunidade_real": false
+  },
+  {
+    "fonte": "pncp",
+    "bruto_total": 1,
+    "transformados": 0,
+    "rejeitados": 1,
+    "motivos_rejeicao": {
+      "Pontuacao abaixo do minimo (oportunidade nao evidenciada)": 1
+    },
+    "tipos_rejeitados_estimados": {
+      "duvidoso": 1
+    },
+    "exemplos_rejeitados": [
+      {
+        "fonte": "pncp",
+        "titulo": "PNCP - Portal Nacional de Contratações Públicas",
+        "link": "https://pncp.gov.br/app/editais",
+        "motivo_rejeicao": "Pontuacao abaixo do minimo (oportunidade nao evidenciada)",
+        "tipo_estimado": "duvidoso",
+        "descricao_curta": "Índice público de contratações e editais governamentais no PNCP."
+      }
+    ],
+    "diagnostico": "crawler_fraco",
+    "recomendacao": "Rever extração do crawler (título/descrição/link detalhe) antes de mexer no gate.",
+    "parece_problema_crawler": true,
+    "parece_problema_gate_transformer": false,
+    "parece_sem_oportunidade_real": false
+  },
+  {
+    "fonte": "sam_gov",
+    "bruto_total": 2,
+    "transformados": 0,
+    "rejeitados": 2,
+    "motivos_rejeicao": {
+      "Pontuacao abaixo do minimo (oportunidade nao evidenciada)": 2
+    },
+    "tipos_rejeitados_estimados": {
+      "duvidoso": 1,
+      "oportunidade_real": 1
+    },
+    "exemplos_rejeitados": [
+      {
+        "fonte": "sam_gov",
+        "titulo": "SAM.gov Contract Opportunities",
+        "link": "https://sam.gov/content/opportunities",
+        "motivo_rejeicao": "Pontuacao abaixo do minimo (oportunidade nao evidenciada)",
+        "tipo_estimado": "duvidoso",
+        "descricao_curta": "Portal oficial de oportunidades de contratação federal dos EUA."
+      },
+      {
+        "fonte": "sam_gov",
+        "titulo": "DoD Strategic Capital and Investment Programs",
+        "link": "https://www.business.defense.gov/Programs/",
+        "motivo_rejeicao": "Pontuacao abaixo do minimo (oportunidade nao evidenciada)",
+        "tipo_estimado": "oportunidade_real",
+        "descricao_curta": "Programas públicos de investimento e fomento para base industrial de defesa dos EUA."
+      }
+    ],
+    "diagnostico": "gate_agressivo",
+    "recomendacao": "Aplicar ajuste local por fonte com critérios objetivos e logs de relaxamento.",
+    "parece_problema_crawler": false,
+    "parece_problema_gate_transformer": true,
+    "parece_sem_oportunidade_real": false
+  },
+  {
+    "fonte": "science_scraper",
+    "bruto_total": 14,
+    "transformados": 0,
+    "rejeitados": 14,
+    "motivos_rejeicao": {
+      "Pontuacao abaixo do minimo (oportunidade nao evidenciada)": 14
+    },
+    "tipos_rejeitados_estimados": {
+      "duvidoso": 14
+    },
+    "exemplos_rejeitados": [
+      {
+        "fonte": "science_scraper",
+        "titulo": "Scientific Advice on Advanced Materials: Handover to Commissioner Zaharieva EBS Live TV debate",
+        "link": "https://research-and-innovation.ec.europa.eu/events/upcoming-events/scientific-advice-advanced-materials-handover-commissioner-zaharieva-ebs-live-tv-debate-2026-04-22_en",
+        "motivo_rejeicao": "Pontuacao abaixo do minimo (oportunidade nao evidenciada)",
+        "tipo_estimado": "duvidoso",
+        "descricao_curta": "Scientific Advice on Advanced Materials: Handover to Commissioner Zaharieva EBS Live TV debate"
+      },
+      {
+        "fonte": "science_scraper",
+        "titulo": "Safe and sustainable by design: Accelerating the industrial transition",
+        "link": "https://research-and-innovation.ec.europa.eu/events/upcoming-events/safe-and-sustainable-design-accelerating-industrial-transition-2026-03-19_en",
+        "motivo_rejeicao": "Pontuacao abaixo do minimo (oportunidade nao evidenciada)",
+        "tipo_estimado": "duvidoso",
+        "descricao_curta": "Safe and sustainable by design: Accelerating the industrial transition"
+      },
+      {
+        "fonte": "science_scraper",
+        "titulo": "The future of Artificial Intelligence and the implications for Materials Science workshop",
+        "link": "https://research-and-innovation.ec.europa.eu/events/upcoming-events/future-artificial-intelligence-and-implications-materials-science-workshop-2025-12-16_en",
+        "motivo_rejeicao": "Pontuacao abaixo do minimo (oportunidade nao evidenciada)",
+        "tipo_estimado": "duvidoso",
+        "descricao_curta": "The future of Artificial Intelligence and the implications for Materials Science workshop"
+      },
+      {
+        "fonte": "science_scraper",
+        "titulo": "The future of Artificial Intelligence and the implications for Materials Science workshop",
+        "link": "https://research-and-innovation.ec.europa.eu/events/upcoming-events/future-artificial-intelligence-and-implications-materials-science-workshop-2025-12-16_en",
+        "motivo_rejeicao": "Pontuacao abaixo do minimo (oportunidade nao evidenciada)",
+        "tipo_estimado": "duvidoso",
+        "descricao_curta": "The future of Artificial Intelligence and the implications for Materials Science workshop"
+      },
+      {
+        "fonte": "science_scraper",
+        "titulo": "12th International Conference on Computer Science and Engineering",
+        "link": "https://csen2025.org/",
+        "motivo_rejeicao": "Pontuacao abaixo do minimo (oportunidade nao evidenciada)",
+        "tipo_estimado": "duvidoso",
+        "descricao_curta": "12th International Conference on Computer Science and Engineering"
+      }
+    ],
+    "diagnostico": "crawler_fraco",
+    "recomendacao": "Rever extração do crawler (título/descrição/link detalhe) antes de mexer no gate.",
+    "parece_problema_crawler": true,
+    "parece_problema_gate_transformer": false,
+    "parece_sem_oportunidade_real": false
+  },
+  {
+    "fonte": "senai",
+    "bruto_total": 1,
+    "transformados": 0,
+    "rejeitados": 1,
+    "motivos_rejeicao": {
+      "Pontuacao abaixo do minimo (oportunidade nao evidenciada)": 1
+    },
+    "tipos_rejeitados_estimados": {
+      "oportunidade_real": 1
+    },
+    "exemplos_rejeitados": [
+      {
+        "fonte": "senai",
+        "titulo": "SENAI - Chamadas Públicas",
+        "link": "https://www.portaldaindustria.com.br/senai/canais/chamadas-publicas/",
+        "motivo_rejeicao": "Pontuacao abaixo do minimo (oportunidade nao evidenciada)",
+        "tipo_estimado": "oportunidade_real",
+        "descricao_curta": "Índice público de chamadas e editais do SENAI."
+      }
+    ],
+    "diagnostico": "gate_agressivo",
+    "recomendacao": "Aplicar ajuste local por fonte com critérios objetivos e logs de relaxamento.",
+    "parece_problema_crawler": false,
+    "parece_problema_gate_transformer": true,
+    "parece_sem_oportunidade_real": false
+  },
+  {
+    "fonte": "softex",
+    "bruto_total": 2,
+    "transformados": 0,
+    "rejeitados": 2,
+    "motivos_rejeicao": {
+      "Pontuacao abaixo do minimo (oportunidade nao evidenciada)": 2
+    },
+    "tipos_rejeitados_estimados": {
+      "duvidoso": 2
+    },
+    "exemplos_rejeitados": [
+      {
+        "fonte": "softex",
+        "titulo": "Inscrições abertas para o Amazônia Geek, programa de formação de talentos em games",
+        "link": "https://softex.br/inscricoes-abertas-para-o-amazonia-geek-programa-de-formacao-de-talentos-em-games/",
+        "motivo_rejeicao": "Pontuacao abaixo do minimo (oportunidade nao evidenciada)",
+        "tipo_estimado": "duvidoso",
+        "descricao_curta": "Inscrições abertas para o Amazônia Geek, programa de formação de talentos em games"
+      },
+      {
+        "fonte": "softex",
+        "titulo": "Softex e CAIXA lançam Programa Amazônia Geek para capacitar jovens e mulheres em vulnerabilidade na indústria de games",
+        "link": "https://softex.br/softex-e-caixa-lancam-programa-amazonia-geek-para-capacitar-jovens-e-mulheres-em-vulnerabilidade-na-industria-de-games/",
+        "motivo_rejeicao": "Pontuacao abaixo do minimo (oportunidade nao evidenciada)",
+        "tipo_estimado": "duvidoso",
+        "descricao_curta": "Softex e CAIXA lançam Programa Amazônia Geek para capacitar jovens e mulheres em vulnerabilidade na indústria de games"
+      }
+    ],
+    "diagnostico": "crawler_fraco",
+    "recomendacao": "Rever extração do crawler (título/descrição/link detalhe) antes de mexer no gate.",
+    "parece_problema_crawler": true,
+    "parece_problema_gate_transformer": false,
+    "parece_sem_oportunidade_real": false
+  }
+]

@@ -1,0 +1,93 @@
+{
+  "meta": {
+    "titulo": "Lote 4 — defesa Brasil (AMAZUL, Marinha, DCTA/ITA/IAE)",
+    "data_auditoria": "2026-05-02",
+    "restricoes": "Sem opportunity_gate global, sem loader apply, sem Supabase, sem migrations; sem contornar Cloudflare/captcha.",
+    "relatorios_execucao": {
+      "retransform_dry_run": "audit_reports_blocked_sources/lote4_fix_defesa_brasil/retransform_summary.json",
+      "auditoria_semantica": "audit_reports_blocked_sources/lote4_fix_defesa_brasil_semantic/audit_semantic_summary.json",
+      "auditoria_documentos": "audit_reports_blocked_sources/lote4_fix_defesa_brasil_docs/audit_docs_summary.json",
+      "auditoria_acesso": "audit_reports_access/source_access_by_source.json (filtrar por fonte)"
+    }
+  },
+  "amazul": {
+    "1_crawler_roda": true,
+    "2_output_bruto_existe": true,
+    "3_quantidade_brutos": 20,
+    "4_quantidade_transformam": 19,
+    "5_quantidade_rejeitados": 1,
+    "6_motivos_rejeicao": {
+      "Noticia ou pagina generica sem chamada evidenciada": 1
+    },
+    "7_classificacao_conteudo_predominante": [
+      "licitacao",
+      "compra_publica",
+      "dispensa_de_licitacao",
+      "documento_oficial_pdf_extrato_dou_termo"
+    ],
+    "8_natureza_problema": "Crawler corrigido (URLs antigas 404); restante é gate local em um caso marginal + ruído textual por PDF DOU agregado no corpo.",
+    "9_documentos_pdfs": true,
+    "10_prazo_processo_orgao_objeto": "Sim em vários itens (NUP, processo licitatório, objeto, DOU, UASG); prazo de inscrição nem sempre extraível.",
+    "11_continuar_no_projeto": true,
+    "12_recomendacao_inicial": "ready_with_notes — cobertura real de dispensas/contratações; revisar escopo de produto para compras administrativas genéricas; 2 flags semânticas fonte_defesa_sem_defesa (esperado após moderar setor por texto).",
+    "readiness_sugerido": "ready_with_notes",
+    "pode_sair_de_blocked": "Sim, condicionado à aceitação de licitações administrativas da AMAZUL como oportunidade e revisão manual leve dos 2 itens sinalizados.",
+    "correcoes_aplicadas": [
+      "listing_urls → https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos",
+      "calibrate_amazul_extras: setor_estrategico sem inferência só por hostname; evidências PNCP/TR; perfil_ideal em compra/concurso",
+      "config/source_access_policy.json: seed e notas AMAZUL"
+    ]
+  },
+  "marinha": {
+    "1_crawler_roda": true,
+    "2_output_bruto_existe": true,
+    "3_quantidade_brutos": 0,
+    "4_quantidade_transformam": 0,
+    "5_quantidade_rejeitados": 0,
+    "6_motivos_rejeicao": {},
+    "7_classificacao_conteudo_predominante": [
+      "indice_ou_listagem_inacessivel",
+      "bloqueio_intermediario"
+    ],
+    "8_natureza_problema": "Acesso — Cloudflare na origem; fetch_soup não obtém HTML de oportunidade.",
+    "9_documentos_pdfs": false,
+    "10_prazo_processo_orgao_objeto": false,
+    "11_continuar_no_projeto": true,
+    "12_recomendacao_inicial": "manter blocked ou needs_manual_review até existir fonte estável (export, PNCP filtrado, ou coleta assistida fora do escopo deste crawler).",
+    "readiness_sugerido": "manter blocked",
+    "pode_sair_de_blocked": "Não, enquanto listagens responderem 403 a cliente HTTP simples.",
+    "correcoes_aplicadas": [
+      "calibrate_marinha_extras: setor por texto do corpo; evidências PNCP/TR; perfil_ideal",
+      "config/source_access_policy.json: nota Cloudflare Marinha"
+    ]
+  },
+  "dcta_ita_iae": {
+    "1_crawler_roda": true,
+    "2_output_bruto_existe": true,
+    "3_quantidade_brutos": 0,
+    "4_quantidade_transformam": 0,
+    "5_quantidade_rejeitados": 0,
+    "6_motivos_rejeicao": {},
+    "7_classificacao_conteudo_predominante": [
+      "url_quebrada",
+      "indice_institucional_inexistente_no_caminho_antigo"
+    ],
+    "8_natureza_problema": "Crawler + URL — rotas gov.br históricas retornam 404; não é gate.",
+    "9_documentos_pdfs": false,
+    "10_prazo_processo_orgao_objeto": false,
+    "11_continuar_no_projeto": true,
+    "12_recomendacao_inicial": "manter blocked até mapear novo hub oficial (FAB, domínio institucional ou PNCP) com URLs reais verificáveis.",
+    "readiness_sugerido": "manter blocked",
+    "pode_sair_de_blocked": "Não, sem seeds HTML válidos.",
+    "correcoes_aplicadas": [
+      "main_dcta_ita_iae.py: comentário de contexto sobre 404",
+      "calibrate_dcta_ita_iae_extras: aeroespacial/defesa por texto do corpo; tokens PNCP/TR",
+      "config/source_access_policy.json: nota sobre 404 gov.br"
+    ]
+  },
+  "sintese_readiness": {
+    "amazul": "ready_with_notes",
+    "marinha": "manter blocked",
+    "dcta_ita_iae": "manter blocked"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "titulo": "Dry-run loader — petrobras (ready_with_notes)",
+  "comando": "python scripts/load_ready_sources.py --dry-run --sources petrobras --exclude-blocked",
+  "id_execucao": "39afcbff-cd7c-4fce-b7e4-393c23292c41",
+  "data_auditoria": "2026-05-02T02:10:26Z",
+  "readiness": {
+    "diff_resumo": [
+      "config/source_readiness.json: petrobras removido de blocked; incluído em ready_with_notes (lista gerada também a partir do readiness pelo script do loader).",
+      "audit_reports_retransform/readiness_for_loader.json: petrobras retirado de fontes_bloqueadas_temporariamente; acrescentado a fontes_prontas_para_loader; pronto_com_observacoes 12→13; bloquear_temporariamente 19→18."
+    ],
+    "standardized_copiado_para": "audit_reports_retransform/standardized/petrobras_standardized.json"
+  },
+  "totais": {
+    "itens_standardized": 4,
+    "would_upsert": 4,
+    "would_ignore": 0,
+    "mapping_errors": 0,
+    "critical_empty_items": 0,
+    "documentos_perdidos_no_payload": 0,
+    "canonical_skipped": 0
+  },
+  "preservacao": {
+    "docs_input_items": 2,
+    "docs_preserved_items": 2,
+    "pdf_input_items": 2,
+    "pdf_preserved_items": 2,
+    "perda_documentos_nao_pdf": 0
+  },
+  "campos_semanticos_rastreados_loader": {
+    "tipo_oportunidade_input_payload_preserved": "4 / 4 / 4",
+    "tipo_recurso_input_payload_preserved": "4 / 4 / 4",
+    "publico_alvo_input_payload_preserved": "4 / 4 / 4",
+    "validacao_status_input_payload_preserved": "4 / 4 / 4",
+    "qualidade_dado_input_payload_preserved": "4 / 4 / 4",
+    "area_input_payload_preserved": "2 / 2 / 2",
+    "nota": "TRACK_FIELDS do loader não inclui perfil_ideal; no standardized há extras com perfil quando preenchido pelo pipeline."
+  },
+  "flags_criticos": {
+    "itens_com_validacao_suspeito_no_standardized": "Alguns itens HTML Bússola podem ter validacao_status=suspeito (descrição curta, prazo/valor ausentes); o dry-run não os ignora.",
+    "canonicalizacao": "Nenhum item ignorado por source_canonicalization.json."
+  },
+  "recomendacao_staging": "Dry-run limpo (4 upserts, 0 erros, 0 perda de documentos/PDF no payload). Pode aplicar em staging quando quiserem gravar estes 4 links, usando o fluxo habitual de apply com flags de ambiente; manter nota de ready_with_notes (volume pequeno, validacao suspeito em parte dos itens, revisão humana opcional)."
+}

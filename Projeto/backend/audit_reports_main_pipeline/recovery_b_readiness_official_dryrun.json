@@ -1,0 +1,19 @@
+{
+  "data_auditoria": "2026-05-10T12:00:00Z",
+  "nota": "Slice temporário só para dry-run oficial Recovery B (amazul, ambev, badesul). Não substitui audit_reports_retransform/readiness_for_loader.json.",
+  "fontes_total": 3,
+  "status_distribution": {
+    "pronto_para_loader": 3,
+    "pronto_com_observacoes": 0,
+    "bloquear_temporariamente": 0,
+    "precisa_revisao_manual": 0,
+    "reprocessar_depois_de_ajuste": 0
+  },
+  "fontes_prontas_para_loader": [
+    "amazul",
+    "ambev",
+    "badesul"
+  ],
+  "fontes_bloqueadas_temporariamente": [],
+  "fontes_para_revisao": []
+}

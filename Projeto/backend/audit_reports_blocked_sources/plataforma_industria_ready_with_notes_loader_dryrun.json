@@ -1,0 +1,39 @@
+{
+  "titulo": "Dry-run do loader: plataforma_industria (ready_with_notes)",
+  "data_referencia": "2026-05-02T00:47:41Z",
+  "comando": "python scripts/load_ready_sources.py --dry-run --sources plataforma_industria --exclude-blocked",
+  "decisao_operacional": "Aprovado diagnóstico; fonte em ready_with_notes; apply não executado.",
+  "fonte": "plataforma_industria",
+  "resumo_loader": {
+    "id_execucao": "350aabfa-1419-4708-9335-350c2fef8b25",
+    "mode": "dry-run",
+    "apply_requested": false,
+    "sources_selected": 1,
+    "sources_excluded": 93,
+    "itens_standardized_total": 23,
+    "would_upsert_total": 23,
+    "would_ignore_total": 0,
+    "mapping_errors_total": 0,
+    "critical_empty_items_total": 0,
+    "documentos_perdidos_no_payload_total": 0,
+    "perda_documentos_nao_pdf_total": 0
+  },
+  "por_fonte": [
+    {
+      "fonte": "plataforma_industria",
+      "standardized_path": "audit_reports_retransform/standardized/plataforma_industria_standardized.json",
+      "itens_standardized": 23,
+      "would_upsert": 23,
+      "would_ignore": 0,
+      "mapping_errors": 0,
+      "critical_empty_items": 0,
+      "documentos_perdidos_no_payload": 0,
+      "docs_loss_examples": []
+    }
+  ],
+  "readiness_paths": {
+    "readiness_for_loader": "audit_reports_retransform/readiness_for_loader.json",
+    "source_readiness": "config/source_readiness.json"
+  },
+  "conclusao_tecnica": "Dry-run limpo: 23 itens mapeados sem erros críticos e sem perda de documentos no payload."
+}

@@ -1,0 +1,439 @@
+[
+  {
+    "fonte": "amazul",
+    "raw_output_path": "amazul/outputs/amazul_editais.json",
+    "old_standardized_path": "CORE/transformer/amazul_standardized.json",
+    "new_standardized_path": "audit_reports_blocked_sources/lote4_brasil_legado_retransform/standardized/amazul_standardized.json",
+    "itens_brutos_encontrados": 0,
+    "itens_transformados": 0,
+    "itens_rejeitados": 0,
+    "itens_incompletos": 0,
+    "itens_suspeitos": 0,
+    "itens_acesso_limitado": 0,
+    "documentos_preservados": 0,
+    "pdf_url_preservado": 0,
+    "area_preenchida": 0,
+    "tipo_oportunidade_preenchido": 0,
+    "tipo_recurso_preenchido": 0,
+    "perfil_ideal_preenchido": 0,
+    "qualidade_dado_media": null,
+    "motivos_rejeicao_principais": {},
+    "quick_audit": {
+      "ruido_passou": 0,
+      "duplicatas_link": 0,
+      "campos_preenchidos_pct": {
+        "area": 0.0,
+        "tipo_oportunidade": 0.0,
+        "tipo_recurso": 0.0,
+        "perfil_ideal": 0.0,
+        "documentos": 0.0,
+        "pdf_url": 0.0
+      },
+      "official_link_only_total": 0,
+      "access_limited_total": 0,
+      "access_reason_counts": {},
+      "access_limited_examples": []
+    },
+    "old_vs_new": {
+      "old_count": 1,
+      "new_count": 0,
+      "delta_count": -1,
+      "old_links_now_missing": [
+        "https://www.amazul.mar.mil.br/licitacoes"
+      ],
+      "new_links_before_missing": [],
+      "core_fields_improved": {},
+      "core_fields_worsened": {
+        "tipo_oportunidade": {
+          "old": 1,
+          "new": 0,
+          "delta": -1
+        },
+        "tipo_recurso": {
+          "old": 1,
+          "new": 0,
+          "delta": -1
+        }
+      },
+      "old_documents_count": 0,
+      "new_documents_count": 0,
+      "old_pdf_count": 0,
+      "new_pdf_count": 0
+    },
+    "risk_notes": []
+  },
+  {
+    "fonte": "ambev",
+    "raw_output_path": "ambev/outputs/ambev_editais.json",
+    "old_standardized_path": "CORE/transformer/ambev_standardized.json",
+    "new_standardized_path": "audit_reports_blocked_sources/lote4_brasil_legado_retransform/standardized/ambev_standardized.json",
+    "itens_brutos_encontrados": 7,
+    "itens_transformados": 0,
+    "itens_rejeitados": 7,
+    "itens_incompletos": 0,
+    "itens_suspeitos": 0,
+    "itens_acesso_limitado": 0,
+    "documentos_preservados": 0,
+    "pdf_url_preservado": 0,
+    "area_preenchida": 0,
+    "tipo_oportunidade_preenchido": 0,
+    "tipo_recurso_preenchido": 0,
+    "perfil_ideal_preenchido": 0,
+    "qualidade_dado_media": null,
+    "motivos_rejeicao_principais": {
+      "Pontuacao abaixo do minimo (oportunidade nao evidenciada)": 6,
+      "Relevancia limite: poucos sinais de oportunidade": 1
+    },
+    "quick_audit": {
+      "ruido_passou": 0,
+      "duplicatas_link": 0,
+      "campos_preenchidos_pct": {
+        "area": 0.0,
+        "tipo_oportunidade": 0.0,
+        "tipo_recurso": 0.0,
+        "perfil_ideal": 0.0,
+        "documentos": 0.0,
+        "pdf_url": 0.0
+      },
+      "official_link_only_total": 0,
+      "access_limited_total": 0,
+      "access_reason_counts": {},
+      "access_limited_examples": []
+    },
+    "old_vs_new": {
+      "old_count": 7,
+      "new_count": 0,
+      "delta_count": -7,
+      "old_links_now_missing": [
+        "https://www.100accelerator.com/challenges/circular-economy",
+        "https://www.100accelerator.com/challenges/climate",
+        "https://www.100accelerator.com/challenges/health-and-wellness",
+        "https://www.100accelerator.com/challenges/inclusive-growth",
+        "https://www.100accelerator.com/challenges/nature-and-biodiversity",
+        "https://www.100accelerator.com/challenges/sustainable-agriculture",
+        "https://www.100accelerator.com/challenges/water-stewardship"
+      ],
+      "new_links_before_missing": [],
+      "core_fields_improved": {},
+      "core_fields_worsened": {
+        "area": {
+          "old": 1,
+          "new": 0,
+          "delta": -1
+        },
+        "tipo_oportunidade": {
+          "old": 7,
+          "new": 0,
+          "delta": -7
+        },
+        "tipo_recurso": {
+          "old": 7,
+          "new": 0,
+          "delta": -7
+        }
+      },
+      "old_documents_count": 0,
+      "new_documents_count": 0,
+      "old_pdf_count": 0,
+      "new_pdf_count": 0
+    },
+    "risk_notes": []
+  },
+  {
+    "fonte": "apex",
+    "raw_output_path": "apex/outputs/apex_editais.json",
+    "old_standardized_path": "CORE/transformer/apex_standardized.json",
+    "new_standardized_path": "audit_reports_blocked_sources/lote4_brasil_legado_retransform/standardized/apex_standardized.json",
+    "itens_brutos_encontrados": 1,
+    "itens_transformados": 0,
+    "itens_rejeitados": 1,
+    "itens_incompletos": 0,
+    "itens_suspeitos": 0,
+    "itens_acesso_limitado": 0,
+    "documentos_preservados": 0,
+    "pdf_url_preservado": 0,
+    "area_preenchida": 0,
+    "tipo_oportunidade_preenchido": 0,
+    "tipo_recurso_preenchido": 0,
+    "perfil_ideal_preenchido": 0,
+    "qualidade_dado_media": null,
+    "motivos_rejeicao_principais": {
+      "titulo_ruido_exato": 1
+    },
+    "quick_audit": {
+      "ruido_passou": 0,
+      "duplicatas_link": 0,
+      "campos_preenchidos_pct": {
+        "area": 0.0,
+        "tipo_oportunidade": 0.0,
+        "tipo_recurso": 0.0,
+        "perfil_ideal": 0.0,
+        "documentos": 0.0,
+        "pdf_url": 0.0
+      },
+      "official_link_only_total": 0,
+      "access_limited_total": 0,
+      "access_reason_counts": {},
+      "access_limited_examples": []
+    },
+    "old_vs_new": {
+      "old_count": 0,
+      "new_count": 0,
+      "delta_count": 0,
+      "old_links_now_missing": [],
+      "new_links_before_missing": [],
+      "core_fields_improved": {},
+      "core_fields_worsened": {},
+      "old_documents_count": 0,
+      "new_documents_count": 0,
+      "old_pdf_count": 0,
+      "new_pdf_count": 0
+    },
+    "risk_notes": []
+  },
+  {
+    "fonte": "dcta_ita_iae",
+    "raw_output_path": "dcta_ita_iae/outputs/dcta_ita_iae_editais.json",
+    "old_standardized_path": "CORE/transformer/dcta_ita_iae_standardized.json",
+    "new_standardized_path": "audit_reports_blocked_sources/lote4_brasil_legado_retransform/standardized/dcta_ita_iae_standardized.json",
+    "itens_brutos_encontrados": 0,
+    "itens_transformados": 0,
+    "itens_rejeitados": 0,
+    "itens_incompletos": 0,
+    "itens_suspeitos": 0,
+    "itens_acesso_limitado": 0,
+    "documentos_preservados": 0,
+    "pdf_url_preservado": 0,
+    "area_preenchida": 0,
+    "tipo_oportunidade_preenchido": 0,
+    "tipo_recurso_preenchido": 0,
+    "perfil_ideal_preenchido": 0,
+    "qualidade_dado_media": null,
+    "motivos_rejeicao_principais": {},
+    "quick_audit": {
+      "ruido_passou": 0,
+      "duplicatas_link": 0,
+      "campos_preenchidos_pct": {
+        "area": 0.0,
+        "tipo_oportunidade": 0.0,
+        "tipo_recurso": 0.0,
+        "perfil_ideal": 0.0,
+        "documentos": 0.0,
+        "pdf_url": 0.0
+      },
+      "official_link_only_total": 0,
+      "access_limited_total": 0,
+      "access_reason_counts": {},
+      "access_limited_examples": []
+    },
+    "old_vs_new": {
+      "old_count": 0,
+      "new_count": 0,
+      "delta_count": 0,
+      "old_links_now_missing": [],
+      "new_links_before_missing": [],
+      "core_fields_improved": {},
+      "core_fields_worsened": {},
+      "old_documents_count": 0,
+      "new_documents_count": 0,
+      "old_pdf_count": 0,
+      "new_pdf_count": 0
+    },
+    "risk_notes": []
+  },
+  {
+    "fonte": "faperg",
+    "raw_output_path": "faperg/outputs/faperg_editais.json",
+    "old_standardized_path": "CORE/transformer/faperg_standardized.json",
+    "new_standardized_path": "audit_reports_blocked_sources/lote4_brasil_legado_retransform/standardized/faperg_standardized.json",
+    "itens_brutos_encontrados": 0,
+    "itens_transformados": 0,
+    "itens_rejeitados": 0,
+    "itens_incompletos": 0,
+    "itens_suspeitos": 0,
+    "itens_acesso_limitado": 0,
+    "documentos_preservados": 0,
+    "pdf_url_preservado": 0,
+    "area_preenchida": 0,
+    "tipo_oportunidade_preenchido": 0,
+    "tipo_recurso_preenchido": 0,
+    "perfil_ideal_preenchido": 0,
+    "qualidade_dado_media": null,
+    "motivos_rejeicao_principais": {},
+    "quick_audit": {
+      "ruido_passou": 0,
+      "duplicatas_link": 0,
+      "campos_preenchidos_pct": {
+        "area": 0.0,
+        "tipo_oportunidade": 0.0,
+        "tipo_recurso": 0.0,
+        "perfil_ideal": 0.0,
+        "documentos": 0.0,
+        "pdf_url": 0.0
+      },
+      "official_link_only_total": 0,
+      "access_limited_total": 0,
+      "access_reason_counts": {},
+      "access_limited_examples": []
+    },
+    "old_vs_new": {
+      "old_count": 0,
+      "new_count": 0,
+      "delta_count": 0,
+      "old_links_now_missing": [],
+      "new_links_before_missing": [],
+      "core_fields_improved": {},
+      "core_fields_worsened": {},
+      "old_documents_count": 0,
+      "new_documents_count": 0,
+      "old_pdf_count": 0,
+      "new_pdf_count": 0
+    },
+    "risk_notes": []
+  },
+  {
+    "fonte": "marinha",
+    "raw_output_path": "marinha/outputs/marinha_editais.json",
+    "old_standardized_path": "CORE/transformer/marinha_standardized.json",
+    "new_standardized_path": "audit_reports_blocked_sources/lote4_brasil_legado_retransform/standardized/marinha_standardized.json",
+    "itens_brutos_encontrados": 0,
+    "itens_transformados": 0,
+    "itens_rejeitados": 0,
+    "itens_incompletos": 0,
+    "itens_suspeitos": 0,
+    "itens_acesso_limitado": 0,
+    "documentos_preservados": 0,
+    "pdf_url_preservado": 0,
+    "area_preenchida": 0,
+    "tipo_oportunidade_preenchido": 0,
+    "tipo_recurso_preenchido": 0,
+    "perfil_ideal_preenchido": 0,
+    "qualidade_dado_media": null,
+    "motivos_rejeicao_principais": {},
+    "quick_audit": {
+      "ruido_passou": 0,
+      "duplicatas_link": 0,
+      "campos_preenchidos_pct": {
+        "area": 0.0,
+        "tipo_oportunidade": 0.0,
+        "tipo_recurso": 0.0,
+        "perfil_ideal": 0.0,
+        "documentos": 0.0,
+        "pdf_url": 0.0
+      },
+      "official_link_only_total": 0,
+      "access_limited_total": 0,
+      "access_reason_counts": {},
+      "access_limited_examples": []
+    },
+    "old_vs_new": {
+      "old_count": 1,
+      "new_count": 0,
+      "delta_count": -1,
+      "old_links_now_missing": [
+        "https://www.marinha.mil.br/editais"
+      ],
+      "new_links_before_missing": [],
+      "core_fields_improved": {},
+      "core_fields_worsened": {
+        "tipo_oportunidade": {
+          "old": 1,
+          "new": 0,
+          "delta": -1
+        },
+        "tipo_recurso": {
+          "old": 1,
+          "new": 0,
+          "delta": -1
+        }
+      },
+      "old_documents_count": 0,
+      "new_documents_count": 0,
+      "old_pdf_count": 0,
+      "new_pdf_count": 0
+    },
+    "risk_notes": []
+  },
+  {
+    "fonte": "science_scraper",
+    "raw_output_path": "science_scraper/outputs/science_editais.json",
+    "old_standardized_path": "CORE/transformer/science_scraper_standardized.json",
+    "new_standardized_path": "audit_reports_blocked_sources/lote4_brasil_legado_retransform/standardized/science_scraper_standardized.json",
+    "itens_brutos_encontrados": 14,
+    "itens_transformados": 0,
+    "itens_rejeitados": 14,
+    "itens_incompletos": 0,
+    "itens_suspeitos": 0,
+    "itens_acesso_limitado": 0,
+    "documentos_preservados": 0,
+    "pdf_url_preservado": 0,
+    "area_preenchida": 0,
+    "tipo_oportunidade_preenchido": 0,
+    "tipo_recurso_preenchido": 0,
+    "perfil_ideal_preenchido": 0,
+    "qualidade_dado_media": null,
+    "motivos_rejeicao_principais": {
+      "Pontuacao abaixo do minimo (oportunidade nao evidenciada)": 14
+    },
+    "quick_audit": {
+      "ruido_passou": 0,
+      "duplicatas_link": 0,
+      "campos_preenchidos_pct": {
+        "area": 0.0,
+        "tipo_oportunidade": 0.0,
+        "tipo_recurso": 0.0,
+        "perfil_ideal": 0.0,
+        "documentos": 0.0,
+        "pdf_url": 0.0
+      },
+      "official_link_only_total": 0,
+      "access_limited_total": 0,
+      "access_reason_counts": {},
+      "access_limited_examples": []
+    },
+    "old_vs_new": {
+      "old_count": 14,
+      "new_count": 0,
+      "delta_count": -14,
+      "old_links_now_missing": [
+        "https://csen2025.org/",
+        "https://defence-industry-space.ec.europa.eu/eu-future-space-ecosystem_en",
+        "https://defence-industry-space.ec.europa.eu/technological-non-dependence_en",
+        "https://ec.europa.eu/defence-industry-space/eu-space-policy/space-research-and-innovation/eu-funded-space-ri-previous-eu-framework-programmes-research-and-innovation_en",
+        "https://ec.europa.eu/defence-industry-space/eu-space-policy/space-research-and-innovation/orbit-demonstration-and-validation-iodiov_en",
+        "https://ec.europa.eu/defence-industry-space/eu-space-policy/space-research-and-innovation/quantum-technologies_en",
+        "https://events.euractiv.com/event/info/media-partnership-choose-europe-and-its-world-class-research-and-technology-infrastructures",
+        "https://research-and-innovation.ec.europa.eu/events/upcoming-events/ai-science-summit-2025-2025-11-03_en",
+        "https://research-and-innovation.ec.europa.eu/events/upcoming-events/future-artificial-intelligence-and-implications-materials-science-workshop-2025-12-16_en",
+        "https://research-and-innovation.ec.europa.eu/events/upcoming-events/knowledge-impact-shaping-europes-next-innovation-wave-2025-11-13_en",
+        "https://research-and-innovation.ec.europa.eu/events/upcoming-events/safe-and-sustainable-design-accelerating-industrial-transition-2026-03-19_en",
+        "https://research-and-innovation.ec.europa.eu/events/upcoming-events/scientific-advice-advanced-materials-handover-commissioner-zaharieva-ebs-live-tv-debate-2026-04-22_en",
+        "https://research-innovation-community.ec.europa.eu/events/v8Zo9SQKeTF72UFEeFpmG/overview"
+      ],
+      "new_links_before_missing": [],
+      "core_fields_improved": {},
+      "core_fields_worsened": {
+        "area": {
+          "old": 1,
+          "new": 0,
+          "delta": -1
+        },
+        "tipo_oportunidade": {
+          "old": 14,
+          "new": 0,
+          "delta": -14
+        },
+        "tipo_recurso": {
+          "old": 14,
+          "new": 0,
+          "delta": -14
+        }
+      },
+      "old_documents_count": 0,
+      "new_documents_count": 0,
+      "old_pdf_count": 0,
+      "new_pdf_count": 0
+    },
+    "risk_notes": []
+  }
+]

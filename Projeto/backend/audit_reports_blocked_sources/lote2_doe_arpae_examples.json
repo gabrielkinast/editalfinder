@@ -1,0 +1,31 @@
+{
+  "antes_crawler_vazio": {
+    "causa_1": "URL antiga arpa-e.energy.gov/funding-opportunities → HTTP 404.",
+    "causa_2": "scraper_generic.remove(#fragment) fazia todas as âncoras #FoaId colapsarem para o mesmo Default.aspx, impedindo múltiplos itens distintos."
+  },
+  "amostra_bruto_pos_correcao": {
+    "titulo": "DE-FOA-0003556",
+    "link": "https://arpa-e-foa.energy.gov/Default.aspx#FoaIddea127bd-98a5-4530-84c8-7662702c3d5a",
+    "metodo_extracao": "arpa_e_exchange_listing",
+    "descricao_resumo": "Linha da tabela eXCHANGE + rodapé explicando que prazos completos estão no NOFO no portal."
+  },
+  "amostra_transformado": {
+    "tipo_oportunidade": "funding_opportunity",
+    "tipo_recurso": "fomento",
+    "pais": "Estados Unidos",
+    "idioma_original": "en",
+    "codigo_oportunidade": "DE-FOA-0003556",
+    "validacao_status": "incompleto",
+    "nota_thematic_tags": "Calibração local remove tags defesa/aeroespacial sem evidência forte no texto (evitava falso positivo por padrões globais)."
+  },
+  "amostra_teaming_rfi": {
+    "titulo": "RFI-0000094 — ARPA-E eXCHANGE",
+    "tipo_oportunidade": "chamada_publica",
+    "tipo_conteudo_arpae": "teaming_partner_notice",
+    "justificativa": "RFI com anúncio de lista de parceiros; mantido porque o pedido inclui teaming ligado a oportunidades reais."
+  },
+  "rejeitados_historicos": {
+    "motivo": "Não houve rejeição no último dry-run (motivos_rejeicao vazios).",
+    "exemplo_hipotetico_antigo_gate": "Itens poderiam falhar no gate global por pontuação baixa; soft continue local doe_arpae + âncora #FoaId contorna quando aplicável."
+  }
+}

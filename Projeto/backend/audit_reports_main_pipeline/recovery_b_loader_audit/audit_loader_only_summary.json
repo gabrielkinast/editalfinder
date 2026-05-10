@@ -1,0 +1,37 @@
+{
+  "modo": "only_loader",
+  "data_auditoria": "2026-05-10T05:23:40Z",
+  "max_items_por_ficheiro": 500,
+  "standardized_dirs": "audit_reports_main_pipeline/recovery_b/standardized",
+  "ficheiros_standardized_encontrados": 3,
+  "ficheiros_processados": 3,
+  "itens_analisados_total": 32,
+  "itens_com_alerta_payload": 32,
+  "erros_audit_exception": 0,
+  "ranking_fontes_perda": [
+    {
+      "fonte": "amazul",
+      "arquivo": "audit_reports_main_pipeline\\recovery_b\\standardized\\amazul_standardized.json",
+      "problemas_payload": 20,
+      "itens_amostra": 20,
+      "readiness_loader_score": 0.0,
+      "riscos_sobrescrita_por_vazio": 0
+    },
+    {
+      "fonte": "ambev",
+      "arquivo": "audit_reports_main_pipeline\\recovery_b\\standardized\\ambev_standardized.json",
+      "problemas_payload": 7,
+      "itens_amostra": 7,
+      "readiness_loader_score": 0.0,
+      "riscos_sobrescrita_por_vazio": 6
+    },
+    {
+      "fonte": "badesul",
+      "arquivo": "audit_reports_main_pipeline\\recovery_b\\standardized\\badesul_standardized.json",
+      "problemas_payload": 5,
+      "itens_amostra": 5,
+      "readiness_loader_score": 0.0,
+      "riscos_sobrescrita_por_vazio": 0
+    }
+  ]
+}

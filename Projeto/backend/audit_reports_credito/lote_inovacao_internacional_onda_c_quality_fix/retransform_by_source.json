@@ -1,0 +1,502 @@
+[
+  {
+    "fonte": "eit",
+    "raw_output_path": "eit/outputs/eit_editais.json",
+    "old_standardized_path": "",
+    "new_standardized_path": "audit_reports_credito/lote_inovacao_internacional_onda_c_quality_fix/standardized/eit_standardized.json",
+    "itens_brutos_encontrados": 16,
+    "itens_transformados": 16,
+    "itens_rejeitados": 0,
+    "itens_incompletos": 14,
+    "itens_suspeitos": 2,
+    "itens_acesso_limitado": 0,
+    "documentos_preservados": 5,
+    "pdf_url_preservado": 5,
+    "area_preenchida": 11,
+    "tipo_oportunidade_preenchido": 16,
+    "tipo_recurso_preenchido": 16,
+    "perfil_ideal_preenchido": 13,
+    "qualidade_dado_media": 74.19,
+    "motivos_rejeicao_principais": {},
+    "quick_audit": {
+      "ruido_passou": 0,
+      "duplicatas_link": 0,
+      "campos_preenchidos_pct": {
+        "area": 68.75,
+        "tipo_oportunidade": 100.0,
+        "tipo_recurso": 100.0,
+        "perfil_ideal": 81.25,
+        "documentos": 31.25,
+        "pdf_url": 31.25
+      },
+      "official_link_only_total": 0,
+      "access_limited_total": 0,
+      "access_reason_counts": {},
+      "access_limited_examples": []
+    },
+    "old_vs_new": {
+      "old_count": 0,
+      "new_count": 16,
+      "delta_count": 16,
+      "old_links_now_missing": [],
+      "new_links_before_missing": [
+        "https://www.eit.europa.eu/opportunities/call-eit-knowledge-and-innovation-communities",
+        "https://www.eit.europa.eu/our-activities/call-for-eit-communities/CCSI",
+        "https://www.eit.europa.eu/our-activities/call-for-eit-communities/eit-water",
+        "https://www.eit.europa.eu/our-activities/opportunities/citizens-move-2026",
+        "https://www.eit.europa.eu/our-activities/opportunities/climatelaunchpad-2026",
+        "https://www.eit.europa.eu/our-activities/opportunities/eit-edtech-conference-open-call",
+        "https://www.eit.europa.eu/our-activities/opportunities/eit-jumpstarter-2026",
+        "https://www.eit.europa.eu/our-activities/opportunities/innonext-call",
+        "https://www.eit.europa.eu/our-activities/opportunities/neb-mentors-open-call-2026",
+        "https://www.eit.europa.eu/our-activities/opportunities/scaleup-promotion-initiative-open-call",
+        "https://www.eit.europa.eu/our-activities/opportunities/strategic-innovation-open-call",
+        "https://www.eit.europa.eu/our-activities/opportunities/urban-mobility-explained-umx-open-call-0",
+        "https://www.eit.europa.eu/our-activities/opportunities/venture-incubation-program",
+        "https://www.eit.europa.eu/our-activities/opportunities/women2invest-0",
+        "https://www.eit.europa.eu/work-with-us/procurement/calls",
+        "https://www.eit.europa.eu/work-with-us/procurement/other-calls"
+      ],
+      "core_fields_improved": {
+        "area": {
+          "old": 0,
+          "new": 11,
+          "delta": 11
+        },
+        "tipo_oportunidade": {
+          "old": 0,
+          "new": 16,
+          "delta": 16
+        },
+        "tipo_recurso": {
+          "old": 0,
+          "new": 16,
+          "delta": 16
+        },
+        "perfil_ideal": {
+          "old": 0,
+          "new": 13,
+          "delta": 13
+        },
+        "documentos": {
+          "old": 0,
+          "new": 5,
+          "delta": 5
+        },
+        "pdf_url": {
+          "old": 0,
+          "new": 5,
+          "delta": 5
+        }
+      },
+      "core_fields_worsened": {},
+      "old_documents_count": 0,
+      "new_documents_count": 5,
+      "old_pdf_count": 0,
+      "new_pdf_count": 5
+    },
+    "risk_notes": []
+  },
+  {
+    "fonte": "esa_osip",
+    "raw_output_path": "esa_osip/outputs/esa_osip_editais.json",
+    "old_standardized_path": "",
+    "new_standardized_path": "audit_reports_credito/lote_inovacao_internacional_onda_c_quality_fix/standardized/esa_osip_standardized.json",
+    "itens_brutos_encontrados": 18,
+    "itens_transformados": 17,
+    "itens_rejeitados": 1,
+    "itens_incompletos": 16,
+    "itens_suspeitos": 1,
+    "itens_acesso_limitado": 0,
+    "documentos_preservados": 3,
+    "pdf_url_preservado": 3,
+    "area_preenchida": 10,
+    "tipo_oportunidade_preenchido": 17,
+    "tipo_recurso_preenchido": 17,
+    "perfil_ideal_preenchido": 13,
+    "qualidade_dado_media": 72.29,
+    "motivos_rejeicao_principais": {
+      "Pagina de login ou autenticacao": 1
+    },
+    "quick_audit": {
+      "ruido_passou": 0,
+      "duplicatas_link": 0,
+      "campos_preenchidos_pct": {
+        "area": 58.82,
+        "tipo_oportunidade": 100.0,
+        "tipo_recurso": 100.0,
+        "perfil_ideal": 76.47,
+        "documentos": 17.65,
+        "pdf_url": 17.65
+      },
+      "official_link_only_total": 0,
+      "access_limited_total": 0,
+      "access_reason_counts": {},
+      "access_limited_examples": []
+    },
+    "old_vs_new": {
+      "old_count": 0,
+      "new_count": 17,
+      "delta_count": 17,
+      "old_links_now_missing": [],
+      "new_links_before_missing": [
+        "https://ideas.esa.int/core/servlet/hype/IMT?documentTableId=6134754942840537568&userAction=Browse&templateName=&documentId=084c11fe4a9679bf192774977870faba",
+        "https://ideas.esa.int/core/servlet/hype/IMT?documentTableId=6134754942840537570&userAction=Browse&templateName=&documentId=07894a9c5321b11da762fd08ee1542e4",
+        "https://ideas.esa.int/core/servlet/hype/IMT?documentTableId=6134754942840537570&userAction=Browse&templateName=&documentId=156f9f2b97cf0185a510d7ee62b5d2c3",
+        "https://ideas.esa.int/core/servlet/hype/IMT?documentTableId=6134754942840537570&userAction=Browse&templateName=&documentId=2bea88be605ff162b45292174fe2dd06",
+        "https://ideas.esa.int/core/servlet/hype/IMT?documentTableId=6134754942840537570&userAction=Browse&templateName=&documentId=7e00afb5bbc5d161c44a5d96f51ebffc",
+        "https://ideas.esa.int/core/servlet/hype/IMT?documentTableId=6134754942840537570&userAction=Browse&templateName=&documentId=c04ea3595023772d80188f79bb71c910",
+        "https://ideas.esa.int/core/servlet/hype/IMT?documentTableId=6134754942840537574&userAction=Browse&templateName=&documentId=084c11fe4a9679bf192774977870faba",
+        "https://ideas.esa.int/core/servlet/hype/IMT?documentTableId=6134754942840537574&userAction=Browse&templateName=&documentId=348122ef3b562fab48fe3e3b4ef3e109",
+        "https://ideas.esa.int/core/servlet/hype/IMT?documentTableId=6134754942840537574&userAction=Browse&templateName=&documentId=359c6b6c83a35aa99c59cd19e002e833",
+        "https://ideas.esa.int/core/servlet/hype/IMT?documentTableId=6134754942840537574&userAction=Browse&templateName=&documentId=5655bd68fc87c649853708e4ff178484",
+        "https://ideas.esa.int/core/servlet/hype/IMT?documentTableId=6134754942840537574&userAction=Browse&templateName=&documentId=6f61eed8caa9411e747cfd7b75c88a70",
+        "https://ideas.esa.int/core/servlet/hype/IMT?documentTableId=6134754942840537574&userAction=Browse&templateName=&documentId=a19fe43cb577173800397fa26cdc1431",
+        "https://ideas.esa.int/core/servlet/hype/IMT?documentTableId=6134754942840537574&userAction=Browse&templateName=&documentId=adf3ae5fd220e84cb4ead11245585f68",
+        "https://ideas.esa.int/core/servlet/hype/IMT?documentTableId=6134754942840537574&userAction=Browse&templateName=&documentId=c80f8b3eb8c33321d06afd148d86ee44",
+        "https://ideas.esa.int/core/servlet/hype/IMT?documentTableId=6134754942840537574&userAction=Browse&templateName=&documentId=d8073b9132adbfd78290395d8a767b52",
+        "https://ideas.esa.int/core/servlet/hype/IMT?documentTableId=6134754942840537574&userAction=Browse&templateName=&documentId=ea0e1fd289bd5f4f9a47138cc6791b2e",
+        "https://ideas.esa.int/servlet/hype/IMT?userAction=Browse&templateName=MenuItem&documentId=84ccafc5b6956ecb712c483724c3e2a0"
+      ],
+      "core_fields_improved": {
+        "area": {
+          "old": 0,
+          "new": 10,
+          "delta": 10
+        },
+        "tipo_oportunidade": {
+          "old": 0,
+          "new": 17,
+          "delta": 17
+        },
+        "tipo_recurso": {
+          "old": 0,
+          "new": 17,
+          "delta": 17
+        },
+        "perfil_ideal": {
+          "old": 0,
+          "new": 13,
+          "delta": 13
+        },
+        "documentos": {
+          "old": 0,
+          "new": 3,
+          "delta": 3
+        },
+        "pdf_url": {
+          "old": 0,
+          "new": 3,
+          "delta": 3
+        }
+      },
+      "core_fields_worsened": {},
+      "old_documents_count": 0,
+      "new_documents_count": 3,
+      "old_pdf_count": 0,
+      "new_pdf_count": 3
+    },
+    "risk_notes": []
+  },
+  {
+    "fonte": "esa_star",
+    "raw_output_path": "esa_star/outputs/esa_star_editais.json",
+    "old_standardized_path": "",
+    "new_standardized_path": "audit_reports_credito/lote_inovacao_internacional_onda_c_quality_fix/standardized/esa_star_standardized.json",
+    "itens_brutos_encontrados": 1,
+    "itens_transformados": 0,
+    "itens_rejeitados": 1,
+    "itens_incompletos": 0,
+    "itens_suspeitos": 0,
+    "itens_acesso_limitado": 0,
+    "documentos_preservados": 0,
+    "pdf_url_preservado": 0,
+    "area_preenchida": 0,
+    "tipo_oportunidade_preenchido": 0,
+    "tipo_recurso_preenchido": 0,
+    "perfil_ideal_preenchido": 0,
+    "qualidade_dado_media": null,
+    "motivos_rejeicao_principais": {
+      "Pagina de login ou autenticacao": 1
+    },
+    "quick_audit": {
+      "ruido_passou": 0,
+      "duplicatas_link": 0,
+      "campos_preenchidos_pct": {
+        "area": 0.0,
+        "tipo_oportunidade": 0.0,
+        "tipo_recurso": 0.0,
+        "perfil_ideal": 0.0,
+        "documentos": 0.0,
+        "pdf_url": 0.0
+      },
+      "official_link_only_total": 0,
+      "access_limited_total": 0,
+      "access_reason_counts": {},
+      "access_limited_examples": []
+    },
+    "old_vs_new": {
+      "old_count": 0,
+      "new_count": 0,
+      "delta_count": 0,
+      "old_links_now_missing": [],
+      "new_links_before_missing": [],
+      "core_fields_improved": {},
+      "core_fields_worsened": {},
+      "old_documents_count": 0,
+      "new_documents_count": 0,
+      "old_pdf_count": 0,
+      "new_pdf_count": 0
+    },
+    "risk_notes": []
+  },
+  {
+    "fonte": "eurostars",
+    "raw_output_path": "eurostars/outputs/eurostars_editais.json",
+    "old_standardized_path": "",
+    "new_standardized_path": "audit_reports_credito/lote_inovacao_internacional_onda_c_quality_fix/standardized/eurostars_standardized.json",
+    "itens_brutos_encontrados": 2,
+    "itens_transformados": 2,
+    "itens_rejeitados": 0,
+    "itens_incompletos": 1,
+    "itens_suspeitos": 0,
+    "itens_acesso_limitado": 0,
+    "documentos_preservados": 2,
+    "pdf_url_preservado": 2,
+    "area_preenchida": 2,
+    "tipo_oportunidade_preenchido": 2,
+    "tipo_recurso_preenchido": 2,
+    "perfil_ideal_preenchido": 2,
+    "qualidade_dado_media": 87.5,
+    "motivos_rejeicao_principais": {},
+    "quick_audit": {
+      "ruido_passou": 0,
+      "duplicatas_link": 0,
+      "campos_preenchidos_pct": {
+        "area": 100.0,
+        "tipo_oportunidade": 100.0,
+        "tipo_recurso": 100.0,
+        "perfil_ideal": 100.0,
+        "documentos": 100.0,
+        "pdf_url": 100.0
+      },
+      "official_link_only_total": 0,
+      "access_limited_total": 0,
+      "access_reason_counts": {},
+      "access_limited_examples": []
+    },
+    "old_vs_new": {
+      "old_count": 0,
+      "new_count": 2,
+      "delta_count": 2,
+      "old_links_now_missing": [],
+      "new_links_before_missing": [
+        "https://www.eurekanetwork.org/programmes-and-calls/eurostars/",
+        "https://www.eurekanetwork.org/programmes-and-calls/eurostars/eurostars-call-for-projects-september-2026/"
+      ],
+      "core_fields_improved": {
+        "area": {
+          "old": 0,
+          "new": 2,
+          "delta": 2
+        },
+        "tipo_oportunidade": {
+          "old": 0,
+          "new": 2,
+          "delta": 2
+        },
+        "tipo_recurso": {
+          "old": 0,
+          "new": 2,
+          "delta": 2
+        },
+        "perfil_ideal": {
+          "old": 0,
+          "new": 2,
+          "delta": 2
+        },
+        "documentos": {
+          "old": 0,
+          "new": 2,
+          "delta": 2
+        },
+        "pdf_url": {
+          "old": 0,
+          "new": 2,
+          "delta": 2
+        }
+      },
+      "core_fields_worsened": {},
+      "old_documents_count": 0,
+      "new_documents_count": 2,
+      "old_pdf_count": 0,
+      "new_pdf_count": 2
+    },
+    "risk_notes": []
+  },
+  {
+    "fonte": "innovate_uk",
+    "raw_output_path": "innovate_uk/outputs/innovate_uk_editais.json",
+    "old_standardized_path": "",
+    "new_standardized_path": "audit_reports_credito/lote_inovacao_internacional_onda_c_quality_fix/standardized/innovate_uk_standardized.json",
+    "itens_brutos_encontrados": 1,
+    "itens_transformados": 1,
+    "itens_rejeitados": 0,
+    "itens_incompletos": 0,
+    "itens_suspeitos": 0,
+    "itens_acesso_limitado": 0,
+    "documentos_preservados": 0,
+    "pdf_url_preservado": 0,
+    "area_preenchida": 1,
+    "tipo_oportunidade_preenchido": 1,
+    "tipo_recurso_preenchido": 1,
+    "perfil_ideal_preenchido": 1,
+    "qualidade_dado_media": 88.0,
+    "motivos_rejeicao_principais": {},
+    "quick_audit": {
+      "ruido_passou": 0,
+      "duplicatas_link": 0,
+      "campos_preenchidos_pct": {
+        "area": 100.0,
+        "tipo_oportunidade": 100.0,
+        "tipo_recurso": 100.0,
+        "perfil_ideal": 100.0,
+        "documentos": 0.0,
+        "pdf_url": 0.0
+      },
+      "official_link_only_total": 0,
+      "access_limited_total": 0,
+      "access_reason_counts": {},
+      "access_limited_examples": []
+    },
+    "old_vs_new": {
+      "old_count": 0,
+      "new_count": 1,
+      "delta_count": 1,
+      "old_links_now_missing": [],
+      "new_links_before_missing": [
+        "https://www.ukri.org/opportunity/dual-use-aviation-systems-and-autonomy/"
+      ],
+      "core_fields_improved": {
+        "area": {
+          "old": 0,
+          "new": 1,
+          "delta": 1
+        },
+        "tipo_oportunidade": {
+          "old": 0,
+          "new": 1,
+          "delta": 1
+        },
+        "tipo_recurso": {
+          "old": 0,
+          "new": 1,
+          "delta": 1
+        },
+        "perfil_ideal": {
+          "old": 0,
+          "new": 1,
+          "delta": 1
+        }
+      },
+      "core_fields_worsened": {},
+      "old_documents_count": 0,
+      "new_documents_count": 0,
+      "old_pdf_count": 0,
+      "new_pdf_count": 0
+    },
+    "risk_notes": []
+  },
+  {
+    "fonte": "ukri_funding",
+    "raw_output_path": "ukri_funding/outputs/ukri_funding_editais.json",
+    "old_standardized_path": "",
+    "new_standardized_path": "audit_reports_credito/lote_inovacao_internacional_onda_c_quality_fix/standardized/ukri_funding_standardized.json",
+    "itens_brutos_encontrados": 10,
+    "itens_transformados": 10,
+    "itens_rejeitados": 0,
+    "itens_incompletos": 3,
+    "itens_suspeitos": 0,
+    "itens_acesso_limitado": 0,
+    "documentos_preservados": 5,
+    "pdf_url_preservado": 4,
+    "area_preenchida": 2,
+    "tipo_oportunidade_preenchido": 10,
+    "tipo_recurso_preenchido": 10,
+    "perfil_ideal_preenchido": 9,
+    "qualidade_dado_media": 91.2,
+    "motivos_rejeicao_principais": {},
+    "quick_audit": {
+      "ruido_passou": 0,
+      "duplicatas_link": 0,
+      "campos_preenchidos_pct": {
+        "area": 20.0,
+        "tipo_oportunidade": 100.0,
+        "tipo_recurso": 100.0,
+        "perfil_ideal": 90.0,
+        "documentos": 50.0,
+        "pdf_url": 40.0
+      },
+      "official_link_only_total": 0,
+      "access_limited_total": 0,
+      "access_reason_counts": {},
+      "access_limited_examples": []
+    },
+    "old_vs_new": {
+      "old_count": 0,
+      "new_count": 10,
+      "delta_count": 10,
+      "old_links_now_missing": [],
+      "new_links_before_missing": [
+        "https://www.ukri.org/opportunity/battery-innovation-programme-battery-skills-initiatives/",
+        "https://www.ukri.org/opportunity/bbsrc-new-investigator-award-applicant-led-mode/",
+        "https://www.ukri.org/opportunity/bbsrc-standard-research-grant-applicant-led-mode/",
+        "https://www.ukri.org/opportunity/centre-for-quantum-commercialisation-skills/",
+        "https://www.ukri.org/opportunity/contracts-for-innovation-cyber-scale-in-critical-sectors/",
+        "https://www.ukri.org/opportunity/dual-use-aviation-systems-and-autonomy/",
+        "https://www.ukri.org/opportunity/environmental-sciences-global-partnerships-seedcorn-fund-2026/",
+        "https://www.ukri.org/opportunity/experimental-medicine/",
+        "https://www.ukri.org/opportunity/national-materials-innovation-programme-feasibility-studies-round-2/",
+        "https://www.ukri.org/opportunity/particle-physics-experiment-consolidated-grants-2026/"
+      ],
+      "core_fields_improved": {
+        "area": {
+          "old": 0,
+          "new": 2,
+          "delta": 2
+        },
+        "tipo_oportunidade": {
+          "old": 0,
+          "new": 10,
+          "delta": 10
+        },
+        "tipo_recurso": {
+          "old": 0,
+          "new": 10,
+          "delta": 10
+        },
+        "perfil_ideal": {
+          "old": 0,
+          "new": 9,
+          "delta": 9
+        },
+        "documentos": {
+          "old": 0,
+          "new": 5,
+          "delta": 5
+        },
+        "pdf_url": {
+          "old": 0,
+          "new": 4,
+          "delta": 4
+        }
+      },
+      "core_fields_worsened": {},
+      "old_documents_count": 0,
+      "new_documents_count": 5,
+      "old_pdf_count": 0,
+      "new_pdf_count": 4
+    },
+    "risk_notes": []
+  }
+]

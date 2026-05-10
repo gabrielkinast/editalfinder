@@ -1,0 +1,410 @@
+{
+  "version": 1,
+  "defaults": {
+    "polite_sleep_sec": 1.0,
+    "timeout_sec": 18,
+    "max_retries": 2
+  },
+  "fontes": {
+    "nato_diana": {
+      "status": "blocked_access_limited",
+      "seed_urls": [
+        "https://www.diana.nato.int/challenges.html"
+      ],
+      "optional_safe_get_urls": [],
+      "allowed_methods": [
+        "official_curated_links",
+        "meta_tags",
+        "sitemap"
+      ],
+      "disallowed_methods": [
+        "captcha_bypass",
+        "cloudflare_bypass",
+        "proxy_rotation"
+      ],
+      "notes": "HTML simples pode receber 403 Cloudflare. Preferir curadoria a partir de URLs oficiais publicadas; sitemap/robots se permitirem."
+    },
+    "iarpa": {
+      "status": "blocked_access_limited",
+      "seed_urls": [
+        "https://www.iarpa.gov/research-programs"
+      ],
+      "optional_safe_get_urls": [
+        "https://www.grants.gov/"
+      ],
+      "allowed_methods": [
+        "usar_api_publica",
+        "official_curated_links",
+        "meta_tags"
+      ],
+      "disallowed_methods": [
+        "captcha_bypass",
+        "cloudflare_bypass",
+        "proxy_rotation"
+      ],
+      "notes": "Programas listados em iarpa.gov; oportunidades detalhadas costumam estar em catálogos Grants.gov (API pública documentada para integradores)."
+    },
+    "sam_gov": {
+      "status": "blocked_access_limited",
+      "seed_urls": [
+        "https://sam.gov/content/opportunities"
+      ],
+      "optional_safe_get_urls": [],
+      "allowed_methods": [
+        "usar_api_publica",
+        "meta_tags",
+        "sitemap"
+      ],
+      "disallowed_methods": [
+        "captcha_bypass",
+        "cloudflare_bypass",
+        "proxy_rotation"
+      ],
+      "notes": "SAM.gov expõe APIs públicas documentadas (OpenAPI); evitar scraping pesado de UI."
+    },
+    "science_scraper": {
+      "status": "blocked_access_limited",
+      "seed_urls": [
+        "https://science.osti.gov/grants/FOAs/Open"
+      ],
+      "optional_safe_get_urls": [],
+      "allowed_methods": [
+        "usar_rss",
+        "usar_sitemap",
+        "meta_tags"
+      ],
+      "disallowed_methods": [
+        "captcha_bypass",
+        "cloudflare_bypass",
+        "proxy_rotation"
+      ],
+      "notes": "Agregador multi-domínio; validar robots e feeds por sítio alvo."
+    },
+    "marinha": {
+      "status": "ok_html_publico",
+      "seed_urls": [
+        "https://www.marinha.mil.br/editais"
+      ],
+      "optional_safe_get_urls": [],
+      "allowed_methods": [
+        "usar_sitemap",
+        "meta_tags"
+      ],
+      "disallowed_methods": [
+        "captcha_bypass",
+        "cloudflare_bypass",
+        "proxy_rotation"
+      ],
+      "notes": "Listagens oficiais .mil.br; em 2026-05 o HTML costuma responder 403 (Cloudflare) a clientes tipo requests/curl sem fluxo de browser — não contornar."
+    },
+    "amazul": {
+      "status": "ok_html_publico",
+      "seed_urls": [
+        "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos"
+      ],
+      "optional_safe_get_urls": [],
+      "allowed_methods": [
+        "meta_tags",
+        "usar_json_ld"
+      ],
+      "disallowed_methods": [
+        "captcha_bypass",
+        "cloudflare_bypass",
+        "proxy_rotation"
+      ],
+      "notes": "Domínio militar .mil.br; listagem ativa em /acesso-a-informacao/licitacoes-e-contratos (rotas /licitacoes e /chamadas-publicas retornam 404)."
+    },
+    "ambev": {
+      "status": "ok_html_publico",
+      "seed_urls": [
+        "https://www.100accelerator.com/challenges"
+      ],
+      "optional_safe_get_urls": [],
+      "allowed_methods": [
+        "meta_tags",
+        "usar_json_ld"
+      ],
+      "disallowed_methods": [
+        "captcha_bypass",
+        "cloudflare_bypass",
+        "proxy_rotation"
+      ],
+      "notes": "Hub externo 100accelerator; pode ser SPA — validar HTML real vs curadoria."
+    },
+    "apex": {
+      "status": "ok_html_publico",
+      "seed_urls": [
+        "https://apexbrasil.com.br/br/pt/acesso-a-informacao/licitacoes-e-contratos/editais.html"
+      ],
+      "optional_safe_get_urls": [],
+      "allowed_methods": [
+        "meta_tags",
+        "usar_sitemap"
+      ],
+      "disallowed_methods": [
+        "captcha_bypass",
+        "cloudflare_bypass",
+        "proxy_rotation"
+      ],
+      "notes": "Portal institucional Brasil."
+    },
+    "china_avic": {
+      "status": "blocked_access_limited",
+      "seed_urls": [
+        "http://www.avic.com/"
+      ],
+      "optional_safe_get_urls": [],
+      "allowed_methods": [
+        "usar_pagina_alternativa_oficial",
+        "usar_curadoria_oficial_minima"
+      ],
+      "disallowed_methods": [
+        "captcha_bypass",
+        "cloudflare_bypass",
+        "proxy_rotation"
+      ],
+      "notes": "Institucional CN; latência e WAF possíveis; manter escopo público declarado no crawler."
+    },
+    "china_cnnc": {
+      "status": "blocked_access_limited",
+      "seed_urls": [
+        "https://www.cnnc.com.cn/"
+      ],
+      "optional_safe_get_urls": [],
+      "allowed_methods": [
+        "meta_tags",
+        "usar_curadoria_oficial_minima"
+      ],
+      "disallowed_methods": [
+        "captcha_bypass",
+        "cloudflare_bypass",
+        "proxy_rotation"
+      ],
+      "notes": "Portal institucional; verificar robots."
+    },
+    "china_norinco": {
+      "status": "blocked_access_limited",
+      "seed_urls": [
+        "http://en.norincogroup.com.cn/"
+      ],
+      "optional_safe_get_urls": [],
+      "allowed_methods": [
+        "usar_curadoria_oficial_minima",
+        "meta_tags"
+      ],
+      "disallowed_methods": [
+        "captcha_bypass",
+        "cloudflare_bypass",
+        "proxy_rotation"
+      ],
+      "notes": "HTTP legado no crawler; preferir HTTPS institucional se disponível."
+    },
+    "dcta_ita_iae": {
+      "status": "ok_html_publico",
+      "seed_urls": [
+        "https://www.gov.br/dcta/pt-br/chamamentos-e-licitacoes"
+      ],
+      "optional_safe_get_urls": [],
+      "allowed_methods": [
+        "usar_sitemap",
+        "meta_tags"
+      ],
+      "disallowed_methods": [
+        "captcha_bypass",
+        "cloudflare_bypass",
+        "proxy_rotation"
+      ],
+      "notes": "Em 2026-05 as URLs gov.br/dcta|ita|iae/pt-br/* usadas historicamente devolvem 404; requer novo hub (FAB ou outro) antes de reativar o crawler."
+    },
+    "japan_e_rad": {
+      "status": "ok_html_publico",
+      "seed_urls": [
+        "https://www.e-rad.go.jp/"
+      ],
+      "optional_safe_get_urls": [],
+      "allowed_methods": [
+        "usar_sitemap",
+        "meta_tags"
+      ],
+      "disallowed_methods": [
+        "captcha_bypass",
+        "cloudflare_bypass",
+        "proxy_rotation"
+      ],
+      "notes": "e-Rad institucional."
+    },
+    "japan_jaxa": {
+      "status": "blocked_access_limited",
+      "seed_urls": [
+        "https://global.jaxa.jp/press/"
+      ],
+      "optional_safe_get_urls": [],
+      "allowed_methods": [
+        "usar_rss",
+        "meta_tags",
+        "usar_sitemap"
+      ],
+      "disallowed_methods": [
+        "captcha_bypass",
+        "cloudflare_bypass",
+        "proxy_rotation"
+      ],
+      "notes": "Press global vs site jp; validar duas origens."
+    },
+    "bae_systems_suppliers": {
+      "status": "ok_html_publico",
+      "seed_urls": [
+        "https://www.baesystems.com/en/suppliers"
+      ],
+      "optional_safe_get_urls": [],
+      "allowed_methods": [
+        "meta_tags",
+        "usar_json_ld"
+      ],
+      "disallowed_methods": [
+        "captcha_bypass",
+        "cloudflare_bypass",
+        "proxy_rotation"
+      ],
+      "notes": "Página corporativa suppliers."
+    },
+    "rheinmetall_suppliers": {
+      "status": "ok_html_publico",
+      "seed_urls": [
+        "https://www.rheinmetall.com/en/company/suppliers"
+      ],
+      "optional_safe_get_urls": [],
+      "allowed_methods": [
+        "meta_tags",
+        "usar_json_ld"
+      ],
+      "disallowed_methods": [
+        "captcha_bypass",
+        "cloudflare_bypass",
+        "proxy_rotation"
+      ],
+      "notes": "Corporate DE."
+    },
+    "thales_suppliers": {
+      "status": "ok_html_publico",
+      "seed_urls": [
+        "https://www.thalesgroup.com/en/group/procurement"
+      ],
+      "optional_safe_get_urls": [],
+      "allowed_methods": [
+        "meta_tags",
+        "usar_json_ld"
+      ],
+      "disallowed_methods": [
+        "captcha_bypass",
+        "cloudflare_bypass",
+        "proxy_rotation"
+      ],
+      "notes": "Procurement público."
+    },
+    "china_nsfc": {
+      "status": "blocked_access_limited",
+      "seed_urls": [
+        "https://www.nsfc.gov.cn/"
+      ],
+      "optional_safe_get_urls": [],
+      "allowed_methods": [
+        "usar_sitemap",
+        "meta_tags",
+        "usar_curadoria_oficial_minima"
+      ],
+      "disallowed_methods": [
+        "captcha_bypass",
+        "cloudflare_bypass",
+        "proxy_rotation"
+      ],
+      "notes": "Gov.cn; latência e filtros regionais possíveis."
+    },
+    "china_university_procurement": {
+      "status": "blocked_access_limited",
+      "seed_urls": [
+        "https://cwc.tsinghua.edu.cn/"
+      ],
+      "optional_safe_get_urls": [],
+      "allowed_methods": [
+        "meta_tags",
+        "usar_sitemap"
+      ],
+      "disallowed_methods": [
+        "captcha_bypass",
+        "cloudflare_bypass",
+        "proxy_rotation"
+      ],
+      "notes": "Multi-universidade; robots por host."
+    },
+    "faperg": {
+      "status": "ok_html_publico",
+      "seed_urls": [
+        "https://fapergs.rs.gov.br/editais-abertos"
+      ],
+      "optional_safe_get_urls": [],
+      "allowed_methods": [
+        "meta_tags",
+        "usar_json_ld"
+      ],
+      "disallowed_methods": [
+        "captcha_bypass",
+        "cloudflare_bypass",
+        "proxy_rotation"
+      ],
+      "notes": "Crawler faperg usa URLs FAPERGS RS (verificar consistência de naming)."
+    },
+    "japan_jaea": {
+      "status": "ok_html_publico",
+      "seed_urls": [
+        "https://www.jaea.go.jp/english/"
+      ],
+      "optional_safe_get_urls": [],
+      "allowed_methods": [
+        "meta_tags",
+        "usar_sitemap"
+      ],
+      "disallowed_methods": [
+        "captcha_bypass",
+        "cloudflare_bypass",
+        "proxy_rotation"
+      ],
+      "notes": "Institucional JAEA."
+    },
+    "japan_jst": {
+      "status": "ok_html_publico",
+      "seed_urls": [
+        "https://www.jst.go.jp/EN/news/index.html"
+      ],
+      "optional_safe_get_urls": [],
+      "allowed_methods": [
+        "usar_rss",
+        "meta_tags",
+        "usar_sitemap"
+      ],
+      "disallowed_methods": [
+        "captcha_bypass",
+        "cloudflare_bypass",
+        "proxy_rotation"
+      ],
+      "notes": "JST costuma expor feeds de notícias."
+    },
+    "japan_kawasaki_heavy": {
+      "status": "ok_html_publico",
+      "seed_urls": [
+        "https://global.kawasaki.com/en/corp/profile/procurement/"
+      ],
+      "optional_safe_get_urls": [],
+      "allowed_methods": [
+        "meta_tags",
+        "usar_sitemap"
+      ],
+      "disallowed_methods": [
+        "captcha_bypass",
+        "cloudflare_bypass",
+        "proxy_rotation"
+      ],
+      "notes": "Procurement global Kawasaki."
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "titulo": "Sobreposição SENAI vs plataforma_industria (URLs de categoria)",
+  "data_relatorio": "2026-05-02T00:55:00Z",
+  "metodologia": {
+    "fonte_bruta_senai": "senai/outputs/senai_editais.json",
+    "fonte_bruta_plataforma_industria": "plataforma_industria/outputs/plataforma_editais.json",
+    "standardized_senai": "audit_reports_retransform/standardized/senai_standardized.json",
+    "standardized_plataforma_industria": "audit_reports_retransform/standardized/plataforma_industria_standardized.json",
+    "normalizacao_link": "strip, rstrip '/', lower",
+    "categoria_url": "último segmento do path (slug após /categoria/…)",
+    "hash_deduplicacao": "Campo `hash_deduplicacao` não está presente em `extras` nestes standardized; comparação não aplicável (N/A).",
+    "content_hash": "Campo `extras.content_hash` nos standardized, para URLs em comum."
+  },
+  "contagens": {
+    "senai_brutos": 22,
+    "plataforma_industria_brutos": 23,
+    "links_iguais": 22,
+    "links_so_plataforma_industria": 1,
+    "links_so_senai": 0,
+    "titulos_iguais_mesmo_link": 22,
+    "content_hash_iguais_mesmo_link": 22,
+    "hash_deduplicacao_iguais_mesmo_link": null,
+    "slug_categoria_igual_mesmo_link": 22
+  },
+  "urls_apenas_plataforma_industria": [
+    "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/inova-mes"
+  ],
+  "amostra_links_iguais": [
+    "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/agendatech",
+    "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/alianca-educacional",
+    "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/alianca-industrial",
+    "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/chamada-regional-senai",
+    "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/ecossistemas-de-inovacao-em-saude-hubs-regionais-s",
+    "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/empreendedorismo-industrial-desafio-instituicao",
+    "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/empreendedorismo-industrial-startuptech",
+    "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/estudos-e-pesquisas-em-saude-e-seguranca-na-indust"
+  ],
+  "interpretacao": "22 de 23 URLs da plataforma_industria coincidem com o crawl SENAI: são as mesmas páginas de hub /categoria/. Uma URL existe só na plataforma_industria (inova-mes). O overlap é esperado e forte; não indica necessariamente duplicidade de linhas na base se o upsert for por link.",
+  "loader_supabase": {
+    "upsert_por": "link (on_conflict)",
+    "efeito_duas_fontes_mesmo_link": "Uma única linha por link; última carga aplicada pode sobrescrever campos incluindo fonte_recurso, conforme ordem de apply."
+  },
+  "recomendacao": "Duplicidade de conteúdo entre crawlers é alta e explicável (mesmo portal e mesmas categorias). Para staging: (1) apply técnico não cria duas linhas por URL; (2) definir qual fonte deve prevalecer nos metadados ou excluir da segunda fonte as URLs já cobertas; (3) opcional: canonização/dedupe na preparação dos standardized se quiser evitar trabalho redundante e ambiguidade de `fonte`."
+}

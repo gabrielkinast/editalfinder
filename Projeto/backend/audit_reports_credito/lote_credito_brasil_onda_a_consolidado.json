@@ -1,0 +1,121 @@
+﻿{
+  "titulo": "Lote Crédito/Desenvolvimento — Onda A Brasil (Consolidado)",
+  "data_consolidacao": "2026-05-05",
+  "fontes_escopo": [
+    "bnb",
+    "banco_da_amazonia",
+    "bdmg",
+    "desenvolve_sp",
+    "agerio"
+  ],
+  "diagnostico": {
+    "fonte": "audit_reports_credito/lote_credito_brasil_onda_a_diagnostico.json",
+    "itens_brutos": 85,
+    "itens_transformados": 83,
+    "itens_rejeitados": 2,
+    "readiness_resumo": {
+      "bnb": "ready_with_notes",
+      "banco_da_amazonia": "ready_with_notes",
+      "bdmg": "ready_with_notes",
+      "desenvolve_sp": "needs_manual_review",
+      "agerio": "needs_manual_review"
+    }
+  },
+  "semantic_fix": {
+    "fonte": "audit_reports_credito/lote_credito_brasil_onda_a_semantic_fix.json",
+    "antes_flags_totais": {
+      "setor_estrategico_excessivo": 6,
+      "classificacao_muito_ampla": 3,
+      "area_cientifica_sem_evidencia": 1
+    },
+    "depois_flags_totais": {},
+    "itens_auditados": 83,
+    "escopo_codigo": "CORE/taxonomy_filtros.py (calibração local por fonte)",
+    "opportunity_gate_global_alterado": false
+  },
+  "readiness": {
+    "fonte": "audit_reports_credito/credito_brasil_onda_a_ready_with_notes_loader_dryrun.json",
+    "promovidas_ready_with_notes": [
+      "bnb",
+      "banco_da_amazonia",
+      "bdmg"
+    ],
+    "mantidas_em_revisao": {
+      "desenvolve_sp": "needs_manual_review (WAF/403)",
+      "agerio": "needs_manual_review (volume baixo)"
+    }
+  },
+  "dry_run": {
+    "fonte": "audit_reports_loader_ready/final_dry_run_before_staging.json",
+    "sources_selected": 3,
+    "itens_standardized_total": 77,
+    "would_upsert_total": 77,
+    "would_ignore_total": 0,
+    "mapping_errors_total": 0,
+    "critical_empty_items_total": 0,
+    "documentos_perdidos_no_payload_total": 0,
+    "validacao_status_preserved_items_total": 77,
+    "qualidade_dado_preserved_items_total": 77,
+    "destination_counts_total": {
+      "edital": 77
+    },
+    "canonical_skipped_total": 0
+  },
+  "migration_schema_payload_real": {
+    "arquivos": [
+      "migrations/20260505_add_missing_edital_columns_from_loader_payload.sql",
+      "migrations/20260505_recreate_edital_views_credito_staging.sql",
+      "docs/sql/check_edital_payload_columns.sql",
+      "audit_reports_credito/credito_brasil_onda_a_schema_gap.md",
+      "audit_reports_credito/credito_brasil_onda_a_schema_gap.json"
+    ],
+    "schema_gap_resumo": {
+      "chaves_no_payload_apos_merge_strip": 64,
+      "colunas_na_migration_20260505": 104,
+      "payload_menos_migration": [],
+      "todas_chaves_payload_cobertas_pela_migration": true
+    }
+  },
+  "apply_staging": {
+    "fonte": "audit_reports_loader_ready/load_ready_summary.json",
+    "status": "applied_to_staging",
+    "environment_safe": true,
+    "environment_guard_block_reason": "",
+    "apply_processed_total": 77,
+    "apply_inserted_total": 77,
+    "apply_updated_total": 0,
+    "apply_ignored_total": 0,
+    "apply_errors_total": 0
+  },
+  "validacoes_pos_carga": {
+    "fonte": "audit_reports_loader_ready/post_staging_validation.json",
+    "executed": true,
+    "apply_status": "applied_to_staging",
+    "records_processed": 77,
+    "records_inserted_or_updated": 77,
+    "blocked_sources_loaded": [],
+    "critical_empty_check": 0,
+    "duplicates_check": "pending_manual_sql_validation",
+    "docs_preservation_check": {
+      "docs_input_items_total": 21,
+      "docs_preserved_items_total": 21,
+      "pdf_preserved_items_total": 21
+    }
+  },
+  "fontes_promovidas": [
+    "bnb",
+    "banco_da_amazonia",
+    "bdmg"
+  ],
+  "fontes_mantidas_em_revisao": [
+    {
+      "fonte": "desenvolve_sp",
+      "motivo": "WAF/403 na coleta automática"
+    },
+    {
+      "fonte": "agerio",
+      "motivo": "baixo volume útil na onda"
+    }
+  ],
+  "conclusao": "Consolidação concluída para a Onda A Brasil com promoção de 3 fontes e manutenção de 2 fontes em revisão controlada."
+}

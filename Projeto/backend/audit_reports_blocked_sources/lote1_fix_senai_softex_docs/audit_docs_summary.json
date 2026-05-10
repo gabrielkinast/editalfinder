@@ -1,0 +1,46 @@
+{
+  "data_auditoria": "2026-05-01T23:52:16Z",
+  "fontes": [
+    "senai",
+    "softex"
+  ],
+  "max_items_por_fonte": 40,
+  "pdf_skip": true,
+  "itens_analisados": 24,
+  "raw_com_pdf_url": 22,
+  "raw_com_documentos": 22,
+  "transformado_com_pdf_url": 22,
+  "transformado_com_documentos": 22,
+  "payload_com_pdf_url": 22,
+  "payload_com_documentos": 22,
+  "bruto_com_documentos_pdf": 22,
+  "bruto_com_documentos_nao_pdf": 21,
+  "transformado_com_documentos_pdf": 22,
+  "transformado_com_documentos_nao_pdf": 21,
+  "payload_com_documentos_pdf": 22,
+  "payload_com_documentos_nao_pdf": 21,
+  "perdas_pdf": 0,
+  "perdas_nao_pdf": 0,
+  "downloads_falharam": 22,
+  "downloads_sucesso": 0,
+  "links_invalidos": 0,
+  "links_relativos_restantes": 0,
+  "links_quebrados": 0,
+  "duplicados_documentos": 0,
+  "perdas_total": 0,
+  "fontes_pior_preservacao": [
+    {
+      "fonte": "softex",
+      "score_perda": 1.0
+    },
+    {
+      "fonte": "senai",
+      "score_perda": 0.0
+    }
+  ],
+  "formatos_detectados": {
+    "pdf": 194,
+    "docx": 102,
+    "xlsx": 20
+  }
+}

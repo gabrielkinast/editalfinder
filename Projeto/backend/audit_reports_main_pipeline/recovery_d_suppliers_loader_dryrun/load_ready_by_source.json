@@ -1,0 +1,263 @@
+[
+  {
+    "fonte": "bae_systems_suppliers",
+    "standardized_path": "audit_reports_main_pipeline/recovery_d_suppliers/standardized/bae_systems_suppliers_standardized.json",
+    "itens_standardized": 2,
+    "would_upsert": 2,
+    "would_ignore": 0,
+    "mapping_errors": 0,
+    "critical_empty_items": 0,
+    "critical_empty_fields": {},
+    "docs_input_items": 0,
+    "docs_preserved_items": 0,
+    "documentos_perdidos_no_payload": 0,
+    "standardized_com_documentos_nao_pdf": 0,
+    "payload_com_documentos_nao_pdf": 0,
+    "perda_documentos_nao_pdf": 0,
+    "pdf_input_items": 0,
+    "pdf_preserved_items": 0,
+    "validacao_status_preserved_items": 2,
+    "qualidade_dado_preserved_items": 2,
+    "semantic_fields_present_items": 2,
+    "docs_loss_examples": [],
+    "field_input_non_empty": {
+      "tipo_oportunidade": 2,
+      "tipo_recurso": 2,
+      "perfil_ideal": 2,
+      "publico_alvo": 2,
+      "validacao_status": 2,
+      "qualidade_dado": 2
+    },
+    "field_payload_non_empty": {
+      "tipo_oportunidade": 2,
+      "tipo_recurso": 2,
+      "perfil_ideal": 2,
+      "publico_alvo": 2,
+      "validacao_status": 2,
+      "qualidade_dado": 2
+    },
+    "field_preserved_non_empty": {
+      "tipo_oportunidade": 2,
+      "tipo_recurso": 2,
+      "perfil_ideal": 2,
+      "publico_alvo": 2,
+      "validacao_status": 2,
+      "qualidade_dado": 2
+    },
+    "canonical_skipped": 0,
+    "canonical_skip_examples": [],
+    "official_link_only_standardized": 1,
+    "official_link_only_payload": 1,
+    "access_limited_items": 1,
+    "official_link_only_access_reasons": {
+      "cloudflare_or_403": 1
+    },
+    "official_link_only_examples": [
+      {
+        "fonte": "bae_systems_suppliers",
+        "titulo": "Responsible supply chain | BAE Systems UK suppliers",
+        "link": "https://www.baesystems.com/en-uk/suppliers/responsible-supply-chain",
+        "extraction_mode": "official_link_only",
+        "access_status": "access_limited",
+        "access_reason": "cloudflare_or_403"
+      }
+    ],
+    "destination_counts": {
+      "edital": 2
+    },
+    "content_route_examples": [],
+    "taxonomy_overwrite_diff_count": 0,
+    "taxonomy_overwrite_preview_errors": 0,
+    "taxonomy_overwrite_examples": []
+  },
+  {
+    "fonte": "general_dynamics_suppliers",
+    "standardized_path": "audit_reports_main_pipeline/recovery_d_suppliers/standardized/general_dynamics_suppliers_standardized.json",
+    "itens_standardized": 7,
+    "would_upsert": 7,
+    "would_ignore": 0,
+    "mapping_errors": 0,
+    "critical_empty_items": 0,
+    "critical_empty_fields": {},
+    "docs_input_items": 5,
+    "docs_preserved_items": 5,
+    "documentos_perdidos_no_payload": 0,
+    "standardized_com_documentos_nao_pdf": 0,
+    "payload_com_documentos_nao_pdf": 0,
+    "perda_documentos_nao_pdf": 0,
+    "pdf_input_items": 5,
+    "pdf_preserved_items": 5,
+    "validacao_status_preserved_items": 6,
+    "qualidade_dado_preserved_items": 6,
+    "semantic_fields_present_items": 6,
+    "docs_loss_examples": [],
+    "field_input_non_empty": {
+      "tipo_oportunidade": 6,
+      "tipo_recurso": 6,
+      "perfil_ideal": 6,
+      "publico_alvo": 6,
+      "setor_economico": 1,
+      "setor_estrategico": 1,
+      "validacao_status": 6,
+      "qualidade_dado": 6,
+      "area": 5
+    },
+    "field_payload_non_empty": {
+      "tipo_oportunidade": 6,
+      "tipo_recurso": 6,
+      "perfil_ideal": 6,
+      "publico_alvo": 6,
+      "setor_economico": 1,
+      "setor_estrategico": 1,
+      "validacao_status": 6,
+      "qualidade_dado": 6,
+      "area": 5
+    },
+    "field_preserved_non_empty": {
+      "tipo_oportunidade": 6,
+      "tipo_recurso": 6,
+      "perfil_ideal": 6,
+      "publico_alvo": 6,
+      "setor_economico": 1,
+      "setor_estrategico": 1,
+      "validacao_status": 6,
+      "qualidade_dado": 6,
+      "area": 5
+    },
+    "canonical_skipped": 0,
+    "canonical_skip_examples": [],
+    "official_link_only_standardized": 0,
+    "official_link_only_payload": 0,
+    "access_limited_items": 1,
+    "official_link_only_access_reasons": {
+      "(sem access_reason)": 1
+    },
+    "official_link_only_examples": [],
+    "destination_counts": {
+      "edital": 6,
+      "pesquisa": 1
+    },
+    "content_route_examples": [
+      {
+        "fonte": "general_dynamics_suppliers",
+        "destination_table": "pesquisa",
+        "titulo": "TRANSPORTATION AND TRADE COMPLIANCE",
+        "link": "https://www.gdls.com/suppliers/transportation-trade-compliance/",
+        "content_type": "pesquisa"
+      }
+    ],
+    "taxonomy_overwrite_diff_count": 0,
+    "taxonomy_overwrite_preview_errors": 0,
+    "taxonomy_overwrite_examples": []
+  },
+  {
+    "fonte": "lockheed_martin_suppliers",
+    "standardized_path": "audit_reports_main_pipeline/recovery_d_suppliers/standardized/lockheed_martin_suppliers_standardized.json",
+    "itens_standardized": 19,
+    "would_upsert": 19,
+    "would_ignore": 0,
+    "mapping_errors": 0,
+    "critical_empty_items": 0,
+    "critical_empty_fields": {},
+    "docs_input_items": 14,
+    "docs_preserved_items": 14,
+    "documentos_perdidos_no_payload": 0,
+    "standardized_com_documentos_nao_pdf": 0,
+    "payload_com_documentos_nao_pdf": 0,
+    "perda_documentos_nao_pdf": 0,
+    "pdf_input_items": 14,
+    "pdf_preserved_items": 14,
+    "validacao_status_preserved_items": 14,
+    "qualidade_dado_preserved_items": 14,
+    "semantic_fields_present_items": 14,
+    "docs_loss_examples": [],
+    "field_input_non_empty": {
+      "area": 14,
+      "tipo_oportunidade": 14,
+      "tipo_recurso": 14,
+      "perfil_ideal": 14,
+      "publico_alvo": 14,
+      "setor_economico": 14,
+      "area_tecnologica": 14,
+      "setor_estrategico": 14,
+      "validacao_status": 14,
+      "qualidade_dado": 14
+    },
+    "field_payload_non_empty": {
+      "area": 14,
+      "tipo_oportunidade": 14,
+      "tipo_recurso": 14,
+      "perfil_ideal": 14,
+      "publico_alvo": 14,
+      "setor_economico": 14,
+      "area_tecnologica": 14,
+      "setor_estrategico": 14,
+      "validacao_status": 14,
+      "qualidade_dado": 14
+    },
+    "field_preserved_non_empty": {
+      "area": 14,
+      "tipo_oportunidade": 14,
+      "tipo_recurso": 14,
+      "perfil_ideal": 14,
+      "publico_alvo": 14,
+      "setor_economico": 14,
+      "area_tecnologica": 14,
+      "setor_estrategico": 14,
+      "validacao_status": 14,
+      "qualidade_dado": 14
+    },
+    "canonical_skipped": 0,
+    "canonical_skip_examples": [],
+    "official_link_only_standardized": 0,
+    "official_link_only_payload": 0,
+    "access_limited_items": 0,
+    "official_link_only_access_reasons": {},
+    "official_link_only_examples": [],
+    "destination_counts": {
+      "edital": 14,
+      "noticia": 4,
+      "pesquisa": 1
+    },
+    "content_route_examples": [
+      {
+        "fonte": "lockheed_martin_suppliers",
+        "destination_table": "noticia",
+        "titulo": "Strategic and Missile Defense Systems",
+        "link": "https://www.lockheedmartin.com/en-us/capabilities/space/strategic-missile-defense.html",
+        "content_type": "noticia"
+      },
+      {
+        "fonte": "lockheed_martin_suppliers",
+        "destination_table": "noticia",
+        "titulo": "Small Business Programs",
+        "link": "https://www.lockheedmartin.com/en-us/suppliers/small-business-programs.html",
+        "content_type": "noticia"
+      },
+      {
+        "fonte": "lockheed_martin_suppliers",
+        "destination_table": "pesquisa",
+        "titulo": "Sustainable Supply Chain Management",
+        "link": "https://www.lockheedmartin.com/en-us/suppliers/sustainable-supply-chain.html",
+        "content_type": "pesquisa"
+      },
+      {
+        "fonte": "lockheed_martin_suppliers",
+        "destination_table": "noticia",
+        "titulo": "Supplier News and Events",
+        "link": "https://www.lockheedmartin.com/en-us/suppliers/news/features.html",
+        "content_type": "noticia"
+      },
+      {
+        "fonte": "lockheed_martin_suppliers",
+        "destination_table": "noticia",
+        "titulo": "LM eInvoicing 2026 Training",
+        "link": "https://www.lockheedmartin.com/en-us/suppliers/news/features/2026/supplier-training-lmeinvoicing.html",
+        "content_type": "noticia"
+      }
+    ],
+    "taxonomy_overwrite_diff_count": 0,
+    "taxonomy_overwrite_preview_errors": 0,
+    "taxonomy_overwrite_examples": []
+  }
+]

@@ -1,0 +1,85 @@
+[
+  {
+    "fonte": "iarpa",
+    "raw_output_path": "iarpa/outputs/iarpa_editais.json",
+    "old_standardized_path": "CORE/transformer/iarpa_standardized.json",
+    "new_standardized_path": "audit_reports_blocked_sources/lote2_fix_iarpa/standardized/iarpa_standardized.json",
+    "itens_brutos_encontrados": 8,
+    "itens_transformados": 8,
+    "itens_rejeitados": 0,
+    "itens_incompletos": 8,
+    "itens_suspeitos": 0,
+    "itens_acesso_limitado": 0,
+    "documentos_preservados": 0,
+    "pdf_url_preservado": 0,
+    "area_preenchida": 0,
+    "tipo_oportunidade_preenchido": 8,
+    "tipo_recurso_preenchido": 8,
+    "perfil_ideal_preenchido": 8,
+    "qualidade_dado_media": 68.25,
+    "motivos_rejeicao_principais": {},
+    "quick_audit": {
+      "ruido_passou": 0,
+      "duplicatas_link": 0,
+      "campos_preenchidos_pct": {
+        "area": 0.0,
+        "tipo_oportunidade": 100.0,
+        "tipo_recurso": 100.0,
+        "perfil_ideal": 100.0,
+        "documentos": 0.0,
+        "pdf_url": 0.0
+      },
+      "official_link_only_total": 0,
+      "access_limited_total": 0,
+      "access_reason_counts": {},
+      "access_limited_examples": []
+    },
+    "old_vs_new": {
+      "old_count": 1,
+      "new_count": 8,
+      "delta_count": 7,
+      "old_links_now_missing": [
+        "https://www.iarpa.gov/research-programs"
+      ],
+      "new_links_before_missing": [
+        "https://www.grants.gov/web/grants/view-opportunity.html?oppId=305910",
+        "https://www.grants.gov/web/grants/view-opportunity.html?oppId=315524",
+        "https://www.grants.gov/web/grants/view-opportunity.html?oppId=336190",
+        "https://www.grants.gov/web/grants/view-opportunity.html?oppId=339318",
+        "https://www.grants.gov/web/grants/view-opportunity.html?oppId=345509",
+        "https://www.grants.gov/web/grants/view-opportunity.html?oppId=352987",
+        "https://www.grants.gov/web/grants/view-opportunity.html?oppId=42526",
+        "https://www.grants.gov/web/grants/view-opportunity.html?oppId=46015"
+      ],
+      "core_fields_improved": {
+        "tipo_oportunidade": {
+          "old": 1,
+          "new": 8,
+          "delta": 7
+        },
+        "tipo_recurso": {
+          "old": 1,
+          "new": 8,
+          "delta": 7
+        },
+        "perfil_ideal": {
+          "old": 0,
+          "new": 8,
+          "delta": 8
+        }
+      },
+      "core_fields_worsened": {
+        "area": {
+          "old": 1,
+          "new": 0,
+          "delta": -1
+        }
+      },
+      "old_documents_count": 0,
+      "new_documents_count": 0,
+      "old_pdf_count": 0,
+      "new_pdf_count": 0
+    },
+    "risk_notes": []
+  }
+]

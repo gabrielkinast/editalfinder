@@ -1,0 +1,166 @@
+{
+  "data_auditoria": "2026-05-10T09:11:35Z",
+  "fontes": [
+    {
+      "fonte": "bae_systems_suppliers",
+      "old_vs_new": {
+        "old_count": 0,
+        "new_count": 2,
+        "delta_count": 2,
+        "old_links_now_missing": [],
+        "new_links_before_missing": [
+          "https://baesystems.hicx.net/bae/hicxesm-portal/app/discovery-login.html",
+          "https://www.baesystems.com/en-uk/suppliers/responsible-supply-chain"
+        ],
+        "core_fields_improved": {
+          "tipo_oportunidade": {
+            "old": 0,
+            "new": 2,
+            "delta": 2
+          },
+          "tipo_recurso": {
+            "old": 0,
+            "new": 2,
+            "delta": 2
+          },
+          "perfil_ideal": {
+            "old": 0,
+            "new": 2,
+            "delta": 2
+          }
+        },
+        "core_fields_worsened": {},
+        "old_documents_count": 0,
+        "new_documents_count": 0,
+        "old_pdf_count": 0,
+        "new_pdf_count": 0
+      }
+    },
+    {
+      "fonte": "general_dynamics_suppliers",
+      "old_vs_new": {
+        "old_count": 17,
+        "new_count": 6,
+        "delta_count": -11,
+        "old_links_now_missing": [
+          "https://app.gdls.com/supplieronboarding/index.jsp",
+          "https://www.gd.com/our-businesses/aerospace",
+          "https://www.gd.com/suppliers/supplier-faqs",
+          "https://www.gdls.com/careers/transitioning-military/",
+          "https://www.gdls.com/cdn-cgi/l/email-protection",
+          "https://www.gdls.com/lav/",
+          "https://www.gdls.com/suppliers/?page=2",
+          "https://www.gdls.com/suppliers/terms-conditions/",
+          "https://www.gdls.com/wp-content/uploads/2025/12/Eng-SCM-MANUALSCM046-rev11.pdf",
+          "https://www.gdls.com/wp-content/uploads/2025/12/GDLS-Supplier-Code-of-Conduct-Ethics-7th-Edition.pdf",
+          "https://www.gdls.com/wp-content/uploads/2026/01/GDLS-Global-Supplier-Performance-Scorecard-2025-12-external.pdf"
+        ],
+        "new_links_before_missing": [],
+        "core_fields_improved": {
+          "perfil_ideal": {
+            "old": 0,
+            "new": 6,
+            "delta": 6
+          },
+          "documentos": {
+            "old": 0,
+            "new": 5,
+            "delta": 5
+          }
+        },
+        "core_fields_worsened": {
+          "area": {
+            "old": 17,
+            "new": 5,
+            "delta": -12
+          },
+          "tipo_oportunidade": {
+            "old": 17,
+            "new": 6,
+            "delta": -11
+          },
+          "tipo_recurso": {
+            "old": 17,
+            "new": 6,
+            "delta": -11
+          },
+          "pdf_url": {
+            "old": 12,
+            "new": 5,
+            "delta": -7
+          }
+        },
+        "old_documents_count": 0,
+        "new_documents_count": 5,
+        "old_pdf_count": 12,
+        "new_pdf_count": 5
+      }
+    },
+    {
+      "fonte": "lockheed_martin_suppliers",
+      "old_vs_new": {
+        "old_count": 20,
+        "new_count": 18,
+        "delta_count": -2,
+        "old_links_now_missing": [
+          "https://www.lockheedmartin.com/en-us/capabilities/c4isr.html",
+          "https://www.lockheedmartin.com/en-us/capabilities/electronic-warfare.html",
+          "https://www.lockheedmartin.com/en-us/capabilities/missile-defense.html",
+          "https://www.lockheedmartin.com/en-us/capabilities/sensors.html",
+          "https://www.lockheedmartin.com/en-us/capabilities/space.html",
+          "https://www.lockheedmartin.com/en-us/capabilities/space/strategic-missile-defense.html",
+          "https://www.lockheedmartin.com/en-us/innovation-defense-technology.html",
+          "https://www.lockheedmartin.com/en-us/suppliers/faqs.html",
+          "https://www.lockheedmartin.com/en-us/who-we-are/communities/military-veteran-support.html"
+        ],
+        "new_links_before_missing": [
+          "https://www.lockheedmartin.com/en-us/suppliers/news/features/2025/annual-eeo-cps-003.html",
+          "https://www.lockheedmartin.com/en-us/suppliers/news/features/2025/csco-message-focus.html",
+          "https://www.lockheedmartin.com/en-us/suppliers/news/features/2025/cybersecurity-cmmc-exostar-status.html",
+          "https://www.lockheedmartin.com/en-us/suppliers/news/features/2025/cybersecurity-cmmc-upcoming-requirements.html",
+          "https://www.lockheedmartin.com/en-us/suppliers/news/features/2025/cybersecurity-discontinuation-phone-otp.html",
+          "https://www.lockheedmartin.com/en-us/suppliers/news/features/2026/cybersecurity-cmmc.html",
+          "https://www.lockheedmartin.com/en-us/suppliers/news/features/2026/supplier-training-lmeinvoicing.html"
+        ],
+        "core_fields_improved": {
+          "perfil_ideal": {
+            "old": 0,
+            "new": 18,
+            "delta": 18
+          },
+          "documentos": {
+            "old": 0,
+            "new": 18,
+            "delta": 18
+          }
+        },
+        "core_fields_worsened": {
+          "area": {
+            "old": 20,
+            "new": 18,
+            "delta": -2
+          },
+          "tipo_oportunidade": {
+            "old": 20,
+            "new": 18,
+            "delta": -2
+          },
+          "tipo_recurso": {
+            "old": 20,
+            "new": 18,
+            "delta": -2
+          },
+          "pdf_url": {
+            "old": 20,
+            "new": 18,
+            "delta": -2
+          }
+        },
+        "old_documents_count": 0,
+        "new_documents_count": 18,
+        "old_pdf_count": 20,
+        "new_pdf_count": 18
+      }
+    }
+  ]
+}

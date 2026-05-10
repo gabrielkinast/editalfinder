@@ -1,0 +1,479 @@
+{
+  "onda_codigo": "Recovery_D_suppliers",
+  "loader_snapshot": {
+    "id_execucao": "e565c1ef-f8e6-40eb-b256-786ab1852fd4",
+    "data_auditoria": "2026-05-10T08:45:33Z",
+    "mode": "dry-run",
+    "staging_flag": false,
+    "apply_requested": false,
+    "taxonomy_overwrite_enabled": false,
+    "overwrite_fields": [],
+    "overwrite_sources": [
+      "bae_systems_suppliers",
+      "general_dynamics_suppliers",
+      "lockheed_martin_suppliers"
+    ],
+    "overwritten_fields_count": 0,
+    "input_dir": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_main_pipeline\\recovery_d_suppliers\\standardized",
+    "readiness_path": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_retransform\\readiness_for_loader.json",
+    "source_readiness_config_disk_path": "D:\\Computational_Physics\\My Projects\\edital\\config\\source_readiness.json",
+    "readiness_derived_slice_path": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_main_pipeline\\recovery_d_suppliers_loader_dryrun\\readiness_derived_slice.json",
+    "readiness_curated_overlay": {
+      "applied": true,
+      "curated_sources_total": 108,
+      "changes_total": 52,
+      "changes": [
+        {
+          "fonte": "badesul",
+          "from": "blocked",
+          "to": "ready_with_notes"
+        },
+        {
+          "fonte": "cbpf",
+          "from": "ready_with_notes",
+          "to": "ready"
+        },
+        {
+          "fonte": "china_caea",
+          "from": "ready_with_notes",
+          "to": "ready"
+        },
+        {
+          "fonte": "china_cas",
+          "from": "ready_with_notes",
+          "to": "ready"
+        },
+        {
+          "fonte": "china_cgn",
+          "from": "ready_with_notes",
+          "to": "ready"
+        },
+        {
+          "fonte": "china_mod_public",
+          "from": "ready_with_notes",
+          "to": "ready"
+        },
+        {
+          "fonte": "china_mofcom_tendering",
+          "from": "ready_with_notes",
+          "to": "ready"
+        },
+        {
+          "fonte": "china_most",
+          "from": "ready_with_notes",
+          "to": "ready"
+        },
+        {
+          "fonte": "china_tendering_bidding",
+          "from": "ready_with_notes",
+          "to": "ready"
+        },
+        {
+          "fonte": "cnen",
+          "from": "ready_with_notes",
+          "to": "ready"
+        },
+        {
+          "fonte": "cnpq",
+          "from": "ready_with_notes",
+          "to": "ready"
+        },
+        {
+          "fonte": "compras_defesa",
+          "from": "ready_with_notes",
+          "to": "ready"
+        },
+        {
+          "fonte": "confap",
+          "from": "ready_with_notes",
+          "to": "ready"
+        },
+        {
+          "fonte": "darpa_opportunities",
+          "from": "ready_with_notes",
+          "to": "ready"
+        },
+        {
+          "fonte": "defesa",
+          "from": "ready_with_notes",
+          "to": "ready"
+        },
+        {
+          "fonte": "diu",
+          "from": "ready_with_notes",
+          "to": "ready"
+        },
+        {
+          "fonte": "dod_sbir_sttr",
+          "from": "ready_with_notes",
+          "to": "ready"
+        },
+        {
+          "fonte": "eletronuclear",
+          "from": "ready_with_notes",
+          "to": "ready"
+        },
+        {
+          "fonte": "embrapii",
+          "from": "ready_with_notes",
+          "to": "ready"
+        },
+        {
+          "fonte": "european_defence_fund",
+          "from": "ready_with_notes",
+          "to": "ready"
+        },
+        {
+          "fonte": "fapemig",
+          "from": "ready_with_notes",
+          "to": "ready"
+        },
+        {
+          "fonte": "fapergs",
+          "from": "ready_with_notes",
+          "to": "ready"
+        },
+        {
+          "fonte": "fapesc",
+          "from": "ready_with_notes",
+          "to": "ready"
+        },
+        {
+          "fonte": "fapesp",
+          "from": "ready_with_notes",
+          "to": "ready"
+        },
+        {
+          "fonte": "fappr",
+          "from": "ready_with_notes",
+          "to": "ready"
+        },
+        {
+          "fonte": "finep",
+          "from": "ready_with_notes",
+          "to": "ready"
+        },
+        {
+          "fonte": "fnde",
+          "from": "ready_with_notes",
+          "to": "ready"
+        },
+        {
+          "fonte": "general_dynamics_suppliers",
+          "from": "ready_with_notes",
+          "to": "ready"
+        },
+        {
+          "fonte": "grants_gov",
+          "from": "ready_with_notes",
+          "to": "ready"
+        },
+        {
+          "fonte": "impa",
+          "from": "ready_with_notes",
+          "to": "ready"
+        },
+        {
+          "fonte": "inb",
+          "from": "ready_with_notes",
+          "to": "ready"
+        },
+        {
+          "fonte": "ipen",
+          "from": "ready_with_notes",
+          "to": "ready"
+        },
+        {
+          "fonte": "japan_aist",
+          "from": "ready_with_notes",
+          "to": "ready"
+        },
+        {
+          "fonte": "japan_atla",
+          "from": "ready_with_notes",
+          "to": "ready"
+        },
+        {
+          "fonte": "japan_ihi",
+          "from": "ready_with_notes",
+          "to": "ready"
+        },
+        {
+          "fonte": "japan_jetro_procurement",
+          "from": "ready_with_notes",
+          "to": "ready"
+        },
+        {
+          "fonte": "japan_jsps",
+          "from": "ready_with_notes",
+          "to": "ready"
+        },
+        {
+          "fonte": "japan_kakenhi",
+          "from": "ready_with_notes",
+          "to": "ready"
+        },
+        {
+          "fonte": "japan_kek",
+          "from": "ready_with_notes",
+          "to": "ready"
+        },
+        {
+          "fonte": "japan_mext",
+          "from": "ready_with_notes",
+          "to": "ready"
+        },
+        {
+          "fonte": "japan_mitsubishi_heavy",
+          "from": "ready_with_notes",
+          "to": "ready"
+        },
+        {
+          "fonte": "japan_mod",
+          "from": "ready_with_notes",
+          "to": "ready"
+        },
+        {
+          "fonte": "japan_nedo",
+          "from": "ready_with_notes",
+          "to": "ready"
+        },
+        {
+          "fonte": "japan_nims",
+          "from": "ready_with_notes",
+          "to": "ready"
+        },
+        {
+          "fonte": "japan_qst",
+          "from": "ready_with_notes",
+          "to": "ready"
+        },
+        {
+          "fonte": "japan_riken",
+          "from": "ready_with_notes",
+          "to": "ready"
+        },
+        {
+          "fonte": "lockheed_martin_suppliers",
+          "from": "ready_with_notes",
+          "to": "ready"
+        },
+        {
+          "fonte": "petrobras",
+          "from": "blocked",
+          "to": "ready_with_notes"
+        },
+        {
+          "fonte": "plataforma_industria",
+          "from": "blocked",
+          "to": "ready_with_notes"
+        },
+        {
+          "fonte": "pncp",
+          "from": "blocked",
+          "to": "ready_with_notes"
+        },
+        {
+          "fonte": "senai",
+          "from": "blocked",
+          "to": "ready_with_notes"
+        },
+        {
+          "fonte": "softex",
+          "from": "blocked",
+          "to": "ready_with_notes"
+        }
+      ],
+      "policy": "config/source_readiness.json overrides derived readiness for sources explicitly listed there."
+    },
+    "readiness_config_write": {
+      "written": false,
+      "path": "",
+      "merge_mode": "none"
+    },
+    "sources_selected": 3,
+    "sources_excluded": 0,
+    "itens_standardized_total": 28,
+    "would_upsert_total": 28,
+    "would_ignore_total": 0,
+    "mapping_errors_total": 0,
+    "critical_empty_items_total": 0,
+    "docs_input_items_total": 19,
+    "docs_preserved_items_total": 19,
+    "documentos_perdidos_no_payload_total": 0,
+    "standardized_com_documentos_nao_pdf_total": 0,
+    "payload_com_documentos_nao_pdf_total": 0,
+    "perda_documentos_nao_pdf_total": 0,
+    "pdf_input_items_total": 19,
+    "pdf_preserved_items_total": 19,
+    "validacao_status_preserved_items_total": 22,
+    "qualidade_dado_preserved_items_total": 22,
+    "fields_input_non_empty_total": {
+      "tipo_oportunidade": 22,
+      "tipo_recurso": 22,
+      "perfil_ideal": 22,
+      "publico_alvo": 22,
+      "validacao_status": 22,
+      "qualidade_dado": 22,
+      "setor_economico": 15,
+      "setor_estrategico": 15,
+      "area": 19,
+      "area_tecnologica": 14
+    },
+    "fields_payload_non_empty_total": {
+      "tipo_oportunidade": 22,
+      "tipo_recurso": 22,
+      "perfil_ideal": 22,
+      "publico_alvo": 22,
+      "validacao_status": 22,
+      "qualidade_dado": 22,
+      "setor_economico": 15,
+      "setor_estrategico": 15,
+      "area": 19,
+      "area_tecnologica": 14
+    },
+    "fields_preserved_non_empty_total": {
+      "tipo_oportunidade": 22,
+      "tipo_recurso": 22,
+      "perfil_ideal": 22,
+      "publico_alvo": 22,
+      "validacao_status": 22,
+      "qualidade_dado": 22,
+      "setor_economico": 15,
+      "setor_estrategico": 15,
+      "area": 19,
+      "area_tecnologica": 14
+    },
+    "destination_counts_total": {
+      "edital": 22,
+      "pesquisa": 2,
+      "noticia": 4
+    },
+    "canonical_skipped_total": 0,
+    "canonicalization_config_path": "D:\\Computational_Physics\\My Projects\\edital\\config\\source_canonicalization.json",
+    "canonical_skip_examples": [],
+    "canonical_claimed_links_by_group": {},
+    "taxonomy_overwrite_preview_examples": [],
+    "taxonomy_overwrite_preview_errors_total": 0,
+    "official_link_only_total": 1,
+    "access_limited_total": 2,
+    "official_link_only_by_source": {
+      "bae_systems_suppliers": 1
+    },
+    "official_link_only_examples": [
+      {
+        "fonte": "bae_systems_suppliers",
+        "titulo": "Responsible supply chain | BAE Systems UK suppliers",
+        "link": "https://www.baesystems.com/en-uk/suppliers/responsible-supply-chain",
+        "extraction_mode": "official_link_only",
+        "access_status": "access_limited",
+        "access_reason": "cloudflare_or_403"
+      }
+    ],
+    "access_reason_counts": {
+      "(sem access_reason)": 1,
+      "cloudflare_or_403": 1
+    },
+    "environment_guard": {
+      "editalfinder_env": "staging",
+      "has_supabase_url": true,
+      "has_service_key": true,
+      "has_anon_key": true,
+      "has_allow_staging_apply": false,
+      "url_host_masked": "dof***.co",
+      "block_reason": "missing_staging_flag"
+    },
+    "db_connection_diag": {
+      "url_masked": "https://dof***.co",
+      "key_name_selected": "SUPABASE_SERVICE_ROLE_KEY",
+      "key_exists": true,
+      "key_len": 219,
+      "key_prefix_masked": "eyJ***zg",
+      "env_sources_found": [
+        "D:\\Computational_Physics\\My Projects\\edital\\.env.staging",
+        "D:\\Computational_Physics\\My Projects\\edital\\CORE\\.env"
+      ]
+    },
+    "apply_status": "not_requested",
+    "carga_execucao_db": {
+      "saved": true,
+      "error": ""
+    }
+  },
+  "padrao_documentacao_onda": {
+    "resumo_executivo": "Recovery D cobre apenas general_dynamics_suppliers, lockheed_martin_suppliers e bae_systems_suppliers para reduzir suspeito_ativo_true relacionado a portais corporativos. Inclui filtro opcional Recovery D nos crawlers, harvest HICX sem index de login, calibracao taxonomy local tipo oportunidade_fornecedor e validacao incompleta/acesso_limitado. Dry-run apenas — sem apply, schema ou Supabase.",
+    "problema_original": "post_daily_validation: suspeito_ativo_true global 47. Entre os exemplos há General Dynamics Suppliers (PDFs ética/scorecard, SUPPLIERS landing, iSUPPLIER), Lockheed (Suppliers hub, Doing Business, documentação), BAE (HICX discovery-login e index Login). Esta onda nao cobre AMAZUL, Petrobras nem outros.",
+    "fontes_tratadas": [
+      "general_dynamics_suppliers",
+      "lockheed_martin_suppliers",
+      "bae_systems_suppliers"
+    ],
+    "resultado_principal": "Loader dry-run sem erros estruturais: mapping_errors_total=0, critical_empty_items_total=0, itens standardized=28.",
+    "metricas_antes_depois": {
+      "suspeito_ativo_true_staging_snapshot": 47,
+      "nota_pre_apply": "O contador staging só mudará depois de apply; localmente os itens retransformados usam maioritariamente incompleto ou acesso_limitado em vez de suspeito no campo top-level.",
+      "loader_mapping_errors_total": 0,
+      "loader_critical_empty_items_total": 0,
+      "semantic_flags_totais": {
+        "publico_alvo_sem_evidencia": 3
+      }
+    },
+    "interpretacao": {
+      "ganhos": [
+        "Removido harvest HICX app/index.html (login isolado) em bae_harvest.",
+        "Crawlers aplicam deny local (FAQ, help, pdf etica/scorecard, login sem contexto) sem scraping agressivo.",
+        "Calibração taxonomy: tipo_oportunidade=oportunidade_fornecedor, cap setores, warnings recovery_d.",
+        "Lockheed: listagem apenas suppliers.html elimina páginas de business-areas órfãs."
+      ],
+      "regressoes_aparentes": [],
+      "sem_mudanca": [
+        "Links para /capabilities ainda aparecem a partir do hub LM — tratamento opcional deny path numa próxima iteração."
+      ],
+      "limitacoes": [
+        "opportunity_gate global inalterado; alguns URLs saem apenas por exclusão de gate durante transformação.",
+        "readiness oficial no disco pode divergir da fatia staging — apenas input-dir isolado foi usado."
+      ]
+    },
+    "decisao_recomendada": {
+      "acao": "Manter aplicacao pendente até revisão humana dos candidatos ativo=false (alta/med.)",
+      "justificativa": "Dry-run com mapping_errors=0 e critical_empty=0; desativação apenas documentada aqui.",
+      "proximo_alvo": "Ondas paralelas AMAZUL / Petrobras conforme backlog."
+    },
+    "riscos": [
+      "Excesso de filtros pode esconder documentos oficialmente mencionados no hub suppliers.",
+      "Dependência de texto público mantém classificação conservadora."
+    ],
+    "proximos_passos": [
+      "Avaliar deny de path /capabilities/ para links oriundos de suppliers LM.",
+      "Aplicar retransformação + loader (--apply) apenas após QA dos candidatos.",
+      "Rodar nova post_daily_validation após atualização staging."
+    ],
+    "evidencias_tecnicas": {
+      "arquivos_lidos": [
+        "audit_reports_main_pipeline/post_daily_validation.json",
+        "audit_reports_main_pipeline/post_daily_warning_examples.json",
+        "audit_reports_main_pipeline/recovery_a_consolidado.json",
+        "audit_reports_main_pipeline/recovery_b_consolidado.json",
+        "audit_reports_main_pipeline/recovery_c_setores_consolidado.json"
+      ],
+      "arquivos_gerados": [
+        "audit_reports_main_pipeline/recovery_d_suppliers_consolidado.json",
+        "audit_reports_main_pipeline/recovery_d_suppliers_consolidado.md"
+      ],
+      "comandos": [
+        "python general_dynamics_suppliers/main_general_dynamics_suppliers.py",
+        "python lockheed_martin_suppliers/main_lockheed_martin_suppliers.py",
+        "python bae_systems_suppliers/main_bae_systems_suppliers.py",
+        "python scripts/retransform_all.py --sources general_dynamics_suppliers,lockheed_martin_suppliers,bae_systems_suppliers --dry-run --output-dir audit_reports_main_pipeline/recovery_d_suppliers",
+        "python scripts/audit_semantic_classification.py --input-dir audit_reports_main_pipeline/recovery_d_suppliers/standardized --output-dir audit_reports_main_pipeline/recovery_d_suppliers_semantic",
+        "python scripts/load_ready_sources.py --dry-run --sources general_dynamics_suppliers,lockheed_martin_suppliers,bae_systems_suppliers --exclude-blocked --input-dir audit_reports_main_pipeline/recovery_d_suppliers/standardized --readiness audit_reports_retransform/readiness_for_loader.json --output-dir audit_reports_main_pipeline/recovery_d_suppliers_loader_dryrun"
+      ],
+      "apply_executado": false,
+      "schema_alterado": false,
+      "supabase_tocado": false,
+      "notas_seguranca": [
+        "Sem bypass de login; apenas HTTP público e robots observados pelo requests."
+      ]
+    }
+  }
+}

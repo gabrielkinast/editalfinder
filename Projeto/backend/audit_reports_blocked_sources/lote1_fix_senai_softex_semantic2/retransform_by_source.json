@@ -1,0 +1,154 @@
+[
+  {
+    "fonte": "senai",
+    "raw_output_path": "senai/outputs/senai_editais.json",
+    "old_standardized_path": "CORE/transformer/senai_standardized.json",
+    "new_standardized_path": "audit_reports_blocked_sources/lote1_fix_senai_softex_semantic2/standardized/senai_standardized.json",
+    "itens_brutos_encontrados": 22,
+    "itens_transformados": 22,
+    "itens_rejeitados": 0,
+    "itens_incompletos": 22,
+    "itens_suspeitos": 0,
+    "documentos_preservados": 22,
+    "pdf_url_preservado": 22,
+    "area_preenchida": 22,
+    "tipo_oportunidade_preenchido": 22,
+    "tipo_recurso_preenchido": 22,
+    "perfil_ideal_preenchido": 22,
+    "qualidade_dado_media": 90.0,
+    "motivos_rejeicao_principais": {},
+    "quick_audit": {
+      "ruido_passou": 0,
+      "duplicatas_link": 0,
+      "campos_preenchidos_pct": {
+        "area": 100.0,
+        "tipo_oportunidade": 100.0,
+        "tipo_recurso": 100.0,
+        "perfil_ideal": 100.0,
+        "documentos": 100.0,
+        "pdf_url": 100.0
+      }
+    },
+    "old_vs_new": {
+      "old_count": 1,
+      "new_count": 22,
+      "delta_count": 21,
+      "old_links_now_missing": [
+        "https://www.portaldaindustria.com.br/senai/canais/chamadas-publicas/"
+      ],
+      "new_links_before_missing": [
+        "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/agendatech/",
+        "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/alianca-educacional/",
+        "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/alianca-industrial/",
+        "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/chamada-regional-senai/",
+        "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/ecossistemas-de-inovacao-em-saude-hubs-regionais-s/",
+        "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/empreendedorismo-industrial-desafio-instituicao/",
+        "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/empreendedorismo-industrial-startuptech/",
+        "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/estudos-e-pesquisas-em-saude-e-seguranca-na-indust/",
+        "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/habitats-de-inovacao/",
+        "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/linhas-de-cuidado-na-saude-suplementar-sesi-e-ans-/",
+        "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/missao-industrial/",
+        "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/projetosemente/",
+        "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/rota-2030-alianca-industrial/",
+        "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/rota-2030-alianca-startups-pequenas-medias/",
+        "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/rota-2030-hands-aprendendo-fazendo-copia/",
+        "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/rota-2030-hands-aprendendo-fazendo/",
+        "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/rota-2030-projetos-estruturantes-fundep-e-senai/",
+        "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/rota-2030-projetos-estruturantesindustrial-copia/",
+        "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/saude-conectada-sesi/",
+        "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/smart-factory-bndes-senai/",
+        "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/smart-factory-finep-senai/",
+        "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/smart-factory/"
+      ],
+      "core_fields_improved": {
+        "area": {
+          "old": 0,
+          "new": 22,
+          "delta": 22
+        },
+        "tipo_oportunidade": {
+          "old": 1,
+          "new": 22,
+          "delta": 21
+        },
+        "tipo_recurso": {
+          "old": 1,
+          "new": 22,
+          "delta": 21
+        },
+        "perfil_ideal": {
+          "old": 0,
+          "new": 22,
+          "delta": 22
+        },
+        "documentos": {
+          "old": 0,
+          "new": 22,
+          "delta": 22
+        },
+        "pdf_url": {
+          "old": 0,
+          "new": 22,
+          "delta": 22
+        }
+      },
+      "core_fields_worsened": {},
+      "old_documents_count": 0,
+      "new_documents_count": 22,
+      "old_pdf_count": 0,
+      "new_pdf_count": 22
+    },
+    "risk_notes": []
+  },
+  {
+    "fonte": "softex",
+    "raw_output_path": "softex/outputs/softex_editais.json",
+    "old_standardized_path": "CORE/transformer/softex_standardized.json",
+    "new_standardized_path": "audit_reports_blocked_sources/lote1_fix_senai_softex_semantic2/standardized/softex_standardized.json",
+    "itens_brutos_encontrados": 2,
+    "itens_transformados": 2,
+    "itens_rejeitados": 0,
+    "itens_incompletos": 0,
+    "itens_suspeitos": 2,
+    "documentos_preservados": 0,
+    "pdf_url_preservado": 0,
+    "area_preenchida": 1,
+    "tipo_oportunidade_preenchido": 2,
+    "tipo_recurso_preenchido": 2,
+    "perfil_ideal_preenchido": 2,
+    "qualidade_dado_media": 60.0,
+    "motivos_rejeicao_principais": {},
+    "quick_audit": {
+      "ruido_passou": 0,
+      "duplicatas_link": 0,
+      "campos_preenchidos_pct": {
+        "area": 50.0,
+        "tipo_oportunidade": 100.0,
+        "tipo_recurso": 100.0,
+        "perfil_ideal": 100.0,
+        "documentos": 0.0,
+        "pdf_url": 0.0
+      }
+    },
+    "old_vs_new": {
+      "old_count": 2,
+      "new_count": 2,
+      "delta_count": 0,
+      "old_links_now_missing": [],
+      "new_links_before_missing": [],
+      "core_fields_improved": {
+        "perfil_ideal": {
+          "old": 0,
+          "new": 2,
+          "delta": 2
+        }
+      },
+      "core_fields_worsened": {},
+      "old_documents_count": 0,
+      "new_documents_count": 0,
+      "old_pdf_count": 0,
+      "new_pdf_count": 0
+    },
+    "risk_notes": []
+  }
+]

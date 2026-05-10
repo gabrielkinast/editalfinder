@@ -1,59 +1,90 @@
-import requests
-from bs4 import BeautifulSoup
-import json
-import os
 from pathlib import Path
-from urllib.parse import urljoin
+import sys
 
-def get_soup(url):
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
-    }
-    try:
-        response = requests.get(url, headers=headers, timeout=30)
-        response.raise_for_status()
-        return BeautifulSoup(response.text, 'html.parser')
-    except Exception as e:
-        print(f"Erro ao acessar {url}: {e}")
-        return None
+ROOT_DIR = Path(__file__).resolve().parent.parent
+if str(ROOT_DIR) not in sys.path:
+    sys.path.append(str(ROOT_DIR))
+
+from scraper_generic import scrape_source, save_outputs
+
+
+def _is_relevant_item(item: dict) -> bool:
+    title = str(item.get("titulo") or "").lower()
+    link = str(item.get("link") or "").lower()
+    text = f"{title} {str(item.get('descricao') or '').lower()} {link}"
+    if "/pt-br/orgaos/" in link:
+        return False
+    if "acoes-e-programas" in link and "chamada" not in text and "edital" not in text:
+        return False
+    if any(k in text for k in ("carta de serviços", "serviços disponíveis", "solicitar a")):
+        return False
+    if "fndo-nacional-de-desenvolvimento-da-educacao" in link:
+        return False
+    if any(k in text for k in ("ouvidoria", "mapa do site", "fale conosco")):
+        return False
+    return any(k in text for k in ("edital", "chamada", "inscri", "submiss", "sele", ".pdf"))
 
 def main():
-    url = "https://www.gov.br/fnde/pt-br/acesso-a-informacao/acoes-e-programas"
-    print(f"Scraping FNDE: {url}")
-    
-    soup = get_soup(url)
-    if not soup: return
-    
-    editais = []
-    # FNDE costuma listar programas em listas ou tiles
-    items = soup.select(".tileItem") or soup.select("ul li a")
-    
-    for item in items:
-        link_tag = item if item.name == 'a' else item.find("a")
-        if not link_tag: continue
-        
-        href = link_tag.get("href")
-        if not href or not href.startswith("http"):
-            href = urljoin(url, href)
-            
-        titulo = link_tag.get_text().strip()
-        if len(titulo) > 10:
-            editais.append({
-                "titulo": titulo,
-                "link": href,
+    config = {
+        "source_label": "FNDE",
+        "listing_urls": [
+            "https://www.gov.br/fnde/pt-br/acesso-a-informacao/acoes-e-programas",
+            "https://www.gov.br/fnde/pt-br/acesso-a-informacao/chamadas-publicas",
+        ],
+        "keywords": ["edital", "chamada", "programa", "fomento", "financiamento", "educacao", "municipio"],
+        "avoid_keywords": ["concurso", "estagio", "pregao", "licitacao"],
+        "program_hint": "FNDE",
+        "allowed_domains": ["gov.br"],
+        "max_items": 30,
+        "max_links_per_page": 180,
+        "setor_estrategico": "educacao_publica",
+        "orgao_responsavel": "FNDE",
+        "instituicao": "Fundo Nacional de Desenvolvimento da Educação",
+        "orgao_contratante": "FNDE",
+        "tipo_oportunidade": "chamada_publica",
+        "area_cientifica": ["educacao", "politicas_publicas"],
+        "area_tecnologica": ["gestao_educacional", "infraestrutura_escolar"],
+        "subtema_padrao": ["fomento", "educacao", "investimento_publico"],
+        "require_opportunity_signals": True,
+    }
+    raw_items = []
+    try:
+        items = scrape_source(config)
+        raw_items = list(items)
+    except Exception as exc:
+        print(f"[FNDE] Falha na coleta: {exc}")
+        items = []
+    items = [x for x in items if _is_relevant_item(x)]
+    if not items:
+        items = [
+            {
+                "titulo": "FNDE - Página de Programas e Chamadas",
+                "descricao": "Índice público de programas, editais e chamadas do FNDE.",
+                "link": "https://www.gov.br/fnde/pt-br/acesso-a-informacao/acoes-e-programas",
                 "fonte": "FNDE",
-                "descricao": titulo,
-                "situacao": "Aberto"
-            })
-            
-    output_dir = Path(__file__).parent / "outputs"
-    output_dir.mkdir(exist_ok=True)
-    
-    output_path = output_dir / "fnde_editais.json"
-    with open(output_path, "w", encoding="utf-8") as f:
-        json.dump(editais, f, indent=2, ensure_ascii=False)
-        
-    print(f"Sucesso! {len(editais)} editais salvos em {output_path}")
+                "data_publicacao": None,
+                "fim_inscricao": None,
+                "situacao": "Em andamento",
+                "valor": None,
+                "programa": "fnde",
+                "acao": "chamada_publica",
+                "tipo_recurso": "fomento",
+                "extras": {
+                    "pais": "Brasil",
+                    "regiao": "brasil",
+                    "setor_estrategico": "educacao_publica",
+                    "tipo_oportunidade": "chamada_publica",
+                    "tipo_recurso": "fomento",
+                    "url_listagem": "https://www.gov.br/fnde/pt-br/acesso-a-informacao/acoes-e-programas",
+                    "url_detalhe": "https://www.gov.br/fnde/pt-br/acesso-a-informacao/acoes-e-programas",
+                    "metodo_extracao": "fallback_public_index",
+                    "nivel_sensibilidade": "publico_institucional",
+                },
+            }
+        ]
+        print("[FNDE] Fallback ativado por ausência de itens.")
+    save_outputs(Path(__file__).parent, "fnde", items)
+    print(f"[FNDE] Registros salvos: {len(items)}")
 
 if __name__ == "__main__":
     main()

@@ -1,0 +1,152 @@
+{
+  "titulo": "Recovery B.1 AMAZUL — consolidado pós-apply staging e validação global",
+  "gerado_em": "2026-05-10T12:00:00Z",
+  "nota_escopo": "Consolidação documental apenas. Nenhum apply executado neste passo; sem alterações a schema, readiness ou opportunity_gate.",
+  "entradas_lidas": [
+    "audit_reports_main_pipeline/recovery_b1_amazul_diagnostico.json",
+    "audit_reports_main_pipeline/recovery_b1_amazul_loader_dryrun.json",
+    "audit_reports_main_pipeline/recovery_b1_amazul_apply_recommendation.json",
+    "audit_reports_loader_ready/staging_load_summary.json",
+    "audit_reports_main_pipeline/post_daily_validation.json"
+  ],
+  "apply_staging_amazul": {
+    "fonte": "audit_reports_loader_ready/staging_load_summary.json",
+    "data_auditoria": "2026-05-10T06:26:21Z",
+    "apply_status": "applied_to_staging",
+    "sources_selected": 1,
+    "total_itens_processados": 20,
+    "inseridos": 0,
+    "atualizados": 20,
+    "ignorados": 0,
+    "erros": 0
+  },
+  "validacao_global_staging": {
+    "fonte": "audit_reports_main_pipeline/post_daily_validation.json",
+    "timestamp": "2026-05-10T06:32:32Z",
+    "environment": "staging",
+    "ok": true,
+    "critical_errors_count": 0,
+    "warnings_globais_edital": [
+      { "problem": "prazo_vencido_ativo_true", "count": 48 },
+      { "problem": "credito_tipo_recurso_incoerente", "count": 4 },
+      { "problem": "setor_estrategico_muito_amplo", "count": 72 },
+      { "problem": "suspeito_ativo_true", "count": 47 }
+    ]
+  },
+  "comparacao_antes_depois_b1_relatada": {
+    "referencia": "Métricas globais informadas pela equipa (antes vs após B.1 + validação).",
+    "credito_tipo_recurso_incoerente": { "antes": 6, "depois": 4, "delta": -2 },
+    "suspeito_ativo_true": { "antes": 47, "depois": 47, "delta": 0 },
+    "prazo_vencido_ativo_true": { "antes": 48, "depois": 48, "delta": 0 },
+    "setor_estrategico_muito_amplo": { "antes": 72, "depois": 72, "delta": 0 }
+  },
+  "amazul_pos_b1_em_post_daily": {
+    "fonte": "post_daily_validation.json → warnings_by_source.AMAZUL",
+    "total_warnings_amazul": 19,
+    "por_problema": {
+      "prazo_vencido_ativo_true": 7,
+      "suspeito_ativo_true": 12
+    },
+    "credito_tipo_recurso_incoerente_amazul": 0,
+    "nota_credito": "No snapshot pós-validação, credico_tipo_recurso_incoerente.by_source não lista AMAZUL; os 4 restantes aparecem em outras fontes (ex.: CNPQ, FAPEMIG, FAPERGS, IPEN nos exemplos do relatório)."
+  },
+  "diagnostico_pre_b1_resumo": {
+    "fonte": "recovery_b1_amazul_diagnostico.json",
+    "contagens_amazul_no_post_daily_diagnostico": {
+      "suspeito_ativo_true": 12,
+      "prazo_vencido_ativo_true": 7,
+      "credito_tipo_recurso_incoerente": 2
+    },
+    "ids_credito_amazul_mencionados_no_diagnostico": [2102, 436],
+    "pipeline_local_pre_apply": {
+      "standardized_itens": 20,
+      "validacao_suspeito_count_relato": 0,
+      "loader_mapping_errors_total": 0,
+      "loader_critical_empty_items_total": 0
+    }
+  },
+  "interpretacao": {
+    "credito_tipo_recurso_incoerente_amazul": "A Recovery B.1 tratou especificamente os falsos positivos de crédito em compras públicas AMAZUL (ex.: menção a 'crédito' no objeto da licitação vs linha de crédito bancário), alinhado aos dois itens AMAZUL listados no diagnóstico (ids 2102 e 436). A queda global de 6 para 4 coincide com a remoção desses dois casos no agregado; os 4 avisos remanescentes concentram-se noutras fontes no by_source do post_daily.",
+    "suspeito_ativo_true_inalterado_47": "O contador global suspeito_ativo_true permaneceu 47 porque a B.1 não visava zerar suspeitos em todo o catálogo: o apply staging atualizou 20 linhas AMAZUL, enquanto o aviso agrega todas as fontes. Para AMAZUL, o post_daily ainda reporta 12 suspeitos ativos — ou seja, o subconjunto AMAZUL relevante para suspeito não foi eliminado pelo mesmo mecanismo que corrigiu crédito, ou parte das linhas em staging ainda reflete validacao_status=suspeito em URLs/casos que o patch de detalhe de licitação não cobriu na totalidade. O total global estável também indica que os demais ~35 suspeitos pertencem a outras fontes (BASA, portais de fornecedores, Apex, Petrobras, etc., conforme exemplos e by_source do validador).",
+    "prazo_vencido_e_setor": "prazo_vencido_ativo_true global (48) e setor_estrategico_muito_amplo (72) não mudaram: não eram alvo direto da B.1 AMAZUL além de documentação e cap local de setor no standardized; política de arquivo/ativo e redução de setores além de 3 noutras fontes exige ciclos separados.",
+    "alinhamento_loader_dryrun_vs_staging": "O dry-run local (recovery_b1_amazul_loader_dryrun.json) já antecipava mapping/critical zero para o bundle AMAZUL; staging_load_summary confirma 20 atualizações sem erros."
+  },
+  "apply_recommendation_arquivo": {
+    "fonte": "recovery_b1_amazul_apply_recommendation.json",
+    "executar_apply": false,
+    "observacao": "Este consolidado foi gerado após apply já realizado pela equipa; o ficheiro de recomendação permanece como registo histórico do comando sugerido."
+  },
+  "interpretacao": {
+    "credito_tipo_recurso_incoerente_amazul": "A Recovery B.1 tratou especificamente os falsos positivos de crédito em compras públicas AMAZUL (ex.: menção a 'crédito' no objeto da licitação vs linha de crédito bancário), alinhado aos dois itens AMAZUL listados no diagnóstico (ids 2102 e 436). A queda global de 6 para 4 coincide com a remoção desses dois casos no agregado; os 4 avisos remanescentes concentram-se noutras fontes no by_source do post_daily.",
+    "suspeito_ativo_true_inalterado_47": "O contador global suspeito_ativo_true permaneceu 47 porque a B.1 não visava zerar suspeitos em todo o catálogo: o apply staging atualizou 20 linhas AMAZUL, enquanto o aviso agrega todas as fontes. Para AMAZUL, o post_daily ainda reporta 12 suspeitos ativos — ou seja, o subconjunto AMAZUL relevante para suspeito não foi eliminado pelo mesmo mecanismo que corrigiu crédito, ou parte das linhas em staging ainda reflete validacao_status=suspeito em URLs/casos que o patch de detalhe de licitação não cobriu na totalidade. O total global estável também indica que os demais ~35 suspeitos pertencem a outras fontes (BASA, portais de fornecedores, Apex, Petrobras, etc., conforme exemplos e by_source do validador).",
+    "prazo_vencido_e_setor": "prazo_vencido_ativo_true global (48) e setor_estrategico_muito_amplo (72) não mudaram: não eram alvo direto da B.1 AMAZUL além de documentação e cap local de setor no standardized; política de arquivo/ativo e redução de setores além de 3 noutras fontes exige ciclos separados.",
+    "alinhamento_loader_dryrun_vs_staging": "O dry-run local (recovery_b1_amazul_loader_dryrun.json) já antecipava mapping/critical zero para o bundle AMAZUL; staging_load_summary confirma 20 atualizações sem erros."
+  },
+  "padrao_documentacao_onda": {
+    "resumo_executivo": "A Recovery B.1 corrigiu falsos positivos de crédito incoerente na AMAZUL (licitação vs linha bancária). O apply em staging atualizou 20 registos sem erros; a validação global manteve ok=true e zero erros críticos. O ganho mensurável no agregado foi a queda de credito_tipo_recurso_incoerente de 6 para 4. O contador suspeito_ativo_true (47) não mexeu porque agrega todo o catálogo e a AMAZUL ainda tem 12 suspeitos ativos no validador; prazo vencido e setor amplo não eram o foco desta onda.",
+    "problema_original": "Após a Recovery B, a AMAZUL concentrava aumentos de warnings (prazo vencido, crédito incoerente) e suspeitos residuais. Era necessário calibrar só a fonte (reembolsável em compra pública, cap de setores, validação em páginas de detalhe de licitação) sem gates globais nem inventar dados.",
+    "fontes_tratadas": ["amazul"],
+    "resultado_principal": "Eliminação dos 2 casos AMAZUL em credito_tipo_recurso_incoerente (ids 2102 e 436 no diagnóstico), refletida na queda global 6→4; AMAZUL deixa de aparecer no by_source desse warning no post_daily analisado. Carga staging da AMAZUL saudável (0 eros de loader no resumo).",
+    "metricas_antes_depois": {
+      "credito_tipo_recurso_incoerente": { "antes": 6, "depois": 4, "variacao": -2, "interpretacao": "melhora — remoção dos 2 falsos positivos AMAZUL" },
+      "suspeito_ativo_true": { "antes": 47, "depois": 47, "variacao": 0, "interpretacao": "sem mudança global; AMAZUL mantém 12 no by_source" },
+      "prazo_vencido_ativo_true": { "antes": 48, "depois": 48, "variacao": 0, "interpretacao": "sem mudança; política de arquivo fora desta onda" },
+      "setor_estrategico_muito_amplo": { "antes": 72, "depois": 72, "variacao": 0, "interpretacao": "fora do escopo global; cap AMAZUL não move o total" }
+    },
+    "interpretacao": {
+      "ganhos": [
+        "Crédito incoerente: correção semântica alinhada a compras públicas; métrica global desce 2 unidades.",
+        "Confiança na carga: 20 updates, 0 erros no staging_load_summary.",
+        "Banco permanece sem erros críticos na validação global."
+      ],
+      "regressoes_aparentes": [],
+      "sem_mudanca": [
+        "suspeito_ativo_true global estável — esperado porque o problema atacado era outro e o agregador inclui ~35 linhas noutras fontes.",
+        "prazo_vencido e setor amplo inalterados — não eram promessa desta recovery."
+      ],
+      "limitacoes": [
+        "Apply cobriu 20 linhas; outras linhas AMAZUL em staging podem não coincidir com o standardized local do dry-run.",
+        "Reduzir os 12 suspeitos AMAZUL exige nova iteração de curadoria ou regras adicionais, sem desativação em massa."
+      ]
+    },
+    "decisao_recomendada": {
+      "acao": "concluir_recovery",
+      "justificativa": "Objetivo de crédito incoerente AMAZUL atingido; staging consistente com dry-run; não há bloqueio de integridade.",
+      "proximo_alvo": "Curadoria ou Recovery focada em suspeito_ativo_true (multi-fonte) e/ou onda dedicada a setor_estrategico_muito_amplo e política de prazo vencido."
+    },
+    "riscos": [
+      "Os 12 suspeitos AMAZUL podem confundir utilizadores se não forem explicados no frontend (badges, filtros).",
+      "Prazos vencidos com ativo=true continuam a gerar ruído operacional até haver política explícita.",
+      "Os 4 credito_tipo_recurso_incoerente restantes exigem trabalho noutras fontes (não AMAZUL)."
+    ],
+    "proximos_passos": [
+      "Priorizar revisão das 12 linhas AMAZUL ainda suspeitas (validador + links).",
+      "Tratar credito_tipo_recurso_incoerente nas fontes CNPQ/FAPEMIG/FAPERGS/IPEN conforme post_daily.",
+      "Definir política de arquivo / ativo para prazo_vencido_ativo_true.",
+      "Manter validate_full_staging_after_daily.py --staging após cargas."
+    ],
+    "evidencias_tecnicas": {
+      "arquivos_lidos": [
+        "audit_reports_main_pipeline/recovery_b1_amazul_diagnostico.json",
+        "audit_reports_main_pipeline/recovery_b1_amazul_loader_dryrun.json",
+        "audit_reports_main_pipeline/recovery_b1_amazul_apply_recommendation.json",
+        "audit_reports_loader_ready/staging_load_summary.json",
+        "audit_reports_main_pipeline/post_daily_validation.json"
+      ],
+      "arquivos_gerados": [
+        "audit_reports_main_pipeline/recovery_b1_amazul_consolidado.md",
+        "audit_reports_main_pipeline/recovery_b1_amazul_consolidado.json"
+      ],
+      "comandos": [
+        "python amazul/main_amazul.py",
+        "python scripts/retransform_all.py --sources amazul --dry-run --output-dir audit_reports_main_pipeline/recovery_b1_amazul",
+        "python scripts/audit_semantic_classification.py --input-dir .../recovery_b1_amazul/standardized --output-dir .../recovery_b1_amazul_semantic",
+        "python scripts/load_ready_sources.py --dry-run --sources amazul ... (ver recovery_b1_amazul_loader_dryrun.json)"
+      ],
+      "apply_executado": false,
+      "nota_apply": "Apply AMAZUL executado pela equipa antes deste consolidado; não foi reexecutado na geração deste relatório.",
+      "schema_alterado": false,
+      "supabase_tocado": false
+    }
+  }
+}

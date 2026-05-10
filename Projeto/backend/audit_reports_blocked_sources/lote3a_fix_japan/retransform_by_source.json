@@ -1,0 +1,280 @@
+[
+  {
+    "fonte": "japan_e_rad",
+    "raw_output_path": "japan_e_rad/outputs/japan_e_rad_editais.json",
+    "old_standardized_path": "CORE/transformer/japan_e_rad_standardized.json",
+    "new_standardized_path": "audit_reports_blocked_sources/lote3a_fix_japan/standardized/japan_e_rad_standardized.json",
+    "itens_brutos_encontrados": 0,
+    "itens_transformados": 0,
+    "itens_rejeitados": 0,
+    "itens_incompletos": 0,
+    "itens_suspeitos": 0,
+    "itens_acesso_limitado": 0,
+    "documentos_preservados": 0,
+    "pdf_url_preservado": 0,
+    "area_preenchida": 0,
+    "tipo_oportunidade_preenchido": 0,
+    "tipo_recurso_preenchido": 0,
+    "perfil_ideal_preenchido": 0,
+    "qualidade_dado_media": null,
+    "motivos_rejeicao_principais": {},
+    "quick_audit": {
+      "ruido_passou": 0,
+      "duplicatas_link": 0,
+      "campos_preenchidos_pct": {
+        "area": 0.0,
+        "tipo_oportunidade": 0.0,
+        "tipo_recurso": 0.0,
+        "perfil_ideal": 0.0,
+        "documentos": 0.0,
+        "pdf_url": 0.0
+      },
+      "official_link_only_total": 0,
+      "access_limited_total": 0,
+      "access_reason_counts": {},
+      "access_limited_examples": []
+    },
+    "old_vs_new": {
+      "old_count": 1,
+      "new_count": 0,
+      "delta_count": -1,
+      "old_links_now_missing": [
+        "https://www.e-rad.go.jp/organ/procedure.html"
+      ],
+      "new_links_before_missing": [],
+      "core_fields_improved": {},
+      "core_fields_worsened": {
+        "tipo_oportunidade": {
+          "old": 1,
+          "new": 0,
+          "delta": -1
+        },
+        "tipo_recurso": {
+          "old": 1,
+          "new": 0,
+          "delta": -1
+        }
+      },
+      "old_documents_count": 0,
+      "new_documents_count": 0,
+      "old_pdf_count": 0,
+      "new_pdf_count": 0
+    },
+    "risk_notes": []
+  },
+  {
+    "fonte": "japan_jaea",
+    "raw_output_path": "japan_jaea/outputs/japan_jaea_editais.json",
+    "old_standardized_path": "CORE/transformer/japan_jaea_standardized.json",
+    "new_standardized_path": "audit_reports_blocked_sources/lote3a_fix_japan/standardized/japan_jaea_standardized.json",
+    "itens_brutos_encontrados": 0,
+    "itens_transformados": 0,
+    "itens_rejeitados": 0,
+    "itens_incompletos": 0,
+    "itens_suspeitos": 0,
+    "itens_acesso_limitado": 0,
+    "documentos_preservados": 0,
+    "pdf_url_preservado": 0,
+    "area_preenchida": 0,
+    "tipo_oportunidade_preenchido": 0,
+    "tipo_recurso_preenchido": 0,
+    "perfil_ideal_preenchido": 0,
+    "qualidade_dado_media": null,
+    "motivos_rejeicao_principais": {},
+    "quick_audit": {
+      "ruido_passou": 0,
+      "duplicatas_link": 0,
+      "campos_preenchidos_pct": {
+        "area": 0.0,
+        "tipo_oportunidade": 0.0,
+        "tipo_recurso": 0.0,
+        "perfil_ideal": 0.0,
+        "documentos": 0.0,
+        "pdf_url": 0.0
+      },
+      "official_link_only_total": 0,
+      "access_limited_total": 0,
+      "access_reason_counts": {},
+      "access_limited_examples": []
+    },
+    "old_vs_new": {
+      "old_count": 30,
+      "new_count": 0,
+      "delta_count": -30,
+      "old_links_now_missing": [
+        "https://rdreview.jaea.go.jp/review_en/2023/e2023_index.html",
+        "https://www.jaea.go.jp/",
+        "https://www.jaea.go.jp/04/anzen/en/FSRM2019.pdf",
+        "https://www.jaea.go.jp/04/kokusaibu/eng/event20230224.html",
+        "https://www.jaea.go.jp/about_JAEA/safety/",
+        "https://www.jaea.go.jp/english/about/annual_report.html",
+        "https://www.jaea.go.jp/english/centers/",
+        "https://www.jaea.go.jp/english/news/newsbox/2024/071201/",
+        "https://www.jaea.go.jp/english/news/newsbox/2025/022001/",
+        "https://www.jaea.go.jp/english/news/newsbox/2025/092601/",
+        "https://www.jaea.go.jp/english/news/newsbox/2025/100201/",
+        "https://www.jaea.go.jp/english/news/press/2023/033102/",
+        "https://www.jaea.go.jp/english/news/press/2024/021602/",
+        "https://www.jaea.go.jp/english/news/press/2024/022901/",
+        "https://www.jaea.go.jp/english/news/press/2024/103001/",
+        "https://www.jaea.go.jp/english/news/press/2024/103101/",
+        "https://www.jaea.go.jp/english/news/press/2025/020401/",
+        "https://www.jaea.go.jp/english/news/press/2025/021402/",
+        "https://www.jaea.go.jp/english/news/press/2026/022002/",
+        "https://www.jaea.go.jp/english/news/press/results/",
+        "https://www.jaea.go.jp/english/publication/annual_report/2023.pdf",
+        "https://www.jaea.go.jp/english/study_results/",
+        "https://www.jaea.go.jp/for_company/supply/",
+        "https://www.jaea.go.jp/glossary/",
+        "https://www.jaea.go.jp/news/media/",
+        "https://www.jaea.go.jp/news/meeting/",
+        "https://www.jaea.go.jp/news/newsbox/2022/033101/",
+        "https://www.jaea.go.jp/news/press/results.html",
+        "https://www.jaea.go.jp/news/weekly_report/",
+        "https://www.jaea.go.jp/study_results/"
+      ],
+      "new_links_before_missing": [],
+      "core_fields_improved": {},
+      "core_fields_worsened": {
+        "tipo_oportunidade": {
+          "old": 30,
+          "new": 0,
+          "delta": -30
+        },
+        "tipo_recurso": {
+          "old": 30,
+          "new": 0,
+          "delta": -30
+        },
+        "documentos": {
+          "old": 29,
+          "new": 0,
+          "delta": -29
+        },
+        "pdf_url": {
+          "old": 13,
+          "new": 0,
+          "delta": -13
+        }
+      },
+      "old_documents_count": 29,
+      "new_documents_count": 0,
+      "old_pdf_count": 13,
+      "new_pdf_count": 0
+    },
+    "risk_notes": []
+  },
+  {
+    "fonte": "japan_jaxa",
+    "raw_output_path": "japan_jaxa/outputs/japan_jaxa_editais.json",
+    "old_standardized_path": "CORE/transformer/japan_jaxa_standardized.json",
+    "new_standardized_path": "audit_reports_blocked_sources/lote3a_fix_japan/standardized/japan_jaxa_standardized.json",
+    "itens_brutos_encontrados": 0,
+    "itens_transformados": 0,
+    "itens_rejeitados": 0,
+    "itens_incompletos": 0,
+    "itens_suspeitos": 0,
+    "itens_acesso_limitado": 0,
+    "documentos_preservados": 0,
+    "pdf_url_preservado": 0,
+    "area_preenchida": 0,
+    "tipo_oportunidade_preenchido": 0,
+    "tipo_recurso_preenchido": 0,
+    "perfil_ideal_preenchido": 0,
+    "qualidade_dado_media": null,
+    "motivos_rejeicao_principais": {},
+    "quick_audit": {
+      "ruido_passou": 0,
+      "duplicatas_link": 0,
+      "campos_preenchidos_pct": {
+        "area": 0.0,
+        "tipo_oportunidade": 0.0,
+        "tipo_recurso": 0.0,
+        "perfil_ideal": 0.0,
+        "documentos": 0.0,
+        "pdf_url": 0.0
+      },
+      "official_link_only_total": 0,
+      "access_limited_total": 0,
+      "access_reason_counts": {},
+      "access_limited_examples": []
+    },
+    "old_vs_new": {
+      "old_count": 1,
+      "new_count": 0,
+      "delta_count": -1,
+      "old_links_now_missing": [
+        "https://global.jaxa.jp/press/"
+      ],
+      "new_links_before_missing": [],
+      "core_fields_improved": {},
+      "core_fields_worsened": {
+        "tipo_oportunidade": {
+          "old": 1,
+          "new": 0,
+          "delta": -1
+        },
+        "tipo_recurso": {
+          "old": 1,
+          "new": 0,
+          "delta": -1
+        }
+      },
+      "old_documents_count": 0,
+      "new_documents_count": 0,
+      "old_pdf_count": 0,
+      "new_pdf_count": 0
+    },
+    "risk_notes": []
+  },
+  {
+    "fonte": "japan_jst",
+    "raw_output_path": "japan_jst/outputs/japan_jst_editais.json",
+    "old_standardized_path": "CORE/transformer/japan_jst_standardized.json",
+    "new_standardized_path": "audit_reports_blocked_sources/lote3a_fix_japan/standardized/japan_jst_standardized.json",
+    "itens_brutos_encontrados": 0,
+    "itens_transformados": 0,
+    "itens_rejeitados": 0,
+    "itens_incompletos": 0,
+    "itens_suspeitos": 0,
+    "itens_acesso_limitado": 0,
+    "documentos_preservados": 0,
+    "pdf_url_preservado": 0,
+    "area_preenchida": 0,
+    "tipo_oportunidade_preenchido": 0,
+    "tipo_recurso_preenchido": 0,
+    "perfil_ideal_preenchido": 0,
+    "qualidade_dado_media": null,
+    "motivos_rejeicao_principais": {},
+    "quick_audit": {
+      "ruido_passou": 0,
+      "duplicatas_link": 0,
+      "campos_preenchidos_pct": {
+        "area": 0.0,
+        "tipo_oportunidade": 0.0,
+        "tipo_recurso": 0.0,
+        "perfil_ideal": 0.0,
+        "documentos": 0.0,
+        "pdf_url": 0.0
+      },
+      "official_link_only_total": 0,
+      "access_limited_total": 0,
+      "access_reason_counts": {},
+      "access_limited_examples": []
+    },
+    "old_vs_new": {
+      "old_count": 0,
+      "new_count": 0,
+      "delta_count": 0,
+      "old_links_now_missing": [],
+      "new_links_before_missing": [],
+      "core_fields_improved": {},
+      "core_fields_worsened": {},
+      "old_documents_count": 0,
+      "new_documents_count": 0,
+      "old_pdf_count": 0,
+      "new_pdf_count": 0
+    },
+    "risk_notes": []
+  }
+]

@@ -1,0 +1,115 @@
+{
+  "gerado_em": "2026-05-10T06:56:08Z",
+  "validacao_global": {
+    "fonte": "audit_reports_main_pipeline/post_daily_validation.json",
+    "timestamp": "2026-05-10T06:32:32Z",
+    "ok": true,
+    "critical_errors_count": 0,
+    "setor_estrategico_muito_amplo_total": 72
+  },
+  "ranking_fontes_setor_amplo": [
+    {
+      "fonte": "EMBRAPII",
+      "setor_estrategico_muito_amplo": 13,
+      "warnings_total": 22
+    },
+    {
+      "fonte": "NUCLEP",
+      "setor_estrategico_muito_amplo": 12,
+      "warnings_total": 12
+    },
+    {
+      "fonte": "DoD SBIR/STTR",
+      "setor_estrategico_muito_amplo": 9,
+      "warnings_total": 9
+    },
+    {
+      "fonte": "EIC",
+      "setor_estrategico_muito_amplo": 9,
+      "warnings_total": 9
+    },
+    {
+      "fonte": "Eureka Network",
+      "setor_estrategico_muito_amplo": 5,
+      "warnings_total": 5
+    },
+    {
+      "fonte": "DIU",
+      "setor_estrategico_muito_amplo": 3,
+      "warnings_total": 3
+    },
+    {
+      "fonte": "European Defence Fund",
+      "setor_estrategico_muito_amplo": 3,
+      "warnings_total": 3
+    },
+    {
+      "fonte": "Ministério da Defesa",
+      "setor_estrategico_muito_amplo": 3,
+      "warnings_total": 3
+    },
+    {
+      "fonte": "Mitsubishi Heavy Industries (Suppliers)",
+      "setor_estrategico_muito_amplo": 3,
+      "warnings_total": 3
+    },
+    {
+      "fonte": "IPEN",
+      "setor_estrategico_muito_amplo": 2,
+      "warnings_total": 3
+    },
+    {
+      "fonte": "AFWERX",
+      "setor_estrategico_muito_amplo": 2,
+      "warnings_total": 2
+    },
+    {
+      "fonte": "ANEEL",
+      "setor_estrategico_muito_amplo": 2,
+      "warnings_total": 2
+    },
+    {
+      "fonte": "SENAI",
+      "setor_estrategico_muito_amplo": 1,
+      "warnings_total": 3
+    },
+    {
+      "fonte": "CNEN",
+      "setor_estrategico_muito_amplo": 1,
+      "warnings_total": 1
+    },
+    {
+      "fonte": "CONFAP",
+      "setor_estrategico_muito_amplo": 1,
+      "warnings_total": 1
+    },
+    {
+      "fonte": "DARPA Opportunities",
+      "setor_estrategico_muito_amplo": 1,
+      "warnings_total": 1
+    },
+    {
+      "fonte": "ELETRONUCLEAR",
+      "setor_estrategico_muito_amplo": 1,
+      "warnings_total": 1
+    },
+    {
+      "fonte": "Ministério da Saúde",
+      "setor_estrategico_muito_amplo": 1,
+      "warnings_total": 1
+    }
+  ],
+  "exemplos_embrapii": [],
+  "exemplos_nuclep": [],
+  "motivo_provavel_excesso": "O enrich_opportunity_classification agrega tags temáticas em setor_estrategico e mantém até 4 entradas; várias fontes recebem pacotes defesa_industrial+aeroespacial+ciencia_tecnologia+industria sem poda por evidência. URLs de listagem e textos longos aumentam acertos genéricos.",
+  "estrategia_correcao": "Recovery C: função recovery_c_cap_setor_estrategico_br em calibrate_embrapii_extras e calibrate_nuclep_extras — máximo 3 setores com pontuação por evidência em título/descrição/URL/tipos; excedentes em tags_secundarias; lista completa também em setores_detectados. NUCLEP: páginas institucionais (quem somos, composição, etc.) recebem tipo_oportunidade noticia_institucional + aviso recovery_c_nuclep_pagina_institucional.",
+  "fontes_recovery_c_fase1": [
+    "embrapii",
+    "nuclep"
+  ],
+  "referencias_consolidados": [
+    "audit_reports_main_pipeline/recovery_a_consolidado.json",
+    "audit_reports_main_pipeline/recovery_b_consolidado.json",
+    "audit_reports_main_pipeline/recovery_b1_amazul_consolidado.json"
+  ]
+}

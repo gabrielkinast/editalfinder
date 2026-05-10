@@ -1,0 +1,132 @@
+{
+  "timestamp_utc": "2026-05-09T16:30:00Z",
+  "ferramenta": "Cursor agent (sincronização pós-Codex VS Code)",
+  "git": {
+    "repositorio_detectado": false,
+    "nota": "Em `D:\\Computational_Physics\\My Projects\\edital` não existe pasta `.git`; `git status` / `git diff` falham (exit 128). Para diff real, abrir a cópia do projeto que o Codex usa com git inicializado ou sincronizar esta pasta com o remoto."
+  },
+  "py_compile": {
+    "executado": true,
+    "ficheiros_ok": [
+      "main.py",
+      "scripts/validate_full_staging_after_daily.py",
+      "scripts/detect_removed_items.py",
+      "scripts/deactivate_removed_items.py",
+      "international_onda_c_common.py",
+      "innovate_uk/main_innovate_uk.py",
+      "ukri_funding/main_ukri_funding.py",
+      "eurostars/main_eurostars.py",
+      "eit/main_eit.py",
+      "esa_star/main_esa_star.py",
+      "esa_osip/main_esa_osip.py"
+    ]
+  },
+  "ficheiros_chave_verificados": {
+    "main.py": {"existe": true, "nota": "Orquestrador diário (subcomandos daily/status/...); legado em main_legacy_pipeline.py"},
+    "config/pipeline_sources.json": {"existe": true},
+    "scripts/validate_full_staging_after_daily.py": {"existe": true},
+    "scripts/detect_removed_items.py": {"existe": true},
+    "scripts/deactivate_removed_items.py": {"existe": true},
+    "scripts/deactivate_removed_credito_onda_a_staging.py": {"existe": true, "nota": "Script específico Onda A (não listado no pedido mas relacionado)"},
+    "scripts/load_ready_sources.py": {"existe": true, "nota": "Não re-lido integralmente nesta sincronização"},
+    "CORE/taxonomy_filtros.py": {"existe": true, "nota": "Não auditado linha-a-linha"},
+    "CORE/transformer.py": {"existe": true, "nota": "Não auditado linha-a-linha"},
+    "international_onda_c_common.py": {"existe": true},
+    "innovate_uk/main_innovate_uk.py": {"existe": true},
+    "ukri_funding/main_ukri_funding.py": {"existe": true},
+    "eurostars/main_eurostars.py": {"existe": true},
+    "eit/main_eit.py": {"existe": true},
+    "esa_star/main_esa_star.py": {"existe": true},
+    "esa_osip/main_esa_osip.py": {"existe": true},
+    "frontend": {"existe": false, "nota": "Nenhuma pasta `frontend/` com .tsx encontrada neste workspace; UI pode estar noutro repositório ou caminho."}
+  },
+  "readiness_curado_config_source_readiness": {
+    "fonte": "config/source_readiness.json",
+    "ready_count": 54,
+    "ready_with_notes_count": 33,
+    "needs_manual_review_count": 6,
+    "blocked_count": 9,
+    "nota_onda_c": "As fontes Onda C (ukri_funding, eit, esa_osip, innovate_uk, eurostars, esa_star) NÃO aparecem ainda em source_readiness.json; recomendações estão apenas no relatório de lote (ver onda_c)."
+  },
+  "onda_c_inovacao_internacional": {
+    "relatorio_principal": "audit_reports_credito/lote_inovacao_internacional_onda_c_diagnostico.json",
+    "timestamp_relatorio": "2026-05-09T15:17:49Z",
+    "confirmado_vs_esperado": {
+      "raw_total_50": true,
+      "standardized_total_48": true,
+      "rejeitados_transform_2": true,
+      "loader_dry_run_would_upsert_48": true,
+      "mapping_errors_0": true,
+      "setor_estrategico_gt3_por_fonte_0": true,
+      "documentos_perdidos_no_payload_total": "não consta explicitamente no bloco loader_dry_run deste JSON; validar com load_ready_summary quando correr loader real"
+    },
+    "readiness_recomendado_relatorio": {
+      "ukri_funding": "ready_with_notes",
+      "eit": "ready_with_notes",
+      "esa_osip": "ready_with_notes",
+      "innovate_uk": "needs_manual_review",
+      "eurostars": "needs_manual_review",
+      "esa_star": "blocked"
+    },
+    "esa_star": {
+      "bloqueado": true,
+      "motivo_relatorio": "Crawler encontra portal oficial; transformer rejeita Publication como login/autenticação; 0 transformados.",
+      "nao_liberar_sem": "feed/API pública oficial ou estratégia documentada"
+    },
+    "artefactos_pastas": {
+      "semantic": "audit_reports_credito/lote_inovacao_internacional_onda_c_semantic/ (8 ficheiros)",
+      "fix": "audit_reports_credito/lote_inovacao_internacional_onda_c_fix/ (retransform + standardized por fonte)",
+      "quality_fix": "audit_reports_credito/lote_inovacao_internacional_onda_c_quality_fix.json/.md existem"
+    },
+    "risco_relatorio": "Dry-run loader no diagnóstico foi com SUPABASE_URL local falso para não tocar staging real — contagens loader são fiáveis para artefatos; ambiente real pode divergir até rerodar."
+  },
+  "eic_eureka": {
+    "config_source_readiness": ["eic", "eureka_network"],
+    "nota_standardized": "Standardized canónicos em audit_reports_retransform/standardized/ não foram revalidados byte-a-byte nesta sincronização.",
+    "staging_warnings_pos_daily": "post_daily_warning_examples.md lista ainda exemplos `setor_estrategico_muito_amplo` para EIC e Eureka Network — consistente com dados antigos em staging se apply canónico recente ainda não correu ou não cobriu esses links."
+  },
+  "post_daily_validation": {
+    "ficheiro": "audit_reports_main_pipeline/post_daily_validation.json",
+    "timestamp": "2026-05-09T14:36:59Z",
+    "ok": true,
+    "critical_errors": [],
+    "warnings_resumo": [
+      "prazo_vencido_ativo_true: 41",
+      "titulo_ruidoso: 6",
+      "credito_tipo_recurso_incoerente: 4",
+      "setor_estrategico_muito_amplo: 72",
+      "suspeito_ativo_true: 76"
+    ],
+    "counts": {"edital_total": 1105, "noticia_total": 109, "pesquisa_total": 47}
+  },
+  "last_run_summary_json_atual": {
+    "ficheiro": "audit_reports_main_pipeline/last_run_summary.json",
+    "conteudo_observado": "Execução recente de deactivate_removed_items (dry_run, group removed_items, 2026-05-09T13:10:46Z); não é resumo do `main.py daily` completo.",
+    "nota": "O mesmo nome de ficheiro é reutilizado por vários fluxos; interpretar sempre com campo `modo` / `group` dentro do JSON."
+  },
+  "pipelines": {
+    "main_py_daily": "definido em main.py; dry-run/apply com gates; documentação docs/DAILY_PIPELINE.md",
+    "onda_c_offline": "diagnostico + semantic + fix presentes; apply não executado no relatório (safety.apply_executed false)",
+    "validate_full_staging_after_daily": "script presente e py_compile OK"
+  },
+  "nao_executado": [
+    "apply loaders",
+    "Supabase write",
+    "migrations",
+    "alteração de ficheiros além deste relatório"
+  ],
+  "comandos_seguros_proximos": [
+    "Abrir projeto com .git e correr: git status; git diff --stat; git diff --name-only",
+    "python main.py status",
+    "python main.py daily --dry-run --skip-crawl --skip-transform --skip-news --skip-edital-audits --sources ukri_funding,eit,esa_osip",
+    "Rever audit_reports_credito/lote_inovacao_internacional_onda_c_diagnostico.md e .json antes de promover fontes em config/source_readiness.json",
+    "Após curadoria: copiar standardized do lote fix para audit_reports_retransform/standardized e dry-run load_ready_sources só para fontes promovidas"
+  ],
+  "tarefas_pendentes_sugeridas": [
+    "Sincronizar workspace com repositório git real para rastrear diff Codex vs Cursor",
+    "Incorporar Onda C em source_readiness.json apenas após revisão humana (alinhado a next_steps do diagnóstico)",
+    "Resolver ESA STAR só com fonte pública (RSS/API/export) — manter blocked",
+    "Se staging ainda mostra setor_estrategico > 3 para EIC/Eureka: aplicar standardized corrigido + loader staging ou desativar ruídos",
+    "Localizar repositório frontend (Radar de Fomento, Editais, Pré-cadastro, PDF) se for separado deste tree"
+  ]
+}

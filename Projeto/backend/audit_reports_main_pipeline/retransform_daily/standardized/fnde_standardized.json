@@ -1,0 +1,121 @@
+[
+  {
+    "titulo": "FNDE - Página de Programas e Chamadas",
+    "descricao": "Índice público de programas, editais e chamadas do FNDE.",
+    "link": "https://www.gov.br/fnde/pt-br/acesso-a-informacao/acoes-e-programas",
+    "fonte": "FNDE",
+    "data_publicacao": null,
+    "fim_inscricao": null,
+    "situacao": "Em andamento",
+    "valor": null,
+    "programa": "fnde",
+    "acao": "chamada_publica",
+    "tipo_recurso": "fomento",
+    "regiao": "Sudeste",
+    "extras": {
+      "pais": "Brasil",
+      "regiao": "brasil",
+      "setor_estrategico": [
+        "defesa_industrial",
+        "aeroespacial"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "tipo_recurso": "fomento",
+      "url_listagem": "https://www.gov.br/fnde/pt-br/acesso-a-informacao/acoes-e-programas",
+      "url_detalhe": "https://www.gov.br/fnde/pt-br/acesso-a-informacao/acoes-e-programas",
+      "metodo_extracao": "fallback_public_index",
+      "nivel_sensibilidade": "publico_institucional",
+      "opportunity_gate_category": "programa",
+      "numero_edital": "_publica",
+      "numero_processo": "",
+      "codigo_oportunidade": "",
+      "documentos": [],
+      "cronograma": [],
+      "content_type": "edital",
+      "destination_table": "edital",
+      "thematic_tags": [
+        "aeroespacial"
+      ],
+      "thematic_confidence": 0.44999999999999996,
+      "public_investment_scope": true,
+      "subtema": [],
+      "area_cientifica": [],
+      "area_tecnologica": [],
+      "empresa_prime": "",
+      "orgao_contratante": "FNDE",
+      "idioma_original": "",
+      "titulo_original": "",
+      "descricao_original": "",
+      "titulo_traduzido": "",
+      "descricao_traduzida": "",
+      "orgao_responsavel": "",
+      "instituicao": "",
+      "numero_chamada": "",
+      "modalidade": "",
+      "publico_alvo": [],
+      "elegibilidade": "",
+      "objetivo": "",
+      "escopo": "",
+      "itens_financiaveis": [],
+      "itens_nao_financiaveis": [],
+      "valor_total": "",
+      "valor_por_projeto": "",
+      "contrapartida": "",
+      "prazo_execucao": "",
+      "pdf_url": "",
+      "pdf_texto_extraido": "",
+      "pdf_resumo": "",
+      "data_publicacao_original": "",
+      "fim_inscricao_original": "",
+      "prazo_submissao_original": "",
+      "contexto_sensivel_detectado": false,
+      "marcadores_contexto_sensivel": [],
+      "origem": "https://www.gov.br/fnde/pt-br/acesso-a-informacao/acoes-e-programas",
+      "palavras_chave_detectadas": [
+        "edital",
+        "fomento"
+      ],
+      "necessita_traducao": false,
+      "observacoes": "",
+      "content_hash": "da13983b7bf2d33bf888f4a10be4b3456c377fd62b620270fd70f53dbe02da37",
+      "area": [],
+      "setor_economico": [
+        "aeroespacial"
+      ],
+      "classificacao_confianca": "media",
+      "metodo_classificacao": "transformer_keyword",
+      "qualidade_dado": 53,
+      "qualidade_nivel": "medio",
+      "qualidade_flags": [
+        "titulo_ok",
+        "link_http",
+        "tipo_recurso"
+      ],
+      "qualidade_problemas": [
+        "descricao_curta",
+        "prazo_ausente",
+        "valor_ausente"
+      ],
+      "validacao_status": "incompleto",
+      "validacao_warnings": [
+        "descricao_curta",
+        "prazo_ausente",
+        "valor_ausente"
+      ],
+      "validacao_erros": [],
+      "field_confidence": {
+        "titulo": 0.95,
+        "descricao": 0.55,
+        "prazo": 0.0,
+        "valor": 0.0,
+        "documentos": 0.0,
+        "orgao": 0.85,
+        "tipo_recurso": 0.8,
+        "pdf_enrichment": 0.0
+      },
+      "extraction_richness": 0.394,
+      "content_type_detectado": "chamada_publica"
+    },
+    "content_type": "edital"
+  }
+]

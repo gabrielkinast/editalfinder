@@ -1,0 +1,91 @@
+{
+  "titulo": "Comparacao Onda A credito — antes (retransform fix original) vs depois (limpeza de ruido)",
+  "data": "2026-05-06T00:45Z",
+  "referencia_antes": "audit_reports_credito/lote_credito_brasil_onda_a_fix/retransform_summary.json",
+  "referencia_depois": "audit_reports_credito/lote_credito_brasil_onda_a_ruido_fix/retransform_summary.json",
+  "totais_antes": {
+    "brutos": 85,
+    "transformados": 83,
+    "rejeitados_gate": 2
+  },
+  "totais_depois": {
+    "brutos": 79,
+    "transformados": 79,
+    "rejeitados_gate": 0
+  },
+  "delta": {
+    "brutos": -6,
+    "transformados": -4,
+    "rejeitados_gate": -2
+  },
+  "semantica_flags": {
+    "antes_semantic_fix_audit": {},
+    "depois_ruido_fix": {
+      "area_cientifica_sem_evidencia": 1
+    }
+  },
+  "destaques": [
+    "Item BDMG Entre em contato removido (URL investimento + hub institucional).",
+    "Correspondentes / seja parceiro / sobre-bdmg / sala imprensa / licitacoes hub filtrados.",
+    "BASA Conta PJ (/conta-pj) filtrada.",
+    "AgeRio educacaofinanceira filtrada; microcredito/microempreendedor preservados via soft-continue estendido.",
+    "Texto de rodape (internet banking) pode permanecer na descricao de paginas validas — nao e titulo nem URL de item de ruido."
+  ],
+  "por_fonte": [
+    {
+      "fonte": "bnb",
+      "brutos_antes_fix_original": 24,
+      "brutos_depois_limpeza": 24,
+      "transformados_antes": 24,
+      "transformados_depois": 24,
+      "rejeitados_antes_gate": 0,
+      "rejeitados_depois_gate": 0,
+      "delta_transformados": 0,
+      "readiness_recomendado_pos_limpeza": "ready_with_notes"
+    },
+    {
+      "fonte": "banco_da_amazonia",
+      "brutos_antes_fix_original": 26,
+      "brutos_depois_limpeza": 26,
+      "transformados_antes": 26,
+      "transformados_depois": 26,
+      "rejeitados_antes_gate": 0,
+      "rejeitados_depois_gate": 0,
+      "delta_transformados": 0,
+      "readiness_recomendado_pos_limpeza": "ready_with_notes"
+    },
+    {
+      "fonte": "bdmg",
+      "brutos_antes_fix_original": 28,
+      "brutos_depois_limpeza": 18,
+      "transformados_antes": 27,
+      "transformados_depois": 18,
+      "rejeitados_antes_gate": 1,
+      "rejeitados_depois_gate": 0,
+      "delta_transformados": -9,
+      "readiness_recomendado_pos_limpeza": "ready_with_notes"
+    },
+    {
+      "fonte": "agerio",
+      "brutos_antes_fix_original": 3,
+      "brutos_depois_limpeza": 7,
+      "transformados_antes": 2,
+      "transformados_depois": 7,
+      "rejeitados_antes_gate": 1,
+      "rejeitados_depois_gate": 0,
+      "delta_transformados": 5,
+      "readiness_recomendado_pos_limpeza": "needs_manual_review"
+    },
+    {
+      "fonte": "desenvolve_sp",
+      "brutos_antes_fix_original": 4,
+      "brutos_depois_limpeza": 4,
+      "transformados_antes": 4,
+      "transformados_depois": 4,
+      "rejeitados_antes_gate": 0,
+      "rejeitados_depois_gate": 0,
+      "delta_transformados": 0,
+      "readiness_recomendado_pos_limpeza": "needs_manual_review"
+    }
+  ]
+}

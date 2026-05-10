@@ -1,0 +1,722 @@
+[
+  {
+    "fonte": "amazul",
+    "arquivo": "amazul\\outputs\\amazul_editais.json",
+    "itens_amostra": 20,
+    "transformados": 19,
+    "rejeitados": 1,
+    "raw_com_pdf_url": 19,
+    "raw_com_documentos": 19,
+    "transformado_com_pdf_url": 19,
+    "transformado_com_documentos": 19,
+    "payload_com_pdf_url": 19,
+    "payload_com_documentos": 19,
+    "bruto_com_documentos_pdf": 19,
+    "bruto_com_documentos_nao_pdf": 2,
+    "transformado_com_documentos_pdf": 19,
+    "transformado_com_documentos_nao_pdf": 2,
+    "payload_com_documentos_pdf": 19,
+    "payload_com_documentos_nao_pdf": 2,
+    "perdas_pdf": 0,
+    "perdas_nao_pdf": 0,
+    "downloads_falharam": 19,
+    "downloads_sucesso": 0,
+    "links_invalidos": 0,
+    "links_relativos_restantes": 0,
+    "links_quebrados": 0,
+    "duplicados_documentos": 0,
+    "formatos_detectados": {
+      "pdf": 24,
+      "zip": 3
+    },
+    "losses": [],
+    "download_failures": [
+      {
+        "fonte": "amazul",
+        "titulo": "Dispensa de Licitação 01/2026",
+        "link": "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos/dispensa-de-licitacao-012026",
+        "pdf_url": "https://www.amazul.mar.mil.br/sites/default/files/2026-04/EXTRATO%20DOU%2013ABR26.pdf",
+        "status_download": "falhou",
+        "erro_download": "pdf_nao_lido_no_transformer"
+      },
+      {
+        "fonte": "amazul",
+        "titulo": "Dispensa de Licitação 06/2025",
+        "link": "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos/dispensa-de-licitacao-062025",
+        "pdf_url": "https://www.amazul.mar.mil.br/sites/default/files/2025-09/EXTRATO%20DOU%2022SET25%20CT%2011.2025%20-%20FGV_0.pdf",
+        "status_download": "falhou",
+        "erro_download": "pdf_nao_lido_no_transformer"
+      },
+      {
+        "fonte": "amazul",
+        "titulo": "Dispensa de Licitação 01/2024",
+        "link": "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos/dispensa-de-licitacao-012024",
+        "pdf_url": "https://www.amazul.mar.mil.br/sites/default/files/2024-08/TJDL%2001-2024%20-%20Termo%20de%20Justificativa_assinado_1.pdf",
+        "status_download": "falhou",
+        "erro_download": "pdf_nao_lido_no_transformer"
+      },
+      {
+        "fonte": "amazul",
+        "titulo": "Dispensa de Licitação 02/2024",
+        "link": "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos/dispensa-de-licitacao-022024",
+        "pdf_url": "https://www.amazul.mar.mil.br/sites/default/files/2024-08/TJDL-02-2024%20-%20TR_04-2024-00_edit%C3%A1vel.pdf",
+        "status_download": "falhou",
+        "erro_download": "pdf_nao_lido_no_transformer"
+      },
+      {
+        "fonte": "amazul",
+        "titulo": "Dispensa de Licitação 05/2024",
+        "link": "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos/dispensa-de-licitacao-052024",
+        "pdf_url": "https://www.amazul.mar.mil.br/sites/default/files/2024-08/Termo%20de%20Justificativa%2011-04%20TJDL%2005-2024%20-%20Edit%C3%A1vel.pdf",
+        "status_download": "falhou",
+        "erro_download": "pdf_nao_lido_no_transformer"
+      },
+      {
+        "fonte": "amazul",
+        "titulo": "Dispensa de Licitação por Valor 05/2026",
+        "link": "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos/dispensa-de-licitacao-por-valor-052026",
+        "pdf_url": "https://www.amazul.mar.mil.br/sites/default/files/2026-03/DV-05-2026-Extrato_CT-02-2026-00_TELEFONICA_VIVO_LINK_DOU_16MAR26_0.pdf",
+        "status_download": "falhou",
+        "erro_download": "pdf_nao_lido_no_transformer"
+      },
+      {
+        "fonte": "amazul",
+        "titulo": "Dispensa de Licitação por Valor 01/2025",
+        "link": "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos/dispensa-de-licitacao-por-valor-012025",
+        "pdf_url": "https://www.amazul.mar.mil.br/sites/default/files/2026-03/Extrato%20da%20publica%C3%A7%C3%A3o%20DOU%20do%20DLV%2001.2025%20-%20APVEACEL_0.pdf",
+        "status_download": "falhou",
+        "erro_download": "pdf_nao_lido_no_transformer"
+      },
+      {
+        "fonte": "amazul",
+        "titulo": "Dispensa de Licitação por Valor 02/2025",
+        "link": "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos/dispensa-de-licitacao-por-valor-022025",
+        "pdf_url": "https://www.amazul.mar.mil.br/sites/default/files/2026-03/Extrato%20Public_CT-02-2025-00_TELIUM_DOU_26MAR25.pdf",
+        "status_download": "falhou",
+        "erro_download": "pdf_nao_lido_no_transformer"
+      },
+      {
+        "fonte": "amazul",
+        "titulo": "Dispensa de Licitação por Valor 03/2025",
+        "link": "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos/dispensa-de-licitacao-por-valor-032025",
+        "pdf_url": "https://www.amazul.mar.mil.br/sites/default/files/2026-03/DV-03-2025-Extrato%20Public_CT-06-2025-AZCORP_DOU_06JUN25.pdf",
+        "status_download": "falhou",
+        "erro_download": "pdf_nao_lido_no_transformer"
+      },
+      {
+        "fonte": "amazul",
+        "titulo": "Dispensa de Licitação por Valor 04/2025",
+        "link": "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos/dispensa-de-licitacao-por-valor-042025",
+        "pdf_url": "https://www.amazul.mar.mil.br/sites/default/files/2026-03/Extrato%20Public_CT_DALETH-2025_DLV%2004-25_DOU_26AGO25.pdf",
+        "status_download": "falhou",
+        "erro_download": "pdf_nao_lido_no_transformer"
+      },
+      {
+        "fonte": "amazul",
+        "titulo": "Dispensa de Licitação por Valor 05/2025",
+        "link": "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos/dispensa-de-licitacao-por-valor-052025",
+        "pdf_url": "https://www.amazul.mar.mil.br/sites/default/files/2026-03/Extrato%20Public_CT-05-2025-00_ECOTRANS_DOU_16MAI25.pdf",
+        "status_download": "falhou",
+        "erro_download": "pdf_nao_lido_no_transformer"
+      },
+      {
+        "fonte": "amazul",
+        "titulo": "Dispensa de Licitação por Valor 06/2025",
+        "link": "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos/dispensa-de-licitacao-por-valor-062025",
+        "pdf_url": "https://www.amazul.mar.mil.br/sites/default/files/2026-03/EXTRATO%20DOU%20CT%20N%C2%BA%2015.2025%20%20CLARO%20SMP.pdf",
+        "status_download": "falhou",
+        "erro_download": "pdf_nao_lido_no_transformer"
+      },
+      {
+        "fonte": "amazul",
+        "titulo": "Dispensa de Licitação por Valor 07/2025",
+        "link": "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos/dispensa-de-licitacao-por-valor-072025",
+        "pdf_url": "https://www.amazul.mar.mil.br/sites/default/files/2026-03/DOU%20n%C2%BA%20237%2012DEZ2025%20CT%2014.2025-00.pdf",
+        "status_download": "falhou",
+        "erro_download": "pdf_nao_lido_no_transformer"
+      },
+      {
+        "fonte": "amazul",
+        "titulo": "Dispensa de Licitação por Valor 04/2024",
+        "link": "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos/dispensa-de-licitacao-por-valor-042024-0",
+        "pdf_url": "https://www.amazul.mar.mil.br/sites/default/files/2026-03/Extrato%20Public_TC08-2024_SACHO_AUDITORES_DOU_17MAI24.pdf",
+        "status_download": "falhou",
+        "erro_download": "pdf_nao_lido_no_transformer"
+      },
+      {
+        "fonte": "amazul",
+        "titulo": "Dispensa de Licitação por Valor 06/2024",
+        "link": "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos/dispensa-de-licitacao-por-valor-062024",
+        "pdf_url": "https://www.amazul.mar.mil.br/sites/default/files/2025-01/DV-06-2024-TR-Purificador%20de%20%C3%A1gua-digitalizado_ASS.pdf",
+        "status_download": "falhou",
+        "erro_download": "pdf_nao_lido_no_transformer"
+      },
+      {
+        "fonte": "amazul",
+        "titulo": "Dispensa de Licitação por valor 04/2024",
+        "link": "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos/dispensa-de-licitacao-por-valor-042024",
+        "pdf_url": "https://www.amazul.mar.mil.br/sites/default/files/2024-09/DV%2004_2024-Auditoria_TC-08-2024-TR%20aasinado_0.pdf",
+        "status_download": "falhou",
+        "erro_download": "pdf_nao_lido_no_transformer"
+      },
+      {
+        "fonte": "amazul",
+        "titulo": "Dispensa de Licitação por Valor 01/2023",
+        "link": "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos/dispensa-de-licitacao-por-valor-012023",
+        "pdf_url": "https://www.amazul.mar.mil.br/sites/default/files/2026-03/15MAR2023-PUBL-DOU-TC-02-2023-GL%20ELETRO.pdf",
+        "status_download": "falhou",
+        "erro_download": "pdf_nao_lido_no_transformer"
+      },
+      {
+        "fonte": "amazul",
+        "titulo": "Dispensa de Licitação por Valor 02/2023",
+        "link": "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos/dispensa-de-licitacao-por-valor-022023",
+        "pdf_url": "https://www.amazul.mar.mil.br/sites/default/files/2026-03/PUBL-DOU-22FEV2023-TC-03-2023-TK%20ELEVADORES.pdf",
+        "status_download": "falhou",
+        "erro_download": "pdf_nao_lido_no_transformer"
+      },
+      {
+        "fonte": "amazul",
+        "titulo": "Dispensa de Licitação por Valor 04/2023",
+        "link": "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos/dispensa-de-licitacao-por-valor-042023",
+        "pdf_url": "https://www.amazul.mar.mil.br/sites/default/files/2026-03/Public_Extrato%20TC_06-2023_SENIOR%20AUDITORES_DOU-03MAI23.pdf",
+        "status_download": "falhou",
+        "erro_download": "pdf_nao_lido_no_transformer"
+      }
+    ],
+    "examples": [
+      {
+        "fonte": "amazul",
+        "titulo": "Dispensa de Licitação 01/2026",
+        "link": "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos/dispensa-de-licitacao-012026",
+        "raw_pdf_url": "https://www.amazul.mar.mil.br/sites/default/files/2026-04/EXTRATO%20DOU%2013ABR26.pdf",
+        "transformado_pdf_url": "https://www.amazul.mar.mil.br/sites/default/files/2026-04/EXTRATO%20DOU%2013ABR26.pdf",
+        "payload_pdf_url": "https://www.amazul.mar.mil.br/sites/default/files/2026-04/EXTRATO%20DOU%2013ABR26.pdf",
+        "raw_docs_n": 1,
+        "transformado_docs_n": 1,
+        "payload_docs_n": 1,
+        "status_download": "falhou",
+        "erro_download": "pdf_nao_lido_no_transformer",
+        "docs_transformado_amostra": [
+          {
+            "titulo": "Download",
+            "url": "https://www.amazul.mar.mil.br/sites/default/files/2026-04/EXTRATO%20DOU%2013ABR26.pdf",
+            "tipo": "documento_desconhecido",
+            "formato": "pdf",
+            "origem": "extras.documentos",
+            "status_download": "nao_baixado",
+            "erro_download": "",
+            "texto_extraido": "",
+            "resumo": ""
+          }
+        ]
+      },
+      {
+        "fonte": "amazul",
+        "titulo": "Dispensa de Licitação 06/2025",
+        "link": "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos/dispensa-de-licitacao-062025",
+        "raw_pdf_url": "https://www.amazul.mar.mil.br/sites/default/files/2025-09/EXTRATO%20DOU%2022SET25%20CT%2011.2025%20-%20FGV_0.pdf",
+        "transformado_pdf_url": "https://www.amazul.mar.mil.br/sites/default/files/2025-09/EXTRATO%20DOU%2022SET25%20CT%2011.2025%20-%20FGV_0.pdf",
+        "payload_pdf_url": "https://www.amazul.mar.mil.br/sites/default/files/2025-09/EXTRATO%20DOU%2022SET25%20CT%2011.2025%20-%20FGV_0.pdf",
+        "raw_docs_n": 1,
+        "transformado_docs_n": 1,
+        "payload_docs_n": 1,
+        "status_download": "falhou",
+        "erro_download": "pdf_nao_lido_no_transformer",
+        "docs_transformado_amostra": [
+          {
+            "titulo": "Download",
+            "url": "https://www.amazul.mar.mil.br/sites/default/files/2025-09/EXTRATO%20DOU%2022SET25%20CT%2011.2025%20-%20FGV_0.pdf",
+            "tipo": "documento_desconhecido",
+            "formato": "pdf",
+            "origem": "extras.documentos",
+            "status_download": "nao_baixado",
+            "erro_download": "",
+            "texto_extraido": "",
+            "resumo": ""
+          }
+        ]
+      },
+      {
+        "fonte": "amazul",
+        "titulo": "Dispensa de Licitação 01/2024",
+        "link": "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos/dispensa-de-licitacao-012024",
+        "raw_pdf_url": "https://www.amazul.mar.mil.br/sites/default/files/2024-08/Edital%20e%20anexos%20_PSCF%2003-2019%20-%20Completo%20Publica%C3%A7%C3%A3o_0.pdf",
+        "transformado_pdf_url": "https://www.amazul.mar.mil.br/sites/default/files/2024-08/TJDL%2001-2024%20-%20Termo%20de%20Justificativa_assinado_1.pdf",
+        "payload_pdf_url": "https://www.amazul.mar.mil.br/sites/default/files/2024-08/TJDL%2001-2024%20-%20Termo%20de%20Justificativa_assinado_1.pdf",
+        "raw_docs_n": 3,
+        "transformado_docs_n": 3,
+        "payload_docs_n": 3,
+        "status_download": "falhou",
+        "erro_download": "pdf_nao_lido_no_transformer",
+        "docs_transformado_amostra": [
+          {
+            "titulo": "Download",
+            "url": "https://www.amazul.mar.mil.br/sites/default/files/2024-08/Edital%20e%20anexos_Edit%C3%A1veis_0.zip",
+            "tipo": "edital_pdf",
+            "formato": "zip",
+            "origem": "extras.documentos",
+            "status_download": "nao_baixado",
+            "erro_download": "",
+            "texto_extraido": "",
+            "resumo": ""
+          },
+          {
+            "titulo": "Download",
+            "url": "https://www.amazul.mar.mil.br/sites/default/files/2024-08/TJDL%2001-2024%20-%20Termo%20de%20Justificativa_assinado_1.pdf",
+            "tipo": "documento_desconhecido",
+            "formato": "pdf",
+            "origem": "extras.documentos",
+            "status_download": "nao_baixado",
+            "erro_download": "",
+            "texto_extraido": "",
+            "resumo": ""
+          },
+          {
+            "titulo": "Download",
+            "url": "https://www.amazul.mar.mil.br/sites/default/files/2024-08/Edital%20e%20anexos%20_PSCF%2003-2019%20-%20Completo%20Publica%C3%A7%C3%A3o_0.pdf",
+            "tipo": "edital_pdf",
+            "formato": "pdf",
+            "origem": "extras.documentos",
+            "status_download": "nao_baixado",
+            "erro_download": "",
+            "texto_extraido": "",
+            "resumo": ""
+          }
+        ]
+      },
+      {
+        "fonte": "amazul",
+        "titulo": "Dispensa de Licitação 02/2024",
+        "link": "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos/dispensa-de-licitacao-022024",
+        "raw_pdf_url": "https://www.amazul.mar.mil.br/sites/default/files/2024-08/TJDL-02-2024%20-%20TR_04-2024-00_edit%C3%A1vel.pdf",
+        "transformado_pdf_url": "https://www.amazul.mar.mil.br/sites/default/files/2024-08/TJDL-02-2024%20-%20TR_04-2024-00_edit%C3%A1vel.pdf",
+        "payload_pdf_url": "https://www.amazul.mar.mil.br/sites/default/files/2024-08/TJDL-02-2024%20-%20TR_04-2024-00_edit%C3%A1vel.pdf",
+        "raw_docs_n": 2,
+        "transformado_docs_n": 2,
+        "payload_docs_n": 2,
+        "status_download": "falhou",
+        "erro_download": "pdf_nao_lido_no_transformer",
+        "docs_transformado_amostra": [
+          {
+            "titulo": "Download",
+            "url": "https://www.amazul.mar.mil.br/sites/default/files/2024-08/TJDL-02-2024%20-%20TR_04-2024-00_edit%C3%A1vel.pdf",
+            "tipo": "termo_referencia",
+            "formato": "pdf",
+            "origem": "extras.documentos",
+            "status_download": "nao_baixado",
+            "erro_download": "",
+            "texto_extraido": "",
+            "resumo": ""
+          },
+          {
+            "titulo": "Download",
+            "url": "https://www.amazul.mar.mil.br/sites/default/files/2024-08/TJDL-02-2024%20-%20TR_04-2024-00_assinado.pdf",
+            "tipo": "termo_referencia",
+            "formato": "pdf",
+            "origem": "extras.documentos",
+            "status_download": "nao_baixado",
+            "erro_download": "",
+            "texto_extraido": "",
+            "resumo": ""
+          }
+        ]
+      },
+      {
+        "fonte": "amazul",
+        "titulo": "Dispensa de Licitação 05/2024",
+        "link": "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos/dispensa-de-licitacao-052024",
+        "raw_pdf_url": "https://www.amazul.mar.mil.br/sites/default/files/2024-08/Termo%20de%20Justificativa%2011-04%20TJDL%2005-2024%20-%20Edit%C3%A1vel.pdf",
+        "transformado_pdf_url": "https://www.amazul.mar.mil.br/sites/default/files/2024-08/Termo%20de%20Justificativa%2011-04%20TJDL%2005-2024%20-%20Edit%C3%A1vel.pdf",
+        "payload_pdf_url": "https://www.amazul.mar.mil.br/sites/default/files/2024-08/Termo%20de%20Justificativa%2011-04%20TJDL%2005-2024%20-%20Edit%C3%A1vel.pdf",
+        "raw_docs_n": 3,
+        "transformado_docs_n": 3,
+        "payload_docs_n": 3,
+        "status_download": "falhou",
+        "erro_download": "pdf_nao_lido_no_transformer",
+        "docs_transformado_amostra": [
+          {
+            "titulo": "Download",
+            "url": "https://www.amazul.mar.mil.br/sites/default/files/2024-08/Termo%20de%20Justificativa%2011-04%20TJDL%2005-2024%20-%20Edit%C3%A1vel.pdf",
+            "tipo": "documento_desconhecido",
+            "formato": "pdf",
+            "origem": "extras.documentos",
+            "status_download": "nao_baixado",
+            "erro_download": "",
+            "texto_extraido": "",
+            "resumo": ""
+          },
+          {
+            "titulo": "Download",
+            "url": "https://www.amazul.mar.mil.br/sites/default/files/2024-08/Edital%20e%20anexos_Digitaliza%C3%A7%C3%A3o.zip",
+            "tipo": "edital_pdf",
+            "formato": "zip",
+            "origem": "extras.documentos",
+            "status_download": "nao_baixado",
+            "erro_download": "",
+            "texto_extraido": "",
+            "resumo": ""
+          },
+          {
+            "titulo": "Download",
+            "url": "https://www.amazul.mar.mil.br/sites/default/files/2024-08/Edital%20e%20anexos_Editaveis.zip",
+            "tipo": "edital_pdf",
+            "formato": "zip",
+            "origem": "extras.documentos",
+            "status_download": "nao_baixado",
+            "erro_download": "",
+            "texto_extraido": "",
+            "resumo": ""
+          }
+        ]
+      },
+      {
+        "fonte": "amazul",
+        "titulo": "Dispensa de Licitação por Valor 05/2026",
+        "link": "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos/dispensa-de-licitacao-por-valor-052026",
+        "raw_pdf_url": "https://www.amazul.mar.mil.br/sites/default/files/2026-03/DV-05-2026-Extrato_CT-02-2026-00_TELEFONICA_VIVO_LINK_DOU_16MAR26_0.pdf",
+        "transformado_pdf_url": "https://www.amazul.mar.mil.br/sites/default/files/2026-03/DV-05-2026-Extrato_CT-02-2026-00_TELEFONICA_VIVO_LINK_DOU_16MAR26_0.pdf",
+        "payload_pdf_url": "https://www.amazul.mar.mil.br/sites/default/files/2026-03/DV-05-2026-Extrato_CT-02-2026-00_TELEFONICA_VIVO_LINK_DOU_16MAR26_0.pdf",
+        "raw_docs_n": 1,
+        "transformado_docs_n": 1,
+        "payload_docs_n": 1,
+        "status_download": "falhou",
+        "erro_download": "pdf_nao_lido_no_transformer",
+        "docs_transformado_amostra": [
+          {
+            "titulo": "Download",
+            "url": "https://www.amazul.mar.mil.br/sites/default/files/2026-03/DV-05-2026-Extrato_CT-02-2026-00_TELEFONICA_VIVO_LINK_DOU_16MAR26_0.pdf",
+            "tipo": "documento_desconhecido",
+            "formato": "pdf",
+            "origem": "extras.documentos",
+            "status_download": "nao_baixado",
+            "erro_download": "",
+            "texto_extraido": "",
+            "resumo": ""
+          }
+        ]
+      },
+      {
+        "fonte": "amazul",
+        "titulo": "Dispensa de Licitação por Valor 01/2025",
+        "link": "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos/dispensa-de-licitacao-por-valor-012025",
+        "raw_pdf_url": "https://www.amazul.mar.mil.br/sites/default/files/2026-03/Extrato%20da%20publica%C3%A7%C3%A3o%20DOU%20do%20DLV%2001.2025%20-%20APVEACEL_0.pdf",
+        "transformado_pdf_url": "https://www.amazul.mar.mil.br/sites/default/files/2026-03/Extrato%20da%20publica%C3%A7%C3%A3o%20DOU%20do%20DLV%2001.2025%20-%20APVEACEL_0.pdf",
+        "payload_pdf_url": "https://www.amazul.mar.mil.br/sites/default/files/2026-03/Extrato%20da%20publica%C3%A7%C3%A3o%20DOU%20do%20DLV%2001.2025%20-%20APVEACEL_0.pdf",
+        "raw_docs_n": 1,
+        "transformado_docs_n": 1,
+        "payload_docs_n": 1,
+        "status_download": "falhou",
+        "erro_download": "pdf_nao_lido_no_transformer",
+        "docs_transformado_amostra": [
+          {
+            "titulo": "Download",
+            "url": "https://www.amazul.mar.mil.br/sites/default/files/2026-03/Extrato%20da%20publica%C3%A7%C3%A3o%20DOU%20do%20DLV%2001.2025%20-%20APVEACEL_0.pdf",
+            "tipo": "documento_desconhecido",
+            "formato": "pdf",
+            "origem": "extras.documentos",
+            "status_download": "nao_baixado",
+            "erro_download": "",
+            "texto_extraido": "",
+            "resumo": ""
+          }
+        ]
+      },
+      {
+        "fonte": "amazul",
+        "titulo": "Dispensa de Licitação por Valor 02/2025",
+        "link": "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos/dispensa-de-licitacao-por-valor-022025",
+        "raw_pdf_url": "https://www.amazul.mar.mil.br/sites/default/files/2026-03/Extrato%20Public_CT-02-2025-00_TELIUM_DOU_26MAR25.pdf",
+        "transformado_pdf_url": "https://www.amazul.mar.mil.br/sites/default/files/2026-03/Extrato%20Public_CT-02-2025-00_TELIUM_DOU_26MAR25.pdf",
+        "payload_pdf_url": "https://www.amazul.mar.mil.br/sites/default/files/2026-03/Extrato%20Public_CT-02-2025-00_TELIUM_DOU_26MAR25.pdf",
+        "raw_docs_n": 1,
+        "transformado_docs_n": 1,
+        "payload_docs_n": 1,
+        "status_download": "falhou",
+        "erro_download": "pdf_nao_lido_no_transformer",
+        "docs_transformado_amostra": [
+          {
+            "titulo": "Download",
+            "url": "https://www.amazul.mar.mil.br/sites/default/files/2026-03/Extrato%20Public_CT-02-2025-00_TELIUM_DOU_26MAR25.pdf",
+            "tipo": "documento_desconhecido",
+            "formato": "pdf",
+            "origem": "extras.documentos",
+            "status_download": "nao_baixado",
+            "erro_download": "",
+            "texto_extraido": "",
+            "resumo": ""
+          }
+        ]
+      },
+      {
+        "fonte": "amazul",
+        "titulo": "Dispensa de Licitação por Valor 03/2025",
+        "link": "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos/dispensa-de-licitacao-por-valor-032025",
+        "raw_pdf_url": "https://www.amazul.mar.mil.br/sites/default/files/2026-03/DV-03-2025-Extrato%20Public_CT-06-2025-AZCORP_DOU_06JUN25.pdf",
+        "transformado_pdf_url": "https://www.amazul.mar.mil.br/sites/default/files/2026-03/DV-03-2025-Extrato%20Public_CT-06-2025-AZCORP_DOU_06JUN25.pdf",
+        "payload_pdf_url": "https://www.amazul.mar.mil.br/sites/default/files/2026-03/DV-03-2025-Extrato%20Public_CT-06-2025-AZCORP_DOU_06JUN25.pdf",
+        "raw_docs_n": 1,
+        "transformado_docs_n": 1,
+        "payload_docs_n": 1,
+        "status_download": "falhou",
+        "erro_download": "pdf_nao_lido_no_transformer",
+        "docs_transformado_amostra": [
+          {
+            "titulo": "Download",
+            "url": "https://www.amazul.mar.mil.br/sites/default/files/2026-03/DV-03-2025-Extrato%20Public_CT-06-2025-AZCORP_DOU_06JUN25.pdf",
+            "tipo": "documento_desconhecido",
+            "formato": "pdf",
+            "origem": "extras.documentos",
+            "status_download": "nao_baixado",
+            "erro_download": "",
+            "texto_extraido": "",
+            "resumo": ""
+          }
+        ]
+      },
+      {
+        "fonte": "amazul",
+        "titulo": "Dispensa de Licitação por Valor 04/2025",
+        "link": "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos/dispensa-de-licitacao-por-valor-042025",
+        "raw_pdf_url": "https://www.amazul.mar.mil.br/sites/default/files/2026-03/Extrato%20Public_CT_DALETH-2025_DLV%2004-25_DOU_26AGO25.pdf",
+        "transformado_pdf_url": "https://www.amazul.mar.mil.br/sites/default/files/2026-03/Extrato%20Public_CT_DALETH-2025_DLV%2004-25_DOU_26AGO25.pdf",
+        "payload_pdf_url": "https://www.amazul.mar.mil.br/sites/default/files/2026-03/Extrato%20Public_CT_DALETH-2025_DLV%2004-25_DOU_26AGO25.pdf",
+        "raw_docs_n": 1,
+        "transformado_docs_n": 1,
+        "payload_docs_n": 1,
+        "status_download": "falhou",
+        "erro_download": "pdf_nao_lido_no_transformer",
+        "docs_transformado_amostra": [
+          {
+            "titulo": "Download",
+            "url": "https://www.amazul.mar.mil.br/sites/default/files/2026-03/Extrato%20Public_CT_DALETH-2025_DLV%2004-25_DOU_26AGO25.pdf",
+            "tipo": "documento_desconhecido",
+            "formato": "pdf",
+            "origem": "extras.documentos",
+            "status_download": "nao_baixado",
+            "erro_download": "",
+            "texto_extraido": "",
+            "resumo": ""
+          }
+        ]
+      },
+      {
+        "fonte": "amazul",
+        "titulo": "Dispensa de Licitação por Valor 05/2025",
+        "link": "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos/dispensa-de-licitacao-por-valor-052025",
+        "raw_pdf_url": "https://www.amazul.mar.mil.br/sites/default/files/2026-03/Extrato%20Public_CT-05-2025-00_ECOTRANS_DOU_16MAI25.pdf",
+        "transformado_pdf_url": "https://www.amazul.mar.mil.br/sites/default/files/2026-03/Extrato%20Public_CT-05-2025-00_ECOTRANS_DOU_16MAI25.pdf",
+        "payload_pdf_url": "https://www.amazul.mar.mil.br/sites/default/files/2026-03/Extrato%20Public_CT-05-2025-00_ECOTRANS_DOU_16MAI25.pdf",
+        "raw_docs_n": 1,
+        "transformado_docs_n": 1,
+        "payload_docs_n": 1,
+        "status_download": "falhou",
+        "erro_download": "pdf_nao_lido_no_transformer",
+        "docs_transformado_amostra": [
+          {
+            "titulo": "Download",
+            "url": "https://www.amazul.mar.mil.br/sites/default/files/2026-03/Extrato%20Public_CT-05-2025-00_ECOTRANS_DOU_16MAI25.pdf",
+            "tipo": "documento_desconhecido",
+            "formato": "pdf",
+            "origem": "extras.documentos",
+            "status_download": "nao_baixado",
+            "erro_download": "",
+            "texto_extraido": "",
+            "resumo": ""
+          }
+        ]
+      },
+      {
+        "fonte": "amazul",
+        "titulo": "Dispensa de Licitação por Valor 06/2025",
+        "link": "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos/dispensa-de-licitacao-por-valor-062025",
+        "raw_pdf_url": "https://www.amazul.mar.mil.br/sites/default/files/2026-03/EXTRATO%20DOU%20CT%20N%C2%BA%2015.2025%20%20CLARO%20SMP.pdf",
+        "transformado_pdf_url": "https://www.amazul.mar.mil.br/sites/default/files/2026-03/EXTRATO%20DOU%20CT%20N%C2%BA%2015.2025%20%20CLARO%20SMP.pdf",
+        "payload_pdf_url": "https://www.amazul.mar.mil.br/sites/default/files/2026-03/EXTRATO%20DOU%20CT%20N%C2%BA%2015.2025%20%20CLARO%20SMP.pdf",
+        "raw_docs_n": 1,
+        "transformado_docs_n": 1,
+        "payload_docs_n": 1,
+        "status_download": "falhou",
+        "erro_download": "pdf_nao_lido_no_transformer",
+        "docs_transformado_amostra": [
+          {
+            "titulo": "Download",
+            "url": "https://www.amazul.mar.mil.br/sites/default/files/2026-03/EXTRATO%20DOU%20CT%20N%C2%BA%2015.2025%20%20CLARO%20SMP.pdf",
+            "tipo": "documento_desconhecido",
+            "formato": "pdf",
+            "origem": "extras.documentos",
+            "status_download": "nao_baixado",
+            "erro_download": "",
+            "texto_extraido": "",
+            "resumo": ""
+          }
+        ]
+      },
+      {
+        "fonte": "amazul",
+        "titulo": "Dispensa de Licitação por Valor 07/2025",
+        "link": "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos/dispensa-de-licitacao-por-valor-072025",
+        "raw_pdf_url": "https://www.amazul.mar.mil.br/sites/default/files/2026-03/DOU%20n%C2%BA%20237%2012DEZ2025%20CT%2014.2025-00.pdf",
+        "transformado_pdf_url": "https://www.amazul.mar.mil.br/sites/default/files/2026-03/DOU%20n%C2%BA%20237%2012DEZ2025%20CT%2014.2025-00.pdf",
+        "payload_pdf_url": "https://www.amazul.mar.mil.br/sites/default/files/2026-03/DOU%20n%C2%BA%20237%2012DEZ2025%20CT%2014.2025-00.pdf",
+        "raw_docs_n": 1,
+        "transformado_docs_n": 1,
+        "payload_docs_n": 1,
+        "status_download": "falhou",
+        "erro_download": "pdf_nao_lido_no_transformer",
+        "docs_transformado_amostra": [
+          {
+            "titulo": "Download",
+            "url": "https://www.amazul.mar.mil.br/sites/default/files/2026-03/DOU%20n%C2%BA%20237%2012DEZ2025%20CT%2014.2025-00.pdf",
+            "tipo": "documento_desconhecido",
+            "formato": "pdf",
+            "origem": "extras.documentos",
+            "status_download": "nao_baixado",
+            "erro_download": "",
+            "texto_extraido": "",
+            "resumo": ""
+          }
+        ]
+      },
+      {
+        "fonte": "amazul",
+        "titulo": "Dispensa de Licitação por Valor 04/2024",
+        "link": "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos/dispensa-de-licitacao-por-valor-042024-0",
+        "raw_pdf_url": "https://www.amazul.mar.mil.br/sites/default/files/2026-03/Extrato%20Public_TC08-2024_SACHO_AUDITORES_DOU_17MAI24.pdf",
+        "transformado_pdf_url": "https://www.amazul.mar.mil.br/sites/default/files/2026-03/Extrato%20Public_TC08-2024_SACHO_AUDITORES_DOU_17MAI24.pdf",
+        "payload_pdf_url": "https://www.amazul.mar.mil.br/sites/default/files/2026-03/Extrato%20Public_TC08-2024_SACHO_AUDITORES_DOU_17MAI24.pdf",
+        "raw_docs_n": 1,
+        "transformado_docs_n": 1,
+        "payload_docs_n": 1,
+        "status_download": "falhou",
+        "erro_download": "pdf_nao_lido_no_transformer",
+        "docs_transformado_amostra": [
+          {
+            "titulo": "Download",
+            "url": "https://www.amazul.mar.mil.br/sites/default/files/2026-03/Extrato%20Public_TC08-2024_SACHO_AUDITORES_DOU_17MAI24.pdf",
+            "tipo": "documento_desconhecido",
+            "formato": "pdf",
+            "origem": "extras.documentos",
+            "status_download": "nao_baixado",
+            "erro_download": "",
+            "texto_extraido": "",
+            "resumo": ""
+          }
+        ]
+      },
+      {
+        "fonte": "amazul",
+        "titulo": "Dispensa de Licitação por Valor 06/2024",
+        "link": "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos/dispensa-de-licitacao-por-valor-062024",
+        "raw_pdf_url": "https://www.amazul.mar.mil.br/sites/default/files/2025-01/DV-06-2024-TR-Purificador%20de%20%C3%A1gua-digitalizado_ASS.pdf",
+        "transformado_pdf_url": "https://www.amazul.mar.mil.br/sites/default/files/2025-01/DV-06-2024-TR-Purificador%20de%20%C3%A1gua-digitalizado_ASS.pdf",
+        "payload_pdf_url": "https://www.amazul.mar.mil.br/sites/default/files/2025-01/DV-06-2024-TR-Purificador%20de%20%C3%A1gua-digitalizado_ASS.pdf",
+        "raw_docs_n": 3,
+        "transformado_docs_n": 3,
+        "payload_docs_n": 3,
+        "status_download": "falhou",
+        "erro_download": "pdf_nao_lido_no_transformer",
+        "docs_transformado_amostra": [
+          {
+            "titulo": "Download",
+            "url": "https://www.amazul.mar.mil.br/sites/default/files/2025-01/DV-06-2024-TR-Purificador%20de%20%C3%A1gua-digitalizado_ASS.pdf",
+            "tipo": "documento_desconhecido",
+            "formato": "pdf",
+            "origem": "extras.documentos",
+            "status_download": "nao_baixado",
+            "erro_download": "",
+            "texto_extraido": "",
+            "resumo": ""
+          },
+          {
+            "titulo": "Download",
+            "url": "https://www.amazul.mar.mil.br/sites/default/files/2025-01/DV-06-2024-TR-Purificador%20de%20%C3%A1gua-EDITAVEL.pdf",
+            "tipo": "documento_desconhecido",
+            "formato": "pdf",
+            "origem": "extras.documentos",
+            "status_download": "nao_baixado",
+            "erro_download": "",
+            "texto_extraido": "",
+            "resumo": ""
+          },
+          {
+            "titulo": "Download",
+            "url": "https://www.amazul.mar.mil.br/sites/default/files/2026-03/Extrato_Public_TC_13-2024-00_DALAK_DOU_02OUT24_0.pdf",
+            "tipo": "documento_desconhecido",
+            "formato": "pdf",
+            "origem": "extras.documentos",
+            "status_download": "nao_baixado",
+            "erro_download": "",
+            "texto_extraido": "",
+            "resumo": ""
+          }
+        ]
+      }
+    ],
+    "timestamp_utc": "2026-05-02T23:20:59Z"
+  },
+  {
+    "fonte": "marinha",
+    "arquivo": "marinha\\outputs\\marinha_editais.json",
+    "itens_amostra": 0,
+    "transformados": 0,
+    "rejeitados": 0,
+    "raw_com_pdf_url": 0,
+    "raw_com_documentos": 0,
+    "transformado_com_pdf_url": 0,
+    "transformado_com_documentos": 0,
+    "payload_com_pdf_url": 0,
+    "payload_com_documentos": 0,
+    "bruto_com_documentos_pdf": 0,
+    "bruto_com_documentos_nao_pdf": 0,
+    "transformado_com_documentos_pdf": 0,
+    "transformado_com_documentos_nao_pdf": 0,
+    "payload_com_documentos_pdf": 0,
+    "payload_com_documentos_nao_pdf": 0,
+    "perdas_pdf": 0,
+    "perdas_nao_pdf": 0,
+    "downloads_falharam": 0,
+    "downloads_sucesso": 0,
+    "links_invalidos": 0,
+    "links_relativos_restantes": 0,
+    "links_quebrados": 0,
+    "duplicados_documentos": 0,
+    "formatos_detectados": {},
+    "losses": [],
+    "download_failures": [],
+    "examples": [],
+    "timestamp_utc": "2026-05-02T23:20:59Z"
+  },
+  {
+    "fonte": "dcta_ita_iae",
+    "arquivo": "dcta_ita_iae\\outputs\\dcta_ita_iae_editais.json",
+    "itens_amostra": 0,
+    "transformados": 0,
+    "rejeitados": 0,
+    "raw_com_pdf_url": 0,
+    "raw_com_documentos": 0,
+    "transformado_com_pdf_url": 0,
+    "transformado_com_documentos": 0,
+    "payload_com_pdf_url": 0,
+    "payload_com_documentos": 0,
+    "bruto_com_documentos_pdf": 0,
+    "bruto_com_documentos_nao_pdf": 0,
+    "transformado_com_documentos_pdf": 0,
+    "transformado_com_documentos_nao_pdf": 0,
+    "payload_com_documentos_pdf": 0,
+    "payload_com_documentos_nao_pdf": 0,
+    "perdas_pdf": 0,
+    "perdas_nao_pdf": 0,
+    "downloads_falharam": 0,
+    "downloads_sucesso": 0,
+    "links_invalidos": 0,
+    "links_relativos_restantes": 0,
+    "links_quebrados": 0,
+    "duplicados_documentos": 0,
+    "formatos_detectados": {},
+    "losses": [],
+    "download_failures": [],
+    "examples": [],
+    "timestamp_utc": "2026-05-02T23:20:59Z"
+  }
+]

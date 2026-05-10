@@ -1,0 +1,62 @@
+{
+  "meta": {
+    "titulo": "Correção lote 4 — Apex + FAPERGS (faperg)",
+    "data": "2026-05-02",
+    "restricoes": [
+      "Sem loader apply",
+      "Sem alteração ao opportunity_gate global (apenas soft_continue e calibrações locais no transformer)",
+      "Sem atualização automática de source_readiness.json"
+    ],
+    "comandos_executados": [
+      "python apex/main_apex.py",
+      "python faperg/main_faperg.py",
+      "python scripts/retransform_all.py --sources apex,faperg --dry-run --output-dir audit_reports_blocked_sources/lote4_fix_apex_faperg",
+      "python scripts/audit_semantic_classification.py --input-dir audit_reports_blocked_sources/lote4_fix_apex_faperg/standardized --output-dir audit_reports_blocked_sources/lote4_fix_apex_faperg_semantic",
+      "python scripts/audit_docs_pipeline.py --sources apex,faperg --output-dir audit_reports_blocked_sources/lote4_fix_apex_faperg_docs"
+    ],
+    "artefatos": {
+      "retransform": "audit_reports_blocked_sources/lote4_fix_apex_faperg/retransform_by_source.json",
+      "semantic": "audit_reports_blocked_sources/lote4_fix_apex_faperg_semantic/audit_semantic_summary.json",
+      "docs": "audit_reports_blocked_sources/lote4_fix_apex_faperg_docs/audit_docs_summary.json"
+    }
+  },
+  "apex": {
+    "alteracoes": [
+      "Crawler: removidos seeds de eventos/notícias e URLs de editais 404; seeds em exporta-mais-brasil, transparência e internacionalização (content + br/pt).",
+      "Filtros: host *.apexbrasil.com.br; bloqueio de /eventos, /noticias, /conteudo/noticias/, redes sociais, brasilexportacao; títulos de navegação (Menu, etc.); sinais fortes em link e corpo.",
+      "get_soup: curl -skL primeiro, depois requests (menos falha em redirects TLS).",
+      "Transformer: calibrate_apex_extras + opportunity_gate_apex_soft + exclusão de build_defense_extras para fonte apex."
+    ],
+    "brutos": 3,
+    "transformados_retransform": 3,
+    "rejeitados_retransform": 0,
+    "observacao_conteudo": "Itens reais: inscrições Exporta Mais (CRM crm-apps.apexbrasil.com.br) — programa de rodadas/exportação com texto de termos e perfil de empresa.",
+    "readiness_recomendado": "ready_with_notes",
+    "readiness_motivo": "Pipeline passa; itens são formulários/inscrições em CRM (sem PDF no bruto); revisar área semântica e documentos quando houver anexo oficial."
+  },
+  "faperg": {
+    "alteracoes": [
+      "Listing oficial: https://fapergs.rs.gov.br/chamadas-e-editais (URLs antigas /editais-abertos retornavam 403/vazio com requests).",
+      "scraper_generic.fetch_soup: fallback curl -skL para sites gov/TLS.",
+      "scrape_source: ignorar link igual à própria página de listagem (evita índice genérico).",
+      "Exclusões: HR /selecao-2025 e convocação PSS; resultados preliminares/finais; navegação institucional.",
+      "Transformer: calibrate_faperg_extras (UF RS, origem FAPERGS) + opportunity_gate_faperg_soft + exclusão defense para faperg."
+    ],
+    "brutos": 2,
+    "transformados_retransform": 2,
+    "rejeitados_retransform": 0,
+    "incompletos_retransform": 1,
+    "observacao_conteudo": "Um edital Centelha (aditivo) + edital SICT/inovação; um item com PDF preservado no dry-run.",
+    "readiness_recomendado": "ready_with_notes",
+    "readiness_motivo": "Cobertura ainda limitada ao que aparece na listagem estática; ampliar seeds (/abertos se passar a expor HTML) após validação manual."
+  },
+  "auditorias": {
+    "semantic_flags": {
+      "tipo_oportunidade_generico": 3
+    },
+    "docs": {
+      "downloads_falharam": 1,
+      "nota": "Ver audit_docs_download_failures.json — comum em CRM ou TLS; pdf_skip pode estar ativo no script."
+    }
+  }
+}

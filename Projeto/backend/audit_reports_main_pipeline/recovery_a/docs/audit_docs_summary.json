@@ -1,0 +1,54 @@
+{
+  "data_auditoria": "2026-05-10T04:20:46Z",
+  "fontes": [
+    "esa_star",
+    "dod_sbir_sttr",
+    "banco_da_amazonia"
+  ],
+  "max_items_por_fonte": 25,
+  "pdf_skip": true,
+  "itens_analisados": 31,
+  "raw_com_pdf_url": 4,
+  "raw_com_documentos": 10,
+  "transformado_com_pdf_url": 4,
+  "transformado_com_documentos": 10,
+  "payload_com_pdf_url": 4,
+  "payload_com_documentos": 10,
+  "bruto_com_documentos_pdf": 4,
+  "bruto_com_documentos_nao_pdf": 7,
+  "transformado_com_documentos_pdf": 4,
+  "transformado_com_documentos_nao_pdf": 7,
+  "payload_com_documentos_pdf": 4,
+  "payload_com_documentos_nao_pdf": 7,
+  "perdas_pdf": 0,
+  "perdas_nao_pdf": 0,
+  "downloads_falharam": 4,
+  "downloads_sucesso": 0,
+  "links_invalidos": 0,
+  "links_relativos_restantes": 0,
+  "links_quebrados": 0,
+  "duplicados_documentos": 0,
+  "perdas_total": 0,
+  "fontes_pior_preservacao": [
+    {
+      "fonte": "esa_star",
+      "score_perda": 1.0
+    },
+    {
+      "fonte": "dod_sbir_sttr",
+      "score_perda": 0.0
+    },
+    {
+      "fonte": "banco_da_amazonia",
+      "score_perda": 0.0
+    }
+  ],
+  "formatos_detectados": {
+    "pdf": 18,
+    "outro": 12,
+    "doc": 4,
+    "docx": 1,
+    "xlsx": 1,
+    "xls": 1
+  }
+}

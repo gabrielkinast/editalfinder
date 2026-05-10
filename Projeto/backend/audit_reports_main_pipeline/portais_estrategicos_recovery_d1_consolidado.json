@@ -1,0 +1,93 @@
+{
+  "titulo": "Portais estratégicos — primeira carga (Recovery D.1 Fornecedores, staging)",
+  "versao_consolidado": "2026-05-10",
+  "ambiente": "staging",
+  "tabela_destino": "public.portal_estrategico",
+  "nota": "Consolidação baseada em relatórios de apply e validação pós-carga. Nenhum novo apply nesta tarefa.",
+  "fontes_carregadas": [
+    "general_dynamics_suppliers",
+    "lockheed_martin_suppliers",
+    "bae_systems_suppliers"
+  ],
+  "artefactos_lidos": [
+    "audit_reports_main_pipeline/portais_estrategicos_recovery_d1_apply/load_portais_estrategicos_summary.json",
+    "audit_reports_main_pipeline/portais_estrategicos_recovery_d1_validation/validate_portais_estrategicos_after_load.json",
+    "audit_reports_main_pipeline/fornecedores_investimentos_backend_design.json",
+    "audit_reports_main_pipeline/recovery_d1_fornecedores_final.json"
+  ],
+  "apply": {
+    "data_execucao": "2026-05-10T22:28:55Z",
+    "modo": "apply",
+    "apply_status": "applied",
+    "total_items": 26,
+    "would_upsert_total": 26,
+    "inserted": 25,
+    "updated": 1,
+    "upserted_total": 26,
+    "errors_count": 0,
+    "by_source": {
+      "bae_systems_suppliers": { "would_upsert": 2, "errors": 0 },
+      "general_dynamics_suppliers": { "would_upsert": 6, "errors": 0 },
+      "lockheed_martin_suppliers": { "would_upsert": 18, "errors": 0 }
+    },
+    "portal_tipo_counts": {
+      "registration": 2,
+      "access_limited": 1,
+      "procurement": 3,
+      "hub": 2,
+      "supplier_resource": 7,
+      "documentation": 11
+    },
+    "validacao_status_counts": {
+      "incompleto": 24,
+      "acesso_limitado": 2
+    },
+    "frontend_section_counts": { "fornecedores": 26 },
+    "mostrar_no_radar_true_count": 0,
+    "mostrar_em_fornecedores_true_count": 26
+  },
+  "validacao_pos_carga": {
+    "data_execucao": "2026-05-10T22:29:36Z",
+    "status": "ok",
+    "expected_links_count": 26,
+    "found_in_portal_estrategico_count": 26,
+    "found_in_vw_fornecedores_front_count": 26,
+    "missing_in_portal_estrategico": [],
+    "missing_in_vw_fornecedores_front": [],
+    "row_rule_violations_count": 0,
+    "view_query_error": null
+  },
+  "explicacoes": {
+    "por_que_portal_estrategico": [
+      "Estes 26 URLs são portais corporativos de fornecedores (GD, Lockheed Martin, BAE): hubs, registo, procurement, documentação e recursos — não são editais de fomento com objeto, prazo e modalidade típicos de `public.edital`.",
+      "O desenho backend (`fornecedores_investimentos_backend_design.json`) define separação explícita entre oportunidades de fornecimento/investimento e o Radar de Fomento; a tabela `portal_estrategico` materializa essa secção produto («Fornecedores & Investimentos» / portais estratégicos) sem poluir o modelo de edital forte."
+    ],
+    "por_que_nao_radar_fomento": [
+      "O Radar de Fomento destina-se a oportunidades de financiamento/concurso acionáveis; estes itens são contexto institucional, ética, CMMC, SBIR institucional, etc., com `tipo_oportunidade` e `portal_tipo` alinhados a fornecedores, não a linhas de crédito ou editais nacionais.",
+      "A Recovery D.1 final (`recovery_d1_fornecedores_final.json`) confirmou `mostrar_no_radar=false` em 26/26 e `documentacao_com_mostrar_radar_true=0`, evitando que documentação apareça como destaque de fomento."
+    ],
+    "como_flags_protegem_o_radar": [
+      "`frontend_section=fornecedores` encaminha consumidores para a experiência «Fornecedores» (lista/API dedicada ou `vw_fornecedores_front`), em vez de misturar com feeds genéricos de edital.",
+      "`mostrar_no_radar=false` é a barreira explícita: qualquer agregador do Radar de Fomento deve filtrar `mostrar_no_radar is not true` (ou equivalente) para não incluir estes registos.",
+      "Em conjunto, mesmo que um cliente antigo ignore `tipo_recurso`, o roteamento por secção + flag de radar mantém o isolamento desejado."
+    ],
+    "validacao_view_vw_fornecedores_front": [
+      "O script `validate_portais_estrategicos_after_load.py` confirmou 26/26 links em `portal_estrategico` e 26/26 na view `vw_fornecedores_front`, sem violações de regras (secção, radar, fornecedores, `portal_tipo`, `validacao_status` ≠ suspeito, setor_estrategico ≤ 3)."
+    ]
+  },
+  "proximos_passos_frontend": [
+    "Consumir dados a partir de `vw_fornecedores_front` (ou API que a reproduza) para a rota «Fornecedores & Investimentos», filtrando por `frontend_section` / `mostrar_em_fornecedores` conforme contrato da view.",
+    "Não reutilizar o mesmo componente/listagem do Radar de Fomento sem filtros: excluir explicitamente `mostrar_no_radar=true` apenas para fontes de fomento; para portais estratégicos usar sempre a secção dedicada.",
+    "Quando existirem fontes com `mostrar_em_investimentos=true`, alinhar com `vw_investimentos_front` (ainda proposto no design JSON).",
+    "Tratar `portal_tipo` (registration, access_limited, documentation, etc.) na UI com ícones ou badges distintos de edital."
+  ],
+  "restricoes_respeitadas_nesta_consolidacao": [
+    "Nenhum novo apply executado",
+    "Schema não alterado",
+    "opportunity_gate global não alterado"
+  ],
+  "referencia_design": {
+    "ficheiro": "audit_reports_main_pipeline/fornecedores_investimentos_backend_design.json",
+    "extras_canonicos_resumo": "frontend_section=fornecedores; mostrar_no_radar=false; mostrar_em_fornecedores=true; portal_tipo enumerado; supplier_portal=true; campos recovery_d1_* de QA"
+  }
+}

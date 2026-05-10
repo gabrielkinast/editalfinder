@@ -1,0 +1,59 @@
+{
+  "pasta_standardized": "audit_reports_main_pipeline/recovery_b_official_dryrun_standardized",
+  "verificacao_por_ficheiro": [
+    {
+      "fonte": "amazul",
+      "itens": 20,
+      "validacao_suspeito": 0,
+      "titulo_ruidoso_exact": [],
+      "login_titulo_curto": [],
+      "institucional_home_badesul": [],
+      "setor_estrategico_mais_de_3": []
+    },
+    {
+      "fonte": "ambev",
+      "itens": 7,
+      "validacao_suspeito": 0,
+      "titulo_ruidoso_exact": [],
+      "login_titulo_curto": [],
+      "institucional_home_badesul": [],
+      "setor_estrategico_mais_de_3": []
+    },
+    {
+      "fonte": "badesul",
+      "itens": 5,
+      "validacao_suspeito": 0,
+      "titulo_ruidoso_exact": [],
+      "login_titulo_curto": [],
+      "institucional_home_badesul": [],
+      "setor_estrategico_mais_de_3": []
+    }
+  ],
+  "checks": {
+    "ficheiros_standardized_presentes": true,
+    "ficheiros_em_falta": [],
+    "total_itens": 32,
+    "validacao_suspeito_total": 0,
+    "validacao_suspeito_zero": true,
+    "mapping_errors_total_loader_previo": 0,
+    "titulo_ruidoso_exact_total": 0,
+    "login_titulo_curto_total": 0,
+    "institucional_badesul_home_total": 0,
+    "setor_estrategico_mais_de_3_total": 0,
+    "artefatos_recovery_b_lidos": {
+      "audit_reports_main_pipeline/recovery_b_by_source.json": true,
+      "audit_reports_main_pipeline/recovery_b_suspeitos_context.json": true,
+      "audit_reports_main_pipeline/recovery_b_loader_dryrun.json": true,
+      "audit_reports_main_pipeline/recovery_b_apply_recommendation.json": true
+    }
+  },
+  "conformidade": {
+    "tres_jsons_presentes": true,
+    "nenhum_suspeito": true,
+    "mapping_errors_previo_zero": true,
+    "sem_titulo_ruidoso_canonico": true,
+    "sem_login_isolado_heuristica": true,
+    "sem_institucional_home": true,
+    "setor_estrategico_mais_de_3_zero": true
+  }
+}

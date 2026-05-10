@@ -1,0 +1,15 @@
+{
+  "edital": {
+    "stable_apply_sources": [],
+    "exclude_from_daily": [],
+    "experimental_sources": []
+  },
+  "news_research": {
+    "active_waves": [
+      {"source": "nasa_news", "wave": "nasa_wave2", "experimental": false},
+      {"source": "darpa_news", "wave": "darpa_news_wave1", "experimental": false},
+      {"source": "iaea_news_publications", "wave": "iaea_wave1", "experimental": false},
+      {"source": "eurekalert_science_filtered", "wave": "eurekalert_wave1", "experimental": true}
+    ]
+  }
+}

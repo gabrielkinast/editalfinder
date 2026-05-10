@@ -1,0 +1,6 @@
+# Standardized antigo vs novo
+
+| fonte | old | new | delta | docs old->new | pdf old->new | old pass agora rejeitados | old rejeitados agora passados |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| iarpa | 1 | 0 | -1 | 0->0 | 0->0 | 1 | 0 |
+| nato_diana | 2 | 2 | 0 | 0->0 | 0->0 | 0 | 0 |

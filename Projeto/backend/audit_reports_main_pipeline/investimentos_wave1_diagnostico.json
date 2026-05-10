@@ -1,0 +1,103 @@
+{
+  "titulo": "Investimentos Wave 1 — diagnóstico (apex, bndes, eic)",
+  "versao": "2026-05-10",
+  "fontes": ["apex", "bndes", "eic"],
+  "standardized_lido": "audit_reports_retransform/standardized/{fonte}_standardized.json",
+  "contagens_standardized_atual": {
+    "apex": 2,
+    "bndes": 19,
+    "eic": 14
+  },
+  "resumo_executivo": "BNDES e EIC concentram chamadas/programas individuais e páginas de produto; Apex no standardized atual está mínimo (2 URLs). Para portal_estrategico Wave 1 curámos 5 hubs por fonte em pasta dedicada, sem duplicar chamadas BNDES nem calls EIC fechadas.",
+  "por_fonte": {
+    "apex": {
+      "observacao_volume": "Apenas 2 registos no standardized de retransform; ambos com validacao_status suspeito a nível de extras e conteúdo curto ou transparência.",
+      "portais_ou_hubs": [
+        "Internacionalização de empresas (sementes de crawler em extrair_informacoes_apex.py)",
+        "Exporta Mais Brasil",
+        "IAra Global (solução de mercados)",
+        "Qualifica (capacitações)",
+        "URL curta /br/pt/... internacionalização"
+      ],
+      "chamadas_individuais_continuam_edital": [
+        "Não há chamadas estruturadas no standardized atual; futuros itens tipo edital forte seguem public.edital."
+      ],
+      "ruido_institucional": [
+        "Página 'licitações e contratos' (transparência) — não é eixo investimentos/exportação estratégica para Wave 1."
+      ],
+      "candidatos_portal_estrategico_wave1": [
+        "Hubs de internacionalização, exportação, IAra e Qualifica (ver investimentos_wave1_portais/standardized/apex_standardized.json)."
+      ]
+    },
+    "bndes": {
+      "observacao_volume": "19 itens; quase todos são chamadas públicas específicas (FIP IA, ETF, mitigação climática, IoT, etc.) com URLs longas WPS.",
+      "portais_ou_hubs": [
+        "Mercado de capitais (nível home)",
+        "Fundos de investimento (índice)",
+        "Listagem 'chamadas públicas para seleção de fundos'",
+        "CRIATEC (pasta de programa)",
+        "Fundos em empresas e projetos (visão de produto)"
+      ],
+      "chamadas_individuais_continuam_edital": [
+        "Cada URL /fip-ia-2026/, ETF, energia sustentável, PME inovadoras, etc. — manter pipeline edital; não promover a portal_estrategico nesta wave."
+      ],
+      "ruido_institucional": [
+        "Páginas puramente transacionais WPS com estado de portal na query podem ser frágeis para deep-link; preferir URLs de âncora de secção sem duplicar edital."
+      ],
+      "candidatos_portal_estrategico_wave1": [
+        "Cinco hubs agregadores listados em investimentos_wave1_portais/standardized/bndes_standardized.json (sem chamadas individuais)."
+      ]
+    },
+    "eic": {
+      "observacao_volume": "14 itens misturam programas (Pathfinder, Transition, Accelerator), listagem, calls específicas 2026 e PDFs.",
+      "portais_ou_hubs": [
+        "eic-funding-opportunities_en (listagem)",
+        "EIC Pathfinder / Transition / Accelerator (páginas de programa)",
+        "STEP Scale",
+        "Business Acceleration Services"
+      ],
+      "chamadas_individuais_continuam_edital": [
+        "URLs calls-proposals/eic-accelerator-2026_en, eic-step-scale_en — convocatorias anuais devem permanecer em public.edital quando existirem."
+      ],
+      "ruido_institucional": [
+        "PDFs de data protection / work programme como item único — não são portais de produto."
+      ],
+      "candidatos_portal_estrategico_wave1": [
+        "Cinco páginas de programa/hub em investimentos_wave1_portais/standardized/eic_standardized.json (exclui calls específicas e PDF)."
+      ]
+    }
+  },
+  "taxonomia_portal_estrategico": {
+    "categoria": "investimentos",
+    "portal_tipo_wave1": [
+      "investment",
+      "credit_investment",
+      "development_agency",
+      "market_access",
+      "internationalization",
+      "startup_program",
+      "corporate_venture",
+      "accelerator",
+      "funding_hub",
+      "other"
+    ],
+    "extras_obrigatorios_referencia": {
+      "frontend_section": "investimentos",
+      "mostrar_no_radar": false,
+      "mostrar_em_fornecedores": false,
+      "mostrar_em_investimentos": true,
+      "mostrar_em_procurement": false,
+      "investment_portal": true,
+      "portal_tipo": "(preenchido)",
+      "wave": "investimentos_wave1"
+    }
+  },
+  "restricoes_cumpridas": [
+    "Sem apply nesta tarefa",
+    "Sem Supabase",
+    "Sem alteração de schema",
+    "Sem opportunity_gate global",
+    "Sem carga em public.edital",
+    "Sem duplicar chamadas individuais como portal nesta wave"
+  ]
+}

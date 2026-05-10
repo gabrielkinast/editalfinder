@@ -1,0 +1,27 @@
+{
+  "output_path": "D:\\Computational_Physics\\My Projects\\edital\\china_cnnc\\outputs\\china_cnnc_editais.json",
+  "message": "todas_as_listagens_falharam_ou_rede",
+  "failure_kind": "falha_de_coleta",
+  "failure_reason": "todas_as_listagens_falharam_ou_rede",
+  "collection_failed": true,
+  "listing_events": [
+    {
+      "url": "https://www.cnnc.com.cn/",
+      "ok": false,
+      "status_code": null
+    },
+    {
+      "url": "https://ec.cnnc.com.cn/",
+      "ok": false,
+      "status_code": null
+    },
+    {
+      "url": "https://www.cnnc.com.cn/cnnc/300557/300558/index.html",
+      "ok": false,
+      "status_code": null
+    }
+  ],
+  "previous_item_count": 1,
+  "tipo_resultado": "falha_de_coleta",
+  "rejected_count": 0
+}

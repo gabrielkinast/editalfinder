@@ -1,0 +1,35 @@
+{
+  "titulo": "Investimentos Wave 1 — recomendação de apply",
+  "versao": "2026-05-10",
+  "opcao_recomendada": 1,
+  "opcoes": [
+    {
+      "id": 1,
+      "titulo": "Aplicar os 15 portais em staging",
+      "descricao": "Executar `load_portais_estrategicos.py --apply --staging` com os mesmos sources/input-dir após confirmar guardas (EDITALFINDER_ENV, EDITALFINDER_ALLOW_STAGING_APPLY, service role). Upsert por `link` em `portal_estrategico` apenas.",
+      "quando_faz_sentido": "Equipa quer fechar a primeira fatia da página Investimentos e já existe `vw_investimentos_front` ou API equivalente em staging — ou aceita-se aplicar dados antes da view e validar só por SQL pontual.",
+      "riscos": [
+        "View pública de investimentos pode ainda não filtrar `frontend_section`; confirmar contrato com frontend antes de divulgar."
+      ]
+    },
+    {
+      "id": 2,
+      "titulo": "Aplicar apenas um subconjunto",
+      "descricao": "Por exemplo só `eic` (5 URLs estáveis) ou `bndes`+`eic`, mantendo `apex` para segunda iteração após enriquecer crawler/standardized.",
+      "quando_faz_sentido": "Quer reduzir superfície de teste ou aguardar validação legal de textos em PT/EN nos hubs Apex."
+    },
+    {
+      "id": 3,
+      "titulo": "Não aplicar ainda",
+      "descricao": "Manter apenas dry-run e artefactos até existir view `vw_investimentos_front`, QA de conteúdo e política de deduplicação explícita contra `public.edital` (links partilhados).",
+      "quando_faz_sentido": "Prioridade é UI/schema; sem consumidor seguro na API."
+    }
+  ],
+  "justificativa_opcao_1": "Payload pequeno (15), validação a zero no dry-run, hubs explícitos sem chamadas individuais, flags alinhadas ao desenho Fornecedores & Investimentos. O custo de rollback em staging é baixo (upsert reversível por `ativo` ou nova carga).",
+  "pre_requisitos_apply": [
+    "Confirmar que `public.portal_estrategico` aceita `categoria=investimentos` e `portal_tipo` da lista Wave 1 (já assumido pelo utilizador).",
+    "Rever links BNDES WPS sem token em browser (200/redirect).",
+    "Após apply, correr validador dedicado ou SELECT de smoke em staging."
+  ],
+  "apply_executado_nesta_tarefa": false
+}

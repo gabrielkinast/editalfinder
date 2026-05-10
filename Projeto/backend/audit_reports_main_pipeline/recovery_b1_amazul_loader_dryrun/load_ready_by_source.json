@@ -1,0 +1,68 @@
+[
+  {
+    "fonte": "amazul",
+    "standardized_path": "audit_reports_main_pipeline/recovery_b1_amazul/standardized/amazul_standardized.json",
+    "itens_standardized": 20,
+    "would_upsert": 20,
+    "would_ignore": 0,
+    "mapping_errors": 0,
+    "critical_empty_items": 0,
+    "critical_empty_fields": {},
+    "docs_input_items": 19,
+    "docs_preserved_items": 19,
+    "documentos_perdidos_no_payload": 0,
+    "standardized_com_documentos_nao_pdf": 2,
+    "payload_com_documentos_nao_pdf": 2,
+    "perda_documentos_nao_pdf": 0,
+    "pdf_input_items": 19,
+    "pdf_preserved_items": 19,
+    "validacao_status_preserved_items": 20,
+    "qualidade_dado_preserved_items": 20,
+    "semantic_fields_present_items": 20,
+    "docs_loss_examples": [],
+    "field_input_non_empty": {
+      "area": 16,
+      "tipo_oportunidade": 20,
+      "tipo_recurso": 20,
+      "perfil_ideal": 20,
+      "setor_economico": 20,
+      "setor_estrategico": 18,
+      "validacao_status": 20,
+      "qualidade_dado": 20,
+      "publico_alvo": 8
+    },
+    "field_payload_non_empty": {
+      "area": 16,
+      "tipo_oportunidade": 20,
+      "tipo_recurso": 20,
+      "perfil_ideal": 20,
+      "setor_economico": 20,
+      "setor_estrategico": 18,
+      "validacao_status": 20,
+      "qualidade_dado": 20,
+      "publico_alvo": 8
+    },
+    "field_preserved_non_empty": {
+      "area": 16,
+      "tipo_oportunidade": 20,
+      "tipo_recurso": 20,
+      "perfil_ideal": 20,
+      "setor_economico": 20,
+      "setor_estrategico": 18,
+      "validacao_status": 20,
+      "qualidade_dado": 20,
+      "publico_alvo": 8
+    },
+    "canonical_skipped": 0,
+    "canonical_skip_examples": [],
+    "official_link_only_standardized": 0,
+    "official_link_only_payload": 0,
+    "access_limited_items": 0,
+    "official_link_only_access_reasons": {},
+    "official_link_only_examples": [],
+    "destination_counts": {
+      "edital": 20
+    },
+    "content_route_examples": []
+  }
+]

@@ -1,0 +1,141 @@
+{
+  "titulo": "Diagnostico de ruido — Onda A Brasil (antes da limpeza)",
+  "data": "2026-05-06T00:40Z",
+  "baseline_standardized": "audit_reports_credito\\lote_credito_brasil_onda_a_semantic_fix\\standardized",
+  "total_itens_flagados_retroativo": 19,
+  "ruidos": [
+    {
+      "fonte": "banco_da_amazonia",
+      "titulo": "Conta PJ",
+      "link": "https://www.bancoamazonia.com.br/empresas/conta-pj",
+      "motivo_exclusao": "Detector pos-limpeza aplicado retroativamente ao standardized anterior (nao era pipeline da epoca).",
+      "padrao_detectado": "url_institucional:conta_digital"
+    },
+    {
+      "fonte": "bdmg",
+      "titulo": "Correspondentes Bancários",
+      "link": "https://www.bdmg.mg.gov.br/sejaparceiro",
+      "motivo_exclusao": "Detector pos-limpeza aplicado retroativamente ao standardized anterior (nao era pipeline da epoca).",
+      "padrao_detectado": "url_institucional:seja_parceiro"
+    },
+    {
+      "fonte": "bdmg",
+      "titulo": "English",
+      "link": "https://www.bdmg.mg.gov.br/en",
+      "motivo_exclusao": "Detector pos-limpeza aplicado retroativamente ao standardized anterior (nao era pipeline da epoca).",
+      "padrao_detectado": "url_institucional:english_gate"
+    },
+    {
+      "fonte": "bdmg",
+      "titulo": "Sobre o BDMG",
+      "link": "https://www.bdmg.mg.gov.br/sobre-bdmg",
+      "motivo_exclusao": "Detector pos-limpeza aplicado retroativamente ao standardized anterior (nao era pipeline da epoca).",
+      "padrao_detectado": "url_institucional:sobre_bdmg"
+    },
+    {
+      "fonte": "bdmg",
+      "titulo": "Atuação",
+      "link": "https://www.bdmg.mg.gov.br/sobre-bdmg?atuacao",
+      "motivo_exclusao": "Detector pos-limpeza aplicado retroativamente ao standardized anterior (nao era pipeline da epoca).",
+      "padrao_detectado": "url_institucional:sobre_bdmg"
+    },
+    {
+      "fonte": "bdmg",
+      "titulo": "Nossa Essência",
+      "link": "https://www.bdmg.mg.gov.br/sobre-bdmg?missao-visao-valores",
+      "motivo_exclusao": "Detector pos-limpeza aplicado retroativamente ao standardized anterior (nao era pipeline da epoca).",
+      "padrao_detectado": "url_institucional:sobre_bdmg"
+    },
+    {
+      "fonte": "bdmg",
+      "titulo": "Responsabilidade Social, Ambiental e Climática",
+      "link": "https://www.bdmg.mg.gov.br/sobre-bdmg?responsabilidade",
+      "motivo_exclusao": "Detector pos-limpeza aplicado retroativamente ao standardized anterior (nao era pipeline da epoca).",
+      "padrao_detectado": "url_institucional:sobre_bdmg"
+    },
+    {
+      "fonte": "bdmg",
+      "titulo": "Segurança da Informação e Cibernética",
+      "link": "https://www.bdmg.mg.gov.br/sobre-bdmg?tab-seguranca-informacao",
+      "motivo_exclusao": "Detector pos-limpeza aplicado retroativamente ao standardized anterior (nao era pipeline da epoca).",
+      "padrao_detectado": "url_institucional:sobre_bdmg"
+    },
+    {
+      "fonte": "bdmg",
+      "titulo": "Proteção de dados e Privacidade",
+      "link": "https://www.bdmg.mg.gov.br/sobre-bdmg?tab-lgpd",
+      "motivo_exclusao": "Detector pos-limpeza aplicado retroativamente ao standardized anterior (nao era pipeline da epoca).",
+      "padrao_detectado": "url_institucional:sobre_bdmg"
+    },
+    {
+      "fonte": "bdmg",
+      "titulo": "Conhecimento",
+      "link": "https://www.bdmg.mg.gov.br/sobre-bdmg?conhecimento",
+      "motivo_exclusao": "Detector pos-limpeza aplicado retroativamente ao standardized anterior (nao era pipeline da epoca).",
+      "padrao_detectado": "url_institucional:sobre_bdmg"
+    },
+    {
+      "fonte": "bdmg",
+      "titulo": "Trabalhe no BDMG e construa o futuro de Minas Gerais!",
+      "link": "https://www.bdmg.mg.gov.br/concurso",
+      "motivo_exclusao": "Detector pos-limpeza aplicado retroativamente ao standardized anterior (nao era pipeline da epoca).",
+      "padrao_detectado": "titulo_institucional_contains:trabalhe no bdmg"
+    },
+    {
+      "fonte": "bdmg",
+      "titulo": "Licitações e Contratos",
+      "link": "https://www.bdmg.mg.gov.br/editais-licitacoes",
+      "motivo_exclusao": "Detector pos-limpeza aplicado retroativamente ao standardized anterior (nao era pipeline da epoca).",
+      "padrao_detectado": "url_institucional:licitacoes_hub"
+    },
+    {
+      "fonte": "bdmg",
+      "titulo": "Licitações e Contratos",
+      "link": "https://www.bdmg.mg.gov.br/editais-venda-bens",
+      "motivo_exclusao": "Detector pos-limpeza aplicado retroativamente ao standardized anterior (nao era pipeline da epoca).",
+      "padrao_detectado": "url_institucional:licitacoes_hub"
+    },
+    {
+      "fonte": "bdmg",
+      "titulo": "Licitações e Contratos",
+      "link": "https://www.bdmg.mg.gov.br/licitacoes-contratos-administrativos",
+      "motivo_exclusao": "Detector pos-limpeza aplicado retroativamente ao standardized anterior (nao era pipeline da epoca).",
+      "padrao_detectado": "url_institucional:licitacoes_hub"
+    },
+    {
+      "fonte": "bdmg",
+      "titulo": "Sala de Imprensa",
+      "link": "https://www.bdmg.mg.gov.br/sala-imprensa",
+      "motivo_exclusao": "Detector pos-limpeza aplicado retroativamente ao standardized anterior (nao era pipeline da epoca).",
+      "padrao_detectado": "url_institucional:imprensa"
+    },
+    {
+      "fonte": "bdmg",
+      "titulo": "Notícias",
+      "link": "https://www.bdmg.mg.gov.br/sala-imprensa/?tab-release",
+      "motivo_exclusao": "Detector pos-limpeza aplicado retroativamente ao standardized anterior (nao era pipeline da epoca).",
+      "padrao_detectado": "url_institucional:imprensa"
+    },
+    {
+      "fonte": "bdmg",
+      "titulo": "Eventos",
+      "link": "https://www.bdmg.mg.gov.br/sala-imprensa/?tab-eventos",
+      "motivo_exclusao": "Detector pos-limpeza aplicado retroativamente ao standardized anterior (nao era pipeline da epoca).",
+      "padrao_detectado": "url_institucional:imprensa"
+    },
+    {
+      "fonte": "bdmg",
+      "titulo": "Documentação BDMG",
+      "link": "https://www.bdmg.mg.gov.br/documentos",
+      "motivo_exclusao": "Detector pos-limpeza aplicado retroativamente ao standardized anterior (nao era pipeline da epoca).",
+      "padrao_detectado": "url_institucional:documentacao_hub"
+    },
+    {
+      "fonte": "bdmg",
+      "titulo": "Entre em contato",
+      "link": "https://www.bdmg.mg.gov.br/investimento",
+      "motivo_exclusao": "Detector pos-limpeza aplicado retroativamente ao standardized anterior (nao era pipeline da epoca).",
+      "padrao_detectado": "url_institucional:investimento_hub"
+    }
+  ]
+}

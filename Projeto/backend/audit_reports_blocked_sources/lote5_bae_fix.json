@@ -1,0 +1,54 @@
+{
+  "meta": {
+    "fonte": "bae_systems_suppliers",
+    "data_relatorio": "2026-05-03T23:19:30Z",
+    "restricoes_respeitadas": [
+      "opportunity_gate global não alterado (apenas allowlist local official_link_only + extras)",
+      "Loader apply não executado",
+      "Supabase não alterado",
+      "Migrations não aplicadas",
+      "source_readiness.json não atualizado automaticamente"
+    ]
+  },
+  "alteracoes_codigo": [
+    "bae_systems_suppliers/bae_harvest.py: colheita HTML em baesystems.hicx.net (discovery-login + index); stub factual baesystems.com quando WAF; merge com scrape_html_portal.",
+    "bae_systems_suppliers/main_bae_systems_suppliers.py: duas seeds corporativas + merge.",
+    "CORE/official_link_only.py: allowlist bae_systems_suppliers (baesystems.com, hicx.net); sinais de oportunidade para supplier/registration; barreira tecnica para stubs/manifest BAE.",
+    "CORE/taxonomy_filtros.py: calibracao bae_systems_suppliers (origem_portal BAE Systems, regiao Internacional, idioma en, curadoria lote5_bae_fix, validacao_status)."
+  ],
+  "pipeline_executado": {
+    "crawler": "python bae_systems_suppliers/main_bae_systems_suppliers.py",
+    "retransform": "python scripts/retransform_all.py --sources bae_systems_suppliers --dry-run --output-dir audit_reports_blocked_sources/lote5_fix_bae",
+    "semantic": "python scripts/audit_semantic_classification.py --input-dir audit_reports_blocked_sources/lote5_fix_bae/standardized --output-dir audit_reports_blocked_sources/lote5_fix_bae_semantic",
+    "docs": "python scripts/audit_docs_pipeline.py --sources bae_systems_suppliers --output-dir audit_reports_blocked_sources/lote5_fix_bae_docs"
+  },
+  "resultado_bruto": {
+    "ficheiro": "bae_systems_suppliers/outputs/bae_systems_suppliers_editais.json",
+    "itens": 3
+  },
+  "resultado_retransform": {
+    "standardized": "audit_reports_blocked_sources/lote5_fix_bae/standardized/bae_systems_suppliers_standardized.json",
+    "itens_transformados": 3,
+    "itens_rejeitados": 0,
+    "official_link_only_total": 1,
+    "resumo_path": "audit_reports_blocked_sources/lote5_fix_bae/retransform_by_source.json"
+  },
+  "auditoria_semantica": {
+    "summary": "audit_reports_blocked_sources/lote5_fix_bae_semantic/audit_semantic_summary.json",
+    "flags": {
+      "publico_alvo_sem_evidencia": 3
+    },
+    "nota": "Falso positivo provavel vs extras.publico_alvo preenchido na calibracao corporativa — rever regra do audit se necessario."
+  },
+  "auditoria_documentos": {
+    "summary": "audit_reports_blocked_sources/lote5_fix_bae_docs/audit_docs_summary.json",
+    "nota": "Sem PDFs nesta fonte; pipeline de docs sem perdas."
+  },
+  "recomendacao_readiness": "ready_with_notes",
+  "justificativa_readiness": [
+    "3 itens oficiais: 2 HICX com texto util + 1 stub corporativo com official_link_only (WAF).",
+    "Classificacao supplier_portal / oportunidade_fornecedor; origem_portal BAE Systems; regiao Internacional.",
+    "Dependencia de HICX + WAF corporativo — nota operacional e revisao periodica.",
+    "Semantic audit reporta publico_alvo_sem_evidencia em todos; calibracao define publico_alvo — tratar como nota de auditoria, nao bloqueio automatico."
+  ]
+}

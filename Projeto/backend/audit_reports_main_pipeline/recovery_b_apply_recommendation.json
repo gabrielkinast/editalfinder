@@ -1,0 +1,19 @@
+{
+  "executar_apply": false,
+  "justificativa": "Código Recovery B reduz suspeito_ativo_true nas três fontes ao mapear gate relaxado → incompleto; exige reprocessamento staging e revisão humana antes de apply.",
+  "impacto_estimado_staging": {
+    "suspeito_ativo_true_top3_antes": 28,
+    "descricao": "Até 28 linhas (14+7+7) podem deixar de contar como suspeito_ativo_true após reload com este CORE"
+  },
+  "criterios_verificacao_pos_deploy": {
+    "mapping_errors_total": 0,
+    "critical_empty_items_total": 0,
+    "titulo_ruidoso": 0,
+    "sem_login_faq_institucional_como_edital": true
+  },
+  "passos": [
+    "Deploy CORE + crawlers; executar pipeline/diário ou retransform staging",
+    "Correr validate_full_staging_after_daily.py",
+    "Só então apply seletivo (nunca em massa)"
+  ]
+}

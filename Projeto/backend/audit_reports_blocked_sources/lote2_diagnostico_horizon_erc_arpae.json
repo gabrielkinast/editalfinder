@@ -1,0 +1,79 @@
+{
+  "lote": 2,
+  "subset": ["horizon_europe", "erc", "doe_arpae"],
+  "data_relatorio": "2026-05-02",
+  "restricoes_respeitadas": [
+    "opportunity_gate global não alterado",
+    "loader apply não executado",
+    "Supabase e migrations não tocados",
+    "source_readiness.json não atualizado automaticamente"
+  ],
+  "artefatos_gerados": {
+    "retransform_dry_run": "audit_reports_blocked_sources/lote2_fix_horizon_erc_arpae",
+    "auditoria_semantica": "audit_reports_blocked_sources/lote2_fix_horizon_erc_arpae_semantic",
+    "auditoria_documentos": "audit_reports_blocked_sources/lote2_fix_horizon_erc_arpae_docs"
+  },
+  "sintese": {
+    "estado_bruto_pos_correcao": "horizon_europe, erc e doe_arpae passaram a emitir lista vazia [] (sem fallback_public_index para hubs genéricos).",
+    "retransform": "0 brutos, 0 transformados, 0 rejeitados por fonte; old_vs_new remove o hub antigo de cada uma.",
+    "auditoria_semantica": "0 itens — sem flags.",
+    "auditoria_docs": "0 itens — sem perdas nem downloads."
+  },
+  "por_fonte": {
+    "horizon_europe": {
+      "crawler_roda": true,
+      "output_bruto_existe": true,
+      "caminho_bruto": "horizon_europe/outputs/horizon_europe_editais.json",
+      "itens_brutos": 0,
+      "itens_transformados_retransform": 0,
+      "itens_rejeitados_retransform": 0,
+      "motivos_rejeicao": {},
+      "classificacao_rejeitados_historico": "Antes da correção havia 1 item fallback_public_index (topic-search EC) — página institucional de busca, não chamada concreta.",
+      "onde_estava_o_problema": "Crawler + política de lista (hub sem cards de oportunidade); transformer aceitava hub como último recurso.",
+      "links_reais_vs_genericos": "Link genérico de busca removido da coleta.",
+      "pagina_detalhe_acessada": "Não aplicável com lista vazia; crawlers orientados a paths de oportunidade/tópico.",
+      "documentos_anexos": "Nenhum no bruto histórico nem após correção.",
+      "readiness_recomendado": "blocked",
+      "readiness_justificativa": "Sem itens brutos não há evidência de pipeline em produção; código alinhado às regras UE — aguardar crawl com rede e URLs de chamadas reais."
+    },
+    "erc": {
+      "crawler_roda": true,
+      "output_bruto_existe": true,
+      "caminho_bruto": "erc/outputs/erc_editais.json",
+      "itens_brutos": 0,
+      "itens_transformados_retransform": 0,
+      "itens_rejeitados_retransform": 0,
+      "motivos_rejeicao": {},
+      "classificacao_rejeitados_historico": "Antes: 1 item fallback_public_index (erc.europa.eu/funding) — hub institucional.",
+      "onde_estava_o_problema": "Crawler + exclusão de hubs; transformer sem relax local específico para páginas de grant com evidência.",
+      "links_reais_vs_genericos": "Hub /funding tratado como não oportunidade na lista.",
+      "pagina_detalhe_acessada": "Não aplicável com lista vazia.",
+      "documentos_anexos": "Nenhum.",
+      "readiness_recomendado": "blocked",
+      "readiness_justificativa": "Igual horizon: precisa validar coleta real de páginas de calls/grants ERC."
+    },
+    "doe_arpae": {
+      "crawler_roda": true,
+      "output_bruto_existe": true,
+      "caminho_bruto": "doe_arpae/outputs/doe_arpae_editais.json",
+      "itens_brutos": 0,
+      "itens_transformados_retransform": 0,
+      "itens_rejeitados_retransform": 0,
+      "motivos_rejeicao": {},
+      "classificacao_rejeitados_historico": "Antes: 1 item fallback_public_index (arpa-e funding-opportunities) — índice genérico.",
+      "onde_estava_o_problema": "Crawler (import re em _is_relevant_item); filtros de relevância e domínio; hub excluído como card único.",
+      "links_reais_vs_genericos": "Índice funding-opportunities não deve ser o único item.",
+      "pagina_detalhe_acessada": "Não aplicável com lista vazia.",
+      "documentos_anexos": "Nenhum no histórico.",
+      "readiness_recomendado": "blocked",
+      "readiness_justificativa": "Aguardar FOA/program announcements concretos na lista bruta."
+    }
+  },
+  "fontes_que_podem_sair_de_blocked": [],
+  "fontes_que_devem_continuar_blocked": ["horizon_europe", "erc", "doe_arpae"],
+  "proximo_lote2_sugerido": [
+    "iarpa",
+    "nato_diana",
+    "sam_gov"
+  ]
+}

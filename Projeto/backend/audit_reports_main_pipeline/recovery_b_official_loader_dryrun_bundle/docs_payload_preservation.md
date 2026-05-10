@@ -1,0 +1,14 @@
+# Preservação de documentos no payload
+
+- standardized_com_documentos: **24**
+- payload_com_documentos: **24**
+- documentos_perdidos_no_payload: **0**
+- standardized_com_documentos_nao_pdf: **7**
+- payload_com_documentos_nao_pdf: **7**
+- perda_documentos_nao_pdf: **0**
+- pdf_url_input: **24**
+- pdf_url_preservado: **24**
+
+## Exemplos de perda
+
+- Nenhuma perda detectada.

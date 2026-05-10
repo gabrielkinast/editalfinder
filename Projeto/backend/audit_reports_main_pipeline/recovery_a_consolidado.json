@@ -1,0 +1,224 @@
+{
+  "timestamp": "2026-05-10T05:05:00Z",
+  "fonte_validacao_staging": "audit_reports_main_pipeline/post_daily_validation.json",
+  "timestamp_validacao": "2026-05-10T04:59:30Z",
+  "ambiente_validacao": "staging",
+  "objetivo_recovery_a": "Corrigir crawlers e transformação local (Onda Recovery A) para recuperar oportunidades reais em banco_da_amazonia e dod_sbir_sttr, filtrar ruído, manter esa_star sem fonte pública útil/SSO; dry-run oficial e carga staging sem alterar opportunity_gate global.",
+  "fontes_tratadas": [
+    "banco_da_amazonia",
+    "dod_sbir_sttr",
+    "esa_star"
+  ],
+  "correcoes_por_fonte": {
+    "banco_da_amazonia": [
+      "Crawler: exclusão de PF, conta-pj, renegociação, hubs bancários genéricos onde aplicável",
+      "Noise/credito_brasil_onda_a: regex e excludes alinhados a linhas reais (FNO, PRONAF, FUNGETUR, Finame, etc.)",
+      "Transformer/item_quality: relax local crédito BR + validacao incompleto em linhas oficiais em vez de suspeito automático"
+    ],
+    "dod_sbir_sttr": [
+      "Denylist: Success Stories, News/Events, /api, data-resources, participating-agencies, impact, FAQ, community, etc.",
+      "Fallback HTML: apenas URLs de detalhe /topics/<id> ou solicitações",
+      "Soft-continue local dod_sbir_sttr_recovery_a_local + calibrate título tópico + setor_estrategico ≤ 3"
+    ],
+    "esa_star": [
+      "Sem coleta SSO; allow_empty; domínios públicos apenas — sem alterar gate global"
+    ]
+  },
+  "recuperado": {
+    "banco_da_amazonia": "26 linhas standardized Recovery A (crédito/financiamento)",
+    "dod_sbir_sttr": "6 tópicos oficiais sbir.gov/topics/<id> (fallback quando API 429)",
+    "esa_star": "0 itens públicos"
+  },
+  "rejeitado_ruido": {
+    "dod_sbir_sttr": "Páginas institucionais, Success Stories, Events listing, hubs API/docs",
+    "banco_da_amazonia": "Conta PJ, PF, renegociação e páginas genéricas excluídas na coleta Recovery A",
+    "esa_star": "Portal SSO / login isolado — não coletado"
+  },
+  "bloqueado": {
+    "esa_star": "Permanece blocked até existir listagem pública verificável (ITT/tenders) sem SSO"
+  },
+  "dry_run_oficial_loader": {
+    "referencia": "audit_reports_main_pipeline/recovery_a_official_loader_dryrun.json",
+    "resumo": {
+      "sources_selected": 2,
+      "would_upsert_total": 32,
+      "mapping_errors_total": 0,
+      "critical_empty_items_total": 0,
+      "documentos_perdidos_no_payload_total": 0,
+      "destination_counts_total": {
+        "edital": 32
+      }
+    }
+  },
+  "apply_staging_detectado_em_relatorios": {
+    "nota_metodologia": "O último ficheiro staging_load_summary.json em audit_reports_loader_ready reflete apenas a execução que o repositório guardou por defeito; outras corridas estão em load_execution_history.jsonl.",
+    "staging_load_summary_mais_recente": {
+      "caminho": "audit_reports_loader_ready/staging_load_summary.json",
+      "data_auditoria": "2026-05-10T04:54:39Z",
+      "apply_status": "applied_to_staging",
+      "fontes_carregadas": [
+        "banco_da_amazonia"
+      ],
+      "banco_da_amazonia": {
+        "processed": 26,
+        "inserted": 3,
+        "updated": 23,
+        "errors": 0
+      },
+      "fontes_excluidas_nessa_execucao": [
+        {
+          "fonte": "dod_sbir_sttr",
+          "reason": "not_in_sources_filter"
+        }
+      ]
+    },
+    "post_staging_validation": {
+      "caminho": "audit_reports_loader_ready/post_staging_validation.json",
+      "records_processed": 26,
+      "records_inserted_or_updated": 26,
+      "critical_empty_check": 0
+    },
+    "historico_2026_05_10_execucao_basa": {
+      "caminho": "audit_reports_loader_ready/load_execution_history.jsonl",
+      "id_execucao": "fc7e5108-d5bd-4eb7-b450-48156b3cf026",
+      "status": "applied_to_staging",
+      "data_inicio": "2026-05-10T04:54:37Z",
+      "fontes": [
+        "banco_da_amazonia"
+      ],
+      "itens_inseridos": 3,
+      "itens_atualizados": 23
+    },
+    "dod_sbir_sttr_em_staging": {
+      "evidencia_pos_validacao": "post_daily_warning_examples.json lista DoD SBIR/STTR em contagens (ex.: setor_estrategico_muito_amplo: 9) — há registos ativos da fonte em staging.",
+      "relatorio_apply_dedicado_recovery_a": "Não presente no staging_load_summary.json atual (última linha guardada só BASA). Recomenda-se apply explícito --sources dod_sbir_sttr se os 6 tópicos Recovery A ainda não estiverem alinhados ao staging."
+    }
+  },
+  "validacao_global_pos_carga": {
+    "ok": true,
+    "critical_errors": 0,
+    "warnings_top_level": [
+      {
+        "problem": "prazo_vencido_ativo_true",
+        "count": 41
+      },
+      {
+        "problem": "credito_tipo_recurso_incoerente",
+        "count": 4
+      },
+      {
+        "problem": "setor_estrategico_muito_amplo",
+        "count": 72
+      },
+      {
+        "problem": "suspeito_ativo_true",
+        "count": 61
+      }
+    ],
+    "counts_edital": {
+      "total": 1231,
+      "ativo_true": 1225,
+      "ativo_false": 6
+    },
+    "titulo_ruidoso_ativo_true": {
+      "count": 0,
+      "nota": "Não entra no array warnings do post_daily_validation; problema dedicado em tabelas com count 0."
+    },
+    "titulo_ruidoso_inativo_info": {
+      "count": 6,
+      "nota": "Inclui legado BASA Conta PJ com ativo=false (histórico) — distinto de warning ativo."
+    },
+    "basa_suspeito_ativo_true_por_warning_examples": 3
+  },
+  "comparacao_warnings_antes_depois": {
+    "fonte_metricas_operador": "Relato pós Recovery A + validate_full_staging_after_daily.py",
+    "antes_referencia": {
+      "suspeito_ativo_true": 80,
+      "titulo_ruidoso_warning_ativo": "presente na operação anterior (agora titulo_ruidoso_ativo_true=0 em post_daily_validation)"
+    },
+    "depois_post_daily": {
+      "warnings_ativos_lista": 4,
+      "suspeito_ativo_true": 61,
+      "titulo_ruidoso_ativo_true": 0
+    },
+    "delta_suspeito_ativo_true": -19
+  },
+  "proximos_passos": [
+    "Opcional: apply dedicado dod_sbir_sttr com standardized Recovery A se ainda não refletido no relatório staging mais recente",
+    "Repetir crawl DoD quando API sbir.gov sem 429 para prazos/títulos",
+    "Continuar investigação pública ESA (sem SSO) para destravar esa_star",
+    "Tratar prazo_vencido_ativo_true (41) e setor_estrategico_muito_amplo (72) como dívida de qualidade transversal",
+    "Rever credito_tipo_recurso_incoerente (4) nas fontes indicadas em post_daily_warning_examples",
+    "Arquivar titulo_ruidoso_inativo (legados) ou desativar limpeza SQL conforme política de dados"
+  ],
+  "restricoes_cumpridas_nesta_consolidacao": [
+    "Não executado novo apply",
+    "Não alterado schema, readiness oficial, opportunity_gate global"
+  ],
+  "padrao_documentacao_onda": {
+    "resumo_executivo": "A Recovery A recuperou linhas reais de crédito/financiamento na BASA (26 itens no standardized), filtrou ruído bancário e institucional no DoD SBIR/STTR (6 tópicos oficiais via HTML), e manteve ESA STAR bloqueada sem SSO. O dry-run oficial do loader simulou 32 upserts com 0 erros de mapeamento. A validação global pós-carga (staging, 2026-05-10T04:59:30Z) ficou ok=true com 0 erros críticos. O principal ganho operacional foi suspeito_ativo_true 80→61 (−19) e titulo_ruidoso_ativo_true=0. Risco residual: último staging_load_summary guardado só aplica BASA; DoD pode precisar de apply dedicado.",
+    "problema_original": "Ruído excessivo (conta PJ, PF, hubs) na BASA; páginas institucionais/API no DoD SBIR; suspeitos inflados; ESA sem fonte pública útil sem login.",
+    "fontes_tratadas": ["banco_da_amazonia", "dod_sbir_sttr", "esa_star"],
+    "resultado_principal": "BASA com carga staging documentada (26 processados, 3 inseridos, 23 atualizados); queda de suspeitos globais; DoD com 6 tópicos recuperáveis no standardized A; ESA permanece blocked por política.",
+    "metricas_antes_depois": {
+      "suspeito_ativo_true": { "antes": 80, "depois": 61, "variacao": -19, "interpretacao": "melhora — menos oportunidades reais marcadas como suspeitas" },
+      "titulo_ruidoso_ativo_true": { "antes": "presente (operação anterior)", "depois": 0, "variacao": "→0", "interpretacao": "melhora — sem ruído ativo no post_daily citado" },
+      "prazo_vencido_ativo_true": { "antes": "—", "depois": 41, "variacao": "—", "interpretacao": "baseline pós-carga; onda futura para política de arquivo" },
+      "credito_tipo_recurso_incoerente": { "antes": "—", "depois": 4, "variacao": "—", "interpretacao": "baseline; revisão por fonte recomendada" },
+      "setor_estrategico_muito_amplo": { "antes": "—", "depois": 72, "variacao": "—", "interpretacao": "dívida transversal" }
+    },
+    "interpretacao": {
+      "ganhos": [
+        "Catálogo mais limpo na BASA e caminho claro para tópicos DoD oficiais.",
+        "Validação global saudável após carga documentada.",
+        "Redução expressiva de suspeitos ativos no agregado."
+      ],
+      "regressoes_aparentes": [],
+      "sem_mudanca": [
+        "Prazo vencido, crédito incoerente e setor amplo permanecem como dívida — não eram promessa única da Recovery A."
+      ],
+      "limitacoes": [
+        "staging_load_summary mais recente no repositório pode listar só BASA; DoD excluído por not_in_sources_filter nessa execução.",
+        "ESA continua blocked — sem dados públicos sem SSO.",
+        "Dependência de API sbir.gov (429) para enriquecimento futuro."
+      ]
+    },
+    "decisao_recomendada": {
+      "acao": "aplicar_staging",
+      "justificativa": "Recovery A concluída para BASA no relatório de carga; confirmar se os 6 tópicos DoD precisam de apply dedicado — se sim, aplicar só dod_sbir_sttr com readiness acordado.",
+      "proximo_alvo": "Apply opcional DoD + continuar ondas Recovery B/C para outras famílias de warning; investigação ESA pública."
+    },
+    "riscos": [
+      "DoD pode não refletir o standardized A se nunca entrou no --sources do último load guardado.",
+      "Prazo vencido (41) pode crescer com mais cargas — comunicação com produto necessária.",
+      "Legados titulo_ruidoso_inativo (info) ainda existem — política de arquivo."
+    ],
+    "proximos_passos": [
+      "Confirmar alinhamento staging dos 6 tópicos DoD Recovery A; executar load_ready_sources --sources dod_sbir_sttr se faltar.",
+      "Repetir crawl DoD quando API estável.",
+      "Pesquisar feeds ESA públicos sem SSO.",
+      "Planejar redução transversal de prazo vencido e setor amplo.",
+      "Manter validate_full_staging_after_daily.py --staging."
+    ],
+    "evidencias_tecnicas": {
+      "arquivos_lidos": [
+        "audit_reports_main_pipeline/post_daily_validation.json",
+        "audit_reports_loader_ready/staging_load_summary.json",
+        "audit_reports_loader_ready/post_staging_validation.json",
+        "audit_reports_loader_ready/load_execution_history.jsonl",
+        "audit_reports_main_pipeline/recovery_a_official_loader_dryrun.json"
+      ],
+      "arquivos_gerados": [
+        "audit_reports_main_pipeline/recovery_a_consolidado.md",
+        "audit_reports_main_pipeline/recovery_a_consolidado.json"
+      ],
+      "comandos": [
+        "Ver recovery_a_apply_recommendation.json e histórico em audit_reports_loader_ready para comandos exatos de load."
+      ],
+      "apply_executado": false,
+      "nota_apply": "Consolidado documental; apply BASA consta nos relatórios loader; não reexecutado aqui.",
+      "schema_alterado": false,
+      "supabase_tocado": false
+    }
+  }
+}

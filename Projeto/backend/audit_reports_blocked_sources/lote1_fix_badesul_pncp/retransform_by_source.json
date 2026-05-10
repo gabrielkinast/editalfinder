@@ -1,0 +1,131 @@
+[
+  {
+    "fonte": "badesul",
+    "raw_output_path": "badesul/outputs/badesul_editais.json",
+    "old_standardized_path": "CORE/transformer/badesul_standardized.json",
+    "new_standardized_path": "audit_reports_blocked_sources/lote1_fix_badesul_pncp/standardized/badesul_standardized.json",
+    "itens_brutos_encontrados": 7,
+    "itens_transformados": 7,
+    "itens_rejeitados": 0,
+    "itens_incompletos": 0,
+    "itens_suspeitos": 7,
+    "documentos_preservados": 7,
+    "pdf_url_preservado": 0,
+    "area_preenchida": 1,
+    "tipo_oportunidade_preenchido": 7,
+    "tipo_recurso_preenchido": 7,
+    "perfil_ideal_preenchido": 7,
+    "qualidade_dado_media": 66.14,
+    "motivos_rejeicao_principais": {},
+    "quick_audit": {
+      "ruido_passou": 0,
+      "duplicatas_link": 0,
+      "campos_preenchidos_pct": {
+        "area": 14.29,
+        "tipo_oportunidade": 100.0,
+        "tipo_recurso": 100.0,
+        "perfil_ideal": 100.0,
+        "documentos": 100.0,
+        "pdf_url": 0.0
+      }
+    },
+    "old_vs_new": {
+      "old_count": 10,
+      "new_count": 7,
+      "delta_count": -3,
+      "old_links_now_missing": [
+        "https://www.badesul.com.br/fas/transparencia/download?idPublicacao=29004",
+        "https://www.badesul.com.br/fas/transparencia/download?idPublicacao=29005",
+        "https://www.badesul.com.br/fas/transparencia/download?idPublicacao=29006"
+      ],
+      "new_links_before_missing": [],
+      "core_fields_improved": {
+        "perfil_ideal": {
+          "old": 0,
+          "new": 7,
+          "delta": 7
+        },
+        "documentos": {
+          "old": 0,
+          "new": 7,
+          "delta": 7
+        }
+      },
+      "core_fields_worsened": {
+        "tipo_oportunidade": {
+          "old": 10,
+          "new": 7,
+          "delta": -3
+        },
+        "tipo_recurso": {
+          "old": 10,
+          "new": 7,
+          "delta": -3
+        }
+      },
+      "old_documents_count": 0,
+      "new_documents_count": 7,
+      "old_pdf_count": 0,
+      "new_pdf_count": 0
+    },
+    "risk_notes": []
+  },
+  {
+    "fonte": "pncp",
+    "raw_output_path": "pncp/outputs/pncp_editais.json",
+    "old_standardized_path": "CORE/transformer/pncp_standardized.json",
+    "new_standardized_path": "audit_reports_blocked_sources/lote1_fix_badesul_pncp/standardized/pncp_standardized.json",
+    "itens_brutos_encontrados": 0,
+    "itens_transformados": 0,
+    "itens_rejeitados": 0,
+    "itens_incompletos": 0,
+    "itens_suspeitos": 0,
+    "documentos_preservados": 0,
+    "pdf_url_preservado": 0,
+    "area_preenchida": 0,
+    "tipo_oportunidade_preenchido": 0,
+    "tipo_recurso_preenchido": 0,
+    "perfil_ideal_preenchido": 0,
+    "qualidade_dado_media": null,
+    "motivos_rejeicao_principais": {},
+    "quick_audit": {
+      "ruido_passou": 0,
+      "duplicatas_link": 0,
+      "campos_preenchidos_pct": {
+        "area": 0.0,
+        "tipo_oportunidade": 0.0,
+        "tipo_recurso": 0.0,
+        "perfil_ideal": 0.0,
+        "documentos": 0.0,
+        "pdf_url": 0.0
+      }
+    },
+    "old_vs_new": {
+      "old_count": 1,
+      "new_count": 0,
+      "delta_count": -1,
+      "old_links_now_missing": [
+        "https://pncp.gov.br/app/editais"
+      ],
+      "new_links_before_missing": [],
+      "core_fields_improved": {},
+      "core_fields_worsened": {
+        "tipo_oportunidade": {
+          "old": 1,
+          "new": 0,
+          "delta": -1
+        },
+        "tipo_recurso": {
+          "old": 1,
+          "new": 0,
+          "delta": -1
+        }
+      },
+      "old_documents_count": 0,
+      "new_documents_count": 0,
+      "old_pdf_count": 0,
+      "new_pdf_count": 0
+    },
+    "risk_notes": []
+  }
+]

@@ -1,0 +1,35 @@
+{
+  "data": "2026-05-02",
+  "titulo": "Dry-run combinado loader — lote 2 (readiness canónico)",
+  "readiness_path": "audit_reports_retransform/readiness_for_loader.json",
+  "comando": "python scripts/load_ready_sources.py --dry-run --sources horizon_europe,erc,doe_arpae,nato_diana,iarpa --exclude-blocked --input-dir audit_reports_retransform/standardized --readiness audit_reports_retransform/readiness_for_loader.json",
+  "resultado_2026_05_02": {
+    "sources_selected": 5,
+    "itens_standardized_total": 57,
+    "would_upsert_total": 57,
+    "mapping_errors_total": 0,
+    "critical_empty_items_total": 0,
+    "docs_input_items_total": 8,
+    "docs_preserved_items_total": 8,
+    "documentos_perdidos_no_payload_total": 0,
+    "pdf_input_items_total": 8,
+    "pdf_preserved_items_total": 8,
+    "validacao_status_preserved_items_total": 57,
+    "qualidade_dado_preserved_items_total": 57,
+    "canonical_skipped_total": 0,
+    "sam_gov_incluida": false,
+    "official_link_only_nos_exemplos": 0
+  },
+  "por_fonte": [
+    {"fonte": "doe_arpae", "itens_standardized": 14, "would_upsert": 14, "mapping_errors": 0},
+    {"fonte": "erc", "itens_standardized": 8, "would_upsert": 8, "mapping_errors": 0},
+    {"fonte": "horizon_europe", "itens_standardized": 25, "would_upsert": 25, "mapping_errors": 0},
+    {"fonte": "iarpa", "itens_standardized": 8, "would_upsert": 8, "mapping_errors": 0},
+    {"fonte": "nato_diana", "itens_standardized": 2, "would_upsert": 2, "mapping_errors": 0}
+  ],
+  "slice_temporario": {
+    "ficheiro": "audit_reports_blocked_sources/lote2_readiness_for_loader_apply_slice.json",
+    "estado": "DEPRECATED — o readiness canónico já permite as 5 fontes; o dry-run com readiness canónico reproduz os mesmos totais (57 upserts)."
+  },
+  "artefactos_loader": "audit_reports_loader_ready/load_ready_summary.json (última execução)"
+}

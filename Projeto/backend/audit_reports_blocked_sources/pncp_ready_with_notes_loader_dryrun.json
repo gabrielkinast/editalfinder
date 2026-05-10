@@ -1,0 +1,44 @@
+{
+  "titulo": "PNCP — loader dry-run após ready_with_notes",
+  "data": "2026-05-01T23:30:06Z",
+  "id_execucao_loader": "99da75e8-ae3b-4147-918e-7bfae94f6bba",
+  "readiness": {
+    "config_path": "config/source_readiness.json",
+    "mudanca": "pncp removido de blocked e incluído em ready_with_notes (entre nuclep e pncp_defesa)",
+    "pncp_em_blocked": false,
+    "pncp_em_ready_with_notes": true
+  },
+  "comando_dry_run": "python scripts/load_ready_sources.py --dry-run --sources pncp --exclude-blocked --input-dir audit_reports_blocked_sources/pncp_calibration/retransform/standardized",
+  "input_standardized": "audit_reports_blocked_sources/pncp_calibration/retransform/standardized/pncp_standardized.json",
+  "artefatos_loader_padrao": {
+    "summary": "audit_reports_loader_ready/load_ready_summary.json",
+    "by_source": "audit_reports_loader_ready/load_ready_by_source.json"
+  },
+  "metricas_loader": {
+    "itens_standardized_total": 31,
+    "would_upsert_total": 31,
+    "would_ignore_total": 0,
+    "mapping_errors_total": 0,
+    "critical_empty_items_total": 0,
+    "docs_input_items_total": 16,
+    "docs_preserved_items_total": 16,
+    "documentos_perdidos_no_payload_total": 0,
+    "pdf_input_items_total": 0,
+    "pdf_preserved_items_total": 0,
+    "validacao_status_preserved_items_total": 31,
+    "qualidade_dado_preserved_items_total": 31
+  },
+  "verificacao_standardized_pos_retransform": {
+    "tipo_oportunidade": { "compra_publica": 31 },
+    "tipo_recurso": { "Contratacao Publica": 31 },
+    "validacao_status": { "incompleto": 17, "valido": 13, "suspeito": 1 },
+    "itens_com_links_oficiais_nao_vazio": 17,
+    "perfil_ideal": { "['fornecedor', 'empresa']": 31 },
+    "correcao_transformer": "Para fonte pncp, build_defense_extras não é mais aplicado (evitava supplier_portal por heurística de fornecedor)."
+  },
+  "apply": {
+    "solicitado": false,
+    "environment_guard_block_reason": "missing_staging_flag",
+    "recomendacao_resumo": "Dry-run OK; apply em staging só com flag explícita de staging e aceitação dos 17 incompleto + 1 suspeito."
+  }
+}

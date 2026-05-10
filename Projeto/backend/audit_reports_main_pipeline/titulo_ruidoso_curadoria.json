@@ -1,0 +1,72 @@
+{
+  "timestamp": "2026-05-09",
+  "source_report": "audit_reports_main_pipeline/post_daily_warning_examples.json",
+  "problem": "edital.titulo_ruidoso",
+  "policy": "Itens com título claramente institucional, FAQ, contato ou conta bancária não são oportunidades acionáveis para public.edital; recomendação: desativar em staging com ativo=false, nunca deletar.",
+  "total_items_reviewed": 6,
+  "approved_for_deactivation": 6,
+  "keep": 0,
+  "items": [
+    {
+      "table": "edital",
+      "source": "BASA",
+      "id": 2,
+      "titulo": "Conta PJ",
+      "link": "https://www.bancoamazonia.com.br/empresas/conta-pj",
+      "decision": "deactivate",
+      "confidence": "high",
+      "reason": "Página de produto bancário/conta, não edital/chamada/oportunidade acionável."
+    },
+    {
+      "table": "edital",
+      "source": "BDMG",
+      "id": 52,
+      "titulo": "Entre em contato",
+      "link": "https://www.bdmg.mg.gov.br/investimento",
+      "decision": "deactivate",
+      "confidence": "high",
+      "reason": "Página genérica de contato/investimento, sem chamada ou submissão específica."
+    },
+    {
+      "table": "edital",
+      "source": "General Dynamics Suppliers",
+      "id": 1014,
+      "titulo": "Supplier FAQs",
+      "link": "https://www.gd.com/suppliers/supplier-faqs",
+      "decision": "deactivate",
+      "confidence": "high",
+      "reason": "FAQ de fornecedor; material informativo, não oportunidade acionável."
+    },
+    {
+      "table": "edital",
+      "source": "KAKENHI",
+      "id": 1252,
+      "titulo": "科研費FAQ",
+      "link": "https://www.jsps.go.jp/j-grantsinaid/01_seido/05_faq/index.html",
+      "decision": "deactivate",
+      "confidence": "high",
+      "reason": "FAQ institucional do programa; não é chamada específica."
+    },
+    {
+      "table": "edital",
+      "source": "NATO DIANA",
+      "id": 1419,
+      "titulo": "NATO DIANA — Programme FAQ (challenges, eligibility, portal)",
+      "link": "https://www.diana.nato.int/faq.html",
+      "decision": "deactivate",
+      "confidence": "high",
+      "reason": "FAQ do programa; útil como referência, mas não deve ficar como edital ativo."
+    },
+    {
+      "table": "edital",
+      "source": "NUCLEP",
+      "id": 1432,
+      "titulo": "Quem Somos",
+      "link": "https://www.nuclep.gov.br/quem-somos",
+      "decision": "deactivate",
+      "confidence": "high",
+      "reason": "Página institucional 'Quem Somos', não licitação/chamada."
+    }
+  ],
+  "deactivation_input": "audit_reports_main_pipeline/titulo_ruidoso_deactivation_input.json"
+}

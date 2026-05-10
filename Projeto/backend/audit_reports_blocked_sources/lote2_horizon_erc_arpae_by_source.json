@@ -1,0 +1,50 @@
+{
+  "horizon_europe": {
+    "perguntas_diagnostico": {
+      "1_crawler_roda": true,
+      "2_output_bruto_existe": true,
+      "3_quantidade_bruta": 0,
+      "4_quantidade_transforma": 0,
+      "5_quantidade_rejeitados": 0,
+      "6_motivos_rejeicao": [],
+      "7_natureza_historico_fallback": "pagina_institucional_generica / busca sem chamada concreta",
+      "8_componente_principal_problema": "crawler_listagem + aceitacao_previa_de_hub_no_pipeline",
+      "9_link_real_ou_generico": "generico_topic_search",
+      "10_detalhe_acessado": false,
+      "11_documentos": false,
+      "12_recomendacao_inicial": "Manter blocked; executar crawler com acesso estável a europa.eu e validar URLs de topic/call específicos."
+    }
+  },
+  "erc": {
+    "perguntas_diagnostico": {
+      "1_crawler_roda": true,
+      "2_output_bruto_existe": true,
+      "3_quantidade_bruta": 0,
+      "4_quantidade_transforma": 0,
+      "5_quantidade_rejeitados": 0,
+      "6_motivos_rejeicao": [],
+      "7_natureza_historico_fallback": "pagina_institucional_funding_hub",
+      "8_componente_principal_problema": "crawler_listagem + gate/taxonomia sem caminho local ERC antes do fix",
+      "9_link_real_ou_generico": "generico_funding_index",
+      "10_detalhe_acessado": false,
+      "11_documentos": false,
+      "12_recomendacao_inicial": "Manter blocked; priorizar apply-grants e páginas de call com título de grant."
+    }
+  },
+  "doe_arpae": {
+    "perguntas_diagnostico": {
+      "1_crawler_roda": true,
+      "2_output_bruto_existe": true,
+      "3_quantidade_bruta": 0,
+      "4_quantidade_transforma": 0,
+      "5_quantidade_rejeitados": 0,
+      "6_motivos_rejeicao": [],
+      "7_natureza_historico_fallback": "pagina_institucional_funding_opportunities_index",
+      "8_componente_principal_problema": "crawler (re não importado) + filtro hub; transformer",
+      "9_link_real_ou_generico": "generico_funding_opportunities",
+      "10_detalhe_acessado": false,
+      "11_documentos": false,
+      "12_recomendacao_inicial": "Manter blocked; validar listagem de FOAs abertas em energy.gov sem scraping agressivo."
+    }
+  }
+}

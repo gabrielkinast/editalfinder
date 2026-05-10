@@ -1,0 +1,48 @@
+[
+  {
+    "titulo": "調達情報",
+    "link": "https://www.kek.jp/ja/procurement",
+    "fonte": "KEK",
+    "access_status": "public_access",
+    "rejection_reason": "Relevancia limite: poucos sinais de oportunidade",
+    "opportunity_intent": "tender",
+    "opportunity_score": 2,
+    "detected_terms": [
+      "調達",
+      "pdf_or_docs",
+      "form_hint",
+      "generic_title",
+      "short_desc"
+    ],
+    "status_code": 200
+  },
+  {
+    "titulo": "加速器とは",
+    "link": "https://www.kek.jp/ja/accelerator",
+    "fonte": "KEK",
+    "access_status": "public_access",
+    "rejection_reason": "Relevancia limite: poucos sinais de oportunidade",
+    "opportunity_intent": "innovation_program",
+    "opportunity_score": 2,
+    "detected_terms": [
+      "pdf_or_docs",
+      "form_hint",
+      "desc_long",
+      "generic_title"
+    ],
+    "status_code": 200
+  },
+  {
+    "titulo": "安全衛⽣情報",
+    "link": "https://www2.kek.jp/hso/index.html",
+    "fonte": "KEK",
+    "access_status": "public_access",
+    "rejection_reason": "Pontuacao abaixo do minimo (oportunidade nao evidenciada)",
+    "opportunity_intent": "generic_page",
+    "opportunity_score": -2,
+    "detected_terms": [
+      "url_noise:/index.htm"
+    ],
+    "status_code": null
+  }
+]

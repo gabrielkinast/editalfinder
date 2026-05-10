@@ -1,9 +1,21 @@
+import sys
+from pathlib import Path
+
 import requests
 from bs4 import BeautifulSoup
 import re
 from typing import Optional
 from datetime import datetime
 import subprocess
+
+_ROOT = Path(__file__).resolve().parents[1]
+if str(_ROOT) not in sys.path:
+    sys.path.insert(0, str(_ROOT))
+try:
+    from CORE.scraper_dates import extract_deadline_from_text, extract_latest_deadline_from_text
+except ImportError:  # pragma: no cover
+    extract_deadline_from_text = None  # type: ignore
+    extract_latest_deadline_from_text = None  # type: ignore
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
@@ -82,3 +94,16 @@ def is_deadline_valid(deadline_str: str) -> bool:
         return deadline_date >= today
     except ValueError:
         return True
+
+
+def extract_deadline_iso(text: str) -> Optional[str]:
+    """Prazo ISO: prioriza data após palavras-chave; senão a data mais tardia encontrada."""
+    if not text:
+        return None
+    if extract_latest_deadline_from_text:
+        d = extract_latest_deadline_from_text(text)
+        if d:
+            return d
+    if extract_deadline_from_text:
+        return extract_deadline_from_text(text)
+    return None

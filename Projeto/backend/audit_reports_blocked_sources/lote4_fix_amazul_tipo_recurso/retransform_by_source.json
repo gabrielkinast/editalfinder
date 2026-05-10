@@ -1,0 +1,107 @@
+[
+  {
+    "fonte": "amazul",
+    "raw_output_path": "amazul/outputs/amazul_editais.json",
+    "old_standardized_path": "CORE/transformer/amazul_standardized.json",
+    "new_standardized_path": "audit_reports_blocked_sources/lote4_fix_amazul_tipo_recurso/standardized/amazul_standardized.json",
+    "itens_brutos_encontrados": 20,
+    "itens_transformados": 19,
+    "itens_rejeitados": 1,
+    "itens_incompletos": 3,
+    "itens_suspeitos": 2,
+    "itens_acesso_limitado": 0,
+    "documentos_preservados": 19,
+    "pdf_url_preservado": 19,
+    "area_preenchida": 15,
+    "tipo_oportunidade_preenchido": 19,
+    "tipo_recurso_preenchido": 19,
+    "perfil_ideal_preenchido": 19,
+    "qualidade_dado_media": 94.74,
+    "motivos_rejeicao_principais": {
+      "Noticia ou pagina generica sem chamada evidenciada": 1
+    },
+    "quick_audit": {
+      "ruido_passou": 0,
+      "duplicatas_link": 0,
+      "campos_preenchidos_pct": {
+        "area": 78.95,
+        "tipo_oportunidade": 100.0,
+        "tipo_recurso": 100.0,
+        "perfil_ideal": 100.0,
+        "documentos": 100.0,
+        "pdf_url": 100.0
+      },
+      "official_link_only_total": 0,
+      "access_limited_total": 0,
+      "access_reason_counts": {},
+      "access_limited_examples": []
+    },
+    "old_vs_new": {
+      "old_count": 1,
+      "new_count": 19,
+      "delta_count": 18,
+      "old_links_now_missing": [
+        "https://www.amazul.mar.mil.br/licitacoes"
+      ],
+      "new_links_before_missing": [
+        "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos/dispensa-de-licitacao-012024",
+        "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos/dispensa-de-licitacao-012026",
+        "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos/dispensa-de-licitacao-022024",
+        "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos/dispensa-de-licitacao-052024",
+        "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos/dispensa-de-licitacao-062025",
+        "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos/dispensa-de-licitacao-por-valor-012023",
+        "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos/dispensa-de-licitacao-por-valor-012025",
+        "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos/dispensa-de-licitacao-por-valor-022023",
+        "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos/dispensa-de-licitacao-por-valor-022025",
+        "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos/dispensa-de-licitacao-por-valor-032025",
+        "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos/dispensa-de-licitacao-por-valor-042023",
+        "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos/dispensa-de-licitacao-por-valor-042024",
+        "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos/dispensa-de-licitacao-por-valor-042024-0",
+        "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos/dispensa-de-licitacao-por-valor-042025",
+        "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos/dispensa-de-licitacao-por-valor-052025",
+        "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos/dispensa-de-licitacao-por-valor-052026",
+        "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos/dispensa-de-licitacao-por-valor-062024",
+        "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos/dispensa-de-licitacao-por-valor-062025",
+        "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos/dispensa-de-licitacao-por-valor-072025"
+      ],
+      "core_fields_improved": {
+        "area": {
+          "old": 0,
+          "new": 15,
+          "delta": 15
+        },
+        "tipo_oportunidade": {
+          "old": 1,
+          "new": 19,
+          "delta": 18
+        },
+        "tipo_recurso": {
+          "old": 1,
+          "new": 19,
+          "delta": 18
+        },
+        "perfil_ideal": {
+          "old": 0,
+          "new": 19,
+          "delta": 19
+        },
+        "documentos": {
+          "old": 0,
+          "new": 19,
+          "delta": 19
+        },
+        "pdf_url": {
+          "old": 0,
+          "new": 19,
+          "delta": 19
+        }
+      },
+      "core_fields_worsened": {},
+      "old_documents_count": 0,
+      "new_documents_count": 19,
+      "old_pdf_count": 0,
+      "new_pdf_count": 19
+    },
+    "risk_notes": []
+  }
+]

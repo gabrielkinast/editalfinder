@@ -1,0 +1,90 @@
+{
+  "meta": {
+    "lote": 5,
+    "titulo": "Auditoria — fontes fornecedores / defesa corporativa",
+    "data_auditoria": "2026-05-03T18:24:00Z",
+    "fontes": [
+      "bae_systems_suppliers",
+      "rheinmetall_suppliers",
+      "thales_suppliers",
+      "japan_kawasaki_heavy"
+    ],
+    "restricoes_respeitadas": [
+      "opportunity_gate.py global não editado",
+      "Loader apply não executado",
+      "Supabase não alterado",
+      "Migrations não aplicadas",
+      "source_readiness.json não atualizado automaticamente"
+    ]
+  },
+  "regra_escopo_produto": {
+    "entra_se": [
+      "cadastro de fornecedor",
+      "supplier portal",
+      "procurement portal",
+      "supplier onboarding",
+      "vendor registration",
+      "open tenders corporativos",
+      "procurement opportunities",
+      "call for suppliers",
+      "sourcing opportunities"
+    ],
+    "nao_entra": [
+      "página institucional pura",
+      "notícia / press release",
+      "careers",
+      "investors",
+      "contato genérico",
+      "política sem ação",
+      "sustentabilidade sem chamada",
+      "página de produto"
+    ],
+    "classificacao_alvo": {
+      "tipo_oportunidade": ["supplier_portal", "cadastro_fornecedor", "procurement_corporativo"],
+      "tipo_recurso": ["oportunidade_fornecedor"],
+      "perfil_ideal": ["fornecedor", "empresa"],
+      "setor_estrategico": "apenas com evidência textual, não pelo nome da empresa"
+    }
+  },
+  "correcoes_locais_aplicadas": [
+    "bae_systems_suppliers/main_bae_systems_suppliers.py: listagem UK responsible-supply-chain; allowed_domains + hicx.net; removido what-we-do genérico.",
+    "rheinmetall_suppliers/main_rheinmetall_suppliers.py: URLs 404 substituídas por become-a-supplier; dominios procurementportal + ivalua.app; removido microsite que puxava GDPR-only.",
+    "thales_suppliers/main_thales_suppliers.py: supplier-relations + /supplier em vez de procurement 404 e countries.",
+    "japan_kawasaki_heavy/main_japan_kawasaki_heavy.py: removido /en/news/ (notícias).",
+    "defense_source_common.py: não gerar ?page=2 em páginas estáticas supplier/procurement; filtro de URLs careers/investors/privacy-policy/datenschutz.",
+    "CORE/taxonomy_filtros.py: calibrate_corporate_supplier_sources_extras.",
+    "CORE/transformer.py: _corporate_supplier_soft_continue + ramo no gate; chamada à calibração para *_suppliers e japan_kawasaki_heavy."
+  ],
+  "pipeline_executado": {
+    "crawlers": [
+      "python bae_systems_suppliers/main_bae_systems_suppliers.py",
+      "python rheinmetall_suppliers/main_rheinmetall_suppliers.py",
+      "python thales_suppliers/main_thales_suppliers.py",
+      "python japan_kawasaki_heavy/main_japan_kawasaki_heavy.py"
+    ],
+    "retransform": "python scripts/retransform_all.py --sources bae_systems_suppliers,rheinmetall_suppliers,thales_suppliers,japan_kawasaki_heavy --dry-run --output-dir audit_reports_blocked_sources/lote5_fix_suppliers",
+    "semantic": "python scripts/audit_semantic_classification.py --input-dir audit_reports_blocked_sources/lote5_fix_suppliers/standardized --output-dir audit_reports_blocked_sources/lote5_fix_suppliers_semantic",
+    "docs": "python scripts/audit_docs_pipeline.py --sources bae_systems_suppliers,rheinmetall_suppliers,thales_suppliers,japan_kawasaki_heavy --output-dir audit_reports_blocked_sources/lote5_fix_suppliers_docs",
+    "access": "python scripts/audit_source_access_methods.py --sources bae_systems_suppliers,rheinmetall_suppliers,thales_suppliers,japan_kawasaki_heavy"
+  },
+  "resultado_quantitativo_final": {
+    "itens_brutos_total": 2,
+    "itens_transformados_total": 2,
+    "itens_rejeitados_total": 0,
+    "fonte_unica_com_dados": "rheinmetall_suppliers"
+  },
+  "readiness_resumo": {
+    "ready_with_notes": ["rheinmetall_suppliers"],
+    "needs_manual_review": ["bae_systems_suppliers", "thales_suppliers"],
+    "blocked": ["japan_kawasaki_heavy"]
+  },
+  "pode_sair_needs_manual_review": {
+    "sim": ["rheinmetall_suppliers"],
+    "nao": ["bae_systems_suppliers", "thales_suppliers", "japan_kawasaki_heavy"]
+  },
+  "auditorias": {
+    "semantic_flags": "audit_reports_blocked_sources/lote5_fix_suppliers_semantic/audit_semantic_summary.json",
+    "docs": "audit_reports_blocked_sources/lote5_fix_suppliers_docs/audit_docs_summary.json",
+    "access": "audit_reports_access/source_access_by_source.json"
+  }
+}

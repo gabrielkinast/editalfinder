@@ -1,0 +1,43 @@
+{
+  "data_auditoria": "2026-05-02",
+  "fontes": {
+    "amazul": {
+      "crawler_executa": true,
+      "output_bruto_path": "amazul/outputs/amazul_editais.json",
+      "itens_brutos": 20,
+      "itens_transformados_retransform": 19,
+      "itens_rejeitados_retransform": 1,
+      "standardized_gerado": "audit_reports_blocked_sources/lote4_fix_defesa_brasil/standardized/amazul_standardized.json",
+      "core_standardized_antigo_CORE_transformer": 1,
+      "observacao": "Listagem corrigida para /acesso-a-informacao/licitacoes-e-contratos."
+    },
+    "marinha": {
+      "crawler_executa": true,
+      "output_bruto_path": "marinha/outputs/marinha_editais.json",
+      "itens_brutos": 0,
+      "itens_transformados_retransform": 0,
+      "itens_rejeitados_retransform": 0,
+      "standardized_gerado": "audit_reports_blocked_sources/lote4_fix_defesa_brasil/standardized/marinha_standardized.json",
+      "core_standardized_antigo_CORE_transformer": 1,
+      "observacao": "fetch_soup sem HTML útil: 403 Cloudflare (Just a moment) em requests."
+    },
+    "dcta_ita_iae": {
+      "crawler_executa": true,
+      "output_bruto_path": "dcta_ita_iae/outputs/dcta_ita_iae_editais.json",
+      "itens_brutos": 0,
+      "itens_transformados_retransform": 0,
+      "itens_rejeitados_retransform": 0,
+      "standardized_gerado": "audit_reports_blocked_sources/lote4_fix_defesa_brasil/standardized/dcta_ita_iae_standardized.json",
+      "core_standardized_antigo_CORE_transformer": 0,
+      "observacao": "URLs gov.br/dcta|ita|iae/pt-br/* devolvem 404 (HTML ou JSON) em 2026-05."
+    }
+  },
+  "relatorios_gerados": {
+    "retransform": "audit_reports_blocked_sources/lote4_fix_defesa_brasil/",
+    "semantic": "audit_reports_blocked_sources/lote4_fix_defesa_brasil_semantic/",
+    "docs": "audit_reports_blocked_sources/lote4_fix_defesa_brasil_docs/",
+    "access": "audit_reports_access/"
+  },
+  "failures_jsonl": "audit_reports_crawler_failures/failures.jsonl (sem linhas amazul|marinha|dcta nesta verificação)",
+  "latest_error_json": "Não existem latest_error.json nestas três pastas (apenas outras fontes no repo)."
+}

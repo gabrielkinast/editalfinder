@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "descricao": "Canonização local entre fontes que partilham o mesmo conteúdo (ex.: hubs Plataforma Inovação). Usada pelo dry-run/apply do load_ready_sources; não altera o Supabase por si só.",
+  "canonical_groups": {
+    "plataforma_inovacao": {
+      "canonical_source": "senai",
+      "aliases": ["plataforma_industria"],
+      "match_rules": {
+        "url_contains": "plataforma-inovacao-para-industria/categoria"
+      },
+      "policy": "skip_alias_if_canonical_exists",
+      "preserve_alias_in_extras": true,
+      "notas": "Quando senai e plataforma_industria vão juntos no loader, itens do alias cujo link já exista no crawl canónico (mesmo URL) são ignorados. preserve_alias_in_extras reservado para gravar metadados do alias em extras no futuro."
+    }
+  }
+}

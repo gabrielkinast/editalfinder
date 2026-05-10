@@ -1,0 +1,46 @@
+{
+  "data_auditoria": "2026-05-03",
+  "rheinmetall_suppliers": {
+    "itens_bruto_exemplo": [
+      {
+        "titulo": "Become a supplier",
+        "link": "https://www.rheinmetall.com/en/suppliers/become-a-supplier",
+        "tipo_inferido_bruto_extras": "supplier_portal",
+        "nota": "Texto descreve self-registration e Rheinmetall Procurement Portal — ação concreta para fornecedor."
+      },
+      {
+        "titulo": "Rheinmetall procurement portal",
+        "link": "https://rheinmetall-supplier.ivalua.app",
+        "tipo_inferido": "supplier_portal",
+        "nota": "Portal SaaS; continuação com login — classificar como supplier_portal, não como edital público."
+      }
+    ],
+    "standardized_pos_calibracao": {
+      "tipo_recurso": "oportunidade_fornecedor",
+      "tipo_oportunidade_exemplos": ["cadastro_fornecedor", "supplier_portal"],
+      "perfil_ideal": ["fornecedor", "empresa"]
+    }
+  },
+  "thales_suppliers": {
+    "urls_recomendadas_para_futuro_crawler": [
+      "https://www.thalesgroup.com/en/supplier-relations",
+      "https://www.thalesgroup.com/en/supplier"
+    ],
+    "nota": "Colheita atual 0 itens — considerar extração dirigida a PDFs \"Requirements\" / âncoras com \"supplier\"."
+  },
+  "bae_systems_suppliers": {
+    "urls_pos_correcao": [
+      "https://www.baesystems.com/en-uk/suppliers/responsible-supply-chain"
+    ],
+    "dominios_permitidos_extra": ["hicx.net"],
+    "nota": "Ambiente de crawl pode devolver HTML mínimo (WAF); validar com browser real ou política explícita."
+  },
+  "japan_kawasaki_heavy": {
+    "seeds_atuais": [
+      "https://global.kawasaki.com/en/corp/profile/procurement/",
+      "https://www.khi.co.jp/procurement/"
+    ],
+    "erro_tipico": "todas_as_listagens_falharam_ou_rede",
+    "ficheiro_erro": "japan_kawasaki_heavy/outputs/latest_error.json"
+  }
+}

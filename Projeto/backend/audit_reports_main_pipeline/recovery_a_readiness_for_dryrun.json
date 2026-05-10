@@ -1,0 +1,18 @@
+{
+  "data": "2026-05-10T04:17:44Z",
+  "nota": "Slice temporario Recovery A; nao substitui config/source_readiness.json",
+  "fontes": {
+    "banco_da_amazonia": {
+      "incluir_em_dryrun_oficial_loader": true,
+      "motivo": "26 itens; mapping_errors=0; suspeito evitado com relax credito BR + incompleto"
+    },
+    "dod_sbir_sttr": {
+      "incluir_em_dryrun_oficial_loader": true,
+      "motivo": "6 topicos /topics/<id>; sem success-stories/events; mapping_errors=0"
+    },
+    "esa_star": {
+      "incluir_em_dryrun_oficial_loader": false,
+      "motivo": "0 itens publicos; manter blocked"
+    }
+  }
+}

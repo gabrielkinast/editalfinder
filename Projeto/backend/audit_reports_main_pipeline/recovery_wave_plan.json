@@ -1,0 +1,121 @@
+{
+  "data_auditoria": "2026-05-10T12:00:00Z",
+  "politica": "Onda Recovery A: no máximo 3 fontes; sem implementação nesta tarefa; sem apply; sem Supabase; sem mudança global de gates ou readiness.",
+  "onda_recovery_a": {
+    "nome": "Onda Recovery A",
+    "fontes_max": 3,
+    "grupos": [
+      {
+        "id": "recovery_esa_star",
+        "fonte_slug": "esa_star",
+        "o_que_investigar": [
+          "Listagem pública Open ITT em www.esa.int vs conteúdo em SSO",
+          "Existência de RSS, ATOM, ICS ou export CSV/JSON de ITTs abertos",
+          "Regra transformer: distinguir SSO puro de página com metadados de tender público"
+        ],
+        "crawler_parser": [
+          "Nova seed: página pública Open Invitations + filtro de links que contenham sso.esa.int sem metadado público",
+          "Opcional: segundo estágio headless só para páginas allowlist (avaliar risco/compliance)"
+        ],
+        "arquivos_provaveis_futuros": [
+          "esa_star/main_esa_star.py",
+          "CORE/transformer.py ou módulo de rejeição login (onde estiver a regra Pagina de login)",
+          "config/opportunity_gate ou filtro por fonte — apenas quando aprovado; não nesta onda de auditoria"
+        ],
+        "riscos": [
+          "Terms of use da ESA para scraping",
+          "SSO pode mudar hostname",
+          "Falso negativo se tender só existir atrás de login"
+        ],
+        "criterios_ready_with_notes": [
+          "≥1 item transformado com link público https://www.esa.int ou documento ITT acessível sem login",
+          "0 itens só-SSO no payload de edital",
+          "Diagnóstico onda C sem linha esa_star: 0 transformados com bruto disponível"
+        ],
+        "criterios_manter_blocked": [
+          "Única saída continuar a ser SSO sem metadados públicos",
+          "WAF ou bloqueio sistemático ao fetch público"
+        ]
+      },
+      {
+        "id": "recovery_dod_sbir",
+        "fonte_slug": "dod_sbir_sttr",
+        "o_que_investigar": [
+          "API https://www.sbir.gov/ como fonte técnica paralela (não edital)",
+          "Estrutura HTML de /topics e páginas-filhas com datas",
+          "Lista de paths a excluir: /faq, /api, /data-resources, /impact, /participating-agencies, /awards se forem só contexto"
+        ],
+        "crawler_parser": [
+          "Allowlist de prefixos para edital; denylist explícita de hubs institucionais",
+          "Heurística: exigir deadline ou topic ID na página filha"
+        ],
+        "arquivos_provaveis_futuros": [
+          "dod_sbir_sttr/main_*.py (ou nome real do crawler)",
+          "Taxonomia / seeds em config se existir",
+          "Regras transformer para tipo_oportunidade hub vs funding_opportunity"
+        ],
+        "riscos": [
+          "Mudança de layout sbir.gov",
+          "Duplicatas entre hub e topic"
+        ],
+        "criterios_ready_with_notes": [
+          "Redução forte de setor_estrategico_muito_amplo em URLs de hub",
+          "Maioria dos itens com prazo ou topic explícito",
+          "FAQ/API permanecem fora do conjunto edital"
+        ],
+        "criterios_manter_blocked": [
+          "Sem fonte estável de topics (só hubs)",
+          "Conflito com política de não ingerir páginas técnicas como oportunidade"
+        ]
+      },
+      {
+        "id": "recovery_basa",
+        "fonte_slug": "banco_da_amazonia",
+        "o_que_investigar": [
+          "Padrões de URL para linhas FNO, FUNGETUR, PRONAF, BNDES Finame vs páginas genéricas",
+          "Campos mínimos para marcar valido vs suspeito (valor, público-alvo, condição de acesso)",
+          "Conta PJ / internet banking — denylist permanente"
+        ],
+        "crawler_parser": [
+          "Extrair tabelas de condições quando existirem",
+          "Marcar tipo_oportunidade como linha_credito quando texto indicar taxa/prazo"
+        ],
+        "arquivos_provaveis_futuros": [
+          "banco_da_amazonia/main_*.py",
+          "Calibração BASA em taxonomy/transformer",
+          "Curadoria JSON existente em audit_reports_main_pipeline/titulo_ruidoso_* se reutilizado"
+        ],
+        "riscos": [
+          "Sobre-correção classificando marketing como chamada",
+          "Impacto em crédito_tipo_recurso_incoerente se tipo_recurso mudar"
+        ],
+        "criterios_ready_with_notes": [
+          "Queda material de suspeito_ativo_true mantendo linhas legítimas",
+          "titulo_ruidoso_ativo_true ~0 para páginas bancárias genéricas",
+          "Documentação curta das exceções (ex.: PRONAF)"
+        ],
+        "criterios_manter_blocked": [
+          "Site bloquear bot ou exigir sessão",
+          "Impossível separar automaticamente produto de linha sem curadoria"
+        ]
+      }
+    ]
+  },
+  "onda_seguinte_sugerida_nao_parte_de_A": {
+    "id": "recovery_supplier_portals",
+    "fontes": [
+      "general_dynamics_suppliers",
+      "lockheed_martin_suppliers",
+      "rheinmetall_suppliers",
+      "thales_suppliers",
+      "bae_systems_suppliers"
+    ],
+    "nota": "Onda B — volume menor de valor por URL; exige padrão comum supplier + política access_limited."
+  },
+  "metricas_pos_onda_a": [
+    "validate_full_staging_after_daily.py --staging ok=true",
+    "suspeito_ativo_true total (BASA e DoD)",
+    "setor_estrategico_muito_amplo em DoD SBIR",
+    "esa_star standardized_count > 0 ou decisão documentada de manter blocked"
+  ]
+}

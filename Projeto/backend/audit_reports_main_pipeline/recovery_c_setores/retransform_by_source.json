@@ -1,0 +1,142 @@
+[
+  {
+    "fonte": "embrapii",
+    "raw_output_path": "embrapii/outputs/embrapii_editais.json",
+    "old_standardized_path": "CORE/transformer/embrapii_standardized.json",
+    "new_standardized_path": "audit_reports_main_pipeline/recovery_c_setores/standardized/embrapii_standardized.json",
+    "itens_brutos_encontrados": 21,
+    "itens_transformados": 21,
+    "itens_rejeitados": 0,
+    "itens_incompletos": 12,
+    "itens_suspeitos": 0,
+    "itens_acesso_limitado": 0,
+    "documentos_preservados": 21,
+    "pdf_url_preservado": 20,
+    "area_preenchida": 21,
+    "tipo_oportunidade_preenchido": 21,
+    "tipo_recurso_preenchido": 21,
+    "perfil_ideal_preenchido": 0,
+    "qualidade_dado_media": 94.38,
+    "motivos_rejeicao_principais": {},
+    "quick_audit": {
+      "ruido_passou": 0,
+      "duplicatas_link": 0,
+      "campos_preenchidos_pct": {
+        "area": 100.0,
+        "tipo_oportunidade": 100.0,
+        "tipo_recurso": 100.0,
+        "perfil_ideal": 0.0,
+        "documentos": 100.0,
+        "pdf_url": 95.24
+      },
+      "official_link_only_total": 0,
+      "access_limited_total": 0,
+      "access_reason_counts": {},
+      "access_limited_examples": []
+    },
+    "old_vs_new": {
+      "old_count": 23,
+      "new_count": 21,
+      "delta_count": -2,
+      "old_links_now_missing": [
+        "https://embrapii.org.br/wp-content/uploads/2025/01/Anexo-III-PROJETO-EXECUTIVO.pdf",
+        "https://embrapii.org.br/wp-content/uploads/2025/01/RRT-PROJETO.pdf"
+      ],
+      "new_links_before_missing": [],
+      "core_fields_improved": {
+        "documentos": {
+          "old": 0,
+          "new": 21,
+          "delta": 21
+        }
+      },
+      "core_fields_worsened": {
+        "area": {
+          "old": 23,
+          "new": 21,
+          "delta": -2
+        },
+        "tipo_oportunidade": {
+          "old": 23,
+          "new": 21,
+          "delta": -2
+        },
+        "tipo_recurso": {
+          "old": 23,
+          "new": 21,
+          "delta": -2
+        },
+        "pdf_url": {
+          "old": 22,
+          "new": 20,
+          "delta": -2
+        }
+      },
+      "old_documents_count": 0,
+      "new_documents_count": 21,
+      "old_pdf_count": 22,
+      "new_pdf_count": 20
+    },
+    "risk_notes": []
+  },
+  {
+    "fonte": "nuclep",
+    "raw_output_path": "nuclep/outputs/nuclep_editais.json",
+    "old_standardized_path": "CORE/transformer/nuclep_standardized.json",
+    "new_standardized_path": "audit_reports_main_pipeline/recovery_c_setores/standardized/nuclep_standardized.json",
+    "itens_brutos_encontrados": 20,
+    "itens_transformados": 20,
+    "itens_rejeitados": 0,
+    "itens_incompletos": 20,
+    "itens_suspeitos": 0,
+    "itens_acesso_limitado": 0,
+    "documentos_preservados": 20,
+    "pdf_url_preservado": 20,
+    "area_preenchida": 20,
+    "tipo_oportunidade_preenchido": 20,
+    "tipo_recurso_preenchido": 20,
+    "perfil_ideal_preenchido": 0,
+    "qualidade_dado_media": 83.1,
+    "motivos_rejeicao_principais": {},
+    "quick_audit": {
+      "ruido_passou": 0,
+      "duplicatas_link": 0,
+      "campos_preenchidos_pct": {
+        "area": 100.0,
+        "tipo_oportunidade": 100.0,
+        "tipo_recurso": 100.0,
+        "perfil_ideal": 0.0,
+        "documentos": 100.0,
+        "pdf_url": 100.0
+      },
+      "official_link_only_total": 0,
+      "access_limited_total": 0,
+      "access_reason_counts": {},
+      "access_limited_examples": []
+    },
+    "old_vs_new": {
+      "old_count": 20,
+      "new_count": 20,
+      "delta_count": 0,
+      "old_links_now_missing": [
+        "https://www.nuclep.gov.br/"
+      ],
+      "new_links_before_missing": [
+        "https://www.nuclep.gov.br/index.php/"
+      ],
+      "core_fields_improved": {
+        "documentos": {
+          "old": 0,
+          "new": 20,
+          "delta": 20
+        }
+      },
+      "core_fields_worsened": {},
+      "old_documents_count": 0,
+      "new_documents_count": 20,
+      "old_pdf_count": 20,
+      "new_pdf_count": 20
+    },
+    "risk_notes": []
+  }
+]

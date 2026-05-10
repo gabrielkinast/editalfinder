@@ -1,0 +1,45 @@
+{
+  "lote": "lote1",
+  "fontes": [
+    "badesul",
+    "petrobras",
+    "senai",
+    "softex",
+    "plataforma_industria",
+    "pncp",
+    "marinha",
+    "amazul",
+    "dcta_ita_iae"
+  ],
+  "fontes_total": 9,
+  "bloqueadas_no_cfg": 9,
+  "itens_brutos_total": 23,
+  "itens_transformados_total": 0,
+  "itens_rejeitados_total": 23,
+  "fontes_com_output_bruto": 9,
+  "fontes_com_transformados": 0,
+  "fontes_com_sinal_gate_transformer": [
+    "badesul",
+    "senai",
+    "plataforma_industria",
+    "marinha",
+    "amazul"
+  ],
+  "fontes_com_sinal_crawler": [
+    "petrobras",
+    "softex",
+    "pncp",
+    "dcta_ita_iae"
+  ],
+  "recomendacao_status_count": {
+    "ajuste_local_gate_transformer": 5,
+    "ajuste_local_crawler": 4
+  },
+  "readiness_base_status_distribution": {
+    "pronto_com_observacoes": 8,
+    "pronto_para_loader": 54,
+    "bloquear_temporariamente": 23,
+    "precisa_revisao_manual": 7,
+    "reprocessar_depois_de_ajuste": 2
+  }
+}

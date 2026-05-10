@@ -12,8 +12,7 @@ def test_real_insert():
         "prazo_envio": "2026-12-31",
         "situacao": "Teste",
         "pdf_url": "https://teste-agente.com.br/edital.pdf",
-        "status": "Ativo",
-        "id_organizacao": 2
+        "id_organizacao": 11
     }
     
     try:

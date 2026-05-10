@@ -1,0 +1,41 @@
+{
+  "meta": {
+    "lote": "3A",
+    "regiao": "Japão",
+    "data_geracao_utc": "2026-05-02T11:48:08Z",
+    "nota_ambiente": "Crawlers executados: todas as URLs de listagem falharam; *_editais.json = []. Retransform reflete apenas esse estado.",
+    "referencias": [
+      "audit_reports_retransform_risks/risk_summary.md",
+      "audit_reports_retransform/retransform_by_source.json",
+      "CORE/transformer/japan_*_standardized.json",
+      "config/source_readiness.json"
+    ]
+  },
+  "exemplos_primeiro_item_canonico": {
+    "japan_jaea": {
+      "titulo": "R&D Results",
+      "link": "https://www.jaea.go.jp/english/study_results/",
+      "tipo_oportunidade": "procurement",
+      "setor_estrategico": [
+        "nuclear"
+      ]
+    },
+    "japan_jaxa": {
+      "titulo": "JAXA Public Calls and Procurement Index",
+      "link": "https://global.jaxa.jp/press/",
+      "tipo_oportunidade": "noticia_institucional",
+      "setor_estrategico": [
+        "ciencia_tecnologia"
+      ]
+    },
+    "japan_e_rad": {
+      "titulo": "（研究機関向け）新規登録の方法",
+      "link": "https://www.e-rad.go.jp/organ/procedure.html",
+      "tipo_oportunidade": "funding_opportunity",
+      "setor_estrategico": [
+        "ciencia_tecnologia"
+      ]
+    }
+  },
+  "nota": "Com outputs vazios, exemplos são do standardized em CORE/transformer (último estado conhecido no repositório)."
+}

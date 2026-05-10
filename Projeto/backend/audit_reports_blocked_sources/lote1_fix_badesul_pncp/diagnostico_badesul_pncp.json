@@ -1,0 +1,51 @@
+{
+  "lote": "lote1_fix_badesul_pncp",
+  "before": {
+    "badesul": {
+      "itens_brutos": 10,
+      "itens_transformados": 0,
+      "itens_rejeitados": 10,
+      "diagnostico": "gate_agressivo",
+      "recomendacao": "ajuste_local_gate_transformer"
+    },
+    "pncp": {
+      "itens_brutos": 1,
+      "itens_transformados": 0,
+      "itens_rejeitados": 1,
+      "diagnostico": "crawler_fraco",
+      "recomendacao": "ajuste_local_crawler"
+    }
+  },
+  "after": {
+    "badesul": {
+      "itens_brutos": 7,
+      "itens_transformados": 7,
+      "itens_rejeitados": 0,
+      "itens_suspeitos": 7,
+      "documentos_preservados": 7,
+      "qualidade_dado_media": 66.14,
+      "resultado": "melhoria_relevante_sem_ruido_obvio"
+    },
+    "pncp": {
+      "itens_brutos": 0,
+      "itens_transformados": 0,
+      "itens_rejeitados": 0,
+      "resultado": "sem_dados_validos_na_coleta_nesta_execucao",
+      "nota": "fallback_generico_desativado_para_nao_poluir_banco"
+    }
+  },
+  "auditoria_semantica": {
+    "fontes": 2,
+    "itens_total": 7,
+    "flags_totais": {}
+  },
+  "auditoria_documentos": {
+    "itens_analisados": 7,
+    "transformado_com_documentos": 7,
+    "perdas_total": 0
+  },
+  "readiness_recomendado": {
+    "badesul": "ready_with_notes",
+    "pncp": "manter_blocked"
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "caso": "pncp_defesa_residual_0021_2025_334656",
+  "fonte": "pncp_defesa",
+  "titulo": "AQUISIÇÃO DE MOVEIS SOB MEDIDA E MATERIAL DE INFORMATICA",
+  "link": "https://pregaobanrisul.com.br/editais/0021_2025/334656",
+  "descricao": "AQUISIÇÃO DE MOVEIS SOB MEDIDA E MATERIAL DE INFORMATICA Pregão - Eletrônico",
+  "motivo_rejeicao_auditoria_original": "Relevancia limite: poucos sinais de oportunidade",
+  "gate_raw_item": {
+    "keep": false,
+    "reason": "Relevancia limite: poucos sinais de oportunidade",
+    "intent": "generic_page",
+    "score": 3,
+    "sinais_detectados": [
+      "pdf_or_docs",
+      "numero_edital",
+      "title_ok",
+      "short_desc"
+    ]
+  },
+  "sinais_ausentes_heuristica": [
+    "licit",
+    "edital",
+    "compra publica",
+    "fornecedor"
+  ],
+  "item_bruto_resumo": {
+    "fonte": "PNCP Defesa",
+    "data_publicacao": "2025-04-30",
+    "fim_inscricao": "2025-05-15",
+    "situacao": "Divulgada no PNCP",
+    "valor": "R$ 25.496,98",
+    "programa": "contratacoes_publicas_defesa",
+    "acao": "Pregão - Eletrônico",
+    "tipo_recurso": "contrato_publico",
+    "extras": {
+      "tipo_oportunidade": "compra_publica",
+      "numero_edital": "88496468000160-1-000132/2025",
+      "numero_chamada": "0021",
+      "numero_processo": "116/2025/2025",
+      "codigo_oportunidade": "88496468000160-1-000132/2025",
+      "numero_controle_pncp": "88496468000160-1-000132/2025",
+      "documentos": [
+        {
+          "nome": "Sistema de origem",
+          "url": "https://pregaobanrisul.com.br/editais/0021_2025/334656"
+        }
+      ]
+    }
+  },
+  "item_transformado_pos_ajuste_local": {
+    "rejected": false,
+    "rejection_reason": "",
+    "validacao_status": "suspeito",
+    "opportunity_gate_relaxed": true,
+    "opportunity_gate_relax_scope": "pncp_defesa_local",
+    "opportunity_gate_relax_reason": "Relevancia limite: poucos sinais de oportunidade",
+    "documentos_preservados": [
+      {
+        "titulo": "Sistema de origem",
+        "url": "https://pregaobanrisul.com.br/editais/0021_2025/334656",
+        "tipo": "documento_desconhecido",
+        "formato": "outro",
+        "origem": "extras.documentos"
+      }
+    ],
+    "pdf_url": ""
+  },
+  "classificacao_manual": {
+    "oportunidade_real": true,
+    "documento_oficial": false,
+    "licitacao": true,
+    "compra_publica": true,
+    "contrato_publico": true,
+    "pagina_generica": false,
+    "ruido": false,
+    "duvidoso": false
+  },
+  "avaliacao_motivo_relevancia_limite": "inadequado_para_este_caso",
+  "decisao_recomendada": "suspeito",
+  "conclusao": "É oportunidade real de compra pública. Deve seguir no pipeline como suspeito/incompleto, sem descarte duro.",
+  "ajuste_local_seguro": {
+    "aplicado": true,
+    "escopo": "somente transformer para fontes pncp_defesa e compras_defesa",
+    "descricao": "Em rejeição por relevância/pontuação, permite seguir quando houver sinais de contratação pública e metadados oficiais (numero_edital/processo/controle PNCP, valor ou prazo).",
+    "nao_altera_gate_global": true,
+    "resultado_validacao": "audit_reports_docs_pncp_check com perdas_total=0"
+  }
+}

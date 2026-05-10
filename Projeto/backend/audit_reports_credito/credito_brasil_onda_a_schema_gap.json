@@ -1,0 +1,868 @@
+{
+  "resumo": {
+    "chaves_no_payload_apos_merge_strip": 64,
+    "colunas_na_migration_20260505": 104,
+    "payload_menos_migration": [],
+    "todas_chaves_payload_cobertas_pela_migration": true
+  },
+  "payload_columns": [
+    "acao",
+    "anexos",
+    "area",
+    "area_cientifica",
+    "area_tecnologica",
+    "ativo",
+    "classificacao_confianca",
+    "compatibilidade",
+    "contato",
+    "content_type_detectado",
+    "contrapartida",
+    "data_publicacao",
+    "descricao",
+    "descricao_original",
+    "documentos",
+    "elegibilidade",
+    "estado",
+    "extras",
+    "fonte_recurso",
+    "hash_deduplicacao",
+    "id_organizacao",
+    "idioma_original",
+    "instituicao",
+    "justificativa",
+    "link",
+    "link_inscricao",
+    "natureza_recurso",
+    "numero_edital",
+    "numero_processo",
+    "objetivo",
+    "ods",
+    "orgao_contratante",
+    "orgao_responsavel",
+    "origem_portal",
+    "pais",
+    "pdf_resumo",
+    "pdf_url",
+    "perfil_ideal",
+    "prazo_envio",
+    "programa",
+    "publico_alvo",
+    "publico_alvo_arr",
+    "qualidade_dado",
+    "recomendacao",
+    "reembolsavel",
+    "regiao",
+    "score",
+    "score_detalhado",
+    "setor_economico",
+    "setor_estrategico",
+    "situacao",
+    "temas",
+    "tipo_oportunidade",
+    "tipo_recurso",
+    "titulo",
+    "titulo_original",
+    "uf",
+    "ultima_coleta",
+    "url_detalhe",
+    "url_listagem",
+    "validacao_status",
+    "valor_maximo",
+    "valor_minimo",
+    "warnings"
+  ],
+  "payload_column_detail": [
+    {
+      "coluna": "acao",
+      "tipo_sugerido": "ver migrations/20260505_add_missing_edital_columns_from_loader_payload.sql",
+      "exemplo": "credito",
+      "fontes": [
+        "banco_da_amazonia",
+        "bdmg",
+        "bnb"
+      ],
+      "canonico_ou_extra": "espelho_extras",
+      "coluna_ou_extras": "coluna"
+    },
+    {
+      "coluna": "anexos",
+      "tipo_sugerido": "ver migrations/20260505_add_missing_edital_columns_from_loader_payload.sql",
+      "exemplo": "<list len=11>",
+      "fontes": [
+        "banco_da_amazonia",
+        "bdmg"
+      ],
+      "canonico_ou_extra": "espelho_extras",
+      "coluna_ou_extras": "coluna"
+    },
+    {
+      "coluna": "area",
+      "tipo_sugerido": "ver migrations/20260505_add_missing_edital_columns_from_loader_payload.sql",
+      "exemplo": "<list len=2>",
+      "fontes": [
+        "banco_da_amazonia",
+        "bdmg",
+        "bnb"
+      ],
+      "canonico_ou_extra": "espelho_extras",
+      "coluna_ou_extras": "coluna"
+    },
+    {
+      "coluna": "area_cientifica",
+      "tipo_sugerido": "ver migrations/20260505_add_missing_edital_columns_from_loader_payload.sql",
+      "exemplo": "<list len=1>",
+      "fontes": [
+        "bdmg"
+      ],
+      "canonico_ou_extra": "espelho_extras",
+      "coluna_ou_extras": "coluna"
+    },
+    {
+      "coluna": "area_tecnologica",
+      "tipo_sugerido": "ver migrations/20260505_add_missing_edital_columns_from_loader_payload.sql",
+      "exemplo": "<list len=1>",
+      "fontes": [
+        "bnb"
+      ],
+      "canonico_ou_extra": "espelho_extras",
+      "coluna_ou_extras": "coluna"
+    },
+    {
+      "coluna": "ativo",
+      "tipo_sugerido": "ver migrations/20260505_add_missing_edital_columns_from_loader_payload.sql",
+      "exemplo": true,
+      "fontes": [
+        "banco_da_amazonia",
+        "bdmg",
+        "bnb"
+      ],
+      "canonico_ou_extra": "espelho_extras",
+      "coluna_ou_extras": "coluna"
+    },
+    {
+      "coluna": "classificacao_confianca",
+      "tipo_sugerido": "ver migrations/20260505_add_missing_edital_columns_from_loader_payload.sql",
+      "exemplo": "alta",
+      "fontes": [
+        "banco_da_amazonia",
+        "bdmg",
+        "bnb"
+      ],
+      "canonico_ou_extra": "espelho_extras",
+      "coluna_ou_extras": "coluna"
+    },
+    {
+      "coluna": "compatibilidade",
+      "tipo_sugerido": "ver migrations/20260505_add_missing_edital_columns_from_loader_payload.sql",
+      "exemplo": null,
+      "fontes": [
+        "banco_da_amazonia",
+        "bdmg",
+        "bnb"
+      ],
+      "canonico_ou_extra": "canonico",
+      "coluna_ou_extras": "coluna"
+    },
+    {
+      "coluna": "contato",
+      "tipo_sugerido": "ver migrations/20260505_add_missing_edital_columns_from_loader_payload.sql",
+      "exemplo": "2024-2027",
+      "fontes": [
+        "banco_da_amazonia",
+        "bdmg",
+        "bnb"
+      ],
+      "canonico_ou_extra": "canonico",
+      "coluna_ou_extras": "coluna"
+    },
+    {
+      "coluna": "content_type_detectado",
+      "tipo_sugerido": "ver migrations/20260505_add_missing_edital_columns_from_loader_payload.sql",
+      "exemplo": "chamada_publica",
+      "fontes": [
+        "banco_da_amazonia",
+        "bdmg",
+        "bnb"
+      ],
+      "canonico_ou_extra": "espelho_extras",
+      "coluna_ou_extras": "coluna"
+    },
+    {
+      "coluna": "contrapartida",
+      "tipo_sugerido": "ver migrations/20260505_add_missing_edital_columns_from_loader_payload.sql",
+      "exemplo": null,
+      "fontes": [
+        "banco_da_amazonia",
+        "bdmg",
+        "bnb"
+      ],
+      "canonico_ou_extra": "canonico",
+      "coluna_ou_extras": "coluna"
+    },
+    {
+      "coluna": "data_publicacao",
+      "tipo_sugerido": "ver migrations/20260505_add_missing_edital_columns_from_loader_payload.sql",
+      "exemplo": "2026-05-05",
+      "fontes": [
+        "banco_da_amazonia",
+        "bdmg",
+        "bnb"
+      ],
+      "canonico_ou_extra": "canonico",
+      "coluna_ou_extras": "coluna"
+    },
+    {
+      "coluna": "descricao",
+      "tipo_sugerido": "ver migrations/20260505_add_missing_edital_columns_from_loader_payload.sql",
+      "exemplo": "Rural – crédito e soluções para o campo – Banco do Nordeste Microcrédito produtivo e orientado para a sua produção no...",
+      "fontes": [
+        "banco_da_amazonia",
+        "bdmg",
+        "bnb"
+      ],
+      "canonico_ou_extra": "canonico",
+      "coluna_ou_extras": "coluna"
+    },
+    {
+      "coluna": "descricao_original",
+      "tipo_sugerido": "ver migrations/20260505_add_missing_edital_columns_from_loader_payload.sql",
+      "exemplo": "Rural – crédito e soluções para o campo – Banco do Nordeste Microcrédito produtivo e orientado para a sua produção no...",
+      "fontes": [
+        "banco_da_amazonia",
+        "bdmg",
+        "bnb"
+      ],
+      "canonico_ou_extra": "espelho_extras",
+      "coluna_ou_extras": "coluna"
+    },
+    {
+      "coluna": "documentos",
+      "tipo_sugerido": "ver migrations/20260505_add_missing_edital_columns_from_loader_payload.sql",
+      "exemplo": "<list len=1>",
+      "fontes": [
+        "banco_da_amazonia",
+        "bdmg",
+        "bnb"
+      ],
+      "canonico_ou_extra": "espelho_extras",
+      "coluna_ou_extras": "coluna"
+    },
+    {
+      "coluna": "elegibilidade",
+      "tipo_sugerido": "ver migrations/20260505_add_missing_edital_columns_from_loader_payload.sql",
+      "exemplo": null,
+      "fontes": [
+        "banco_da_amazonia",
+        "bdmg",
+        "bnb"
+      ],
+      "canonico_ou_extra": "canonico",
+      "coluna_ou_extras": "coluna"
+    },
+    {
+      "coluna": "estado",
+      "tipo_sugerido": "ver migrations/20260505_add_missing_edital_columns_from_loader_payload.sql",
+      "exemplo": "MG",
+      "fontes": [
+        "bdmg"
+      ],
+      "canonico_ou_extra": "espelho_extras",
+      "coluna_ou_extras": "coluna"
+    },
+    {
+      "coluna": "extras",
+      "tipo_sugerido": "ver migrations/20260505_add_missing_edital_columns_from_loader_payload.sql",
+      "exemplo": "<dict len=46>",
+      "fontes": [
+        "banco_da_amazonia",
+        "bdmg",
+        "bnb"
+      ],
+      "canonico_ou_extra": "espelho_extras",
+      "coluna_ou_extras": "coluna"
+    },
+    {
+      "coluna": "fonte_recurso",
+      "tipo_sugerido": "ver migrations/20260505_add_missing_edital_columns_from_loader_payload.sql",
+      "exemplo": "BNB",
+      "fontes": [
+        "banco_da_amazonia",
+        "bdmg",
+        "bnb"
+      ],
+      "canonico_ou_extra": "canonico",
+      "coluna_ou_extras": "coluna"
+    },
+    {
+      "coluna": "hash_deduplicacao",
+      "tipo_sugerido": "ver migrations/20260505_add_missing_edital_columns_from_loader_payload.sql",
+      "exemplo": "ce1b7b19b2827ad74216ced48bf42dc6088ff2d5638cb7cf2ac9fd636fb82b7a",
+      "fontes": [
+        "banco_da_amazonia",
+        "bdmg",
+        "bnb"
+      ],
+      "canonico_ou_extra": "espelho_extras",
+      "coluna_ou_extras": "coluna"
+    },
+    {
+      "coluna": "id_organizacao",
+      "tipo_sugerido": "ver migrations/20260505_add_missing_edital_columns_from_loader_payload.sql",
+      "exemplo": 11,
+      "fontes": [
+        "banco_da_amazonia",
+        "bdmg",
+        "bnb"
+      ],
+      "canonico_ou_extra": "canonico",
+      "coluna_ou_extras": "coluna"
+    },
+    {
+      "coluna": "idioma_original",
+      "tipo_sugerido": "ver migrations/20260505_add_missing_edital_columns_from_loader_payload.sql",
+      "exemplo": "pt",
+      "fontes": [
+        "banco_da_amazonia",
+        "bdmg",
+        "bnb"
+      ],
+      "canonico_ou_extra": "espelho_extras",
+      "coluna_ou_extras": "coluna"
+    },
+    {
+      "coluna": "instituicao",
+      "tipo_sugerido": "ver migrations/20260505_add_missing_edital_columns_from_loader_payload.sql",
+      "exemplo": "Banco do Nordeste S.A.",
+      "fontes": [
+        "banco_da_amazonia",
+        "bdmg",
+        "bnb"
+      ],
+      "canonico_ou_extra": "espelho_extras",
+      "coluna_ou_extras": "coluna"
+    },
+    {
+      "coluna": "justificativa",
+      "tipo_sugerido": "ver migrations/20260505_add_missing_edital_columns_from_loader_payload.sql",
+      "exemplo": null,
+      "fontes": [
+        "banco_da_amazonia",
+        "bdmg",
+        "bnb"
+      ],
+      "canonico_ou_extra": "canonico",
+      "coluna_ou_extras": "coluna"
+    },
+    {
+      "coluna": "link",
+      "tipo_sugerido": "ver migrations/20260505_add_missing_edital_columns_from_loader_payload.sql",
+      "exemplo": "https://www.bnb.gov.br/web/guest/rural",
+      "fontes": [
+        "banco_da_amazonia",
+        "bdmg",
+        "bnb"
+      ],
+      "canonico_ou_extra": "canonico",
+      "coluna_ou_extras": "coluna"
+    },
+    {
+      "coluna": "link_inscricao",
+      "tipo_sugerido": "ver migrations/20260505_add_missing_edital_columns_from_loader_payload.sql",
+      "exemplo": null,
+      "fontes": [
+        "banco_da_amazonia",
+        "bdmg",
+        "bnb"
+      ],
+      "canonico_ou_extra": "canonico",
+      "coluna_ou_extras": "coluna"
+    },
+    {
+      "coluna": "natureza_recurso",
+      "tipo_sugerido": "ver migrations/20260505_add_missing_edital_columns_from_loader_payload.sql",
+      "exemplo": "reembolsavel",
+      "fontes": [
+        "banco_da_amazonia",
+        "bdmg",
+        "bnb"
+      ],
+      "canonico_ou_extra": "espelho_extras",
+      "coluna_ou_extras": "coluna"
+    },
+    {
+      "coluna": "numero_edital",
+      "tipo_sugerido": "ver migrations/20260505_add_missing_edital_columns_from_loader_payload.sql",
+      "exemplo": "Preg",
+      "fontes": [
+        "bdmg"
+      ],
+      "canonico_ou_extra": "espelho_extras",
+      "coluna_ou_extras": "coluna"
+    },
+    {
+      "coluna": "numero_processo",
+      "tipo_sugerido": "ver migrations/20260505_add_missing_edital_columns_from_loader_payload.sql",
+      "exemplo": "preliminar",
+      "fontes": [
+        "banco_da_amazonia",
+        "bdmg"
+      ],
+      "canonico_ou_extra": "espelho_extras",
+      "coluna_ou_extras": "coluna"
+    },
+    {
+      "coluna": "objetivo",
+      "tipo_sugerido": "ver migrations/20260505_add_missing_edital_columns_from_loader_payload.sql",
+      "exemplo": "financiamento_reembolsavel",
+      "fontes": [
+        "banco_da_amazonia",
+        "bdmg",
+        "bnb"
+      ],
+      "canonico_ou_extra": "canonico",
+      "coluna_ou_extras": "coluna"
+    },
+    {
+      "coluna": "ods",
+      "tipo_sugerido": "ver migrations/20260505_add_missing_edital_columns_from_loader_payload.sql",
+      "exemplo": null,
+      "fontes": [
+        "banco_da_amazonia",
+        "bdmg",
+        "bnb"
+      ],
+      "canonico_ou_extra": "canonico",
+      "coluna_ou_extras": "coluna"
+    },
+    {
+      "coluna": "orgao_contratante",
+      "tipo_sugerido": "ver migrations/20260505_add_missing_edital_columns_from_loader_payload.sql",
+      "exemplo": "BNB",
+      "fontes": [
+        "banco_da_amazonia",
+        "bdmg",
+        "bnb"
+      ],
+      "canonico_ou_extra": "espelho_extras",
+      "coluna_ou_extras": "coluna"
+    },
+    {
+      "coluna": "orgao_responsavel",
+      "tipo_sugerido": "ver migrations/20260505_add_missing_edital_columns_from_loader_payload.sql",
+      "exemplo": "Banco do Nordeste",
+      "fontes": [
+        "banco_da_amazonia",
+        "bdmg",
+        "bnb"
+      ],
+      "canonico_ou_extra": "espelho_extras",
+      "coluna_ou_extras": "coluna"
+    },
+    {
+      "coluna": "origem_portal",
+      "tipo_sugerido": "ver migrations/20260505_add_missing_edital_columns_from_loader_payload.sql",
+      "exemplo": "Banco do Nordeste (bnb.gov.br)",
+      "fontes": [
+        "banco_da_amazonia",
+        "bdmg",
+        "bnb"
+      ],
+      "canonico_ou_extra": "espelho_extras",
+      "coluna_ou_extras": "coluna"
+    },
+    {
+      "coluna": "pais",
+      "tipo_sugerido": "ver migrations/20260505_add_missing_edital_columns_from_loader_payload.sql",
+      "exemplo": "Brasil",
+      "fontes": [
+        "banco_da_amazonia",
+        "bdmg",
+        "bnb"
+      ],
+      "canonico_ou_extra": "espelho_extras",
+      "coluna_ou_extras": "coluna"
+    },
+    {
+      "coluna": "pdf_resumo",
+      "tipo_sugerido": "ver migrations/20260505_add_missing_edital_columns_from_loader_payload.sql",
+      "exemplo": "\u0001QPS\u0001 5VUPSJBM 1MBUBGPSNB\u0001EF\u0001 $SÉEJUP\u0001&TQFDJBMJ[BEP \"QSFTFOUBÇÄP 1SF[BEP B \u0001$MJFOUF &TUF\u0001UVUPSJBM\u0001UFN\u0001P\u0001PCKFUJWP\u0001 EF\u0001...",
+      "fontes": [
+        "banco_da_amazonia",
+        "bdmg",
+        "bnb"
+      ],
+      "canonico_ou_extra": "espelho_extras",
+      "coluna_ou_extras": "coluna"
+    },
+    {
+      "coluna": "pdf_url",
+      "tipo_sugerido": "ver migrations/20260505_add_missing_edital_columns_from_loader_payload.sql",
+      "exemplo": "https://www.bnb.gov.br/documents/45767/0/Tutorial+Cliente+-+Solicite+seu+Cr%C3%A9dito.pdf",
+      "fontes": [
+        "banco_da_amazonia",
+        "bdmg",
+        "bnb"
+      ],
+      "canonico_ou_extra": "canonico",
+      "coluna_ou_extras": "coluna"
+    },
+    {
+      "coluna": "perfil_ideal",
+      "tipo_sugerido": "ver migrations/20260505_add_missing_edital_columns_from_loader_payload.sql",
+      "exemplo": "<list len=1>",
+      "fontes": [
+        "banco_da_amazonia",
+        "bdmg",
+        "bnb"
+      ],
+      "canonico_ou_extra": "espelho_extras",
+      "coluna_ou_extras": "coluna"
+    },
+    {
+      "coluna": "prazo_envio",
+      "tipo_sugerido": "ver migrations/20260505_add_missing_edital_columns_from_loader_payload.sql",
+      "exemplo": "2025-06-24",
+      "fontes": [
+        "banco_da_amazonia",
+        "bdmg",
+        "bnb"
+      ],
+      "canonico_ou_extra": "canonico",
+      "coluna_ou_extras": "coluna"
+    },
+    {
+      "coluna": "programa",
+      "tipo_sugerido": "ver migrations/20260505_add_missing_edital_columns_from_loader_payload.sql",
+      "exemplo": "produtos_bnb",
+      "fontes": [
+        "banco_da_amazonia",
+        "bdmg",
+        "bnb"
+      ],
+      "canonico_ou_extra": "espelho_extras",
+      "coluna_ou_extras": "coluna"
+    },
+    {
+      "coluna": "publico_alvo",
+      "tipo_sugerido": "ver migrations/20260505_add_missing_edital_columns_from_loader_payload.sql",
+      "exemplo": "[]",
+      "fontes": [
+        "banco_da_amazonia",
+        "bdmg",
+        "bnb"
+      ],
+      "canonico_ou_extra": "canonico",
+      "coluna_ou_extras": "coluna"
+    },
+    {
+      "coluna": "publico_alvo_arr",
+      "tipo_sugerido": "ver migrations/20260505_add_missing_edital_columns_from_loader_payload.sql",
+      "exemplo": "<list len=1>",
+      "fontes": [
+        "banco_da_amazonia",
+        "bdmg",
+        "bnb"
+      ],
+      "canonico_ou_extra": "espelho_extras",
+      "coluna_ou_extras": "coluna"
+    },
+    {
+      "coluna": "qualidade_dado",
+      "tipo_sugerido": "ver migrations/20260505_add_missing_edital_columns_from_loader_payload.sql",
+      "exemplo": 70,
+      "fontes": [
+        "banco_da_amazonia",
+        "bdmg",
+        "bnb"
+      ],
+      "canonico_ou_extra": "espelho_extras",
+      "coluna_ou_extras": "coluna"
+    },
+    {
+      "coluna": "recomendacao",
+      "tipo_sugerido": "ver migrations/20260505_add_missing_edital_columns_from_loader_payload.sql",
+      "exemplo": null,
+      "fontes": [
+        "banco_da_amazonia",
+        "bdmg",
+        "bnb"
+      ],
+      "canonico_ou_extra": "canonico",
+      "coluna_ou_extras": "coluna"
+    },
+    {
+      "coluna": "reembolsavel",
+      "tipo_sugerido": "ver migrations/20260505_add_missing_edital_columns_from_loader_payload.sql",
+      "exemplo": true,
+      "fontes": [
+        "banco_da_amazonia",
+        "bdmg",
+        "bnb"
+      ],
+      "canonico_ou_extra": "espelho_extras",
+      "coluna_ou_extras": "coluna"
+    },
+    {
+      "coluna": "regiao",
+      "tipo_sugerido": "ver migrations/20260505_add_missing_edital_columns_from_loader_payload.sql",
+      "exemplo": "Sudeste",
+      "fontes": [
+        "banco_da_amazonia",
+        "bdmg",
+        "bnb"
+      ],
+      "canonico_ou_extra": "canonico",
+      "coluna_ou_extras": "coluna"
+    },
+    {
+      "coluna": "score",
+      "tipo_sugerido": "ver migrations/20260505_add_missing_edital_columns_from_loader_payload.sql",
+      "exemplo": 0,
+      "fontes": [
+        "banco_da_amazonia",
+        "bdmg",
+        "bnb"
+      ],
+      "canonico_ou_extra": "canonico",
+      "coluna_ou_extras": "coluna"
+    },
+    {
+      "coluna": "score_detalhado",
+      "tipo_sugerido": "ver migrations/20260505_add_missing_edital_columns_from_loader_payload.sql",
+      "exemplo": null,
+      "fontes": [
+        "banco_da_amazonia",
+        "bdmg",
+        "bnb"
+      ],
+      "canonico_ou_extra": "canonico",
+      "coluna_ou_extras": "coluna"
+    },
+    {
+      "coluna": "setor_economico",
+      "tipo_sugerido": "ver migrations/20260505_add_missing_edital_columns_from_loader_payload.sql",
+      "exemplo": "<list len=2>",
+      "fontes": [
+        "banco_da_amazonia",
+        "bdmg",
+        "bnb"
+      ],
+      "canonico_ou_extra": "espelho_extras",
+      "coluna_ou_extras": "coluna"
+    },
+    {
+      "coluna": "setor_estrategico",
+      "tipo_sugerido": "ver migrations/20260505_add_missing_edital_columns_from_loader_payload.sql",
+      "exemplo": "<list len=1>",
+      "fontes": [
+        "banco_da_amazonia",
+        "bdmg",
+        "bnb"
+      ],
+      "canonico_ou_extra": "espelho_extras",
+      "coluna_ou_extras": "coluna"
+    },
+    {
+      "coluna": "situacao",
+      "tipo_sugerido": "ver migrations/20260505_add_missing_edital_columns_from_loader_payload.sql",
+      "exemplo": "Em andamento",
+      "fontes": [
+        "banco_da_amazonia",
+        "bdmg",
+        "bnb"
+      ],
+      "canonico_ou_extra": "canonico",
+      "coluna_ou_extras": "coluna"
+    },
+    {
+      "coluna": "temas",
+      "tipo_sugerido": "ver migrations/20260505_add_missing_edital_columns_from_loader_payload.sql",
+      "exemplo": null,
+      "fontes": [
+        "banco_da_amazonia",
+        "bdmg",
+        "bnb"
+      ],
+      "canonico_ou_extra": "canonico",
+      "coluna_ou_extras": "coluna"
+    },
+    {
+      "coluna": "tipo_oportunidade",
+      "tipo_sugerido": "ver migrations/20260505_add_missing_edital_columns_from_loader_payload.sql",
+      "exemplo": "noticia_institucional",
+      "fontes": [
+        "banco_da_amazonia",
+        "bdmg",
+        "bnb"
+      ],
+      "canonico_ou_extra": "espelho_extras",
+      "coluna_ou_extras": "coluna"
+    },
+    {
+      "coluna": "tipo_recurso",
+      "tipo_sugerido": "ver migrations/20260505_add_missing_edital_columns_from_loader_payload.sql",
+      "exemplo": "financiamento_reembolsavel",
+      "fontes": [
+        "banco_da_amazonia",
+        "bdmg",
+        "bnb"
+      ],
+      "canonico_ou_extra": "espelho_extras",
+      "coluna_ou_extras": "coluna"
+    },
+    {
+      "coluna": "titulo",
+      "tipo_sugerido": "ver migrations/20260505_add_missing_edital_columns_from_loader_payload.sql",
+      "exemplo": "Rural – crédito e soluções para o campo – Banco do Nordeste",
+      "fontes": [
+        "banco_da_amazonia",
+        "bdmg",
+        "bnb"
+      ],
+      "canonico_ou_extra": "canonico",
+      "coluna_ou_extras": "coluna"
+    },
+    {
+      "coluna": "titulo_original",
+      "tipo_sugerido": "ver migrations/20260505_add_missing_edital_columns_from_loader_payload.sql",
+      "exemplo": "Rural – crédito e soluções para o campo – Banco do Nordeste",
+      "fontes": [
+        "banco_da_amazonia",
+        "bdmg",
+        "bnb"
+      ],
+      "canonico_ou_extra": "espelho_extras",
+      "coluna_ou_extras": "coluna"
+    },
+    {
+      "coluna": "uf",
+      "tipo_sugerido": "ver migrations/20260505_add_missing_edital_columns_from_loader_payload.sql",
+      "exemplo": "MG",
+      "fontes": [
+        "bdmg"
+      ],
+      "canonico_ou_extra": "espelho_extras",
+      "coluna_ou_extras": "coluna"
+    },
+    {
+      "coluna": "ultima_coleta",
+      "tipo_sugerido": "ver migrations/20260505_add_missing_edital_columns_from_loader_payload.sql",
+      "exemplo": "2026-05-05T04:59:54.684251+00:00",
+      "fontes": [
+        "banco_da_amazonia",
+        "bdmg",
+        "bnb"
+      ],
+      "canonico_ou_extra": "espelho_extras",
+      "coluna_ou_extras": "coluna"
+    },
+    {
+      "coluna": "url_detalhe",
+      "tipo_sugerido": "ver migrations/20260505_add_missing_edital_columns_from_loader_payload.sql",
+      "exemplo": "https://www.bnb.gov.br/web/guest/rural",
+      "fontes": [
+        "banco_da_amazonia",
+        "bdmg",
+        "bnb"
+      ],
+      "canonico_ou_extra": "espelho_extras",
+      "coluna_ou_extras": "coluna"
+    },
+    {
+      "coluna": "url_listagem",
+      "tipo_sugerido": "ver migrations/20260505_add_missing_edital_columns_from_loader_payload.sql",
+      "exemplo": "https://www.bnb.gov.br/web/guest/produtos-e-servicos",
+      "fontes": [
+        "banco_da_amazonia",
+        "bdmg",
+        "bnb"
+      ],
+      "canonico_ou_extra": "espelho_extras",
+      "coluna_ou_extras": "coluna"
+    },
+    {
+      "coluna": "validacao_status",
+      "tipo_sugerido": "ver migrations/20260505_add_missing_edital_columns_from_loader_payload.sql",
+      "exemplo": "incompleto",
+      "fontes": [
+        "banco_da_amazonia",
+        "bdmg",
+        "bnb"
+      ],
+      "canonico_ou_extra": "espelho_extras",
+      "coluna_ou_extras": "coluna"
+    },
+    {
+      "coluna": "valor_maximo",
+      "tipo_sugerido": "ver migrations/20260505_add_missing_edital_columns_from_loader_payload.sql",
+      "exemplo": 200.0,
+      "fontes": [
+        "banco_da_amazonia",
+        "bdmg",
+        "bnb"
+      ],
+      "canonico_ou_extra": "canonico",
+      "coluna_ou_extras": "coluna"
+    },
+    {
+      "coluna": "valor_minimo",
+      "tipo_sugerido": "ver migrations/20260505_add_missing_edital_columns_from_loader_payload.sql",
+      "exemplo": 20.0,
+      "fontes": [
+        "banco_da_amazonia",
+        "bdmg",
+        "bnb"
+      ],
+      "canonico_ou_extra": "canonico",
+      "coluna_ou_extras": "coluna"
+    },
+    {
+      "coluna": "warnings",
+      "tipo_sugerido": "ver migrations/20260505_add_missing_edital_columns_from_loader_payload.sql",
+      "exemplo": "<list len=2>",
+      "fontes": [
+        "banco_da_amazonia",
+        "bdmg",
+        "bnb"
+      ],
+      "canonico_ou_extra": "espelho_extras",
+      "coluna_ou_extras": "coluna"
+    }
+  ],
+  "extras_keys_nao_promovidos_topo": [
+    "acao_identificada",
+    "coletado_em",
+    "content_hash",
+    "contexto_sensivel_detectado",
+    "cronograma",
+    "descricao_completa",
+    "destination_table",
+    "extraction_richness",
+    "field_confidence",
+    "metodo_classificacao",
+    "metodo_extracao",
+    "necessita_traducao",
+    "nivel_sensibilidade",
+    "opportunity_gate_category",
+    "opportunity_gate_relax_reason",
+    "opportunity_gate_relax_scope",
+    "opportunity_gate_relaxed",
+    "origem",
+    "palavras_chave_detectadas",
+    "pdf_enrichment",
+    "pdf_lido_para_enriquecimento",
+    "pdf_texto_extraido",
+    "prazo",
+    "programa_identificado",
+    "public_investment_scope",
+    "qualidade_flags",
+    "qualidade_nivel",
+    "qualidade_problemas",
+    "subtema",
+    "thematic_confidence",
+    "thematic_tags",
+    "url_pagina",
+    "validacao_warnings",
+    "valor"
+  ]
+}

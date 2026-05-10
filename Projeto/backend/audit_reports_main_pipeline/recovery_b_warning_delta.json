@@ -1,0 +1,106 @@
+{
+  "titulo": "Recovery B — delta de warnings (prazo vencido e crédito incoerente)",
+  "data_analise": "2026-05-10",
+  "metodologia": {
+    "baseline_global": {
+      "fonte": "audit_reports_main_pipeline/recovery_a_consolidado.json → validacao_global_pos_carga (validação staging 2026-05-10T04:59:30Z, imediatamente antes da onda Recovery B)",
+      "nota": "Não existe no repositório uma cópia arquivada de post_daily_warning_examples.json com by_source anterior à Recovery B; o baseline usa os totais globais dessa validação.",
+      "prazo_vencido_ativo_true_total": 41,
+      "credito_tipo_recurso_incoerente_total": 4
+    },
+    "depois": {
+      "fonte": "audit_reports_main_pipeline/post_daily_warning_examples.json",
+      "timestamp": "2026-05-10T05:51:55Z",
+      "prazo_vencido_ativo_true_total": 48,
+      "credito_tipo_recurso_incoerente_total": 6
+    },
+    "delta_global": {
+      "prazo_vencido_ativo_true": 7,
+      "credito_tipo_recurso_incoerente": 2
+    }
+  },
+  "edital.prazo_vencido_ativo_true": {
+    "depois_by_source": {
+      "AMAZUL": 7,
+      "ANP": 2,
+      "Apex Brasil": 1,
+      "BDMG": 1,
+      "CNPQ": 10,
+      "EMBRAPII": 9,
+      "Grants.gov": 9,
+      "IARPA": 8,
+      "NATO DIANA": 1
+    },
+    "soma_sem_amazul": 41,
+    "interpretacao_aritmetica": "Soma das contagens por fonte excluindo AMAZUL = 48 − 7 = 41, igual ao total global antes da Recovery B. Conclui-se que o aumento de +7 em prazo_vencido_ativo_true deve-se integralmente às 7 linhas AMAZUL agora contabilizadas neste warning; Ambev e BADESUL não aparecem em by_source (0).",
+    "fontes_recovery_b": {
+      "amazul": { "count_pos": 7, "papel_no_delta": "explica os +7 globais" },
+      "ambev": { "count_pos": 0, "papel_no_delta": "sem linhas neste warning no estado atual" },
+      "badesul": { "count_pos": 0, "papel_no_delta": "sem linhas neste warning no estado atual" }
+    },
+    "exemplos_amazul_em_examples_by_warning": [
+      {
+        "id": 425,
+        "titulo": "Dispensa de Licitação por Valor 02/2025",
+        "link": "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos/dispensa-de-licitacao-por-valor-022025",
+        "validacao_status": "suspeito",
+        "prazo_envio": "2026-03-20",
+        "motivo": "prazo_envio vencido (2026-03-20) e ativo=true"
+      },
+      {
+        "id": 430,
+        "titulo": "Dispensa de Licitação por Valor 07/2025",
+        "link": "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos/dispensa-de-licitacao-por-valor-072025",
+        "validacao_status": "suspeito",
+        "prazo_envio": "2025-12-11",
+        "motivo": "prazo_envio vencido (2025-12-11) e ativo=true"
+      }
+    ],
+    "nota_exemplos": "A lista examples_by_warning é amostral; by_source reflete o universo contado pelo validador."
+  },
+  "edital.credito_tipo_recurso_incoerente": {
+    "depois_by_source": {
+      "AMAZUL": 2,
+      "CNPQ": 1,
+      "FAPEMIG": 1,
+      "FAPERGS": 1,
+      "IPEN": 1
+    },
+    "soma_sem_amazul": 4,
+    "interpretacao_aritmetica": "Soma excluindo AMAZUL = 6 − 2 = 4, igual ao total global antes da Recovery B. O aumento de +2 corresponde às 2 linhas AMAZUL neste warning. Ambev e BADESUL: 0 em by_source.",
+    "fontes_recovery_b": {
+      "amazul": { "count_pos": 2, "papel_no_delta": "explica os +2 globais" },
+      "ambev": { "count_pos": 0 },
+      "badesul": { "count_pos": 0 }
+    },
+    "exemplos_amazul_em_examples_by_warning": [
+      {
+        "id": 2102,
+        "titulo": "Dispensa de Licitação 03/2024",
+        "link": "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos/dispensa-de-licitacao-032024",
+        "tipo_oportunidade": "licitacao",
+        "tipo_recurso": "licitação",
+        "validacao_status": "incompleto",
+        "motivo": "crédito/financiamento sem reembolsavel nem natureza_recurso preenchidos"
+      },
+      {
+        "id": 436,
+        "titulo": "Dispensa de Licitação por Valor 04/2023",
+        "link": "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos/dispensa-de-licitacao-por-valor-042023",
+        "tipo_oportunidade": "licitacao",
+        "tipo_recurso": "licitação",
+        "validacao_status": "suspeito",
+        "motivo": "crédito/financiamento sem reembolsavel nem natureza_recurso preenchidos"
+      }
+    ],
+    "nota_validador": "O motivo textual do validador menciona crédito/financiamento; o par tipo_oportunidade/tipo_recurso em licitação AMAZUL pode disparar a heurística — revisão de regra ou extras (reembolsável/natureza) é candidata a trabalho futuro, fora do âmbito deste relatório."
+  },
+  "conclusao": {
+    "ambev_e_badesul": "Não contribuem para os aumentos agregados de prazo_vencido_ativo_true nem credito_tipo_recurso_incoerente no ficheiro post_daily atual (ausentes em by_source).",
+    "amazul": "Concentra as novas contagens: +7 prazo e +2 crédito, compatível com carga/atualização de linhas AMAZUL após Recovery B (prazos visíveis e regras aplicadas a estados não-suspeito onde aplicável).",
+    "limite_da_analise": "Sem arquivo histórico de by_source pré-Recovery B, a decomposição usa consistência interna (total depois − AMAZUL = total antes)."
+  },
+  "restricoes": [
+    "Nenhuma alteração a código, apply ou Supabase nesta investigação."
+  ]
+}

@@ -1,0 +1,72 @@
+# Snapshot pré dry-run (sem Git)
+
+- **Quando:** `2026-05-10T03:14:09.111525+00:00`
+- **Pasta:** `D:\Computational_Physics\My Projects\edital`
+- **`.git` presente:** False
+
+## Ficheiros-chave (existência + mtime UTC)
+
+```json
+[
+  {
+    "path": "main.py",
+    "exists": true,
+    "mtime_utc": "2026-05-09T12:54:42+00:00"
+  },
+  {
+    "path": "international_onda_c_common.py",
+    "exists": true,
+    "mtime_utc": "2026-05-09T15:27:38+00:00"
+  },
+  {
+    "path": "config/source_readiness.json",
+    "exists": true,
+    "mtime_utc": "2026-05-06T00:57:00+00:00"
+  },
+  {
+    "path": "audit_reports_credito/lote_inovacao_internacional_onda_c_diagnostico.json",
+    "exists": true,
+    "mtime_utc": "2026-05-09T15:17:50+00:00"
+  },
+  {
+    "path": "audit_reports_credito/lote_inovacao_internacional_onda_c_fix/standardized/ukri_funding_standardized.json",
+    "exists": true,
+    "mtime_utc": "2026-05-09T15:12:50+00:00"
+  },
+  {
+    "path": "audit_reports_credito/lote_inovacao_internacional_onda_c_fix/standardized/eit_standardized.json",
+    "exists": true,
+    "mtime_utc": "2026-05-09T15:12:20+00:00"
+  },
+  {
+    "path": "audit_reports_credito/lote_inovacao_internacional_onda_c_fix/standardized/esa_osip_standardized.json",
+    "exists": true,
+    "mtime_utc": "2026-05-09T15:12:32+00:00"
+  }
+]
+```
+
+## Relatórios Onda C (amostra)
+
+- `audit_reports_credito/lote_inovacao_internacional_onda_c_by_source.json`
+- `audit_reports_credito/lote_inovacao_internacional_onda_c_diagnostico.json`
+- `audit_reports_credito/lote_inovacao_internacional_onda_c_diagnostico.md`
+- `audit_reports_credito/lote_inovacao_internacional_onda_c_examples.json`
+- `audit_reports_credito/lote_inovacao_internacional_onda_c_quality_fix.json`
+- `audit_reports_credito/lote_inovacao_internacional_onda_c_quality_fix.md`
+- `audit_reports_credito/lote_inovacao_internacional_onda_c_quality_fix_readiness_temp.json`
+
+## Readiness curado (`config/source_readiness.json`)
+
+```json
+{
+  "ready_n": 54,
+  "ready_with_notes_n": 33,
+  "needs_manual_review_n": 6,
+  "blocked_n": 9
+}
+```
+
+## Git
+
+Inicializar repositório Git na pasta do projeto, criar branch e commit antes de novas alterações (não executado automaticamente).

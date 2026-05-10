@@ -1,0 +1,87 @@
+{
+  "data_auditoria": "2026-05-03T00:59:02Z",
+  "fonte": "amazul",
+  "readiness": {
+    "config_source_readiness": "ready_with_notes",
+    "readiness_for_loader": "pronto_com_observacoes",
+    "standardized_origem": "audit_reports_blocked_sources/lote4_fix_defesa_brasil/standardized/amazul_standardized.json",
+    "standardized_loader_input": "audit_reports_retransform/standardized/amazul_standardized.json"
+  },
+  "comando_dry_run": "python scripts/load_ready_sources.py --dry-run --sources amazul --exclude-blocked --input-dir audit_reports_retransform/standardized --readiness audit_reports_retransform/readiness_for_loader.json",
+  "artefactos_loader": {
+    "resumo": "audit_reports_loader_ready/load_ready_summary.json",
+    "por_fonte": "audit_reports_loader_ready/load_ready_by_source.json",
+    "slice_readiness": "audit_reports_loader_ready/readiness_derived_slice.json"
+  },
+  "totais": {
+    "itens_standardized": 19,
+    "would_upsert": 19,
+    "would_ignore": 0,
+    "mapping_errors": 0,
+    "critical_empty_items": 0
+  },
+  "preservacao": {
+    "documentos_input_itens": 19,
+    "documentos_payload_itens": 19,
+    "documentos_perdidos_no_payload": 0,
+    "pdf_url_input_itens": 19,
+    "pdf_url_payload_itens": 19,
+    "validacao_status_preservados": 19,
+    "qualidade_dado_preservados": 19,
+    "docs_nao_pdf_std": 2,
+    "docs_nao_pdf_payload": 2,
+    "perda_docs_nao_pdf": 0
+  },
+  "campos_rastreados_input_vs_payload": {
+    "area": 15,
+    "tipo_oportunidade": 19,
+    "tipo_recurso": 19,
+    "perfil_ideal": 19,
+    "setor_economico": 19,
+    "setor_estrategico": 17,
+    "validacao_status": 19,
+    "qualidade_dado": 19,
+    "publico_alvo": 7
+  },
+  "verificacao_pedido_6": {
+    "tipo_oportunidade": {
+      "distribuicao": {
+        "licitacao": 19
+      },
+      "nota": "Todos os itens com extras.tipo_oportunidade licitacao; coerente com compra/licitação."
+    },
+    "tipo_recurso": {
+      "distribuicao": {
+        "licitação": 13,
+        "Prêmio / Concurso": 4,
+        "Subvenção (Não Reembolsável)": 1,
+        "Reembolsável (Financiamento)": 1
+      },
+      "nota": "Maioria contratual/licitação; 6 itens com rótulo de fomento/crédito/prémio herdado provavelmente de texto agregado (PDF DOU). Revisão manual leve antes de ready pleno — alinhado a ready_with_notes."
+    },
+    "validacao_status": {
+      "distribuicao": {
+        "valido": 14,
+        "incompleto": 3,
+        "suspeito": 2
+      }
+    },
+    "noticia_institucional": {
+      "titulos_com_noticia_ou_menu": 0,
+      "nota": "Nenhum título óbvio de notícia/menu na amostra."
+    },
+    "setor_estrategico": {
+      "itens_com_lista_nao_vazia": 17,
+      "itens_vazios": 2,
+      "nota": "Alinhado às 2 flags fonte_defesa_sem_defesa no relatório semântico."
+    }
+  },
+  "recomendacao_staging": {
+    "pode_submeter_apply_staging": "sim_com_ressalvas",
+    "condicoes": [
+      "Manter decisão ready_with_notes: não promover a ready pleno até homogeneizar tipo_recurso nos 6 casos mistos vs objeto de dispensa.",
+      "Não executar apply nesta tarefa; quando for aplicar, usar fluxo staging explícito do script (flags e env) conforme docs internas.",
+      "Opcional: correção futura local (transformer/calibrate) para forçar tipo_recurso de contratação quando tipo_oportunidade=licitacao e tipo_conteudo_amazul=compra_licitacao — fora do âmbito deste pedido."
+    ]
+  }
+}

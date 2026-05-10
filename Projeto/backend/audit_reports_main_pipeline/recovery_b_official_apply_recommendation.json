@@ -1,0 +1,16 @@
+{
+  "opcao_recomendada": 1,
+  "titulo_opcao": "Aplicar as três fontes em staging",
+  "justificativa": "O dry-run oficial isolado cumpre os limiares: 3 fontes, 32 itens, mapping_errors=0, critical_empty=0, documentos não perdidos, destino edital=32, sem suspeito no standardized e na amostra de payload, sem título ruído/login/institucional genérico na verificação automática. Flags semânticas remanescentes (publico_alvo_sem_evidencia, tipo_oportunidade_generico, fonte_defesa_sem_defesa) são melhorias incrementais, não bloqueadores de carga.",
+  "condicoes_previas": [
+    "Deploy do código Recovery B já integrado no branch que alimenta staging",
+    "Correr validate_full_staging_after_daily.py após apply",
+    "Não promover readiness global nem alterar source_readiness.json via este dry-run"
+  ],
+  "comando_apply_nao_executado": "python scripts/load_ready_sources.py --apply --staging --test-db-before-apply --sources amazul,ambev,badesul --exclude-blocked --input-dir audit_reports_main_pipeline/recovery_b_official_dryrun_standardized --readiness audit_reports_main_pipeline/recovery_b_readiness_official_dryrun.json --output-dir audit_reports_main_pipeline/recovery_b_official_loader_apply_bundle",
+  "nota_readiness_no_apply": "Para apply real em staging, alinhar --readiness ao ficheiro canónico ou atualizar temporariamente só o slice necessário; o JSON recovery_b_readiness_official_dryrun.json serve ao dry-run isolado.",
+  "alternativas_descartadas": {
+    "2_aplicar_so_algumas": "Não necessário: as três fontes passaram os mesmos gates.",
+    "3_nao_aplicar": "Reservado se a política de release exigir esperar outro batch ou revisão humana adicional além do já documentado."
+  }
+}

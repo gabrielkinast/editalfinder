@@ -1,0 +1,99 @@
+{
+  "fontes_mais_campos_vazios": [
+    {
+      "fonte_ou_ficheiro": "aneel|aneel_editais.json",
+      "indice_vazio_0_1": 0.4304
+    },
+    {
+      "fonte_ou_ficheiro": "finep|finep_editais.json",
+      "indice_vazio_0_1": 0.3333
+    }
+  ],
+  "campos_mais_vazios_global": [
+    {
+      "campo": "tipo_oportunidade",
+      "score": 200
+    },
+    {
+      "campo": "area",
+      "score": 200
+    },
+    {
+      "campo": "perfil_ideal",
+      "score": 200
+    },
+    {
+      "campo": "setor_economico",
+      "score": 200
+    },
+    {
+      "campo": "area_cientifica",
+      "score": 200
+    },
+    {
+      "campo": "area_tecnologica",
+      "score": 200
+    },
+    {
+      "campo": "setor_estrategico",
+      "score": 200
+    },
+    {
+      "campo": "documentos",
+      "score": 200
+    },
+    {
+      "campo": "fim_inscricao",
+      "score": 100
+    },
+    {
+      "campo": "publico_alvo",
+      "score": 67
+    },
+    {
+      "campo": "data_publicacao",
+      "score": 33
+    },
+    {
+      "campo": "valor",
+      "score": 33
+    },
+    {
+      "campo": "titulo",
+      "score": 0
+    },
+    {
+      "campo": "descricao",
+      "score": 0
+    },
+    {
+      "campo": "link",
+      "score": 0
+    },
+    {
+      "campo": "fonte",
+      "score": 0
+    },
+    {
+      "campo": "situacao",
+      "score": 0
+    },
+    {
+      "campo": "programa",
+      "score": 0
+    },
+    {
+      "campo": "acao",
+      "score": 0
+    },
+    {
+      "campo": "tipo_recurso",
+      "score": 0
+    }
+  ],
+  "fontes_com_zero_aceites_na_amostra": [
+    "bndes (bndes\\outputs\\bndes_editais.json)",
+    "cnpq (cnpq\\outputs\\cnpq_editais.json)"
+  ],
+  "n_fontes_zero_aceites": 2
+}

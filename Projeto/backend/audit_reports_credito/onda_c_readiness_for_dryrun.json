@@ -1,0 +1,21 @@
+{
+  "data_auditoria": "2026-05-10T03:14:11.241485+00:00",
+  "fontes_total": 3,
+  "status_distribution": {
+    "pronto_para_loader": 0,
+    "pronto_com_observacoes": 3,
+    "bloquear_temporariamente": 0,
+    "precisa_revisao_manual": 0,
+    "reprocessar_depois_de_ajuste": 0
+  },
+  "fontes_prontas_para_loader": [
+    "ukri_funding",
+    "eit",
+    "esa_osip"
+  ],
+  "fontes_bloqueadas_temporariamente": [],
+  "fontes_para_revisao": [],
+  "nota": "Apenas ukri_funding, eit, esa_osip como pronto_com_observacoes (lista única). innovate_uk, eurostars, esa_star fora de propósito.",
+  "top20_problemas_semanticos": [],
+  "top20_ajustes_recomendados": []
+}

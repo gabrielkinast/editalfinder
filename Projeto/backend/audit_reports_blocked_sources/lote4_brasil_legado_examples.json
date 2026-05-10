@@ -1,0 +1,54 @@
+{
+  "meta": {
+    "lote": 4,
+    "titulo": "Brasil / legado — exemplos de bruto por fonte",
+    "data_auditoria": "2026-05-01",
+    "observacao": "Amostras tiradas dos JSONs em outputs/; não inventar campos além do que existe no bruto."
+  },
+  "amazul": [],
+  "marinha": [],
+  "dcta_ita_iae": [],
+  "faperg": [],
+  "apex": [
+    {
+      "titulo": "Menu",
+      "link": "https://apexbrasil.com.br/content/apexbrasil/br/pt/eventos.html",
+      "descricao_curta": "Calendário de eventos ApexBrasil",
+      "problema": "titulo_ruido_exato / página de eventos, não chamada pública"
+    }
+  ],
+  "ambev": [
+    {
+      "titulo": "Water Stewardship",
+      "link": "https://www.100accelerator.com/challenges/water-stewardship",
+      "descricao_curta": "Challenge corporativo 100accelerator",
+      "problema": "opportunity_gate — texto EN genérico de desafio, poucos sinais de edital/licitação"
+    },
+    {
+      "titulo": "Climate",
+      "link": "https://www.100accelerator.com/challenges/climate",
+      "descricao_curta": "Challenge corporativo 100accelerator",
+      "problema": "opportunity_gate — texto EN genérico de desafio, poucos sinais de edital/licitação"
+    }
+  ],
+  "science_scraper": [
+    {
+      "titulo": "AI in Science Summit 2025",
+      "link": "https://research-and-innovation.ec.europa.eu/events/upcoming-events/ai-science-summit-2025-2025-11-03_en",
+      "fonte_bruto": "EC-AI",
+      "problema": "evento/agenda; gate — não edital"
+    },
+    {
+      "titulo": "Media Partnership: Choose Europe...",
+      "link": "https://events.euractiv.com/event/info/media-partnership-choose-europe-and-its-world-class-research-and-technology-infrastructures",
+      "fonte_bruto": "EC-Tech-Infra",
+      "problema": "parceria de mídia / evento"
+    },
+    {
+      "titulo": "In-Orbit Demonstration and Validation (IOD/IOV)",
+      "link": "https://ec.europa.eu/defence-industry-space/eu-space-policy/space-research-and-innovation/orbit-demonstration-and-validation-iodiov_en",
+      "fonte_bruto": "EC-Space",
+      "problema": "página temática EC; não chamada capturada como oportunidade no pipeline"
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "titulo": "Lote Crédito/Desenvolvimento — Onda A Brasil",
+  "data": "2026-05-05T04:25Z",
+  "fontes": [
+    "bnb",
+    "banco_da_amazonia",
+    "desenvolve_sp",
+    "bdmg",
+    "agerio"
+  ],
+  "restricoes": "Sem apply, sem Supabase, sem schema, sem alterar opportunity_gate.py (relaxamento apenas local em transformer para este lote).",
+  "pipeline": {
+    "retransform_dir": "audit_reports_credito/lote_credito_brasil_onda_a_fix",
+    "semantic_dir": "audit_reports_credito/lote_credito_brasil_onda_a_semantic",
+    "docs_dir": "audit_reports_credito/lote_credito_brasil_onda_a_docs",
+    "access_dir": "audit_reports_credito/lote_credito_brasil_onda_a_access"
+  },
+  "resumo_transformacao": {
+    "itens_brutos": 85,
+    "itens_transformados": 83,
+    "itens_rejeitados": 2
+  },
+  "classificacao_escopo_parte2": {
+    "tipos_oportunidade": [
+      "credito",
+      "financiamento",
+      "programa_credito",
+      "programa_inovacao",
+      "chamada_publica",
+      "edital",
+      "selecao_propostas",
+      "desenvolvimento_regional",
+      "apoio_empresarial"
+    ],
+    "tipos_recurso": [
+      "reembolsavel",
+      "nao_reembolsavel",
+      "subvensao",
+      "credito",
+      "financiamento",
+      "apoio_tecnico",
+      "apoio_inovacao"
+    ],
+    "perfil_ideal": [
+      "empresa",
+      "microempresa",
+      "pequena_empresa",
+      "media_empresa",
+      "startup",
+      "produtor_rural",
+      "cooperativa",
+      "municipio",
+      "instituicao_cientifica",
+      "universidade",
+      "ICT"
+    ],
+    "setores": [
+      "inovacao",
+      "industria",
+      "agro",
+      "energia",
+      "sustentabilidade",
+      "infraestrutura",
+      "ciencia_tecnologia",
+      "desenvolvimento_regional",
+      "comercio_servicos"
+    ],
+    "regras": [
+      "Crédito reembolsável: tipo_recurso financiamento_reembolsavel / natureza reembolsavel — não rotular como subvenção.",
+      "Subvenção apenas com evidência textual explícita.",
+      "Edital só com publicação/solicitação — não usar página institucional genérica.",
+      "Separar notícia de linha de crédito acionável por URL/canal e texto."
+    ]
+  },
+  "por_fonte": {
+    "bnb": {
+      "crawler": "bnb/main_bnb.py",
+      "existe_antes": false,
+      "urls_uteis": [
+        "https://www.bnb.gov.br/web/guest/produtos-e-servicos",
+        "https://www.bnb.gov.br/web/guest/solicitacao-de-credito",
+        "https://www.bnb.gov.br/web/guest/microcredito"
+      ],
+      "excluir": [
+        "/imprensa/",
+        "noticias",
+        "open-finance",
+        "educacao-financeira sem produto"
+      ],
+      "readiness_recomendado": "ready_with_notes",
+      "readiness_motivo": "Muitas páginas de crédito; filtro remove imprensa; alguns itens suspeitos (texto curto)."
+    },
+    "banco_da_amazonia": {
+      "crawler": "banco_da_amazonia/main_banco_da_amazonia.py",
+      "existe_antes": false,
+      "urls_uteis": [
+        "https://www.bancoamazonia.com.br/empresas/credito-e-financiamentos",
+        "https://www.bancoamazonia.com.br/rural/credito-e-financiamento-agro",
+        "https://www.bancoamazonia.com.br/linhas-de-fomento/fno"
+      ],
+      "excluir": [
+        "cartão PF genérico",
+        "seguros",
+        "só investimentos sem crédito"
+      ],
+      "readiness_recomendado": "ready_with_notes",
+      "readiness_motivo": "Cobertura boa de linhas; muitos itens com flag suspeito (revisar conteúdo mínimo)."
+    },
+    "desenvolve_sp": {
+      "crawler": "desenvolve_sp/main_desenvolve_sp.py",
+      "existe_antes": false,
+      "urls_uteis": [
+        "https://www.desenvolvesp.com.br/empresas/opcoes-de-credito/",
+        "https://www.desenvolvesp.com.br/empresas/guia-do-financiamento/como-solicitar/"
+      ],
+      "excluir": [
+        "WAF 403 em coleta automática — não burlar"
+      ],
+      "readiness_recomendado": "needs_manual_review",
+      "readiness_motivo": "HTTP 403 no scraper; seeds curados oficiais; enriquecimento de descrição depende de acesso humano ou acordo com o site."
+    },
+    "bdmg": {
+      "crawler": "bdmg/main_bdmg.py",
+      "existe_antes": false,
+      "urls_uteis": [
+        "https://www.bdmg.mg.gov.br/linhaspermanentes",
+        "https://www.bdmg.mg.gov.br/micro-empresa"
+      ],
+      "excluir": [
+        "relacao-investidores",
+        "termos de uso PDF genérico"
+      ],
+      "readiness_recomendado": "ready_with_notes",
+      "readiness_motivo": "Lista extensa; alguns PDFs externos podem falhar; revisar duplicatas por âncora #."
+    },
+    "agerio": {
+      "crawler": "agerio/main_agerio.py",
+      "existe_antes": false,
+      "urls_uteis": [
+        "https://www.agerio.com.br/linhas-de-credito/",
+        "https://www.agerio.com.br/areas-de-atuacao/tipo/empresas/"
+      ],
+      "excluir": [
+        "/noticias/",
+        "/agerio-orienta/dicas",
+        "/sem-categoria/",
+        "educacao financeira isolada"
+      ],
+      "readiness_recomendado": "needs_manual_review",
+      "readiness_motivo": "Poucos itens após filtros; uma página de área sem evidência de chamada foi rejeitada pelo gate."
+    }
+  },
+  "readiness_resumo": {
+    "bnb": "ready_with_notes",
+    "banco_da_amazonia": "ready_with_notes",
+    "desenvolve_sp": "needs_manual_review",
+    "bdmg": "ready_with_notes",
+    "agerio": "needs_manual_review"
+  }
+}

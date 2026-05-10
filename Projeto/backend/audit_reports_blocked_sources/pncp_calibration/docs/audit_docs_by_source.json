@@ -1,0 +1,367 @@
+[
+  {
+    "fonte": "pncp",
+    "arquivo": "pncp\\outputs\\pncp_editais.json",
+    "itens_amostra": 25,
+    "transformados": 25,
+    "rejeitados": 0,
+    "raw_com_pdf_url": 0,
+    "raw_com_documentos": 12,
+    "transformado_com_pdf_url": 0,
+    "transformado_com_documentos": 12,
+    "payload_com_pdf_url": 0,
+    "payload_com_documentos": 12,
+    "bruto_com_documentos_pdf": 0,
+    "bruto_com_documentos_nao_pdf": 12,
+    "transformado_com_documentos_pdf": 0,
+    "transformado_com_documentos_nao_pdf": 12,
+    "payload_com_documentos_pdf": 0,
+    "payload_com_documentos_nao_pdf": 12,
+    "perdas_pdf": 0,
+    "perdas_nao_pdf": 0,
+    "downloads_falharam": 0,
+    "downloads_sucesso": 0,
+    "links_invalidos": 0,
+    "links_relativos_restantes": 0,
+    "links_quebrados": 0,
+    "duplicados_documentos": 0,
+    "formatos_detectados": {
+      "outro": 12
+    },
+    "losses": [],
+    "download_failures": [],
+    "examples": [
+      {
+        "fonte": "pncp",
+        "titulo": "CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA A PRESTAÇÃO DE SERVIÇOS DE MONITORAMENTO 24 HORAS DO SISTEMA DE ACIONAMENTO ANTIGRANIZO DA DEFESA CIVIL DE CHAPECÓ.",
+        "link": "https://pncp.gov.br/app/editais/83021808000182-1-000187/2026",
+        "raw_pdf_url": "",
+        "transformado_pdf_url": "",
+        "payload_pdf_url": "",
+        "raw_docs_n": 0,
+        "transformado_docs_n": 0,
+        "payload_docs_n": 0,
+        "status_download": "nao_baixado",
+        "erro_download": "sem_pdf_url",
+        "docs_transformado_amostra": []
+      },
+      {
+        "fonte": "pncp",
+        "titulo": "Contratação de empresa especializada para a prestação de serviços continuados, com dedicação exclusiva de mão de obra, para alocação de postos de trabalho de Serviços Gerais de Limpeza, Cozinheiro (Preparação de Alimento",
+        "link": "https://pregaobanrisul.com.br/editais/0005_2026/350351",
+        "raw_pdf_url": "",
+        "transformado_pdf_url": "",
+        "payload_pdf_url": "",
+        "raw_docs_n": 1,
+        "transformado_docs_n": 1,
+        "payload_docs_n": 1,
+        "status_download": "nao_baixado",
+        "erro_download": "sem_pdf_url",
+        "docs_transformado_amostra": [
+          {
+            "titulo": "linkSistemaOrigem",
+            "url": "https://pregaobanrisul.com.br/editais/0005_2026/350351",
+            "tipo": "documento_desconhecido",
+            "formato": "outro",
+            "origem": "extras.documentos",
+            "status_download": "nao_baixado",
+            "erro_download": "",
+            "texto_extraido": "",
+            "resumo": ""
+          }
+        ]
+      },
+      {
+        "fonte": "pncp",
+        "titulo": "Contratação de empresa especializada, para a execução de manutenção corretiva no cabo rompido na subestação elétrica do Instituto de Previdência e Assistência dos Servidores Municipais de Canoas – CANOASPREV, compreenden",
+        "link": "https://pregaobanrisul.com.br/editais/0007_2026/350418",
+        "raw_pdf_url": "",
+        "transformado_pdf_url": "",
+        "payload_pdf_url": "",
+        "raw_docs_n": 1,
+        "transformado_docs_n": 1,
+        "payload_docs_n": 1,
+        "status_download": "nao_baixado",
+        "erro_download": "sem_pdf_url",
+        "docs_transformado_amostra": [
+          {
+            "titulo": "linkSistemaOrigem",
+            "url": "https://pregaobanrisul.com.br/editais/0007_2026/350418",
+            "tipo": "documento_desconhecido",
+            "formato": "outro",
+            "origem": "extras.documentos",
+            "status_download": "nao_baixado",
+            "erro_download": "",
+            "texto_extraido": "",
+            "resumo": ""
+          }
+        ]
+      },
+      {
+        "fonte": "pncp",
+        "titulo": "SOLICITAÇÃO DE SERVIÇO DE MANUTENÇÃO EM ROÇADEIRA E RETROECAVADEIRA DO DSM",
+        "link": "https://pmroseira.geosiap.net.br:8443/portal-transparencia/licitacoes/processo/30277",
+        "raw_pdf_url": "",
+        "transformado_pdf_url": "",
+        "payload_pdf_url": "",
+        "raw_docs_n": 1,
+        "transformado_docs_n": 1,
+        "payload_docs_n": 1,
+        "status_download": "nao_baixado",
+        "erro_download": "sem_pdf_url",
+        "docs_transformado_amostra": [
+          {
+            "titulo": "linkSistemaOrigem",
+            "url": "https://pmroseira.geosiap.net.br:8443/portal-transparencia/licitacoes/processo/30277",
+            "tipo": "documento_desconhecido",
+            "formato": "outro",
+            "origem": "extras.documentos",
+            "status_download": "nao_baixado",
+            "erro_download": "",
+            "texto_extraido": "",
+            "resumo": ""
+          }
+        ]
+      },
+      {
+        "fonte": "pncp",
+        "titulo": "Contratação de serviços de desobstrução de rede de esgoto e limpeza de caixas de passagem, destinados à EMEI Thereza de Jesus Trannin Pasin.",
+        "link": "https://pmroseira.geosiap.net.br:8443/portal-transparencia/licitacoes/processo/30279",
+        "raw_pdf_url": "",
+        "transformado_pdf_url": "",
+        "payload_pdf_url": "",
+        "raw_docs_n": 1,
+        "transformado_docs_n": 1,
+        "payload_docs_n": 1,
+        "status_download": "nao_baixado",
+        "erro_download": "sem_pdf_url",
+        "docs_transformado_amostra": [
+          {
+            "titulo": "linkSistemaOrigem",
+            "url": "https://pmroseira.geosiap.net.br:8443/portal-transparencia/licitacoes/processo/30279",
+            "tipo": "documento_desconhecido",
+            "formato": "outro",
+            "origem": "extras.documentos",
+            "status_download": "nao_baixado",
+            "erro_download": "",
+            "texto_extraido": "",
+            "resumo": ""
+          }
+        ]
+      },
+      {
+        "fonte": "pncp",
+        "titulo": "Contratação de empresa especializada na prestação de serviços de organização de eventos, compreendendo a decoração de espaços com fornecimento de materiais, para atender ao calendário de Formações Continuadas, Festividad",
+        "link": "https://pncp.gov.br/app/editais/25064080000170-1-000069/2026",
+        "raw_pdf_url": "",
+        "transformado_pdf_url": "",
+        "payload_pdf_url": "",
+        "raw_docs_n": 0,
+        "transformado_docs_n": 0,
+        "payload_docs_n": 0,
+        "status_download": "nao_baixado",
+        "erro_download": "sem_pdf_url",
+        "docs_transformado_amostra": []
+      },
+      {
+        "fonte": "pncp",
+        "titulo": "Contratação de Serviço",
+        "link": "https://pncp.gov.br",
+        "raw_pdf_url": "",
+        "transformado_pdf_url": "",
+        "payload_pdf_url": "",
+        "raw_docs_n": 1,
+        "transformado_docs_n": 1,
+        "payload_docs_n": 1,
+        "status_download": "nao_baixado",
+        "erro_download": "sem_pdf_url",
+        "docs_transformado_amostra": [
+          {
+            "titulo": "linkSistemaOrigem",
+            "url": "https://pncp.gov.br",
+            "tipo": "documento_desconhecido",
+            "formato": "outro",
+            "origem": "extras.documentos",
+            "status_download": "nao_baixado",
+            "erro_download": "",
+            "texto_extraido": "",
+            "resumo": ""
+          }
+        ]
+      },
+      {
+        "fonte": "pncp",
+        "titulo": "PROCESSO PARA AQUISIÇÃO DE QUADROS DE COMANDO PARA 2 BOMBAS PARA ATENDER O HINSG",
+        "link": "https://pncp.gov.br/app/editais/27080605002059-1-000072/2026",
+        "raw_pdf_url": "",
+        "transformado_pdf_url": "",
+        "payload_pdf_url": "",
+        "raw_docs_n": 0,
+        "transformado_docs_n": 0,
+        "payload_docs_n": 0,
+        "status_download": "nao_baixado",
+        "erro_download": "sem_pdf_url",
+        "docs_transformado_amostra": []
+      },
+      {
+        "fonte": "pncp",
+        "titulo": "[Portal de Compras Públicas] - AQUISIÇÃO DE GÊNEROS ALIMENTÍCIOS",
+        "link": "https://portaldecompraspublicas.com.br/processos/MG/Fundacao-Hospitalar-do-Municipio-de-Varginha-3328/DE-35-2026-2026-475680",
+        "raw_pdf_url": "",
+        "transformado_pdf_url": "",
+        "payload_pdf_url": "",
+        "raw_docs_n": 1,
+        "transformado_docs_n": 1,
+        "payload_docs_n": 1,
+        "status_download": "nao_baixado",
+        "erro_download": "sem_pdf_url",
+        "docs_transformado_amostra": [
+          {
+            "titulo": "linkSistemaOrigem",
+            "url": "https://portaldecompraspublicas.com.br/processos/MG/Fundacao-Hospitalar-do-Municipio-de-Varginha-3328/DE-35-2026-2026-475680",
+            "tipo": "documento_desconhecido",
+            "formato": "outro",
+            "origem": "extras.documentos",
+            "status_download": "nao_baixado",
+            "erro_download": "",
+            "texto_extraido": "",
+            "resumo": ""
+          }
+        ]
+      },
+      {
+        "fonte": "pncp",
+        "titulo": "CONTRATAÇÃO DE EMPRESA ESPECIALIZADA EM SERVIÇOS DE MANUTENÇÃO CORRETIVA, AVALIAÇÃO DE RISCOS ELETRICOS, INSPEÇÃO, REVISAO E MITIGAÇÃO DE RISCOS NO SISTEMA FOTOVOLTAICO",
+        "link": "https://pncp.gov.br/app/editais/80881915000192-1-000010/2026",
+        "raw_pdf_url": "",
+        "transformado_pdf_url": "",
+        "payload_pdf_url": "",
+        "raw_docs_n": 0,
+        "transformado_docs_n": 0,
+        "payload_docs_n": 0,
+        "status_download": "nao_baixado",
+        "erro_download": "sem_pdf_url",
+        "docs_transformado_amostra": []
+      },
+      {
+        "fonte": "pncp",
+        "titulo": "[LICITANET] - CONTRATAÇÃO DE EMPRESA PARA REALIZAÇÃO DE: - MANUTENÇÃO PREVENTIVA E CORRETIVA E SERVIÇO DE LAVAGEM, NO VEÍCULO FIAT TORO, PLACA QMF3036, PERTENCENTE AO PATRIMÔNIO DO CRO/SE; - SERVIÇO DE LAVAGEM E APLICAÇÃ",
+        "link": "https://licitanet.com.br/sessao/182156",
+        "raw_pdf_url": "",
+        "transformado_pdf_url": "",
+        "payload_pdf_url": "",
+        "raw_docs_n": 1,
+        "transformado_docs_n": 1,
+        "payload_docs_n": 1,
+        "status_download": "nao_baixado",
+        "erro_download": "sem_pdf_url",
+        "docs_transformado_amostra": [
+          {
+            "titulo": "linkSistemaOrigem",
+            "url": "https://licitanet.com.br/sessao/182156",
+            "tipo": "documento_desconhecido",
+            "formato": "outro",
+            "origem": "extras.documentos",
+            "status_download": "nao_baixado",
+            "erro_download": "",
+            "texto_extraido": "",
+            "resumo": ""
+          }
+        ]
+      },
+      {
+        "fonte": "pncp",
+        "titulo": "CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA A IMPLANTAÇÃO DE DEFENSA METÁLICA SIMPLES E SARJETA EM CONCRETO, NO MUNICÍPIO DE LAJEADO/RS, COM FORNECIMENTO DE MATERIAL E MÃO DE OBRA, DESTINADA À PARTICIPAÇÃO EXCLUSIVA DE MIC",
+        "link": "https://pregaobanrisul.com.br/editais/0002_2026/349695",
+        "raw_pdf_url": "",
+        "transformado_pdf_url": "",
+        "payload_pdf_url": "",
+        "raw_docs_n": 1,
+        "transformado_docs_n": 1,
+        "payload_docs_n": 1,
+        "status_download": "nao_baixado",
+        "erro_download": "sem_pdf_url",
+        "docs_transformado_amostra": [
+          {
+            "titulo": "linkSistemaOrigem",
+            "url": "https://pregaobanrisul.com.br/editais/0002_2026/349695",
+            "tipo": "documento_desconhecido",
+            "formato": "outro",
+            "origem": "extras.documentos",
+            "status_download": "nao_baixado",
+            "erro_download": "",
+            "texto_extraido": "",
+            "resumo": ""
+          }
+        ]
+      },
+      {
+        "fonte": "pncp",
+        "titulo": "Contratação de empresa para serviços de manutenção de rede de fibra óptica",
+        "link": "https://portal.tce.rs.gov.br/aplicprod/f?p=50500:10:::NO:10:P10_ID_LICITACAO,P10_PAG_RETORNO,F50500_CD_ORGAO:1517947,14,88048&cs=1ik-rUtPuwljCtQGE61UDdYBPEr8",
+        "raw_pdf_url": "",
+        "transformado_pdf_url": "",
+        "payload_pdf_url": "",
+        "raw_docs_n": 1,
+        "transformado_docs_n": 1,
+        "payload_docs_n": 1,
+        "status_download": "nao_baixado",
+        "erro_download": "sem_pdf_url",
+        "docs_transformado_amostra": [
+          {
+            "titulo": "linkSistemaOrigem",
+            "url": "https://portal.tce.rs.gov.br/aplicprod/f?p=50500:10:::NO:10:P10_ID_LICITACAO,P10_PAG_RETORNO,F50500_CD_ORGAO:1517947,14,88048&cs=1ik-rUtPuwljCtQGE61UDdYBPEr8",
+            "tipo": "documento_desconhecido",
+            "formato": "outro",
+            "origem": "extras.documentos",
+            "status_download": "nao_baixado",
+            "erro_download": "",
+            "texto_extraido": "",
+            "resumo": ""
+          }
+        ]
+      },
+      {
+        "fonte": "pncp",
+        "titulo": "[Portal de Compras Públicas] - Contratação de empresa para a aquisição de Splits (condensador e evaporador), a fim de atender às demandas da Câmara Municipal de Timon – MA",
+        "link": "https://portaldecompraspublicas.com.br/processos/MA/Camara-Municipal-de-Timon-4098/DE-008-2026-2026-474440",
+        "raw_pdf_url": "",
+        "transformado_pdf_url": "",
+        "payload_pdf_url": "",
+        "raw_docs_n": 1,
+        "transformado_docs_n": 1,
+        "payload_docs_n": 1,
+        "status_download": "nao_baixado",
+        "erro_download": "sem_pdf_url",
+        "docs_transformado_amostra": [
+          {
+            "titulo": "linkSistemaOrigem",
+            "url": "https://portaldecompraspublicas.com.br/processos/MA/Camara-Municipal-de-Timon-4098/DE-008-2026-2026-474440",
+            "tipo": "documento_desconhecido",
+            "formato": "outro",
+            "origem": "extras.documentos",
+            "status_download": "nao_baixado",
+            "erro_download": "",
+            "texto_extraido": "",
+            "resumo": ""
+          }
+        ]
+      },
+      {
+        "fonte": "pncp",
+        "titulo": "Contratação tem por objeto a Contratação de prestador de serviços técnicos especializados para execução de oficina de violão no CRAS, incluindo planejamento pedagógico, preparação de material didático, ministração de 4 a",
+        "link": "https://pncp.gov.br/app/editais/01613129000138-1-000032/2026",
+        "raw_pdf_url": "",
+        "transformado_pdf_url": "",
+        "payload_pdf_url": "",
+        "raw_docs_n": 0,
+        "transformado_docs_n": 0,
+        "payload_docs_n": 0,
+        "status_download": "nao_baixado",
+        "erro_download": "sem_pdf_url",
+        "docs_transformado_amostra": []
+      }
+    ],
+    "timestamp_utc": "2026-05-01T23:23:26Z"
+  }
+]

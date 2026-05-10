@@ -2,8 +2,17 @@ import re
 from datetime import datetime
 from urllib.parse import urljoin
 from typing import List, Optional
+from pathlib import Path
+import sys
 from utils_aneel import get_soup, normalize_text, extract_date, is_deadline_valid
 from models_aneel import EditalAneel
+
+ROOT_DIR = Path(__file__).resolve().parent.parent
+if str(ROOT_DIR) not in sys.path:
+    sys.path.append(str(ROOT_DIR))
+
+from CORE.http_fetch import fetch_pdf_bytes
+from CORE.pdf_enrichment import extract_pdf_text_with_fallback
 
 BASE_URL = "https://www.gov.br"
 
@@ -76,11 +85,29 @@ class AneelScraper:
                 
                 # Se for PDF direto
                 if url_lower.endswith(".pdf"):
+                    pdf_text = ""
+                    try:
+                        pdf_bytes = fetch_pdf_bytes(full_url, page_referer=current_url)
+                        if pdf_bytes:
+                            extracted = extract_pdf_text_with_fallback(pdf_bytes, max_pages=5) or ""
+                            pdf_text = normalize_text(extracted)[:2200]
+                    except Exception:
+                        pdf_text = ""
+                    title_from_pdf = self._guess_pdf_title(full_url, titulo, pdf_text)
                     editais_list.append(EditalAneel(
-                        titulo=titulo or "Edital ANEEL (PDF)",
+                        titulo=title_from_pdf,
                         link=full_url,
-                        descricao=titulo or "Documento de edital/chamada da ANEEL",
-                        extras={"fonte_original": current_url, "tipo": "PDF"}
+                        descricao=(pdf_text[:900] if pdf_text else titulo or "Documento de edital/chamada da ANEEL"),
+                        data_publicacao=extract_date(pdf_text) if pdf_text else None,
+                        fim_inscricao=self._extract_deadline_iso(pdf_text) if pdf_text else None,
+                        extras={
+                            "fonte_original": current_url,
+                            "tipo": "PDF",
+                            "pdf_url": full_url,
+                            "pdf_texto_extraido": pdf_text,
+                            "pdf_resumo": pdf_text[:500] if pdf_text else "",
+                            "metodo_extracao": "pdf_enriched",
+                        }
                     ))
                     continue
 
@@ -164,3 +191,20 @@ class AneelScraper:
                 "data_extracao": datetime.now().strftime("%Y-%m-%d")
             }
         )
+
+    def _guess_pdf_title(self, url: str, anchor_title: str, pdf_text: str) -> str:
+        for ln in (pdf_text or "").split("."):
+            txt = normalize_text(ln)
+            low = txt.lower()
+            if len(txt) < 12:
+                continue
+            if any(k in low for k in ["edital", "chamada", "concurso", "projeto p&d", "pdi", "termo de referência"]):
+                return txt[:240]
+        if anchor_title and len(anchor_title.strip()) > 8 and anchor_title.strip().lower() not in {"baixar", "edital", "english version"}:
+            return anchor_title.strip()[:240]
+        filename = url.split("/")[-1].replace(".pdf", "").replace("_", " ").replace("-", " ")
+        return f"ANEEL - {normalize_text(filename)[:180]}"
+
+    def _extract_deadline_iso(self, text: str) -> Optional[str]:
+        m = re.search(r"(\d{2}/\d{2}/\d{4})", text or "")
+        return extract_date(m.group(1)) if m else None
