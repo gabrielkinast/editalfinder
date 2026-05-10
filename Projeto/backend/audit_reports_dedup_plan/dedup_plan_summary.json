@@ -1,0 +1,17 @@
+{
+  "data_plano": "2026-05-01T20:50:02Z",
+  "input_dir": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_duplicates_db",
+  "total_grupos_avaliados": 50,
+  "merge_seguro": 13,
+  "revisar_manual": 37,
+  "manter_todos": 0,
+  "only_strong": false,
+  "include_fuzzy": false,
+  "proposal_future_implementation": {
+    "merge_extras": "merge profundo sem sobrescrever não-vazio por vazio",
+    "merge_documentos": "dedupe por URL em extras.documentos",
+    "preservar_ids_antigos": "registrar em extras.merged_from_ids",
+    "historico": "registrar operação em edital_historico",
+    "desativar_duplicatas": "marcar ativo=false no futuro sem delete"
+  }
+}

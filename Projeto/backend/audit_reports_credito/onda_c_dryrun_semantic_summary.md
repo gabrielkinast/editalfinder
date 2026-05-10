@@ -1,0 +1,41 @@
+# Onda C — auditoria semântica (dry-run dir)
+
+- **Exit:** 0
+
+## setor_estrategico > 3 (varredura direta nos 3 JSON)
+
+- **count:** 0
+
+## audit_semantic_summary (flags)
+
+```json
+{
+  "data_auditoria": "2026-05-10T03:14:25Z",
+  "fontes": 3,
+  "itens_total": 45,
+  "flags_totais": {
+    "publico_alvo_sem_evidencia": 14,
+    "classificacao_muito_ampla": 1
+  },
+  "top20_problemas_semanticos": [
+    [
+      "publico_alvo_sem_evidencia",
+      14
+    ],
+    [
+      "classificacao_muito_ampla",
+      1
+    ]
+  ],
+  "top20_ajustes_recomendados": [
+    "Restringir perfil_ideal genérico por evidência textual mínima.",
+    "Separar regras de crédito vs fomento por fonte + palavras-chave obrigatórias.",
+    "Exigir marcador de licitação para tipo_oportunidade=licitacao/compra_publica.",
+    "Reduzir classificação ampla quando classficacao_confianca=baixa.",
+    "Para fontes nucleares/defesa: usar peso institucional + objeto para evitar over/under tag.",
+    "Fortalecer extração de publico_alvo por entidades explícitas.",
+    "Adicionar fallback de área para itens com tipo_recurso definido e área vazia.",
+    "Revisar taxonomia em fontes com flag_rate > 100%."
+  ]
+}
+```

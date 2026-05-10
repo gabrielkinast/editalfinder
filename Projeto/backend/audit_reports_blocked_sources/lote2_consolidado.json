@@ -1,0 +1,59 @@
+{
+  "data": "2026-05-02",
+  "titulo": "Consolidação lote 2 — alinhamento readiness canónico",
+  "causa_desfasamento_retransform_readiness": [
+    "O script retransform_all.py, quando invocado com --sources, gravava apenas as linhas dessas fontes em retransform_by_source.json, substituindo o relatório completo (~94 fontes) por um subconjunto — o build_loader_readiness lia então contagens erradas ou parciais.",
+    "Corridas com --output-dir fora de audit_reports_retransform/ deixavam o ficheiro canónico sem actualização.",
+    "readiness_for_loader.json nunca leu standardized/ directamente; depende sempre de retransform_by_source.json + risco + semântica + acesso.",
+    "iarpa ficava bloqueada com risco crawler_fraco + access_http_403 mesmo com itens transformados > 0 — a heurística de bloqueio não considerava sucesso de transformação.",
+    "sam_gov: linha antiga (2 brutos / 0 transformados) persistia no merge até correr retransform só para sam_gov; com bruto [] a regra explícita sam_gov + trf==0 mantém bloqueio."
+  ],
+  "correcoes_codigo": [
+    "scripts/retransform_all.py: merge ao gravar retransform_by_source.json e standardized_old_vs_new.json quando --sources está definido (preserva as outras fontes).",
+    "scripts/build_loader_readiness.py: argumentos --retransform-by-source, --old-vs-new, --risk-dir, --semantic-dir, --output-dir; não bloquear por crawler_fraco/access se itens_transformados > 0; pronto_com_observacoes para alta taxa de incompletos (>=85%) ou risco gate_agressivo ou acesso limitado; sam_gov sem transformados mantém bloqueio."
+  ],
+  "fontes_prontas_staging": [
+    "horizon_europe",
+    "erc",
+    "doe_arpae",
+    "nato_diana",
+    "iarpa"
+  ],
+  "fontes_pendentes": ["sam_gov"],
+  "readiness_canonico_pos_alinhamento": {
+    "ficheiro": "audit_reports_retransform/readiness_for_loader.json",
+    "data_auditoria": "2026-05-02T11:32:10Z",
+    "recomendacao_loader_por_fonte": {
+      "horizon_europe": "pronto_com_observacoes",
+      "erc": "pronto_com_observacoes",
+      "doe_arpae": "pronto_com_observacoes",
+      "nato_diana": "pronto_com_observacoes",
+      "iarpa": "pronto_com_observacoes",
+      "sam_gov": "bloquear_temporariamente"
+    },
+    "sam_gov_em_bloqueadas": true
+  },
+  "retransform_consolidada": {
+    "comando_lote2": "python scripts/retransform_all.py --sources horizon_europe,erc,doe_arpae,nato_diana,iarpa --dry-run --output-dir audit_reports_retransform",
+    "comando_copia": "python scripts/retransform_all.py --sources horizon_europe,erc,doe_arpae,nato_diana,iarpa --dry-run --output-dir audit_reports_retransform_lote2_ready",
+    "comando_sam_gov": "python scripts/retransform_all.py --sources sam_gov --dry-run --output-dir audit_reports_retransform",
+    "retransform_by_source_total_linhas": 94
+  },
+  "dry_run_loader_readiness_canonico": {
+    "comando": "python scripts/load_ready_sources.py --dry-run --sources horizon_europe,erc,doe_arpae,nato_diana,iarpa --exclude-blocked --input-dir audit_reports_retransform/standardized --readiness audit_reports_retransform/readiness_for_loader.json",
+    "sources_selected": 5,
+    "would_upsert_total": 57,
+    "mapping_errors_total": 0,
+    "critical_empty_items_total": 0
+  },
+  "slice_lote2_readiness": {
+    "ficheiro": "audit_reports_blocked_sources/lote2_readiness_for_loader_apply_slice.json",
+    "estado": "DEPRECATED — não necessário após alinhamento canónico."
+  },
+  "restricoes_respeitadas": [
+    "apply não executado",
+    "sem alteração ao gate global",
+    "sem migration"
+  ],
+  "nota_supabase": "load_ready_sources em dry-run pode registar execução em carga_execucao se credenciais existirem (comportamento do script)."
+}

@@ -1,0 +1,52 @@
+{
+  "fonte": "horizon_europe",
+  "arquivo_analisado": "horizon_europe/outputs/horizon_europe_editais.json",
+  "data_auditoria": "2026-05-02",
+  "total_itens": 18,
+  "resumo_contagens": {
+    "pagina_institucional_generica": 18,
+    "variante_idioma": 18,
+    "programa_geral": 18,
+    "funding_topic": 0,
+    "call_for_proposals": 0,
+    "work_programme": 0,
+    "documento": 1,
+    "outro": 0
+  },
+  "nota_sobre_documento": "Apenas o primeiro item (horizon-europe_en) traz PDFs institucionais anexados; os restantes repetem o mesmo conteúdo textual sem anexos ou com menos metadados.",
+  "padrao_url": "research-and-innovation.ec.europa.eu/.../funding-programmes-and-open-calls/horizon-europe_XX com XX = código de idioma (en, bg, es, ...).",
+  "problema": "Mesma página descritiva do programa Horizon Europe em variantes multilíngues; sem topic id, call id, deadline ou metadados de concurso.",
+  "pos_correcao_crawler_2026_05_02": {
+    "registos_brutos": 25,
+    "tipo": "topic-details horizon-*",
+    "retransform_dry_run": "audit_reports_blocked_sources/lote2_fix_horizon",
+    "transformados": 25,
+    "suspeitos": 25,
+    "auditoria_semantica_flags": {"oportunidade_fomento_sem_fomento": 25}
+  },
+  "fonte_publica_recomendada": {
+    "descricao": "Listagem HTML estática do portal Funding & Tenders com links diretos para topic-details (público, sem login).",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/data/topic-list.html",
+    "filtro_sugerido": "Apenas hrefs que contenham /topic-details/horizon- (tópicos do programa Horizon Europe)."
+  },
+  "itens": [
+    {"indice": 0, "link": "https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe_en", "classificacoes": ["pagina_institucional_generica", "variante_idioma", "programa_geral", "documento"], "titulo": "Horizon Europe"},
+    {"indice": 1, "link": "https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe_bg", "classificacoes": ["pagina_institucional_generica", "variante_idioma", "programa_geral"], "titulo": "Horizon Europe"},
+    {"indice": 2, "link": "https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe_es", "classificacoes": ["pagina_institucional_generica", "variante_idioma", "programa_geral"], "titulo": "Horizon Europe"},
+    {"indice": 3, "link": "https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe_cs", "classificacoes": ["pagina_institucional_generica", "variante_idioma", "programa_geral"], "titulo": "Horizon Europe"},
+    {"indice": 4, "link": "https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe_da", "classificacoes": ["pagina_institucional_generica", "variante_idioma", "programa_geral"], "titulo": "Horizon Europe"},
+    {"indice": 5, "link": "https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe_de", "classificacoes": ["pagina_institucional_generica", "variante_idioma", "programa_geral"], "titulo": "Horizon Europe"},
+    {"indice": 6, "link": "https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe_et", "classificacoes": ["pagina_institucional_generica", "variante_idioma", "programa_geral"], "titulo": "Horizon Europe"},
+    {"indice": 7, "link": "https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe_el", "classificacoes": ["pagina_institucional_generica", "variante_idioma", "programa_geral"], "titulo": "Horizon Europe"},
+    {"indice": 8, "link": "https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe_fr", "classificacoes": ["pagina_institucional_generica", "variante_idioma", "programa_geral"], "titulo": "Horizon Europe"},
+    {"indice": 9, "link": "https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe_ga", "classificacoes": ["pagina_institucional_generica", "variante_idioma", "programa_geral"], "titulo": "Horizon Europe"},
+    {"indice": 10, "link": "https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe_hr", "classificacoes": ["pagina_institucional_generica", "variante_idioma", "programa_geral"], "titulo": "Horizon Europe"},
+    {"indice": 11, "link": "https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe_it", "classificacoes": ["pagina_institucional_generica", "variante_idioma", "programa_geral"], "titulo": "Horizon Europe"},
+    {"indice": 12, "link": "https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe_lv", "classificacoes": ["pagina_institucional_generica", "variante_idioma", "programa_geral"], "titulo": "Horizon Europe"},
+    {"indice": 13, "link": "https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe_lt", "classificacoes": ["pagina_institucional_generica", "variante_idioma", "programa_geral"], "titulo": "Horizon Europe"},
+    {"indice": 14, "link": "https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe_hu", "classificacoes": ["pagina_institucional_generica", "variante_idioma", "programa_geral"], "titulo": "Horizon Europe"},
+    {"indice": 15, "link": "https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe_mt", "classificacoes": ["pagina_institucional_generica", "variante_idioma", "programa_geral"], "titulo": "Horizon Europe"},
+    {"indice": 16, "link": "https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe_nl", "classificacoes": ["pagina_institucional_generica", "variante_idioma", "programa_geral"], "titulo": "Horizon Europe"},
+    {"indice": 17, "link": "https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe_pl", "classificacoes": ["pagina_institucional_generica", "variante_idioma", "programa_geral"], "titulo": "Horizon Europe"}
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "fonte": "banco_da_amazonia",
+  "timestamp": "2026-05-10T04:09:23Z",
+  "retransform": {
+    "itens_brutos_encontrados": 26,
+    "itens_transformados": 26,
+    "itens_rejeitados": 0,
+    "itens_incompletos": 26,
+    "itens_suspeitos": 0
+  },
+  "exclusoes_crawler": [
+    "solucoes-pf",
+    "pessoa-fisica",
+    "renegociacao",
+    "conta-pj",
+    "concurso",
+    "internet-banking",
+    "fale-conosco",
+    "ouvidoria"
+  ],
+  "sample_titulos": [
+    "Crédito e financiamento",
+    "PRONAF",
+    "FUNGETUR",
+    "BNDES Finame",
+    "BNDES Automático - Linha Projeto deInvestimento Rural",
+    "BNDES Automático - Projeto de Investimento Não Rural",
+    "Plano Safra",
+    "Relatórios do FNO"
+  ]
+}

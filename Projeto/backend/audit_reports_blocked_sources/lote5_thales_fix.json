@@ -1,0 +1,58 @@
+{
+  "meta": {
+    "fonte": "thales_suppliers",
+    "data_relatorio": "2026-05-03T22:33:00Z",
+    "restricoes_respeitadas": [
+      "opportunity_gate global não alterado",
+      "Loader apply não executado",
+      "Supabase não alterado",
+      "Migrations não aplicadas",
+      "source_readiness.json não atualizado automaticamente"
+    ]
+  },
+  "alteracoes_codigo": [
+    "thales_suppliers/thales_harvest.py: colheita relaxada (âncoras curtas + sinais na URL), filtro careers/news/press/contact/etc., manifesto oficial Key documents (3 PDFs), item hub resumido quando HTML bloqueado.",
+    "thales_suppliers/main_thales_suppliers.py: merge scrape_html_portal + harvest; dominio thalesgroup.com.",
+    "CORE/taxonomy_filtros.py: calibração thales_suppliers (origem_portal Thales, idioma en, regiao Internacional, curadoria_referencia lote5_thales_fix, validacao_status para PDF/hub)."
+  ],
+  "pipeline_executado": {
+    "crawler": "python thales_suppliers/main_thales_suppliers.py",
+    "retransform": "python scripts/retransform_all.py --sources thales_suppliers --dry-run --output-dir audit_reports_blocked_sources/lote5_fix_thales",
+    "semantic": "python scripts/audit_semantic_classification.py --input-dir audit_reports_blocked_sources/lote5_fix_thales/standardized --output-dir audit_reports_blocked_sources/lote5_fix_thales_semantic",
+    "docs": "python scripts/audit_docs_pipeline.py --sources thales_suppliers --output-dir audit_reports_blocked_sources/lote5_fix_thales_docs"
+  },
+  "resultado_bruto": {
+    "ficheiro": "thales_suppliers/outputs/thales_suppliers_editais.json",
+    "itens": 4,
+    "composicao": [
+      "1 hub /supplier (curated_hub_summary ou html se disponível)",
+      "3 PDFs Key documents (curated_official_manifest)"
+    ]
+  },
+  "resultado_retransform": {
+    "standardized": "audit_reports_blocked_sources/lote5_fix_thales/standardized/thales_suppliers_standardized.json",
+    "itens_transformados": 4,
+    "itens_rejeitados": 0,
+    "resumo_path": "audit_reports_blocked_sources/lote5_fix_thales/retransform_by_source.json"
+  },
+  "auditoria_semantica": {
+    "summary": "audit_reports_blocked_sources/lote5_fix_thales_semantic/audit_semantic_summary.json",
+    "itens_total": 4,
+    "top20_problemas_semanticos": []
+  },
+  "auditoria_documentos": {
+    "summary": "audit_reports_blocked_sources/lote5_fix_thales_docs/audit_docs_summary.json",
+    "itens_analisados": 4,
+    "raw_com_pdf_url": 3,
+    "downloads_falharam": 3,
+    "downloads_sucesso": 0,
+    "nota": "Script de auditoria de docs pode falhar download por WAF; crawler em runtime obteve texto PDF para enriquecer GRAEP (e possivelmente outros) quando bytes PDF válidos."
+  },
+  "recomendacao_readiness": "ready_with_notes",
+  "justificativa_readiness": [
+    "4 itens oficiais com ação de procurement/fornecedor (hub + 3 PDFs contratuais).",
+    "Dependência de manifesto + WAF Incapsula — convém revisão humana periódica de URLs e datas dos ficheiros em /sites/default/files/.",
+    "Não bloqueado: conteúdo não é careers/news vazio; sem bypass de login.",
+    "Não recomendado como ready pleno: parte da colheita não vem de DOM vivo em todos os ambientes."
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "data_auditoria": "2026-05-05T12:00:00Z",
+  "nota": "Readiness temporário só para dry-run oficial Recovery A (BASA + DoD). Não substitui audit_reports_retransform/readiness_for_loader.json nem config/source_readiness.json.",
+  "fontes_total": 2,
+  "status_distribution": {
+    "pronto_para_loader": 2,
+    "pronto_com_observacoes": 0,
+    "bloquear_temporariamente": 0,
+    "precisa_revisao_manual": 0,
+    "reprocessar_depois_de_ajuste": 0
+  },
+  "fontes_prontas_para_loader": [
+    "banco_da_amazonia",
+    "dod_sbir_sttr"
+  ],
+  "fontes_bloqueadas_temporariamente": [
+    "esa_star"
+  ],
+  "fontes_para_revisao": []
+}

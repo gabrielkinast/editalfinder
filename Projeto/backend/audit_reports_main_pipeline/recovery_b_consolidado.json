@@ -1,0 +1,209 @@
+{
+  "titulo": "Recovery B — consolidado pós-apply staging e validação global",
+  "data_consolidacao_iso": "2026-05-10",
+  "fontes_recovery_b": ["amazul", "ambev", "badesul"],
+  "objetivo": "Reduzir edital.suspeito_ativo_true nas fontes AMAZUL, Ambev e BADESUL sem promover ruído a oportunidade, sem alterar opportunity_gate global, schema ou readiness oficial; apply apenas staging após dry-run isolado.",
+  "alteracoes_codigo_e_crawler": {
+    "CORE_item_quality": "Ramos para opportunity_gate_relaxed com scopes amazul_local, ambev_local e badesul_local: validacao_status passa a incompleto (avisos recovery_b_*_gate_relaxed) em vez de suspeito por defeito.",
+    "CORE_transformer": "calibrate_badesul_extras para fonte badesul; _amazul_soft_continue e _badesul_soft_continue aceitam também gate reason 'Noticia ou pagina generica'.",
+    "CORE_taxonomy_filtros": "calibrate_badesul_extras: ajuste de tipo_oportunidade quando há evidência de edital/subvenção/crédito; contenção de setor_estrategico defesa/aero sem evidência textual.",
+    "badesul_main": "Filtro de ruído (lista de entidades / entidades inscritas); remoção do fallback institucional para badesul.com.br/home; save_outputs com allow_empty quando a coleta vem vazia."
+  },
+  "dry_run_oficial": {
+    "referencias": [
+      "audit_reports_main_pipeline/recovery_b_official_loader_dryrun.json",
+      "audit_reports_main_pipeline/recovery_b_official_semantic_summary.json",
+      "audit_reports_main_pipeline/recovery_b_official_apply_recommendation.json",
+      "audit_reports_main_pipeline/recovery_b_official_dryrun_context.json"
+    ],
+    "resumo": {
+      "sources_selected": 3,
+      "would_upsert_total": 32,
+      "mapping_errors_total": 0,
+      "critical_empty_items_total": 0,
+      "documentos_perdidos_no_payload_total": 0,
+      "destination_counts_total": { "edital": 32 },
+      "validacao_suspeito_standardized": 0,
+      "flags_semanticas_nao_bloqueantes": {
+        "publico_alvo_sem_evidencia": 10,
+        "tipo_oportunidade_generico": 3,
+        "fonte_defesa_sem_defesa": 2
+      }
+    }
+  },
+  "apply_staging": {
+    "detectado": true,
+    "fonte_relatorio": "audit_reports_loader_ready/staging_load_summary.json",
+    "data_auditoria_relatorio": "2026-05-10T05:43:54Z",
+    "apply_status": "applied_to_staging",
+    "sources_selected": 3,
+    "total_itens_processados": 32,
+    "inseridos": 1,
+    "atualizados": 31,
+    "erros": 0,
+    "nota": "Execução alinhada ao pacote Recovery B (três fontes). Histórico adicional: audit_reports_loader_ready/load_execution_history.jsonl."
+  },
+  "validacao_global_pos_recovery_b": {
+    "fonte": "audit_reports_main_pipeline/post_daily_validation.json",
+    "timestamp": "2026-05-10T05:51:55Z",
+    "environment": "staging",
+    "ok": true,
+    "critical_errors_count": 0,
+    "warnings_count": 4,
+    "warnings": [
+      { "problem": "prazo_vencido_ativo_true", "count": 48 },
+      { "problem": "credito_tipo_recurso_incoerente", "count": 6 },
+      { "problem": "setor_estrategico_muito_amplo", "count": 72 },
+      { "problem": "suspeito_ativo_true", "count": 47 }
+    ]
+  },
+  "metricas_globais_antes_recovery_b": {
+    "nota": "Valores fornecidos pela equipa (baseline imediatamente antes da onda Recovery B em staging).",
+    "suspeito_ativo_true": 61,
+    "prazo_vencido_ativo_true": 41,
+    "credito_tipo_recurso_incoerente": 4,
+    "setor_estrategico_muito_amplo": 72
+  },
+  "metricas_globais_depois_recovery_b": {
+    "fonte": "post_daily_validation.json (mesmo run que post_daily_warning_examples.json)",
+    "suspeito_ativo_true": 47,
+    "prazo_vencido_ativo_true": 48,
+    "credito_tipo_recurso_incoerente": 6,
+    "setor_estrategico_muito_amplo": 72
+  },
+  "deltas_globais": {
+    "suspeito_ativo_true": -14,
+    "prazo_vencido_ativo_true": 7,
+    "credito_tipo_recurso_incoerente": 2,
+    "setor_estrategico_muito_amplo": 0
+  },
+  "impacto_nas_tres_fontes_suspeito_ativo_true": {
+    "nota": "Agregado edital.suspeito_ativo_true.by_source em post_daily_warning_examples.json (pós Recovery B) vs baseline documentado na Recovery B (pré: AMAZUL 14, Ambev 7, BADESUL 7).",
+    "pre_documentado_por_fonte": { "AMAZUL": 14, "Ambev": 7, "BADESUL": 7 },
+    "pos_staging_por_fonte": { "AMAZUL": 12, "Ambev": 0, "BADESUL": 2 },
+    "delta_por_fonte": { "AMAZUL": -2, "Ambev": -7, "BADESUL": -5 },
+    "delta_soma_tres_fontes": -14,
+    "coerencia_com_delta_global": "A queda global de 14 em suspeito_ativo_true corresponde à soma das quedas nas três fontes prioritárias."
+  },
+  "interpretacao_aumentos_prazo_e_credito": [
+    "Itens que deixaram suspeito e passaram a incompleto ou válido passam a ser contabilizados por regras de negócio que antes não se aplicavam da mesma forma ao estado suspeito ou a campos ainda vazios.",
+    "prazo_vencido_ativo_true (+7): muitos editais ativos com data de fim já ultrapassada; ao normalizar validacao_status e carregar dados frescos (ex.: AMAZUL com linhas em prazo_vencido no by_source), o validador marca mais ocorrências — efeito esperado, não regressão de integridade.",
+    "credito_tipo_recurso_incoerente (+2): regra de coerência entre tipo_recurso crédito e texto/tipo_oportunidade; AMAZUL aparece com 2 no by_source pós Recovery B — possível exposição de casos antes mascarados pelo bucket suspeito ou por atualização de tipo/calibragem.",
+    "setor_estrategico_muito_amplo (72 estável): fora do âmbito desta Recovery; permanece para onda futura."
+  ],
+  "warnings_restantes_resumo": {
+    "fonte_agregados": "audit_reports_main_pipeline/post_daily_warning_examples.json",
+    "timestamp": "2026-05-10T05:51:55Z",
+    "totais_por_problema_warning": {
+      "prazo_vencido_ativo_true": 48,
+      "credito_tipo_recurso_incoerente": 6,
+      "setor_estrategico_muito_amplo": 72,
+      "suspeito_ativo_true": 47
+    },
+    "titulo_ruidoso_inativo": {
+      "severity": "info",
+      "count": 6,
+      "nota": "Presente em summary_by_warning; não entra nos 4 warnings de post_daily_validation.json"
+    },
+    "suspeito_ativo_true_top_fontes": {
+      "AMAZUL": 12,
+      "General Dynamics Suppliers": 6,
+      "Petrobras": 4,
+      "Apex Brasil": 4,
+      "BASA": 3,
+      "Lockheed Martin Suppliers": 3,
+      "BADESUL": 2,
+      "BAE Systems Suppliers": 2,
+      "EIT": 2,
+      "SENAI": 2,
+      "Softex": 2,
+      "Rheinmetall Suppliers": 2,
+      "ESA OSIP": 1,
+      "Thales Suppliers": 1,
+      "UKRI Funding": 1
+    },
+    "recovery_b_fontes_em_warnings_by_source": {
+      "AMAZUL": { "total": 21, "prazo_vencido_ativo_true": 7, "credito_tipo_recurso_incoerente": 2, "suspeito_ativo_true": 12 },
+      "BADESUL": { "total": 2, "suspeito_ativo_true": 2 },
+      "Ambev": "Sem entrada em warnings_by_source (0 avisos agregados para esta fonte no ficheiro atual)."
+    }
+  },
+  "restricoes_respeitadas": [
+    "Nenhum novo apply neste consolidado.",
+    "Sem alteração a schema, readiness oficial (config/source_readiness.json e audit_reports_retransform/readiness_for_loader.json), ou opportunity_gate global."
+  ],
+  "proximos_passos": [
+    "Recovery C ou onda dedicada: prazo_vencido_ativo_true (política ativo vs arquivo, reprocessar datas).",
+    "Afinar credito_tipo_recurso_incoerente nas fontes afetadas (incl. AMAZUL se persistir).",
+    "Onda setor_estrategico_muito_amplo (72) independente desta Recovery.",
+    "Rever os 12 suspeitos remanescentes AMAZUL e 2 BADESUL (curadoria pontual, sem desativação em massa).",
+    "Manter validate_full_staging_after_daily.py --staging no pipeline após cargas relevantes."
+  ],
+  "padrao_documentacao_onda": {
+    "resumo_executivo": "A Recovery B relaxou gates locais para AMAZUL, Ambev e BADESUL, desviando casos limítrofes de suspeito automático para incompleto com avisos dedicados, e endureceu ruído BADESUL. O apply staging processou 32 itens (3 fontes) sem erros de loader. A validação global manteve ok=true e zero críticos. O ganho central foi suspeito_ativo_true global 61→47 (−14), alinhado à soma das quedas nas três fontes. Prazo vencido (+7) e crédito incoerente (+2) subiram no agregado por reexposição de regras a itens antes mascarados como suspeito — interpretação no relatório, não regressão de integridade.",
+    "problema_original": "Excesso de editais marcados como suspeito_ativo_true em AMAZUL, Ambev e BADESUL por gates genéricos, com risco de esconder oportunidades reais ou de promover ruído (home BADESUL, listagens).",
+    "fontes_tratadas": ["amazul", "ambev", "badesul"],
+    "resultado_principal": "Queda de 14 em suspeito_ativo_true global, coerente com AMAZUL −2, Ambev −7, BADESUL −5 em suspeitos por fonte. Dry-run oficial: 32 itens, 0 erros de mapeamento, 0 vazios críticos. Ambev saiu do agregado de suspeitos no snapshot documentado.",
+    "metricas_antes_depois": {
+      "suspeito_ativo_true": { "antes": 61, "depois": 47, "variacao": -14, "interpretacao": "melhora — objetivo principal da Recovery B" },
+      "prazo_vencido_ativo_true": { "antes": 41, "depois": 48, "variacao": 7, "interpretacao": "variação esperada ao normalizar estados; mais linhas sujeitas à regra de prazo" },
+      "credito_tipo_recurso_incoerente": { "antes": 4, "depois": 6, "variacao": 2, "interpretacao": "aparente aumento por exposição de coerência; AMAZUL +2 no contexto pós-B" },
+      "setor_estrategico_muito_amplo": { "antes": 72, "depois": 72, "variacao": 0, "interpretacao": "fora do escopo desta recovery" }
+    },
+    "interpretacao": {
+      "ganhos": [
+        "Redução forte de suspeitos nas três fontes-alvo; Ambev a zero suspeitos no agregado analisado.",
+        "Carga staging 32 itens sem falhas de mapeamento ou payload crítico.",
+        "Validação global permanece saudável (ok=true, critical 0)."
+      ],
+      "regressoes_aparentes": [
+        "prazo_vencido_ativo_true e credito_tipo_recurso_incoerente subiram no total global — explicável por mudança de estado de suspeito para incompleto/válido e por regras de negócio mais visíveis."
+      ],
+      "sem_mudanca": [
+        "setor_estrategico_muito_amplo estável em 72 — não era meta desta onda."
+      ],
+      "limitacoes": [
+        "A recovery não resolve dívida transversal de prazo nem setor amplo.",
+        "AMAZUL ainda concentra 12 suspeitos e 7 prazos vencidos — trabalho residual."
+      ]
+    },
+    "decisao_recomendada": {
+      "acao": "concluir_recovery",
+      "justificativa": "Objetivo de redução de suspeitos nas três fontes foi atingido com staging estável; aumentos colaterais em outras métricas foram antecipados e documentados.",
+      "proximo_alvo": "Onda Recovery C ou equivalente: prazo_vencido_ativo_true; depois crédito incoerente remanescente; onda dedicada setor_estrategico_muito_amplo."
+    },
+    "riscos": [
+      "Interpretação errada dos +7 prazo / +2 crédito como 'piora' sem ler a nota de método.",
+      "12 suspeitos AMAZUL ainda exigem curadoria; BADESUL mantém 2.",
+      "Flags semânticas (publico_alvo, etc.) continuam como dívida incremental."
+    ],
+    "proximos_passos": [
+      "Definir política de arquivo / ativo para prazo_vencido_ativo_true.",
+      "Recovery B.1 ou afinações por fonte para crédito incoerente onde persistir (ex.: AMAZUL).",
+      "Planejar onda setor_estrategico_muito_amplo.",
+      "Curadoria pontual suspeitos remanescentes AMAZUL/BADESUL.",
+      "Manter validate_full_staging_after_daily.py --staging após cargas."
+    ],
+    "evidencias_tecnicas": {
+      "arquivos_lidos": [
+        "audit_reports_main_pipeline/post_daily_validation.json",
+        "audit_reports_main_pipeline/post_daily_warning_examples.json",
+        "audit_reports_loader_ready/staging_load_summary.json",
+        "audit_reports_main_pipeline/recovery_b_official_loader_dryrun.json",
+        "audit_reports_main_pipeline/recovery_b_official_semantic_summary.json",
+        "audit_reports_main_pipeline/recovery_b_official_apply_recommendation.json"
+      ],
+      "arquivos_gerados": [
+        "audit_reports_main_pipeline/recovery_b_consolidado.md",
+        "audit_reports_main_pipeline/recovery_b_consolidado.json"
+      ],
+      "comandos": [
+        "Ver recovery_b_official_loader_dryrun.json e recovery_b_official_apply_recommendation.json para o ciclo dry-run/apply documentado."
+      ],
+      "apply_executado": false,
+      "nota_apply": "Apply Recovery B em staging já realizado pela equipa (2026-05-10); este consolidado não reexecuta apply.",
+      "schema_alterado": false,
+      "supabase_tocado": false
+    }
+  }
+}

@@ -1,0 +1,161 @@
+{
+  "referencia_antiga": "audit_reports_credito\\lote_credito_brasil_onda_a_semantic_fix\\standardized",
+  "referencia_nova": "audit_reports_credito\\lote_credito_brasil_onda_a_ruido_fix\\standardized",
+  "por_fonte": {
+    "bnb": {
+      "total_antigo": 24,
+      "total_novo": 24,
+      "removidos_count": 0,
+      "removidos": []
+    },
+    "banco_da_amazonia": {
+      "total_antigo": 26,
+      "total_novo": 26,
+      "removidos_count": 1,
+      "removidos": [
+        {
+          "link": "https://www.bancoamazonia.com.br/empresas/conta-pj",
+          "titulo": "Conta PJ"
+        }
+      ]
+    },
+    "bdmg": {
+      "total_antigo": 27,
+      "total_novo": 18,
+      "removidos_count": 20,
+      "removidos": [
+        {
+          "link": "https://www.bdmg.mg.gov.br/sejaparceiro",
+          "titulo": "Correspondentes Bancários"
+        },
+        {
+          "link": "https://www.bdmg.mg.gov.br/en",
+          "titulo": "English"
+        },
+        {
+          "link": "https://www.bdmg.mg.gov.br/labagrominas",
+          "titulo": "O LabAgroMinas é um Programa desenvolvido em parceria entre o BDMG e a Embrapa Cerrados para o fomento às práticas de agricultura regenerativa em Minas Gerais. O Programa tem como objetivo fomentar uma agricultura de alta qualidade e competitividade associada à produção de ativos ambientais e de valor compartilhado."
+        },
+        {
+          "link": "https://www.bdmg.mg.gov.br/sobre-bdmg",
+          "titulo": "Sobre o BDMG"
+        },
+        {
+          "link": "https://www.bdmg.mg.gov.br/sobre-bdmg?atuacao",
+          "titulo": "Atuação"
+        },
+        {
+          "link": "https://www.bdmg.mg.gov.br/sobre-bdmg?missao-visao-valores",
+          "titulo": "Nossa Essência"
+        },
+        {
+          "link": "https://www.bdmg.mg.gov.br/sobre-bdmg?responsabilidade",
+          "titulo": "Responsabilidade Social, Ambiental e Climática"
+        },
+        {
+          "link": "https://www.bdmg.mg.gov.br/sobre-bdmg?tab-seguranca-informacao",
+          "titulo": "Segurança da Informação e Cibernética"
+        },
+        {
+          "link": "https://www.bdmg.mg.gov.br/sobre-bdmg?tab-lgpd",
+          "titulo": "Proteção de dados e Privacidade"
+        },
+        {
+          "link": "https://www.bdmg.mg.gov.br/sobre-bdmg?conhecimento",
+          "titulo": "Conhecimento"
+        },
+        {
+          "link": "https://www.bdmg.mg.gov.br/concurso",
+          "titulo": "Trabalhe no BDMG e construa o futuro de Minas Gerais!"
+        },
+        {
+          "link": "https://www.bdmg.mg.gov.br/editais-licitacoes",
+          "titulo": "Licitações e Contratos"
+        },
+        {
+          "link": "https://www.bdmg.mg.gov.br/editais-venda-bens",
+          "titulo": "Licitações e Contratos"
+        },
+        {
+          "link": "https://www.bdmg.mg.gov.br/licitacoes-contratos-administrativos",
+          "titulo": "Licitações e Contratos"
+        },
+        {
+          "link": "https://www.bdmg.mg.gov.br/sala-imprensa",
+          "titulo": "Sala de Imprensa"
+        },
+        {
+          "link": "https://www.bdmg.mg.gov.br/sala-imprensa/?tab-release",
+          "titulo": "Notícias"
+        },
+        {
+          "link": "https://www.bdmg.mg.gov.br/sala-imprensa/?tab-eventos",
+          "titulo": "Eventos"
+        },
+        {
+          "link": "https://www.bdmg.mg.gov.br/documentos",
+          "titulo": "Documentação BDMG"
+        },
+        {
+          "link": "https://www.bdmg.mg.gov.br/investimento",
+          "titulo": "Entre em contato"
+        },
+        {
+          "link": "https://www.bdmg.mg.gov.br/linhaspermanentes",
+          "titulo": "Linhas Permanentes Saiba mais sobre as linhas de financiamento para os municípios mineiros."
+        }
+      ]
+    },
+    "agerio": {
+      "total_antigo": 2,
+      "total_novo": 7,
+      "removidos_count": 1,
+      "removidos": [
+        {
+          "link": "https://www.agerio.com.br/educacaofinanceira/",
+          "titulo": "Escola Virtual .Gov (EVG)"
+        }
+      ]
+    },
+    "desenvolve_sp": {
+      "total_antigo": 4,
+      "total_novo": 4,
+      "removidos_count": 0,
+      "removidos": []
+    }
+  },
+  "destaques": {
+    "entre_em_contato": [
+      {
+        "link": "https://www.bdmg.mg.gov.br/investimento",
+        "titulo": "Entre em contato",
+        "fonte": "bdmg"
+      }
+    ],
+    "conta_pj": [
+      {
+        "link": "https://www.bancoamazonia.com.br/empresas/conta-pj",
+        "titulo": "Conta PJ",
+        "fonte": "banco_da_amazonia"
+      }
+    ],
+    "educacao_financeira": [
+      {
+        "link": "https://www.agerio.com.br/educacaofinanceira/",
+        "titulo": "Escola Virtual .Gov (EVG)",
+        "fonte": "agerio"
+      }
+    ]
+  },
+  "total_links_removidos": 22,
+  "fontes_com_diff": [
+    "banco_da_amazonia",
+    "bdmg",
+    "agerio"
+  ],
+  "notas": [
+    "O URL https://www.bdmg.mg.gov.br/linhaspermanentes aparece como removido porque o standardized antigo usava o hub como link principal; o novo conjunto mantem linhas municipais com links de detalhe (link principal diferente).",
+    "LabAgroMinas (labagrominas) saiu do crawl atual; reintroduzir apenas se for oportunidade real com seed curado.",
+    "Comparacao agerio: standardized antigo (semantic_fix) tinha apenas 2 itens; o novo tem 7 — a lista de removidos e apenas old-not-in-new (educacao financeira)."
+  ]
+}

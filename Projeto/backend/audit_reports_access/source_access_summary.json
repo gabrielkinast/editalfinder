@@ -1,0 +1,51 @@
+{
+  "data_auditoria": "2026-05-09T13:59:55Z",
+  "fontes_total": 102,
+  "classificacao_distribuicao": {
+    "endpoint_quebrado": 19,
+    "captcha": 13,
+    "ok_html_publico": 55,
+    "cloudflare_403": 3,
+    "fonte_sem_dados": 6,
+    "spa_pouco_html": 2,
+    "rate_limit_429": 1,
+    "access_http_403": 3
+  },
+  "metodos_recomendados_top": [
+    [
+      "usar_meta_tags",
+      29
+    ],
+    [
+      "revisar_manualmente",
+      25
+    ],
+    [
+      "usar_sitemap",
+      18
+    ],
+    [
+      "usar_rss",
+      11
+    ],
+    [
+      "usar_json_ld",
+      9
+    ],
+    [
+      "blocked_access_limited",
+      5
+    ],
+    [
+      "usar_curadoria_oficial_minima",
+      4
+    ],
+    [
+      "usar_pagina_alternativa_oficial",
+      1
+    ]
+  ],
+  "readiness_access_limited_count": 26,
+  "policy_path": "D:\\Computational_Physics\\My Projects\\edital\\config\\source_access_policy.json",
+  "readiness_path": "D:\\Computational_Physics\\My Projects\\edital\\config\\source_readiness.json"
+}

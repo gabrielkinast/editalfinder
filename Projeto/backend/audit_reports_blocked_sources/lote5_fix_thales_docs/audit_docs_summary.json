@@ -1,0 +1,39 @@
+{
+  "data_auditoria": "2026-05-03T22:31:48Z",
+  "fontes": [
+    "thales_suppliers"
+  ],
+  "max_items_por_fonte": 25,
+  "pdf_skip": true,
+  "itens_analisados": 4,
+  "raw_com_pdf_url": 3,
+  "raw_com_documentos": 3,
+  "transformado_com_pdf_url": 3,
+  "transformado_com_documentos": 3,
+  "payload_com_pdf_url": 3,
+  "payload_com_documentos": 3,
+  "bruto_com_documentos_pdf": 3,
+  "bruto_com_documentos_nao_pdf": 0,
+  "transformado_com_documentos_pdf": 3,
+  "transformado_com_documentos_nao_pdf": 0,
+  "payload_com_documentos_pdf": 3,
+  "payload_com_documentos_nao_pdf": 0,
+  "perdas_pdf": 0,
+  "perdas_nao_pdf": 0,
+  "downloads_falharam": 3,
+  "downloads_sucesso": 0,
+  "links_invalidos": 0,
+  "links_relativos_restantes": 0,
+  "links_quebrados": 0,
+  "duplicados_documentos": 0,
+  "perdas_total": 0,
+  "fontes_pior_preservacao": [
+    {
+      "fonte": "thales_suppliers",
+      "score_perda": 0.0
+    }
+  ],
+  "formatos_detectados": {
+    "pdf": 3
+  }
+}

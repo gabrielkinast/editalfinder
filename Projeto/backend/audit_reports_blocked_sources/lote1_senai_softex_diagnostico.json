@@ -1,0 +1,85 @@
+{
+  "titulo": "Lote 1 — diagnóstico SENAI e Softex",
+  "data_auditoria": "2026-05-01T23:52:00Z",
+  "restricoes_respeitadas": [
+    "Sem loader apply",
+    "Sem alteração ao opportunity_gate global (apenas soft-continue local no transformer)",
+    "Sem Supabase/migrations",
+    "Sem alterar source_readiness.json nesta entrega"
+  ],
+  "pre_correcao": {
+    "senai": {
+      "crawler_rodou": true,
+      "output_bruto": "1 item (fallback de índice)",
+      "transformacao": "1 bruto → gate rejeitava índice genérico",
+      "natureza_fallback": "pagina_institucional_listagem"
+    },
+    "softex": {
+      "crawler_rodou": true,
+      "output_bruto": "2 itens (URLs de detalhe)",
+      "transformacao": "gate rejeitava por score / página genérica",
+      "natureza_itens": "chamada_programa_real"
+    }
+  },
+  "correcoes_codigo": {
+    "scraper_generic.py": [
+      "fetch_soup(url, timeout=10) configurável",
+      "scrape_source: http_timeout, link_url_must_contain_any, link_url_exclude_substrings, link_path_min_depth"
+    ],
+    "senai/main_senai.py": [
+      "Listagem extra: plataforma inovação para indústria",
+      "Palavras-chave e filtros de URL mais restritivos",
+      "Remoção do fallback de página índice",
+      "http_timeout 22s, link_path_min_depth 3, exclusão de /resultados e /edicoes da plataforma"
+    ],
+    "softex/main_softex.py": [
+      "POSITIVE_HINTS ampliado (geek, startup, capacita, transformação digital)"
+    ],
+    "CORE/transformer.py": [
+      "_senai_soft_continue: portaldaindustria + detalhe + marcadores de oportunidade; bloqueia fallback_public_index",
+      "_softex_soft_continue: softex.br profundo + marcadores; bloqueia notícia institucional sem inscrição/edital"
+    ]
+  },
+  "pos_correcao_metricas": {
+    "retransform_summary": "audit_reports_blocked_sources/lote1_fix_senai_softex/retransform_summary.json",
+    "totais": {
+      "brutos": 24,
+      "transformados": 24,
+      "rejeitados": 0
+    },
+    "por_fonte": {
+      "senai": {
+        "brutos": 22,
+        "transformados": 22,
+        "rejeitados": 0,
+        "incompletos": 22,
+        "suspeitos": 0,
+        "qualidade_media": 90.0,
+        "perfil_ideal_preenchido": 0
+      },
+      "softex": {
+        "brutos": 2,
+        "transformados": 2,
+        "rejeitados": 0,
+        "incompletos": 0,
+        "suspeitos": 2,
+        "qualidade_media": 53.0,
+        "area_preenchida_ratio": 0.5
+      }
+    },
+    "auditoria_semantica": "audit_reports_blocked_sources/lote1_fix_senai_softex_semantic/audit_semantic_summary.json",
+    "auditoria_documentos": "audit_reports_blocked_sources/lote1_fix_senai_softex_docs/audit_docs_summary.json",
+    "docs_pipeline": {
+      "perdas_total": 0,
+      "observacao_downloads": "audit_docs registra tentativas de download PDF (falhas esperadas em ambiente sem persistência); preservação bruto→payload sem perda estrutural"
+    }
+  },
+  "readiness_recomendado": {
+    "senai": "ready_with_notes",
+    "softex": "ready_with_notes",
+    "justificativa_curta": "Ambas com transformados > 0 e baixo ruído no lote atual; SENAI exige nota sobre categorias agregadas e perfil_ideal; Softex exige nota sobre 2 itens suspeitos e descrição curta."
+  },
+  "sair_de_blocked": ["senai", "softex"],
+  "manter_blocked": [],
+  "proxima_acao": "Revisão humana das 22 categorias SENAI (granularidade); enriquecer descrição Softex e perfil_ideal; dry-run loader; só então atualizar config/source_readiness.json."
+}

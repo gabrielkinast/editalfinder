@@ -1,0 +1,72 @@
+{
+  "data_auditoria": "2026-05-01T20:46:27Z",
+  "source_filter": "",
+  "db_connection_diag": {
+    "url_masked": "https://dof***.co",
+    "key_name_selected": "SUPABASE_SERVICE_ROLE_KEY",
+    "key_exists": true,
+    "key_len": 219,
+    "key_prefix_masked": "eyJ***zg",
+    "env_sources_found": [
+      "D:\\Computational_Physics\\My Projects\\edital\\.env.staging",
+      "D:\\Computational_Physics\\My Projects\\edital\\CORE\\.env"
+    ]
+  },
+  "total_registros_analisados": 790,
+  "totais_por_criterio": {
+    "link": {
+      "grupos": 0,
+      "linhas_afetadas": 0
+    },
+    "hash_deduplicacao": {
+      "grupos": 13,
+      "linhas_afetadas": 34
+    },
+    "pdf_url": {
+      "grupos": 16,
+      "linhas_afetadas": 105
+    },
+    "fonte_titulo_normalizado": {
+      "grupos": 21,
+      "linhas_afetadas": 52
+    },
+    "codigo_oportunidade": {
+      "grupos": 0,
+      "linhas_afetadas": 0
+    },
+    "numero_edital": {
+      "grupos": 0,
+      "linhas_afetadas": 0
+    },
+    "numero_processo": {
+      "grupos": 0,
+      "linhas_afetadas": 0
+    },
+    "fuzzy": {
+      "grupos": 84,
+      "linhas_afetadas": 249
+    }
+  },
+  "top_fontes_com_duplicatas": {
+    "EMBRAPII": 80,
+    "KEK": 66,
+    "JETRO Government Procurement": 38,
+    "AIST": 30,
+    "DARPA Opportunities": 24,
+    "NUCLEP": 20,
+    "ANEEL": 17,
+    "CAS": 16,
+    "IPEN": 14,
+    "MCTI": 13,
+    "Mitsubishi Heavy Industries (Suppliers)": 12,
+    "FAPEMIG": 12,
+    "FAPESC": 11,
+    "Lockheed Martin Suppliers": 11,
+    "ATLA": 10,
+    "JSPS": 10,
+    "IHI Corporation (Suppliers)": 8,
+    "MMA / FNMA": 6,
+    "WELLCOME": 6,
+    "Ministério da Defesa": 6
+  }
+}

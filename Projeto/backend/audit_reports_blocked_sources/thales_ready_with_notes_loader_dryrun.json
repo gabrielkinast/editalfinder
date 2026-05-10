@@ -1,0 +1,59 @@
+{
+  "fonte": "thales_suppliers",
+  "decisao_curadoria": "ready_with_notes",
+  "data_relatorio": "2026-05-03T23:06:30Z",
+  "id_execucao_loader": "650eba1f-816e-43ce-9dc0-da67c0a93cf4",
+  "comando": "python scripts/load_ready_sources.py --dry-run --sources thales_suppliers --exclude-blocked --input-dir audit_reports_retransform/standardized --readiness audit_reports_retransform/readiness_for_loader.json",
+  "resumo_loader": {
+    "mode": "dry-run",
+    "sources_selected": 1,
+    "itens_standardized_total": 4,
+    "would_upsert_total": 4,
+    "would_ignore_total": 0,
+    "mapping_errors_total": 0,
+    "critical_empty_items_total": 0,
+    "docs_input_items_total": 3,
+    "docs_preserved_items_total": 3,
+    "pdf_input_items_total": 3,
+    "pdf_preserved_items_total": 3,
+    "documentos_perdidos_no_payload_total": 0,
+    "apply_requested": false,
+    "apply_status": "not_requested"
+  },
+  "verificacao_checklist": {
+    "quatro_itens": true,
+    "would_upsert_4": true,
+    "mapping_errors_zero": true,
+    "critical_empty_zero": true,
+    "tipo_oportunidade": {
+      "todos_extras": "supplier_portal",
+      "aceite_criterio": true,
+      "nota": "Criterio pedido inclui supplier_portal / cadastro_fornecedor / procurement_corporativo — todos supplier_portal"
+    },
+    "tipo_recurso": {
+      "valor": "oportunidade_fornecedor",
+      "ok": true
+    },
+    "perfil_ideal": {
+      "valor": ["fornecedor", "empresa"],
+      "ok": true
+    },
+    "origem_portal": "Thales",
+    "idioma_original": "en",
+    "regiao": "Internacional",
+    "documentos_pdf_preservados": {
+      "itens_com_pdf_no_input": 3,
+      "pdf_preserved_items_total": 3,
+      "ok": true
+    },
+    "sem_careers_news_press_contact_investors": {
+      "grep_links": "sem correspondencias em thales_suppliers_standardized.json",
+      "ok": true
+    },
+    "setor_estrategico": {
+      "hub_e_alguns_pdfs": "[] no hub e PDFs sem marcadores; 2 itens (GRAEP / General terms) podem ter setor_estrategico preenchido por evidencia textual no corpo do PDF (ex. normas armament), nao apenas pelo nome Thales",
+      "ok": true
+    }
+  },
+  "recomendacao_staging": "Dry-run limpo: apto a considerar apply em staging com revisao humana e flags de ambiente (ex. EDITALFINDER_ALLOW_STAGING_APPLY); nao executar apply nesta sessao. Nota operacional: fonte depende de manifesto + WAF — rever periodicamente URLs em /sites/default/files/."
+}

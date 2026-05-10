@@ -1,0 +1,15 @@
+{
+  "executar_apply": false,
+  "fontes": ["embrapii", "nuclep"],
+  "justificativa": "Recovery C limita setor_estrategico a 3 com evidência textual e preserva excedentes em extras; dry-run sem erros de mapeamento ou payload crítico. Apply só após revisão humana dos itens NUCLEP marcados como noticia_institucional.",
+  "comando_sugerido_pos_validacao": "python scripts/load_ready_sources.py --apply --staging --test-db-before-apply --sources embrapii,nuclep --exclude-blocked --input-dir audit_reports_main_pipeline/recovery_c_setores/standardized --readiness <readiness_operacional_acordado> --output-dir audit_reports_main_pipeline/recovery_c_setores_loader_apply",
+  "pre_condicoes": [
+    "Ler recovery_c_setores_diagnostico.md e validar classificação institucional NUCLEP",
+    "Correr validate_full_staging_after_daily.py --staging após apply",
+    "Não alterar opportunity_gate global, readiness oficial nem schema neste passo"
+  ],
+  "riscos_residuais": [
+    "Contagem global setor_estrategico_muito_amplo (72) inclui outras fontes — esperar queda parcial após apply só destas duas",
+    "Flags area_cientifica_sem_evidencia podem continuar até onda futura"
+  ]
+}

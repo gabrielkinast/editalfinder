@@ -1,0 +1,121 @@
+{
+  "meta": {
+    "fonte": "erc",
+    "data_relatorio": "2026-05-02",
+    "raw_path": "erc/outputs/erc_editais.json",
+    "hub_oficial": "https://erc.europa.eu/apply-grant",
+    "nota_url_antiga": "https://erc.europa.eu/apply-grants (plural) devolvia 404 e impedia coleta."
+  },
+  "contagens": {
+    "itens_brutos": 8,
+    "itens_transformados": 8,
+    "itens_rejeitados": 0,
+    "itens_incompletos": 8,
+    "itens_suspeitos": 0,
+    "qualidade_dado_media": 86.0
+  },
+  "motivos_rejeicao_atual": {},
+  "historico_antes_das_correcoes": {
+    "raw_vazio_por_404": true,
+    "rejeicoes_gate_login_falso_positivo": {
+      "descricao": "Antes do relaxamento ERC no transformer/item_quality, páginas Synergy e ERC Plus podiam ser classificadas como login pelo opportunity_gate.",
+      "exemplos_urls": [
+        "https://erc.europa.eu/apply-grant/synergy-grant",
+        "https://erc.europa.eu/apply-grant/erc-plus-grant"
+      ]
+    }
+  },
+  "links_coletados": [
+    {
+      "url": "https://erc.europa.eu/apply-grant/starting-grant",
+      "tipo_pagina": "grant_scheme_oficial",
+      "rotulo": "Starting Grant",
+      "notas": "Página de esquema + Work Programme; PDFs oficiais; não é notícia isolada."
+    },
+    {
+      "url": "https://erc.europa.eu/apply-grant/consolidator-grant",
+      "tipo_pagina": "grant_scheme_oficial",
+      "rotulo": "Consolidator Grant"
+    },
+    {
+      "url": "https://erc.europa.eu/apply-grant/advanced-grant",
+      "tipo_pagina": "grant_scheme_oficial",
+      "rotulo": "Advanced Grant"
+    },
+    {
+      "url": "https://erc.europa.eu/apply-grant/proof-concept",
+      "tipo_pagina": "grant_scheme_oficial",
+      "rotulo": "Proof of Concept"
+    },
+    {
+      "url": "https://erc.europa.eu/apply-grant/synergy-grant",
+      "tipo_pagina": "grant_scheme_oficial",
+      "rotulo": "Synergy Grant"
+    },
+    {
+      "url": "https://erc.europa.eu/apply-grant/erc-plus-grant",
+      "tipo_pagina": "grant_scheme_oficial",
+      "rotulo": "ERC Plus Grant"
+    },
+    {
+      "url": "https://erc.europa.eu/apply-grant/non-european-researchers",
+      "tipo_pagina": "elegibilidade_financiamento",
+      "rotulo": "For Non-European Researchers",
+      "notas": "Informação de elegibilidade e financiamento adicional; não é calendário nem notícia pura."
+    },
+    {
+      "url": "https://erc.europa.eu/apply-grant/additional-opportunities",
+      "tipo_pagina": "hub_oportunidades_secundarias",
+      "rotulo": "Additional opportunities",
+      "notas": "Agrega empregos, visitas nacionais, mentoring; conteúdo híbrido ligado a carreira ERC."
+    }
+  ],
+  "classificacao_tipos_conteudo_possiveis": [
+    "grant",
+    "call_for_proposals",
+    "bolsa_pesquisa",
+    "pesquisa_cientifica",
+    "calendario_de_chamadas",
+    "noticia_institucional",
+    "pagina_generica"
+  ],
+  "mapeamento_observado": {
+    "grant_scheme_oficial": ["grant", "pesquisa_cientifica", "call_for_proposals"],
+    "elegibilidade_financiamento": ["grant", "bolsa_pesquisa"],
+    "hub_oportunidades_secundarias": ["call_for_proposals", "bolsa_pesquisa", "pesquisa_cientifica"]
+  },
+  "pipelines_executados": {
+    "retransform_dry_run": {
+      "comando": "python scripts/retransform_all.py --sources erc --dry-run --output-dir audit_reports_blocked_sources/lote2_fix_erc",
+      "retransform_by_source": "audit_reports_blocked_sources/lote2_fix_erc/retransform_by_source.json"
+    },
+    "auditoria_semantica": {
+      "comando": "python scripts/audit_semantic_classification.py --input-dir audit_reports_blocked_sources/lote2_fix_erc/standardized --output-dir audit_reports_blocked_sources/lote2_fix_erc_semantic",
+      "resumo": "audit_reports_blocked_sources/lote2_fix_erc_semantic/audit_semantic_summary.json",
+      "flags_totais": {},
+      "itens_total": 8
+    },
+    "auditoria_documentos": {
+      "comando": "python scripts/audit_docs_pipeline.py --sources erc --output-dir audit_reports_blocked_sources/lote2_fix_erc_docs",
+      "resumo": "audit_reports_blocked_sources/lote2_fix_erc_docs/audit_docs_summary.json",
+      "perdas_total": 0,
+      "downloads_falharam": 8,
+      "nota": "pdf_skip=true na auditoria; falhas de download esperadas sem ir buscar PDFs."
+    }
+  },
+  "readiness_recomendado": "ready_with_notes",
+  "readiness_justificativa": [
+    "Há 8 itens transformados, todos sob /apply-grant/ com esquemas ERC ou páginas satélite oficiais.",
+    "Não são listagens genéricas do portal nem notícias isoladas; documentos oficiais preservados.",
+    "Auditoria semântica sem flags nos totais.",
+    "Todos os itens ficam incompletos no validador (prazo explícito ausente no nível de registo único); calendário detalhado está sobretudo no PDF Work Programme.",
+    "Ruído residual: campo valor em R$ por heurística BR em texto EUR; possível codigo_oportunidade truncado; setores temáticos por vezes amplos (PDF)."
+  ],
+  "nao_executado_por_instrucao": [
+    "loader apply",
+    "Supabase",
+    "migrations",
+    "atualização automática de config/source_readiness.json",
+    "alteração global do opportunity_gate"
+  ]
+}

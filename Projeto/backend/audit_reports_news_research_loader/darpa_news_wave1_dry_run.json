@@ -1,0 +1,33 @@
+{
+  "gerado_em": "2026-05-09T14:00:40Z",
+  "fonte": "darpa_news",
+  "entrada": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_news_research\\standardized\\darpa_news_standardized.json",
+  "total_entrada": 10,
+  "apos_dedupe": 10,
+  "dedupe_removidos": 0,
+  "payload_noticia_count": 8,
+  "payload_pesquisa_count": 2,
+  "review_candidates_count": 0,
+  "rejected_routing_count": 0,
+  "excluded_quality_count": 0,
+  "excluded_validation_count": 0,
+  "links_unicos_noticia": true,
+  "links_unicos_pesquisa": true,
+  "overlap_noticia_pesquisa_links": [],
+  "nenhum_item_public_edital": true,
+  "array_normalizations_logged": 0,
+  "readiness_apply_staging": {
+    "ok": true,
+    "nota": "Apto se houver volume útil e zero erros de validação do loader nos payloads; revisar review_for_edital manualmente antes de apply."
+  },
+  "dedupe_amostra": [],
+  "rejected_noise": [],
+  "excluded_quality": [],
+  "excluded_validation": [],
+  "review_candidates": [],
+  "governance": {
+    "public_edital": 0,
+    "review_for_edital_carregado_loader": 0,
+    "apply": false
+  }
+}

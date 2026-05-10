@@ -1,0 +1,127 @@
+[
+  {
+    "titulo": "军委国防动员部",
+    "link": "http://www.mod.gov.cn/gfbw/qwfb/jwgfdyb/index.html",
+    "fonte": "China MOD (public)",
+    "access_status": "public_access",
+    "rejection_reason": "Relevancia limite: poucos sinais de oportunidade",
+    "opportunity_intent": "generic_page",
+    "opportunity_score": 2,
+    "detected_terms": [
+      "deadline_date",
+      "desc_long",
+      "url_noise:/index.htm"
+    ],
+    "status_code": 200
+  },
+  {
+    "titulo": "新闻发言人",
+    "link": "http://www.mod.gov.cn/gfbw/xwfyr/index.html",
+    "fonte": "China MOD (public)",
+    "access_status": "public_access",
+    "rejection_reason": "Pontuacao abaixo do minimo (oportunidade nao evidenciada)",
+    "opportunity_intent": "generic_page",
+    "opportunity_score": 1,
+    "detected_terms": [
+      "deadline_date",
+      "pdf_or_docs",
+      "desc_long",
+      "generic_title",
+      "url_noise:/index.htm"
+    ],
+    "status_code": 200
+  },
+  {
+    "titulo": "例行新闻发布",
+    "link": "http://www.mod.gov.cn/gfbw/xwfyr/yzxwfb/index.html",
+    "fonte": "China MOD (public)",
+    "access_status": "public_access",
+    "rejection_reason": "Relevancia limite: poucos sinais de oportunidade",
+    "opportunity_intent": "generic_page",
+    "opportunity_score": 2,
+    "detected_terms": [
+      "deadline_date",
+      "desc_long",
+      "url_noise:/index.htm"
+    ],
+    "status_code": 200
+  },
+  {
+    "titulo": "国防服务",
+    "link": "http://www.mod.gov.cn/gfbw/gffw/index.html",
+    "fonte": "China MOD (public)",
+    "access_status": "public_access",
+    "rejection_reason": "Pontuacao abaixo do minimo (oportunidade nao evidenciada)",
+    "opportunity_intent": "innovation_program",
+    "opportunity_score": -1,
+    "detected_terms": [
+      "deadline_date",
+      "desc_long",
+      "generic_title",
+      "url_noise:/index.htm"
+    ],
+    "status_code": 200
+  },
+  {
+    "titulo": "国防动员",
+    "link": "http://www.mod.gov.cn/gfbw/gfdy/index.html",
+    "fonte": "China MOD (public)",
+    "access_status": "public_access",
+    "rejection_reason": "Pontuacao abaixo do minimo (oportunidade nao evidenciada)",
+    "opportunity_intent": "generic_page",
+    "opportunity_score": -1,
+    "detected_terms": [
+      "deadline_date",
+      "desc_long",
+      "generic_title",
+      "url_noise:/index.htm"
+    ],
+    "status_code": 200
+  },
+  {
+    "titulo": "国防教育",
+    "link": "http://www.mod.gov.cn/gfbw/gfjy_index/index.html",
+    "fonte": "China MOD (public)",
+    "access_status": "public_access",
+    "rejection_reason": "Pontuacao abaixo do minimo (oportunidade nao evidenciada)",
+    "opportunity_intent": "generic_page",
+    "opportunity_score": 1,
+    "detected_terms": [
+      "deadline_date",
+      "pdf_or_docs",
+      "desc_long",
+      "generic_title",
+      "url_noise:/index.htm"
+    ],
+    "status_code": 200
+  },
+  {
+    "titulo": "2026年4月国防部例行记者会文字实录",
+    "link": "http://www.mod.gov.cn/gfbw/sy/rt/16458408.html",
+    "fonte": "China MOD (public)",
+    "access_status": "restricted_login",
+    "rejection_reason": "Pagina de login ou autenticacao",
+    "opportunity_intent": "invalid",
+    "opportunity_score": -50,
+    "detected_terms": [
+      "登陆"
+    ],
+    "status_code": 200
+  },
+  {
+    "titulo": "Defense Policy",
+    "link": "http://eng.mod.gov.cn/2025xb/M/D_251593/index.html",
+    "fonte": "China MOD (public)",
+    "access_status": "public_access",
+    "rejection_reason": "Relevancia limite: poucos sinais de oportunidade",
+    "opportunity_intent": "generic_page",
+    "opportunity_score": 2,
+    "detected_terms": [
+      "pdf_or_docs",
+      "title_ok",
+      "desc_long",
+      "url_noise:/index.htm"
+    ],
+    "status_code": 200
+  }
+]

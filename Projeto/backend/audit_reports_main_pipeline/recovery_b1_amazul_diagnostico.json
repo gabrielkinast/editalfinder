@@ -1,0 +1,147 @@
+{
+  "fonte": "AMAZUL",
+  "timestamp_post_daily": "2026-05-10T05:51:55Z",
+  "contagens_summary_by_warning": {
+    "edital.suspeito_ativo_true": 12,
+    "edital.prazo_vencido_ativo_true": 7,
+    "edital.credito_tipo_recurso_incoerente": 2
+  },
+  "itens_por_warning": {
+    "suspeito_ativo_true": [
+      {
+        "warning": "suspeito_ativo_true",
+        "id": 425,
+        "titulo": "Dispensa de Licitação por Valor 02/2025",
+        "link": "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos/dispensa-de-licitacao-por-valor-022025",
+        "validacao_status": "suspeito",
+        "tipo_oportunidade": "licitacao",
+        "tipo_recurso": "licitação",
+        "prazo_envio": "2026-03-20",
+        "motivo_staging": "validacao_status=suspeito e ativo=true",
+        "classificacao": "chamada_editais_reais",
+        "acao_recomendada": "Calibração local + validacao incompleto (Recovery B.1); não desativar sem curadoria."
+      },
+      {
+        "warning": "suspeito_ativo_true",
+        "id": 426,
+        "titulo": "Dispensa de Licitação por Valor 03/2025",
+        "link": "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos/dispensa-de-licitacao-por-valor-032025",
+        "validacao_status": "suspeito",
+        "tipo_oportunidade": "licitacao",
+        "tipo_recurso": "licitação",
+        "prazo_envio": "2026-06-02",
+        "motivo_staging": "validacao_status=suspeito e ativo=true",
+        "classificacao": "chamada_editais_reais",
+        "acao_recomendada": "Calibração local + validacao incompleto (Recovery B.1); não desativar sem curadoria."
+      },
+      {
+        "warning": "suspeito_ativo_true",
+        "id": 429,
+        "titulo": "Dispensa de Licitação por Valor 06/2025",
+        "link": "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos/dispensa-de-licitacao-por-valor-062025",
+        "validacao_status": "suspeito",
+        "tipo_oportunidade": "licitacao",
+        "tipo_recurso": "licitação",
+        "prazo_envio": "2028-06-16",
+        "motivo_staging": "validacao_status=suspeito e ativo=true",
+        "classificacao": "chamada_editais_reais",
+        "acao_recomendada": "Calibração local + validacao incompleto (Recovery B.1); não desativar sem curadoria."
+      },
+      {
+        "warning": "suspeito_ativo_true",
+        "id": 430,
+        "titulo": "Dispensa de Licitação por Valor 07/2025",
+        "link": "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos/dispensa-de-licitacao-por-valor-072025",
+        "validacao_status": "suspeito",
+        "tipo_oportunidade": "licitacao",
+        "tipo_recurso": "licitação",
+        "prazo_envio": "2025-12-11",
+        "motivo_staging": "validacao_status=suspeito e ativo=true",
+        "classificacao": "chamada_editais_reais",
+        "acao_recomendada": "Calibração local + validacao incompleto (Recovery B.1); não desativar sem curadoria."
+      }
+    ],
+    "prazo_vencido_ativo_true": [
+      {
+        "warning": "prazo_vencido_ativo_true",
+        "id": 425,
+        "titulo": "Dispensa de Licitação por Valor 02/2025",
+        "link": "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos/dispensa-de-licitacao-por-valor-022025",
+        "validacao_status": "suspeito",
+        "tipo_oportunidade": "licitacao",
+        "tipo_recurso": "licitação",
+        "prazo_envio": "2026-03-20",
+        "motivo_staging": "prazo_envio vencido (2026-03-20) e ativo=true",
+        "classificacao": "oportunidade_vencida",
+        "acao_recomendada": "Documentar prazo vencido; política de arquivo ou ativo=false em passo futuro (sem inventar datas)."
+      },
+      {
+        "warning": "prazo_vencido_ativo_true",
+        "id": 430,
+        "titulo": "Dispensa de Licitação por Valor 07/2025",
+        "link": "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos/dispensa-de-licitacao-por-valor-072025",
+        "validacao_status": "suspeito",
+        "tipo_oportunidade": "licitacao",
+        "tipo_recurso": "licitação",
+        "prazo_envio": "2025-12-11",
+        "motivo_staging": "prazo_envio vencido (2025-12-11) e ativo=true",
+        "classificacao": "oportunidade_vencida",
+        "acao_recomendada": "Documentar prazo vencido; política de arquivo ou ativo=false em passo futuro (sem inventar datas)."
+      }
+    ],
+    "credito_tipo_recurso_incoerente": [
+      {
+        "warning": "credito_tipo_recurso_incoerente",
+        "id": 2102,
+        "titulo": "Dispensa de Licitação 03/2024",
+        "link": "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos/dispensa-de-licitacao-032024",
+        "validacao_status": "incompleto",
+        "tipo_oportunidade": "licitacao",
+        "tipo_recurso": "licitação",
+        "prazo_envio": null,
+        "motivo_staging": "crédito/financiamento sem reembolsavel nem natureza_recurso preenchidos",
+        "classificacao": "chamada_editais_reais",
+        "acao_recomendada": "Marcar reembolsavel=false para compra pública AMAZUL no transformer; texto com 'crédito' no objeto ≠ linha de crédito bancário."
+      },
+      {
+        "warning": "credito_tipo_recurso_incoerente",
+        "id": 436,
+        "titulo": "Dispensa de Licitação por Valor 04/2023",
+        "link": "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos/dispensa-de-licitacao-por-valor-042023",
+        "validacao_status": "suspeito",
+        "tipo_oportunidade": "licitacao",
+        "tipo_recurso": "licitação",
+        "prazo_envio": "2024-05-31",
+        "motivo_staging": "crédito/financiamento sem reembolsavel nem natureza_recurso preenchidos",
+        "classificacao": "chamada_editais_reais",
+        "acao_recomendada": "Marcar reembolsavel=false para compra pública AMAZUL no transformer; texto com 'crédito' no objeto ≠ linha de crédito bancário."
+      }
+    ]
+  },
+  "nota": "Exemplos limitados pelo validador (máx. ~30 por warning). Contagens completas em summary_by_warning.by_source.AMAZUL.",
+  "pipeline_recovery_b1_local": {
+    "data": "2026-05-10T06:16Z",
+    "retransform_dir": "audit_reports_main_pipeline/recovery_b1_amazul",
+    "semantic_dir": "audit_reports_main_pipeline/recovery_b1_amazul_semantic",
+    "loader_bundle_dir": "audit_reports_main_pipeline/recovery_b1_amazul_loader_dryrun",
+    "standardized": {
+      "itens": 20,
+      "validacao_suspeito_count": 0,
+      "reembolsavel_false_em_amostra": true,
+      "nota": "grep em amazul_standardized.json: sem validacao_status=suspeito; reembolsavel=false nos blocos de licitação."
+    },
+    "loader_dry_run": {
+      "sources_selected": 1,
+      "would_upsert_total": 20,
+      "mapping_errors_total": 0,
+      "critical_empty_items_total": 0,
+      "documentos_perdidos_no_payload_total": 0,
+      "destination_counts_total": { "edital": 20 }
+    },
+    "semantic": {
+      "flags_totais": { "fonte_defesa_sem_defesa": 2 },
+      "titulo_ruidoso": 0,
+      "publico_alvo_sem_evidencia": 0
+    }
+  }
+}

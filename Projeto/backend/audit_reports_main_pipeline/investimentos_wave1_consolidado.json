@@ -1,0 +1,100 @@
+{
+  "titulo": "Investimentos Wave 1 — consolidado (portal_estrategico, staging)",
+  "versao_consolidado": "2026-05-10",
+  "ambiente": "staging",
+  "tabela_destino": "public.portal_estrategico",
+  "nota": "Consolidação a partir de diagnóstico, payloads, recomendação, apply e validação. Nenhum novo apply nesta tarefa.",
+  "fontes_wave1": ["apex", "bndes", "eic"],
+  "artefactos_lidos": [
+    "audit_reports_main_pipeline/investimentos_wave1_diagnostico.json",
+    "audit_reports_main_pipeline/investimentos_wave1_portais.json",
+    "audit_reports_main_pipeline/investimentos_wave1_apply_recommendation.json",
+    "audit_reports_main_pipeline/investimentos_wave1_portais_apply/load_portais_estrategicos_summary.json",
+    "audit_reports_main_pipeline/investimentos_wave1_portais_validation/validate_portais_estrategicos_after_load.json",
+    "audit_reports_main_pipeline/portais_estrategicos_recovery_d1_consolidado.json"
+  ],
+  "por_que_estas_fontes": [
+    "Apex, BNDES e EIC são fontes já integradas no pipeline com conteúdo de internacionalização, mercado de capitais / fundos e instrumentos europeus de inovação — alinhadas à página «Fornecedores & Investimentos» sem depender só de fornecedores defesa.",
+    "O diagnóstico mostrou volume e natureza distintos: Apex standardized mínimo mas sementes de hubs reais; BNDES com muitas chamadas individuais (edital) vs poucos hubs; EIC com mix programa vs calls vs PDF. A Wave 1 seleccionou explicitamente hubs/programas (5 por fonte)."
+  ],
+  "por_que_portal_estrategico_nao_edital": [
+    "Os 15 URLs são páginas agregadoras ou programas (listagens, mercado de capitais, Pathfinder, etc.), não substitutos 1:1 de editais com prazo/modalidade já modelados em public.edital.",
+    "Chamadas BNDES (FIP, ETF, …) e calls EIC 2026 permanecem no domínio edital; a Wave evita duplicar esses links como portal estratégico.",
+    "Categoria `investimentos`, `frontend_section=investimentos`, `mostrar_em_investimentos=true` e `mostrar_em_fornecedores=false` roteiam o produto sem poluir o feed de fornecedores nem o modelo edital forte."
+  ],
+  "check_portal_tipo_e_solucao": {
+    "problema": "A constraint PostgreSQL `portal_estrategico_portal_tipo_check` só aceita valores legados do eixo fornecedores (ex.: hub, registration, procurement, …). Taxonomia Wave 1 (`market_access`, `internationalization`, …) violava a CHECK.",
+    "solucao_loader": "A coluna `portal_tipo` enviada ao upsert é normalizada para valores permitidos pela CHECK (`portal_tipo_db` / contagens no resumo de apply). A taxonomia semântica da Wave fica em `extras.portal_tipo_wave1` (e alinhamento em `extras.portal_tipo` com o valor persistido na coluna, conforme versão do loader).",
+    "apply_resumo_coluna_portal_tipo": {
+      "hub": 11,
+      "procurement": 3,
+      "registration": 1
+    },
+    "taxonomia_semantica_payloads_referencia": {
+      "nota": "Contagens semânticas no artefacto investimentos_wave1_portais.json (pré-CHECK); não são as mesmas que as contagens da coluna na BD após normalização.",
+      "internationalization": 2,
+      "market_access": 1,
+      "funding_hub": 4,
+      "accelerator": 2,
+      "development_agency": 1,
+      "startup_program": 1,
+      "corporate_venture": 1,
+      "investment": 3
+    }
+  },
+  "validador_investimentos": {
+    "descricao": "`validate_portais_estrategicos_after_load.py` passou a suportar `--frontend-section auto|fornecedores|investimentos` (auto infere pelos JSONs). Para investimentos aplica regras de linha (radar, investimentos, fornecedores, `portal_tipo_wave1`) e consulta `vw_investimentos_front` quando existe.",
+    "ficheiro": "audit_reports_main_pipeline/investimentos_wave1_portais_validation/validate_portais_estrategicos_after_load.json"
+  },
+  "radar": {
+    "mostrar_no_radar_false": "Todos os itens da Wave mantêm `mostrar_no_radar=false`, impedindo que o agregador Radar de Fomento trate estes portais como oportunidades de fomento prioritárias."
+  },
+  "vw_investimentos_front": {
+    "papel": "A view deve expor apenas (ou principalmente) linhas com `frontend_section=investimentos` e flags coerentes, para alimentar a listagem UI «Investimentos» em paralelo a `vw_fornecedores_front` para fornecedores.",
+    "validacao_staging": "15/15 links esperados presentes na view após apply bem-sucedido."
+  },
+  "apply": {
+    "data_execucao": "2026-05-10T23:06:07Z",
+    "apply_status": "applied",
+    "total_items": 15,
+    "would_upsert_total": 15,
+    "inserted": 0,
+    "updated": 15,
+    "upserted_total": 15,
+    "errors_count": 0,
+    "by_source": {
+      "apex": { "would_upsert": 5, "errors": 0 },
+      "bndes": { "would_upsert": 5, "errors": 0 },
+      "eic": { "would_upsert": 5, "errors": 0 }
+    },
+    "mostrar_no_radar_true_count": 0,
+    "mostrar_em_investimentos_true_count": 15,
+    "mostrar_em_fornecedores_true_count": 0
+  },
+  "validacao_pos_carga": {
+    "data_execucao": "2026-05-10T23:06:33Z",
+    "status": "ok",
+    "frontend_section": "investimentos",
+    "view_name": "vw_investimentos_front",
+    "investimentos_view_skipped": false,
+    "expected_links_count": 15,
+    "found_in_portal_estrategico_count": 15,
+    "found_in_front_view_count": 15,
+    "row_rule_violations_count": 0
+  },
+  "continuidade_com_recovery_d1": {
+    "referencia": "audit_reports_main_pipeline/portais_estrategicos_recovery_d1_consolidado.json",
+    "mensagem": "A mesma tabela `public.portal_estrategico` acolhe fornecedores (26 itens, secção fornecedores) e investimentos Wave 1 (15 itens, secção investimentos), com flags distintas e views de front distintas."
+  },
+  "proximos_passos_frontend": [
+    "Consumir `vw_investimentos_front` (ou API equivalente) para a rota Investimentos; não reutilizar o componente do Radar sem filtrar `mostrar_no_radar`.",
+    "Para badges/filtros finos, usar `extras.portal_tipo_wave1` (taxonomia) em conjunto com `portal_tipo` da coluna (valor CHECK) se necessário para compatibilidade.",
+    "Garantir que a UI de Fornecedores continua a usar apenas `vw_fornecedores_front` / `frontend_section=fornecedores`.",
+    "Monitorizar duplicação de links entre `portal_estrategico` e `public.edital` quando a mesma URL existir nos dois pipelines."
+  ],
+  "restricoes_respeitadas_nesta_consolidacao": [
+    "Nenhum novo apply executado ao gerar este consolidado",
+    "Schema não alterado",
+    "opportunity_gate global não alterado"
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "titulo": "Promoção Onda A Brasil — ready_with_notes + dry-run loader",
+  "data_geracao": "2026-05-05T04:45Z",
+  "fontes_promovidas_ready_with_notes": ["bnb", "banco_da_amazonia", "bdmg"],
+  "fontes_sem_promocao": {
+    "desenvolve_sp": "needs_manual_review (WAF/403)",
+    "agerio": "needs_manual_review (volume baixo)"
+  },
+  "justificativa_operacional": {
+    "lote_brutos": 85,
+    "lote_transformados": 83,
+    "lote_rejeitados": 2,
+    "auditoria_semantica_pos_fix": "flags_totais vazio para o lote credito BR",
+    "oportunidades": "linhas de crédito/financiamento reais nas três fontes promovidas"
+  },
+  "alteracoes_readiness": {
+    "config_source_readiness_json": {
+      "acao": "Adicionados banco_da_amazonia, bdmg e bnb em ready_with_notes (ordenado); removidos de ready/blocked/needs_manual_review/reprocess se existissem (não estavam).",
+      "path": "config/source_readiness.json"
+    },
+    "audit_reports_retransform_readiness_for_loader_json": {
+      "acao": "Incluídas as três fontes em fontes_prontas_para_loader (segmento pronto_com_observacoes: índices 8–78); status_distribution.pronto_com_observacoes 68→71; fontes_total 94→97.",
+      "desenvolve_sp_e_agerio_excluidos": true,
+      "path": "audit_reports_retransform/readiness_for_loader.json"
+    }
+  },
+  "standardized_copiados": {
+    "origem": "audit_reports_credito/lote_credito_brasil_onda_a_semantic_fix/standardized/",
+    "destino": "audit_reports_retransform/standardized/",
+    "arquivos": [
+      "bnb_standardized.json",
+      "banco_da_amazonia_standardized.json",
+      "bdmg_standardized.json"
+    ]
+  },
+  "comando_loader": "python scripts/load_ready_sources.py --dry-run --sources bnb,banco_da_amazonia,bdmg --exclude-blocked --input-dir audit_reports_retransform/standardized --readiness audit_reports_retransform/readiness_for_loader.json",
+  "relatorio_loader_canonico": "audit_reports_loader_ready/final_dry_run_before_staging.json",
+  "metricas_loader_dry_run": {
+    "sources_selected": 3,
+    "itens_standardized_total": 77,
+    "would_upsert_total": 77,
+    "would_ignore_total": 0,
+    "mapping_errors_total": 0,
+    "critical_empty_items_total": 0,
+    "documentos_perdidos_no_payload_total": 0,
+    "validacao_status_preserved_items_total": 77,
+    "qualidade_dado_preserved_items_total": 77,
+    "destination_counts_total": { "edital": 77 },
+    "canonical_skipped_total": 0
+  },
+  "verificacao_manual_checklist": {
+    "sources_selected_igual_3": true,
+    "itens_standardized_total_maior_0": true,
+    "would_upsert_total_maior_0": true,
+    "mapping_errors_total_zero": true,
+    "critical_empty_items_total_zero": true,
+    "documentos_perdidos_zero": true,
+    "tipo_recurso_coerente_credito_reembolsavel_amostra": "OK (script: 0 issues setor>3 / subvenção sem evidência)",
+    "setor_estrategico_sem_excesso_amostra": "OK (calibração anterior ≤3)",
+    "institucional_generico_indevido": "Não avaliado linha a linha; destino edital 77 itens"
+  },
+  "restricoes_respeitadas": {
+    "apply_executado": false,
+    "supabase_alterado": false,
+    "opportunity_gate_global_alterado": false
+  },
+  "recomendacao_staging": {
+    "dry_run": "Limpo: métricas acima permitem um apply controlado a staging quando desejado.",
+    "comando_apply_nao_executado_aqui": "python scripts/load_ready_sources.py --apply --staging --sources bnb,banco_da_amazonia,bdmg --exclude-blocked --input-dir audit_reports_retransform/standardized --readiness audit_reports_retransform/readiness_for_loader.json",
+    "observacao": "Confirmar política interna de apply (--staging obrigatório para ambiente não-produção); revisar environment_guard no relatório do loader."
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "data_auditoria": "2026-05-05T22:17:07Z",
+  "fontes_total": 5,
+  "classificacao_distribuicao": {
+    "cloudflare_403": 1,
+    "endpoint_quebrado": 1,
+    "ok_html_publico": 2,
+    "captcha": 1
+  },
+  "metodos_recomendados_top": [
+    [
+      "blocked_access_limited",
+      1
+    ],
+    [
+      "revisar_manualmente",
+      1
+    ],
+    [
+      "usar_sitemap",
+      1
+    ],
+    [
+      "usar_rss",
+      1
+    ],
+    [
+      "usar_meta_tags",
+      1
+    ]
+  ],
+  "readiness_access_limited_count": 2,
+  "policy_path": "D:\\Computational_Physics\\My Projects\\edital\\config\\source_access_policy.json",
+  "readiness_path": "D:\\Computational_Physics\\My Projects\\edital\\config\\source_readiness.json"
+}

@@ -1,0 +1,2477 @@
+{
+  "timestamp": "2026-05-10T08:02:47Z",
+  "environment": "staging",
+  "env_files_loaded": [
+    "D:\\Computational_Physics\\My Projects\\edital\\.env.staging",
+    "D:\\Computational_Physics\\My Projects\\edital\\CORE\\.env"
+  ],
+  "ok": true,
+  "critical_errors": [],
+  "warnings": [
+    {
+      "table": "edital",
+      "problem": "prazo_vencido_ativo_true",
+      "count": 49
+    },
+    {
+      "table": "edital",
+      "problem": "credito_tipo_recurso_incoerente",
+      "count": 4
+    },
+    {
+      "table": "edital",
+      "problem": "setor_estrategico_muito_amplo",
+      "count": 47
+    },
+    {
+      "table": "edital",
+      "problem": "suspeito_ativo_true",
+      "count": 47
+    }
+  ],
+  "counts": {
+    "edital": {
+      "total": 1232,
+      "ativo_true": 1226,
+      "ativo_false": 6,
+      "ativo_null_or_missing": 0
+    },
+    "noticia": {
+      "total": 109,
+      "ativo_true": 109,
+      "ativo_false": 0,
+      "ativo_null_or_missing": 0
+    },
+    "pesquisa": {
+      "total": 47,
+      "ativo_true": 47,
+      "ativo_false": 0,
+      "ativo_null_or_missing": 0
+    }
+  },
+  "tables": {
+    "edital": {
+      "counts": {
+        "total": 1232,
+        "ativo_true": 1226,
+        "ativo_false": 6,
+        "ativo_null_or_missing": 0
+      },
+      "problems": {
+        "links_duplicados": {
+          "severity": "critical",
+          "count": 0,
+          "examples": [],
+          "by_source": {}
+        },
+        "sem_titulo": {
+          "severity": "critical",
+          "count": 0,
+          "examples": [],
+          "by_source": {}
+        },
+        "sem_link": {
+          "severity": "critical",
+          "count": 0,
+          "examples": [],
+          "by_source": {}
+        },
+        "sem_fonte_recurso": {
+          "severity": "warning",
+          "count": 0,
+          "examples": [],
+          "by_source": {}
+        },
+        "validacao_status_vazio": {
+          "severity": "warning",
+          "count": 0,
+          "examples": [],
+          "by_source": {}
+        },
+        "qualidade_dado_nula": {
+          "severity": "warning",
+          "count": 0,
+          "examples": [],
+          "by_source": {}
+        },
+        "arrays_invalidos": {
+          "severity": "warning",
+          "count": 0,
+          "examples": [],
+          "by_source": {}
+        },
+        "extras_nao_json": {
+          "severity": "warning",
+          "count": 0,
+          "examples": [],
+          "by_source": {}
+        },
+        "prazo_vencido_ativo_true": {
+          "severity": "warning",
+          "count": 49,
+          "examples": [
+            {
+              "id": 37,
+              "fonte_recurso": "BDMG",
+              "fonte": null,
+              "titulo": "Trabalhe no BDMG e construa o futuro de Minas Gerais!",
+              "link": "https://www.bdmg.mg.gov.br/concurso",
+              "tipo_oportunidade": "licitacao",
+              "tipo_recurso": "financiamento_reembolsavel",
+              "validacao_status": "valido",
+              "qualidade_dado": 100,
+              "prazo_envio": "2025-06-24",
+              "setor_estrategico": [
+                "inovacao",
+                "industria"
+              ],
+              "ativo": true,
+              "motivo": "prazo_envio vencido (2025-06-24) e ativo=true"
+            },
+            {
+              "id": 425,
+              "fonte_recurso": "AMAZUL",
+              "fonte": null,
+              "titulo": "Dispensa de Licitação por Valor 02/2025",
+              "link": "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos/dispensa-de-licitacao-por-valor-022025",
+              "tipo_oportunidade": "licitacao",
+              "tipo_recurso": "licitação",
+              "validacao_status": "suspeito",
+              "qualidade_dado": 100,
+              "prazo_envio": "2026-03-20",
+              "setor_estrategico": [
+                "defesa"
+              ],
+              "ativo": true,
+              "motivo": "prazo_envio vencido (2026-03-20) e ativo=true"
+            },
+            {
+              "id": 430,
+              "fonte_recurso": "AMAZUL",
+              "fonte": null,
+              "titulo": "Dispensa de Licitação por Valor 07/2025",
+              "link": "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos/dispensa-de-licitacao-por-valor-072025",
+              "tipo_oportunidade": "licitacao",
+              "tipo_recurso": "licitação",
+              "validacao_status": "suspeito",
+              "qualidade_dado": 100,
+              "prazo_envio": "2025-12-11",
+              "setor_estrategico": [
+                "nuclear",
+                "defesa"
+              ],
+              "ativo": true,
+              "motivo": "prazo_envio vencido (2025-12-11) e ativo=true"
+            },
+            {
+              "id": 471,
+              "fonte_recurso": "ANP",
+              "fonte": null,
+              "titulo": "Edital de Chamada Pública",
+              "link": "https://www.gov.br/anp/pt-br/assuntos/tecnologia-meio-ambiente/prh-anp-programa-de-formacao-de-recursos-humanos/eixo-academico/edital-de-chamada-publica",
+              "tipo_oportunidade": "chamada_publica",
+              "tipo_recurso": "fomento",
+              "validacao_status": "incompleto",
+              "qualidade_dado": 92,
+              "prazo_envio": "2025-11-26",
+              "setor_estrategico": [
+                "defesa_industrial",
+                "aeroespacial",
+                "ciencia_tecnologia"
+              ],
+              "ativo": true,
+              "motivo": "prazo_envio vencido (2025-11-26) e ativo=true"
+            },
+            {
+              "id": 472,
+              "fonte_recurso": "ANP",
+              "fonte": null,
+              "titulo": "Consultas e Audiências Públicas",
+              "link": "https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas/consulta-audiencia-publica",
+              "tipo_oportunidade": "noticia_institucional",
+              "tipo_recurso": "fomento",
+              "validacao_status": "incompleto",
+              "qualidade_dado": 63,
+              "prazo_envio": "2026-05-04",
+              "setor_estrategico": [
+                "defesa_industrial"
+              ],
+              "ativo": true,
+              "motivo": "prazo_envio vencido (2026-05-04) e ativo=true"
+            },
+            {
+              "id": 474,
+              "fonte_recurso": "Apex Brasil",
+              "fonte": null,
+              "titulo": "Exporta Mais Brasil - E-commerce 2026",
+              "link": "https://crm-apps.apexbrasil.com.br/orgbdeab873/inscricao-eventos/evento/exporta-mais-brasil-e-commerce-2026/9a606dbd-27e2-4239-9914-a7826b563add?utm_source=Comunicacao",
+              "tipo_oportunidade": "selecao_empresas",
+              "tipo_recurso": "apoio_internacionalizacao",
+              "validacao_status": "suspeito",
+              "qualidade_dado": 80,
+              "prazo_envio": "2026-05-08",
+              "setor_estrategico": [
+                "aeroespacial"
+              ],
+              "ativo": true,
+              "motivo": "prazo_envio vencido (2026-05-08) e ativo=true"
+            },
+            {
+              "id": 739,
+              "fonte_recurso": "CNPQ",
+              "fonte": null,
+              "titulo": "Chamada Nº 28/2025 - Apoio a Projetos de Cooperação CNPq-TUBITAK",
+              "link": "https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2025/chamada-no-28-2025/chamada-tubitak-lan-amento.pdf",
+              "tipo_oportunidade": "noticia_institucional",
+              "tipo_recurso": "fomento",
+              "validacao_status": "valido",
+              "qualidade_dado": 90,
+              "prazo_envio": "2026-05-04",
+              "setor_estrategico": [
+                "defesa_industrial",
+                "aeroespacial"
+              ],
+              "ativo": true,
+              "motivo": "prazo_envio vencido (2026-05-04) e ativo=true"
+            },
+            {
+              "id": 740,
+              "fonte_recurso": "CNPQ",
+              "fonte": null,
+              "titulo": "Chamada pública CNPq/MCTI/MEMP N° 05/2026 - Programa de Iniciação ao Empreendedorismo - PIEMP",
+              "link": "https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-05-2026/chamada-piemp-2026-1.pdf",
+              "tipo_oportunidade": "chamada_publica",
+              "tipo_recurso": "Bolsa / Auxílio",
+              "validacao_status": "valido",
+              "qualidade_dado": 100,
+              "prazo_envio": "2026-04-13",
+              "setor_estrategico": [
+                "defesa_industrial",
+                "industria"
+              ],
+              "ativo": true,
+              "motivo": "prazo_envio vencido (2026-04-13) e ativo=true"
+            },
+            {
+              "id": 743,
+              "fonte_recurso": "CNPQ",
+              "fonte": null,
+              "titulo": "Chamada para Pesquisas Inovadoras em Vacinas CNPq/Decit/SCTIE/MS Nº 31/2025",
+              "link": "https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2025/chamada-no-31-2025/chamada_publica_vacinas.pdf",
+              "tipo_oportunidade": "noticia_institucional",
+              "tipo_recurso": "fomento",
+              "validacao_status": "valido",
+              "qualidade_dado": 100,
+              "prazo_envio": "2026-02-23",
+              "setor_estrategico": [
+                "defesa_industrial",
+                "aeroespacial"
+              ],
+              "ativo": true,
+              "motivo": "prazo_envio vencido (2026-02-23) e ativo=true"
+            },
+            {
+              "id": 744,
+              "fonte_recurso": "CNPQ",
+              "fonte": null,
+              "titulo": "CHAMADA PÚBLICA CNPq/MPA Nº 03/2026 PROGRAMA JOVEM CIENTISTA DA PESCA ARTESANAL - INICIAÇÃO CIENTÍFICA JÚNIOR (ICJ)",
+              "link": "https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-03-2026/sei_01300-000619_2026_40.pdf",
+              "tipo_oportunidade": "chamada_publica",
+              "tipo_recurso": "Bolsa / Auxílio",
+              "validacao_status": "valido",
+              "qualidade_dado": 100,
+              "prazo_envio": "2026-03-24",
+              "setor_estrategico": [
+                "defesa_industrial"
+              ],
+              "ativo": true,
+              "motivo": "prazo_envio vencido (2026-03-24) e ativo=true"
+            },
+            {
+              "id": 745,
+              "fonte_recurso": "CNPQ",
+              "fonte": null,
+              "titulo": "Chamada CNPq Nº 26/2025 Auxílio à Promoção de Eventos Científicos, Tecnológicos e/ou de Inovação - ARC",
+              "link": "https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2025/chamada-no-26-2025/chamada-arc-26-2025.pdf",
+              "tipo_oportunidade": "noticia_institucional",
+              "tipo_recurso": "Bolsa / Auxílio",
+              "validacao_status": "valido",
+              "qualidade_dado": 90,
+              "prazo_envio": "2026-01-20",
+              "setor_estrategico": [
+                "defesa_industrial"
+              ],
+              "ativo": true,
+              "motivo": "prazo_envio vencido (2026-01-20) e ativo=true"
+            },
+            {
+              "id": 747,
+              "fonte_recurso": "CNPQ",
+              "fonte": null,
+              "titulo": "Chamada CNPq/MS-SCTIE-Decit Nº 30/2025 - Pesquisas Estratégicas em Terapias Avançadas e Terapias Baseadas em Ácidos Nucleicos",
+              "link": "https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2025/chamada-no-30-2025/chamada30-2025.pdf",
+              "tipo_oportunidade": "noticia_institucional",
+              "tipo_recurso": "Bolsa / Auxílio",
+              "validacao_status": "valido",
+              "qualidade_dado": 100,
+              "prazo_envio": "2026-02-23",
+              "setor_estrategico": [
+                "defesa_industrial",
+                "aeroespacial",
+                "industria"
+              ],
+              "ativo": true,
+              "motivo": "prazo_envio vencido (2026-02-23) e ativo=true"
+            },
+            {
+              "id": 748,
+              "fonte_recurso": "CNPQ",
+              "fonte": null,
+              "titulo": "Chamada Pública CNPq/MCTI/FNDCT Nº 25/2025 - Transporte Aquaviário e Construção Naval",
+              "link": "https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2025/chamada-no-25-2025/1763131579912-dup-_chamada-25-2025-aquavi-rio.pdf",
+              "tipo_oportunidade": "chamada_publica",
+              "tipo_recurso": "Subvenção (Não Reembolsável)",
+              "validacao_status": "valido",
+              "qualidade_dado": 90,
+              "prazo_envio": "2025-12-29",
+              "setor_estrategico": [
+                "defesa_industrial"
+              ],
+              "ativo": true,
+              "motivo": "prazo_envio vencido (2025-12-29) e ativo=true"
+            },
+            {
+              "id": 844,
+              "fonte_recurso": "EMBRAPII",
+              "fonte": null,
+              "titulo": "CHAMADA PÚBLICA CENTRO DE COMPETÊNCIA 04/2022",
+              "link": "https://embrapii.org.br/chamadas-publicas/chamada-publica-centro-de-competencia-04-2022/",
+              "tipo_oportunidade": "supplier_portal",
+              "tipo_recurso": "apoio_inovacao",
+              "validacao_status": "incompleto",
+              "qualidade_dado": 100,
+              "prazo_envio": "2022-12-22",
+              "setor_estrategico": [
+                "ciencia_tecnologia",
+                "defesa_industrial",
+                "aeroespacial"
+              ],
+              "ativo": true,
+              "motivo": "prazo_envio vencido (2022-12-22) e ativo=true"
+            },
+            {
+              "id": 847,
+              "fonte_recurso": "EMBRAPII",
+              "fonte": null,
+              "titulo": "Chamada Pública Unidades Embrapii nº 03/2025",
+              "link": "https://embrapii.org.br/chamadas-publicas/chamada-publica-unidades-embrapii-no-03-2025/",
+              "tipo_oportunidade": "supplier_portal",
+              "tipo_recurso": "apoio_inovacao",
+              "validacao_status": "valido",
+              "qualidade_dado": 100,
+              "prazo_envio": "2025-12-18",
+              "setor_estrategico": [
+                "ciencia_tecnologia",
+                "energia",
+                "defesa_industrial"
+              ],
+              "ativo": true,
+              "motivo": "prazo_envio vencido (2025-12-18) e ativo=true"
+            },
+            {
+              "id": 850,
+              "fonte_recurso": "EMBRAPII",
+              "fonte": null,
+              "titulo": "Chamada Pública Unidades Embrapii nº 02/2025",
+              "link": "https://embrapii.org.br/chamadas-publicas/chamada-unidades-02-2025/",
+              "tipo_oportunidade": "supplier_portal",
+              "tipo_recurso": "apoio_inovacao",
+              "validacao_status": "incompleto",
+              "qualidade_dado": 100,
+              "prazo_envio": "2025-09-02",
+              "setor_estrategico": [
+                "ciencia_tecnologia",
+                "industria",
+                "defesa_industrial"
+              ],
+              "ativo": true,
+              "motivo": "prazo_envio vencido (2025-09-02) e ativo=true"
+            },
+            {
+              "id": 837,
+              "fonte_recurso": "EMBRAPII",
+              "fonte": null,
+              "titulo": "CHAMADA PÚBLICA – 01/2020 – Resultado final",
+              "link": "https://embrapii.org.br/chamadas-publicas/chamada-publica-01-2020-resultado-final/",
+              "tipo_oportunidade": "supplier_portal",
+              "tipo_recurso": "apoio_inovacao",
+              "validacao_status": "incompleto",
+              "qualidade_dado": 100,
+              "prazo_envio": "2020-01-15",
+              "setor_estrategico": [
+                "ciencia_tecnologia",
+                "industria",
+                "defesa_industrial"
+              ],
+              "ativo": true,
+              "motivo": "prazo_envio vencido (2020-01-15) e ativo=true"
+            },
+            {
+              "id": 841,
+              "fonte_recurso": "EMBRAPII",
+              "fonte": null,
+              "titulo": "CHAMADA PÚBLICA CENTRO DE COMPETÊNCIA 01/2022",
+              "link": "https://embrapii.org.br/chamadas-publicas/chamada-publica-centro-de-competencia-01-2022/",
+              "tipo_oportunidade": "supplier_portal",
+              "tipo_recurso": "apoio_inovacao",
+              "validacao_status": "incompleto",
+              "qualidade_dado": 92,
+              "prazo_envio": "2022-08-23",
+              "setor_estrategico": [
+                "ciencia_tecnologia",
+                "industria",
+                "defesa_industrial"
+              ],
+              "ativo": true,
+              "motivo": "prazo_envio vencido (2022-08-23) e ativo=true"
+            },
+            {
+              "id": 846,
+              "fonte_recurso": "EMBRAPII",
+              "fonte": null,
+              "titulo": "CHAMADA PÚBLICA 05/2022 PARA CREDENCIAMENTO NO SISTEMA EMBRAPII – Resultado Preliminar",
+              "link": "https://embrapii.org.br/chamadas-publicas/chamada-publica-05-2022-para-credenciamento-no-sistema-embrapii-resultado-preliminar/",
+              "tipo_oportunidade": "supplier_portal",
+              "tipo_recurso": "apoio_inovacao",
+              "validacao_status": "valido",
+              "qualidade_dado": 100,
+              "prazo_envio": "2022-06-30",
+              "setor_estrategico": [
+                "ciencia_tecnologia",
+                "energia",
+                "defesa_industrial"
+              ],
+              "ativo": true,
+              "motivo": "prazo_envio vencido (2022-06-30) e ativo=true"
+            },
+            {
+              "id": 848,
+              "fonte_recurso": "EMBRAPII",
+              "fonte": null,
+              "titulo": "Chamada Pública Centro de Competência Embrapii nº 03/2025",
+              "link": "https://embrapii.org.br/chamadas-publicas/chamada-publica-centro-de-competencia-no-03-2025/",
+              "tipo_oportunidade": "supplier_portal",
+              "tipo_recurso": "apoio_inovacao",
+              "validacao_status": "incompleto",
+              "qualidade_dado": 100,
+              "prazo_envio": "2025-11-12",
+              "setor_estrategico": [
+                "ciencia_tecnologia",
+                "defesa_industrial",
+                "aeroespacial"
+              ],
+              "ativo": true,
+              "motivo": "prazo_envio vencido (2025-11-12) e ativo=true"
+            },
+            {
+              "id": 1043,
+              "fonte_recurso": "Grants.gov",
+              "fonte": null,
+              "titulo": "Defense Sciences Office (DSO) Office-wide BAA",
+              "link": "https://www.grants.gov/web/grants/view-opportunity.html?oppId=359239",
+              "tipo_oportunidade": "grant",
+              "tipo_recurso": "grant",
+              "validacao_status": "incompleto",
+              "qualidade_dado": 63,
+              "prazo_envio": "2026-02-06",
+              "setor_estrategico": [
+                "defesa_industrial"
+              ],
+              "ativo": true,
+              "motivo": "prazo_envio vencido (2026-02-06) e ativo=true"
+            },
+            {
+              "id": 1085,
+              "fonte_recurso": "Grants.gov",
+              "fonte": null,
+              "titulo": "DoW Lung Cancer Idea Development Award",
+              "link": "https://www.grants.gov/web/grants/view-opportunity.html?oppId=362243",
+              "tipo_oportunidade": "grant",
+              "tipo_recurso": "grant",
+              "validacao_status": "incompleto",
+              "qualidade_dado": 63,
+              "prazo_envio": "2026-02-09",
+              "setor_estrategico": [
+                "defesa_industrial"
+              ],
+              "ativo": true,
+              "motivo": "prazo_envio vencido (2026-02-09) e ativo=true"
+            },
+            {
+              "id": 1087,
+              "fonte_recurso": "Grants.gov",
+              "fonte": null,
+              "titulo": "DoW Lung Cancer Translational Research Award",
+              "link": "https://www.grants.gov/web/grants/view-opportunity.html?oppId=362250",
+              "tipo_oportunidade": "programa_pdi",
+              "tipo_recurso": "grant",
+              "validacao_status": "incompleto",
+              "qualidade_dado": 63,
+              "prazo_envio": "2026-02-09",
+              "setor_estrategico": [
+                "defesa_industrial"
+              ],
+              "ativo": true,
+              "motivo": "prazo_envio vencido (2026-02-09) e ativo=true"
+            },
+            {
+              "id": 1088,
+              "fonte_recurso": "Grants.gov",
+              "fonte": null,
+              "titulo": "DoW Lung Cancer Patient-Centered Outcomes and Survivorship Award",
+              "link": "https://www.grants.gov/web/grants/view-opportunity.html?oppId=362247",
+              "tipo_oportunidade": "grant",
+              "tipo_recurso": "grant",
+              "validacao_status": "incompleto",
+              "qualidade_dado": 63,
+              "prazo_envio": "2026-02-09",
+              "setor_estrategico": [
+                "defesa_industrial"
+              ],
+              "ativo": true,
+              "motivo": "prazo_envio vencido (2026-02-09) e ativo=true"
+            },
+            {
+              "id": 1101,
+              "fonte_recurso": "Grants.gov",
+              "fonte": null,
+              "titulo": "DoW, Ovarian Cancer, Pilot Award",
+              "link": "https://www.grants.gov/web/grants/view-opportunity.html?oppId=362209",
+              "tipo_oportunidade": "grant",
+              "tipo_recurso": "grant",
+              "validacao_status": "incompleto",
+              "qualidade_dado": 63,
+              "prazo_envio": "2026-01-10",
+              "setor_estrategico": [
+                "defesa_industrial"
+              ],
+              "ativo": true,
+              "motivo": "prazo_envio vencido (2026-01-10) e ativo=true"
+            },
+            {
+              "id": 1107,
+              "fonte_recurso": "Grants.gov",
+              "fonte": null,
+              "titulo": "DoW, Ovarian Cancer, Ovarian Cancer Academy – Early-Career Investigator Award",
+              "link": "https://www.grants.gov/web/grants/view-opportunity.html?oppId=362204",
+              "tipo_oportunidade": "grant",
+              "tipo_recurso": "grant",
+              "validacao_status": "incompleto",
+              "qualidade_dado": 63,
+              "prazo_envio": "2026-01-10",
+              "setor_estrategico": [
+                "defesa_industrial"
+              ],
+              "ativo": true,
+              "motivo": "prazo_envio vencido (2026-01-10) e ativo=true"
+            },
+            {
+              "id": 1109,
+              "fonte_recurso": "Grants.gov",
+              "fonte": null,
+              "titulo": "DoW, Ovarian Cancer, Investigator-Initiated Research Award",
+              "link": "https://www.grants.gov/web/grants/view-opportunity.html?oppId=362202",
+              "tipo_oportunidade": "programa_pdi",
+              "tipo_recurso": "grant",
+              "validacao_status": "incompleto",
+              "qualidade_dado": 63,
+              "prazo_envio": "2026-01-10",
+              "setor_estrategico": [
+                "defesa_industrial"
+              ],
+              "ativo": true,
+              "motivo": "prazo_envio vencido (2026-01-10) e ativo=true"
+            },
+            {
+              "id": 1110,
+              "fonte_recurso": "Grants.gov",
+              "fonte": null,
+              "titulo": "DoW, Ovarian Cancer, Ovarian Cancer Clinical Trial Academy – Early-Career Investigator Award",
+              "link": "https://www.grants.gov/web/grants/view-opportunity.html?oppId=362207",
+              "tipo_oportunidade": "grant",
+              "tipo_recurso": "grant",
+              "validacao_status": "incompleto",
+              "qualidade_dado": 70,
+              "prazo_envio": "2026-01-10",
+              "setor_estrategico": [
+                "defesa_industrial"
+              ],
+              "ativo": true,
+              "motivo": "prazo_envio vencido (2026-01-10) e ativo=true"
+            },
+            {
+              "id": 1123,
+              "fonte_recurso": "Grants.gov",
+              "fonte": null,
+              "titulo": "DoW Ovarian Cancer, Clinical Trial Award",
+              "link": "https://www.grants.gov/web/grants/view-opportunity.html?oppId=362200",
+              "tipo_oportunidade": "grant",
+              "tipo_recurso": "grant",
+              "validacao_status": "incompleto",
+              "qualidade_dado": 63,
+              "prazo_envio": "2026-01-10",
+              "setor_estrategico": [
+                "defesa_industrial"
+              ],
+              "ativo": true,
+              "motivo": "prazo_envio vencido (2026-01-10) e ativo=true"
+            },
+            {
+              "id": 1179,
+              "fonte_recurso": "IARPA",
+              "fonte": null,
+              "titulo": "SuperCables",
+              "link": "https://www.grants.gov/web/grants/view-opportunity.html?oppId=305910",
+              "tipo_oportunidade": "funding_opportunity",
+              "tipo_recurso": "fomento_pdi",
+              "validacao_status": "incompleto",
+              "qualidade_dado": 63,
+              "prazo_envio": "2018-07-31",
+              "setor_estrategico": [
+                "defesa_industrial",
+                "inteligencia",
+                "pesquisa_avancada"
+              ],
+              "ativo": true,
+              "motivo": "prazo_envio vencido (2018-07-31) e ativo=true"
+            }
+          ],
+          "by_source": {
+            "AMAZUL": 7,
+            "ANP": 2,
+            "Apex Brasil": 1,
+            "BDMG": 1,
+            "CNPQ": 10,
+            "EMBRAPII": 10,
+            "Grants.gov": 9,
+            "IARPA": 8,
+            "NATO DIANA": 1
+          }
+        },
+        "titulo_ruidoso_ativo_true": {
+          "severity": "warning",
+          "count": 0,
+          "examples": [],
+          "by_source": {}
+        },
+        "titulo_ruidoso_inativo": {
+          "severity": "info",
+          "count": 6,
+          "examples": [
+            {
+              "id": 2,
+              "fonte_recurso": "BASA",
+              "fonte": null,
+              "titulo": "Conta PJ",
+              "link": "https://www.bancoamazonia.com.br/empresas/conta-pj",
+              "tipo_oportunidade": "licitacao",
+              "tipo_recurso": "financiamento_reembolsavel",
+              "validacao_status": "incompleto",
+              "qualidade_dado": 83,
+              "prazo_envio": null,
+              "setor_estrategico": [
+                "agro",
+                "sustentabilidade",
+                "industria"
+              ],
+              "ativo": false,
+              "motivo": "título contém termo ruidoso: conta pj (ativo=false; histórico)"
+            },
+            {
+              "id": 1252,
+              "fonte_recurso": "KAKENHI",
+              "fonte": null,
+              "titulo": "科研費FAQ",
+              "link": "https://www.jsps.go.jp/j-grantsinaid/01_seido/05_faq/index.html",
+              "tipo_oportunidade": "grant",
+              "tipo_recurso": "Oportunidade Publica",
+              "validacao_status": "incompleto",
+              "qualidade_dado": 75,
+              "prazo_envio": null,
+              "setor_estrategico": [
+                "ciencia_tecnologia"
+              ],
+              "ativo": false,
+              "motivo": "título contém termo ruidoso: faq (ativo=false; histórico)"
+            },
+            {
+              "id": 52,
+              "fonte_recurso": "BDMG",
+              "fonte": null,
+              "titulo": "Entre em contato",
+              "link": "https://www.bdmg.mg.gov.br/investimento",
+              "tipo_oportunidade": "investimento",
+              "tipo_recurso": "financiamento_reembolsavel",
+              "validacao_status": "incompleto",
+              "qualidade_dado": 70,
+              "prazo_envio": null,
+              "setor_estrategico": [
+                "sustentabilidade"
+              ],
+              "ativo": false,
+              "motivo": "título contém termo ruidoso: entre em contato (ativo=false; histórico)"
+            },
+            {
+              "id": 1014,
+              "fonte_recurso": "General Dynamics Suppliers",
+              "fonte": null,
+              "titulo": "Supplier FAQs",
+              "link": "https://www.gd.com/suppliers/supplier-faqs",
+              "tipo_oportunidade": "supplier_portal",
+              "tipo_recurso": "oportunidade_fornecedor",
+              "validacao_status": "suspeito",
+              "qualidade_dado": 70,
+              "prazo_envio": null,
+              "setor_estrategico": null,
+              "ativo": false,
+              "motivo": "título contém termo ruidoso: faq (ativo=false; histórico)"
+            },
+            {
+              "id": 1419,
+              "fonte_recurso": "NATO DIANA",
+              "fonte": null,
+              "titulo": "NATO DIANA — Programme FAQ (challenges, eligibility, portal)",
+              "link": "https://www.diana.nato.int/faq.html",
+              "tipo_oportunidade": "accelerator",
+              "tipo_recurso": "fomento_pdi",
+              "validacao_status": "incompleto",
+              "qualidade_dado": 70,
+              "prazo_envio": null,
+              "setor_estrategico": [
+                "defesa_industrial",
+                "inovacao_defesa",
+                "dual_use"
+              ],
+              "ativo": false,
+              "motivo": "título contém termo ruidoso: faq (ativo=false; histórico)"
+            },
+            {
+              "id": 1432,
+              "fonte_recurso": "NUCLEP",
+              "fonte": null,
+              "titulo": "Quem Somos",
+              "link": "https://www.nuclep.gov.br/quem-somos",
+              "tipo_oportunidade": "noticia_institucional",
+              "tipo_recurso": "licitação",
+              "validacao_status": "incompleto",
+              "qualidade_dado": 83,
+              "prazo_envio": null,
+              "setor_estrategico": [
+                "energia",
+                "defesa",
+                "defesa_industrial"
+              ],
+              "ativo": false,
+              "motivo": "título contém termo ruidoso: quem somos (ativo=false; histórico)"
+            }
+          ],
+          "by_source": {
+            "BASA": 1,
+            "BDMG": 1,
+            "General Dynamics Suppliers": 1,
+            "KAKENHI": 1,
+            "NATO DIANA": 1,
+            "NUCLEP": 1
+          }
+        },
+        "credito_tipo_recurso_incoerente": {
+          "severity": "warning",
+          "count": 4,
+          "examples": [
+            {
+              "id": 903,
+              "fonte_recurso": "FAPEMIG",
+              "fonte": null,
+              "titulo": "Guias passo a passo",
+              "link": "https://fapemig.br/central-de-ajuda/guias-passo-a-passo/4908",
+              "tipo_oportunidade": "noticia_institucional",
+              "tipo_recurso": "Reembolsável (Financiamento)",
+              "validacao_status": "incompleto",
+              "qualidade_dado": 82,
+              "prazo_envio": null,
+              "setor_estrategico": [
+                "defesa_industrial",
+                "aeroespacial"
+              ],
+              "ativo": true,
+              "motivo": "crédito/financiamento sem reembolsavel nem natureza_recurso preenchidos"
+            },
+            {
+              "id": 910,
+              "fonte_recurso": "FAPERGS",
+              "fonte": null,
+              "titulo": "FAPERGS - Fundação de Amparo à pesquisa do Estado do RS",
+              "link": "https://fapergs.rs.gov.br/sict-e-fapergs-lancam-edital-de-r-8-milhoes-para-fortalecer-ambientes-de-inovacao-no-rs",
+              "tipo_oportunidade": "edital",
+              "tipo_recurso": "Reembolsável (Financiamento)",
+              "validacao_status": "valido",
+              "qualidade_dado": 88,
+              "prazo_envio": "2026-05-20",
+              "setor_estrategico": [
+                "aeroespacial",
+                "ciencia_tecnologia"
+              ],
+              "ativo": true,
+              "motivo": "crédito/financiamento sem reembolsavel nem natureza_recurso preenchidos"
+            },
+            {
+              "id": 1192,
+              "fonte_recurso": "IPEN",
+              "fonte": null,
+              "titulo": "Internacionalização",
+              "link": "https://www.gov.br/ipen/pt-br/pesquisa-e-desenvolvimento/internacionalizacao",
+              "tipo_oportunidade": "noticia_institucional",
+              "tipo_recurso": "Reembolsável (Financiamento)",
+              "validacao_status": "incompleto",
+              "qualidade_dado": 82,
+              "prazo_envio": null,
+              "setor_estrategico": [
+                "defesa_industrial",
+                "energia",
+                "nuclear"
+              ],
+              "ativo": true,
+              "motivo": "crédito/financiamento sem reembolsavel nem natureza_recurso preenchidos"
+            },
+            {
+              "id": 742,
+              "fonte_recurso": "CNPQ",
+              "fonte": null,
+              "titulo": "CNPq/CAPES/IRD Nº 27/2025 Programa de apoio ao Centro Franco-Brasileiro de Biodiversidade Amazônica",
+              "link": "https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2025/chamada-no-27-2025/sei_cnpq-2536880-chamada-p-blica.pdf",
+              "tipo_oportunidade": "noticia_institucional",
+              "tipo_recurso": "Reembolsável (Financiamento)",
+              "validacao_status": "valido",
+              "qualidade_dado": 100,
+              "prazo_envio": "2026-03-02",
+              "setor_estrategico": [
+                "defesa_industrial"
+              ],
+              "ativo": true,
+              "motivo": "crédito/financiamento sem reembolsavel nem natureza_recurso preenchidos"
+            }
+          ],
+          "by_source": {
+            "CNPQ": 1,
+            "FAPEMIG": 1,
+            "FAPERGS": 1,
+            "IPEN": 1
+          }
+        },
+        "setor_estrategico_muito_amplo": {
+          "severity": "warning",
+          "count": 47,
+          "examples": [
+            {
+              "id": 779,
+              "fonte_recurso": "Ministério da Defesa",
+              "fonte": null,
+              "titulo": "Projeto Soldado Cidadão",
+              "link": "https://www.gov.br/defesa/pt-br/assuntos/programas-sociais/copy_of_projeto-soldado-cidadao",
+              "tipo_oportunidade": "noticia_institucional",
+              "tipo_recurso": "fomento",
+              "validacao_status": "incompleto",
+              "qualidade_dado": 82,
+              "prazo_envio": null,
+              "setor_estrategico": [
+                "defesa_industrial",
+                "aeroespacial",
+                "defesa",
+                "energia"
+              ],
+              "ativo": true,
+              "motivo": "setor_estrategico contém 4 valores; limite recomendado é 3"
+            },
+            {
+              "id": 446,
+              "fonte_recurso": "ANEEL",
+              "fonte": null,
+              "titulo": "Sistemas de Armazenamento de Energia",
+              "link": "https://www.gov.br/aneel/pt-br/assuntos/programa-de-pesquisa-desenvolvimento-e-inovacao/chamadas-de-projetos-de-pdi-estrategicos/sistemas-de-armazenamento-de-energia",
+              "tipo_oportunidade": "programa_pdi",
+              "tipo_recurso": "fomento",
+              "validacao_status": "incompleto",
+              "qualidade_dado": 78,
+              "prazo_envio": null,
+              "setor_estrategico": [
+                "defesa_industrial",
+                "aeroespacial",
+                "ciencia_tecnologia",
+                "energia"
+              ],
+              "ativo": true,
+              "motivo": "setor_estrategico contém 4 valores; limite recomendado é 3"
+            },
+            {
+              "id": 412,
+              "fonte_recurso": "AFWERX",
+              "fonte": null,
+              "titulo": "Specific Topic",
+              "link": "https://afwerx.com/divisions/sbir-sttr/specific-topic/",
+              "tipo_oportunidade": "programa_pdi",
+              "tipo_recurso": "fomento_investimento",
+              "validacao_status": "incompleto",
+              "qualidade_dado": 90,
+              "prazo_envio": null,
+              "setor_estrategico": [
+                "defesa_industrial",
+                "aeroespacial",
+                "defesa",
+                "dual_use"
+              ],
+              "ativo": true,
+              "motivo": "setor_estrategico contém 4 valores; limite recomendado é 3"
+            },
+            {
+              "id": 773,
+              "fonte_recurso": "Ministério da Defesa",
+              "fonte": null,
+              "titulo": "Consulta Pública ao Inteiro Teor dos Processos de Licitações e Contratos",
+              "link": "https://www.gov.br/defesa/pt-br/acesso-a-informacao/licitacoes-e-contratos-1/consulta-publica-ao-inteiro-teor-dos-processos-de-licitacoes-e-contratos-1",
+              "tipo_oportunidade": "noticia_institucional",
+              "tipo_recurso": "fomento",
+              "validacao_status": "incompleto",
+              "qualidade_dado": 82,
+              "prazo_envio": null,
+              "setor_estrategico": [
+                "defesa_industrial",
+                "aeroespacial",
+                "defesa",
+                "seguranca_publica"
+              ],
+              "ativo": true,
+              "motivo": "setor_estrategico contém 4 valores; limite recomendado é 3"
+            },
+            {
+              "id": 790,
+              "fonte_recurso": "DoD SBIR/STTR",
+              "fonte": null,
+              "titulo": "Participating Federal Agencies",
+              "link": "https://www.sbir.gov/participating-agencies",
+              "tipo_oportunidade": "programa_pdi",
+              "tipo_recurso": "fomento_investimento",
+              "validacao_status": "incompleto",
+              "qualidade_dado": 90,
+              "prazo_envio": null,
+              "setor_estrategico": [
+                "defesa_industrial",
+                "aeroespacial",
+                "defesa",
+                "industria"
+              ],
+              "ativo": true,
+              "motivo": "setor_estrategico contém 4 valores; limite recomendado é 3"
+            },
+            {
+              "id": 792,
+              "fonte_recurso": "DoD SBIR/STTR",
+              "fonte": null,
+              "titulo": "Impact, Mission, and Goals",
+              "link": "https://www.sbir.gov/impact",
+              "tipo_oportunidade": "programa_pdi",
+              "tipo_recurso": "fomento_investimento",
+              "validacao_status": "incompleto",
+              "qualidade_dado": 82,
+              "prazo_envio": null,
+              "setor_estrategico": [
+                "defesa_industrial",
+                "aeroespacial",
+                "defesa",
+                "industria"
+              ],
+              "ativo": true,
+              "motivo": "setor_estrategico contém 4 valores; limite recomendado é 3"
+            },
+            {
+              "id": 796,
+              "fonte_recurso": "DoD SBIR/STTR",
+              "fonte": null,
+              "titulo": "Portfolio",
+              "link": "https://www.sbir.gov/awards",
+              "tipo_oportunidade": "programa_pdi",
+              "tipo_recurso": "fomento_investimento",
+              "validacao_status": "incompleto",
+              "qualidade_dado": 75,
+              "prazo_envio": null,
+              "setor_estrategico": [
+                "defesa_industrial",
+                "aeroespacial",
+                "defesa",
+                "industria"
+              ],
+              "ativo": true,
+              "motivo": "setor_estrategico contém 4 valores; limite recomendado é 3"
+            },
+            {
+              "id": 798,
+              "fonte_recurso": "DoD SBIR/STTR",
+              "fonte": null,
+              "titulo": "Data Resources",
+              "link": "https://www.sbir.gov/api",
+              "tipo_oportunidade": "programa_pdi",
+              "tipo_recurso": "fomento_investimento",
+              "validacao_status": "incompleto",
+              "qualidade_dado": 82,
+              "prazo_envio": null,
+              "setor_estrategico": [
+                "defesa_industrial",
+                "aeroespacial",
+                "defesa",
+                "industria"
+              ],
+              "ativo": true,
+              "motivo": "setor_estrategico contém 4 valores; limite recomendado é 3"
+            },
+            {
+              "id": 799,
+              "fonte_recurso": "DoD SBIR/STTR",
+              "fonte": null,
+              "titulo": "Data Resources",
+              "link": "https://www.sbir.gov/data-resources",
+              "tipo_oportunidade": "programa_pdi",
+              "tipo_recurso": "fomento_investimento",
+              "validacao_status": "incompleto",
+              "qualidade_dado": 82,
+              "prazo_envio": null,
+              "setor_estrategico": [
+                "defesa_industrial",
+                "aeroespacial",
+                "defesa",
+                "industria"
+              ],
+              "ativo": true,
+              "motivo": "setor_estrategico contém 4 valores; limite recomendado é 3"
+            },
+            {
+              "id": 800,
+              "fonte_recurso": "DoD SBIR/STTR",
+              "fonte": null,
+              "titulo": "Funding Opportunities",
+              "link": "https://www.sbir.gov/topics",
+              "tipo_oportunidade": "programa_pdi",
+              "tipo_recurso": "fomento_investimento",
+              "validacao_status": "incompleto",
+              "qualidade_dado": 82,
+              "prazo_envio": null,
+              "setor_estrategico": [
+                "defesa_industrial",
+                "aeroespacial",
+                "defesa",
+                "industria"
+              ],
+              "ativo": true,
+              "motivo": "setor_estrategico contém 4 valores; limite recomendado é 3"
+            },
+            {
+              "id": 801,
+              "fonte_recurso": "DoD SBIR/STTR",
+              "fonte": null,
+              "titulo": "Frequently Asked Questions",
+              "link": "https://www.sbir.gov/faq",
+              "tipo_oportunidade": "programa_pdi",
+              "tipo_recurso": "fomento_investimento",
+              "validacao_status": "incompleto",
+              "qualidade_dado": 90,
+              "prazo_envio": null,
+              "setor_estrategico": [
+                "defesa_industrial",
+                "aeroespacial",
+                "defesa",
+                "industria"
+              ],
+              "ativo": true,
+              "motivo": "setor_estrategico contém 4 valores; limite recomendado é 3"
+            },
+            {
+              "id": 781,
+              "fonte_recurso": "DIU",
+              "fonte": null,
+              "titulo": "Defense Innovation Unit Announces New Director, Designation as Defense Field Activity",
+              "link": "https://www.diu.mil/latest/defense-innovation-unit-announces-new-director-designation-as-defense-field",
+              "tipo_oportunidade": "programa_pdi",
+              "tipo_recurso": "fomento_investimento",
+              "validacao_status": "incompleto",
+              "qualidade_dado": 82,
+              "prazo_envio": null,
+              "setor_estrategico": [
+                "defesa_industrial",
+                "aeroespacial",
+                "defesa",
+                "dual_use"
+              ],
+              "ativo": true,
+              "motivo": "setor_estrategico contém 4 valores; limite recomendado é 3"
+            },
+            {
+              "id": 105,
+              "fonte_recurso": "EIC",
+              "fonte": null,
+              "titulo": "EIC Accelerator Challenges 2026",
+              "link": "https://eic.ec.europa.eu/eic-funding-opportunities/eic-accelerator/eic-accelerator-challenges-2026_en",
+              "tipo_oportunidade": "funding_opportunity",
+              "tipo_recurso": "grant",
+              "validacao_status": "incompleto",
+              "qualidade_dado": 90,
+              "prazo_envio": null,
+              "setor_estrategico": [
+                "inovacao",
+                "ciencia_tecnologia",
+                "digital",
+                "energia",
+                "sustentabilidade"
+              ],
+              "ativo": true,
+              "motivo": "setor_estrategico contém 5 valores; limite recomendado é 3"
+            },
+            {
+              "id": 895,
+              "fonte_recurso": "European Defence Fund",
+              "fonte": null,
+              "titulo": "EU Defence Industry",
+              "link": "https://defence-industry-space.ec.europa.eu/eu-defence-industry_en",
+              "tipo_oportunidade": "licitacao",
+              "tipo_recurso": "fomento_investimento",
+              "validacao_status": "incompleto",
+              "qualidade_dado": 82,
+              "prazo_envio": null,
+              "setor_estrategico": [
+                "defesa_industrial",
+                "aeroespacial",
+                "defesa",
+                "industria"
+              ],
+              "ativo": true,
+              "motivo": "setor_estrategico contém 4 valores; limite recomendado é 3"
+            },
+            {
+              "id": 898,
+              "fonte_recurso": "European Defence Fund",
+              "fonte": null,
+              "titulo": "BraveTech EU",
+              "link": "https://defence-industry-space.ec.europa.eu/eu-defence-industry/bravetech-eu_en",
+              "tipo_oportunidade": "licitacao",
+              "tipo_recurso": "fomento_investimento",
+              "validacao_status": "incompleto",
+              "qualidade_dado": 82,
+              "prazo_envio": null,
+              "setor_estrategico": [
+                "defesa_industrial",
+                "aeroespacial",
+                "defesa",
+                "industria"
+              ],
+              "ativo": true,
+              "motivo": "setor_estrategico contém 4 valores; limite recomendado é 3"
+            },
+            {
+              "id": 900,
+              "fonte_recurso": "European Defence Fund",
+              "fonte": null,
+              "titulo": "European Network of Defence-related Regions",
+              "link": "https://defence-industry-space.ec.europa.eu/eu-defence-industry/european-network-defence-related-regions_en",
+              "tipo_oportunidade": "supplier_portal",
+              "tipo_recurso": "fomento_investimento",
+              "validacao_status": "incompleto",
+              "qualidade_dado": 82,
+              "prazo_envio": null,
+              "setor_estrategico": [
+                "defesa_industrial",
+                "aeroespacial",
+                "dual_use",
+                "industria"
+              ],
+              "ativo": true,
+              "motivo": "setor_estrategico contém 4 valores; limite recomendado é 3"
+            },
+            {
+              "id": 1187,
+              "fonte_recurso": "IPEN",
+              "fonte": null,
+              "titulo": "Emergência Radiológica IPEN",
+              "link": "https://www.gov.br/ipen/pt-br/seguranca-nuclear-e-radiologica/emergencia-radiologica",
+              "tipo_oportunidade": "noticia_institucional",
+              "tipo_recurso": "Não Especificado",
+              "validacao_status": "incompleto",
+              "qualidade_dado": 75,
+              "prazo_envio": null,
+              "setor_estrategico": [
+                "defesa_industrial",
+                "aeroespacial",
+                "defesa",
+                "nuclear"
+              ],
+              "ativo": true,
+              "motivo": "setor_estrategico contém 4 valores; limite recomendado é 3"
+            },
+            {
+              "id": 1194,
+              "fonte_recurso": "IPEN",
+              "fonte": null,
+              "titulo": "Energia",
+              "link": "https://www.gov.br/ipen/pt-br/pesquisa-e-desenvolvimento/areas-de-pesquisa/copy_of_energia",
+              "tipo_oportunidade": "noticia_institucional",
+              "tipo_recurso": "Não Especificado",
+              "validacao_status": "incompleto",
+              "qualidade_dado": 68,
+              "prazo_envio": null,
+              "setor_estrategico": [
+                "defesa_industrial",
+                "aeroespacial",
+                "energia",
+                "nuclear"
+              ],
+              "ativo": true,
+              "motivo": "setor_estrategico contém 4 valores; limite recomendado é 3"
+            },
+            {
+              "id": 734,
+              "fonte_recurso": "CNEN",
+              "fonte": null,
+              "titulo": "Edital de Chamamento Público para Credenciamento 01/2020",
+              "link": "https://www.gov.br/cnen/pt-br/acesso-rapido/plam-cnen/edital-de-chamamento-publico-para-credenciamento-01-2020",
+              "tipo_oportunidade": "noticia_institucional",
+              "tipo_recurso": "Não Especificado",
+              "validacao_status": "incompleto",
+              "qualidade_dado": 75,
+              "prazo_envio": null,
+              "setor_estrategico": [
+                "defesa_industrial",
+                "aeroespacial",
+                "energia",
+                "nuclear"
+              ],
+              "ativo": true,
+              "motivo": "setor_estrategico contém 4 valores; limite recomendado é 3"
+            },
+            {
+              "id": 786,
+              "fonte_recurso": "DIU",
+              "fonte": null,
+              "titulo": "Defense Innovation Unit Launches First CSO Under New Emerging Technology Portfolio",
+              "link": "https://www.diu.mil/latest/defense-innovation-unit-launches-first-cso-under-new-emerging-technology",
+              "tipo_oportunidade": "investimento",
+              "tipo_recurso": "fomento_investimento",
+              "validacao_status": "incompleto",
+              "qualidade_dado": 82,
+              "prazo_envio": null,
+              "setor_estrategico": [
+                "defesa_industrial",
+                "aeroespacial",
+                "defesa",
+                "dual_use"
+              ],
+              "ativo": true,
+              "motivo": "setor_estrategico contém 4 valores; limite recomendado é 3"
+            },
+            {
+              "id": 787,
+              "fonte_recurso": "DIU",
+              "fonte": null,
+              "titulo": "To Secure U.S. Energy Dominance, the Department of Defense Selects Eligible Companies for the Advanced Nuclear Power for Installations Program",
+              "link": "https://www.diu.mil/latest/DOD-selects-eligible-companies-for-the-Advanced-Nuclear-Power-for-Installations-Program",
+              "tipo_oportunidade": "licitacao",
+              "tipo_recurso": "fomento_investimento",
+              "validacao_status": "incompleto",
+              "qualidade_dado": 82,
+              "prazo_envio": null,
+              "setor_estrategico": [
+                "defesa_industrial",
+                "aeroespacial",
+                "defesa",
+                "industria"
+              ],
+              "ativo": true,
+              "motivo": "setor_estrategico contém 4 valores; limite recomendado é 3"
+            },
+            {
+              "id": 1346,
+              "fonte_recurso": "Mitsubishi Heavy Industries (Suppliers)",
+              "fonte": null,
+              "titulo": "02 INNOVATION",
+              "link": "https://www.mhi.com/business/technology/innovation",
+              "tipo_oportunidade": "supplier_portal",
+              "tipo_recurso": "Portal de Fornecedores",
+              "validacao_status": "incompleto",
+              "qualidade_dado": 82,
+              "prazo_envio": null,
+              "setor_estrategico": [
+                "ciencia_tecnologia",
+                "aeroespacial",
+                "defesa",
+                "industria"
+              ],
+              "ativo": true,
+              "motivo": "setor_estrategico contém 4 valores; limite recomendado é 3"
+            },
+            {
+              "id": 1344,
+              "fonte_recurso": "Mitsubishi Heavy Industries (Suppliers)",
+              "fonte": null,
+              "titulo": "Energy & Environment",
+              "link": "https://www.mhi.com/business/products-services/energy-environment",
+              "tipo_oportunidade": "supplier_portal",
+              "tipo_recurso": "Portal de Fornecedores",
+              "validacao_status": "incompleto",
+              "qualidade_dado": 82,
+              "prazo_envio": null,
+              "setor_estrategico": [
+                "nuclear",
+                "aeroespacial",
+                "defesa",
+                "industria"
+              ],
+              "ativo": true,
+              "motivo": "setor_estrategico contém 4 valores; limite recomendado é 3"
+            },
+            {
+              "id": 1348,
+              "fonte_recurso": "Mitsubishi Heavy Industries (Suppliers)",
+              "fonte": null,
+              "titulo": "05 DIGITAL INNOVATION",
+              "link": "https://www.mhi.com/business/technology/digital_innovation",
+              "tipo_oportunidade": "supplier_portal",
+              "tipo_recurso": "Portal de Fornecedores",
+              "validacao_status": "incompleto",
+              "qualidade_dado": 82,
+              "prazo_envio": null,
+              "setor_estrategico": [
+                "ciencia_tecnologia",
+                "aeroespacial",
+                "defesa",
+                "industria"
+              ],
+              "ativo": true,
+              "motivo": "setor_estrategico contém 4 valores; limite recomendado é 3"
+            },
+            {
+              "id": 1456,
+              "fonte_recurso": "Ministério da Saúde",
+              "fonte": null,
+              "titulo": "Fomento à Pesquisa em Saúde",
+              "link": "https://www.gov.br/saude/pt-br/composicao/sectics/decit/fomento-a-pesquisa-em-saude",
+              "tipo_oportunidade": "investimento",
+              "tipo_recurso": "fomento",
+              "validacao_status": "incompleto",
+              "qualidade_dado": 70,
+              "prazo_envio": null,
+              "setor_estrategico": [
+                "defesa_industrial",
+                "aeroespacial",
+                "ciencia_tecnologia",
+                "energia"
+              ],
+              "ativo": true,
+              "motivo": "setor_estrategico contém 4 valores; limite recomendado é 3"
+            },
+            {
+              "id": 397,
+              "fonte_recurso": "SENAI",
+              "fonte": null,
+              "titulo": "Missão Industrial (SENAI)",
+              "link": "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/missao-industrial/",
+              "tipo_oportunidade": "programa_agregado",
+              "tipo_recurso": "Fomento e apoio à inovação industrial",
+              "validacao_status": "incompleto",
+              "qualidade_dado": 90,
+              "prazo_envio": null,
+              "setor_estrategico": [
+                "industria_inovacao",
+                "aeroespacial",
+                "ciencia_tecnologia",
+                "energia"
+              ],
+              "ativo": true,
+              "motivo": "setor_estrategico contém 4 valores; limite recomendado é 3"
+            },
+            {
+              "id": 411,
+              "fonte_recurso": "AFWERX",
+              "fonte": null,
+              "titulo": "Open Topic",
+              "link": "https://afwerx.com/divisions/sbir-sttr/open-topic/",
+              "tipo_oportunidade": "programa_pdi",
+              "tipo_recurso": "fomento_investimento",
+              "validacao_status": "incompleto",
+              "qualidade_dado": 83,
+              "prazo_envio": null,
+              "setor_estrategico": [
+                "defesa_industrial",
+                "aeroespacial",
+                "defesa",
+                "dual_use"
+              ],
+              "ativo": true,
+              "motivo": "setor_estrategico contém 4 valores; limite recomendado é 3"
+            },
+            {
+              "id": 453,
+              "fonte_recurso": "ANEEL",
+              "fonte": null,
+              "titulo": "Temas Estratégicos do PEQuI",
+              "link": "https://www.gov.br/aneel/pt-br/assuntos/programa-de-pesquisa-desenvolvimento-e-inovacao/temas-estrategicos-do-pequi",
+              "tipo_oportunidade": "programa_pdi",
+              "tipo_recurso": "fomento",
+              "validacao_status": "incompleto",
+              "qualidade_dado": 90,
+              "prazo_envio": null,
+              "setor_estrategico": [
+                "defesa_industrial",
+                "aeroespacial",
+                "ciencia_tecnologia",
+                "energia"
+              ],
+              "ativo": true,
+              "motivo": "setor_estrategico contém 4 valores; limite recomendado é 3"
+            },
+            {
+              "id": 754,
+              "fonte_recurso": "CONFAP",
+              "fonte": null,
+              "titulo": "premio confap de ciencia tecnologia inovacao professora niede guidon 5 edicao 2025",
+              "link": "https://confap.org.br/pt/editais/104/premio-confap-de-ciencia-tecnologia-inovacao-professora-niede-guidon-5-edicao-2025",
+              "tipo_oportunidade": "chamada_publica",
+              "tipo_recurso": "Prêmio / Concurso",
+              "validacao_status": "valido",
+              "qualidade_dado": 100,
+              "prazo_envio": "2026-05-15",
+              "setor_estrategico": [
+                "defesa_industrial",
+                "aeroespacial",
+                "ciencia_tecnologia",
+                "nuclear"
+              ],
+              "ativo": true,
+              "motivo": "setor_estrategico contém 4 valores; limite recomendado é 3"
+            },
+            {
+              "id": 89,
+              "fonte_recurso": "EIC",
+              "fonte": null,
+              "titulo": "EIC Transition",
+              "link": "https://eic.ec.europa.eu/eic-funding-opportunities/eic-transition_en",
+              "tipo_oportunidade": "funding_opportunity",
+              "tipo_recurso": "grant",
+              "validacao_status": "incompleto",
+              "qualidade_dado": 90,
+              "prazo_envio": null,
+              "setor_estrategico": [
+                "inovacao",
+                "ciencia_tecnologia",
+                "energia",
+                "sustentabilidade",
+                "digital"
+              ],
+              "ativo": true,
+              "motivo": "setor_estrategico contém 5 valores; limite recomendado é 3"
+            }
+          ],
+          "by_source": {
+            "AFWERX": 2,
+            "ANEEL": 2,
+            "CNEN": 1,
+            "CONFAP": 1,
+            "DARPA Opportunities": 1,
+            "DIU": 3,
+            "DoD SBIR/STTR": 9,
+            "EIC": 9,
+            "ELETRONUCLEAR": 1,
+            "Eureka Network": 5,
+            "European Defence Fund": 3,
+            "IPEN": 2,
+            "Ministério da Defesa": 3,
+            "Ministério da Saúde": 1,
+            "Mitsubishi Heavy Industries (Suppliers)": 3,
+            "SENAI": 1
+          }
+        },
+        "suspeito_ativo_true": {
+          "severity": "warning",
+          "count": 47,
+          "examples": [
+            {
+              "id": 12,
+              "fonte_recurso": "BASA",
+              "fonte": null,
+              "titulo": "Renegociação de Dívidas",
+              "link": "https://www.bancoamazonia.com.br/empresas/credito-e-financiamentos/renegociacao-dividas",
+              "tipo_oportunidade": "noticia_institucional",
+              "tipo_recurso": "financiamento_reembolsavel",
+              "validacao_status": "suspeito",
+              "qualidade_dado": 53,
+              "prazo_envio": null,
+              "setor_estrategico": null,
+              "ativo": true,
+              "motivo": "validacao_status=suspeito e ativo=true"
+            },
+            {
+              "id": 483,
+              "fonte_recurso": "BAE Systems Suppliers",
+              "fonte": null,
+              "titulo": "Login to your account",
+              "link": "https://baesystems.hicx.net/bae/hicxesm-portal/app/index.html",
+              "tipo_oportunidade": "supplier_portal",
+              "tipo_recurso": "oportunidade_fornecedor",
+              "validacao_status": "suspeito",
+              "qualidade_dado": 60,
+              "prazo_envio": null,
+              "setor_estrategico": null,
+              "ativo": true,
+              "motivo": "validacao_status=suspeito e ativo=true"
+            },
+            {
+              "id": 423,
+              "fonte_recurso": "AMAZUL",
+              "fonte": null,
+              "titulo": "Dispensa de Licitação por Valor 05/2026",
+              "link": "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos/dispensa-de-licitacao-por-valor-052026",
+              "tipo_oportunidade": "licitacao",
+              "tipo_recurso": "licitação",
+              "validacao_status": "suspeito",
+              "qualidade_dado": 100,
+              "prazo_envio": "2027-03-09",
+              "setor_estrategico": [
+                "nuclear",
+                "defesa"
+              ],
+              "ativo": true,
+              "motivo": "validacao_status=suspeito e ativo=true"
+            },
+            {
+              "id": 388,
+              "fonte_recurso": "SENAI",
+              "fonte": null,
+              "titulo": "Agenda.Tech (SENAI) 2026 Chamada: Mapeamento de Oportunidades e Tencologias para Powrshoring no Brasill | Resultado – Edição 2025",
+              "link": "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/agendatech/",
+              "tipo_oportunidade": "programa_agregado",
+              "tipo_recurso": "Fomento e apoio à inovação industrial",
+              "validacao_status": "suspeito",
+              "qualidade_dado": 60,
+              "prazo_envio": null,
+              "setor_estrategico": [
+                "industria_inovacao",
+                "industria"
+              ],
+              "ativo": true,
+              "motivo": "validacao_status=suspeito e ativo=true"
+            },
+            {
+              "id": 389,
+              "fonte_recurso": "SENAI",
+              "fonte": null,
+              "titulo": "Chamada Regional (SENAI) [SENAI/RJ] CONCURSO DE INOVAÇÃO PARA SOLUÇÕES EM EFICIÊNCIA ENERGÉTICA - (SENAI RJ/ENBPAR) - CHAMADA 1",
+              "link": "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/chamada-regional-senai/",
+              "tipo_oportunidade": "programa_agregado",
+              "tipo_recurso": "Fomento e apoio à inovação industrial",
+              "validacao_status": "suspeito",
+              "qualidade_dado": 60,
+              "prazo_envio": null,
+              "setor_estrategico": [
+                "industria_inovacao",
+                "energia"
+              ],
+              "ativo": true,
+              "motivo": "validacao_status=suspeito e ativo=true"
+            },
+            {
+              "id": 431,
+              "fonte_recurso": "AMAZUL",
+              "fonte": null,
+              "titulo": "Dispensa de Licitação por Valor 04/2024",
+              "link": "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos/dispensa-de-licitacao-por-valor-042024-0",
+              "tipo_oportunidade": "licitacao",
+              "tipo_recurso": "licitação",
+              "validacao_status": "suspeito",
+              "qualidade_dado": 100,
+              "prazo_envio": "2026-05-31",
+              "setor_estrategico": [
+                "defesa"
+              ],
+              "ativo": true,
+              "motivo": "validacao_status=suspeito e ativo=true"
+            },
+            {
+              "id": 425,
+              "fonte_recurso": "AMAZUL",
+              "fonte": null,
+              "titulo": "Dispensa de Licitação por Valor 02/2025",
+              "link": "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos/dispensa-de-licitacao-por-valor-022025",
+              "tipo_oportunidade": "licitacao",
+              "tipo_recurso": "licitação",
+              "validacao_status": "suspeito",
+              "qualidade_dado": 100,
+              "prazo_envio": "2026-03-20",
+              "setor_estrategico": [
+                "defesa"
+              ],
+              "ativo": true,
+              "motivo": "validacao_status=suspeito e ativo=true"
+            },
+            {
+              "id": 426,
+              "fonte_recurso": "AMAZUL",
+              "fonte": null,
+              "titulo": "Dispensa de Licitação por Valor 03/2025",
+              "link": "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos/dispensa-de-licitacao-por-valor-032025",
+              "tipo_oportunidade": "licitacao",
+              "tipo_recurso": "licitação",
+              "validacao_status": "suspeito",
+              "qualidade_dado": 100,
+              "prazo_envio": "2026-06-02",
+              "setor_estrategico": [
+                "defesa"
+              ],
+              "ativo": true,
+              "motivo": "validacao_status=suspeito e ativo=true"
+            },
+            {
+              "id": 429,
+              "fonte_recurso": "AMAZUL",
+              "fonte": null,
+              "titulo": "Dispensa de Licitação por Valor 06/2025",
+              "link": "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos/dispensa-de-licitacao-por-valor-062025",
+              "tipo_oportunidade": "licitacao",
+              "tipo_recurso": "licitação",
+              "validacao_status": "suspeito",
+              "qualidade_dado": 100,
+              "prazo_envio": "2028-06-16",
+              "setor_estrategico": [
+                "nuclear",
+                "defesa"
+              ],
+              "ativo": true,
+              "motivo": "validacao_status=suspeito e ativo=true"
+            },
+            {
+              "id": 430,
+              "fonte_recurso": "AMAZUL",
+              "fonte": null,
+              "titulo": "Dispensa de Licitação por Valor 07/2025",
+              "link": "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos/dispensa-de-licitacao-por-valor-072025",
+              "tipo_oportunidade": "licitacao",
+              "tipo_recurso": "licitação",
+              "validacao_status": "suspeito",
+              "qualidade_dado": 100,
+              "prazo_envio": "2025-12-11",
+              "setor_estrategico": [
+                "nuclear",
+                "defesa"
+              ],
+              "ativo": true,
+              "motivo": "validacao_status=suspeito e ativo=true"
+            },
+            {
+              "id": 473,
+              "fonte_recurso": "Apex Brasil",
+              "fonte": null,
+              "titulo": "Exporta Mais Brasil | Alimentos Funcionais e Suplementos Alimentares 2026",
+              "link": "https://crm-apps.apexbrasil.com.br/orgbdeab873/inscricao-eventos/evento/exporta-mais-brasil-natural-tech-2026/ac9457a1-40b1-4807-916a-d8129d19ba1d?utm_source=comunicacao",
+              "tipo_oportunidade": "programa",
+              "tipo_recurso": "apoio_internacionalizacao",
+              "validacao_status": "suspeito",
+              "qualidade_dado": 70,
+              "prazo_envio": null,
+              "setor_estrategico": [
+                "aeroespacial"
+              ],
+              "ativo": true,
+              "motivo": "validacao_status=suspeito e ativo=true"
+            },
+            {
+              "id": 474,
+              "fonte_recurso": "Apex Brasil",
+              "fonte": null,
+              "titulo": "Exporta Mais Brasil - E-commerce 2026",
+              "link": "https://crm-apps.apexbrasil.com.br/orgbdeab873/inscricao-eventos/evento/exporta-mais-brasil-e-commerce-2026/9a606dbd-27e2-4239-9914-a7826b563add?utm_source=Comunicacao",
+              "tipo_oportunidade": "selecao_empresas",
+              "tipo_recurso": "apoio_internacionalizacao",
+              "validacao_status": "suspeito",
+              "qualidade_dado": 80,
+              "prazo_envio": "2026-05-08",
+              "setor_estrategico": [
+                "aeroespacial"
+              ],
+              "ativo": true,
+              "motivo": "validacao_status=suspeito e ativo=true"
+            },
+            {
+              "id": 476,
+              "fonte_recurso": "BADESUL",
+              "fonte": null,
+              "titulo": "Lista de entidades inscritas",
+              "link": "https://www.badesul.com.br/fas/transparencia/download?idPublicacao=29015",
+              "tipo_oportunidade": "noticia_institucional",
+              "tipo_recurso": "financiamento_reembolsavel",
+              "validacao_status": "suspeito",
+              "qualidade_dado": 65,
+              "prazo_envio": null,
+              "setor_estrategico": [
+                "defesa_industrial",
+                "aeroespacial"
+              ],
+              "ativo": true,
+              "motivo": "validacao_status=suspeito e ativo=true"
+            },
+            {
+              "id": 482,
+              "fonte_recurso": "BAE Systems Suppliers",
+              "fonte": null,
+              "titulo": "New supplier registration (HICX)",
+              "link": "https://baesystems.hicx.net/bae/hicxesm-portal/app/discovery-login.html",
+              "tipo_oportunidade": "supplier_portal",
+              "tipo_recurso": "oportunidade_fornecedor",
+              "validacao_status": "suspeito",
+              "qualidade_dado": 70,
+              "prazo_envio": null,
+              "setor_estrategico": null,
+              "ativo": true,
+              "motivo": "validacao_status=suspeito e ativo=true"
+            },
+            {
+              "id": 1018,
+              "fonte_recurso": "General Dynamics Suppliers",
+              "fonte": null,
+              "titulo": "ETHICS & CONDUCT BLUE BOOK (v7)",
+              "link": "https://www.gdls.com/wp-content/uploads/2025/12/GDLS-Supplier-Code-of-Conduct-Ethics-7th-Edition.pdf",
+              "tipo_oportunidade": "supplier_portal",
+              "tipo_recurso": "oportunidade_fornecedor",
+              "validacao_status": "suspeito",
+              "qualidade_dado": 90,
+              "prazo_envio": null,
+              "setor_estrategico": null,
+              "ativo": true,
+              "motivo": "validacao_status=suspeito e ativo=true"
+            },
+            {
+              "id": 1015,
+              "fonte_recurso": "General Dynamics Suppliers",
+              "fonte": null,
+              "titulo": "Mentor-Protégé Program",
+              "link": "https://www.gd.com/suppliers/mentor-protege-program",
+              "tipo_oportunidade": "supplier_portal",
+              "tipo_recurso": "oportunidade_fornecedor",
+              "validacao_status": "suspeito",
+              "qualidade_dado": 70,
+              "prazo_envio": null,
+              "setor_estrategico": [
+                "defesa_industrial"
+              ],
+              "ativo": true,
+              "motivo": "validacao_status=suspeito e ativo=true"
+            },
+            {
+              "id": 1016,
+              "fonte_recurso": "General Dynamics Suppliers",
+              "fonte": null,
+              "titulo": "SUPPLIERS",
+              "link": "https://www.gdls.com/suppliers/",
+              "tipo_oportunidade": "supplier_portal",
+              "tipo_recurso": "oportunidade_fornecedor",
+              "validacao_status": "suspeito",
+              "qualidade_dado": 75,
+              "prazo_envio": null,
+              "setor_estrategico": null,
+              "ativo": true,
+              "motivo": "validacao_status=suspeito e ativo=true"
+            },
+            {
+              "id": 1019,
+              "fonte_recurso": "General Dynamics Suppliers",
+              "fonte": null,
+              "titulo": "iSUPPLIER",
+              "link": "https://www.gdls.com/suppliers/isupplier",
+              "tipo_oportunidade": "cadastro_fornecedor",
+              "tipo_recurso": "oportunidade_fornecedor",
+              "validacao_status": "suspeito",
+              "qualidade_dado": 75,
+              "prazo_envio": null,
+              "setor_estrategico": null,
+              "ativo": true,
+              "motivo": "validacao_status=suspeito e ativo=true"
+            },
+            {
+              "id": 1020,
+              "fonte_recurso": "General Dynamics Suppliers",
+              "fonte": null,
+              "titulo": "QUALITY",
+              "link": "https://www.gdls.com/suppliers/quality/",
+              "tipo_oportunidade": "supplier_portal",
+              "tipo_recurso": "oportunidade_fornecedor",
+              "validacao_status": "suspeito",
+              "qualidade_dado": 75,
+              "prazo_envio": null,
+              "setor_estrategico": null,
+              "ativo": true,
+              "motivo": "validacao_status=suspeito e ativo=true"
+            },
+            {
+              "id": 1021,
+              "fonte_recurso": "General Dynamics Suppliers",
+              "fonte": null,
+              "titulo": "SUPPLIER PERFORMANCE",
+              "link": "https://www.gdls.com/wp-content/uploads/2026/01/GDLS-Global-Supplier-Performance-Scorecard-2025-12-external.pdf",
+              "tipo_oportunidade": "supplier_portal",
+              "tipo_recurso": "oportunidade_fornecedor",
+              "validacao_status": "suspeito",
+              "qualidade_dado": 82,
+              "prazo_envio": null,
+              "setor_estrategico": null,
+              "ativo": true,
+              "motivo": "validacao_status=suspeito e ativo=true"
+            },
+            {
+              "id": 1451,
+              "fonte_recurso": "Petrobras",
+              "fonte": null,
+              "titulo": "Inscrições Projetos Incentivados",
+              "link": "https://investidor.bussolasocial.com.br/petrobras/editais/incentivados2023.2",
+              "tipo_oportunidade": "chamada_publica",
+              "tipo_recurso": "Patrocínio e projetos sociais e culturais",
+              "validacao_status": "suspeito",
+              "qualidade_dado": 53,
+              "prazo_envio": null,
+              "setor_estrategico": [
+                "aeroespacial"
+              ],
+              "ativo": true,
+              "motivo": "validacao_status=suspeito e ativo=true"
+            },
+            {
+              "id": 1396,
+              "fonte_recurso": "Lockheed Martin Suppliers",
+              "fonte": null,
+              "titulo": "Suppliers",
+              "link": "https://www.lockheedmartin.com/en-us/suppliers.html",
+              "tipo_oportunidade": "supplier_portal",
+              "tipo_recurso": "oportunidade_fornecedor",
+              "validacao_status": "suspeito",
+              "qualidade_dado": 75,
+              "prazo_envio": null,
+              "setor_estrategico": null,
+              "ativo": true,
+              "motivo": "validacao_status=suspeito e ativo=true"
+            },
+            {
+              "id": 1404,
+              "fonte_recurso": "Lockheed Martin Suppliers",
+              "fonte": null,
+              "titulo": "Doing Business",
+              "link": "https://www.lockheedmartin.com/en-us/suppliers/information.html",
+              "tipo_oportunidade": "supplier_portal",
+              "tipo_recurso": "oportunidade_fornecedor",
+              "validacao_status": "suspeito",
+              "qualidade_dado": 82,
+              "prazo_envio": null,
+              "setor_estrategico": [
+                "defesa_industrial"
+              ],
+              "ativo": true,
+              "motivo": "validacao_status=suspeito e ativo=true"
+            },
+            {
+              "id": 1410,
+              "fonte_recurso": "Lockheed Martin Suppliers",
+              "fonte": null,
+              "titulo": "Supplier Documentation",
+              "link": "https://www.lockheedmartin.com/en-us/suppliers/documentation.html",
+              "tipo_oportunidade": "supplier_portal",
+              "tipo_recurso": "oportunidade_fornecedor",
+              "validacao_status": "suspeito",
+              "qualidade_dado": 82,
+              "prazo_envio": null,
+              "setor_estrategico": [
+                "defesa_industrial",
+                "aeroespacial"
+              ],
+              "ativo": true,
+              "motivo": "validacao_status=suspeito e ativo=true"
+            },
+            {
+              "id": 1458,
+              "fonte_recurso": "Softex",
+              "fonte": null,
+              "titulo": "Softex e CAIXA lançam Programa Amazônia Geek para capacitar jovens e mulheres em vulnerabilidade na indústria de games",
+              "link": "https://softex.br/softex-e-caixa-lancam-programa-amazonia-geek-para-capacitar-jovens-e-mulheres-em-vulnerabilidade-na-industria-de-games/",
+              "tipo_oportunidade": "programa",
+              "tipo_recurso": "Capacitação",
+              "validacao_status": "suspeito",
+              "qualidade_dado": 60,
+              "prazo_envio": null,
+              "setor_estrategico": [
+                "transformacao_digital",
+                "aeroespacial"
+              ],
+              "ativo": true,
+              "motivo": "validacao_status=suspeito e ativo=true"
+            },
+            {
+              "id": 1452,
+              "fonte_recurso": "Petrobras",
+              "fonte": null,
+              "titulo": "Regulamento Seleção Pública 2023.1 – Projetos Incentivados",
+              "link": "https://petrobras.com.br/documents/2677942/7444258/SP+2023.1+-+Regulamento+Incentivados.pdf/c175c3b8-d4ca-a0f9-85ce-8a75d836a0ac",
+              "tipo_oportunidade": "chamada_publica",
+              "tipo_recurso": "Subvenção (Não Reembolsável)",
+              "validacao_status": "suspeito",
+              "qualidade_dado": 65,
+              "prazo_envio": null,
+              "setor_estrategico": null,
+              "ativo": true,
+              "motivo": "validacao_status=suspeito e ativo=true"
+            },
+            {
+              "id": 1450,
+              "fonte_recurso": "Petrobras",
+              "fonte": null,
+              "titulo": "Inscrições Projetos Não Incentivados",
+              "link": "https://investidor.bussolasocial.com.br/petrobras/editais/naoincentivados2023.2",
+              "tipo_oportunidade": "chamada_publica",
+              "tipo_recurso": "Patrocínio e projetos sociais e culturais",
+              "validacao_status": "suspeito",
+              "qualidade_dado": 53,
+              "prazo_envio": null,
+              "setor_estrategico": [
+                "aeroespacial"
+              ],
+              "ativo": true,
+              "motivo": "validacao_status=suspeito e ativo=true"
+            },
+            {
+              "id": 1453,
+              "fonte_recurso": "Petrobras",
+              "fonte": null,
+              "titulo": "Regulamento Seleção Pública 2023.1 – Projetos Não Incentivados",
+              "link": "https://petrobras.com.br/documents/2677942/7444258/SP+2023.1+-+Regulamento+Nao+Incentivados.pdf/04e566d0-35dc-f269-ee71-bdaed0b5b0ff",
+              "tipo_oportunidade": "chamada_publica",
+              "tipo_recurso": "Subvenção (Não Reembolsável)",
+              "validacao_status": "suspeito",
+              "qualidade_dado": 65,
+              "prazo_envio": null,
+              "setor_estrategico": null,
+              "ativo": true,
+              "motivo": "validacao_status=suspeito e ativo=true"
+            },
+            {
+              "id": 1454,
+              "fonte_recurso": "Rheinmetall Suppliers",
+              "fonte": null,
+              "titulo": "Become a supplier",
+              "link": "https://www.rheinmetall.com/en/suppliers/become-a-supplier",
+              "tipo_oportunidade": "cadastro_fornecedor",
+              "tipo_recurso": "oportunidade_fornecedor",
+              "validacao_status": "suspeito",
+              "qualidade_dado": 70,
+              "prazo_envio": null,
+              "setor_estrategico": null,
+              "ativo": true,
+              "motivo": "validacao_status=suspeito e ativo=true"
+            },
+            {
+              "id": 1455,
+              "fonte_recurso": "Rheinmetall Suppliers",
+              "fonte": null,
+              "titulo": "Rheinmetall procurement portal",
+              "link": "https://rheinmetall-supplier.ivalua.app",
+              "tipo_oportunidade": "supplier_portal",
+              "tipo_recurso": "oportunidade_fornecedor",
+              "validacao_status": "suspeito",
+              "qualidade_dado": 53,
+              "prazo_envio": null,
+              "setor_estrategico": null,
+              "ativo": true,
+              "motivo": "validacao_status=suspeito e ativo=true"
+            }
+          ],
+          "by_source": {
+            "AMAZUL": 12,
+            "Apex Brasil": 4,
+            "BADESUL": 2,
+            "BAE Systems Suppliers": 2,
+            "BASA": 3,
+            "EIT": 2,
+            "ESA OSIP": 1,
+            "General Dynamics Suppliers": 6,
+            "Lockheed Martin Suppliers": 3,
+            "Petrobras": 4,
+            "Rheinmetall Suppliers": 2,
+            "SENAI": 2,
+            "Softex": 2,
+            "Thales Suppliers": 1,
+            "UKRI Funding": 1
+          }
+        }
+      }
+    },
+    "noticia": {
+      "counts": {
+        "total": 109,
+        "ativo_true": 109,
+        "ativo_false": 0,
+        "ativo_null_or_missing": 0
+      },
+      "problems": {
+        "links_duplicados": {
+          "severity": "critical",
+          "count": 0,
+          "examples": [],
+          "by_source": {}
+        },
+        "sem_data_publicacao": {
+          "severity": "warning",
+          "count": 0,
+          "examples": [],
+          "by_source": {}
+        },
+        "sem_resumo": {
+          "severity": "warning",
+          "count": 0,
+          "examples": [],
+          "by_source": {}
+        },
+        "sem_fonte": {
+          "severity": "warning",
+          "count": 0,
+          "examples": [],
+          "by_source": {}
+        },
+        "review_for_edital_indevido": {
+          "severity": "warning",
+          "count": 0,
+          "examples": [],
+          "by_source": {}
+        },
+        "tipo_pesquisa_incoerente": {
+          "severity": "warning",
+          "count": 0,
+          "examples": [],
+          "by_source": {}
+        },
+        "extras_nao_json": {
+          "severity": "warning",
+          "count": 0,
+          "examples": [],
+          "by_source": {}
+        },
+        "fonte_experimental": {
+          "severity": "warning",
+          "count": 0,
+          "examples": [],
+          "by_source": {}
+        }
+      }
+    },
+    "pesquisa": {
+      "counts": {
+        "total": 47,
+        "ativo_true": 47,
+        "ativo_false": 0,
+        "ativo_null_or_missing": 0
+      },
+      "problems": {
+        "links_duplicados": {
+          "severity": "critical",
+          "count": 0,
+          "examples": [],
+          "by_source": {}
+        },
+        "sem_descricao": {
+          "severity": "warning",
+          "count": 0,
+          "examples": [],
+          "by_source": {}
+        },
+        "sem_fonte_recurso": {
+          "severity": "warning",
+          "count": 0,
+          "examples": [],
+          "by_source": {}
+        },
+        "sem_data_publicacao_sem_justificativa": {
+          "severity": "warning",
+          "count": 0,
+          "examples": [],
+          "by_source": {}
+        },
+        "setor_area_incoerente": {
+          "severity": "warning",
+          "count": 0,
+          "examples": [],
+          "by_source": {}
+        },
+        "extras_nao_json": {
+          "severity": "warning",
+          "count": 0,
+          "examples": [],
+          "by_source": {}
+        },
+        "sem_pdf_ou_documentos": {
+          "severity": "warning",
+          "count": 0,
+          "examples": [],
+          "by_source": {}
+        }
+      }
+    }
+  },
+  "views": {
+    "vw_editais_front": {
+      "ok": true,
+      "accessible": true,
+      "sample_count": 5,
+      "columns_seen": [
+        "area_cientifica",
+        "area_tecnologica",
+        "ativo",
+        "atualizado_em",
+        "classificacao_confianca",
+        "contrapartida",
+        "criado_em",
+        "data_publicacao",
+        "descricao",
+        "extras",
+        "fim_inscricao",
+        "fonte",
+        "fonte_recurso",
+        "garantias",
+        "id",
+        "linha_credito",
+        "link",
+        "modalidade_financiamento",
+        "natureza_recurso",
+        "pais",
+        "pdf_url",
+        "perfil_ideal",
+        "prazo_amortizacao",
+        "prazo_carencia",
+        "prazo_envio",
+        "publico_alvo",
+        "qualidade_dado",
+        "reembolsavel",
+        "regiao",
+        "setor_economico",
+        "setor_estrategico",
+        "situacao",
+        "taxa_juros",
+        "tipo_oportunidade",
+        "tipo_recurso",
+        "titulo",
+        "uf",
+        "validacao_status",
+        "valor_maximo",
+        "valor_minimo"
+      ],
+      "missing_column_groups": {},
+      "error": ""
+    },
+    "vw_editais_admin": {
+      "ok": true,
+      "accessible": true,
+      "sample_count": 5,
+      "columns_seen": [
+        "area_cientifica",
+        "area_tecnologica",
+        "ativo",
+        "atualizado_em",
+        "classificacao_confianca",
+        "contrapartida",
+        "criado_em",
+        "data_publicacao",
+        "descricao",
+        "extras",
+        "fim_inscricao",
+        "fonte",
+        "fonte_recurso",
+        "garantias",
+        "id",
+        "linha_credito",
+        "link",
+        "modalidade_financiamento",
+        "natureza_recurso",
+        "pais",
+        "pdf_url",
+        "perfil_ideal",
+        "prazo_amortizacao",
+        "prazo_carencia",
+        "prazo_envio",
+        "publico_alvo",
+        "qualidade_dado",
+        "reembolsavel",
+        "regiao",
+        "setor_economico",
+        "setor_estrategico",
+        "situacao",
+        "taxa_juros",
+        "tipo_oportunidade",
+        "tipo_recurso",
+        "titulo",
+        "uf",
+        "validacao_status",
+        "valor_maximo",
+        "valor_minimo"
+      ],
+      "missing_column_groups": {},
+      "error": ""
+    },
+    "vw_noticias_front": {
+      "ok": true,
+      "accessible": true,
+      "sample_count": 5,
+      "columns_seen": [
+        "area_cientifica",
+        "area_tecnologica",
+        "ativo",
+        "atualizado_em",
+        "content_type",
+        "conteudo",
+        "criado_em",
+        "data_publicacao",
+        "extras",
+        "fim_inscricao",
+        "fonte",
+        "fonte_legado",
+        "fonte_recurso",
+        "id",
+        "idioma",
+        "idioma_original",
+        "link",
+        "origem_portal",
+        "pais",
+        "prazo_envio",
+        "qualidade_dado",
+        "regiao",
+        "resumo",
+        "setor_estrategico",
+        "tags",
+        "tipo_conteudo",
+        "titulo",
+        "validacao_status"
+      ],
+      "missing_column_groups": {},
+      "error": ""
+    },
+    "vw_pesquisas_front": {
+      "ok": true,
+      "accessible": true,
+      "sample_count": 5,
+      "columns_seen": [
+        "area_cientifica",
+        "area_tecnologica",
+        "ativo",
+        "atualizado_em",
+        "criado_em",
+        "data_publicacao",
+        "descricao",
+        "documentos",
+        "extras",
+        "fim_inscricao",
+        "fonte",
+        "fonte_legado",
+        "fonte_recurso",
+        "id",
+        "idioma",
+        "idioma_original",
+        "link",
+        "origem_portal",
+        "pais",
+        "pdf_url",
+        "prazo_envio",
+        "qualidade_dado",
+        "regiao",
+        "resumo",
+        "setor_estrategico",
+        "tags",
+        "tipo_oportunidade",
+        "tipo_pesquisa",
+        "tipo_recurso",
+        "titulo",
+        "url_documento",
+        "validacao_status"
+      ],
+      "missing_column_groups": {},
+      "error": ""
+    }
+  },
+  "warnings_by_source": {
+    "AMAZUL": {
+      "total": 19,
+      "prazo_vencido_ativo_true": 7,
+      "suspeito_ativo_true": 12
+    },
+    "CNPQ": {
+      "total": 11,
+      "prazo_vencido_ativo_true": 10,
+      "credito_tipo_recurso_incoerente": 1
+    },
+    "EMBRAPII": {
+      "total": 10,
+      "prazo_vencido_ativo_true": 10
+    },
+    "DoD SBIR/STTR": {
+      "total": 9,
+      "setor_estrategico_muito_amplo": 9
+    },
+    "EIC": {
+      "total": 9,
+      "setor_estrategico_muito_amplo": 9
+    },
+    "Grants.gov": {
+      "total": 9,
+      "prazo_vencido_ativo_true": 9
+    },
+    "IARPA": {
+      "total": 8,
+      "prazo_vencido_ativo_true": 8
+    },
+    "General Dynamics Suppliers": {
+      "total": 6,
+      "suspeito_ativo_true": 6
+    },
+    "Apex Brasil": {
+      "total": 5,
+      "prazo_vencido_ativo_true": 1,
+      "suspeito_ativo_true": 4
+    },
+    "Eureka Network": {
+      "total": 5,
+      "setor_estrategico_muito_amplo": 5
+    },
+    "Petrobras": {
+      "total": 4,
+      "suspeito_ativo_true": 4
+    },
+    "BASA": {
+      "total": 3,
+      "suspeito_ativo_true": 3
+    },
+    "DIU": {
+      "total": 3,
+      "setor_estrategico_muito_amplo": 3
+    },
+    "European Defence Fund": {
+      "total": 3,
+      "setor_estrategico_muito_amplo": 3
+    },
+    "IPEN": {
+      "total": 3,
+      "credito_tipo_recurso_incoerente": 1,
+      "setor_estrategico_muito_amplo": 2
+    },
+    "Lockheed Martin Suppliers": {
+      "total": 3,
+      "suspeito_ativo_true": 3
+    },
+    "Ministério da Defesa": {
+      "total": 3,
+      "setor_estrategico_muito_amplo": 3
+    },
+    "Mitsubishi Heavy Industries (Suppliers)": {
+      "total": 3,
+      "setor_estrategico_muito_amplo": 3
+    },
+    "SENAI": {
+      "total": 3,
+      "setor_estrategico_muito_amplo": 1,
+      "suspeito_ativo_true": 2
+    },
+    "AFWERX": {
+      "total": 2,
+      "setor_estrategico_muito_amplo": 2
+    },
+    "ANEEL": {
+      "total": 2,
+      "setor_estrategico_muito_amplo": 2
+    },
+    "ANP": {
+      "total": 2,
+      "prazo_vencido_ativo_true": 2
+    },
+    "BADESUL": {
+      "total": 2,
+      "suspeito_ativo_true": 2
+    },
+    "BAE Systems Suppliers": {
+      "total": 2,
+      "suspeito_ativo_true": 2
+    },
+    "EIT": {
+      "total": 2,
+      "suspeito_ativo_true": 2
+    },
+    "Rheinmetall Suppliers": {
+      "total": 2,
+      "suspeito_ativo_true": 2
+    },
+    "Softex": {
+      "total": 2,
+      "suspeito_ativo_true": 2
+    },
+    "BDMG": {
+      "total": 1,
+      "prazo_vencido_ativo_true": 1
+    },
+    "CNEN": {
+      "total": 1,
+      "setor_estrategico_muito_amplo": 1
+    },
+    "CONFAP": {
+      "total": 1,
+      "setor_estrategico_muito_amplo": 1
+    },
+    "DARPA Opportunities": {
+      "total": 1,
+      "setor_estrategico_muito_amplo": 1
+    },
+    "ELETRONUCLEAR": {
+      "total": 1,
+      "setor_estrategico_muito_amplo": 1
+    },
+    "ESA OSIP": {
+      "total": 1,
+      "suspeito_ativo_true": 1
+    },
+    "FAPEMIG": {
+      "total": 1,
+      "credito_tipo_recurso_incoerente": 1
+    },
+    "FAPERGS": {
+      "total": 1,
+      "credito_tipo_recurso_incoerente": 1
+    },
+    "Ministério da Saúde": {
+      "total": 1,
+      "setor_estrategico_muito_amplo": 1
+    },
+    "NATO DIANA": {
+      "total": 1,
+      "prazo_vencido_ativo_true": 1
+    },
+    "Thales Suppliers": {
+      "total": 1,
+      "suspeito_ativo_true": 1
+    },
+    "UKRI Funding": {
+      "total": 1,
+      "suspeito_ativo_true": 1
+    }
+  },
+  "environment_guard": {
+    "editalfinder_env": "staging",
+    "has_supabase_url": true,
+    "has_key": true,
+    "url_host_masked": "dof***.co",
+    "block_reason": ""
+  },
+  "recommendations": [
+    "Usar warnings para priorizar limpeza, ajustes de classificação e filtros de frontend.",
+    "Frontend deve ocultar ativo=false por padrão e expor badges para acesso limitado/fonte experimental."
+  ]
+}

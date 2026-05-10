@@ -1,0 +1,66 @@
+{
+  "data_auditoria": "2026-05-09T15:33:13Z",
+  "fontes": [
+    "innovate_uk",
+    "ukri_funding",
+    "eurostars",
+    "eit",
+    "esa_star",
+    "esa_osip"
+  ],
+  "max_items_por_fonte": 25,
+  "pdf_skip": true,
+  "itens_analisados": 48,
+  "raw_com_pdf_url": 14,
+  "raw_com_documentos": 15,
+  "transformado_com_pdf_url": 14,
+  "transformado_com_documentos": 15,
+  "payload_com_pdf_url": 14,
+  "payload_com_documentos": 15,
+  "bruto_com_documentos_pdf": 14,
+  "bruto_com_documentos_nao_pdf": 4,
+  "transformado_com_documentos_pdf": 14,
+  "transformado_com_documentos_nao_pdf": 4,
+  "payload_com_documentos_pdf": 14,
+  "payload_com_documentos_nao_pdf": 4,
+  "perdas_pdf": 0,
+  "perdas_nao_pdf": 0,
+  "downloads_falharam": 14,
+  "downloads_sucesso": 0,
+  "links_invalidos": 0,
+  "links_relativos_restantes": 0,
+  "links_quebrados": 0,
+  "duplicados_documentos": 0,
+  "perdas_total": 0,
+  "fontes_pior_preservacao": [
+    {
+      "fonte": "innovate_uk",
+      "score_perda": 1.0
+    },
+    {
+      "fonte": "esa_star",
+      "score_perda": 1.0
+    },
+    {
+      "fonte": "ukri_funding",
+      "score_perda": 0.0
+    },
+    {
+      "fonte": "eurostars",
+      "score_perda": 0.0
+    },
+    {
+      "fonte": "eit",
+      "score_perda": 0.0
+    },
+    {
+      "fonte": "esa_osip",
+      "score_perda": 0.0
+    }
+  ],
+  "formatos_detectados": {
+    "pdf": 28,
+    "docx": 9,
+    "xlsx": 2
+  }
+}

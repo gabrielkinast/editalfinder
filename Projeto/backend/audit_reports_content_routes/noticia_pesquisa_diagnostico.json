@@ -1,0 +1,102 @@
+{
+  "data_auditoria": "2026-05-04T00:00:00Z",
+  "escopo": {
+    "arquivos": [
+      "CORE/loader.py",
+      "CORE/content_routing.py",
+      "migrations/20260504_create_noticia_pesquisa_tables.sql",
+      "migrations/20260501_create_carga_execucao_and_edital_historico.sql",
+      "CORE/schema_sql_completo.sql"
+    ]
+  },
+  "respostas": {
+    "backend_ja_grava_noticia": true,
+    "backend_ja_grava_pesquisa": true,
+    "quais_campos_existem": {
+      "noticia": [
+        "titulo",
+        "resumo",
+        "link",
+        "fonte",
+        "data_publicacao",
+        "pais",
+        "orgao",
+        "setor_estrategico(text[])",
+        "area_cientifica(text[])",
+        "area_tecnologica(text[])",
+        "idioma",
+        "tags(text[])",
+        "url_documento",
+        "content_type",
+        "extras(jsonb)",
+        "hash_deduplicacao",
+        "ultima_coleta",
+        "criado_em",
+        "atualizado_em"
+      ],
+      "pesquisa": [
+        "titulo",
+        "resumo",
+        "link",
+        "fonte",
+        "data_publicacao",
+        "pais",
+        "orgao",
+        "setor_estrategico(text[])",
+        "area_cientifica(text[])",
+        "area_tecnologica(text[])",
+        "idioma",
+        "tags(text[])",
+        "url_documento",
+        "content_type",
+        "extras(jsonb)",
+        "hash_deduplicacao",
+        "ultima_coleta",
+        "criado_em",
+        "atualizado_em"
+      ]
+    },
+    "quais_campos_faltam_para_objetivo_news_research": [
+      "noticia.conteudo (opcional, para texto completo)",
+      "noticia.imagem_url (opcional, para front)",
+      "pesquisa.tipo_pesquisa (opcional, taxonomia de pesquisa)",
+      "campos explícitos de qualidade/validacao fora de extras para noticia/pesquisa (opcional)"
+    ],
+    "o_que_loader_espera": {
+      "roteamento": "destination_table_for_item() -> noticia/pesquisa/edital",
+      "upsert": "inserir_ou_atualizar_conteudo(table_name, row) com on_conflict='link'",
+      "mapper": "map_to_content_schema() monta payload enxuto e normaliza arrays text[]",
+      "chave_unica": "link único em noticia/pesquisa"
+    },
+    "science_scraper_deve_migrar_para_noticia": "sim_parcial",
+    "ajustes_necessarios_antes_apply": [
+      "Consolidar crawler dedicado com janela temporal e anti-ruído (sem apply).",
+      "Auditar classificação noticia vs pesquisa por fonte antes de escrever em DB.",
+      "Adicionar whitelist de seeds e limites por fonte.",
+      "Opcional: ampliar schema noticia/pesquisa com campos editoriais se o front exigir."
+    ]
+  },
+  "detalhes_tecnicos": {
+    "map_to_content_schema_campos_emitidos": [
+      "titulo",
+      "resumo",
+      "link",
+      "fonte",
+      "data_publicacao",
+      "pais",
+      "orgao",
+      "setor_estrategico",
+      "area_cientifica",
+      "area_tecnologica",
+      "idioma",
+      "tags",
+      "url_documento",
+      "content_type",
+      "extras",
+      "hash_deduplicacao",
+      "ultima_coleta"
+    ],
+    "upsert_routed_item": "Já roteia para public.noticia/public.pesquisa quando infer_content_type retorna noticia/pesquisa."
+  }
+}
+

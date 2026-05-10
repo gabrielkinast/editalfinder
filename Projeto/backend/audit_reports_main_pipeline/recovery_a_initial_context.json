@@ -1,0 +1,41 @@
+{
+  "data_auditoria": "2026-05-10T04:01:58Z",
+  "fontes_recovery_a": [
+    "esa_star",
+    "dod_sbir_sttr",
+    "banco_da_amazonia"
+  ],
+  "recuperaveis_por_fonte": {
+    "esa_star": "Apenas se crawlers encontrarem ITT/tender em esa.int ou procurement público (sem SSO).",
+    "dod_sbir_sttr": "Solicitações/topics via API ou HTML filtrado; hubs FAQ/API excluídos.",
+    "banco_da_amazonia": "Linhas FNO/PRONAF/FUNGETUR/Finame; excluir conta PJ, renegociação, hubs genéricos."
+  },
+  "manter_bloqueado": {
+    "esa_star": "Se continuar sem URL pública acionável (só SSO).",
+    "dod_sbir_sttr": "N/A se pipeline só API/topics.",
+    "ruido_global": [
+      "FAQ",
+      "login isolado",
+      "API/docs como edital",
+      "about/contact"
+    ]
+  },
+  "riscos": [
+    "ESA: listagens públicas podem não expor links profundos sem JS.",
+    "DoD: API pode rate-limit (429).",
+    "BASA: WAF ou mudança de HTML do site."
+  ],
+  "recomendacao_inicial": "Rodar crawlers + retransform isolado em recovery_a/; validar mapping_errors=0 antes de qualquer apply.",
+  "referencia_warnings_staging": {
+    "suspeito_por_fonte_top": {
+      "AMAZUL": 14,
+      "Ambev": 7,
+      "Apex Brasil": 4,
+      "BADESUL": 7,
+      "BAE Systems Suppliers": 2,
+      "BASA": 22,
+      "EIT": 2,
+      "ESA OSIP": 1
+    }
+  }
+}

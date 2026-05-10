@@ -1,0 +1,279 @@
+{
+  "innovate_uk": {
+    "label": "Innovate UK",
+    "crawler_exists": true,
+    "raw_output_path": "innovate_uk\\outputs\\innovate_uk_editais.json",
+    "raw_count": 1,
+    "standardized_path": "audit_reports_credito\\lote_inovacao_internacional_onda_c_fix\\standardized\\innovate_uk_standardized.json",
+    "standardized_exists": true,
+    "standardized_count": 1,
+    "readiness_current": null,
+    "readiness_recommended": "needs_manual_review",
+    "readiness_reason": "Volume baixo (1 item) e depende de filtro por funder Innovate UK no detalhe; oficial e acionavel, mas ainda estreito.",
+    "official_urls_useful": [
+      "https://www.gov.uk/apply-funding-innovation",
+      "https://apply-for-innovation-funding.service.gov.uk/competition/search",
+      "https://www.ukri.org/opportunity/?lang=en-gb"
+    ],
+    "exclude_patterns": [
+      "about",
+      "contact",
+      "careers",
+      "news/blog sem submissao",
+      "events sem inscricao",
+      "policy/privacy/terms",
+      "login isolado",
+      "FAQ/resource library generico"
+    ],
+    "semantic": {
+      "fonte": "innovate_uk",
+      "itens": 1,
+      "qualidade_media": 78.0,
+      "flags": {
+        "publico_alvo_sem_evidencia": 1
+      },
+      "flag_rate_pct": 100.0
+    },
+    "tipo_oportunidade_counts": {
+      "funding_opportunity": 1
+    },
+    "tipo_recurso_counts": {
+      "grant": 1
+    },
+    "destination_counts": {
+      "edital": 1
+    },
+    "with_deadline_count": 0,
+    "setor_estrategico_gt3": 0
+  },
+  "ukri_funding": {
+    "label": "UKRI Funding",
+    "crawler_exists": true,
+    "raw_output_path": "ukri_funding\\outputs\\ukri_funding_editais.json",
+    "raw_count": 12,
+    "standardized_path": "audit_reports_credito\\lote_inovacao_internacional_onda_c_fix\\standardized\\ukri_funding_standardized.json",
+    "standardized_exists": true,
+    "standardized_count": 12,
+    "readiness_current": null,
+    "readiness_recommended": "ready_with_notes",
+    "readiness_reason": "12 oportunidades oficiais UKRI; sem erros criticos, mas metade dos itens tem publico_alvo generico e muitos sem prazo extraido.",
+    "official_urls_useful": [
+      "https://www.ukri.org/opportunity/?lang=en-gb",
+      "https://www.ukri.org/apply-for-funding/"
+    ],
+    "exclude_patterns": [
+      "about",
+      "contact",
+      "careers",
+      "news/blog sem submissao",
+      "events sem inscricao",
+      "policy/privacy/terms",
+      "login isolado",
+      "FAQ/resource library generico"
+    ],
+    "semantic": {
+      "fonte": "ukri_funding",
+      "itens": 12,
+      "qualidade_media": 79.67,
+      "flags": {
+        "publico_alvo_sem_evidencia": 6
+      },
+      "flag_rate_pct": 50.0
+    },
+    "tipo_oportunidade_counts": {
+      "research_grant": 8,
+      "funding_opportunity": 2,
+      "fellowship": 2
+    },
+    "tipo_recurso_counts": {
+      "grant": 12
+    },
+    "destination_counts": {
+      "edital": 12
+    },
+    "with_deadline_count": 0,
+    "setor_estrategico_gt3": 0
+  },
+  "eurostars": {
+    "label": "Eurostars",
+    "crawler_exists": true,
+    "raw_output_path": "eurostars\\outputs\\eurostars_editais.json",
+    "raw_count": 2,
+    "standardized_path": "audit_reports_credito\\lote_inovacao_internacional_onda_c_fix\\standardized\\eurostars_standardized.json",
+    "standardized_exists": true,
+    "standardized_count": 2,
+    "readiness_current": null,
+    "readiness_recommended": "needs_manual_review",
+    "readiness_reason": "2 itens oficiais; inclui hub Eurostars e uma call especifica. Bom escopo, mas volume baixo e hub deve ficar com observacao.",
+    "official_urls_useful": [
+      "https://www.eurekanetwork.org/programmes/eurostars/",
+      "https://www.eurekanetwork.org/programmes-and-calls/eurostars/",
+      "https://www.eurekanetwork.org/programmes-and-calls/eurostars/eurostars-call-for-projects-september-2026/"
+    ],
+    "exclude_patterns": [
+      "about",
+      "contact",
+      "careers",
+      "news/blog sem submissao",
+      "events sem inscricao",
+      "policy/privacy/terms",
+      "login isolado",
+      "FAQ/resource library generico"
+    ],
+    "semantic": {
+      "fonte": "eurostars",
+      "itens": 2,
+      "qualidade_media": 87.5,
+      "flags": {},
+      "flag_rate_pct": 0.0
+    },
+    "tipo_oportunidade_counts": {
+      "call_for_proposals": 2
+    },
+    "tipo_recurso_counts": {
+      "grant": 2
+    },
+    "destination_counts": {
+      "edital": 2
+    },
+    "with_deadline_count": 1,
+    "setor_estrategico_gt3": 0
+  },
+  "eit": {
+    "label": "EIT",
+    "crawler_exists": true,
+    "raw_output_path": "eit\\outputs\\eit_editais.json",
+    "raw_count": 16,
+    "standardized_path": "audit_reports_credito\\lote_inovacao_internacional_onda_c_fix\\standardized\\eit_standardized.json",
+    "standardized_exists": true,
+    "standardized_count": 16,
+    "readiness_current": null,
+    "readiness_recommended": "ready_with_notes",
+    "readiness_reason": "16 itens oficiais EIT; mistura calls, procurement e oportunidades de KICs. Precisa curadoria leve para hubs e publico_alvo.",
+    "official_urls_useful": [
+      "https://www.eit.europa.eu/our-activities/opportunities",
+      "https://www.eit.europa.eu/opportunities",
+      "https://www.eit.europa.eu/work-with-us/procurement/calls"
+    ],
+    "exclude_patterns": [
+      "about",
+      "contact",
+      "careers",
+      "news/blog sem submissao",
+      "events sem inscricao",
+      "policy/privacy/terms",
+      "login isolado",
+      "FAQ/resource library generico"
+    ],
+    "semantic": {
+      "fonte": "eit",
+      "itens": 16,
+      "qualidade_media": 74.19,
+      "flags": {
+        "publico_alvo_sem_evidencia": 4
+      },
+      "flag_rate_pct": 25.0
+    },
+    "tipo_oportunidade_counts": {
+      "call_for_proposals": 8,
+      "procurement": 3,
+      "innovation_programme": 5
+    },
+    "tipo_recurso_counts": {
+      "grant": 8,
+      "oportunidade_fornecedor": 3,
+      "apoio_inovacao": 5
+    },
+    "destination_counts": {
+      "edital": 16
+    },
+    "with_deadline_count": 0,
+    "setor_estrategico_gt3": 0
+  },
+  "esa_star": {
+    "label": "ESA STAR",
+    "crawler_exists": true,
+    "raw_output_path": "esa_star\\outputs\\esa_star_editais.json",
+    "raw_count": 1,
+    "standardized_path": "audit_reports_credito\\lote_inovacao_internacional_onda_c_fix\\standardized\\esa_star_standardized.json",
+    "standardized_exists": true,
+    "standardized_count": 0,
+    "readiness_current": null,
+    "readiness_recommended": "blocked",
+    "readiness_reason": "Crawler encontra portal oficial, mas transformer rejeita esa-star Publication como login/autenticacao; 0 transformados.",
+    "official_urls_useful": [
+      "https://www.esa.int/About_Us/Business_with_ESA/How_to_do/Open_Invitations_to_Tender",
+      "https://esastar-publication-ext.sso.esa.int"
+    ],
+    "exclude_patterns": [
+      "about",
+      "contact",
+      "careers",
+      "news/blog sem submissao",
+      "events sem inscricao",
+      "policy/privacy/terms",
+      "login isolado",
+      "FAQ/resource library generico"
+    ],
+    "semantic": {
+      "fonte": "esa_star",
+      "itens": 0,
+      "qualidade_media": null,
+      "flags": {},
+      "flag_rate_pct": 0.0
+    },
+    "tipo_oportunidade_counts": {},
+    "tipo_recurso_counts": {},
+    "destination_counts": {},
+    "with_deadline_count": 0,
+    "setor_estrategico_gt3": 0
+  },
+  "esa_osip": {
+    "label": "ESA OSIP",
+    "crawler_exists": true,
+    "raw_output_path": "esa_osip\\outputs\\esa_osip_editais.json",
+    "raw_count": 18,
+    "standardized_path": "audit_reports_credito\\lote_inovacao_internacional_onda_c_fix\\standardized\\esa_osip_standardized.json",
+    "standardized_exists": true,
+    "standardized_count": 17,
+    "readiness_current": null,
+    "readiness_recommended": "ready_with_notes",
+    "readiness_reason": "17 oportunidades/campaigns oficiais OSIP transformadas; 1 item rejeitado por login/autenticacao e alguns itens sem prazo.",
+    "official_urls_useful": [
+      "https://ideas.esa.int/core/servlet/hype/IMT?templateName=MenuItem&userAction=BrowseCurrentUser",
+      "https://www.esa.int/Enabling_Support/Preparing_for_the_Future/Discovery_and_Preparation/The_Open_Space_Innovation_Platform_OSIP"
+    ],
+    "exclude_patterns": [
+      "about",
+      "contact",
+      "careers",
+      "news/blog sem submissao",
+      "events sem inscricao",
+      "policy/privacy/terms",
+      "login isolado",
+      "FAQ/resource library generico"
+    ],
+    "semantic": {
+      "fonte": "esa_osip",
+      "itens": 17,
+      "qualidade_media": 72.29,
+      "flags": {
+        "publico_alvo_sem_evidencia": 4,
+        "classificacao_muito_ampla": 1
+      },
+      "flag_rate_pct": 29.41
+    },
+    "tipo_oportunidade_counts": {
+      "space_opportunity": 13,
+      "programa_agregado": 4
+    },
+    "tipo_recurso_counts": {
+      "apoio_inovacao": 17
+    },
+    "destination_counts": {
+      "edital": 17
+    },
+    "with_deadline_count": 1,
+    "setor_estrategico_gt3": 0
+  }
+}

@@ -1,0 +1,634 @@
+[
+  {
+    "fonte": "agerio",
+    "policy_entry": {},
+    "policy_notes": null,
+    "seed_urls": [
+      "https://www.agerio.com.br/linhas-de-credito/",
+      "https://www.agerio.com.br/areas-de-atuacao/tipo/empresas/",
+      "https://www.agerio.com.br/"
+    ],
+    "primary_classification": "ok_html_publico",
+    "recommended_method": "usar_rss",
+    "readiness_access_tag": "ok",
+    "interpretacao_crawler": "crawler_nao_evidenciado_como_quebrado_por_acesso",
+    "probes": [
+      {
+        "seed_url": "https://www.agerio.com.br/linhas-de-credito/",
+        "robots": {
+          "ok": true,
+          "status_code": 200,
+          "url": "https://www.agerio.com.br/robots.txt",
+          "lines": [
+            "User-agent: *",
+            "Disallow:",
+            "Sitemap: https://www.agerio.com.br/sitemap_index.xml"
+          ],
+          "sitemap_hints": [
+            "https://www.agerio.com.br/sitemap_index.xml"
+          ]
+        },
+        "robots_disallows_url": false,
+        "primary_probe": {
+          "status_code": 200,
+          "final_url": "https://www.agerio.com.br/linhas-de-credito/",
+          "bytes": 345434,
+          "cloudflare_headers": false,
+          "fetch_error": null
+        },
+        "primary_classification": "ok_html_publico",
+        "feeds": [
+          {
+            "href": "https://www.agerio.com.br/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.agerio.com.br%2Flinhas-de-credito%2F&format=xml",
+            "type": "text/xml+oembed"
+          }
+        ],
+        "sitemap": {
+          "checked": [
+            {
+              "url": "https://www.agerio.com.br/sitemap_index.xml",
+              "ok": true,
+              "status_code": 200,
+              "loc_count_sample": 15,
+              "loc_samples": [
+                "https://www.agerio.com.br/post-sitemap.xml",
+                "https://www.agerio.com.br/page-sitemap.xml",
+                "https://www.agerio.com.br/eventos-sitemap.xml",
+                "https://www.agerio.com.br/areaatuacao-sitemap.xml",
+                "https://www.agerio.com.br/casosdesucesso-sitemap.xml",
+                "https://www.agerio.com.br/comunicacao-sitemap.xml",
+                "https://www.agerio.com.br/concurso-publico-sitemap.xml",
+                "https://www.agerio.com.br/faq-creditaxi-sitemap.xml",
+                "https://www.agerio.com.br/faq-supera-rj-sitemap.xml",
+                "https://www.agerio.com.br/estagio-sitemap.xml",
+                "https://www.agerio.com.br/institucional-sitemap.xml",
+                "https://www.agerio.com.br/transparencia-sitemap.xml",
+                "https://www.agerio.com.br/faq-creditaxi-areas-sitemap.xml",
+                "https://www.agerio.com.br/faqsuperacat-sitemap.xml",
+                "https://www.agerio.com.br/faq-supera-rj-areas-sitemap.xml"
+              ]
+            }
+          ]
+        },
+        "json_ld_sample": [
+          {
+            "@type": null,
+            "keys": [
+              "@context",
+              "@graph"
+            ]
+          },
+          {
+            "@type": "GovernmentOrganization",
+            "keys": [
+              "@context",
+              "@type",
+              "address",
+              "contactPoint",
+              "logo",
+              "name",
+              "openingHoursSpecification",
+              "sameAs",
+              "telephone",
+              "url"
+            ]
+          }
+        ],
+        "meta_sample": {
+          "description": "A AgeRio investe em empreendimentos de todos os portes e setores, desde o microempreendedor individual até as grandes empresas e prefeituras do Rio  de Janeiro, através de recursos próprios e repasses de linhas de crédito. \nAssim, a empresa contribui para a geração de empregos no estado e para o aumento da qualidade de vida dos cidadãos fluminenses.\n",
+          "fb:pages": "448384228552436",
+          "generator": "Site Kit by Google 1.176.0",
+          "msapplication-tileimage": "https://www.agerio.com.br/wp-content/uploads/2021/11/thumbnail_fav-icon-agerio-simbolo.png",
+          "og:description": "A AgeRio investe em empreendimentos de todos os portes e setores, desde o microempreendedor individual até as grandes empresas e prefeituras do Rio  de Janeiro, através de recursos próprios e repasses de linhas de crédito. \nAssim, a empresa contribui para a geração de empregos no estado e para o aumento da qualidade de vida dos cidadãos fluminenses.\n",
+          "og:image": "https://www.agerio.com.br/wp-content/themes/agerio2018/img/imagem_site_home2.jpg",
+          "og:image:alt": "AgeRio - Escolha a melhor linha de crédito para seu negócio - AgeRio",
+          "og:image:height": "600",
+          "og:image:type": "image/jpg",
+          "og:image:width": "800",
+          "og:locale": "pt_BR",
+          "og:site_name": "AgeRio - Escolha a melhor linha de crédito para seu negócio - AgeRio",
+          "og:title": "AgeRio - Escolha a melhor linha de crédito para seu negócio - AgeRio",
+          "og:type": "website",
+          "og:url": "https://www.agerio.com.br/linhas-de-credito",
+          "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+          "theme-color": "#2196f3",
+          "twitter:data1": "2 minutos",
+          "twitter:label1": "Est. tempo de leitura",
+          "viewport": "width=device-width, initial-scale=1"
+        },
+        "open_graph_sample": {
+          "og:locale": "pt_BR",
+          "og:site_name": "AgeRio - Escolha a melhor linha de crédito para seu negócio - AgeRio",
+          "og:url": "https://www.agerio.com.br/linhas-de-credito",
+          "og:type": "website",
+          "og:title": "AgeRio - Escolha a melhor linha de crédito para seu negócio - AgeRio",
+          "og:description": "A AgeRio investe em empreendimentos de todos os portes e setores, desde o microempreendedor individual até as grandes empresas e prefeituras do Rio  de Janeiro, através de recursos próprios e repasses de linhas de crédito. \nAssim, a empresa contribui para a geração de empregos no estado e para o aumento da qualidade de vida dos cidadãos fluminenses.\n",
+          "og:image": "https://www.agerio.com.br/wp-content/themes/agerio2018/img/imagem_site_home2.jpg",
+          "og:image:alt": "AgeRio - Escolha a melhor linha de crédito para seu negócio - AgeRio",
+          "og:image:type": "image/jpg",
+          "og:image:width": "800",
+          "og:image:height": "600"
+        },
+        "document_links_sample": [
+          "https://www.agerio.com.br/wp-content/uploads/2025/11/CartaServicosAgeRio-1.pdf"
+        ],
+        "signals": {
+          "rss_found": true,
+          "sitemap_ok": true,
+          "json_ld_types": [
+            "GovernmentOrganization"
+          ],
+          "meta_keys": [
+            "description",
+            "fb:pages",
+            "generator",
+            "msapplication-tileimage",
+            "og:description",
+            "og:image",
+            "og:image:alt",
+            "og:image:height",
+            "og:image:type",
+            "og:image:width",
+            "og:locale",
+            "og:site_name",
+            "og:title",
+            "og:type",
+            "og:url",
+            "robots",
+            "theme-color",
+            "twitter:data1",
+            "twitter:label1",
+            "viewport"
+          ],
+          "open_graph_keys": [
+            "og:description",
+            "og:image",
+            "og:image:alt",
+            "og:image:height",
+            "og:image:type",
+            "og:image:width",
+            "og:locale",
+            "og:site_name",
+            "og:title",
+            "og:type",
+            "og:url"
+          ],
+          "document_links_n": 1
+        },
+        "probe_alternatives": []
+      }
+    ],
+    "optional_probes": [],
+    "allowed_methods_policy": [],
+    "disallowed_methods_policy": []
+  },
+  {
+    "fonte": "banco_da_amazonia",
+    "policy_entry": {},
+    "policy_notes": null,
+    "seed_urls": [
+      "https://www.bancoamazonia.com.br/empresas/credito-e-financiamentos",
+      "https://www.bancoamazonia.com.br/rural/credito-e-financiamento-agro",
+      "https://www.bancoamazonia.com.br/linhas-de-fomento/fno"
+    ],
+    "primary_classification": "ok_html_publico",
+    "recommended_method": "usar_sitemap",
+    "readiness_access_tag": "ok",
+    "interpretacao_crawler": "crawler_nao_evidenciado_como_quebrado_por_acesso",
+    "probes": [
+      {
+        "seed_url": "https://www.bancoamazonia.com.br/empresas/credito-e-financiamentos",
+        "robots": {
+          "ok": true,
+          "status_code": 200,
+          "url": "https://www.bancoamazonia.com.br/robots.txt",
+          "lines": [
+            "User-Agent: *",
+            "Allow: /",
+            "Sitemap: https://www.bancoamazonia.com.br/sitemap/pt-BR.xml"
+          ],
+          "sitemap_hints": [
+            "https://www.bancoamazonia.com.br/sitemap/pt-BR.xml"
+          ]
+        },
+        "robots_disallows_url": false,
+        "primary_probe": {
+          "status_code": 200,
+          "final_url": "https://www.bancoamazonia.com.br/empresas/credito-e-financiamentos",
+          "bytes": 523591,
+          "cloudflare_headers": false,
+          "fetch_error": null
+        },
+        "primary_classification": "ok_html_publico",
+        "feeds": [],
+        "sitemap": {
+          "checked": [
+            {
+              "url": "https://www.bancoamazonia.com.br/sitemap/pt-BR.xml",
+              "ok": true,
+              "status_code": 200,
+              "loc_count_sample": 226,
+              "loc_samples": [
+                "https://www.bancoamazonia.com.br/",
+                "https://www.bancoamazonia.com.br/acesso-informacao",
+                "https://www.bancoamazonia.com.br/acesso-informacao/acoes-e-programas",
+                "https://www.bancoamazonia.com.br/acesso-informacao/acompanhamento-propostas-de-credito",
+                "https://www.bancoamazonia.com.br/acesso-informacao/auditorias",
+                "https://www.bancoamazonia.com.br/acesso-informacao/contratos-vigentes",
+                "https://www.bancoamazonia.com.br/acesso-informacao/convenios-e-transferencias",
+                "https://www.bancoamazonia.com.br/acesso-informacao/dados-abertos",
+                "https://www.bancoamazonia.com.br/acesso-informacao/extrato-fundeb",
+                "https://www.bancoamazonia.com.br/acesso-informacao/informacoes-classificadas",
+                "https://www.bancoamazonia.com.br/acesso-informacao/institucional",
+                "https://www.bancoamazonia.com.br/acesso-informacao/lei-acesso-a-informacao",
+                "https://www.bancoamazonia.com.br/acesso-informacao/licitacoes-contratos",
+                "https://www.bancoamazonia.com.br/acesso-informacao/outras-informacoes",
+                "https://www.bancoamazonia.com.br/acesso-informacao/participacao-social"
+              ]
+            }
+          ]
+        },
+        "json_ld_sample": [],
+        "meta_sample": {
+          "description": "Banco da Amazonia",
+          "og:description": "Banco da Amazonia",
+          "og:image": "https://d1rb2uej4kk1a4.cloudfront.net/bancoamazonia/COVER_STATUS_FB_3f0dc6e7f9.png",
+          "og:image:height": "1918",
+          "og:image:width": "3840",
+          "og:locale": "pt-BR",
+          "og:site_name": "Banco da Amazonia",
+          "og:title": "Crédito e Financiamentos",
+          "og:type": "website",
+          "og:url": "https://www.bancoamazonia.com.br/empresas/credito-e-financiamentos",
+          "robots": "index, follow",
+          "theme-color": "#00E12D",
+          "twitter:card": "summary_large_image",
+          "twitter:description": "Banco da Amazonia",
+          "twitter:image": "https://d1rb2uej4kk1a4.cloudfront.net/bancoamazonia/COVER_STATUS_FB_3f0dc6e7f9.png",
+          "twitter:image:height": "1918",
+          "twitter:image:width": "3840",
+          "twitter:title": "Crédito e Financiamentos",
+          "viewport": "width=device-width, initial-scale=1"
+        },
+        "open_graph_sample": {
+          "og:title": "Crédito e Financiamentos",
+          "og:description": "Banco da Amazonia",
+          "og:url": "https://www.bancoamazonia.com.br/empresas/credito-e-financiamentos",
+          "og:site_name": "Banco da Amazonia",
+          "og:locale": "pt-BR",
+          "og:image": "https://d1rb2uej4kk1a4.cloudfront.net/bancoamazonia/COVER_STATUS_FB_3f0dc6e7f9.png",
+          "og:image:width": "3840",
+          "og:image:height": "1918",
+          "og:type": "website"
+        },
+        "document_links_sample": [],
+        "signals": {
+          "rss_found": false,
+          "sitemap_ok": true,
+          "json_ld_types": [],
+          "meta_keys": [
+            "description",
+            "og:description",
+            "og:image",
+            "og:image:height",
+            "og:image:width",
+            "og:locale",
+            "og:site_name",
+            "og:title",
+            "og:type",
+            "og:url",
+            "robots",
+            "theme-color",
+            "twitter:card",
+            "twitter:description",
+            "twitter:image",
+            "twitter:image:height",
+            "twitter:image:width",
+            "twitter:title",
+            "viewport"
+          ],
+          "open_graph_keys": [
+            "og:description",
+            "og:image",
+            "og:image:height",
+            "og:image:width",
+            "og:locale",
+            "og:site_name",
+            "og:title",
+            "og:type",
+            "og:url"
+          ],
+          "document_links_n": 0
+        },
+        "probe_alternatives": []
+      }
+    ],
+    "optional_probes": [],
+    "allowed_methods_policy": [],
+    "disallowed_methods_policy": []
+  },
+  {
+    "fonte": "bdmg",
+    "policy_entry": {},
+    "policy_notes": null,
+    "seed_urls": [
+      "https://www.bdmg.mg.gov.br/",
+      "https://www.bdmg.mg.gov.br/linhaspermanentes",
+      "https://www.bdmg.mg.gov.br/micro-empresa"
+    ],
+    "primary_classification": "captcha",
+    "recommended_method": "usar_sitemap",
+    "readiness_access_tag": "blocked_access_limited",
+    "interpretacao_crawler": "destino_exige_login_ou_captcha_publico",
+    "probes": [
+      {
+        "seed_url": "https://www.bdmg.mg.gov.br/",
+        "robots": {
+          "ok": true,
+          "status_code": 200,
+          "url": "https://www.bdmg.mg.gov.br/robots.txt",
+          "lines": [
+            "User-agent: *",
+            "Disallow: /wp-admin/",
+            "Allow: /wp-admin/admin-ajax.php",
+            "Sitemap: https://www.bdmg.mg.gov.br/wp-sitemap.xml"
+          ],
+          "sitemap_hints": [
+            "https://www.bdmg.mg.gov.br/wp-sitemap.xml"
+          ]
+        },
+        "robots_disallows_url": false,
+        "primary_probe": {
+          "status_code": 200,
+          "final_url": "https://www.bdmg.mg.gov.br/",
+          "bytes": 190929,
+          "cloudflare_headers": false,
+          "fetch_error": null
+        },
+        "primary_classification": "captcha",
+        "feeds": [],
+        "sitemap": {
+          "checked": [
+            {
+              "url": "https://www.bdmg.mg.gov.br/wp-sitemap.xml",
+              "ok": true,
+              "status_code": 200,
+              "loc_count_sample": 67,
+              "loc_samples": [
+                "https://www.bdmg.mg.gov.br/wp-sitemap-posts-post-1.xml",
+                "https://www.bdmg.mg.gov.br/wp-sitemap-posts-page-1.xml",
+                "https://www.bdmg.mg.gov.br/wp-sitemap-posts-diferenciais-1.xml",
+                "https://www.bdmg.mg.gov.br/wp-sitemap-posts-produto_inovacao-1.xml",
+                "https://www.bdmg.mg.gov.br/wp-sitemap-posts-diferenciais_outros-1.xml",
+                "https://www.bdmg.mg.gov.br/wp-sitemap-posts-documento_prod_ino-1.xml",
+                "https://www.bdmg.mg.gov.br/wp-sitemap-posts-textos_gerais-1.xml",
+                "https://www.bdmg.mg.gov.br/wp-sitemap-posts-video-1.xml",
+                "https://www.bdmg.mg.gov.br/wp-sitemap-posts-fip-1.xml",
+                "https://www.bdmg.mg.gov.br/wp-sitemap-posts-duvida-1.xml",
+                "https://www.bdmg.mg.gov.br/wp-sitemap-posts-documento-1.xml",
+                "https://www.bdmg.mg.gov.br/wp-sitemap-posts-documento_edital-1.xml",
+                "https://www.bdmg.mg.gov.br/wp-sitemap-posts-agronegocio_credito-1.xml",
+                "https://www.bdmg.mg.gov.br/wp-sitemap-posts-depoimento_mpe-1.xml",
+                "https://www.bdmg.mg.gov.br/wp-sitemap-posts-banner_video-1.xml"
+              ]
+            }
+          ]
+        },
+        "json_ld_sample": [],
+        "meta_sample": {
+          "author": "BDMG",
+          "description": "BDMG - Banco de Desenvolvimento de Minas Gerais. Empresa de MG está procurando de crédito? Simule um financiamento e surpreenda-se com as condições. Confira!",
+          "facebook-domain-verification": "2jf91xqijjeumn1kctbhmzo9992exz",
+          "format-detection": "telephone=no",
+          "keywords": "bdmg, banco desenvolvimento minas gerais, bancos mg, bdmg digital, bdmg boleto, site bdmg, banco de minas, bdmg financiamento, bdmg internet banking, pronampe",
+          "msapplication-tilecolor": "#ebebeb",
+          "msapplication-tileimage": "https://www.bdmg.mg.gov.br/wp-content/themes/bdmg/assets/favicon/ms-icon-144x144.png",
+          "og:description": "BDMG - Banco de Desenvolvimento de Minas Gerais. Empresa de MG está procurando de crédito? Simule um financiamento e surpreenda-se com as condições. Confira!",
+          "og:image": "https://www.bdmg.mg.gov.br/wp-content/themes/bdmg/img/og_image.webp",
+          "og:site_name": "BDMG – Banco de Desenvolvimento de Minas Gerais",
+          "og:title": "BDMG – Banco de Desenvolvimento de Minas Gerais",
+          "og:type": "website",
+          "og:url": "https://www.bdmg.mg.gov.br/",
+          "robots": "index, follow",
+          "theme-color": "#ebebeb",
+          "twitter:card": "summary",
+          "twitter:description": "BDMG - Banco de Desenvolvimento de Minas Gerais. Empresa de MG está procurando de crédito? Simule um financiamento e surpreenda-se com as condições. Confira!",
+          "twitter:image": "https://www.bdmg.mg.gov.br/wp-content/themes/bdmg/img/og_image.webp",
+          "twitter:title": "BDMG – Banco de Desenvolvimento de Minas Gerais",
+          "twitter:url": "https://www.bdmg.mg.gov.br/"
+        },
+        "open_graph_sample": {
+          "og:title": "BDMG – Banco de Desenvolvimento de Minas Gerais",
+          "og:description": "BDMG - Banco de Desenvolvimento de Minas Gerais. Empresa de MG está procurando de crédito? Simule um financiamento e surpreenda-se com as condições. Confira!",
+          "og:image": "https://www.bdmg.mg.gov.br/wp-content/themes/bdmg/img/og_image.webp",
+          "og:site_name": "BDMG – Banco de Desenvolvimento de Minas Gerais",
+          "og:type": "website",
+          "og:url": "https://www.bdmg.mg.gov.br/"
+        },
+        "document_links_sample": [],
+        "signals": {
+          "rss_found": false,
+          "sitemap_ok": true,
+          "json_ld_types": [],
+          "meta_keys": [
+            "author",
+            "description",
+            "facebook-domain-verification",
+            "format-detection",
+            "keywords",
+            "msapplication-tilecolor",
+            "msapplication-tileimage",
+            "og:description",
+            "og:image",
+            "og:site_name",
+            "og:title",
+            "og:type",
+            "og:url",
+            "robots",
+            "theme-color",
+            "twitter:card",
+            "twitter:description",
+            "twitter:image",
+            "twitter:title",
+            "twitter:url",
+            "viewport"
+          ],
+          "open_graph_keys": [
+            "og:description",
+            "og:image",
+            "og:site_name",
+            "og:title",
+            "og:type",
+            "og:url"
+          ],
+          "document_links_n": 0
+        },
+        "probe_alternatives": []
+      }
+    ],
+    "optional_probes": [],
+    "allowed_methods_policy": [],
+    "disallowed_methods_policy": []
+  },
+  {
+    "fonte": "bnb",
+    "policy_entry": {},
+    "policy_notes": null,
+    "seed_urls": [
+      "https://www.bnb.gov.br/web/guest/produtos-e-servicos",
+      "https://www.bnb.gov.br/web/guest/solicitacao-de-credito",
+      "https://www.bnb.gov.br/web/guest/microcredito"
+    ],
+    "primary_classification": "ok_html_publico",
+    "recommended_method": "usar_sitemap",
+    "readiness_access_tag": "ok",
+    "interpretacao_crawler": "crawler_nao_evidenciado_como_quebrado_por_acesso",
+    "probes": [
+      {
+        "seed_url": "https://www.bnb.gov.br/web/guest/produtos-e-servicos",
+        "robots": {
+          "ok": true,
+          "status_code": 200,
+          "url": "https://www.bnb.gov.br/robots.txt",
+          "lines": [],
+          "sitemap_hints": []
+        },
+        "robots_disallows_url": null,
+        "primary_probe": {
+          "status_code": 200,
+          "final_url": "https://www.bnb.gov.br/web/guest/produtos-e-servicos",
+          "bytes": 124815,
+          "cloudflare_headers": false,
+          "fetch_error": null
+        },
+        "primary_classification": "ok_html_publico",
+        "feeds": [],
+        "sitemap": {
+          "checked": [
+            {
+              "url": "https://www.bnb.gov.br/sitemap.xml",
+              "ok": true,
+              "status_code": 200,
+              "loc_count_sample": 756,
+              "loc_samples": [
+                "https://www.bnb.gov.br/sitemap.xml?p_l_id=2385&amp;layoutUuid=ba2cda0b-134f-0183-dc92-0ea81f593220&amp;groupId=20124&amp;privateLayout=false",
+                "https://www.bnb.gov.br/sitemap.xml?p_l_id=2627&amp;layoutUuid=adc286f2-74ff-4911-9602-41a9762308b8&amp;groupId=20124&amp;privateLayout=false",
+                "https://www.bnb.gov.br/sitemap.xml?p_l_id=38&amp;layoutUuid=1ec0cc60-51a0-9b62-f246-40a004efe96a&amp;groupId=20124&amp;privateLayout=false",
+                "https://www.bnb.gov.br/sitemap.xml?p_l_id=42&amp;layoutUuid=32784c9f-b78e-4e4b-74c6-e620012c5cee&amp;groupId=20124&amp;privateLayout=false",
+                "https://www.bnb.gov.br/sitemap.xml?p_l_id=44&amp;layoutUuid=f1f409aa-48e3-7431-721f-f58dbf361f19&amp;groupId=20124&amp;privateLayout=false",
+                "https://www.bnb.gov.br/sitemap.xml?p_l_id=46&amp;layoutUuid=f900e8b8-62ee-af05-6ffe-26a93ee6b419&amp;groupId=20124&amp;privateLayout=false",
+                "https://www.bnb.gov.br/sitemap.xml?p_l_id=48&amp;layoutUuid=da62f75e-5cbc-9c11-10c5-c7fdbee95014&amp;groupId=20124&amp;privateLayout=false",
+                "https://www.bnb.gov.br/sitemap.xml?p_l_id=50&amp;layoutUuid=9393fa40-d5bc-0cb2-d0be-69049a9b46cd&amp;groupId=20124&amp;privateLayout=false",
+                "https://www.bnb.gov.br/sitemap.xml?p_l_id=52&amp;layoutUuid=844d460d-4569-a40d-fff8-9ab01ab2f2b2&amp;groupId=20124&amp;privateLayout=false",
+                "https://www.bnb.gov.br/sitemap.xml?p_l_id=54&amp;layoutUuid=ef24c147-cf34-4d2a-5d00-4f2509c5de1d&amp;groupId=20124&amp;privateLayout=false",
+                "https://www.bnb.gov.br/sitemap.xml?p_l_id=56&amp;layoutUuid=9b7bee3b-ce2f-e8fd-4351-28d60d071828&amp;groupId=20124&amp;privateLayout=false",
+                "https://www.bnb.gov.br/sitemap.xml?p_l_id=58&amp;layoutUuid=0e7e3670-a1e3-1f28-d270-a3d6def7e624&amp;groupId=20124&amp;privateLayout=false",
+                "https://www.bnb.gov.br/sitemap.xml?p_l_id=60&amp;layoutUuid=caf4d6de-0745-4281-a7b2-acded4a0c30c&amp;groupId=20124&amp;privateLayout=false",
+                "https://www.bnb.gov.br/sitemap.xml?p_l_id=62&amp;layoutUuid=a364b935-3f80-17fb-327a-c2bd88b453ad&amp;groupId=20124&amp;privateLayout=false",
+                "https://www.bnb.gov.br/sitemap.xml?p_l_id=64&amp;layoutUuid=12c72a79-926b-d50f-4048-7247331f9790&amp;groupId=20124&amp;privateLayout=false"
+              ]
+            }
+          ]
+        },
+        "json_ld_sample": [],
+        "meta_sample": {
+          "description": "Conheça de forma simples os produtos e serviços do Banco do Nordeste. Explore opções de crédito, investimentos, cartões e soluções para apoiar você, sua empresa ou seu projeto.",
+          "msapplication-config": "https://www.bnb.gov.br/o/bnb-dxp-theme/images/favicon/browserconfig.xml",
+          "msapplication-tilecolor": "#a6193c",
+          "theme-color": "#a6193c",
+          "viewport": "initial-scale=1.0, width=device-width"
+        },
+        "open_graph_sample": {},
+        "document_links_sample": [],
+        "signals": {
+          "rss_found": false,
+          "sitemap_ok": true,
+          "json_ld_types": [],
+          "meta_keys": [
+            "description",
+            "msapplication-config",
+            "msapplication-tilecolor",
+            "theme-color",
+            "viewport"
+          ],
+          "open_graph_keys": [],
+          "document_links_n": 0
+        },
+        "probe_alternatives": []
+      }
+    ],
+    "optional_probes": [],
+    "allowed_methods_policy": [],
+    "disallowed_methods_policy": []
+  },
+  {
+    "fonte": "desenvolve_sp",
+    "policy_entry": {},
+    "policy_notes": null,
+    "seed_urls": [
+      "https://www.desenvolvesp.com.br/empresas/opcoes-de-credito/",
+      "https://www.desenvolvesp.com.br/empresas/guia-do-financiamento/como-solicitar/",
+      "https://www.desenvolvesp.com.br/empresas/opcoes-de-credito/maquinas-e-equipamentos/"
+    ],
+    "primary_classification": "cloudflare_403",
+    "recommended_method": "blocked_access_limited",
+    "readiness_access_tag": "blocked_access_limited",
+    "interpretacao_crawler": "acesso_limitado_waf_ou_robots",
+    "probes": [
+      {
+        "seed_url": "https://www.desenvolvesp.com.br/empresas/opcoes-de-credito/",
+        "robots": {
+          "ok": true,
+          "status_code": 200,
+          "url": "https://www.desenvolvesp.com.br/robots.txt",
+          "lines": [
+            "User-agent: *",
+            "Allow:",
+            "User-agent: Googlebot",
+            "Allow:",
+            "User-agent: Googlebot-Image",
+            "Allow:",
+            "User-agent: Mediapartners-Google",
+            "Allow:",
+            "User-agent: Adsbot-Google",
+            "Allow:",
+            "Disallow: /wp-admin/",
+            "Disallow: /emailmkt/",
+            "Disallow: /E-Book/",
+            "Disallow: /simulacoes/",
+            "Disallow: /workflow/",
+            "Allow: /wp-admin/admin-ajax.php"
+          ],
+          "sitemap_hints": []
+        },
+        "robots_disallows_url": false,
+        "primary_probe": {
+          "status_code": 403,
+          "final_url": "https://www.desenvolvesp.com.br/empresas/opcoes-de-credito/",
+          "bytes": 0,
+          "cloudflare_headers": false,
+          "fetch_error": null
+        },
+        "primary_classification": "cloudflare_403",
+        "feeds": [],
+        "sitemap": {},
+        "json_ld_sample": [],
+        "meta_sample": {},
+        "open_graph_sample": {},
+        "document_links_sample": [],
+        "signals": {
+          "rss_found": false,
+          "sitemap_ok": false,
+          "json_ld_types": [],
+          "meta_keys": [],
+          "open_graph_keys": [],
+          "document_links_n": 0
+        },
+        "probe_alternatives": []
+      }
+    ],
+    "optional_probes": [],
+    "allowed_methods_policy": [],
+    "disallowed_methods_policy": []
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "nome": "clean_removed_items",
+    "comando": "D:\\Computational_Physics\\My Projects\\edital\\CORE\\.venv\\Scripts\\python.exe D:\\Computational_Physics\\My Projects\\edital\\scripts\\deactivate_removed_items.py --input D:\\Computational_Physics\\My Projects\\edital\\audit_reports_main_pipeline\\removed_items_candidates.json --table all --confidence high --report-dir D:\\Computational_Physics\\My Projects\\edital\\audit_reports_main_pipeline --dry-run",
+    "started_at": "2026-05-09T13:10:46.207225+00:00",
+    "finished_at": "2026-05-09T13:10:46.532144+00:00",
+    "duration_seconds": 0.325,
+    "exit_code": 0,
+    "stdout_tail": "{\"ok\": true, \"mode\": \"dry_run\", \"candidates_filtered\": 0, \"path\": \"D:\\\\Computational_Physics\\\\My Projects\\\\edital\\\\audit_reports_main_pipeline\\\\deactivate_removed_items_summary.json\"}",
+    "stderr_tail": "",
+    "status": "success",
+    "artefatos_gerados": []
+  }
+]

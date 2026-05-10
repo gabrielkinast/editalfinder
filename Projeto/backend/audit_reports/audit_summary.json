@@ -1,0 +1,252 @@
+{
+  "data_auditoria": "2026-05-01T05:58:38Z",
+  "max_items_por_ficheiro": 25,
+  "ficheiros_json_encontrados": 95,
+  "ficheiros_processados": 95,
+  "fontes_com_amostra_positiva": 88,
+  "itens_analisados_total": 961,
+  "erros_audit_exception": 0,
+  "pdf_skip": true,
+  "ranking_campos_vazios": {
+    "fontes_mais_campos_vazios": [
+      {
+        "fonte_ou_ficheiro": "darpa_opportunities|darpa_opportunities_editais.json",
+        "indice_vazio_0_1": 0.5417
+      },
+      {
+        "fonte_ou_ficheiro": "nsf|nsf_editais.json",
+        "indice_vazio_0_1": 0.5417
+      },
+      {
+        "fonte_ou_ficheiro": "wellcome|wellcome_editais.json",
+        "indice_vazio_0_1": 0.5417
+      },
+      {
+        "fonte_ou_ficheiro": "diu|diu_editais.json",
+        "indice_vazio_0_1": 0.5346
+      },
+      {
+        "fonte_ou_ficheiro": "china_most|china_most_editais.json",
+        "indice_vazio_0_1": 0.5192
+      },
+      {
+        "fonte_ou_ficheiro": "dod_sbir_sttr|dod_sbir_sttr_editais.json",
+        "indice_vazio_0_1": 0.5162
+      },
+      {
+        "fonte_ou_ficheiro": "china_mofcom_tendering|china_mofcom_tendering_editais.json",
+        "indice_vazio_0_1": 0.5117
+      },
+      {
+        "fonte_ou_ficheiro": "abdi|abdi_editais.json",
+        "indice_vazio_0_1": 0.5
+      },
+      {
+        "fonte_ou_ficheiro": "aneel|aneel_editais.json",
+        "indice_vazio_0_1": 0.5
+      },
+      {
+        "fonte_ou_ficheiro": "china_cas|china_cas_editais.json",
+        "indice_vazio_0_1": 0.5
+      },
+      {
+        "fonte_ou_ficheiro": "china_cgn|china_cgn_editais.json",
+        "indice_vazio_0_1": 0.5
+      },
+      {
+        "fonte_ou_ficheiro": "china_university_procurement|china_university_procurement_editais.json",
+        "indice_vazio_0_1": 0.5
+      },
+      {
+        "fonte_ou_ficheiro": "defesa|defesa_editais.json",
+        "indice_vazio_0_1": 0.5
+      },
+      {
+        "fonte_ou_ficheiro": "general_dynamics_suppliers|general_dynamics_suppliers_editais.json",
+        "indice_vazio_0_1": 0.5
+      },
+      {
+        "fonte_ou_ficheiro": "japan_mext|japan_mext_editais.json",
+        "indice_vazio_0_1": 0.5
+      },
+      {
+        "fonte_ou_ficheiro": "lockheed_martin_suppliers|lockheed_martin_suppliers_editais.json",
+        "indice_vazio_0_1": 0.4938
+      },
+      {
+        "fonte_ou_ficheiro": "japan_aist|japan_aist_editais.json",
+        "indice_vazio_0_1": 0.4929
+      },
+      {
+        "fonte_ou_ficheiro": "japan_qst|japan_qst_editais.json",
+        "indice_vazio_0_1": 0.4917
+      },
+      {
+        "fonte_ou_ficheiro": "grants_gov|grants_gov_editais.json",
+        "indice_vazio_0_1": 0.4883
+      },
+      {
+        "fonte_ou_ficheiro": "japan_jsps|japan_jsps_editais.json",
+        "indice_vazio_0_1": 0.485
+      },
+      {
+        "fonte_ou_ficheiro": "afwerx|afwerx_editais.json",
+        "indice_vazio_0_1": 0.4833
+      },
+      {
+        "fonte_ou_ficheiro": "china_mod_public|china_mod_public_editais.json",
+        "indice_vazio_0_1": 0.4833
+      },
+      {
+        "fonte_ou_ficheiro": "china_caea|china_caea_editais.json",
+        "indice_vazio_0_1": 0.4825
+      },
+      {
+        "fonte_ou_ficheiro": "japan_nims|japan_nims_editais.json",
+        "indice_vazio_0_1": 0.4825
+      },
+      {
+        "fonte_ou_ficheiro": "japan_riken|japan_riken_editais.json",
+        "indice_vazio_0_1": 0.4808
+      }
+    ],
+    "campos_mais_vazios_global": [
+      {
+        "campo": "tipo_oportunidade",
+        "score": 4200
+      },
+      {
+        "campo": "area",
+        "score": 4200
+      },
+      {
+        "campo": "publico_alvo",
+        "score": 4200
+      },
+      {
+        "campo": "perfil_ideal",
+        "score": 4200
+      },
+      {
+        "campo": "setor_economico",
+        "score": 4200
+      },
+      {
+        "campo": "area_cientifica",
+        "score": 4200
+      },
+      {
+        "campo": "area_tecnologica",
+        "score": 4200
+      },
+      {
+        "campo": "setor_estrategico",
+        "score": 4200
+      },
+      {
+        "campo": "fim_inscricao",
+        "score": 3772
+      },
+      {
+        "campo": "valor",
+        "score": 3748
+      },
+      {
+        "campo": "data_publicacao",
+        "score": 2656
+      },
+      {
+        "campo": "pdf_url",
+        "score": 2170
+      },
+      {
+        "campo": "documentos",
+        "score": 2082
+      },
+      {
+        "campo": "acao",
+        "score": 200
+      },
+      {
+        "campo": "programa",
+        "score": 100
+      },
+      {
+        "campo": "titulo",
+        "score": 0
+      },
+      {
+        "campo": "descricao",
+        "score": 0
+      },
+      {
+        "campo": "link",
+        "score": 0
+      },
+      {
+        "campo": "fonte",
+        "score": 0
+      },
+      {
+        "campo": "situacao",
+        "score": 0
+      }
+    ],
+    "fontes_com_zero_aceites_na_amostra": [
+      "amazul (amazul\\outputs\\amazul_editais.json)",
+      "ambev (ambev\\outputs\\ambev_editais.json)",
+      "anp (anp\\outputs\\anp_editais.json)",
+      "apex (apex\\outputs\\apex_editais.json)",
+      "badesul (badesul\\outputs\\badesul_editais.json)",
+      "bae_systems_suppliers (bae_systems_suppliers\\outputs\\bae_systems_suppliers_editais.json)",
+      "bndes (bndes\\outputs\\bndes_editais.json)",
+      "brde (brde\\outputs\\brde_editais.json)",
+      "caixa (caixa\\outputs\\caixa_editais.json)",
+      "capes (capes\\outputs\\capes_editais.json)",
+      "cbpf (cbpf\\outputs\\cbpf_editais.json)",
+      "china_avic (china_avic\\outputs\\china_avic_editais.json)",
+      "china_cnnc (china_cnnc\\outputs\\china_cnnc_editais.json)",
+      "china_norinco (china_norinco\\outputs\\china_norinco_editais.json)",
+      "china_nsfc (china_nsfc\\outputs\\china_nsfc_editais.json)",
+      "cnen (cnen\\outputs\\cnen_editais.json)",
+      "cnpq (cnpq\\outputs\\cnpq_editais.json)",
+      "compras_defesa (compras_defesa\\outputs\\compras_defesa_editais.json)",
+      "confap (confap\\outputs\\confap_editais.json)",
+      "dcta_ita_iae (dcta_ita_iae\\outputs\\dcta_ita_iae_editais.json)",
+      "defesa (defesa\\outputs\\defesa_noticias_militares.json)",
+      "doe_arpae (doe_arpae\\outputs\\doe_arpae_editais.json)",
+      "eletronuclear (eletronuclear\\outputs\\eletronuclear_editais.json)",
+      "embrapii (embrapii\\outputs\\embrapii_editais.json)",
+      "erc (erc\\outputs\\erc_editais.json)",
+      "european_defence_fund (european_defence_fund\\outputs\\european_defence_fund_editais.json)",
+      "fapemig (fapemig\\outputs\\fapemig_editais.json)",
+      "faperg (faperg\\outputs\\faperg_editais.json)",
+      "fapergs (fapergs\\outputs\\fapergs_editais.json)",
+      "fapesc (fapesc\\outputs\\fapesc_editais.json)",
+      "fappr (fappr\\outputs\\fappr_editais.json)",
+      "fnde (fnde\\outputs\\fnde_editais.json)",
+      "horizon_europe (horizon_europe\\outputs\\horizon_europe_editais.json)",
+      "iarpa (iarpa\\outputs\\iarpa_editais.json)",
+      "impa (impa\\outputs\\impa_editais.json)",
+      "japan_e_rad (japan_e_rad\\outputs\\japan_e_rad_editais.json)",
+      "japan_jaxa (japan_jaxa\\outputs\\japan_jaxa_editais.json)",
+      "japan_jst (japan_jst\\outputs\\japan_jst_editais.json)",
+      "japan_kawasaki_heavy (japan_kawasaki_heavy\\outputs\\japan_kawasaki_heavy_editais.json)",
+      "mapa (mapa\\outputs\\mapa_editais.json)",
+      "marinha (marinha\\outputs\\marinha_editais.json)",
+      "mma (mma\\outputs\\mma_editais.json)",
+      "nato_diana (nato_diana\\outputs\\nato_diana_editais.json)",
+      "petrobras (petrobras\\outputs\\petrobras_editais.json)",
+      "plataforma_industria (plataforma_industria\\outputs\\plataforma_editais.json)",
+      "pncp (pncp\\outputs\\pncp_editais.json)",
+      "rheinmetall_suppliers (rheinmetall_suppliers\\outputs\\rheinmetall_suppliers_editais.json)",
+      "sam_gov (sam_gov\\outputs\\sam_gov_editais.json)",
+      "saude (saude\\outputs\\saude_editais.json)",
+      "science_scraper (science_scraper\\outputs\\science_editais.json)",
+      "senai (senai\\outputs\\senai_editais.json)",
+      "softex (softex\\outputs\\softex_editais.json)",
+      "thales_suppliers (thales_suppliers\\outputs\\thales_suppliers_editais.json)"
+    ],
+    "n_fontes_zero_aceites": 53
+  }
+}

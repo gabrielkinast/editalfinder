@@ -1,0 +1,70 @@
+# --- Ambientes virtuais ---
+.venv/
+venv/
+env/
+CORE/.venv/
+CORE/venv/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# --- Variáveis de ambiente e secrets ---
+.env
+.env.*
+CORE/.env
+CORE/.env.*
+*.key
+*.pem
+*.secret
+*.token
+*.credentials
+service_role*.json
+supabase*.json
+
+# --- Logs ---
+*.log
+logs/
+*.trace
+
+# --- Caches ---
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.cache/
+.ipynb_checkpoints/
+
+# --- Node / frontend ---
+node_modules/
+dist/
+build/
+.next/
+.vite/
+
+# --- Sistema / IDE ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# --- Bancos locais / dumps ---
+*.db
+*.sqlite
+*.sqlite3
+*.dump
+*.sql.gz
+*.backup
+
+# --- Temporários ---
+tmp/
+temp/
+*.tmp
+*.bak
+*.swp
+*~
+
+# --- Relatórios / artefactos potencialmente sensíveis (apply, validação, consola) ---
+audit_reports_loader_ready/
+audit_reports_retransform/
+audit_reports_main_pipeline/*apply*/
+audit_reports_main_pipeline/*validation*/
+audit_reports_main_pipeline/*console*

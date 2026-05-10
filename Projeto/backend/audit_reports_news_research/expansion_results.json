@@ -1,0 +1,102 @@
+{
+  "gerado_em": "2026-05-05T00:22:12Z",
+  "entrada": {
+    "config": "config/news_research_sources.json",
+    "comandos_executados": [
+      "python scripts/crawl_news_research_sources.py",
+      "python scripts/audit_news_research_pipeline.py",
+      "python scripts/dry_run_news_research_loader.py"
+    ],
+    "apply_executado": false
+  },
+  "crawl": {
+    "fontes": 5,
+    "itens_standardized_total": 158,
+    "referencia": "audit_reports_news_research/news_research_summary.json"
+  },
+  "auditoria": {
+    "linhas_total": 158,
+    "sem_data_publicacao": 17,
+    "duplicata_link": 0,
+    "links_invalidos": 0,
+    "referencia": "audit_reports_news_research/audit_summary.json"
+  },
+  "dry_run": {
+    "total_antes_dedupe": 158,
+    "total_depois_dedupe": 158,
+    "deduplicated_total": 0,
+    "por_destino": {
+      "public.noticia": 127,
+      "public.pesquisa": 30,
+      "review_for_edital": 0,
+      "rejected_noise": 1
+    },
+    "missing_date_total": 17,
+    "missing_summary_total": 42,
+    "review_for_edital_total": 0,
+    "referencia": "audit_reports_news_research_loader/dry_run_summary.json"
+  },
+  "por_fonte": [
+    {
+      "source_id": "nasa_news",
+      "status_config": "ready_for_wave",
+      "crawl_standardized": 95,
+      "auditoria_within_12m": 95,
+      "auditoria_sem_data": 0,
+      "dry_run_noticia": 78,
+      "dry_run_pesquisa": 17,
+      "estimativa_prontos_staging": "Alta: 78+ notícias com data e resumo sólidos no dry-run; 17 pesquisa (rever tipo_pesquisa/pdf_url antes do apply).",
+      "recomendacao": "Primeira candidata a Onda 2 em staging após validação humana por amostragem."
+    },
+    {
+      "source_id": "darpa_news",
+      "status_config": "needs_cleanup",
+      "crawl_standardized": 10,
+      "auditoria_within_12m": 10,
+      "auditoria_sem_data": 0,
+      "dry_run_noticia": 9,
+      "dry_run_pesquisa": 1,
+      "estimativa_prontos_staging": "Boa: 10 itens RSS-only, datas presentes; volume modesto.",
+      "recomendacao": "Segunda onda após NASA: aplicar lote pequeno em staging quando quiser diversificar EUA/defesa sem ruído do hub HTML antigo."
+    },
+    {
+      "source_id": "iaea_news_publications",
+      "status_config": "active_candidate",
+      "crawl_standardized": 50,
+      "auditoria_within_12m": 35,
+      "auditoria_sem_data": 15,
+      "dry_run_noticia": 40,
+      "dry_run_pesquisa": 10,
+      "estimativa_prontos_staging": "Média: muitos itens com missing_summary (42 no agregado IAEA) — subir page_enrich ou aceitar apply apenas para subset com validacao_status=valido.",
+      "recomendacao": "Onda 4: staging incremental só após reforço de enriquecimento ou filtro de validacao_status != incompleto para notícia."
+    },
+    {
+      "source_id": "darpa_opportunities_research",
+      "status_config": "active_candidate",
+      "crawl_standardized": 1,
+      "auditoria_within_12m": 1,
+      "auditoria_sem_data": 0,
+      "dry_run_noticia": 0,
+      "dry_run_pesquisa": 0,
+      "dry_run_rejected_noise": 1,
+      "estimativa_prontos_staging": "Baixa no ciclo atual: RSS devolveu 1 item; parte pode ter sido filtrada como ruído.",
+      "recomendacao": "Manter separado de notícias; quando houver volume, priorizar revisão manual BAA/RFI → review_for_edital; não misturar com noticia."
+    },
+    {
+      "source_id": "eurekalert_science_filtered",
+      "status_config": "noisy",
+      "crawl_standardized": 2,
+      "auditoria_within_12m": 0,
+      "auditoria_sem_data": 2,
+      "dry_run_pesquisa": 2,
+      "estimativa_prontos_staging": "Baixa: volume mínimo; datas ausentes nas 2 linhas — exige mais enrich ou seeds alternativas aprovadas pela política do site.",
+      "recomendacao": "Onda 5 experimental; não priorizar staging até melhorar data ou negociar feed oficial."
+    }
+  ],
+  "resumo_executivo": {
+    "prontas_prioridade_onda_2": ["nasa_news", "darpa_news"],
+    "candidatas_com_ressalvas": ["iaea_news_publications"],
+    "nao_priorizar_staging_agora": ["eurekalert_science_filtered", "darpa_opportunities_research"],
+    "observacao_review_edital": "Neste dry_run, review_for_edital=0: oportunidades DARPA fortes podem estar sub-representadas no RSS atual; manter política manual."
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "gerado_em_utc": "2026-05-02T22:00:15Z",
+  "resumo_readiness": {
+    "config_source_readiness": "config/source_readiness.json",
+    "mudancas": [
+      "china_nsfc e china_university_procurement: removidos de needs_manual_review; adicionados a ready_with_notes.",
+      "china_avic e china_norinco: removidos de blocked; adicionados a needs_manual_review (fora do loader com --exclude-blocked).",
+      "china_cnnc: permanece em blocked."
+    ],
+    "readiness_for_loader": "audit_reports_retransform/readiness_for_loader.json",
+    "mudancas_loader": [
+      "china_nsfc e china_university_procurement acrescentados a fontes_prontas_para_loader (slice pronto_com_observacoes: contagem 59 -> 61).",
+      "china_avic e china_norinco retirados de fontes_bloqueadas_temporariamente; colocados em fontes_para_revisao (bloquear 18 -> 16; revisao 7 -> 9).",
+      "oportunidade_fomento_sem_fomento no top20 fixado a 0.",
+      "data_auditoria atualizada."
+    ]
+  },
+  "standardized_copiados": [
+    {
+      "de": "audit_reports_blocked_sources/lote3b_china_curated_semantic_fix/standardized/china_nsfc_standardized.json",
+      "para": "audit_reports_retransform/standardized/china_nsfc_standardized.json"
+    },
+    {
+      "de": "audit_reports_blocked_sources/lote3b_china_curated_semantic_fix/standardized/china_university_procurement_standardized.json",
+      "para": "audit_reports_retransform/standardized/china_university_procurement_standardized.json"
+    }
+  ],
+  "comando_loader_dry_run": "python scripts/load_ready_sources.py --dry-run --sources china_nsfc,china_university_procurement --exclude-blocked --input-dir audit_reports_retransform/standardized --readiness audit_reports_retransform/readiness_for_loader.json",
+  "artefactos_loader": {
+    "diretorio": "audit_reports_loader_ready",
+    "resumo": "audit_reports_loader_ready/load_ready_summary.json",
+    "por_fonte": "audit_reports_loader_ready/load_ready_by_source.json",
+    "exemplos_payload": "audit_reports_loader_ready/load_ready_payload_examples.json",
+    "slice_derivado": "audit_reports_loader_ready/readiness_derived_slice.json"
+  },
+  "resultado_dry_run": {
+    "sources_selected": 2,
+    "sources_excluded": 92,
+    "itens_standardized_total": 13,
+    "would_upsert_total": 13,
+    "would_ignore_total": 0,
+    "mapping_errors_total": 0,
+    "critical_empty_items_total": 0,
+    "docs_input_items_total": 9,
+    "docs_preserved_items_total": 9,
+    "documentos_perdidos_no_payload_total": 0,
+    "pdf_input_items_total": 3,
+    "pdf_preserved_items_total": 3,
+    "validacao_status_preserved_items_total": 13,
+    "qualidade_dado_preserved_items_total": 13,
+    "por_fonte": [
+      {
+        "fonte": "china_nsfc",
+        "itens_standardized": 9,
+        "would_upsert": 9,
+        "mapping_errors": 0,
+        "critical_empty_items": 0,
+        "docs_preserved_items": 5,
+        "pdf_preserved_items": 2
+      },
+      {
+        "fonte": "china_university_procurement",
+        "itens_standardized": 4,
+        "would_upsert": 4,
+        "mapping_errors": 0,
+        "critical_empty_items": 0,
+        "docs_preserved_items": 4,
+        "pdf_preserved_items": 1
+      }
+    ]
+  },
+  "verificacao_pedida": {
+    "itens_standardized": "13 (9 NSFC + 4 USTC); alinhado ao bruto curado, nao inclui AVIC.",
+    "would_upsert": "13 = total de upserts simulados.",
+    "mapping_errors": "0",
+    "critical_empty": "0",
+    "documentos_preservados": "docs_preserved == docs_input (9); sem perdas em nao-PDF.",
+    "pdf_url_preservado": "pdf_preserved == pdf_input (3); exemplos com pdf_url no payload quando existia no standardized.",
+    "tipo_oportunidade_tipo_recurso": "Presentes em todos os itens (grant / funding_opportunity + Grant para pesquisa competitiva).",
+    "idioma_original_titulo_original_origem_portal": "Presentes nos standardized (ex.: NSFC zh + origem_portal NSFC; USTC com origem_portal USTC).",
+    "validacao_status_qualidade_dado": "Preservados item-a-item (contagens 13).",
+    "areas_exageradas": "area vazia na maioria; contagens setor_estrategico dentro do payload sem flag de area_excessiva neste dry-run.",
+    "noticias_politicas_removidas": "Nenhum titulo do tipo indicacao politica Xi/forum nas amostras de payload (load_ready_payload_examples)."
+  },
+  "environment_guard": {
+    "editalfinder_env": "staging",
+    "has_allow_staging_apply": false,
+    "nota": "Apply real requer fluxo staging explícito e política de ambiente; nao executado nesta tarefa."
+  },
+  "recomendacao_staging": {
+    "pode_aplicar": "condicional_sim",
+    "condicoes": [
+      "Confirmar variáveis de staging (ALLOW_STAGING_APPLY ou equivalente documentado no loader).",
+      "Rever itens incompletos (validacao_status incompleto) antes de carga de producao.",
+      "Executar apply apenas com: python scripts/load_ready_sources.py --apply --staging ... (sem --dry-run), após aprovação humana.",
+      "Nao foi corrido apply nesta entrega; Supabase não foi alterado."
+    ]
+  }
+}

@@ -1,0 +1,204 @@
+{
+  "campos_mais_vazios_no_payload": [
+    {
+      "campo": "area_cientifica",
+      "contagem_vazio": 32
+    },
+    {
+      "campo": "area_tecnologica",
+      "contagem_vazio": 32
+    },
+    {
+      "campo": "codigo_oportunidade",
+      "contagem_vazio": 32
+    },
+    {
+      "campo": "contrapartida",
+      "contagem_vazio": 32
+    },
+    {
+      "campo": "descricao_traduzida",
+      "contagem_vazio": 32
+    },
+    {
+      "campo": "elegibilidade",
+      "contagem_vazio": 32
+    },
+    {
+      "campo": "link_inscricao",
+      "contagem_vazio": 32
+    },
+    {
+      "campo": "numero_chamada",
+      "contagem_vazio": 32
+    },
+    {
+      "campo": "numero_edital",
+      "contagem_vazio": 32
+    },
+    {
+      "campo": "ods",
+      "contagem_vazio": 32
+    },
+    {
+      "campo": "prazo_envio",
+      "contagem_vazio": 32
+    },
+    {
+      "campo": "temas",
+      "contagem_vazio": 32
+    },
+    {
+      "campo": "titulo_traduzido",
+      "contagem_vazio": 32
+    },
+    {
+      "campo": "valor_total",
+      "contagem_vazio": 32
+    },
+    {
+      "campo": "contato",
+      "contagem_vazio": 31
+    },
+    {
+      "campo": "valor_maximo",
+      "contagem_vazio": 31
+    },
+    {
+      "campo": "valor_minimo",
+      "contagem_vazio": 31
+    },
+    {
+      "campo": "numero_processo",
+      "contagem_vazio": 30
+    },
+    {
+      "campo": "compatibilidade",
+      "contagem_vazio": 29
+    },
+    {
+      "campo": "justificativa",
+      "contagem_vazio": 28
+    },
+    {
+      "campo": "objetivo",
+      "contagem_vazio": 28
+    },
+    {
+      "campo": "pdf_resumo",
+      "contagem_vazio": 28
+    },
+    {
+      "campo": "pdf_url",
+      "contagem_vazio": 28
+    },
+    {
+      "campo": "recomendacao",
+      "contagem_vazio": 28
+    },
+    {
+      "campo": "score_detalhado",
+      "contagem_vazio": 28
+    },
+    {
+      "campo": "anexos",
+      "contagem_vazio": 22
+    },
+    {
+      "campo": "documentos",
+      "contagem_vazio": 22
+    },
+    {
+      "campo": "publico_alvo",
+      "contagem_vazio": 21
+    },
+    {
+      "campo": "setor_estrategico",
+      "contagem_vazio": 14
+    },
+    {
+      "campo": "data_publicacao",
+      "contagem_vazio": 6
+    },
+    {
+      "campo": "descricao_original",
+      "contagem_vazio": 6
+    },
+    {
+      "campo": "idioma_original",
+      "contagem_vazio": 6
+    },
+    {
+      "campo": "instituicao",
+      "contagem_vazio": 6
+    },
+    {
+      "campo": "orgao_responsavel",
+      "contagem_vazio": 6
+    },
+    {
+      "campo": "regiao",
+      "contagem_vazio": 6
+    },
+    {
+      "campo": "titulo_original",
+      "contagem_vazio": 6
+    },
+    {
+      "campo": "area",
+      "contagem_vazio": 1
+    }
+  ],
+  "fontes_com_maior_perda": [
+    {
+      "fonte": "banco_da_amazonia",
+      "arquivo": "audit_reports_main_pipeline\\recovery_a\\standardized\\banco_da_amazonia_standardized.json",
+      "problemas_payload": 26,
+      "itens_amostra": 26,
+      "readiness_loader_score": 0.0,
+      "riscos_sobrescrita_por_vazio": 0
+    },
+    {
+      "fonte": "dod_sbir_sttr",
+      "arquivo": "audit_reports_main_pipeline\\recovery_a\\standardized\\dod_sbir_sttr_standardized.json",
+      "problemas_payload": 6,
+      "itens_amostra": 6,
+      "readiness_loader_score": 0.0,
+      "riscos_sobrescrita_por_vazio": 0
+    },
+    {
+      "fonte": "esa_star",
+      "arquivo": "audit_reports_main_pipeline\\recovery_a\\standardized\\esa_star_standardized.json",
+      "problemas_payload": 0,
+      "itens_amostra": 0,
+      "readiness_loader_score": 100.0,
+      "riscos_sobrescrita_por_vazio": 0
+    }
+  ],
+  "fontes_mais_prontas_loader": [
+    {
+      "fonte": "esa_star",
+      "arquivo": "audit_reports_main_pipeline\\recovery_a\\standardized\\esa_star_standardized.json",
+      "problemas_payload": 0,
+      "itens_amostra": 0,
+      "readiness_loader_score": 100.0,
+      "riscos_sobrescrita_por_vazio": 0
+    },
+    {
+      "fonte": "banco_da_amazonia",
+      "arquivo": "audit_reports_main_pipeline\\recovery_a\\standardized\\banco_da_amazonia_standardized.json",
+      "problemas_payload": 26,
+      "itens_amostra": 26,
+      "readiness_loader_score": 0.0,
+      "riscos_sobrescrita_por_vazio": 0
+    },
+    {
+      "fonte": "dod_sbir_sttr",
+      "arquivo": "audit_reports_main_pipeline\\recovery_a\\standardized\\dod_sbir_sttr_standardized.json",
+      "problemas_payload": 6,
+      "itens_amostra": 6,
+      "readiness_loader_score": 0.0,
+      "riscos_sobrescrita_por_vazio": 0
+    }
+  ]
+}

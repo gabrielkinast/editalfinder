@@ -1,104 +1,158 @@
-import re
 from datetime import datetime
 from urllib.parse import urljoin
-from typing import List, Optional
-from utils_ambev import get_soup, normalize_text, extract_date, is_deadline_valid
+from typing import List, Optional, Set
+
+from utils_ambev import get_soup, normalize_text, extract_date, extract_deadline_iso
 from models_ambev import EditalAmbev
 
-BASE_URL = "https://www.ambev.com.br"
+CHALLENGES_INDEX = "https://www.100accelerator.com/challenges"
+STARTUPS_HUB = "https://www.ambev.com.br/startups"
 
-URLS = [
-    "https://www.ambev.com.br/startups",
-    "https://www.100accelerator.com/",
-    "https://www.ambev.com.br/sustentabilidade",
-    "https://www.ambev.com.br/sala-de-imprensa"
-]
+SOCIAL = ("facebook.com", "instagram.com", "linkedin.com", "twitter.com", "youtube.com", "whatsapp.com", "google.com")
+
+
+def _is_challenge_detail(url: str) -> bool:
+    u = url.lower().rstrip("/")
+    if "100accelerator.com/challenges" not in u:
+        return False
+    # /challenges ou /challenges/ apenas — não é detalhe
+    parts = [p for p in u.split("/") if p]
+    if not parts:
+        return False
+    try:
+        idx = parts.index("challenges")
+    except ValueError:
+        return False
+    return len(parts) > idx + 1
+
+
+def _allowed_ambev_detail(url: str) -> bool:
+    u = url.lower()
+    if "ambev.com.br" in u:
+        return True
+    if _is_challenge_detail(url):
+        return True
+    return False
+
+
+def _junk_heading(text: str) -> bool:
+    t = normalize_text(text).lower()
+    if not t or len(t) < 3:
+        return True
+    if t in ("subchallenges", "subchallenge", "challenges", "learn more"):
+        return True
+    if "subchallenge" in t:
+        return True
+    if t.startswith("learn more"):
+        return True
+    return False
+
+
+def _title_from_challenge_slug(url: str) -> str:
+    slug = url.rstrip("/").split("/")[-1]
+    if not slug or slug.lower() == "challenges":
+        return ""
+    return slug.replace("-", " ").strip().title()
+
+
+def _reject_url(url: str, titulo: str) -> bool:
+    low = url.lower()
+    if any(s in low for s in SOCIAL):
+        return True
+    if low.endswith((".png", ".jpg", ".jpeg", ".gif", ".svg", ".css", ".js", ".ico", ".mp4")):
+        return True
+    if "subchallenge" in low or "sub-challenge" in low:
+        return True
+    t = titulo.lower()
+    if "subchallenge" in t or "challengeschallenges" in t or t.strip() in ("subchallenges", "subchallenge"):
+        return True
+    return False
+
 
 class AmbevScraper:
-    def __init__(self):
-        self.base_url = BASE_URL
-
     def extract_editais(self) -> List[EditalAmbev]:
-        all_editais = []
-        seen_links = set()
+        out: List[EditalAmbev] = []
+        seen: Set[str] = set()
 
-        for url in URLS:
-            print(f"Iniciando extração AMBEV em: {url}")
-            soup = get_soup(url)
+        for listing_url, mode in (
+            (CHALLENGES_INDEX, "accelerator"),
+            (STARTUPS_HUB, "ambev"),
+        ):
+            print(f"Iniciando extração AMBEV em: {listing_url}")
+            soup = get_soup(listing_url)
             if not soup:
                 continue
+            if mode == "accelerator":
+                self._seed_accelerator_challenges(soup, listing_url, out, seen)
+            else:
+                self._seed_ambev_startups(soup, listing_url, out, seen)
 
-            self._extract_from_page(soup, url, all_editais, seen_links)
+        return out
 
-        return all_editais
-
-    def _extract_from_page(self, soup, current_url, editais_list, seen_links):
-        # Captura links de todo o documento, não apenas main
-        links = soup.select("a[href]")
-        
-        for a in links:
+    def _seed_accelerator_challenges(self, soup, listing_url: str, out: List[EditalAmbev], seen: Set[str]) -> None:
+        main = soup.select_one("main") or soup.select_one("article") or soup
+        for a in main.select("a[href]"):
             href = a.get("href")
             titulo = normalize_text(a.get_text())
-            
-            if not href or href.startswith("javascript:") or href.startswith("#"):
+            if not href or href.startswith(("javascript:", "#")):
                 continue
-
             if not href.startswith("http"):
-                href = urljoin(current_url, href)
-            
-            full_url = href.split("?", 1)[0].split("#", 1)[0]
-            if full_url in seen_links:
+                href = urljoin(listing_url, href)
+            full = href.split("?", 1)[0].split("#", 1)[0]
+            if full in seen or _reject_url(full, titulo):
                 continue
+            if not _is_challenge_detail(full):
+                continue
+            seen.add(full)
+            if not titulo or _junk_heading(titulo):
+                titulo = _title_from_challenge_slug(full) or "Challenge 100+"
+            edital = self.process_detail_page(full, titulo, listing_url=listing_url)
+            if edital:
+                out.append(edital)
 
-            # Palavras-chave expandidas
-            keywords = [
-                "edital", "chamada", "seleção", "fomento", "programa", "projeto", 
-                "startup", "aceleradora", "inovação", "sustentabilidade", 
-                "inscrição", "impacto", "esg", "challenge", "oportunidade"
-            ]
-            
-            url_lower = full_url.lower()
-            titulo_lower = titulo.lower()
-            
-            is_relevant = any(kw in url_lower or kw in titulo_lower for kw in keywords)
-            
-            # Filtros de exclusão
-            irrelevant_ext = [".png", ".jpg", ".jpeg", ".gif", ".svg", ".mp4", ".mp3", ".css", ".js", ".ico"]
-            is_irrelevant_ext = any(url_lower.endswith(ext) for ext in irrelevant_ext)
-            
-            avoid_links = ["facebook.com", "instagram.com", "linkedin.com", "twitter.com", "youtube.com", "whatsapp.com", "google.com"]
-            is_avoid_link = any(avoid in url_lower for avoid in avoid_links)
+    def _seed_ambev_startups(self, soup, listing_url: str, out: List[EditalAmbev], seen: Set[str]) -> None:
+        main = soup.select_one("main") or soup.select_one("#content") or soup.select_one("article") or soup
+        hints = ("startup", "programa", "edital", "chamada", "inova", "inscri", "accelerat", "desafio", "oportunidade")
+        for a in main.select("a[href]"):
+            href = a.get("href")
+            titulo = normalize_text(a.get_text())
+            if not href or href.startswith(("javascript:", "#")):
+                continue
+            if not href.startswith("http"):
+                href = urljoin(listing_url, href)
+            full = href.split("?", 1)[0].split("#", 1)[0]
+            if full in seen or _reject_url(full, titulo):
+                continue
+            low = f"{full} {titulo}".lower()
+            if "ambev.com.br" not in full.lower() and "100accelerator.com" not in full.lower():
+                continue
+            if not any(h in low for h in hints):
+                continue
+            seen.add(full)
+            if full.lower().endswith(".pdf"):
+                out.append(
+                    EditalAmbev(
+                        titulo=titulo or "Documento",
+                        link=full,
+                        descricao=titulo,
+                        extras={
+                            "fonte_original": listing_url,
+                            "tipo": "PDF",
+                            "url_listagem": listing_url,
+                            "metodo_extracao": "curated_startups_pdf",
+                        },
+                    )
+                )
+                continue
+            edital = self.process_detail_page(full, titulo, listing_url=listing_url)
+            if edital:
+                out.append(edital)
 
-            if is_relevant and not is_irrelevant_ext and not is_avoid_link:
-                # Se for PDF
-                if url_lower.endswith(".pdf"):
-                    seen_links.add(full_url)
-                    editais_list.append(EditalAmbev(
-                        titulo=titulo or "Documento AMBEV",
-                        link=full_url,
-                        descricao=titulo or "Edital/Documento relevante encontrado",
-                        extras={"fonte_original": current_url, "tipo": "PDF"}
-                    ))
-                    continue
-
-                # Processa página de detalhe
-                seen_links.add(full_url)
-                edital = self.process_detail_page(full_url, titulo, source=current_url)
-                if edital:
-                    editais_list.append(edital)
-
-    def process_detail_page(self, url: str, titulo: str, source: str) -> Optional[EditalAmbev]:
-        if url == source: return None
-        
-        # Não processa páginas externas muito grandes para evitar loop infinito ou lentidão
-        if "ambev.com.br" not in url and "100accelerator.com" not in url:
-            return EditalAmbev(
-                titulo=titulo,
-                link=url,
-                descricao=f"Link externo relevante encontrado em {source}",
-                situacao="Aberto",
-                extras={"fonte_original": source, "externo": True}
-            )
+    def process_detail_page(self, url: str, titulo: str, listing_url: str) -> Optional[EditalAmbev]:
+        if url.rstrip("/") == listing_url.rstrip("/"):
+            return None
+        if not _allowed_ambev_detail(url):
+            return None
 
         print(f"Processando página detalhe AMBEV: {url}")
         soup = get_soup(url)
@@ -107,18 +161,23 @@ class AmbevScraper:
 
         content = soup.select_one("main") or soup.select_one("#content") or soup.select_one("article") or soup
         text = content.get_text()
-        
-        # Título
+
         h1 = soup.select_one("h1") or soup.select_one("h2")
         if h1:
             h1_text = normalize_text(h1.get_text())
-            if len(h1_text) > 5:
+            if len(h1_text) > 5 and not _junk_heading(h1_text):
                 titulo = h1_text
 
-        if any(kw in titulo.lower() for kw in ["ops...", "erro", "not found", "404"]):
+        if _junk_heading(titulo):
+            slug_title = _title_from_challenge_slug(url)
+            if slug_title:
+                titulo = slug_title
+            elif _is_challenge_detail(url):
+                titulo = "Challenge 100+"
+
+        if any(kw in titulo.lower() for kw in ("ops...", "erro", "not found", "404")):
             return None
 
-        # Descrição
         paragraphs = content.select("p")
         descricao = ""
         count = 0
@@ -127,47 +186,34 @@ class AmbevScraper:
             if len(p_text) > 50:
                 descricao += p_text + " "
                 count += 1
-            if count >= 5: break
-        
-        # Datas
-        data_pub = extract_date(text)
-        
-        # Prazo (deadline)
-        prazo = None
-        prazo_patterns = [
-            r'(?:prazo|vencimento|término|até|submissão|propostas|inscrições|encerramento|entrega|final|limite)\s*:?\s*(\d{2}/\d{2}/\d{4})',
-            r'(?:inscrições|vão)\s+até\s+(\d{1,2}\s+de\s+[a-zA-Zç]+\s+de\s+\d{4})',
-            r'(\d{2}/\d{2}/\d{4})'
-        ]
-        
-        for pattern in prazo_patterns:
-            matches = re.findall(pattern, text, re.I)
-            for m in matches:
-                extracted = extract_date(m)
-                if extracted:
-                    if not prazo or extracted > prazo:
-                        prazo = extracted
+            if count >= 5:
+                break
 
-        # Anexos
+        data_pub = extract_date(text)
+        prazo = extract_deadline_iso(text)
+
         anexos = []
         for a in content.select("a[href]"):
             a_href = a.get("href")
             a_text = normalize_text(a.get_text())
-            if any(ext in a_href.lower() for ext in [".pdf", ".doc", ".zip", ".rar"]):
+            if a_href and any(ext in a_href.lower() for ext in (".pdf", ".doc", ".zip", ".rar")):
                 if not a_href.startswith("http"):
                     a_href = urljoin(url, a_href)
                 anexos.append({"nome": a_text or "Documento", "url": a_href})
 
         return EditalAmbev(
-            titulo=titulo,
+            titulo=titulo[:250],
             link=url,
-            descricao=descricao.strip() or titulo,
+            descricao=(descricao.strip() or titulo)[:4000],
             data_publicacao=data_pub,
             fim_inscricao=prazo,
             situacao="Aberto",
             extras={
                 "anexos": anexos,
-                "fonte_original": source,
-                "data_extracao": datetime.now().strftime("%Y-%m-%d")
-            }
+                "fonte_original": listing_url,
+                "data_extracao": datetime.now().strftime("%Y-%m-%d"),
+                "url_listagem": listing_url,
+                "url_detalhe": url,
+                "metodo_extracao": "curated_listing_detail",
+            },
         )

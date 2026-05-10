@@ -1,0 +1,73 @@
+{
+  "data_auditoria": "2026-05-01T07:35:14Z",
+  "fontes": [
+    "aneel",
+    "bndes",
+    "cnpq",
+    "finep",
+    "fapergs",
+    "fapesp",
+    "fapesc",
+    "cnen",
+    "pncp_defesa",
+    "compras_defesa"
+  ],
+  "max_items_por_fonte": 25,
+  "pdf_skip": false,
+  "itens_analisados": 111,
+  "raw_com_pdf_url": 52,
+  "raw_com_documentos": 67,
+  "transformado_com_pdf_url": 52,
+  "transformado_com_documentos": 52,
+  "payload_com_pdf_url": 53,
+  "payload_com_documentos": 52,
+  "downloads_falharam": 9,
+  "downloads_sucesso": 43,
+  "links_invalidos": 0,
+  "links_relativos_restantes": 0,
+  "links_quebrados": 0,
+  "duplicados_documentos": 0,
+  "perdas_total": 16,
+  "fontes_pior_preservacao": [
+    {
+      "fonte": "bndes",
+      "score_perda": 1.0
+    },
+    {
+      "fonte": "pncp_defesa",
+      "score_perda": 1.0
+    },
+    {
+      "fonte": "compras_defesa",
+      "score_perda": 1.0
+    },
+    {
+      "fonte": "aneel",
+      "score_perda": 0.040000000000000036
+    },
+    {
+      "fonte": "cnpq",
+      "score_perda": 0.0
+    },
+    {
+      "fonte": "finep",
+      "score_perda": 0.0
+    },
+    {
+      "fonte": "fapergs",
+      "score_perda": 0.0
+    },
+    {
+      "fonte": "fapesp",
+      "score_perda": 0.0
+    },
+    {
+      "fonte": "fapesc",
+      "score_perda": 0.0
+    },
+    {
+      "fonte": "cnen",
+      "score_perda": 0.0
+    }
+  ]
+}

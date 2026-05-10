@@ -1,0 +1,343 @@
+[
+  {
+    "fonte": "pncp",
+    "arquivo": "pncp\\outputs\\pncp_editais.json",
+    "itens_amostra": 21,
+    "transformados": 20,
+    "rejeitados": 1,
+    "raw_com_pdf_url": 0,
+    "raw_com_documentos": 11,
+    "transformado_com_pdf_url": 0,
+    "transformado_com_documentos": 11,
+    "payload_com_pdf_url": 0,
+    "payload_com_documentos": 11,
+    "bruto_com_documentos_pdf": 0,
+    "bruto_com_documentos_nao_pdf": 11,
+    "transformado_com_documentos_pdf": 0,
+    "transformado_com_documentos_nao_pdf": 11,
+    "payload_com_documentos_pdf": 0,
+    "payload_com_documentos_nao_pdf": 11,
+    "perdas_pdf": 0,
+    "perdas_nao_pdf": 0,
+    "downloads_falharam": 0,
+    "downloads_sucesso": 0,
+    "links_invalidos": 0,
+    "links_relativos_restantes": 0,
+    "links_quebrados": 0,
+    "duplicados_documentos": 0,
+    "formatos_detectados": {
+      "outro": 11
+    },
+    "losses": [
+      {
+        "fonte": "pncp",
+        "etapa": "bruto->transformado",
+        "motivo": "Relevancia limite: poucos sinais de oportunidade",
+        "titulo": "[Portal de Compras Públicas] - AQUISIÇÃO DE GÊNEROS ALIMENTÍCIOS",
+        "link": "https://portaldecompraspublicas.com.br/processos/MG/Fundacao-Hospitalar-do-Municipio-de-Varginha-3328/DE-35-2026-2026-475680",
+        "raw_pdf_url": "",
+        "raw_docs_n": 1,
+        "transformado_docs_n": 0,
+        "payload_docs_n": 0
+      }
+    ],
+    "download_failures": [],
+    "examples": [
+      {
+        "fonte": "pncp",
+        "titulo": "CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA A PRESTAÇÃO DE SERVIÇOS DE MONITORAMENTO 24 HORAS DO SISTEMA DE ACIONAMENTO ANTIGRANIZO DA DEFESA CIVIL DE CHAPECÓ.",
+        "link": "https://pncp.gov.br/app/editais/83021808000182-1-000187/2026",
+        "raw_pdf_url": "",
+        "transformado_pdf_url": "",
+        "payload_pdf_url": "",
+        "raw_docs_n": 0,
+        "transformado_docs_n": 0,
+        "payload_docs_n": 0,
+        "status_download": "nao_baixado",
+        "erro_download": "sem_pdf_url",
+        "docs_transformado_amostra": []
+      },
+      {
+        "fonte": "pncp",
+        "titulo": "Contratação de empresa especializada para a prestação de serviços continuados, com dedicação exclusiva de mão de obra, para alocação de postos de trabalho de Serviços Gerais de Limpeza, Cozinheiro (Preparação de Alimento",
+        "link": "https://pregaobanrisul.com.br/editais/0005_2026/350351",
+        "raw_pdf_url": "",
+        "transformado_pdf_url": "",
+        "payload_pdf_url": "",
+        "raw_docs_n": 1,
+        "transformado_docs_n": 1,
+        "payload_docs_n": 1,
+        "status_download": "nao_baixado",
+        "erro_download": "sem_pdf_url",
+        "docs_transformado_amostra": [
+          {
+            "titulo": "linkSistemaOrigem",
+            "url": "https://pregaobanrisul.com.br/editais/0005_2026/350351",
+            "tipo": "documento_desconhecido",
+            "formato": "outro",
+            "origem": "extras.documentos",
+            "status_download": "nao_baixado",
+            "erro_download": "",
+            "texto_extraido": "",
+            "resumo": ""
+          }
+        ]
+      },
+      {
+        "fonte": "pncp",
+        "titulo": "Contratação de empresa especializada, para a execução de manutenção corretiva no cabo rompido na subestação elétrica do Instituto de Previdência e Assistência dos Servidores Municipais de Canoas – CANOASPREV, compreenden",
+        "link": "https://pregaobanrisul.com.br/editais/0007_2026/350418",
+        "raw_pdf_url": "",
+        "transformado_pdf_url": "",
+        "payload_pdf_url": "",
+        "raw_docs_n": 1,
+        "transformado_docs_n": 1,
+        "payload_docs_n": 1,
+        "status_download": "nao_baixado",
+        "erro_download": "sem_pdf_url",
+        "docs_transformado_amostra": [
+          {
+            "titulo": "linkSistemaOrigem",
+            "url": "https://pregaobanrisul.com.br/editais/0007_2026/350418",
+            "tipo": "documento_desconhecido",
+            "formato": "outro",
+            "origem": "extras.documentos",
+            "status_download": "nao_baixado",
+            "erro_download": "",
+            "texto_extraido": "",
+            "resumo": ""
+          }
+        ]
+      },
+      {
+        "fonte": "pncp",
+        "titulo": "SOLICITAÇÃO DE SERVIÇO DE MANUTENÇÃO EM ROÇADEIRA E RETROECAVADEIRA DO DSM",
+        "link": "https://pmroseira.geosiap.net.br:8443/portal-transparencia/licitacoes/processo/30277",
+        "raw_pdf_url": "",
+        "transformado_pdf_url": "",
+        "payload_pdf_url": "",
+        "raw_docs_n": 1,
+        "transformado_docs_n": 1,
+        "payload_docs_n": 1,
+        "status_download": "nao_baixado",
+        "erro_download": "sem_pdf_url",
+        "docs_transformado_amostra": [
+          {
+            "titulo": "linkSistemaOrigem",
+            "url": "https://pmroseira.geosiap.net.br:8443/portal-transparencia/licitacoes/processo/30277",
+            "tipo": "documento_desconhecido",
+            "formato": "outro",
+            "origem": "extras.documentos",
+            "status_download": "nao_baixado",
+            "erro_download": "",
+            "texto_extraido": "",
+            "resumo": ""
+          }
+        ]
+      },
+      {
+        "fonte": "pncp",
+        "titulo": "Contratação de serviços de desobstrução de rede de esgoto e limpeza de caixas de passagem, destinados à EMEI Thereza de Jesus Trannin Pasin.",
+        "link": "https://pmroseira.geosiap.net.br:8443/portal-transparencia/licitacoes/processo/30279",
+        "raw_pdf_url": "",
+        "transformado_pdf_url": "",
+        "payload_pdf_url": "",
+        "raw_docs_n": 1,
+        "transformado_docs_n": 1,
+        "payload_docs_n": 1,
+        "status_download": "nao_baixado",
+        "erro_download": "sem_pdf_url",
+        "docs_transformado_amostra": [
+          {
+            "titulo": "linkSistemaOrigem",
+            "url": "https://pmroseira.geosiap.net.br:8443/portal-transparencia/licitacoes/processo/30279",
+            "tipo": "documento_desconhecido",
+            "formato": "outro",
+            "origem": "extras.documentos",
+            "status_download": "nao_baixado",
+            "erro_download": "",
+            "texto_extraido": "",
+            "resumo": ""
+          }
+        ]
+      },
+      {
+        "fonte": "pncp",
+        "titulo": "Contratação de empresa especializada na prestação de serviços de organização de eventos, compreendendo a decoração de espaços com fornecimento de materiais, para atender ao calendário de Formações Continuadas, Festividad",
+        "link": "https://pncp.gov.br/app/editais/25064080000170-1-000069/2026",
+        "raw_pdf_url": "",
+        "transformado_pdf_url": "",
+        "payload_pdf_url": "",
+        "raw_docs_n": 0,
+        "transformado_docs_n": 0,
+        "payload_docs_n": 0,
+        "status_download": "nao_baixado",
+        "erro_download": "sem_pdf_url",
+        "docs_transformado_amostra": []
+      },
+      {
+        "fonte": "pncp",
+        "titulo": "Contratação de Serviço",
+        "link": "https://pncp.gov.br",
+        "raw_pdf_url": "",
+        "transformado_pdf_url": "",
+        "payload_pdf_url": "",
+        "raw_docs_n": 1,
+        "transformado_docs_n": 1,
+        "payload_docs_n": 1,
+        "status_download": "nao_baixado",
+        "erro_download": "sem_pdf_url",
+        "docs_transformado_amostra": [
+          {
+            "titulo": "linkSistemaOrigem",
+            "url": "https://pncp.gov.br",
+            "tipo": "documento_desconhecido",
+            "formato": "outro",
+            "origem": "extras.documentos",
+            "status_download": "nao_baixado",
+            "erro_download": "",
+            "texto_extraido": "",
+            "resumo": ""
+          }
+        ]
+      },
+      {
+        "fonte": "pncp",
+        "titulo": "PROCESSO PARA AQUISIÇÃO DE QUADROS DE COMANDO PARA 2 BOMBAS PARA ATENDER O HINSG",
+        "link": "https://pncp.gov.br/app/editais/27080605002059-1-000072/2026",
+        "raw_pdf_url": "",
+        "transformado_pdf_url": "",
+        "payload_pdf_url": "",
+        "raw_docs_n": 0,
+        "transformado_docs_n": 0,
+        "payload_docs_n": 0,
+        "status_download": "nao_baixado",
+        "erro_download": "sem_pdf_url",
+        "docs_transformado_amostra": []
+      },
+      {
+        "fonte": "pncp",
+        "titulo": "A presente contratação tem por objetivo a aquisição de letreiro em aço inox com os dizeres “Galeria das Vereadoras”, destinado à identificação institucional da referida galeria nas dependências da Câmara Municipal da Cam",
+        "link": "https://imaq.diretriz.net",
+        "raw_pdf_url": "",
+        "transformado_pdf_url": "",
+        "payload_pdf_url": "",
+        "raw_docs_n": 1,
+        "transformado_docs_n": 1,
+        "payload_docs_n": 1,
+        "status_download": "nao_baixado",
+        "erro_download": "sem_pdf_url",
+        "docs_transformado_amostra": [
+          {
+            "titulo": "linkSistemaOrigem",
+            "url": "https://imaq.diretriz.net",
+            "tipo": "documento_desconhecido",
+            "formato": "outro",
+            "origem": "extras.documentos",
+            "status_download": "nao_baixado",
+            "erro_download": "",
+            "texto_extraido": "",
+            "resumo": ""
+          }
+        ]
+      },
+      {
+        "fonte": "pncp",
+        "titulo": "Processo de contratação de serviço de publicação em jornal de grande circulação para atendimento desta Penitenciária 1 \"Dr. Paulo Luciano de Campos.",
+        "link": "https://pncp.gov.br/app/editais/96291141000180-1-002211/2026",
+        "raw_pdf_url": "",
+        "transformado_pdf_url": "",
+        "payload_pdf_url": "",
+        "raw_docs_n": 0,
+        "transformado_docs_n": 0,
+        "payload_docs_n": 0,
+        "status_download": "nao_baixado",
+        "erro_download": "sem_pdf_url",
+        "docs_transformado_amostra": []
+      },
+      {
+        "fonte": "pncp",
+        "titulo": "Contratação de serviços gráficos",
+        "link": "https://pncp.gov.br/app/editais/07954480000179-1-010755/2026",
+        "raw_pdf_url": "",
+        "transformado_pdf_url": "",
+        "payload_pdf_url": "",
+        "raw_docs_n": 0,
+        "transformado_docs_n": 0,
+        "payload_docs_n": 0,
+        "status_download": "nao_baixado",
+        "erro_download": "sem_pdf_url",
+        "docs_transformado_amostra": []
+      },
+      {
+        "fonte": "pncp",
+        "titulo": "Contratação de serviço de manutenção e conservação de bens imóveis",
+        "link": "https://pncp.gov.br/app/editais/07954480000179-1-010756/2026",
+        "raw_pdf_url": "",
+        "transformado_pdf_url": "",
+        "payload_pdf_url": "",
+        "raw_docs_n": 0,
+        "transformado_docs_n": 0,
+        "payload_docs_n": 0,
+        "status_download": "nao_baixado",
+        "erro_download": "sem_pdf_url",
+        "docs_transformado_amostra": []
+      },
+      {
+        "fonte": "pncp",
+        "titulo": "Contratação de serviços comuns de engenharia para reparo em telhados nas dependências do 5º CGEO. Alojamento feminino e Rancho dos ST/SGT do 5º CGEO",
+        "link": "https://pncp.gov.br/app/editais/00394452000103-1-008268/2026",
+        "raw_pdf_url": "",
+        "transformado_pdf_url": "",
+        "payload_pdf_url": "",
+        "raw_docs_n": 0,
+        "transformado_docs_n": 0,
+        "payload_docs_n": 0,
+        "status_download": "nao_baixado",
+        "erro_download": "sem_pdf_url",
+        "docs_transformado_amostra": []
+      },
+      {
+        "fonte": "pncp",
+        "titulo": "O objeto da presente Dispensa de Licitação é a aquisição de Quadro de Legislatura para a Galeria de Vereadores, com imagem digital colorida impressa em aço, medindo 40 x 50 cm, com perfil de alumínio brilhante, destinado",
+        "link": "https://imaq.diretriz.net",
+        "raw_pdf_url": "",
+        "transformado_pdf_url": "",
+        "payload_pdf_url": "",
+        "raw_docs_n": 1,
+        "transformado_docs_n": 1,
+        "payload_docs_n": 1,
+        "status_download": "nao_baixado",
+        "erro_download": "sem_pdf_url",
+        "docs_transformado_amostra": [
+          {
+            "titulo": "linkSistemaOrigem",
+            "url": "https://imaq.diretriz.net",
+            "tipo": "documento_desconhecido",
+            "formato": "outro",
+            "origem": "extras.documentos",
+            "status_download": "nao_baixado",
+            "erro_download": "",
+            "texto_extraido": "",
+            "resumo": ""
+          }
+        ]
+      },
+      {
+        "fonte": "pncp",
+        "titulo": "Contratação de empresa especializada em serviço de dedetização e desratização nas dependências da unidade prisional.",
+        "link": "https://pncp.gov.br/app/editais/96291141000180-1-002212/2026",
+        "raw_pdf_url": "",
+        "transformado_pdf_url": "",
+        "payload_pdf_url": "",
+        "raw_docs_n": 0,
+        "transformado_docs_n": 0,
+        "payload_docs_n": 0,
+        "status_download": "nao_baixado",
+        "erro_download": "sem_pdf_url",
+        "docs_transformado_amostra": []
+      }
+    ],
+    "timestamp_utc": "2026-05-01T23:10:13Z"
+  }
+]

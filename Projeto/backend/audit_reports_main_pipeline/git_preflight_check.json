@@ -1,0 +1,436 @@
+{
+  "git_repository_detected": false,
+  "gitignore_path": ".gitignore",
+  "gitignore_exists": true,
+  "ignore_rules_count": 53,
+  "ignore_coverage": {
+    ".env": true,
+    "CORE/.env": true,
+    ".venv/": true,
+    "CORE/.venv/": true
+  },
+  "files_scanned_estimate": 3229,
+  "suspicious_hits_count": 68,
+  "risk_before_git_add": "high",
+  "suspicious": [
+    {
+      "file": ".gitignore",
+      "pattern": "SERVICE_ROLE",
+      "line": 21,
+      "masked": "<REDACTED_LINE>"
+    },
+    {
+      "file": "asia_translate.py",
+      "pattern": "API_KEY",
+      "line": 105,
+      "masked": "self.api_key = <REDACTED>"
+    },
+    {
+      "file": "audit_reports_blocked_sources/lote1_ready_sources_loader_dryrun.json",
+      "pattern": "SUPABASE_SERVICE_ROLE_KEY",
+      "line": 292,
+      "masked": "<REDACTED_LINE>"
+    },
+    {
+      "file": "audit_reports_credito/lote_inovacao_internacional_onda_c_diagnostico.md",
+      "pattern": "SUPABASE_URL",
+      "line": 8,
+      "masked": "<REDACTED_LINE>"
+    },
+    {
+      "file": "audit_reports_credito/onda_c_loader_dryrun.json",
+      "pattern": "SUPABASE_SERVICE_ROLE_KEY",
+      "line": 616,
+      "masked": "<REDACTED_LINE>"
+    },
+    {
+      "file": "audit_reports_credito/onda_c_loader_dryrun.md",
+      "pattern": "SUPABASE_SERVICE_ROLE_KEY",
+      "line": 627,
+      "masked": "<REDACTED_LINE>"
+    },
+    {
+      "file": "audit_reports_credito/onda_c_loader_dryrun_summary_loader_ready.json",
+      "pattern": "SUPABASE_SERVICE_ROLE_KEY",
+      "line": 610,
+      "masked": "<REDACTED_LINE>"
+    },
+    {
+      "file": "audit_reports_db_validation/db_validation_summary.json",
+      "pattern": "SUPABASE_SERVICE_ROLE_KEY",
+      "line": 6,
+      "masked": "<REDACTED_LINE>"
+    },
+    {
+      "file": "audit_reports_duplicates_db/duplicates_summary.json",
+      "pattern": "SUPABASE_SERVICE_ROLE_KEY",
+      "line": 6,
+      "masked": "<REDACTED_LINE>"
+    },
+    {
+      "file": "audit_reports_main_pipeline/recovery_a_official_loader_dryrun.json",
+      "pattern": "SUPABASE_SERVICE_ROLE_KEY",
+      "line": 627,
+      "masked": "<REDACTED_LINE>"
+    },
+    {
+      "file": "audit_reports_main_pipeline/recovery_a_official_loader_dryrun_bundle/final_dry_run_before_staging.json",
+      "pattern": "SUPABASE_SERVICE_ROLE_KEY",
+      "line": 627,
+      "masked": "<REDACTED_LINE>"
+    },
+    {
+      "file": "audit_reports_main_pipeline/recovery_a_official_loader_dryrun_bundle/load_ready_summary.json",
+      "pattern": "SUPABASE_SERVICE_ROLE_KEY",
+      "line": 627,
+      "masked": "<REDACTED_LINE>"
+    },
+    {
+      "file": "audit_reports_main_pipeline/recovery_b1_amazul_loader_dryrun/final_dry_run_before_staging.json",
+      "pattern": "SUPABASE_SERVICE_ROLE_KEY",
+      "line": 637,
+      "masked": "<REDACTED_LINE>"
+    },
+    {
+      "file": "audit_reports_main_pipeline/recovery_b1_amazul_loader_dryrun/load_ready_summary.json",
+      "pattern": "SUPABASE_SERVICE_ROLE_KEY",
+      "line": 637,
+      "masked": "<REDACTED_LINE>"
+    },
+    {
+      "file": "audit_reports_main_pipeline/recovery_b_official_loader_dryrun_bundle/final_dry_run_before_staging.json",
+      "pattern": "SUPABASE_SERVICE_ROLE_KEY",
+      "line": 637,
+      "masked": "<REDACTED_LINE>"
+    },
+    {
+      "file": "audit_reports_main_pipeline/recovery_b_official_loader_dryrun_bundle/load_ready_summary.json",
+      "pattern": "SUPABASE_SERVICE_ROLE_KEY",
+      "line": 637,
+      "masked": "<REDACTED_LINE>"
+    },
+    {
+      "file": "audit_reports_main_pipeline/recovery_c_setores_loader_dryrun/final_dry_run_before_staging.json",
+      "pattern": "SUPABASE_SERVICE_ROLE_KEY",
+      "line": 360,
+      "masked": "<REDACTED_LINE>"
+    },
+    {
+      "file": "audit_reports_main_pipeline/recovery_c_setores_loader_dryrun/load_ready_summary.json",
+      "pattern": "SUPABASE_SERVICE_ROLE_KEY",
+      "line": 360,
+      "masked": "<REDACTED_LINE>"
+    },
+    {
+      "file": "audit_reports_main_pipeline/recovery_c_taxonomy_overwrite_dryrun/final_dry_run_before_staging.json",
+      "pattern": "SUPABASE_SERVICE_ROLE_KEY",
+      "line": 1181,
+      "masked": "<REDACTED_LINE>"
+    },
+    {
+      "file": "audit_reports_main_pipeline/recovery_c_taxonomy_overwrite_dryrun/load_ready_summary.json",
+      "pattern": "SUPABASE_SERVICE_ROLE_KEY",
+      "line": 1181,
+      "masked": "<REDACTED_LINE>"
+    },
+    {
+      "file": "audit_reports_main_pipeline/recovery_c_taxonomy_overwrite_dryrun/recovery_c_taxonomy_overwrite_dryrun.json",
+      "pattern": "SUPABASE_SERVICE_ROLE_KEY",
+      "line": 1181,
+      "masked": "<REDACTED_LINE>"
+    },
+    {
+      "file": "audit_reports_main_pipeline/recovery_d1_fornecedores_final_loader_dryrun.json",
+      "pattern": "SUPABASE_SERVICE_ROLE_KEY",
+      "line": 387,
+      "masked": "<REDACTED_LINE>"
+    },
+    {
+      "file": "audit_reports_main_pipeline/recovery_d1_fornecedores_final_loader_dryrun/final_dry_run_before_staging.json",
+      "pattern": "SUPABASE_SERVICE_ROLE_KEY",
+      "line": 386,
+      "masked": "<REDACTED_LINE>"
+    },
+    {
+      "file": "audit_reports_main_pipeline/recovery_d1_fornecedores_final_loader_dryrun/load_ready_summary.json",
+      "pattern": "SUPABASE_SERVICE_ROLE_KEY",
+      "line": 386,
+      "masked": "<REDACTED_LINE>"
+    },
+    {
+      "file": "audit_reports_main_pipeline/recovery_d1_suppliers_qa_loader_dryrun.json",
+      "pattern": "SUPABASE_SERVICE_ROLE_KEY",
+      "line": 387,
+      "masked": "<REDACTED_LINE>"
+    },
+    {
+      "file": "audit_reports_main_pipeline/recovery_d1_suppliers_qa_loader_dryrun/final_dry_run_before_staging.json",
+      "pattern": "SUPABASE_SERVICE_ROLE_KEY",
+      "line": 386,
+      "masked": "<REDACTED_LINE>"
+    },
+    {
+      "file": "audit_reports_main_pipeline/recovery_d1_suppliers_qa_loader_dryrun/load_ready_summary.json",
+      "pattern": "SUPABASE_SERVICE_ROLE_KEY",
+      "line": 386,
+      "masked": "<REDACTED_LINE>"
+    },
+    {
+      "file": "audit_reports_main_pipeline/recovery_d_suppliers_consolidado.json",
+      "pattern": "SUPABASE_SERVICE_ROLE_KEY",
+      "line": 388,
+      "masked": "<REDACTED_LINE>"
+    },
+    {
+      "file": "audit_reports_main_pipeline/recovery_d_suppliers_loader_dryrun.json",
+      "pattern": "SUPABASE_SERVICE_ROLE_KEY",
+      "line": 387,
+      "masked": "<REDACTED_LINE>"
+    },
+    {
+      "file": "audit_reports_main_pipeline/recovery_d_suppliers_loader_dryrun/final_dry_run_before_staging.json",
+      "pattern": "SUPABASE_SERVICE_ROLE_KEY",
+      "line": 386,
+      "masked": "<REDACTED_LINE>"
+    },
+    {
+      "file": "audit_reports_main_pipeline/recovery_d_suppliers_loader_dryrun/load_ready_summary.json",
+      "pattern": "SUPABASE_SERVICE_ROLE_KEY",
+      "line": 386,
+      "masked": "<REDACTED_LINE>"
+    },
+    {
+      "file": "audit_reports_news_research_loader/load_news_research_summary.md",
+      "pattern": "SUPABASE_SERVICE_ROLE_KEY",
+      "line": 50,
+      "masked": "<REDACTED_LINE>"
+    },
+    {
+      "file": "CORE/db.py",
+      "pattern": "SUPABASE_URL",
+      "line": 25,
+      "masked": "SUPABASE_URL = <REDACTED>"
+    },
+    {
+      "file": "CORE/db.py",
+      "pattern": "SUPABASE_KEY",
+      "line": 27,
+      "masked": "SUPABASE_KEY = <REDACTED>"
+    },
+    {
+      "file": "CORE/db.py",
+      "pattern": "SUPABASE_SERVICE_ROLE_KEY",
+      "line": 35,
+      "masked": "<REDACTED_LINE>"
+    },
+    {
+      "file": "CORE/db.py",
+      "pattern": "SUPABASE_SERVICE_ROLE_KEY",
+      "line": 36,
+      "masked": "<REDACTED_LINE>"
+    },
+    {
+      "file": "CORE/db.py",
+      "pattern": "SUPABASE_KEY",
+      "line": 43,
+      "masked": "<REDACTED_LINE>"
+    },
+    {
+      "file": "CORE/schema_rls_policies.sql",
+      "pattern": "SERVICE_ROLE",
+      "line": 7,
+      "masked": "<REDACTED_LINE>"
+    },
+    {
+      "file": "CORE/schema_rls_policies.sql",
+      "pattern": "SERVICE_ROLE",
+      "line": 13,
+      "masked": "<REDACTED_LINE>"
+    },
+    {
+      "file": "CORE/schema_rls_policies.sql",
+      "pattern": "SERVICE_ROLE",
+      "line": 25,
+      "masked": "<REDACTED_LINE>"
+    },
+    {
+      "file": "CORE/schema_rls_policies.sql",
+      "pattern": "SERVICE_ROLE",
+      "line": 34,
+      "masked": "<REDACTED_LINE>"
+    },
+    {
+      "file": "CORE/schema_rls_policies.sql",
+      "pattern": "SERVICE_ROLE",
+      "line": 43,
+      "masked": "<REDACTED_LINE>"
+    },
+    {
+      "file": "CORE/schema_rls_policies.sql",
+      "pattern": "SERVICE_ROLE",
+      "line": 52,
+      "masked": "<REDACTED_LINE>"
+    },
+    {
+      "file": "CORE/schema_rls_policies.sql",
+      "pattern": "SERVICE_ROLE",
+      "line": 61,
+      "masked": "<REDACTED_LINE>"
+    },
+    {
+      "file": "docs/DAILY_PIPELINE.md",
+      "pattern": "SUPABASE_SERVICE_ROLE_KEY",
+      "line": 27,
+      "masked": "<REDACTED_LINE>"
+    },
+    {
+      "file": "docs/STAGING_LOADER.md",
+      "pattern": "SUPABASE_SERVICE_ROLE_KEY",
+      "line": 10,
+      "masked": "<REDACTED_LINE>"
+    },
+    {
+      "file": "docs/STAGING_LOADER.md",
+      "pattern": "SUPABASE_URL",
+      "line": 28,
+      "masked": "SUPABASE_URL=<REDACTED>"
+    },
+    {
+      "file": "docs/STAGING_LOADER.md",
+      "pattern": "SUPABASE_SERVICE_ROLE_KEY",
+      "line": 29,
+      "masked": "SUPABASE_SERVICE_ROLE_KEY=<REDACTED>"
+    },
+    {
+      "file": "docs/STAGING_LOADER.md",
+      "pattern": "SUPABASE_SERVICE_ROLE_KEY",
+      "line": 39,
+      "masked": "<REDACTED_LINE>"
+    },
+    {
+      "file": "main.py",
+      "pattern": "SUPABASE_SERVICE_ROLE_KEY",
+      "line": 116,
+      "masked": "<REDACTED_LINE>"
+    },
+    {
+      "file": "sam_gov/main_sam_gov.py",
+      "pattern": "API_KEY",
+      "line": 175,
+      "masked": "api_key = <REDACTED>"
+    },
+    {
+      "file": "scripts/deactivate_removed_credito_onda_a_staging.py",
+      "pattern": "SUPABASE_SERVICE_ROLE_KEY",
+      "line": 70,
+      "masked": "<REDACTED_LINE>"
+    },
+    {
+      "file": "scripts/deactivate_removed_items.py",
+      "pattern": "SUPABASE_SERVICE_ROLE_KEY",
+      "line": 47,
+      "masked": "key = <REDACTED>"
+    },
+    {
+      "file": "scripts/deactivate_removed_items.py",
+      "pattern": "SUPABASE_SERVICE_ROLE_KEY",
+      "line": 79,
+      "masked": "key = <REDACTED>"
+    },
+    {
+      "file": "scripts/detect_removed_items.py",
+      "pattern": "SUPABASE_SERVICE_ROLE_KEY",
+      "line": 69,
+      "masked": "<REDACTED_LINE>"
+    },
+    {
+      "file": "scripts/detect_removed_items.py",
+      "pattern": "SUPABASE_SERVICE_ROLE_KEY",
+      "line": 89,
+      "masked": "<REDACTED_LINE>"
+    },
+    {
+      "file": "scripts/git_preflight_check.py",
+      "pattern": "SUPABASE_SERVICE_ROLE_KEY",
+      "line": 28,
+      "masked": "<REDACTED_LINE>"
+    },
+    {
+      "file": "scripts/git_preflight_check.py",
+      "pattern": "SERVICE_ROLE",
+      "line": 29,
+      "masked": "<REDACTED_LINE>"
+    },
+    {
+      "file": "scripts/load_news_research_sources.py",
+      "pattern": "SUPABASE_SERVICE_ROLE_KEY",
+      "line": 111,
+      "masked": "<REDACTED_LINE>"
+    },
+    {
+      "file": "scripts/load_news_research_sources.py",
+      "pattern": "SUPABASE_SERVICE_ROLE_KEY",
+      "line": 580,
+      "masked": "<REDACTED_LINE>"
+    },
+    {
+      "file": "scripts/load_portais_estrategicos.py",
+      "pattern": "SUPABASE_SERVICE_ROLE_KEY",
+      "line": 97,
+      "masked": "<REDACTED_LINE>"
+    },
+    {
+      "file": "scripts/load_portais_estrategicos.py",
+      "pattern": "SUPABASE_SERVICE_ROLE_KEY",
+      "line": 487,
+      "masked": "key = <REDACTED>"
+    },
+    {
+      "file": "scripts/load_ready_sources.py",
+      "pattern": "SUPABASE_SERVICE_ROLE_KEY",
+      "line": 797,
+      "masked": "has_service_key = <REDACTED>"
+    },
+    {
+      "file": "scripts/validate_full_staging_after_daily.py",
+      "pattern": "SUPABASE_SERVICE_ROLE_KEY",
+      "line": 74,
+      "masked": "<REDACTED_LINE>"
+    },
+    {
+      "file": "scripts/validate_full_staging_after_daily.py",
+      "pattern": "SUPABASE_SERVICE_ROLE_KEY",
+      "line": 100,
+      "masked": "<REDACTED_LINE>"
+    },
+    {
+      "file": "scripts/validate_news_research_after_load.py",
+      "pattern": "SUPABASE_SERVICE_ROLE_KEY",
+      "line": 166,
+      "masked": "<REDACTED_LINE>"
+    },
+    {
+      "file": "scripts/validate_portais_estrategicos_after_load.py",
+      "pattern": "SUPABASE_SERVICE_ROLE_KEY",
+      "line": 51,
+      "masked": "<REDACTED_LINE>"
+    },
+    {
+      "file": "scripts/validate_portais_estrategicos_after_load.py",
+      "pattern": "SUPABASE_SERVICE_ROLE_KEY",
+      "line": 78,
+      "masked": "key = <REDACTED>"
+    }
+  ],
+  "truncated": false,
+  "safe_git_add_examples": [
+    "git add .gitignore",
+    "git add scripts/",
+    "git add CORE/",
+    "git add main.py",
+    "git add docs/",
+    "# Evitar: git add . ou git add -A sem rever o status depois de atualizar .gitignore",
+    "# Preferir: git add -p   ou   git add caminhos explícitos"
+  ],
+  "nota": "Valores de segredos não são reproduzidos; apenas padrão e linha mascarada."
+}

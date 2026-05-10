@@ -1,0 +1,54 @@
+[
+  {
+    "fonte": "senai",
+    "crawler_roda": true,
+    "existe_output_bruto": true,
+    "caminho_bruto": "senai/outputs/senai_editais.json",
+    "itens_brutos_pos_correcao": 22,
+    "itens_transformados_pos_correcao": 22,
+    "itens_rejeitados_pos_correcao": 0,
+    "motivos_rejeicao_pos_correcao": {},
+    "pre_correcao_resumo": {
+      "brutos_tipicos": 0,
+      "fallback_indice_generico": true,
+      "problema_principal": "scrape_source retornava 0 itens (timeout curto + filtros de URL amplos); fallback gravava página índice de chamadas públicas.",
+      "rejeicao_transformer": "opportunity_gate (Pontuacao abaixo / não gov.br trusted_fin) no índice genérico"
+    },
+    "rejeitados_pareciam": [],
+    "causa_raiz": "crawler (timeout, falta de listagem plataforma inovação, fallback genérico) + gate global sem contexto trusted_fin para portaldaindustria.com.br",
+    "links_reais_ou_genericos": "Pós-correção: URLs de categorias da Plataforma Inovação (/categoria/...) — oportunidade real agregada por linha, não edital único.",
+    "pagina_detalhe_acessada": true,
+    "documentos_anexos": "Sim no bruto/transformado: PDFs detectados nas páginas de categoria (contagem alta no audit_docs por muitos links .pdf na página).",
+    "recomendacao_inicial": "Tratar categorias como programas/chamadas agregadas; revisar se o produto deseja um registro por categoria ou drill-down por edital. Enriquecer perfil_ideal.",
+    "artefatos_pos_pipeline": {
+      "retransform": "audit_reports_blocked_sources/lote1_fix_senai_softex/retransform_by_source.json",
+      "standardized": "audit_reports_blocked_sources/lote1_fix_senai_softex/standardized/senai_standardized.json"
+    }
+  },
+  {
+    "fonte": "softex",
+    "crawler_roda": true,
+    "existe_output_bruto": true,
+    "caminho_bruto": "softex/outputs/softex_editais.json",
+    "itens_brutos_pos_correcao": 2,
+    "itens_transformados_pos_correcao": 2,
+    "itens_rejeitados_pos_correcao": 0,
+    "motivos_rejeicao_pos_correcao": {},
+    "pre_correcao_resumo": {
+      "brutos": 2,
+      "fallback_home": false,
+      "problema_principal": "opportunity_gate global (score baixo + intent genérico / notícia) sem trusted_fin em softex.br",
+      "ruido_filtrado": "Notícias Brasil IT / eventos filtradas por _is_relevant_item e NOISE_HINTS"
+    },
+    "rejeitados_pareciam": [],
+    "causa_raiz": "gate + descrição curta; não crawler quebrado",
+    "links_reais_ou_genericos": "URLs de post com programa Amazônia Geek (oportunidades reais).",
+    "pagina_detalhe_acessada": true,
+    "documentos_anexos": "anexos vazios nas duas páginas auditadas; sem PDF no bruto",
+    "recomendacao_inicial": "Manter só chamadas com inscrição/programa; ampliar texto de detalhe para classificação e qualidade.",
+    "artefatos_pos_pipeline": {
+      "retransform": "audit_reports_blocked_sources/lote1_fix_senai_softex/retransform_by_source.json",
+      "standardized": "audit_reports_blocked_sources/lote1_fix_senai_softex/standardized/softex_standardized.json"
+    }
+  }
+]

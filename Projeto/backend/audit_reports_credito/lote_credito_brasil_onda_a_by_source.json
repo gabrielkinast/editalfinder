@@ -1,0 +1,132 @@
+{
+  "agerio": {
+    "crawler_output": "agerio/outputs/agerio_editais.json",
+    "brutos": 3,
+    "transformados": 2,
+    "rejeitados": 1,
+    "incompletos": 1,
+    "suspeitos": 1,
+    "qualidade_media": 76.5,
+    "motivos_rejeicao": {
+      "Noticia ou pagina generica sem chamada evidenciada": 1
+    },
+    "diagnostico_detalhe": {
+      "crawler": "agerio/main_agerio.py",
+      "existe_antes": false,
+      "urls_uteis": [
+        "https://www.agerio.com.br/linhas-de-credito/",
+        "https://www.agerio.com.br/areas-de-atuacao/tipo/empresas/"
+      ],
+      "excluir": [
+        "/noticias/",
+        "/agerio-orienta/dicas",
+        "/sem-categoria/",
+        "educacao financeira isolada"
+      ],
+      "readiness_recomendado": "needs_manual_review",
+      "readiness_motivo": "Poucos itens após filtros; uma página de área sem evidência de chamada foi rejeitada pelo gate."
+    }
+  },
+  "banco_da_amazonia": {
+    "crawler_output": "banco_da_amazonia/outputs/banco_da_amazonia_editais.json",
+    "brutos": 26,
+    "transformados": 26,
+    "rejeitados": 0,
+    "incompletos": 5,
+    "suspeitos": 21,
+    "qualidade_media": 58.38,
+    "motivos_rejeicao": {},
+    "diagnostico_detalhe": {
+      "crawler": "banco_da_amazonia/main_banco_da_amazonia.py",
+      "existe_antes": false,
+      "urls_uteis": [
+        "https://www.bancoamazonia.com.br/empresas/credito-e-financiamentos",
+        "https://www.bancoamazonia.com.br/rural/credito-e-financiamento-agro",
+        "https://www.bancoamazonia.com.br/linhas-de-fomento/fno"
+      ],
+      "excluir": [
+        "cartão PF genérico",
+        "seguros",
+        "só investimentos sem crédito"
+      ],
+      "readiness_recomendado": "ready_with_notes",
+      "readiness_motivo": "Cobertura boa de linhas; muitos itens com flag suspeito (revisar conteúdo mínimo)."
+    }
+  },
+  "bdmg": {
+    "crawler_output": "bdmg/outputs/bdmg_editais.json",
+    "brutos": 28,
+    "transformados": 27,
+    "rejeitados": 1,
+    "incompletos": 26,
+    "suspeitos": 0,
+    "qualidade_media": 79.56,
+    "motivos_rejeicao": {
+      "titulo_ruido_exato": 1
+    },
+    "diagnostico_detalhe": {
+      "crawler": "bdmg/main_bdmg.py",
+      "existe_antes": false,
+      "urls_uteis": [
+        "https://www.bdmg.mg.gov.br/linhaspermanentes",
+        "https://www.bdmg.mg.gov.br/micro-empresa"
+      ],
+      "excluir": [
+        "relacao-investidores",
+        "termos de uso PDF genérico"
+      ],
+      "readiness_recomendado": "ready_with_notes",
+      "readiness_motivo": "Lista extensa; alguns PDFs externos podem falhar; revisar duplicatas por âncora #."
+    }
+  },
+  "bnb": {
+    "crawler_output": "bnb/outputs/bnb_editais.json",
+    "brutos": 24,
+    "transformados": 24,
+    "rejeitados": 0,
+    "incompletos": 24,
+    "suspeitos": 0,
+    "qualidade_media": 70.83,
+    "motivos_rejeicao": {},
+    "diagnostico_detalhe": {
+      "crawler": "bnb/main_bnb.py",
+      "existe_antes": false,
+      "urls_uteis": [
+        "https://www.bnb.gov.br/web/guest/produtos-e-servicos",
+        "https://www.bnb.gov.br/web/guest/solicitacao-de-credito",
+        "https://www.bnb.gov.br/web/guest/microcredito"
+      ],
+      "excluir": [
+        "/imprensa/",
+        "noticias",
+        "open-finance",
+        "educacao-financeira sem produto"
+      ],
+      "readiness_recomendado": "ready_with_notes",
+      "readiness_motivo": "Muitas páginas de crédito; filtro remove imprensa; alguns itens suspeitos (texto curto)."
+    }
+  },
+  "desenvolve_sp": {
+    "crawler_output": "desenvolve_sp/outputs/desenvolve_sp_editais.json",
+    "brutos": 4,
+    "transformados": 4,
+    "rejeitados": 0,
+    "incompletos": 0,
+    "suspeitos": 4,
+    "qualidade_media": 54.75,
+    "motivos_rejeicao": {},
+    "diagnostico_detalhe": {
+      "crawler": "desenvolve_sp/main_desenvolve_sp.py",
+      "existe_antes": false,
+      "urls_uteis": [
+        "https://www.desenvolvesp.com.br/empresas/opcoes-de-credito/",
+        "https://www.desenvolvesp.com.br/empresas/guia-do-financiamento/como-solicitar/"
+      ],
+      "excluir": [
+        "WAF 403 em coleta automática — não burlar"
+      ],
+      "readiness_recomendado": "needs_manual_review",
+      "readiness_motivo": "HTTP 403 no scraper; seeds curados oficiais; enriquecimento de descrição depende de acesso humano ou acordo com o site."
+    }
+  }
+}

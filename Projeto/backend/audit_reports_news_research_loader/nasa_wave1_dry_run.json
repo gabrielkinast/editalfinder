@@ -1,0 +1,73 @@
+{
+  "data": "2026-05-04T15:50:24Z",
+  "fonte": "nasa_news",
+  "input_file": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_news_research\\standardized\\nasa_news_standardized.json",
+  "total_standardized_lido": 19,
+  "total_apos_dedupe": 19,
+  "dedupe_removidos": 0,
+  "payload_noticia_count": 13,
+  "payload_pesquisa_count": 5,
+  "review_for_edital_count": 1,
+  "excluded_count": 0,
+  "links_unicos_noticia": 13,
+  "links_unicos_pesquisa": 5,
+  "apto_staging_futuro": true,
+  "apto_staging_motivo": "ok_todos_requisitos_wave1",
+  "review_for_edital_fora_do_payload": true,
+  "nenhum_item_para_edital": true,
+  "exemplos": [
+    {
+      "tipo": "noticia",
+      "titulo": "Cyclone Rains Spur Papua New Guinea Landslides",
+      "link": "https://science.nasa.gov/earth/earth-observatory/cyclone-rains-spur-papua-new-guinea-landslides/"
+    },
+    {
+      "tipo": "noticia",
+      "titulo": "Record-Setting Retreat of Hektoria Glacier",
+      "link": "https://science.nasa.gov/earth/earth-observatory/record-setting-retreat-of-hektoria-glacier/"
+    },
+    {
+      "tipo": "pesquisa",
+      "titulo": "Artemis Moon Tree Dedicated in Honor of Mary W. Jackson",
+      "link": "https://science.nasa.gov/learning-resources/science-activation/artemis-moon-tree-dedicated-in-honor-of-mary-w-jackson/"
+    },
+    {
+      "tipo": "pesquisa",
+      "titulo": "Science Through Shadows: How Astronomical Alignments Reveal the Universe",
+      "link": "https://science.nasa.gov/learning-resources/science-activation/science-through-shadows-how-astronomical-alignments-reveal-the-universe/"
+    },
+    {
+      "tipo": "noticia",
+      "titulo": "Hubble Spots a Starry Spiral",
+      "link": "https://science.nasa.gov/missions/hubble/hubble-spots-a-starry-spiral/"
+    },
+    {
+      "tipo": "pesquisa",
+      "titulo": "For NASA’s TESS, Stellar Eclipses Shed Light on Possible New Worlds",
+      "link": "https://science.nasa.gov/missions/tess/for-nasas-tess-stellar-eclipses-shed-light-on-possible-new-worlds/"
+    },
+    {
+      "tipo": "pesquisa",
+      "titulo": "NASA’s STORIE Mission to Tell Tale of Earth’s Ring Current",
+      "link": "https://science.nasa.gov/science-research/heliophysics/nasas-storie-mission-to-tell-tale-of-earths-ring-current/"
+    },
+    {
+      "tipo": "noticia",
+      "titulo": "NASA Announces 32nd Annual Human Exploration Rover Challenge Winners",
+      "link": "https://www.nasa.gov/centers-and-facilities/marshall/nasa-announces-32nd-annual-human-exploration-rover-challenge-winners/"
+    },
+    {
+      "tipo": "noticia",
+      "titulo": "Key Support Equipment Arrives at Kennedy for Roman Space Telescope",
+      "link": "https://www.nasa.gov/image-article/key-support-equipment-arrives-at-kennedy-for-roman-space-telescope/"
+    },
+    {
+      "tipo": "noticia",
+      "titulo": "NASA Artemis II Crew Rings Nasdaq Closing Bell",
+      "link": "https://www.nasa.gov/image-article/nasa-artemis-ii-crew-rings-nasdaq-closing-bell/"
+    }
+  ],
+  "campos_faltantes_noticia": [],
+  "campos_faltantes_pesquisa": [],
+  "exclusoes_resumo": []
+}

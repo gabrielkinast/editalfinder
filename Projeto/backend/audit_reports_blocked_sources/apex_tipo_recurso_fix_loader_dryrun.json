@@ -1,0 +1,42 @@
+{
+  "meta": {
+    "titulo": "Apex — correção tipo_recurso (Exporta Mais ≠ licitação)",
+    "data": "2026-05-02",
+    "alteracao_codigo": "CORE/taxonomy_filtros.py: APEX_LICITACAO_EVIDENCIA, APEX_PROGRAMA_EXPORTACAO, calibrate_apex_extras reescrito (sem PROCUREMENT_MARKERS com \"compra\" que casava em \"compradores\").",
+    "comandos": [
+      "python scripts/retransform_all.py --sources apex --dry-run --output-dir audit_reports_blocked_sources/lote4_fix_apex_tipo_recurso",
+      "cópia: audit_reports_blocked_sources/lote4_fix_apex_tipo_recurso/standardized/apex_standardized.json → audit_reports_retransform/standardized/apex_standardized.json",
+      "python scripts/load_ready_sources.py --dry-run --sources apex --exclude-blocked --input-dir audit_reports_retransform/standardized --readiness audit_reports_retransform/readiness_for_loader.json"
+    ],
+    "apply": false,
+    "faperg_alterado": false
+  },
+  "retransform_apex": {
+    "output_dir": "audit_reports_blocked_sources/lote4_fix_apex_tipo_recurso",
+    "itens_brutos": 3,
+    "itens_transformados": 3,
+    "itens_rejeitados": 0
+  },
+  "loader_dry_run_apex": {
+    "resumo_path": "audit_reports_loader_ready/load_ready_summary.json",
+    "exemplos_payload_path": "audit_reports_loader_ready/load_ready_payload_examples.json",
+    "itens_standardized": 3,
+    "would_upsert": 3,
+    "mapping_errors": 0,
+    "critical_empty_items": 0,
+    "documentos_perdidos_no_payload": 0
+  },
+  "classificacao_pos_fix": {
+    "tipo_recurso_payload": "apoio_internacionalizacao (3 itens no dry-run)",
+    "tipo_oportunidade_payload": "programa (2 itens), selecao_empresas (1 item — E-commerce com seleção/critérios)",
+    "substring_licitacao_no_standardized": "nenhuma (grep em audit_reports_retransform/standardized/apex_standardized.json)"
+  },
+  "verificacao_pedida": {
+    "tres_itens": true,
+    "zero_erros_mapeamento": true,
+    "zero_critical_empty": true,
+    "tipo_recurso_nao_licitacao": true,
+    "tipo_oportunidade_coerente": true,
+    "sem_menu_evento_noticia": "Títulos: Exporta Mais — Casa e Design; Alimentos…; E-commerce 2026"
+  }
+}

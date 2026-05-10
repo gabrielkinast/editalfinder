@@ -1,0 +1,49 @@
+{
+  "meta": {
+    "fonte": "thales_suppliers",
+    "lote": 5,
+    "data_auditoria": "2026-05-03T22:32:00Z",
+    "objetivo": "Diagnosticar 0 brutos no lote 5 e viabilidade de colheita supplier/procurement"
+  },
+  "crawler_roda": true,
+  "script": "thales_suppliers/main_thales_suppliers.py",
+  "seeds_listagem_usadas": [
+    "https://www.thalesgroup.com/en/supplier",
+    "https://www.thalesgroup.com/en/supplier-relations"
+  ],
+  "seed_historica_problematica": [
+    "https://www.thalesgroup.com/en/group/procurement",
+    "https://www.thalesgroup.com/en/countries"
+  ],
+  "nota_seeds_historicas": "Relatório lote5_suppliers_diagnostico: procurement/countries substituídos por supplier-relations + /supplier; procurement group ainda pode 404 ou institucional.",
+  "motivo_zero_brutos_antes_da_correcao": [
+    "Resposta HTML frequentemente é shell Incapsula/Imperva (~1,1 KB) para `requests` simples — BeautifulSoup quase sem âncoras reais.",
+    "`scrape_html_portal` exige texto de âncora com comprimento mínimo (6) e keywords em `titulo + url`; muitos PDFs usam rótulo curto ('PDF') ou ícone, ou o texto está fora do `<a>`.",
+    "Com listagem bloqueada, nenhum detalhe é seguido e a saída permanece `[]`."
+  ],
+  "pdfs_supplier_requirements_oficiais": {
+    "existem_na_pagina_publica": true,
+    "urls": [
+      "https://www.thalesgroup.com/sites/default/files/2025-06/SECURITY%20REQUIREMENTS%20PURCHASING%20T%26Cs%20%281%29_0.pdf",
+      "https://www.thalesgroup.com/sites/default/files/2025-06/87212869-ACQ-GRP-EN-006%20-%20Matrice%20EGAPE%20-%20GRAEP%20Matrix%20%283%29.pdf",
+      "https://www.thalesgroup.com/sites/default/files/2025-09/THALES%20GENERAL%20TERMS%20AND%20CONDITIONS%20OF%20PURCHASE%20-%2005.05.2025%20%282%29.pdf"
+    ],
+    "nota_acesso": "Em ambientes com WAF, HEAD/GET aos PDFs pode devolver HTML de desafio; o crawler tenta `fetch_pdf_bytes` e usa descrição manifest + texto quando disponível."
+  },
+  "pagina_supplier_relations": {
+    "url_hub": "https://www.thalesgroup.com/en/supplier",
+    "conteudo_util": "Key documents (PDFs), collaborative tools (Air Supply, e-ACQuisition — acesso restrito), mediador, conferência fornecedores."
+  },
+  "acao_concreta_fornecedor": true,
+  "login_ou_portal_sem_contexto": {
+    "e_acquisition_air_supply": "Mencionados como 'Restricted access' no site público — não foram inventados links de login; não há item só com portal opaco sem contexto de procurement.",
+    "incapsula": "Não é login corporativo explícito do utilizador; é anti-bot. Não foi contornado com bypass/captcha."
+  },
+  "outputs_antes_correcao": "thales_suppliers/outputs/thales_suppliers_editais.json estava `[]` (0 itens).",
+  "logs_dedicados": "Sem ficheiro de log versionado no repositório; mensagens no stdout do script.",
+  "referencias_lote5": [
+    "audit_reports_blocked_sources/lote5_suppliers_diagnostico.json",
+    "audit_reports_blocked_sources/lote5_suppliers_examples.json",
+    "audit_reports_access/source_access_by_source.json (entradas thales_suppliers)"
+  ]
+}

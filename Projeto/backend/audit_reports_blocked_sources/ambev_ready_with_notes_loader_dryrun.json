@@ -1,0 +1,52 @@
+{
+  "fonte": "ambev",
+  "data_auditoria": "2026-05-03T04:28:00Z",
+  "decisao": "ready_with_notes",
+  "readiness_diff": {
+    "config_source_readiness_json": {
+      "antes": "ambev em blocked (não constava em needs_manual_review neste disco)",
+      "depois": "ambev em ready_with_notes; removido de blocked"
+    },
+    "audit_reports_retransform_readiness_for_loader_json": {
+      "antes": "ambev em fontes_bloqueadas_temporariamente; pronto_com_observacoes=64; bloquear_temporariamente=14",
+      "depois": "ambev em fontes_prontas_para_loader (último elemento, slice pronto_com_observacoes); pronto_com_observacoes=65; bloquear_temporariamente=13"
+    },
+    "standardized_copiado": {
+      "origem": "audit_reports_blocked_sources/lote4_fix_ambev/standardized/ambev_standardized.json",
+      "destino": "audit_reports_retransform/standardized/ambev_standardized.json"
+    }
+  },
+  "comando_dry_run": "python scripts/load_ready_sources.py --dry-run --sources ambev --exclude-blocked --input-dir audit_reports_retransform/standardized --readiness audit_reports_retransform/readiness_for_loader.json",
+  "artefatos_loader_padrao": {
+    "diretorio": "audit_reports_loader_ready",
+    "resumo": "load_ready_summary.json",
+    "por_fonte": "load_ready_by_source.json"
+  },
+  "dry_run_totals": {
+    "itens_standardized_total": 7,
+    "would_upsert_total": 7,
+    "would_ignore_total": 0,
+    "mapping_errors_total": 0,
+    "critical_empty_items_total": 0,
+    "documentos_perdidos_no_payload_total": 0,
+    "sources_selected": 1
+  },
+  "verificacao_standardized_ambev": {
+    "itens": 7,
+    "tipo_oportunidade": "chamada_publica (7/7)",
+    "tipo_recurso": "apoio_inovacao (7/7)",
+    "tipo_conteudo_ambev": "open_innovation_aceleracao (7/7)",
+    "regiao_top_level": "Internacional (7/7)",
+    "idioma_original_extras": "en (7/7)",
+    "documentos": "entrada 0; perda 0",
+    "conteudo": "100+ Accelerator; sem newsroom/produto/marketing genérico no lote"
+  },
+  "staging": {
+    "recomendacao": "Aplicável em staging após revisão humana curta: dry-run limpo; usar apply explícito com flags de ambiente de staging conforme STAGING_LOADER.md; não executado nesta tarefa.",
+    "environment_guard_snapshot": {
+      "editalfinder_env": "staging",
+      "has_allow_staging_apply": false,
+      "nota": "Apply real exige variável/guard de staging conforme projeto; dry-run não grava Supabase."
+    }
+  }
+}

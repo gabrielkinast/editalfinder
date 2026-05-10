@@ -1,0 +1,50 @@
+{
+  "nota": "Exemplos do estado anterior (1 hub por fonte) vs estado atual (lista vazia até nova coleta bem-sucedida).",
+  "historico_fallback_public_index": [
+    {
+      "fonte": "horizon_europe",
+      "exemplo_link": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-search",
+      "rotulo": "topic-search (portal EC)",
+      "classificacao_conteudo": "pagina_de_busca_institucional"
+    },
+    {
+      "fonte": "erc",
+      "exemplo_link": "https://erc.europa.eu/funding",
+      "rotulo": "ERC funding hub",
+      "classificacao_conteudo": "pagina_institucional_generica"
+    },
+    {
+      "fonte": "doe_arpae",
+      "exemplo_link": "https://arpa-e.energy.gov/funding-opportunities",
+      "rotulo": "ARPA-E funding opportunities index",
+      "classificacao_conteudo": "pagina_institucional_generica"
+    }
+  ],
+  "retransform_old_vs_new_links_ausentes": {
+    "fonte": "todas",
+    "referencia": "audit_reports_blocked_sources/lote2_fix_horizon_erc_arpae/retransform_by_source.json",
+    "old_links_now_missing": [
+      "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-search",
+      "https://erc.europa.eu/funding",
+      "https://arpa-e.energy.gov/funding-opportunities"
+    ]
+  },
+  "validacao_sintetica_transformer": {
+    "nota": "Durante o desenvolvimento, itens fictícios com texto de call/grant/FOA transformaram com tipo_oportunidade coerente e sem opportunity_gate_relaxed obrigatório — não persistidos no repositório.",
+    "exemplo_campo_minimo_sugerido": {
+      "titulo": "HORIZON-CL5-2024-DEMO-01 — Innovation Actions",
+      "link": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/topicId/EXAMPLE",
+      "descricao": "Call for proposals; deadline; budget; work programme topic."
+    }
+  },
+  "auditorias_vazias": {
+    "semantic": {
+      "itens_total": 0,
+      "arquivo": "audit_reports_blocked_sources/lote2_fix_horizon_erc_arpae_semantic/audit_semantic_summary.json"
+    },
+    "documentos": {
+      "itens_analisados": 0,
+      "arquivo": "audit_reports_blocked_sources/lote2_fix_horizon_erc_arpae_docs/audit_docs_summary.json"
+    }
+  }
+}

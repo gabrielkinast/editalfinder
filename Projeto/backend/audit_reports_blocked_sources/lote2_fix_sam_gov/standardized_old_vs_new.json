@@ -1,0 +1,40 @@
+{
+  "data_auditoria": "2026-05-02T11:11:40Z",
+  "fontes": [
+    {
+      "fonte": "sam_gov",
+      "old_vs_new": {
+        "old_count": 2,
+        "new_count": 0,
+        "delta_count": -2,
+        "old_links_now_missing": [
+          "https://sam.gov/content/opportunities",
+          "https://www.business.defense.gov/Programs/"
+        ],
+        "new_links_before_missing": [],
+        "core_fields_improved": {},
+        "core_fields_worsened": {
+          "area": {
+            "old": 2,
+            "new": 0,
+            "delta": -2
+          },
+          "tipo_oportunidade": {
+            "old": 2,
+            "new": 0,
+            "delta": -2
+          },
+          "tipo_recurso": {
+            "old": 2,
+            "new": 0,
+            "delta": -2
+          }
+        },
+        "old_documents_count": 0,
+        "new_documents_count": 0,
+        "old_pdf_count": 0,
+        "new_pdf_count": 0
+      }
+    }
+  ]
+}

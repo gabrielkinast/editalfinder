@@ -1,0 +1,1195 @@
+{
+  "id_execucao": "4e5737b5-764f-440e-8dae-b086e25a32a7",
+  "data_auditoria": "2026-05-10T07:29:36Z",
+  "mode": "dry-run",
+  "staging_flag": false,
+  "apply_requested": false,
+  "taxonomy_overwrite_enabled": true,
+  "overwrite_fields": [
+    "setor_estrategico"
+  ],
+  "overwrite_sources": [
+    "embrapii",
+    "nuclep"
+  ],
+  "overwritten_fields_count": 38,
+  "input_dir": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_main_pipeline\\recovery_c_setores\\standardized",
+  "readiness_path": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_retransform\\readiness_for_loader.json",
+  "source_readiness_config_disk_path": "D:\\Computational_Physics\\My Projects\\edital\\config\\source_readiness.json",
+  "readiness_derived_slice_path": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_main_pipeline\\recovery_c_taxonomy_overwrite_dryrun\\readiness_derived_slice.json",
+  "readiness_curated_overlay": {
+    "applied": true,
+    "curated_sources_total": 108,
+    "changes_total": 52,
+    "changes": [
+      {
+        "fonte": "badesul",
+        "from": "blocked",
+        "to": "ready_with_notes"
+      },
+      {
+        "fonte": "cbpf",
+        "from": "ready_with_notes",
+        "to": "ready"
+      },
+      {
+        "fonte": "china_caea",
+        "from": "ready_with_notes",
+        "to": "ready"
+      },
+      {
+        "fonte": "china_cas",
+        "from": "ready_with_notes",
+        "to": "ready"
+      },
+      {
+        "fonte": "china_cgn",
+        "from": "ready_with_notes",
+        "to": "ready"
+      },
+      {
+        "fonte": "china_mod_public",
+        "from": "ready_with_notes",
+        "to": "ready"
+      },
+      {
+        "fonte": "china_mofcom_tendering",
+        "from": "ready_with_notes",
+        "to": "ready"
+      },
+      {
+        "fonte": "china_most",
+        "from": "ready_with_notes",
+        "to": "ready"
+      },
+      {
+        "fonte": "china_tendering_bidding",
+        "from": "ready_with_notes",
+        "to": "ready"
+      },
+      {
+        "fonte": "cnen",
+        "from": "ready_with_notes",
+        "to": "ready"
+      },
+      {
+        "fonte": "cnpq",
+        "from": "ready_with_notes",
+        "to": "ready"
+      },
+      {
+        "fonte": "compras_defesa",
+        "from": "ready_with_notes",
+        "to": "ready"
+      },
+      {
+        "fonte": "confap",
+        "from": "ready_with_notes",
+        "to": "ready"
+      },
+      {
+        "fonte": "darpa_opportunities",
+        "from": "ready_with_notes",
+        "to": "ready"
+      },
+      {
+        "fonte": "defesa",
+        "from": "ready_with_notes",
+        "to": "ready"
+      },
+      {
+        "fonte": "diu",
+        "from": "ready_with_notes",
+        "to": "ready"
+      },
+      {
+        "fonte": "dod_sbir_sttr",
+        "from": "ready_with_notes",
+        "to": "ready"
+      },
+      {
+        "fonte": "eletronuclear",
+        "from": "ready_with_notes",
+        "to": "ready"
+      },
+      {
+        "fonte": "embrapii",
+        "from": "ready_with_notes",
+        "to": "ready"
+      },
+      {
+        "fonte": "european_defence_fund",
+        "from": "ready_with_notes",
+        "to": "ready"
+      },
+      {
+        "fonte": "fapemig",
+        "from": "ready_with_notes",
+        "to": "ready"
+      },
+      {
+        "fonte": "fapergs",
+        "from": "ready_with_notes",
+        "to": "ready"
+      },
+      {
+        "fonte": "fapesc",
+        "from": "ready_with_notes",
+        "to": "ready"
+      },
+      {
+        "fonte": "fapesp",
+        "from": "ready_with_notes",
+        "to": "ready"
+      },
+      {
+        "fonte": "fappr",
+        "from": "ready_with_notes",
+        "to": "ready"
+      },
+      {
+        "fonte": "finep",
+        "from": "ready_with_notes",
+        "to": "ready"
+      },
+      {
+        "fonte": "fnde",
+        "from": "ready_with_notes",
+        "to": "ready"
+      },
+      {
+        "fonte": "general_dynamics_suppliers",
+        "from": "ready_with_notes",
+        "to": "ready"
+      },
+      {
+        "fonte": "grants_gov",
+        "from": "ready_with_notes",
+        "to": "ready"
+      },
+      {
+        "fonte": "impa",
+        "from": "ready_with_notes",
+        "to": "ready"
+      },
+      {
+        "fonte": "inb",
+        "from": "ready_with_notes",
+        "to": "ready"
+      },
+      {
+        "fonte": "ipen",
+        "from": "ready_with_notes",
+        "to": "ready"
+      },
+      {
+        "fonte": "japan_aist",
+        "from": "ready_with_notes",
+        "to": "ready"
+      },
+      {
+        "fonte": "japan_atla",
+        "from": "ready_with_notes",
+        "to": "ready"
+      },
+      {
+        "fonte": "japan_ihi",
+        "from": "ready_with_notes",
+        "to": "ready"
+      },
+      {
+        "fonte": "japan_jetro_procurement",
+        "from": "ready_with_notes",
+        "to": "ready"
+      },
+      {
+        "fonte": "japan_jsps",
+        "from": "ready_with_notes",
+        "to": "ready"
+      },
+      {
+        "fonte": "japan_kakenhi",
+        "from": "ready_with_notes",
+        "to": "ready"
+      },
+      {
+        "fonte": "japan_kek",
+        "from": "ready_with_notes",
+        "to": "ready"
+      },
+      {
+        "fonte": "japan_mext",
+        "from": "ready_with_notes",
+        "to": "ready"
+      },
+      {
+        "fonte": "japan_mitsubishi_heavy",
+        "from": "ready_with_notes",
+        "to": "ready"
+      },
+      {
+        "fonte": "japan_mod",
+        "from": "ready_with_notes",
+        "to": "ready"
+      },
+      {
+        "fonte": "japan_nedo",
+        "from": "ready_with_notes",
+        "to": "ready"
+      },
+      {
+        "fonte": "japan_nims",
+        "from": "ready_with_notes",
+        "to": "ready"
+      },
+      {
+        "fonte": "japan_qst",
+        "from": "ready_with_notes",
+        "to": "ready"
+      },
+      {
+        "fonte": "japan_riken",
+        "from": "ready_with_notes",
+        "to": "ready"
+      },
+      {
+        "fonte": "lockheed_martin_suppliers",
+        "from": "ready_with_notes",
+        "to": "ready"
+      },
+      {
+        "fonte": "petrobras",
+        "from": "blocked",
+        "to": "ready_with_notes"
+      },
+      {
+        "fonte": "plataforma_industria",
+        "from": "blocked",
+        "to": "ready_with_notes"
+      },
+      {
+        "fonte": "pncp",
+        "from": "blocked",
+        "to": "ready_with_notes"
+      },
+      {
+        "fonte": "senai",
+        "from": "blocked",
+        "to": "ready_with_notes"
+      },
+      {
+        "fonte": "softex",
+        "from": "blocked",
+        "to": "ready_with_notes"
+      }
+    ],
+    "policy": "config/source_readiness.json overrides derived readiness for sources explicitly listed there."
+  },
+  "readiness_config_write": {
+    "written": false,
+    "path": "",
+    "merge_mode": "none"
+  },
+  "sources_selected": 2,
+  "sources_excluded": 0,
+  "itens_standardized_total": 41,
+  "would_upsert_total": 41,
+  "would_ignore_total": 0,
+  "mapping_errors_total": 0,
+  "critical_empty_items_total": 0,
+  "docs_input_items_total": 41,
+  "docs_preserved_items_total": 41,
+  "documentos_perdidos_no_payload_total": 0,
+  "standardized_com_documentos_nao_pdf_total": 20,
+  "payload_com_documentos_nao_pdf_total": 20,
+  "perda_documentos_nao_pdf_total": 0,
+  "pdf_input_items_total": 40,
+  "pdf_preserved_items_total": 40,
+  "validacao_status_preserved_items_total": 41,
+  "qualidade_dado_preserved_items_total": 41,
+  "fields_input_non_empty_total": {
+    "area": 41,
+    "tipo_oportunidade": 41,
+    "tipo_recurso": 41,
+    "publico_alvo": 22,
+    "setor_economico": 41,
+    "setor_estrategico": 41,
+    "validacao_status": 41,
+    "qualidade_dado": 41,
+    "area_tecnologica": 3,
+    "area_cientifica": 29
+  },
+  "fields_payload_non_empty_total": {
+    "area": 41,
+    "tipo_oportunidade": 41,
+    "tipo_recurso": 41,
+    "publico_alvo": 22,
+    "setor_economico": 41,
+    "setor_estrategico": 41,
+    "validacao_status": 41,
+    "qualidade_dado": 41,
+    "area_tecnologica": 3,
+    "area_cientifica": 29
+  },
+  "fields_preserved_non_empty_total": {
+    "area": 41,
+    "tipo_oportunidade": 41,
+    "tipo_recurso": 41,
+    "publico_alvo": 22,
+    "setor_economico": 41,
+    "setor_estrategico": 41,
+    "validacao_status": 41,
+    "qualidade_dado": 41,
+    "area_tecnologica": 3,
+    "area_cientifica": 29
+  },
+  "destination_counts_total": {
+    "edital": 41
+  },
+  "canonical_skipped_total": 0,
+  "canonicalization_config_path": "D:\\Computational_Physics\\My Projects\\edital\\config\\source_canonicalization.json",
+  "canonical_skip_examples": [],
+  "canonical_claimed_links_by_group": {},
+  "taxonomy_overwrite_preview_examples": [
+    {
+      "fonte": "embrapii",
+      "titulo": "Chamada Pública 01/2016 – RESULTADO FINAL",
+      "link": "https://embrapii.org.br/chamadas-publicas/chamada-publica-01-2016-resultado-final/",
+      "setor_pos_merge_default": [
+        "defesa_industrial",
+        "aeroespacial",
+        "ciencia_tecnologia",
+        "industria"
+      ],
+      "setor_pos_merge_com_overwrite": [
+        "ciencia_tecnologia",
+        "defesa_industrial",
+        "aeroespacial"
+      ],
+      "setor_payload": [
+        "ciencia_tecnologia",
+        "defesa_industrial",
+        "aeroespacial"
+      ]
+    },
+    {
+      "fonte": "embrapii",
+      "titulo": "Chamada Pública 01/2017 – RESULTADO FINAL",
+      "link": "https://embrapii.org.br/chamadas-publicas/chamada-publica-01-2017-resultado-final/",
+      "setor_pos_merge_default": [
+        "defesa_industrial",
+        "aeroespacial",
+        "energia",
+        "industria",
+        "ciencia_tecnologia"
+      ],
+      "setor_pos_merge_com_overwrite": [
+        "ciencia_tecnologia",
+        "energia",
+        "defesa_industrial"
+      ],
+      "setor_payload": [
+        "ciencia_tecnologia",
+        "energia",
+        "defesa_industrial"
+      ]
+    },
+    {
+      "fonte": "embrapii",
+      "titulo": "Chamada Pública 02/2017 – RESULTADO FINAL",
+      "link": "https://embrapii.org.br/chamadas-publicas/chamada-publica-02-2017-resultado-final/",
+      "setor_pos_merge_default": [
+        "defesa_industrial",
+        "aeroespacial",
+        "industria",
+        "ciencia_tecnologia",
+        "energia"
+      ],
+      "setor_pos_merge_com_overwrite": [
+        "ciencia_tecnologia",
+        "energia",
+        "defesa_industrial"
+      ],
+      "setor_payload": [
+        "ciencia_tecnologia",
+        "energia",
+        "defesa_industrial"
+      ]
+    },
+    {
+      "fonte": "embrapii",
+      "titulo": "CHAMADA PÚBLICA – 01/2020 – Resultado final",
+      "link": "https://embrapii.org.br/chamadas-publicas/chamada-publica-01-2020-resultado-final/",
+      "setor_pos_merge_default": [
+        "defesa_industrial",
+        "aeroespacial",
+        "ciencia_tecnologia",
+        "industria"
+      ],
+      "setor_pos_merge_com_overwrite": [
+        "ciencia_tecnologia",
+        "industria",
+        "defesa_industrial"
+      ],
+      "setor_payload": [
+        "ciencia_tecnologia",
+        "industria",
+        "defesa_industrial"
+      ]
+    },
+    {
+      "fonte": "embrapii",
+      "titulo": "CHAMADA PÚBLICA – 02/2020 – Resultado final",
+      "link": "https://embrapii.org.br/chamadas-publicas/chamada-publica-02-2020-resultado-final/",
+      "setor_pos_merge_default": [
+        "defesa_industrial",
+        "aeroespacial",
+        "ciencia_tecnologia",
+        "industria"
+      ],
+      "setor_pos_merge_com_overwrite": [
+        "ciencia_tecnologia",
+        "industria",
+        "defesa_industrial"
+      ],
+      "setor_payload": [
+        "ciencia_tecnologia",
+        "industria",
+        "defesa_industrial"
+      ]
+    },
+    {
+      "fonte": "embrapii",
+      "titulo": "Chamada Pública 03/2020 – Resultado Final",
+      "link": "https://embrapii.org.br/chamadas-publicas/chamada-publica-03-2020-resultado-final/",
+      "setor_pos_merge_default": [
+        "defesa_industrial",
+        "aeroespacial",
+        "ciencia_tecnologia",
+        "energia"
+      ],
+      "setor_pos_merge_com_overwrite": [
+        "ciencia_tecnologia",
+        "energia",
+        "defesa_industrial"
+      ],
+      "setor_payload": [
+        "ciencia_tecnologia",
+        "energia",
+        "defesa_industrial"
+      ]
+    },
+    {
+      "fonte": "embrapii",
+      "titulo": "CHAMADA PÚBLICA 04/2020 PROGRAMA ROTA 2030 – Resultado Final",
+      "link": "https://embrapii.org.br/chamadas-publicas/chamada-publica-04-2020-programa-rota-2030-resultado-final/",
+      "setor_pos_merge_default": [
+        "defesa_industrial",
+        "aeroespacial",
+        "ciencia_tecnologia",
+        "defesa"
+      ],
+      "setor_pos_merge_com_overwrite": [
+        "ciencia_tecnologia",
+        "defesa_industrial",
+        "aeroespacial"
+      ],
+      "setor_payload": [
+        "ciencia_tecnologia",
+        "defesa_industrial",
+        "aeroespacial"
+      ]
+    },
+    {
+      "fonte": "embrapii",
+      "titulo": "CHAMADA PÚBLICA CENTRO DE COMPETÊNCIA 01/2022",
+      "link": "https://embrapii.org.br/chamadas-publicas/chamada-publica-centro-de-competencia-01-2022/",
+      "setor_pos_merge_default": [
+        "defesa_industrial",
+        "aeroespacial",
+        "ciencia_tecnologia",
+        "industria"
+      ],
+      "setor_pos_merge_com_overwrite": [
+        "ciencia_tecnologia",
+        "industria",
+        "defesa_industrial"
+      ],
+      "setor_payload": [
+        "ciencia_tecnologia",
+        "industria",
+        "defesa_industrial"
+      ]
+    },
+    {
+      "fonte": "embrapii",
+      "titulo": "CHAMADA PÚBLICA CENTRO DE COMPETÊNCIA 02/2022",
+      "link": "https://embrapii.org.br/chamadas-publicas/chamada-publica-centro-de-competencia-02-2022/",
+      "setor_pos_merge_default": [
+        "defesa_industrial",
+        "aeroespacial",
+        "ciencia_tecnologia",
+        "industria"
+      ],
+      "setor_pos_merge_com_overwrite": [
+        "ciencia_tecnologia",
+        "industria",
+        "defesa_industrial"
+      ],
+      "setor_payload": [
+        "ciencia_tecnologia",
+        "industria",
+        "defesa_industrial"
+      ]
+    },
+    {
+      "fonte": "embrapii",
+      "titulo": "Chamada Pública 03/2022 – RESULTADO FINAL",
+      "link": "https://embrapii.org.br/chamadas-publicas/chamada-publica-03-2022-resultado-final/",
+      "setor_pos_merge_default": [
+        "defesa_industrial",
+        "aeroespacial",
+        "industria",
+        "energia"
+      ],
+      "setor_pos_merge_com_overwrite": [
+        "industria",
+        "energia",
+        "defesa_industrial"
+      ],
+      "setor_payload": [
+        "industria",
+        "energia",
+        "defesa_industrial"
+      ]
+    },
+    {
+      "fonte": "embrapii",
+      "titulo": "CHAMADA PÚBLICA CENTRO DE COMPETÊNCIA 04/2022",
+      "link": "https://embrapii.org.br/chamadas-publicas/chamada-publica-centro-de-competencia-04-2022/",
+      "setor_pos_merge_default": [
+        "defesa_industrial",
+        "aeroespacial",
+        "ciencia_tecnologia",
+        "industria"
+      ],
+      "setor_pos_merge_com_overwrite": [
+        "ciencia_tecnologia",
+        "defesa_industrial",
+        "aeroespacial"
+      ],
+      "setor_payload": [
+        "ciencia_tecnologia",
+        "defesa_industrial",
+        "aeroespacial"
+      ]
+    },
+    {
+      "fonte": "embrapii",
+      "titulo": "CHAMADA PÚBLICA 04/2022 – Resultado Final",
+      "link": "https://embrapii.org.br/chamadas-publicas/chamada-publica-04-2022-resultado-final/",
+      "setor_pos_merge_default": [
+        "defesa_industrial",
+        "aeroespacial",
+        "ciencia_tecnologia",
+        "defesa"
+      ],
+      "setor_pos_merge_com_overwrite": [
+        "ciencia_tecnologia",
+        "defesa",
+        "defesa_industrial"
+      ],
+      "setor_payload": [
+        "ciencia_tecnologia",
+        "defesa",
+        "defesa_industrial"
+      ]
+    },
+    {
+      "fonte": "embrapii",
+      "titulo": "CHAMADA PÚBLICA 05/2022 PARA CREDENCIAMENTO NO SISTEMA EMBRAPII – Resultado Preliminar",
+      "link": "https://embrapii.org.br/chamadas-publicas/chamada-publica-05-2022-para-credenciamento-no-sistema-embrapii-resultado-preliminar/",
+      "setor_pos_merge_default": [
+        "defesa_industrial",
+        "aeroespacial",
+        "industria",
+        "materiais_avancados",
+        "ciencia_tecnologia",
+        "energia"
+      ],
+      "setor_pos_merge_com_overwrite": [
+        "ciencia_tecnologia",
+        "energia",
+        "defesa_industrial"
+      ],
+      "setor_payload": [
+        "ciencia_tecnologia",
+        "energia",
+        "defesa_industrial"
+      ]
+    },
+    {
+      "fonte": "embrapii",
+      "titulo": "Chamada Pública Unidades Embrapii nº 03/2025",
+      "link": "https://embrapii.org.br/chamadas-publicas/chamada-publica-unidades-embrapii-no-03-2025/",
+      "setor_pos_merge_default": [
+        "defesa_industrial",
+        "aeroespacial",
+        "industria",
+        "ciencia_tecnologia",
+        "energia"
+      ],
+      "setor_pos_merge_com_overwrite": [
+        "ciencia_tecnologia",
+        "energia",
+        "defesa_industrial"
+      ],
+      "setor_payload": [
+        "ciencia_tecnologia",
+        "energia",
+        "defesa_industrial"
+      ]
+    },
+    {
+      "fonte": "embrapii",
+      "titulo": "Chamada Pública Centro de Competência Embrapii nº 03/2025",
+      "link": "https://embrapii.org.br/chamadas-publicas/chamada-publica-centro-de-competencia-no-03-2025/",
+      "setor_pos_merge_default": [
+        "defesa_industrial",
+        "aeroespacial",
+        "ciencia_tecnologia",
+        "industria"
+      ],
+      "setor_pos_merge_com_overwrite": [
+        "ciencia_tecnologia",
+        "defesa_industrial",
+        "aeroespacial"
+      ],
+      "setor_payload": [
+        "ciencia_tecnologia",
+        "defesa_industrial",
+        "aeroespacial"
+      ]
+    },
+    {
+      "fonte": "embrapii",
+      "titulo": "Chamada Pública Centro de Competência Embrapii nº 02/2025",
+      "link": "https://embrapii.org.br/chamadas-publicas/chamada-publica-centro-de-competencia-embrapii-no-02-2025/",
+      "setor_pos_merge_default": [
+        "defesa_industrial",
+        "aeroespacial",
+        "ciencia_tecnologia",
+        "industria",
+        "energia"
+      ],
+      "setor_pos_merge_com_overwrite": [
+        "ciencia_tecnologia",
+        "energia",
+        "defesa_industrial"
+      ],
+      "setor_payload": [
+        "ciencia_tecnologia",
+        "energia",
+        "defesa_industrial"
+      ]
+    },
+    {
+      "fonte": "embrapii",
+      "titulo": "Chamada Pública Unidades Embrapii nº 02/2025",
+      "link": "https://embrapii.org.br/chamadas-publicas/chamada-unidades-02-2025/",
+      "setor_pos_merge_default": [
+        "defesa_industrial",
+        "aeroespacial",
+        "ciencia_tecnologia",
+        "industria"
+      ],
+      "setor_pos_merge_com_overwrite": [
+        "ciencia_tecnologia",
+        "industria",
+        "defesa_industrial"
+      ],
+      "setor_payload": [
+        "ciencia_tecnologia",
+        "industria",
+        "defesa_industrial"
+      ]
+    },
+    {
+      "fonte": "embrapii",
+      "titulo": "Chamada Pública Centro de Competência Embrapii nº 01/2025",
+      "link": "https://embrapii.org.br/chamadas-publicas/chamada-publica-centro-de-competencia-embrapii-no-01-2025/",
+      "setor_pos_merge_default": [
+        "defesa_industrial",
+        "aeroespacial",
+        "ciencia_tecnologia",
+        "industria"
+      ],
+      "setor_pos_merge_com_overwrite": [
+        "ciencia_tecnologia",
+        "industria",
+        "defesa_industrial"
+      ],
+      "setor_payload": [
+        "ciencia_tecnologia",
+        "industria",
+        "defesa_industrial"
+      ]
+    },
+    {
+      "fonte": "embrapii",
+      "titulo": "Chamada Pública Unidades Embrapii nº 01/2025",
+      "link": "https://embrapii.org.br/chamadas-publicas/chamada-publica-unidades-embrapii-no-01-2025/",
+      "setor_pos_merge_default": [
+        "defesa_industrial",
+        "aeroespacial",
+        "industria",
+        "ciencia_tecnologia"
+      ],
+      "setor_pos_merge_com_overwrite": [
+        "ciencia_tecnologia",
+        "industria",
+        "defesa_industrial"
+      ],
+      "setor_payload": [
+        "ciencia_tecnologia",
+        "industria",
+        "defesa_industrial"
+      ]
+    },
+    {
+      "fonte": "nuclep",
+      "titulo": "NUCLEP",
+      "link": "https://www.nuclep.gov.br/index.php/",
+      "setor_pos_merge_default": [
+        "defesa_industrial",
+        "aeroespacial",
+        "defesa",
+        "energia"
+      ],
+      "setor_pos_merge_com_overwrite": [
+        "energia",
+        "defesa",
+        "defesa_industrial"
+      ],
+      "setor_payload": [
+        "energia",
+        "defesa",
+        "defesa_industrial"
+      ]
+    },
+    {
+      "fonte": "nuclep",
+      "titulo": "Página Inicial",
+      "link": "https://www.nuclep.gov.br/pagina-inicial",
+      "setor_pos_merge_default": [
+        "defesa_industrial",
+        "aeroespacial",
+        "defesa",
+        "energia"
+      ],
+      "setor_pos_merge_com_overwrite": [
+        "energia",
+        "defesa",
+        "defesa_industrial"
+      ],
+      "setor_payload": [
+        "energia",
+        "defesa",
+        "defesa_industrial"
+      ]
+    },
+    {
+      "fonte": "nuclep",
+      "titulo": "Quem Somos",
+      "link": "https://www.nuclep.gov.br/quem-somos",
+      "setor_pos_merge_default": [
+        "defesa_industrial",
+        "aeroespacial",
+        "defesa",
+        "energia"
+      ],
+      "setor_pos_merge_com_overwrite": [
+        "energia",
+        "defesa",
+        "defesa_industrial"
+      ],
+      "setor_payload": [
+        "energia",
+        "defesa",
+        "defesa_industrial"
+      ]
+    },
+    {
+      "fonte": "nuclep",
+      "titulo": "Expertise",
+      "link": "https://www.nuclep.gov.br/quem-somos/expertise",
+      "setor_pos_merge_default": [
+        "defesa_industrial",
+        "aeroespacial",
+        "defesa",
+        "industria",
+        "energia"
+      ],
+      "setor_pos_merge_com_overwrite": [
+        "energia",
+        "defesa",
+        "defesa_industrial"
+      ],
+      "setor_payload": [
+        "energia",
+        "defesa",
+        "defesa_industrial"
+      ]
+    },
+    {
+      "fonte": "nuclep",
+      "titulo": "Terminal Portuário",
+      "link": "https://www.nuclep.gov.br/quem-somos/terminal-portuario",
+      "setor_pos_merge_default": [
+        "defesa_industrial",
+        "aeroespacial",
+        "defesa",
+        "nuclear",
+        "energia"
+      ],
+      "setor_pos_merge_com_overwrite": [
+        "energia",
+        "defesa",
+        "defesa_industrial"
+      ],
+      "setor_payload": [
+        "energia",
+        "defesa",
+        "defesa_industrial"
+      ]
+    },
+    {
+      "fonte": "nuclep",
+      "titulo": "Centro de Treinamento",
+      "link": "https://www.nuclep.gov.br/quem-somos/centro-de-treinamento",
+      "setor_pos_merge_default": [
+        "defesa_industrial",
+        "aeroespacial",
+        "defesa",
+        "industria",
+        "energia"
+      ],
+      "setor_pos_merge_com_overwrite": [
+        "energia",
+        "defesa",
+        "defesa_industrial"
+      ],
+      "setor_payload": [
+        "energia",
+        "defesa",
+        "defesa_industrial"
+      ]
+    },
+    {
+      "fonte": "nuclep",
+      "titulo": "Sala Limpa",
+      "link": "https://www.nuclep.gov.br/quem-somos/sala-limpa",
+      "setor_pos_merge_default": [
+        "defesa_industrial",
+        "aeroespacial",
+        "defesa",
+        "energia"
+      ],
+      "setor_pos_merge_com_overwrite": [
+        "energia",
+        "defesa",
+        "defesa_industrial"
+      ],
+      "setor_payload": [
+        "energia",
+        "defesa",
+        "defesa_industrial"
+      ]
+    },
+    {
+      "fonte": "nuclep",
+      "titulo": "Presidência da empresa",
+      "link": "https://www.nuclep.gov.br/composicao/presidencia",
+      "setor_pos_merge_default": [
+        "defesa_industrial",
+        "defesa",
+        "nuclear",
+        "energia"
+      ],
+      "setor_pos_merge_com_overwrite": [
+        "energia",
+        "defesa",
+        "defesa_industrial"
+      ],
+      "setor_payload": [
+        "energia",
+        "defesa",
+        "defesa_industrial"
+      ]
+    },
+    {
+      "fonte": "nuclep",
+      "titulo": "Diretoria Administrativa",
+      "link": "https://www.nuclep.gov.br/composicao/diretoria-administrativa",
+      "setor_pos_merge_default": [
+        "defesa_industrial",
+        "defesa",
+        "nuclear",
+        "energia"
+      ],
+      "setor_pos_merge_com_overwrite": [
+        "energia",
+        "defesa",
+        "defesa_industrial"
+      ],
+      "setor_payload": [
+        "energia",
+        "defesa",
+        "defesa_industrial"
+      ]
+    },
+    {
+      "fonte": "nuclep",
+      "titulo": "Diretoria Comercial",
+      "link": "https://www.nuclep.gov.br/composicao/diretoria-comercial",
+      "setor_pos_merge_default": [
+        "defesa_industrial",
+        "defesa",
+        "nuclear",
+        "energia"
+      ],
+      "setor_pos_merge_com_overwrite": [
+        "energia",
+        "defesa",
+        "defesa_industrial"
+      ],
+      "setor_payload": [
+        "energia",
+        "defesa",
+        "defesa_industrial"
+      ]
+    },
+    {
+      "fonte": "nuclep",
+      "titulo": "Diretoria Industrial",
+      "link": "https://www.nuclep.gov.br/composicao/diretoria-industrial",
+      "setor_pos_merge_default": [
+        "defesa_industrial",
+        "aeroespacial",
+        "defesa",
+        "industria",
+        "energia"
+      ],
+      "setor_pos_merge_com_overwrite": [
+        "energia",
+        "defesa",
+        "defesa_industrial"
+      ],
+      "setor_payload": [
+        "energia",
+        "defesa",
+        "defesa_industrial"
+      ]
+    },
+    {
+      "fonte": "nuclep",
+      "titulo": "Organograma",
+      "link": "https://www.nuclep.gov.br/acesso-a-informacao/institucional/organograma",
+      "setor_pos_merge_default": [
+        "defesa_industrial",
+        "defesa",
+        "nuclear",
+        "energia"
+      ],
+      "setor_pos_merge_com_overwrite": [
+        "energia",
+        "defesa",
+        "defesa_industrial"
+      ],
+      "setor_payload": [
+        "energia",
+        "defesa",
+        "defesa_industrial"
+      ]
+    },
+    {
+      "fonte": "nuclep",
+      "titulo": "Segmento de Defesa",
+      "link": "https://www.nuclep.gov.br/segmentos/setor-de-defesa",
+      "setor_pos_merge_default": [
+        "defesa_industrial",
+        "aeroespacial",
+        "defesa",
+        "industria",
+        "energia"
+      ],
+      "setor_pos_merge_com_overwrite": [
+        "defesa",
+        "energia",
+        "defesa_industrial"
+      ],
+      "setor_payload": [
+        "defesa",
+        "energia",
+        "defesa_industrial"
+      ]
+    },
+    {
+      "fonte": "nuclep",
+      "titulo": "Segmento Nuclear",
+      "link": "https://www.nuclep.gov.br/segmentos/setor-nuclear",
+      "setor_pos_merge_default": [
+        "defesa_industrial",
+        "aeroespacial",
+        "defesa",
+        "energia"
+      ],
+      "setor_pos_merge_com_overwrite": [
+        "energia",
+        "defesa",
+        "defesa_industrial"
+      ],
+      "setor_payload": [
+        "energia",
+        "defesa",
+        "defesa_industrial"
+      ]
+    },
+    {
+      "fonte": "nuclep",
+      "titulo": "Segmento de Energia",
+      "link": "https://www.nuclep.gov.br/segmentos/setor-de-energia",
+      "setor_pos_merge_default": [
+        "defesa_industrial",
+        "defesa",
+        "energia",
+        "nuclear"
+      ],
+      "setor_pos_merge_com_overwrite": [
+        "energia",
+        "defesa",
+        "defesa_industrial"
+      ],
+      "setor_payload": [
+        "energia",
+        "defesa",
+        "defesa_industrial"
+      ]
+    },
+    {
+      "fonte": "nuclep",
+      "titulo": "Segmento de Óleo & Gás",
+      "link": "https://www.nuclep.gov.br/segmentos/setor-de-oleo-e-gas",
+      "setor_pos_merge_default": [
+        "defesa_industrial",
+        "defesa",
+        "energia",
+        "nuclear"
+      ],
+      "setor_pos_merge_com_overwrite": [
+        "energia",
+        "defesa",
+        "defesa_industrial"
+      ],
+      "setor_payload": [
+        "energia",
+        "defesa",
+        "defesa_industrial"
+      ]
+    },
+    {
+      "fonte": "nuclep",
+      "titulo": "Institucional",
+      "link": "https://www.nuclep.gov.br/acesso-a-informacao/institucional",
+      "setor_pos_merge_default": [
+        "defesa_industrial",
+        "defesa",
+        "nuclear",
+        "energia"
+      ],
+      "setor_pos_merge_com_overwrite": [
+        "energia",
+        "defesa",
+        "defesa_industrial"
+      ],
+      "setor_payload": [
+        "energia",
+        "defesa",
+        "defesa_industrial"
+      ]
+    },
+    {
+      "fonte": "nuclep",
+      "titulo": "Paticipação Social",
+      "link": "https://www.nuclep.gov.br/acesso-a-informacao/participacao-social",
+      "setor_pos_merge_default": [
+        "defesa_industrial",
+        "defesa",
+        "nuclear",
+        "energia"
+      ],
+      "setor_pos_merge_com_overwrite": [
+        "energia",
+        "defesa",
+        "defesa_industrial"
+      ],
+      "setor_payload": [
+        "energia",
+        "defesa",
+        "defesa_industrial"
+      ]
+    },
+    {
+      "fonte": "nuclep",
+      "titulo": "Auditorias",
+      "link": "https://www.nuclep.gov.br/acesso-a-informacao/auditorias",
+      "setor_pos_merge_default": [
+        "defesa_industrial",
+        "defesa",
+        "nuclear",
+        "energia"
+      ],
+      "setor_pos_merge_com_overwrite": [
+        "energia",
+        "defesa",
+        "defesa_industrial"
+      ],
+      "setor_payload": [
+        "energia",
+        "defesa",
+        "defesa_industrial"
+      ]
+    }
+  ],
+  "taxonomy_overwrite_preview_errors_total": 0,
+  "official_link_only_total": 0,
+  "access_limited_total": 0,
+  "official_link_only_by_source": {},
+  "official_link_only_examples": [],
+  "access_reason_counts": {},
+  "environment_guard": {
+    "editalfinder_env": "staging",
+    "has_supabase_url": true,
+    "has_service_key": true,
+    "has_anon_key": true,
+    "has_allow_staging_apply": false,
+    "url_host_masked": "dof***.co",
+    "block_reason": "missing_staging_flag"
+  },
+  "db_connection_diag": {
+    "url_masked": "https://dof***.co",
+    "key_name_selected": "SUPABASE_SERVICE_ROLE_KEY",
+    "key_exists": true,
+    "key_len": 219,
+    "key_prefix_masked": "eyJ***zg",
+    "env_sources_found": [
+      "D:\\Computational_Physics\\My Projects\\edital\\.env.staging",
+      "D:\\Computational_Physics\\My Projects\\edital\\CORE\\.env"
+    ]
+  },
+  "apply_status": "not_requested",
+  "carga_execucao_db": {
+    "saved": true,
+    "error": ""
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "fonte": "horizon_europe",
+  "data": "2026-05-02",
+  "arquivos_analisados": {
+    "bruto": "horizon_europe/outputs/horizon_europe_editais.json",
+    "standardized_antes": "audit_reports_blocked_sources/lote2_fix_horizon/standardized/horizon_europe_standardized.json",
+    "semantic_antes": "audit_reports_blocked_sources/lote2_fix_horizon_semantic/",
+    "pos_calibracao_retransform": "audit_reports_blocked_sources/lote2_horizon_calibration/retransform/",
+    "pos_calibracao_semantic": "audit_reports_blocked_sources/lote2_horizon_calibration/semantic/",
+    "pos_calibracao_docs": "audit_reports_blocked_sources/lote2_horizon_calibration/docs/"
+  },
+  "campos_no_bruto": [
+    "titulo",
+    "descricao",
+    "link",
+    "fonte",
+    "data_publicacao",
+    "fim_inscricao",
+    "situacao",
+    "valor",
+    "programa",
+    "tipo_recurso",
+    "extras (url_listagem, url_detalhe, palavras_chave_detectadas, metodo_extracao, coletado_em, ...)"
+  ],
+  "campos_ausentes_no_bruto": [
+    "prazo explícito (fim_inscricao)",
+    "orçamento/valor",
+    "documentos/PDF",
+    "texto longo de detalhe (página SPA)"
+  ],
+  "campos_no_standardized_pos_calibracao": [
+    "tipo_oportunidade: funding_opportunity",
+    "tipo_recurso: fomento",
+    "topic_id",
+    "call_code",
+    "origem_portal",
+    "programa",
+    "tipo_conteudo_horizon: funding_topic",
+    "natureza_recurso: nao_reembolsavel",
+    "classificacao_confianca: media",
+    "links_oficiais",
+    "descricao enriquecida (fallback + meta quando crawler com enrich_meta_tags)",
+    "validacao_status: incompleto",
+    "opportunity_gate_category: grant",
+    "content_type_detectado: chamada_publica"
+  ],
+  "por_que_suspeito_antes": "opportunity_gate_relaxed era sempre forçado a validacao_status=suspeito em item_quality; tópicos HE reais ficavam indistintos de relax genérico.",
+  "por_que_oportunidade_fomento_sem_fomento_antes": "audit_semantic_classification exigia tokens PT (fomento, chamada, …) no blob; texto curto em EN + tipo_recurso inferido como licitação por substring 'tender' em 'Funding & Tenders' disparava inconsistência.",
+  "html_publico_observado": "Página topic-details carrega conteúdo principalmente no cliente; HTML inicial costuma ter pouco texto além de título/meta.",
+  "json_embutido_ou_endpoint_spa": "Sem JSON útil confiável no HTML estático da shell; o portal usa aplicação SPA; listagem estática topic-list.html fornece links, não metadados de prazo.",
+  "alteracoes_codigo": [
+    "CORE/taxonomy_filtros.py: calibrate_horizon_europe_extras (tópico), link no corpus de enrich, _infer_tipo_recurso prioriza topic horizon",
+    "CORE/item_quality.py: relax horizon_europe_local + topic-details não força suspeito",
+    "CORE/transformer.py: opportunity_gate_category=grant (atribuição explícita no soft Horizon)",
+    "CORE/noise_filter.py: detect_content_type HE topic → chamada_publica",
+    "scripts/audit_semantic_classification.py: isenção oportunidade_fomento_sem_fomento para HE topic + fomento",
+    "scraper_generic.py + horizon main: enrich_meta_tags (meta description/og)"
+  ],
+  "criterios_sucesso": {
+    "transformados": 25,
+    "rejeitados": 0,
+    "oportunidade_fomento_sem_fomento": 0,
+    "suspeitos": 0,
+    "incompletos": 25,
+    "tipo_oportunidade": "funding_opportunity",
+    "tipo_recurso": "fomento",
+    "topic_id_preenchido": true
+  },
+  "readiness_recomendado": "ready_with_notes",
+  "readiness_justificativa": "Tópicos reais, classificação e auditoria semântica limpas; permanece incompleto por prazo/valor/PDF ausentes — notas obrigatórias. Lista blocked mantém-se por decisão de produto até revisão humana.",
+  "restricoes_respeitadas": [
+    "Sem alteração ao opportunity_gate global (apenas transformer/auditoria/calibração local)",
+    "Sem loader apply, Supabase, migrations, source_readiness automático"
+  ]
+}

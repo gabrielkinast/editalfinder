@@ -1,0 +1,103 @@
+{
+  "timestamp": "2026-05-10T03:41:20Z",
+  "queries": [
+    {
+      "label": "BASA / Conta PJ",
+      "link": "https://www.bancoamazonia.com.br/empresas/conta-pj",
+      "rows_found": 1,
+      "rows": [
+        {
+          "id_edital": 2,
+          "titulo": "Conta PJ",
+          "link": "https://www.bancoamazonia.com.br/empresas/conta-pj",
+          "ativo": false,
+          "validacao_status": "incompleto",
+          "fonte_recurso": "BASA"
+        }
+      ]
+    },
+    {
+      "label": "BDMG / Entre em contato",
+      "link": "https://www.bdmg.mg.gov.br/investimento",
+      "rows_found": 1,
+      "rows": [
+        {
+          "id_edital": 52,
+          "titulo": "Entre em contato",
+          "link": "https://www.bdmg.mg.gov.br/investimento",
+          "ativo": false,
+          "validacao_status": "incompleto",
+          "fonte_recurso": "BDMG"
+        }
+      ]
+    },
+    {
+      "label": "General Dynamics Suppliers / FAQ",
+      "link": "https://www.gd.com/suppliers/supplier-faqs",
+      "rows_found": 1,
+      "rows": [
+        {
+          "id_edital": 1014,
+          "titulo": "Supplier FAQs",
+          "link": "https://www.gd.com/suppliers/supplier-faqs",
+          "ativo": false,
+          "validacao_status": "suspeito",
+          "fonte_recurso": "General Dynamics Suppliers"
+        }
+      ]
+    },
+    {
+      "label": "KAKENHI / FAQ",
+      "link": "https://www.jsps.go.jp/j-grantsinaid/01_seido/05_faq/index.html",
+      "rows_found": 1,
+      "rows": [
+        {
+          "id_edital": 1252,
+          "titulo": "科研費FAQ",
+          "link": "https://www.jsps.go.jp/j-grantsinaid/01_seido/05_faq/index.html",
+          "ativo": false,
+          "validacao_status": "incompleto",
+          "fonte_recurso": "KAKENHI"
+        }
+      ]
+    },
+    {
+      "label": "NATO DIANA / FAQ",
+      "link": "https://www.diana.nato.int/faq.html",
+      "rows_found": 1,
+      "rows": [
+        {
+          "id_edital": 1419,
+          "titulo": "NATO DIANA — Programme FAQ (challenges, eligibility, portal)",
+          "link": "https://www.diana.nato.int/faq.html",
+          "ativo": false,
+          "validacao_status": "incompleto",
+          "fonte_recurso": "NATO DIANA"
+        }
+      ]
+    },
+    {
+      "label": "NUCLEP / Quem Somos",
+      "link": "https://www.nuclep.gov.br/quem-somos",
+      "rows_found": 1,
+      "rows": [
+        {
+          "id_edital": 1432,
+          "titulo": "Quem Somos",
+          "link": "https://www.nuclep.gov.br/quem-somos",
+          "ativo": false,
+          "validacao_status": "incompleto",
+          "fonte_recurso": "NUCLEP"
+        }
+      ]
+    }
+  ],
+  "error": "",
+  "resumo": {
+    "ambiente": "staging (Supabase via CORE/db)",
+    "operacao": "SELECT apenas; nenhum UPDATE",
+    "causa_titulo_ruidoso_6": "O contador antigo agregava todos os registros cujo titulo casava NOISE_TITLES, sem excluir ativo=false. Os seis casos listados estao com ativo=false em staging; continuavam a entrar no mesmo bucket titulo_ruidoso.",
+    "correcao": "validate_full_staging_after_daily.py separa titulo_ruidoso_ativo_true (warning, entra no resumo global de warnings) de titulo_ruidoso_inativo (info, apenas em tables.edital.problems).",
+    "todos_ativo_false": true
+  }
+}

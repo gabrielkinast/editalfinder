@@ -1,0 +1,65 @@
+{
+  "timestamp_utc": "2026-05-01T08:20:44Z",
+  "tests": [
+    {
+      "transform_function": "transform_generic",
+      "noise_item_rejected": true,
+      "noise_reasons": [
+        "titulo_ruido_exato"
+      ],
+      "valid_item_kept": true,
+      "valid_item_status": "valido",
+      "valid_item_rejection_reasons": []
+    },
+    {
+      "transform_function": "transform_cnpq",
+      "noise_item_rejected": true,
+      "noise_reasons": [
+        "titulo_ruido_exato"
+      ],
+      "valid_item_kept": true,
+      "valid_item_status": "valido",
+      "valid_item_rejection_reasons": []
+    },
+    {
+      "transform_function": "transform_finep",
+      "noise_item_rejected": true,
+      "noise_reasons": [
+        "titulo_ruido_exato"
+      ],
+      "valid_item_kept": true,
+      "valid_item_status": "valido",
+      "valid_item_rejection_reasons": []
+    },
+    {
+      "transform_function": "transform_fapergs",
+      "noise_item_rejected": true,
+      "noise_reasons": [
+        "titulo_ruido_exato"
+      ],
+      "valid_item_kept": true,
+      "valid_item_status": "valido",
+      "valid_item_rejection_reasons": []
+    },
+    {
+      "transform_function": "transform_embrapii",
+      "noise_item_rejected": true,
+      "noise_reasons": [
+        "titulo_ruido_exato"
+      ],
+      "valid_item_kept": true,
+      "valid_item_status": "valido",
+      "valid_item_rejection_reasons": []
+    },
+    {
+      "transform_function": "transform_bndes",
+      "noise_item_rejected": true,
+      "noise_reasons": [
+        "titulo_ruido_exato"
+      ],
+      "valid_item_kept": true,
+      "valid_item_status": "valido",
+      "valid_item_rejection_reasons": []
+    }
+  ]
+}

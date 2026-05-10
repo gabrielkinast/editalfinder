@@ -1,0 +1,31 @@
+{
+  "antes": {
+    "metodo_extracao": "fallback_public_index",
+    "exemplo_link_generico": "https://www.diana.nato.int/challenges.html",
+    "nota": "Hub genérico + NIF fora do âmbito DIANA."
+  },
+  "depois_curated": [
+    {
+      "titulo": "Decision Superiority for NATO Warfighters — DIANA challenge call",
+      "link": "https://www.diana.nato.int/challenges.html",
+      "metodo_extracao": "curated_official_public_brief",
+      "codigo_oportunidade": "DIANA-WARFIGHTERS-2026",
+      "fim_inscricao": "2026-05-05",
+      "classificacao_url": "challenge / portal oficial"
+    },
+    {
+      "titulo": "NATO DIANA — Programme FAQ (challenges, eligibility, portal)",
+      "link": "https://www.diana.nato.int/faq.html",
+      "metodo_extracao": "curated_official_public_brief",
+      "classificacao_url": "programa / FAQ oficial"
+    }
+  ],
+  "ciberseguranca": {
+    "regra": "Só tags/áreas de cibersegurança com evidência forte (lista em calibrate_nato_diana_extras); termos fracos isolados (security, secure, digital, infrastructure, defence sozinho) não disparam ciber.",
+    "referencia_codigo": "CORE/taxonomy_filtros.py — calibrate_nato_diana_extras"
+  },
+  "rejeitados": {
+    "motivo": "Nenhum no último dry-run.",
+    "exemplo_hipotetico": "Página só de notícias sem sinais de challenge seria filtrada no scrape; se scrape falhar, não se usa fallback_public_index."
+  }
+}

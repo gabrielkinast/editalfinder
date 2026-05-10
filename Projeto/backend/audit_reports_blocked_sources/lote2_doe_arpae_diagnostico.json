@@ -1,0 +1,88 @@
+{
+  "meta": {
+    "fonte": "doe_arpae",
+    "data_relatorio": "2026-05-02",
+    "raw_path": "doe_arpae/outputs/doe_arpae_editais.json",
+    "portal_oficial": "https://arpa-e-foa.energy.gov/Default.aspx"
+  },
+  "diagnostico_inicial": {
+    "estado_anterior": {
+      "itens_brutos": 0,
+      "notas": [
+        "Listagem https://arpa-e.energy.gov/funding-opportunities devolvia 404.",
+        "O scraper genérico removia o fragmento #FoaId… dos links do eXCHANGE, colapsando todas as oportunidades num único URL (vista de listagem sem distinção)."
+      ]
+    },
+    "estado_pos_correcao": {
+      "metodo_coleta": "Coleta dedicada à tabela pública do ARPA-E eXCHANGE (âncoras #FoaId… preservadas no link).",
+      "listagens_usadas": [
+        "https://arpa-e-foa.energy.gov/Default.aspx",
+        "https://arpa-e-foa.energy.gov/Default.aspx?Archive=1"
+      ]
+    }
+  },
+  "contagens_finais": {
+    "itens_brutos": 14,
+    "itens_transformados": 14,
+    "itens_rejeitados": 0,
+    "itens_incompletos": 14,
+    "itens_suspeitos": 0,
+    "qualidade_dado_media": 67.86
+  },
+  "motivos_rejeicao": {},
+  "classificacao_links": {
+    "tipo_majoritario": "funding_opportunity_ou_teaming_no_portal_exchange",
+    "observacao": "Todos os links são Default.aspx#FoaId{uuid}: identificador oficial de oportunidade no eXCHANGE (FOA/NOFO ou aviso de teaming). Não são páginas institucionais genéricas nem notícias isoladas.",
+    "exemplos": [
+      {
+        "link": "https://arpa-e-foa.energy.gov/Default.aspx#FoaIddeda37c5-b4c7-46cc-bc8f-11a453428235",
+        "titulo_curto": "DE-FOA-0003467",
+        "classificacao": "FOA / funding opportunity announcement (listagem pública)"
+      },
+      {
+        "link": "https://arpa-e-foa.energy.gov/Default.aspx#FoaId8e2883e2-e11d-4388-85d0-2341d4c5fae2",
+        "classificacao": "Teaming partner announcement (RFI) ligada a programa ARPA-E"
+      }
+    ]
+  },
+  "tipos_conteudo_possiveis": [
+    "funding_opportunity_announcement",
+    "FOA",
+    "programa_tecnico",
+    "chamada_publica",
+    "grant_fomento",
+    "teaming_partner_opportunity",
+    "noticia_institucional",
+    "pagina_generica"
+  ],
+  "mapeamento_observado": {
+    "DE-FOA-*": ["funding_opportunity_announcement", "FOA", "grant_fomento"],
+    "RFI-* com Teaming": ["teaming_partner_opportunity", "chamada_publica"]
+  },
+  "pipelines_executados": {
+    "retransform": "python scripts/retransform_all.py --sources doe_arpae --dry-run --output-dir audit_reports_blocked_sources/lote2_fix_doe_arpae",
+    "auditoria_semantica": "python scripts/audit_semantic_classification.py --input-dir audit_reports_blocked_sources/lote2_fix_doe_arpae/standardized --output-dir audit_reports_blocked_sources/lote2_fix_doe_arpae_semantic",
+    "auditoria_documentos": "python scripts/audit_docs_pipeline.py --sources doe_arpae --output-dir audit_reports_blocked_sources/lote2_fix_doe_arpae_docs"
+  },
+  "resultados_auditoria": {
+    "semantica_flags_totais": {},
+    "documentos": {
+      "nota": "Listagem HTML não traz PDFs anexados; 0 documentos no bruto é esperado sem segunda passagem por FileContent.aspx (evitado scraping agressivo).",
+      "perdas_total": 0
+    }
+  },
+  "readiness_recomendado": "ready_with_notes",
+  "readiness_justificativa": [
+    "14 oportunidades reais (DE-FOA e RFI/teaming) no portal oficial.",
+    "0 rejeitados; tipo_oportunidade e tipo_recurso coerentes; perfil_ideal preenchido; sem flags semânticas por item.",
+    "Todos incompletos: prazo e valor não extraídos da linha da tabela (detalhe nos NOFOs em PDF no portal).",
+    "Sem PDF/documentos na coleta atual — aceitável com nota; melhoria futura opcional resolver FileContent por FoaId sem login."
+  ],
+  "nao_executado": [
+    "loader apply",
+    "Supabase",
+    "migrations",
+    "atualização automática de config/source_readiness.json",
+    "alteração global do opportunity_gate"
+  ]
+}

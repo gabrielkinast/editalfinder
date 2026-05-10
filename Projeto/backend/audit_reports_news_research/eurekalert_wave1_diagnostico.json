@@ -1,0 +1,39 @@
+{
+  "fonte": "eurekalert_science_filtered",
+  "seeds_usados": [
+    "https://www.eurekalert.org/news-releases/browse"
+  ],
+  "itens_extraidos_antes_filtro_tematico": 12,
+  "passaram_filtro_tematico": 3,
+  "rejeitados_require_any": 7,
+  "rejeitados_exclude": 2,
+  "rejeitados_exclude_medicina_saude_generica_heuristica": 1,
+  "itens_raw_apos_filtro_max_items": 3,
+  "sem_data_publicacao_no_standardized": 0,
+  "contagem_tipo_conteudo_standardized": {
+    "pesquisa": 3
+  },
+  "top_matched_keywords": [
+    [
+      "aircraft",
+      1
+    ],
+    [
+      "engineering",
+      1
+    ],
+    [
+      "defense",
+      1
+    ],
+    [
+      "artificial intelligence",
+      1
+    ]
+  ],
+  "volume_aceitavel_heuristica": true,
+  "payload_build_hint_noticia": 0,
+  "payload_build_hint_pesquisa": 3,
+  "apto_apply_staging_build_readiness": true,
+  "nota": "Contagem de saúde/medicina baseada em substrings do exclude_keyword. Datas: meta/JSON-LD na página; fallback do prefixo de data no título (listings EurekAlert)."
+}

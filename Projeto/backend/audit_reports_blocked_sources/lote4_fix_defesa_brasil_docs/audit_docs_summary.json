@@ -1,0 +1,50 @@
+{
+  "data_auditoria": "2026-05-02T23:20:59Z",
+  "fontes": [
+    "amazul",
+    "marinha",
+    "dcta_ita_iae"
+  ],
+  "max_items_por_fonte": 25,
+  "pdf_skip": true,
+  "itens_analisados": 20,
+  "raw_com_pdf_url": 19,
+  "raw_com_documentos": 19,
+  "transformado_com_pdf_url": 19,
+  "transformado_com_documentos": 19,
+  "payload_com_pdf_url": 19,
+  "payload_com_documentos": 19,
+  "bruto_com_documentos_pdf": 19,
+  "bruto_com_documentos_nao_pdf": 2,
+  "transformado_com_documentos_pdf": 19,
+  "transformado_com_documentos_nao_pdf": 2,
+  "payload_com_documentos_pdf": 19,
+  "payload_com_documentos_nao_pdf": 2,
+  "perdas_pdf": 0,
+  "perdas_nao_pdf": 0,
+  "downloads_falharam": 19,
+  "downloads_sucesso": 0,
+  "links_invalidos": 0,
+  "links_relativos_restantes": 0,
+  "links_quebrados": 0,
+  "duplicados_documentos": 0,
+  "perdas_total": 0,
+  "fontes_pior_preservacao": [
+    {
+      "fonte": "marinha",
+      "score_perda": 1.0
+    },
+    {
+      "fonte": "dcta_ita_iae",
+      "score_perda": 1.0
+    },
+    {
+      "fonte": "amazul",
+      "score_perda": 0.0
+    }
+  ],
+  "formatos_detectados": {
+    "pdf": 24,
+    "zip": 3
+  }
+}

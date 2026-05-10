@@ -1,0 +1,25 @@
+{
+  "exemplo_bruto_legado_fallback": {
+    "descricao": "Único registo histórico antes deste lote: hub https://www.gov.br/dcta/pt-br com metodo_extracao fallback_public_index.",
+    "tipo_link": "pagina_institucional_indice",
+    "transform_esperado": "rejeitado_pelo_opportunity_gate",
+    "motivo": "Pontuacao abaixo do minimo (oportunidade nao evidenciada) — sem objeto concreto."
+  },
+  "sintetico_licitacao_ita": {
+    "nota": "Bruto sintético (não persistido em outputs). transform_generic em 2026-05-02.",
+    "link": "https://www.gov.br/ita/pt-br/chamamentos-e-licitacoes/pregao-012-2026",
+    "ok": true,
+    "tipo_oportunidade": "licitacao",
+    "setor_estrategico": [],
+    "opportunity_gate_relaxed": false
+  },
+  "sintetico_edital_academico_dcta": {
+    "nota": "Bruto sintético (não persistido em outputs). transform_generic em 2026-05-02.",
+    "link": "https://www.gov.br/dcta/pt-br/editais/selecao-mestrado-2026",
+    "ok": true,
+    "tipo_oportunidade": "edital_academico",
+    "setor_estrategico": [],
+    "opportunity_gate_relaxed": false
+  },
+  "bruto_atual": []
+}

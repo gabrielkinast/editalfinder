@@ -1,0 +1,121 @@
+{
+  "meta": {
+    "lote": 5,
+    "tema": "fornecedores_defesa_corporativa",
+    "data_auditoria": "2026-05-03T18:24:00Z",
+    "readiness_config_referencia": "config/source_readiness.json (needs_manual_review: bae_systems_suppliers, japan_kawasaki_heavy, rheinmetall_suppliers, thales_suppliers)",
+    "artefatos_pipeline": {
+      "retransform": "audit_reports_blocked_sources/lote5_fix_suppliers/retransform_summary.json",
+      "semantic": "audit_reports_blocked_sources/lote5_fix_suppliers_semantic/audit_semantic_summary.json",
+      "docs": "audit_reports_blocked_sources/lote5_fix_suppliers_docs/audit_docs_summary.json",
+      "access": "audit_reports_access/source_access_by_source.json"
+    }
+  },
+  "totais_agregados_pos_correcoes": {
+    "itens_brutos": 2,
+    "itens_transformados": 2,
+    "itens_rejeitados_gate": 0,
+    "fontes_com_bruto": ["rheinmetall_suppliers"]
+  },
+  "fontes": [
+    {
+      "id": "bae_systems_suppliers",
+      "retransform": {
+        "itens_brutos_encontrados": 0,
+        "itens_transformados": 0,
+        "itens_rejeitados": 0
+      },
+      "perguntas_11": {
+        "1_crawler_roda": "Sim (exit 0).",
+        "2_output_bruto_existe": "Sim: bae_systems_suppliers/outputs/bae_systems_suppliers_editais.json (lista vazia []).",
+        "3_qtd_brutos": 0,
+        "4_qtd_transformam": 0,
+        "5_qtd_rejeitam": 0,
+        "6_tipo_links": "Listagem alterada para en-uk/suppliers/responsible-supply-chain + domínio hicx.net permitido; mesmo assim 0 âncoras passam filtro keywords/defense_intel no ambiente atual (HTML muito curto ~924 bytes no probe de acesso sugere anti-bot/página intermédia).",
+        "7_acao_concreta_fornecedor": "Não evidenciada no bruto (0 itens).",
+        "8_formulario_portal_onboarding": "Esperado na cadeia HICX; não extraído.",
+        "9_documento_anexo": "Não no bruto.",
+        "10_faz_sentido_produto": "Sim em princípio (supplier corporate), mas requer estratégia anti-bot ou curadoria manual de URLs estáveis.",
+        "11_problema_principal": "acesso / heurística de extração (WAF/bot), não gate."
+      },
+      "readiness_recomendado": "needs_manual_review",
+      "pode_sair_needs_manual_review": false,
+      "nota": "Manter em revisão até haver itens brutos verificáveis sem violar anti-bot."
+    },
+    {
+      "id": "rheinmetall_suppliers",
+      "retransform": {
+        "itens_brutos_encontrados": 2,
+        "itens_transformados": 2,
+        "itens_rejeitados": 0
+      },
+      "perguntas_11": {
+        "1_crawler_roda": "Sim.",
+        "2_output_bruto_existe": "Sim: rheinmetall_suppliers/outputs/rheinmetall_suppliers_editais.json.",
+        "3_qtd_brutos": 2,
+        "4_qtd_transformam": 2,
+        "5_qtd_rejeitam": 0,
+        "6_tipo_links": "1) Página pública \"Become a supplier\" (onboarding textual); 2) Entrada do portal Ivalua (supplier portal; login na continuação, não contornado).",
+        "7_acao_concreta_fornecedor": "Sim — self-registration e procurement portal descritos no texto oficial.",
+        "8_formulario_portal_onboarding": "Sim (referências explícitas a registo e portal; execução do formulário é no domínio Ivalua).",
+        "9_documento_anexo": "Não nos 2 itens finais (microsite de termos/privacidade removido da colheita).",
+        "10_faz_sentido_produto": "Sim como oportunidade_fornecedor / procurement corporativo, não como edital público.",
+        "11_problema_principal": "gate (falso positivo \"login\") corrigido com relaxamento local + taxonomia; crawler OK."
+      },
+      "readiness_recomendado": "ready_with_notes",
+      "pode_sair_needs_manual_review": true,
+      "notas_readiness": [
+        "opportunity_gate_relaxed com scope corporate_supplier_local nos itens afetados.",
+        "tipo_recurso calibrado para oportunidade_fornecedor; setor defesa limpo sem evidência textual.",
+        "Volume baixo (2); validação_status suspeito por prazo/valor ausentes."
+      ]
+    },
+    {
+      "id": "thales_suppliers",
+      "retransform": {
+        "itens_brutos_encontrados": 0,
+        "itens_transformados": 0,
+        "itens_rejeitados": 0
+      },
+      "perguntas_11": {
+        "1_crawler_roda": "Sim.",
+        "2_output_bruto_existe": "Sim (ficheiro existe; []).",
+        "3_qtd_brutos": 0,
+        "4_qtd_transformam": 0,
+        "5_qtd_rejeitam": 0,
+        "6_tipo_links": "Listagens atualizadas para /en/supplier-relations e /en/supplier (conteúdo real de fornecedores; PDFs de requisitos de compra).",
+        "7_acao_concreta_fornecedor": "Presente no site humano; não refletida no bruto — nenhuma âncora passou keywords+detect_keywords no scrape_html_portal.",
+        "8_formulario_portal_onboarding": "Air Supply / e-ACQuisition são acesso restrito — não extrair como oportunidade sem evidência pública adicional.",
+        "9_documento_anexo": "PDFs existem no site; não colhidos pelo crawler atual.",
+        "10_faz_sentido_produto": "Parcial — precisa refinamento de extração (links para PDFs \"Requirements\", âncoras \"supplier\").",
+        "11_problema_principal": "crawler/heurística (filtragem de links), não gate."
+      },
+      "readiness_recomendado": "needs_manual_review",
+      "pode_sair_needs_manual_review": false
+    },
+    {
+      "id": "japan_kawasaki_heavy",
+      "retransform": {
+        "itens_brutos_encontrados": 0,
+        "itens_transformados": 0,
+        "itens_rejeitados": 0
+      },
+      "perguntas_11": {
+        "1_crawler_roda": "Sim (exit 0).",
+        "2_output_bruto_existe": "japan_kawasaki_heavy_editais.json existe como []; latest_error.json com falha_de_coleta.",
+        "3_qtd_brutos": 0,
+        "4_qtd_transformam": 0,
+        "5_qtd_rejeitam": 0,
+        "6_tipo_links": "Listagens procurement Kawasaki: falha HTTP (status null / rede) no crawler asiático; removido /en/news/ da seed.",
+        "7_acao_concreta_fornecedor": "Não observada no bruto.",
+        "8_formulario_portal_onboarding": "Não extraído.",
+        "9_documento_anexo": "Não.",
+        "10_faz_sentido_produto": "Condicional — depende de acesso estável a .jp / global.kawasaki.",
+        "11_problema_principal": "acesso / rede / TLS (probe access: endpoint_quebrado em seed legado)."
+      },
+      "readiness_recomendado": "blocked",
+      "pode_sair_needs_manual_review": false,
+      "nota": "Tratar como bloqueado por acesso até novo URL ou proxy regional conforme política do projeto."
+    }
+  ]
+}

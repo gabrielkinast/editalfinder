@@ -1,0 +1,93 @@
+{
+  "meta": {
+    "titulo": "Apex + FAPERGS (faperg) — ready_with_notes e dry-run do loader",
+    "data": "2026-05-02",
+    "comando_loader": "python scripts/load_ready_sources.py --dry-run --sources apex,faperg --exclude-blocked --input-dir audit_reports_retransform/standardized --readiness audit_reports_retransform/readiness_for_loader.json",
+    "artefatos_loader": "audit_reports_loader_ready/load_ready_summary.json",
+    "artefatos_por_fonte": "audit_reports_loader_ready/load_ready_by_source.json",
+    "standardized_copiados_para": "audit_reports_retransform/standardized/",
+    "apply_executado": false
+  },
+  "diff_readiness": {
+    "config_source_readiness_json": {
+      "apex": "blocked → ready_with_notes",
+      "faperg": "needs_manual_review → ready_with_notes"
+    },
+    "audit_reports_retransform_readiness_for_loader_json": {
+      "apex": "fontes_bloqueadas_temporariamente → fontes_prontas_para_loader (fatia pronto_com_observacoes)",
+      "faperg": "fontes_para_revisao → fontes_prontas_para_loader (fatia pronto_com_observacoes)",
+      "status_distribution": {
+        "pronto_com_observacoes": "61 → 63",
+        "bloquear_temporariamente": "16 → 15",
+        "precisa_revisao_manual": "9 → 8"
+      }
+    }
+  },
+  "dry_run_resumo": {
+    "mode": "dry-run",
+    "sources_selected": 2,
+    "itens_standardized_total": 5,
+    "would_upsert_total": 5,
+    "would_ignore_total": 0,
+    "mapping_errors_total": 0,
+    "critical_empty_items_total": 0,
+    "docs_preserved_items_total": 1,
+    "pdf_preserved_items_total": 1,
+    "documentos_perdidos_no_payload_total": 0,
+    "validacao_status_preserved_items_total": 5,
+    "qualidade_dado_preserved_items_total": 5
+  },
+  "por_fonte": [
+    {
+      "fonte": "apex",
+      "itens_standardized": 3,
+      "would_upsert": 3,
+      "mapping_errors": 0,
+      "critical_empty_items": 0,
+      "docs_preserved_items": 0,
+      "pdf_preserved_items": 0,
+      "titulos_verificacao_sem_menu": [
+        "Exporta Mais - Casa e Design",
+        "Exporta Mais Brasil | Alimentos Funcionais e Suplementos Alimentares 2026",
+        "Exporta Mais Brasil - E-commerce 2026"
+      ],
+      "links_tipo": "inscrição CRM (crm-apps.apexbrasil.com.br)"
+    },
+    {
+      "fonte": "faperg",
+      "itens_standardized": 2,
+      "would_upsert": 2,
+      "mapping_errors": 0,
+      "critical_empty_items": 0,
+      "docs_preserved_items": 1,
+      "pdf_preserved_items": 1,
+      "uf_rs_presente_extras": true,
+      "origem_portal_fapergs_presente": true
+    }
+  ],
+  "verificacao_checklist": {
+    "itens_standardized": "5 (3 apex + 2 faperg)",
+    "would_upsert": "5",
+    "mapping_errors": "0",
+    "critical_empty": "0",
+    "documentos_preservados": "1 item faperg com documentos no payload",
+    "pdf_url_preservado": "1 (faperg)",
+    "tipo_oportunidade": "presente em todos os itens (totais agregados no summary)",
+    "tipo_recurso": "presente em todos",
+    "perfil_ideal": "presente em todos",
+    "validacao_status": "preservado 5/5",
+    "qualidade_dado": "preservado 5/5",
+    "origem_portal": "ApexBrasil (apex); FAPERGS (faperg)",
+    "uf_faperg": "RS em extras (amostra standardized)",
+    "sem_menu_evento_noticia": "Títulos apex são Exporta Mais; faperg Centelha/SICT — sem Menu"
+  },
+  "recomendacao_staging": {
+    "pode_aplicar_staging": true,
+    "condicoes": [
+      "Dry-run sem erros de mapeamento e sem critical_empty.",
+      "Antes de --apply: confirmar política de ambiente (EDITALFINDER / ALLOW_STAGING_APPLY) e usar flag --staging conforme scripts/load_ready_sources.py.",
+      "Rever taxonomicamente tipo_recurso nos itens apex (ex.: valor 'licitação' no standardized atual) se o produto exigir rótulo alinhado a programa/exportação."
+    ],
+    "nao_executado": "apply / upsert real"
+  }
+}

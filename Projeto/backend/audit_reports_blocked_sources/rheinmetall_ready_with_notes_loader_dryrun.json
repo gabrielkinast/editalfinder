@@ -1,0 +1,63 @@
+{
+  "fonte": "rheinmetall_suppliers",
+  "decisao_curadoria": "ready_with_notes",
+  "data_relatorio": "2026-05-03T18:55:10Z",
+  "id_execucao_loader": "d2db4edc-8fc2-4881-a7ab-2603017f11f4",
+  "comando": "python scripts/load_ready_sources.py --dry-run --sources rheinmetall_suppliers --exclude-blocked --input-dir audit_reports_retransform/standardized --readiness audit_reports_retransform/readiness_for_loader.json",
+  "resumo_loader": {
+    "mode": "dry-run",
+    "sources_selected": 1,
+    "itens_standardized_total": 2,
+    "would_upsert_total": 2,
+    "would_ignore_total": 0,
+    "mapping_errors_total": 0,
+    "critical_empty_items_total": 0,
+    "apply_requested": false,
+    "apply_status": "not_requested"
+  },
+  "verificacao_checklist": {
+    "dois_itens": true,
+    "would_upsert_igual_2": true,
+    "mapping_errors_zero": true,
+    "critical_empty_zero": true,
+    "tipo_oportunidade": {
+      "item_0_extras": "cadastro_fornecedor",
+      "item_1_extras": "supplier_portal",
+      "ok": true
+    },
+    "tipo_recurso": {
+      "ambos": "oportunidade_fornecedor",
+      "ok": true
+    },
+    "perfil_ideal": {
+      "ambos": ["fornecedor", "empresa"],
+      "ok": true
+    },
+    "validacao_status_nivel_item": {
+      "item_0": "incompleto",
+      "item_1": "acesso_limitado",
+      "ok": true,
+      "nota": "extras.validacao_status permanece 'suspeito' em ambos; nivel de item atende criterio de curadoria"
+    },
+    "origem_portal": {
+      "ambos": "Rheinmetall",
+      "ok": true
+    },
+    "idioma_original": {
+      "ambos": "en",
+      "ok": true
+    },
+    "sem_setor_defesa_somente_nome": {
+      "setor_estrategico_vazio": true,
+      "ok": true
+    },
+    "sem_pagina_institucional_vazia": {
+      "links": [
+        "https://www.rheinmetall.com/en/suppliers/become-a-supplier",
+        "https://rheinmetall-supplier.ivalua.app"
+      ],
+      "ok": true
+    }
+  },
+  "recomendacao_staging": "Apto a dry-run em staging com --apply apenas apos revisao humana e com EDITALFINDER_ALLOW_STAGING_APPLY conforme politica do projeto; nao executar apply nesta sessao."
+}

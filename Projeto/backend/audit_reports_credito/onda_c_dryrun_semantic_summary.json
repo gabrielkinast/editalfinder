@@ -1,0 +1,39 @@
+{
+  "timestamp_utc": "2026-05-10T03:14:26.010980+00:00",
+  "comando": "C:\\Program Files\\Python312\\python.exe D:\\Computational_Physics\\My Projects\\edital\\scripts\\audit_semantic_classification.py --input-dir audit_reports_credito/onda_c_dryrun_standardized --output-dir audit_reports_credito/onda_c_dryrun_semantic",
+  "exit_code": 0,
+  "audit_semantic_summary": {
+    "data_auditoria": "2026-05-10T03:14:25Z",
+    "fontes": 3,
+    "itens_total": 45,
+    "flags_totais": {
+      "publico_alvo_sem_evidencia": 14,
+      "classificacao_muito_ampla": 1
+    },
+    "top20_problemas_semanticos": [
+      [
+        "publico_alvo_sem_evidencia",
+        14
+      ],
+      [
+        "classificacao_muito_ampla",
+        1
+      ]
+    ],
+    "top20_ajustes_recomendados": [
+      "Restringir perfil_ideal genérico por evidência textual mínima.",
+      "Separar regras de crédito vs fomento por fonte + palavras-chave obrigatórias.",
+      "Exigir marcador de licitação para tipo_oportunidade=licitacao/compra_publica.",
+      "Reduzir classificação ampla quando classficacao_confianca=baixa.",
+      "Para fontes nucleares/defesa: usar peso institucional + objeto para evitar over/under tag.",
+      "Fortalecer extração de publico_alvo por entidades explícitas.",
+      "Adicionar fallback de área para itens com tipo_recurso definido e área vazia.",
+      "Revisar taxonomia em fontes com flag_rate > 100%."
+    ]
+  },
+  "setor_estrategico_gt3_scan": {
+    "count_gt3": 0,
+    "examples": []
+  },
+  "stderr_tail": ""
+}

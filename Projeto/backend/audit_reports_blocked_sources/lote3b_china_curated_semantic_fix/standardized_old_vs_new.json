@@ -1,0 +1,141 @@
+{
+  "data_auditoria": "2026-05-02T21:52:30Z",
+  "fontes": [
+    {
+      "fonte": "china_avic",
+      "old_vs_new": {
+        "old_count": 1,
+        "new_count": 1,
+        "delta_count": 0,
+        "old_links_now_missing": [
+          "http://www.avic.com/"
+        ],
+        "new_links_before_missing": [
+          "http://www.avic.com/c/2026-04-22/642825.shtml"
+        ],
+        "core_fields_improved": {
+          "perfil_ideal": {
+            "old": 0,
+            "new": 1,
+            "delta": 1
+          },
+          "documentos": {
+            "old": 0,
+            "new": 1,
+            "delta": 1
+          }
+        },
+        "core_fields_worsened": {},
+        "old_documents_count": 0,
+        "new_documents_count": 1,
+        "old_pdf_count": 0,
+        "new_pdf_count": 0
+      }
+    },
+    {
+      "fonte": "china_nsfc",
+      "old_vs_new": {
+        "old_count": 0,
+        "new_count": 9,
+        "delta_count": 9,
+        "old_links_now_missing": [],
+        "new_links_before_missing": [
+          "https://www.nsfc.gov.cn/english/site_1/funding/E1/2022/01-12/25901.html",
+          "https://www.nsfc.gov.cn/english/site_1/funding/E1/2024/06-12/364.html",
+          "https://www.nsfc.gov.cn/english/site_1/international/D5/index.html",
+          "https://www.nsfc.gov.cn/english/site_1/international/D6/index.html",
+          "https://www.nsfc.gov.cn/p1/2931/3971/3972/qy2026.html",
+          "https://www.nsfc.gov.cn/p1/2931/3971/3973/2026ndgjzrkxjjggjc.html",
+          "https://www.nsfc.gov.cn/p1/2931/3971/4002/gjzrkxjjsqdm2026.html",
+          "https://www.nsfc.gov.cn/p1/3381/2822/120883.html",
+          "https://www.nsfc.gov.cn/p1/3381/2824/122642.html"
+        ],
+        "core_fields_improved": {
+          "area": {
+            "old": 0,
+            "new": 1,
+            "delta": 1
+          },
+          "tipo_oportunidade": {
+            "old": 0,
+            "new": 9,
+            "delta": 9
+          },
+          "tipo_recurso": {
+            "old": 0,
+            "new": 9,
+            "delta": 9
+          },
+          "perfil_ideal": {
+            "old": 0,
+            "new": 9,
+            "delta": 9
+          },
+          "documentos": {
+            "old": 0,
+            "new": 5,
+            "delta": 5
+          },
+          "pdf_url": {
+            "old": 0,
+            "new": 2,
+            "delta": 2
+          }
+        },
+        "core_fields_worsened": {},
+        "old_documents_count": 0,
+        "new_documents_count": 5,
+        "old_pdf_count": 0,
+        "new_pdf_count": 2
+      }
+    },
+    {
+      "fonte": "china_university_procurement",
+      "old_vs_new": {
+        "old_count": 2,
+        "new_count": 4,
+        "delta_count": 2,
+        "old_links_now_missing": [
+          "http://news.ustc.edu.cn/info/1055/94796.htm"
+        ],
+        "new_links_before_missing": [
+          "https://www.ustc.edu.cn/info/1362/24794.htm",
+          "https://www.ustc.edu.cn/info/1362/24795.htm",
+          "https://www.ustc.edu.cn/info/1362/24805.htm"
+        ],
+        "core_fields_improved": {
+          "tipo_oportunidade": {
+            "old": 2,
+            "new": 4,
+            "delta": 2
+          },
+          "tipo_recurso": {
+            "old": 2,
+            "new": 4,
+            "delta": 2
+          },
+          "perfil_ideal": {
+            "old": 0,
+            "new": 4,
+            "delta": 4
+          },
+          "documentos": {
+            "old": 2,
+            "new": 4,
+            "delta": 2
+          },
+          "pdf_url": {
+            "old": 0,
+            "new": 1,
+            "delta": 1
+          }
+        },
+        "core_fields_worsened": {},
+        "old_documents_count": 2,
+        "new_documents_count": 4,
+        "old_pdf_count": 0,
+        "new_pdf_count": 1
+      }
+    }
+  ]
+}

@@ -9,8 +9,7 @@ BASE_URL_GOV = "https://www.gov.br"
 BASE_URL_CNPQ = "http://memoria2.cnpq.br"
 
 URLS = [
-    "https://www.gov.br/saude/pt-br/assuntos/noticias/2026",
-    "https://www.gov.br/saude/pt-br/assuntos/noticias/2025",
+    "https://www.gov.br/saude/pt-br/composicao/sectics/decit/chamadas-publicas",
     "https://www.gov.br/saude/pt-br/composicao/sectics/decit",
     "http://memoria2.cnpq.br/web/guest/chamadas-publicas"
 ]
@@ -73,10 +72,10 @@ class SaudeScraper:
             if full_url in seen_links:
                 continue
             
-            # Filtro: links que pareçam editais, chamadas ou notícias de fomento
-            if any(kw in full_url.lower() or kw in titulo.lower() for kw in ["edital", "chamada", "selecao", "fomento", "programa", "concurso"]):
+            # Filtro: links que pareçam editais/chamadas de fomento (não notícia genérica)
+            if any(kw in full_url.lower() or kw in titulo.lower() for kw in ["edital", "chamada", "selecao", "fomento", "proposta", "decit", "sctie", "sectics"]):
                 # Evita links de redes sociais
-                if any(x in full_url.lower() for x in ["facebook", "twitter", "linkedin", "whatsapp"]):
+                if any(x in full_url.lower() for x in ["facebook", "twitter", "linkedin", "whatsapp", "/noticias/"]):
                     continue
 
                 seen_links.add(full_url)
@@ -88,6 +87,8 @@ class SaudeScraper:
                     editais_list.append(edital)
 
     def process_detail_page(self, url: str, titulo: str, source: str) -> Optional[EditalSaude]:
+        if url.rstrip("/").endswith(("sectics", "decit", "departamento-de-ciencia-e-tecnologia")):
+            return None
         if url.lower().endswith(".pdf"):
             return EditalSaude(
                 titulo=titulo if len(titulo) > 10 else f"Documento: {url.split('/')[-1]}",
@@ -105,7 +106,8 @@ class SaudeScraper:
         text = content.get_text()
         
         # Filtro de relevância para Saúde/Decit/SCTIE
-        is_relevant = any(kw in (titulo + text).lower() for kw in ["edital", "chamada", "fomento", "seleção", "pública", "propostas", "pesquisa"])
+        all_text = (titulo + " " + text).lower()
+        is_relevant = any(kw in all_text for kw in ["edital", "chamada", "chamamento", "fomento", "seleção", "propostas", "submissão", "inscrição"])
         is_ms = any(kw in (titulo + text).lower() for kw in ["ministério da saúde", "decit", "sctie", "sectics", "sus"])
         
         if not (is_relevant and is_ms):

@@ -1,0 +1,63 @@
+{
+  "data_auditoria": "2026-05-05T04:37:46Z",
+  "fontes": [
+    "bnb",
+    "banco_da_amazonia",
+    "desenvolve_sp",
+    "bdmg",
+    "agerio"
+  ],
+  "max_items_por_fonte": 25,
+  "pdf_skip": true,
+  "itens_analisados": 81,
+  "raw_com_pdf_url": 20,
+  "raw_com_documentos": 20,
+  "transformado_com_pdf_url": 21,
+  "transformado_com_documentos": 21,
+  "payload_com_pdf_url": 21,
+  "payload_com_documentos": 21,
+  "bruto_com_documentos_pdf": 20,
+  "bruto_com_documentos_nao_pdf": 2,
+  "transformado_com_documentos_pdf": 21,
+  "transformado_com_documentos_nao_pdf": 2,
+  "payload_com_documentos_pdf": 21,
+  "payload_com_documentos_nao_pdf": 2,
+  "perdas_pdf": 0,
+  "perdas_nao_pdf": 0,
+  "downloads_falharam": 21,
+  "downloads_sucesso": 0,
+  "links_invalidos": 0,
+  "links_relativos_restantes": 0,
+  "links_quebrados": 0,
+  "duplicados_documentos": 0,
+  "perdas_total": 0,
+  "fontes_pior_preservacao": [
+    {
+      "fonte": "desenvolve_sp",
+      "score_perda": 1.0
+    },
+    {
+      "fonte": "bnb",
+      "score_perda": 0.0
+    },
+    {
+      "fonte": "banco_da_amazonia",
+      "score_perda": 0.0
+    },
+    {
+      "fonte": "bdmg",
+      "score_perda": 0.0
+    },
+    {
+      "fonte": "agerio",
+      "score_perda": 0.0
+    }
+  ],
+  "formatos_detectados": {
+    "pdf": 66,
+    "doc": 4,
+    "docx": 4,
+    "xlsx": 1,
+    "xls": 1
+  }
+}

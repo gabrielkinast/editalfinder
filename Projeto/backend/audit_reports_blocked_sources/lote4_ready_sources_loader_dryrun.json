@@ -1,0 +1,61 @@
+{
+  "lote": 4,
+  "data_auditoria": "2026-05-03T04:32:37Z",
+  "fontes": ["apex", "faperg", "amazul", "ambev"],
+  "comando_executado": "python scripts/load_ready_sources.py --dry-run --sources apex,faperg,amazul,ambev --exclude-blocked --input-dir audit_reports_retransform/standardized --readiness audit_reports_retransform/readiness_for_loader.json",
+  "artefactos_loader": {
+    "diretorio": "audit_reports_loader_ready",
+    "id_execucao": "994cf6ee-67f8-4874-a1a1-c124e6105028"
+  },
+  "totais": {
+    "sources_selected": 4,
+    "itens_standardized_total": 31,
+    "would_upsert_total": 31,
+    "would_ignore_total": 0,
+    "mapping_errors_total": 0,
+    "critical_empty_items_total": 0,
+    "docs_input_items_total": 20,
+    "docs_preserved_items_total": 20,
+    "documentos_perdidos_no_payload_total": 0,
+    "pdf_input_items_total": 20,
+    "pdf_preserved_items_total": 20,
+    "validacao_status_preserved_items_total": 31,
+    "qualidade_dado_preserved_items_total": 31,
+    "standardized_com_documentos_nao_pdf_total": 2,
+    "payload_com_documentos_nao_pdf_total": 2,
+    "perda_documentos_nao_pdf_total": 0
+  },
+  "por_fonte": [
+    {"fonte": "amazul", "itens_standardized": 19, "would_upsert": 19, "mapping_errors": 0, "critical_empty_items": 0, "docs_preserved_items": 19, "pdf_preserved_items": 19},
+    {"fonte": "ambev", "itens_standardized": 7, "would_upsert": 7, "mapping_errors": 0, "critical_empty_items": 0, "docs_preserved_items": 0, "pdf_preserved_items": 0},
+    {"fonte": "apex", "itens_standardized": 3, "would_upsert": 3, "mapping_errors": 0, "critical_empty_items": 0, "docs_preserved_items": 0, "pdf_preserved_items": 0},
+    {"fonte": "faperg", "itens_standardized": 2, "would_upsert": 2, "mapping_errors": 0, "critical_empty_items": 0, "docs_preserved_items": 1, "pdf_preserved_items": 1}
+  ],
+  "verificacao_pos_dryrun": {
+    "total_standardized_igual_soma_fontes": "19+7+3+2=31 — ok",
+    "would_upsert_igual_31": true,
+    "mapping_errors_zero": true,
+    "critical_empty_zero": true,
+    "documentos_preservados": "docs_preserved_total=20; perda documentos no payload=0",
+    "pdf_url_preservado": "pdf_preserved_total=20 (19 amazul + 1 faperg)",
+    "validacao_status": "preservado em 31/31 itens",
+    "qualidade_dado": "preservado em 31/31 itens",
+    "apex_nao_licitacao": "grep audit_reports_retransform/standardized/apex_standardized.json: apenas tipo_recurso apoio_internacionalizacao",
+    "amazul_nao_premio_subvencao": "grep Prêmio/Subvenção/Reembolsável em amazul_standardized.json: sem ocorrências",
+    "ambev_nao_marketing_generico": "itens 100accelerator; tipo_conteudo_ambev open_innovation_aceleracao",
+    "faperg_pdf": "pdf_url preenchido num item (segundo-termo-aditivo...centelha...pdf); pdf_preserved_items=1"
+  },
+  "apply_staging_nao_executado": {
+    "powershell": [
+      "$env:EDITALFINDER_ALLOW_STAGING_APPLY=\"true\"",
+      "$env:EDITALFINDER_ENV=\"staging\"",
+      "python scripts/load_ready_sources.py --apply --staging --sources apex,faperg,amazul,ambev --exclude-blocked --input-dir audit_reports_retransform/standardized --readiness audit_reports_retransform/readiness_for_loader.json --test-db-before-apply"
+    ]
+  },
+  "validacao_pos_apply_nao_executada": [
+    "python scripts/validate_database_after_load.py --staging --source apex",
+    "python scripts/validate_database_after_load.py --staging --source faperg",
+    "python scripts/validate_database_after_load.py --staging --source amazul",
+    "python scripts/validate_database_after_load.py --staging --source ambev"
+  ]
+}

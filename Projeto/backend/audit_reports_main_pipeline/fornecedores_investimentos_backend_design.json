@@ -1,0 +1,48 @@
+{
+  "titulo": "Fornecedores & Investimentos — desenho backend (Recovery D final)",
+  "versao": "2026-05-10",
+  "objetivo": "Separar portais corporativos de fornecedores, hubs e documentação do Radar de Fomento (editais fortes).",
+  "extras_canonicos": {
+    "frontend_section": "fornecedores",
+    "mostrar_no_radar": false,
+    "mostrar_em_fornecedores": true,
+    "mostrar_em_investimentos": false,
+    "portal_tipo": "registration | hub | access_limited | documentation | supplier_resource | procurement",
+    "supplier_portal": true,
+    "recovery_d1_decisao_qa": "string",
+    "recovery_d1_motivo_qa": "string",
+    "recovery_d1_acao_recomendada": "string"
+  },
+  "tipo_oportunidade_recovery_d": [
+    "oportunidade_fornecedor",
+    "supplier_registration",
+    "supplier_portal",
+    "procurement_portal",
+    "programa_agregado",
+    "documentacao_fornecedor",
+    "recurso_fornecedor",
+    "investment_portal",
+    "corporate_venture",
+    "startup_program",
+    "internationalization_portal"
+  ],
+  "tipo_recurso_uso_atual": "Mantém-se principalmente `oportunidade_fornecedor` para destaque; `recurso_fornecedor` para bloco documentação.",
+  "codigo_python": {
+    "taxonomia_constantes": "CORE/taxonomy_filtros.py — TIPO_OPORTUNIDADE_FORNECEDORES_INVESTIMENTOS, _RECOVERY_D_FORNECEDORES_*",
+    "roteamento": "CORE/taxonomy_filtros.py — _apply_recovery_d_fornecedores_investimentos_routing",
+    "qualidade_cap": "CORE/item_quality.py — recovery_d_doc_supplier_cap / recovery_d_hub_supplier_cap"
+  },
+  "sql_proposto": {
+    "vw_fornecedores_front": "docs/sql/VW_FORNECEDORES_FRONT_PROPOSTA.sql"
+  },
+  "vw_investimentos_front_futuro": {
+    "estado": "proposta_only",
+    "nota": "Quando existirem fontes investment_portal / corporate_venture com extras.mostrar_em_investimentos=true, criar view análoga filtrando por tipo_oportunidade in (investment_portal, corporate_venture, startup_program, internationalization_portal) ou flag dedicada.",
+    "esqueleto_sql_sugerido": "create or replace view public.vw_investimentos_front as select * from public.edital where ativo = true and coalesce(extras->>'mostrar_em_investimentos','false') = 'true';"
+  },
+  "restricoes_onda": [
+    "Sem apply nesta entrega",
+    "Sem alteração a schema Supabase nesta entrega",
+    "opportunity_gate global inalterado"
+  ]
+}

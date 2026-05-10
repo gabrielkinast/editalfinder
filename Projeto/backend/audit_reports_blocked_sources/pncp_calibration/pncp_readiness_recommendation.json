@@ -1,0 +1,30 @@
+{
+  "data": "2026-05-01T23:25:00Z",
+  "classificacao": "ready_with_notes",
+  "pncp_gate_global": "blocked",
+  "justificativa_classificacao": "Transformacao local estavel, sem flags semanticas agregadas, perfil_ideal e tipos coerentes; permanece blocked por decisao de produto e pequenas ressalvas operacionais.",
+  "criterios_ready_with_notes": {
+    "transformados_maior_zero": true,
+    "ruido_baixo": true,
+    "perfil_ideal_coerente": true,
+    "flags_semanticas_reduzidas": true,
+    "links_oficiais_preservados": true,
+    "duplicata_explicada": true,
+    "api_modo_conservador": true
+  },
+  "notas": [
+    "duplicatas_link=0 no quick audit apos canonizacao do link PNCP no transformer.",
+    "17 itens com validacao_status incompleto e 1 suspeito (relaxamento opportunity_gate) — revisar antes de loader real.",
+    "pdf_url nao e requisito para readiness PNCP; documentos nao-PDF preservados com tipos oficiais onde aplicavel."
+  ],
+  "criterios_blocked_nao_acionados": [
+    "classificacao_incoerente persistente — nao observado nesta rodada pos-calibracao",
+    "muitos vazios em tipo_oportunidade/tipo_recurso/perfil_ideal — nao observado"
+  ],
+  "artefatos": {
+    "plano": "audit_reports_blocked_sources/pncp_calibration/pncp_calibration_plan.md",
+    "retransform": "audit_reports_blocked_sources/pncp_calibration/retransform/",
+    "semantic": "audit_reports_blocked_sources/pncp_calibration/semantic/",
+    "docs": "audit_reports_blocked_sources/pncp_calibration/docs/"
+  }
+}

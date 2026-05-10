@@ -1,0 +1,454 @@
+{
+  "china_nsfc": {
+    "source": "china_nsfc",
+    "crawler_exit_code": 0,
+    "exit_code_interpretation": "Coleta concluida sem preservacao forcada por falha vazia.",
+    "items_in_editais_json": 28,
+    "bruto_real_para_retransform": true,
+    "latest_error_path": null,
+    "latest_error": null,
+    "tipo_resultado_dominante": "coleta_com_itens",
+    "tipo_resultado_secundario": null,
+    "diagnostico_categoria": null,
+    "failures_jsonl_matching_lines": 0,
+    "failures_jsonl_novas_apos_threshold": 0,
+    "failures_jsonl_threshold_utc": "2026-05-02T21:19:00Z",
+    "failures_jsonl_records_this_source": [],
+    "readiness_recomendado": "ready_with_notes",
+    "readiness_notas": "Coleta com itens; algumas listagens NSFC ou espelhos falharam (HTTP nao OK). Sem latest_error apos gravacao bem-sucedida."
+  },
+  "china_cnnc": {
+    "source": "china_cnnc",
+    "crawler_exit_code": 2,
+    "exit_code_interpretation": "JSON principal preservado (politica save_output_safely); nao e crash.",
+    "items_in_editais_json": 1,
+    "bruto_real_para_retransform": true,
+    "latest_error_path": "china_cnnc\\outputs\\latest_error.json",
+    "latest_error": {
+      "output_path": "D:\\Computational_Physics\\My Projects\\edital\\china_cnnc\\outputs\\china_cnnc_editais.json",
+      "message": "todas_as_listagens_falharam_ou_rede",
+      "failure_kind": "falha_de_coleta",
+      "failure_reason": "todas_as_listagens_falharam_ou_rede",
+      "collection_failed": true,
+      "listing_events": [
+        {
+          "url": "https://www.cnnc.com.cn/",
+          "ok": false,
+          "status_code": null
+        },
+        {
+          "url": "https://ec.cnnc.com.cn/",
+          "ok": false,
+          "status_code": null
+        },
+        {
+          "url": "https://www.cnnc.com.cn/cnnc/300557/300558/index.html",
+          "ok": false,
+          "status_code": null
+        }
+      ],
+      "previous_item_count": 1,
+      "tipo_resultado": "falha_de_coleta",
+      "rejected_count": 0
+    },
+    "tipo_resultado_dominante": "falha_de_coleta",
+    "tipo_resultado_secundario": null,
+    "diagnostico_categoria": "rede_acesso_listagem",
+    "failures_jsonl_matching_lines": 2,
+    "failures_jsonl_novas_apos_threshold": 1,
+    "failures_jsonl_threshold_utc": "2026-05-02T21:19:00Z",
+    "failures_jsonl_records_this_source": [
+      {
+        "jsonl_line": 2,
+        "record": {
+          "output_path": "D:\\Computational_Physics\\My Projects\\edital\\china_cnnc\\outputs\\china_cnnc_editais.json",
+          "message": "todas_as_listagens_falharam_ou_rede",
+          "failure_kind": "falha_de_coleta",
+          "failure_reason": "todas_as_listagens_falharam_ou_rede",
+          "collection_failed": true,
+          "listing_events": [
+            {
+              "url": "https://www.cnnc.com.cn/",
+              "ok": false,
+              "status_code": null
+            },
+            {
+              "url": "https://ec.cnnc.com.cn/",
+              "ok": false,
+              "status_code": null
+            },
+            {
+              "url": "https://www.cnnc.com.cn/cnnc/300557/300558/index.html",
+              "ok": false,
+              "status_code": null
+            }
+          ],
+          "previous_item_count": 1,
+          "tipo_resultado": "falha_de_coleta",
+          "rejected_count": 0,
+          "ts_utc": "2026-05-02T12:11:19Z",
+          "source_name": "china_cnnc"
+        }
+      },
+      {
+        "jsonl_line": 4,
+        "record": {
+          "output_path": "D:\\Computational_Physics\\My Projects\\edital\\china_cnnc\\outputs\\china_cnnc_editais.json",
+          "message": "todas_as_listagens_falharam_ou_rede",
+          "failure_kind": "falha_de_coleta",
+          "failure_reason": "todas_as_listagens_falharam_ou_rede",
+          "collection_failed": true,
+          "listing_events": [
+            {
+              "url": "https://www.cnnc.com.cn/",
+              "ok": false,
+              "status_code": null
+            },
+            {
+              "url": "https://ec.cnnc.com.cn/",
+              "ok": false,
+              "status_code": null
+            },
+            {
+              "url": "https://www.cnnc.com.cn/cnnc/300557/300558/index.html",
+              "ok": false,
+              "status_code": null
+            }
+          ],
+          "previous_item_count": 1,
+          "tipo_resultado": "falha_de_coleta",
+          "rejected_count": 0,
+          "ts_utc": "2026-05-02T21:23:00Z",
+          "source_name": "china_cnnc"
+        }
+      }
+    ],
+    "readiness_recomendado": "blocked",
+    "readiness_notas": "Todas as listagens falharam (rede ou bloqueio); exit 2 preservou JSON anterior (1 item). Atualizacao em tempo real bloqueada."
+  },
+  "china_avic": {
+    "source": "china_avic",
+    "crawler_exit_code": 0,
+    "exit_code_interpretation": "Coleta concluida sem preservacao forcada por falha vazia.",
+    "items_in_editais_json": 15,
+    "bruto_real_para_retransform": true,
+    "latest_error_path": null,
+    "latest_error": null,
+    "tipo_resultado_dominante": "coleta_com_itens",
+    "tipo_resultado_secundario": null,
+    "diagnostico_categoria": null,
+    "failures_jsonl_matching_lines": 0,
+    "failures_jsonl_novas_apos_threshold": 0,
+    "failures_jsonl_threshold_utc": "2026-05-02T21:19:00Z",
+    "failures_jsonl_records_this_source": [],
+    "readiness_recomendado": "ready",
+    "readiness_notas": "15 itens gravados; coleta estavel nesta execucao."
+  },
+  "china_norinco": {
+    "source": "china_norinco",
+    "crawler_exit_code": 2,
+    "exit_code_interpretation": "JSON principal preservado (politica save_output_safely); nao e crash.",
+    "items_in_editais_json": 1,
+    "bruto_real_para_retransform": true,
+    "latest_error_path": "china_norinco\\outputs\\latest_error.json",
+    "latest_error": {
+      "output_path": "D:\\Computational_Physics\\My Projects\\edital\\china_norinco\\outputs\\china_norinco_editais.json",
+      "message": "Itens vazios após coleta sem flag de falha nem confirmação de lista vazia; preservando dados anteriores.",
+      "failure_kind": "coleta_vazia_sem_confirmacao",
+      "failure_reason": null,
+      "collection_failed": false,
+      "listing_events": [
+        {
+          "url": "http://www.norincogroup.com.cn/",
+          "ok": true,
+          "status_code": 200
+        },
+        {
+          "url": "http://www.norincogroup.com.cn/?page=2",
+          "ok": true,
+          "status_code": 200
+        },
+        {
+          "url": "http://www.norincogroup.com.cn/?page=3",
+          "ok": true,
+          "status_code": 200
+        },
+        {
+          "url": "http://www.norincogroup.com.cn/?page=4",
+          "ok": true,
+          "status_code": 200
+        },
+        {
+          "url": "http://www.norincogroup.com.cn/?page=5",
+          "ok": true,
+          "status_code": 200
+        },
+        {
+          "url": "http://en.norincogroup.com.cn/",
+          "ok": true,
+          "status_code": 200
+        },
+        {
+          "url": "http://en.norincogroup.com.cn/col/col423/index.html",
+          "ok": false,
+          "status_code": null
+        },
+        {
+          "url": "http://en.norincogroup.com.cn/col/col441/index.html",
+          "ok": false,
+          "status_code": null
+        },
+        {
+          "url": "http://en.norincogroup.com.cn/col/col445/index.html",
+          "ok": false,
+          "status_code": null
+        },
+        {
+          "url": "http://en.norincogroup.com.cn/col/col446/index.html",
+          "ok": false,
+          "status_code": null
+        },
+        {
+          "url": "http://www.norincogroup.com.cn/col/col5081/index.html",
+          "ok": true,
+          "status_code": 200
+        },
+        {
+          "url": "http://www.norincogroup.com.cn/col/col5081/index.html?page=2",
+          "ok": true,
+          "status_code": 200
+        },
+        {
+          "url": "http://www.norincogroup.com.cn/col/col5081/index.html?page=3",
+          "ok": true,
+          "status_code": 200
+        },
+        {
+          "url": "http://www.norincogroup.com.cn/col/col5081/index.html?page=4",
+          "ok": true,
+          "status_code": 200
+        },
+        {
+          "url": "http://www.norincogroup.com.cn/col/col5081/index.html?page=5",
+          "ok": true,
+          "status_code": 200
+        }
+      ],
+      "previous_item_count": 1,
+      "tipo_resultado": "coleta_vazia_pos_filtros",
+      "rejected_count": 2
+    },
+    "tipo_resultado_dominante": "coleta_vazia_sem_confirmacao",
+    "tipo_resultado_secundario": "coleta_vazia_pos_filtros",
+    "diagnostico_categoria": "filtro_keyword_gate_com_listagem_ok",
+    "failures_jsonl_matching_lines": 2,
+    "failures_jsonl_novas_apos_threshold": 1,
+    "failures_jsonl_threshold_utc": "2026-05-02T21:19:00Z",
+    "failures_jsonl_records_this_source": [
+      {
+        "jsonl_line": 3,
+        "record": {
+          "output_path": "D:\\Computational_Physics\\My Projects\\edital\\china_norinco\\outputs\\china_norinco_editais.json",
+          "message": "Itens vazios após coleta sem flag de falha nem confirmação de lista vazia; preservando dados anteriores.",
+          "failure_kind": "coleta_vazia_sem_confirmacao",
+          "failure_reason": null,
+          "collection_failed": false,
+          "listing_events": [
+            {
+              "url": "http://www.norincogroup.com.cn/",
+              "ok": true,
+              "status_code": 200
+            },
+            {
+              "url": "http://www.norincogroup.com.cn/?page=2",
+              "ok": true,
+              "status_code": 200
+            },
+            {
+              "url": "http://www.norincogroup.com.cn/?page=3",
+              "ok": true,
+              "status_code": 200
+            },
+            {
+              "url": "http://www.norincogroup.com.cn/?page=4",
+              "ok": true,
+              "status_code": 200
+            },
+            {
+              "url": "http://www.norincogroup.com.cn/?page=5",
+              "ok": true,
+              "status_code": 200
+            },
+            {
+              "url": "http://en.norincogroup.com.cn/",
+              "ok": true,
+              "status_code": 200
+            },
+            {
+              "url": "http://en.norincogroup.com.cn/col/col423/index.html",
+              "ok": false,
+              "status_code": null
+            },
+            {
+              "url": "http://en.norincogroup.com.cn/col/col441/index.html",
+              "ok": false,
+              "status_code": null
+            },
+            {
+              "url": "http://en.norincogroup.com.cn/col/col445/index.html",
+              "ok": false,
+              "status_code": null
+            },
+            {
+              "url": "http://en.norincogroup.com.cn/col/col446/index.html",
+              "ok": false,
+              "status_code": null
+            },
+            {
+              "url": "http://www.norincogroup.com.cn/col/col5081/index.html",
+              "ok": true,
+              "status_code": 200
+            },
+            {
+              "url": "http://www.norincogroup.com.cn/col/col5081/index.html?page=2",
+              "ok": true,
+              "status_code": 200
+            },
+            {
+              "url": "http://www.norincogroup.com.cn/col/col5081/index.html?page=3",
+              "ok": true,
+              "status_code": 200
+            },
+            {
+              "url": "http://www.norincogroup.com.cn/col/col5081/index.html?page=4",
+              "ok": true,
+              "status_code": 200
+            },
+            {
+              "url": "http://www.norincogroup.com.cn/col/col5081/index.html?page=5",
+              "ok": true,
+              "status_code": 200
+            }
+          ],
+          "previous_item_count": 1,
+          "tipo_resultado": "coleta_vazia_pos_filtros",
+          "rejected_count": 2,
+          "ts_utc": "2026-05-02T12:13:22Z",
+          "source_name": "china_norinco"
+        }
+      },
+      {
+        "jsonl_line": 5,
+        "record": {
+          "output_path": "D:\\Computational_Physics\\My Projects\\edital\\china_norinco\\outputs\\china_norinco_editais.json",
+          "message": "Itens vazios após coleta sem flag de falha nem confirmação de lista vazia; preservando dados anteriores.",
+          "failure_kind": "coleta_vazia_sem_confirmacao",
+          "failure_reason": null,
+          "collection_failed": false,
+          "listing_events": [
+            {
+              "url": "http://www.norincogroup.com.cn/",
+              "ok": true,
+              "status_code": 200
+            },
+            {
+              "url": "http://www.norincogroup.com.cn/?page=2",
+              "ok": true,
+              "status_code": 200
+            },
+            {
+              "url": "http://www.norincogroup.com.cn/?page=3",
+              "ok": true,
+              "status_code": 200
+            },
+            {
+              "url": "http://www.norincogroup.com.cn/?page=4",
+              "ok": true,
+              "status_code": 200
+            },
+            {
+              "url": "http://www.norincogroup.com.cn/?page=5",
+              "ok": true,
+              "status_code": 200
+            },
+            {
+              "url": "http://en.norincogroup.com.cn/",
+              "ok": true,
+              "status_code": 200
+            },
+            {
+              "url": "http://en.norincogroup.com.cn/col/col423/index.html",
+              "ok": false,
+              "status_code": null
+            },
+            {
+              "url": "http://en.norincogroup.com.cn/col/col441/index.html",
+              "ok": false,
+              "status_code": null
+            },
+            {
+              "url": "http://en.norincogroup.com.cn/col/col445/index.html",
+              "ok": false,
+              "status_code": null
+            },
+            {
+              "url": "http://en.norincogroup.com.cn/col/col446/index.html",
+              "ok": false,
+              "status_code": null
+            },
+            {
+              "url": "http://www.norincogroup.com.cn/col/col5081/index.html",
+              "ok": true,
+              "status_code": 200
+            },
+            {
+              "url": "http://www.norincogroup.com.cn/col/col5081/index.html?page=2",
+              "ok": true,
+              "status_code": 200
+            },
+            {
+              "url": "http://www.norincogroup.com.cn/col/col5081/index.html?page=3",
+              "ok": true,
+              "status_code": 200
+            },
+            {
+              "url": "http://www.norincogroup.com.cn/col/col5081/index.html?page=4",
+              "ok": true,
+              "status_code": 200
+            },
+            {
+              "url": "http://www.norincogroup.com.cn/col/col5081/index.html?page=5",
+              "ok": true,
+              "status_code": 200
+            }
+          ],
+          "previous_item_count": 1,
+          "tipo_resultado": "coleta_vazia_pos_filtros",
+          "rejected_count": 2,
+          "ts_utc": "2026-05-02T21:23:23Z",
+          "source_name": "china_norinco"
+        }
+      }
+    ],
+    "readiness_recomendado": "needs_manual_review",
+    "readiness_notas": "Run devolveu 0 itens apos filtros ou gate; subsitios EN falham; JSON anterior preservado (1 item). Requer revisao de URLs, listagens ou calibracao."
+  },
+  "china_university_procurement": {
+    "source": "china_university_procurement",
+    "crawler_exit_code": 0,
+    "exit_code_interpretation": "Coleta concluida sem preservacao forcada por falha vazia.",
+    "items_in_editais_json": 6,
+    "bruto_real_para_retransform": true,
+    "latest_error_path": null,
+    "latest_error": null,
+    "tipo_resultado_dominante": "coleta_com_itens",
+    "tipo_resultado_secundario": null,
+    "diagnostico_categoria": null,
+    "failures_jsonl_matching_lines": 0,
+    "failures_jsonl_novas_apos_threshold": 0,
+    "failures_jsonl_threshold_utc": "2026-05-02T21:19:00Z",
+    "failures_jsonl_records_this_source": [],
+    "readiness_recomendado": "ready_with_notes",
+    "readiness_notas": "6 itens (USTC); Tsinghua e PKU com falhas de listagem nesta execucao."
+  }
+}

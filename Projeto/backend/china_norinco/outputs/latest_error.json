@@ -1,0 +1,87 @@
+{
+  "output_path": "D:\\Computational_Physics\\My Projects\\edital\\china_norinco\\outputs\\china_norinco_editais.json",
+  "message": "Itens vazios após coleta sem flag de falha nem confirmação de lista vazia; preservando dados anteriores.",
+  "failure_kind": "coleta_vazia_sem_confirmacao",
+  "failure_reason": null,
+  "collection_failed": false,
+  "listing_events": [
+    {
+      "url": "http://www.norincogroup.com.cn/",
+      "ok": true,
+      "status_code": 200
+    },
+    {
+      "url": "http://www.norincogroup.com.cn/?page=2",
+      "ok": true,
+      "status_code": 200
+    },
+    {
+      "url": "http://www.norincogroup.com.cn/?page=3",
+      "ok": true,
+      "status_code": 200
+    },
+    {
+      "url": "http://www.norincogroup.com.cn/?page=4",
+      "ok": true,
+      "status_code": 200
+    },
+    {
+      "url": "http://www.norincogroup.com.cn/?page=5",
+      "ok": true,
+      "status_code": 200
+    },
+    {
+      "url": "http://en.norincogroup.com.cn/",
+      "ok": true,
+      "status_code": 200
+    },
+    {
+      "url": "http://en.norincogroup.com.cn/col/col423/index.html",
+      "ok": false,
+      "status_code": null
+    },
+    {
+      "url": "http://en.norincogroup.com.cn/col/col441/index.html",
+      "ok": false,
+      "status_code": null
+    },
+    {
+      "url": "http://en.norincogroup.com.cn/col/col445/index.html",
+      "ok": false,
+      "status_code": null
+    },
+    {
+      "url": "http://en.norincogroup.com.cn/col/col446/index.html",
+      "ok": false,
+      "status_code": null
+    },
+    {
+      "url": "http://www.norincogroup.com.cn/col/col5081/index.html",
+      "ok": true,
+      "status_code": 200
+    },
+    {
+      "url": "http://www.norincogroup.com.cn/col/col5081/index.html?page=2",
+      "ok": true,
+      "status_code": 200
+    },
+    {
+      "url": "http://www.norincogroup.com.cn/col/col5081/index.html?page=3",
+      "ok": true,
+      "status_code": 200
+    },
+    {
+      "url": "http://www.norincogroup.com.cn/col/col5081/index.html?page=4",
+      "ok": true,
+      "status_code": 200
+    },
+    {
+      "url": "http://www.norincogroup.com.cn/col/col5081/index.html?page=5",
+      "ok": true,
+      "status_code": 200
+    }
+  ],
+  "previous_item_count": 1,
+  "tipo_resultado": "coleta_vazia_pos_filtros",
+  "rejected_count": 2
+}

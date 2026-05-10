@@ -1,0 +1,37 @@
+{
+  "timestamp_utc": "2026-05-10T03:14:26.064817+00:00",
+  "duracao_segundos": 16.97,
+  "apply_executado": false,
+  "supabase_staging_tocado": false,
+  "schema_alterado": false,
+  "opportunity_gate_global_alterado": false,
+  "errors": [],
+  "warnings": [],
+  "artefatos": [
+    "audit_reports_main_pipeline/pre_dryrun_state_snapshot.md",
+    "audit_reports_main_pipeline/pre_dryrun_state_snapshot.json",
+    "audit_reports_credito/onda_c_pre_dryrun_file_check.md",
+    "audit_reports_credito/onda_c_pre_dryrun_file_check.json",
+    "audit_reports_credito/onda_c_pre_dryrun_pycompile.md",
+    "audit_reports_credito/onda_c_pre_dryrun_pycompile.json",
+    "audit_reports_credito/onda_c_readiness_for_dryrun.json",
+    "audit_reports_credito/onda_c_dryrun_standardized/",
+    "audit_reports_credito/onda_c_dryrun_standardized_copy.md",
+    "audit_reports_credito/onda_c_dryrun_standardized_copy.json",
+    "audit_reports_credito/onda_c_loader_dryrun.md",
+    "audit_reports_credito/onda_c_loader_dryrun.json",
+    "audit_reports_credito/onda_c_dryrun_semantic/",
+    "audit_reports_credito/onda_c_dryrun_semantic_summary.md",
+    "audit_reports_credito/onda_c_dryrun_semantic_summary.json",
+    "audit_reports_credito/onda_c_apply_readiness_recommendation.md",
+    "audit_reports_credito/onda_c_apply_readiness_recommendation.json"
+  ],
+ "loader_backup_note": "Se existia load_ready_summary.json global, foi guardado em load_ready_summary.backup_pre_onda_c_dryrun.json durante a captura e restaurado após copiar para onda_c_loader_dryrun.json.",
+  "script_reprodutivel": "scripts/onda_c_controlled_dryrun_prepare.py",
+  "nota_supabase": "Dry-run do loader pode inicializar cliente Supabase para diagnósticos; sem --apply/--staging não há upsert.",
+  "proximos_comandos_seguros": [
+    "Revisar audit_reports_credito/onda_c_apply_readiness_recommendation.md",
+    "Promover manualmente fontes em config/source_readiness.json após aprovação humana",
+    "Copiar standardized do lote fix para audit_reports_retransform/standardized e dry-run global com readiness oficial"
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "data_auditoria": "2026-05-09T06:12:01Z",
+  "source_filter": "japan_aist",
+  "db_connection_diag": {
+    "url_masked": "https://dof***.co",
+    "key_name_selected": "SUPABASE_SERVICE_ROLE_KEY",
+    "key_exists": true,
+    "key_len": 219,
+    "key_prefix_masked": "eyJ***zg",
+    "env_sources_found": [
+      "D:\\Computational_Physics\\My Projects\\edital\\.env.staging",
+      "D:\\Computational_Physics\\My Projects\\edital\\CORE\\.env"
+    ]
+  },
+  "contagem_geral": {
+    "total_registros": 0,
+    "registros_ativos": 0,
+    "registros_inativos": 0,
+    "por_situacao": {},
+    "por_fonte": {}
+  },
+  "blocked_sources_loaded": [],
+  "critical_alerts": [
+    "vw_editais_front vazia ou quebrada"
+  ],
+  "medium_alerts": [],
+  "duplicates_overview": {
+    "link": 0,
+    "hash_deduplicacao": 0,
+    "fonte_titulo": 0,
+    "pdf_url": 0,
+    "codigo_oportunidade": 0,
+    "numero_edital": 0,
+    "numero_processo": 0
+  },
+  "empty_fields_overview_pct": {
+    "titulo": 0.0,
+    "link": 0.0,
+    "fonte_recurso": 0.0,
+    "descricao": 0.0,
+    "extras": 0.0,
+    "tipo_recurso": 0.0,
+    "tipo_oportunidade": 0.0,
+    "area": 0.0,
+    "perfil_ideal": 0.0,
+    "publico_alvo_arr": 0.0,
+    "setor_economico": 0.0,
+    "area_cientifica": 0.0,
+    "area_tecnologica": 0.0,
+    "setor_estrategico": 0.0,
+    "validacao_status": 0.0,
+    "qualidade_dado": 0.0,
+    "pdf_url": 0.0,
+    "prazo_envio": 0.0,
+    "valor_total_texto": 0.0,
+    "valor_maximo": 0.0,
+    "valor_minimo": 0.0
+  },
+  "documents_overview": {
+    "com_documentos": 0,
+    "com_pdf_url": 0,
+    "docs_nao_pdf": 0
+  },
+  "view_overview": {
+    "view_count": 0,
+    "count_match_table": null,
+    "view_has_rows": false,
+    "error": ""
+  },
+  "rich_fields_presence": {
+    "area": {
+      "count": 0,
+      "pct": 0.0
+    },
+    "tipo_oportunidade": {
+      "count": 0,
+      "pct": 0.0
+    },
+    "tipo_recurso": {
+      "count": 0,
+      "pct": 0.0
+    },
+    "perfil_ideal": {
+      "count": 0,
+      "pct": 0.0
+    },
+    "publico_alvo_arr": {
+      "count": 0,
+      "pct": 0.0
+    },
+    "setor_economico": {
+      "count": 0,
+      "pct": 0.0
+    },
+    "area_cientifica": {
+      "count": 0,
+      "pct": 0.0
+    },
+    "area_tecnologica": {
+      "count": 0,
+      "pct": 0.0
+    },
+    "setor_estrategico": {
+      "count": 0,
+      "pct": 0.0
+    },
+    "classificacao_confianca": {
+      "count": 0,
+      "pct": 0.0
+    },
+    "qualidade_dado": {
+      "count": 0,
+      "pct": 0.0
+    },
+    "validacao_status": {
+      "count": 0,
+      "pct": 0.0
+    }
+  }
+}

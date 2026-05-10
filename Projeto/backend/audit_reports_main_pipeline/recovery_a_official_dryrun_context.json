@@ -1,0 +1,48 @@
+{
+  "timestamp": "2026-05-10T04:42:47Z",
+  "artefactos_lidos": {
+    "recovery_a_summary": "audit_reports_main_pipeline\\recovery_a_summary.json",
+    "recovery_a_by_source": "audit_reports_main_pipeline\\recovery_a_by_source.json",
+    "recovery_a_examples": "audit_reports_main_pipeline\\recovery_a_examples.json",
+    "recovery_a_apply_recommendation": "audit_reports_main_pipeline\\recovery_a_apply_recommendation.json",
+    "recovery_a_basa": "audit_reports_main_pipeline\\recovery_a_basa.json",
+    "recovery_a_dod_sbir": "audit_reports_main_pipeline\\recovery_a_dod_sbir.json",
+    "recovery_a_esa_star": "audit_reports_main_pipeline\\recovery_a_esa_star.json"
+  },
+  "confirmacao_dryrun_oficial": {
+    "banco_da_amazonia": true,
+    "dod_sbir_sttr": true,
+    "esa_star": false,
+    "motivo_esa_star": "blocked — sem fonte publica suficiente / SSO (ver recovery_a_esa_star.json)"
+  },
+  "resumo_por_artefacto": {
+    "recovery_a_summary": {
+      "banco_da_amazonia": "26 linhas de credito/fomento (Conta PJ/PF/renegociacao filtrados no crawl)",
+      "dod_sbir_sttr": "6 topicos sbir.gov/topics/<id> via fallback HTML (API 429) + soft-continue local + titulo calibrado",
+      "esa_star": "nenhum — sem listagem publica estavel sem SSO"
+    },
+    "recovery_a_by_source": {
+      "banco_da_amazonia": {
+        "mapping_errors": 0,
+        "itens_standardized": 26,
+        "validacao_predominante": "incompleto"
+      },
+      "dod_sbir_sttr": {
+        "mapping_errors": 0,
+        "itens_standardized": 6,
+        "validacao_predominante": "incompleto",
+        "nota": "API 429; topicos reais por URL"
+      },
+      "esa_star": {
+        "mapping_errors": 0,
+        "itens_standardized": 0
+      }
+    },
+    "recovery_a_readiness_slice_anterior": "ver recovery_a_readiness_for_dryrun.json (incluia esa_star como false)"
+  },
+  "criterios_loader_anteriores": {
+    "mapping_errors_total": 0,
+    "basa_itens": 26,
+    "dod_itens": 6
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "data_auditoria": "2026-05-04",
+  "arquivos_comparados": [
+    "docs/sql/schema_consolidado_editalfinder.sql",
+    "CORE/schema_sql_completo.sql",
+    "migrations/20260430_add_edital_filter_columns.sql",
+    "migrations/20260501_create_carga_execucao_and_edital_historico.sql",
+    "migrations/20260504_create_noticia_pesquisa_tables.sql",
+    "CORE/loader.py"
+  ],
+  "resumo": {
+    "compatibilidade_geral": "alta",
+    "campos_criticos_ausentes_no_consolidado": 0,
+    "divergencias_importantes": 0,
+    "divergencias_moderadas": 1
+  },
+  "loader_vs_schema": {
+    "map_to_db_schema_edital": {
+      "status": "compatível",
+      "on_conflict": {
+        "coluna": "link",
+        "unique_existente": true
+      },
+      "campos_usados_ausentes": []
+    },
+    "map_to_content_schema_pesquisa_noticia": {
+      "status": "compatível",
+      "on_conflict": {
+        "coluna": "link",
+        "unique_existente_pesquisa": true,
+        "unique_existente_noticia": true
+      },
+      "tipos_sensiveis": {
+        "setor_estrategico": "text[]",
+        "area_cientifica": "text[]",
+        "area_tecnologica": "text[]",
+        "tags": "text[]",
+        "extras": "jsonb"
+      },
+      "campos_usados_ausentes": []
+    },
+    "save_detail_tables": {
+      "edital_anexo_campos_minimos": [
+        "id_edital",
+        "nome",
+        "url",
+        "tipo"
+      ],
+      "edital_extra_campo_campos_minimos": [
+        "id_edital",
+        "chave",
+        "valor",
+        "tipo_dado",
+        "tamanho_valor",
+        "ordem"
+      ],
+      "status": "compatível"
+    },
+    "carga_execucao_db_record": {
+      "status": "compatível_com_superset",
+      "campos_legacy_usados": [
+        "id_execucao",
+        "ambiente",
+        "status",
+        "data_inicio",
+        "data_fim",
+        "duracao_segundos",
+        "fontes_carregadas",
+        "fontes_excluidas",
+        "itens_processados",
+        "itens_inseridos",
+        "itens_atualizados",
+        "itens_ignorados",
+        "erros",
+        "fontes",
+        "fontes_excluidas_detalhe",
+        "blocked_sources_loaded",
+        "environment_guard",
+        "relatorio_json"
+      ],
+      "campos_no_consolidado_nao_usados_hoje": [
+        "staging_flag",
+        "apply_status",
+        "sources",
+        "sources_selected",
+        "sources_excluded",
+        "total_itens_processados",
+        "inseridos",
+        "atualizados",
+        "ignorados",
+        "environment_safe",
+        "summary"
+      ]
+    }
+  },
+  "campos_no_sql_nao_usados_diretamente": {
+    "edital": [
+      "data_encerramento",
+      "orgao",
+      "uf",
+      "cidade",
+      "valor_estimado",
+      "origem_portal",
+      "valor_novo",
+      "valor_antigo"
+    ],
+    "pesquisa_noticia": [
+      "fonte_recurso",
+      "prazo_envio",
+      "origem_portal",
+      "perfil_ideal",
+      "publico_alvo",
+      "qualidade_dado",
+      "validacao_status",
+      "codigo_oportunidade",
+      "numero_chamada",
+      "ativo"
+    ]
+  },
+  "tipos_incompatibilidade_detectada": [],
+  "indices": {
+    "presentes_importantes": [
+      "idx_edital_link",
+      "idx_edital_hash_dedup",
+      "idx_edital_extras_gin",
+      "idx_pesquisa_link",
+      "idx_pesquisa_extras_gin",
+      "idx_noticia_link",
+      "idx_noticia_extras_gin"
+    ],
+    "lacunas": [],
+    "recomendacao_sql": "aplicado no consolidado: idx_edital_codigo_oportunidade, idx_pesquisa_codigo_oportunidade e idx_noticia_codigo_oportunidade"
+  },
+  "views": {
+    "vw_editais_front": {
+      "status": "compatível_legado_e_canonico",
+      "diferencas": [
+        "exposição canônica mantida: fonte_recurso, prazo_envio",
+        "aliases legados adicionados: fonte, fim_inscricao"
+      ],
+      "risco": "baixo",
+      "sugestao": [
+        "manter aliases legados enquanto houver clientes antigos",
+        "documentar depreciação futura de aliases, se desejado"
+      ]
+    }
+  },
+  "conclusao": {
+    "pode_usar_como_base": true,
+    "ajustes_recomendados_antes_de_congelar": [
+      "decidir se carga_execucao deve ficar estrito ao formato legado ou superset documental"
+    ]
+  }
+}
+

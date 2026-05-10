@@ -1,0 +1,73 @@
+{
+  "meta": {
+    "fonte": "doe_arpae",
+    "readiness_alvo": "ready_with_notes",
+    "data_relatorio": "2026-05-02",
+    "id_execucao_loader": "cf2d0d73-5fb7-41a9-9b93-2e5c4a52dc35",
+    "comando": "python scripts/load_ready_sources.py --dry-run --sources doe_arpae --exclude-blocked --input-dir audit_reports_retransform/standardized --readiness audit_reports_retransform/readiness_for_loader.json"
+  },
+  "readiness_diff": {
+    "config_source_readiness_json": {
+      "blocked_removido": ["doe_arpae"],
+      "ready_with_notes_adicionado": ["doe_arpae"],
+      "nota": "O loader regrava config/source_readiness.json a partir de readiness_for_loader.json (54 + 17); listas ordenadas alfabeticamente dentro de cada bucket."
+    },
+    "audit_reports_retransform_readiness_for_loader_json": {
+      "fontes_bloqueadas_temporariamente_removido": ["doe_arpae"],
+      "fontes_prontas_para_loader_adicionado": ["doe_arpae"],
+      "status_distribution_ajustes": {
+        "pronto_com_observacoes": "16 → 17",
+        "bloquear_temporariamente": "15 → 14"
+      }
+    },
+    "standardized_copiado": {
+      "origem": "CORE/transformer/doe_arpae_standardized.json",
+      "destino": "audit_reports_retransform/standardized/doe_arpae_standardized.json"
+    }
+  },
+  "dry_run_resumo": {
+    "sources_selected": 1,
+    "sources_excluded": 93,
+    "itens_standardized_total": 14,
+    "would_upsert_total": 14,
+    "would_ignore_total": 0,
+    "mapping_errors_total": 0,
+    "critical_empty_items_total": 0,
+    "docs_input_items_total": 0,
+    "docs_preserved_items_total": 0,
+    "documentos_perdidos_no_payload_total": 0,
+    "pdf_input_items_total": 0,
+    "pdf_preserved_items_total": 0,
+    "validacao_status_preserved_items_total": 14,
+    "qualidade_dado_preserved_items_total": 14,
+    "canonical_skipped_total": 0
+  },
+  "verificacao": {
+    "itens_standardized": 14,
+    "would_upsert": 14,
+    "tipo_oportunidade": "14/14 no payload (funding_opportunity ou chamada_publica)",
+    "tipo_recurso": "fomento em todos os exemplos de payload",
+    "perfil_ideal": "14/14 preenchido (lista padrão calibrada ARPA-E)",
+    "validacao_status": "incompleto nos exemplos (prazo/valor ausentes)",
+    "qualidade_dado": "60–70 nos exemplos do relatório de payload",
+    "origem_portal": "ARPA-E eXCHANGE nos itens verificados no standardized",
+    "codigo_oportunidade": "RFI-* ou DE-FOA-* alinhado ao título",
+    "links_oficiais": "link e extras.url_detalhe / url_listagem apontam para arpa-e-foa.energy.gov (portal público)",
+    "pdf_url": "null ou string vazia no bruto/payload — não inventado",
+    "documentos": "0 no input; 0 perdas (nada a perder na cadeia)"
+  },
+  "environment_guard": {
+    "has_allow_staging_apply": false,
+    "block_reason": "missing_staging_flag"
+  },
+  "recomendacao_staging": {
+    "pode_aplicar_em_staging": "condicional",
+    "texto": "Dry-run com 14 upserts simulados, 0 erros de mapeamento e 0 critical_empty. Para apply em staging: mesmo comando com flags do projeto (--apply --staging) e permissões de ambiente. Manter consciência de incompletude (prazo/valor) e ausência de PDF até haver enriquecimento opcional.",
+    "apply_nao_executado": true
+  },
+  "referencias": {
+    "load_ready_summary": "audit_reports_loader_ready/load_ready_summary.json",
+    "load_ready_by_source": "audit_reports_loader_ready/load_ready_by_source.json",
+    "load_ready_payload_examples": "audit_reports_loader_ready/load_ready_payload_examples.json"
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "fonte": "rheinmetall_suppliers",
+  "data_curadoria": "2026-05-03T18:38:00Z",
+  "bruto_path": "rheinmetall_suppliers/outputs/rheinmetall_suppliers_editais.json",
+  "itens_analisados": 2,
+  "decisao_agregada": "Ambos úteis para o módulo como oportunidade de fornecedor corporativo; recomenda-se ready_with_notes.",
+  "itens": [
+    {
+      "link": "https://www.rheinmetall.com/en/suppliers/become-a-supplier",
+      "titulo": "Become a supplier",
+      "classificacao_curadoria": "onboarding de fornecedor + procurement portal (texto público)",
+      "rotulos": {
+        "supplier_portal_real": false,
+        "onboarding_fornecedor": true,
+        "procurement_portal": true,
+        "pagina_institucional_generica": false,
+        "politica_generica": false,
+        "login_sem_contexto": false,
+        "fora_de_escopo": false
+      },
+      "acao_concreta_evidenciada": [
+        "become a supplier",
+        "new supplier / registration",
+        "procurement portal",
+        "self-registration",
+        "supplier onboarding",
+        "login (no fluxo de registo, não página só de login)"
+      ],
+      "notas": "Texto longo descreve portal digital, sourcing e contract management; não é mera 'about us'. Defesa não inferida pelo nome: texto não contém termos militares explícitos."
+    },
+    {
+      "link": "https://rheinmetall-supplier.ivalua.app",
+      "titulo": "Rheinmetall procurement portal",
+      "classificacao_curadoria": "supplier_portal real (Ivalua) com contexto mínimo no bruto",
+      "rotulos": {
+        "supplier_portal_real": true,
+        "onboarding_fornecedor": false,
+        "procurement_portal": true,
+        "pagina_institucional_generica": false,
+        "politica_generica": false,
+        "login_sem_contexto": false,
+        "fora_de_escopo": false
+      },
+      "acao_concreta_evidenciada": [
+        "Ivalua portal",
+        "procurement (título)",
+        "URL oficial do ecossistema Rheinmetall supplier"
+      ],
+      "notas": "Descrição curta no JSON bruto; ação concreta inferível pelo URL+título, não por página institucional genérica. Tratar como acesso_limitado no standardized (top-level) por falta de corpo descritivo."
+    }
+  ],
+  "campos_pos_curadoria_codigo": {
+    "tipo_recurso": "oportunidade_fornecedor",
+    "tipo_oportunidade": ["cadastro_fornecedor (item 1)", "supplier_portal (item 2)"],
+    "perfil_ideal": ["fornecedor", "empresa"],
+    "origem_portal": "Rheinmetall",
+    "validacao_status_top_level": {
+      "become-a-supplier": "incompleto",
+      "ivalua.app": "acesso_limitado"
+    },
+    "setor_estrategico_thematic": "Vazio / tags ML suprimidas para Rheinmetall sem evidência textual de defesa",
+    "gate": "opportunity_gate_relax_scope = corporate_supplier_local (inalterado globalmente)"
+  },
+  "pipeline_pos_curadoria": {
+    "retransform": "audit_reports_blocked_sources/lote5_rheinmetall_curated/",
+    "semantic": "audit_reports_blocked_sources/lote5_rheinmetall_curated_semantic/",
+    "docs": "audit_reports_blocked_sources/lote5_rheinmetall_curated_docs/"
+  },
+  "readiness_recomendado": "ready_with_notes",
+  "readiness_justificativa": "Dois links oficiais com ação de fornecedor; classificação coerente; sem política-only; gate relax documentado; volume baixo e segundo item com descrição curta (acesso_limitado).",
+  "source_readiness_atualizado": false
+}

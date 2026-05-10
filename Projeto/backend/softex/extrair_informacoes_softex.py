@@ -119,8 +119,14 @@ class SoftexScraper:
         if not soup:
             return edital
 
-        content = soup.select_one(".entry-content") or soup.select_one("article") or soup
-        text = content.get_text()
+        content = (
+            soup.select_one("article .entry-content")
+            or soup.select_one(".entry-content")
+            or soup.select_one("article.type-post")
+            or soup.select_one("article")
+            or soup
+        )
+        text = content.get_text(" ", strip=True)
         
         # Se for notícia, verifica se é anúncio de edital
         if "noticias" in url:
@@ -135,11 +141,24 @@ class SoftexScraper:
         # Descrição
         paragraphs = content.select("p")
         descricao = ""
-        for p in paragraphs[:5]:
+        for p in paragraphs[:15]:
             p_text = normalize_text(p.get_text())
-            if len(p_text) > 30:
+            if len(p_text) > 20:
                 descricao += p_text + " "
-        edital.descricao = descricao.strip() or edital.titulo
+        descricao = descricao.strip()
+        if len(descricao) < 120:
+            meta = soup.find("meta", attrs={"property": "og:description"}) or soup.find("meta", attrs={"name": "description"})
+            if meta and meta.get("content"):
+                meta_d = normalize_text(meta["content"])
+                if len(meta_d) > len(descricao):
+                    descricao = meta_d
+        if len(descricao) < 120:
+            art = soup.select_one("main article") or soup.select_one("article.type-post") or soup.select_one("article")
+            if art:
+                fb = normalize_text(art.get_text(" ", strip=True))
+                if fb and len(fb) > max(len(descricao), 80) + 20:
+                    descricao = fb[:8000]
+        edital.descricao = descricao or edital.titulo
         
         # Datas
         if not edital.data_publicacao:

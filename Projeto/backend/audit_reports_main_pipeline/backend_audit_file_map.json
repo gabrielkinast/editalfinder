@@ -1,0 +1,204 @@
+{
+  "generated_at": "2026-05-09",
+  "root": "d:\\Computational_Physics\\My Projects\\edital",
+  "summary": {
+    "source_directories_detected": 104,
+    "core_transformer_standardized_json": 94,
+    "canonical_standardized_json": 99,
+    "daily_standardized_json": 87,
+    "news_research_raw_json": 5,
+    "news_research_standardized_json": 5,
+    "news_research_loader_json": 39
+  },
+  "files": [
+    {
+      "path": "main.py",
+      "role": "Orquestrador moderno: daily, apply-edital, apply-news, validate-staging, clean-staging, status e readiness."
+    },
+    {
+      "path": "main_legacy_pipeline.py",
+      "role": "Pipeline legado monolítico: crawlers -> CORE/transformer.py -> CORE/loader.py; também fornece mapa SCRAPERS usado por main.py."
+    },
+    {
+      "path": "CORE/transformer.py",
+      "role": "Transforma outputs brutos das fontes em standardized; aplica gate, enriquecimentos, documentos, PDF e calibrações por fonte."
+    },
+    {
+      "path": "CORE/loader.py",
+      "role": "Mapeia standardized para payload de banco; faz upsert por link em edital/noticia/pesquisa e persiste anexos/extras quando tabelas auxiliares existem."
+    },
+    {
+      "path": "CORE/taxonomy_filtros.py",
+      "role": "Classificação semântica, filtros e calibrações por domínio/fonte, incluindo crédito Brasil e ondas multilaterais."
+    },
+    {
+      "path": "CORE/opportunity_gate.py",
+      "role": "Gate de oportunidade: detecta acesso, intenção, sinais fortes/fracos e motivos de rejeição."
+    },
+    {
+      "path": "CORE/official_link_only.py",
+      "role": "Tratamento de fontes com link oficial, barreiras técnicas e metadados de acesso limitado."
+    },
+    {
+      "path": "CORE/content_routing.py",
+      "role": "Decide destino operacional: public.edital, public.noticia ou public.pesquisa."
+    },
+    {
+      "path": "CORE/schema.py",
+      "role": "Modelo base normalizado e preservação de campos órfãos em extras."
+    },
+    {
+      "path": "scripts/retransform_all.py",
+      "role": "Retransforma fontes selecionadas e grava reports/standardized em diretório escolhido."
+    },
+    {
+      "path": "scripts/load_ready_sources.py",
+      "role": "Loader operacional de fontes ready/ready_with_notes; simula ou aplica em staging com guards; grava audit_reports_loader_ready."
+    },
+    {
+      "path": "scripts/audit_semantic_classification.py",
+      "role": "Audita preservação/coerência de campos semânticos nos standardized."
+    },
+    {
+      "path": "scripts/audit_docs_pipeline.py",
+      "role": "Audita documentos, PDFs e perdas entre crawler/standardized/payload."
+    },
+    {
+      "path": "scripts/audit_source_access_methods.py",
+      "role": "Audita métodos de acesso por fonte e flags de acesso limitado/official_link_only."
+    },
+    {
+      "path": "scripts/validate_database_after_load.py",
+      "role": "Validação pós-carga de edital por fonte, apenas leitura contra Supabase."
+    },
+    {
+      "path": "scripts/crawl_news_research_sources.py",
+      "role": "Coleta fontes de notícia/pesquisa por RSS/listing com filtros e orçamento de enriquecimento."
+    },
+    {
+      "path": "scripts/audit_news_research_pipeline.py",
+      "role": "Audita pipeline news/research e consolida status por fonte."
+    },
+    {
+      "path": "scripts/build_nasa_wave2_payloads.py",
+      "role": "Constrói payloads NASA Wave 2 para noticia/pesquisa/review."
+    },
+    {
+      "path": "scripts/build_darpa_news_wave_payloads.py",
+      "role": "Constrói payloads DARPA News Wave 1 e separa candidatos de edital."
+    },
+    {
+      "path": "scripts/build_iaea_wave1_payloads.py",
+      "role": "Constrói payloads IAEA Wave 1, incluindo rejected/review quando aplicável."
+    },
+    {
+      "path": "scripts/build_eurekalert_wave1_payloads.py",
+      "role": "Constrói payloads EurekAlert Wave 1 com filtros científicos e status experimental."
+    },
+    {
+      "path": "scripts/load_news_research_sources.py",
+      "role": "Loader dedicado a public.noticia/public.pesquisa; não escreve em public.edital."
+    },
+    {
+      "path": "scripts/validate_news_research_after_load.py",
+      "role": "Validação pós-carga por onda news/research, incluindo overlap com edital, review/rejected e views."
+    },
+    {
+      "path": "scripts/deactivate_removed_credito_onda_a_staging.py",
+      "role": "Desativa resíduos da Onda A por ativo=false mediante guards; limitado por input JSON."
+    },
+    {
+      "path": "config/source_readiness.json",
+      "role": "Readiness curado operacional: ready, ready_with_notes, needs_manual_review, blocked e reprocess_after_fix."
+    },
+    {
+      "path": "config/pipeline_sources.json",
+      "role": "Política de seleção do pipeline diário e ondas news/research ativas."
+    },
+    {
+      "path": "config/news_research_sources.json",
+      "role": "Configura fontes news/research, governança, seeds, filtros, status e limites."
+    },
+    {
+      "path": "audit_reports_retransform/readiness_for_loader.json",
+      "role": "Readiness derivado por auditoria/retransform; usado pelo loader junto com overlay curado."
+    },
+    {
+      "path": "audit_reports_retransform/standardized/",
+      "role": "Standardized canônico usado pelo loader de edital."
+    },
+    {
+      "path": "audit_reports_main_pipeline/last_run_summary.json",
+      "role": "Resumo da última execução do main.py."
+    },
+    {
+      "path": "audit_reports_main_pipeline/last_run_steps.json",
+      "role": "Steps detalhados da última execução do main.py."
+    },
+    {
+      "path": "audit_reports_main_pipeline/last_run_errors.json",
+      "role": "Erros agregados da última execução; atualmente pode ficar vazio mesmo com steps em erro."
+    },
+    {
+      "path": "audit_reports_loader_ready/load_ready_summary.json",
+      "role": "Resumo do loader ready: fontes, would_upsert, apply, erros, documentos e destination_counts."
+    },
+    {
+      "path": "audit_reports_news_research/news_research_consolidado.json",
+      "role": "Relatório consolidado conceitual/operacional de news/research."
+    },
+    {
+      "path": "audit_reports_news_research_loader/load_news_research_summary.json",
+      "role": "Último resumo do loader news/research, sobrescrito por fonte/onda."
+    },
+    {
+      "path": "audit_reports_credito/credito_brasil_onda_a_removed_links.json",
+      "role": "Lista estática de links removidos/ruído para desativação segura Onda A."
+    },
+    {
+      "path": "migrations/20260504_create_noticia_pesquisa_tables.sql",
+      "role": "Cria tabelas notícia/pesquisa iniciais e views front correspondentes."
+    },
+    {
+      "path": "migrations/20260505_add_missing_edital_columns_from_loader_payload.sql",
+      "role": "Migration aditiva para alinhar public.edital ao payload real do loader, incluindo crédito."
+    },
+    {
+      "path": "migrations/20260504_recreate_front_views_staging.sql",
+      "role": "Recria views front/admin para edital, notícia e pesquisa."
+    },
+    {
+      "path": "migrations/20260505_recreate_edital_views_credito_staging.sql",
+      "role": "Recria views de edital com campos de crédito."
+    },
+    {
+      "path": "migrations/DANGER_RESET_STAGING_SCHEMA.sql",
+      "role": "Reset destrutivo de staging; não deve entrar em automação diária."
+    },
+    {
+      "path": "docs/sql/schema_consolidado_editalfinder.sql",
+      "role": "Schema consolidado documental/non-destructive para ambiente novo."
+    },
+    {
+      "path": "docs/sql/check_edital_payload_columns.sql",
+      "role": "Check manual de colunas esperadas em public.edital contra payload do loader."
+    }
+  ],
+  "source_directory_examples": [
+    "finep",
+    "cnpq",
+    "fapergs",
+    "abdi",
+    "embrapii",
+    "bndes",
+    "pncp",
+    "darpa_opportunities",
+    "japan_*",
+    "china_*",
+    "bnb",
+    "banco_da_amazonia",
+    "bdmg",
+    "eureka_network",
+    "eic"
+  ]
+}

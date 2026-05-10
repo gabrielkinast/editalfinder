@@ -1,0 +1,53 @@
+{
+  "fonte": "bae_systems_suppliers",
+  "decisao_curadoria": "ready_with_notes",
+  "data_relatorio": "2026-05-04T00:09:20Z",
+  "id_execucao_loader": "eb82ebd9-197f-4ba4-9fb4-246d42885657",
+  "comando": "python scripts/load_ready_sources.py --dry-run --sources bae_systems_suppliers --exclude-blocked --input-dir audit_reports_retransform/standardized --readiness audit_reports_retransform/readiness_for_loader.json",
+  "nota_primeira_tentativa": "Se `bae_systems_suppliers` nao estiver em `fontes_prontas_para_loader`, o dry-run devolve sources_selected=0; corrigido acrescentando a entrada antes do segundo run.",
+  "resumo_loader": {
+    "mode": "dry-run",
+    "sources_selected": 1,
+    "itens_standardized_total": 3,
+    "would_upsert_total": 3,
+    "would_ignore_total": 0,
+    "mapping_errors_total": 0,
+    "critical_empty_items_total": 0,
+    "docs_input_items_total": 0,
+    "docs_preserved_items_total": 0,
+    "documentos_perdidos_no_payload_total": 0,
+    "pdf_input_items_total": 0,
+    "pdf_preserved_items_total": 0,
+    "apply_requested": false,
+    "apply_status": "not_requested"
+  },
+  "official_link_only": {
+    "itens_com_extraction_mode_no_standardized": 1,
+    "referencia_retransform_quick_audit": "audit_reports_blocked_sources/lote5_fix_bae/retransform_by_source.json — official_link_only_total: 1",
+    "ok": true
+  },
+  "verificacao_checklist": {
+    "tres_itens": true,
+    "would_upsert_3": true,
+    "mapping_errors_zero": true,
+    "critical_empty_zero": true,
+    "validacao_status": {
+      "nivel_item": ["incompleto", "acesso_limitado", "acesso_limitado"],
+      "inclui_acesso_limitado": true,
+      "nota": "Item stub corporativo + portal login HICX com acesso_limitado onde aplicavel"
+    },
+    "tipo_oportunidade": {
+      "todos_extras": "supplier_portal",
+      "aceite_vs_criterio_cadastro_ou_portal": true
+    },
+    "tipo_recurso": "oportunidade_fornecedor",
+    "perfil_ideal": ["fornecedor", "empresa"],
+    "origem_portal": "BAE Systems",
+    "idioma_original": "en",
+    "setor_estrategico": "[] nos tres itens (sem defesa so por nome)",
+    "sem_careers_news_investors": true,
+    "sem_pdfs_inventados": true,
+    "sem_documentos_perdidos": true
+  },
+  "recomendacao_staging": "Dry-run limpo apos inclusao em fontes_prontas_para_loader: apto a considerar apply em staging com revisao humana e flags de ambiente; nao executar apply nesta sessao. Nota WAF/Incapsula corporativo + 1 official_link_only."
+}

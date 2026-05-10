@@ -1,0 +1,55 @@
+{
+  "data_auditoria": "2026-05-02T10:26:11Z",
+  "fontes": [
+    {
+      "fonte": "iarpa",
+      "old_vs_new": {
+        "old_count": 1,
+        "new_count": 0,
+        "delta_count": -1,
+        "old_links_now_missing": [
+          "https://www.iarpa.gov/research-programs"
+        ],
+        "new_links_before_missing": [],
+        "core_fields_improved": {},
+        "core_fields_worsened": {
+          "area": {
+            "old": 1,
+            "new": 0,
+            "delta": -1
+          },
+          "tipo_oportunidade": {
+            "old": 1,
+            "new": 0,
+            "delta": -1
+          },
+          "tipo_recurso": {
+            "old": 1,
+            "new": 0,
+            "delta": -1
+          }
+        },
+        "old_documents_count": 0,
+        "new_documents_count": 0,
+        "old_pdf_count": 0,
+        "new_pdf_count": 0
+      }
+    },
+    {
+      "fonte": "nato_diana",
+      "old_vs_new": {
+        "old_count": 2,
+        "new_count": 2,
+        "delta_count": 0,
+        "old_links_now_missing": [],
+        "new_links_before_missing": [],
+        "core_fields_improved": {},
+        "core_fields_worsened": {},
+        "old_documents_count": 0,
+        "new_documents_count": 0,
+        "old_pdf_count": 0,
+        "new_pdf_count": 0
+      }
+    }
+  ]
+}

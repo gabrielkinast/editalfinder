@@ -1,0 +1,69 @@
+[
+  {
+    "fonte": "petrobras",
+    "raw_output_path": "petrobras/outputs/petrobras_editais.json",
+    "old_standardized_path": "CORE/transformer/petrobras_standardized.json",
+    "new_standardized_path": "audit_reports_blocked_sources/lote1_fix_petrobras/standardized/petrobras_standardized.json",
+    "itens_brutos_encontrados": 4,
+    "itens_transformados": 4,
+    "itens_rejeitados": 0,
+    "itens_incompletos": 0,
+    "itens_suspeitos": 4,
+    "documentos_preservados": 2,
+    "pdf_url_preservado": 2,
+    "area_preenchida": 2,
+    "tipo_oportunidade_preenchido": 4,
+    "tipo_recurso_preenchido": 4,
+    "perfil_ideal_preenchido": 0,
+    "qualidade_dado_media": 76.5,
+    "motivos_rejeicao_principais": {},
+    "quick_audit": {
+      "ruido_passou": 0,
+      "duplicatas_link": 0,
+      "campos_preenchidos_pct": {
+        "area": 50.0,
+        "tipo_oportunidade": 100.0,
+        "tipo_recurso": 100.0,
+        "perfil_ideal": 0.0,
+        "documentos": 50.0,
+        "pdf_url": 50.0
+      }
+    },
+    "old_vs_new": {
+      "old_count": 5,
+      "new_count": 4,
+      "delta_count": -1,
+      "old_links_now_missing": [
+        "http://investidor.bussolasocial.com.br/petrobras/editais/incentivados2023.2",
+        "http://investidor.bussolasocial.com.br/petrobras/editais/naoincentivados2023.2"
+      ],
+      "new_links_before_missing": [
+        "https://investidor.bussolasocial.com.br/petrobras/editais/naoincentivados2023.2"
+      ],
+      "core_fields_improved": {
+        "documentos": {
+          "old": 0,
+          "new": 2,
+          "delta": 2
+        }
+      },
+      "core_fields_worsened": {
+        "tipo_oportunidade": {
+          "old": 5,
+          "new": 4,
+          "delta": -1
+        },
+        "tipo_recurso": {
+          "old": 5,
+          "new": 4,
+          "delta": -1
+        }
+      },
+      "old_documents_count": 0,
+      "new_documents_count": 2,
+      "old_pdf_count": 2,
+      "new_pdf_count": 2
+    },
+    "risk_notes": []
+  }
+]

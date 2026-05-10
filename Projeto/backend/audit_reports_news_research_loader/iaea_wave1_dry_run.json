@@ -1,0 +1,463 @@
+{
+  "gerado_em": "2026-05-09T14:00:41Z",
+  "fonte": "iaea_news_publications",
+  "wave": "iaea_wave1",
+  "entrada": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_news_research\\standardized\\iaea_news_publications_standardized.json",
+  "total_entrada": 45,
+  "apos_dedupe": 45,
+  "dedupe_removidos": 0,
+  "payload_noticia_count": 5,
+  "payload_pesquisa_count": 14,
+  "review_candidates_count": 2,
+  "rejected_count": 24,
+  "excluded_quality_count": 24,
+  "excluded_validation_count": 0,
+  "entrada_missing_summary": 26,
+  "entrada_missing_date": 0,
+  "links_unicos_noticia": true,
+  "links_unicos_pesquisa": true,
+  "overlap_noticia_pesquisa_links": [],
+  "nenhum_item_public_edital": true,
+  "array_normalizations_logged": 0,
+  "readiness_apply_staging": {
+    "ok": true,
+    "nota": "Wave 1: só avançar apply após revisão humana dos review_manual e confirmação de zero erros no dry-run do loader; não executar apply automaticamente."
+  },
+  "dedupe_amostra": [],
+  "rejected": [
+    {
+      "source_id": "iaea_news_publications",
+      "link": "http://www.iaea.org/newscenter/multimedia/videos/chornobyl-40-years-improved-international-cooperation",
+      "titulo": "Chornobyl 40 Years: Improved International Cooperation",
+      "stage": "excluded_quality",
+      "motivo": "resumo_curto",
+      "extra": {
+        "len": 0
+      }
+    },
+    {
+      "source_id": "iaea_news_publications",
+      "link": "http://www.iaea.org/newscenter/multimedia/videos/chornobyl-40-years-message-from-iaea-director-general",
+      "titulo": "Chornobyl 40 Years: Message from IAEA Director General",
+      "stage": "excluded_quality",
+      "motivo": "resumo_curto",
+      "extra": {
+        "len": 0
+      }
+    },
+    {
+      "source_id": "iaea_news_publications",
+      "link": "http://www.iaea.org/newscenter/multimedia/videos/earthday-protecting-rhinos-with-nuclear-science",
+      "titulo": "#EarthDay: Protecting Rhinos With Nuclear Science",
+      "stage": "excluded_quality",
+      "motivo": "resumo_curto",
+      "extra": {
+        "len": 0
+      }
+    },
+    {
+      "source_id": "iaea_news_publications",
+      "link": "http://www.iaea.org/newscenter/news/iaea-and-japan-strengthen-emergency-preparedness-in-fukushima",
+      "titulo": "IAEA and Japan Strengthen Emergency Preparedness in Fukushima",
+      "stage": "excluded_quality",
+      "motivo": "resumo_curto",
+      "extra": {
+        "len": 0
+      }
+    },
+    {
+      "source_id": "iaea_news_publications",
+      "link": "http://www.iaea.org/newscenter/news/iaea-builds-ocean-acidification-monitoring-capacity-in-caribbean-small-island-developing-states",
+      "titulo": "IAEA Builds Ocean Acidification Monitoring Capacity in Caribbean Small Island Developing States",
+      "stage": "excluded_quality",
+      "motivo": "resumo_curto",
+      "extra": {
+        "len": 0
+      }
+    },
+    {
+      "source_id": "iaea_news_publications",
+      "link": "http://www.iaea.org/newscenter/news/iaea-research-project-strengthens-understanding-of-advanced-fuel-behaviour",
+      "titulo": "IAEA Research Project Strengthens Understanding of Advanced Fuel Behaviour",
+      "stage": "excluded_quality",
+      "motivo": "resumo_curto",
+      "extra": {
+        "len": 0
+      }
+    },
+    {
+      "source_id": "iaea_news_publications",
+      "link": "http://www.iaea.org/newscenter/news/iaea-supports-research-reactor-safety-and-utilization-efforts-in-africa",
+      "titulo": "IAEA Supports Research Reactor Safety and Utilization Efforts in Africa",
+      "stage": "excluded_quality",
+      "motivo": "resumo_curto",
+      "extra": {
+        "len": 0
+      }
+    },
+    {
+      "source_id": "iaea_news_publications",
+      "link": "http://www.iaea.org/newscenter/news/new-research-project-on-combatting-transboundary-crop-diseases",
+      "titulo": "New Research Project on Combatting Transboundary Crop Diseases",
+      "stage": "excluded_quality",
+      "motivo": "resumo_curto",
+      "extra": {
+        "len": 0
+      }
+    },
+    {
+      "source_id": "iaea_news_publications",
+      "link": "http://www.iaea.org/newscenter/news/nuclear-science-enhances-malawis-food-safety-and-export-systems",
+      "titulo": "Nuclear Science Enhances Malawi’s Food Safety and Export Systems",
+      "stage": "excluded_quality",
+      "motivo": "resumo_curto",
+      "extra": {
+        "len": 0
+      }
+    },
+    {
+      "source_id": "iaea_news_publications",
+      "link": "http://www.iaea.org/newscenter/news/powering-change-a-nuclear-engineers-journey-from-brazil-to-the-iaea",
+      "titulo": "Powering Change: A Nuclear Engineer’s Journey from Brazil to the IAEA",
+      "stage": "excluded_quality",
+      "motivo": "resumo_curto",
+      "extra": {
+        "len": 0
+      }
+    },
+    {
+      "source_id": "iaea_news_publications",
+      "link": "http://www.iaea.org/newscenter/news/republic-of-korea-nuclear-energy-safeguards-and-more",
+      "titulo": "Republic of Korea: Nuclear Energy, Safeguards and More",
+      "stage": "excluded_quality",
+      "motivo": "resumo_curto",
+      "extra": {
+        "len": 0
+      }
+    },
+    {
+      "source_id": "iaea_news_publications",
+      "link": "http://www.iaea.org/newscenter/news/six-ways-the-iaea-supports-global-health-through-nuclear-science",
+      "titulo": "Six Ways the IAEA Supports Global Health Through Nuclear Science",
+      "stage": "excluded_quality",
+      "motivo": "resumo_curto",
+      "extra": {
+        "len": 0
+      }
+    },
+    {
+      "source_id": "iaea_news_publications",
+      "link": "http://www.iaea.org/newscenter/news/strengthening-collaborative-water-resource-management-in-africa",
+      "titulo": "Strengthening Collaborative Water Resource Management in Africa",
+      "stage": "excluded_quality",
+      "motivo": "resumo_curto",
+      "extra": {
+        "len": 0
+      }
+    },
+    {
+      "source_id": "iaea_news_publications",
+      "link": "http://www.iaea.org/newscenter/news/strengthening-sustainability-iaea-conducts-training-on-strategic-environmental-assessment",
+      "titulo": "Strengthening Sustainability: IAEA Conducts Training on Strategic Environmental Assessment",
+      "stage": "excluded_quality",
+      "motivo": "resumo_curto",
+      "extra": {
+        "len": 0
+      }
+    },
+    {
+      "source_id": "iaea_news_publications",
+      "link": "http://www.iaea.org/newscenter/news/supporting-data-driven-tsetse-eradication-efforts-in-africa",
+      "titulo": "Supporting Data-Driven Tsetse Eradication Efforts in Africa",
+      "stage": "excluded_quality",
+      "motivo": "resumo_curto",
+      "extra": {
+        "len": 0
+      }
+    },
+    {
+      "source_id": "iaea_news_publications",
+      "link": "http://www.iaea.org/newscenter/pressreleases/iaea-helps-transport-high-enriched-nuclear-fuel-from-venezuela-to-the-us",
+      "titulo": "IAEA Helps Transport High Enriched Nuclear Fuel from Venezuela to the US",
+      "stage": "excluded_quality",
+      "motivo": "resumo_curto",
+      "extra": {
+        "len": 0
+      }
+    },
+    {
+      "source_id": "iaea_news_publications",
+      "link": "http://www.iaea.org/newscenter/pressreleases/iaea-rays-of-hope-initiative-delivers-critical-equipment-to-restore-radiotherapy-services-in-sudan",
+      "titulo": "IAEA Rays of Hope Initiative Delivers Critical Equipment to Restore Radiotherapy Services in Sudan",
+      "stage": "excluded_quality",
+      "motivo": "resumo_curto",
+      "extra": {
+        "len": 0
+      }
+    },
+    {
+      "source_id": "iaea_news_publications",
+      "link": "http://www.iaea.org/newscenter/pressreleases/japan-continues-to-meet-international-safety-standards-in-alps-treated-water-discharge-iaea-reports-confirm",
+      "titulo": "Japan Continues to Meet International Safety Standards in ALPS Treated Water Discharge, IAEA Reports Confirm",
+      "stage": "excluded_quality",
+      "motivo": "resumo_curto",
+      "extra": {
+        "len": 0
+      }
+    },
+    {
+      "source_id": "iaea_news_publications",
+      "link": "http://www.iaea.org/newscenter/pressreleases/tritium-level-far-below-japans-operational-limit-in-19th-batch-of-alps-treated-water-iaea-confirms",
+      "titulo": "Tritium Level Far Below Japan’s Operational Limit in 19th Batch of ALPS Treated Water, IAEA Confirms",
+      "stage": "excluded_quality",
+      "motivo": "resumo_curto",
+      "extra": {
+        "len": 0
+      }
+    },
+    {
+      "source_id": "iaea_news_publications",
+      "link": "http://www.iaea.org/newscenter/pressreleases/update-346-iaea-director-general-statement-on-situation-in-ukraine",
+      "titulo": "Update 346 – IAEA Director General Statement on Situation in Ukraine",
+      "stage": "excluded_quality",
+      "motivo": "resumo_curto",
+      "extra": {
+        "len": 0
+      }
+    },
+    {
+      "source_id": "iaea_news_publications",
+      "link": "http://www.iaea.org/newscenter/pressreleases/update-347-iaea-director-general-statement-on-situation-in-ukraine",
+      "titulo": "Update 347 – IAEA Director General Statement on Situation in Ukraine",
+      "stage": "excluded_quality",
+      "motivo": "resumo_curto",
+      "extra": {
+        "len": 0
+      }
+    },
+    {
+      "source_id": "iaea_news_publications",
+      "link": "http://www.iaea.org/newscenter/pressreleases/update-348-iaea-director-general-statement-on-situation-in-ukraine",
+      "titulo": "Update 348 – IAEA Director General Statement on Situation in Ukraine",
+      "stage": "excluded_quality",
+      "motivo": "resumo_curto",
+      "extra": {
+        "len": 0
+      }
+    },
+    {
+      "source_id": "iaea_news_publications",
+      "link": "http://www.iaea.org/newscenter/pressreleases/update-349-iaea-director-general-statement-on-situation-in-ukraine",
+      "titulo": "Update 349 – IAEA Director General Statement on Situation in Ukraine",
+      "stage": "excluded_quality",
+      "motivo": "resumo_curto",
+      "extra": {
+        "len": 0
+      }
+    },
+    {
+      "source_id": "iaea_news_publications",
+      "link": "http://www.iaea.org/publications/16021/food-safety-and-control",
+      "titulo": "Food Safety and Control",
+      "stage": "excluded_quality",
+      "motivo": "descricao_curta",
+      "extra": {
+        "len": 0
+      }
+    }
+  ],
+  "excluded_quality": [
+    {
+      "routing": "noticia",
+      "link": "http://www.iaea.org/newscenter/multimedia/videos/chornobyl-40-years-improved-international-cooperation",
+      "razao": "resumo_curto_payload"
+    },
+    {
+      "routing": "noticia",
+      "link": "http://www.iaea.org/newscenter/multimedia/videos/chornobyl-40-years-message-from-iaea-director-general",
+      "razao": "resumo_curto_payload"
+    },
+    {
+      "routing": "noticia",
+      "link": "http://www.iaea.org/newscenter/multimedia/videos/earthday-protecting-rhinos-with-nuclear-science",
+      "razao": "resumo_curto_payload"
+    },
+    {
+      "routing": "noticia",
+      "link": "http://www.iaea.org/newscenter/news/iaea-and-japan-strengthen-emergency-preparedness-in-fukushima",
+      "razao": "resumo_curto_payload"
+    },
+    {
+      "routing": "noticia",
+      "link": "http://www.iaea.org/newscenter/news/iaea-builds-ocean-acidification-monitoring-capacity-in-caribbean-small-island-developing-states",
+      "razao": "resumo_curto_payload"
+    },
+    {
+      "routing": "noticia",
+      "link": "http://www.iaea.org/newscenter/news/iaea-research-project-strengthens-understanding-of-advanced-fuel-behaviour",
+      "razao": "resumo_curto_payload"
+    },
+    {
+      "routing": "noticia",
+      "link": "http://www.iaea.org/newscenter/news/iaea-supports-research-reactor-safety-and-utilization-efforts-in-africa",
+      "razao": "resumo_curto_payload"
+    },
+    {
+      "routing": "noticia",
+      "link": "http://www.iaea.org/newscenter/news/new-research-project-on-combatting-transboundary-crop-diseases",
+      "razao": "resumo_curto_payload"
+    },
+    {
+      "routing": "noticia",
+      "link": "http://www.iaea.org/newscenter/news/nuclear-science-enhances-malawis-food-safety-and-export-systems",
+      "razao": "resumo_curto_payload"
+    },
+    {
+      "routing": "noticia",
+      "link": "http://www.iaea.org/newscenter/news/powering-change-a-nuclear-engineers-journey-from-brazil-to-the-iaea",
+      "razao": "resumo_curto_payload"
+    },
+    {
+      "routing": "noticia",
+      "link": "http://www.iaea.org/newscenter/news/republic-of-korea-nuclear-energy-safeguards-and-more",
+      "razao": "resumo_curto_payload"
+    },
+    {
+      "routing": "noticia",
+      "link": "http://www.iaea.org/newscenter/news/six-ways-the-iaea-supports-global-health-through-nuclear-science",
+      "razao": "resumo_curto_payload"
+    },
+    {
+      "routing": "noticia",
+      "link": "http://www.iaea.org/newscenter/news/strengthening-collaborative-water-resource-management-in-africa",
+      "razao": "resumo_curto_payload"
+    },
+    {
+      "routing": "noticia",
+      "link": "http://www.iaea.org/newscenter/news/strengthening-sustainability-iaea-conducts-training-on-strategic-environmental-assessment",
+      "razao": "resumo_curto_payload"
+    },
+    {
+      "routing": "noticia",
+      "link": "http://www.iaea.org/newscenter/news/supporting-data-driven-tsetse-eradication-efforts-in-africa",
+      "razao": "resumo_curto_payload"
+    },
+    {
+      "routing": "noticia",
+      "link": "http://www.iaea.org/newscenter/pressreleases/iaea-helps-transport-high-enriched-nuclear-fuel-from-venezuela-to-the-us",
+      "razao": "resumo_curto_payload"
+    },
+    {
+      "routing": "noticia",
+      "link": "http://www.iaea.org/newscenter/pressreleases/iaea-rays-of-hope-initiative-delivers-critical-equipment-to-restore-radiotherapy-services-in-sudan",
+      "razao": "resumo_curto_payload"
+    },
+    {
+      "routing": "noticia",
+      "link": "http://www.iaea.org/newscenter/pressreleases/japan-continues-to-meet-international-safety-standards-in-alps-treated-water-discharge-iaea-reports-confirm",
+      "razao": "resumo_curto_payload"
+    },
+    {
+      "routing": "noticia",
+      "link": "http://www.iaea.org/newscenter/pressreleases/tritium-level-far-below-japans-operational-limit-in-19th-batch-of-alps-treated-water-iaea-confirms",
+      "razao": "resumo_curto_payload"
+    },
+    {
+      "routing": "noticia",
+      "link": "http://www.iaea.org/newscenter/pressreleases/update-346-iaea-director-general-statement-on-situation-in-ukraine",
+      "razao": "resumo_curto_payload"
+    },
+    {
+      "routing": "noticia",
+      "link": "http://www.iaea.org/newscenter/pressreleases/update-347-iaea-director-general-statement-on-situation-in-ukraine",
+      "razao": "resumo_curto_payload"
+    },
+    {
+      "routing": "noticia",
+      "link": "http://www.iaea.org/newscenter/pressreleases/update-348-iaea-director-general-statement-on-situation-in-ukraine",
+      "razao": "resumo_curto_payload"
+    },
+    {
+      "routing": "noticia",
+      "link": "http://www.iaea.org/newscenter/pressreleases/update-349-iaea-director-general-statement-on-situation-in-ukraine",
+      "razao": "resumo_curto_payload"
+    },
+    {
+      "routing": "pesquisa",
+      "link": "http://www.iaea.org/publications/16021/food-safety-and-control",
+      "razao": "descricao_curta"
+    }
+  ],
+  "excluded_validation": [],
+  "review_candidates": [
+    {
+      "source_id": "iaea_news_publications",
+      "link": "http://www.iaea.org/newscenter/news/call-for-applications-ictp-iaea-nuclear-stakeholder-engagement-school",
+      "titulo": "Call for Applications: ICTP-IAEA Nuclear Stakeholder Engagement School",
+      "data_publicacao": "2026-04-07",
+      "routing_motivo": "iaea_oportunidade_acionavel_titulo_ou_url",
+      "routing_decision": "review_for_edital",
+      "candidate_for_edital": true,
+      "requires_manual_review": true,
+      "infer_content_type_legacy": "noticia",
+      "extras": {
+        "source_id": "iaea_news_publications",
+        "source_method": "rss",
+        "seed_url": "https://www.iaea.org/feeds/news",
+        "seed_kind": "news",
+        "kind_declared": [
+          "noticia",
+          "pesquisa"
+        ],
+        "time_window_months": 12,
+        "content_type": "noticia",
+        "titulo_original": "Call for Applications: ICTP-IAEA Nuclear Stakeholder Engagement School",
+        "descricao_original": "",
+        "origem_portal": "IAEA News and Publications",
+        "url_detalhe": "http://www.iaea.org/newscenter/news/call-for-applications-ictp-iaea-nuclear-stakeholder-engagement-school",
+        "idioma_original": "en",
+        "missing_summary": true,
+        "pesquisa_sem_data": false,
+        "page_enriched": false,
+        "iaea_descricao_fallback_titulo": false
+      }
+    },
+    {
+      "source_id": "iaea_news_publications",
+      "link": "http://www.iaea.org/newscenter/news/iaea-symposium-on-international-safeguards-2026-call-for-papers-and-student-competition",
+      "titulo": "IAEA Symposium on International Safeguards 2026: Call for Papers and Student Competition",
+      "data_publicacao": "2026-04-09",
+      "routing_motivo": "iaea_oportunidade_acionavel_titulo_ou_url",
+      "routing_decision": "review_for_edital",
+      "candidate_for_edital": true,
+      "requires_manual_review": true,
+      "infer_content_type_legacy": "noticia",
+      "extras": {
+        "source_id": "iaea_news_publications",
+        "source_method": "rss",
+        "seed_url": "https://www.iaea.org/feeds/news",
+        "seed_kind": "news",
+        "kind_declared": [
+          "noticia",
+          "pesquisa"
+        ],
+        "time_window_months": 12,
+        "content_type": "noticia",
+        "titulo_original": "IAEA Symposium on International Safeguards 2026: Call for Papers and Student Competition",
+        "descricao_original": "",
+        "origem_portal": "IAEA News and Publications",
+        "url_detalhe": "http://www.iaea.org/newscenter/news/iaea-symposium-on-international-safeguards-2026-call-for-papers-and-student-competition",
+        "idioma_original": "en",
+        "missing_summary": true,
+        "pesquisa_sem_data": false,
+        "page_enriched": false,
+        "iaea_descricao_fallback_titulo": false
+      }
+    }
+  ],
+  "governance": {
+    "public_edital": 0,
+    "review_for_edital_carregado_loader": 0,
+    "apply": false
+  }
+}

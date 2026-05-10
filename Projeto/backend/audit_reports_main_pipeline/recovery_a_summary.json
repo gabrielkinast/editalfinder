@@ -1,0 +1,96 @@
+{
+  "timestamp": "2026-05-10T04:20:33Z",
+  "retransform_summary": {
+    "data_auditoria": "2026-05-10T04:20:00Z",
+    "dry_run": true,
+    "fontes_processadas": 3,
+    "fontes_com_erro": 0,
+    "itens_brutos_total": 32,
+    "itens_transformados_total": 32,
+    "itens_rejeitados_total": 0,
+    "fontes_risco_loader": [],
+    "partial_merge_retransform": true,
+    "fontes_total_apos_merge": 3
+  },
+  "semantic_summary": {
+    "data_auditoria": "2026-05-10T04:20:21Z",
+    "fontes": 3,
+    "itens_total": 32,
+    "flags_totais": {
+      "publico_alvo_sem_evidencia": 1
+    },
+    "top20_problemas_semanticos": [
+      [
+        "publico_alvo_sem_evidencia",
+        1
+      ]
+    ],
+    "top20_ajustes_recomendados": [
+      "Restringir perfil_ideal genérico por evidência textual mínima.",
+      "Separar regras de crédito vs fomento por fonte + palavras-chave obrigatórias.",
+      "Exigir marcador de licitação para tipo_oportunidade=licitacao/compra_publica.",
+      "Reduzir classificação ampla quando classficacao_confianca=baixa.",
+      "Para fontes nucleares/defesa: usar peso institucional + objeto para evitar over/under tag.",
+      "Fortalecer extração de publico_alvo por entidades explícitas.",
+      "Adicionar fallback de área para itens com tipo_recurso definido e área vazia.",
+      "Revisar taxonomia em fontes com flag_rate > 100%."
+    ]
+  },
+  "loader_only_summary": {
+    "modo": "only_loader",
+    "data_auditoria": "2026-05-10T04:20:23Z",
+    "max_items_por_ficheiro": 50,
+    "standardized_dirs": "audit_reports_main_pipeline/recovery_a/standardized",
+    "ficheiros_standardized_encontrados": 3,
+    "ficheiros_processados": 3,
+    "itens_analisados_total": 32,
+    "itens_com_alerta_payload": 32,
+    "erros_audit_exception": 0,
+    "ranking_fontes_perda": [
+      {
+        "fonte": "banco_da_amazonia",
+        "arquivo": "audit_reports_main_pipeline\\recovery_a\\standardized\\banco_da_amazonia_standardized.json",
+        "problemas_payload": 26,
+        "itens_amostra": 26,
+        "readiness_loader_score": 0.0,
+        "riscos_sobrescrita_por_vazio": 0
+      },
+      {
+        "fonte": "dod_sbir_sttr",
+        "arquivo": "audit_reports_main_pipeline\\recovery_a\\standardized\\dod_sbir_sttr_standardized.json",
+        "problemas_payload": 6,
+        "itens_amostra": 6,
+        "readiness_loader_score": 0.0,
+        "riscos_sobrescrita_por_vazio": 0
+      },
+      {
+        "fonte": "esa_star",
+        "arquivo": "audit_reports_main_pipeline\\recovery_a\\standardized\\esa_star_standardized.json",
+        "problemas_payload": 0,
+        "itens_amostra": 0,
+        "readiness_loader_score": 100.0,
+        "riscos_sobrescrita_por_vazio": 0
+      }
+    ]
+  },
+  "criterios_recovery_a": {
+    "mapping_errors_total": 0,
+    "critical_empty_items_total": 0,
+    "setor_estrategico_gt3": 0,
+    "login_isolado_esa": 0,
+    "api_docs_como_edital": 0
+  },
+  "loader_mapping_errors_total": 0,
+  "recuperado": {
+    "banco_da_amazonia": "26 linhas de credito/fomento (Conta PJ/PF/renegociacao filtrados no crawl)",
+    "dod_sbir_sttr": "6 topicos sbir.gov/topics/<id> via fallback HTML (API 429) + soft-continue local + titulo calibrado",
+    "esa_star": "nenhum — sem listagem publica estavel sem SSO"
+  },
+  "rejeitado_ruido": {
+    "dod_sbir_sttr": "success-stories, events-listing, hubs /api, data-resources, participating-agencies, impact, FAQ, etc.",
+    "esa_star": "SSO nao coletado; allow_empty"
+  },
+  "bloqueado": {
+    "esa_star": "readiness oficial continua blocked ate fonte publica com ITT/tenders verificaveis"
+  }
+}

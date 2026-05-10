@@ -1,0 +1,62 @@
+{
+  "data_auditoria": "2026-05-05T22:15:34Z",
+  "fontes": [
+    "bid_lab",
+    "caf",
+    "fonplata",
+    "eureka_network",
+    "eic"
+  ],
+  "max_items_por_fonte": 25,
+  "pdf_skip": true,
+  "itens_analisados": 44,
+  "raw_com_pdf_url": 19,
+  "raw_com_documentos": 19,
+  "transformado_com_pdf_url": 19,
+  "transformado_com_documentos": 19,
+  "payload_com_pdf_url": 19,
+  "payload_com_documentos": 19,
+  "bruto_com_documentos_pdf": 19,
+  "bruto_com_documentos_nao_pdf": 4,
+  "transformado_com_documentos_pdf": 19,
+  "transformado_com_documentos_nao_pdf": 4,
+  "payload_com_documentos_pdf": 19,
+  "payload_com_documentos_nao_pdf": 4,
+  "perdas_pdf": 0,
+  "perdas_nao_pdf": 0,
+  "downloads_falharam": 19,
+  "downloads_sucesso": 0,
+  "links_invalidos": 0,
+  "links_relativos_restantes": 0,
+  "links_quebrados": 0,
+  "duplicados_documentos": 0,
+  "perdas_total": 1,
+  "fontes_pior_preservacao": [
+    {
+      "fonte": "bid_lab",
+      "score_perda": 1.0
+    },
+    {
+      "fonte": "caf",
+      "score_perda": 1.0
+    },
+    {
+      "fonte": "fonplata",
+      "score_perda": 1.0
+    },
+    {
+      "fonte": "eureka_network",
+      "score_perda": 0.0
+    },
+    {
+      "fonte": "eic",
+      "score_perda": 0.0
+    }
+  ],
+  "formatos_detectados": {
+    "pdf": 39,
+    "docx": 3,
+    "xlsx": 1,
+    "zip": 1
+  }
+}

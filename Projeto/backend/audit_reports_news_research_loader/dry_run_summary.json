@@ -1,0 +1,134 @@
+{
+  "data_dry_run": "2026-05-05T00:22:12Z",
+  "input_dir": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_news_research\\standardized",
+  "output_dir": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_news_research_loader",
+  "modo": "dry_run_sem_supabase_sem_apply_com_dedupe",
+  "total_itens_antes_dedupe": 158,
+  "total_itens_depois_dedupe": 158,
+  "deduplicated_total": 0,
+  "por_destino_simulado": {
+    "public.noticia": 127,
+    "public.pesquisa": 30,
+    "review_for_edital": 0,
+    "rejected_noise": 1
+  },
+  "missing_date_total": 17,
+  "review_missing_date_total": 13,
+  "missing_summary_total": 42,
+  "review_for_edital_total": 0,
+  "rejected_noise_total": 1,
+  "fora_ultimos_12_meses": 0,
+  "itens_com_missing_fields": 64,
+  "itens_com_array_issues": 0,
+  "campos_noticia_validados": [
+    "titulo",
+    "resumo",
+    "link",
+    "fonte",
+    "fonte_recurso",
+    "data_publicacao",
+    "pais",
+    "regiao",
+    "idioma_original",
+    "tipo_conteudo",
+    "area_cientifica",
+    "area_tecnologica",
+    "setor_estrategico",
+    "tags",
+    "extras",
+    "qualidade_dado",
+    "validacao_status"
+  ],
+  "campos_pesquisa_validados": [
+    "titulo",
+    "descricao",
+    "link",
+    "fonte_recurso",
+    "data_publicacao",
+    "tipo_pesquisa",
+    "area_cientifica",
+    "area_tecnologica",
+    "setor_estrategico",
+    "documentos",
+    "pdf_url",
+    "idioma_original",
+    "pais",
+    "regiao",
+    "tags",
+    "extras",
+    "qualidade_dado",
+    "validacao_status"
+  ],
+  "recomendacao_por_fonte": {
+    "darpa_news": "onda_2_apos_limpeza",
+    "darpa_opportunities_research": "onda_3_politica_edital",
+    "eurekalert_science_filtered": "pendente_crawler",
+    "iaea_news_publications": "pendente_crawler",
+    "nasa_news": "OK_onda_1_apply_futuro_se_staging_validado"
+  },
+  "readiness_apply_futuro": {
+    "darpa_news": {
+      "apply_futuro_ok": true,
+      "motivo": "criterios_minimos_ok"
+    },
+    "darpa_opportunities_research": {
+      "apply_futuro_ok": false,
+      "motivo": "volume_baixo"
+    },
+    "eurekalert_science_filtered": {
+      "apply_futuro_ok": false,
+      "motivo": "volume_baixo"
+    },
+    "iaea_news_publications": {
+      "apply_futuro_ok": false,
+      "motivo": "maioria_sem_resumo"
+    },
+    "nasa_news": {
+      "apply_futuro_ok": true,
+      "motivo": "criterios_minimos_ok"
+    }
+  },
+  "ajustes_necessarios_pre_apply": [
+    "Reexecutar crawler após melhorias de RSS/HTML para datas e resumos.",
+    "Itens noticia com review_missing_date: corrigir data na fonte antes do apply.",
+    "Itens com missing_summary: enriquecer só a partir de HTML/RSS real (sem invenção).",
+    "Manter dedupe por link no job de carga dedicado.",
+    "Auditoria manual apenas para review_for_edital; nunca public.edital automático neste módulo."
+  ],
+  "plano_ativacao": {
+    "waves": {
+      "onda_1": [
+        "nasa_news"
+      ],
+      "onda_2": [
+        "darpa_news"
+      ],
+      "onda_3": [
+        "darpa_opportunities_research"
+      ],
+      "pendentes": [
+        "iaea_news_publications",
+        "eurekalert_science_filtered"
+      ]
+    },
+    "notas_por_fonte": {
+      "nasa_news": "candidata_onda_1_criterios_apply_futuro_ok",
+      "darpa_news": "onda_2_apos_reduzir_ruido_e_sem_data",
+      "darpa_opportunities_research": "onda_3_apos_politica_pesquisa_vs_edital",
+      "iaea_news_publications": "pendente_crawler",
+      "eurekalert_science_filtered": "pendente_crawler"
+    },
+    "totais_globais": {
+      "total_antes_dedupe": 158,
+      "total_depois_dedupe": 158,
+      "deduplicated_total": 0,
+      "public.noticia": 127,
+      "public.pesquisa": 30,
+      "review_for_edital": 0,
+      "rejected_noise": 1,
+      "missing_date_total": 17,
+      "review_missing_date_total": 13,
+      "missing_summary_total": 42
+    }
+  }
+}

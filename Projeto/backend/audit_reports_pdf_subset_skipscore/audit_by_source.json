@@ -1,0 +1,446 @@
+[
+  {
+    "ficheiro": "aneel\\outputs\\aneel_editais.json",
+    "fonte_pipeline": "aneel",
+    "categoria": "energia",
+    "file_error": null,
+    "itens_brutos_amostra": 25,
+    "itens_brutos_ficheiro": 27,
+    "noise_titulos_bruto": 0,
+    "transformados": 3,
+    "rejeitados": 22,
+    "incompletos": 3,
+    "suspeitos": 0,
+    "campos_preenchidos_pct": {
+      "titulo": "100%",
+      "descricao": "100%",
+      "link": "100%",
+      "fonte": "100%",
+      "data_publicacao": "67%",
+      "fim_inscricao": "0%",
+      "situacao": "100%",
+      "valor": "67%",
+      "programa": "100%",
+      "acao": "100%",
+      "tipo_recurso": "100%",
+      "tipo_oportunidade": "0%",
+      "area": "0%",
+      "publico_alvo": "33%",
+      "perfil_ideal": "0%",
+      "setor_economico": "0%",
+      "area_cientifica": "0%",
+      "area_tecnologica": "0%",
+      "setor_estrategico": "0%",
+      "extras": "100%",
+      "pdf_url": "100%",
+      "documentos": "0%",
+      "validacao_status": "100%",
+      "qualidade_dado": "100%"
+    },
+    "motivos_rejeicao": {
+      "Pontuacao abaixo do minimo (oportunidade nao evidenciada)": 8,
+      "Relevancia limite: poucos sinais de oportunidade": 14
+    },
+    "qualidade_media": 87.33,
+    "maturidade_detectada": "fraco",
+    "amostras_boas": [
+      {
+        "titulo": "ANEEL - Call for Projects H2 PDI",
+        "link": "https://git.aneel.gov.br/publico/centralconteudo/-/raw/main/Assuntos/PDI/Call_for_Projects_H2_-_PDI.pdf"
+      },
+      {
+        "titulo": "Chamadas de Projetos de PDI Estratégicos",
+        "link": "https://www.gov.br/aneel/pt-br/assuntos/programa-de-pesquisa-desenvolvimento-e-inovacao/chamadas-de-projetos-de-pdi-estrategicos"
+      },
+      {
+        "titulo": "Guia de Comunicação dos Programas de PDI e EE ANEEL",
+        "link": "https://www.gov.br/aneel/pt-br/assuntos/programa-de-pesquisa-desenvolvimento-e-inovacao/guia-de-comunicacao-dos-programas-de-pdi-e-ee-aneel"
+      }
+    ],
+    "amostras_ruins": [
+      {
+        "titulo": "ANEEL - adsp2024778 2",
+        "link": "https://www2.aneel.gov.br/cedoc/adsp2024778_2.pdf",
+        "motivo": "Pontuacao abaixo do minimo (oportunidade nao evidenciada)",
+        "content_type": "generic_page"
+      },
+      {
+        "titulo": "Sistemas de Armazenamento de Energia",
+        "link": "https://www.gov.br/aneel/pt-br/assuntos/programa-de-pesquisa-desenvolvimento-e-inovacao/chamadas-de-projetos-de-pdi-estrategicos/sistemas-de-armazenamento-de-energia",
+        "motivo": "Relevancia limite: poucos sinais de oportunidade",
+        "content_type": "institutional_program"
+      },
+      {
+        "titulo": "Guia de Avaliação da Maturidade Tecnológica da ANEEL",
+        "link": "https://www.gov.br/aneel/pt-br/assuntos/programa-de-pesquisa-desenvolvimento-e-inovacao/guia-de-avaliacao-da-maturidade-tecnologica-da-aneel",
+        "motivo": "Relevancia limite: poucos sinais de oportunidade",
+        "content_type": "institutional_program"
+      },
+      {
+        "titulo": "Prêmio ANEEL de Inovação",
+        "link": "https://www.gov.br/aneel/pt-br/assuntos/programa-de-pesquisa-desenvolvimento-e-inovacao/premio-aneel-de-inovacao",
+        "motivo": "Relevancia limite: poucos sinais de oportunidade",
+        "content_type": "institutional_program"
+      },
+      {
+        "titulo": "PDI ANEEL",
+        "link": "https://www.gov.br/aneel/pt-br/assuntos/programa-de-pesquisa-desenvolvimento-e-inovacao/procedimentos-manuais-guias-e-relatorios-do-pdi-aneel",
+        "motivo": "Pontuacao abaixo do minimo (oportunidade nao evidenciada)",
+        "content_type": "institutional_program"
+      }
+    ],
+    "noise_passou_transformer": [],
+    "duplicados_link_bruto": 0,
+    "duplicados_link_transformados": 0,
+    "data_loss_examples": [],
+    "classification_flag_examples": [],
+    "profile_flag_examples": [],
+    "date_flag_examples": [],
+    "value_flag_examples": [],
+    "loader_simulacao_n": 3,
+    "loader_primeiro": {
+      "chaves_core": 25,
+      "chaves_apos_strip": 25,
+      "nulos_core": 14,
+      "nulos_strip": 15,
+      "extras_preservado_fora_strip": true,
+      "amostra_chaves_strip": [
+        "compatibilidade",
+        "contato",
+        "contrapartida",
+        "data_publicacao",
+        "descricao",
+        "elegibilidade",
+        "fonte_recurso",
+        "id_organizacao",
+        "justificativa",
+        "link",
+        "link_inscricao",
+        "objetivo",
+        "ods",
+        "pdf_url",
+        "prazo_envio",
+        "publico_alvo",
+        "recomendacao",
+        "regiao",
+        "score",
+        "score_detalhado",
+        "situacao",
+        "temas",
+        "titulo",
+        "valor_maximo",
+        "valor_minimo"
+      ]
+    },
+    "tempo_ms": 8190
+  },
+  {
+    "ficheiro": "bndes\\outputs\\bndes_editais.json",
+    "fonte_pipeline": "bndes",
+    "categoria": "credito",
+    "file_error": null,
+    "itens_brutos_amostra": 19,
+    "itens_brutos_ficheiro": 19,
+    "noise_titulos_bruto": 0,
+    "transformados": 0,
+    "rejeitados": 19,
+    "incompletos": 0,
+    "suspeitos": 0,
+    "campos_preenchidos_pct": {
+      "titulo": "0%",
+      "descricao": "0%",
+      "link": "0%",
+      "fonte": "0%",
+      "data_publicacao": "0%",
+      "fim_inscricao": "0%",
+      "situacao": "0%",
+      "valor": "0%",
+      "programa": "0%",
+      "acao": "0%",
+      "tipo_recurso": "0%",
+      "tipo_oportunidade": "0%",
+      "area": "0%",
+      "publico_alvo": "0%",
+      "perfil_ideal": "0%",
+      "setor_economico": "0%",
+      "area_cientifica": "0%",
+      "area_tecnologica": "0%",
+      "setor_estrategico": "0%",
+      "extras": "0%",
+      "pdf_url": "0%",
+      "documentos": "0%",
+      "validacao_status": "0%",
+      "qualidade_dado": "0%"
+    },
+    "motivos_rejeicao": {
+      "Relevancia limite: poucos sinais de oportunidade": 19
+    },
+    "qualidade_media": null,
+    "maturidade_detectada": "quebrado",
+    "amostras_boas": [],
+    "amostras_ruins": [
+      {
+        "titulo": "Chamada Pública para Seleção de Fundo de Investimento em Participações de Startups de Inteligência Artificial (IA) - 2026",
+        "link": "https://www.bndes.gov.br?1dmy&urile=wcm%3apath%3a%2Fbndes_institucional%2Fhome%2Fmercado-de-capitais%2Ffundos-de-investimentos%2Fchamadas-publicas-para-fundos%2Ffip-ia-2026",
+        "motivo": "Relevancia limite: poucos sinais de oportunidade",
+        "content_type": "investment"
+      },
+      {
+        "titulo": "Chamada Pública para Seleção de Fundos de Investimento em Índice de Mercado – Fundos de Índice (ETFs)",
+        "link": "https://www.bndes.gov.br?1dmy&urile=wcm%3apath%3a%2Fbndes_institucional%2Fhome%2Fmercado-de-capitais%2Ffundos-de-investimentos%2Fchamadas-publicas-para-fundos%2Fchamada-publica-selecao-fundos-indice-de-mercado-etf",
+        "motivo": "Relevancia limite: poucos sinais de oportunidade",
+        "content_type": "generic_page"
+      },
+      {
+        "titulo": "Chamada Pública para Seleção de Fundos com Foco em Mitigação Climática - Chamada de Clima",
+        "link": "https://www.bndes.gov.br?1dmy&urile=wcm%3apath%3a%2Fbndes_institucional%2Fhome%2Fmercado-de-capitais%2Ffundos-de-investimentos%2Fchamadas-publicas-para-fundos%2Fchamada-publica-selecao-fundos-mitigacao-climatica",
+        "motivo": "Relevancia limite: poucos sinais de oportunidade",
+        "content_type": "generic_page"
+      },
+      {
+        "titulo": "Chamada Pública para Seleção de Fundo de Investimento em Participações no Complexo de Saúde - 2025",
+        "link": "https://www.bndes.gov.br?1dmy&urile=wcm%3apath%3a%2Fbndes_institucional%2Fhome%2Fmercado-de-capitais%2Ffundos-de-investimentos%2Fchamadas-publicas-para-fundos%2Fchamada-fundo-investimento-complexo-da-saude",
+        "motivo": "Relevancia limite: poucos sinais de oportunidade",
+        "content_type": "investment"
+      },
+      {
+        "titulo": "Chamada Pública para Seleção de Gestor para Fundo de Investimento em Participações nos setores de Transição Energética e Descarbonização - 2025",
+        "link": "https://www.bndes.gov.br?1dmy&urile=wcm%3apath%3a%2Fbndes_institucional%2Fhome%2Fmercado-de-capitais%2Ffundos-de-investimentos%2Fchamadas-publicas-para-fundos%2Ffip-transicao-energetica-2025",
+        "motivo": "Relevancia limite: poucos sinais de oportunidade",
+        "content_type": "generic_page"
+      }
+    ],
+    "noise_passou_transformer": [],
+    "duplicados_link_bruto": 0,
+    "duplicados_link_transformados": 0,
+    "data_loss_examples": [],
+    "classification_flag_examples": [],
+    "profile_flag_examples": [],
+    "date_flag_examples": [],
+    "value_flag_examples": [],
+    "loader_simulacao_n": 0,
+    "loader_primeiro": null,
+    "tempo_ms": 32
+  },
+  {
+    "ficheiro": "cnpq\\outputs\\cnpq_editais.json",
+    "fonte_pipeline": "cnpq",
+    "categoria": "fomento",
+    "file_error": null,
+    "itens_brutos_amostra": 14,
+    "itens_brutos_ficheiro": 14,
+    "noise_titulos_bruto": 0,
+    "transformados": 0,
+    "rejeitados": 14,
+    "incompletos": 0,
+    "suspeitos": 0,
+    "campos_preenchidos_pct": {
+      "titulo": "0%",
+      "descricao": "0%",
+      "link": "0%",
+      "fonte": "0%",
+      "data_publicacao": "0%",
+      "fim_inscricao": "0%",
+      "situacao": "0%",
+      "valor": "0%",
+      "programa": "0%",
+      "acao": "0%",
+      "tipo_recurso": "0%",
+      "tipo_oportunidade": "0%",
+      "area": "0%",
+      "publico_alvo": "0%",
+      "perfil_ideal": "0%",
+      "setor_economico": "0%",
+      "area_cientifica": "0%",
+      "area_tecnologica": "0%",
+      "setor_estrategico": "0%",
+      "extras": "0%",
+      "pdf_url": "0%",
+      "documentos": "0%",
+      "validacao_status": "0%",
+      "qualidade_dado": "0%"
+    },
+    "motivos_rejeicao": {
+      "Relevancia limite: poucos sinais de oportunidade": 14
+    },
+    "qualidade_media": null,
+    "maturidade_detectada": "quebrado",
+    "amostras_boas": [],
+    "amostras_ruins": [
+      {
+        "titulo": "Chamada CNPq/SETEC/MCTI N° 13/2026 - Apoio a Eventos de Promoção do Empreendedorismo e da Inovação no Brasil",
+        "link": "https://www.gov.br/cnpq/pt-br/chamadas/abertas-para-submissao",
+        "motivo": "Relevancia limite: poucos sinais de oportunidade",
+        "content_type": "generic_page"
+      },
+      {
+        "titulo": "Chamada CNPq/MCTI/FNDCT Nº 12/2026 - Programa PCI",
+        "link": "https://www.gov.br/cnpq/pt-br/chamadas/abertas-para-submissao",
+        "motivo": "Relevancia limite: poucos sinais de oportunidade",
+        "content_type": "scholarship"
+      },
+      {
+        "titulo": "Chamada CNPq/MCTI Nº 11/2026 – RENAMA e NAMs",
+        "link": "https://www.gov.br/cnpq/pt-br/chamadas/abertas-para-submissao",
+        "motivo": "Relevancia limite: poucos sinais de oportunidade",
+        "content_type": "generic_page"
+      },
+      {
+        "titulo": "Chamada Pública MCTI/CNPq Nº 02/2026 Programa de Cooperação Latino-Americana e Caribenha em Ciência, Tecnologia e Inovação - PROSUL Pepe Mujica",
+        "link": "https://www.gov.br/cnpq/pt-br/chamadas/abertas-para-submissao",
+        "motivo": "Relevancia limite: poucos sinais de oportunidade",
+        "content_type": "generic_page"
+      },
+      {
+        "titulo": "Chamada Nº 28/2025 - Apoio a Projetos de Cooperação CNPq-TUBITAK",
+        "link": "https://www.gov.br/cnpq/pt-br/chamadas/abertas-para-submissao",
+        "motivo": "Relevancia limite: poucos sinais de oportunidade",
+        "content_type": "generic_page"
+      }
+    ],
+    "noise_passou_transformer": [],
+    "duplicados_link_bruto": 3,
+    "duplicados_link_transformados": 0,
+    "data_loss_examples": [],
+    "classification_flag_examples": [],
+    "profile_flag_examples": [],
+    "date_flag_examples": [],
+    "value_flag_examples": [],
+    "loader_simulacao_n": 0,
+    "loader_primeiro": null,
+    "tempo_ms": 23
+  },
+  {
+    "ficheiro": "finep\\outputs\\finep_editais.json",
+    "fonte_pipeline": "finep",
+    "categoria": "fomento",
+    "file_error": null,
+    "itens_brutos_amostra": 10,
+    "itens_brutos_ficheiro": 10,
+    "noise_titulos_bruto": 0,
+    "transformados": 1,
+    "rejeitados": 9,
+    "incompletos": 0,
+    "suspeitos": 0,
+    "campos_preenchidos_pct": {
+      "titulo": "100%",
+      "descricao": "100%",
+      "link": "100%",
+      "fonte": "100%",
+      "data_publicacao": "100%",
+      "fim_inscricao": "100%",
+      "situacao": "100%",
+      "valor": "100%",
+      "programa": "100%",
+      "acao": "100%",
+      "tipo_recurso": "100%",
+      "tipo_oportunidade": "0%",
+      "area": "0%",
+      "publico_alvo": "100%",
+      "perfil_ideal": "0%",
+      "setor_economico": "0%",
+      "area_cientifica": "0%",
+      "area_tecnologica": "0%",
+      "setor_estrategico": "0%",
+      "extras": "100%",
+      "pdf_url": "100%",
+      "documentos": "0%",
+      "validacao_status": "100%",
+      "qualidade_dado": "100%"
+    },
+    "motivos_rejeicao": {
+      "Relevancia limite: poucos sinais de oportunidade": 9
+    },
+    "qualidade_media": 100.0,
+    "maturidade_detectada": "fraco",
+    "amostras_boas": [
+      {
+        "titulo": "Ecossistema Tecnológico de Biorrefino",
+        "link": "https://www.finep.gov.br/chamadas-publicas/chamadapublica/782"
+      }
+    ],
+    "amostras_ruins": [
+      {
+        "titulo": "FIP Startup Inteligência Artificial",
+        "link": "https://www.finep.gov.br/chamadas-publicas/chamadapublica/784",
+        "motivo": "Relevancia limite: poucos sinais de oportunidade",
+        "content_type": "investment"
+      },
+      {
+        "titulo": "Agricultura familiar para ICTs 2026",
+        "link": "https://www.finep.gov.br/chamadas-publicas/chamadapublica/783",
+        "motivo": "Relevancia limite: poucos sinais de oportunidade",
+        "content_type": "generic_page"
+      },
+      {
+        "titulo": "PRÊMIO MULHERES INOVADORAS 7ª EDIÇÃO – 2026",
+        "link": "https://www.finep.gov.br/chamadas-publicas/chamadapublica/781",
+        "motivo": "Relevancia limite: poucos sinais de oportunidade",
+        "content_type": "investment"
+      },
+      {
+        "titulo": "Finep Mais Inovação Brasil - Rodada 2 – Tecnologias Digitais",
+        "link": "https://www.finep.gov.br/chamadas-publicas/chamadapublica/779",
+        "motivo": "Relevancia limite: poucos sinais de oportunidade",
+        "content_type": "generic_page"
+      },
+      {
+        "titulo": "Finep Mais Inovação Brasil – Rodada 2 – Semicondutores",
+        "link": "https://www.finep.gov.br/chamadas-publicas/chamadapublica/780",
+        "motivo": "Relevancia limite: poucos sinais de oportunidade",
+        "content_type": "generic_page"
+      }
+    ],
+    "noise_passou_transformer": [],
+    "duplicados_link_bruto": 0,
+    "duplicados_link_transformados": 0,
+    "data_loss_examples": [],
+    "classification_flag_examples": [],
+    "profile_flag_examples": [
+      {
+        "fonte": "finep",
+        "titulo": "Ecossistema Tecnológico de Biorrefino",
+        "perfil_ideal": null,
+        "nota": "fonte estratégica sem perfil inferido"
+      }
+    ],
+    "date_flag_examples": [],
+    "value_flag_examples": [],
+    "loader_simulacao_n": 1,
+    "loader_primeiro": {
+      "chaves_core": 25,
+      "chaves_apos_strip": 25,
+      "nulos_core": 9,
+      "nulos_strip": 10,
+      "extras_preservado_fora_strip": true,
+      "amostra_chaves_strip": [
+        "compatibilidade",
+        "contato",
+        "contrapartida",
+        "data_publicacao",
+        "descricao",
+        "elegibilidade",
+        "fonte_recurso",
+        "id_organizacao",
+        "justificativa",
+        "link",
+        "link_inscricao",
+        "objetivo",
+        "ods",
+        "pdf_url",
+        "prazo_envio",
+        "publico_alvo",
+        "recomendacao",
+        "regiao",
+        "score",
+        "score_detalhado",
+        "situacao",
+        "temas",
+        "titulo",
+        "valor_maximo",
+        "valor_minimo"
+      ]
+    },
+    "tempo_ms": 2263
+  }
+]

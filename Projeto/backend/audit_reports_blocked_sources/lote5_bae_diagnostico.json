@@ -1,0 +1,41 @@
+{
+  "meta": {
+    "fonte": "bae_systems_suppliers",
+    "lote": 5,
+    "data_auditoria": "2026-05-03T23:19:00Z",
+    "objetivo": "Diagnosticar 0 brutos e viabilidade de colheita BAE / HICX"
+  },
+  "crawler_roda": true,
+  "script": "bae_systems_suppliers/main_bae_systems_suppliers.py",
+  "seeds_listagem": [
+    "https://www.baesystems.com/en-uk/suppliers/responsible-supply-chain",
+    "https://www.baesystems.com/en/suppliers"
+  ],
+  "motivo_zero_brutos_antes": [
+    "`scrape_html_portal` depende de HTML real em baesystems.com; probes reportam ~924 bytes ou 403/Incapsula — poucas âncoras com texto + keywords passam o filtro.",
+    "Links para o portal HICX não surgem no DOM quando a listagem é um desafio anti-bot."
+  ],
+  "portal_hicx_oficial": {
+    "host": "baesystems.hicx.net",
+    "urls_verificaveis": [
+      "https://baesystems.hicx.net/bae/hicxesm-portal/app/discovery-login.html",
+      "https://baesystems.hicx.net/bae/hicxesm-portal/app/index.html"
+    ],
+    "nota": "Páginas públicas com texto de registo de fornecedor / login; não é hicx.com marketing."
+  },
+  "paginas_corporativas_suppliers": {
+    "responsible_supply_chain": "https://www.baesystems.com/en-uk/suppliers/responsible-supply-chain",
+    "probe_ambiente": "403/Incapsula comum para requests simples"
+  },
+  "acao_concreta_fornecedor": true,
+  "login_sem_contexto": false,
+  "official_link_only": {
+    "habilitado_em": "CORE/official_link_only.py — allowlist `bae_systems_suppliers` com dominios baesystems.com e hicx.net; barreira tecnica inclui `bae_baesystems_waf_stub` e manifest-style methods.",
+    "uso_stub_corporativo": "Stub factual (sem inventar corpo) quando GET corporativo devolve desafio/403."
+  },
+  "referencias_lote5": [
+    "audit_reports_blocked_sources/lote5_suppliers_diagnostico.json",
+    "audit_reports_blocked_sources/lote5_suppliers_examples.json",
+    "audit_reports_access/source_access_by_source.json"
+  ]
+}

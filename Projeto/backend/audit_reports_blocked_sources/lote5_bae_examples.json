@@ -1,0 +1,22 @@
+{
+  "fonte": "bae_systems_suppliers",
+  "data": "2026-05-03",
+  "hicx_portal_oficial": {
+    "new_supplier_registration": "https://baesystems.hicx.net/bae/hicxesm-portal/app/discovery-login.html",
+    "supplier_portal_login": "https://baesystems.hicx.net/bae/hicxesm-portal/app/index.html",
+    "excerto_publico": "If you would like to register your company within our supplier database ... Start new supplier registration"
+  },
+  "corporate_stub_oficial": {
+    "url": "https://www.baesystems.com/en-uk/suppliers/responsible-supply-chain",
+    "extraction_mode_pos_transform": "official_link_only",
+    "nota": "Apenas quando GET automatizado falha; descricao factual do estado de fetch (sem inventar conteudo corporativo)."
+  },
+  "standardized_resumo": {
+    "itens": 3,
+    "tipo_recurso": "oportunidade_fornecedor",
+    "tipo_oportunidade": "supplier_portal",
+    "origem_portal": "BAE Systems",
+    "idioma_original": "en",
+    "regiao": "Internacional"
+  }
+}

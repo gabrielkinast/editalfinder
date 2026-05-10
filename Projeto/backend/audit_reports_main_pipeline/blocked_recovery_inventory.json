@@ -1,0 +1,168 @@
+{
+  "data_auditoria": "2026-05-10T12:00:00Z",
+  "escopo": "Somente leitura de artefactos locais; sem Supabase, sem apply, sem alteração de readiness ou schema.",
+  "nota_glob_rejected_json": "Padrão audit_reports_credito/**/rejected*.json e audit_reports_retransform/**/rejected*.json: 0 ficheiros no workspace; rejeições foram inferidas de retransform_by_source.json e diagnostico.",
+  "fontes_lidas": [
+    "config/source_readiness.json",
+    "audit_reports_retransform/readiness_for_loader.json",
+    "audit_reports_loader_ready/load_ready_excluded_sources.json",
+    "audit_reports_loader_ready/load_ready_by_source.json",
+    "audit_reports_loader_ready/load_ready_summary.json",
+    "audit_reports_loader_ready/staging_load_errors.json",
+    "audit_reports_main_pipeline/post_daily_warning_examples.json",
+    "audit_reports_credito/lote_inovacao_internacional_onda_c_fix/retransform_by_source.json",
+    "audit_reports_credito/lote_credito_multilateral_onda_b_fix/retransform_by_source.json",
+    "audit_reports_credito/lote_inovacao_internacional_onda_c_diagnostico.json"
+  ],
+  "blocked_config_source_readiness": [
+    "bid_lab",
+    "caf",
+    "china_cnnc",
+    "dcta_ita_iae",
+    "esa_star",
+    "japan_e_rad",
+    "japan_jaxa",
+    "marinha",
+    "sam_gov",
+    "science_scraper"
+  ],
+  "needs_manual_review_config": [
+    "china_avic",
+    "china_norinco",
+    "eurostars",
+    "fonplata",
+    "innovate_uk",
+    "japan_jaea",
+    "japan_jst",
+    "japan_kawasaki_heavy"
+  ],
+  "readiness_for_loader_fontes_bloqueadas_temporariamente": [
+    "badesul",
+    "bid_lab",
+    "caf",
+    "china_cnnc",
+    "dcta_ita_iae",
+    "japan_e_rad",
+    "japan_jaxa",
+    "marinha",
+    "petrobras",
+    "plataforma_industria",
+    "pncp",
+    "sam_gov",
+    "science_scraper",
+    "senai",
+    "softex",
+    "esa_star"
+  ],
+  "nota_divergencia_config_vs_readiness_json": "readiness_for_loader.json inclui fontes bloqueadas_temporariamente além do array blocked de source_readiness.json (ex.: badesul, petrobras, pncp, plataforma_industria, senai, softex). O slice efetivo de loader usou overlay em load_ready_summary.json — não alterar nesta auditoria.",
+  "suspeito_ativo_true_por_fonte_top": {
+    "BASA": 22,
+    "AMAZUL": 14,
+    "BADESUL": 7,
+    "Ambev": 7,
+    "General Dynamics Suppliers": 6,
+    "Apex Brasil": 4,
+    "Petrobras": 4,
+    "Lockheed Martin Suppliers": 3,
+    "BAE Systems Suppliers": 2,
+    "EIT": 2,
+    "Rheinmetall Suppliers": 2,
+    "SENAI": 2,
+    "Softex": 2,
+    "ESA OSIP": 1,
+    "Thales Suppliers": 1,
+    "UKRI Funding": 1
+  },
+  "warnings_globais_resumo": {
+    "fonte": "post_daily_warning_examples.json",
+    "timestamp_referencia": "2026-05-10T03:35:07Z",
+    "prazo_vencido_ativo_true": 41,
+    "titulo_ruidoso": 6,
+    "credito_tipo_recurso_incoerente": 4,
+    "setor_estrategico_muito_amplo": 72,
+    "suspeito_ativo_true": 80
+  },
+  "rejeicoes_retransform_resumo": [
+    {
+      "lote": "lote_inovacao_internacional_onda_c_fix",
+      "fonte": "esa_star",
+      "brutos": 1,
+      "transformados": 0,
+      "rejeitados": 1,
+      "motivos_principais": {
+        "Pagina de login ou autenticacao": 1
+      }
+    },
+    {
+      "lote": "lote_inovacao_internacional_onda_c_fix",
+      "fonte": "esa_osip",
+      "brutos": 18,
+      "transformados": 17,
+      "rejeitados": 1,
+      "motivos_principais": {
+        "Pagina de login ou autenticacao": 1
+      }
+    },
+    {
+      "lote": "lote_credito_multilateral_onda_b_fix",
+      "fonte": "eureka_network",
+      "brutos": 23,
+      "transformados": 21,
+      "rejeitados": 2,
+      "motivos_principais": {
+        "Pagina de login ou autenticacao": 2
+      }
+    },
+    {
+      "lote": "lote_credito_multilateral_onda_b_fix",
+      "fonte": "fonplata",
+      "brutos": 7,
+      "transformados": 5,
+      "rejeitados": 2,
+      "motivos_principais": {
+        "Relevancia limite: poucos sinais de oportunidade": 2
+      }
+    }
+  ],
+  "fontes_raw_mas_zero_standardized_ou_risco_loader": [
+    {
+      "fonte": "esa_star",
+      "raw_count": 1,
+      "standardized_count": 0,
+      "evidencia": "lote_inovacao_internacional_onda_c_diagnostico.json / retransform_by_source.json; raw em esa_star/outputs/esa_star_editais.json"
+    },
+    {
+      "fonte": "bid_lab",
+      "raw_count": 0,
+      "standardized_count": 0,
+      "nota": "bloqueada; crawler sem itens no dry-run onda_b"
+    },
+    {
+      "fonte": "caf",
+      "raw_count": 0,
+      "standardized_count": 0,
+      "nota": "idem bid_lab no lote multilateral"
+    }
+  ],
+  "staging_load_errors": {
+    "path": "audit_reports_loader_ready/staging_load_errors.json",
+    "linhas": 0,
+    "interpretacao": "array vazio na leitura atual — sem erros de carga registrados nesse ficheiro"
+  },
+  "outputs_latest_error_encontrados": [
+    "senai/outputs/latest_error.json",
+    "japan_mitsubishi_heavy/outputs/latest_error.json",
+    "horizon_europe/outputs/latest_error.json",
+    "japan_kawasaki_heavy/outputs/latest_error.json",
+    "china_norinco/outputs/latest_error.json",
+    "china_cnnc/outputs/latest_error.json",
+    "japan_jaea/outputs/latest_error.json"
+  ],
+  "classificacao_estrategica_resumo": {
+    "1_manter_bloqueado": "Portais só login (ex.: entrada Hicx sem call pública), science_scraper instável, sam_gov sem pipeline maduro, páginas API/docs do SBIR como edital",
+    "2_recuperar_crawler_parser": "ESA STAR via feed/listagem pública + regra login; DoD SBIR filtrar hubs; Eureka login em URLs de recurso; PDF pipeline UKRI/EIT",
+    "3_recuperar_curadoria_manual": "Fonplata RH vs procurement; NUCLEP/AMAZUL institucional vs licitação; linhas BASA ambíguas",
+    "4_soft_continue_local": "Fontes needs_manual_review com coleta_vazia mas HTML 200 — expandir seeds e confirmar lista vazia",
+    "5_fonte_alternativa": "Open ITT ESA (página pública esa.int), SBIR topics API oficial, feeds UKRI/Eurostars"
+  }
+}

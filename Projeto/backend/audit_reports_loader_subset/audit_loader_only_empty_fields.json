@@ -1,0 +1,128 @@
+{
+  "campos_mais_vazios_no_payload": [
+    {
+      "campo": "contrapartida",
+      "contagem_vazio": 43
+    },
+    {
+      "campo": "ods",
+      "contagem_vazio": 43
+    },
+    {
+      "campo": "regiao",
+      "contagem_vazio": 43
+    },
+    {
+      "campo": "link_inscricao",
+      "contagem_vazio": 40
+    },
+    {
+      "campo": "temas",
+      "contagem_vazio": 34
+    },
+    {
+      "campo": "valor_minimo",
+      "contagem_vazio": 32
+    },
+    {
+      "campo": "contato",
+      "contagem_vazio": 26
+    },
+    {
+      "campo": "elegibilidade",
+      "contagem_vazio": 23
+    },
+    {
+      "campo": "compatibilidade",
+      "contagem_vazio": 19
+    },
+    {
+      "campo": "justificativa",
+      "contagem_vazio": 19
+    },
+    {
+      "campo": "objetivo",
+      "contagem_vazio": 19
+    },
+    {
+      "campo": "pdf_url",
+      "contagem_vazio": 19
+    },
+    {
+      "campo": "prazo_envio",
+      "contagem_vazio": 19
+    },
+    {
+      "campo": "recomendacao",
+      "contagem_vazio": 19
+    },
+    {
+      "campo": "score_detalhado",
+      "contagem_vazio": 19
+    },
+    {
+      "campo": "data_publicacao",
+      "contagem_vazio": 17
+    },
+    {
+      "campo": "publico_alvo",
+      "contagem_vazio": 17
+    },
+    {
+      "campo": "valor_maximo",
+      "contagem_vazio": 4
+    }
+  ],
+  "fontes_com_maior_perda": [
+    {
+      "fonte": "bndes",
+      "arquivo": "CORE\\transformer\\bndes_standardized.json",
+      "problemas_payload": 19,
+      "itens_amostra": 19,
+      "readiness_loader_score": 0.0,
+      "riscos_sobrescrita_por_vazio": 19
+    },
+    {
+      "fonte": "cnpq",
+      "arquivo": "CORE\\transformer\\cnpq_standardized.json",
+      "problemas_payload": 14,
+      "itens_amostra": 14,
+      "readiness_loader_score": 0.0,
+      "riscos_sobrescrita_por_vazio": 0
+    },
+    {
+      "fonte": "finep",
+      "arquivo": "CORE\\transformer\\finep_standardized.json",
+      "problemas_payload": 10,
+      "itens_amostra": 10,
+      "readiness_loader_score": 0.0,
+      "riscos_sobrescrita_por_vazio": 0
+    }
+  ],
+  "fontes_mais_prontas_loader": [
+    {
+      "fonte": "bndes",
+      "arquivo": "CORE\\transformer\\bndes_standardized.json",
+      "problemas_payload": 19,
+      "itens_amostra": 19,
+      "readiness_loader_score": 0.0,
+      "riscos_sobrescrita_por_vazio": 19
+    },
+    {
+      "fonte": "cnpq",
+      "arquivo": "CORE\\transformer\\cnpq_standardized.json",
+      "problemas_payload": 14,
+      "itens_amostra": 14,
+      "readiness_loader_score": 0.0,
+      "riscos_sobrescrita_por_vazio": 0
+    },
+    {
+      "fonte": "finep",
+      "arquivo": "CORE\\transformer\\finep_standardized.json",
+      "problemas_payload": 10,
+      "itens_amostra": 10,
+      "readiness_loader_score": 0.0,
+      "riscos_sobrescrita_por_vazio": 0
+    }
+  ]
+}

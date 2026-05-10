@@ -1,0 +1,85 @@
+[
+  {
+    "fonte": "bid_lab",
+    "crawler": "bid_lab/main_bid_lab.py",
+    "output_bruto": "bid_lab/outputs/bid_lab_editais.json",
+    "standardized": "audit_reports_credito/lote_credito_multilateral_onda_b_fix/standardized/bid_lab_standardized.json",
+    "itens_brutos": 0,
+    "itens_transformados": 0,
+    "itens_rejeitados_gate": 0,
+    "readiness_recomendado": "blocked",
+    "readiness_motivo": "Cloudflare 403 em bidlab.org; coleta segura retorna zero sem bypass.",
+    "acesso_audit": {
+      "classificacao_primaria": "cloudflare_403",
+      "metodo_recomendado": "blocked_access_limited"
+    }
+  },
+  {
+    "fonte": "caf",
+    "crawler": "caf/main_caf.py",
+    "output_bruto": "caf/outputs/caf_editais.json",
+    "standardized": "audit_reports_credito/lote_credito_multilateral_onda_b_fix/standardized/caf_standardized.json",
+    "itens_brutos": 0,
+    "itens_transformados": 0,
+    "itens_rejeitados_gate": 0,
+    "readiness_recomendado": "blocked",
+    "readiness_motivo": "Resposta Incapsula/WAF ('Request unsuccessful') e falhas TLS em probes; listagens nao renderizam links via fetch leve.",
+    "acesso_audit": {
+      "classificacao_primaria": "endpoint_quebrado",
+      "metodo_recomendado": "revisar_manualmente"
+    }
+  },
+  {
+    "fonte": "fonplata",
+    "crawler": "fonplata/main_fonplata.py",
+    "output_bruto": "fonplata/outputs/fonplata_editais.json",
+    "standardized": "audit_reports_credito/lote_credito_multilateral_onda_b_fix/standardized/fonplata_standardized.json",
+    "itens_brutos": 7,
+    "itens_transformados": 5,
+    "itens_rejeitados_gate": 2,
+    "motivos_rejeicao_principais": {
+      "Relevancia limite: poucos sinais de oportunidade": 2
+    },
+    "itens_suspeitos": 5,
+    "readiness_recomendado": "needs_manual_review",
+    "readiness_motivo": "Volume baixo; mistura roster de consultores / RH com financiamento; sem PDFs; curadoria para separar procurement vs programa vs edital.",
+    "acesso_audit": {
+      "classificacao_primaria": "captcha",
+      "readiness_access_tag": "blocked_access_limited",
+      "nota": "Probe classificou como captcha; crawler obteve HTML 200 na listagem — validar ambiente."
+    }
+  },
+  {
+    "fonte": "eureka_network",
+    "crawler": "eureka_network/main_eureka_network.py",
+    "output_bruto": "eureka_network/outputs/eureka_network_editais.json",
+    "standardized": "audit_reports_credito/lote_credito_multilateral_onda_b_fix/standardized/eureka_network_standardized.json",
+    "itens_brutos": 23,
+    "itens_transformados": 21,
+    "itens_rejeitados_gate": 2,
+    "motivos_rejeicao_principais": {
+      "Pagina de login ou autenticacao": 2
+    },
+    "readiness_recomendado": "ready_with_notes",
+    "readiness_motivo": "Chamadas Eurostars/Globalstars/Network Projects coerentes; 2 URLs hub tratadas como login pelo gate; PDFs parciais; revisar agregadores vs call especifica.",
+    "acesso_audit": {
+      "classificacao_primaria": "ok_html_publico",
+      "metodo_recomendado": "usar_rss"
+    }
+  },
+  {
+    "fonte": "eic",
+    "crawler": "eic/main_eic.py",
+    "output_bruto": "eic/outputs/eic_editais.json",
+    "standardized": "audit_reports_credito/lote_credito_multilateral_onda_b_fix/standardized/eic_standardized.json",
+    "itens_brutos": 14,
+    "itens_transformados": 14,
+    "itens_rejeitados_gate": 0,
+    "readiness_recomendado": "ready_with_notes",
+    "readiness_motivo": "Paginas oficiais de funding Pathfinder/Transition/Accelerator com PDFs WP; muitos itens sao hubs de programa — distinguir call ativa vs material de programa em curadoria.",
+    "acesso_audit": {
+      "classificacao_primaria": "ok_html_publico",
+      "metodo_recomendado": "usar_sitemap"
+    }
+  }
+]

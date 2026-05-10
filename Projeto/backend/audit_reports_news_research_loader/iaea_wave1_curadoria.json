@@ -1,0 +1,239 @@
+{
+  "gerado_em": "2026-05-05T12:00:00Z",
+  "fonte": "iaea_news_publications",
+  "wave": "iaea_wave1",
+  "entradas_lidas": {
+    "payload_noticia": "audit_reports_news_research_loader/iaea_wave1_payload_noticia.json",
+    "payload_pesquisa": "audit_reports_news_research_loader/iaea_wave1_payload_pesquisa.json",
+    "review_candidates": "audit_reports_news_research_loader/iaea_wave1_review_candidates.json",
+    "rejected": "audit_reports_news_research_loader/iaea_wave1_rejected.json"
+  },
+  "review_candidates_curadoria": [
+    {
+      "indice": 1,
+      "titulo": "Call for Applications: ICTP-IAEA Nuclear Stakeholder Engagement School",
+      "link": "http://www.iaea.org/newscenter/news/call-for-applications-ictp-iaea-nuclear-stakeholder-engagement-school",
+      "motivo_rota": "iaea_oportunidade_acionavel_titulo_ou_url",
+      "data_publicacao": "2026-04-07",
+      "parece_oportunidade_acionavel": true,
+      "parece_pesquisa_publicacao": false,
+      "parece_noticia": false,
+      "manter_fora_do_payload_noticia_pesquisa": true,
+      "mover_para_pesquisa": false,
+      "mover_para_noticia": false,
+      "manter_como_review_for_edital_futuro": true,
+      "nota_curador": "Convite explícito a candidaturas (escola ICTP-IAEA). Não é notícia editorial nem publicação técnica catalogada; adequado a fila de revisão humana / eventual edital-referência fora deste apply."
+    },
+    {
+      "indice": 2,
+      "titulo": "IAEA Symposium on International Safeguards 2026: Call for Papers and Student Competition",
+      "link": "http://www.iaea.org/newscenter/news/iaea-symposium-on-international-safeguards-2026-call-for-papers-and-student-competition",
+      "motivo_rota": "iaea_oportunidade_acionavel_titulo_ou_url",
+      "data_publicacao": "2026-04-09",
+      "parece_oportunidade_acionavel": true,
+      "parece_pesquisa_publicacao": false,
+      "parece_noticia": false,
+      "manter_fora_do_payload_noticia_pesquisa": true,
+      "mover_para_pesquisa": false,
+      "mover_para_noticia": false,
+      "manter_como_review_for_edital_futuro": true,
+      "nota_curador": "Call for papers / competição para estudantes — acionável. Manter fora de `public.noticia` e `public.pesquisa` neste módulo; revisão futura."
+    }
+  ],
+  "rejected_curadoria": {
+    "total": 24,
+    "por_motivo_pipeline": {
+      "resumo_curto": 23,
+      "descricao_curta": 1
+    },
+    "por_stage": {
+      "excluded_quality": 24
+    },
+    "categorias_curadoria": {
+      "resumo_fraco_sem_enriquecimento": 23,
+      "descricao_insuficiente_titulo_curto": 1,
+      "generico_heuristica": 0,
+      "ambiguo_noticia_pesquisa": 0,
+      "oportunidade_mas_nao_rota_review": 1,
+      "outro": 0
+    },
+    "nota_oportunidade_nao_rota": "O item «Uranium Mine Challenge: Call for Student Submissions» foi rejeitado por `resumo_curto` (RSS sem corpo). Por título poderia ter ido para review de oportunidade; não reincluir automaticamente — avaliar numa iteração futura com frases/heurísticas alinhadas.",
+    "amostra_ate_10": [
+      {
+        "titulo": "Chornobyl 40 Years: Improved International Cooperation",
+        "link": "http://www.iaea.org/newscenter/multimedia/videos/chornobyl-40-years-improved-international-cooperation",
+        "motivo": "resumo_curto",
+        "categoria_curador": "resumo_fraco_sem_enriquecimento",
+        "tipo_conteudo_inferido": "noticia_multimedia"
+      },
+      {
+        "titulo": "How Nuclear Science Helps Tackle Food Waste",
+        "link": "http://www.iaea.org/newscenter/news/how-nuclear-science-helps-tackle-food-waste",
+        "motivo": "resumo_curto",
+        "categoria_curador": "resumo_fraco_sem_enriquecimento",
+        "tipo_conteudo_inferido": "noticia"
+      },
+      {
+        "titulo": "IAEA Rays of Hope Initiative Delivers Critical Equipment to Restore Radiotherapy Services in Sudan",
+        "link": "http://www.iaea.org/newscenter/pressreleases/iaea-rays-of-hope-initiative-delivers-critical-equipment-to-restore-radiotherapy-services-in-sudan",
+        "motivo": "resumo_curto",
+        "categoria_curador": "resumo_fraco_sem_enriquecimento",
+        "tipo_conteudo_inferido": "noticia_press_release"
+      },
+      {
+        "titulo": "Update 348 – IAEA Director General Statement on Situation in Ukraine",
+        "link": "http://www.iaea.org/newscenter/pressreleases/update-348-iaea-director-general-statement-on-situation-in-ukraine",
+        "motivo": "resumo_curto",
+        "categoria_curador": "resumo_fraco_sem_enriquecimento",
+        "tipo_conteudo_inferido": "noticia_press_release"
+      },
+      {
+        "titulo": "Japan Continues to Meet International Safety Standards in ALPS Treated Water Discharge, IAEA Reports Confirm",
+        "link": "http://www.iaea.org/newscenter/pressreleases/japan-continues-to-meet-international-safety-standards-in-alps-treated-water-discharge-iaea-reports-confirm",
+        "motivo": "resumo_curto",
+        "categoria_curador": "resumo_fraco_sem_enriquecimento",
+        "tipo_conteudo_inferido": "noticia_press_release"
+      },
+      {
+        "titulo": "New Research Project on Combatting Transboundary Crop Diseases",
+        "link": "http://www.iaea.org/newscenter/news/new-research-project-on-combatting-transboundary-crop-diseases",
+        "motivo": "resumo_curto",
+        "categoria_curador": "resumo_fraco_sem_enriquecimento",
+        "tipo_conteudo_inferido": "noticia"
+      },
+      {
+        "titulo": "Six Ways the IAEA Supports Global Health Through Nuclear Science",
+        "link": "http://www.iaea.org/newscenter/news/six-ways-the-iaea-supports-global-health-through-nuclear-science",
+        "motivo": "resumo_curto",
+        "categoria_curador": "resumo_fraco_sem_enriquecimento",
+        "tipo_conteudo_inferido": "noticia"
+      },
+      {
+        "titulo": "Uranium Mine Challenge: Call for Student Submissions",
+        "link": "http://www.iaea.org/newscenter/news/uranium-mine-challenge-call-for-student-submissions",
+        "motivo": "resumo_curto",
+        "categoria_curador": "oportunidade_mas_nao_rota_review",
+        "tipo_conteudo_inferido": "oportunidade_potencial"
+      },
+      {
+        "titulo": "Strengthening Collaborative Water Resource Management in Africa",
+        "link": "http://www.iaea.org/newscenter/news/strengthening-collaborative-water-resource-management-in-africa",
+        "motivo": "resumo_curto",
+        "categoria_curador": "resumo_fraco_sem_enriquecimento",
+        "tipo_conteudo_inferido": "noticia"
+      },
+      {
+        "titulo": "Food Safety and Control",
+        "link": "http://www.iaea.org/publications/16021/food-safety-and-control",
+        "motivo": "descricao_curta",
+        "categoria_curador": "descricao_insuficiente_titulo_curto",
+        "tipo_conteudo_inferido": "publicacao_tecnica_curta"
+      }
+    ],
+    "reinclusao_futura_recomendada_sem_auto": [
+      "Conjunto dos 23 itens com `resumo_curto`: em geral notícias ou comunicados IAEA úteis após enriquecimento por página (meta/og/1º parágrafo) ou resumo manual — não reincluir em lote sem nova validação.",
+      "Press releases «Update NNN – Ukraine» e vídeos Chornobyl: alto valor informativo; candidatos fortes a uma Wave 1b após `page_enrich` ou texto curado.",
+      "«Food Safety and Control»: publicação com título curto; reavaliar com página de catálogo ou título longo normalizado, ou excluir permanentemente se for apenas stub."
+    ]
+  },
+  "payload_noticia_curadoria": {
+    "count": 5,
+    "checklist_global": {
+      "todas_com_data_publicacao": true,
+      "todas_com_resumo_min_40": true,
+      "todas_com_link_http": true,
+      "todas_com_fonte_e_fonte_recurso": true,
+      "tipo_conteudo_noticia": true,
+      "observacao_tipo_pesquisa": "Todos os itens trazem `tipo_pesquisa: relatorio_tecnico` herdado do standardized; `tipo_conteudo` é `noticia` — coerente para o loader de notícia. Opcional: limpar `tipo_pesquisa` em payload só-notícia numa refinagem futura (cosmético)."
+    },
+    "itens": [
+      {
+        "titulo": "Ecuador and Panama Use Nuclear Techniques to Research, Restore and Protect their Cultural Heritage",
+        "link": "http://www.iaea.org/newscenter/news/ecuador-and-panama-use-nuclear-techniques-to-research-restore-and-protect-their-cultural-heritage",
+        "data_publicacao": "2026-04-08",
+        "resumo_chars": 152,
+        "seed_kind": "news",
+        "ok": true
+      },
+      {
+        "titulo": "IAEA Delivers Report to Viet Nam on its Nuclear Power Infrastructure Development",
+        "link": "http://www.iaea.org/newscenter/news/iaea-delivers-report-to-viet-nam-on-its-nuclear-power-infrastructure-development",
+        "data_publicacao": "2026-04-22",
+        "resumo_chars": 214,
+        "seed_kind": "news",
+        "ok": true
+      },
+      {
+        "titulo": "IAEA ZODIAC Week Sets Roadmap to Strengthen Global Pandemic Readiness",
+        "link": "http://www.iaea.org/newscenter/news/iaea-zodiac-week-sets-roadmap-to-strengthen-global-pandemic-readiness",
+        "data_publicacao": "2026-04-29",
+        "resumo_chars": 214,
+        "seed_kind": "news",
+        "ok": true,
+        "nota": "Resumo contém entidade HTML `&nbsp;` residual — aceitável; pode normalizar no loader/sanitize se desejado."
+      },
+      {
+        "titulo": "Nuclear Techniques Help Liberia Develop Climate-Resilient Rice",
+        "link": "http://www.iaea.org/newscenter/news/nuclear-techniques-help-liberia-develop-climate-resilient-rice",
+        "data_publicacao": "2026-04-29",
+        "resumo_chars": 132,
+        "seed_kind": "news",
+        "ok": true
+      },
+      {
+        "titulo": "Singapore Signs its Fourth Country Programme Framework (CPF) for 2026–2031",
+        "link": "http://www.iaea.org/newscenter/news/singapore-signs-its-fourth-country-programme-framework-cpf-for-2026-2031",
+        "data_publicacao": "2026-04-23",
+        "resumo_chars": 200,
+        "seed_kind": "news",
+        "ok": true,
+        "nota": "Trecho de resumo pode estar truncado na origem RSS/HTML; comprimento ainda ≥40 caracteres úteis."
+      }
+    ]
+  },
+  "payload_pesquisa_curadoria": {
+    "count": 14,
+    "com_fallback_titulo_extras": 14,
+    "links_com_iaea_descricao_fallback_titulo_true": [
+      "http://www.iaea.org/publications/15913/ageing-management-programmes-for-spent-fuel-dry-storage-systems",
+      "http://www.iaea.org/publications/15969/interlaboratory-comparison-on-the-determination-of-trace-elements-and-rare-earth-element-mass-fractions-in-marine-sediment-sample-iaea-mesl-2024-ilc-te-sediment",
+      "http://www.iaea.org/publications/15989/technological-obsolescence-management-of-nuclear-power-plants",
+      "http://www.iaea.org/publications/16008/approaches-to-operating-nuclear-power-plants-to-mitigate-production-losses-caused-by-climate-change-and-environmental-hazards",
+      "http://www.iaea.org/publications/16009/integrated-review-service-for-radioactive-waste-and-spent-fuel-management-decommissioning-and-remediation-artemis-guidelines",
+      "http://www.iaea.org/publications/16010/volcanic-tephra-fallout-hazard-assessment-and-the-associated-design-and-operational-considerations-for-nuclear-installations",
+      "http://www.iaea.org/publications/16013/decommissioning-and-waste-management-considerations-for-fusion-facilities",
+      "http://www.iaea.org/publications/16017/good-practices-and-lessons-learned-from-the-long-term-operation-of-nuclear-power-plants",
+      "http://www.iaea.org/publications/16018/ssdl-newsletter-issue-no-82-december-2025",
+      "http://www.iaea.org/publications/16022/syllabus-for-the-training-of-radiation-protection-officers",
+      "http://www.iaea.org/publications/16023/specific-infrastructure-considerations-for-nuclear-energy-applications-beyond-electricity",
+      "http://www.iaea.org/publications/16047/nuclear-data-newsletter-no-80-issue-no-80-january-2026",
+      "http://www.iaea.org/publications/8574/clinical-training-of-medical-physicists-specializing-in-diagnostic-radiology",
+      "http://www.iaea.org/publications/8656/clinical-training-of-medical-physicists-specializing-in-nuclear-medicine"
+    ],
+    "checklist_global": {
+      "todas_com_descricao_min_40": true,
+      "todas_com_data_publicacao": true,
+      "justificativa_data_separada": "Não necessária: datas presentes em `data_publicacao` (catálogo/RSS).",
+      "todas_com_link_http": true,
+      "fonte_recurso_iaea_news_publications": true,
+      "tipo_conteudo_pesquisa": true,
+      "tipo_pesquisa_definido": true,
+      "observacao_fallback": "As 14 entradas usam `extras.iaea_descricao_fallback_titulo: true`: a descrição/resumo coincide com o título oficial porque o feed não traz texto — aceitável para Wave 1 como registo de catálogo; melhorar num ciclo futuro com resumo da página ou metadados do PDF."
+    }
+  },
+  "recomendacao_final": {
+    "apto_apply_staging": true,
+    "texto": "Aprovado para um apply manual de staging limitado a **5 notícias + 14 pesquisas** já presentes nos payloads, desde que se mantenham os 2 `review_candidates` e os 24 `rejected` fora do `load --apply`. O dry-run anterior reportou `errors_count: 0`. Nenhuma alteração a gates globais nem a `public.edital` neste passo.",
+    "apply_escopo": {
+      "incluir_noticia": 5,
+      "incluir_pesquisa": 14,
+      "excluir_review_candidates": 2,
+      "excluir_rejected": 24
+    },
+    "ressalvas": [
+      "Pesquisas: descrição = título (fallback) — aceitável com consciência de qualidade documental.",
+      "Notícias: campo `tipo_pesquisa` redundante; opcional limpeza pré-apply.",
+      "Rejeitados: muitos são conteúdo útil bloqueado só por falta de resumo; planear Wave 1b ou mais `page_enrich_max` antes de segunda subida."
+    ]
+  }
+}

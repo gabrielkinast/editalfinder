@@ -1,0 +1,161 @@
+[
+  {
+    "fonte": "apex",
+    "arquivo": "apex\\outputs\\apex_editais.json",
+    "itens_amostra": 3,
+    "transformados": 3,
+    "rejeitados": 0,
+    "raw_com_pdf_url": 0,
+    "raw_com_documentos": 0,
+    "transformado_com_pdf_url": 0,
+    "transformado_com_documentos": 0,
+    "payload_com_pdf_url": 0,
+    "payload_com_documentos": 0,
+    "bruto_com_documentos_pdf": 0,
+    "bruto_com_documentos_nao_pdf": 0,
+    "transformado_com_documentos_pdf": 0,
+    "transformado_com_documentos_nao_pdf": 0,
+    "payload_com_documentos_pdf": 0,
+    "payload_com_documentos_nao_pdf": 0,
+    "perdas_pdf": 0,
+    "perdas_nao_pdf": 0,
+    "downloads_falharam": 0,
+    "downloads_sucesso": 0,
+    "links_invalidos": 0,
+    "links_relativos_restantes": 0,
+    "links_quebrados": 0,
+    "duplicados_documentos": 0,
+    "formatos_detectados": {},
+    "losses": [],
+    "download_failures": [],
+    "examples": [
+      {
+        "fonte": "apex",
+        "titulo": "Exporta Mais - Casa e Design",
+        "link": "https://crm-apps.apexbrasil.com.br/orgbdeab873/inscricao-eventos/evento/exporta-mais-casa-e-design/88138b32-1ac3-41c7-97fc-94dc43a63fc7?utm_source=comunicacao",
+        "raw_pdf_url": "",
+        "transformado_pdf_url": "",
+        "payload_pdf_url": "",
+        "raw_docs_n": 0,
+        "transformado_docs_n": 0,
+        "payload_docs_n": 0,
+        "status_download": "nao_baixado",
+        "erro_download": "sem_pdf_url",
+        "docs_transformado_amostra": []
+      },
+      {
+        "fonte": "apex",
+        "titulo": "Exporta Mais Brasil | Alimentos Funcionais e Suplementos Alimentares 2026",
+        "link": "https://crm-apps.apexbrasil.com.br/orgbdeab873/inscricao-eventos/evento/exporta-mais-brasil-natural-tech-2026/ac9457a1-40b1-4807-916a-d8129d19ba1d?utm_source=comunicacao",
+        "raw_pdf_url": "",
+        "transformado_pdf_url": "",
+        "payload_pdf_url": "",
+        "raw_docs_n": 0,
+        "transformado_docs_n": 0,
+        "payload_docs_n": 0,
+        "status_download": "nao_baixado",
+        "erro_download": "sem_pdf_url",
+        "docs_transformado_amostra": []
+      },
+      {
+        "fonte": "apex",
+        "titulo": "Exporta Mais Brasil - E-commerce 2026",
+        "link": "https://crm-apps.apexbrasil.com.br/orgbdeab873/inscricao-eventos/evento/exporta-mais-brasil-e-commerce-2026/9a606dbd-27e2-4239-9914-a7826b563add?utm_source=Comunicacao",
+        "raw_pdf_url": "",
+        "transformado_pdf_url": "",
+        "payload_pdf_url": "",
+        "raw_docs_n": 0,
+        "transformado_docs_n": 0,
+        "payload_docs_n": 0,
+        "status_download": "nao_baixado",
+        "erro_download": "sem_pdf_url",
+        "docs_transformado_amostra": []
+      }
+    ],
+    "timestamp_utc": "2026-05-02T22:43:37Z"
+  },
+  {
+    "fonte": "faperg",
+    "arquivo": "faperg\\outputs\\faperg_editais.json",
+    "itens_amostra": 2,
+    "transformados": 2,
+    "rejeitados": 0,
+    "raw_com_pdf_url": 1,
+    "raw_com_documentos": 1,
+    "transformado_com_pdf_url": 1,
+    "transformado_com_documentos": 1,
+    "payload_com_pdf_url": 1,
+    "payload_com_documentos": 1,
+    "bruto_com_documentos_pdf": 1,
+    "bruto_com_documentos_nao_pdf": 0,
+    "transformado_com_documentos_pdf": 1,
+    "transformado_com_documentos_nao_pdf": 0,
+    "payload_com_documentos_pdf": 1,
+    "payload_com_documentos_nao_pdf": 0,
+    "perdas_pdf": 0,
+    "perdas_nao_pdf": 0,
+    "downloads_falharam": 1,
+    "downloads_sucesso": 0,
+    "links_invalidos": 0,
+    "links_relativos_restantes": 0,
+    "links_quebrados": 0,
+    "duplicados_documentos": 0,
+    "formatos_detectados": {
+      "pdf": 1
+    },
+    "losses": [],
+    "download_failures": [
+      {
+        "fonte": "faperg",
+        "titulo": "FAPERGS - Fundação de Amparo à pesquisa do Estado do RS",
+        "link": "https://fapergs.rs.gov.br/edital-07-2025-pregograma-centelha-3-rs-segundo-aditivo",
+        "pdf_url": "https://fapergs.rs.gov.br/upload/arquivos/202604/29091714-segundo-termo-aditivo-do-programa-centelha-rs-3.pdf",
+        "status_download": "falhou",
+        "erro_download": "pdf_nao_lido_no_transformer"
+      }
+    ],
+    "examples": [
+      {
+        "fonte": "faperg",
+        "titulo": "FAPERGS - Fundação de Amparo à pesquisa do Estado do RS",
+        "link": "https://fapergs.rs.gov.br/edital-07-2025-pregograma-centelha-3-rs-segundo-aditivo",
+        "raw_pdf_url": "https://fapergs.rs.gov.br/upload/arquivos/202604/29091714-segundo-termo-aditivo-do-programa-centelha-rs-3.pdf",
+        "transformado_pdf_url": "https://fapergs.rs.gov.br/upload/arquivos/202604/29091714-segundo-termo-aditivo-do-programa-centelha-rs-3.pdf",
+        "payload_pdf_url": "https://fapergs.rs.gov.br/upload/arquivos/202604/29091714-segundo-termo-aditivo-do-programa-centelha-rs-3.pdf",
+        "raw_docs_n": 1,
+        "transformado_docs_n": 1,
+        "payload_docs_n": 1,
+        "status_download": "falhou",
+        "erro_download": "pdf_nao_lido_no_transformer",
+        "docs_transformado_amostra": [
+          {
+            "titulo": "Segundo Termo Aditivo do Programa CENTELHA/RS - 3 (.pdf 740,29 KBytes)",
+            "url": "https://fapergs.rs.gov.br/upload/arquivos/202604/29091714-segundo-termo-aditivo-do-programa-centelha-rs-3.pdf",
+            "tipo": "documento_desconhecido",
+            "formato": "pdf",
+            "origem": "extras.documentos",
+            "status_download": "nao_baixado",
+            "erro_download": "",
+            "texto_extraido": "",
+            "resumo": ""
+          }
+        ]
+      },
+      {
+        "fonte": "faperg",
+        "titulo": "FAPERGS - Fundação de Amparo à pesquisa do Estado do RS",
+        "link": "https://fapergs.rs.gov.br/sict-e-fapergs-lancam-edital-de-r-8-milhoes-para-fortalecer-ambientes-de-inovacao-no-rs",
+        "raw_pdf_url": "",
+        "transformado_pdf_url": "",
+        "payload_pdf_url": "",
+        "raw_docs_n": 0,
+        "transformado_docs_n": 0,
+        "payload_docs_n": 0,
+        "status_download": "nao_baixado",
+        "erro_download": "sem_pdf_url",
+        "docs_transformado_amostra": []
+      }
+    ],
+    "timestamp_utc": "2026-05-02T22:43:37Z"
+  }
+]

@@ -1,0 +1,552 @@
+[
+  {
+    "fonte": "china_nsfc",
+    "arquivo": "china_nsfc\\outputs\\china_nsfc_editais.json",
+    "itens_amostra": 9,
+    "transformados": 9,
+    "rejeitados": 0,
+    "raw_com_pdf_url": 2,
+    "raw_com_documentos": 5,
+    "transformado_com_pdf_url": 2,
+    "transformado_com_documentos": 5,
+    "payload_com_pdf_url": 2,
+    "payload_com_documentos": 5,
+    "bruto_com_documentos_pdf": 2,
+    "bruto_com_documentos_nao_pdf": 4,
+    "transformado_com_documentos_pdf": 2,
+    "transformado_com_documentos_nao_pdf": 4,
+    "payload_com_documentos_pdf": 2,
+    "payload_com_documentos_nao_pdf": 4,
+    "perdas_pdf": 0,
+    "perdas_nao_pdf": 0,
+    "downloads_falharam": 2,
+    "downloads_sucesso": 0,
+    "links_invalidos": 0,
+    "links_relativos_restantes": 0,
+    "links_quebrados": 0,
+    "duplicados_documentos": 0,
+    "formatos_detectados": {
+      "pdf": 11,
+      "html": 23
+    },
+    "losses": [],
+    "download_failures": [
+      {
+        "fonte": "china_nsfc",
+        "titulo": "国家自然科学基金委员会中德科学中心2026年度中德学生与青年学者短期讲习班项目指南 04-29",
+        "link": "https://www.nsfc.gov.cn/p1/3381/2824/122642.html",
+        "pdf_url": "https://www.nsfc.gov.cn/u/cms/www/202604/29160701z4gt.pdf",
+        "status_download": "falhou",
+        "erro_download": "pdf_nao_lido_no_transformer"
+      },
+      {
+        "fonte": "china_nsfc",
+        "titulo": "Guide to Programs",
+        "link": "https://www.nsfc.gov.cn/english/site_1/funding/E1/2024/06-12/364.html",
+        "pdf_url": "https://www.nsfc.gov.cn/english/site_1/pdf/NationalNaturalScienceFundGuidetoPrograms2025.pdf",
+        "status_download": "falhou",
+        "erro_download": "pdf_nao_lido_no_transformer"
+      }
+    ],
+    "examples": [
+      {
+        "fonte": "china_nsfc",
+        "titulo": "国家自然科学基金委员会医学科学部青年科学基金项目（A类）（原国家杰出青年科学基金项目）注意事项补充说明 03-12",
+        "link": "https://www.nsfc.gov.cn/p1/3381/2822/120883.html",
+        "raw_pdf_url": "",
+        "transformado_pdf_url": "",
+        "payload_pdf_url": "",
+        "raw_docs_n": 0,
+        "transformado_docs_n": 0,
+        "payload_docs_n": 0,
+        "status_download": "nao_baixado",
+        "erro_download": "sem_pdf_url",
+        "docs_transformado_amostra": []
+      },
+      {
+        "fonte": "china_nsfc",
+        "titulo": "2026年度国家自然科学基金项目指南 01-19",
+        "link": "https://www.nsfc.gov.cn/p1/2931/3971/3972/qy2026.html",
+        "raw_pdf_url": "",
+        "transformado_pdf_url": "",
+        "payload_pdf_url": "",
+        "raw_docs_n": 0,
+        "transformado_docs_n": 0,
+        "payload_docs_n": 0,
+        "status_download": "nao_baixado",
+        "erro_download": "sem_pdf_url",
+        "docs_transformado_amostra": []
+      },
+      {
+        "fonte": "china_nsfc",
+        "titulo": "国家自然科学基金委员会中德科学中心2026年度中德学生与青年学者短期讲习班项目指南 04-29",
+        "link": "https://www.nsfc.gov.cn/p1/3381/2824/122642.html",
+        "raw_pdf_url": "https://www.nsfc.gov.cn/u/cms/www/202604/29160701z4gt.pdf",
+        "transformado_pdf_url": "https://www.nsfc.gov.cn/u/cms/www/202604/29160701z4gt.pdf",
+        "payload_pdf_url": "https://www.nsfc.gov.cn/u/cms/www/202604/29160701z4gt.pdf",
+        "raw_docs_n": 1,
+        "transformado_docs_n": 1,
+        "payload_docs_n": 1,
+        "status_download": "falhou",
+        "erro_download": "pdf_nao_lido_no_transformer",
+        "docs_transformado_amostra": [
+          {
+            "titulo": "4. 中德学生与青年学者短期讲习班资助标准.pdf",
+            "url": "https://www.nsfc.gov.cn/u/cms/www/202604/29160701z4gt.pdf",
+            "tipo": "documento_desconhecido",
+            "formato": "pdf",
+            "origem": "extras.documentos",
+            "status_download": "nao_baixado",
+            "erro_download": "",
+            "texto_extraido": "",
+            "resumo": ""
+          }
+        ]
+      },
+      {
+        "fonte": "china_nsfc",
+        "titulo": "2026年度国家自然科学基金改革举措",
+        "link": "https://www.nsfc.gov.cn/p1/2931/3971/3973/2026ndgjzrkxjjggjc.html",
+        "raw_pdf_url": "",
+        "transformado_pdf_url": "",
+        "payload_pdf_url": "",
+        "raw_docs_n": 0,
+        "transformado_docs_n": 0,
+        "payload_docs_n": 0,
+        "status_download": "nao_baixado",
+        "erro_download": "sem_pdf_url",
+        "docs_transformado_amostra": []
+      },
+      {
+        "fonte": "china_nsfc",
+        "titulo": "国家自然科学基金申请代码",
+        "link": "https://www.nsfc.gov.cn/p1/2931/3971/4002/gjzrkxjjsqdm2026.html",
+        "raw_pdf_url": "",
+        "transformado_pdf_url": "",
+        "payload_pdf_url": "",
+        "raw_docs_n": 0,
+        "transformado_docs_n": 0,
+        "payload_docs_n": 0,
+        "status_download": "nao_baixado",
+        "erro_download": "sem_pdf_url",
+        "docs_transformado_amostra": []
+      },
+      {
+        "fonte": "china_nsfc",
+        "titulo": "The Research Fund For International Scientists",
+        "link": "https://www.nsfc.gov.cn/english/site_1/international/D5/index.html",
+        "raw_pdf_url": "",
+        "transformado_pdf_url": "",
+        "payload_pdf_url": "",
+        "raw_docs_n": 11,
+        "transformado_docs_n": 11,
+        "payload_docs_n": 11,
+        "status_download": "nao_baixado",
+        "erro_download": "sem_pdf_url",
+        "docs_transformado_amostra": [
+          {
+            "titulo": "Documento",
+            "url": "https://www.nsfc.gov.cn/english/site_1/index.html",
+            "tipo": "documento_desconhecido",
+            "formato": "html",
+            "origem": "extras.documentos",
+            "status_download": "nao_baixado",
+            "erro_download": "",
+            "texto_extraido": "",
+            "resumo": ""
+          },
+          {
+            "titulo": "Application and Review Process",
+            "url": "https://www.nsfc.gov.cn/english/site_1/funding/E1/2022/01-12/25901.html",
+            "tipo": "documento_desconhecido",
+            "formato": "html",
+            "origem": "extras.documentos",
+            "status_download": "nao_baixado",
+            "erro_download": "",
+            "texto_extraido": "",
+            "resumo": ""
+          },
+          {
+            "titulo": "Call Guidelines for Research Fund for International Scientists in 2026",
+            "url": "https://www.nsfc.gov.cn/english/site_1/international/D5/2026/01-20/502.html",
+            "tipo": "documento_desconhecido",
+            "formato": "html",
+            "origem": "extras.documentos",
+            "status_download": "nao_baixado",
+            "erro_download": "",
+            "texto_extraido": "",
+            "resumo": ""
+          }
+        ]
+      },
+      {
+        "fonte": "china_nsfc",
+        "titulo": "Science Fund for Global Challenges and Sustainability",
+        "link": "https://www.nsfc.gov.cn/english/site_1/international/D6/index.html",
+        "raw_pdf_url": "",
+        "transformado_pdf_url": "",
+        "payload_pdf_url": "",
+        "raw_docs_n": 8,
+        "transformado_docs_n": 8,
+        "payload_docs_n": 8,
+        "status_download": "nao_baixado",
+        "erro_download": "sem_pdf_url",
+        "docs_transformado_amostra": [
+          {
+            "titulo": "Documento",
+            "url": "https://www.nsfc.gov.cn/english/site_1/index.html",
+            "tipo": "documento_desconhecido",
+            "formato": "html",
+            "origem": "extras.documentos",
+            "status_download": "nao_baixado",
+            "erro_download": "",
+            "texto_extraido": "",
+            "resumo": ""
+          },
+          {
+            "titulo": "Application and Review Process",
+            "url": "https://www.nsfc.gov.cn/english/site_1/funding/E1/2022/01-12/25901.html",
+            "tipo": "documento_desconhecido",
+            "formato": "html",
+            "origem": "extras.documentos",
+            "status_download": "nao_baixado",
+            "erro_download": "",
+            "texto_extraido": "",
+            "resumo": ""
+          },
+          {
+            "titulo": "NSFC Call for Proposals of Invitational Visiting Fellowship for European Scholars",
+            "url": "https://www.nsfc.gov.cn/english/site_1/international/D6/2026/03-24/510.html",
+            "tipo": "chamada",
+            "formato": "html",
+            "origem": "extras.documentos",
+            "status_download": "nao_baixado",
+            "erro_download": "",
+            "texto_extraido": "",
+            "resumo": ""
+          }
+        ]
+      },
+      {
+        "fonte": "china_nsfc",
+        "titulo": "Application and Review Process",
+        "link": "https://www.nsfc.gov.cn/english/site_1/funding/E1/2022/01-12/25901.html",
+        "raw_pdf_url": "",
+        "transformado_pdf_url": "",
+        "payload_pdf_url": "",
+        "raw_docs_n": 2,
+        "transformado_docs_n": 2,
+        "payload_docs_n": 2,
+        "status_download": "nao_baixado",
+        "erro_download": "sem_pdf_url",
+        "docs_transformado_amostra": [
+          {
+            "titulo": "Documento",
+            "url": "https://www.nsfc.gov.cn/english/site_1/index.html",
+            "tipo": "documento_desconhecido",
+            "formato": "html",
+            "origem": "extras.documentos",
+            "status_download": "nao_baixado",
+            "erro_download": "",
+            "texto_extraido": "",
+            "resumo": ""
+          },
+          {
+            "titulo": "Application and Review Process",
+            "url": "https://www.nsfc.gov.cn/english/site_1/funding/E1/2022/01-12/25901.html",
+            "tipo": "documento_desconhecido",
+            "formato": "html",
+            "origem": "extras.documentos",
+            "status_download": "nao_baixado",
+            "erro_download": "",
+            "texto_extraido": "",
+            "resumo": ""
+          }
+        ]
+      },
+      {
+        "fonte": "china_nsfc",
+        "titulo": "Guide to Programs",
+        "link": "https://www.nsfc.gov.cn/english/site_1/funding/E1/2024/06-12/364.html",
+        "raw_pdf_url": "https://www.nsfc.gov.cn/english/site_1/pdf/NationalNaturalScienceFundGuidetoPrograms2025.pdf",
+        "transformado_pdf_url": "https://www.nsfc.gov.cn/english/site_1/pdf/NationalNaturalScienceFundGuidetoPrograms2025.pdf",
+        "payload_pdf_url": "https://www.nsfc.gov.cn/english/site_1/pdf/NationalNaturalScienceFundGuidetoPrograms2025.pdf",
+        "raw_docs_n": 12,
+        "transformado_docs_n": 12,
+        "payload_docs_n": 12,
+        "status_download": "falhou",
+        "erro_download": "pdf_nao_lido_no_transformer",
+        "docs_transformado_amostra": [
+          {
+            "titulo": "Documento",
+            "url": "https://www.nsfc.gov.cn/english/site_1/index.html",
+            "tipo": "documento_desconhecido",
+            "formato": "html",
+            "origem": "extras.documentos",
+            "status_download": "nao_baixado",
+            "erro_download": "",
+            "texto_extraido": "",
+            "resumo": ""
+          },
+          {
+            "titulo": "Application and Review Process",
+            "url": "https://www.nsfc.gov.cn/english/site_1/funding/E1/2022/01-12/25901.html",
+            "tipo": "documento_desconhecido",
+            "formato": "html",
+            "origem": "extras.documentos",
+            "status_download": "nao_baixado",
+            "erro_download": "",
+            "texto_extraido": "",
+            "resumo": ""
+          },
+          {
+            "titulo": "Documento",
+            "url": "https://www.nsfc.gov.cn/english/site_1/pdf/NationalNaturalScienceFundGuidetoPrograms2025.pdf",
+            "tipo": "documento_desconhecido",
+            "formato": "pdf",
+            "origem": "extras.documentos",
+            "status_download": "nao_baixado",
+            "erro_download": "",
+            "texto_extraido": "",
+            "resumo": ""
+          }
+        ]
+      }
+    ],
+    "timestamp_utc": "2026-05-02T21:42:34Z"
+  },
+  {
+    "fonte": "china_avic",
+    "arquivo": "china_avic\\outputs\\china_avic_editais.json",
+    "itens_amostra": 1,
+    "transformados": 1,
+    "rejeitados": 0,
+    "raw_com_pdf_url": 0,
+    "raw_com_documentos": 1,
+    "transformado_com_pdf_url": 0,
+    "transformado_com_documentos": 1,
+    "payload_com_pdf_url": 0,
+    "payload_com_documentos": 1,
+    "bruto_com_documentos_pdf": 0,
+    "bruto_com_documentos_nao_pdf": 1,
+    "transformado_com_documentos_pdf": 0,
+    "transformado_com_documentos_nao_pdf": 1,
+    "payload_com_documentos_pdf": 0,
+    "payload_com_documentos_nao_pdf": 1,
+    "perdas_pdf": 0,
+    "perdas_nao_pdf": 0,
+    "downloads_falharam": 0,
+    "downloads_sucesso": 0,
+    "links_invalidos": 0,
+    "links_relativos_restantes": 0,
+    "links_quebrados": 0,
+    "duplicados_documentos": 0,
+    "formatos_detectados": {
+      "outro": 2
+    },
+    "losses": [],
+    "download_failures": [],
+    "examples": [
+      {
+        "fonte": "china_avic",
+        "titulo": "中国航空工业集团2026年纪检监察人员校园招聘公告",
+        "link": "http://www.avic.com/c/2026-04-22/642825.shtml",
+        "raw_pdf_url": "",
+        "transformado_pdf_url": "",
+        "payload_pdf_url": "",
+        "raw_docs_n": 2,
+        "transformado_docs_n": 2,
+        "payload_docs_n": 2,
+        "status_download": "nao_baixado",
+        "erro_download": "sem_pdf_url",
+        "docs_transformado_amostra": [
+          {
+            "titulo": "Documento",
+            "url": "https://www.avic.com/",
+            "tipo": "documento_desconhecido",
+            "formato": "outro",
+            "origem": "extras.documentos",
+            "status_download": "nao_baixado",
+            "erro_download": "",
+            "texto_extraido": "",
+            "resumo": ""
+          },
+          {
+            "titulo": "集团公告",
+            "url": "http://www.avic.com/hdjl/jtgg/",
+            "tipo": "documento_desconhecido",
+            "formato": "outro",
+            "origem": "extras.documentos",
+            "status_download": "nao_baixado",
+            "erro_download": "",
+            "texto_extraido": "",
+            "resumo": ""
+          }
+        ]
+      }
+    ],
+    "timestamp_utc": "2026-05-02T21:42:34Z"
+  },
+  {
+    "fonte": "china_university_procurement",
+    "arquivo": "china_university_procurement\\outputs\\china_university_procurement_editais.json",
+    "itens_amostra": 4,
+    "transformados": 4,
+    "rejeitados": 0,
+    "raw_com_pdf_url": 1,
+    "raw_com_documentos": 4,
+    "transformado_com_pdf_url": 1,
+    "transformado_com_documentos": 4,
+    "payload_com_pdf_url": 1,
+    "payload_com_documentos": 4,
+    "bruto_com_documentos_pdf": 1,
+    "bruto_com_documentos_nao_pdf": 4,
+    "transformado_com_documentos_pdf": 1,
+    "transformado_com_documentos_nao_pdf": 4,
+    "payload_com_documentos_pdf": 1,
+    "payload_com_documentos_nao_pdf": 4,
+    "perdas_pdf": 0,
+    "perdas_nao_pdf": 0,
+    "downloads_falharam": 0,
+    "downloads_sucesso": 0,
+    "links_invalidos": 0,
+    "links_relativos_restantes": 0,
+    "links_quebrados": 0,
+    "duplicados_documentos": 0,
+    "formatos_detectados": {
+      "html": 4,
+      "pdf": 2
+    },
+    "losses": [],
+    "download_failures": [],
+    "examples": [
+      {
+        "fonte": "china_university_procurement",
+        "titulo": "国家重点研发计划：“政府间国际科技创新合作”重点专项2026年度...",
+        "link": "https://www.ustc.edu.cn/info/1362/24946.htm",
+        "raw_pdf_url": "",
+        "transformado_pdf_url": "",
+        "payload_pdf_url": "",
+        "raw_docs_n": 1,
+        "transformado_docs_n": 1,
+        "payload_docs_n": 1,
+        "status_download": "nao_baixado",
+        "erro_download": "sem_pdf_url",
+        "docs_transformado_amostra": [
+          {
+            "titulo": "公告通知",
+            "url": "https://www.ustc.edu.cn/tzgg.htm",
+            "tipo": "documento_desconhecido",
+            "formato": "html",
+            "origem": "extras.documentos",
+            "status_download": "nao_baixado",
+            "erro_download": "",
+            "texto_extraido": "",
+            "resumo": ""
+          }
+        ]
+      },
+      {
+        "fonte": "china_university_procurement",
+        "titulo": "霍英东教育基金会2026年高等院校青年教师基金项目申报通知",
+        "link": "https://www.ustc.edu.cn/info/1362/24805.htm",
+        "raw_pdf_url": "https://www.ustc.edu.cn/system/_content/download.jsp?urltype=news.DownloadAttachUrl&owner=1585251974&wbfileid=16006300",
+        "transformado_pdf_url": "https://www.ustc.edu.cn/system/_content/download.jsp?urltype=news.DownloadAttachUrl&owner=1585251974&wbfileid=16006300",
+        "payload_pdf_url": "https://www.ustc.edu.cn/system/_content/download.jsp?urltype=news.DownloadAttachUrl&owner=1585251974&wbfileid=16006300",
+        "raw_docs_n": 3,
+        "transformado_docs_n": 3,
+        "payload_docs_n": 3,
+        "status_download": "nao_baixado",
+        "erro_download": "",
+        "docs_transformado_amostra": [
+          {
+            "titulo": "公告通知",
+            "url": "https://www.ustc.edu.cn/tzgg.htm",
+            "tipo": "documento_desconhecido",
+            "formato": "html",
+            "origem": "extras.documentos",
+            "status_download": "nao_baixado",
+            "erro_download": "",
+            "texto_extraido": "",
+            "resumo": ""
+          },
+          {
+            "titulo": "附件1：教育部关于申报霍英东教育基金会2026年高等院校青年教师基金项目的通知.pdf",
+            "url": "https://www.ustc.edu.cn/system/_content/download.jsp?urltype=news.DownloadAttachUrl&owner=1585251974&wbfileid=16006300",
+            "tipo": "documento_desconhecido",
+            "formato": "pdf",
+            "origem": "extras.documentos",
+            "status_download": "nao_baixado",
+            "erro_download": "",
+            "texto_extraido": "",
+            "resumo": ""
+          },
+          {
+            "titulo": "附件2：2026年霍英东教育基金会高等院校青年教师基金项目学科设置和名额分配方案.pdf",
+            "url": "https://www.ustc.edu.cn/system/_content/download.jsp?urltype=news.DownloadAttachUrl&owner=1585251974&wbfileid=16006299",
+            "tipo": "documento_desconhecido",
+            "formato": "pdf",
+            "origem": "extras.documentos",
+            "status_download": "nao_baixado",
+            "erro_download": "",
+            "texto_extraido": "",
+            "resumo": ""
+          }
+        ]
+      },
+      {
+        "fonte": "china_university_procurement",
+        "titulo": "基金委通知：可持续发展国际合作科学计划2026年度项目（第一批）",
+        "link": "https://www.ustc.edu.cn/info/1362/24795.htm",
+        "raw_pdf_url": "",
+        "transformado_pdf_url": "",
+        "payload_pdf_url": "",
+        "raw_docs_n": 1,
+        "transformado_docs_n": 1,
+        "payload_docs_n": 1,
+        "status_download": "nao_baixado",
+        "erro_download": "sem_pdf_url",
+        "docs_transformado_amostra": [
+          {
+            "titulo": "公告通知",
+            "url": "https://www.ustc.edu.cn/tzgg.htm",
+            "tipo": "documento_desconhecido",
+            "formato": "html",
+            "origem": "extras.documentos",
+            "status_download": "nao_baixado",
+            "erro_download": "",
+            "texto_extraido": "",
+            "resumo": ""
+          }
+        ]
+      },
+      {
+        "fonte": "china_university_procurement",
+        "titulo": "基金委通知：一批国际合作交流项目",
+        "link": "https://www.ustc.edu.cn/info/1362/24794.htm",
+        "raw_pdf_url": "",
+        "transformado_pdf_url": "",
+        "payload_pdf_url": "",
+        "raw_docs_n": 1,
+        "transformado_docs_n": 1,
+        "payload_docs_n": 1,
+        "status_download": "nao_baixado",
+        "erro_download": "sem_pdf_url",
+        "docs_transformado_amostra": [
+          {
+            "titulo": "公告通知",
+            "url": "https://www.ustc.edu.cn/tzgg.htm",
+            "tipo": "documento_desconhecido",
+            "formato": "html",
+            "origem": "extras.documentos",
+            "status_download": "nao_baixado",
+            "erro_download": "",
+            "texto_extraido": "",
+            "resumo": ""
+          }
+        ]
+      }
+    ],
+    "timestamp_utc": "2026-05-02T21:42:34Z"
+  }
+]

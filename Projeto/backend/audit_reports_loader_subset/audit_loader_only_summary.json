@@ -1,0 +1,37 @@
+{
+  "modo": "only_loader",
+  "data_auditoria": "2026-05-01T06:09:11Z",
+  "max_items_por_ficheiro": 50,
+  "standardized_dirs": "CORE/transformer",
+  "ficheiros_standardized_encontrados": 94,
+  "ficheiros_processados": 3,
+  "itens_analisados_total": 43,
+  "itens_com_alerta_payload": 43,
+  "erros_audit_exception": 0,
+  "ranking_fontes_perda": [
+    {
+      "fonte": "bndes",
+      "arquivo": "CORE\\transformer\\bndes_standardized.json",
+      "problemas_payload": 19,
+      "itens_amostra": 19,
+      "readiness_loader_score": 0.0,
+      "riscos_sobrescrita_por_vazio": 19
+    },
+    {
+      "fonte": "cnpq",
+      "arquivo": "CORE\\transformer\\cnpq_standardized.json",
+      "problemas_payload": 14,
+      "itens_amostra": 14,
+      "readiness_loader_score": 0.0,
+      "riscos_sobrescrita_por_vazio": 0
+    },
+    {
+      "fonte": "finep",
+      "arquivo": "CORE\\transformer\\finep_standardized.json",
+      "problemas_payload": 10,
+      "itens_amostra": 10,
+      "readiness_loader_score": 0.0,
+      "riscos_sobrescrita_por_vazio": 0
+    }
+  ]
+}

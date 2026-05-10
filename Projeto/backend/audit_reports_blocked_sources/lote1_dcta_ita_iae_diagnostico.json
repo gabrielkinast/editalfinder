@@ -1,0 +1,78 @@
+{
+  "fonte": "dcta_ita_iae",
+  "data_auditoria": "2026-05-02T03:55:00Z",
+  "resumo_bruto_atual": {
+    "caminho": "dcta_ita_iae/outputs/dcta_ita_iae_editais.json",
+    "itens_brutos": 0,
+    "nota": "Bruto alinhado ao crawler sem fallback de índice institucional."
+  },
+  "historico_antes_correcoes": {
+    "itens_brutos": 1,
+    "metodo_extracao": "fallback_public_index",
+    "link": "https://www.gov.br/dcta/pt-br",
+    "classificacao_conteudo": "pagina_institucional_indice",
+    "nao_e_oportunidade_real": true,
+    "motivos": [
+      "URL é apenas a raiz gov.br/dcta/pt-br (sem objeto de edital, licitação ou chamada).",
+      "Título genérico «DCTA/ITA/IAE - Página de Oportunidades».",
+      "extras forçavam setor_estrategico aeroespacial_defesa e tipo_oportunidade chamada_publica sem evidência no texto."
+    ],
+    "transformacao_historica": {
+      "transformados": 0,
+      "rejeitados": 1,
+      "motivo_principal_rejeicao": "opportunity_gate — Pontuacao abaixo do minimo (oportunidade nao evidenciada) ou equivalente em logs",
+      "observacao": "O opportunity_gate global não foi alterado; o item era ruído institucional."
+    }
+  },
+  "tipos_de_link_observados_ou_esperados": [
+    "noticia_institucional",
+    "edital_academico",
+    "concurso_publico_processo_seletivo",
+    "licitacao_compra_publica",
+    "chamada_publica_fomento",
+    "programa_pesquisa",
+    "pagina_generica_menu",
+    "contato_acesso_informacao"
+  ],
+  "regra_de_escopo": {
+    "entram": [
+      "Licitações e compras públicas com objeto identificável (pregão, UASG, modalidade, edital, PDF).",
+      "Chamadas e editais reais (fomento, seleção, inscrição, prazo).",
+      "Editais académicos (mestrado/doutorado/stricto sensu, bolsas) quando forem oportunidades reais."
+    ],
+    "entram_so_se_projeto_aceitar": [
+      "Concursos públicos / processos seletivos de emprego (marcadores explícitos; perfil candidatos)."
+    ],
+    "nao_entram": [
+      "Notícias institucionais puras.",
+      "Páginas genéricas, contacto, mapa do site.",
+      "Índice / fallback sem detalhe (removido no crawler)."
+    ]
+  },
+  "retransformacao_dry_run": {
+    "output_dir": "audit_reports_blocked_sources/lote1_fix_dcta_ita_iae",
+    "itens_brutos": 0,
+    "itens_transformados": 0,
+    "itens_rejeitados": 0,
+    "resumo_path": "audit_reports_blocked_sources/lote1_fix_dcta_ita_iae/retransform_summary.json"
+  },
+  "auditoria_semantica": {
+    "output_dir": "audit_reports_blocked_sources/lote1_fix_dcta_ita_iae_semantic",
+    "nota": "Sem itens no standardized dry-run; relatórios gerados com contagens zero."
+  },
+  "auditoria_documentos": {
+    "output_dir": "audit_reports_blocked_sources/lote1_fix_dcta_ita_iae_docs",
+    "nota": "Sem itens para analisar."
+  },
+  "alteracoes_codigo_locais": [
+    "dcta_ita_iae/main_dcta_ita_iae.py: removido fallback_public_index; listagens em secções chamamentos/editais; filtros URL e profundidade; sem defaults forçados de setor/tipo/áreas.",
+    "CORE/transformer.py: _dcta_ita_iae_hub_only, _dcta_ita_iae_soft_continue (relax local do gate); dcta_ita_iae excluído de build_defense_extras.",
+    "CORE/taxonomy_filtros.py: calibrate_dcta_ita_iae_extras (tipos e setores só com evidência).",
+    "CORE/transformer/dcta_ita_iae_standardized.json regenerado a partir do bruto vazio (sem apply no Supabase)."
+  ],
+  "readiness_recomendado": {
+    "valor": "needs_manual_review",
+    "manter_blocked_no_loader": true,
+    "justificativa": "Sem itens brutos até nova execução do crawler com rede; política honesta evita carregar índice institucional como edital."
+  }
+}

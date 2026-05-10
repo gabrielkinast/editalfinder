@@ -1,0 +1,59 @@
+{
+  "titulo": "IARPA — oppId / Grants.gov extras — loader dry-run",
+  "data": "2026-05-02",
+  "alteracoes_pipeline": {
+    "load_ready_sources": [
+      "Removida escrita automática de config/source_readiness.json no dry-run/apply.",
+      "Exportação do slice derivado de readiness para audit_reports_loader_ready/readiness_derived_slice.json.",
+      "Flag --write-readiness-config: merge conservativo (união + prioridade blocked > review > reprocess > ready > notes) e gravação explícita.",
+      "Resumo JSON inclui readiness_config_write e readiness_derived_slice_path.",
+      "Relatórios readiness_config_write_guard.{md,json} atualizados a cada execução."
+    ],
+    "transformer": [
+      "_extras_apply_patch_preserve_nonempty: build_defense_extras já não apaga codigo_oportunidade, numero_chamada, metodo_extracao, etc.",
+      "_enrich_grants_gov_catalog_extras: oppId na URL → grants_gov_opp_id, codigo_oportunidade; Opportunity number na descrição → numero_chamada; grants_opp_status → grants_gov_status; agency; origem_portal padrão Grants.gov.",
+      "extract_codigo_oportunidade: aceita '=' após oppid no texto."
+    ],
+    "iarpa_main": [
+      "extras: agency, grants_gov_opp_id, grants_gov_status; numero_chamada só com número real da API (sem fallback para oppId)."
+    ]
+  },
+  "retransform": {
+    "output_dir": "audit_reports_blocked_sources/lote2_fix_iarpa_oppid",
+    "standardized": "audit_reports_blocked_sources/lote2_fix_iarpa_oppid/standardized/iarpa_standardized.json"
+  },
+  "verificacao_standardized": {
+    "itens": 8,
+    "codigo_oportunidade_preenchido": 8,
+    "numero_chamada_preenchido": 8,
+    "grants_gov_opp_id": 8,
+    "agency": 8,
+    "grants_gov_status": 8,
+    "exemplo_primeiro_item": {
+      "codigo_oportunidade": "336190",
+      "numero_chamada": "W911NF-22-S-0002",
+      "grants_gov_opp_id": "336190",
+      "grants_gov_status": "archived",
+      "agency": "Dept of the Army -- Materiel Command",
+      "metodo_extracao": "grants_gov_api"
+    }
+  },
+  "loader_dry_run": {
+    "comando": "python scripts/load_ready_sources.py --dry-run --sources iarpa --exclude-blocked --input-dir audit_reports_blocked_sources/lote2_fix_iarpa_oppid/standardized --readiness audit_reports_retransform/readiness_for_loader.json",
+    "would_upsert": 8,
+    "mapping_errors": 0,
+    "critical_empty_items": 0,
+    "readiness_config_write": {
+      "written": false
+    },
+    "source_readiness_sha256_inalterado": "CC441738BEE545F2DF1223D785EF332021897C9ADFC5194B06814A4F7A9CBE50"
+  },
+  "source_readiness_categorias_verificadas": {
+    "badesul_em_ready_with_notes": true,
+    "nato_diana_em_ready_with_notes": true,
+    "horizon_europe_em_ready_with_notes": true,
+    "erc_em_ready_with_notes": true,
+    "doe_arpae_em_ready_with_notes": true,
+    "iarpa_em_ready_with_notes": true
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "data_auditoria": "2026-05-10T05:37:34Z",
+  "input_dir": "audit_reports_main_pipeline/recovery_b_official_dryrun_standardized",
+  "output_dir_detalhe": "audit_reports_main_pipeline/recovery_b_official_semantic",
+  "fontes": 3,
+  "itens_total": 32,
+  "flags_totais": {
+    "fonte_defesa_sem_defesa": 2,
+    "publico_alvo_sem_evidencia": 10,
+    "tipo_oportunidade_generico": 3
+  },
+  "top20_problemas_semanticos": [
+    ["publico_alvo_sem_evidencia", 10],
+    ["tipo_oportunidade_generico", 3],
+    ["fonte_defesa_sem_defesa", 2]
+  ],
+  "criterios_recovery_b_oficial": {
+    "setor_estrategico_mais_de_3_itens": 0,
+    "setor_estrategico_excessivo_script": 0,
+    "nota_setor": "Nenhum item com mais de 3 entradas em setor_estrategico no standardized isolado (ver recovery_b_official_dryrun_context.json). Flag setor_estrategico_excessivo do script semântico exige >5.",
+    "titulo_ruidoso": 0,
+    "login_isolado": 0,
+    "institucional_generico": 0,
+    "publico_alvo_sem_evidencia": 10,
+    "publico_alvo_sem_evidencia_documentado": "Esperado em parte dos itens Ambev/BADESUL; não bloqueia dry-run; melhorias futuras no extrato.",
+    "validacao_status_suspeito_standardized": 0
+  },
+  "top20_ajustes_recomendados": [
+    "Restringir perfil_ideal genérico por evidência textual mínima.",
+    "Separar regras de crédito vs fomento por fonte + palavras-chave obrigatórias.",
+    "Exigir marcador de licitação para tipo_oportunidade=licitacao/compra_publica.",
+    "Reduzir classificação ampla quando classficacao_confianca=baixa.",
+    "Para fontes nucleares/defesa: usar peso institucional + objeto para evitar over/under tag.",
+    "Fortalecer extração de publico_alvo por entidades explícitas.",
+    "Adicionar fallback de área para tipo_recurso definido e área vazia.",
+    "Revisar taxonomia em fontes com flag_rate > 100%."
+  ]
+}

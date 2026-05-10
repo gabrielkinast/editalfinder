@@ -1,0 +1,67 @@
+{
+  "versao": "1.0",
+  "data": "2026-05-01",
+  "status_fonte": "blocked_mas_tecnicamente_destravada",
+  "endpoint_funcional": "https://pncp.gov.br/api/consulta/v1/contratacoes/publicacao",
+  "endpoint_legado_inativo": "https://pncp.gov.br/api/pncp/v1/contratacoes/publicacao",
+  "parametros_obrigatorios": [
+    "dataInicial (AAAAMMDD)",
+    "dataFinal (AAAAMMDD)",
+    "codigoModalidadeContratacao (inteiro)",
+    "pagina",
+    "tamanhoPagina (minimo 10)"
+  ],
+  "parametros_operacionais_padrao": {
+    "PNCP_TOTAL_DAYS": 9,
+    "PNCP_CHUNK_DAYS": 3,
+    "PNCP_MAX_PAGES": 2,
+    "PNCP_PAGE_SIZE": 10,
+    "pausa_entre_requests_seg": 0.35,
+    "REQUEST_TIMEOUT_connect_read": [12, 38],
+    "DISCOVER_TIMEOUT_connect_read": [8, 24]
+  },
+  "riscos": [
+    "Timeouts intermitentes em consultas nacionais com janelas largas ou paginas altas.",
+    "Algumas UFs ou combinacoes podem retornar 500 ou demorar (tratar como nao-agressivo)."
+  ],
+  "metricas_pre_calibracao": {
+    "brutos": 21,
+    "transformados_dry_run": 20,
+    "rejeitados_gate": 1,
+    "duplicata_link_quick_audit": 1,
+    "flags_semanticas_classificacao_incoerente": 6
+  },
+  "ajustes_codigo_previstos": [
+    "calibrate_pncp_extras: perfil_ideal, confianca, tipo_recurso, setor_economico contido, links_oficiais",
+    "_pncp_soft_continue: permitir link sistema externo com controle PNCP nos extras",
+    "content_hash PNCP: incluir link + codigo_oportunidade + processo",
+    "_extract_link: ignorar URL generica https://pncp.gov.br (evita duplicata falsa)",
+    "documentos: tipos sistema_origem, processo_eletronico, edital_pncp",
+    "audit_semantic: excecao PNCP para licitacao_sem_licitacao quando texto de contratacao",
+    "Variaveis de ambiente PNCP_* documentadas em main_pncp.py"
+  ],
+  "motivos_manter_blocked": [
+    "Decisao operacional: gate global PNCP permanece fechado ate revisao manual de taxonomia/carga.",
+    "Carga bruta atual pode ainda conter link generico antigo ate nova coleta com crawler corrigido.",
+    "Nao executar loader apply nesta rodada."
+  ],
+  "metricas_pos_calibracao_execucao_local": {
+    "brutos_no_arquivo": 31,
+    "transformados": 31,
+    "rejeitados_gate": 0,
+    "duplicatas_link_quick_audit": 0,
+    "flags_semanticas_agregadas": 0,
+    "perfil_ideal_preenchido_pct": 100,
+    "observacao_duplicata": "Corrigido no transformer: link raiz https://pncp.gov.br canonizado para /app/editais/{controle} quando codigo_oportunidade existe; crawler tambem atualizado para novas coletas."
+  },
+  "analise_rejeicao_residual": {
+    "antes": "Um item (portal de compras MG) era rejeitado por relevancia; link externo sem pncp.gov.br impedia _pncp_soft_continue.",
+    "depois": "_pncp_soft_continue aceita URL externa quando codigo_oportunidade/numero_controle_pncp existem nos extras; item passa no gate com relaxamento local."
+  },
+  "analise_duplicata_link": {
+    "classificacao": "falso_positivo_operacional",
+    "causa": "API devolveu linkSistemaOrigem ou link principal como https://pncp.gov.br (portal raiz) para dois controles distintos.",
+    "mitigacao_codigo": "pncp/main_pncp._extract_link ignora URL raiz; transformer canoniza link no item PNCP antes do gate quando ha codigo_oportunidade.",
+    "acao_recomendada": "Opcional: nova coleta PNCP para alinhar JSON bruto ao mesmo comportamento."
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "data_auditoria": "2026-05-10T12:00:00Z",
+  "escala_recuperabilidade": {
+    "high": "Oficial + sinais de call/procurement + bloqueio por técnica recuperável (PDF/parser/login falso positivo) + não FAQ/contact",
+    "medium": "Hub oficial, falta prazo, agregador útil, ou classificação errada corrigível com curadoria",
+    "low": "WAF, login real obrigatório, conteúdo ambíguo",
+    "none": "FAQ, about, careers, API docs, conta bancária genérica, quem somos"
+  },
+  "candidatos": [
+    {
+      "fonte": "esa_star",
+      "titulo": "Open Invitations to Tender (canal público ESA)",
+      "link": "https://www.esa.int/About_Us/Business_with_ESA/How_to_do/Open_Invitations_to_Tender",
+      "motivo_original": "Portal SSO rejeitado no transform; raw aponta esastar-publication-ext.sso.esa.int",
+      "categoria": "login_autenticacao",
+      "recuperabilidade": "high",
+      "acao_recomendada": "5_fonte_alternativa_oficial",
+      "justificativa": "Página pública ESA descreve ITTs abertos; candidato a RSS/sitemap ou parceria com export público sem promover login isolado."
+    },
+    {
+      "fonte": "dod_sbir_sttr",
+      "titulo": "Funding Opportunities (índice de topics)",
+      "link": "https://www.sbir.gov/topics",
+      "motivo_original": "Classificado como hub com setor_estrategico amplo em staging",
+      "categoria": "pagina_hub",
+      "recuperabilidade": "high",
+      "acao_recomendada": "2_melhoria_crawler_parser",
+      "justificativa": "Base oficial para ingerir topics individuais com deadline — não é lixo, é agregador a decompor."
+    },
+    {
+      "fonte": "ukri_funding",
+      "titulo": "Oportunidades UKRI (HTML + PDF)",
+      "link": "https://www.ukri.org/opportunity/",
+      "motivo_original": "pdf_nao_lido_no_transformer em vários PDFs",
+      "categoria": "documento_pdf_sem_texto",
+      "recuperabilidade": "high",
+      "acao_recomendada": "2_melhoria_crawler_parser",
+      "justificativa": "Calls reais; falha é técnica de extração, não relevância."
+    },
+    {
+      "fonte": "banco_da_amazonia",
+      "titulo": "FUNGENTUR / linhas de fomento",
+      "link": "https://www.bancoamazonia.com.br/linhas-de-fomento/fungetur",
+      "motivo_original": "suspeito_ativo_true; tipo_oportunidade noticia_institucional",
+      "categoria": "institucional_generico",
+      "recuperabilidade": "medium",
+      "acao_recomendada": "3_curadoria_manual",
+      "justificativa": "Pode ser linha de crédito real comercializável; exige revisão humana vs página institucional sem condição."
+    },
+    {
+      "fonte": "banco_da_amazonia",
+      "titulo": "FNO Biodiversidade",
+      "link": "https://www.bancoamazonia.com.br/linhas-de-fomento/fno/fno-biodiversidade",
+      "motivo_original": "suspeito_ativo_true",
+      "categoria": "institucional_generico",
+      "recuperabilidade": "medium",
+      "acao_recomendada": "3_curadoria_manual",
+      "justificativa": "Mesmo racional FUNGETUR/FNO — separar produto de edital quando houver critérios e valores explícitos."
+    },
+    {
+      "fonte": "eurostars",
+      "titulo": "Eurostars Call (deadline Sept 2026)",
+      "link": "https://www.eurekanetwork.org/programmes-and-calls/eurostars/eurostars-call-for-projects-september-2026/",
+      "motivo_original": "needs_manual_review + PDF audit falhou em documento guia",
+      "categoria": "documento_pdf_sem_texto",
+      "recuperabilidade": "medium",
+      "acao_recomendada": "2_melhoria_crawler_parser",
+      "justificativa": "Call real; baixo volume — combinar parser melhor + nota de readiness."
+    },
+    {
+      "fonte": "fonplata",
+      "titulo": "Oportunidades Fonplata",
+      "link": "https://www.fonplata.org/es/oportunidades",
+      "motivo_original": "Relevancia limite em 2 itens + muitos suspeitos no conjunto transformado",
+      "categoria": "institucional_generico",
+      "recuperabilidade": "medium",
+      "acao_recomendada": "3_curadoria_manual",
+      "justificativa": "Separar empregos/consultoria de instrumentos financeiros multilaterais."
+    },
+    {
+      "fonte": "general_dynamics_suppliers",
+      "titulo": "Supplier FAQs (exemplo)",
+      "link": "https://www.gd.com/suppliers/supplier-faqs",
+      "motivo_original": "titulo_ruidoso + suspeito (histórico staging)",
+      "categoria": "faq",
+      "recuperabilidade": "none",
+      "acao_recomendada": "1_manter_bloqueado_ou_inativo",
+      "justificativa": "FAQ fornecedor — não recuperar como edital; eventual supplier registration só com texto público de requisitos."
+    },
+    {
+      "fonte": "bae_systems_suppliers",
+      "titulo": "Login to your account",
+      "link": "https://baesystems.hicx.net/bae/hicxesm-portal/app/index.html",
+      "motivo_original": "suspeito_ativo_true",
+      "categoria": "login_autenticacao",
+      "recuperabilidade": "low",
+      "acao_recomendada": "1_manter_bloqueado",
+      "justificativa": "Sem evidência de call pública no URL; Hicx é autenticação."
+    },
+    {
+      "fonte": "japan_jaea",
+      "titulo": "(procurement JAEA)",
+      "link": "https://www.jaea.go.jp/02/chotatsu/",
+      "motivo_original": "coleta_vazia_sem_confirmacao",
+      "categoria": "parser_falhou",
+      "recuperabilidade": "low",
+      "acao_recomendada": "4_soft_continue_local",
+      "justificativa": "Precisa confirmação se lista vazia é real ou seletor; risco de institucional japonês."
+    },
+    {
+      "fonte": "china_norinco",
+      "titulo": "(lista EN procurement)",
+      "link": "http://en.norincogroup.com.cn/col/col423/index.html",
+      "motivo_original": "coleta_vazia; URL ok false",
+      "categoria": "WAF/bloqueio",
+      "recuperabilidade": "low",
+      "acao_recomendada": "5_fonte_alternativa_oficial",
+      "justificativa": "Tentar mirror, RSS ou outro host antes de investir parser profundo."
+    }
+  ],
+  "resumo_contagens": {
+    "high": 3,
+    "medium": 4,
+    "low": 2,
+    "none": 1
+  }
+}

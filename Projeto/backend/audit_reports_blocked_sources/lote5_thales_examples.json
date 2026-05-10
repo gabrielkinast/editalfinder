@@ -1,0 +1,28 @@
+{
+  "fonte": "thales_suppliers",
+  "data": "2026-05-03",
+  "seeds_crawler": [
+    "https://www.thalesgroup.com/en/supplier",
+    "https://www.thalesgroup.com/en/supplier-relations"
+  ],
+  "urls_pdf_key_documents": [
+    "https://www.thalesgroup.com/sites/default/files/2025-06/SECURITY%20REQUIREMENTS%20PURCHASING%20T%26Cs%20%281%29_0.pdf",
+    "https://www.thalesgroup.com/sites/default/files/2025-06/87212869-ACQ-GRP-EN-006%20-%20Matrice%20EGAPE%20-%20GRAEP%20Matrix%20%283%29.pdf",
+    "https://www.thalesgroup.com/sites/default/files/2025-09/THALES%20GENERAL%20TERMS%20AND%20CONDITIONS%20OF%20PURCHASE%20-%2005.05.2025%20%282%29.pdf"
+  ],
+  "exemplo_bruto_manifest": {
+    "titulo": "Generic Requirements Applicable to External Providers (GRAEP)",
+    "link": "https://www.thalesgroup.com/sites/default/files/2025-06/87212869-ACQ-GRP-EN-006%20-%20Matrice%20EGAPE%20-%20GRAEP%20Matrix%20%283%29.pdf",
+    "metodo_extracao": "curated_official_manifest",
+    "nota": "Manifesto alinhado à listagem pública Key documents; texto longo quando PDF é legível via fetch."
+  },
+  "exemplo_standardized_pos_pipeline": {
+    "tipo_recurso": "oportunidade_fornecedor",
+    "tipo_oportunidade_exemplos": ["supplier_portal", "procurement_corporativo"],
+    "perfil_ideal": ["fornecedor", "empresa"],
+    "origem_portal": "Thales",
+    "idioma_original": "en",
+    "validacao_status_exemplos": ["incompleto", "acesso_limitado"],
+    "setor_estrategico": "[] no hub; PDF GRAEP pode manter subtemas se texto citar armament standards (evidência documental, não só nome Thales)"
+  }
+}

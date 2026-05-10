@@ -1,0 +1,71 @@
+[
+  {
+    "fonte": "sam_gov",
+    "raw_output_path": "sam_gov/outputs/sam_gov_editais.json",
+    "old_standardized_path": "CORE/transformer/sam_gov_standardized.json",
+    "new_standardized_path": "audit_reports_blocked_sources/lote2_fix_sam_gov/standardized/sam_gov_standardized.json",
+    "itens_brutos_encontrados": 0,
+    "itens_transformados": 0,
+    "itens_rejeitados": 0,
+    "itens_incompletos": 0,
+    "itens_suspeitos": 0,
+    "itens_acesso_limitado": 0,
+    "documentos_preservados": 0,
+    "pdf_url_preservado": 0,
+    "area_preenchida": 0,
+    "tipo_oportunidade_preenchido": 0,
+    "tipo_recurso_preenchido": 0,
+    "perfil_ideal_preenchido": 0,
+    "qualidade_dado_media": null,
+    "motivos_rejeicao_principais": {},
+    "quick_audit": {
+      "ruido_passou": 0,
+      "duplicatas_link": 0,
+      "campos_preenchidos_pct": {
+        "area": 0.0,
+        "tipo_oportunidade": 0.0,
+        "tipo_recurso": 0.0,
+        "perfil_ideal": 0.0,
+        "documentos": 0.0,
+        "pdf_url": 0.0
+      },
+      "official_link_only_total": 0,
+      "access_limited_total": 0,
+      "access_reason_counts": {},
+      "access_limited_examples": []
+    },
+    "old_vs_new": {
+      "old_count": 2,
+      "new_count": 0,
+      "delta_count": -2,
+      "old_links_now_missing": [
+        "https://sam.gov/content/opportunities",
+        "https://www.business.defense.gov/Programs/"
+      ],
+      "new_links_before_missing": [],
+      "core_fields_improved": {},
+      "core_fields_worsened": {
+        "area": {
+          "old": 2,
+          "new": 0,
+          "delta": -2
+        },
+        "tipo_oportunidade": {
+          "old": 2,
+          "new": 0,
+          "delta": -2
+        },
+        "tipo_recurso": {
+          "old": 2,
+          "new": 0,
+          "delta": -2
+        }
+      },
+      "old_documents_count": 0,
+      "new_documents_count": 0,
+      "old_pdf_count": 0,
+      "new_pdf_count": 0
+    },
+    "risk_notes": []
+  }
+]

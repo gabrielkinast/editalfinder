@@ -1,0 +1,49 @@
+{
+  "titulo": "Limpeza semântica local — Lote Crédito/Desenvolvimento Onda A Brasil",
+  "data_geracao": "2026-05-05T04:40Z",
+  "escopo": "Apenas CORE/taxonomy_filtros.py — funções _calibrate_br_credito_agencia_core e calibrate_* (bnb, banco_da_amazonia, desenvolve_sp, bdmg, agerio).",
+  "restricoes": "opportunity_gate.py inalterado; sem apply, Supabase, source_readiness.json.",
+  "auditoria_semantica_antes": {
+    "arquivo": "audit_reports_credito/lote_credito_brasil_onda_a_semantic/audit_semantic_summary.json",
+    "itens_total": 83,
+    "flags_totais": {
+      "setor_estrategico_excessivo": 6,
+      "classificacao_muito_ampla": 3,
+      "area_cientifica_sem_evidencia": 1
+    }
+  },
+  "auditoria_semantica_depois": {
+    "arquivo": "audit_reports_credito/lote_credito_brasil_onda_a_semantic_fix_audit/audit_semantic_summary.json",
+    "itens_total": 83,
+    "flags_totais": {}
+  },
+  "transformacao": {
+    "brutos": 85,
+    "transformados": 83,
+    "rejeitados": 2,
+    "output_retransform": "audit_reports_credito/lote_credito_brasil_onda_a_semantic_fix"
+  },
+  "artefatos_pipeline": {
+    "standardized": "audit_reports_credito/lote_credito_brasil_onda_a_semantic_fix/standardized",
+    "audit_semantico": "audit_reports_credito/lote_credito_brasil_onda_a_semantic_fix_audit",
+    "audit_docs": "audit_reports_credito/lote_credito_brasil_onda_a_semantic_fix_docs"
+  },
+  "mudancas_principais": [
+    "setor_estrategico: substituído por lista derivada só com evidência (agro, energia, sustentabilidade, inovacao, industria, desenvolvimento_regional explícito); máximo 3 tags; sem append automático de desenvolvimento_regional.",
+    "Inovação/P&D: helper _credito_br_innovacao_evidence — programa_inovacao só com termos explícitos.",
+    "Crédito reembolsável: natureza_reembolsavel + tipo_recurso credito em extras; item tipo_recurso financiamento_reembolsavel.",
+    "Subvenção: apenas termos explícitos de subvenção/doação/reembolso não reembolsável; não dispara com simples menção a crédito.",
+    "area_cientifica / area_tecnologica: esvaziadas se não houver evidência no texto.",
+    "BDMG: host bdmgorienta.bdmg.mg.gov.br aceito no calibrate_bdmg_extras.",
+    "AgeRio: educação financeira sem setor_estrategico.",
+    "BASA: relatórios FNO — area limpa e perfil podado para evitar classificacao_muito_ampla."
+  ],
+  "readiness_recomendado_pos_limpeza": {
+    "bnb": "ready_with_notes",
+    "banco_da_amazonia": "ready_with_notes",
+    "bdmg": "ready_with_notes",
+    "desenvolve_sp": "needs_manual_review",
+    "agerio": "needs_manual_review"
+  },
+  "notas_readiness": "bnb/banco_da_amazonia/bdmg: flags semânticos zerados no audit local; desenvolve_sp permanece dependente de seeds (WAF); agerio permanece com 2 itens úteis — revisão manual opcional antes de promover."
+}

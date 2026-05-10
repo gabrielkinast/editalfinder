@@ -1,0 +1,24 @@
+{
+  "titulo": "Recovery C — setores (loader dry-run EMBRAPII + NUCLEP)",
+  "data": "2026-05-10T06:55:51Z",
+  "bundle_completo": "audit_reports_main_pipeline/recovery_c_setores_loader_dryrun/load_ready_summary.json",
+  "comando": "python scripts/load_ready_sources.py --dry-run --sources embrapii,nuclep --exclude-blocked --input-dir audit_reports_main_pipeline/recovery_c_setores/standardized --readiness audit_reports_retransform/readiness_for_loader.json --output-dir audit_reports_main_pipeline/recovery_c_setores_loader_dryrun",
+  "resumo": {
+    "sources_selected": 2,
+    "would_upsert_total": 41,
+    "itens_standardized_total": 41,
+    "mapping_errors_total": 0,
+    "critical_empty_items_total": 0,
+    "documentos_perdidos_no_payload_total": 0,
+    "destination_counts_total": { "edital": 41 }
+  },
+  "verificacoes_recovery_c": {
+    "setor_estrategico_gt3_em_standardized": 0,
+    "titulo_ruidoso_flags_semantic": 0,
+    "flags_semanticas_observadas": {
+      "area_cientifica_sem_evidencia": 20,
+      "publico_alvo_sem_evidencia": 1
+    },
+    "nota_institucional": "NUCLEP: páginas institucionais listadas em _nuclep_institutional_url recebem tipo_oportunidade noticia_institucional + aviso recovery_c_nuclep_pagina_institucional; destino no dry-run continua edital (sem alteração de schema/gate)."
+  }
+}

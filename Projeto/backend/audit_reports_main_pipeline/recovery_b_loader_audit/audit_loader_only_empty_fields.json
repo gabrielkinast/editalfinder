@@ -1,0 +1,208 @@
+{
+  "campos_mais_vazios_no_payload": [
+    {
+      "campo": "area_cientifica",
+      "contagem_vazio": 32
+    },
+    {
+      "campo": "area_tecnologica",
+      "contagem_vazio": 32
+    },
+    {
+      "campo": "contrapartida",
+      "contagem_vazio": 32
+    },
+    {
+      "campo": "descricao_traduzida",
+      "contagem_vazio": 32
+    },
+    {
+      "campo": "elegibilidade",
+      "contagem_vazio": 32
+    },
+    {
+      "campo": "link_inscricao",
+      "contagem_vazio": 32
+    },
+    {
+      "campo": "numero_chamada",
+      "contagem_vazio": 32
+    },
+    {
+      "campo": "ods",
+      "contagem_vazio": 32
+    },
+    {
+      "campo": "temas",
+      "contagem_vazio": 32
+    },
+    {
+      "campo": "titulo_traduzido",
+      "contagem_vazio": 32
+    },
+    {
+      "campo": "valor_total",
+      "contagem_vazio": 31
+    },
+    {
+      "campo": "codigo_oportunidade",
+      "contagem_vazio": 27
+    },
+    {
+      "campo": "valor_maximo",
+      "contagem_vazio": 22
+    },
+    {
+      "campo": "valor_minimo",
+      "contagem_vazio": 19
+    },
+    {
+      "campo": "numero_edital",
+      "contagem_vazio": 18
+    },
+    {
+      "campo": "prazo_envio",
+      "contagem_vazio": 18
+    },
+    {
+      "campo": "numero_processo",
+      "contagem_vazio": 18
+    },
+    {
+      "campo": "contato",
+      "contagem_vazio": 17
+    },
+    {
+      "campo": "area",
+      "contagem_vazio": 15
+    },
+    {
+      "campo": "compatibilidade",
+      "contagem_vazio": 15
+    },
+    {
+      "campo": "justificativa",
+      "contagem_vazio": 15
+    },
+    {
+      "campo": "objetivo",
+      "contagem_vazio": 15
+    },
+    {
+      "campo": "recomendacao",
+      "contagem_vazio": 15
+    },
+    {
+      "campo": "score_detalhado",
+      "contagem_vazio": 15
+    },
+    {
+      "campo": "publico_alvo",
+      "contagem_vazio": 12
+    },
+    {
+      "campo": "descricao_original",
+      "contagem_vazio": 12
+    },
+    {
+      "campo": "titulo_original",
+      "contagem_vazio": 12
+    },
+    {
+      "campo": "pdf_resumo",
+      "contagem_vazio": 11
+    },
+    {
+      "campo": "setor_estrategico",
+      "contagem_vazio": 9
+    },
+    {
+      "campo": "anexos",
+      "contagem_vazio": 8
+    },
+    {
+      "campo": "documentos",
+      "contagem_vazio": 8
+    },
+    {
+      "campo": "pdf_url",
+      "contagem_vazio": 8
+    },
+    {
+      "campo": "setor_economico",
+      "contagem_vazio": 8
+    },
+    {
+      "campo": "instituicao",
+      "contagem_vazio": 7
+    },
+    {
+      "campo": "orgao_responsavel",
+      "contagem_vazio": 7
+    },
+    {
+      "campo": "pais",
+      "contagem_vazio": 7
+    },
+    {
+      "campo": "regiao",
+      "contagem_vazio": 7
+    },
+    {
+      "campo": "idioma_original",
+      "contagem_vazio": 5
+    }
+  ],
+  "fontes_com_maior_perda": [
+    {
+      "fonte": "amazul",
+      "arquivo": "audit_reports_main_pipeline\\recovery_b\\standardized\\amazul_standardized.json",
+      "problemas_payload": 20,
+      "itens_amostra": 20,
+      "readiness_loader_score": 0.0,
+      "riscos_sobrescrita_por_vazio": 0
+    },
+    {
+      "fonte": "ambev",
+      "arquivo": "audit_reports_main_pipeline\\recovery_b\\standardized\\ambev_standardized.json",
+      "problemas_payload": 7,
+      "itens_amostra": 7,
+      "readiness_loader_score": 0.0,
+      "riscos_sobrescrita_por_vazio": 6
+    },
+    {
+      "fonte": "badesul",
+      "arquivo": "audit_reports_main_pipeline\\recovery_b\\standardized\\badesul_standardized.json",
+      "problemas_payload": 5,
+      "itens_amostra": 5,
+      "readiness_loader_score": 0.0,
+      "riscos_sobrescrita_por_vazio": 0
+    }
+  ],
+  "fontes_mais_prontas_loader": [
+    {
+      "fonte": "amazul",
+      "arquivo": "audit_reports_main_pipeline\\recovery_b\\standardized\\amazul_standardized.json",
+      "problemas_payload": 20,
+      "itens_amostra": 20,
+      "readiness_loader_score": 0.0,
+      "riscos_sobrescrita_por_vazio": 0
+    },
+    {
+      "fonte": "ambev",
+      "arquivo": "audit_reports_main_pipeline\\recovery_b\\standardized\\ambev_standardized.json",
+      "problemas_payload": 7,
+      "itens_amostra": 7,
+      "readiness_loader_score": 0.0,
+      "riscos_sobrescrita_por_vazio": 6
+    },
+    {
+      "fonte": "badesul",
+      "arquivo": "audit_reports_main_pipeline\\recovery_b\\standardized\\badesul_standardized.json",
+      "problemas_payload": 5,
+      "itens_amostra": 5,
+      "readiness_loader_score": 0.0,
+      "riscos_sobrescrita_por_vazio": 0
+    }
+  ]
+}

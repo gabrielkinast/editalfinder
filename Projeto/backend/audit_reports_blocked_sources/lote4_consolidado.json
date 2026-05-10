@@ -1,0 +1,128 @@
+{
+  "meta": {
+    "lote": 4,
+    "titulo": "Relatório consolidado — fontes Brasil / legado",
+    "data_auditoria": "2026-05-03T04:35:00Z",
+    "referencia_estado_inicial": "audit_reports_blocked_sources/lote4_brasil_legado_diagnostico.json (2026-05-01)",
+    "restricoes_respeitadas": [
+      "Loader apply não executado",
+      "Supabase não alterado",
+      "Migrations não aplicadas",
+      "opportunity_gate global não alterado",
+      "source_readiness não atualizado automaticamente nesta tarefa",
+      "science_scraper não corrigido"
+    ]
+  },
+  "resumo_executivo": "Quatro fontes (apex, faperg, amazul, ambev) ficaram prontas para staging com observações: 31 itens no standardized combinado, dry-run do loader com would_upsert=31, zero erros de mapeamento e zero itens com campos críticos vazios; documentos/PDF preservados onde existem (20 itens com documentos no payload agregado). Três fontes permanecem bloqueadas ou fora do módulo edital: marinha (403/Cloudflare), dcta_ita_iae (404 em URLs legadas), science_scraper (agenda/notícias; candidato futuro a módulo de ciência, não public.edital).",
+  "fontes_prontas_staging": ["apex", "faperg", "amazul", "ambev"],
+  "fontes_bloqueadas_ou_fora_edital": ["marinha", "dcta_ita_iae", "science_scraper"],
+  "fontes": [
+    {
+      "id": "apex",
+      "estado_antes_lote4_legado": "needs_manual_review sugerido; 1 bruto, 0 transformados, 1 rejeitado (titulo_ruido_exato); risco eventos vs programas reais",
+      "estado_depois": "ready_with_notes; 3 itens Exporta Mais; tipo_recurso apoio_internacionalizacao em 3/3; dry-run limpo",
+      "brutos_referencia": 3,
+      "transformados": 3,
+      "rejeitados_pipeline": 0,
+      "documentos": "Sem PDF no standardized atual; preservação N/A",
+      "problemas": "Ruído de listagem/calendário vs chamadas reais",
+      "correcoes": "Crawler/transformação e calibração Apex; exclusão de páginas genéricas",
+      "readiness": "ready_with_notes",
+      "aplicar_staging": true,
+      "observacoes": "Confirmar no standardized que não há regressão para licitação; verificação 2026-05-03: tipo_recurso apenas apoio_internacionalizacao"
+    },
+    {
+      "id": "faperg",
+      "estado_antes_lote4_legado": "0 brutos observados no snapshot legado; transformação inexistente",
+      "estado_depois": "ready_with_notes; 2 editais/chamadas; 1 PDF preservado no dry-run",
+      "brutos_referencia": 2,
+      "transformados": 2,
+      "rejeitados_pipeline": 0,
+      "documentos": "1 item com pdf_url/documentos; pdf_preserved_items=1 na simulação por fonte",
+      "problemas": "Acesso/crawler a editais RS",
+      "correcoes": "URLs e extração FAPERGS; gate/calibração local conforme trabalho do lote",
+      "readiness": "ready_with_notes",
+      "aplicar_staging": true,
+      "observacoes": "Um item sem PDF no standardized; o com PDF mantém URL fapergs.rs.gov.br"
+    },
+    {
+      "id": "amazul",
+      "estado_antes_lote4_legado": "0 brutos no snapshot legado; crawler smoke OK",
+      "estado_depois": "ready_with_notes; 19 dispensas/licitações; tipo_recurso licitação 19/19; PDFs preservados",
+      "brutos_referencia": 19,
+      "transformados": 19,
+      "rejeitados_pipeline": 0,
+      "documentos": "docs_input_items=19; docs_preserved_items=19; pdf_input=19; pdf_preserved=19 no dry-run por fonte",
+      "problemas": "Índice antigo / heurística sem itens no legado",
+      "correcoes": "Fonte/URLs AMAZUL; calibração tipo_recurso licitação",
+      "readiness": "ready_with_notes",
+      "aplicar_staging": true,
+      "observacoes": "Sem ocorrências de Prêmio/Subvenção/Reembolsável em tipo_recurso no standardized verificado por grep"
+    },
+    {
+      "id": "ambev",
+      "estado_antes_lote4_legado": "7 brutos, 0 transformados, 7 rejeitados (gate pontuação/relevância)",
+      "estado_depois": "ready_with_notes; 7 desafios 100+ Accelerator; chamada_publica + apoio_inovacao + open_innovation_aceleracao; gate relaxado só local",
+      "brutos_referencia": 7,
+      "transformados": 7,
+      "rejeitados_pipeline": 0,
+      "documentos": "Sem documentos no bruto; perda 0",
+      "problemas": "Texto EN; programa corporativo; prazo ausente no JSON",
+      "correcoes": "calibrate_ambev_extras; _ambev_soft_continue; noise/crawler já alinhados",
+      "readiness": "ready_with_notes",
+      "aplicar_staging": true,
+      "observacoes": "Links oficiais 100accelerator; não é marketing genérico"
+    },
+    {
+      "id": "marinha",
+      "estado_antes_lote4_legado": "0 brutos; listagem não gera item",
+      "estado_depois": "blocked",
+      "brutos_referencia": 0,
+      "transformados": 0,
+      "rejeitados_pipeline": "N/A",
+      "documentos": "N/A",
+      "problemas": "Cloudflare / HTTP 403 na listagem institucional",
+      "correcoes": "Nenhuma no âmbito deste fecho de lote",
+      "readiness": "blocked",
+      "aplicar_staging": false,
+      "observacoes": "Requer novo mapeamento de URLs ou estratégia anti-bot antes de reabrir"
+    },
+    {
+      "id": "dcta_ita_iae",
+      "estado_antes_lote4_legado": "0 brutos; URLs gov.br antigas",
+      "estado_depois": "blocked",
+      "brutos_referencia": 0,
+      "transformados": 0,
+      "rejeitados_pipeline": "N/A",
+      "documentos": "N/A",
+      "problemas": "404 em caminhos legados (DCTA/ITA/IAE)",
+      "correcoes": "Nenhuma no âmbito deste fecho de lote",
+      "readiness": "blocked",
+      "aplicar_staging": false,
+      "observacoes": "Reindexar portais atuais por órgão"
+    },
+    {
+      "id": "science_scraper",
+      "estado_antes_lote4_legado": "14 brutos, 0 transformados, 14 rejeitados (pontuação); 404 em seed AEB",
+      "estado_depois": "blocked / fora do módulo edital",
+      "brutos_referencia": 14,
+      "transformados": 0,
+      "rejeitados_pipeline": 14,
+      "documentos": "N/A relevante para edital",
+      "problemas": "Agenda/eventos; não editais; ruído para public.edital",
+      "correcoes": "Nenhuma (explícito no pedido)",
+      "readiness": "blocked",
+      "aplicar_staging": false,
+      "observacoes": "Candidato a módulo futuro de notícias/agenda científica"
+    }
+  ],
+  "dry_run_combinado": {
+    "comando": "python scripts/load_ready_sources.py --dry-run --sources apex,faperg,amazul,ambev --exclude-blocked --input-dir audit_reports_retransform/standardized --readiness audit_reports_retransform/readiness_for_loader.json",
+    "artefactos_padrao": "audit_reports_loader_ready/load_ready_summary.json, load_ready_by_source.json",
+    "relatorio_dedicado": [
+      "audit_reports_blocked_sources/lote4_ready_sources_loader_dryrun.md",
+      "audit_reports_blocked_sources/lote4_ready_sources_loader_dryrun.json"
+    ]
+  },
+  "recomendacao_proximo_passo": "Executar apply em staging apenas com EDITALFINDER_ENV=staging e EDITALFINDER_ALLOW_STAGING_APPLY=true, flags --apply --staging --test-db-before-apply, fontes apex,faperg,amazul,ambev; em seguida validate_database_after_load.py por fonte. Não promover marinha/dcta/science até novo diagnóstico."
+}

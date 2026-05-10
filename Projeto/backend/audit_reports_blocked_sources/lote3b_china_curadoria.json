@@ -1,0 +1,321 @@
+{
+  "gerado_em_utc": "2026-05-02T21:43:02Z",
+  "script_curadoria": "scripts/apply_lote3b_china_curadoria.py",
+  "antes_depois_brutos": {
+    "china_nsfc": {
+      "antes": 28,
+      "depois": 9,
+      "removidos": 19
+    },
+    "china_avic": {
+      "antes": 15,
+      "depois": 1,
+      "removidos": 14
+    },
+    "china_university_procurement": {
+      "antes": 6,
+      "depois": 4,
+      "removidos": 2
+    }
+  },
+  "retransform_dry_run": {
+    "data_auditoria": "2026-05-02T21:42:27Z",
+    "dry_run": true,
+    "fontes_processadas": 3,
+    "fontes_com_erro": 0,
+    "itens_brutos_total": 14,
+    "itens_transformados_total": 14,
+    "itens_rejeitados_total": 0,
+    "fontes_risco_loader": [],
+    "partial_merge_retransform": true,
+    "fontes_total_apos_merge": 3
+  },
+  "retransform_por_fonte": [
+    {
+      "fonte": "china_avic",
+      "raw_output_path": "china_avic/outputs/china_avic_editais.json",
+      "old_standardized_path": "CORE/transformer/china_avic_standardized.json",
+      "new_standardized_path": "audit_reports_blocked_sources/lote3b_china_curated/standardized/china_avic_standardized.json",
+      "itens_brutos_encontrados": 1,
+      "itens_transformados": 1,
+      "itens_rejeitados": 0,
+      "itens_incompletos": 1,
+      "itens_suspeitos": 0,
+      "itens_acesso_limitado": 0,
+      "documentos_preservados": 1,
+      "pdf_url_preservado": 0,
+      "area_preenchida": 1,
+      "tipo_oportunidade_preenchido": 1,
+      "tipo_recurso_preenchido": 1,
+      "perfil_ideal_preenchido": 0,
+      "qualidade_dado_media": 82.0,
+      "motivos_rejeicao_principais": {},
+      "quick_audit": {
+        "ruido_passou": 0,
+        "duplicatas_link": 0,
+        "campos_preenchidos_pct": {
+          "area": 100.0,
+          "tipo_oportunidade": 100.0,
+          "tipo_recurso": 100.0,
+          "perfil_ideal": 0.0,
+          "documentos": 100.0,
+          "pdf_url": 0.0
+        },
+        "official_link_only_total": 0,
+        "access_limited_total": 0,
+        "access_reason_counts": {},
+        "access_limited_examples": []
+      },
+      "old_vs_new": {
+        "old_count": 1,
+        "new_count": 1,
+        "delta_count": 0,
+        "old_links_now_missing": [
+          "http://www.avic.com/"
+        ],
+        "new_links_before_missing": [
+          "http://www.avic.com/c/2026-04-22/642825.shtml"
+        ],
+        "core_fields_improved": {
+          "documentos": {
+            "old": 0,
+            "new": 1,
+            "delta": 1
+          }
+        },
+        "core_fields_worsened": {},
+        "old_documents_count": 0,
+        "new_documents_count": 1,
+        "old_pdf_count": 0,
+        "new_pdf_count": 0
+      },
+      "risk_notes": []
+    },
+    {
+      "fonte": "china_nsfc",
+      "raw_output_path": "china_nsfc/outputs/china_nsfc_editais.json",
+      "old_standardized_path": "CORE/transformer/china_nsfc_standardized.json",
+      "new_standardized_path": "audit_reports_blocked_sources/lote3b_china_curated/standardized/china_nsfc_standardized.json",
+      "itens_brutos_encontrados": 9,
+      "itens_transformados": 9,
+      "itens_rejeitados": 0,
+      "itens_incompletos": 9,
+      "itens_suspeitos": 0,
+      "itens_acesso_limitado": 0,
+      "documentos_preservados": 5,
+      "pdf_url_preservado": 2,
+      "area_preenchida": 1,
+      "tipo_oportunidade_preenchido": 9,
+      "tipo_recurso_preenchido": 9,
+      "perfil_ideal_preenchido": 9,
+      "qualidade_dado_media": 73.33,
+      "motivos_rejeicao_principais": {},
+      "quick_audit": {
+        "ruido_passou": 0,
+        "duplicatas_link": 0,
+        "campos_preenchidos_pct": {
+          "area": 11.11,
+          "tipo_oportunidade": 100.0,
+          "tipo_recurso": 100.0,
+          "perfil_ideal": 100.0,
+          "documentos": 55.56,
+          "pdf_url": 22.22
+        },
+        "official_link_only_total": 0,
+        "access_limited_total": 0,
+        "access_reason_counts": {},
+        "access_limited_examples": []
+      },
+      "old_vs_new": {
+        "old_count": 0,
+        "new_count": 9,
+        "delta_count": 9,
+        "old_links_now_missing": [],
+        "new_links_before_missing": [
+          "https://www.nsfc.gov.cn/english/site_1/funding/E1/2022/01-12/25901.html",
+          "https://www.nsfc.gov.cn/english/site_1/funding/E1/2024/06-12/364.html",
+          "https://www.nsfc.gov.cn/english/site_1/international/D5/index.html",
+          "https://www.nsfc.gov.cn/english/site_1/international/D6/index.html",
+          "https://www.nsfc.gov.cn/p1/2931/3971/3972/qy2026.html",
+          "https://www.nsfc.gov.cn/p1/2931/3971/3973/2026ndgjzrkxjjggjc.html",
+          "https://www.nsfc.gov.cn/p1/2931/3971/4002/gjzrkxjjsqdm2026.html",
+          "https://www.nsfc.gov.cn/p1/3381/2822/120883.html",
+          "https://www.nsfc.gov.cn/p1/3381/2824/122642.html"
+        ],
+        "core_fields_improved": {
+          "area": {
+            "old": 0,
+            "new": 1,
+            "delta": 1
+          },
+          "tipo_oportunidade": {
+            "old": 0,
+            "new": 9,
+            "delta": 9
+          },
+          "tipo_recurso": {
+            "old": 0,
+            "new": 9,
+            "delta": 9
+          },
+          "perfil_ideal": {
+            "old": 0,
+            "new": 9,
+            "delta": 9
+          },
+          "documentos": {
+            "old": 0,
+            "new": 5,
+            "delta": 5
+          },
+          "pdf_url": {
+            "old": 0,
+            "new": 2,
+            "delta": 2
+          }
+        },
+        "core_fields_worsened": {},
+        "old_documents_count": 0,
+        "new_documents_count": 5,
+        "old_pdf_count": 0,
+        "new_pdf_count": 2
+      },
+      "risk_notes": []
+    },
+    {
+      "fonte": "china_university_procurement",
+      "raw_output_path": "china_university_procurement/outputs/china_university_procurement_editais.json",
+      "old_standardized_path": "CORE/transformer/china_university_procurement_standardized.json",
+      "new_standardized_path": "audit_reports_blocked_sources/lote3b_china_curated/standardized/china_university_procurement_standardized.json",
+      "itens_brutos_encontrados": 4,
+      "itens_transformados": 4,
+      "itens_rejeitados": 0,
+      "itens_incompletos": 4,
+      "itens_suspeitos": 0,
+      "itens_acesso_limitado": 0,
+      "documentos_preservados": 4,
+      "pdf_url_preservado": 1,
+      "area_preenchida": 0,
+      "tipo_oportunidade_preenchido": 4,
+      "tipo_recurso_preenchido": 4,
+      "perfil_ideal_preenchido": 4,
+      "qualidade_dado_media": 82.0,
+      "motivos_rejeicao_principais": {},
+      "quick_audit": {
+        "ruido_passou": 0,
+        "duplicatas_link": 0,
+        "campos_preenchidos_pct": {
+          "area": 0.0,
+          "tipo_oportunidade": 100.0,
+          "tipo_recurso": 100.0,
+          "perfil_ideal": 100.0,
+          "documentos": 100.0,
+          "pdf_url": 25.0
+        },
+        "official_link_only_total": 0,
+        "access_limited_total": 0,
+        "access_reason_counts": {},
+        "access_limited_examples": []
+      },
+      "old_vs_new": {
+        "old_count": 2,
+        "new_count": 4,
+        "delta_count": 2,
+        "old_links_now_missing": [
+          "http://news.ustc.edu.cn/info/1055/94796.htm"
+        ],
+        "new_links_before_missing": [
+          "https://www.ustc.edu.cn/info/1362/24794.htm",
+          "https://www.ustc.edu.cn/info/1362/24795.htm",
+          "https://www.ustc.edu.cn/info/1362/24805.htm"
+        ],
+        "core_fields_improved": {
+          "tipo_oportunidade": {
+            "old": 2,
+            "new": 4,
+            "delta": 2
+          },
+          "tipo_recurso": {
+            "old": 2,
+            "new": 4,
+            "delta": 2
+          },
+          "perfil_ideal": {
+            "old": 0,
+            "new": 4,
+            "delta": 4
+          },
+          "documentos": {
+            "old": 2,
+            "new": 4,
+            "delta": 2
+          },
+          "pdf_url": {
+            "old": 0,
+            "new": 1,
+            "delta": 1
+          }
+        },
+        "core_fields_worsened": {},
+        "old_documents_count": 2,
+        "new_documents_count": 4,
+        "old_pdf_count": 0,
+        "new_pdf_count": 1
+      },
+      "risk_notes": []
+    }
+  ],
+  "auditoria_semantica_resumo": {
+    "data_auditoria": "2026-05-02T21:42:32Z",
+    "fontes": 3,
+    "itens_total": 14,
+    "flags_totais": {
+      "oportunidade_fomento_sem_fomento": 4
+    },
+    "top20_problemas_semanticos": [
+      [
+        "oportunidade_fomento_sem_fomento",
+        4
+      ]
+    ],
+    "top20_ajustes_recomendados": [
+      "Restringir perfil_ideal genérico por evidência textual mínima.",
+      "Separar regras de crédito vs fomento por fonte + palavras-chave obrigatórias.",
+      "Exigir marcador de licitação para tipo_oportunidade=licitacao/compra_publica.",
+      "Reduzir classificação ampla quando classficacao_confianca=baixa.",
+      "Para fontes nucleares/defesa: usar peso institucional + objeto para evitar over/under tag.",
+      "Fortalecer extração de publico_alvo por entidades explícitas.",
+      "Adicionar fallback de área para itens com tipo_recurso definido e área vazia.",
+      "Revisar taxonomia em fontes com flag_rate > 100%."
+    ]
+  },
+  "pipelines": {
+    "retransform_all": "audit_reports_blocked_sources/lote3b_china_curated",
+    "audit_semantic_classification": "audit_reports_blocked_sources/lote3b_china_curated_semantic",
+    "audit_docs_pipeline": "audit_reports_blocked_sources/lote3b_china_curated_docs"
+  },
+  "nao_executado": [
+    "loader_apply",
+    "supabase",
+    "migrations",
+    "gate_global_opportunity",
+    "source_readiness_auto"
+  ],
+  "acesso_listagem_parcial": {
+    "china_university_procurement": "Tsinghua e PKU: falhas de listagem/HTTP em corridas anteriores e neste modulo; apenas USTC manteve fluxo estavel."
+  },
+  "readiness_recomendado_final_manual": {
+    "china_nsfc": "ready_with_notes",
+    "china_avic": "needs_manual_review",
+    "china_university_procurement": "ready_with_notes",
+    "china_cnnc": "blocked",
+    "china_norinco": "needs_manual_review"
+  },
+  "readiness_justificativas": {
+    "china_nsfc": "Curadoria removeu 19 entradas sem edital (politica, reunioes, forums, noticias). Restam 9 registos com grant/chamada_publica/funding_opportunity e evidencia. Auditoria semantica ainda sinaliza oportunidade_fomento_sem_fomento em parte dos casos.",
+    "china_avic": "Apos curadoria resta 1 chamada publica de recrutamento (RH/compliance), nao procurement de defesa nem aeronautica com evidencia. Listagens genericas e military aviation removidas.",
+    "china_university_procurement": "Quatro avisos USTC alinhados a fundos/chamadas NSFC/MOST; removidos indice agregado e aviso de seguranca. Cobertura parcial outras universidades.",
+    "china_cnnc": "Sem alteracao: falha total de listagem na ultima corrida; manter blocked.",
+    "china_norinco": "Sem alteracao nesta tarefa: bruto legado fraco; manter needs_manual_review."
+  }
+}

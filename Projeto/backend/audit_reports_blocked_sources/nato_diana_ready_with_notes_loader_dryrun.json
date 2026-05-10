@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "fonte": "nato_diana",
+    "readiness_alvo": "ready_with_notes",
+    "data_relatorio": "2026-05-02",
+    "id_execucao_loader": "eda92b2d-85a3-40da-b0b3-b31807f4109f",
+    "comando": "python scripts/load_ready_sources.py --dry-run --sources nato_diana --exclude-blocked --input-dir audit_reports_retransform/standardized --readiness audit_reports_retransform/readiness_for_loader.json"
+  },
+  "readiness_diff": {
+    "config_source_readiness_json": {
+      "blocked_removido": ["nato_diana"],
+      "ready_with_notes_adicionado": ["nato_diana"],
+      "nota": "O loader regrava config/source_readiness.json a partir de readiness_for_loader.json (split 54 + 18); nato_diana fica em ready_with_notes ordenado alfabeticamente."
+    },
+    "audit_reports_retransform_readiness_for_loader_json": {
+      "fontes_bloqueadas_temporariamente_removido": ["nato_diana"],
+      "fontes_prontas_para_loader_adicionado": ["nato_diana"],
+      "status_distribution_ajustes": {
+        "pronto_com_observacoes": "17 → 18",
+        "bloquear_temporariamente": "14 → 13"
+      }
+    },
+    "standardized_copiado": {
+      "origem": "CORE/transformer/nato_diana_standardized.json",
+      "destino": "audit_reports_retransform/standardized/nato_diana_standardized.json"
+    }
+  },
+  "dry_run_resumo": {
+    "sources_selected": 1,
+    "sources_excluded": 93,
+    "itens_standardized_total": 2,
+    "would_upsert_total": 2,
+    "would_ignore_total": 0,
+    "mapping_errors_total": 0,
+    "critical_empty_items_total": 0,
+    "docs_input_items_total": 0,
+    "docs_preserved_items_total": 0,
+    "documentos_perdidos_no_payload_total": 0,
+    "pdf_input_items_total": 0,
+    "pdf_preserved_items_total": 0,
+    "validacao_status_preserved_items_total": 2,
+    "qualidade_dado_preserved_items_total": 2,
+    "canonical_skipped_total": 0
+  },
+  "verificacao_por_fonte": {
+    "nato_diana": {
+      "itens_standardized": 2,
+      "would_upsert": 2,
+      "mapping_errors": 0,
+      "critical_empty_items": 0,
+      "critical_empty_fields": {},
+      "tipo_recurso": {
+        "payload_non_empty": 2,
+        "valor_observado": "fomento_pdi nos dois exemplos"
+      },
+      "tipo_oportunidade": {
+        "payload_non_empty": 2,
+        "valores": "accelerator (calibração DIANA)"
+      },
+      "perfil_ideal": {
+        "payload_non_empty": 2,
+        "valores": "pequenas empresas"
+      },
+      "setor_estrategico": {
+        "payload_non_empty": 2,
+        "valores": "defesa_industrial, inovacao_defesa, dual_use (sem ciber por palavra genérica)"
+      },
+      "area_tecnologica": {
+        "input": "listas vazias [] nos 2 itens standardized",
+        "nota": "Não contabilizado como campo semântico preenchido; coerente com FAQ/challenge de alto nível."
+      },
+      "links_oficiais": {
+        "challenges": "https://www.diana.nato.int/challenges.html",
+        "faq": "https://www.diana.nato.int/faq.html"
+      },
+      "pdf_url": {
+        "standardized": "\"\" (string vazia) → null no payload",
+        "nota": "Sem PDF inventado; sem documentos anexos."
+      },
+      "validacao_status": {
+        "exemplos": "valido (challenge); incompleto (FAQ: prazo_ausente, valor_ausente)"
+      },
+      "qualidade_dado": {
+        "exemplos": "88 (challenge); 70 (FAQ)"
+      },
+      "ciberseguranca": {
+        "flags_taxonomia": "ausentes nos setores observados",
+        "texto_descricao": "menção contextual 'defence and security experience' no FAQ — não dispara setor ciber por heurística genérica"
+      }
+    }
+  },
+  "environment_guard": {
+    "editalfinder_env": "staging",
+    "has_allow_staging_apply": false,
+    "block_reason": "missing_staging_flag",
+    "nota": "Dry-run não pediu apply; guard impede apply sem flags explícitas de staging."
+  },
+  "recomendacao_staging": {
+    "pode_aplicar_em_staging": "condicional",
+    "texto": "Dry-run com 2 would_upsert, 0 erros, 0 critical_empty, links diana.nato.int oficiais, pdf_url null (não fabricado). Volume baixo e 1 registo incompleto por desenho (FAQ sem prazo/valor estruturados). Aplicável em staging após confirmar env e EDITALFINDER_ALLOW_STAGING_APPLY no fluxo documentado; manter ready_with_notes (não promover a ready pleno) até cobertura/scrape melhorar.",
+    "apply_nao_executado": true
+  },
+  "referencias": {
+    "load_ready_summary": "audit_reports_loader_ready/load_ready_summary.json",
+    "load_ready_by_source": "audit_reports_loader_ready/load_ready_by_source.json",
+    "load_ready_payload_examples": "audit_reports_loader_ready/load_ready_payload_examples.json"
+  }
+}

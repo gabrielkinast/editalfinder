@@ -3,8 +3,17 @@ import requests
 from datetime import datetime
 from urllib.parse import urljoin
 from typing import List, Optional
+from pathlib import Path
+import sys
 from utils_abdi import get_soup, normalize_text, extract_date, is_deadline_valid
 from models_abdi import EditalABDI
+
+ROOT_DIR = Path(__file__).resolve().parent.parent
+if str(ROOT_DIR) not in sys.path:
+    sys.path.append(str(ROOT_DIR))
+
+from CORE.http_fetch import fetch_pdf_bytes
+from CORE.pdf_enrichment import extract_pdf_text_with_fallback
 
 BASE_URL = "https://www.abdi.com.br"
 URLS = [
@@ -13,6 +22,63 @@ URLS = [
     "https://www.abdi.com.br/transparencia/consultas-publicas/",
     "https://www.abdi.com.br/concursos/"
 ]
+
+
+def _extract_money(text: str) -> Optional[str]:
+    m = re.search(r"(R\$\s?\d[\d\.\,]*(?:\s?(?:mil|milh[aã]o|milh[oõ]es))?)", text, re.IGNORECASE)
+    return normalize_text(m.group(1)) if m else None
+
+
+def _extract_deadline_iso(text: str) -> Optional[str]:
+    m = re.search(r"(\d{2}/\d{2}/\d{4})", text)
+    if not m:
+        return None
+    return extract_date(m.group(1))
+
+
+def _guess_title_from_pdf(url: str, extracted_text: str) -> str:
+    lines = [normalize_text(x) for x in (extracted_text or "").splitlines()]
+    for ln in lines[:30]:
+        low = ln.lower()
+        if len(ln) < 12:
+            continue
+        if any(k in low for k in ["edital", "chamada", "concurso", "termo de referência", "seleção", "agro", "inovação", "inovacao"]):
+            return ln[:240]
+    filename = url.split("/")[-1].replace(".pdf", "")
+    clean = filename.replace("_", " ").replace("-", " ").strip()
+    return f"ABDI - {clean[:180]}"
+
+
+def _build_pdf_edital(full_url: str, anchor_title: str) -> EditalABDI:
+    pdf_text = ""
+    try:
+        pdf_bytes = fetch_pdf_bytes(full_url, page_referer=BASE_URL)
+        if pdf_bytes:
+            pdf_text = extract_pdf_text_with_fallback(pdf_bytes, max_pages=5) or ""
+    except Exception:
+        pdf_text = ""
+    pdf_text_norm = normalize_text(pdf_text)[:2200] if pdf_text else ""
+    title = _guess_title_from_pdf(full_url, pdf_text)
+    desc = pdf_text_norm[:900] if pdf_text_norm else (anchor_title or title)
+    return EditalABDI(
+        titulo=title,
+        link=full_url,
+        descricao=desc,
+        data_publicacao=extract_date(pdf_text_norm) if pdf_text_norm else None,
+        fim_inscricao=_extract_deadline_iso(pdf_text_norm) if pdf_text_norm else None,
+        situacao="Aberto",
+        extras={
+            "anexos": [{"nome": "Edital PDF", "url": full_url}],
+            "fonte_original": "ABDI",
+            "pdf_url": full_url,
+            "pdf_texto_extraido": pdf_text_norm,
+            "pdf_resumo": pdf_text_norm[:500] if pdf_text_norm else "",
+            "valor_total": _extract_money(pdf_text_norm) or "",
+            "objetivo": pdf_text_norm[:500] if pdf_text_norm else "",
+            "metodo_extracao": "pdf_enriched",
+        },
+    )
+
 
 class ABDIScraper:
     def __init__(self):
@@ -48,13 +114,7 @@ class ABDIScraper:
                         
                     # Se for PDF direto, cria o edital sem entrar na página
                     if full_url.lower().endswith(".pdf"):
-                        edital = EditalABDI(
-                            titulo=titulo if len(titulo) > 10 else f"Documento: {full_url.split('/')[-1]}",
-                            link=full_url,
-                            descricao=titulo,
-                            situacao="Aberto",
-                            extras={"anexos": [{"nome": "Edital PDF", "url": full_url}], "fonte_original": "ABDI"}
-                        )
+                        edital = _build_pdf_edital(full_url, titulo)
                         all_editais.append(edital)
                         print(f"Encontrado PDF direto: {edital.titulo[:50]}...")
                     else:

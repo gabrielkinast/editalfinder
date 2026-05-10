@@ -1,0 +1,86 @@
+{
+  "meta": {
+    "fonte": "nato_diana",
+    "data_relatorio": "2026-05-02",
+    "raw_path": "nato_diana/outputs/nato_diana_editais.json",
+    "portal": "https://www.diana.nato.int/"
+  },
+  "diagnostico_inicial": {
+    "estado_anterior": {
+      "itens_brutos_tipicos": 2,
+      "problemas": [
+        "Fallback `fallback_public_index` e página genérica `challenges.html` + entrada NIF (`nif.fund`) misturada com DIANA.",
+        "Listagens `diana.nato.int` frequentemente bloqueadas por Cloudflare (HTTP 403 / 'Just a moment...') para `requests` simples."
+      ]
+    },
+    "estado_pos_correcao": {
+      "coleta": "Tenta `scrape_html_portal` só em `diana.nato.int` (challenges + FAQ); filtra índice `/challenges.html` como detalhe scrapeado.",
+      "fallback": "Removido `fallback_public_index`. Se scrape vazio: **curated_official_public_brief** (2 registos) com texto derivado de FAQ pública DIANA e prazo publicado do desafio em destaque.",
+      "nif_fund": "Removido do âmbito `nato_diana`."
+    }
+  },
+  "contagens_finais": {
+    "itens_brutos": 2,
+    "itens_transformados": 2,
+    "itens_rejeitados": 0,
+    "itens_incompletos": 1,
+    "itens_suspeitos": 0,
+    "qualidade_dado_media": 79.0
+  },
+  "motivos_rejeicao": {},
+  "classificacao_links": {
+    "observacao": "Não há subpáginas scrapeadas: links oficiais `challenges.html` (challenge) e `faq.html` (programa/FAQ). Não são notícias isoladas nem hub inventado; o challenge aponta para o portal real.",
+    "tipos": [
+      {
+        "link": "https://www.diana.nato.int/challenges.html",
+        "tipo": "challenge / portal de candidaturas (conteúdo curado + verificação humana no portal)"
+      },
+      {
+        "link": "https://www.diana.nato.int/faq.html",
+        "tipo": "programa / FAQ institucional útil (não é ‘notícia’ solta)"
+      }
+    ]
+  },
+  "tipos_conteudo_possiveis": [
+    "challenge",
+    "accelerator",
+    "chamada_publica",
+    "programa",
+    "defence_innovation",
+    "dual_use",
+    "test_centre",
+    "noticia_institucional",
+    "pagina_generica"
+  ],
+  "mapeamento_observado": {
+    "challenge": ["Decision Superiority… (curated)"],
+    "programa": ["NATO DIANA — Programme FAQ (curated)"],
+    "test_centre": "Não evidenciado no texto curado atual (não inventado).",
+    "accelerator": "Mencionado como subtema no segundo item; sem URL dedicada scrapeada."
+  },
+  "pipelines_executados": {
+    "retransform": "python scripts/retransform_all.py --sources nato_diana --dry-run --output-dir audit_reports_blocked_sources/lote2_fix_nato_diana",
+    "auditoria_semantica": "python scripts/audit_semantic_classification.py --input-dir audit_reports_blocked_sources/lote2_fix_nato_diana/standardized --output-dir audit_reports_blocked_sources/lote2_fix_nato_diana_semantic",
+    "auditoria_documentos": "python scripts/audit_docs_pipeline.py --sources nato_diana --output-dir audit_reports_blocked_sources/lote2_fix_nato_diana_docs"
+  },
+  "resultados_auditoria": {
+    "semantica_flags_totais": {},
+    "ajuste_script_semantica": "Isenção `fonte_defesa_sem_defesa` para `nato_diana` quando o texto contém marcadores OTAN/DIANA (defence/defense/nato/diana/military/allied/warfighter/dual_use).",
+    "documentos": "0 PDFs no bruto; 0 perdas na cadeia."
+  },
+  "readiness_recomendado": "ready_with_notes",
+  "readiness_justificativa": [
+    "2 oportunidades reais alinhadas ao programa DIANA (challenge + FAQ), sem fallback de índice genérico.",
+    "0 rejeitados; classificação local (tipo_oportunidade, tipo_recurso, setor, perfil) calibrada; cibersegurança só com marcadores fortes.",
+    "Auditoria semântica sem flags após ajuste.",
+    "Volume baixo e dependência de brief curado enquanto Cloudflare bloquear scrape HTML; atualizar brief quando novos desafios forem publicados.",
+    "1 incompleto (ex.: segundo item sem prazo estruturado); sem PDFs na coleta."
+  ],
+  "nao_executado": [
+    "loader apply",
+    "Supabase",
+    "migrations",
+    "atualização automática de config/source_readiness.json",
+    "alteração global do opportunity_gate"
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "data": "2026-05-02T02:25:00Z",
+  "escopo_regra": {
+    "entra": [
+      "licitacao_compra_com_evidencia",
+      "chamada_edital_real"
+    ],
+    "nao_entra": [
+      "noticia_institucional",
+      "pagina_generica",
+      "hub_editais_ou_licitacoes_sem_detalhe",
+      "contato_menu"
+    ],
+    "concurso_seletivo": "classificado como processo_seletivo só com marcadores; projeto pode excluir depois se não quiser"
+  },
+  "marinha": {
+    "bruto_atual_n": 0,
+    "transformados_n": 0,
+    "rejeitados_n": 0,
+    "motivos_rejeicao": {},
+    "historico": {
+      "antes": "1 item fallback metodo_extracao=fallback_public_index (hub /editais) — rejeitado pelo opportunity_gate (Pontuacao abaixo)",
+      "depois": "Sem fallback de índice; crawler com filtros de URL e profundidade; relaxamento _marinha_soft_continue só fora do hub e com marcadores; calibrate_marinha_extras"
+    },
+    "classificacao_links_tipicos": {
+      "hub_editais": "pagina_institucional_generica",
+      "detalhe_com_pregao_licit_edital": "licitacao_ou_compra_publica",
+      "concurso_publico": "processo_seletivo"
+    }
+  },
+  "amazul": {
+    "bruto_atual_n": 0,
+    "transformados_n": 0,
+    "rejeitados_n": 0,
+    "motivos_rejeicao": {},
+    "historico": {
+      "antes": "1 item fallback hub /licitacoes — rejeitado pelo opportunity_gate",
+      "depois": "Sem fallback; filtros; _amazul_soft_continue + calibrate_amazul_extras (nuclear só com evidência forte)"
+    }
+  },
+  "retransformacao": {
+    "data_auditoria": "2026-05-02T02:20:17Z",
+    "dry_run": true,
+    "fontes_processadas": 2,
+    "fontes_com_erro": 0,
+    "itens_brutos_total": 0,
+    "itens_transformados_total": 0,
+    "itens_rejeitados_total": 0,
+    "fontes_risco_loader": []
+  },
+  "readiness_recomendado": {
+    "marinha": "needs_manual_review — sem itens brutos até nova coleta com rede; manter blocked no loader até haver dados",
+    "amazul": "needs_manual_review — idem"
+  }
+}

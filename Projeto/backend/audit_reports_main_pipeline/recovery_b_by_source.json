@@ -1,0 +1,128 @@
+{
+  "data_geracao_iso": "2026-05-10",
+  "baseline": "post_daily_warning_examples.json → summary_by_warning.edital.suspeito_ativo_true.by_source",
+  "fontes_recovery_b": [
+    {
+      "fonte": "amazul",
+      "staging_suspeito_ativo_true_pos_recovery_a": 14,
+      "recovery_b_itens_transformados": 20,
+      "recovery_b_suspeito_ativo_true": 0,
+      "recovery_b_incompleto": 6,
+      "recovery_b_valido": 14,
+      "exemplos": [
+        {
+          "titulo": "Dispensa de Licitação 01/2026",
+          "link": "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos/dispensa-de-licitacao-012026",
+          "validacao_status": "valido"
+        },
+        {
+          "titulo": "Dispensa de Licitação 06/2025",
+          "link": "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos/dispensa-de-licitacao-062025",
+          "validacao_status": "valido"
+        },
+        {
+          "titulo": "Dispensa de Licitação 01/2024",
+          "link": "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos/dispensa-de-licitacao-012024",
+          "validacao_status": "incompleto"
+        },
+        {
+          "titulo": "Dispensa de Licitação 02/2024",
+          "link": "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos/dispensa-de-licitacao-022024",
+          "validacao_status": "incompleto"
+        }
+      ],
+      "provavel_causa": "Gate relaxado (opportunity_gate_relaxed) sem estado final adequado em item_quality — corrigido com scopes amazul_local, ambev_local, badesul_local → incompleto; BADESUL: calibrate_badesul_extras + remoção de fallback institucional.",
+      "acao_recomendada": "Enriquecer prazo/valor quando existirem em fonte; manter suspeito só com dúvida real; não apply automático."
+    },
+    {
+      "fonte": "ambev",
+      "staging_suspeito_ativo_true_pos_recovery_a": 7,
+      "recovery_b_itens_transformados": 7,
+      "recovery_b_suspeito_ativo_true": 0,
+      "recovery_b_incompleto": 7,
+      "recovery_b_valido": 0,
+      "exemplos": [
+        {
+          "titulo": "Water Stewardship",
+          "link": "https://www.100accelerator.com/challenges/water-stewardship",
+          "validacao_status": "incompleto"
+        },
+        {
+          "titulo": "Climate",
+          "link": "https://www.100accelerator.com/challenges/climate",
+          "validacao_status": "incompleto"
+        },
+        {
+          "titulo": "Circular Economy",
+          "link": "https://www.100accelerator.com/challenges/circular-economy",
+          "validacao_status": "incompleto"
+        },
+        {
+          "titulo": "Sustainable Agriculture",
+          "link": "https://www.100accelerator.com/challenges/sustainable-agriculture",
+          "validacao_status": "incompleto"
+        }
+      ],
+      "provavel_causa": "Gate relaxado (opportunity_gate_relaxed) sem estado final adequado em item_quality — corrigido com scopes amazul_local, ambev_local, badesul_local → incompleto; BADESUL: calibrate_badesul_extras + remoção de fallback institucional.",
+      "acao_recomendada": "Enriquecer prazo/valor quando existirem em fonte; manter suspeito só com dúvida real; não apply automático."
+    },
+    {
+      "fonte": "badesul",
+      "staging_suspeito_ativo_true_pos_recovery_a": 7,
+      "recovery_b_itens_transformados": 5,
+      "recovery_b_suspeito_ativo_true": 0,
+      "recovery_b_incompleto": 5,
+      "recovery_b_valido": 0,
+      "exemplos": [
+        {
+          "titulo": "Badesul divulga projetos contemplados",
+          "link": "https://www.badesul.com.br/fas/transparencia/download?idPublicacao=29016",
+          "validacao_status": "incompleto"
+        },
+        {
+          "titulo": "Resultado - Seleção Pública de Subvenção Econômica",
+          "link": "https://www.badesul.com.br/fas/transparencia/download?idPublicacao=29014",
+          "validacao_status": "incompleto"
+        },
+        {
+          "titulo": "Inscrições abertas - Edital de Subvenção+Social",
+          "link": "https://www.badesul.com.br/fas/transparencia/download?idPublicacao=29010",
+          "validacao_status": "incompleto"
+        },
+        {
+          "titulo": "AVISO - RETIFICAÇÃO EDITAL DE SELEÇÃO PÚBLICA",
+          "link": "https://www.badesul.com.br/fas/transparencia/download?idPublicacao=29009",
+          "validacao_status": "incompleto"
+        }
+      ],
+      "provavel_causa": "Gate relaxado (opportunity_gate_relaxed) sem estado final adequado em item_quality — corrigido com scopes amazul_local, ambev_local, badesul_local → incompleto; BADESUL: calibrate_badesul_extras + remoção de fallback institucional.",
+      "acao_recomendada": "Enriquecer prazo/valor quando existirem em fonte; manter suspeito só com dúvida real; não apply automático."
+    }
+  ],
+  "totais_por_fonte": {
+    "amazul": {
+      "total": 20,
+      "suspeito_ativo": 0,
+      "incompleto": 6,
+      "valido": 14,
+      "acesso_limitado": 0,
+      "outro": 0
+    },
+    "ambev": {
+      "total": 7,
+      "suspeito_ativo": 0,
+      "incompleto": 7,
+      "valido": 0,
+      "acesso_limitado": 0,
+      "outro": 0
+    },
+    "badesul": {
+      "total": 5,
+      "suspeito_ativo": 0,
+      "incompleto": 5,
+      "valido": 0,
+      "acesso_limitado": 0,
+      "outro": 0
+    }
+  }
+}

@@ -1,0 +1,282 @@
+{
+  "timestamp": "2026-05-09T15:36:54Z",
+  "safety": {
+    "apply_executed": false,
+    "supabase_touched": false,
+    "schema_changed": false,
+    "opportunity_gate_global_changed": false,
+    "source_readiness_updated": false
+  },
+  "changes": [
+    "Poda de publico_alvo/perfil_ideal por evidencia textual nas calibracoes internacionais locais.",
+    "Compactacao de area/classificacao ampla e preservacao de excedentes em tags_secundarias.",
+    "Melhoria de extracao de prazo por closing date/deadline/apply by/submission date em detalhes HTML.",
+    "Filtro de URLs agregadoras UKRI (/feed e /page/) para reduzir ruido."
+  ],
+  "before": {
+    "semantic_flags": {
+      "publico_alvo_sem_evidencia": 15,
+      "classificacao_muito_ampla": 1
+    },
+    "items_total": 48
+  },
+  "after": {
+    "semantic_flags": {
+      "publico_alvo_sem_evidencia": 4
+    },
+    "items_total": 46,
+    "by_source": [
+      {
+        "fonte": "eit",
+        "itens": 16,
+        "qualidade_media": 74.19,
+        "flags": {},
+        "flag_rate_pct": 0.0
+      },
+      {
+        "fonte": "esa_osip",
+        "itens": 17,
+        "qualidade_media": 72.29,
+        "flags": {
+          "publico_alvo_sem_evidencia": 1
+        },
+        "flag_rate_pct": 5.88
+      },
+      {
+        "fonte": "esa_star",
+        "itens": 0,
+        "qualidade_media": null,
+        "flags": {},
+        "flag_rate_pct": 0.0
+      },
+      {
+        "fonte": "eurostars",
+        "itens": 2,
+        "qualidade_media": 87.5,
+        "flags": {},
+        "flag_rate_pct": 0.0
+      },
+      {
+        "fonte": "innovate_uk",
+        "itens": 1,
+        "qualidade_media": 88.0,
+        "flags": {
+          "publico_alvo_sem_evidencia": 1
+        },
+        "flag_rate_pct": 100.0
+      },
+      {
+        "fonte": "ukri_funding",
+        "itens": 10,
+        "qualidade_media": 91.2,
+        "flags": {
+          "publico_alvo_sem_evidencia": 2
+        },
+        "flag_rate_pct": 20.0
+      }
+    ],
+    "counts": {
+      "innovate_uk": {
+        "standardized_count": 1,
+        "with_deadline": 1,
+        "setor_gt3": 0
+      },
+      "ukri_funding": {
+        "standardized_count": 10,
+        "with_deadline": 8,
+        "setor_gt3": 0
+      },
+      "eurostars": {
+        "standardized_count": 2,
+        "with_deadline": 1,
+        "setor_gt3": 0
+      },
+      "eit": {
+        "standardized_count": 16,
+        "with_deadline": 0,
+        "setor_gt3": 0
+      },
+      "esa_star": {
+        "standardized_count": 0,
+        "with_deadline": 0,
+        "setor_gt3": 0
+      },
+      "esa_osip": {
+        "standardized_count": 17,
+        "with_deadline": 1,
+        "setor_gt3": 0
+      }
+    }
+  },
+  "docs_summary": {
+    "data_auditoria": "2026-05-09T15:33:13Z",
+    "fontes": [
+      "innovate_uk",
+      "ukri_funding",
+      "eurostars",
+      "eit",
+      "esa_star",
+      "esa_osip"
+    ],
+    "max_items_por_fonte": 25,
+    "pdf_skip": true,
+    "itens_analisados": 48,
+    "raw_com_pdf_url": 14,
+    "raw_com_documentos": 15,
+    "transformado_com_pdf_url": 14,
+    "transformado_com_documentos": 15,
+    "payload_com_pdf_url": 14,
+    "payload_com_documentos": 15,
+    "bruto_com_documentos_pdf": 14,
+    "bruto_com_documentos_nao_pdf": 4,
+    "transformado_com_documentos_pdf": 14,
+    "transformado_com_documentos_nao_pdf": 4,
+    "payload_com_documentos_pdf": 14,
+    "payload_com_documentos_nao_pdf": 4,
+    "perdas_pdf": 0,
+    "perdas_nao_pdf": 0,
+    "downloads_falharam": 14,
+    "downloads_sucesso": 0,
+    "links_invalidos": 0,
+    "links_relativos_restantes": 0,
+    "links_quebrados": 0,
+    "duplicados_documentos": 0,
+    "perdas_total": 0,
+    "fontes_pior_preservacao": [
+      {
+        "fonte": "innovate_uk",
+        "score_perda": 1.0
+      },
+      {
+        "fonte": "esa_star",
+        "score_perda": 1.0
+      },
+      {
+        "fonte": "ukri_funding",
+        "score_perda": 0.0
+      },
+      {
+        "fonte": "eurostars",
+        "score_perda": 0.0
+      },
+      {
+        "fonte": "eit",
+        "score_perda": 0.0
+      },
+      {
+        "fonte": "esa_osip",
+        "score_perda": 0.0
+      }
+    ],
+    "formatos_detectados": {
+      "pdf": 28,
+      "docx": 9,
+      "xlsx": 2
+    }
+  },
+  "loader_dry_run": {
+    "mode": "dry-run",
+    "apply_requested": false,
+    "sources_selected": 3,
+    "sources_excluded": 3,
+    "itens_standardized_total": 43,
+    "would_upsert_total": 43,
+    "would_ignore_total": 0,
+    "mapping_errors_total": 0,
+    "critical_empty_items_total": 0,
+    "destination_counts_total": {
+      "edital": 43
+    },
+    "readiness_path": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_credito\\lote_inovacao_internacional_onda_c_quality_fix_readiness_temp.json",
+    "db_connection_diag": {
+      "url_masked": "http://127***0.1",
+      "key_name_selected": "SUPABASE_KEY",
+      "key_exists": true,
+      "key_len": 23,
+      "key_prefix_masked": "dum***ey",
+      "env_sources_found": [
+        "D:\\Computational_Physics\\My Projects\\edital\\.env.staging",
+        "D:\\Computational_Physics\\My Projects\\edital\\CORE\\.env"
+      ]
+    }
+  },
+  "remaining_examples": [
+    {
+      "fonte": "esa_osip",
+      "titulo": "European Space for Sustainability Award 2026",
+      "link": "https://ideas.esa.int/core/servlet/hype/IMT?documentTableId=6134754942840537570&userAction=Browse&templateName=&documentId=7e00afb5bbc5d161c44a5d96f51ebffc",
+      "flags": [
+        "publico_alvo_sem_evidencia"
+      ],
+      "tipo_recurso": "apoio_inovacao",
+      "tipo_oportunidade": "space_opportunity",
+      "area": [
+        "Meio ambiente"
+      ],
+      "perfil_ideal": []
+    },
+    {
+      "fonte": "innovate_uk",
+      "titulo": "Funding opportunity: Dual-use aviation systems and autonomy",
+      "link": "https://www.ukri.org/opportunity/dual-use-aviation-systems-and-autonomy/",
+      "flags": [
+        "publico_alvo_sem_evidencia"
+      ],
+      "tipo_recurso": "grant",
+      "tipo_oportunidade": "funding_opportunity",
+      "area": [
+        "Defesa nacional"
+      ],
+      "perfil_ideal": [
+        "pequena_empresa",
+        "media_empresa",
+        "consorcio"
+      ]
+    },
+    {
+      "fonte": "ukri_funding",
+      "titulo": "Funding opportunity: Dual-use aviation systems and autonomy",
+      "link": "https://www.ukri.org/opportunity/dual-use-aviation-systems-and-autonomy/",
+      "flags": [
+        "publico_alvo_sem_evidencia"
+      ],
+      "tipo_recurso": "grant",
+      "tipo_oportunidade": "research_grant",
+      "area": [
+        "Defesa nacional"
+      ],
+      "perfil_ideal": [
+        "pequena_empresa",
+        "media_empresa",
+        "consorcio"
+      ]
+    },
+    {
+      "fonte": "ukri_funding",
+      "titulo": "Funding opportunity: National Materials Innovation Programme: Feasibility studies Round 2",
+      "link": "https://www.ukri.org/opportunity/national-materials-innovation-programme-feasibility-studies-round-2/",
+      "flags": [
+        "publico_alvo_sem_evidencia"
+      ],
+      "tipo_recurso": "grant",
+      "tipo_oportunidade": "research_grant",
+      "area": [],
+      "perfil_ideal": [
+        "consorcio"
+      ]
+    }
+  ],
+  "recommendations": {
+    "ukri_funding": "ready_with_notes",
+    "eit": "ready_with_notes",
+    "esa_osip": "ready_with_notes",
+    "innovate_uk": "needs_manual_review",
+    "eurostars": "needs_manual_review",
+    "esa_star": "blocked"
+  },
+  "notes": [
+    "Dry-run loader usou SUPABASE_URL local falso para nao tocar staging real.",
+    "Com --exclude-blocked e readiness oficial atual, fontes Onda C ainda sao excluidas; foi usado readiness temporario local de auditoria para validar payload.",
+    "esa_star permanece blocked por login/autenticacao no portal esa-star Publication."
+  ]
+}

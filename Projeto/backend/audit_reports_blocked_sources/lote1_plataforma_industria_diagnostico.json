@@ -1,0 +1,55 @@
+{
+  "fonte": "plataforma_industria",
+  "data_auditoria": "2026-05-02T00:44:00Z",
+  "parte1_diagnostico_inicial": {
+    "output_bruto_path": "plataforma_industria/outputs/plataforma_editais.json",
+    "antes_correcao": {
+      "itens_brutos": 1,
+      "natureza": "fallback_public_index — página índice da Plataforma Inovação (hub genérico)",
+      "problema": "scrape sem filtros de path + fallback; retransform histórico: 0 transformados / gate"
+    },
+    "apos_correcao_crawler_e_pipeline": {
+      "itens_brutos": 23,
+      "itens_transformados": 23,
+      "itens_rejeitados": 0,
+      "motivos_rejeicao": {},
+      "urls_com_categoria": 23,
+      "fallback_public_index": 0,
+      "padrao_urls": "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/...",
+      "classificacao_conteudo": "categorias agregadas da Plataforma Inovação (equivalente ao lote SENAI /categoria/)"
+    }
+  },
+  "parte2_paralelo_senai": {
+    "mesmo_portal": true,
+    "caminho_categoria": true,
+    "listagem_agregada": true,
+    "sobreposicao_potencial_com_senai": "As listagens da plataforma podem coincidir com URLs já coletadas pela fonte senai — dedupe no loader/BD se necessário."
+  },
+  "parte3_correcoes_locais": {
+    "plataforma_industria/main_plataforma.py": [
+      "Config alinhada ao scraper_generic (timeout, link_url_must_contain_any, link_path_min_depth, exclusões resultados/edicoes)",
+      "Removido fallback de índice genérico",
+      "Filtro _is_relevant_item reforçado (hub sem /categoria/, resultados/edicoes)"
+    ],
+    "CORE/transformer.py": [
+      "build_defense_extras não aplicado a plataforma_industria",
+      "_senai_soft_continue estendido a plataforma_industria + bloqueio de hub sem /categoria/",
+      "Calibração: calibrate_portal_plataforma_inovacao_extras(out, src) com tipo_conteudo_plataforma_industria"
+    ],
+    "CORE/taxonomy_filtros.py": [
+      "calibrate_portal_plataforma_inovacao_extras(item, pipeline_source) — programa_agregado, perfil_ideal com evidência"
+    ],
+    "scripts/audit_docs_pipeline.py": [
+      "_discover_source_json: plataforma_editais.json para fonte plataforma_industria",
+      "_write_md_summary: tolera entradas com erro sem KeyError"
+    ]
+  },
+  "parte5_a_7_artefatos": {
+    "retransform": "audit_reports_blocked_sources/lote1_fix_plataforma_industria/",
+    "auditoria_semantica": "audit_reports_blocked_sources/lote1_fix_plataforma_industria_semantic/",
+    "auditoria_documentos": "audit_reports_blocked_sources/lote1_fix_plataforma_industria_docs/"
+  },
+  "parte8_readiness_recomendado": "ready_with_notes",
+  "justificativa_readiness": "23 categorias úteis como programa_agregado; sem licitação/supplier_portal/notícia indevida; docs preservados; todos incompletos; overlap possível com SENAI.",
+  "nao_atualizado": "config/source_readiness.json e audit_reports_retransform/readiness_for_loader.json (conforme pedido: sem mudança automática de readiness)"
+}

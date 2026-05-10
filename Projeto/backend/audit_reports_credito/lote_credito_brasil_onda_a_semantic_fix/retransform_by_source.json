@@ -1,0 +1,489 @@
+[
+  {
+    "fonte": "agerio",
+    "raw_output_path": "agerio/outputs/agerio_editais.json",
+    "old_standardized_path": "",
+    "new_standardized_path": "audit_reports_credito/lote_credito_brasil_onda_a_semantic_fix/standardized/agerio_standardized.json",
+    "itens_brutos_encontrados": 3,
+    "itens_transformados": 2,
+    "itens_rejeitados": 1,
+    "itens_incompletos": 1,
+    "itens_suspeitos": 1,
+    "itens_acesso_limitado": 0,
+    "documentos_preservados": 1,
+    "pdf_url_preservado": 1,
+    "area_preenchida": 2,
+    "tipo_oportunidade_preenchido": 2,
+    "tipo_recurso_preenchido": 2,
+    "perfil_ideal_preenchido": 2,
+    "qualidade_dado_media": 76.5,
+    "motivos_rejeicao_principais": {
+      "Noticia ou pagina generica sem chamada evidenciada": 1
+    },
+    "quick_audit": {
+      "ruido_passou": 0,
+      "duplicatas_link": 0,
+      "campos_preenchidos_pct": {
+        "area": 100.0,
+        "tipo_oportunidade": 100.0,
+        "tipo_recurso": 100.0,
+        "perfil_ideal": 100.0,
+        "documentos": 50.0,
+        "pdf_url": 50.0
+      },
+      "official_link_only_total": 0,
+      "access_limited_total": 0,
+      "access_reason_counts": {},
+      "access_limited_examples": []
+    },
+    "old_vs_new": {
+      "old_count": 0,
+      "new_count": 2,
+      "delta_count": 2,
+      "old_links_now_missing": [],
+      "new_links_before_missing": [
+        "https://www.agerio.com.br/areas-de-atuacao/tipo/empresas/",
+        "https://www.agerio.com.br/educacaofinanceira/"
+      ],
+      "core_fields_improved": {
+        "area": {
+          "old": 0,
+          "new": 2,
+          "delta": 2
+        },
+        "tipo_oportunidade": {
+          "old": 0,
+          "new": 2,
+          "delta": 2
+        },
+        "tipo_recurso": {
+          "old": 0,
+          "new": 2,
+          "delta": 2
+        },
+        "perfil_ideal": {
+          "old": 0,
+          "new": 2,
+          "delta": 2
+        },
+        "documentos": {
+          "old": 0,
+          "new": 1,
+          "delta": 1
+        },
+        "pdf_url": {
+          "old": 0,
+          "new": 1,
+          "delta": 1
+        }
+      },
+      "core_fields_worsened": {},
+      "old_documents_count": 0,
+      "new_documents_count": 1,
+      "old_pdf_count": 0,
+      "new_pdf_count": 1
+    },
+    "risk_notes": []
+  },
+  {
+    "fonte": "banco_da_amazonia",
+    "raw_output_path": "banco_da_amazonia/outputs/banco_da_amazonia_editais.json",
+    "old_standardized_path": "",
+    "new_standardized_path": "audit_reports_credito/lote_credito_brasil_onda_a_semantic_fix/standardized/banco_da_amazonia_standardized.json",
+    "itens_brutos_encontrados": 26,
+    "itens_transformados": 26,
+    "itens_rejeitados": 0,
+    "itens_incompletos": 5,
+    "itens_suspeitos": 21,
+    "itens_acesso_limitado": 0,
+    "documentos_preservados": 5,
+    "pdf_url_preservado": 5,
+    "area_preenchida": 25,
+    "tipo_oportunidade_preenchido": 26,
+    "tipo_recurso_preenchido": 26,
+    "perfil_ideal_preenchido": 16,
+    "qualidade_dado_media": 58.38,
+    "motivos_rejeicao_principais": {},
+    "quick_audit": {
+      "ruido_passou": 0,
+      "duplicatas_link": 0,
+      "campos_preenchidos_pct": {
+        "area": 96.15,
+        "tipo_oportunidade": 100.0,
+        "tipo_recurso": 100.0,
+        "perfil_ideal": 61.54,
+        "documentos": 19.23,
+        "pdf_url": 19.23
+      },
+      "official_link_only_total": 0,
+      "access_limited_total": 0,
+      "access_reason_counts": {},
+      "access_limited_examples": []
+    },
+    "old_vs_new": {
+      "old_count": 0,
+      "new_count": 26,
+      "delta_count": 26,
+      "old_links_now_missing": [],
+      "new_links_before_missing": [
+        "https://www.bancoamazonia.com.br/empresas/conta-pj",
+        "https://www.bancoamazonia.com.br/empresas/credito-e-financiamentos",
+        "https://www.bancoamazonia.com.br/empresas/credito-e-financiamentos/amazonia-rural-verde",
+        "https://www.bancoamazonia.com.br/empresas/credito-e-financiamentos/antecipacao-de-cartao",
+        "https://www.bancoamazonia.com.br/empresas/credito-e-financiamentos/capital-de-giro",
+        "https://www.bancoamazonia.com.br/empresas/credito-e-financiamentos/capital-de-giro-produtor-rural",
+        "https://www.bancoamazonia.com.br/empresas/credito-e-financiamentos/energia-verde-nao-rural",
+        "https://www.bancoamazonia.com.br/empresas/credito-e-financiamentos/fundo-marinha",
+        "https://www.bancoamazonia.com.br/empresas/credito-e-financiamentos/renegociacao-dividas",
+        "https://www.bancoamazonia.com.br/fundo-constitucional-financiamento/relatorios-fno",
+        "https://www.bancoamazonia.com.br/linhas-de-fomento/bndes-automatico-rural",
+        "https://www.bancoamazonia.com.br/linhas-de-fomento/bndes-automatico-urbano",
+        "https://www.bancoamazonia.com.br/linhas-de-fomento/bndes-finame",
+        "https://www.bancoamazonia.com.br/linhas-de-fomento/fno/energia-verde",
+        "https://www.bancoamazonia.com.br/linhas-de-fomento/fno/fno-biodiversidade",
+        "https://www.bancoamazonia.com.br/linhas-de-fomento/fungetur",
+        "https://www.bancoamazonia.com.br/linhas-de-fomento/plano-safra",
+        "https://www.bancoamazonia.com.br/linhas-de-fomento/pronaf",
+        "https://www.bancoamazonia.com.br/rural/credito-e-financiamento-agro",
+        "https://www.bancoamazonia.com.br/rural/credito-e-financiamento-agro/capital-de-giro-produtor-rural",
+        "https://www.bancoamazonia.com.br/rural/credito-e-financiamento-agro/financiamento-veiculo-produtor-rural",
+        "https://www.bancoamazonia.com.br/rural/credito-e-financiamento-agro/maquinas-equipamentos",
+        "https://www.bancoamazonia.com.br/rural/credito-e-financiamento-agro/pronaf",
+        "https://www.bancoamazonia.com.br/rural/credito-e-financiamento-agro/pronaf/pronaf-a",
+        "https://www.bancoamazonia.com.br/rural/credito-e-financiamento-agro/renegociacao-dividas",
+        "https://www.bancoamazonia.com.br/solucoes-pf/emprestimo-e-microcredito"
+      ],
+      "core_fields_improved": {
+        "area": {
+          "old": 0,
+          "new": 25,
+          "delta": 25
+        },
+        "tipo_oportunidade": {
+          "old": 0,
+          "new": 26,
+          "delta": 26
+        },
+        "tipo_recurso": {
+          "old": 0,
+          "new": 26,
+          "delta": 26
+        },
+        "perfil_ideal": {
+          "old": 0,
+          "new": 16,
+          "delta": 16
+        },
+        "documentos": {
+          "old": 0,
+          "new": 5,
+          "delta": 5
+        },
+        "pdf_url": {
+          "old": 0,
+          "new": 5,
+          "delta": 5
+        }
+      },
+      "core_fields_worsened": {},
+      "old_documents_count": 0,
+      "new_documents_count": 5,
+      "old_pdf_count": 0,
+      "new_pdf_count": 5
+    },
+    "risk_notes": []
+  },
+  {
+    "fonte": "bdmg",
+    "raw_output_path": "bdmg/outputs/bdmg_editais.json",
+    "old_standardized_path": "",
+    "new_standardized_path": "audit_reports_credito/lote_credito_brasil_onda_a_semantic_fix/standardized/bdmg_standardized.json",
+    "itens_brutos_encontrados": 28,
+    "itens_transformados": 27,
+    "itens_rejeitados": 1,
+    "itens_incompletos": 26,
+    "itens_suspeitos": 0,
+    "itens_acesso_limitado": 0,
+    "documentos_preservados": 15,
+    "pdf_url_preservado": 15,
+    "area_preenchida": 27,
+    "tipo_oportunidade_preenchido": 27,
+    "tipo_recurso_preenchido": 27,
+    "perfil_ideal_preenchido": 26,
+    "qualidade_dado_media": 79.56,
+    "motivos_rejeicao_principais": {
+      "titulo_ruido_exato": 1
+    },
+    "quick_audit": {
+      "ruido_passou": 0,
+      "duplicatas_link": 0,
+      "campos_preenchidos_pct": {
+        "area": 100.0,
+        "tipo_oportunidade": 100.0,
+        "tipo_recurso": 100.0,
+        "perfil_ideal": 96.3,
+        "documentos": 55.56,
+        "pdf_url": 55.56
+      },
+      "official_link_only_total": 0,
+      "access_limited_total": 0,
+      "access_reason_counts": {},
+      "access_limited_examples": []
+    },
+    "old_vs_new": {
+      "old_count": 0,
+      "new_count": 27,
+      "delta_count": 27,
+      "old_links_now_missing": [],
+      "new_links_before_missing": [
+        "https://www.bdmg.mg.gov.br/concurso",
+        "https://www.bdmg.mg.gov.br/credito-verde",
+        "https://www.bdmg.mg.gov.br/documentos",
+        "https://www.bdmg.mg.gov.br/editais-licitacoes",
+        "https://www.bdmg.mg.gov.br/editais-venda-bens",
+        "https://www.bdmg.mg.gov.br/en",
+        "https://www.bdmg.mg.gov.br/grandes-empresas",
+        "https://www.bdmg.mg.gov.br/inovacao",
+        "https://www.bdmg.mg.gov.br/investimento",
+        "https://www.bdmg.mg.gov.br/labagrominas",
+        "https://www.bdmg.mg.gov.br/licitacoes-contratos-administrativos",
+        "https://www.bdmg.mg.gov.br/linhaspermanentes",
+        "https://www.bdmg.mg.gov.br/medias-empresas",
+        "https://www.bdmg.mg.gov.br/micro-empresa",
+        "https://www.bdmg.mg.gov.br/pequenas-empresas",
+        "https://www.bdmg.mg.gov.br/pronampe",
+        "https://www.bdmg.mg.gov.br/sala-imprensa",
+        "https://www.bdmg.mg.gov.br/sala-imprensa/?tab-eventos",
+        "https://www.bdmg.mg.gov.br/sala-imprensa/?tab-release",
+        "https://www.bdmg.mg.gov.br/sejaparceiro",
+        "https://www.bdmg.mg.gov.br/sobre-bdmg",
+        "https://www.bdmg.mg.gov.br/sobre-bdmg?atuacao",
+        "https://www.bdmg.mg.gov.br/sobre-bdmg?conhecimento",
+        "https://www.bdmg.mg.gov.br/sobre-bdmg?missao-visao-valores",
+        "https://www.bdmg.mg.gov.br/sobre-bdmg?responsabilidade",
+        "https://www.bdmg.mg.gov.br/sobre-bdmg?tab-lgpd",
+        "https://www.bdmg.mg.gov.br/sobre-bdmg?tab-seguranca-informacao"
+      ],
+      "core_fields_improved": {
+        "area": {
+          "old": 0,
+          "new": 27,
+          "delta": 27
+        },
+        "tipo_oportunidade": {
+          "old": 0,
+          "new": 27,
+          "delta": 27
+        },
+        "tipo_recurso": {
+          "old": 0,
+          "new": 27,
+          "delta": 27
+        },
+        "perfil_ideal": {
+          "old": 0,
+          "new": 26,
+          "delta": 26
+        },
+        "documentos": {
+          "old": 0,
+          "new": 15,
+          "delta": 15
+        },
+        "pdf_url": {
+          "old": 0,
+          "new": 15,
+          "delta": 15
+        }
+      },
+      "core_fields_worsened": {},
+      "old_documents_count": 0,
+      "new_documents_count": 15,
+      "old_pdf_count": 0,
+      "new_pdf_count": 15
+    },
+    "risk_notes": []
+  },
+  {
+    "fonte": "bnb",
+    "raw_output_path": "bnb/outputs/bnb_editais.json",
+    "old_standardized_path": "",
+    "new_standardized_path": "audit_reports_credito/lote_credito_brasil_onda_a_semantic_fix/standardized/bnb_standardized.json",
+    "itens_brutos_encontrados": 24,
+    "itens_transformados": 24,
+    "itens_rejeitados": 0,
+    "itens_incompletos": 24,
+    "itens_suspeitos": 0,
+    "itens_acesso_limitado": 0,
+    "documentos_preservados": 1,
+    "pdf_url_preservado": 1,
+    "area_preenchida": 24,
+    "tipo_oportunidade_preenchido": 24,
+    "tipo_recurso_preenchido": 24,
+    "perfil_ideal_preenchido": 18,
+    "qualidade_dado_media": 70.83,
+    "motivos_rejeicao_principais": {},
+    "quick_audit": {
+      "ruido_passou": 0,
+      "duplicatas_link": 0,
+      "campos_preenchidos_pct": {
+        "area": 100.0,
+        "tipo_oportunidade": 100.0,
+        "tipo_recurso": 100.0,
+        "perfil_ideal": 75.0,
+        "documentos": 4.17,
+        "pdf_url": 4.17
+      },
+      "official_link_only_total": 0,
+      "access_limited_total": 0,
+      "access_reason_counts": {},
+      "access_limited_examples": []
+    },
+    "old_vs_new": {
+      "old_count": 0,
+      "new_count": 24,
+      "delta_count": 24,
+      "old_links_now_missing": [],
+      "new_links_before_missing": [
+        "https://www.bnb.gov.br/atividades-financiadas/apicultura",
+        "https://www.bnb.gov.br/atividades-financiadas/bovinocultura",
+        "https://www.bnb.gov.br/atividades-financiadas/carcinicultura",
+        "https://www.bnb.gov.br/atividades-financiadas/comercio",
+        "https://www.bnb.gov.br/atividades-financiadas/educacao",
+        "https://www.bnb.gov.br/atividades-financiadas/floricultura",
+        "https://www.bnb.gov.br/atividades-financiadas/fruticultura",
+        "https://www.bnb.gov.br/atividades-financiadas/graos",
+        "https://www.bnb.gov.br/atividades-financiadas/industrial",
+        "https://www.bnb.gov.br/atividades-financiadas/meio-ambiente",
+        "https://www.bnb.gov.br/atividades-financiadas/ovinocaprinocultura",
+        "https://www.bnb.gov.br/atividades-financiadas/pesca",
+        "https://www.bnb.gov.br/atividades-financiadas/piscicultura",
+        "https://www.bnb.gov.br/atividades-financiadas/pronaf",
+        "https://www.bnb.gov.br/credito-pessoal-consignado-convenios",
+        "https://www.bnb.gov.br/documents/45767/0/Tutorial+Cliente+-+Solicite+seu+Cr%C3%A9dito.pdf/fd249d24-7c96-6323-4d2c-4e1b56667977?version=2.1&t=1721067358818&download=true",
+        "https://www.bnb.gov.br/rural/publicacoes",
+        "https://www.bnb.gov.br/web/guest/atividades-financiadas",
+        "https://www.bnb.gov.br/web/guest/microcredito",
+        "https://www.bnb.gov.br/web/guest/miniprodutor-rural",
+        "https://www.bnb.gov.br/web/guest/mpe",
+        "https://www.bnb.gov.br/web/guest/poder-publico/credito",
+        "https://www.bnb.gov.br/web/guest/rural",
+        "https://www.bnb.gov.br/web/guest/voce/emprestimos-e-financiamentos"
+      ],
+      "core_fields_improved": {
+        "area": {
+          "old": 0,
+          "new": 24,
+          "delta": 24
+        },
+        "tipo_oportunidade": {
+          "old": 0,
+          "new": 24,
+          "delta": 24
+        },
+        "tipo_recurso": {
+          "old": 0,
+          "new": 24,
+          "delta": 24
+        },
+        "perfil_ideal": {
+          "old": 0,
+          "new": 18,
+          "delta": 18
+        },
+        "documentos": {
+          "old": 0,
+          "new": 1,
+          "delta": 1
+        },
+        "pdf_url": {
+          "old": 0,
+          "new": 1,
+          "delta": 1
+        }
+      },
+      "core_fields_worsened": {},
+      "old_documents_count": 0,
+      "new_documents_count": 1,
+      "old_pdf_count": 0,
+      "new_pdf_count": 1
+    },
+    "risk_notes": []
+  },
+  {
+    "fonte": "desenvolve_sp",
+    "raw_output_path": "desenvolve_sp/outputs/desenvolve_sp_editais.json",
+    "old_standardized_path": "",
+    "new_standardized_path": "audit_reports_credito/lote_credito_brasil_onda_a_semantic_fix/standardized/desenvolve_sp_standardized.json",
+    "itens_brutos_encontrados": 4,
+    "itens_transformados": 4,
+    "itens_rejeitados": 0,
+    "itens_incompletos": 0,
+    "itens_suspeitos": 4,
+    "itens_acesso_limitado": 0,
+    "documentos_preservados": 0,
+    "pdf_url_preservado": 0,
+    "area_preenchida": 4,
+    "tipo_oportunidade_preenchido": 4,
+    "tipo_recurso_preenchido": 4,
+    "perfil_ideal_preenchido": 3,
+    "qualidade_dado_media": 54.75,
+    "motivos_rejeicao_principais": {},
+    "quick_audit": {
+      "ruido_passou": 0,
+      "duplicatas_link": 0,
+      "campos_preenchidos_pct": {
+        "area": 100.0,
+        "tipo_oportunidade": 100.0,
+        "tipo_recurso": 100.0,
+        "perfil_ideal": 75.0,
+        "documentos": 0.0,
+        "pdf_url": 0.0
+      },
+      "official_link_only_total": 0,
+      "access_limited_total": 0,
+      "access_reason_counts": {},
+      "access_limited_examples": []
+    },
+    "old_vs_new": {
+      "old_count": 0,
+      "new_count": 4,
+      "delta_count": 4,
+      "old_links_now_missing": [],
+      "new_links_before_missing": [
+        "https://www.desenvolvesp.com.br/empresas/guia-do-financiamento/como-solicitar/",
+        "https://www.desenvolvesp.com.br/empresas/opcoes-de-credito/",
+        "https://www.desenvolvesp.com.br/empresas/opcoes-de-credito/maquinas-e-equipamentos/",
+        "https://www.desenvolvesp.com.br/negocios/online"
+      ],
+      "core_fields_improved": {
+        "area": {
+          "old": 0,
+          "new": 4,
+          "delta": 4
+        },
+        "tipo_oportunidade": {
+          "old": 0,
+          "new": 4,
+          "delta": 4
+        },
+        "tipo_recurso": {
+          "old": 0,
+          "new": 4,
+          "delta": 4
+        },
+        "perfil_ideal": {
+          "old": 0,
+          "new": 3,
+          "delta": 3
+        }
+      },
+      "core_fields_worsened": {},
+      "old_documents_count": 0,
+      "new_documents_count": 0,
+      "old_pdf_count": 0,
+      "new_pdf_count": 0
+    },
+    "risk_notes": []
+  }
+]

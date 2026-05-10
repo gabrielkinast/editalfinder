@@ -1,0 +1,66 @@
+{
+  "amostra_itens_transformados": [
+    {
+      "titulo": "Starting Grant",
+      "link": "https://erc.europa.eu/apply-grant/starting-grant",
+      "extras_tipo_oportunidade": "grant",
+      "extras_tipo_recurso": "fomento",
+      "classificacao_url": "grant_scheme_oficial",
+      "documentos_exemplo": [
+        "https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/horizon/wp-call/2026/wp_horizon-erc-2026_en.pdf"
+      ]
+    },
+    {
+      "titulo": "Proof of Concept",
+      "link": "https://erc.europa.eu/apply-grant/proof-concept",
+      "extras_tipo_oportunidade": "grant",
+      "classificacao_url": "grant_scheme_oficial"
+    },
+    {
+      "titulo": "Additional opportunities",
+      "link": "https://erc.europa.eu/apply-grant/additional-opportunities",
+      "extras_tipo_oportunidade": "chamada_publica",
+      "classificacao_url": "hub_oportunidades_secundarias",
+      "nota": "Página agrega empregos em equipas ERC, visitas nacionais e mentoring; útil mas menos homogénea que um único call identifier."
+    }
+  ],
+  "historico_gate_login_falso_positivo": [
+    {
+      "link": "https://erc.europa.eu/apply-grant/synergy-grant",
+      "motivo_aproximado": "Texto da página interpretado como fluxo de autenticação pelo gate global; tratado com regra soft ERC em /apply-grant/."
+    },
+    {
+      "link": "https://erc.europa.eu/apply-grant/erc-plus-grant",
+      "motivo_aproximado": "Idem."
+    }
+  ],
+  "exemplos_ruido_pos_transformacao": [
+    {
+      "campo": "valor",
+      "exemplo": "R$ 1.5 mil",
+      "causa_provavel": "Heurística de moeda BR aplicada a texto com €1.5 million.",
+      "acao_sugerida": "Normalizar moeda para EUR em fontes ERC ou ignorar valor quando só houver menção simbólica no PDF."
+    },
+    {
+      "campo": "codigo_oportunidade",
+      "exemplo": "entifier",
+      "causa_provavel": "Fragmento de 'Call Identifier' ou parsing de tabela PDF.",
+      "acao_sugerida": "Regex dedicado a ERC-20xx-StG ou suprimir se confiança baixa."
+    },
+    {
+      "campo": "publico_alvo / setor_estrategico",
+      "exemplo": "ICTs, aeroespacial em páginas abertas a todas as áreas",
+      "causa_provavel": "Palavras-chave espúrias no texto longo ou PDF.",
+      "acao_sugerida": "Endurecer evidência para setores em páginas bottom-up ERC."
+    }
+  ],
+  "tipos_url_vs_categorias_pedidas": {
+    "grant": "Esquemas StG, CoG, AdG, SyG, PoC, ERC Plus.",
+    "call_for_proposals": "Tabelas de datas no WP 2026 embutidas na descrição; calendário fino no PDF.",
+    "bolsa_pesquisa": "Elegibilidade e reforço para investigadores (incl. non-European).",
+    "pesquisa_cientifica": "Objeto transversal dos esquemas ERC.",
+    "calendario_de_chamadas": "Não é uma página só de calendário; prazos vêm do conteúdo/PDF.",
+    "noticia_institucional": "Excluído pelo crawler (ex.: painéis, empregos genéricos) na medida do possível.",
+    "pagina_generica": "Evitado: hub singular apply-grant em vez de 404 ou raiz vaga."
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "data": "2026-05-02",
+  "fonte": "sam_gov",
+  "resumo_executivo": "O crawler antigo usava HTML de listagem e fallback (hub SAM + business.defense.gov), gerando 2 itens não-notice; o gate rejeitava tudo (0 transformados). A versão corrigida usa só a API GSA Opportunities v2 com política local (config/sam_gov_scope_policy.json), limites conservadores e sem fallback; sem SAM_GOV_API_KEY o output bruto fica vazio por desenho.",
+  "respostas_diagnostico": {
+    "1_o_crawler_roda": true,
+    "2_existe_output_bruto": true,
+    "3_quantidade_itens_brutos": "Antes da última execução desta sessão: 2 (hubs/fallback). Após `python sam_gov/main_sam_gov.py` sem chave API: 0 (array vazio em sam_gov/outputs/sam_gov_editais.json). Com chave válida: até max_items_output (25) após filtros locais.",
+    "4_quantos_transformam": "Histórico (readiness_rows / retransform global): 0 com os 2 itens antigos. Dry-run lote2_fix_sam_gov com bruto=0: 0.",
+    "5_quantos_rejeitados": "Histórico: 2 rejeitados (oportunidades de busca/hub, não notices). Com bruto vazio: 0 rejeitados.",
+    "6_motivos_rejeicao": "Conteúdo institucional/listagem (sam.gov/content/opportunities), página de programas DoD (business.defense.gov/Programs/), sem noticeId, metadados de oportunidade federal insuficientes para o transformer/gate — readiness_rows apontava risco `gate_agressivo`.",
+    "7_tipos_de_link": "Antes: um hub de oportunidades (não é notice detail) e uma página de programas (não é SAM notice). Alvo correto: `https://sam.gov/opp/<noticeId>/view` (ou uiLink da API).",
+    "8_metodo_coleta_atual": "API HTTP GET documentada (GSA SAM.gov Opportunities API v2 search), com várias bases candidatas em api_base_urls, parâmetros postedFrom/postedTo, title e ptype opcionais; sem scraping agressivo de UI e sem fallback HTML.",
+    "9_paginacao": "Sim na API (offset/limit), mas limitada pela política: max_distinct_api_calls (~8), per_request_limit (≤25), max_items_output (≤25).",
+    "10_filtros_por_data": "Sim: janela postedFrom/postedTo derivada de posted_days_back na política.",
+    "11_filtros_naics_psc_keywords": "NAICS/PSC entram na descrição agregada e na classificação local; busca principal por title_search_queries e optional_ptypes; filtro forte via positive/negative terms e acceptance_rules no scope_policy.py.",
+    "12_documentos_anexos": "Quando a API devolve resourceLinks, são mapeados para extras.documentos; sem chave não houve itens para validar download nesta sessão.",
+    "13_relevancia_geral": "Antes: irrelevante para o produto (hubs). Depois: só entram linhas que passam passes_acceptance + classify_sam_gov_relevance ≥ min configurado — amostra intencionalmente pequena e voltada a P&D/defesa/energia/etc.",
+    "14_por_que_fonte_bloqueada": "Em config/source_readiness.json está em `blocked`; relatórios de retransform mostravam 0 transformados com bruto>0 (ruído/hub) e risco de poluir o loader.",
+    "15_natureza_do_problema": "Principalmente escopo/crawler legado (HTML + fallback) e excesso de ruído relativo ao gate; não é falta de acesso HTTP ao seed (audit_reports_access: ok_html_publico). Taxonomia foi reforçada com calibrate_sam_gov_extras; duplicata não era o foco."
+  },
+  "artefatos_referencia": {
+    "crawler": "sam_gov/main_sam_gov.py",
+    "politica_escopo": "config/sam_gov_scope_policy.json",
+    "classificacao_local": "sam_gov/scope_policy.py",
+    "calibracao_transformer": "CORE/taxonomy_filtros.py::calibrate_sam_gov_extras",
+    "official_link_only": "SAM.gov fora da allowlist; comentário em CORE/official_link_only.py",
+    "retransform_dry_run": "audit_reports_blocked_sources/lote2_fix_sam_gov/",
+    "auditoria_semantica": "audit_reports_blocked_sources/lote2_fix_sam_gov_semantic/",
+    "auditoria_docs": "audit_reports_blocked_sources/lote2_fix_sam_gov_docs/",
+    "auditoria_acesso": "audit_reports_access/source_access_by_source.json (entrada sam_gov)",
+    "readiness_rows_historico": "audit_reports_retransform/readiness_rows.json (entrada sam_gov)"
+  },
+  "pipeline_local_2026_05_02": {
+    "main_sam_gov": "Executado; sem SAM_GOV_API_KEY — 0 registros gravados.",
+    "retransform": "audit_reports_blocked_sources/lote2_fix_sam_gov/retransform_summary.json",
+    "audit_semantic": "audit_reports_blocked_sources/lote2_fix_sam_gov_semantic/audit_semantic_summary.json",
+    "audit_docs": "audit_reports_blocked_sources/lote2_fix_sam_gov_docs/audit_docs_summary.json",
+    "audit_access": "scripts/audit_source_access_methods.py --sources sam_gov"
+  },
+  "readiness_recomendacao": "needs_manual_review",
+  "readiness_justificativa": "Código e política de escopo alinham-se ao pedido (amostra pequena, API, filtros locais, sem gate global, sem apply). Nesta máquina o pipeline pós-correção rodou com 0 itens por falta de chave pública SAM.gov; não há evidência empírica nova de `ready_with_notes` até rodar com SAM_GOV_API_KEY e validar títulos/agências/tipos. Manter `blocked` no JSON de produto até essa validação ou promover explicitamente após revisão humana.",
+  "nao_executado_por_pedido": [
+    "loader_apply",
+    "supabase",
+    "migration",
+    "opportunity_gate_global",
+    "atualizacao_automatica_source_readiness.json"
+  ]
+}

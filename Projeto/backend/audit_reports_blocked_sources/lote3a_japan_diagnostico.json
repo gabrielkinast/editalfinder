@@ -1,0 +1,175 @@
+{
+  "meta": {
+    "lote": "3A",
+    "regiao": "Japão",
+    "data_geracao_utc": "2026-05-02T11:48:08Z",
+    "nota_ambiente": "Crawlers executados: todas as URLs de listagem falharam; *_editais.json = []. Retransform reflete apenas esse estado.",
+    "referencias": [
+      "audit_reports_retransform_risks/risk_summary.md",
+      "audit_reports_retransform/retransform_by_source.json",
+      "CORE/transformer/japan_*_standardized.json",
+      "config/source_readiness.json"
+    ]
+  },
+  "fontes": [
+    {
+      "fonte": "japan_jst",
+      "crawler_executou": true,
+      "crawler_notas_execucao": "Listagens falharam (HTTP/timeout ou bloqueio) neste ambiente; outputs gravados vazios.",
+      "output_bruto_existe": true,
+      "itens_brutos_output_atual": 0,
+      "itens_standardized_canonico_CORE": 0,
+      "retransform_lote3a": {
+        "itens_brutos": 0,
+        "transformados": 0,
+        "rejeitados": 0,
+        "motivos_rejeicao": {}
+      },
+      "historico_risco": "relatórios antigos: fonte vazia / quebrada",
+      "classificacao_exemplos_canonico": null,
+      "perguntas": {
+        "1_crawler_roda": true,
+        "2_output_bruto_existe": true,
+        "3_quantidade_bruta_atual": 0,
+        "4_quantos_transformam_retransform_atual": 0,
+        "5_quantos_rejeitados": 0,
+        "6_motivos_rejeicao": {},
+        "7_natureza_itens_observada": "Histórico frequentemente vazio ou listagens inacessíveis.",
+        "8_categoria_problema": "acesso_rede_ou_listagem; lógica do crawler ok",
+        "9_documentos_pdfs": "Ver itens canônicos; JAEA tinha lista de links genéricos em exemplos antigos.",
+        "10_prazo_programa_codigo": "Em geral ausente nos exemplos institucionais / ruído.",
+        "11_metadados_oficiais_suficientes": false,
+        "12_recomendacao_readiness_inicial": "blocked — sem itens úteis após crawl neste ciclo; repetir crawl com acesso às origens; não promover readiness com JSON vazio."
+      }
+    },
+    {
+      "fonte": "japan_jaea",
+      "crawler_executou": true,
+      "crawler_notas_execucao": "Listagens falharam (HTTP/timeout ou bloqueio) neste ambiente; outputs gravados vazios.",
+      "output_bruto_existe": true,
+      "itens_brutos_output_atual": 0,
+      "itens_standardized_canonico_CORE": 30,
+      "retransform_lote3a": {
+        "itens_brutos": 0,
+        "transformados": 0,
+        "rejeitados": 0,
+        "motivos_rejeicao": {}
+      },
+      "historico_risco": "bruto=30, transformados=3, rejeitados=27 → fonte_ruidosa",
+      "classificacao_exemplos_canonico": {
+        "titulo": "R&D Results",
+        "link": "https://www.jaea.go.jp/english/study_results/",
+        "tipo_oportunidade": "procurement",
+        "setor_estrategico": [
+          "nuclear"
+        ]
+      },
+      "perguntas": {
+        "1_crawler_roda": true,
+        "2_output_bruto_existe": true,
+        "3_quantidade_bruta_atual": 0,
+        "4_quantos_transformam_retransform_atual": 0,
+        "5_quantos_rejeitados": 0,
+        "6_motivos_rejeicao": {},
+        "7_natureza_itens_observada": "Mix: página R&D Results / annual report (notícia ou institucional), não edital; procurement real pode existir mas com ruído.",
+        "8_categoria_problema": "acesso_rede_ou_listagem; lógica do crawler ok",
+        "9_documentos_pdfs": "Ver itens canônicos; JAEA tinha lista de links genéricos em exemplos antigos.",
+        "10_prazo_programa_codigo": "Em geral ausente nos exemplos institucionais / ruído.",
+        "11_metadados_oficiais_suficientes": false,
+        "12_recomendacao_readiness_inicial": "blocked — sem itens úteis após crawl neste ciclo; repetir crawl com acesso às origens; não promover readiness com JSON vazio."
+      }
+    },
+    {
+      "fonte": "japan_jaxa",
+      "crawler_executou": true,
+      "crawler_notas_execucao": "Listagens falharam (HTTP/timeout ou bloqueio) neste ambiente; outputs gravados vazios.",
+      "output_bruto_existe": true,
+      "itens_brutos_output_atual": 0,
+      "itens_standardized_canonico_CORE": 1,
+      "retransform_lote3a": {
+        "itens_brutos": 0,
+        "transformados": 0,
+        "rejeitados": 0,
+        "motivos_rejeicao": {}
+      },
+      "historico_risco": "bruto=1, transformados=0, rejeitados=1 → gate_agressivo",
+      "classificacao_exemplos_canonico": {
+        "titulo": "JAXA Public Calls and Procurement Index",
+        "link": "https://global.jaxa.jp/press/",
+        "tipo_oportunidade": "noticia_institucional",
+        "setor_estrategico": [
+          "ciencia_tecnologia"
+        ]
+      },
+      "perguntas": {
+        "1_crawler_roda": true,
+        "2_output_bruto_existe": true,
+        "3_quantidade_bruta_atual": 0,
+        "4_quantos_transformam_retransform_atual": 0,
+        "5_quantos_rejeitados": 0,
+        "6_motivos_rejeicao": {},
+        "7_natureza_itens_observada": "Índice institucional / imprensa (página genérica), não chamada.",
+        "8_categoria_problema": "acesso_rede_ou_listagem; lógica do crawler ok",
+        "9_documentos_pdfs": "Ver itens canônicos; JAEA tinha lista de links genéricos em exemplos antigos.",
+        "10_prazo_programa_codigo": "Em geral ausente nos exemplos institucionais / ruído.",
+        "11_metadados_oficiais_suficientes": false,
+        "12_recomendacao_readiness_inicial": "blocked — sem itens úteis após crawl neste ciclo; repetir crawl com acesso às origens; não promover readiness com JSON vazio."
+      }
+    },
+    {
+      "fonte": "japan_e_rad",
+      "crawler_executou": true,
+      "crawler_notas_execucao": "Listagens falharam (HTTP/timeout ou bloqueio) neste ambiente; outputs gravados vazios.",
+      "output_bruto_existe": true,
+      "itens_brutos_output_atual": 0,
+      "itens_standardized_canonico_CORE": 1,
+      "retransform_lote3a": {
+        "itens_brutos": 0,
+        "transformados": 0,
+        "rejeitados": 0,
+        "motivos_rejeicao": {}
+      },
+      "historico_risco": "bruto=1, transformados=0, rejeitados=1 → fonte_quebrada",
+      "classificacao_exemplos_canonico": {
+        "titulo": "（研究機関向け）新規登録の方法",
+        "link": "https://www.e-rad.go.jp/organ/procedure.html",
+        "tipo_oportunidade": "funding_opportunity",
+        "setor_estrategico": [
+          "ciencia_tecnologia"
+        ]
+      },
+      "perguntas": {
+        "1_crawler_roda": true,
+        "2_output_bruto_existe": true,
+        "3_quantidade_bruta_atual": 0,
+        "4_quantos_transformam_retransform_atual": 0,
+        "5_quantos_rejeitados": 0,
+        "6_motivos_rejeicao": {},
+        "7_natureza_itens_observada": "Procedimento de registro (organ/procedure), não grant.",
+        "8_categoria_problema": "acesso_rede_ou_listagem; lógica do crawler ok",
+        "9_documentos_pdfs": "Ver itens canônicos; JAEA tinha lista de links genéricos em exemplos antigos.",
+        "10_prazo_programa_codigo": "Em geral ausente nos exemplos institucionais / ruído.",
+        "11_metadados_oficiais_suficientes": false,
+        "12_recomendacao_readiness_inicial": "blocked — sem itens úteis após crawl neste ciclo; repetir crawl com acesso às origens; não promover readiness com JSON vazio."
+      }
+    }
+  ],
+  "readiness_config_atual": {
+    "needs_manual_review": [
+      "japan_jaea",
+      "japan_jst"
+    ],
+    "blocked": [
+      "japan_e_rad",
+      "japan_jaxa"
+    ]
+  },
+  "pode_sair_de_blocked": [],
+  "continua_blocked_ou_manual": [
+    "japan_jst",
+    "japan_jaea",
+    "japan_jaxa",
+    "japan_e_rad"
+  ],
+  "proximo_passo_lote_3B_china": "Repetir o mesmo pipeline para fontes china_* prioritárias (ex.: caea, cas, most, tendering): diagnóstico, filtros locais, calibrate_*_extras se necessário, crawl, retransform dry-run, auditorias semântica/docs/acesso, sem loader apply."
+}

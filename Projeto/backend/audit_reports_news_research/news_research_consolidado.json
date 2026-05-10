@@ -1,0 +1,148 @@
+{
+  "gerado_em": "2026-05-05T12:00:00Z",
+  "titulo": "Módulo notícia/pesquisa — consolidado final",
+  "nota_metodologia": "Documento gerado a partir de config/news_research_sources.json, payloads em audit_reports_news_research_loader/, relatórios de expansão/dry-run e validações pós-carga onde existem. Sem SELECT ao Supabase nesta geração.",
+  "resumo_executivo": "O módulo separa editais acionáveis (public.edital) de conteúdo editorial (public.noticia) e de fundo técnico (public.pesquisa). Quatro ondas principais (NASA Wave 2, DARPA News Wave 1, IAEA Wave 1, EurekAlert Wave 1) produziram payloads e, à exceção de DARPA Opportunities Research, seguiram pipeline build → dry-run → apply staging (com guardas) → validação pós-carga onde aplicável. EurekAlert permanece experimental com volume baixo e curadoria/taxonomia de defesa biológica vs militar. DARPA Opportunities deve permanecer em revisão manual, sem apply automático.",
+  "separacao_conceitual": {
+    "public_edital": "Oportunidades acionáveis (crédito, fomento, licitações, chamadas com prazo e requisitos). O módulo notícia/pesquisa não carrega estes itens automaticamente para edital; candidatos fortes podem aparecer em review_for_edital para triagem humana.",
+    "public_noticia": "Notícias, press releases e atualizações institucionais com `tipo_conteudo` notícia e resumo datado.",
+    "public_pesquisa": "Publicações, relatórios, estudos e conteúdo técnico-científico denso com `tipo_conteudo` pesquisa / `tipo_pesquisa` conforme contrato."
+  },
+  "fontes": [
+    {
+      "fonte_id": "nasa_news",
+      "wave": "nasa_wave2",
+      "nome": "NASA News (multi-feed)",
+      "status_config": "ready_for_wave",
+      "crawl_standardized_referencia": "158 no crawl agregado histórico (expansion_results.json); NASA isolado ~95 itens",
+      "payload_noticia": 78,
+      "payload_pesquisa": 17,
+      "review_for_edital_json": 0,
+      "rejected_json": null,
+      "dry_run": "ok (nasa_wave2_dry_run.json)",
+      "apply_staging": "executado no projeto; última validação referência nasa_wave2_post_load_validation.json (ok)",
+      "validacao_pos_carga": "ok — esperado 78 notícia + 17 pesquisa",
+      "problemas_conhecidos": "Volume elevado; validação humana por amostragem recomendada antes de novos loads maciços.",
+      "recomendacao": "Manter como referência de onda estável; reprovar apenas após mudança de feeds ou política NASA."
+    },
+    {
+      "fonte_id": "darpa_news",
+      "wave": "darpa_news_wave1",
+      "nome": "DARPA News",
+      "status_config": "needs_cleanup",
+      "crawl_standardized_referencia": "~10 itens por ciclo RSS",
+      "payload_noticia": 9,
+      "payload_pesquisa": 1,
+      "review_for_edital_json": 0,
+      "rejected_json": null,
+      "dry_run": "ok (darpa_news_wave1_dry_run.json)",
+      "apply_staging": "executado no projeto; darpa_news_wave1_post_load_validation.json (ok)",
+      "validacao_pos_carga": "ok — esperado 9 + 1",
+      "problemas_conhecidos": "Itens com sinais BAA/RFI fortes devem ir para review_for_edital, não misturar como notícia fraca.",
+      "recomendacao": "Segunda prioridade após NASA; ampliar com critérios anti-ruído do hub antigo."
+    },
+    {
+      "fonte_id": "iaea_news_publications",
+      "wave": "iaea_wave1",
+      "nome": "IAEA News and Publications",
+      "status_config": "wave1_preparation",
+      "crawl_standardized_referencia": "entrada build 45 linhas (iaea_wave1_dry_run.json)",
+      "payload_noticia": 5,
+      "payload_pesquisa": 14,
+      "review_for_edital_json": 2,
+      "rejected_json": 24,
+      "dry_run": "ok",
+      "apply_staging": "previsto no fluxo Wave 1 com guardas; confirmar ambiente antes de novo apply",
+      "validacao_pos_carga": "script validate_news_research_after_load.py suporta iaea_wave1; arquivo dedicado pode ser gerado sob demanda",
+      "problemas_conhecidos": "Fallback de descrição para título em algumas publicações IAEA quando resumo RSS curto (extras iaea_descricao_fallback_titulo); revisar enriquecimento HTML.",
+      "recomendacao": "Reduzir dependência de fallback; aplicar subset com validacao_status=valido quando necessário."
+    },
+    {
+      "fonte_id": "eurekalert_science_filtered",
+      "wave": "eurekalert_wave1",
+      "nome": "EurekAlert (tópicos filtrados)",
+      "status_config": "experimental_wave",
+      "crawl_standardized_referencia": "3 itens no último crawl documentado (by_source.json snapshot)",
+      "payload_noticia": 0,
+      "payload_pesquisa": 3,
+      "review_for_edital_json": 0,
+      "rejected_json": 0,
+      "dry_run": "ok",
+      "apply_staging": "apply executado (load_news_research_summary.json modo apply)",
+      "validacao_pos_carga": "ok — eurekalert_wave1_post_load_validation.json",
+      "problemas_conhecidos": "WAF em algumas redes; listing limitado; taxonomia defense biológico vs militar em extras.defense_semantica.",
+      "recomendacao": "Manter experimental; volume baixo; curadoria por onda."
+    },
+    {
+      "fonte_id": "darpa_opportunities_research",
+      "wave": null,
+      "nome": "DARPA R&D Opportunities",
+      "status_config": "active_candidate",
+      "crawl_standardized_referencia": "~1 item/ciclo recente; RSS opportunities",
+      "payload_noticia": 0,
+      "payload_pesquisa": 0,
+      "review_for_edital_json": "via dry_run futuro / não misturar",
+      "rejected_json": null,
+      "dry_run": "política: oportunidades → review_for_edital no roteamento",
+      "apply_staging": "não aplicar automaticamente",
+      "validacao_pos_carga": "n/a até haver lote estável",
+      "problemas_conhecidos": "Volume baixo; confundir com notícia ou edital arriscado.",
+      "recomendacao": "Manter em revisão manual; separado de darpa_news."
+    }
+  ],
+  "totais_consolidados": {
+    "payload_noticia_soma_ondas_principais": 92,
+    "payload_pesquisa_soma_ondas_principais": 35,
+    "nota_soma": "Soma NASA+DARPA News+IAEA+EurekAlert (78+9+5+0 notícia; 17+1+14+3 pesquisa). Não inclui DARPA Opportunities.",
+    "review_for_edital_json_total_iaea": 2,
+    "rejected_json_total_iaea": 24,
+    "total_carregado_staging_estimado_noticia": 92,
+    "total_carregado_staging_estimado_pesquisa": 35,
+    "nota_carregado": "Estimativa alinhada a payloads + validações pós-carga NASA/DARPA/EurekAlert e política IAEA Wave 1; reconciliar com BD em auditoria independente se necessário.",
+    "fontes_ativas": ["nasa_news", "darpa_news", "iaea_news_publications"],
+    "fontes_experimentais": ["eurekalert_science_filtered"],
+    "fontes_em_review_sem_apply_auto": ["darpa_opportunities_research"]
+  },
+  "status_esperado": {
+    "nasa_wave2": "ativa / validada (post-load ok)",
+    "darpa_news_wave1": "ativa / validada (post-load ok)",
+    "iaea_wave1": "ativa / validada com notas sobre fallback de título em pesquisas IAEA quando resumo curto",
+    "eurekalert_wave1": "experimental / validada pós-carga — 3 pesquisas",
+    "darpa_opportunities_research": "manter em review; não apply automático"
+  },
+  "comandos_referencia": {
+    "build_payloads": [
+      "python scripts/build_nasa_wave2_payloads.py",
+      "python scripts/build_darpa_news_wave1_payloads.py (se existir) ou payloads pré-gerados",
+      "python scripts/build_iaea_wave1_payloads.py",
+      "python scripts/build_eurekalert_wave1_payloads.py"
+    ],
+    "dry_run_loader": [
+      "python scripts/load_news_research_sources.py --dry-run --staging --source <fonte> --input-dir audit_reports_news_research_loader --wave <onda>"
+    ],
+    "apply_staging": [
+      "EDITALFINDER_ENV=staging EDITALFINDER_ALLOW_STAGING_APPLY=true python scripts/load_news_research_sources.py --apply --staging --test-db-before-apply --source <fonte> --input-dir audit_reports_news_research_loader --wave <onda>"
+    ],
+    "validacao_pos_carga": [
+      "python scripts/validate_news_research_after_load.py --staging --source <fonte> --wave <onda> --input-dir audit_reports_news_research_loader"
+    ]
+  },
+  "governanca": [
+    "Nada do módulo notícia/pesquisa deve ir para public.edital automaticamente.",
+    "review_for_edital nunca aplicado automaticamente ao destino edital.",
+    "Scraping/crawl conservador: feeds oficiais, limites max_items e page_enrich_max.",
+    "Fontes experimentais: volume baixo, filtros fortes, curadoria (ex.: EurekAlert).",
+    "Apply apenas em staging com EDITALFINDER_ALLOW_STAGING_APPLY e --test-db-before-apply."
+  ],
+  "proximos_passos": [
+    "IAEA: reduzir fallback título→descrição em publicações quando possível (mais enrich ou filtro).",
+    "DARPA News: expandir com critérios anti-ruído e separação clara oportunidade vs notícia.",
+    "EurekAlert: manter experimental; rever seeds se WAF bloquear.",
+    "Retomar prioridade: fontes de crédito, fomento e desenvolvimento (órgãos de edital)."
+  ],
+  "referencias": {
+    "config": "config/news_research_sources.json",
+    "governance_config": "config.news_research_sources.governance",
+    "loader_dir": "audit_reports_news_research_loader/"
+  }
+}

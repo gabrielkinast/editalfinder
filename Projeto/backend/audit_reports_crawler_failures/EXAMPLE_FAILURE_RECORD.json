@@ -1,0 +1,17 @@
+{
+  "descricao": "Exemplo ilustrativo do registo escrito em failures.jsonl + outputs/latest_error.json quando a coleta falha e o JSON anterior é preservado.",
+  "source_name": "japan_jst",
+  "ts_utc": "2026-05-02T12:00:00Z",
+  "output_path": "japan_jst/outputs/japan_jst_editais.json",
+  "message": "todas_as_listagens_falharam_ou_rede",
+  "failure_kind": "falha_de_coleta",
+  "failure_reason": "todas_as_listagens_falharam_ou_rede",
+  "collection_failed": true,
+  "listing_events": [
+    {"url": "https://www.jst.go.jp/EN/research/index.html", "ok": false, "status_code": null}
+  ],
+  "previous_item_count": 12,
+  "tipo_resultado": "falha_de_coleta",
+  "rejected_count": 0,
+  "acao_repositorio": "ficheiro_japan_jst_editais_json_nao_foi_sobrescrito"
+}

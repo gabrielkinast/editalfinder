@@ -1,0 +1,36 @@
+{
+  "source_id": "iaea_news_publications",
+  "source_name": "IAEA News and Publications",
+  "method": "rss",
+  "seed_urls_used": [
+    "https://www.iaea.org/feeds/publications",
+    "https://www.iaea.org/feeds/topnews",
+    "https://www.iaea.org/feeds/news"
+  ],
+  "max_items": 55,
+  "time_window_months": 12,
+  "raw_total": 45,
+  "within_window_total": 45,
+  "without_date_total": 0,
+  "raw_by_seed_kind": {
+    "publications": 15,
+    "news": 30
+  },
+  "feed_kind_caps_applied": {
+    "publications": 25,
+    "news": 30
+  },
+  "page_enrich_fetch_total": 0,
+  "errors": [],
+  "theme_filter_stats": {
+    "extracted_total": 180,
+    "skipped_duplicate_link": 16,
+    "rejected_exclude_keyword": 0,
+    "rejected_exclude_medical_generic": 0,
+    "rejected_require_any_keyword": 0,
+    "rejected_feed_kind_cap": 119,
+    "passed_theme_filters": 45,
+    "matched_keyword_counts": {},
+    "reject_samples": []
+  }
+}

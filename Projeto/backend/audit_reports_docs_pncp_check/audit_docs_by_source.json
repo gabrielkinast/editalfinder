@@ -1,0 +1,402 @@
+[
+  {
+    "fonte": "pncp_defesa",
+    "arquivo": "pncp_defesa\\outputs\\pncp_defesa_editais.json",
+    "itens_amostra": 25,
+    "transformados": 25,
+    "rejeitados": 0,
+    "raw_com_pdf_url": 0,
+    "raw_com_documentos": 15,
+    "transformado_com_pdf_url": 0,
+    "transformado_com_documentos": 15,
+    "payload_com_pdf_url": 0,
+    "payload_com_documentos": 15,
+    "bruto_com_documentos_pdf": 0,
+    "bruto_com_documentos_nao_pdf": 15,
+    "transformado_com_documentos_pdf": 0,
+    "transformado_com_documentos_nao_pdf": 15,
+    "payload_com_documentos_pdf": 0,
+    "payload_com_documentos_nao_pdf": 15,
+    "perdas_pdf": 0,
+    "perdas_nao_pdf": 0,
+    "downloads_falharam": 0,
+    "downloads_sucesso": 0,
+    "links_invalidos": 0,
+    "links_relativos_restantes": 0,
+    "links_quebrados": 0,
+    "duplicados_documentos": 0,
+    "formatos_detectados": {
+      "outro": 15
+    },
+    "losses": [],
+    "download_failures": [],
+    "examples": [
+      {
+        "fonte": "pncp_defesa",
+        "titulo": "REGISTRO DE PREÇOS PARA AQUISIÇÃO DE ANTIESPUMANTE A BASE DE SILICONE PARA EMPREGO NO TRATAMENTO DE ESGOTO DA ETE NOVA ESPERANÇA, CONFORME CONVENIÊNCIA E NECESSIDADE ESTIMADA, PARA ENTREGA E FORNECIMENTO AO LONGO DE 12 (",
+        "link": "https://pncp.gov.br/app/editais/07854402000100-1-000041/2025",
+        "raw_pdf_url": "",
+        "transformado_pdf_url": "",
+        "payload_pdf_url": "",
+        "raw_docs_n": 0,
+        "transformado_docs_n": 0,
+        "payload_docs_n": 0,
+        "status_download": "nao_baixado",
+        "erro_download": "sem_pdf_url",
+        "docs_transformado_amostra": []
+      },
+      {
+        "fonte": "pncp_defesa",
+        "titulo": "CONCESSÃO SOBRE EXPLORAÇÃO DE SERVIÇOS DE ESTACIONAMENTO E PARQUE DE DIVERSÕES POR EMPRESA GESTORA DE EVENTOS, NA FESTA DO COLONO",
+        "link": "https://pncp.gov.br/app/editais/83102277000152-1-000114/2025",
+        "raw_pdf_url": "",
+        "transformado_pdf_url": "",
+        "payload_pdf_url": "",
+        "raw_docs_n": 0,
+        "transformado_docs_n": 0,
+        "payload_docs_n": 0,
+        "status_download": "nao_baixado",
+        "erro_download": "sem_pdf_url",
+        "docs_transformado_amostra": []
+      },
+      {
+        "fonte": "pncp_defesa",
+        "titulo": "AQUISIÇÃO DE TRANSFORMADOR DE ENERGIA ELÉTRICA PARA A REDE MUNICIPAL DE EDUCAÇÃO",
+        "link": "https://pncp.gov.br/app/editais/83102277000152-1-000115/2025",
+        "raw_pdf_url": "",
+        "transformado_pdf_url": "",
+        "payload_pdf_url": "",
+        "raw_docs_n": 0,
+        "transformado_docs_n": 0,
+        "payload_docs_n": 0,
+        "status_download": "nao_baixado",
+        "erro_download": "sem_pdf_url",
+        "docs_transformado_amostra": []
+      },
+      {
+        "fonte": "pncp_defesa",
+        "titulo": "AQUISIÇÃO DE MOVEIS SOB MEDIDA E MATERIAL DE INFORMATICA",
+        "link": "https://pregaobanrisul.com.br/editais/0021_2025/334656",
+        "raw_pdf_url": "",
+        "transformado_pdf_url": "",
+        "payload_pdf_url": "",
+        "raw_docs_n": 1,
+        "transformado_docs_n": 1,
+        "payload_docs_n": 1,
+        "status_download": "nao_baixado",
+        "erro_download": "sem_pdf_url",
+        "docs_transformado_amostra": [
+          {
+            "titulo": "Sistema de origem",
+            "url": "https://pregaobanrisul.com.br/editais/0021_2025/334656",
+            "tipo": "documento_desconhecido",
+            "formato": "outro",
+            "origem": "extras.documentos",
+            "status_download": "nao_baixado",
+            "erro_download": "",
+            "texto_extraido": "",
+            "resumo": ""
+          }
+        ]
+      },
+      {
+        "fonte": "pncp_defesa",
+        "titulo": "Pregão Eletrônico 008/2025 - Contratar serviços de consultoria, assessoria técnica e educação permanente na área da saúde, conforme demanda da Secretaria Municipal da Saúde e Assistência Social do Município de Coqueiros ",
+        "link": "https://pregaobanrisul.com.br/editais/0008_2025/334608",
+        "raw_pdf_url": "",
+        "transformado_pdf_url": "",
+        "payload_pdf_url": "",
+        "raw_docs_n": 1,
+        "transformado_docs_n": 1,
+        "payload_docs_n": 1,
+        "status_download": "nao_baixado",
+        "erro_download": "sem_pdf_url",
+        "docs_transformado_amostra": [
+          {
+            "titulo": "Sistema de origem",
+            "url": "https://pregaobanrisul.com.br/editais/0008_2025/334608",
+            "tipo": "documento_desconhecido",
+            "formato": "outro",
+            "origem": "extras.documentos",
+            "status_download": "nao_baixado",
+            "erro_download": "",
+            "texto_extraido": "",
+            "resumo": ""
+          }
+        ]
+      },
+      {
+        "fonte": "pncp_defesa",
+        "titulo": "CONTRATAÇÃO DE EMPRESA PARA FORNECIMENTO DE LIVROS DE LITERATURA PARA USO EXCLUSIVO DOS USUÁRIOS DA BIBLIOTECA PÚBLICA",
+        "link": "https://pregaobanrisul.com.br/editais/0030_2025/334634",
+        "raw_pdf_url": "",
+        "transformado_pdf_url": "",
+        "payload_pdf_url": "",
+        "raw_docs_n": 1,
+        "transformado_docs_n": 1,
+        "payload_docs_n": 1,
+        "status_download": "nao_baixado",
+        "erro_download": "sem_pdf_url",
+        "docs_transformado_amostra": [
+          {
+            "titulo": "Sistema de origem",
+            "url": "https://pregaobanrisul.com.br/editais/0030_2025/334634",
+            "tipo": "documento_desconhecido",
+            "formato": "outro",
+            "origem": "extras.documentos",
+            "status_download": "nao_baixado",
+            "erro_download": "",
+            "texto_extraido": "",
+            "resumo": ""
+          }
+        ]
+      },
+      {
+        "fonte": "pncp_defesa",
+        "titulo": "Aquisição de um tanque novo com capacidade para 15.000 litros, para instalação em caminhão MERCEDES-BENZ, ATEGO 2730 K (6X4), conforme especificações no termo de Referência, anexo ao edital.",
+        "link": "https://pncp.gov.br/app/editais/83102376000134-1-000080/2025",
+        "raw_pdf_url": "",
+        "transformado_pdf_url": "",
+        "payload_pdf_url": "",
+        "raw_docs_n": 0,
+        "transformado_docs_n": 0,
+        "payload_docs_n": 0,
+        "status_download": "nao_baixado",
+        "erro_download": "sem_pdf_url",
+        "docs_transformado_amostra": []
+      },
+      {
+        "fonte": "pncp_defesa",
+        "titulo": "[Portal de Compras Públicas] - Registro de preço para a aquisição de aquisição de brinquedos e materiais lúdicos para atender as necessidades da Secretaria Municipal de Educação de Concórdia do Pará.",
+        "link": "https://portaldecompraspublicas.com.br/processos/PA/Prefeitura-Municipal-de-Concordia-do-Para-1273/PE-92025-06-SEMED-2025-2025-384879",
+        "raw_pdf_url": "",
+        "transformado_pdf_url": "",
+        "payload_pdf_url": "",
+        "raw_docs_n": 1,
+        "transformado_docs_n": 1,
+        "payload_docs_n": 1,
+        "status_download": "nao_baixado",
+        "erro_download": "sem_pdf_url",
+        "docs_transformado_amostra": [
+          {
+            "titulo": "Sistema de origem",
+            "url": "https://portaldecompraspublicas.com.br/processos/PA/Prefeitura-Municipal-de-Concordia-do-Para-1273/PE-92025-06-SEMED-2025-2025-384879",
+            "tipo": "documento_desconhecido",
+            "formato": "outro",
+            "origem": "extras.documentos",
+            "status_download": "nao_baixado",
+            "erro_download": "",
+            "texto_extraido": "",
+            "resumo": ""
+          }
+        ]
+      },
+      {
+        "fonte": "pncp_defesa",
+        "titulo": "[Portal de Compras Públicas] - Registro de preço para a contratação de empresa especializada no fornecimento de pneus, câmaras e protetores, para atender as necessidades da Secretaria Municipal de Educação de Concórdia d",
+        "link": "https://portaldecompraspublicas.com.br/processos/PA/Prefeitura-Municipal-de-Concordia-do-Para-1273/PE-92025-09-SEMED-2025-2025-384881",
+        "raw_pdf_url": "",
+        "transformado_pdf_url": "",
+        "payload_pdf_url": "",
+        "raw_docs_n": 1,
+        "transformado_docs_n": 1,
+        "payload_docs_n": 1,
+        "status_download": "nao_baixado",
+        "erro_download": "sem_pdf_url",
+        "docs_transformado_amostra": [
+          {
+            "titulo": "Sistema de origem",
+            "url": "https://portaldecompraspublicas.com.br/processos/PA/Prefeitura-Municipal-de-Concordia-do-Para-1273/PE-92025-09-SEMED-2025-2025-384881",
+            "tipo": "documento_desconhecido",
+            "formato": "outro",
+            "origem": "extras.documentos",
+            "status_download": "nao_baixado",
+            "erro_download": "",
+            "texto_extraido": "",
+            "resumo": ""
+          }
+        ]
+      },
+      {
+        "fonte": "pncp_defesa",
+        "titulo": "[LICITANET] - REGISTRO DE PREÇOS PARA AQUISIÇÃO DE VEÍCULOS NOVOS, TIPO AMBULÂNCIAS, QUE SERÃO UTILIZADOS NO TRANSPORTE DE PACIENTES EM ATENDIMENTOS DE MÉDIA E ALTA COMPLEXIDADE DESTE MUNICÍPIO",
+        "link": "https://portal.licitanet.com.br/acesso-visitante/WkphZ2xaV3A=",
+        "raw_pdf_url": "",
+        "transformado_pdf_url": "",
+        "payload_pdf_url": "",
+        "raw_docs_n": 1,
+        "transformado_docs_n": 1,
+        "payload_docs_n": 1,
+        "status_download": "nao_baixado",
+        "erro_download": "sem_pdf_url",
+        "docs_transformado_amostra": [
+          {
+            "titulo": "Sistema de origem",
+            "url": "https://portal.licitanet.com.br/acesso-visitante/WkphZ2xaV3A=",
+            "tipo": "documento_desconhecido",
+            "formato": "outro",
+            "origem": "extras.documentos",
+            "status_download": "nao_baixado",
+            "erro_download": "",
+            "texto_extraido": "",
+            "resumo": ""
+          }
+        ]
+      },
+      {
+        "fonte": "pncp_defesa",
+        "titulo": "[LICITANET] - REGISTRO DE PREÇOS PARA AQUISIÇÃO DE MATERIAIS ELÉTRICOS A SEREM UTILIZADOS NO DESENVOLVIMENTO DAS AÇÕES DIÁRIAS DE DIVERSAS SECRETARIAS DESTA ADMINISTRAÇÃO.",
+        "link": "https://portal.licitanet.com.br/acesso-visitante/WkphaW01U2w=",
+        "raw_pdf_url": "",
+        "transformado_pdf_url": "",
+        "payload_pdf_url": "",
+        "raw_docs_n": 1,
+        "transformado_docs_n": 1,
+        "payload_docs_n": 1,
+        "status_download": "nao_baixado",
+        "erro_download": "sem_pdf_url",
+        "docs_transformado_amostra": [
+          {
+            "titulo": "Sistema de origem",
+            "url": "https://portal.licitanet.com.br/acesso-visitante/WkphaW01U2w=",
+            "tipo": "documento_desconhecido",
+            "formato": "outro",
+            "origem": "extras.documentos",
+            "status_download": "nao_baixado",
+            "erro_download": "",
+            "texto_extraido": "",
+            "resumo": ""
+          }
+        ]
+      },
+      {
+        "fonte": "pncp_defesa",
+        "titulo": "[LICITANET] - REGISTRO DE PREÇOS PARA AQUISIÇÃO DE PNEUS E AFINS, A SEREM UTILIZADOS NA REPOSIÇÃO DOS VEÍCULOS DA FROTA MUNICIPAL E CONVENIADOS.",
+        "link": "https://portal.licitanet.com.br/acesso-visitante/WkphaW5aR2g=",
+        "raw_pdf_url": "",
+        "transformado_pdf_url": "",
+        "payload_pdf_url": "",
+        "raw_docs_n": 1,
+        "transformado_docs_n": 1,
+        "payload_docs_n": 1,
+        "status_download": "nao_baixado",
+        "erro_download": "sem_pdf_url",
+        "docs_transformado_amostra": [
+          {
+            "titulo": "Sistema de origem",
+            "url": "https://portal.licitanet.com.br/acesso-visitante/WkphaW5aR2g=",
+            "tipo": "documento_desconhecido",
+            "formato": "outro",
+            "origem": "extras.documentos",
+            "status_download": "nao_baixado",
+            "erro_download": "",
+            "texto_extraido": "",
+            "resumo": ""
+          }
+        ]
+      },
+      {
+        "fonte": "pncp_defesa",
+        "titulo": "Bottons em formato circular, em latão, formato circular, tamanho 4x4cm, 4 cores (diversas imagens), Broches do tipo pin de vários formatos para atender as necessidades das unidades, fantasia do \"Zé Gotinha\" para promoção",
+        "link": "https://pncp.gov.br/app/editais/01409580000138-1-000952/2025",
+        "raw_pdf_url": "",
+        "transformado_pdf_url": "",
+        "payload_pdf_url": "",
+        "raw_docs_n": 0,
+        "transformado_docs_n": 0,
+        "payload_docs_n": 0,
+        "status_download": "nao_baixado",
+        "erro_download": "sem_pdf_url",
+        "docs_transformado_amostra": []
+      },
+      {
+        "fonte": "pncp_defesa",
+        "titulo": "[Portal de Compras Públicas] - Registro de preço para futuras aquisições de materiais de limpeza",
+        "link": "https://portaldecompraspublicas.com.br/processos/PI/Prefeitura-Municipal-de-Avelino-Lopes-3394/RPE-018-2025-2025-384866",
+        "raw_pdf_url": "",
+        "transformado_pdf_url": "",
+        "payload_pdf_url": "",
+        "raw_docs_n": 1,
+        "transformado_docs_n": 1,
+        "payload_docs_n": 1,
+        "status_download": "nao_baixado",
+        "erro_download": "sem_pdf_url",
+        "docs_transformado_amostra": [
+          {
+            "titulo": "Sistema de origem",
+            "url": "https://portaldecompraspublicas.com.br/processos/PI/Prefeitura-Municipal-de-Avelino-Lopes-3394/RPE-018-2025-2025-384866",
+            "tipo": "documento_desconhecido",
+            "formato": "outro",
+            "origem": "extras.documentos",
+            "status_download": "nao_baixado",
+            "erro_download": "",
+            "texto_extraido": "",
+            "resumo": ""
+          }
+        ]
+      },
+      {
+        "fonte": "pncp_defesa",
+        "titulo": "Contratação de Empresa Especializada para Fornecimento e Emissão de 01 (um) Certificado Digital SSL/TLS do tipo Wildcard OV para uso no domínio *.pontagrossa.pr.gov.br e seus subdomínios",
+        "link": "https://pncp.gov.br/app/editais/76175884000187-1-000080/2025",
+        "raw_pdf_url": "",
+        "transformado_pdf_url": "",
+        "payload_pdf_url": "",
+        "raw_docs_n": 0,
+        "transformado_docs_n": 0,
+        "payload_docs_n": 0,
+        "status_download": "nao_baixado",
+        "erro_download": "sem_pdf_url",
+        "docs_transformado_amostra": []
+      }
+    ],
+    "timestamp_utc": "2026-05-01T08:05:26Z"
+  },
+  {
+    "fonte": "compras_defesa",
+    "arquivo": "compras_defesa\\outputs\\compras_defesa_editais.json",
+    "itens_amostra": 1,
+    "transformados": 1,
+    "rejeitados": 0,
+    "raw_com_pdf_url": 0,
+    "raw_com_documentos": 0,
+    "transformado_com_pdf_url": 0,
+    "transformado_com_documentos": 0,
+    "payload_com_pdf_url": 0,
+    "payload_com_documentos": 0,
+    "bruto_com_documentos_pdf": 0,
+    "bruto_com_documentos_nao_pdf": 0,
+    "transformado_com_documentos_pdf": 0,
+    "transformado_com_documentos_nao_pdf": 0,
+    "payload_com_documentos_pdf": 0,
+    "payload_com_documentos_nao_pdf": 0,
+    "perdas_pdf": 0,
+    "perdas_nao_pdf": 0,
+    "downloads_falharam": 0,
+    "downloads_sucesso": 0,
+    "links_invalidos": 0,
+    "links_relativos_restantes": 0,
+    "links_quebrados": 0,
+    "duplicados_documentos": 0,
+    "formatos_detectados": {},
+    "losses": [],
+    "download_failures": [],
+    "examples": [
+      {
+        "fonte": "compras_defesa",
+        "titulo": "Compras.gov Defesa - Índice de Licitações",
+        "link": "https://www.gov.br/compras/pt-br",
+        "raw_pdf_url": "",
+        "transformado_pdf_url": "",
+        "payload_pdf_url": "",
+        "raw_docs_n": 0,
+        "transformado_docs_n": 0,
+        "payload_docs_n": 0,
+        "status_download": "nao_baixado",
+        "erro_download": "sem_pdf_url",
+        "docs_transformado_amostra": []
+      }
+    ],
+    "timestamp_utc": "2026-05-01T08:05:26Z"
+  }
+]

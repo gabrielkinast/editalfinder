@@ -1,0 +1,152 @@
+{
+  "data_auditoria": "2026-05-10T08:45:22Z",
+  "fontes": [
+    {
+      "fonte": "bae_systems_suppliers",
+      "old_vs_new": {
+        "old_count": 0,
+        "new_count": 2,
+        "delta_count": 2,
+        "old_links_now_missing": [],
+        "new_links_before_missing": [
+          "https://baesystems.hicx.net/bae/hicxesm-portal/app/discovery-login.html",
+          "https://www.baesystems.com/en-uk/suppliers/responsible-supply-chain"
+        ],
+        "core_fields_improved": {
+          "tipo_oportunidade": {
+            "old": 0,
+            "new": 2,
+            "delta": 2
+          },
+          "tipo_recurso": {
+            "old": 0,
+            "new": 2,
+            "delta": 2
+          },
+          "perfil_ideal": {
+            "old": 0,
+            "new": 2,
+            "delta": 2
+          }
+        },
+        "core_fields_worsened": {},
+        "old_documents_count": 0,
+        "new_documents_count": 0,
+        "old_pdf_count": 0,
+        "new_pdf_count": 0
+      }
+    },
+    {
+      "fonte": "general_dynamics_suppliers",
+      "old_vs_new": {
+        "old_count": 17,
+        "new_count": 7,
+        "delta_count": -10,
+        "old_links_now_missing": [
+          "https://app.gdls.com/supplieronboarding/index.jsp",
+          "https://www.gd.com/our-businesses/aerospace",
+          "https://www.gd.com/suppliers/supplier-faqs",
+          "https://www.gdls.com/careers/transitioning-military/",
+          "https://www.gdls.com/cdn-cgi/l/email-protection",
+          "https://www.gdls.com/suppliers/?page=2",
+          "https://www.gdls.com/suppliers/terms-conditions/",
+          "https://www.gdls.com/wp-content/uploads/2025/12/Eng-SCM-MANUALSCM046-rev11.pdf",
+          "https://www.gdls.com/wp-content/uploads/2025/12/GDLS-Supplier-Code-of-Conduct-Ethics-7th-Edition.pdf",
+          "https://www.gdls.com/wp-content/uploads/2026/01/GDLS-Global-Supplier-Performance-Scorecard-2025-12-external.pdf"
+        ],
+        "new_links_before_missing": [],
+        "core_fields_improved": {
+          "perfil_ideal": {
+            "old": 0,
+            "new": 7,
+            "delta": 7
+          },
+          "documentos": {
+            "old": 0,
+            "new": 6,
+            "delta": 6
+          }
+        },
+        "core_fields_worsened": {
+          "area": {
+            "old": 17,
+            "new": 6,
+            "delta": -11
+          },
+          "tipo_oportunidade": {
+            "old": 17,
+            "new": 7,
+            "delta": -10
+          },
+          "tipo_recurso": {
+            "old": 17,
+            "new": 7,
+            "delta": -10
+          },
+          "pdf_url": {
+            "old": 12,
+            "new": 6,
+            "delta": -6
+          }
+        },
+        "old_documents_count": 0,
+        "new_documents_count": 6,
+        "old_pdf_count": 12,
+        "new_pdf_count": 6
+      }
+    },
+    {
+      "fonte": "lockheed_martin_suppliers",
+      "old_vs_new": {
+        "old_count": 20,
+        "new_count": 19,
+        "delta_count": -1,
+        "old_links_now_missing": [
+          "https://www.lockheedmartin.com/en-us/capabilities/space.html",
+          "https://www.lockheedmartin.com/en-us/suppliers/faqs.html"
+        ],
+        "new_links_before_missing": [
+          "https://www.lockheedmartin.com/en-us/suppliers/news/features/2026/supplier-training-lmeinvoicing.html"
+        ],
+        "core_fields_improved": {
+          "perfil_ideal": {
+            "old": 0,
+            "new": 19,
+            "delta": 19
+          },
+          "documentos": {
+            "old": 0,
+            "new": 19,
+            "delta": 19
+          }
+        },
+        "core_fields_worsened": {
+          "area": {
+            "old": 20,
+            "new": 19,
+            "delta": -1
+          },
+          "tipo_oportunidade": {
+            "old": 20,
+            "new": 19,
+            "delta": -1
+          },
+          "tipo_recurso": {
+            "old": 20,
+            "new": 19,
+            "delta": -1
+          },
+          "pdf_url": {
+            "old": 20,
+            "new": 19,
+            "delta": -1
+          }
+        },
+        "old_documents_count": 0,
+        "new_documents_count": 19,
+        "old_pdf_count": 20,
+        "new_pdf_count": 19
+      }
+    }
+  ]
+}

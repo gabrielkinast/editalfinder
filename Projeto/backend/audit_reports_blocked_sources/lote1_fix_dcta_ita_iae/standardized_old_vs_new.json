@@ -1,0 +1,34 @@
+{
+  "data_auditoria": "2026-05-02T03:53:49Z",
+  "fontes": [
+    {
+      "fonte": "dcta_ita_iae",
+      "old_vs_new": {
+        "old_count": 1,
+        "new_count": 0,
+        "delta_count": -1,
+        "old_links_now_missing": [
+          "https://www.gov.br/dcta/pt-br"
+        ],
+        "new_links_before_missing": [],
+        "core_fields_improved": {},
+        "core_fields_worsened": {
+          "tipo_oportunidade": {
+            "old": 1,
+            "new": 0,
+            "delta": -1
+          },
+          "tipo_recurso": {
+            "old": 1,
+            "new": 0,
+            "delta": -1
+          }
+        },
+        "old_documents_count": 0,
+        "new_documents_count": 0,
+        "old_pdf_count": 0,
+        "new_pdf_count": 0
+      }
+    }
+  ]
+}

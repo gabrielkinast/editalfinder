@@ -1,0 +1,155 @@
+{
+  "titulo": "Recovery C — Setores estratégicos (EMBRAPII, NUCLEP) — Consolidado final",
+  "gerado_em": "2026-05-10T12:30:00Z",
+  "escopo": "Calibração taxonomy/transformer Recovery C + duas cargas em staging: (1) merge padrão do loader, (2) overwrite taxonómico de setor_estrategico.",
+  "metricas_globais_referencia_linha_base": {
+    "fonte": "recovery_c_setores_consolidado.json anterior / post_daily antes da Recovery C",
+    "setor_estrategico_muito_amplo": 72
+  },
+  "metricas_pos_segundo_apply": {
+    "fonte": "audit_reports_main_pipeline/post_daily_validation.json",
+    "timestamp": "2026-05-10T08:02:47Z",
+    "ok": true,
+    "critical_errors_count": 0,
+    "setor_estrategico_muito_amplo": 47,
+    "prazo_vencido_ativo_true": 49,
+    "credito_tipo_recurso_incoerente": 4,
+    "suspeito_ativo_true": 47
+  },
+  "regressao_documentada_primeiro_apply": {
+    "setor_estrategico_muito_amplo": 85,
+    "fonte": "post_daily_validation 2026-05-10T07:08:09Z referenciado em recovery_c_setores_regression_debug.json"
+  },
+  "codigo_recovery_c_calibracao": {
+    "taxonomy_filtros": [
+      "recovery_c_cap_setor_estrategico_br",
+      "_BR_SETOR_STRATEGICO_MARKERS",
+      "_nuclep_institutional_url",
+      "calibrate_embrapii_extras",
+      "calibrate_nuclep_extras"
+    ],
+    "transformer": [
+      "calibrate_nuclep_extras ramo nuclep"
+    ],
+    "loader_merge": [
+      "CORE/merge_utils.merge_extras_dict (uniao listas)"
+    ],
+    "loader_correcao": [
+      "_rebuild_merged_extras(..., taxonomy_replace_keys=…) em CORE/loader.py",
+      "scripts/load_ready_sources.py —overwrite-fields setor_estrategico (+ --sources)"
+    ]
+  },
+  "pipeline_local": {
+    "retransform_dir": "audit_reports_main_pipeline/recovery_c_setores",
+    "standardized": "audit_reports_main_pipeline/recovery_c_setores/standardized",
+    "would_upsert_total": 41,
+    "dry_run_overwrite_preview": {
+      "ficheiro": "audit_reports_main_pipeline/recovery_c_taxonomy_overwrite_dryrun/recovery_c_taxonomy_overwrite_dryrun.json",
+      "overwritten_fields_count": 38,
+      "nota": "Contagem onde multiconjunto difere entre merge padrao e replace; pode ser menor que 41."
+    },
+    "primeiro_apply_id_execucao": "c6ae1239-3bbe-4585-a1e7-bf41e3ef0e14",
+    "segundo_apply_id_execucao": "e854551d-f758-42c3-b045-8474eae125ef",
+    "segundo_apply_data": "2026-05-10T07:44:28Z"
+  },
+  "padrao_documentacao_onda": {
+    "resumo_executivo": "A Recovery C aplicou cap e evidencia em setor_estrategico para EMBRAPII e NUCLEP (41 itens). O primeiro apply corrigiu standardized na origem mas o merge de extras no loader unia listas antigas e novas, fazendo regressao global 72->85. Foi implementado --overwrite-fields setor_estrategico no load_ready_sources; o segundo apply gravou o setor do payload. Pos-validacao (2026-05-10T08:02:47Z): ok=true, setor_estrategico_muito_amplo=47; ganho liquido versus pre-Recovery C: 72->47 (-25).",
+    "problema_original": "setor_estrategico_muito_amplo alto no staging (72 no snapshot pre-Recovery C); EMBRAPII e NUCLEP tinham multiplos itens com 4+ setores genericos.",
+    "fontes_tratadas": [
+      "embrapii",
+      "nuclep"
+    ],
+    "resultado_principal": "Standardized Recovery C com <=3 setores por item; apos segunda carga staging com overwrite taxonomico a metrica global caiu de 85 para 47; EMBRAPII deixa de aparecer neste warning no agregado por fonte atual.",
+    "metricas_antes_depois": {
+      "setor_estrategico_muito_amplo_global": {
+        "antes_linha_base": 72,
+        "apos_primeiro_apply_merge_uniao": 85,
+        "depois_segundo_apply_overwrite": 47,
+        "ganho_liquido_vs_linha_base_ocorrencias": -25,
+        "interpretacao": "Regressao intermedia (+13) explicada por merge_extras_dict; correcao com taxonomy_replace_keys."
+      },
+      "warnings_by_source_setor_amplo_EMBRAPII": {
+        "antes_linha_base": 13,
+        "apos_primeiro_apply": 19,
+        "pos_segundo_apply_agregado": "0 neste warning (warnings_by_source 2026-05-10T08:02:47Z)"
+      },
+      "warnings_by_source_setor_amplo_NUCLEP": {
+        "antes_linha_base": 12,
+        "apos_primeiro_apply": 19,
+        "pos_segundo_apply": "0 neste warning (mesmo snapshot)"
+      },
+      "prazo_vencido_ativo_true": {
+        "antes_linha_ref": 48,
+        "final": 49
+      },
+      "credito_tipo_recurso_incoerente": {
+        "final": 4
+      },
+      "suspeito_ativo_true": {
+        "final": 47
+      },
+      "would_upsert_recovery_c": 41,
+      "mapping_errors": 0
+    },
+    "interpretacao": {
+      "ganhos": [
+        "Cap por evidencia com excedentes em tags_secundarias / setores_detectados.",
+        "Correcao institucional NUCLEP (tipo_oportunidade noticia_institucional onde aplicavel).",
+        "-25 ocorrencias globais vs baseline 72 na metrica principal.",
+        "Diagnostico documentado em recovery_c_setores_regression_debug e taxonomy_preservation_debug."
+      ],
+      "regressoes_aparentes": [
+        "Entre primeiro e segundo apply: 72->85 devido unicamente ao merge lista+lista no loader."
+      ],
+      "sem_mudanca": [
+        "Outras fontes (DoD SBIR, EIC, etc.) continuam a dominar o aviso residual (47)."
+      ],
+      "limitacoes": [
+        "overwrite-fields v1 so allowlist para setor_estrategico; requer --sources explicito.",
+        "fields_preserved_non_empty no dry-run nao equivale ao merge com BD — ver diagnostico."
+      ]
+    },
+    "decisao_recomendada": {
+      "acao": "considerar_recovery_c_encerrada_fase_setores_EMBRAPII_NUCLEP",
+      "justificativa": "Metricas globais dentro do esperado apos segunda carga; sem novos criticos.",
+      "proximo_alvo": "Fase seguinte: outras fontes com setor_ampli (DoD SBIR, EIC, Eureka, ...)"
+    },
+    "riscos": [
+      "Reutilizar --overwrite-fields sem revisao pode substituir setor mesmo quando BD tiver valor curado diferente.",
+      "Paginas institucionais NUCLEP seguem como linhas editais ate roteamento de produto.",
+      "Residual 47 depende de ondas posteriores; nao e bug de crawler."
+    ],
+    "proximos_passos": [
+      "Planejar Recovery C.2 / onda seguinte por fontes com alto setor_estrategico_muito_amplo.",
+      "Opcional: alargar campos sob overwrite com allowlist institucional (nao automatizar extras inteiro sem revisao).",
+      "Monitorizar post_daily apos cargas ordinarias dos mesmos dois sources para evitar regressao de merge."
+    ],
+    "evidencias_tecnicas": {
+      "arquivos_lidos": [
+        "audit_reports_main_pipeline/recovery_c_setores_regression_debug.json",
+        "audit_reports_main_pipeline/recovery_c_taxonomy_preservation_debug.json",
+        "audit_reports_main_pipeline/recovery_c_taxonomy_overwrite_dryrun/recovery_c_taxonomy_overwrite_dryrun.json",
+        "audit_reports_main_pipeline/post_daily_validation.json",
+        "audit_reports_main_pipeline/post_daily_warning_examples.json",
+        "audit_reports_loader_ready/staging_load_summary.json",
+        "audit_reports_loader_ready/load_execution_history.jsonl"
+      ],
+      "arquivos_gerados": [
+        "audit_reports_main_pipeline/recovery_c_setores_consolidado.md",
+        "audit_reports_main_pipeline/recovery_c_setores_consolidado.json"
+      ],
+      "comandos": [
+        "load_ready_sources.py (1º apply) embrapii,nuclep standardized Recovery C — id c6ae1239…",
+        "load_ready_sources.py --apply --staging --overwrite-fields setor_estrategico … — id e854551d…",
+        "validate_full_staging_after_daily.py --staging -> post_daily_validation.json"
+      ],
+      "apply_executado": true,
+      "schema_alterado": false,
+      "supabase_tocado": true,
+      "notas_seguranca": [
+        "Este ficheiro de consolidado apenas documenta; nao altera schema, readiness oficial nem opportunity_gate.",
+        "As cargas documentadas atualizaram staging via loader (Duas aplicacoes: merge padrao e overwrite taxonomico)."
+      ]
+    }
+  }
+}

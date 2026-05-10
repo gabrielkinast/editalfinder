@@ -1,0 +1,155 @@
+{
+  "verificacao_recovery_d_fornecedores": {
+    "itens_total": 26,
+    "loader_would_upsert": 26,
+    "mapping_errors_total": 0,
+    "critical_empty_items_total": 0,
+    "faq_help_heuristic": 0,
+    "login_isolado": 0,
+    "validacao_suspeito_top": 0,
+    "setor_estrategico_gt3": 0,
+    "frontend_section_fornecedores": 26,
+    "mostrar_no_radar_false": 26,
+    "mostrar_em_fornecedores_true": 26,
+    "mostrar_em_investimentos_false": 26,
+    "portal_tipo_preenchido": 26,
+    "documentacao_com_mostrar_radar_true": 0,
+    "todos_checks_ok": true
+  },
+  "documentacao_itens": [
+    {
+      "titulo": "Small Business Innovation Research",
+      "link": "https://www.lockheedmartin.com/en-us/suppliers/sbir.html"
+    },
+    {
+      "titulo": "Cybersecurity",
+      "link": "https://www.lockheedmartin.com/en-us/suppliers/cybersecurity.html"
+    },
+    {
+      "titulo": "Supplier Ethics",
+      "link": "https://www.lockheedmartin.com/en-us/suppliers/supplier-ethics.html"
+    },
+    {
+      "titulo": "Sustainable Supply Chain Management",
+      "link": "https://www.lockheedmartin.com/en-us/suppliers/sustainable-supply-chain.html"
+    },
+    {
+      "titulo": "Supplier Documentation",
+      "link": "https://www.lockheedmartin.com/en-us/suppliers/documentation.html"
+    },
+    {
+      "titulo": "Webinars & Programs",
+      "link": "https://www.lockheedmartin.com/en-us/suppliers/training.html"
+    },
+    {
+      "titulo": "Supplier News and Events",
+      "link": "https://www.lockheedmartin.com/en-us/suppliers/news/features.html"
+    },
+    {
+      "titulo": "LM eInvoicing 2026 Training",
+      "link": "https://www.lockheedmartin.com/en-us/suppliers/news/features/2026/supplier-training-lmeinvoicing.html"
+    },
+    {
+      "titulo": "Maintaining Cybersecurity Maturity Model Certification",
+      "link": "https://www.lockheedmartin.com/en-us/suppliers/news/features/2026/cybersecurity-cmmc.html"
+    },
+    {
+      "titulo": "Shared Commitment to Equal Employment Opportunity",
+      "link": "https://www.lockheedmartin.com/en-us/suppliers/news/features/2025/annual-eeo-cps-003.html"
+    },
+    {
+      "titulo": "Power Of A Shared Focus",
+      "link": "https://www.lockheedmartin.com/en-us/suppliers/news/features/2025/csco-message-focus.html"
+    },
+    {
+      "titulo": "Document CMMC status in Exostar",
+      "link": "https://www.lockheedmartin.com/en-us/suppliers/news/features/2025/cybersecurity-cmmc-exostar-status.html"
+    },
+    {
+      "titulo": "Discontinuation of Phone-Based OTP for Supplier Access",
+      "link": "https://www.lockheedmartin.com/en-us/suppliers/news/features/2025/cybersecurity-discontinuation-phone-otp.html"
+    },
+    {
+      "titulo": "Upcoming CMMC Requirements",
+      "link": "https://www.lockheedmartin.com/en-us/suppliers/news/features/2025/cybersecurity-cmmc-upcoming-requirements.html"
+    }
+  ],
+  "padrao_documentacao_onda": {
+    "resumo_executivo": "Recovery D finaliza marcações para a secção produto «Fornecedores & Investimentos»: extras de roteamento, tipos supplier/documentação, cap de qualidade para não simular edital forte. Apply e Supabase ficam pendentes.",
+    "problema_original": "Itens de portais GD/LM/BAE não devem alimentar o Radar de Fomento como oportunidade principal; precisam taxonomia e flags explícitas no JSON.",
+    "fontes_tratadas": [
+      "general_dynamics_suppliers",
+      "lockheed_martin_suppliers",
+      "bae_systems_suppliers"
+    ],
+    "resultado_principal": "{\"itens_total\": 26, \"loader_would_upsert\": 26, \"mapping_errors_total\": 0, \"critical_empty_items_total\": 0, \"faq_help_heuristic\": 0, \"login_isolado\": 0, \"validacao_suspeito_top\": 0, \"setor_estrategico_gt3\": 0, \"frontend_section_fornecedores\": 26, \"mostrar_no_radar_false\": 26, \"mostrar_em_fornecedores_true\": 26, \"mostrar_em_investimentos_false\": 26, \"portal_tipo_preenchido\": 26, \"documentacao_com_mostrar_radar_true\": 0, \"todos_checks_ok\": true}",
+    "metricas_antes_depois": {
+      "tipo_oportunidade_distribuicao": {
+        "supplier_registration": 2,
+        "supplier_portal": 1,
+        "oportunidade_fornecedor": 5,
+        "programa_agregado": 2,
+        "procurement_portal": 2,
+        "documentacao_fornecedor": 14
+      },
+      "portal_tipo_distribuicao": {
+        "registration": 2,
+        "access_limited": 1,
+        "procurement": 3,
+        "hub": 2,
+        "supplier_resource": 7,
+        "documentation": 11
+      }
+    },
+    "interpretacao": {
+      "ganhos": [
+        "frontend_section=fornecedores em todos os itens D.1",
+        "documentacao_fornecedor isolada do radar principal",
+        "View SQL proposta em docs/sql sem executar migration"
+      ],
+      "regressoes_aparentes": [],
+      "sem_mudanca": [
+        "opportunity_gate global inalterado"
+      ],
+      "limitacoes": [
+        "mostrar_no_radar=true reservado a futuras oportunidades acionáveis com prazo explícito"
+      ]
+    },
+    "decisao_recomendada": {
+      "acao": "Opção 1 (preferida): aplicar os 26 itens em staging com extras de fornecedores e mostrar_no_radar=false.",
+      "justificativa": "Checks automáticos passam; taxonomia e vista SQL alinhadas; risco baixo se o front filtrar por frontend_section.",
+      "proximo_alvo": "Opção 2 se quiserem carga incremental: subset 12 principais primeiro, documentação depois."
+    },
+    "riscos": [
+      "Consumidores legacy do payload podem assumir tipo_oportunidade antigo — rever API pública.",
+      "View SQL requer validação DBA e índices em extras."
+    ],
+    "proximos_passos": [
+      "QA rápido no staging após apply (quando autorizado).",
+      "Implementar rota UI «Fornecedores» filtrando extras.frontend_section.",
+      "Planejar vw_investimentos_front quando existirem dados."
+    ],
+    "evidencias_tecnicas": {
+      "arquivos_lidos": [
+        "audit_reports_main_pipeline/recovery_d1_fornecedores_final/standardized/*.json",
+        "audit_reports_main_pipeline/recovery_d1_fornecedores_final_loader_dryrun/load_ready_summary.json"
+      ],
+      "arquivos_gerados": [
+        "audit_reports_main_pipeline/recovery_d1_fornecedores_final.md",
+        "audit_reports_main_pipeline/fornecedores_investimentos_backend_design.md",
+        "docs/sql/VW_FORNECEDORES_FRONT_PROPOSTA.sql"
+      ],
+      "comandos": [
+        "python scripts/retransform_all.py --sources general_dynamics_suppliers,lockheed_martin_suppliers,bae_systems_suppliers --dry-run --output-dir audit_reports_main_pipeline/recovery_d1_fornecedores_final",
+        "python scripts/audit_semantic_classification.py ...",
+        "python scripts/load_ready_sources.py ... recovery_d1_fornecedores_final_loader_dryrun"
+      ],
+      "apply_executado": false,
+      "schema_alterado": false,
+      "supabase_tocado": false,
+      "notas_seguranca": [
+        "Sem apply nesta tarefa."
+      ]
+    }
+  }
+}

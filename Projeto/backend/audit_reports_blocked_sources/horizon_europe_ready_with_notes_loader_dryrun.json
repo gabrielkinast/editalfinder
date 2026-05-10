@@ -1,0 +1,43 @@
+{
+  "data": "2026-05-02",
+  "fonte": "horizon_europe",
+  "readiness_alvo": "ready_with_notes",
+  "alteracoes_config": {
+    "config_source_readiness": "horizon_europe removido de blocked; incluído em ready_with_notes (ficheiro também regenerado pelo load_ready_sources a partir de readiness_for_loader.json).",
+    "audit_reports_retransform_readiness_for_loader": "horizon_europe removido de fontes_bloqueadas_temporariamente; acrescentado a fontes_prontas_para_loader; status_distribution: pronto_com_observacoes 14→15, bloquear_temporariamente 17→16, fontes_total 94→95."
+  },
+  "standardized_copiado_para": "audit_reports_retransform/standardized/horizon_europe_standardized.json",
+  "origem_copia": "CORE/transformer/horizon_europe_standardized.json",
+  "comando_loader_dry_run": "python scripts/load_ready_sources.py --sources horizon_europe --exclude-blocked --input-dir audit_reports_retransform/standardized --readiness audit_reports_retransform/readiness_for_loader.json",
+  "artefatos_loader": {
+    "diretorio": "audit_reports_loader_ready",
+    "summary": "audit_reports_loader_ready/load_ready_summary.json",
+    "by_source": "audit_reports_loader_ready/load_ready_by_source.json",
+    "payload_examples": "audit_reports_loader_ready/load_ready_payload_examples.json"
+  },
+  "resumo_dry_run": {
+    "itens_standardized": 25,
+    "would_upsert": 25,
+    "would_ignore": 0,
+    "mapping_errors": 0,
+    "critical_empty_items": 0,
+    "documentos_perdidos_no_payload": 0,
+    "pdf_url_inventado": false,
+    "apply_solicitado": false,
+    "apply_status": "not_requested"
+  },
+  "verificacao_checklist": {
+    "urls_topic_details_horizon": true,
+    "tipo_oportunidade_funding_opportunity": true,
+    "tipo_recurso_fomento": true,
+    "natureza_recurso_nao_reembolsavel_em_extras": true,
+    "topic_id_e_call_code_em_extras": true,
+    "links_oficiais_em_extras": true,
+    "origem_portal_funding_tenders": true,
+    "validacao_status_incompleto": true,
+    "qualidade_dado_60": true,
+    "pdf_url_null_sem_inventar": true,
+    "sem_documentos_perdidos": true
+  },
+  "recomendacao_staging": "O dry-run está limpo (25 upserts, 0 erros críticos). Um apply em staging pode ser feito com `python scripts/load_ready_sources.py --apply --staging ...` quando a política de ambiente (`has_allow_staging_apply` / flags) estiver explicitamente autorizada; não executar apply nesta tarefa."
+}

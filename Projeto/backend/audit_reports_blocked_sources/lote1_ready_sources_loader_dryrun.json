@@ -1,0 +1,806 @@
+{
+  "titulo": "Lote 1 — dry-run combinado (audit_reports_retransform/standardized)",
+  "input_dir": "audit_reports_retransform/standardized",
+  "id_execucao": "a8e9a2d0-d98c-4c65-8914-4d0f683f5caf",
+  "data_auditoria": "2026-05-02T06:23:50Z",
+  "sincronizacao_ficheiros": {
+    "badesul": {
+      "acao": "copiado",
+      "origem": "audit_reports_blocked_sources/lote1_fix_badesul_pncp/standardized/badesul_standardized.json",
+      "motivo": "audit_reports_retransform/standardized estava vazio (0 itens)"
+    },
+    "pncp": {
+      "acao": "copiado",
+      "origem": "audit_reports_blocked_sources/pncp_calibration/retransform/standardized/pncp_standardized.json",
+      "motivo": "audit_reports_retransform/standardized estava vazio (0 itens); calibracao com 31 itens"
+    },
+    "senai": {
+      "acao": "ja_atualizado",
+      "itens": 22,
+      "nota": "mesmo mtime que lote1_fix_senai_softex_semantic2"
+    },
+    "softex": {
+      "acao": "ja_atualizado",
+      "itens": 2
+    },
+    "plataforma_industria": {
+      "acao": "ja_atualizado",
+      "itens": 23,
+      "nota": "mesmo mtime que lote1_fix_plataforma_industria"
+    },
+    "petrobras": {
+      "acao": "ja_atualizado",
+      "itens": 4,
+      "nota": "alinhado a 4 itens (nao usar CORE/transformer com 5)"
+    }
+  },
+  "verificacao": {
+    "itens_standardized_total": 89,
+    "soma_por_fonte": {
+      "senai": 22,
+      "plataforma_industria": 23,
+      "badesul": 7,
+      "petrobras": 4,
+      "pncp": 31,
+      "softex": 2
+    },
+    "would_upsert_total": 67,
+    "mapping_errors_total": 0,
+    "critical_empty_items_total": 0,
+    "canonical_skipped_total": 22,
+    "docs_preserved_items_total": 48,
+    "docs_input_items_total": 48,
+    "pdf_preserved_vs_input": "25/25",
+    "validacao_status_preserved_items_total": 67,
+    "qualidade_dado_preserved_items_total": 67,
+    "nota_would_upsert": "would_upsert (67) < itens_standardized (89): 22 linhas de plataforma_industria saltadas por canonizacao (URL ja reclamado por senai)."
+  },
+  "resumo_global": {
+    "id_execucao": "a8e9a2d0-d98c-4c65-8914-4d0f683f5caf",
+    "data_auditoria": "2026-05-02T06:23:50Z",
+    "mode": "dry-run",
+    "staging_flag": false,
+    "apply_requested": false,
+    "input_dir": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_retransform\\standardized",
+    "readiness_path": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_retransform\\readiness_for_loader.json",
+    "source_readiness_config_path": "D:\\Computational_Physics\\My Projects\\edital\\config\\source_readiness.json",
+    "sources_selected": 6,
+    "sources_excluded": 88,
+    "itens_standardized_total": 89,
+    "would_upsert_total": 67,
+    "would_ignore_total": 0,
+    "mapping_errors_total": 0,
+    "critical_empty_items_total": 0,
+    "docs_input_items_total": 48,
+    "docs_preserved_items_total": 48,
+    "documentos_perdidos_no_payload_total": 0,
+    "standardized_com_documentos_nao_pdf_total": 45,
+    "payload_com_documentos_nao_pdf_total": 45,
+    "perda_documentos_nao_pdf_total": 0,
+    "pdf_input_items_total": 25,
+    "pdf_preserved_items_total": 25,
+    "validacao_status_preserved_items_total": 67,
+    "qualidade_dado_preserved_items_total": 67,
+    "fields_input_non_empty_total": {
+      "area": 35,
+      "tipo_oportunidade": 67,
+      "tipo_recurso": 67,
+      "perfil_ideal": 63,
+      "publico_alvo": 62,
+      "setor_economico": 36,
+      "area_cientifica": 23,
+      "setor_estrategico": 43,
+      "validacao_status": 67,
+      "qualidade_dado": 67
+    },
+    "fields_payload_non_empty_total": {
+      "area": 35,
+      "tipo_oportunidade": 67,
+      "tipo_recurso": 67,
+      "perfil_ideal": 63,
+      "publico_alvo": 62,
+      "setor_economico": 36,
+      "area_cientifica": 23,
+      "setor_estrategico": 43,
+      "validacao_status": 67,
+      "qualidade_dado": 67
+    },
+    "fields_preserved_non_empty_total": {
+      "area": 35,
+      "tipo_oportunidade": 67,
+      "tipo_recurso": 67,
+      "perfil_ideal": 63,
+      "publico_alvo": 62,
+      "setor_economico": 36,
+      "area_cientifica": 23,
+      "setor_estrategico": 43,
+      "validacao_status": 67,
+      "qualidade_dado": 67
+    },
+    "canonical_skipped_total": 22,
+    "canonicalization_config_path": "D:\\Computational_Physics\\My Projects\\edital\\config\\source_canonicalization.json",
+    "canonical_skip_examples": [
+      {
+        "fonte": "plataforma_industria",
+        "motivo": "canonicalization_skip",
+        "detalhe": "group=plataforma_inovacao canonical=senai alias=plataforma_industria",
+        "titulo": "Smart Factory- BNDES (SENAI)",
+        "link": "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/smart-factory-bndes-senai/"
+      },
+      {
+        "fonte": "plataforma_industria",
+        "motivo": "canonicalization_skip",
+        "detalhe": "group=plataforma_inovacao canonical=senai alias=plataforma_industria",
+        "titulo": "Agenda.Tech (SENAI)",
+        "link": "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/agendatech/"
+      },
+      {
+        "fonte": "plataforma_industria",
+        "motivo": "canonicalization_skip",
+        "detalhe": "group=plataforma_inovacao canonical=senai alias=plataforma_industria",
+        "titulo": "Chamada Regional (SENAI)",
+        "link": "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/chamada-regional-senai/"
+      },
+      {
+        "fonte": "plataforma_industria",
+        "motivo": "canonicalization_skip",
+        "detalhe": "group=plataforma_inovacao canonical=senai alias=plataforma_industria",
+        "titulo": "Projeto Semente (SENAI)",
+        "link": "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/projetosemente/"
+      },
+      {
+        "fonte": "plataforma_industria",
+        "motivo": "canonicalization_skip",
+        "detalhe": "group=plataforma_inovacao canonical=senai alias=plataforma_industria",
+        "titulo": "Aliança Industrial (SENAI)",
+        "link": "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/alianca-industrial/"
+      },
+      {
+        "fonte": "plataforma_industria",
+        "motivo": "canonicalization_skip",
+        "detalhe": "group=plataforma_inovacao canonical=senai alias=plataforma_industria",
+        "titulo": "Saúde Conectada (SESI)",
+        "link": "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/saude-conectada-sesi/"
+      },
+      {
+        "fonte": "plataforma_industria",
+        "motivo": "canonicalization_skip",
+        "detalhe": "group=plataforma_inovacao canonical=senai alias=plataforma_industria",
+        "titulo": "Aliança Educacional (SENAI)",
+        "link": "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/alianca-educacional/"
+      },
+      {
+        "fonte": "plataforma_industria",
+        "motivo": "canonicalization_skip",
+        "detalhe": "group=plataforma_inovacao canonical=senai alias=plataforma_industria",
+        "titulo": "Empreendedorismo Industrial - Desafio Instituição Âncora (SENAI)",
+        "link": "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/empreendedorismo-industrial-desafio-instituicao/"
+      },
+      {
+        "fonte": "plataforma_industria",
+        "motivo": "canonicalization_skip",
+        "detalhe": "group=plataforma_inovacao canonical=senai alias=plataforma_industria",
+        "titulo": "Empreendedorismo Industrial - Startup.Tech (SENAI)",
+        "link": "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/empreendedorismo-industrial-startuptech/"
+      },
+      {
+        "fonte": "plataforma_industria",
+        "motivo": "canonicalization_skip",
+        "detalhe": "group=plataforma_inovacao canonical=senai alias=plataforma_industria",
+        "titulo": "Habitats de Inovação (SENAI)",
+        "link": "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/habitats-de-inovacao/"
+      },
+      {
+        "fonte": "plataforma_industria",
+        "motivo": "canonicalization_skip",
+        "detalhe": "group=plataforma_inovacao canonical=senai alias=plataforma_industria",
+        "titulo": "Missão Industrial (SENAI)",
+        "link": "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/missao-industrial/"
+      },
+      {
+        "fonte": "plataforma_industria",
+        "motivo": "canonicalization_skip",
+        "detalhe": "group=plataforma_inovacao canonical=senai alias=plataforma_industria",
+        "titulo": "MOVER - Aliança Industrial (SENAI)",
+        "link": "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/rota-2030-alianca-industrial/"
+      },
+      {
+        "fonte": "plataforma_industria",
+        "motivo": "canonicalization_skip",
+        "detalhe": "group=plataforma_inovacao canonical=senai alias=plataforma_industria",
+        "titulo": "MOVER - Aliança de Startups, Pequenas e/ou Médias Empresas (SENAI)",
+        "link": "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/rota-2030-alianca-startups-pequenas-medias/"
+      },
+      {
+        "fonte": "plataforma_industria",
+        "motivo": "canonicalization_skip",
+        "detalhe": "group=plataforma_inovacao canonical=senai alias=plataforma_industria",
+        "titulo": "MOVER - Projetos Estruturantes (EMBRAPII e SENAI)",
+        "link": "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/rota-2030-projetos-estruturantesindustrial-copia/"
+      },
+      {
+        "fonte": "plataforma_industria",
+        "motivo": "canonicalization_skip",
+        "detalhe": "group=plataforma_inovacao canonical=senai alias=plataforma_industria",
+        "titulo": "Rota 2030 - Projetos Estruturantes (FUNDEP e SENAI)",
+        "link": "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/rota-2030-projetos-estruturantes-fundep-e-senai/"
+      },
+      {
+        "fonte": "plataforma_industria",
+        "motivo": "canonicalization_skip",
+        "detalhe": "group=plataforma_inovacao canonical=senai alias=plataforma_industria",
+        "titulo": "MOVER Hands-on: Aprendendo Fazendo (SENAI)",
+        "link": "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/rota-2030-hands-aprendendo-fazendo/"
+      },
+      {
+        "fonte": "plataforma_industria",
+        "motivo": "canonicalization_skip",
+        "detalhe": "group=plataforma_inovacao canonical=senai alias=plataforma_industria",
+        "titulo": "Rota 2030 Hands-on: Recupera RS (SENAI)",
+        "link": "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/rota-2030-hands-aprendendo-fazendo-copia/"
+      },
+      {
+        "fonte": "plataforma_industria",
+        "motivo": "canonicalization_skip",
+        "detalhe": "group=plataforma_inovacao canonical=senai alias=plataforma_industria",
+        "titulo": "Smart Factory (SENAI)",
+        "link": "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/smart-factory/"
+      },
+      {
+        "fonte": "plataforma_industria",
+        "motivo": "canonicalization_skip",
+        "detalhe": "group=plataforma_inovacao canonical=senai alias=plataforma_industria",
+        "titulo": "Smart Factory- FINEP (SENAI)",
+        "link": "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/smart-factory-finep-senai/"
+      },
+      {
+        "fonte": "plataforma_industria",
+        "motivo": "canonicalization_skip",
+        "detalhe": "group=plataforma_inovacao canonical=senai alias=plataforma_industria",
+        "titulo": "Ecossistemas de Inovação em Saúde – Hubs Regionais (SESI)",
+        "link": "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/ecossistemas-de-inovacao-em-saude-hubs-regionais-s/"
+      },
+      {
+        "fonte": "plataforma_industria",
+        "motivo": "canonicalization_skip",
+        "detalhe": "group=plataforma_inovacao canonical=senai alias=plataforma_industria",
+        "titulo": "Estudos e Pesquisas em Saúde e Segurança na Indústria (SESI)",
+        "link": "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/estudos-e-pesquisas-em-saude-e-seguranca-na-indust/"
+      },
+      {
+        "fonte": "plataforma_industria",
+        "motivo": "canonicalization_skip",
+        "detalhe": "group=plataforma_inovacao canonical=senai alias=plataforma_industria",
+        "titulo": "Linhas de Cuidado na Saúde Suplementar SESI e ANS (SESI)",
+        "link": "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/linhas-de-cuidado-na-saude-suplementar-sesi-e-ans-/"
+      }
+    ],
+    "canonical_claimed_links_by_group": {
+      "plataforma_inovacao": 22
+    },
+    "environment_guard": {
+      "editalfinder_env": "staging",
+      "has_supabase_url": true,
+      "has_service_key": true,
+      "has_anon_key": true,
+      "has_allow_staging_apply": false,
+      "url_host_masked": "dof***.co",
+      "block_reason": "missing_staging_flag"
+    },
+    "db_connection_diag": {
+      "url_masked": "https://dof***.co",
+      "key_name_selected": "SUPABASE_SERVICE_ROLE_KEY",
+      "key_exists": true,
+      "key_len": 219,
+      "key_prefix_masked": "eyJ***zg",
+      "env_sources_found": [
+        "D:\\Computational_Physics\\My Projects\\edital\\.env.staging",
+        "D:\\Computational_Physics\\My Projects\\edital\\CORE\\.env"
+      ]
+    },
+    "apply_status": "not_requested",
+    "carga_execucao_db": {
+      "saved": true,
+      "error": ""
+    }
+  },
+  "por_fonte": [
+    {
+      "fonte": "senai",
+      "standardized_path": "audit_reports_retransform/standardized/senai_standardized.json",
+      "itens_standardized": 22,
+      "would_upsert": 22,
+      "would_ignore": 0,
+      "mapping_errors": 0,
+      "critical_empty_items": 0,
+      "critical_empty_fields": {},
+      "docs_input_items": 22,
+      "docs_preserved_items": 22,
+      "documentos_perdidos_no_payload": 0,
+      "standardized_com_documentos_nao_pdf": 21,
+      "payload_com_documentos_nao_pdf": 21,
+      "perda_documentos_nao_pdf": 0,
+      "pdf_input_items": 22,
+      "pdf_preserved_items": 22,
+      "validacao_status_preserved_items": 22,
+      "qualidade_dado_preserved_items": 22,
+      "semantic_fields_present_items": 22,
+      "docs_loss_examples": [],
+      "field_input_non_empty": {
+        "area": 22,
+        "tipo_oportunidade": 22,
+        "tipo_recurso": 22,
+        "perfil_ideal": 22,
+        "publico_alvo": 22,
+        "setor_economico": 22,
+        "area_cientifica": 22,
+        "setor_estrategico": 22,
+        "validacao_status": 22,
+        "qualidade_dado": 22
+      },
+      "field_payload_non_empty": {
+        "area": 22,
+        "tipo_oportunidade": 22,
+        "tipo_recurso": 22,
+        "perfil_ideal": 22,
+        "publico_alvo": 22,
+        "setor_economico": 22,
+        "area_cientifica": 22,
+        "setor_estrategico": 22,
+        "validacao_status": 22,
+        "qualidade_dado": 22
+      },
+      "field_preserved_non_empty": {
+        "area": 22,
+        "tipo_oportunidade": 22,
+        "tipo_recurso": 22,
+        "perfil_ideal": 22,
+        "publico_alvo": 22,
+        "setor_economico": 22,
+        "area_cientifica": 22,
+        "setor_estrategico": 22,
+        "validacao_status": 22,
+        "qualidade_dado": 22
+      },
+      "canonical_skipped": 0,
+      "canonical_skip_examples": []
+    },
+    {
+      "fonte": "plataforma_industria",
+      "standardized_path": "audit_reports_retransform/standardized/plataforma_industria_standardized.json",
+      "itens_standardized": 23,
+      "would_upsert": 1,
+      "would_ignore": 0,
+      "mapping_errors": 0,
+      "critical_empty_items": 0,
+      "critical_empty_fields": {},
+      "docs_input_items": 1,
+      "docs_preserved_items": 1,
+      "documentos_perdidos_no_payload": 0,
+      "standardized_com_documentos_nao_pdf": 1,
+      "payload_com_documentos_nao_pdf": 1,
+      "perda_documentos_nao_pdf": 0,
+      "pdf_input_items": 1,
+      "pdf_preserved_items": 1,
+      "validacao_status_preserved_items": 1,
+      "qualidade_dado_preserved_items": 1,
+      "semantic_fields_present_items": 1,
+      "docs_loss_examples": [],
+      "field_input_non_empty": {
+        "area": 1,
+        "tipo_oportunidade": 1,
+        "tipo_recurso": 1,
+        "perfil_ideal": 1,
+        "publico_alvo": 1,
+        "setor_economico": 1,
+        "area_cientifica": 1,
+        "setor_estrategico": 1,
+        "validacao_status": 1,
+        "qualidade_dado": 1
+      },
+      "field_payload_non_empty": {
+        "area": 1,
+        "tipo_oportunidade": 1,
+        "tipo_recurso": 1,
+        "perfil_ideal": 1,
+        "publico_alvo": 1,
+        "setor_economico": 1,
+        "area_cientifica": 1,
+        "setor_estrategico": 1,
+        "validacao_status": 1,
+        "qualidade_dado": 1
+      },
+      "field_preserved_non_empty": {
+        "area": 1,
+        "tipo_oportunidade": 1,
+        "tipo_recurso": 1,
+        "perfil_ideal": 1,
+        "publico_alvo": 1,
+        "setor_economico": 1,
+        "area_cientifica": 1,
+        "setor_estrategico": 1,
+        "validacao_status": 1,
+        "qualidade_dado": 1
+      },
+      "canonical_skipped": 22,
+      "canonical_skip_examples": [
+        {
+          "fonte": "plataforma_industria",
+          "motivo": "canonicalization_skip",
+          "detalhe": "group=plataforma_inovacao canonical=senai alias=plataforma_industria",
+          "titulo": "Smart Factory- BNDES (SENAI)",
+          "link": "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/smart-factory-bndes-senai/"
+        },
+        {
+          "fonte": "plataforma_industria",
+          "motivo": "canonicalization_skip",
+          "detalhe": "group=plataforma_inovacao canonical=senai alias=plataforma_industria",
+          "titulo": "Agenda.Tech (SENAI)",
+          "link": "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/agendatech/"
+        },
+        {
+          "fonte": "plataforma_industria",
+          "motivo": "canonicalization_skip",
+          "detalhe": "group=plataforma_inovacao canonical=senai alias=plataforma_industria",
+          "titulo": "Chamada Regional (SENAI)",
+          "link": "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/chamada-regional-senai/"
+        },
+        {
+          "fonte": "plataforma_industria",
+          "motivo": "canonicalization_skip",
+          "detalhe": "group=plataforma_inovacao canonical=senai alias=plataforma_industria",
+          "titulo": "Projeto Semente (SENAI)",
+          "link": "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/projetosemente/"
+        },
+        {
+          "fonte": "plataforma_industria",
+          "motivo": "canonicalization_skip",
+          "detalhe": "group=plataforma_inovacao canonical=senai alias=plataforma_industria",
+          "titulo": "Aliança Industrial (SENAI)",
+          "link": "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/alianca-industrial/"
+        },
+        {
+          "fonte": "plataforma_industria",
+          "motivo": "canonicalization_skip",
+          "detalhe": "group=plataforma_inovacao canonical=senai alias=plataforma_industria",
+          "titulo": "Saúde Conectada (SESI)",
+          "link": "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/saude-conectada-sesi/"
+        },
+        {
+          "fonte": "plataforma_industria",
+          "motivo": "canonicalization_skip",
+          "detalhe": "group=plataforma_inovacao canonical=senai alias=plataforma_industria",
+          "titulo": "Aliança Educacional (SENAI)",
+          "link": "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/alianca-educacional/"
+        },
+        {
+          "fonte": "plataforma_industria",
+          "motivo": "canonicalization_skip",
+          "detalhe": "group=plataforma_inovacao canonical=senai alias=plataforma_industria",
+          "titulo": "Empreendedorismo Industrial - Desafio Instituição Âncora (SENAI)",
+          "link": "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/empreendedorismo-industrial-desafio-instituicao/"
+        },
+        {
+          "fonte": "plataforma_industria",
+          "motivo": "canonicalization_skip",
+          "detalhe": "group=plataforma_inovacao canonical=senai alias=plataforma_industria",
+          "titulo": "Empreendedorismo Industrial - Startup.Tech (SENAI)",
+          "link": "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/empreendedorismo-industrial-startuptech/"
+        },
+        {
+          "fonte": "plataforma_industria",
+          "motivo": "canonicalization_skip",
+          "detalhe": "group=plataforma_inovacao canonical=senai alias=plataforma_industria",
+          "titulo": "Habitats de Inovação (SENAI)",
+          "link": "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/habitats-de-inovacao/"
+        },
+        {
+          "fonte": "plataforma_industria",
+          "motivo": "canonicalization_skip",
+          "detalhe": "group=plataforma_inovacao canonical=senai alias=plataforma_industria",
+          "titulo": "Missão Industrial (SENAI)",
+          "link": "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/missao-industrial/"
+        },
+        {
+          "fonte": "plataforma_industria",
+          "motivo": "canonicalization_skip",
+          "detalhe": "group=plataforma_inovacao canonical=senai alias=plataforma_industria",
+          "titulo": "MOVER - Aliança Industrial (SENAI)",
+          "link": "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/rota-2030-alianca-industrial/"
+        },
+        {
+          "fonte": "plataforma_industria",
+          "motivo": "canonicalization_skip",
+          "detalhe": "group=plataforma_inovacao canonical=senai alias=plataforma_industria",
+          "titulo": "MOVER - Aliança de Startups, Pequenas e/ou Médias Empresas (SENAI)",
+          "link": "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/rota-2030-alianca-startups-pequenas-medias/"
+        },
+        {
+          "fonte": "plataforma_industria",
+          "motivo": "canonicalization_skip",
+          "detalhe": "group=plataforma_inovacao canonical=senai alias=plataforma_industria",
+          "titulo": "MOVER - Projetos Estruturantes (EMBRAPII e SENAI)",
+          "link": "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/rota-2030-projetos-estruturantesindustrial-copia/"
+        },
+        {
+          "fonte": "plataforma_industria",
+          "motivo": "canonicalization_skip",
+          "detalhe": "group=plataforma_inovacao canonical=senai alias=plataforma_industria",
+          "titulo": "Rota 2030 - Projetos Estruturantes (FUNDEP e SENAI)",
+          "link": "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/rota-2030-projetos-estruturantes-fundep-e-senai/"
+        },
+        {
+          "fonte": "plataforma_industria",
+          "motivo": "canonicalization_skip",
+          "detalhe": "group=plataforma_inovacao canonical=senai alias=plataforma_industria",
+          "titulo": "MOVER Hands-on: Aprendendo Fazendo (SENAI)",
+          "link": "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/rota-2030-hands-aprendendo-fazendo/"
+        },
+        {
+          "fonte": "plataforma_industria",
+          "motivo": "canonicalization_skip",
+          "detalhe": "group=plataforma_inovacao canonical=senai alias=plataforma_industria",
+          "titulo": "Rota 2030 Hands-on: Recupera RS (SENAI)",
+          "link": "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/rota-2030-hands-aprendendo-fazendo-copia/"
+        },
+        {
+          "fonte": "plataforma_industria",
+          "motivo": "canonicalization_skip",
+          "detalhe": "group=plataforma_inovacao canonical=senai alias=plataforma_industria",
+          "titulo": "Smart Factory (SENAI)",
+          "link": "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/smart-factory/"
+        },
+        {
+          "fonte": "plataforma_industria",
+          "motivo": "canonicalization_skip",
+          "detalhe": "group=plataforma_inovacao canonical=senai alias=plataforma_industria",
+          "titulo": "Smart Factory- FINEP (SENAI)",
+          "link": "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/smart-factory-finep-senai/"
+        },
+        {
+          "fonte": "plataforma_industria",
+          "motivo": "canonicalization_skip",
+          "detalhe": "group=plataforma_inovacao canonical=senai alias=plataforma_industria",
+          "titulo": "Ecossistemas de Inovação em Saúde – Hubs Regionais (SESI)",
+          "link": "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/ecossistemas-de-inovacao-em-saude-hubs-regionais-s/"
+        },
+        {
+          "fonte": "plataforma_industria",
+          "motivo": "canonicalization_skip",
+          "detalhe": "group=plataforma_inovacao canonical=senai alias=plataforma_industria",
+          "titulo": "Estudos e Pesquisas em Saúde e Segurança na Indústria (SESI)",
+          "link": "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/estudos-e-pesquisas-em-saude-e-seguranca-na-indust/"
+        },
+        {
+          "fonte": "plataforma_industria",
+          "motivo": "canonicalization_skip",
+          "detalhe": "group=plataforma_inovacao canonical=senai alias=plataforma_industria",
+          "titulo": "Linhas de Cuidado na Saúde Suplementar SESI e ANS (SESI)",
+          "link": "https://www.portaldaindustria.com.br/canais/plataforma-inovacao-para-industria/categoria/linhas-de-cuidado-na-saude-suplementar-sesi-e-ans-/"
+        }
+      ]
+    },
+    {
+      "fonte": "badesul",
+      "standardized_path": "audit_reports_retransform/standardized/badesul_standardized.json",
+      "itens_standardized": 7,
+      "would_upsert": 7,
+      "would_ignore": 0,
+      "mapping_errors": 0,
+      "critical_empty_items": 0,
+      "critical_empty_fields": {},
+      "docs_input_items": 7,
+      "docs_preserved_items": 7,
+      "documentos_perdidos_no_payload": 0,
+      "standardized_com_documentos_nao_pdf": 7,
+      "payload_com_documentos_nao_pdf": 7,
+      "perda_documentos_nao_pdf": 0,
+      "pdf_input_items": 0,
+      "pdf_preserved_items": 0,
+      "validacao_status_preserved_items": 7,
+      "qualidade_dado_preserved_items": 7,
+      "semantic_fields_present_items": 7,
+      "docs_loss_examples": [],
+      "field_input_non_empty": {
+        "tipo_oportunidade": 7,
+        "tipo_recurso": 7,
+        "perfil_ideal": 7,
+        "publico_alvo": 4,
+        "setor_estrategico": 7,
+        "validacao_status": 7,
+        "qualidade_dado": 7,
+        "area": 1,
+        "setor_economico": 5
+      },
+      "field_payload_non_empty": {
+        "tipo_oportunidade": 7,
+        "tipo_recurso": 7,
+        "perfil_ideal": 7,
+        "publico_alvo": 4,
+        "setor_estrategico": 7,
+        "validacao_status": 7,
+        "qualidade_dado": 7,
+        "area": 1,
+        "setor_economico": 5
+      },
+      "field_preserved_non_empty": {
+        "tipo_oportunidade": 7,
+        "tipo_recurso": 7,
+        "perfil_ideal": 7,
+        "publico_alvo": 4,
+        "setor_estrategico": 7,
+        "validacao_status": 7,
+        "qualidade_dado": 7,
+        "area": 1,
+        "setor_economico": 5
+      },
+      "canonical_skipped": 0,
+      "canonical_skip_examples": []
+    },
+    {
+      "fonte": "petrobras",
+      "standardized_path": "audit_reports_retransform/standardized/petrobras_standardized.json",
+      "itens_standardized": 4,
+      "would_upsert": 4,
+      "would_ignore": 0,
+      "mapping_errors": 0,
+      "critical_empty_items": 0,
+      "critical_empty_fields": {},
+      "docs_input_items": 2,
+      "docs_preserved_items": 2,
+      "documentos_perdidos_no_payload": 0,
+      "standardized_com_documentos_nao_pdf": 0,
+      "payload_com_documentos_nao_pdf": 0,
+      "perda_documentos_nao_pdf": 0,
+      "pdf_input_items": 2,
+      "pdf_preserved_items": 2,
+      "validacao_status_preserved_items": 4,
+      "qualidade_dado_preserved_items": 4,
+      "semantic_fields_present_items": 4,
+      "docs_loss_examples": [],
+      "field_input_non_empty": {
+        "tipo_oportunidade": 4,
+        "tipo_recurso": 4,
+        "publico_alvo": 4,
+        "validacao_status": 4,
+        "qualidade_dado": 4,
+        "area": 2,
+        "setor_economico": 2,
+        "setor_estrategico": 2
+      },
+      "field_payload_non_empty": {
+        "tipo_oportunidade": 4,
+        "tipo_recurso": 4,
+        "publico_alvo": 4,
+        "validacao_status": 4,
+        "qualidade_dado": 4,
+        "area": 2,
+        "setor_economico": 2,
+        "setor_estrategico": 2
+      },
+      "field_preserved_non_empty": {
+        "tipo_oportunidade": 4,
+        "tipo_recurso": 4,
+        "publico_alvo": 4,
+        "validacao_status": 4,
+        "qualidade_dado": 4,
+        "area": 2,
+        "setor_economico": 2,
+        "setor_estrategico": 2
+      },
+      "canonical_skipped": 0,
+      "canonical_skip_examples": []
+    },
+    {
+      "fonte": "pncp",
+      "standardized_path": "audit_reports_retransform/standardized/pncp_standardized.json",
+      "itens_standardized": 31,
+      "would_upsert": 31,
+      "would_ignore": 0,
+      "mapping_errors": 0,
+      "critical_empty_items": 0,
+      "critical_empty_fields": {},
+      "docs_input_items": 16,
+      "docs_preserved_items": 16,
+      "documentos_perdidos_no_payload": 0,
+      "standardized_com_documentos_nao_pdf": 16,
+      "payload_com_documentos_nao_pdf": 16,
+      "perda_documentos_nao_pdf": 0,
+      "pdf_input_items": 0,
+      "pdf_preserved_items": 0,
+      "validacao_status_preserved_items": 31,
+      "qualidade_dado_preserved_items": 31,
+      "semantic_fields_present_items": 31,
+      "docs_loss_examples": [],
+      "field_input_non_empty": {
+        "tipo_oportunidade": 31,
+        "tipo_recurso": 31,
+        "perfil_ideal": 31,
+        "publico_alvo": 31,
+        "setor_economico": 4,
+        "setor_estrategico": 9,
+        "validacao_status": 31,
+        "qualidade_dado": 31,
+        "area": 8
+      },
+      "field_payload_non_empty": {
+        "tipo_oportunidade": 31,
+        "tipo_recurso": 31,
+        "perfil_ideal": 31,
+        "publico_alvo": 31,
+        "setor_economico": 4,
+        "setor_estrategico": 9,
+        "validacao_status": 31,
+        "qualidade_dado": 31,
+        "area": 8
+      },
+      "field_preserved_non_empty": {
+        "tipo_oportunidade": 31,
+        "tipo_recurso": 31,
+        "perfil_ideal": 31,
+        "publico_alvo": 31,
+        "setor_economico": 4,
+        "setor_estrategico": 9,
+        "validacao_status": 31,
+        "qualidade_dado": 31,
+        "area": 8
+      },
+      "canonical_skipped": 0,
+      "canonical_skip_examples": []
+    },
+    {
+      "fonte": "softex",
+      "standardized_path": "audit_reports_retransform/standardized/softex_standardized.json",
+      "itens_standardized": 2,
+      "would_upsert": 2,
+      "would_ignore": 0,
+      "mapping_errors": 0,
+      "critical_empty_items": 0,
+      "critical_empty_fields": {},
+      "docs_input_items": 0,
+      "docs_preserved_items": 0,
+      "documentos_perdidos_no_payload": 0,
+      "standardized_com_documentos_nao_pdf": 0,
+      "payload_com_documentos_nao_pdf": 0,
+      "perda_documentos_nao_pdf": 0,
+      "pdf_input_items": 0,
+      "pdf_preserved_items": 0,
+      "validacao_status_preserved_items": 2,
+      "qualidade_dado_preserved_items": 2,
+      "semantic_fields_present_items": 2,
+      "docs_loss_examples": [],
+      "field_input_non_empty": {
+        "tipo_oportunidade": 2,
+        "tipo_recurso": 2,
+        "perfil_ideal": 2,
+        "setor_economico": 2,
+        "setor_estrategico": 2,
+        "validacao_status": 2,
+        "qualidade_dado": 2,
+        "area": 1
+      },
+      "field_payload_non_empty": {
+        "tipo_oportunidade": 2,
+        "tipo_recurso": 2,
+        "perfil_ideal": 2,
+        "setor_economico": 2,
+        "setor_estrategico": 2,
+        "validacao_status": 2,
+        "qualidade_dado": 2,
+        "area": 1
+      },
+      "field_preserved_non_empty": {
+        "tipo_oportunidade": 2,
+        "tipo_recurso": 2,
+        "perfil_ideal": 2,
+        "setor_economico": 2,
+        "setor_estrategico": 2,
+        "validacao_status": 2,
+        "qualidade_dado": 2,
+        "area": 1
+      },
+      "canonical_skipped": 0,
+      "canonical_skip_examples": []
+    }
+  ]
+}
