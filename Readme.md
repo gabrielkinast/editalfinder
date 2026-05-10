@@ -555,23 +555,6 @@ O apply exige variáveis de ambiente e guardas de segurança.
 
 ---
 
-## 📸 Screenshots
-
-Adicionar imagens do projeto:
-
-- Dashboard de editais;
-- Radar de Fomento;
-- Cadastro de clientes;
-- Pré-cadastro de projeto;
-- Página de fornecedores;
-- Relatórios PDF.
-
-```text
-docs/images/
-```
-
----
-
 ## 🔐 Boas Práticas
 
 Antes de versionar o projeto:
