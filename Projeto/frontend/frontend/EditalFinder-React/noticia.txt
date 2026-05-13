@@ -1,0 +1,58 @@
+create table public.noticia (
+  id uuid not null default gen_random_uuid (),
+  titulo text not null,
+  resumo text null,
+  conteudo text null,
+  link text not null,
+  fonte text null,
+  fonte_recurso text null,
+  data_publicacao date null,
+  prazo_envio date null,
+  autor text null,
+  pais text null,
+  regiao text null,
+  idioma text null,
+  idioma_original text null,
+  origem_portal text null,
+  tipo_conteudo text null,
+  content_type text not null default 'noticia'::text,
+  imagem_url text null,
+  area_cientifica text[] null,
+  area_tecnologica text[] null,
+  setor_estrategico text[] null,
+  tags text[] null,
+  perfil_ideal text[] null,
+  publico_alvo text null,
+  qualidade_dado integer null,
+  validacao_status text null default 'incompleto'::text,
+  codigo_oportunidade text null,
+  numero_chamada text null,
+  extras jsonb not null default '{}'::jsonb,
+  ativo boolean not null default true,
+  hash_deduplicacao text null,
+  ultima_coleta timestamp with time zone null,
+  criado_em timestamp with time zone not null default now(),
+  atualizado_em timestamp with time zone not null default now(),
+  constraint noticia_pkey primary key (id),
+  constraint noticia_link_key unique (link)
+) TABLESPACE pg_default;
+
+create index IF not exists idx_noticia_fonte_recurso on public.noticia using btree (fonte_recurso) TABLESPACE pg_default;
+
+create index IF not exists idx_noticia_data_publicacao on public.noticia using btree (data_publicacao desc) TABLESPACE pg_default;
+
+create index IF not exists idx_noticia_prazo_envio on public.noticia using btree (prazo_envio) TABLESPACE pg_default;
+
+create index IF not exists idx_noticia_validacao_status on public.noticia using btree (validacao_status) TABLESPACE pg_default;
+
+create index IF not exists idx_noticia_codigo_oportunidade on public.noticia using btree (codigo_oportunidade) TABLESPACE pg_default;
+
+create index IF not exists idx_noticia_extras_gin on public.noticia using gin (extras) TABLESPACE pg_default;
+
+create index IF not exists idx_noticia_tags_gin on public.noticia using gin (tags) TABLESPACE pg_default;
+
+create index IF not exists idx_noticia_area_cientifica_gin on public.noticia using gin (area_cientifica) TABLESPACE pg_default;
+
+create index IF not exists idx_noticia_area_tecnologica_gin on public.noticia using gin (area_tecnologica) TABLESPACE pg_default;
+
+create index IF not exists idx_noticia_setor_estrategico_gin on public.noticia using gin (setor_estrategico) TABLESPACE pg_default;

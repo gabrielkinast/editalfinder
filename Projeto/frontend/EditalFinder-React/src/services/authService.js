@@ -1,15 +1,24 @@
-import { supabase } from './api';
+import { supabase, isSupabaseConfigured } from './api';
 
 export const authService = {
   async login(email, password) {
-    const { data: usuario, error } = await supabase
-      .from('usuario')
-      .select('*')
-      .eq('nome_email', email)
-      .single();
+    let usuario = null;
 
-    if (error && error.code !== 'PGRST116') {
-      throw error;
+    if (isSupabaseConfigured) {
+      try {
+        const { data, error } = await supabase
+          .from('usuario')
+          .select('*')
+          .eq('nome_email', email)
+          .single();
+
+        if (error && error.code !== 'PGRST116') {
+          throw error;
+        }
+        usuario = data;
+      } catch (e) {
+        console.warn('[authService] Consulta Supabase indisponível ou falhou:', e?.message || e);
+      }
     }
 
     if (usuario && usuario.senha === password) {

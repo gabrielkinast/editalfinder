@@ -17,12 +17,16 @@ function formatCell(raw) {
   return '—';
 }
 
-/** @param {(item: object) => import('react').ReactNode | null} [extraRowActions] */
-export default function AdminTable({ columns, data, onEdit, onDelete, extraRowActions }) {
+/**
+ * @param {object} props
+ * @param {string} [props.rowIdKey] — chave do ID para delete/keys (ex.: `id_cliente` se a primeira coluna não for o ID).
+ * @param {(item: object, helpers: { onEdit: (i: object) => void; onDelete: (id: unknown) => void; idKey: string }) => import('react').ReactNode} [props.extraRowActions]
+ * @param {string} [props.wrapClassName] — classes extras no wrapper da tabela (ex.: compactação por aba).
+ */
+export default function AdminTable({ columns, data, onEdit, onDelete, extraRowActions, rowIdKey, wrapClassName }) {
   const permissions = usePermissions();
-  
-  // A primeira coluna é SEMPRE o ID nas tabelas de cadastro
-  const idKey = columns[0]?.key;
+
+  const idKey = rowIdKey ?? columns[0]?.key;
 
   const showsActionsColumn =
     permissions.canEdit ||
@@ -41,13 +45,17 @@ export default function AdminTable({ columns, data, onEdit, onDelete, extraRowAc
     return link || pdf;
   };
 
+  const useCustomActions = typeof extraRowActions === 'function';
+
   return (
-    <div className="table-container">
+    <div className={['table-container', 'cad-table-wrap', wrapClassName].filter(Boolean).join(' ')}>
       <table className="admin-table">
         <thead>
           <tr>
-            {columns.map((col) => <th key={col.key}>{col.label}</th>)}
-            {showsActionsColumn && <th>Ações</th>}
+            {columns.map((col) => (
+              <th key={col.key}>{col.label}</th>
+            ))}
+            {showsActionsColumn && <th className="admin-th-actions">Ações</th>}
           </tr>
         </thead>
         <tbody>
@@ -62,41 +70,52 @@ export default function AdminTable({ columns, data, onEdit, onDelete, extraRowAc
               <tr key={item[idKey] || idx}>
                 {columns.map((col) => (
                   <td key={col.key} data-label={col.label}>
-                    {col.render
-                      ? col.render(item[col.key], item)
-                      : formatCell(item[col.key])}
+                    {col.render ? col.render(item[col.key], item) : formatCell(item[col.key])}
                   </td>
                 ))}
                 {(permissions.canEdit ||
                   permissions.canDelete ||
-                  typeof extraRowActions === 'function' ||
+                  useCustomActions ||
                   rowNeedsExternalActions(item)) && (
-                  <td>
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
-                      {typeof extraRowActions === 'function' ? extraRowActions(item) : null}
-                      {typeof item.pdf_url === 'string' && item.pdf_url.trim() && (
-                        <button 
-                          className="btn-action btn-open-pdf" 
-                          onClick={() => window.open(item.pdf_url, '_blank')}
-                        >
-                          Abrir PDF
-                        </button>
-                      )}
-                      {typeof item.link === 'string' && item.link.trim() && (
-                        <button 
-                          className="btn-action btn-open-link" 
-                          onClick={() => window.open(item.link, '_blank')}
-                        >
-                          Abrir Link
-                        </button>
-                      )}
-                      {permissions.canEdit && (
-                        <button className="btn-action btn-edit" onClick={() => onEdit(item)}>Editar</button>
-                      )}
-                      {permissions.canDelete && (
-                        <button className="btn-action btn-delete" onClick={() => onDelete(item[idKey])}>Deletar</button>
-                      )}
-                    </div>
+                  <td className="admin-td-actions" data-label="Ações">
+                    {useCustomActions ? (
+                      extraRowActions(item, {
+                        onEdit,
+                        onDelete,
+                        idKey,
+                      })
+                    ) : (
+                      <div className="admin-actions-stack">
+                        {typeof item.pdf_url === 'string' && item.pdf_url.trim() && (
+                          <button
+                            type="button"
+                            className="btn-action btn-open-pdf"
+                            onClick={() => window.open(item.pdf_url, '_blank')}
+                          >
+                            Abrir PDF
+                          </button>
+                        )}
+                        {typeof item.link === 'string' && item.link.trim() && (
+                          <button
+                            type="button"
+                            className="btn-action btn-open-link"
+                            onClick={() => window.open(item.link, '_blank')}
+                          >
+                            Abrir Link
+                          </button>
+                        )}
+                        {permissions.canEdit && (
+                          <button type="button" className="btn-action btn-edit" onClick={() => onEdit(item)}>
+                            Editar
+                          </button>
+                        )}
+                        {permissions.canDelete && (
+                          <button type="button" className="btn-action btn-delete" onClick={() => onDelete(item[idKey])}>
+                            Deletar
+                          </button>
+                        )}
+                      </div>
+                    )}
                   </td>
                 )}
               </tr>

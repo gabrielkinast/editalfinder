@@ -1,0 +1,178 @@
+/* Layout dedicado: sidebar é irmã do main — usar .portais-layout no dashboard-container */
+.portais-layout .portais-filters-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  margin-bottom: 8px;
+}
+
+.portais-layout .portais-filters-title {
+  margin: 0;
+}
+
+/* Evita corte do rótulo (ex.: "Buscar") por uppercase/stacking e pelo layout em linha do breakpoint 1024px */
+.portais-layout .portais-filters-sidebar .filter-label {
+  line-height: 1.45;
+  margin: 0 0 6px;
+  padding-top: 2px;
+  overflow: visible;
+  text-transform: none;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--color-text);
+}
+
+@media (max-width: 1024px) {
+  .portais-layout .sidebar {
+    max-height: none;
+    overflow-x: visible;
+    overflow-y: visible;
+  }
+
+  .portais-layout .portais-filters-sidebar {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+
+  .portais-layout .portais-filters-sidebar .filter-group {
+    flex: none;
+    min-width: 0;
+    width: 100%;
+  }
+}
+
+.portais-layout .portais-filters-sidebar .filter-input-large {
+  width: 100%;
+}
+
+.portais-layout .portais-filters-sidebar .filter-select {
+  width: 100%;
+}
+
+.portais-main .portais-subtitle {
+  margin-top: 8px;
+  font-size: 14px;
+  color: var(--color-muted);
+  max-width: 720px;
+  line-height: 1.5;
+}
+
+.portais-header-block {
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.portais-tabs {
+  margin-bottom: 16px;
+}
+
+.portais-stats-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.portais-stat-chip {
+  background: var(--portais-stat-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 10px 14px;
+  min-width: 110px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.portais-stat-chip strong {
+  font-size: 18px;
+  color: var(--color-text);
+}
+
+.portais-stat-chip span {
+  font-size: 11px;
+  color: var(--color-muted);
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+.portais-stat-chip--accent {
+  background: var(--portais-stat-accent-bg);
+  border-color: var(--portais-stat-accent-border);
+}
+
+.portais-stat-chip--tab {
+  background: var(--portais-stat-tab-bg);
+  border-color: var(--portais-stat-tab-border);
+  box-shadow: 0 1px 0 rgba(30, 136, 229, 0.12);
+}
+
+.theme-dark .portais-stat-chip--tab {
+  box-shadow: 0 1px 0 rgba(96, 165, 250, 0.15);
+}
+
+.portais-stat-chip--tab strong {
+  color: var(--portais-stat-tab-strong);
+}
+
+.portais-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.portais-sort-label {
+  font-size: 14px;
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.portais-sort-select.filter-select {
+  min-width: 200px;
+  margin-left: 8px;
+}
+
+/* Grelha de cards: até 3 colunas em desktop, 2 tablet, 1 mobile */
+@media (min-width: 992px) {
+  .main-content.portais-main .portais-cards-grid.editais-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 640px) and (max-width: 991px) {
+  .main-content.portais-main .portais-cards-grid.editais-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 639px) {
+  .main-content.portais-main .portais-cards-grid.editais-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.portais-filters-clear-btn {
+  width: auto;
+  margin-top: 0;
+  padding: 8px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+  background: var(--portais-clear-btn-bg);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.portais-filters-clear-btn:hover {
+  background: var(--portais-clear-hover);
+}

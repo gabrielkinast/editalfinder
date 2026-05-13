@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo, useCallback } from 'react';
 import Header from '../components/layout/Header';
 import AdminTable from '../components/admin/AdminTable';
 import UserForm from '../components/admin/UserForm';
@@ -9,10 +9,37 @@ import Modal from '../components/ui/Modal';
 import { dataService } from '../services/dataService';
 import { formatCurrency, formatDate } from '../utils/formatters';
 import { usePermissions } from '../hooks/usePermissions';
+import {
+  buildInitialPrecadastroState,
+  loadPrecadEnvelope,
+} from '../utils/precadastroProjetoInitialState';
+import { calculatePreCadastroCompleteness } from '../utils/precadastro/calculatePreCadastroCompleteness';
+
+function formatCnpjDisplay(v) {
+  if (v == null || v === '') return '—';
+  const d = String(v).replace(/\D/g, '');
+  if (d.length !== 14) return String(v);
+  return d.replace(/^(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})$/, '$1.$2.$3/$4-$5');
+}
+
+function cellStr(v) {
+  if (v == null || v === '') return '—';
+  return String(v);
+}
+
+/** @param {{ hadDraft?: boolean; status?: string } | undefined} info */
+function precadBadgeDisplay(info) {
+  if (!info || !info.hadDraft) {
+    return { label: 'Não iniciado', cls: 'cad-precad-none' };
+  }
+  const s = String(info.status || 'rascunho').toLowerCase();
+  if (s === 'pronto') return { label: 'Completo', cls: 'cad-precad-ready' };
+  if (s === 'revisao') return { label: 'Em andamento', cls: 'cad-precad-wip' };
+  return { label: 'Rascunho', cls: 'cad-precad-draft' };
+}
 
 export default function Cadastros() {
   const permissions = usePermissions();
-  // Se não puder gerenciar usuários, começa na aba de clientes
   const [activeTab, setActiveTab] = useState(permissions.canManageUsers ? 'usuarios' : 'clientes');
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -27,8 +54,8 @@ export default function Cadastros() {
   const [filterMinInteresse, setFilterMinInteresse] = useState(0);
   const [filterMaxInteresse, setFilterMaxInteresse] = useState(100000000);
   const [filterPorte, setFilterPorte] = useState('');
+  const [filterSetor, setFilterSetor] = useState('');
 
-  /** Contexto opcional vindo do radar (sessionStorage `precadastro_context_<id_cliente>` JSON: titulo, scorePct). */
   const precadContext = useMemo(() => {
     const id = precadCliente?.id_cliente;
     if (id == null) return { editalAssociado: null, radarMatch: null };
@@ -73,12 +100,22 @@ export default function Cadastros() {
     setFilterMinInteresse(0);
     setFilterMaxInteresse(100000000);
     setFilterPorte('');
+    setFilterSetor('');
   }, [activeTab]);
+
+  const setoresDisponiveis = useMemo(() => {
+    if (activeTab !== 'clientes') return [];
+    const s = new Set();
+    data.forEach((c) => {
+      if (c?.setor) s.add(String(c.setor).trim());
+    });
+    return [...s].sort((a, b) => a.localeCompare(b, 'pt-BR'));
+  }, [data, activeTab]);
 
   const availableOrgs = useMemo(() => {
     if (activeTab !== 'editais-cadastrados') return [];
     const orgs = new Set();
-    data.forEach(item => {
+    data.forEach((item) => {
       if (item.fonte_recurso) {
         orgs.add(item.fonte_recurso.toUpperCase());
       }
@@ -87,37 +124,106 @@ export default function Cadastros() {
   }, [data, activeTab]);
 
   const filteredData = useMemo(() => {
-    return data.filter(item => {
+    return data.filter((item) => {
       const s = searchTerm.toLowerCase();
-      
+
       let matchesSearch = true;
       if (activeTab === 'usuarios') {
-        matchesSearch = (item.nome?.toLowerCase() || '').includes(s) || (item.nome_email?.toLowerCase() || '').includes(s);
+        matchesSearch =
+          (item.nome?.toLowerCase() || '').includes(s) || (item.nome_email?.toLowerCase() || '').includes(s);
       } else if (activeTab === 'clientes') {
-        matchesSearch = (item.nome_empresa?.toLowerCase() || '').includes(s) || (item.cnpj || '').includes(s);
+        matchesSearch =
+          (item.nome_empresa?.toLowerCase() || '').includes(s) || (item.cnpj || '').includes(s);
       } else if (activeTab === 'editais-cadastrados') {
-        matchesSearch = (item.titulo?.toLowerCase() || '').includes(s) || (item.fonte_recurso?.toLowerCase() || '').includes(s);
+        matchesSearch =
+          (item.titulo?.toLowerCase() || '').includes(s) ||
+          (item.fonte_recurso?.toLowerCase() || '').includes(s);
       }
 
       const matchesType = !filterType || (activeTab === 'usuarios' ? item.tipo_usuario === filterType : true);
-      const matchesStatus = activeTab === 'editais-cadastrados' ? true : (!filterStatus || item.status === filterStatus);
-      
-      const matchesOrg = activeTab === 'editais-cadastrados' 
-        ? (selectedOrgs.length === 0 || selectedOrgs.includes(item.fonte_recurso?.toUpperCase()))
-        : true;
+      const matchesStatus =
+        activeTab === 'editais-cadastrados' ? true : !filterStatus || item.status === filterStatus;
+
+      const matchesOrg =
+        activeTab === 'editais-cadastrados'
+          ? selectedOrgs.length === 0 || selectedOrgs.includes(item.fonte_recurso?.toUpperCase())
+          : true;
 
       let matchesClientFilters = true;
       if (activeTab === 'clientes') {
         const valMin = item.interesse_valor_min || 0;
         const valMax = item.interesse_valor_max || 0;
         const porteMatch = !filterPorte || item.porte_empresa === filterPorte;
-        const valueMatch = (valMax >= filterMinInteresse) && (valMin <= filterMaxInteresse);
-        matchesClientFilters = porteMatch && valueMatch;
+        const valueMatch = valMax >= filterMinInteresse && valMin <= filterMaxInteresse;
+        const setorMatch =
+          !filterSetor || String(item.setor || '').toLowerCase() === filterSetor.toLowerCase();
+        matchesClientFilters = porteMatch && valueMatch && setorMatch;
       }
 
       return matchesSearch && matchesType && matchesStatus && matchesOrg && matchesClientFilters;
     });
-  }, [data, searchTerm, filterType, filterStatus, selectedOrgs, filterMinInteresse, filterMaxInteresse, filterPorte, activeTab]);
+  }, [
+    data,
+    searchTerm,
+    filterType,
+    filterStatus,
+    selectedOrgs,
+    filterMinInteresse,
+    filterMaxInteresse,
+    filterPorte,
+    filterSetor,
+    activeTab,
+  ]);
+
+  const clientPrecadById = useMemo(() => {
+    if (activeTab !== 'clientes') return {};
+    const m = {};
+    for (const c of data) {
+      const id = c?.id_cliente;
+      if (id == null) continue;
+      try {
+        const initial = buildInitialPrecadastroState(c, {});
+        const env = loadPrecadEnvelope(id, initial, 'geral');
+        const comp = calculatePreCadastroCompleteness(env.form);
+        m[id] = {
+          hadDraft: env.hadStoredDraft,
+          status: env.form?.bloco_estr_status_precadastro || 'rascunho',
+          score: comp.score,
+        };
+      } catch {
+        m[id] = { hadDraft: false, status: 'rascunho', score: 0 };
+      }
+    }
+    return m;
+  }, [data, activeTab]);
+
+  const clientesStats = useMemo(() => {
+    if (activeTab !== 'clientes') return null;
+    const total = data.length;
+    const ativos = data.filter((i) => String(i.status || '').toLowerCase() === 'ativo').length;
+    const withPrecad = data.filter((c) => clientPrecadById[c.id_cliente]?.hadDraft).length;
+    const scores = data.map((c) => clientPrecadById[c.id_cliente]?.score ?? 0);
+    const avgCompleteness = total ? Math.round(scores.reduce((a, b) => a + b, 0) / total) : 0;
+    const maxInteresse = total ? Math.max(0, ...data.map((c) => Number(c.interesse_valor_max) || 0)) : 0;
+    return { total, ativos, withPrecad, avgCompleteness, maxInteresse };
+  }, [activeTab, data, clientPrecadById]);
+
+  const usuariosStats = useMemo(() => {
+    if (activeTab !== 'usuarios') return null;
+    return {
+      total: data.length,
+      ativos: data.filter((u) => u.status === 'Ativo').length,
+    };
+  }, [activeTab, data]);
+
+  const clearClientFilters = useCallback(() => {
+    setSearchTerm('');
+    setFilterStatus('');
+    setFilterPorte('');
+    setFilterSetor('');
+    setFilterMinInteresse(0);
+    setFilterMaxInteresse(100000000);
+  }, []);
 
   const handleSave = async (formData) => {
     try {
@@ -151,33 +257,93 @@ export default function Cadastros() {
     }
   };
 
+  const openPrecad = (item) => {
+    setPrecadCliente(item);
+    setIsPrecadModalOpen(true);
+  };
+
   const columns = useMemo(() => {
-    if (activeTab === 'usuarios') return [
-      { key: 'id_usuario', label: 'ID' },
-      { key: 'nome', label: 'Nome' },
-      { key: 'nome_email', label: 'Email' },
-      { key: 'tipo_usuario', label: 'Tipo' },
-      { key: 'nivel_acesso', label: 'Nível' },
-      { key: 'status', label: 'Status' },
-    ];
-    if (activeTab === 'clientes') return [
-      { key: 'id_cliente', label: 'ID' },
-      { key: 'nome_empresa', label: 'Empresa' },
-      { key: 'cnpj', label: 'CNPJ' },
-      { key: 'setor', label: 'Setor' },
-      { key: 'porte_empresa', label: 'Porte' },
-      { key: 'status', label: 'Status' },
-    ];
-    if (activeTab === 'editais-cadastrados') return [
-      { key: 'id_edital', label: 'ID' },
-      { key: 'titulo', label: 'Título' },
-      { key: 'fonte_recurso', label: 'Fonte' },
-      { key: 'valor_maximo', label: 'Valor Máx.', render: (v) => formatCurrency(v) },
-      { key: 'prazo_envio', label: 'Prazo', render: (v) => v ? formatDate(v) : '-' },
-      { key: 'status', label: 'Status' },
-    ];
+    if (activeTab === 'usuarios') {
+      return [
+        { key: 'id_usuario', label: 'ID' },
+        { key: 'nome', label: 'Nome' },
+        { key: 'nome_email', label: 'Email' },
+        {
+          key: 'tipo_usuario',
+          label: 'Tipo',
+          render: (v) => (
+            <span className="cad-badge cad-badge-type">{v || '—'}</span>
+          ),
+        },
+        { key: 'nivel_acesso', label: 'Nível' },
+        {
+          key: 'status',
+          label: 'Status',
+          render: (v) => {
+            const ativo = v === 'Ativo';
+            return (
+              <span className={`cad-badge cad-badge-status ${ativo ? 'cad-badge-ativo' : 'cad-badge-inativo'}`}>
+                {v || '—'}
+              </span>
+            );
+          },
+        },
+      ];
+    }
+    if (activeTab === 'clientes') {
+      return [
+        {
+          key: 'nome_empresa',
+          label: 'Cliente',
+          render: (_, item) => (
+            <div className="cad-cell-cliente">
+              <span className="cad-cell-cliente-name">{item.nome_empresa || '—'}</span>
+              {(item.setor || item.cnae) && (
+                <span className="cad-cell-cliente-meta">
+                  {[item.setor, item.cnae].filter(Boolean).join(' · ')}
+                </span>
+              )}
+            </div>
+          ),
+        },
+        { key: 'cnpj', label: 'CNPJ', render: (v) => formatCnpjDisplay(v) },
+        { key: 'setor', label: 'Setor', render: (v) => cellStr(v) },
+        { key: 'porte_empresa', label: 'Porte', render: (v) => cellStr(v) },
+        {
+          key: 'status',
+          label: 'Status',
+          render: (v) => {
+            const ativo = String(v || '').toLowerCase() === 'ativo';
+            return (
+              <span className={`cad-badge cad-badge-status ${ativo ? 'cad-badge-ativo' : 'cad-badge-inativo'}`}>
+                {ativo ? 'Ativo' : 'Inativo'}
+              </span>
+            );
+          },
+        },
+        {
+          key: 'precad',
+          label: 'Pré-projeto',
+          render: (_, item) => {
+            const info = clientPrecadById[item.id_cliente];
+            const { label, cls } = precadBadgeDisplay(info);
+            return <span className={`cad-badge cad-badge-precad ${cls}`}>{label}</span>;
+          },
+        },
+      ];
+    }
+    if (activeTab === 'editais-cadastrados') {
+      return [
+        { key: 'id_edital', label: 'ID' },
+        { key: 'titulo', label: 'Título' },
+        { key: 'fonte_recurso', label: 'Fonte' },
+        { key: 'valor_maximo', label: 'Valor Máx.', render: (v) => formatCurrency(v) },
+        { key: 'prazo_envio', label: 'Prazo', render: (v) => (v ? formatDate(v) : '-') },
+        { key: 'status', label: 'Status' },
+      ];
+    }
     return [];
-  }, [activeTab]);
+  }, [activeTab, clientPrecadById]);
 
   const renderForm = () => {
     const props = { initialData: editingItem, onSave: handleSave, onCancel: () => setIsModalOpen(false) };
@@ -187,6 +353,15 @@ export default function Cadastros() {
     return null;
   };
 
+  const hasClientFilters =
+    activeTab === 'clientes' &&
+    (searchTerm ||
+      filterStatus ||
+      filterPorte ||
+      filterSetor ||
+      filterMinInteresse > 0 ||
+      filterMaxInteresse < 100000000);
+
   return (
     <>
       <Header />
@@ -195,56 +370,161 @@ export default function Cadastros() {
           <h2 className="sidebar-title">Cadastros</h2>
           <nav className="sidebar-nav">
             {permissions.canManageUsers && (
-              <button className={`sidebar-link ${activeTab === 'usuarios' ? 'active' : ''}`} onClick={() => setActiveTab('usuarios')}>
+              <button
+                type="button"
+                className={`sidebar-link ${activeTab === 'usuarios' ? 'active' : ''}`}
+                onClick={() => setActiveTab('usuarios')}
+              >
                 <span className="icon">👤</span> Usuários
               </button>
             )}
-            <button className={`sidebar-link ${activeTab === 'clientes' ? 'active' : ''}`} onClick={() => setActiveTab('clientes')}>
+            <button
+              type="button"
+              className={`sidebar-link ${activeTab === 'clientes' ? 'active' : ''}`}
+              onClick={() => setActiveTab('clientes')}
+            >
               <span className="icon">🏢</span> Clientes
             </button>
-            <button className={`sidebar-link ${activeTab === 'editais-cadastrados' ? 'active' : ''}`} onClick={() => setActiveTab('editais-cadastrados')}>
+            <button
+              type="button"
+              className={`sidebar-link ${activeTab === 'editais-cadastrados' ? 'active' : ''}`}
+              onClick={() => setActiveTab('editais-cadastrados')}
+            >
               <span className="icon">📄</span> Editais
             </button>
           </nav>
         </aside>
         <main className="admin-main">
           <section className="admin-section active">
-            <div className="section-header">
-              <h2>{activeTab === 'usuarios' ? 'Cadastro de Usuários' : activeTab === 'clientes' ? 'Cadastro de Clientes' : 'Cadastro de Editais'}</h2>
-              {/* Somente exibe o botão Novo se tiver permissão de criação. Se for na aba usuários, precisa de permissão canManageUsers */}
-              {permissions.canCreate && (activeTab !== 'usuarios' || permissions.canManageUsers) && (
-                <button className="btn-primary" onClick={() => { setEditingItem(null); setIsModalOpen(true); }}>
-                  + Novo {activeTab === 'usuarios' ? 'Usuário' : activeTab === 'clientes' ? 'Cliente' : 'Edital'}
-                </button>
-              )}
-            </div>
+            {activeTab === 'clientes' && (
+              <>
+                <div className="cad-hero cad-hero-clientes">
+                  <div className="cad-hero-text">
+                    <h2 className="cad-hero-title">Clientes</h2>
+                    <p className="cad-hero-sub">
+                      Gerencie perfis de empresas, instituições e projetos usados no Radar de Fomento.
+                    </p>
+                  </div>
+                  {permissions.canCreate && (
+                    <button
+                      type="button"
+                      className="btn-primary cad-hero-cta"
+                      onClick={() => {
+                        setEditingItem(null);
+                        setIsModalOpen(true);
+                      }}
+                    >
+                      + Novo cliente
+                    </button>
+                  )}
+                </div>
+                {!loading && clientesStats && (
+                  <div className="cad-stat-cards" aria-label="Resumo de clientes">
+                    <div className="cad-stat-card">
+                      <span className="cad-stat-value">{clientesStats.total}</span>
+                      <span className="cad-stat-label">Total de clientes</span>
+                    </div>
+                    <div className="cad-stat-card">
+                      <span className="cad-stat-value">{clientesStats.ativos}</span>
+                      <span className="cad-stat-label">Ativos</span>
+                    </div>
+                    <div className="cad-stat-card">
+                      <span className="cad-stat-value">{clientesStats.withPrecad}</span>
+                      <span className="cad-stat-label">Com pré-cadastro</span>
+                    </div>
+                    <div className="cad-stat-card">
+                      <span className="cad-stat-value">{clientesStats.avgCompleteness}%</span>
+                      <span className="cad-stat-label">Completude média (est.)</span>
+                    </div>
+                    <div className="cad-stat-card">
+                      <span className="cad-stat-value">{formatCurrency(clientesStats.maxInteresse)}</span>
+                      <span className="cad-stat-label">Interesse máximo configurado</span>
+                    </div>
+                  </div>
+                )}
+              </>
+            )}
 
-            <div className="filters-bar" style={{ flexDirection: 'column', alignItems: 'flex-start', gap: '1rem' }}>
-              <div style={{ display: 'flex', gap: '10px', width: '100%', flexWrap: 'wrap' }}>
-                <input 
-                  type="text" 
-                  placeholder="Buscar..." 
-                  className="filter-input-large"
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                />
-                {activeTab === 'usuarios' && (
-                  <select className="filter-select-small" value={filterType} onChange={(e) => setFilterType(e.target.value)}>
-                    <option value="">Todos os tipos</option>
-                    <option value="Administrador">Administrador</option>
-                    <option value="Consultor">Consultor</option>
-                    <option value="Funcionário">Funcionário</option>
-                  </select>
+            {activeTab === 'usuarios' && (
+              <>
+                <div className="cad-hero cad-hero-users">
+                  <div className="cad-hero-text">
+                    <h2 className="cad-hero-title">Usuários</h2>
+                    <p className="cad-hero-sub">Contas com acesso ao EditalFinder e permissões por perfil.</p>
+                  </div>
+                  {permissions.canManageUsers && permissions.canCreate && (
+                    <button
+                      type="button"
+                      className="btn-primary cad-hero-cta"
+                      onClick={() => {
+                        setEditingItem(null);
+                        setIsModalOpen(true);
+                      }}
+                    >
+                      + Novo usuário
+                    </button>
+                  )}
+                </div>
+                {!loading && usuariosStats && (
+                  <div className="cad-stat-cards cad-stat-cards-compact" aria-label="Resumo de usuários">
+                    <div className="cad-stat-card">
+                      <span className="cad-stat-value">{usuariosStats.total}</span>
+                      <span className="cad-stat-label">Total</span>
+                    </div>
+                    <div className="cad-stat-card">
+                      <span className="cad-stat-value">{usuariosStats.ativos}</span>
+                      <span className="cad-stat-label">Ativos</span>
+                    </div>
+                  </div>
                 )}
-                {activeTab !== 'editais-cadastrados' && (
-                  <select className="filter-select-small" value={filterStatus} onChange={(e) => setFilterStatus(e.target.value)}>
-                    <option value="">Todos os status</option>
-                    <option value="Ativo">Ativo</option>
-                    <option value="Inativo">Inativo</option>
-                  </select>
+              </>
+            )}
+
+            {activeTab === 'editais-cadastrados' && (
+              <div className="cad-hero cad-hero-editais">
+                <div className="cad-hero-text">
+                  <h2 className="cad-hero-title">Editais cadastrados</h2>
+                  <p className="cad-hero-sub">Registros manuais ou complementares ao catálogo principal.</p>
+                </div>
+                {permissions.canCreate && (
+                  <button
+                    type="button"
+                    className="btn-primary cad-hero-cta"
+                    onClick={() => {
+                      setEditingItem(null);
+                      setIsModalOpen(true);
+                    }}
+                  >
+                    + Novo edital
+                  </button>
                 )}
-                {activeTab === 'clientes' && (
-                  <>
+              </div>
+            )}
+
+            {activeTab === 'clientes' ? (
+              <div className="cad-filters-panel">
+                <div className="cad-filters-grid">
+                  <label className="cad-filter-field cad-filter-grow">
+                    <span className="cad-filter-label">Buscar cliente</span>
+                    <input
+                      type="search"
+                      placeholder="Nome ou CNPJ…"
+                      className="filter-input-large"
+                      value={searchTerm}
+                      onChange={(e) => setSearchTerm(e.target.value)}
+                      autoComplete="off"
+                    />
+                  </label>
+                  <label className="cad-filter-field">
+                    <span className="cad-filter-label">Status</span>
+                    <select className="filter-select-small" value={filterStatus} onChange={(e) => setFilterStatus(e.target.value)}>
+                      <option value="">Todos</option>
+                      <option value="Ativo">Ativo</option>
+                      <option value="Inativo">Inativo</option>
+                    </select>
+                  </label>
+                  <label className="cad-filter-field">
+                    <span className="cad-filter-label">Porte</span>
                     <select className="filter-select-small" value={filterPorte} onChange={(e) => setFilterPorte(e.target.value)}>
                       <option value="">Todos os portes</option>
                       <option value="MEI">MEI</option>
@@ -253,74 +533,180 @@ export default function Cadastros() {
                       <option value="Média">Média</option>
                       <option value="Grande">Grande</option>
                     </select>
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: '4px', minWidth: '200px' }}>
-                      <span style={{ fontSize: '13px', fontWeight: '500' }}>Interesse até: <strong>{formatCurrency(filterMaxInteresse)}</strong></span>
-                      <input 
-                        type="range" 
-                        min="0" 
-                        max="50000000" 
+                  </label>
+                  <label className="cad-filter-field">
+                    <span className="cad-filter-label">Setor</span>
+                    <select className="filter-select-small" value={filterSetor} onChange={(e) => setFilterSetor(e.target.value)}>
+                      <option value="">Todos</option>
+                      {setoresDisponiveis.map((se) => (
+                        <option key={se} value={se}>
+                          {se}
+                        </option>
+                      ))}
+                    </select>
+                  </label>
+                </div>
+                <div className="cad-filters-slider-row">
+                  <label className="cad-filter-field cad-filter-slider">
+                    <span className="cad-filter-label">Interesse até (filtro por faixa)</span>
+                    <div className="cad-range-line">
+                      <span className="cad-range-value">{formatCurrency(filterMaxInteresse)}</span>
+                      <input
+                        type="range"
+                        min="0"
+                        max="50000000"
                         step="5000"
-                        className="range-slider"
-                        value={filterMaxInteresse} 
-                        onChange={(e) => setFilterMaxInteresse(Number(e.target.value))} 
+                        className="range-slider cad-range-input"
+                        value={filterMaxInteresse}
+                        onChange={(e) => setFilterMaxInteresse(Number(e.target.value))}
+                        aria-valuetext={formatCurrency(filterMaxInteresse)}
                       />
                     </div>
-                  </>
-                )}
+                  </label>
+                  <button
+                    type="button"
+                    className={`cad-filters-clear ${hasClientFilters ? 'is-visible' : ''}`}
+                    onClick={clearClientFilters}
+                    disabled={!hasClientFilters}
+                  >
+                    Limpar filtros
+                  </button>
+                </div>
               </div>
-
-              {activeTab === 'editais-cadastrados' && availableOrgs.length > 0 && (
-                <div className="org-filters" style={{ display: 'flex', flexWrap: 'wrap', gap: '15px', padding: '10px', backgroundColor: '#f9f9f9', borderRadius: '8px', width: '100%' }}>
-                  <span style={{ fontWeight: '600', color: 'var(--primary-color)', width: '100%', marginBottom: '5px' }}>Filtrar por Órgão Financiador:</span>
-                  {availableOrgs.map(org => (
-                    <label key={org} style={{ display: 'flex', alignItems: 'center', gap: '5px', cursor: 'pointer', fontSize: '14px' }}>
-                      <input 
-                        type="checkbox" 
-                        checked={selectedOrgs.includes(org)}
-                        onChange={(e) => {
-                          if (e.target.checked) {
-                            setSelectedOrgs([...selectedOrgs, org]);
-                          } else {
-                            setSelectedOrgs(selectedOrgs.filter(o => o !== org));
-                          }
-                        }}
-                      />
-                      {org}
-                    </label>
-                  ))}
-                  {selectedOrgs.length > 0 && (
-                    <button 
-                      onClick={() => setSelectedOrgs([])}
-                      style={{ border: 'none', background: 'none', color: '#e74c3c', cursor: 'pointer', fontSize: '12px', textDecoration: 'underline', marginLeft: 'auto' }}
-                    >
-                      Limpar Filtros
-                    </button>
+            ) : (
+              <div className="filters-bar" style={{ flexDirection: 'column', alignItems: 'flex-start', gap: '1rem' }}>
+                <div style={{ display: 'flex', gap: '10px', width: '100%', flexWrap: 'wrap' }}>
+                  <input
+                    type="text"
+                    placeholder="Buscar..."
+                    className="filter-input-large"
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                  />
+                  {activeTab === 'usuarios' && (
+                    <select className="filter-select-small" value={filterType} onChange={(e) => setFilterType(e.target.value)}>
+                      <option value="">Todos os tipos</option>
+                      <option value="Administrador">Administrador</option>
+                      <option value="Consultor">Consultor</option>
+                      <option value="Funcionário">Funcionário</option>
+                    </select>
+                  )}
+                  {activeTab !== 'editais-cadastrados' && (
+                    <select className="filter-select-small" value={filterStatus} onChange={(e) => setFilterStatus(e.target.value)}>
+                      <option value="">Todos os status</option>
+                      <option value="Ativo">Ativo</option>
+                      <option value="Inativo">Inativo</option>
+                    </select>
                   )}
                 </div>
-              )}
-            </div>
+
+                {activeTab === 'editais-cadastrados' && availableOrgs.length > 0 && (
+                  <div
+                    className="org-filters"
+                    style={{
+                      display: 'flex',
+                      flexWrap: 'wrap',
+                      gap: '15px',
+                      padding: '10px',
+                      backgroundColor: '#f9f9f9',
+                      borderRadius: '8px',
+                      width: '100%',
+                    }}
+                  >
+                    <span
+                      style={{
+                        fontWeight: '600',
+                        color: 'var(--primary-color)',
+                        width: '100%',
+                        marginBottom: '5px',
+                      }}
+                    >
+                      Filtrar por órgão financiador
+                    </span>
+                    {availableOrgs.map((org) => (
+                      <label
+                        key={org}
+                        style={{ display: 'flex', alignItems: 'center', gap: '5px', cursor: 'pointer', fontSize: '14px' }}
+                      >
+                        <input
+                          type="checkbox"
+                          checked={selectedOrgs.includes(org)}
+                          onChange={(e) => {
+                            if (e.target.checked) {
+                              setSelectedOrgs([...selectedOrgs, org]);
+                            } else {
+                              setSelectedOrgs(selectedOrgs.filter((o) => o !== org));
+                            }
+                          }}
+                        />
+                        {org}
+                      </label>
+                    ))}
+                    {selectedOrgs.length > 0 && (
+                      <button
+                        type="button"
+                        onClick={() => setSelectedOrgs([])}
+                        style={{
+                          border: 'none',
+                          background: 'none',
+                          color: '#e74c3c',
+                          cursor: 'pointer',
+                          fontSize: '12px',
+                          textDecoration: 'underline',
+                          marginLeft: 'auto',
+                        }}
+                      >
+                        Limpar filtros
+                      </button>
+                    )}
+                  </div>
+                )}
+              </div>
+            )}
 
             {loading ? (
-              <div style={{ textAlign: 'center', padding: '50px' }}><h3>Carregando dados...</h3></div>
+              <div style={{ textAlign: 'center', padding: '50px' }}>
+                <h3>Carregando dados...</h3>
+              </div>
             ) : (
-              <AdminTable 
-                columns={columns} 
-                data={filteredData} 
-                onEdit={(item) => { setEditingItem(item); setIsModalOpen(true); }} 
+              <AdminTable
+                columns={columns}
+                data={filteredData}
+                wrapClassName={activeTab === 'usuarios' ? 'cad-table-users' : undefined}
+                rowIdKey={
+                  activeTab === 'usuarios'
+                    ? 'id_usuario'
+                    : activeTab === 'clientes'
+                      ? 'id_cliente'
+                      : 'id_edital'
+                }
+                onEdit={(item) => {
+                  setEditingItem(item);
+                  setIsModalOpen(true);
+                }}
                 onDelete={handleDelete}
                 extraRowActions={
                   activeTab === 'clientes' && (permissions.canEdit || permissions.canCreate)
-                    ? (item) => (
-                        <button
-                          type="button"
-                          className="btn-action btn-precad"
-                          onClick={() => {
-                            setPrecadCliente(item);
-                            setIsPrecadModalOpen(true);
-                          }}
-                        >
-                          Pré-cadastro projeto
-                        </button>
+                    ? (item, { onEdit, onDelete, idKey }) => (
+                        <div className="cad-client-actions">
+                          {(permissions.canEdit || permissions.canCreate) && (
+                            <button type="button" className="cad-btn-precad-primary" onClick={() => openPrecad(item)}>
+                              Abrir pré-cadastro
+                            </button>
+                          )}
+                          <div className="cad-client-actions-row">
+                            {permissions.canEdit && (
+                              <button type="button" className="cad-btn-text" onClick={() => onEdit(item)}>
+                                Editar
+                              </button>
+                            )}
+                            {permissions.canDelete && (
+                              <button type="button" className="cad-btn-text cad-btn-text-danger" onClick={() => onDelete(item[idKey])}>
+                                Excluir
+                              </button>
+                            )}
+                          </div>
+                        </div>
                       )
                     : undefined
                 }
@@ -330,27 +716,39 @@ export default function Cadastros() {
         </main>
       </div>
       {isModalOpen && (
-        <Modal 
-          onClose={() => setIsModalOpen(false)} 
-          className={activeTab === 'clientes' || activeTab === 'editais-manuais' ? 'modal-large' : ''}
+        <Modal
+          onClose={() => setIsModalOpen(false)}
+          className={
+            activeTab === 'clientes' || activeTab === 'editais-cadastrados' ? 'modal-large' : ''
+          }
         >
           <div className="modal-header">
-            <h2>{editingItem ? 'Editar' : 'Cadastrar'} {activeTab === 'usuarios' ? 'Usuário' : activeTab === 'clientes' ? 'Cliente' : 'Edital'}</h2>
+            <h2>
+              {editingItem ? 'Editar' : 'Cadastrar'}{' '}
+              {activeTab === 'usuarios' ? 'Usuário' : activeTab === 'clientes' ? 'Cliente' : 'Edital'}
+            </h2>
           </div>
           {renderForm()}
         </Modal>
       )}
       {isPrecadModalOpen && precadCliente && (
         <Modal
-          onClose={() => { setIsPrecadModalOpen(false); setPrecadCliente(null); }}
+          onClose={() => {
+            setIsPrecadModalOpen(false);
+            setPrecadCliente(null);
+          }}
           className="modal-large modal-precad"
+          hideCloseButton
         >
           <ProjetoPrecadastroForm
             key={precadCliente.id_cliente}
             cliente={precadCliente}
             editalAssociado={precadContext.editalAssociado}
             radarMatch={precadContext.radarMatch}
-            onCancel={() => { setIsPrecadModalOpen(false); setPrecadCliente(null); }}
+            onCancel={() => {
+              setIsPrecadModalOpen(false);
+              setPrecadCliente(null);
+            }}
           />
         </Modal>
       )}

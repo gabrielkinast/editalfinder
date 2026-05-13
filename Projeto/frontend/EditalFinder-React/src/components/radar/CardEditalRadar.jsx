@@ -49,11 +49,15 @@ export default function CardEditalRadar({
 
   return (
     <div className={`radar-card ${compatibilidade === 'Alta' ? 'radar-card-destaque' : ''} ${expirado ? 'radar-card-expirado' : ''}`}>
-      {/* Cabeçalho */}
+      {/* Cabeçalho: título → fonte/órgão → score (destaque) */}
       <div className="radar-card-header">
         <div className="radar-card-titulo-wrap">
           <h3 className="radar-card-titulo">{tituloCard}</h3>
-          <span className="radar-card-orgao">{edital.orgao}</span>
+          {edital.orgao && (
+            <p className="radar-card-orgao" title="Órgão ou fonte">
+              {edital.orgao}
+            </p>
+          )}
         </div>
         <button
           className={`radar-btn-fav ${favorito ? 'ativo' : ''}`}
@@ -92,13 +96,17 @@ export default function CardEditalRadar({
         </div>
       )}
 
-      {/* Barra de score geral */}
-      <div className="radar-score-row">
-        <div className="radar-score-bar-wrap">
-          <div className="radar-score-bar" style={{ width: `${scorePct}%`, background: cor }} />
+      <div className="radar-score-block">
+        <div className="radar-score-block-head">
+          <span className="radar-score-label">Compatibilidade</span>
+          <span className={`radar-badge radar-badge-compat ${badgeClass}`}>{compatibilidade}</span>
         </div>
-        <span className="radar-score-pct">{scorePct}%</span>
-        <span className={`radar-badge ${badgeClass}`}>{compatibilidade}</span>
+        <div className="radar-score-row">
+          <div className="radar-score-bar-wrap">
+            <div className="radar-score-bar" style={{ width: `${scorePct}%`, background: cor }} />
+          </div>
+          <span className="radar-score-pct">{scorePct}%</span>
+        </div>
       </div>
 
       {matchLinha && (
@@ -106,7 +114,7 @@ export default function CardEditalRadar({
           className="radar-match-linha"
           title={
             fonteMatch === 'radar_v2'
-              ? 'Radar v2 — sete dimensoes (afinidade, perfil/tipo/localizacao, prazo, qualidade da fonte e valor), com penalidades e filtros sobre texto e metadados do edital.'
+              ? 'Radar v2 — dimensões de afinidade, perfil, tipo, localização, prazo, qualidade e valor; com penalidades quando aplicável.'
               : 'Estimativa a partir dos critérios do cadastro.'
           }
         >
@@ -115,38 +123,41 @@ export default function CardEditalRadar({
       )}
 
       {mostraCriterios && (
-        <div className="radar-criterios">
-          {CRITERIOS.map((c) => {
-            const ausente = !!(criterioMeta && criterioMeta[c.key]?.ausente);
-            const pts = Number.isFinite(detalhes[c.key]) ? detalhes[c.key] : 0;
-            const pct = ausente
-              ? 0
-              : c.max > 0
-                ? Math.min(100, Math.max(0, Math.round((pts / c.max) * 100)))
-                : 0;
-            const nivel = ausente ? 'ausente' : pct >= 75 ? 'alto' : pct >= 40 ? 'medio' : 'baixo';
-            return (
-              <div
-                key={c.key}
-                className={`radar-criterio-row${ausente ? ' radar-criterio-row-ausente' : ''}`}
-                title={
-                  ausente
-                    ? `${c.label}: dado não informado ou não avaliado — não conta como match pleno`
-                    : `${c.label}: ${pts}/${c.max}`
-                }
-              >
-                <span className="radar-criterio-nome">{c.label}</span>
-                <div className="radar-criterio-barra-wrap">
-                  <div
-                    className={`radar-criterio-barra radar-criterio-barra-${nivel}${ausente ? ' radar-criterio-barra-ausente' : ''}`}
-                    style={{ width: ausente ? '6%' : `${pct}%` }}
-                  />
+        <details className="radar-criterios-details">
+          <summary className="radar-criterios-summary">Detalhe por dimensão ({CRITERIOS.length}) — opcional</summary>
+          <div className="radar-criterios">
+            {CRITERIOS.map((c) => {
+              const ausente = !!(criterioMeta && criterioMeta[c.key]?.ausente);
+              const pts = Number.isFinite(detalhes[c.key]) ? detalhes[c.key] : 0;
+              const pct = ausente
+                ? 0
+                : c.max > 0
+                  ? Math.min(100, Math.max(0, Math.round((pts / c.max) * 100)))
+                  : 0;
+              const nivel = ausente ? 'ausente' : pct >= 75 ? 'alto' : pct >= 40 ? 'medio' : 'baixo';
+              return (
+                <div
+                  key={c.key}
+                  className={`radar-criterio-row${ausente ? ' radar-criterio-row-ausente' : ''}`}
+                  title={
+                    ausente
+                      ? `${c.label}: dado não informado ou não avaliado — não conta como match pleno`
+                      : `${c.label}: ${pts}/${c.max}`
+                  }
+                >
+                  <span className="radar-criterio-nome">{c.label}</span>
+                  <div className="radar-criterio-barra-wrap">
+                    <div
+                      className={`radar-criterio-barra radar-criterio-barra-${nivel}${ausente ? ' radar-criterio-barra-ausente' : ''}`}
+                      style={{ width: ausente ? '6%' : `${pct}%` }}
+                    />
+                  </div>
+                  <span className="radar-criterio-pts">{ausente ? 'n/d' : `${pts}/${c.max}`}</span>
                 </div>
-                <span className="radar-criterio-pts">{ausente ? 'n/d' : `${pts}/${c.max}`}</span>
-              </div>
-            );
-          })}
-        </div>
+              );
+            })}
+          </div>
+        </details>
       )}
 
       {/* Razões (tags curtas) */}
