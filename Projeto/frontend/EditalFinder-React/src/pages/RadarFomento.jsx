@@ -72,6 +72,7 @@ export default function RadarFomento() {
     incluirSuspeitos: false,
     incluirAproximados: false,
   });
+  const [radarAvancadoAberto, setRadarAvancadoAberto] = useState(false);
 
   useEffect(() => {
     async function load() {
@@ -189,6 +190,7 @@ export default function RadarFomento() {
     progress: radarProgress,
     progressPct: radarProgressPct,
     error: radarError,
+    meta: radarMeta,
     recalculate: radarRecalculate,
     reloadNonce: radarReloadNonce,
   } = useRadarMatches({
@@ -291,12 +293,19 @@ export default function RadarFomento() {
   capRest -= melhoresOportunidadesVis.length;
   const demaisVis = capRest > 0 ? demais.slice(0, capRest) : [];
   const podeMostrarMaisOp = visibleCap < recomendacoesFiltradas.length;
+  const cardsVisiveis = melhoresOportunidadesVis.length + demaisVis.length;
 
   return (
-    <div className="page-wrapper">
+    <div className="page-wrapper radar-fomento-page">
       <Header />
 
-      <div className="radar-page">
+      <div className="radar-fomento-below-header">
+        <div className="radar-page-title-strip" role="note">
+          <h1 className="radar-page-h1">Radar de Fomento</h1>
+          <p className="radar-page-h1-sub">Compatibilidade entre clientes e oportunidades de fomento</p>
+        </div>
+
+        <div className="radar-page">
         {/* ── Painel esquerdo: clientes ── */}
         <ListaClientes
           clientes={clientes}
@@ -318,8 +327,8 @@ export default function RadarFomento() {
           {!clienteSelecionado ? (
             <div className="radar-placeholder">
               <div className="radar-placeholder-icon">🎯</div>
-              <h3>Selecione um cliente</h3>
-              <p>Escolha um cliente na lista para ver os editais mais compatíveis com seu perfil.</p>
+              <h3>Comece por um cliente</h3>
+              <p>Selecione um cliente à esquerda para calcular o match com o catálogo de editais e ver o score de compatibilidade.</p>
             </div>
           ) : (
             <>
@@ -329,23 +338,67 @@ export default function RadarFomento() {
                   <h2 className="radar-resultado-titulo">
                     Radar: <span>{clienteSelecionado.nome_empresa}</span>
                   </h2>
-                  <p className="radar-resultado-sub">
+                  <div className="radar-resultado-sub-wrap">
                     {recoCalculando && (
-                      <>Calculando melhores oportunidades… · catálogo: {radarProgress.originalTotal || editais.length} editais</>
+                      <p className="radar-resultado-sub">
+                        <span className="radar-resultado-pill">Em andamento</span>{' '}
+                        Catálogo: <strong>{radarProgress.originalTotal || editais.length}</strong>
+                        {radarProgress.total > 0 && (
+                          <>
+                            {' '}
+                            · A analisar com score: <strong>{radarProgress.total}</strong> editais elegíveis
+                          </>
+                        )}
+                      </p>
                     )}
                     {!recoCalculando && radarError === null && (
-                      <>{recomendacoesFiltradas.length} edital(is) encontrado(s)</>
+                      <>
+                        <p className="radar-resultado-sub radar-resultado-sub--principal">
+                          <strong>{recomendacoesFiltradas.length}</strong>{' '}
+                          {recomendacoesFiltradas.length === 1 ? 'oportunidade listada' : 'oportunidades listadas'}
+                          {algumFiltroAtivo ? ' com os filtros atuais' : ' (ordenadas por compatibilidade)'}
+                          {melhoresOportunidades.length > 0 && (
+                            <span className="radar-resultado-alta">
+                              {' '}
+                              · <strong>{melhoresOportunidades.length}</strong> com compatibilidade{' '}
+                              <span className="radar-inline-badge radar-inline-badge--alta">Alta</span>
+                            </span>
+                          )}
+                          {favoritosCliente.size > 0 && (
+                            <span className="radar-resultado-fav">
+                              {' '}
+                              · ★ <strong>{favoritosCliente.size}</strong> favorito
+                              {favoritosCliente.size !== 1 ? 's' : ''}
+                            </span>
+                          )}
+                        </p>
+                        {radarMeta && (
+                          <p className="radar-contagens-micro" title="Números do pipeline do radar (não se somam como etapas lineares simples)">
+                            Catálogo total: <strong>{radarMeta.totalIn}</strong>
+                            {' · '}
+                            Elegíveis após filtros rápidos: <strong>{radarMeta.afterPreFilter}</strong>
+                            {radarMeta.excludedPreScore > 0 && (
+                              <>
+                                {' '}
+                                · Retirados antes do score: <strong>{radarMeta.excludedPreScore}</strong>
+                              </>
+                            )}
+                            {' · '}
+                            Retornadas pelo radar: <strong>{recomendacoes.length}</strong>
+                          </p>
+                        )}
+                        {cardsVisiveis < recomendacoesFiltradas.length && (
+                          <p className="radar-contagens-lista">
+                            Exibindo <strong>{cardsVisiveis}</strong> de <strong>{recomendacoesFiltradas.length}</strong> na
+                            página — use &quot;Mostrar mais oportunidades&quot; para carregar mais cards.
+                          </p>
+                        )}
+                      </>
                     )}
                     {!recoCalculando && radarError !== null && (
-                      <>Radar indisponível no momento.</>
+                      <p className="radar-resultado-sub">Compatibilidade indisponível no momento — use Recalcular ou tente novamente.</p>
                     )}
-                    {!recoCalculando && melhoresOportunidades.length > 0 && (
-                      <> · <strong style={{ color: '#22c55e' }}>{melhoresOportunidades.length} alta compatibilidade</strong></>
-                    )}
-                    {favoritosCliente.size > 0 && (
-                      <> · <strong style={{ color: '#f59e0b' }}>★ {favoritosCliente.size} favoritado(s)</strong></>
-                    )}
-                  </p>
+                  </div>
                 </div>
                 <button type="button" className="radar-btn-recalc" onClick={radarRecalculate}>
                   🔄 Recalcular
@@ -354,7 +407,10 @@ export default function RadarFomento() {
 
               {radarError && (
                 <div className="radar-load-erro-banner" role="alert">
-                  <span>{radarError}</span>
+                  <div className="radar-load-erro-copy">
+                    <strong>Não foi possível concluir o cálculo da compatibilidade.</strong>
+                    <span className="radar-load-erro-detalhe">{radarError}</span>
+                  </div>
                   <button type="button" className="radar-btn-recalc" onClick={radarRecalculate}>
                     Tentar novamente
                   </button>
@@ -434,32 +490,47 @@ export default function RadarFomento() {
                 )}
               </div>
 
-              <div className="radar-opcoes-avancadas" style={{ marginTop: '12px', display: 'flex', flexWrap: 'wrap', gap: '16px', alignItems: 'center', padding: '10px 12px', background: '#f8fafc', borderRadius: '8px', border: '1px solid var(--border-light)', fontSize: '13px' }}>
-                <span style={{ fontWeight: 600, color: '#64748b' }}>Radar avançado</span>
-                <label style={{ display: 'flex', alignItems: 'center', gap: '6px', cursor: 'pointer' }}>
-                  <input
-                    type="checkbox"
-                    checked={radarOpts.incluirEncerrados}
-                    onChange={(e) => setRadarOpts((o) => ({ ...o, incluirEncerrados: e.target.checked }))}
-                  />
-                  Incluir encerrados
-                </label>
-                <label style={{ display: 'flex', alignItems: 'center', gap: '6px', cursor: 'pointer' }}>
-                  <input
-                    type="checkbox"
-                    checked={radarOpts.incluirSuspeitos}
-                    onChange={(e) => setRadarOpts((o) => ({ ...o, incluirSuspeitos: e.target.checked }))}
-                  />
-                  Incluir suspeitos (validação)
-                </label>
-                <label style={{ display: 'flex', alignItems: 'center', gap: '6px', cursor: 'pointer' }}>
-                  <input
-                    type="checkbox"
-                    checked={radarOpts.incluirAproximados}
-                    onChange={(e) => setRadarOpts((o) => ({ ...o, incluirAproximados: e.target.checked }))}
-                  />
-                  Incluir oportunidades aproximadas (score menor)
-                </label>
+              <div className="radar-avancado-wrap">
+                <button
+                  type="button"
+                  className="radar-avancado-toggle"
+                  onClick={() => setRadarAvancadoAberto((v) => !v)}
+                  aria-expanded={radarAvancadoAberto}
+                >
+                  <span className="radar-avancado-toggle-titulo">Opções avançadas do radar</span>
+                  <span className="radar-avancado-toggle-hint">Filtros opcionais — alteram quem entra no cálculo</span>
+                  <span className="radar-avancado-chev" aria-hidden>
+                    {radarAvancadoAberto ? '▲' : '▼'}
+                  </span>
+                </button>
+                {radarAvancadoAberto && (
+                  <div className="radar-opcoes-avancadas" role="group" aria-label="Opções avançadas do radar">
+                    <label className="radar-avancado-label">
+                      <input
+                        type="checkbox"
+                        checked={radarOpts.incluirEncerrados}
+                        onChange={(e) => setRadarOpts((o) => ({ ...o, incluirEncerrados: e.target.checked }))}
+                      />
+                      <span>Incluir editais encerrados</span>
+                    </label>
+                    <label className="radar-avancado-label">
+                      <input
+                        type="checkbox"
+                        checked={radarOpts.incluirSuspeitos}
+                        onChange={(e) => setRadarOpts((o) => ({ ...o, incluirSuspeitos: e.target.checked }))}
+                      />
+                      <span>Incluir itens com validação suspeita</span>
+                    </label>
+                    <label className="radar-avancado-label">
+                      <input
+                        type="checkbox"
+                        checked={radarOpts.incluirAproximados}
+                        onChange={(e) => setRadarOpts((o) => ({ ...o, incluirAproximados: e.target.checked }))}
+                      />
+                      <span>Incluir oportunidades mais fracas (score menor)</span>
+                    </label>
+                  </div>
+                )}
               </div>
 
               {/* Melhores oportunidades */}
@@ -537,20 +608,45 @@ export default function RadarFomento() {
                   {(() => {
                     if (recomendacoes.length === 0) {
                       if (!algumFiltroAtivo) {
-                        return 'Nenhuma oportunidade forte encontrada. Tente incluir oportunidades aproximadas no radar avançado.';
+                        return (
+                          <>
+                            <p className="radar-empty-titulo">Nenhuma oportunidade apareceu neste radar</p>
+                            <p className="radar-empty-texto">
+                              O catálogo pode ter sido filtrado no início ou o score mínimo excluiu tudo. Abra{' '}
+                              <strong>Opções avançadas do radar</strong> e experimente &quot;oportunidades mais fracas&quot;
+                              ou editais encerrados — ou recadastre temas de interesse no cliente.
+                            </p>
+                          </>
+                        );
                       }
-                      return 'Nenhum edital encontrado com os filtros aplicados.';
+                      return (
+                        <>
+                          <p className="radar-empty-titulo">Nenhum resultado com estes filtros</p>
+                          <p className="radar-empty-texto">Limpe a busca, os selects ou favoritos para ver de novo a lista completa do radar.</p>
+                        </>
+                      );
                     }
                     if (filtroFavs && favoritosCliente.size === 0) {
-                      return 'Nenhum edital favoritado ainda. Clique em ☆ nos cards para favoritar.';
+                      return (
+                        <>
+                          <p className="radar-empty-titulo">Sem favoritos a mostrar</p>
+                          <p className="radar-empty-texto">Use ☆ nos cards para guardar oportunidades e depois filtre por favoritos.</p>
+                        </>
+                      );
                     }
-                    return 'Nenhum edital encontrado com os filtros aplicados.';
+                    return (
+                      <>
+                        <p className="radar-empty-titulo">Nenhum resultado com estes filtros</p>
+                        <p className="radar-empty-texto">Ajuste tipo, órgão, compatibilidade ou busca — ou limpe tudo com &quot;Limpar&quot;.</p>
+                      </>
+                    );
                   })()}
                 </div>
               )}
             </>
           )}
         </div>
+      </div>
       </div>
     </div>
   );
