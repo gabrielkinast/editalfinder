@@ -3,6 +3,7 @@ import { formatDateLoose } from '../../utils/formatters';
 import { formatTipoAmigavel } from '../../utils/edital/formatEditalUi';
 import { coerceStringArray } from '../../utils/edital/coerceArrays';
 import { prazoVencido } from '../../utils/edital/dates';
+import { humanizeTechnicalLabel } from '../../utils/portaisDisplayLabels';
 
 function Row({ label, children }) {
   return (
@@ -36,7 +37,7 @@ export default function EditalDetailsModal({ edital, onClose }) {
       acc.push(...coerceStringArray(c));
     }
     const u = [...new Set(acc)].slice(0, 14);
-    return u.length ? u.join(', ') : '—';
+    return u.length ? u.map((x) => humanizeTechnicalLabel(x)).join(', ') : '—';
   }
 
   return (
@@ -83,6 +84,7 @@ export default function EditalDetailsModal({ edital, onClose }) {
           <Row label="Público-alvo">{listaPieces(edital.publico_alvo_arr_raw, edital.publico_alvo_raw)}</Row>
           <Row label="Setores estratégicos">{listaPieces(edital.setor_estrategico_raw)}</Row>
           <Row label="Áreas tecnológicas">{listaPieces(edital.area_tecnologica_raw)}</Row>
+          <Row label="Setor(es) econômico(s)">{listaPieces(edital.setor_economico_raw)}</Row>
           <Row label="Área (campo texto)">{edital.area || '—'}</Row>
           <Row label="Localização">
             {[edital.cidade_raw, edital.uf_raw, edital.regiao_raw, edital.pais_raw].filter(Boolean).join(' · ') ||

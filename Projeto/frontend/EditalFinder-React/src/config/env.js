@@ -15,9 +15,11 @@ function str(key, fallback = '') {
 
 function truthyEnv(key, defaultValue = false) {
   const raw = import.meta.env[key];
-  if (raw == null || raw === '') return defaultValue;
-  const s = String(raw).trim().toLowerCase();
-  return s === '1' || s === 'true' || s === 'yes' || s === 'on';
+  if (raw == null) return defaultValue;
+  const s = String(raw).trim();
+  if (s === '') return defaultValue;
+  const sl = s.toLowerCase();
+  return sl === '1' || sl === 'true' || sl === 'yes' || sl === 'on';
 }
 
 /** local | staging | production (texto livre para a UI / logs) */
@@ -48,6 +50,13 @@ export const FEATURE_PORTAIS_ESTRATEGICOS = truthyEnv('VITE_ENABLE_PORTAIS_ESTRA
 export const FEATURE_FORNECEDORES = truthyEnv('VITE_ENABLE_FORNECEDORES', true);
 export const FEATURE_INVESTIMENTOS = truthyEnv('VITE_ENABLE_INVESTIMENTOS', true);
 export const FEATURE_RADAR = truthyEnv('VITE_ENABLE_RADAR', true);
+/** Favoritos persistentes (RLS + anon) — view leitura, tabela escrita. */
+export const VIEW_EDITAIS_FAVORITOS = str(
+  'VITE_VIEW_EDITAIS_FAVORITOS',
+  'vw_editais_favoritos_front',
+);
+export const TABLE_EDITAL_FAVORITO = str('VITE_TABLE_EDITAL_FAVORITO', 'edital_favorito');
+export const FEATURE_EDITAL_FAVORITOS = truthyEnv('VITE_ENABLE_EDITAL_FAVORITOS', true);
 export const ENABLE_DEBUG_PIPELINE = truthyEnv('VITE_ENABLE_DEBUG_PIPELINE', false);
 
 /**

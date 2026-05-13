@@ -2,12 +2,6 @@ import { useNavigate } from 'react-router-dom';
 import { CRITERIOS } from '../../services/matchService';
 import { getDisplayTitle } from '../../utils/displayTitle';
 
-const COR = {
-  Alta:  '#22c55e',
-  Média: '#f59e0b',
-  Baixa: '#ef4444',
-};
-
 export default function CardEditalRadar({
   edital,
   score,
@@ -39,7 +33,11 @@ export default function CardEditalRadar({
     compatibilidade === 'Média' ? 'radar-badge-media' :
                                    'radar-badge-baixa';
 
-  const cor      = COR[compatibilidade] || COR.Baixa;
+  const scoreBarClass =
+    compatibilidade === 'Alta'  ? 'radar-score-bar--alta'  :
+    compatibilidade === 'Média' ? 'radar-score-bar--media' :
+                                   'radar-score-bar--baixa';
+
   const siteLink = edital.linkInscricao || edital.linkOriginal || edital.orgSite || null;
   const pdfLink  = edital.pdfUrl || null;
   const scorePct = Number.isFinite(Number(score)) ? Math.min(100, Math.max(0, Math.round(Number(score)))) : 0;
@@ -61,7 +59,7 @@ export default function CardEditalRadar({
         </div>
         <button
           className={`radar-btn-fav ${favorito ? 'ativo' : ''}`}
-          onClick={() => onFavoritar(edital.id)}
+          onClick={() => onFavoritar(edital)}
           aria-pressed={favorito}
           title={favorito ? 'Remover favorito' : 'Favoritar'}
         >
@@ -103,7 +101,7 @@ export default function CardEditalRadar({
         </div>
         <div className="radar-score-row">
           <div className="radar-score-bar-wrap">
-            <div className="radar-score-bar" style={{ width: `${scorePct}%`, background: cor }} />
+            <div className={`radar-score-bar ${scoreBarClass}`} style={{ width: `${scorePct}%` }} />
           </div>
           <span className="radar-score-pct">{scorePct}%</span>
         </div>

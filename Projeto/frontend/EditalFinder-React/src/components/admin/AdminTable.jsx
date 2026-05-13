@@ -61,7 +61,10 @@ export default function AdminTable({ columns, data, onEdit, onDelete, extraRowAc
         <tbody>
           {data.length === 0 ? (
             <tr>
-              <td colSpan={columns.length + (showsActionsColumn ? 1 : 0)} style={{ textAlign: 'center', padding: '20px' }}>
+              <td
+                colSpan={columns.length + (showsActionsColumn ? 1 : 0)}
+                className="admin-table-empty"
+              >
                 Nenhum item encontrado.
               </td>
             </tr>
