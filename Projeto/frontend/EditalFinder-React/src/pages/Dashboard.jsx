@@ -23,6 +23,12 @@ import { coerceStringArray } from '../utils/edital/coerceArrays';
 import { getFonte } from '../utils/edital/editalFieldHelpers';
 import { useDebouncedValue } from '../hooks/useDebouncedValue';
 import { useEditaisPagePrefs } from '../hooks/useEditaisPagePrefs';
+import { useEditalFavorites } from '../hooks/useEditalFavorites';
+import {
+  getDeadlineAlertBadgeVariant,
+  getDeadlineAlertLabel,
+  getDeadlineAlertStatus,
+} from '../utils/deadlineAlerts';
 
 const FAVORITES_LS = 'editais_favoritos_v1';
 
@@ -75,6 +81,8 @@ function buildFilterSuggestions(totalOriginal, dbg, _filters, searchQuery = '') 
 export default function Dashboard() {
   const { settings } = useSettings();
   const { prefs, updatePrefs } = useEditaisPagePrefs();
+  const favHook = useEditalFavorites();
+  const favoritosRemote = favHook.favoritosRemoteEnabled;
 
   const [allEditais, setAllEditais] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -104,6 +112,30 @@ export default function Dashboard() {
         if (import.meta.env.DEV) {
           console.info('[Editais] recebidos do banco:', arr.length);
           console.info('[Editais] amostra:', arr.slice(0, 3).map((e) => ({ id: e?.id, titulo: e?.titulo?.slice?.(0, 60), ativo: e?.ativo })));
+          const fapesc = arr.filter((e) =>
+            String(e.fonte_recurso_display || e.orgao || e.fonte_raw || '')
+              .toUpperCase()
+              .includes('FAPESC'),
+          );
+          if (fapesc.length) {
+            console.info(
+              '[Editais][DEV][FAPESC] classificação (amostra até 8)',
+              fapesc.slice(0, 8).map((e) => ({
+                id_edital: e.idNumerico ?? e.id_edital,
+                titulo: (e.titulo || '').slice(0, 72),
+                fonte_recurso: e.fonte_recurso_display || e.orgao,
+                setor_estrategico: e.setor_estrategico_raw,
+                setor_economico: e.setor_economico_raw,
+                area: e.area,
+                area_tecnologica: e.area_tecnologica_raw,
+                tags: e.tags,
+                extras_keys:
+                  e.extras_raw && typeof e.extras_raw === 'object' && !Array.isArray(e.extras_raw)
+                    ? Object.keys(e.extras_raw).slice(0, 15)
+                    : undefined,
+              })),
+            );
+          }
         }
       } catch (error) {
         console.error('Erro ao carregar editais:', error?.message || error);
@@ -130,7 +162,26 @@ export default function Dashboard() {
     [allEditais, filters, searchTokens, pagePrefs],
   );
 
-  const filteredEditaisRaw = filteredOut.filtered;
+  const filteredCatalog = filteredOut.filtered;
+
+  const filteredEditaisRaw = useMemo(() => {
+    let list = filteredCatalog;
+    if (filters.toggleSomenteFavoritos) {
+      if (favoritosRemote) {
+        list = list.filter((e) => favHook.isFavorite(e));
+      } else {
+        list = list.filter((e) => favIds.has(String(e.id)));
+      }
+    }
+    return list;
+  }, [
+    filteredCatalog,
+    filters.toggleSomenteFavoritos,
+    favoritosRemote,
+    favHook.favorites,
+    favHook.isFavorite,
+    favIds,
+  ]);
   const hiddenMetaBaseline = filteredOut.hiddenMeta ?? {};
   const filterPipelineDebug = filteredOut.filterDebug ?? {};
 
@@ -271,6 +322,7 @@ export default function Dashboard() {
       ...f,
       toggleSoPdf: false,
       toggleAltaQualidade: false,
+      toggleSomenteFavoritos: false,
     }));
   }, []);
 
@@ -283,11 +335,12 @@ export default function Dashboard() {
       toggleMostrarInativos: true,
       toggleSoPdf: false,
       toggleAltaQualidade: false,
+      toggleSomenteFavoritos: false,
     }));
     updatePrefs({ showRuidos: true });
   }, [updatePrefs]);
 
-  const toggleFavorite = useCallback((id) => {
+  const toggleLegacyFavorite = useCallback((id) => {
     setFavIds((prev) => {
       const next = new Set(prev);
       const k = String(id);
@@ -296,6 +349,31 @@ export default function Dashboard() {
       return next;
     });
   }, []);
+
+  const favoritosCountLabel = useMemo(() => {
+    if (favoritosRemote) return favHook.favorites.length;
+    return favIds.size;
+  }, [favoritosRemote, favHook.favorites, favIds]);
+
+  const handleCardFavorite = useCallback(
+    async (edital) => {
+      if (!edital) return;
+      if (favoritosRemote) {
+        await favHook.toggleFavorite(edital, { contexto: 'editais' });
+      } else {
+        toggleLegacyFavorite(edital.id);
+      }
+    },
+    [favoritosRemote, favHook.toggleFavorite, toggleLegacyFavorite],
+  );
+
+  const isEditalFavorite = useCallback(
+    (edital) => {
+      if (favoritosRemote) return favHook.isFavorite(edital);
+      return favIds.has(String(edital?.id));
+    },
+    [favoritosRemote, favHook.isFavorite, favIds],
+  );
 
   /* Chips removíveis -------------------------------------------------------- */
   const chips = useMemo(() => {
@@ -335,6 +413,13 @@ export default function Dashboard() {
         key: 'q',
         label: 'Apenas alta qualidade',
         onRemove: rm(() => setFilters((f) => ({ ...f, toggleAltaQualidade: false }))),
+      });
+    }
+    if (filters.toggleSomenteFavoritos) {
+      out.push({
+        key: 'fav',
+        label: 'Somente favoritos',
+        onRemove: rm(() => setFilters((f) => ({ ...f, toggleSomenteFavoritos: false }))),
       });
     }
     if (filters.tipoRecurso) {
@@ -397,7 +482,10 @@ export default function Dashboard() {
 
   function resolveExportDataset() {
     if (exportScope === 'filtered') return sortedFiltered;
-    if (exportScope === 'favorites') return sortedFiltered.filter((e) => favIds.has(String(e.id)));
+    if (exportScope === 'favorites') {
+      if (favoritosRemote) return sortedFiltered.filter((e) => isEditalFavorite(e));
+      return sortedFiltered.filter((e) => favIds.has(String(e.id)));
+    }
     /* all carregados */
     return allEditais;
   }
@@ -551,6 +639,21 @@ export default function Dashboard() {
                 <button type="button" className="btn-relax-filters" onClick={relaxFilters}>
                   Relaxar filtros
                 </button>
+                <button
+                  type="button"
+                  className={`editais-fav-filter-btn ${filters.toggleSomenteFavoritos ? 'ativo' : ''}`}
+                  aria-pressed={filters.toggleSomenteFavoritos}
+                  title={
+                    favoritosRemote
+                      ? 'Mostrar apenas editais salvos como favoritos no Supabase'
+                      : 'Mostrar apenas favoritos neste navegador'
+                  }
+                  onClick={() =>
+                    setFilters((f) => ({ ...f, toggleSomenteFavoritos: !f.toggleSomenteFavoritos }))
+                  }
+                >
+                  {filters.toggleSomenteFavoritos ? '★' : '☆'} Favoritos ({favoritosCountLabel})
+                </button>
                 {import.meta.env.DEV ? (
                   <>
                     <button type="button" className="btn-show-all-debug" onClick={mostrarTudoPossivel}>
@@ -606,6 +709,44 @@ export default function Dashboard() {
 
           <ActiveFiltersChips chips={chips} onClearAll={resetFilters} />
 
+          {favoritosRemote && favHook.error ? (
+            <div className="editais-fav-toggle-error" role="alert">
+              <span>
+                Não foi possível carregar favoritos:{' '}
+                {favHook.error?.message || favHook.error?.details || String(favHook.error)}
+              </span>
+            </div>
+          ) : null}
+
+          {favoritosRemote && favHook.toggleError ? (
+            <div className="editais-fav-toggle-error" role="alert">
+              <span>Não foi possível atualizar favoritos: {favHook.toggleError}</span>
+              <button
+                type="button"
+                className="editais-fav-toggle-error-dismiss"
+                onClick={() => favHook.clearToggleError()}
+              >
+                Fechar
+              </button>
+            </div>
+          ) : null}
+
+          {favoritosRemote && favHook.favoriteAlertsSummary.alert7dCount > 0 ? (
+            <div className="editais-fav-deadline-banner" role="status">
+              <span>
+                Você tem <strong>{favHook.favoriteAlertsSummary.alert7dCount}</strong> edital(is) favorito(s)
+                vencendo nos próximos 7 dias.
+              </span>
+              <button
+                type="button"
+                className="editais-fav-deadline-banner-btn"
+                onClick={() => setFilters((f) => ({ ...f, toggleSomenteFavoritos: true }))}
+              >
+                Ver favoritos
+              </button>
+            </div>
+          ) : null}
+
           {import.meta.env.DEV && showPipelineDebugPanel ? (
             <div className="editais-pipeline-debug-panel">
               <pre tabIndex={0}>{JSON.stringify(filterPipelineDebug, null, 2)}</pre>
@@ -623,30 +764,58 @@ export default function Dashboard() {
           ) : (
             <>
               <div className="editais-grid">
-                {visibleEditais.map((edital) => (
-                  <EditalCard
-                    key={edital.id}
-                    edital={edital}
-                    searchTokensNorm={searchTokens}
-                    isFavorite={favIds.has(String(edital.id))}
-                    onToggleFavorite={toggleFavorite}
-                    density={prefs.density}
-                    onOpenDetails={setDetailEdital}
-                  />
-                ))}
+                {visibleEditais.map((edital) => {
+                  const st = getDeadlineAlertStatus(edital);
+                  const deadlineFavoriteBadge =
+                    favoritosRemote && isEditalFavorite(edital)
+                      ? {
+                          label: getDeadlineAlertLabel(st),
+                          variant: getDeadlineAlertBadgeVariant(st),
+                        }
+                      : null;
+                  return (
+                    <EditalCard
+                      key={edital.id}
+                      edital={edital}
+                      searchTokensNorm={searchTokens}
+                      isFavorite={isEditalFavorite(edital)}
+                      onToggleFavorite={handleCardFavorite}
+                      deadlineFavoriteBadge={deadlineFavoriteBadge}
+                      density={prefs.density}
+                      onOpenDetails={setDetailEdital}
+                    />
+                  );
+                })}
               </div>
 
               {!sortedFiltered.length && (
                 <div className="empty-state editais-empty-state">
-                  <h3>Nenhum edital encontrado com os filtros atuais.</h3>
-                  {emptySuggestions.length > 0 ? (
-                    <ul className="empty-state-suggestions">
-                      {emptySuggestions.map((s, i) => (
-                        <li key={i}>{s}</li>
-                      ))}
-                    </ul>
+                  {filters.toggleSomenteFavoritos &&
+                  favoritosRemote &&
+                  !favHook.loading &&
+                  favHook.favorites.length === 0 ? (
+                    <>
+                      <h3>Nenhum edital favoritado ainda.</h3>
+                      <p>Clique na estrela de um edital para acompanhá-lo.</p>
+                    </>
+                  ) : filters.toggleSomenteFavoritos && !favoritosRemote && favIds.size === 0 ? (
+                    <>
+                      <h3>Nenhum edital favoritado ainda.</h3>
+                      <p>Clique na estrela de um edital para acompanhá-lo neste navegador.</p>
+                    </>
                   ) : (
-                    <p>Ajuste os filtros na barra lateral ou as preferências de ruídos.</p>
+                    <>
+                      <h3>Nenhum edital encontrado com os filtros atuais.</h3>
+                      {emptySuggestions.length > 0 ? (
+                        <ul className="empty-state-suggestions">
+                          {emptySuggestions.map((s, i) => (
+                            <li key={i}>{s}</li>
+                          ))}
+                        </ul>
+                      ) : (
+                        <p>Ajuste os filtros na barra lateral ou as preferências de ruídos.</p>
+                      )}
+                    </>
                   )}
                   <div className="editais-empty-actions">
                     <button type="button" className="btn-view btn-relax-filters-empty" onClick={relaxFilters}>

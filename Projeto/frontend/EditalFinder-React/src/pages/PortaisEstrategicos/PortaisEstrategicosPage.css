@@ -22,7 +22,7 @@
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.02em;
-  color: var(--text-dark, #334155);
+  color: var(--color-text);
 }
 
 @media (max-width: 1024px) {
@@ -45,10 +45,18 @@
   }
 }
 
+.portais-layout .portais-filters-sidebar .filter-input-large {
+  width: 100%;
+}
+
+.portais-layout .portais-filters-sidebar .filter-select {
+  width: 100%;
+}
+
 .portais-main .portais-subtitle {
   margin-top: 8px;
   font-size: 14px;
-  color: var(--text-light, #666);
+  color: var(--color-muted);
   max-width: 720px;
   line-height: 1.5;
 }
@@ -70,8 +78,8 @@
 }
 
 .portais-stat-chip {
-  background: #f5f7fa;
-  border: 1px solid var(--border-light, #e0e0e0);
+  background: var(--portais-stat-bg);
+  border: 1px solid var(--color-border);
   border-radius: 8px;
   padding: 10px 14px;
   min-width: 110px;
@@ -82,29 +90,33 @@
 
 .portais-stat-chip strong {
   font-size: 18px;
-  color: var(--text-dark, #333);
+  color: var(--color-text);
 }
 
 .portais-stat-chip span {
   font-size: 11px;
-  color: var(--text-light, #666);
+  color: var(--color-muted);
   text-transform: none;
   letter-spacing: normal;
 }
 
 .portais-stat-chip--accent {
-  background: #fff8e1;
-  border-color: #ffe082;
+  background: var(--portais-stat-accent-bg);
+  border-color: var(--portais-stat-accent-border);
 }
 
 .portais-stat-chip--tab {
-  background: rgba(30, 136, 229, 0.08);
-  border-color: rgba(30, 136, 229, 0.45);
+  background: var(--portais-stat-tab-bg);
+  border-color: var(--portais-stat-tab-border);
   box-shadow: 0 1px 0 rgba(30, 136, 229, 0.12);
 }
 
+.theme-dark .portais-stat-chip--tab {
+  box-shadow: 0 1px 0 rgba(96, 165, 250, 0.15);
+}
+
 .portais-stat-chip--tab strong {
-  color: var(--primary-blue, #1e88e5);
+  color: var(--portais-stat-tab-strong);
 }
 
 .portais-toolbar {
@@ -118,10 +130,15 @@
 
 .portais-sort-label {
   font-size: 14px;
-  color: var(--text-dark, #333);
+  color: var(--color-text);
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+}
+
+.portais-sort-select.filter-select {
+  min-width: 200px;
+  margin-left: 8px;
 }
 
 /* Grelha de cards: até 3 colunas em desktop, 2 tablet, 1 mobile */
@@ -149,13 +166,13 @@
   padding: 8px 14px;
   font-size: 12px;
   font-weight: 600;
-  border: 1px solid var(--primary-blue, #1e88e5);
-  color: var(--primary-blue, #1e88e5);
-  background: #fff;
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+  background: var(--portais-clear-btn-bg);
   border-radius: 8px;
   cursor: pointer;
 }
 
 .portais-filters-clear-btn:hover {
-  background: rgba(30, 136, 229, 0.06);
+  background: var(--portais-clear-hover);
 }

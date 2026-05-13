@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { formatCurrency, formatDateLoose } from '../../utils/formatters';
 import { prazoVencido } from '../../utils/edital/dates';
-import { resumirEdital, formatTipoAmigavel } from '../../utils/edital/formatEditalUi';
+import { resumirEdital, formatTipoAmigavel, humanizeTaxonomyList } from '../../utils/edital/formatEditalUi';
 import { coerceStringArray } from '../../utils/edital/coerceArrays';
 import HighlightedText from './HighlightedText';
 
@@ -32,6 +32,7 @@ export default function EditalCard({
   searchTokensNorm = [],
   isFavorite = false,
   onToggleFavorite,
+  deadlineFavoriteBadge = null,
   density = 'normal',
   onOpenDetails,
 }) {
@@ -87,8 +88,13 @@ export default function EditalCard({
         <button
           type="button"
           className={`edital-fav-star ${isFavorite ? 'on' : ''}`}
-          aria-label={isFavorite ? 'Remover favorito' : 'Favoritar'}
-          onClick={() => onToggleFavorite?.(edital.id)}
+          aria-label={isFavorite ? 'Remover dos favoritos' : 'Favoritar edital'}
+          aria-pressed={isFavorite}
+          title={isFavorite ? 'Remover dos favoritos' : 'Favoritar para acompanhamento e alertas de prazo'}
+          onClick={(e) => {
+            e.stopPropagation();
+            onToggleFavorite?.(edital);
+          }}
         >
           {isFavorite ? '★' : '☆'}
         </button>
@@ -102,6 +108,14 @@ export default function EditalCard({
           </span>
         ))}
       </div>
+
+      {deadlineFavoriteBadge?.label ? (
+        <div className="edital-fav-prazo-wrap" aria-label="Prazo do favorito">
+          <span className={badgeClass(deadlineFavoriteBadge.variant || 'info')}>
+            {deadlineFavoriteBadge.label}
+          </span>
+        </div>
+      ) : null}
 
       {edital.descricao && (
         <p className={`edital-card-desc clamp-${density === 'compact' ? 2 : density === 'detailed' ? 4 : 2}`}>
@@ -131,14 +145,32 @@ export default function EditalCard({
             )}
           </span>
         </div>
-        <div className="edital-meta-row">
-          <span className="edital-meta-label">Setor / Área tech:</span>
-          <span>
-            {coerceStringArray(edital.setor_estrategico_raw).slice(0, 2).join(', ')}
-            {coerceStringArray(edital.area_tecnologica_raw).length ? ' · ' : ''}
-            {coerceStringArray(edital.area_tecnologica_raw).slice(0, 2).join(', ') || ''}
-          </span>
-        </div>
+        {humanizeTaxonomyList(edital.setor_economico_raw) ? (
+          <div className="edital-meta-row">
+            <span className="edital-meta-label">Setor econômico:</span>
+            <span>{humanizeTaxonomyList(edital.setor_economico_raw)}</span>
+          </div>
+        ) : null}
+        {humanizeTaxonomyList(edital.setor_estrategico_raw) ? (
+          <div className="edital-meta-row">
+            <span className="edital-meta-label">Setores estratégicos:</span>
+            <span>{humanizeTaxonomyList(edital.setor_estrategico_raw)}</span>
+          </div>
+        ) : null}
+        {humanizeTaxonomyList(edital.area_tecnologica_raw) ? (
+          <div className="edital-meta-row">
+            <span className="edital-meta-label">Áreas tecnológicas:</span>
+            <span>{humanizeTaxonomyList(edital.area_tecnologica_raw)}</span>
+          </div>
+        ) : null}
+        {!humanizeTaxonomyList(edital.setor_economico_raw) &&
+        !humanizeTaxonomyList(edital.setor_estrategico_raw) &&
+        !humanizeTaxonomyList(edital.area_tecnologica_raw) ? (
+          <div className="edital-meta-row">
+            <span className="edital-meta-label">Classificação setorial:</span>
+            <span className="edital-muted-soft">—</span>
+          </div>
+        ) : null}
         <div className="edital-meta-row">
           <span className="edital-meta-label">Local:</span>
           <span>

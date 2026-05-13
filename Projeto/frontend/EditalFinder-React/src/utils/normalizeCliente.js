@@ -17,6 +17,8 @@ export function normalizeClienteRow(row) {
   return {
     ...row,
     id_cliente: id,
+    id_usuario:
+      pickFirst(row, ['id_usuario', 'idUsuario', 'usuario_id', 'id_usuario_fk']) ?? row.id_usuario ?? null,
     nome_empresa:
       pickFirst(row, ['nome_empresa', 'nomeEmpresa', 'NomeEmpresa', 'empresa', 'nome', 'nome_fantasia'])
       ?? row.nome_empresa,

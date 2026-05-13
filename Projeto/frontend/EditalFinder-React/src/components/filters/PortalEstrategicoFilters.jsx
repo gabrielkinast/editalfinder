@@ -83,7 +83,6 @@ export default function PortalEstrategicoFilters({ filters, onChange, optionSour
           placeholder="Buscar portal, fonte ou tag…"
           value={filters.search}
           onChange={handle}
-          style={{ width: '100%', padding: '8px 10px', borderRadius: '8px', border: '1px solid var(--border-light, #e0e0e0)' }}
         />
       </div>
 

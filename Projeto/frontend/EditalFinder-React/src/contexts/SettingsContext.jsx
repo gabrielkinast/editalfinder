@@ -1,4 +1,5 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react';
+import { applyTheme, getSavedThemePreference, clearThemeSystemListener } from '../config/theme';
 
 const STORAGE_KEY = 'editalfinder_app_settings';
 
@@ -35,6 +36,14 @@ export function SettingsProvider({ children }) {
     if (settings.primaryBlue) root.style.setProperty('--primary-blue', settings.primaryBlue);
     if (settings.primaryYellow) root.style.setProperty('--primary-yellow', settings.primaryYellow);
   }, [settings]);
+
+  // Tema global (light/dark/system) — independente das demais configurações.
+  useEffect(() => {
+    applyTheme(getSavedThemePreference());
+    return () => {
+      clearThemeSystemListener();
+    };
+  }, []);
 
   const updateSettings = useCallback((partial) => {
     setSettings((prev) => ({ ...prev, ...partial }));

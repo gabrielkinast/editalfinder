@@ -7,8 +7,18 @@ import ProjetoPrecadastroForm from '../components/admin/ProjetoPrecadastroForm';
 import EditalForm from '../components/admin/EditalForm';
 import Modal from '../components/ui/Modal';
 import { dataService } from '../services/dataService';
+import { supabase, isSupabaseConfigured } from '../services/api';
 import { formatCurrency, formatDate } from '../utils/formatters';
 import { usePermissions } from '../hooks/usePermissions';
+import { useAuth } from '../contexts/AuthContext';
+import {
+  attachOwnerToClientPayload,
+  canEditClient,
+  canViewClient,
+  isAdminUser,
+  sanitizeClientWritePayload,
+  sessionUserId,
+} from '../utils/permissions';
 import {
   buildInitialPrecadastroState,
   loadPrecadEnvelope,
@@ -40,6 +50,7 @@ function precadBadgeDisplay(info) {
 
 export default function Cadastros() {
   const permissions = usePermissions();
+  const { user, loading: authLoading } = useAuth();
   const [activeTab, setActiveTab] = useState(permissions.canManageUsers ? 'usuarios' : 'clientes');
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -75,23 +86,45 @@ export default function Cadastros() {
     }
   }, [precadCliente?.id_cliente]);
 
-  const loadData = async () => {
+  const loadData = useCallback(async () => {
     setLoading(true);
     try {
+      if (isSupabaseConfigured && (activeTab === 'clientes' || activeTab === 'usuarios')) {
+        const { data: sessWrap, error: sessErr } = await supabase.auth.getSession();
+        if (import.meta.env.DEV && sessErr) {
+          console.warn('[Cadastros] supabase.auth.getSession()', sessErr.message || sessErr);
+        }
+        if (import.meta.env.DEV && !sessWrap?.session?.access_token) {
+          console.warn(
+            '[Cadastros] Sem access_token na sessão antes de carregar dados; verifique login Supabase e persistência da sessão.',
+          );
+        }
+      }
+
       let result = [];
       if (activeTab === 'usuarios') result = await dataService.getUsers();
-      else if (activeTab === 'clientes') result = await dataService.getClients();
+      else if (activeTab === 'clientes') result = await dataService.getClients({ user });
       else if (activeTab === 'editais-cadastrados') result = await dataService.getAllEditaisAdmin();
       setData(result);
     } catch (error) {
+      if (import.meta.env.DEV) {
+        console.error('[Cadastros] loadData falhou', {
+          tab: activeTab,
+          message: error?.message,
+          code: error?.code,
+          details: error?.details,
+          hint: error?.hint,
+        });
+      }
       console.error('Erro ao carregar dados:', error);
       alert('Erro ao carregar dados.');
     } finally {
       setLoading(false);
     }
-  };
+  }, [activeTab, user]);
 
   useEffect(() => {
+    if (authLoading) return;
     loadData();
     setSearchTerm('');
     setFilterType('');
@@ -101,7 +134,7 @@ export default function Cadastros() {
     setFilterMaxInteresse(100000000);
     setFilterPorte('');
     setFilterSetor('');
-  }, [activeTab]);
+  }, [loadData, authLoading]);
 
   const setoresDisponiveis = useMemo(() => {
     if (activeTab !== 'clientes') return [];
@@ -231,8 +264,21 @@ export default function Cadastros() {
         if (editingItem) await dataService.updateUser(editingItem.id_usuario, formData);
         else await dataService.createUser(formData);
       } else if (activeTab === 'clientes') {
-        if (editingItem) await dataService.updateClient(editingItem.id_cliente, formData);
-        else await dataService.createClient(formData);
+        if (editingItem) {
+          if (!canEditClient(user, editingItem)) {
+            alert('Você não tem permissão para editar este cliente.');
+            return;
+          }
+          const patch = sanitizeClientWritePayload(user, formData);
+          await dataService.updateClient(editingItem.id_cliente, patch, { user });
+        } else {
+          if (!isAdminUser(user) && sessionUserId(user) == null) {
+            alert('Sua sessão não tem id_usuario. Faça login novamente para cadastrar clientes.');
+            return;
+          }
+          const payload = attachOwnerToClientPayload(user, formData);
+          await dataService.createClient(payload, { user });
+        }
       } else if (activeTab === 'editais-cadastrados') {
         if (editingItem) await dataService.updateEdital(editingItem.id_edital, formData);
         else await dataService.createEdital(formData);
@@ -249,7 +295,7 @@ export default function Cadastros() {
     if (!window.confirm('Deseja realmente excluir este item?')) return;
     try {
       if (activeTab === 'usuarios') await dataService.deleteUser(id);
-      else if (activeTab === 'clientes') await dataService.deleteClient(id);
+      else if (activeTab === 'clientes') await dataService.deleteClient(id, { user });
       else if (activeTab === 'editais-cadastrados') await dataService.deleteEdital(id);
       loadData();
     } catch (error) {
@@ -258,6 +304,10 @@ export default function Cadastros() {
   };
 
   const openPrecad = (item) => {
+    if (!canViewClient(user, item)) {
+      alert('Você não tem permissão para acessar este cliente.');
+      return;
+    }
     setPrecadCliente(item);
     setIsPrecadModalOpen(true);
   };
@@ -343,7 +393,7 @@ export default function Cadastros() {
       ];
     }
     return [];
-  }, [activeTab, clientPrecadById]);
+  }, [activeTab, clientPrecadById, user]);
 
   const renderForm = () => {
     const props = { initialData: editingItem, onSave: handleSave, onCancel: () => setIsModalOpen(false) };
@@ -363,7 +413,7 @@ export default function Cadastros() {
       filterMaxInteresse < 100000000);
 
   return (
-    <>
+    <div className="admin-body">
       <Header />
       <div className="admin-container">
         <aside className="admin-sidebar">
@@ -601,33 +651,10 @@ export default function Cadastros() {
                 </div>
 
                 {activeTab === 'editais-cadastrados' && availableOrgs.length > 0 && (
-                  <div
-                    className="org-filters"
-                    style={{
-                      display: 'flex',
-                      flexWrap: 'wrap',
-                      gap: '15px',
-                      padding: '10px',
-                      backgroundColor: '#f9f9f9',
-                      borderRadius: '8px',
-                      width: '100%',
-                    }}
-                  >
-                    <span
-                      style={{
-                        fontWeight: '600',
-                        color: 'var(--primary-color)',
-                        width: '100%',
-                        marginBottom: '5px',
-                      }}
-                    >
-                      Filtrar por órgão financiador
-                    </span>
+                  <div className="cad-org-filters">
+                    <span className="cad-org-filters-title">Filtrar por órgão financiador</span>
                     {availableOrgs.map((org) => (
-                      <label
-                        key={org}
-                        style={{ display: 'flex', alignItems: 'center', gap: '5px', cursor: 'pointer', fontSize: '14px' }}
-                      >
+                      <label key={org}>
                         <input
                           type="checkbox"
                           checked={selectedOrgs.includes(org)}
@@ -643,19 +670,7 @@ export default function Cadastros() {
                       </label>
                     ))}
                     {selectedOrgs.length > 0 && (
-                      <button
-                        type="button"
-                        onClick={() => setSelectedOrgs([])}
-                        style={{
-                          border: 'none',
-                          background: 'none',
-                          color: '#e74c3c',
-                          cursor: 'pointer',
-                          fontSize: '12px',
-                          textDecoration: 'underline',
-                          marginLeft: 'auto',
-                        }}
-                      >
+                      <button type="button" className="cad-org-filters-clear" onClick={() => setSelectedOrgs([])}>
                         Limpar filtros
                       </button>
                     )}
@@ -665,7 +680,7 @@ export default function Cadastros() {
             )}
 
             {loading ? (
-              <div style={{ textAlign: 'center', padding: '50px' }}>
+              <div className="cad-loading-placeholder">
                 <h3>Carregando dados...</h3>
               </div>
             ) : (
@@ -681,6 +696,10 @@ export default function Cadastros() {
                       : 'id_edital'
                 }
                 onEdit={(item) => {
+                  if (activeTab === 'clientes' && !canEditClient(user, item)) {
+                    alert('Você não tem permissão para editar este cliente.');
+                    return;
+                  }
                   setEditingItem(item);
                   setIsModalOpen(true);
                 }}
@@ -689,18 +708,18 @@ export default function Cadastros() {
                   activeTab === 'clientes' && (permissions.canEdit || permissions.canCreate)
                     ? (item, { onEdit, onDelete, idKey }) => (
                         <div className="cad-client-actions">
-                          {(permissions.canEdit || permissions.canCreate) && (
+                          {(permissions.canEdit || permissions.canCreate) && canViewClient(user, item) && (
                             <button type="button" className="cad-btn-precad-primary" onClick={() => openPrecad(item)}>
                               Abrir pré-cadastro
                             </button>
                           )}
                           <div className="cad-client-actions-row">
-                            {permissions.canEdit && (
+                            {permissions.canEdit && canEditClient(user, item) && (
                               <button type="button" className="cad-btn-text" onClick={() => onEdit(item)}>
                                 Editar
                               </button>
                             )}
-                            {permissions.canDelete && (
+                            {permissions.canDelete && canEditClient(user, item) && (
                               <button type="button" className="cad-btn-text cad-btn-text-danger" onClick={() => onDelete(item[idKey])}>
                                 Excluir
                               </button>
@@ -752,6 +771,6 @@ export default function Cadastros() {
           />
         </Modal>
       )}
-    </>
+    </div>
   );
 }

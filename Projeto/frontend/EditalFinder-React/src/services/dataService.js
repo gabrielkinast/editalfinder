@@ -9,6 +9,11 @@ import {
   APP_ENV,
 } from '../config/env';
 import { normalizeClienteRow } from '../utils/normalizeCliente';
+import {
+  attachOwnerToClientPayload,
+  isAdminUser,
+  sanitizeClientWritePayload,
+} from '../utils/permissions';
 import { mapRawEditalRow } from '../utils/edital/editalRowMapper';
 
 const IS_DEV = import.meta.env.DEV;
@@ -226,26 +231,70 @@ export const dataService = {
     if (error) throw error;
   },
 
-  // --- CLIENTES ---
-  async getClients() {
+  // --- CLIENTES (isolamento por id_usuario; admin vê todos) ---
+  async getClients(options = {}) {
     if (!isSupabaseConfigured) return [];
-    const { data, error } = await supabase.from('cliente').select('*').order('id_cliente', { ascending: true });
-    if (error) throw error;
+    const { user } = options;
+
+    const { data: sessionData, error: sessionErr } = await supabase.auth.getSession();
+    if (sessionErr && IS_DEV) {
+      console.warn('[dataService.getClients] getSession', sessionErr.message || sessionErr);
+    }
+    if (IS_DEV && !sessionData?.session?.user) {
+      console.warn(
+        '[dataService.getClients] Sem sessão Supabase Auth antes da query; com RLS em `cliente` o PostgREST pode devolver erro ou zero linhas.',
+      );
+    }
+
+    let q = supabase.from('cliente').select('*').order('id_cliente', { ascending: true });
+    if (!isAdminUser(user)) {
+      const uid = user?.id_usuario;
+      if (uid == null || uid === '') return [];
+      q = q.eq('id_usuario', Number(uid));
+    }
+    const { data, error } = await q;
+    if (error) {
+      if (IS_DEV) {
+        console.error('[dataService.getClients] supabase', {
+          message: error.message,
+          code: error.code,
+          details: error.details,
+          hint: error.hint,
+        });
+      }
+      throw error;
+    }
     return (data || []).map(normalizeClienteRow);
   },
 
-  async createClient(data) {
-    const { error } = await supabase.from('cliente').insert([data]);
+  async createClient(data, options = {}) {
+    if (!isSupabaseConfigured) return;
+    const { user } = options;
+    const row = attachOwnerToClientPayload(user, { ...(data || {}) });
+    const { error } = await supabase.from('cliente').insert([row]);
     if (error) throw error;
   },
 
-  async updateClient(id, data) {
-    const { error } = await supabase.from('cliente').update(data).eq('id_cliente', id);
+  async updateClient(id, data, options = {}) {
+    if (!isSupabaseConfigured) return;
+    const { user } = options;
+    const patch = sanitizeClientWritePayload(user, data || {});
+    let q = supabase.from('cliente').update(patch).eq('id_cliente', id);
+    if (!isAdminUser(user) && user?.id_usuario != null && user.id_usuario !== '') {
+      q = q.eq('id_usuario', Number(user.id_usuario));
+    }
+    const { error } = await q;
     if (error) throw error;
   },
 
-  async deleteClient(id) {
-    const { error } = await supabase.from('cliente').delete().eq('id_cliente', id);
+  async deleteClient(id, options = {}) {
+    if (!isSupabaseConfigured) return;
+    const { user } = options;
+    let q = supabase.from('cliente').delete().eq('id_cliente', id);
+    if (!isAdminUser(user) && user?.id_usuario != null && user.id_usuario !== '') {
+      q = q.eq('id_usuario', Number(user.id_usuario));
+    }
+    const { error } = await q;
     if (error) throw error;
   },
 

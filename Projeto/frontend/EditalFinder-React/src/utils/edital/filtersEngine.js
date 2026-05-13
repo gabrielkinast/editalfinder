@@ -40,6 +40,7 @@ export const INITIAL_SIDEBAR_FILTERS = () => ({
   /** Só aplica se o usuário marcar explicitamente */
   toggleSoPdf: false,
   toggleAltaQualidade: false,
+  toggleSomenteFavoritos: false,
 });
 
 function prazoReferencia(e) {

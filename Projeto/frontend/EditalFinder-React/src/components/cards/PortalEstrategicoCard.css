@@ -1,4 +1,4 @@
-/* Cartões Portais — alinhados ao tema EditalFinder (tons azul/neutro/amarelo) */
+/* Cartões Portais — alinhados ao tema EditalFinder (tokens + modo escuro) */
 
 /* Ligeiramente mais compacto que o card de edital base, mantendo CTAs sempre acessíveis */
 .portais-card.edital-card {
@@ -23,14 +23,14 @@
   font-size: 16px;
   font-weight: 700;
   line-height: 1.35;
-  color: var(--text-dark, #333);
+  color: var(--color-text);
   font-family: Poppins, var(--heading-font, system-ui), sans-serif;
 }
 
 .portais-card-fonte {
   margin: 4px 0 0;
   font-size: 12px;
-  color: var(--text-light, #666);
+  color: var(--color-muted);
 }
 
 .portais-card-badge-row {
@@ -58,7 +58,7 @@
   white-space: nowrap;
 }
 
-/* Fornecedores — tons azul/indigo */
+/* Fornecedores — tons azul/indigo (claro) */
 .portais-tipobadge--fn {
   border-color: #c5cae9;
   background: #e8eaf6;
@@ -97,7 +97,7 @@
   color: #bf360c;
 }
 
-/* Investimentos — tons verde/azul petrol */
+/* Investimentos — tons verde/azul petrol (claro) */
 .portais-tipobadge--inv {
   border-color: #b2dfdb;
   background: #e0f2f1;
@@ -150,10 +150,10 @@
   padding: 6px 8px;
   font-size: 11px;
   line-height: 1.45;
-  color: #795548;
-  background: rgba(255, 193, 7, 0.12);
+  color: var(--badge-warn-text);
+  background: var(--badge-warn-bg);
   border-radius: 6px;
-  border-left: 3px solid var(--primary-yellow, #ffc107);
+  border-left: 3px solid var(--color-secondary, #ffc107);
 }
 
 .portais-meta-dl {
@@ -163,8 +163,8 @@
   grid-template-columns: 1fr 1fr;
   gap: 8px 14px;
   font-size: 13px;
-  background: #f8fafc;
-  border: 1px solid var(--border-light, #e8ecf1);
+  background: var(--color-surface-soft);
+  border: 1px solid var(--color-border);
   border-radius: 8px;
 }
 
@@ -176,7 +176,7 @@
 .portais-meta-item--full {
   grid-column: 1 / -1;
   padding-top: 2px;
-  border-top: 1px dashed var(--border-light, #e0e0e0);
+  border-top: 1px dashed var(--color-border);
   margin-top: 2px;
 }
 
@@ -186,12 +186,12 @@
   font-weight: 600;
   text-transform: none;
   letter-spacing: 0;
-  color: #64748b;
+  color: var(--color-muted);
 }
 
 .portais-meta-dl dd {
   margin: 3px 0 0;
-  color: var(--text-dark, #1e293b);
+  color: var(--color-text);
   font-weight: 500;
   line-height: 1.35;
   word-break: break-word;
@@ -207,7 +207,7 @@
   margin-top: 2px;
   font-size: 12px;
   line-height: 1.5;
-  color: var(--text-light, #666);
+  color: var(--color-muted);
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
@@ -237,8 +237,8 @@
 }
 
 .portais-card-btn-primary {
-  background: var(--primary-blue, #1e88e5);
-  color: #fff;
+  background: var(--primary-blue);
+  color: var(--color-on-primary);
   border: none;
 }
 
@@ -248,9 +248,9 @@
 }
 
 .portais-card-btn-secondary {
-  background: #fff;
-  color: var(--primary-blue, #1e88e5);
-  border: 2px solid var(--primary-blue, #1e88e5);
+  background: var(--color-input-bg);
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
 }
 
 .portais-card-btn-secondary:disabled {
@@ -268,4 +268,83 @@
     padding-top: 0;
     margin-top: 0;
   }
+}
+
+/* ─── Tema escuro: badges tipo portal legíveis ─────────────────────────── */
+.theme-dark .portais-tipobadge--fn {
+  border-color: rgba(129, 140, 248, 0.55);
+  background: rgba(79, 70, 229, 0.28);
+  color: #c7d2fe;
+}
+
+.theme-dark .portais-tipobadge--fn-hub,
+.theme-dark .portais-tipobadge--fn-funding_hub {
+  border-color: rgba(96, 165, 250, 0.55);
+  background: rgba(37, 99, 235, 0.32);
+  color: #bfdbfe;
+}
+
+.theme-dark .portais-tipobadge--fn-registration {
+  border-color: rgba(163, 230, 53, 0.45);
+  background: rgba(101, 163, 13, 0.28);
+  color: #d9f99d;
+}
+
+.theme-dark .portais-tipobadge--fn-documentation,
+.theme-dark .portais-tipobadge--fn-supplier_resource {
+  border-color: rgba(251, 191, 36, 0.5);
+  background: rgba(180, 83, 9, 0.28);
+  color: #fde68a;
+}
+
+.theme-dark .portais-tipobadge--fn-procurement {
+  border-color: rgba(168, 162, 158, 0.5);
+  background: rgba(87, 83, 78, 0.35);
+  color: #e7e5e4;
+}
+
+.theme-dark .portais-tipobadge--fn-access_limited {
+  border-color: rgba(251, 113, 133, 0.55);
+  background: rgba(190, 18, 60, 0.28);
+  color: #fecdd3;
+}
+
+.theme-dark .portais-tipobadge--inv {
+  border-color: rgba(45, 212, 191, 0.45);
+  background: rgba(15, 118, 110, 0.32);
+  color: #ccfbf1;
+}
+
+.theme-dark .portais-tipobadge--inv-investment,
+.theme-dark .portais-tipobadge--inv-credit_investment {
+  border-color: rgba(34, 211, 238, 0.45);
+  background: rgba(14, 116, 144, 0.32);
+  color: #cffafe;
+}
+
+.theme-dark .portais-tipobadge--inv-internationalization {
+  border-color: rgba(129, 140, 248, 0.55);
+  background: rgba(67, 56, 202, 0.32);
+  color: #e0e7ff;
+}
+
+.theme-dark .portais-tipobadge--inv-funding_hub,
+.theme-dark .portais-tipobadge--inv-market_access {
+  border-color: rgba(56, 189, 248, 0.5);
+  background: rgba(3, 105, 161, 0.32);
+  color: #e0f2fe;
+}
+
+.theme-dark .portais-tipobadge--inv-development_agency {
+  border-color: rgba(74, 222, 128, 0.45);
+  background: rgba(22, 101, 52, 0.32);
+  color: #bbf7d0;
+}
+
+.theme-dark .portais-tipobadge--inv-startup_program,
+.theme-dark .portais-tipobadge--inv-accelerator,
+.theme-dark .portais-tipobadge--inv-corporate_venture {
+  border-color: rgba(216, 180, 254, 0.55);
+  background: rgba(107, 33, 168, 0.32);
+  color: #f3e8ff;
 }

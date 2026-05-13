@@ -287,10 +287,9 @@ export default function PortaisEstrategicosPage() {
             <label className="portais-sort-label">
               Ordenar por{' '}
               <select
-                className="filter-select"
+                className="filter-select portais-sort-select"
                 value={sortId}
                 onChange={(e) => setSortId(e.target.value)}
-                style={{ minWidth: '200px', marginLeft: '8px' }}
               >
                 {SORT_OPTIONS.map((o) => (
                   <option key={o.id} value={o.id}>

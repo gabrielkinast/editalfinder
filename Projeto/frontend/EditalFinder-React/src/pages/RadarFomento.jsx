@@ -7,6 +7,9 @@ import { useRadarMatches } from '../hooks/useRadarMatches';
 import { useDebouncedValue } from '../hooks/useDebouncedValue';
 import { dataService } from '../services/dataService';
 import { tiposRecursoEditaisNaAreaDoCliente, debugRadar } from '../services/matchService';
+import { useEditalFavorites } from '../hooks/useEditalFavorites';
+import { useAuth } from '../contexts/AuthContext';
+import { filterClientsForUser } from '../utils/permissions';
 
 function idClienteKey(c, idx = 0) {
   const v = c?.id_cliente ?? c?.id;
@@ -48,6 +51,10 @@ function salvarFavoritos(favs) {
 }
 
 export default function RadarFomento() {
+  const { user } = useAuth();
+  const favHook = useEditalFavorites();
+  const favoritosRemote = favHook.favoritosRemoteEnabled;
+
   const [clientes, setClientes]               = useState([]);
   const [editais, setEditais]                 = useState([]);
   /** ID estável — evita perder seleção com referências diferentes / hidratação. */
@@ -79,10 +86,11 @@ export default function RadarFomento() {
       try {
         setLoadError(null);
         const [cls, eds] = await Promise.all([
-          dataService.getClients(),
+          dataService.getClients({ user }),
           dataService.getEditais(),
         ]);
-        setClientes(cls.filter((c) => String(c.status || '').toLowerCase() === 'ativo'));
+        const allowed = filterClientsForUser(user, cls);
+        setClientes(allowed.filter((c) => String(c.status || '').toLowerCase() === 'ativo'));
         setEditais(eds);
       } catch (e) {
         console.error('Erro ao carregar dados:', e);
@@ -92,7 +100,7 @@ export default function RadarFomento() {
       }
     }
     load();
-  }, []);
+  }, [user]);
 
   const clienteSelecionado = useMemo(
     () => clientePorIdNaLista(clientes, clienteIdSelecionado),
@@ -101,13 +109,15 @@ export default function RadarFomento() {
 
   useEffect(() => {
     if (loading) return;
-    if (clienteIdSelecionado == null) return;
     if (clientes.length === 0) {
       setClienteIdSelecionado(null);
       return;
     }
-    if (!clientePorIdNaLista(clientes, clienteIdSelecionado)) {
-      setClienteIdSelecionado(null);
+    if (clienteIdSelecionado != null && clientePorIdNaLista(clientes, clienteIdSelecionado)) {
+      return;
+    }
+    if (clienteIdSelecionado != null && !clientePorIdNaLista(clientes, clienteIdSelecionado)) {
+      setClienteIdSelecionado(idClienteKey(clientes[0], 0));
     }
   }, [loading, clientes, clienteIdSelecionado]);
 
@@ -165,24 +175,35 @@ export default function RadarFomento() {
     return counts;
   }, [favoritos, editaisIdsExistentes]);
 
-  const toggleFavorito = (editalId) => {
-    if (!clienteSelecionado) return;
-    const cid = String(clienteSelecionado.id_cliente ?? '');
-
-    setFavoritos(prev => {
-      const next = { ...prev };
-      const set = new Set(next[cid] || []);
-      set.has(editalId) ? set.delete(editalId) : set.add(editalId);
-      next[cid] = set;
-
-      // Persiste: converte Sets em arrays
-      const raw = {};
-      Object.entries(next).forEach(([k, s]) => { raw[k] = [...s]; });
-      salvarFavoritos(raw);
-
-      return next;
-    });
-  };
+  const toggleFavoritoRadar = useCallback(
+    async (editalOuId) => {
+      const ed =
+        editalOuId && typeof editalOuId === 'object' && 'titulo' in editalOuId
+          ? editalOuId
+          : editais.find((e) => e.id === editalOuId);
+      if (!ed) return;
+      if (favoritosRemote) {
+        await favHook.toggleFavorite(ed, { contexto: 'radar' });
+        return;
+      }
+      if (!clienteSelecionado) return;
+      const cid = String(clienteSelecionado.id_cliente ?? '');
+      const editalId = typeof editalOuId === 'object' ? ed.id : editalOuId;
+      setFavoritos((prev) => {
+        const next = { ...prev };
+        const set = new Set(next[cid] || []);
+        set.has(editalId) ? set.delete(editalId) : set.add(editalId);
+        next[cid] = set;
+        const raw = {};
+        Object.entries(next).forEach(([k, s]) => {
+          raw[k] = [...s];
+        });
+        salvarFavoritos(raw);
+        return next;
+      });
+    },
+    [favoritosRemote, favHook.toggleFavorite, editais, clienteSelecionado],
+  );
 
   const {
     results: recomendacoes,
@@ -200,6 +221,14 @@ export default function RadarFomento() {
     chunkSize: 72,
     enabled: Boolean(clienteSelecionado) && !loading,
   });
+
+  /** Quando favoritos vêm do Supabase, contagens no painel refletem favoritos nas recomendações atuais. */
+  const favoritosCountDisplay = useMemo(() => {
+    if (!favoritosRemote || !clienteSelecionado) return favoritosCount;
+    const cid = String(clienteSelecionado.id_cliente ?? clienteSelecionado.id ?? '');
+    const n = recomendacoes.filter((r) => r?.edital && favHook.isFavorite(r.edital)).length;
+    return { ...favoritosCount, [cid]: n };
+  }, [favoritosRemote, clienteSelecionado, recomendacoes, favHook, favoritosCount]);
 
   useEffect(() => {
     setVisibleCap(40);
@@ -252,7 +281,8 @@ export default function RadarFomento() {
       if (filtroTipo  && r.edital.tipoRecurso?.toLowerCase() !== filtroTipo.toLowerCase()) return false;
       if (filtroOrgao && r.edital.orgao?.toUpperCase() !== filtroOrgao.toUpperCase())      return false;
       if (filtroComp  && r.compatibilidade !== filtroComp)                                  return false;
-      if (filtroFavs  && !favoritosCliente.has(r.edital.id))                               return false;
+      if (filtroFavs && !(favoritosRemote ? favHook.isFavorite(r.edital) : favoritosCliente.has(r.edital.id)))
+        return false;
       if (filtroBuscaDebounced) {
         const termo = filtroBuscaDebounced.toLowerCase();
         const bate  =
@@ -263,7 +293,14 @@ export default function RadarFomento() {
       }
       return true;
     });
-  }, [recomendacoes, filtroTipo, filtroOrgao, filtroComp, filtroFavs, favoritosCliente, filtroBuscaDebounced]);
+  }, [recomendacoes, filtroTipo, filtroOrgao, filtroComp, filtroFavs, favoritosCliente, filtroBuscaDebounced, favoritosRemote, favHook]);
+
+  const radarFavCount = useMemo(() => {
+    if (favoritosRemote) {
+      return recomendacoes.filter((r) => r?.edital && favHook.isFavorite(r.edital)).length;
+    }
+    return favoritosCliente.size;
+  }, [favoritosRemote, recomendacoes, favHook, favoritosCliente]);
 
   const limparFiltros = useCallback(() => {
     setFiltroTipo('');
@@ -309,7 +346,7 @@ export default function RadarFomento() {
         {/* ── Painel esquerdo: clientes ── */}
         <ListaClientes
           clientes={clientes}
-          favoritosCount={favoritosCount}
+          favoritosCount={favoritosCountDisplay}
           clienteIdSelecionado={clienteIdSelecionado}
           onSelecionar={handleSelecionarCliente}
           loading={loading}
@@ -364,11 +401,11 @@ export default function RadarFomento() {
                               <span className="radar-inline-badge radar-inline-badge--alta">Alta</span>
                             </span>
                           )}
-                          {favoritosCliente.size > 0 && (
+                          {radarFavCount > 0 && (
                             <span className="radar-resultado-fav">
                               {' '}
-                              · ★ <strong>{favoritosCliente.size}</strong> favorito
-                              {favoritosCliente.size !== 1 ? 's' : ''}
+                              · ★ <strong>{radarFavCount}</strong> favorito
+                              {radarFavCount !== 1 ? 's' : ''}
                             </span>
                           )}
                         </p>
@@ -478,8 +515,8 @@ export default function RadarFomento() {
                   title="Mostrar apenas favoritos"
                 >
                   {filtroFavs ? '★' : '☆'} Favoritos
-                  {favoritosCliente.size > 0 && (
-                    <span className="radar-favs-count">{favoritosCliente.size}</span>
+                  {radarFavCount > 0 && (
+                    <span className="radar-favs-count">{radarFavCount}</span>
                   )}
                 </button>
 
@@ -553,8 +590,8 @@ export default function RadarFomento() {
                         radarPenalidades={row.radar_penalidades}
                         prazoInfo={row.prazoInfo}
                         expirado={row.expirado}
-                        favorito={favoritosCliente.has(row.edital.id)}
-                        onFavoritar={toggleFavorito}
+                        favorito={favoritosRemote ? favHook.isFavorite(row.edital) : favoritosCliente.has(row.edital.id)}
+                        onFavoritar={toggleFavoritoRadar}
                       />
                     ))}
                   </div>
@@ -583,8 +620,8 @@ export default function RadarFomento() {
                         radarPenalidades={row.radar_penalidades}
                         prazoInfo={row.prazoInfo}
                         expirado={row.expirado}
-                        favorito={favoritosCliente.has(row.edital.id)}
-                        onFavoritar={toggleFavorito}
+                        favorito={favoritosRemote ? favHook.isFavorite(row.edital) : favoritosCliente.has(row.edital.id)}
+                        onFavoritar={toggleFavoritoRadar}
                       />
                     ))}
                   </div>
@@ -626,7 +663,7 @@ export default function RadarFomento() {
                         </>
                       );
                     }
-                    if (filtroFavs && favoritosCliente.size === 0) {
+                    if (filtroFavs && radarFavCount === 0) {
                       return (
                         <>
                           <p className="radar-empty-titulo">Sem favoritos a mostrar</p>
