@@ -1,8 +1,26 @@
-import { useState, useEffect, useMemo, useCallback } from 'react';
+import { useState, useEffect, useMemo, useCallback, useRef } from 'react';
 import Header from '../components/layout/Header';
 import ListaClientes from '../components/radar/ListaClientes';
-import CardEditalRadar from '../components/radar/CardEditalRadar';
-import RadarLoading from '../components/radar/RadarLoading';
+import RadarResultsSkeleton from '../components/radar/RadarResultsSkeleton';
+import RadarResultsGrid from '../components/radar/RadarResultsGrid';
+import RadarErrorBoundary from '../components/radar/RadarErrorBoundary';
+import { purgeLegacyRadarSessionCaches } from '../utils/radar/radarPersistentCache';
+import {
+  RADAR_VISIBLE_INITIAL_CAP,
+  RADAR_VISIBLE_LOAD_MORE_STEP,
+} from '../constants/radarVirtual';
+import {
+  radarPerfClickReceived,
+  radarPerfSelectClienteState,
+  radarPerfStart,
+} from '../utils/radarPerfLog';
+import {
+  buildClientesFingerprintMap,
+  catalogFingerprintFromEditais,
+  clienteFingerprintFromRow,
+  optionsFingerprintFromMerged,
+} from '../utils/radar/radarFingerprints';
+import { radarRenderPerfCycle, radarRenderPerfEvent } from '../utils/radarRenderPerfLog';
 import { useRadarMatches } from '../hooks/useRadarMatches';
 import { useDebouncedValue } from '../hooks/useDebouncedValue';
 import { dataService } from '../services/dataService';
@@ -63,7 +81,7 @@ export default function RadarFomento() {
   const [loadError, setLoadError]             = useState(null);
 
   /** Listagem progressiva dos cards após o cálculo (evita pintar ~900 elementos de uma vez). */
-  const [visibleCap, setVisibleCap] = useState(40);
+  const [visibleCap, setVisibleCap] = useState(RADAR_VISIBLE_INITIAL_CAP);
 
   // { [clienteId]: Set<editalId> }
   const [favoritos, setFavoritos] = useState(() => favoritosParaEstado(carregarFavoritos()));
@@ -80,6 +98,12 @@ export default function RadarFomento() {
     incluirAproximados: false,
   });
   const [radarAvancadoAberto, setRadarAvancadoAberto] = useState(false);
+  const radarPerfSessionRef = useRef(null);
+  const radarClickT0Ref = useRef(null);
+
+  useEffect(() => {
+    purgeLegacyRadarSessionCaches();
+  }, []);
 
   useEffect(() => {
     async function load() {
@@ -106,6 +130,45 @@ export default function RadarFomento() {
     () => clientePorIdNaLista(clientes, clienteIdSelecionado),
     [clientes, clienteIdSelecionado],
   );
+
+  const catalogFingerprint = useMemo(
+    () => catalogFingerprintFromEditais(editais),
+    [editais],
+  );
+
+  const clientesFingerprintMap = useMemo(
+    () => buildClientesFingerprintMap(clientes),
+    [clientes],
+  );
+
+  const radarOptionsFingerprint = useMemo(
+    () =>
+      optionsFingerprintFromMerged({
+        incluirSuspeitos: radarOpts.incluirSuspeitos,
+        incluirEncerrados: radarOpts.incluirEncerrados,
+        incluirAproximados: radarOpts.incluirAproximados,
+        cortePrincipal: 52,
+        corteFallback: 30,
+        limite: 3000,
+        scoreMinimoExibir: radarOpts.incluirAproximados ? 12 : 24,
+      }),
+    [
+      radarOpts.incluirSuspeitos,
+      radarOpts.incluirEncerrados,
+      radarOpts.incluirAproximados,
+    ],
+  );
+
+  const clienteFingerprintAtual = useMemo(() => {
+    if (!clienteSelecionado) return null;
+    const cid = String(
+      clienteSelecionado.id_cliente ?? clienteSelecionado.id ?? '',
+    );
+    return (
+      clientesFingerprintMap.get(cid) ??
+      clienteFingerprintFromRow(clienteSelecionado)
+    );
+  }, [clienteSelecionado, clientesFingerprintMap]);
 
   useEffect(() => {
     if (loading) return;
@@ -207,6 +270,9 @@ export default function RadarFomento() {
 
   const {
     results: recomendacoes,
+    resultsReady: radarResultsReady,
+    hasPreviewResults: radarHasPreview,
+    isPartial: radarIsPartial,
     isCalculating: recoCalculando,
     progress: radarProgress,
     progressPct: radarProgressPct,
@@ -214,24 +280,49 @@ export default function RadarFomento() {
     meta: radarMeta,
     recalculate: radarRecalculate,
     reloadNonce: radarReloadNonce,
+    lastCacheHit: radarLastCacheHit,
+    isSessionRefreshing: radarSessionRefreshing,
+    isPreparing: radarIsPreparing,
+    prefilterStats: radarPrefilterStats,
   } = useRadarMatches({
     cliente: clienteSelecionado,
     editais: editais ?? [],
     options: radarOpts,
     chunkSize: 72,
     enabled: Boolean(clienteSelecionado) && !loading,
+    perfSessionRef: radarPerfSessionRef,
+    perfClickT0Ref: radarClickT0Ref,
+    catalogFingerprint,
+    clienteFingerprint: clienteFingerprintAtual,
+    optionsFingerprint: radarOptionsFingerprint,
   });
+
+  const recomendacoesLista = Array.isArray(recomendacoes) ? recomendacoes : [];
+
+  const showStaleResults =
+    recoCalculando &&
+    recomendacoesLista.length > 0 &&
+    !radarResultsReady &&
+    !radarHasPreview;
+  const showResultCards = radarResultsReady || radarHasPreview || showStaleResults;
+  const showPreparing =
+    Boolean(clienteSelecionado) &&
+    radarIsPreparing &&
+    !showResultCards &&
+    !radarHasPreview;
+  const showSkeleton =
+    (recoCalculando || showPreparing) && !showResultCards && !showStaleResults;
 
   /** Quando favoritos vêm do Supabase, contagens no painel refletem favoritos nas recomendações atuais. */
   const favoritosCountDisplay = useMemo(() => {
     if (!favoritosRemote || !clienteSelecionado) return favoritosCount;
     const cid = String(clienteSelecionado.id_cliente ?? clienteSelecionado.id ?? '');
-    const n = recomendacoes.filter((r) => r?.edital && favHook.isFavorite(r.edital)).length;
+    const n = recomendacoesLista.filter((r) => r?.edital && favHook.isFavorite(r.edital)).length;
     return { ...favoritosCount, [cid]: n };
-  }, [favoritosRemote, clienteSelecionado, recomendacoes, favHook, favoritosCount]);
+  }, [favoritosRemote, clienteSelecionado, recomendacoesLista, favHook, favoritosCount]);
 
   useEffect(() => {
-    setVisibleCap(40);
+    setVisibleCap(RADAR_VISIBLE_INITIAL_CAP);
   }, [
     clienteIdSelecionado,
     radarReloadNonce,
@@ -276,7 +367,7 @@ export default function RadarFomento() {
 
   // Aplica filtros
   const recomendacoesFiltradas = useMemo(() => {
-    return recomendacoes.filter((r) => {
+    return recomendacoesLista.filter((r) => {
       if (!r?.edital?.id) return false;
       if (filtroTipo  && r.edital.tipoRecurso?.toLowerCase() !== filtroTipo.toLowerCase()) return false;
       if (filtroOrgao && r.edital.orgao?.toUpperCase() !== filtroOrgao.toUpperCase())      return false;
@@ -293,14 +384,14 @@ export default function RadarFomento() {
       }
       return true;
     });
-  }, [recomendacoes, filtroTipo, filtroOrgao, filtroComp, filtroFavs, favoritosCliente, filtroBuscaDebounced, favoritosRemote, favHook]);
+  }, [recomendacoesLista, filtroTipo, filtroOrgao, filtroComp, filtroFavs, favoritosCliente, filtroBuscaDebounced, favoritosRemote, favHook]);
 
   const radarFavCount = useMemo(() => {
     if (favoritosRemote) {
-      return recomendacoes.filter((r) => r?.edital && favHook.isFavorite(r.edital)).length;
+      return recomendacoesLista.filter((r) => r?.edital && favHook.isFavorite(r.edital)).length;
     }
     return favoritosCliente.size;
-  }, [favoritosRemote, recomendacoes, favHook, favoritosCliente]);
+  }, [favoritosRemote, recomendacoesLista, favHook, favoritosCliente]);
 
   const limparFiltros = useCallback(() => {
     setFiltroTipo('');
@@ -313,24 +404,81 @@ export default function RadarFomento() {
   const handleSelecionarCliente = useCallback(
     (c, idx = 0) => {
       if (!c) return;
-      setClienteIdSelecionado(idClienteKey(c, idx));
+      const clickT0 = typeof performance !== 'undefined' ? performance.now() : Date.now();
+      radarClickT0Ref.current = clickT0;
+      const cid = idClienteKey(c, idx);
+      setClienteIdSelecionado(cid);
       limparFiltros();
+      queueMicrotask(() => {
+        radarPerfClickReceived(clickT0, { cliente_id: cid });
+        radarPerfSelectClienteState(clickT0, { cliente_id: cid });
+      });
+      radarPerfSessionRef.current = radarPerfStart(`radar-${cid}-${Date.now()}`, {
+        clienteId: cid,
+        clienteNome: c.nome_empresa ?? c.nome ?? null,
+        editaisCount: editais?.length ?? 0,
+        clickT0,
+      });
     },
-    [limparFiltros],
+    [limparFiltros, editais?.length],
   );
 
   const algumFiltroAtivo = filtroTipo || filtroOrgao || filtroComp || filtroFavs || filtroBusca;
 
-  // Separar melhores oportunidades (Alta compatibilidade)
-  const melhoresOportunidades = recomendacoesFiltradas.filter(r => r.compatibilidade === 'Alta');
-  const demais = recomendacoesFiltradas.filter(r => r.compatibilidade !== 'Alta');
+  const melhoresOportunidades = useMemo(
+    () => recomendacoesFiltradas.filter((r) => r.compatibilidade === 'Alta'),
+    [recomendacoesFiltradas],
+  );
+  const demaisOportunidades = useMemo(
+    () => recomendacoesFiltradas.filter((r) => r.compatibilidade !== 'Alta'),
+    [recomendacoesFiltradas],
+  );
 
-  let capRest = visibleCap;
-  const melhoresOportunidadesVis = melhoresOportunidades.slice(0, Math.min(capRest, melhoresOportunidades.length));
-  capRest -= melhoresOportunidadesVis.length;
-  const demaisVis = capRest > 0 ? demais.slice(0, capRest) : [];
-  const podeMostrarMaisOp = visibleCap < recomendacoesFiltradas.length;
-  const cardsVisiveis = melhoresOportunidadesVis.length + demaisVis.length;
+  const { melhoresOportunidadesVis, demaisVis, cardsVisiveis, podeMostrarMaisOp } = useMemo(() => {
+    let capRest = visibleCap;
+    const melhoresVis = melhoresOportunidades.slice(
+      0,
+      Math.min(capRest, melhoresOportunidades.length),
+    );
+    capRest -= melhoresVis.length;
+    const demaisV = capRest > 0 ? demaisOportunidades.slice(0, capRest) : [];
+    return {
+      melhoresOportunidadesVis: melhoresVis,
+      demaisVis: demaisV,
+      cardsVisiveis: melhoresVis.length + demaisV.length,
+      podeMostrarMaisOp: visibleCap < recomendacoesFiltradas.length,
+    };
+  }, [
+    visibleCap,
+    melhoresOportunidades,
+    demaisOportunidades,
+    recomendacoesFiltradas.length,
+  ]);
+
+  const staleOverlay = showStaleResults || radarIsPartial;
+  const clienteIdStr = clienteSelecionado
+    ? String(clienteSelecionado.id_cliente ?? clienteSelecionado.id ?? '')
+    : '';
+
+  useEffect(() => {
+    if (!showResultCards) return;
+    radarRenderPerfCycle({
+      virtual_enabled: false,
+      items_total: cardsVisiveis,
+      render_items_count: cardsVisiveis,
+      visible_items_count: cardsVisiveis,
+      cliente_id: clienteIdStr,
+      partial: radarIsPartial,
+      full: radarResultsReady,
+    });
+  }, [
+    showResultCards,
+    cardsVisiveis,
+    clienteIdStr,
+    radarIsPartial,
+    radarResultsReady,
+    radarReloadNonce,
+  ]);
 
   return (
     <div className="page-wrapper radar-fomento-page">
@@ -354,6 +502,7 @@ export default function RadarFomento() {
 
         {/* ── Painel direito: recomendações ── */}
         <div className="radar-resultado-panel">
+          <RadarErrorBoundary onRetry={radarRecalculate}>
 
           {loadError && !loading && (
             <div className="radar-load-erro" role="alert">
@@ -376,9 +525,23 @@ export default function RadarFomento() {
                     Radar: <span>{clienteSelecionado.nome_empresa}</span>
                   </h2>
                   <div className="radar-resultado-sub-wrap">
-                    {recoCalculando && (
+                    {(recoCalculando || showPreparing) && (
                       <p className="radar-resultado-sub">
-                        <span className="radar-resultado-pill">Em andamento</span>{' '}
+                        {radarSessionRefreshing && (
+                          <span className="radar-resultado-pill radar-resultado-pill--cache">
+                            Resultado em cache — atualizando…
+                          </span>
+                        )}
+                        {!radarSessionRefreshing && showPreparing && (
+                          <span className="radar-resultado-pill">
+                            Preparando cálculo…
+                          </span>
+                        )}
+                        {!radarSessionRefreshing && !showPreparing && (
+                          <span className="radar-resultado-pill">
+                            {radarHasPreview ? 'Prévia — completando lista' : 'Em andamento'}
+                          </span>
+                        )}{' '}
                         Catálogo: <strong>{radarProgress.originalTotal || editais.length}</strong>
                         {radarProgress.total > 0 && (
                           <>
@@ -388,11 +551,14 @@ export default function RadarFomento() {
                         )}
                       </p>
                     )}
-                    {!recoCalculando && radarError === null && (
+                    {(!recoCalculando || radarHasPreview) && radarError === null && (
                       <>
                         <p className="radar-resultado-sub radar-resultado-sub--principal">
                           <strong>{recomendacoesFiltradas.length}</strong>{' '}
                           {recomendacoesFiltradas.length === 1 ? 'oportunidade listada' : 'oportunidades listadas'}
+                          {radarIsPartial && recoCalculando && (
+                            <span className="radar-resultado-pill"> prévia</span>
+                          )}
                           {algumFiltroAtivo ? ' com os filtros atuais' : ' (ordenadas por compatibilidade)'}
                           {melhoresOportunidades.length > 0 && (
                             <span className="radar-resultado-alta">
@@ -421,7 +587,7 @@ export default function RadarFomento() {
                               </>
                             )}
                             {' · '}
-                            Retornadas pelo radar: <strong>{recomendacoes.length}</strong>
+                            Retornadas pelo radar: <strong>{recomendacoesLista.length}</strong>
                           </p>
                         )}
                         {cardsVisiveis < recomendacoesFiltradas.length && (
@@ -454,15 +620,15 @@ export default function RadarFomento() {
                 </div>
               )}
 
-              {recoCalculando && (
-                <RadarLoading
-                  nomeCliente={clienteSelecionado.nome_empresa}
-                  processed={radarProgress.processed}
-                  total={radarProgress.total}
-                  originalTotal={radarProgress.originalTotal}
-                  excludedPreScore={radarProgress.excludedPreScore}
-                  progressPct={radarProgressPct}
-                />
+              {recoCalculando && !showStaleResults && (
+                <RadarResultsSkeleton rows={6} />
+              )}
+              {recoCalculando && radarProgress.total > 0 && (
+                <p className="radar-skeleton-progress" aria-live="polite">
+                  Analisando {radarProgress.processed} de {radarProgress.total} editais
+                  {radarProgressPct > 0 ? ` (${radarProgressPct}%)` : ''}
+                  {import.meta.env?.DEV && radarLastCacheHit === false ? ' · cache miss' : ''}
+                </p>
               )}
 
               {/* Filtros */}
@@ -566,84 +732,68 @@ export default function RadarFomento() {
                       />
                       <span>Incluir oportunidades mais fracas (score menor)</span>
                     </label>
+                    {radarPrefilterStats && radarPrefilterStats.catalog_total > 0 && (
+                      <p className="radar-prefilter-hint">
+                        Catálogo filtrado:{' '}
+                        <strong>{radarPrefilterStats.sent_to_worker}</strong> de{' '}
+                        <strong>{radarPrefilterStats.catalog_total}</strong> oportunidades consideradas
+                        no cálculo
+                        {import.meta.env?.DEV && radarPrefilterStats.catalog_total > radarPrefilterStats.sent_to_worker && (
+                          <span className="radar-prefilter-hint-dev">
+                            {' '}
+                            (−
+                            {radarPrefilterStats.catalog_total - radarPrefilterStats.sent_to_worker}{' '}
+                            ruído/duplicatas — ver [radar-noise] no console)
+                          </span>
+                        )}
+                      </p>
+                    )}
                   </div>
                 )}
               </div>
 
-              {/* Melhores oportunidades */}
-              {!recoCalculando && melhoresOportunidadesVis.length > 0 && (
-                <section className="radar-secao">
-                  <h3 className="radar-secao-titulo">⭐ Melhores Oportunidades</h3>
-                  <div className="radar-grid">
-                    {melhoresOportunidadesVis.map((row) => (
-                      <CardEditalRadar
-                        key={row.edital.id}
-                        edital={row.edital}
-                        score={row.score}
-                        compatibilidade={row.compatibilidade}
-                        razoes={row.razoes}
-                        detalhes={row.detalhes}
-                        criterioMeta={row.criterioMeta}
-                        matchLinha={row.matchLinha}
-                        fonteMatch={row.fonteMatch}
-                        radarBadges={row.radar_badges}
-                        radarPenalidades={row.radar_penalidades}
-                        prazoInfo={row.prazoInfo}
-                        expirado={row.expirado}
-                        favorito={favoritosRemote ? favHook.isFavorite(row.edital) : favoritosCliente.has(row.edital.id)}
-                        onFavoritar={toggleFavoritoRadar}
-                      />
-                    ))}
-                  </div>
-                </section>
+              {showResultCards && melhoresOportunidadesVis.length > 0 && (
+                <RadarResultsGrid
+                  rows={melhoresOportunidadesVis}
+                  staleOverlay={staleOverlay}
+                  sectionTitle="⭐ Melhores Oportunidades"
+                  showSectionTitle
+                  favoritosRemote={favoritosRemote}
+                  favoritosCliente={favoritosCliente}
+                  favHook={favHook}
+                  onFavoritar={toggleFavoritoRadar}
+                />
               )}
 
-              {/* Demais editais */}
-              {!recoCalculando && demaisVis.length > 0 && (
-                <section className="radar-secao">
-                  {melhoresOportunidades.length > 0 && (
-                    <h3 className="radar-secao-titulo">Outros Editais</h3>
-                  )}
-                  <div className="radar-grid">
-                    {demaisVis.map((row) => (
-                      <CardEditalRadar
-                        key={row.edital.id}
-                        edital={row.edital}
-                        score={row.score}
-                        compatibilidade={row.compatibilidade}
-                        razoes={row.razoes}
-                        detalhes={row.detalhes}
-                        criterioMeta={row.criterioMeta}
-                        matchLinha={row.matchLinha}
-                        fonteMatch={row.fonteMatch}
-                        radarBadges={row.radar_badges}
-                        radarPenalidades={row.radar_penalidades}
-                        prazoInfo={row.prazoInfo}
-                        expirado={row.expirado}
-                        favorito={favoritosRemote ? favHook.isFavorite(row.edital) : favoritosCliente.has(row.edital.id)}
-                        onFavoritar={toggleFavoritoRadar}
-                      />
-                    ))}
-                  </div>
-                </section>
+              {showResultCards && demaisVis.length > 0 && (
+                <RadarResultsGrid
+                  rows={demaisVis}
+                  staleOverlay={staleOverlay}
+                  sectionTitle="Outros Editais"
+                  showSectionTitle={melhoresOportunidades.length > 0}
+                  favoritosRemote={favoritosRemote}
+                  favoritosCliente={favoritosCliente}
+                  favHook={favHook}
+                  onFavoritar={toggleFavoritoRadar}
+                />
               )}
 
-              {!recoCalculando && podeMostrarMaisOp && (
+              {radarResultsReady && podeMostrarMaisOp && (
                 <div style={{ textAlign: 'center', marginTop: 20 }}>
                   <button
                     type="button"
                     className="radar-btn-recalc"
-                    onClick={() => setVisibleCap((c) => c + 40)}
+                    onClick={() => setVisibleCap((c) => c + RADAR_VISIBLE_LOAD_MORE_STEP)}
                   >
                     Mostrar mais oportunidades
                   </button>
                 </div>
               )}
 
-              {!recoCalculando && !radarError && recomendacoesFiltradas.length === 0 && (
+              {radarResultsReady && !radarError && recomendacoesFiltradas.length === 0 && (
                 <div className="radar-empty">
                   {(() => {
-                    if (recomendacoes.length === 0) {
+                    if (recomendacoesLista.length === 0) {
                       if (!algumFiltroAtivo) {
                         return (
                           <>
@@ -682,6 +832,7 @@ export default function RadarFomento() {
               )}
             </>
           )}
+          </RadarErrorBoundary>
         </div>
       </div>
       </div>

@@ -29,6 +29,7 @@ import {
   getDeadlineAlertLabel,
   getDeadlineAlertStatus,
 } from '../utils/deadlineAlerts';
+import { logEditaisVisibilityDev } from '../utils/edital/editalVisibility';
 
 const FAVORITES_LS = 'editais_favoritos_v1';
 
@@ -110,6 +111,7 @@ export default function Dashboard() {
         const arr = Array.isArray(data) ? data : [];
         setAllEditais(arr);
         if (import.meta.env.DEV) {
+          logEditaisVisibilityDev(arr);
           console.info('[Editais] recebidos do banco:', arr.length);
           console.info('[Editais] amostra:', arr.slice(0, 3).map((e) => ({ id: e?.id, titulo: e?.titulo?.slice?.(0, 60), ativo: e?.ativo })));
           const fapesc = arr.filter((e) =>
@@ -359,12 +361,19 @@ export default function Dashboard() {
     async (edital) => {
       if (!edital) return;
       if (favoritosRemote) {
-        await favHook.toggleFavorite(edital, { contexto: 'editais' });
-      } else {
-        toggleLegacyFavorite(edital.id);
+        if (favHook.needsLoginForFavorites) {
+          window.alert(favHook.loginMessage || 'Entre na sua conta para favoritar editais.');
+          return;
+        }
+        const res = await favHook.toggleFavorite(edital, { contexto: 'editais' });
+        if (res?.needsLogin) {
+          window.alert(res.message || favHook.loginMessage);
+        }
+        return;
       }
+      toggleLegacyFavorite(edital.id);
     },
-    [favoritosRemote, favHook.toggleFavorite, toggleLegacyFavorite],
+    [favoritosRemote, favHook, toggleLegacyFavorite],
   );
 
   const isEditalFavorite = useCallback(

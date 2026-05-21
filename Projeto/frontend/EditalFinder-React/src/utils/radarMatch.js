@@ -6,6 +6,8 @@
  * prazo 10, qualidade 10, valor 5.
  */
 
+import { buildRadarCardExplanation } from './radar/radarMatchExplain.js';
+
 // ─── Normalização e tokens ───────────────────────────────────────────────────
 
 export const RADAR_STOPWORDS = new Set([
@@ -1073,19 +1075,19 @@ export function radarMatchToCardPayload(editalFmt, hit) {
     valor: { ausente: !!(criterios.valor.ausente || criterios.valor.ausenteCliente || criterios.valor.ausenteEdital) },
   };
 
-  const explicTail = (hit.explicacoes || []).slice(0, 5).join(' · ');
-  const matchLinha = `Match de ${hit.percentual}% pelo cadastro.${explicTail ? ` ${explicTail}` : ''}`;
-
   const prazoInfoCard = prazoParaCard(hit, editalFmt);
+  const explain = buildRadarCardExplanation(hit, editalFmt, prazoInfoCard);
+  const razoesPositivas = explain.positivos.map((p) => p.text);
 
   return {
     score: hit.percentual,
     compatibilidade: hit.compatUILabel,
     compatKey: hit.compatibilidade,
-    razoes: hit.explicacoes,
+    razoes: razoesPositivas,
+    razoesPositivas,
     detalhes,
-    criterioMeta,
-    matchLinha,
+    criterioMeta: explain.criterioMeta ?? criterioMeta,
+    matchLinha: explain.resumo,
     fonteMatch: 'radar_v2',
     prazoInfo: {
       dias: prazoInfoCard.dias,
@@ -1095,6 +1097,9 @@ export function radarMatchToCardPayload(editalFmt, hit) {
     expirado: prazoInfoCard.expirado,
     radar_penalidades: Array.isArray(hit.penalidades?.motivos) ? hit.penalidades.motivos : [],
     radar_badges: extrairBadges(hit, prazoInfoCard),
+    radar_alertas: explain.alertas,
+    radar_dimensoes: explain.dimensoes,
+    radar_explicacao: explain,
     radar_raw: hit,
     excluido: false,
   };

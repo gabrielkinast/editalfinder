@@ -60,6 +60,7 @@ export function mapRawEditalRow(m) {
 
   return {
     id: `manual-${idEdital}`,
+    id_edital: Number.isFinite(Number(idEdital)) ? Number(idEdital) : null,
     idNumerico: Number(idEdital),
     isManual: true,
 
@@ -161,6 +162,9 @@ export function mapRawEditalRow(m) {
     origem_portal_raw: m.origem_portal ?? null,
     idioma_original_raw: m.idioma_original ?? null,
     extras_raw: m.extras ?? null,
+    curadoria_visibility_raw:
+      (m.extras && typeof m.extras === 'object' && m.extras.curadoria_front?.visibility) ||
+      null,
 
     reembolsavel:
       typeof m.reembolsavel === 'boolean' ? m.reembolsavel : undefined,

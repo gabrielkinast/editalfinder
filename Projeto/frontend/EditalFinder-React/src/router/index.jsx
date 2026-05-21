@@ -1,5 +1,6 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
 import Login from '../pages/Login';
+import AuthCallback from '../pages/AuthCallback';
 import Dashboard from '../pages/Dashboard';
 import Cadastros from '../pages/Cadastros';
 import RadarFomento from '../pages/RadarFomento';
@@ -8,12 +9,14 @@ import EditalDetalhes from '../pages/EditalDetalhes';
 import Noticias from '../pages/Noticias';
 import Pesquisas from '../pages/Pesquisas';
 import PortaisEstrategicosPage from '../pages/PortaisEstrategicos/PortaisEstrategicosPage';
+import ConcursosPage from '../pages/Concursos/ConcursosPage';
 import ProtectedRoute from './ProtectedRoute';
 
 export default function AppRoutes() {
   return (
     <Routes>
       <Route path="/login" element={<Login />} />
+      <Route path="/auth/callback" element={<AuthCallback />} />
       <Route 
         path="/dashboard" 
         element={
@@ -67,6 +70,14 @@ export default function AppRoutes() {
         element={
           <ProtectedRoute>
             <PortaisEstrategicosPage />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/concursos"
+        element={
+          <ProtectedRoute>
+            <ConcursosPage />
           </ProtectedRoute>
         }
       />

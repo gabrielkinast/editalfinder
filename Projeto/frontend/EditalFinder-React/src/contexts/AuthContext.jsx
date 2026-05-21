@@ -1,13 +1,34 @@
-import { createContext, useContext, useState, useEffect, useRef } from 'react';
+import { createContext, useContext, useState, useEffect, useRef, useCallback } from 'react';
 import { supabase, isSupabaseConfigured } from '../services/api';
 import { authService } from '../services/authService';
+import {
+  shouldDeferAuthBootstrap,
+  isAuthCallbackHandling,
+} from '../auth/authCallbackCoordinator';
 
 const AuthContext = createContext({});
+
+const BOOTSTRAP_TIMEOUT_MS = 9000;
+
+function withTimeout(promise, ms, label) {
+  return Promise.race([
+    promise,
+    new Promise((_, reject) => {
+      setTimeout(() => reject(new Error(`${label} timeout (${ms}ms)`)), ms);
+    }),
+  ]);
+}
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
   const initDone = useRef(false);
+
+  const setAppUser = useCallback((appUser) => {
+    setUser(appUser ?? null);
+    if (appUser) authService.persistProfileCache(appUser);
+    else authService.clearProfileCache();
+  }, []);
 
   useEffect(() => {
     let cancelled = false;
@@ -15,8 +36,13 @@ export const AuthProvider = ({ children }) => {
 
     async function applySessionToUser(session) {
       if (!session?.user?.id) return null;
-      const row = await authService.fetchProfileByAuthUserId(session.user.id);
+      let row = await authService.fetchProfileByAuthUserId(session.user.id);
       if (!row) {
+        const ensured = await authService.ensureInternalProfileFromAuthUser(session.user);
+        if (ensured) {
+          authService.persistProfileCache(ensured);
+          return ensured;
+        }
         await authService.logout();
         return null;
       }
@@ -50,10 +76,16 @@ export const AuthProvider = ({ children }) => {
     }
 
     async function bootstrap() {
+      if (shouldDeferAuthBootstrap()) {
+        initDone.current = true;
+        if (!cancelled) setLoading(false);
+        return;
+      }
+
       setLoading(true);
       try {
         if (isSupabaseConfigured) {
-          await initFromSupabase();
+          await withTimeout(initFromSupabase(), BOOTSTRAP_TIMEOUT_MS, 'auth bootstrap');
         } else if (import.meta.env.DEV) {
           const legacy = authService.hydrateDevLegacyFromCache();
           if (!cancelled && legacy) setUser(legacy);
@@ -77,6 +109,9 @@ export const AuthProvider = ({ children }) => {
     if (isSupabaseConfigured) {
       const { data } = supabase.auth.onAuthStateChange(async (event, session) => {
         if (!initDone.current) return;
+        if (isAuthCallbackHandling() || shouldDeferAuthBootstrap()) {
+          return;
+        }
 
         if (event === 'SIGNED_OUT') {
           setUser(null);
@@ -123,14 +158,21 @@ export const AuthProvider = ({ children }) => {
   };
 
   const register = async (payload) => {
-    const userData = await authService.registerUser(payload);
-    setUser(userData);
-    return userData;
+    const result = await authService.registerUser(payload);
+    if (result?.status === 'complete') {
+      setUser(result.user);
+    }
+    return result;
   };
 
+  const onCallbackRoute = shouldDeferAuthBootstrap();
+  const showGlobalLoader = loading && !onCallbackRoute;
+
   return (
-    <AuthContext.Provider value={{ user, login, register, logout, authenticated: !!user, loading }}>
-      {loading ? (
+    <AuthContext.Provider
+      value={{ user, login, register, logout, setAppUser, authenticated: !!user, loading }}
+    >
+      {showGlobalLoader ? (
         <div
           style={{
             minHeight: '100vh',

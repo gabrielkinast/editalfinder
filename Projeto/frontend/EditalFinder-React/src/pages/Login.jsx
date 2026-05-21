@@ -1,5 +1,5 @@
-import { useState, useCallback } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useState, useCallback, useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import { useSettings } from '../contexts/SettingsContext';
 
@@ -26,13 +26,23 @@ export default function Login() {
   const [signupPassword2, setSignupPassword2] = useState('');
   const [loading, setLoading] = useState(false);
   const [formError, setFormError] = useState('');
+  const [formInfo, setFormInfo] = useState('');
   const navigate = useNavigate();
+  const location = useLocation();
   const { login, register } = useAuth();
+
+  useEffect(() => {
+    if (!location.state?.emailConfirmed) return;
+    setFormInfo('E-mail confirmado. Entre com sua conta.');
+    setMode('signin');
+    window.history.replaceState({}, document.title, location.pathname);
+  }, [location.state?.emailConfirmed, location.pathname]);
   const { settings } = useSettings();
 
   const switchMode = useCallback((next) => {
     setMode(next);
     setFormError('');
+    if (next !== 'signin') setFormInfo('');
   }, []);
 
   const handleLogin = async (e) => {
@@ -52,6 +62,7 @@ export default function Login() {
   const handleSignup = async (e) => {
     e.preventDefault();
     setFormError('');
+    setFormInfo('');
     const localErr = validateSignupFields({
       nome: signupNome,
       email: signupEmail,
@@ -64,12 +75,25 @@ export default function Login() {
     }
     setLoading(true);
     try {
-      await register({
+      const result = await register({
         nome: signupNome.trim(),
         email: signupEmail.trim(),
         senha: signupPassword,
       });
-      navigate('/dashboard');
+      if (result?.status === 'pending_email_confirmation') {
+        setFormInfo(result.message);
+        setSignupNome('');
+        setSignupEmail('');
+        setSignupPassword('');
+        setSignupPassword2('');
+        switchMode('signin');
+        return;
+      }
+      if (result?.status === 'complete') {
+        navigate('/dashboard');
+        return;
+      }
+      setFormError('Resposta inesperada ao criar conta. Tente entrar ou contacte o suporte.');
     } catch (error) {
       setFormError(error?.message || 'Não foi possível criar a conta.');
     } finally {
@@ -112,6 +136,12 @@ export default function Login() {
             Criar conta
           </button>
         </div>
+
+        {formInfo ? (
+          <div className="login-alert login-alert--info" role="status">
+            {formInfo}
+          </div>
+        ) : null}
 
         {formError ? (
           <div className="login-alert login-alert--error" role="alert">

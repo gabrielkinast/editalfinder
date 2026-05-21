@@ -8,18 +8,30 @@ import { getDeadlineAlertStatus, parsePrazoEnvio } from '../utils/deadlineAlerts
 
 function warnSafe(msg, err) {
   const code = err?.code || err?.message || String(err);
-  console.warn(`[favoritosService] ${msg}`, code);
+  console.warn(`[favoritos] ${msg}`, code);
 }
 
 function logFavoritosSupabaseError(scope, err) {
   warnSafe(scope, err);
   if (!import.meta.env.DEV || !err || typeof err !== 'object') return;
-  console.error(`[favoritosService] ${scope}`, {
+  console.error(`[favoritos] ${scope}`, {
     message: err.message,
     code: err.code,
     details: err.details,
     hint: err.hint,
   });
+}
+
+function logFavoritosDev(scope, payload) {
+  if (!import.meta.env.DEV) return;
+  console.info(`[favoritos] ${scope}`, payload);
+}
+
+const ALERTAR_DIAS_ALLOWED = new Set([1, 3, 7, 15, 30]);
+
+function normalizeAlertarComDias(value) {
+  const n = Number(value);
+  return ALERTAR_DIAS_ALLOWED.has(n) ? n : 7;
 }
 
 export function normalizeEditalLink(edital) {
@@ -117,9 +129,15 @@ export async function fetchFavoritos(options = {}) {
       throw error;
     }
     const rows = Array.isArray(data) ? data : [];
-    return rows.filter((r) => r && r.ativo !== false);
+    const active = rows.filter((r) => r && r.ativo !== false);
+    logFavoritosDev('fetch', {
+      id_usuario: idUsuario,
+      quantidade: active.length,
+      view: VIEW_EDITAIS_FAVORITOS,
+    });
+    return active;
   } catch (e) {
-    warnSafe('fetchFavoritos', e);
+    logFavoritosSupabaseError('fetchFavoritos', e);
     throw e;
   }
 }
@@ -144,24 +162,33 @@ function buildInsertPayload(edital, options = {}) {
   const prazoRaw = parsePrazoEnvio(edital);
   const status_prazo = getDeadlineAlertStatus(edital);
   const contexto = options.contexto === 'radar' ? 'radar' : 'editais';
+  const origem = options.origem || (contexto === 'radar' ? 'radar_front' : 'editais_front');
+  const exRaw = edital.extras_raw ?? edital.extras;
+  const hashDedup =
+    edital.hash_deduplicacao ??
+    (exRaw && typeof exRaw === 'object' && !Array.isArray(exRaw) ? exRaw.hash_deduplicacao : null) ??
+    null;
 
   const payload = {
     id_usuario: idUsuario,
     id_edital: idEdital,
     edital_link: edital_link || null,
-    edital_titulo: edital.titulo ?? edital.titulo_original_raw ?? null,
-    edital_fonte: edital.fonte_recurso ?? edital.fonte ?? edital.orgao ?? null,
-    prazo_envio: prazoRaw || null,
-    status_prazo,
-    alerta_ativo: options.alerta_ativo !== false,
-    alertar_com_dias: options.alertar_com_dias ?? 7,
-    origem: 'frontend',
+    edital_titulo: edital.titulo ?? edital.nome ?? edital.titulo_original_raw ?? null,
+    edital_fonte: edital.fonte ?? edital.fonte_recurso ?? edital.fonte_recurso_display ?? edital.orgao ?? null,
+    prazo_envio: prazoRaw || edital.prazo_envio_raw || null,
+    status_prazo: edital.status_prazo ?? status_prazo ?? null,
+    alerta_ativo: options.alerta_ativo === true,
+    alertar_com_dias: normalizeAlertarComDias(options.alertar_com_dias ?? 7),
+    origem,
     contexto,
     ativo: true,
     visualizado: false,
     observacao: options.observacao ?? null,
   };
   const ex = {
+    source: origem,
+    fonte_recurso: edital.fonte_recurso ?? edital.fonte_recurso_display ?? edital.fonte_raw ?? null,
+    hash_deduplicacao: hashDedup,
     favorited_from: contexto,
     client_side_created: true,
     ...(options.extras && typeof options.extras === 'object' ? options.extras : {}),
@@ -247,17 +274,18 @@ function buildReactivatePatch(edital, options = {}, existingRow = null) {
   }
 
   const idEdital = getEditalNumericoId(edital);
+  const origem = options.origem || (contexto === 'radar' ? 'radar_front' : 'editais_front');
   const patch = {
     ativo: true,
-    alerta_ativo: options.alerta_ativo !== false,
-    alertar_com_dias: options.alertar_com_dias ?? 7,
+    alerta_ativo: options.alerta_ativo === true,
+    alertar_com_dias: normalizeAlertarComDias(options.alertar_com_dias ?? 7),
     visualizado: false,
     prazo_envio: prazoRaw || null,
     status_prazo,
     edital_titulo: edital.titulo ?? edital.titulo_original_raw ?? null,
     edital_fonte: edital.fonte_recurso ?? edital.fonte ?? edital.orgao ?? null,
     contexto,
-    origem: 'frontend',
+    origem,
     edital_link: link || rowLinkRaw(existingRow) || null,
     observacao: options.observacao != null ? options.observacao : existingRow?.observacao ?? null,
     extras: mergedExtras,
@@ -346,7 +374,7 @@ export async function removeFavorito(favoritoOrEdital, options = {}) {
   }
   const idUsuario = getIdUsuario(options);
   try {
-    const patch = { ativo: false };
+    const patch = { ativo: false, atualizado_em: new Date().toISOString() };
     let q = supabase.from(TABLE_EDITAL_FAVORITO).update(patch).eq('id_favorito', idFavorito);
     if (idUsuario != null) q = q.eq('id_usuario', idUsuario);
     const { error } = await q;
@@ -369,19 +397,68 @@ function findActiveFavoritoRow(favorites, edital) {
 
 export async function toggleFavorito(edital, favorites, options = {}) {
   if (!isFavoritosEnabled() || !edital) return { ok: false, error: 'disabled' };
+  const idUsuario = getIdUsuario(options);
+  if (idUsuario == null) {
+    return { ok: false, error: { message: 'missing_id_usuario', code: 'MISSING_USER' } };
+  }
+
+  let authUserId = options.auth_user_id ?? null;
   if (import.meta.env.DEV) {
     const { data: sessWrap } = await supabase.auth.getSession();
+    authUserId = authUserId ?? sessWrap?.session?.user?.id ?? null;
     if (!sessWrap?.session?.access_token) {
-      console.warn(
-        '[favoritosService.toggleFavorito] Sem access_token na sessão; RLS ou PostgREST podem falhar ao gravar favorito.',
-      );
+      console.warn('[favoritos] toggle sem access_token; RLS pode falhar.');
     }
   }
-  const existing = findActiveFavoritoRow(favorites, edital);
-  if (existing) {
-    return removeFavorito(existing, options);
+
+  const existingActive = findActiveFavoritoRow(favorites, edital);
+  const action = existingActive ? 'unfavorite' : 'favorite_or_reactivate';
+
+  logFavoritosDev('toggle:start', {
+    action,
+    id_usuario: idUsuario,
+    auth_user_id: authUserId,
+    id_edital: getEditalNumericoId(edital),
+    edital_id: edital.id ?? null,
+    link: normalizeEditalLink(edital),
+  });
+
+  let res;
+  if (existingActive) {
+    res = await removeFavorito(existingActive, options);
+  } else {
+    const inactive = await findExistingFavoritoRowInTable(edital, options);
+    if (inactive && inactive.ativo === false) {
+      res = await reactivateFavoritoRow(inactive, edital, options);
+      if (res.ok) res = { ...res, action: 'reactivate' };
+    } else if (inactive && inactive.ativo !== false) {
+      res = await removeFavorito(inactive, options);
+      if (res.ok) res = { ...res, action: 'unfavorite' };
+    } else {
+      const payload = buildInsertPayload(edital, options);
+      logFavoritosDev('toggle:insert_payload', { payload });
+      res = await addFavorito(edital, options);
+      if (res.ok && !res.reactivated) res = { ...res, action: 'favorite' };
+      else if (res.ok && res.reactivated) res = { ...res, action: 'reactivate' };
+    }
   }
-  return addFavorito(edital, options);
+
+  if (import.meta.env.DEV) {
+    logFavoritosDev('toggle:result', {
+      action: res.action ?? action,
+      ok: res.ok,
+      error: res.error
+        ? {
+            code: res.error?.code,
+            message: res.error?.message,
+            details: res.error?.details,
+            hint: res.error?.hint,
+          }
+        : null,
+    });
+  }
+
+  return res;
 }
 
 export async function markFavoritoVisualizado(id_favorito) {

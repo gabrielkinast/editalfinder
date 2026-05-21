@@ -7,10 +7,14 @@ import {
   toRadarOportunidade,
   debugRadarCliente,
   diasAtePrazo,
-  filtrarEditaisPreScoreRadar,
-  avaliarEditalRadarLinha,
-  finalizarRankingOportunidadesRadar,
 } from '../utils/radarMatch';
+import {
+  runRadarMatchAsync,
+  ordenarLinhasRadarUi,
+  DEFAULT_RADAR_ASYNC_CHUNK,
+  RADAR_FIRST_BATCH_MIN_PROCESSED,
+  RADAR_FIRST_BATCH_TOP_N,
+} from '../utils/radar/radarMatchCore';
 
 // ─── Helpers de texto ────────────────────────────────────────────────────────
 
@@ -329,7 +333,11 @@ export function resolverRadarMatch(cliente, edital, options = {}) {
   };
 }
 
-const DEFAULT_RADAR_ASYNC_CHUNK = 72;
+export {
+  DEFAULT_RADAR_ASYNC_CHUNK,
+  RADAR_FIRST_BATCH_MIN_PROCESSED,
+  RADAR_FIRST_BATCH_TOP_N,
+};
 
 /** Chave superficial para memoizar radar (lista enorme igual + mesmas flags). */
 export function buildRadarCacheKey(clienteRow, totalEditais, headId, tailId, options) {
@@ -348,93 +356,22 @@ export function buildRadarCacheKey(clienteRow, totalEditais, headId, tailId, opt
   ].join('|');
 }
 
-/** Ordenação final igual a `recomendarEditais` (expirados depois). */
-export function ordenarLinhasRadarUi(rows, nowMs = Date.now()) {
-  return [...rows].sort((a, b) => {
-    const expA = a.expirado ? 1 : 0;
-    const expB = b.expirado ? 1 : 0;
-    if (expA !== expB) return expA - expB;
-    if (b.score !== a.score) return b.score - a.score;
-    const diaA = diasAtePrazo(a.edital.dataLimite);
-    const diaB = diasAtePrazo(b.edital.dataLimite);
-    const tA = new Date(a.edital.dataLimite || 0).getTime();
-    const tB = new Date(b.edital.dataLimite || 0).getTime();
-    const vA = diaA != null && diaA >= 0 ? tA - nowMs : Number.POSITIVE_INFINITY;
-    const vB = diaB != null && diaB >= 0 ? tB - nowMs : Number.POSITIVE_INFINITY;
-    return vA - vB;
-  });
-}
-
-function enriquecerLinhasRadarOrdenadas(linhasRadar, nowMs = Date.now()) {
-  const enriquecidas = linhasRadar
-    .map((row) => {
-      if (!row?.edital || !row?.radar_match) return null;
-      const p = radarMatchToCardPayload(row.edital, row.radar_match);
-      if (p.excluido) return null;
-      return { edital: row.edital, ...p };
-    })
-    .filter(Boolean);
-  return ordenarLinhasRadarUi(enriquecidas, nowMs);
-}
+export { ordenarLinhasRadarUi };
 
 /**
- * Radar em lotes: pré-filtro barato + `calcularMatchRadar` em chunks + mesmo ranking da versão síncrona.
+ * Radar em lotes (main thread). Mesmo núcleo que o Web Worker (`radarMatchCore`).
+ * `onPartialResults` emite até top 20 após o primeiro chunk (Fase 0.5).
  */
 export async function recomendarEditaisAsync(cliente, editais, options = {}, asyncOpts = {}) {
-  const chunkSize = asyncOpts.chunkSize ?? DEFAULT_RADAR_ASYNC_CHUNK;
-  const signal = asyncOpts.signal;
-  const onProgress = asyncOpts.onProgress;
-
-  const eds = Array.isArray(editais) ? editais : [];
-  const merged = {
-    incluirSuspeitos: options.incluirSuspeitos ?? false,
-    incluirEncerrados: options.incluirEncerrados ?? false,
-    incluirAproximados: options.incluirAproximados ?? false,
-    cortePrincipal: options.cortePrincipal ?? 52,
-    corteFallback: options.corteFallback ?? 30,
-    limite: options.limite ?? 3000,
-    scoreMinimoExibir: options.scoreMinimoExibir ?? (options.incluirAproximados ? 12 : 24),
-    ...options,
-  };
-
-  const { passed, totalIn, excludedPreScore } = filtrarEditaisPreScoreRadar(eds, merged);
-  const radarCliente = toRadarCliente(cliente);
-  const scoreMin = merged.scoreMinimoExibir ?? (merged.incluirAproximados ? 15 : 24);
-
-  const avaliadas = [];
-  const n = passed.length;
-  for (let i = 0; i < n; i += chunkSize) {
-    if (signal?.aborted) {
-      const err = new DOMException('Radar cancelado', 'AbortError');
-      throw err;
-    }
-    const slice = passed.slice(i, i + chunkSize);
-    for (let j = 0; j < slice.length; j++) {
-      avaliadas.push(avaliarEditalRadarLinha(radarCliente, slice[j], merged, scoreMin));
-    }
-    const processed = Math.min(i + chunkSize, n);
-    onProgress?.({
-      processed,
-      total: n,
-      originalTotal: totalIn,
-      excludedPreScore,
-    });
-    await new Promise((r) => setTimeout(r, 0));
-  }
-
-  const linhas = finalizarRankingOportunidadesRadar(avaliadas, merged);
-  const now = Date.now();
-  const rows = enriquecerLinhasRadarOrdenadas(linhas, now);
-
-  return {
-    rows,
-    meta: {
-      totalIn,
-      afterPreFilter: n,
-      excludedPreScore,
-      chunkSize,
-    },
-  };
+  return runRadarMatchAsync(cliente, editais, options, {
+    chunkSize: asyncOpts.chunkSize ?? DEFAULT_RADAR_ASYNC_CHUNK,
+    signal: asyncOpts.signal,
+    onProgress: asyncOpts.onProgress,
+    onPartialResults: asyncOpts.onPartialResults,
+    firstBatchMinProcessed: asyncOpts.firstBatchMinProcessed,
+    firstBatchTopN: asyncOpts.firstBatchTopN,
+    yieldBetweenChunks: true,
+  });
 }
 
 /**

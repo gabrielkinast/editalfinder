@@ -6,6 +6,8 @@ import { formatDate, formatCurrency } from '../utils/formatters';
 import { getDisplayTitle } from '../utils/displayTitle';
 import { calcularScore } from '../services/matchService';
 import { classificarEdital } from '../services/classificationService';
+import { resolveActionLinks } from '../utils/edital/linkHealth';
+import EditalReportProblemButton from '../components/editais/EditalReportProblemButton';
 
 // Perfis representativos para cálculo dinâmico de compatibilidade
 // Campos alinhados com os nomes esperados pelo matchService.js
@@ -223,12 +225,22 @@ export default function EditalDetalhes() {
     return '#dc2626';
   };
 
-  // Links externos validados (não renderizar href vazio ou só espaços)
-  const linkInscricao = urlDisponivel(edital.link_inscricao);
-  const linkEdital    = urlDisponivel(edital.link);
-  const linkSite      = linkEdital && linkInscricao && linkEdital === linkInscricao ? null : linkEdital;
-  const pdfUrl        = urlDisponivel(edital.pdf_url);
-  const temAcoesLaterais = !!(linkInscricao || linkSite || pdfUrl);
+  const linkActions = resolveActionLinks({
+    linkOriginal: edital.link,
+    linkInscricao: edital.link_inscricao,
+    pdfUrl: edital.pdf_url,
+    extras_raw: edital.extras,
+  });
+  const linkInscricao = urlDisponivel(linkActions.inscricao);
+  const linkEdital = urlDisponivel(linkActions.site);
+  const linkSite =
+    linkEdital && linkInscricao && linkEdital === linkInscricao ? null : linkEdital;
+  const pdfUrl = urlDisponivel(linkActions.pdf);
+  const temAcoesLaterais =
+    !!(linkInscricao || linkSite || pdfUrl) ||
+    linkActions.inscDisabled ||
+    linkActions.siteDisabled ||
+    linkActions.pdfDisabled;
 
   return (
     <div className="page-wrapper">
@@ -244,6 +256,11 @@ export default function EditalDetalhes() {
         <div className="detalhes-hero">
           <div className="detalhes-hero-info">
             <span className="detalhes-orgao-badge">{edital.fonte_recurso || (edital.organizacao?.nome) || '—'}</span>
+            {linkActions.health.showUnavailableBadge ? (
+              <span className="detalhes-link-health-badge" title="Auditoria: link oficial indisponível">
+                Link indisponível
+              </span>
+            ) : null}
             <h1 className="detalhes-titulo">{tituloPagina}</h1>
           </div>
         </div>
@@ -413,6 +430,15 @@ export default function EditalDetalhes() {
                     📄 Baixar PDF Principal
                   </a>
                 )}
+                {linkActions.inscDisabled && !linkInscricao && (
+                  <span className="detalhes-doc-btn-disabled">Inscrição — link indisponível</span>
+                )}
+                {linkActions.siteDisabled && !linkSite && (
+                  <span className="detalhes-doc-btn-disabled">Site — link indisponível</span>
+                )}
+                {linkActions.pdfDisabled && !pdfUrl && (
+                  <span className="detalhes-doc-btn-disabled">PDF — link indisponível</span>
+                )}
               </div>
             ) : (
               <p className="detalhes-sem-doc detalhes-acoes-vazio">
@@ -420,6 +446,9 @@ export default function EditalDetalhes() {
               </p>
             )}
 
+            <div className="detalhes-report-problem-wrap">
+              <EditalReportProblemButton edital={edital} variant="details" />
+            </div>
 
             {/* Compatibilidade por Perfil */}
             <div className="detalhes-card-lateral">

@@ -19,7 +19,14 @@ if (!isSupabaseConfigured) {
  * Sem .env válido, usa host inválido só para satisfazer imports — não envie dados sensíveis.
  */
 export const supabase = isSupabaseConfigured
-  ? createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
+  ? createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
+      auth: {
+        flowType: 'implicit',
+        detectSessionInUrl: true,
+        persistSession: true,
+        autoRefreshToken: true,
+      },
+    })
   : createClient('https://offline.invalid', 'public-anon-placeholder-not-used');
 
 /**
