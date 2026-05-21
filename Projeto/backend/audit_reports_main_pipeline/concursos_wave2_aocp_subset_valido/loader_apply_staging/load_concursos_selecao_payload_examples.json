@@ -1,0 +1,71 @@
+[
+  {
+    "titulo": "CESAMA - COMPANHIA DE SANEAMENTO MUNICIPAL - MG",
+    "tipo_selecao": "concurso_publico",
+    "categoria": "banca_aocp_concurso",
+    "orgao": "CESAMA - COMPANHIA DE SANEAMENTO MUNICIPAL - MG",
+    "instituicao": "CESAMA - COMPANHIA DE SANEAMENTO MUNICIPAL - MG",
+    "banca": "Instituto AOCP",
+    "cargo": null,
+    "curso": null,
+    "area": null,
+    "nivel_escolaridade": null,
+    "estado": null,
+    "municipio": null,
+    "regiao": null,
+    "modalidade": null,
+    "numero_vagas": null,
+    "salario_min": null,
+    "salario_max": null,
+    "taxa_inscricao": null,
+    "data_publicacao": "2026-06-10",
+    "data_inicio_inscricao": "2026-06-10",
+    "data_fim_inscricao": "2026-07-10",
+    "data_prova": null,
+    "status": "inscricoes_abertas",
+    "link": "https://www.institutoaocp.org.br/concursos/690/",
+    "link_edital": "https://arquivos-site.institutoaocp.org.br/publicacoes/4e834cb0-6c46-469f-8a72-d3fc4641beff.pdf",
+    "fonte": "aocp",
+    "fonte_tipo": "banca",
+    "validacao_status": "valido",
+    "qualidade_dado": "media",
+    "tags": [
+      "aocp",
+      "wave1"
+    ],
+    "extras": {
+      "crawler": "main_aocp_concursos",
+      "wave": "concursos_wave1_aocp",
+      "fetched_at_utc": "2026-05-16T21:18:14.055454+00:00",
+      "aocp_api_list": "https://link.institutoaocp.org.br/api/concursos",
+      "aocp_api_base": "https://link.institutoaocp.org.br",
+      "aocp_listing_pages": [
+        "https://www.institutoaocp.org.br/concursos/status/inscricoes-abertas",
+        "https://www.institutoaocp.org.br/concursos/status/novos"
+      ],
+      "aocp_list_id": 690,
+      "aocp_api_status_list": "NEW",
+      "aocp_api_status_detail": "novo",
+      "official_link_missing": false,
+      "extracted_fields": [
+        "data_fim_inscricao_texto",
+        "data_inicio_inscricao_texto"
+      ],
+      "missing_core_fields": [
+        "data_prova",
+        "estado",
+        "numero_vagas"
+      ],
+      "extraction_confidence": "alta",
+      "source_is_aggregator": false,
+      "value_extraction_notes": [],
+      "tipo_selecao_evidencia": "texto:concurso_publico",
+      "possible_fee_detected": false,
+      "possible_salary_detected": false,
+      "source_standardized_key": "aocp",
+      "loader": "load_concursos_selecao",
+      "origem_pipeline": "concursos_wave1_manual"
+    },
+    "ativo": true
+  }
+]

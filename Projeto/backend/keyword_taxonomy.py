@@ -43,16 +43,102 @@ KEYWORDS_INTEREST: List[str] = [
     "subvencao",
 ]
 
+# Frases multi-palavra: substring no texto normalizado (espaços colapsados).
+# Palavra única curta (<12 chars): exige fronteira [^a-z0-9] para evitar "ita" em "digital",
+# "dcta" em palavras compostas acidentais, etc.
+# Palavra única longa (>=12): substring (ex.: "aeroespacial").
+# Excepções documentadas:
+#   - Padrões com & ou hífen: re.escape no ramo de fronteira (token curto).
+#   - Siglas curtas (ex.: dcta, inpe, nasa): só disparam como token isolado por fronteira;
+#     não usar siglas de 2–3 letras salvo contexto frasal (espaço no padrão).
 THEMATIC_PATTERNS: Dict[str, List[str]] = {
-    "defesa": ["defesa", "base industrial de defesa", "forcas armadas", "militar", "exercito", "marinha", "aeronautica"],
-    "seguranca_publica": ["seguranca publica", "policia", "policiamento", "forca nacional", "pericia"],
-    "nuclear": ["nuclear", "uranio", "reator", "radiofarmaco", "radioprotecao", "fissao", "fusao"],
-    "materiais": ["ciencia dos materiais", "materiais avancados", "blindagem", "liga metalica", "composito"],
-    "energia": ["energia", "geracao", "eficiencia energetica", "eletronuclear", "combustivel"],
-    "aeroespacial": ["aeroespacial", "espacial", "satelite", "lancador", "dcta", "ita", "iae"],
-    "veiculos": ["veiculo militar", "blindado", "viatura", "submarino", "navio patrulha"],
-    "industria": ["industria pesada", "manufatura", "cadeia produtiva", "industrial"],
-    # Evita sobreclassificação com termos genéricos isolados.
+    "defesa": [
+        "defesa",
+        "base industrial de defesa",
+        "defesa nacional",
+        "ministerio da defesa",
+        "tecnologias de defesa",
+        "forcas armadas",
+        "militar",
+        "exercito",
+        "marinha",
+        "aeronautica",
+    ],
+    "seguranca_publica": [
+        "seguranca publica",
+        "policiamento",
+        "forca nacional",
+        "pericia criminal",
+    ],
+    "nuclear": [
+        "energia nuclear",
+        "fisica nuclear",
+        "engenharia nuclear",
+        "radiofarmaco",
+        "radioprotecao",
+        "combustivel nuclear",
+        "uranio",
+        "reator nuclear",
+        "fissao",
+        "fusao",
+        "nuclear",
+    ],
+    "materiais": [
+        "ciencia dos materiais",
+        "materiais avancados",
+        "liga metalica",
+        "composito",
+        "blindagem",
+    ],
+    "energia": [
+        "eficiencia energetica",
+        "eletronuclear",
+        "geracao distribuida",
+        "matriz energetica",
+        "energia",
+        "combustivel",
+    ],
+    "aeroespacial": [
+        "aeroespacial",
+        "aerospace",
+        "space industry",
+        "space mission",
+        "veiculo lancador",
+        "veículo lançador",
+        "lancador espacial",
+        "instituto tecnologico de aeronautica",
+        "instituto tecnologico de aeronáutica",
+        "tecnologias aeroespaciais",
+        "engenharia aeroespacial",
+        "satelite",
+        "satélite",
+        "orbita",
+        "orbital",
+        "foguete",
+        "agencia espacial",
+        "missao espacial",
+        "dcta",
+        "ita aeroespacial",
+        "iae aeronautica",
+        "instituto de aeronautica e espaco",
+        "inpe",
+        "jaxa",
+        "nasa",
+        "espacial",
+    ],
+    "veiculos": [
+        "veiculo militar",
+        "blindado",
+        "viatura",
+        "navio patrulha",
+        "submarino",
+    ],
+    "industria": [
+        "industria pesada",
+        "cadeia produtiva",
+        "manufatura",
+        "industrial",
+    ],
     "ciencia_tecnologia": [
         "pesquisa cientifica",
         "desenvolvimento tecnologico",
@@ -64,6 +150,7 @@ THEMATIC_PATTERNS: Dict[str, List[str]] = {
     ],
     "dual_use": ["dual-use", "duplo uso", "tecnologia dual", "uso dual"],
 }
+
 
 def _normalize(text: str) -> str:
     cleaned = (text or "").lower()
@@ -84,15 +171,38 @@ def _normalize(text: str) -> str:
     return re.sub(r"\s+", " ", cleaned).strip()
 
 
+def _pattern_matches(norm: str, pattern: str) -> bool:
+    """
+    Evita substring curta dentro de palavras comuns (ex.: 'ita' em 'digital').
+
+    - Frase com espaço: substring directa em `norm`.
+    - Token longo (>= 12 chars): substring (ex.: 'aeroespacial').
+    - Token mais curto: fronteira não alfanumérica (texto já está normalizado sem acentos).
+    """
+    p = (pattern or "").strip().lower()
+    if not p or not norm:
+        return False
+    if " " in p:
+        return p in norm
+    if len(p) >= 12:
+        return p in norm
+    return bool(
+        re.search(
+            rf"(^|[^a-z0-9]){re.escape(p)}([^a-z0-9]|$)",
+            norm,
+        )
+    )
+
+
 def has_interest_keyword(text: str) -> bool:
     norm = _normalize(text)
-    return any(keyword in norm for keyword in KEYWORDS_INTEREST)
+    return any(_pattern_matches(norm, keyword) for keyword in KEYWORDS_INTEREST)
 
 
 def classify_thematic_tags(text: str) -> List[str]:
     norm = _normalize(text)
     found: Set[str] = set()
     for theme, patterns in THEMATIC_PATTERNS.items():
-        if any(pattern in norm for pattern in patterns):
+        if any(_pattern_matches(norm, pat) for pat in patterns):
             found.add(theme)
     return sorted(found)

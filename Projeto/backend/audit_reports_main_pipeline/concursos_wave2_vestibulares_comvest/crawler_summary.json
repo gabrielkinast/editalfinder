@@ -1,0 +1,202 @@
+{
+  "fonte": "comvest",
+  "collected_at_utc": "2026-05-16T21:14:49.980194+00:00",
+  "seeds": [
+    {
+      "url": "https://www.comvest.unicamp.br/ingresso-2027/vestibular-2027/",
+      "tipo_selecao": "vestibular",
+      "titulo": "Vestibular Unicamp 2027"
+    },
+    {
+      "url": "https://www.comvest.unicamp.br/ingresso-2027/vagas-olimpicas-2027/",
+      "tipo_selecao": "programa_ingresso",
+      "titulo": "Vagas Olímpicas Unicamp 2027"
+    }
+  ],
+  "total_seeds": 2,
+  "total_discarded_all": 0,
+  "discarded": [],
+  "total_standardized": 2,
+  "errors": [],
+  "field_fill": {
+    "titulo": 2,
+    "tipo_selecao": 2,
+    "categoria": 2,
+    "orgao": 2,
+    "instituicao": 2,
+    "banca": 2,
+    "cargo": 0,
+    "curso": 2,
+    "area": 2,
+    "nivel_escolaridade": 2,
+    "estado": 2,
+    "municipio": 2,
+    "regiao": 0,
+    "modalidade": 0,
+    "numero_vagas": 0,
+    "salario_min": 0,
+    "salario_max": 0,
+    "taxa_inscricao": 0,
+    "data_publicacao": 0,
+    "data_inicio_inscricao": 0,
+    "data_fim_inscricao": 0,
+    "data_prova": 1,
+    "status": 2,
+    "link": 2,
+    "link_edital": 2,
+    "fonte": 2,
+    "fonte_tipo": 2,
+    "validacao_status": 2,
+    "qualidade_dado": 2,
+    "tags": 2,
+    "extras": 2,
+    "ativo": 2
+  },
+  "fields_always_missing": [
+    "cargo",
+    "regiao",
+    "modalidade",
+    "numero_vagas",
+    "salario_min",
+    "salario_max",
+    "taxa_inscricao",
+    "data_publicacao",
+    "data_inicio_inscricao",
+    "data_fim_inscricao"
+  ],
+  "standardized_path": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_main_pipeline\\concursos_wave2_vestibulares_comvest\\standardized\\comvest_standardized.json",
+  "exemplos_payload": [
+    {
+      "titulo": "Vestibular 2027",
+      "tipo_selecao": "vestibular",
+      "categoria": "vestibular_unicamp",
+      "orgao": "Unicamp / Comvest",
+      "instituicao": "Universidade Estadual de Campinas",
+      "banca": "Comvest",
+      "cargo": null,
+      "curso": "Graduação — Vestibular Unicamp",
+      "area": "Graduação",
+      "nivel_escolaridade": "ensino_medio",
+      "estado": "SP",
+      "municipio": "Campinas",
+      "regiao": null,
+      "modalidade": null,
+      "numero_vagas": null,
+      "salario_min": null,
+      "salario_max": null,
+      "taxa_inscricao": null,
+      "data_publicacao": null,
+      "data_inicio_inscricao": null,
+      "data_fim_inscricao": null,
+      "data_prova": "2026-10-18",
+      "status": "ativo",
+      "link": "https://www.comvest.unicamp.br/ingresso-2027/vestibular-2027/",
+      "link_edital": "https://www.comvest.unicamp.br/wp-content/uploads/2025/06/Manual-Programa_provas_VU2026.pdf",
+      "fonte": "comvest",
+      "fonte_tipo": "universidade",
+      "validacao_status": "incompleto",
+      "qualidade_dado": "media",
+      "tags": [
+        "comvest",
+        "unicamp",
+        "wave2",
+        "vestibular"
+      ],
+      "extras": {
+        "crawler": "main_vestibulares_comvest",
+        "wave": "concursos_wave2_vestibulares_comvest",
+        "fetched_at_utc": "2026-05-16T21:14:46.874193+00:00",
+        "seed_url": "https://www.comvest.unicamp.br/ingresso-2027/vestibular-2027/",
+        "pdf_enrichment": {
+          "fetch_note": "pdf_download_ok",
+          "schedule": {
+            "data_inicio_inscricao": null,
+            "data_fim_inscricao": null,
+            "data_prova": null,
+            "schedule_notes": []
+          }
+        },
+        "extracted_fields": [
+          "data_prova",
+          "link_edital"
+        ],
+        "missing_core_fields": [
+          "data_fim_inscricao",
+          "numero_vagas"
+        ],
+        "extraction_confidence": "alta",
+        "value_extraction_notes": [
+          "cronograma_inscricao_ainda_generico_ou_ausente",
+          "pdf:pdf_download_ok"
+        ]
+      },
+      "ativo": true
+    },
+    {
+      "titulo": "Vagas Olímpicas 2027",
+      "tipo_selecao": "programa_ingresso",
+      "categoria": "vagas_olimpicas_unicamp",
+      "orgao": "Unicamp / Comvest",
+      "instituicao": "Universidade Estadual de Campinas",
+      "banca": "Comvest",
+      "cargo": null,
+      "curso": "Vagas Olímpicas",
+      "area": "Graduação",
+      "nivel_escolaridade": "ensino_medio",
+      "estado": "SP",
+      "municipio": "Campinas",
+      "regiao": null,
+      "modalidade": null,
+      "numero_vagas": null,
+      "salario_min": null,
+      "salario_max": null,
+      "taxa_inscricao": null,
+      "data_publicacao": null,
+      "data_inicio_inscricao": null,
+      "data_fim_inscricao": null,
+      "data_prova": null,
+      "status": "ativo",
+      "link": "https://www.comvest.unicamp.br/ingresso-2027/vagas-olimpicas-2027/",
+      "link_edital": "https://www.comvest.unicamp.br/wp-content/uploads/2025/10/Edital-Vagas-Olimpicas-2026.pdf",
+      "fonte": "comvest",
+      "fonte_tipo": "universidade",
+      "validacao_status": "incompleto",
+      "qualidade_dado": "media",
+      "tags": [
+        "comvest",
+        "unicamp",
+        "wave2",
+        "programa_ingresso"
+      ],
+      "extras": {
+        "crawler": "main_vestibulares_comvest",
+        "wave": "concursos_wave2_vestibulares_comvest",
+        "fetched_at_utc": "2026-05-16T21:14:49.980194+00:00",
+        "seed_url": "https://www.comvest.unicamp.br/ingresso-2027/vagas-olimpicas-2027/",
+        "pdf_enrichment": {
+          "fetch_note": "pdf_download_ok",
+          "schedule": {
+            "data_inicio_inscricao": null,
+            "data_fim_inscricao": null,
+            "data_prova": null,
+            "schedule_notes": []
+          }
+        },
+        "extracted_fields": [
+          "link_edital"
+        ],
+        "missing_core_fields": [
+          "data_fim_inscricao",
+          "data_prova",
+          "numero_vagas"
+        ],
+        "extraction_confidence": "media",
+        "value_extraction_notes": [
+          "cronograma_inscricao_ainda_generico_ou_ausente",
+          "pdf:pdf_download_ok"
+        ]
+      },
+      "ativo": true
+    }
+  ]
+}

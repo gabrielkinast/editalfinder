@@ -1,0 +1,220 @@
+{
+  "generated_at": "2026-05-18T23:32:46Z",
+  "baseline": {
+    "diretorio": "mcti_noticias_dryrun",
+    "total_raw": 30,
+    "mantidos": 22,
+    "review": 2,
+    "descartados": 6,
+    "validos": 7,
+    "incompletos": 15,
+    "errors_count": 0,
+    "page_enrich_max": 10,
+    "page_enrich_fetches": 10,
+    "validacao_status_counts": {
+      "valido": 7,
+      "incompleto": 15
+    },
+    "distribuicao": {
+      "eixo_estrategico": {
+        "ciencia": 10,
+        "pesquisa": 9,
+        "inovacao": 5,
+        "tecnologia": 5,
+        "ia": 4,
+        "fomento": 4,
+        "clima_cientifico": 2,
+        "energia": 1,
+        "espaco": 1,
+        "semicondutores": 1
+      },
+      "relevancia_mcti": {
+        "alta": 12,
+        "media": 10
+      }
+    }
+  },
+  "enriched": {
+    "diretorio": "mcti_noticias_dryrun_enriched",
+    "total_raw": 30,
+    "mantidos": 24,
+    "review": 2,
+    "descartados": 4,
+    "validos": 24,
+    "incompletos": 0,
+    "errors_count": 0,
+    "page_enrich_max": 30,
+    "page_enrich_fetches": 30,
+    "validacao_status_counts": {
+      "valido": 24
+    },
+    "distribuicao": {
+      "eixo_estrategico": {
+        "ciencia": 11,
+        "pesquisa": 10,
+        "inovacao": 7,
+        "tecnologia": 7,
+        "ia": 5,
+        "fomento": 4,
+        "clima_cientifico": 3,
+        "energia": 1,
+        "espaco": 1,
+        "semicondutores": 1,
+        "defesa": 1,
+        "computacao": 1
+      },
+      "relevancia_mcti": {
+        "alta": 15,
+        "media": 9
+      }
+    }
+  },
+  "delta": {
+    "total_raw": 0,
+    "mantidos": 2,
+    "review": 0,
+    "descartados": -2,
+    "validos": 17,
+    "incompletos": -15,
+    "errors_count": 0,
+    "page_enrich_max": 20,
+    "page_enrich_fetches": 20
+  },
+  "eixos_estrategicos_delta": {
+    "ciencia": 1,
+    "fomento": 0,
+    "defesa": 1,
+    "pesquisa": 1,
+    "semicondutores": 0,
+    "inovacao": 2,
+    "tecnologia": 2,
+    "clima_cientifico": 1,
+    "espaco": 0,
+    "energia": 0,
+    "ia": 1,
+    "computacao": 1
+  },
+  "incompleto_para_valido": [
+    {
+      "titulo": "MCTI expande infovias para interligar 180 mil pesquisadores no Brasil",
+      "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/mcti-expande-infovias-para-interligar-180-mil-pesquisadores-no-brasil",
+      "validacao_antes": "incompleto",
+      "validacao_depois": "valido",
+      "resumo_chars_antes": 0,
+      "resumo_chars_depois": 155
+    },
+    {
+      "titulo": "Da TV para o espaço: conheça o SCD-1, primeiro e mais antigo satélite brasileiro em operação",
+      "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/da-tv-para-o-espaco-conheca-o-scd-1-primeiro-e-mais-antigo-satelite-brasileiro-em-operacao",
+      "validacao_antes": "incompleto",
+      "validacao_depois": "valido",
+      "resumo_chars_antes": 0,
+      "resumo_chars_depois": 162
+    },
+    {
+      "titulo": "MCTI auxilia parceria entre Ceitec e empresa chinesa para produção de semicondutores",
+      "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/mcti-auxilia-parceria-entre-ceitec-e-empresa-chinesa-para-producao-de-semicondutores",
+      "validacao_antes": "incompleto",
+      "validacao_depois": "valido",
+      "resumo_chars_antes": 0,
+      "resumo_chars_depois": 93
+    },
+    {
+      "titulo": "MCTI lança GT para transformar riqueza mineral em tecnologia, indústria e desenvolvimento sustentável",
+      "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/mcti-lanca-gt-para-transformar-riqueza-mineral-em-tecnologia-industria-e-desenvolvimento-sustentavel",
+      "validacao_antes": "incompleto",
+      "validacao_depois": "valido",
+      "resumo_chars_antes": 0,
+      "resumo_chars_depois": 115
+    },
+    {
+      "titulo": "Pesquisa do Cemaden e INPE usa inteligência artificial para tornar previsões de enxurradas mais confiáveis",
+      "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/pesquisa-do-cemaden-e-inpe-usa-inteligencia-artificial-para-tornar-previsoes-de-enxurradas-mais-confiaveis",
+      "validacao_antes": "incompleto",
+      "validacao_depois": "valido",
+      "resumo_chars_antes": 0,
+      "resumo_chars_depois": 169
+    },
+    {
+      "titulo": "Inscrições prorrogadas: projeto de Inteligência Artificial do MCTI oferece bolsa de R$ 12,5 mil para pesquisa",
+      "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/inscricoes-prorrogadas-projeto-de-inteligencia-artificial-do-mcti-oferece-bolsa-de-r-12-5-mil-para-pesquisa",
+      "validacao_antes": "incompleto",
+      "validacao_depois": "valido",
+      "resumo_chars_antes": 0,
+      "resumo_chars_depois": 143
+    },
+    {
+      "titulo": "Construção de estratégia de longo prazo para ação climática deve ter ciência e transparência como guias",
+      "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/construcao-de-estrategia-de-longo-prazo-para-acao-climatica-deve-ter-ciencia-e-transparencia-como-guias",
+      "validacao_antes": "incompleto",
+      "validacao_depois": "valido",
+      "resumo_chars_antes": 0,
+      "resumo_chars_depois": 159
+    },
+    {
+      "titulo": "MCTI investe R$ 188 milhões em inovação industrial, infraestrutura científica e fortalecimento da pesquisa em Alagoas",
+      "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/mcti-investe-r-188-milhoes-em-inovacao-industrial-infraestrutura-cientifica-e-fortalecimento-da-pesquisa-em-alagoas",
+      "validacao_antes": "incompleto",
+      "validacao_depois": "valido",
+      "resumo_chars_antes": 0,
+      "resumo_chars_depois": 116
+    },
+    {
+      "titulo": "23ª Semana Nacional de Ciência e Tecnologia homenageará mulheres cientistas",
+      "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/23a-semana-nacional-de-ciencia-e-tecnologia-homenageara-mulheres-cientistas",
+      "validacao_antes": "incompleto",
+      "validacao_depois": "valido",
+      "resumo_chars_antes": 0,
+      "resumo_chars_depois": 133
+    },
+    {
+      "titulo": "Entre ciência e resistência: ABC completa 110 anos como pilar do conhecimento no Brasil",
+      "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/entre-ciencia-e-resistencia-abc-completa-110-anos-como-pilar-do-conhecimento-no-brasil",
+      "validacao_antes": "incompleto",
+      "validacao_depois": "valido",
+      "resumo_chars_antes": 0,
+      "resumo_chars_depois": 185
+    },
+    {
+      "titulo": "MCTI e CNPq lançam edital de R$ 2,5 milhões para apoiar eventos de inovação e empreendedorismo",
+      "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/mcti-e-cnpq-lancam-edital-de-r-2-5-milhoes-para-apoiar-eventos-de-inovacao-e-empreendedorismo",
+      "validacao_antes": "incompleto",
+      "validacao_depois": "valido",
+      "resumo_chars_antes": 0,
+      "resumo_chars_depois": 132
+    },
+    {
+      "titulo": "Governo do Brasil lança edital de arborização e mapeamento de ilhas de calor",
+      "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/governo-do-brasil-lanca-edital-de-arborizacao-e-mapeamento-de-ilhas-de-calor",
+      "validacao_antes": "incompleto",
+      "validacao_depois": "valido",
+      "resumo_chars_antes": 0,
+      "resumo_chars_depois": 177
+    },
+    {
+      "titulo": "Expansão da área protegida do Pantanal amplia o desenvolvimento de pesquisas sobre a fauna e flora",
+      "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/expansao-da-area-protegida-do-pantanal-amplia-o-desenvolvimento-de-pesquisas-sobre-a-fauna-e-flora",
+      "validacao_antes": "incompleto",
+      "validacao_depois": "valido",
+      "resumo_chars_antes": 0,
+      "resumo_chars_depois": 114
+    },
+    {
+      "titulo": "Prêmio Almirante Álvaro Alberto reconhece contribuição da ciência amazônica para o Brasil",
+      "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/premio-almirante-alvaro-alberto-reconhece-contribuicao-da-ciencia-amazonica-para-o-brasil",
+      "validacao_antes": "incompleto",
+      "validacao_depois": "valido",
+      "resumo_chars_antes": 0,
+      "resumo_chars_depois": 164
+    },
+    {
+      "titulo": "MCTI e União Europeia reforçam parceria estratégica em ciência, tecnologia e inovação",
+      "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/mcti-e-uniao-europeia-reforcam-parceria-estrategica-em-ciencia-tecnologia-e-inovacao",
+      "validacao_antes": "incompleto",
+      "validacao_depois": "valido",
+      "resumo_chars_antes": 0,
+      "resumo_chars_depois": 174
+    }
+  ],
+  "incompleto_para_valido_total": 15
+}

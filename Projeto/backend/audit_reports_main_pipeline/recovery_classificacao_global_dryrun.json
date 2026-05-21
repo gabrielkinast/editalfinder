@@ -1,0 +1,3574 @@
+{
+  "gerado_em": "2026-05-13T01:09:49.972180+00:00",
+  "fonte_dados": "audit_reports_retransform/standardized",
+  "total_editais_analisados": 1294,
+  "total_mudariam_setor_estrategico": 1114,
+  "total_perderiam_defesa_industrial": 591,
+  "total_perderiam_aeroespacial": 304,
+  "total_perderiam_cyber_defesa": 0,
+  "total_ficariam_sem_setor_estrategico": 920,
+  "total_ficariam_sem_setor_tinham_slugs_antes": 790,
+  "total_ficariam_sem_setor_ja_vazios_antes": 130,
+  "nota_cyber_defesa": "Contagem só em extras.setor_estrategico. Neste corpus, cyber_defesa aparece sobretudo em area_tecnologica/subtema, não na lista de setor estratégico — por isso perda em setor pode ser 0.",
+  "top_fontes_mais_afetadas": [
+    [
+      "Grants.gov",
+      127
+    ],
+    [
+      "Fundação Araucária",
+      88
+    ],
+    [
+      "China International Tendering (MOFCOM)",
+      74
+    ],
+    [
+      "JSPS",
+      40
+    ],
+    [
+      "European Defence Fund",
+      39
+    ],
+    [
+      "CAS",
+      34
+    ],
+    [
+      "NSFC",
+      29
+    ],
+    [
+      "ANEEL",
+      27
+    ],
+    [
+      "KAKENHI",
+      26
+    ],
+    [
+      "PNCP Defesa",
+      22
+    ],
+    [
+      "SENAI",
+      22
+    ],
+    [
+      "EMBRAPII",
+      21
+    ],
+    [
+      "KEK",
+      21
+    ],
+    [
+      "NUCLEP",
+      20
+    ],
+    [
+      "PLATAFORMA_INDUSTRIA",
+      20
+    ],
+    [
+      "BNB",
+      19
+    ],
+    [
+      "BNDES",
+      19
+    ],
+    [
+      "Japan MOD",
+      19
+    ],
+    [
+      "PNCP",
+      19
+    ],
+    [
+      "MOST China",
+      16
+    ],
+    [
+      "Eureka Network",
+      16
+    ],
+    [
+      "Mitsubishi Heavy Industries (Suppliers)",
+      16
+    ],
+    [
+      "NEDO",
+      16
+    ],
+    [
+      "DARPA Opportunities",
+      15
+    ],
+    [
+      "DoD SBIR/STTR",
+      15
+    ],
+    [
+      "ESA OSIP",
+      15
+    ],
+    [
+      "CNPQ",
+      14
+    ],
+    [
+      "EIT",
+      14
+    ],
+    [
+      "IPEN",
+      14
+    ],
+    [
+      "Lockheed Martin Suppliers",
+      14
+    ],
+    [
+      "China MOD (public)",
+      13
+    ],
+    [
+      "ATLA",
+      13
+    ],
+    [
+      "NIMS",
+      13
+    ],
+    [
+      "RIKEN",
+      12
+    ],
+    [
+      "BASA",
+      11
+    ],
+    [
+      "JETRO Government Procurement",
+      11
+    ],
+    [
+      "WELLCOME",
+      11
+    ],
+    [
+      "Ministério da Defesa",
+      10
+    ],
+    [
+      "EIC",
+      10
+    ],
+    [
+      "FAPESC",
+      10
+    ]
+  ],
+  "top_arquivos_mais_afetados": [
+    [
+      "grants_gov_standardized.json",
+      127
+    ],
+    [
+      "fappr_standardized.json",
+      88
+    ],
+    [
+      "china_mofcom_tendering_standardized.json",
+      74
+    ],
+    [
+      "japan_jsps_standardized.json",
+      40
+    ],
+    [
+      "european_defence_fund_standardized.json",
+      39
+    ],
+    [
+      "china_cas_standardized.json",
+      34
+    ],
+    [
+      "china_nsfc_standardized.json",
+      29
+    ],
+    [
+      "aneel_standardized.json",
+      27
+    ],
+    [
+      "japan_kakenhi_standardized.json",
+      26
+    ],
+    [
+      "pncp_defesa_standardized.json",
+      22
+    ],
+    [
+      "senai_standardized.json",
+      22
+    ],
+    [
+      "embrapii_standardized.json",
+      21
+    ],
+    [
+      "japan_kek_standardized.json",
+      21
+    ],
+    [
+      "nuclep_standardized.json",
+      20
+    ],
+    [
+      "plataforma_industria_standardized.json",
+      20
+    ],
+    [
+      "bnb_standardized.json",
+      19
+    ],
+    [
+      "bndes_standardized.json",
+      19
+    ],
+    [
+      "japan_mod_standardized.json",
+      19
+    ],
+    [
+      "pncp_standardized.json",
+      19
+    ],
+    [
+      "china_most_standardized.json",
+      16
+    ],
+    [
+      "eureka_network_standardized.json",
+      16
+    ],
+    [
+      "japan_mitsubishi_heavy_standardized.json",
+      16
+    ],
+    [
+      "japan_nedo_standardized.json",
+      16
+    ],
+    [
+      "darpa_opportunities_standardized.json",
+      15
+    ],
+    [
+      "dod_sbir_sttr_standardized.json",
+      15
+    ],
+    [
+      "esa_osip_standardized.json",
+      15
+    ],
+    [
+      "cnpq_standardized.json",
+      14
+    ],
+    [
+      "eit_standardized.json",
+      14
+    ],
+    [
+      "ipen_standardized.json",
+      14
+    ],
+    [
+      "lockheed_martin_suppliers_standardized.json",
+      14
+    ],
+    [
+      "china_mod_public_standardized.json",
+      13
+    ],
+    [
+      "japan_atla_standardized.json",
+      13
+    ],
+    [
+      "japan_nims_standardized.json",
+      13
+    ],
+    [
+      "japan_riken_standardized.json",
+      12
+    ],
+    [
+      "banco_da_amazonia_standardized.json",
+      11
+    ],
+    [
+      "japan_jetro_procurement_standardized.json",
+      11
+    ],
+    [
+      "wellcome_standardized.json",
+      11
+    ],
+    [
+      "defesa_standardized.json",
+      10
+    ],
+    [
+      "eic_standardized.json",
+      10
+    ],
+    [
+      "fapesc_standardized.json",
+      10
+    ]
+  ],
+  "sanidade_fontes_militares": {
+    "amazul": {
+      "linhas": 19,
+      "com_defense_like_depois": 5,
+      "regressao_militar": 0
+    },
+    "darpa": {
+      "linhas": 15,
+      "com_defense_like_depois": 1,
+      "regressao_militar": 9
+    },
+    "dod_sbir_sttr": {
+      "linhas": 15,
+      "com_defense_like_depois": 15,
+      "regressao_militar": 0
+    },
+    "esa_osip": {
+      "linhas": 17,
+      "com_defense_like_depois": 3,
+      "regressao_militar": 0
+    },
+    "iarpa": {
+      "linhas": 8,
+      "com_defense_like_depois": 0,
+      "regressao_militar": 8
+    },
+    "nuclep": {
+      "linhas": 20,
+      "com_defense_like_depois": 20,
+      "regressao_militar": 0
+    }
+  },
+  "exemplos_correcoes_boas": [
+    {
+      "fonte": "AFWERX",
+      "arquivo": "afwerx_standardized.json",
+      "titulo": "SBIR/STTR Overview",
+      "link": "https://afwerx.com/divisions/sbir-sttr/sbir-sttr-overview/",
+      "antes": [
+        "defesa_industrial",
+        "aeroespacial",
+        "defesa"
+      ],
+      "depois": [
+        "defesa"
+      ],
+      "historico_merge": [
+        [
+          "defesa_industrial",
+          "aeroespacial",
+          "defesa"
+        ]
+      ],
+      "motivo_boa": "remocao_slug_ruidoso"
+    },
+    {
+      "fonte": "AFWERX",
+      "arquivo": "afwerx_standardized.json",
+      "titulo": "Open Topic",
+      "link": "https://afwerx.com/divisions/sbir-sttr/open-topic/",
+      "antes": [
+        "defesa_industrial",
+        "aeroespacial",
+        "defesa",
+        "dual_use"
+      ],
+      "depois": [
+        "defesa",
+        "dual_use"
+      ],
+      "historico_merge": [
+        [
+          "defesa_industrial",
+          "aeroespacial",
+          "defesa",
+          "dual_use"
+        ]
+      ],
+      "motivo_boa": "remocao_slug_ruidoso"
+    },
+    {
+      "fonte": "AFWERX",
+      "arquivo": "afwerx_standardized.json",
+      "titulo": "Specific Topic",
+      "link": "https://afwerx.com/divisions/sbir-sttr/specific-topic/",
+      "antes": [
+        "defesa_industrial",
+        "aeroespacial",
+        "defesa",
+        "dual_use"
+      ],
+      "depois": [
+        "defesa",
+        "dual_use"
+      ],
+      "historico_merge": [
+        [
+          "defesa_industrial",
+          "aeroespacial",
+          "defesa",
+          "dual_use"
+        ]
+      ],
+      "motivo_boa": "remocao_slug_ruidoso"
+    },
+    {
+      "fonte": "AFWERX",
+      "arquivo": "afwerx_standardized.json",
+      "titulo": "STRATFI/TACFI",
+      "link": "https://afwerx.com/divisions/sbir-sttr/stratfi-tacfi/",
+      "antes": [
+        "defesa_industrial",
+        "aeroespacial",
+        "defesa"
+      ],
+      "depois": [
+        "defesa"
+      ],
+      "historico_merge": [
+        [
+          "defesa_industrial",
+          "aeroespacial",
+          "defesa"
+        ]
+      ],
+      "motivo_boa": "remocao_slug_ruidoso"
+    },
+    {
+      "fonte": "AFWERX",
+      "arquivo": "afwerx_standardized.json",
+      "titulo": "Phase III",
+      "link": "https://afwerx.com/divisions/sbir-sttr/phase-iii/",
+      "antes": [
+        "defesa_industrial",
+        "defesa"
+      ],
+      "depois": [
+        "defesa"
+      ],
+      "historico_merge": [
+        [
+          "defesa_industrial",
+          "defesa"
+        ]
+      ],
+      "motivo_boa": "remocao_slug_ruidoso"
+    },
+    {
+      "fonte": "AFWERX",
+      "arquivo": "afwerx_standardized.json",
+      "titulo": "Risk-Based Analysis",
+      "link": "https://afwerx.com/divisions/sbir-sttr/risk-based-analysis/",
+      "antes": [
+        "defesa_industrial",
+        "defesa"
+      ],
+      "depois": [
+        "defesa"
+      ],
+      "historico_merge": [
+        [
+          "defesa_industrial",
+          "defesa"
+        ]
+      ],
+      "motivo_boa": "remocao_slug_ruidoso"
+    },
+    {
+      "fonte": "AFWERX",
+      "arquivo": "afwerx_standardized.json",
+      "titulo": "Augmentee Program",
+      "link": "https://afwerx.com/divisions/sbir-sttr/augmentee-program/",
+      "antes": [
+        "defesa_industrial",
+        "aeroespacial",
+        "defesa"
+      ],
+      "depois": [
+        "defesa"
+      ],
+      "historico_merge": [
+        [
+          "defesa_industrial",
+          "aeroespacial",
+          "defesa"
+        ]
+      ],
+      "motivo_boa": "remocao_slug_ruidoso"
+    },
+    {
+      "fonte": "AFWERX",
+      "arquivo": "afwerx_standardized.json",
+      "titulo": "SAGE Fellowship Program",
+      "link": "https://afwerx.com/divisions/sbir-sttr/sage-fellowship-program/",
+      "antes": [
+        "defesa_industrial",
+        "aeroespacial",
+        "defesa"
+      ],
+      "depois": [
+        "defesa"
+      ],
+      "historico_merge": [
+        [
+          "defesa_industrial",
+          "aeroespacial",
+          "defesa"
+        ]
+      ],
+      "motivo_boa": "remocao_slug_ruidoso"
+    },
+    {
+      "fonte": "ANEEL",
+      "arquivo": "aneel_standardized.json",
+      "titulo": "ANEEL - adsp2024778 2",
+      "link": "https://www2.aneel.gov.br/cedoc/adsp2024778_2.pdf",
+      "antes": [
+        "defesa_industrial"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "defesa_industrial"
+        ]
+      ],
+      "motivo_boa": "remocao_slug_ruidoso"
+    },
+    {
+      "fonte": "ANEEL",
+      "arquivo": "aneel_standardized.json",
+      "titulo": "ANEEL - Call for Projects H2 PDI",
+      "link": "https://git.aneel.gov.br/publico/centralconteudo/-/raw/main/Assuntos/PDI/Call_for_Projects_H2_-_PDI.pdf",
+      "antes": [
+        "defesa_industrial"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "defesa_industrial"
+        ]
+      ],
+      "motivo_boa": "remocao_slug_ruidoso"
+    },
+    {
+      "fonte": "ANEEL",
+      "arquivo": "aneel_standardized.json",
+      "titulo": "Sistemas de Armazenamento de Energia",
+      "link": "https://www.gov.br/aneel/pt-br/assuntos/programa-de-pesquisa-desenvolvimento-e-inovacao/chamadas-de-projetos-de-pdi-estrategicos/sistemas-de-armazenamento-de-energia",
+      "antes": [
+        "defesa_industrial",
+        "aeroespacial",
+        "ciencia_tecnologia",
+        "energia"
+      ],
+      "depois": [
+        "ciencia_tecnologia",
+        "energia"
+      ],
+      "historico_merge": [
+        [
+          "defesa_industrial",
+          "aeroespacial",
+          "ciencia_tecnologia",
+          "energia"
+        ]
+      ],
+      "motivo_boa": "remocao_slug_ruidoso"
+    },
+    {
+      "fonte": "ANEEL",
+      "arquivo": "aneel_standardized.json",
+      "titulo": "Chamadas de Projetos de PDI Estratégicos",
+      "link": "https://www.gov.br/aneel/pt-br/assuntos/programa-de-pesquisa-desenvolvimento-e-inovacao/chamadas-de-projetos-de-pdi-estrategicos",
+      "antes": [
+        "defesa_industrial",
+        "aeroespacial",
+        "energia"
+      ],
+      "depois": [
+        "energia"
+      ],
+      "historico_merge": [
+        [
+          "defesa_industrial",
+          "aeroespacial",
+          "energia"
+        ]
+      ],
+      "motivo_boa": "remocao_slug_ruidoso"
+    },
+    {
+      "fonte": "ANEEL",
+      "arquivo": "aneel_standardized.json",
+      "titulo": "Guia de Avaliação da Maturidade Tecnológica da ANEEL",
+      "link": "https://www.gov.br/aneel/pt-br/assuntos/programa-de-pesquisa-desenvolvimento-e-inovacao/guia-de-avaliacao-da-maturidade-tecnologica-da-aneel",
+      "antes": [
+        "defesa_industrial",
+        "ciencia_tecnologia"
+      ],
+      "depois": [
+        "aeroespacial",
+        "ciencia_tecnologia"
+      ],
+      "historico_merge": [
+        [
+          "defesa_industrial",
+          "ciencia_tecnologia"
+        ]
+      ],
+      "motivo_boa": "remocao_slug_ruidoso"
+    },
+    {
+      "fonte": "ANEEL",
+      "arquivo": "aneel_standardized.json",
+      "titulo": "Guia de Comunicação dos Programas de PDI e EE ANEEL",
+      "link": "https://www.gov.br/aneel/pt-br/assuntos/programa-de-pesquisa-desenvolvimento-e-inovacao/guia-de-comunicacao-dos-programas-de-pdi-e-ee-aneel",
+      "antes": [
+        "defesa_industrial",
+        "energia"
+      ],
+      "depois": [
+        "energia"
+      ],
+      "historico_merge": [
+        [
+          "defesa_industrial",
+          "energia"
+        ]
+      ],
+      "motivo_boa": "remocao_slug_ruidoso"
+    },
+    {
+      "fonte": "ANEEL",
+      "arquivo": "aneel_standardized.json",
+      "titulo": "Prêmio ANEEL de Inovação",
+      "link": "https://www.gov.br/aneel/pt-br/assuntos/programa-de-pesquisa-desenvolvimento-e-inovacao/premio-aneel-de-inovacao",
+      "antes": [
+        "defesa_industrial",
+        "energia"
+      ],
+      "depois": [
+        "energia"
+      ],
+      "historico_merge": [
+        [
+          "defesa_industrial",
+          "energia"
+        ]
+      ],
+      "motivo_boa": "remocao_slug_ruidoso"
+    },
+    {
+      "fonte": "ANEEL",
+      "arquivo": "aneel_standardized.json",
+      "titulo": "PDI ANEEL",
+      "link": "https://www.gov.br/aneel/pt-br/assuntos/programa-de-pesquisa-desenvolvimento-e-inovacao/procedimentos-manuais-guias-e-relatorios-do-pdi-aneel",
+      "antes": [
+        "defesa_industrial"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "defesa_industrial"
+        ]
+      ],
+      "motivo_boa": "remocao_slug_ruidoso"
+    },
+    {
+      "fonte": "ANEEL",
+      "arquivo": "aneel_standardized.json",
+      "titulo": "Sandboxes Tarifários",
+      "link": "https://www.gov.br/aneel/pt-br/assuntos/programa-de-pesquisa-desenvolvimento-e-inovacao/sandboxes-tarifarios",
+      "antes": [
+        "defesa_industrial"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "defesa_industrial"
+        ]
+      ],
+      "motivo_boa": "remocao_slug_ruidoso"
+    },
+    {
+      "fonte": "ANEEL",
+      "arquivo": "aneel_standardized.json",
+      "titulo": "Temas Estratégicos do PEQuI",
+      "link": "https://www.gov.br/aneel/pt-br/assuntos/programa-de-pesquisa-desenvolvimento-e-inovacao/temas-estrategicos-do-pequi",
+      "antes": [
+        "defesa_industrial",
+        "aeroespacial",
+        "ciencia_tecnologia",
+        "energia"
+      ],
+      "depois": [
+        "ciencia_tecnologia",
+        "energia"
+      ],
+      "historico_merge": [
+        [
+          "defesa_industrial",
+          "aeroespacial",
+          "ciencia_tecnologia",
+          "energia"
+        ]
+      ],
+      "motivo_boa": "remocao_slug_ruidoso"
+    },
+    {
+      "fonte": "ANEEL",
+      "arquivo": "aneel_standardized.json",
+      "titulo": "Planejamento de Tecnologia da Informação",
+      "link": "https://www.gov.br/aneel/pt-br/acesso-a-informacao/acoes-e-programas/planejamento-ti",
+      "antes": [
+        "defesa_industrial",
+        "aeroespacial"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "defesa_industrial",
+          "aeroespacial"
+        ]
+      ],
+      "motivo_boa": "remocao_slug_ruidoso"
+    },
+    {
+      "fonte": "ANEEL",
+      "arquivo": "aneel_standardized.json",
+      "titulo": "Programa de Eficiência Energética",
+      "link": "https://www.gov.br/aneel/pt-br/acesso-a-informacao/acoes-e-programas/eficiencia-energetica",
+      "antes": [
+        "defesa_industrial",
+        "aeroespacial",
+        "energia"
+      ],
+      "depois": [
+        "energia"
+      ],
+      "historico_merge": [
+        [
+          "defesa_industrial",
+          "aeroespacial",
+          "energia"
+        ]
+      ],
+      "motivo_boa": "remocao_slug_ruidoso"
+    },
+    {
+      "fonte": "ANEEL",
+      "arquivo": "aneel_standardized.json",
+      "titulo": "Programa de Pesquisa, Desenvolvimento e Inovação (PDI)",
+      "link": "https://www.gov.br/aneel/pt-br/acesso-a-informacao/acoes-e-programas/pesquisa-e-desenvolvimento",
+      "antes": [
+        "defesa_industrial",
+        "energia"
+      ],
+      "depois": [
+        "energia"
+      ],
+      "historico_merge": [
+        [
+          "defesa_industrial",
+          "energia"
+        ]
+      ],
+      "motivo_boa": "remocao_slug_ruidoso"
+    },
+    {
+      "fonte": "ANEEL",
+      "arquivo": "aneel_standardized.json",
+      "titulo": "Programas Setoriais",
+      "link": "https://www.gov.br/aneel/pt-br/acesso-a-informacao/acoes-e-programas/setoriais",
+      "antes": [
+        "defesa_industrial",
+        "energia"
+      ],
+      "depois": [
+        "energia"
+      ],
+      "historico_merge": [
+        [
+          "defesa_industrial",
+          "energia"
+        ]
+      ],
+      "motivo_boa": "remocao_slug_ruidoso"
+    },
+    {
+      "fonte": "ANEEL",
+      "arquivo": "aneel_standardized.json",
+      "titulo": "Plano de Desenvolvimento da Distribuição",
+      "link": "https://www.gov.br/aneel/pt-br/assuntos/distribuicao/plano-de-desenvolvimento-da-distribuicao",
+      "antes": [
+        "defesa_industrial"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "defesa_industrial"
+        ]
+      ],
+      "motivo_boa": "remocao_slug_ruidoso"
+    },
+    {
+      "fonte": "ANEEL",
+      "arquivo": "aneel_standardized.json",
+      "titulo": "Programa de Pesquisa, Desenvolvimento e Inovação da ANEEL",
+      "link": "https://www.gov.br/aneel/pt-br/assuntos/programa-de-pesquisa-desenvolvimento-e-inovacao",
+      "antes": [
+        "defesa_industrial"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "defesa_industrial"
+        ]
+      ],
+      "motivo_boa": "remocao_slug_ruidoso"
+    },
+    {
+      "fonte": "ANEEL",
+      "arquivo": "aneel_standardized.json",
+      "titulo": "PDI ANEEL",
+      "link": "https://www.gov.br/aneel/pt-br/centrais-de-conteudos/manuais-modelos-e-instrucoes/procedimentos-manuais-guias-e-relatorios-do-pdi-aneel",
+      "antes": [
+        "defesa_industrial"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "defesa_industrial"
+        ]
+      ],
+      "motivo_boa": "remocao_slug_ruidoso"
+    },
+    {
+      "fonte": "ANEEL",
+      "arquivo": "aneel_standardized.json",
+      "titulo": "Pesquisa e Desenvolvimento e Eficiência Energética",
+      "link": "https://www.gov.br/aneel/pt-br/centrais-de-conteudos/apresentacoes/ped-ee",
+      "antes": [
+        "defesa_industrial",
+        "energia"
+      ],
+      "depois": [
+        "energia"
+      ],
+      "historico_merge": [
+        [
+          "defesa_industrial",
+          "energia"
+        ]
+      ],
+      "motivo_boa": "remocao_slug_ruidoso"
+    },
+    {
+      "fonte": "ANEEL",
+      "arquivo": "aneel_standardized.json",
+      "titulo": "PDI ANEEL",
+      "link": "https://www.gov.br/aneel/pt-br/centrais-de-conteudos/manuais-modelos-e-instrucoes/pdi-aneel",
+      "antes": [
+        "defesa_industrial"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "defesa_industrial"
+        ]
+      ],
+      "motivo_boa": "remocao_slug_ruidoso"
+    },
+    {
+      "fonte": "ANEEL",
+      "arquivo": "aneel_standardized.json",
+      "titulo": "Procedimentos dos Programas de Eficiência Energética e de Pesquisa e Desenvolvimento",
+      "link": "https://www.gov.br/aneel/pt-br/centrais-de-conteudos/procedimentos-regulatorios/procedimentos-ee-ped",
+      "antes": [
+        "defesa_industrial",
+        "energia"
+      ],
+      "depois": [
+        "energia"
+      ],
+      "historico_merge": [
+        [
+          "defesa_industrial",
+          "energia"
+        ]
+      ],
+      "motivo_boa": "remocao_slug_ruidoso"
+    },
+    {
+      "fonte": "ANEEL",
+      "arquivo": "aneel_standardized.json",
+      "titulo": "Revista de Pesquisa e Desenvolvimento (P&D)",
+      "link": "https://www.gov.br/aneel/pt-br/centrais-de-conteudos/publicacoes-institucionais/revista-de-ped",
+      "antes": [
+        "defesa_industrial",
+        "ciencia_tecnologia",
+        "energia"
+      ],
+      "depois": [
+        "ciencia_tecnologia",
+        "energia"
+      ],
+      "historico_merge": [
+        [
+          "defesa_industrial",
+          "ciencia_tecnologia",
+          "energia"
+        ]
+      ],
+      "motivo_boa": "remocao_slug_ruidoso"
+    },
+    {
+      "fonte": "ANEEL",
+      "arquivo": "aneel_standardized.json",
+      "titulo": "Pesquisa e Desenvolvimento e Eficiência Energética",
+      "link": "https://www.gov.br/aneel/pt-br/centrais-de-conteudos/relatorios-e-indicadores/ped-e-ee",
+      "antes": [
+        "defesa_industrial",
+        "ciencia_tecnologia",
+        "energia"
+      ],
+      "depois": [
+        "ciencia_tecnologia",
+        "energia"
+      ],
+      "historico_merge": [
+        [
+          "defesa_industrial",
+          "ciencia_tecnologia",
+          "energia"
+        ]
+      ],
+      "motivo_boa": "remocao_slug_ruidoso"
+    },
+    {
+      "fonte": "ANEEL",
+      "arquivo": "aneel_standardized.json",
+      "titulo": "1ª Chamada Pública",
+      "link": "https://www.gov.br/aneel/pt-br/empreendedores/sandboxes-tarifarios/1a-chamada-publica",
+      "antes": [
+        "defesa_industrial",
+        "energia"
+      ],
+      "depois": [
+        "energia"
+      ],
+      "historico_merge": [
+        [
+          "defesa_industrial",
+          "energia"
+        ]
+      ],
+      "motivo_boa": "remocao_slug_ruidoso"
+    },
+    {
+      "fonte": "ANEEL",
+      "arquivo": "aneel_standardized.json",
+      "titulo": "2ª Chamada Pública",
+      "link": "https://www.gov.br/aneel/pt-br/empreendedores/sandboxes-tarifarios/2a-chamada-publica",
+      "antes": [
+        "defesa_industrial",
+        "energia"
+      ],
+      "depois": [
+        "energia"
+      ],
+      "historico_merge": [
+        [
+          "defesa_industrial",
+          "energia"
+        ]
+      ],
+      "motivo_boa": "remocao_slug_ruidoso"
+    },
+    {
+      "fonte": "ANEEL",
+      "arquivo": "aneel_standardized.json",
+      "titulo": "Demais Projetos",
+      "link": "https://www.gov.br/aneel/pt-br/empreendedores/sandboxes-tarifarios/demais-projetos",
+      "antes": [
+        "defesa_industrial",
+        "energia"
+      ],
+      "depois": [
+        "energia"
+      ],
+      "historico_merge": [
+        [
+          "defesa_industrial",
+          "energia"
+        ]
+      ],
+      "motivo_boa": "remocao_slug_ruidoso"
+    },
+    {
+      "fonte": "ANEEL",
+      "arquivo": "aneel_standardized.json",
+      "titulo": "Desenvolvimento, cuidados e educação pré-escolar",
+      "link": "https://www.gov.br/pt-br/temas/desenvolvimento-cuidados-e-educacao-pre-escolar",
+      "antes": [
+        "defesa_industrial"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "defesa_industrial"
+        ]
+      ],
+      "motivo_boa": "remocao_slug_ruidoso"
+    },
+    {
+      "fonte": "ANEEL",
+      "arquivo": "aneel_standardized.json",
+      "titulo": "ANEEL - dd projetos de pd em energia eletrica",
+      "link": "https://dadosabertos.aneel.gov.br/dataset/78c2db95-fb29-4851-98f9-4d55cb5bf646/resource/8aa3a61c-41d2-48c9-b856-81d9b391fcda/download/dd-projetos-de-pd-em-energia-eletrica.pdf",
+      "antes": [
+        "defesa_industrial",
+        "energia"
+      ],
+      "depois": [
+        "energia"
+      ],
+      "historico_merge": [
+        [
+          "defesa_industrial",
+          "energia"
+        ]
+      ],
+      "motivo_boa": "remocao_slug_ruidoso"
+    },
+    {
+      "fonte": "ANP",
+      "arquivo": "anp_standardized.json",
+      "titulo": "Edital de Chamada Pública",
+      "link": "https://www.gov.br/anp/pt-br/assuntos/tecnologia-meio-ambiente/prh-anp-programa-de-formacao-de-recursos-humanos/eixo-academico/edital-de-chamada-publica",
+      "antes": [
+        "defesa_industrial",
+        "aeroespacial",
+        "ciencia_tecnologia"
+      ],
+      "depois": [
+        "ciencia_tecnologia"
+      ],
+      "historico_merge": [
+        [
+          "defesa_industrial",
+          "aeroespacial",
+          "ciencia_tecnologia"
+        ]
+      ],
+      "motivo_boa": "remocao_slug_ruidoso"
+    },
+    {
+      "fonte": "ANP",
+      "arquivo": "anp_standardized.json",
+      "titulo": "Consultas e Audiências Públicas",
+      "link": "https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas/consulta-audiencia-publica",
+      "antes": [
+        "defesa_industrial"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "defesa_industrial"
+        ]
+      ],
+      "motivo_boa": "remocao_slug_ruidoso"
+    },
+    {
+      "fonte": "Apex Brasil",
+      "arquivo": "apex_standardized.json",
+      "titulo": "licitações e contratos",
+      "link": "https://apexbrasil.com.br/content/apexbrasil/br/pt/transparencia-e-prestacao-de-contas/licitacoes-e-contratos.html",
+      "antes": [
+        "aeroespacial"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "aeroespacial"
+        ]
+      ],
+      "motivo_boa": "remocao_slug_ruidoso"
+    },
+    {
+      "fonte": "BADESUL",
+      "arquivo": "badesul_standardized.json",
+      "titulo": "Badesul divulga projetos contemplados",
+      "link": "https://www.badesul.com.br/fas/transparencia/download?idPublicacao=29016",
+      "antes": [
+        "defesa_industrial"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "defesa_industrial"
+        ]
+      ],
+      "motivo_boa": "remocao_slug_ruidoso"
+    },
+    {
+      "fonte": "BADESUL",
+      "arquivo": "badesul_standardized.json",
+      "titulo": "Lista de entidades inscritas",
+      "link": "https://www.badesul.com.br/fas/transparencia/download?idPublicacao=29015",
+      "antes": [
+        "defesa_industrial",
+        "aeroespacial"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "defesa_industrial",
+          "aeroespacial"
+        ]
+      ],
+      "motivo_boa": "remocao_slug_ruidoso"
+    }
+  ],
+  "exemplos_casos_duvidosos": [
+    {
+      "fonte": "AMAZUL",
+      "arquivo": "amazul_standardized.json",
+      "titulo": "Dispensa de Licitação 05/2024",
+      "link": "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos/dispensa-de-licitacao-052024",
+      "antes": [
+        "nuclear",
+        "defesa"
+      ],
+      "depois": [
+        "defesa",
+        "nuclear",
+        "aeroespacial"
+      ],
+      "historico_merge": [
+        [
+          "nuclear",
+          "defesa"
+        ]
+      ],
+      "motivo_duvidoso": "mudanca_sem_criterio_boa_ou_lock"
+    },
+    {
+      "fonte": "BASA",
+      "arquivo": "banco_da_amazonia_standardized.json",
+      "titulo": "Crédito e financiamento",
+      "link": "https://www.bancoamazonia.com.br/rural/credito-e-financiamento-agro",
+      "antes": [
+        "agro"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "agro"
+        ]
+      ],
+      "motivo_duvidoso": "mudanca_sem_criterio_boa_ou_lock"
+    },
+    {
+      "fonte": "BASA",
+      "arquivo": "banco_da_amazonia_standardized.json",
+      "titulo": "PRONAF",
+      "link": "https://www.bancoamazonia.com.br/linhas-de-fomento/pronaf",
+      "antes": [
+        "agro"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "agro"
+        ]
+      ],
+      "motivo_duvidoso": "mudanca_sem_criterio_boa_ou_lock"
+    },
+    {
+      "fonte": "BASA",
+      "arquivo": "banco_da_amazonia_standardized.json",
+      "titulo": "Plano Safra",
+      "link": "https://www.bancoamazonia.com.br/linhas-de-fomento/plano-safra",
+      "antes": [
+        "agro"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "agro"
+        ]
+      ],
+      "motivo_duvidoso": "mudanca_sem_criterio_boa_ou_lock"
+    },
+    {
+      "fonte": "BASA",
+      "arquivo": "banco_da_amazonia_standardized.json",
+      "titulo": "Fundo da Marinha Mercante",
+      "link": "https://www.bancoamazonia.com.br/empresas/credito-e-financiamentos/fundo-marinha",
+      "antes": [],
+      "depois": [
+        "defesa"
+      ],
+      "historico_merge": null,
+      "motivo_duvidoso": "mudanca_sem_criterio_boa_ou_lock"
+    },
+    {
+      "fonte": "BASA",
+      "arquivo": "banco_da_amazonia_standardized.json",
+      "titulo": "Giro Produtor Rural",
+      "link": "https://www.bancoamazonia.com.br/empresas/credito-e-financiamentos/capital-de-giro-produtor-rural",
+      "antes": [
+        "agro"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "agro"
+        ]
+      ],
+      "motivo_duvidoso": "mudanca_sem_criterio_boa_ou_lock"
+    },
+    {
+      "fonte": "BASA",
+      "arquivo": "banco_da_amazonia_standardized.json",
+      "titulo": "Giro Produtor Rural",
+      "link": "https://www.bancoamazonia.com.br/rural/credito-e-financiamento-agro/capital-de-giro-produtor-rural",
+      "antes": [
+        "agro"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "agro"
+        ]
+      ],
+      "motivo_duvidoso": "mudanca_sem_criterio_boa_ou_lock"
+    },
+    {
+      "fonte": "BASA",
+      "arquivo": "banco_da_amazonia_standardized.json",
+      "titulo": "Máquinas e Equipamentos",
+      "link": "https://www.bancoamazonia.com.br/rural/credito-e-financiamento-agro/maquinas-equipamentos",
+      "antes": [
+        "agro"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "agro"
+        ]
+      ],
+      "motivo_duvidoso": "mudanca_sem_criterio_boa_ou_lock"
+    },
+    {
+      "fonte": "BASA",
+      "arquivo": "banco_da_amazonia_standardized.json",
+      "titulo": "Financiamento de Veículo Produtor Rural",
+      "link": "https://www.bancoamazonia.com.br/rural/credito-e-financiamento-agro/financiamento-veiculo-produtor-rural",
+      "antes": [
+        "agro"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "agro"
+        ]
+      ],
+      "motivo_duvidoso": "mudanca_sem_criterio_boa_ou_lock"
+    },
+    {
+      "fonte": "BASA",
+      "arquivo": "banco_da_amazonia_standardized.json",
+      "titulo": "Renegociação de Dívidas",
+      "link": "https://www.bancoamazonia.com.br/rural/credito-e-financiamento-agro/renegociacao-dividas",
+      "antes": [
+        "agro"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "agro"
+        ]
+      ],
+      "motivo_duvidoso": "mudanca_sem_criterio_boa_ou_lock"
+    },
+    {
+      "fonte": "BASA",
+      "arquivo": "banco_da_amazonia_standardized.json",
+      "titulo": "PRONAF A",
+      "link": "https://www.bancoamazonia.com.br/rural/credito-e-financiamento-agro/pronaf/pronaf-a",
+      "antes": [
+        "agro"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "agro"
+        ]
+      ],
+      "motivo_duvidoso": "mudanca_sem_criterio_boa_ou_lock"
+    },
+    {
+      "fonte": "BASA",
+      "arquivo": "banco_da_amazonia_standardized.json",
+      "titulo": "Programa Nacional de Fortalecimento da Agricultura Familiar",
+      "link": "https://www.bancoamazonia.com.br/rural/credito-e-financiamento-agro/pronaf",
+      "antes": [
+        "agro"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "agro"
+        ]
+      ],
+      "motivo_duvidoso": "mudanca_sem_criterio_boa_ou_lock"
+    },
+    {
+      "fonte": "BDMG",
+      "arquivo": "bdmg_standardized.json",
+      "titulo": "Se é novo para sua empresa, é inovação para o BDMG.",
+      "link": "https://www.bdmg.mg.gov.br/inovacao",
+      "antes": [
+        "inovacao",
+        "industria"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "inovacao",
+          "industria"
+        ]
+      ],
+      "motivo_duvidoso": "mudanca_sem_criterio_boa_ou_lock"
+    },
+    {
+      "fonte": "BDMG",
+      "arquivo": "bdmg_standardized.json",
+      "titulo": "Agronegócio Para empresas e cooperativas que exercem as mais diversas atividades ligadas à agropecuária.",
+      "link": "https://www.bdmg.mg.gov.br/agronegocio",
+      "antes": [
+        "agro",
+        "sustentabilidade"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "agro",
+          "sustentabilidade"
+        ]
+      ],
+      "motivo_duvidoso": "mudanca_sem_criterio_boa_ou_lock"
+    },
+    {
+      "fonte": "BDMG",
+      "arquivo": "bdmg_standardized.json",
+      "titulo": "Não apenas prover o crédito, mas mensurar o seu impacto",
+      "link": "https://www.bdmg.mg.gov.br/credito-verde",
+      "antes": [
+        "sustentabilidade"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "sustentabilidade"
+        ]
+      ],
+      "motivo_duvidoso": "mudanca_sem_criterio_boa_ou_lock"
+    },
+    {
+      "fonte": "BDMG",
+      "arquivo": "bdmg_standardized.json",
+      "titulo": "Linhas Permanentes de Financiamento Municipal",
+      "link": "https://www.bdmg.mg.gov.br/municipios/?sec-programa-paraopeba",
+      "antes": [
+        "sustentabilidade"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "sustentabilidade"
+        ]
+      ],
+      "motivo_duvidoso": "mudanca_sem_criterio_boa_ou_lock"
+    },
+    {
+      "fonte": "BDMG",
+      "arquivo": "bdmg_standardized.json",
+      "titulo": "Linhas Permanentes de Financiamento Municipal",
+      "link": "https://www.bdmg.mg.gov.br/municipios/?cta-editais",
+      "antes": [
+        "sustentabilidade"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "sustentabilidade"
+        ]
+      ],
+      "motivo_duvidoso": "mudanca_sem_criterio_boa_ou_lock"
+    },
+    {
+      "fonte": "BDMG",
+      "arquivo": "bdmg_standardized.json",
+      "titulo": "Linhas Permanentes de Financiamento Municipal",
+      "link": "https://www.bdmg.mg.gov.br/municipios/?section-bdmg-digital",
+      "antes": [
+        "sustentabilidade"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "sustentabilidade"
+        ]
+      ],
+      "motivo_duvidoso": "mudanca_sem_criterio_boa_ou_lock"
+    },
+    {
+      "fonte": "BDMG",
+      "arquivo": "bdmg_standardized.json",
+      "titulo": "Linhas Permanentes de Financiamento Municipal",
+      "link": "https://www.bdmg.mg.gov.br/municipios/?form=cadastro",
+      "antes": [
+        "sustentabilidade"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "sustentabilidade"
+        ]
+      ],
+      "motivo_duvidoso": "mudanca_sem_criterio_boa_ou_lock"
+    },
+    {
+      "fonte": "BNB",
+      "arquivo": "bnb_standardized.json",
+      "titulo": "Microcrédito – soluções para pequenos negócios – Banco do Nordeste",
+      "link": "https://www.bnb.gov.br/web/guest/microcredito",
+      "antes": [
+        "agro"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "agro"
+        ]
+      ],
+      "motivo_duvidoso": "mudanca_sem_criterio_boa_ou_lock"
+    },
+    {
+      "fonte": "BNB",
+      "arquivo": "bnb_standardized.json",
+      "titulo": "Empréstimos e Financiamentos - Soluções para você - Banco do Nordeste",
+      "link": "https://www.bnb.gov.br/web/guest/voce/emprestimos-e-financiamentos",
+      "antes": [
+        "energia",
+        "sustentabilidade",
+        "inovacao"
+      ],
+      "depois": [
+        "energia"
+      ],
+      "historico_merge": [
+        [
+          "energia",
+          "sustentabilidade",
+          "inovacao"
+        ]
+      ],
+      "motivo_duvidoso": "mudanca_sem_criterio_boa_ou_lock"
+    },
+    {
+      "fonte": "BNB",
+      "arquivo": "bnb_standardized.json",
+      "titulo": "Micro e Pequenas Empresas - Crédito e soluções para o seu negócio - Banco do Nordeste",
+      "link": "https://www.bnb.gov.br/web/guest/mpe",
+      "antes": [],
+      "depois": [
+        "energia"
+      ],
+      "historico_merge": null,
+      "motivo_duvidoso": "mudanca_sem_criterio_boa_ou_lock"
+    },
+    {
+      "fonte": "BNB",
+      "arquivo": "bnb_standardized.json",
+      "titulo": "Miniprodutor Rural – crédito e soluções para o campo – Banco do Nordeste",
+      "link": "https://www.bnb.gov.br/web/guest/miniprodutor-rural",
+      "antes": [
+        "agro"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "agro"
+        ]
+      ],
+      "motivo_duvidoso": "mudanca_sem_criterio_boa_ou_lock"
+    },
+    {
+      "fonte": "BNB",
+      "arquivo": "bnb_standardized.json",
+      "titulo": "Crédito para Poder Público – financiamento de projetos – Banco do Nordeste",
+      "link": "https://www.bnb.gov.br/web/guest/poder-publico/credito",
+      "antes": [
+        "sustentabilidade",
+        "industria",
+        "desenvolvimento_regional"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "sustentabilidade",
+          "industria",
+          "desenvolvimento_regional"
+        ]
+      ],
+      "motivo_duvidoso": "mudanca_sem_criterio_boa_ou_lock"
+    },
+    {
+      "fonte": "BNB",
+      "arquivo": "bnb_standardized.json",
+      "titulo": "Publicações para Agricultura Familiar - Setor Rural - Produtos e Serviços",
+      "link": "https://www.bnb.gov.br/rural/publicacoes",
+      "antes": [
+        "agro"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "agro"
+        ]
+      ],
+      "motivo_duvidoso": "mudanca_sem_criterio_boa_ou_lock"
+    },
+    {
+      "fonte": "BNB",
+      "arquivo": "bnb_standardized.json",
+      "titulo": "Agricultura Familiar – atividades financiadas – Banco do Nordeste",
+      "link": "https://www.bnb.gov.br/atividades-financiadas/pronaf",
+      "antes": [
+        "agro",
+        "inovacao"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "agro",
+          "inovacao"
+        ]
+      ],
+      "motivo_duvidoso": "mudanca_sem_criterio_boa_ou_lock"
+    },
+    {
+      "fonte": "BNB",
+      "arquivo": "bnb_standardized.json",
+      "titulo": "Apicultura – atividades financiadas – Banco do Nordeste",
+      "link": "https://www.bnb.gov.br/atividades-financiadas/apicultura",
+      "antes": [
+        "agro"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "agro"
+        ]
+      ],
+      "motivo_duvidoso": "mudanca_sem_criterio_boa_ou_lock"
+    },
+    {
+      "fonte": "BNB",
+      "arquivo": "bnb_standardized.json",
+      "titulo": "Bovinocultura – atividades financiadas – Banco do Nordeste",
+      "link": "https://www.bnb.gov.br/atividades-financiadas/bovinocultura",
+      "antes": [
+        "agro",
+        "sustentabilidade",
+        "inovacao"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "agro",
+          "sustentabilidade",
+          "inovacao"
+        ]
+      ],
+      "motivo_duvidoso": "mudanca_sem_criterio_boa_ou_lock"
+    },
+    {
+      "fonte": "BNB",
+      "arquivo": "bnb_standardized.json",
+      "titulo": "Carcinicultura – atividades financiadas – Banco do Nordeste",
+      "link": "https://www.bnb.gov.br/atividades-financiadas/carcinicultura",
+      "antes": [
+        "agro",
+        "sustentabilidade",
+        "industria"
+      ],
+      "depois": [
+        "defesa"
+      ],
+      "historico_merge": [
+        [
+          "agro",
+          "sustentabilidade",
+          "industria"
+        ]
+      ],
+      "motivo_duvidoso": "mudanca_sem_criterio_boa_ou_lock"
+    },
+    {
+      "fonte": "BNB",
+      "arquivo": "bnb_standardized.json",
+      "titulo": "Educação – atividades financiadas – Banco do Nordeste",
+      "link": "https://www.bnb.gov.br/atividades-financiadas/educacao",
+      "antes": [
+        "inovacao"
+      ],
+      "depois": [
+        "energia"
+      ],
+      "historico_merge": [
+        [
+          "inovacao"
+        ]
+      ],
+      "motivo_duvidoso": "mudanca_sem_criterio_boa_ou_lock"
+    },
+    {
+      "fonte": "BNB",
+      "arquivo": "bnb_standardized.json",
+      "titulo": "Floricultura - Atividades Financiadas - Banco do Nordeste",
+      "link": "https://www.bnb.gov.br/atividades-financiadas/floricultura",
+      "antes": [
+        "agro"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "agro"
+        ]
+      ],
+      "motivo_duvidoso": "mudanca_sem_criterio_boa_ou_lock"
+    },
+    {
+      "fonte": "BNB",
+      "arquivo": "bnb_standardized.json",
+      "titulo": "Fruticultura – atividades financiadas – Banco do Nordeste",
+      "link": "https://www.bnb.gov.br/atividades-financiadas/fruticultura",
+      "antes": [
+        "agro",
+        "industria"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "agro",
+          "industria"
+        ]
+      ],
+      "motivo_duvidoso": "mudanca_sem_criterio_boa_ou_lock"
+    },
+    {
+      "fonte": "BNB",
+      "arquivo": "bnb_standardized.json",
+      "titulo": "Grãos – atividades financiadas – Banco do Nordeste",
+      "link": "https://www.bnb.gov.br/atividades-financiadas/graos",
+      "antes": [
+        "agro",
+        "industria"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "agro",
+          "industria"
+        ]
+      ],
+      "motivo_duvidoso": "mudanca_sem_criterio_boa_ou_lock"
+    },
+    {
+      "fonte": "BNB",
+      "arquivo": "bnb_standardized.json",
+      "titulo": "Industrial – atividades financiadas – Banco do Nordeste",
+      "link": "https://www.bnb.gov.br/atividades-financiadas/industrial",
+      "antes": [
+        "inovacao",
+        "industria"
+      ],
+      "depois": [
+        "industria"
+      ],
+      "historico_merge": [
+        [
+          "inovacao",
+          "industria"
+        ]
+      ],
+      "motivo_duvidoso": "mudanca_sem_criterio_boa_ou_lock"
+    },
+    {
+      "fonte": "BNB",
+      "arquivo": "bnb_standardized.json",
+      "titulo": "Meio Ambiente – atividades financiadas – Banco do Nordeste",
+      "link": "https://www.bnb.gov.br/atividades-financiadas/meio-ambiente",
+      "antes": [
+        "agro",
+        "sustentabilidade",
+        "inovacao"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "agro",
+          "sustentabilidade",
+          "inovacao"
+        ]
+      ],
+      "motivo_duvidoso": "mudanca_sem_criterio_boa_ou_lock"
+    },
+    {
+      "fonte": "BNB",
+      "arquivo": "bnb_standardized.json",
+      "titulo": "Ovinocaprinocultura – atividades financiadas – Banco do Nordeste",
+      "link": "https://www.bnb.gov.br/atividades-financiadas/ovinocaprinocultura",
+      "antes": [
+        "agro",
+        "industria"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "agro",
+          "industria"
+        ]
+      ],
+      "motivo_duvidoso": "mudanca_sem_criterio_boa_ou_lock"
+    },
+    {
+      "fonte": "BNB",
+      "arquivo": "bnb_standardized.json",
+      "titulo": "Pesca – atividades financiadas – Banco do Nordeste",
+      "link": "https://www.bnb.gov.br/atividades-financiadas/pesca",
+      "antes": [
+        "agro",
+        "industria"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "agro",
+          "industria"
+        ]
+      ],
+      "motivo_duvidoso": "mudanca_sem_criterio_boa_ou_lock"
+    },
+    {
+      "fonte": "BNB",
+      "arquivo": "bnb_standardized.json",
+      "titulo": "Piscicultura – atividades financiadas – Banco do Nordeste",
+      "link": "https://www.bnb.gov.br/atividades-financiadas/piscicultura",
+      "antes": [
+        "agro",
+        "industria"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "agro",
+          "industria"
+        ]
+      ],
+      "motivo_duvidoso": "mudanca_sem_criterio_boa_ou_lock"
+    },
+    {
+      "fonte": "CAEA",
+      "arquivo": "china_caea_standardized.json",
+      "titulo": "CNNC and NASA sign EPC contract for building an HPR1000 unit in Argentina",
+      "link": "https://www.caea.gov.cn/english/n6759361/n6759363/c6813199/content.html",
+      "antes": [
+        "nuclear"
+      ],
+      "depois": [
+        "aeroespacial",
+        "nuclear"
+      ],
+      "historico_merge": [
+        [
+          "nuclear"
+        ]
+      ],
+      "motivo_duvidoso": "mudanca_sem_criterio_boa_ou_lock"
+    },
+    {
+      "fonte": "CAS",
+      "arquivo": "china_cas_standardized.json",
+      "titulo": "科研进展",
+      "link": "https://www.cas.cn/../../syky/",
+      "antes": [
+        "ciencia_tecnologia"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "ciencia_tecnologia"
+        ]
+      ],
+      "motivo_duvidoso": "mudanca_sem_criterio_boa_ou_lock"
+    }
+  ],
+  "exemplos_lock_recomendado": [
+    {
+      "fonte": "DARPA Opportunities",
+      "arquivo": "darpa_opportunities_standardized.json",
+      "titulo": "Offices",
+      "link": "https://www.darpa.mil/about/offices",
+      "antes": [
+        "defesa_industrial",
+        "aeroespacial",
+        "defesa"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "defesa_industrial",
+          "aeroespacial",
+          "defesa"
+        ]
+      ],
+      "motivo_lock": "military_family_evidence_loss"
+    },
+    {
+      "fonte": "DARPA Opportunities",
+      "arquivo": "darpa_opportunities_standardized.json",
+      "titulo": "Contracts Management Office",
+      "link": "https://www.darpa.mil/about/offices/contracts-management",
+      "antes": [
+        "defesa_industrial",
+        "aeroespacial"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "defesa_industrial",
+          "aeroespacial"
+        ]
+      ],
+      "motivo_lock": "military_family_evidence_loss"
+    },
+    {
+      "fonte": "DARPA Opportunities",
+      "arquivo": "darpa_opportunities_standardized.json",
+      "titulo": "Academia",
+      "link": "https://www.darpa.mil/work-with-us/communities/academia",
+      "antes": [
+        "defesa_industrial"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "defesa_industrial"
+        ]
+      ],
+      "motivo_lock": "military_family_evidence_loss"
+    },
+    {
+      "fonte": "DARPA Opportunities",
+      "arquivo": "darpa_opportunities_standardized.json",
+      "titulo": "Industry",
+      "link": "https://www.darpa.mil/work-with-us/communities/industry",
+      "antes": [
+        "defesa_industrial",
+        "aeroespacial",
+        "defesa"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "defesa_industrial",
+          "aeroespacial",
+          "defesa"
+        ]
+      ],
+      "motivo_lock": "military_family_evidence_loss"
+    },
+    {
+      "fonte": "DARPA Opportunities",
+      "arquivo": "darpa_opportunities_standardized.json",
+      "titulo": "Small Business",
+      "link": "https://www.darpa.mil/work-with-us/communities/small-business",
+      "antes": [
+        "defesa_industrial",
+        "aeroespacial"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "defesa_industrial",
+          "aeroespacial"
+        ]
+      ],
+      "motivo_lock": "military_family_evidence_loss"
+    },
+    {
+      "fonte": "DARPA Opportunities",
+      "arquivo": "darpa_opportunities_standardized.json",
+      "titulo": "Ideas Under Incubation",
+      "link": "https://www.darpa.mil/research/ideas",
+      "antes": [
+        "defesa_industrial",
+        "aeroespacial"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "defesa_industrial",
+          "aeroespacial"
+        ]
+      ],
+      "motivo_lock": "military_family_evidence_loss"
+    },
+    {
+      "fonte": "DARPA Opportunities",
+      "arquivo": "darpa_opportunities_standardized.json",
+      "titulo": "About DARPA",
+      "link": "https://www.darpa.mil/about",
+      "antes": [
+        "defesa_industrial",
+        "aeroespacial",
+        "defesa"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "defesa_industrial",
+          "aeroespacial",
+          "defesa"
+        ]
+      ],
+      "motivo_lock": "military_family_evidence_loss"
+    },
+    {
+      "fonte": "DARPA Opportunities",
+      "arquivo": "darpa_opportunities_standardized.json",
+      "titulo": "Defense Sciences Office",
+      "link": "https://www.darpa.mil/about/offices/dso",
+      "antes": [
+        "defesa_industrial",
+        "aeroespacial",
+        "defesa"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "defesa_industrial",
+          "aeroespacial",
+          "defesa"
+        ]
+      ],
+      "motivo_lock": "military_family_evidence_loss"
+    },
+    {
+      "fonte": "DARPA Opportunities",
+      "arquivo": "darpa_opportunities_standardized.json",
+      "titulo": "Usage Policy",
+      "link": "https://www.darpa.mil/policies/usage-policy",
+      "antes": [
+        "defesa_industrial"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "defesa_industrial"
+        ]
+      ],
+      "motivo_lock": "military_family_evidence_loss"
+    },
+    {
+      "fonte": "IARPA",
+      "arquivo": "iarpa_standardized.json",
+      "titulo": "Targeted Evaluation of Ionizing Radiation Exposure (TEI-REX)",
+      "link": "https://www.grants.gov/web/grants/view-opportunity.html?oppId=336190",
+      "antes": [
+        "defesa_industrial",
+        "inteligencia",
+        "pesquisa_avancada"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "defesa_industrial",
+          "inteligencia",
+          "pesquisa_avancada"
+        ]
+      ],
+      "motivo_lock": "military_family_evidence_loss"
+    },
+    {
+      "fonte": "IARPA",
+      "arquivo": "iarpa_standardized.json",
+      "titulo": "IARPA Advanced Materials and Fabrication for Coherent Superconducting Qubits Program",
+      "link": "https://www.grants.gov/web/grants/view-opportunity.html?oppId=46015",
+      "antes": [
+        "defesa_industrial",
+        "inteligencia",
+        "pesquisa_avancada"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "defesa_industrial",
+          "inteligencia",
+          "pesquisa_avancada"
+        ]
+      ],
+      "motivo_lock": "military_family_evidence_loss"
+    },
+    {
+      "fonte": "IARPA",
+      "arquivo": "iarpa_standardized.json",
+      "titulo": "Advanced Materials and Fabrication for Coherent Superconducting Qubits -",
+      "link": "https://www.grants.gov/web/grants/view-opportunity.html?oppId=42526",
+      "antes": [
+        "defesa_industrial",
+        "inteligencia",
+        "pesquisa_avancada"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "defesa_industrial",
+          "inteligencia",
+          "pesquisa_avancada"
+        ]
+      ],
+      "motivo_lock": "military_family_evidence_loss"
+    },
+    {
+      "fonte": "IARPA",
+      "arquivo": "iarpa_standardized.json",
+      "titulo": "SuperCables",
+      "link": "https://www.grants.gov/web/grants/view-opportunity.html?oppId=305910",
+      "antes": [
+        "defesa_industrial",
+        "inteligencia",
+        "pesquisa_avancada"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "defesa_industrial",
+          "inteligencia",
+          "pesquisa_avancada"
+        ]
+      ],
+      "motivo_lock": "military_family_evidence_loss"
+    },
+    {
+      "fonte": "IARPA",
+      "arquivo": "iarpa_standardized.json",
+      "titulo": "TrojAI",
+      "link": "https://www.grants.gov/web/grants/view-opportunity.html?oppId=315524",
+      "antes": [
+        "defesa_industrial",
+        "inteligencia",
+        "pesquisa_avancada"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "defesa_industrial",
+          "inteligencia",
+          "pesquisa_avancada"
+        ]
+      ],
+      "motivo_lock": "military_family_evidence_loss"
+    },
+    {
+      "fonte": "IARPA",
+      "arquivo": "iarpa_standardized.json",
+      "titulo": "BROAD AGENCY ANNOUNCEMENT FOR Entangled Logical Qubits (ELQ)",
+      "link": "https://www.grants.gov/web/grants/view-opportunity.html?oppId=345509",
+      "antes": [
+        "defesa_industrial",
+        "inteligencia",
+        "pesquisa_avancada"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "defesa_industrial",
+          "inteligencia",
+          "pesquisa_avancada"
+        ]
+      ],
+      "motivo_lock": "military_family_evidence_loss"
+    },
+    {
+      "fonte": "IARPA",
+      "arquivo": "iarpa_standardized.json",
+      "titulo": "Intelligence Community Centers For Academic Excellence",
+      "link": "https://www.grants.gov/web/grants/view-opportunity.html?oppId=339318",
+      "antes": [
+        "defesa_industrial",
+        "inteligencia",
+        "pesquisa_avancada"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "defesa_industrial",
+          "inteligencia",
+          "pesquisa_avancada"
+        ]
+      ],
+      "motivo_lock": "military_family_evidence_loss"
+    },
+    {
+      "fonte": "IARPA",
+      "arquivo": "iarpa_standardized.json",
+      "titulo": "Intelligence Community Centers for Academic Excellence",
+      "link": "https://www.grants.gov/web/grants/view-opportunity.html?oppId=352987",
+      "antes": [
+        "defesa_industrial",
+        "inteligencia",
+        "pesquisa_avancada"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "defesa_industrial",
+          "inteligencia",
+          "pesquisa_avancada"
+        ]
+      ],
+      "motivo_lock": "military_family_evidence_loss"
+    }
+  ],
+  "exemplos_mudanca_todas_amostra": [
+    {
+      "fonte": "AFWERX",
+      "arquivo": "afwerx_standardized.json",
+      "titulo": "SBIR/STTR Overview",
+      "link": "https://afwerx.com/divisions/sbir-sttr/sbir-sttr-overview/",
+      "antes": [
+        "defesa_industrial",
+        "aeroespacial",
+        "defesa"
+      ],
+      "depois": [
+        "defesa"
+      ],
+      "historico_merge": [
+        [
+          "defesa_industrial",
+          "aeroespacial",
+          "defesa"
+        ]
+      ]
+    },
+    {
+      "fonte": "AFWERX",
+      "arquivo": "afwerx_standardized.json",
+      "titulo": "Open Topic",
+      "link": "https://afwerx.com/divisions/sbir-sttr/open-topic/",
+      "antes": [
+        "defesa_industrial",
+        "aeroespacial",
+        "defesa",
+        "dual_use"
+      ],
+      "depois": [
+        "defesa",
+        "dual_use"
+      ],
+      "historico_merge": [
+        [
+          "defesa_industrial",
+          "aeroespacial",
+          "defesa",
+          "dual_use"
+        ]
+      ]
+    },
+    {
+      "fonte": "AFWERX",
+      "arquivo": "afwerx_standardized.json",
+      "titulo": "Specific Topic",
+      "link": "https://afwerx.com/divisions/sbir-sttr/specific-topic/",
+      "antes": [
+        "defesa_industrial",
+        "aeroespacial",
+        "defesa",
+        "dual_use"
+      ],
+      "depois": [
+        "defesa",
+        "dual_use"
+      ],
+      "historico_merge": [
+        [
+          "defesa_industrial",
+          "aeroespacial",
+          "defesa",
+          "dual_use"
+        ]
+      ]
+    },
+    {
+      "fonte": "AFWERX",
+      "arquivo": "afwerx_standardized.json",
+      "titulo": "STRATFI/TACFI",
+      "link": "https://afwerx.com/divisions/sbir-sttr/stratfi-tacfi/",
+      "antes": [
+        "defesa_industrial",
+        "aeroespacial",
+        "defesa"
+      ],
+      "depois": [
+        "defesa"
+      ],
+      "historico_merge": [
+        [
+          "defesa_industrial",
+          "aeroespacial",
+          "defesa"
+        ]
+      ]
+    },
+    {
+      "fonte": "AFWERX",
+      "arquivo": "afwerx_standardized.json",
+      "titulo": "Phase III",
+      "link": "https://afwerx.com/divisions/sbir-sttr/phase-iii/",
+      "antes": [
+        "defesa_industrial",
+        "defesa"
+      ],
+      "depois": [
+        "defesa"
+      ],
+      "historico_merge": [
+        [
+          "defesa_industrial",
+          "defesa"
+        ]
+      ]
+    },
+    {
+      "fonte": "AFWERX",
+      "arquivo": "afwerx_standardized.json",
+      "titulo": "Risk-Based Analysis",
+      "link": "https://afwerx.com/divisions/sbir-sttr/risk-based-analysis/",
+      "antes": [
+        "defesa_industrial",
+        "defesa"
+      ],
+      "depois": [
+        "defesa"
+      ],
+      "historico_merge": [
+        [
+          "defesa_industrial",
+          "defesa"
+        ]
+      ]
+    },
+    {
+      "fonte": "AFWERX",
+      "arquivo": "afwerx_standardized.json",
+      "titulo": "Augmentee Program",
+      "link": "https://afwerx.com/divisions/sbir-sttr/augmentee-program/",
+      "antes": [
+        "defesa_industrial",
+        "aeroespacial",
+        "defesa"
+      ],
+      "depois": [
+        "defesa"
+      ],
+      "historico_merge": [
+        [
+          "defesa_industrial",
+          "aeroespacial",
+          "defesa"
+        ]
+      ]
+    },
+    {
+      "fonte": "AFWERX",
+      "arquivo": "afwerx_standardized.json",
+      "titulo": "SAGE Fellowship Program",
+      "link": "https://afwerx.com/divisions/sbir-sttr/sage-fellowship-program/",
+      "antes": [
+        "defesa_industrial",
+        "aeroespacial",
+        "defesa"
+      ],
+      "depois": [
+        "defesa"
+      ],
+      "historico_merge": [
+        [
+          "defesa_industrial",
+          "aeroespacial",
+          "defesa"
+        ]
+      ]
+    },
+    {
+      "fonte": "AMAZUL",
+      "arquivo": "amazul_standardized.json",
+      "titulo": "Dispensa de Licitação 05/2024",
+      "link": "https://www.amazul.mar.mil.br/acesso-a-informacao/licitacoes-e-contratos/dispensa-de-licitacao-052024",
+      "antes": [
+        "nuclear",
+        "defesa"
+      ],
+      "depois": [
+        "defesa",
+        "nuclear",
+        "aeroespacial"
+      ],
+      "historico_merge": [
+        [
+          "nuclear",
+          "defesa"
+        ]
+      ]
+    },
+    {
+      "fonte": "ANEEL",
+      "arquivo": "aneel_standardized.json",
+      "titulo": "ANEEL - adsp2024778 2",
+      "link": "https://www2.aneel.gov.br/cedoc/adsp2024778_2.pdf",
+      "antes": [
+        "defesa_industrial"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "defesa_industrial"
+        ]
+      ]
+    },
+    {
+      "fonte": "ANEEL",
+      "arquivo": "aneel_standardized.json",
+      "titulo": "ANEEL - Call for Projects H2 PDI",
+      "link": "https://git.aneel.gov.br/publico/centralconteudo/-/raw/main/Assuntos/PDI/Call_for_Projects_H2_-_PDI.pdf",
+      "antes": [
+        "defesa_industrial"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "defesa_industrial"
+        ]
+      ]
+    },
+    {
+      "fonte": "ANEEL",
+      "arquivo": "aneel_standardized.json",
+      "titulo": "Sistemas de Armazenamento de Energia",
+      "link": "https://www.gov.br/aneel/pt-br/assuntos/programa-de-pesquisa-desenvolvimento-e-inovacao/chamadas-de-projetos-de-pdi-estrategicos/sistemas-de-armazenamento-de-energia",
+      "antes": [
+        "defesa_industrial",
+        "aeroespacial",
+        "ciencia_tecnologia",
+        "energia"
+      ],
+      "depois": [
+        "ciencia_tecnologia",
+        "energia"
+      ],
+      "historico_merge": [
+        [
+          "defesa_industrial",
+          "aeroespacial",
+          "ciencia_tecnologia",
+          "energia"
+        ]
+      ]
+    },
+    {
+      "fonte": "ANEEL",
+      "arquivo": "aneel_standardized.json",
+      "titulo": "Chamadas de Projetos de PDI Estratégicos",
+      "link": "https://www.gov.br/aneel/pt-br/assuntos/programa-de-pesquisa-desenvolvimento-e-inovacao/chamadas-de-projetos-de-pdi-estrategicos",
+      "antes": [
+        "defesa_industrial",
+        "aeroespacial",
+        "energia"
+      ],
+      "depois": [
+        "energia"
+      ],
+      "historico_merge": [
+        [
+          "defesa_industrial",
+          "aeroespacial",
+          "energia"
+        ]
+      ]
+    },
+    {
+      "fonte": "ANEEL",
+      "arquivo": "aneel_standardized.json",
+      "titulo": "Guia de Avaliação da Maturidade Tecnológica da ANEEL",
+      "link": "https://www.gov.br/aneel/pt-br/assuntos/programa-de-pesquisa-desenvolvimento-e-inovacao/guia-de-avaliacao-da-maturidade-tecnologica-da-aneel",
+      "antes": [
+        "defesa_industrial",
+        "ciencia_tecnologia"
+      ],
+      "depois": [
+        "aeroespacial",
+        "ciencia_tecnologia"
+      ],
+      "historico_merge": [
+        [
+          "defesa_industrial",
+          "ciencia_tecnologia"
+        ]
+      ]
+    },
+    {
+      "fonte": "ANEEL",
+      "arquivo": "aneel_standardized.json",
+      "titulo": "Guia de Comunicação dos Programas de PDI e EE ANEEL",
+      "link": "https://www.gov.br/aneel/pt-br/assuntos/programa-de-pesquisa-desenvolvimento-e-inovacao/guia-de-comunicacao-dos-programas-de-pdi-e-ee-aneel",
+      "antes": [
+        "defesa_industrial",
+        "energia"
+      ],
+      "depois": [
+        "energia"
+      ],
+      "historico_merge": [
+        [
+          "defesa_industrial",
+          "energia"
+        ]
+      ]
+    },
+    {
+      "fonte": "ANEEL",
+      "arquivo": "aneel_standardized.json",
+      "titulo": "Prêmio ANEEL de Inovação",
+      "link": "https://www.gov.br/aneel/pt-br/assuntos/programa-de-pesquisa-desenvolvimento-e-inovacao/premio-aneel-de-inovacao",
+      "antes": [
+        "defesa_industrial",
+        "energia"
+      ],
+      "depois": [
+        "energia"
+      ],
+      "historico_merge": [
+        [
+          "defesa_industrial",
+          "energia"
+        ]
+      ]
+    },
+    {
+      "fonte": "ANEEL",
+      "arquivo": "aneel_standardized.json",
+      "titulo": "PDI ANEEL",
+      "link": "https://www.gov.br/aneel/pt-br/assuntos/programa-de-pesquisa-desenvolvimento-e-inovacao/procedimentos-manuais-guias-e-relatorios-do-pdi-aneel",
+      "antes": [
+        "defesa_industrial"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "defesa_industrial"
+        ]
+      ]
+    },
+    {
+      "fonte": "ANEEL",
+      "arquivo": "aneel_standardized.json",
+      "titulo": "Sandboxes Tarifários",
+      "link": "https://www.gov.br/aneel/pt-br/assuntos/programa-de-pesquisa-desenvolvimento-e-inovacao/sandboxes-tarifarios",
+      "antes": [
+        "defesa_industrial"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "defesa_industrial"
+        ]
+      ]
+    },
+    {
+      "fonte": "ANEEL",
+      "arquivo": "aneel_standardized.json",
+      "titulo": "Temas Estratégicos do PEQuI",
+      "link": "https://www.gov.br/aneel/pt-br/assuntos/programa-de-pesquisa-desenvolvimento-e-inovacao/temas-estrategicos-do-pequi",
+      "antes": [
+        "defesa_industrial",
+        "aeroespacial",
+        "ciencia_tecnologia",
+        "energia"
+      ],
+      "depois": [
+        "ciencia_tecnologia",
+        "energia"
+      ],
+      "historico_merge": [
+        [
+          "defesa_industrial",
+          "aeroespacial",
+          "ciencia_tecnologia",
+          "energia"
+        ]
+      ]
+    },
+    {
+      "fonte": "ANEEL",
+      "arquivo": "aneel_standardized.json",
+      "titulo": "Planejamento de Tecnologia da Informação",
+      "link": "https://www.gov.br/aneel/pt-br/acesso-a-informacao/acoes-e-programas/planejamento-ti",
+      "antes": [
+        "defesa_industrial",
+        "aeroespacial"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "defesa_industrial",
+          "aeroespacial"
+        ]
+      ]
+    },
+    {
+      "fonte": "ANEEL",
+      "arquivo": "aneel_standardized.json",
+      "titulo": "Programa de Eficiência Energética",
+      "link": "https://www.gov.br/aneel/pt-br/acesso-a-informacao/acoes-e-programas/eficiencia-energetica",
+      "antes": [
+        "defesa_industrial",
+        "aeroespacial",
+        "energia"
+      ],
+      "depois": [
+        "energia"
+      ],
+      "historico_merge": [
+        [
+          "defesa_industrial",
+          "aeroespacial",
+          "energia"
+        ]
+      ]
+    },
+    {
+      "fonte": "ANEEL",
+      "arquivo": "aneel_standardized.json",
+      "titulo": "Programa de Pesquisa, Desenvolvimento e Inovação (PDI)",
+      "link": "https://www.gov.br/aneel/pt-br/acesso-a-informacao/acoes-e-programas/pesquisa-e-desenvolvimento",
+      "antes": [
+        "defesa_industrial",
+        "energia"
+      ],
+      "depois": [
+        "energia"
+      ],
+      "historico_merge": [
+        [
+          "defesa_industrial",
+          "energia"
+        ]
+      ]
+    },
+    {
+      "fonte": "ANEEL",
+      "arquivo": "aneel_standardized.json",
+      "titulo": "Programas Setoriais",
+      "link": "https://www.gov.br/aneel/pt-br/acesso-a-informacao/acoes-e-programas/setoriais",
+      "antes": [
+        "defesa_industrial",
+        "energia"
+      ],
+      "depois": [
+        "energia"
+      ],
+      "historico_merge": [
+        [
+          "defesa_industrial",
+          "energia"
+        ]
+      ]
+    },
+    {
+      "fonte": "ANEEL",
+      "arquivo": "aneel_standardized.json",
+      "titulo": "Plano de Desenvolvimento da Distribuição",
+      "link": "https://www.gov.br/aneel/pt-br/assuntos/distribuicao/plano-de-desenvolvimento-da-distribuicao",
+      "antes": [
+        "defesa_industrial"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "defesa_industrial"
+        ]
+      ]
+    },
+    {
+      "fonte": "ANEEL",
+      "arquivo": "aneel_standardized.json",
+      "titulo": "Programa de Pesquisa, Desenvolvimento e Inovação da ANEEL",
+      "link": "https://www.gov.br/aneel/pt-br/assuntos/programa-de-pesquisa-desenvolvimento-e-inovacao",
+      "antes": [
+        "defesa_industrial"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "defesa_industrial"
+        ]
+      ]
+    },
+    {
+      "fonte": "ANEEL",
+      "arquivo": "aneel_standardized.json",
+      "titulo": "PDI ANEEL",
+      "link": "https://www.gov.br/aneel/pt-br/centrais-de-conteudos/manuais-modelos-e-instrucoes/procedimentos-manuais-guias-e-relatorios-do-pdi-aneel",
+      "antes": [
+        "defesa_industrial"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "defesa_industrial"
+        ]
+      ]
+    },
+    {
+      "fonte": "ANEEL",
+      "arquivo": "aneel_standardized.json",
+      "titulo": "Pesquisa e Desenvolvimento e Eficiência Energética",
+      "link": "https://www.gov.br/aneel/pt-br/centrais-de-conteudos/apresentacoes/ped-ee",
+      "antes": [
+        "defesa_industrial",
+        "energia"
+      ],
+      "depois": [
+        "energia"
+      ],
+      "historico_merge": [
+        [
+          "defesa_industrial",
+          "energia"
+        ]
+      ]
+    },
+    {
+      "fonte": "ANEEL",
+      "arquivo": "aneel_standardized.json",
+      "titulo": "PDI ANEEL",
+      "link": "https://www.gov.br/aneel/pt-br/centrais-de-conteudos/manuais-modelos-e-instrucoes/pdi-aneel",
+      "antes": [
+        "defesa_industrial"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "defesa_industrial"
+        ]
+      ]
+    },
+    {
+      "fonte": "ANEEL",
+      "arquivo": "aneel_standardized.json",
+      "titulo": "Procedimentos dos Programas de Eficiência Energética e de Pesquisa e Desenvolvimento",
+      "link": "https://www.gov.br/aneel/pt-br/centrais-de-conteudos/procedimentos-regulatorios/procedimentos-ee-ped",
+      "antes": [
+        "defesa_industrial",
+        "energia"
+      ],
+      "depois": [
+        "energia"
+      ],
+      "historico_merge": [
+        [
+          "defesa_industrial",
+          "energia"
+        ]
+      ]
+    },
+    {
+      "fonte": "ANEEL",
+      "arquivo": "aneel_standardized.json",
+      "titulo": "Revista de Pesquisa e Desenvolvimento (P&D)",
+      "link": "https://www.gov.br/aneel/pt-br/centrais-de-conteudos/publicacoes-institucionais/revista-de-ped",
+      "antes": [
+        "defesa_industrial",
+        "ciencia_tecnologia",
+        "energia"
+      ],
+      "depois": [
+        "ciencia_tecnologia",
+        "energia"
+      ],
+      "historico_merge": [
+        [
+          "defesa_industrial",
+          "ciencia_tecnologia",
+          "energia"
+        ]
+      ]
+    },
+    {
+      "fonte": "ANEEL",
+      "arquivo": "aneel_standardized.json",
+      "titulo": "Pesquisa e Desenvolvimento e Eficiência Energética",
+      "link": "https://www.gov.br/aneel/pt-br/centrais-de-conteudos/relatorios-e-indicadores/ped-e-ee",
+      "antes": [
+        "defesa_industrial",
+        "ciencia_tecnologia",
+        "energia"
+      ],
+      "depois": [
+        "ciencia_tecnologia",
+        "energia"
+      ],
+      "historico_merge": [
+        [
+          "defesa_industrial",
+          "ciencia_tecnologia",
+          "energia"
+        ]
+      ]
+    },
+    {
+      "fonte": "ANEEL",
+      "arquivo": "aneel_standardized.json",
+      "titulo": "1ª Chamada Pública",
+      "link": "https://www.gov.br/aneel/pt-br/empreendedores/sandboxes-tarifarios/1a-chamada-publica",
+      "antes": [
+        "defesa_industrial",
+        "energia"
+      ],
+      "depois": [
+        "energia"
+      ],
+      "historico_merge": [
+        [
+          "defesa_industrial",
+          "energia"
+        ]
+      ]
+    },
+    {
+      "fonte": "ANEEL",
+      "arquivo": "aneel_standardized.json",
+      "titulo": "2ª Chamada Pública",
+      "link": "https://www.gov.br/aneel/pt-br/empreendedores/sandboxes-tarifarios/2a-chamada-publica",
+      "antes": [
+        "defesa_industrial",
+        "energia"
+      ],
+      "depois": [
+        "energia"
+      ],
+      "historico_merge": [
+        [
+          "defesa_industrial",
+          "energia"
+        ]
+      ]
+    },
+    {
+      "fonte": "ANEEL",
+      "arquivo": "aneel_standardized.json",
+      "titulo": "Demais Projetos",
+      "link": "https://www.gov.br/aneel/pt-br/empreendedores/sandboxes-tarifarios/demais-projetos",
+      "antes": [
+        "defesa_industrial",
+        "energia"
+      ],
+      "depois": [
+        "energia"
+      ],
+      "historico_merge": [
+        [
+          "defesa_industrial",
+          "energia"
+        ]
+      ]
+    },
+    {
+      "fonte": "ANEEL",
+      "arquivo": "aneel_standardized.json",
+      "titulo": "Desenvolvimento, cuidados e educação pré-escolar",
+      "link": "https://www.gov.br/pt-br/temas/desenvolvimento-cuidados-e-educacao-pre-escolar",
+      "antes": [
+        "defesa_industrial"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "defesa_industrial"
+        ]
+      ]
+    },
+    {
+      "fonte": "ANEEL",
+      "arquivo": "aneel_standardized.json",
+      "titulo": "ANEEL - dd projetos de pd em energia eletrica",
+      "link": "https://dadosabertos.aneel.gov.br/dataset/78c2db95-fb29-4851-98f9-4d55cb5bf646/resource/8aa3a61c-41d2-48c9-b856-81d9b391fcda/download/dd-projetos-de-pd-em-energia-eletrica.pdf",
+      "antes": [
+        "defesa_industrial",
+        "energia"
+      ],
+      "depois": [
+        "energia"
+      ],
+      "historico_merge": [
+        [
+          "defesa_industrial",
+          "energia"
+        ]
+      ]
+    },
+    {
+      "fonte": "ANP",
+      "arquivo": "anp_standardized.json",
+      "titulo": "Edital de Chamada Pública",
+      "link": "https://www.gov.br/anp/pt-br/assuntos/tecnologia-meio-ambiente/prh-anp-programa-de-formacao-de-recursos-humanos/eixo-academico/edital-de-chamada-publica",
+      "antes": [
+        "defesa_industrial",
+        "aeroespacial",
+        "ciencia_tecnologia"
+      ],
+      "depois": [
+        "ciencia_tecnologia"
+      ],
+      "historico_merge": [
+        [
+          "defesa_industrial",
+          "aeroespacial",
+          "ciencia_tecnologia"
+        ]
+      ]
+    },
+    {
+      "fonte": "ANP",
+      "arquivo": "anp_standardized.json",
+      "titulo": "Consultas e Audiências Públicas",
+      "link": "https://www.gov.br/anp/pt-br/assuntos/consultas-e-audiencias-publicas/consulta-audiencia-publica",
+      "antes": [
+        "defesa_industrial"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "defesa_industrial"
+        ]
+      ]
+    },
+    {
+      "fonte": "Apex Brasil",
+      "arquivo": "apex_standardized.json",
+      "titulo": "licitações e contratos",
+      "link": "https://apexbrasil.com.br/content/apexbrasil/br/pt/transparencia-e-prestacao-de-contas/licitacoes-e-contratos.html",
+      "antes": [
+        "aeroespacial"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "aeroespacial"
+        ]
+      ]
+    },
+    {
+      "fonte": "BADESUL",
+      "arquivo": "badesul_standardized.json",
+      "titulo": "Badesul divulga projetos contemplados",
+      "link": "https://www.badesul.com.br/fas/transparencia/download?idPublicacao=29016",
+      "antes": [
+        "defesa_industrial"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "defesa_industrial"
+        ]
+      ]
+    },
+    {
+      "fonte": "BADESUL",
+      "arquivo": "badesul_standardized.json",
+      "titulo": "Lista de entidades inscritas",
+      "link": "https://www.badesul.com.br/fas/transparencia/download?idPublicacao=29015",
+      "antes": [
+        "defesa_industrial",
+        "aeroespacial"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "defesa_industrial",
+          "aeroespacial"
+        ]
+      ]
+    },
+    {
+      "fonte": "BADESUL",
+      "arquivo": "badesul_standardized.json",
+      "titulo": "Resultado - Seleção Pública de Subvenção Econômica",
+      "link": "https://www.badesul.com.br/fas/transparencia/download?idPublicacao=29014",
+      "antes": [
+        "defesa_industrial"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "defesa_industrial"
+        ]
+      ]
+    },
+    {
+      "fonte": "BADESUL",
+      "arquivo": "badesul_standardized.json",
+      "titulo": "Edital Subvenção Econ. Projetos de Impacto Social",
+      "link": "https://www.badesul.com.br/fas/transparencia/download?idPublicacao=29012",
+      "antes": [
+        "defesa_industrial",
+        "aeroespacial"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "defesa_industrial",
+          "aeroespacial"
+        ]
+      ]
+    },
+    {
+      "fonte": "BADESUL",
+      "arquivo": "badesul_standardized.json",
+      "titulo": "Inscrições abertas - Edital de Subvenção+Social",
+      "link": "https://www.badesul.com.br/fas/transparencia/download?idPublicacao=29010",
+      "antes": [
+        "defesa_industrial",
+        "aeroespacial"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "defesa_industrial",
+          "aeroespacial"
+        ]
+      ]
+    },
+    {
+      "fonte": "BADESUL",
+      "arquivo": "badesul_standardized.json",
+      "titulo": "AVISO - RETIFICAÇÃO EDITAL DE SELEÇÃO PÚBLICA",
+      "link": "https://www.badesul.com.br/fas/transparencia/download?idPublicacao=29009",
+      "antes": [
+        "defesa_industrial",
+        "aeroespacial"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "defesa_industrial",
+          "aeroespacial"
+        ]
+      ]
+    },
+    {
+      "fonte": "BADESUL",
+      "arquivo": "badesul_standardized.json",
+      "titulo": "RETIFICADO Edital Subvenção para Proj Sociais",
+      "link": "https://www.badesul.com.br/fas/transparencia/download?idPublicacao=29003",
+      "antes": [
+        "defesa_industrial",
+        "aeroespacial"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "defesa_industrial",
+          "aeroespacial"
+        ]
+      ]
+    },
+    {
+      "fonte": "BASA",
+      "arquivo": "banco_da_amazonia_standardized.json",
+      "titulo": "Crédito e financiamento",
+      "link": "https://www.bancoamazonia.com.br/rural/credito-e-financiamento-agro",
+      "antes": [
+        "agro"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "agro"
+        ]
+      ]
+    },
+    {
+      "fonte": "BASA",
+      "arquivo": "banco_da_amazonia_standardized.json",
+      "titulo": "PRONAF",
+      "link": "https://www.bancoamazonia.com.br/linhas-de-fomento/pronaf",
+      "antes": [
+        "agro"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "agro"
+        ]
+      ]
+    },
+    {
+      "fonte": "BASA",
+      "arquivo": "banco_da_amazonia_standardized.json",
+      "titulo": "Plano Safra",
+      "link": "https://www.bancoamazonia.com.br/linhas-de-fomento/plano-safra",
+      "antes": [
+        "agro"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "agro"
+        ]
+      ]
+    },
+    {
+      "fonte": "BASA",
+      "arquivo": "banco_da_amazonia_standardized.json",
+      "titulo": "Fundo da Marinha Mercante",
+      "link": "https://www.bancoamazonia.com.br/empresas/credito-e-financiamentos/fundo-marinha",
+      "antes": [],
+      "depois": [
+        "defesa"
+      ],
+      "historico_merge": null
+    },
+    {
+      "fonte": "BASA",
+      "arquivo": "banco_da_amazonia_standardized.json",
+      "titulo": "Giro Produtor Rural",
+      "link": "https://www.bancoamazonia.com.br/empresas/credito-e-financiamentos/capital-de-giro-produtor-rural",
+      "antes": [
+        "agro"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "agro"
+        ]
+      ]
+    },
+    {
+      "fonte": "BASA",
+      "arquivo": "banco_da_amazonia_standardized.json",
+      "titulo": "Giro Produtor Rural",
+      "link": "https://www.bancoamazonia.com.br/rural/credito-e-financiamento-agro/capital-de-giro-produtor-rural",
+      "antes": [
+        "agro"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "agro"
+        ]
+      ]
+    },
+    {
+      "fonte": "BASA",
+      "arquivo": "banco_da_amazonia_standardized.json",
+      "titulo": "Máquinas e Equipamentos",
+      "link": "https://www.bancoamazonia.com.br/rural/credito-e-financiamento-agro/maquinas-equipamentos",
+      "antes": [
+        "agro"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "agro"
+        ]
+      ]
+    },
+    {
+      "fonte": "BASA",
+      "arquivo": "banco_da_amazonia_standardized.json",
+      "titulo": "Financiamento de Veículo Produtor Rural",
+      "link": "https://www.bancoamazonia.com.br/rural/credito-e-financiamento-agro/financiamento-veiculo-produtor-rural",
+      "antes": [
+        "agro"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "agro"
+        ]
+      ]
+    },
+    {
+      "fonte": "BASA",
+      "arquivo": "banco_da_amazonia_standardized.json",
+      "titulo": "Renegociação de Dívidas",
+      "link": "https://www.bancoamazonia.com.br/rural/credito-e-financiamento-agro/renegociacao-dividas",
+      "antes": [
+        "agro"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "agro"
+        ]
+      ]
+    },
+    {
+      "fonte": "BASA",
+      "arquivo": "banco_da_amazonia_standardized.json",
+      "titulo": "PRONAF A",
+      "link": "https://www.bancoamazonia.com.br/rural/credito-e-financiamento-agro/pronaf/pronaf-a",
+      "antes": [
+        "agro"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "agro"
+        ]
+      ]
+    },
+    {
+      "fonte": "BASA",
+      "arquivo": "banco_da_amazonia_standardized.json",
+      "titulo": "Programa Nacional de Fortalecimento da Agricultura Familiar",
+      "link": "https://www.bancoamazonia.com.br/rural/credito-e-financiamento-agro/pronaf",
+      "antes": [
+        "agro"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "agro"
+        ]
+      ]
+    },
+    {
+      "fonte": "BDMG",
+      "arquivo": "bdmg_standardized.json",
+      "titulo": "Se é novo para sua empresa, é inovação para o BDMG.",
+      "link": "https://www.bdmg.mg.gov.br/inovacao",
+      "antes": [
+        "inovacao",
+        "industria"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "inovacao",
+          "industria"
+        ]
+      ]
+    },
+    {
+      "fonte": "BDMG",
+      "arquivo": "bdmg_standardized.json",
+      "titulo": "Agronegócio Para empresas e cooperativas que exercem as mais diversas atividades ligadas à agropecuária.",
+      "link": "https://www.bdmg.mg.gov.br/agronegocio",
+      "antes": [
+        "agro",
+        "sustentabilidade"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "agro",
+          "sustentabilidade"
+        ]
+      ]
+    },
+    {
+      "fonte": "BDMG",
+      "arquivo": "bdmg_standardized.json",
+      "titulo": "Não apenas prover o crédito, mas mensurar o seu impacto",
+      "link": "https://www.bdmg.mg.gov.br/credito-verde",
+      "antes": [
+        "sustentabilidade"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "sustentabilidade"
+        ]
+      ]
+    },
+    {
+      "fonte": "BDMG",
+      "arquivo": "bdmg_standardized.json",
+      "titulo": "Linhas Permanentes de Financiamento Municipal",
+      "link": "https://www.bdmg.mg.gov.br/municipios/?sec-programa-paraopeba",
+      "antes": [
+        "sustentabilidade"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "sustentabilidade"
+        ]
+      ]
+    },
+    {
+      "fonte": "BDMG",
+      "arquivo": "bdmg_standardized.json",
+      "titulo": "Linhas Permanentes de Financiamento Municipal",
+      "link": "https://www.bdmg.mg.gov.br/municipios/?cta-editais",
+      "antes": [
+        "sustentabilidade"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "sustentabilidade"
+        ]
+      ]
+    },
+    {
+      "fonte": "BDMG",
+      "arquivo": "bdmg_standardized.json",
+      "titulo": "Linhas Permanentes de Financiamento Municipal",
+      "link": "https://www.bdmg.mg.gov.br/municipios/?section-bdmg-digital",
+      "antes": [
+        "sustentabilidade"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "sustentabilidade"
+        ]
+      ]
+    },
+    {
+      "fonte": "BDMG",
+      "arquivo": "bdmg_standardized.json",
+      "titulo": "Linhas Permanentes de Financiamento Municipal",
+      "link": "https://www.bdmg.mg.gov.br/municipios/?form=cadastro",
+      "antes": [
+        "sustentabilidade"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "sustentabilidade"
+        ]
+      ]
+    },
+    {
+      "fonte": "BNB",
+      "arquivo": "bnb_standardized.json",
+      "titulo": "Microcrédito – soluções para pequenos negócios – Banco do Nordeste",
+      "link": "https://www.bnb.gov.br/web/guest/microcredito",
+      "antes": [
+        "agro"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "agro"
+        ]
+      ]
+    },
+    {
+      "fonte": "BNB",
+      "arquivo": "bnb_standardized.json",
+      "titulo": "Empréstimos e Financiamentos - Soluções para você - Banco do Nordeste",
+      "link": "https://www.bnb.gov.br/web/guest/voce/emprestimos-e-financiamentos",
+      "antes": [
+        "energia",
+        "sustentabilidade",
+        "inovacao"
+      ],
+      "depois": [
+        "energia"
+      ],
+      "historico_merge": [
+        [
+          "energia",
+          "sustentabilidade",
+          "inovacao"
+        ]
+      ]
+    },
+    {
+      "fonte": "BNB",
+      "arquivo": "bnb_standardized.json",
+      "titulo": "Micro e Pequenas Empresas - Crédito e soluções para o seu negócio - Banco do Nordeste",
+      "link": "https://www.bnb.gov.br/web/guest/mpe",
+      "antes": [],
+      "depois": [
+        "energia"
+      ],
+      "historico_merge": null
+    },
+    {
+      "fonte": "BNB",
+      "arquivo": "bnb_standardized.json",
+      "titulo": "Miniprodutor Rural – crédito e soluções para o campo – Banco do Nordeste",
+      "link": "https://www.bnb.gov.br/web/guest/miniprodutor-rural",
+      "antes": [
+        "agro"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "agro"
+        ]
+      ]
+    },
+    {
+      "fonte": "BNB",
+      "arquivo": "bnb_standardized.json",
+      "titulo": "Crédito para Poder Público – financiamento de projetos – Banco do Nordeste",
+      "link": "https://www.bnb.gov.br/web/guest/poder-publico/credito",
+      "antes": [
+        "sustentabilidade",
+        "industria",
+        "desenvolvimento_regional"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "sustentabilidade",
+          "industria",
+          "desenvolvimento_regional"
+        ]
+      ]
+    },
+    {
+      "fonte": "BNB",
+      "arquivo": "bnb_standardized.json",
+      "titulo": "Publicações para Agricultura Familiar - Setor Rural - Produtos e Serviços",
+      "link": "https://www.bnb.gov.br/rural/publicacoes",
+      "antes": [
+        "agro"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "agro"
+        ]
+      ]
+    },
+    {
+      "fonte": "BNB",
+      "arquivo": "bnb_standardized.json",
+      "titulo": "Agricultura Familiar – atividades financiadas – Banco do Nordeste",
+      "link": "https://www.bnb.gov.br/atividades-financiadas/pronaf",
+      "antes": [
+        "agro",
+        "inovacao"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "agro",
+          "inovacao"
+        ]
+      ]
+    },
+    {
+      "fonte": "BNB",
+      "arquivo": "bnb_standardized.json",
+      "titulo": "Apicultura – atividades financiadas – Banco do Nordeste",
+      "link": "https://www.bnb.gov.br/atividades-financiadas/apicultura",
+      "antes": [
+        "agro"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "agro"
+        ]
+      ]
+    },
+    {
+      "fonte": "BNB",
+      "arquivo": "bnb_standardized.json",
+      "titulo": "Bovinocultura – atividades financiadas – Banco do Nordeste",
+      "link": "https://www.bnb.gov.br/atividades-financiadas/bovinocultura",
+      "antes": [
+        "agro",
+        "sustentabilidade",
+        "inovacao"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "agro",
+          "sustentabilidade",
+          "inovacao"
+        ]
+      ]
+    },
+    {
+      "fonte": "BNB",
+      "arquivo": "bnb_standardized.json",
+      "titulo": "Carcinicultura – atividades financiadas – Banco do Nordeste",
+      "link": "https://www.bnb.gov.br/atividades-financiadas/carcinicultura",
+      "antes": [
+        "agro",
+        "sustentabilidade",
+        "industria"
+      ],
+      "depois": [
+        "defesa"
+      ],
+      "historico_merge": [
+        [
+          "agro",
+          "sustentabilidade",
+          "industria"
+        ]
+      ]
+    },
+    {
+      "fonte": "BNB",
+      "arquivo": "bnb_standardized.json",
+      "titulo": "Educação – atividades financiadas – Banco do Nordeste",
+      "link": "https://www.bnb.gov.br/atividades-financiadas/educacao",
+      "antes": [
+        "inovacao"
+      ],
+      "depois": [
+        "energia"
+      ],
+      "historico_merge": [
+        [
+          "inovacao"
+        ]
+      ]
+    },
+    {
+      "fonte": "BNB",
+      "arquivo": "bnb_standardized.json",
+      "titulo": "Floricultura - Atividades Financiadas - Banco do Nordeste",
+      "link": "https://www.bnb.gov.br/atividades-financiadas/floricultura",
+      "antes": [
+        "agro"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "agro"
+        ]
+      ]
+    },
+    {
+      "fonte": "BNB",
+      "arquivo": "bnb_standardized.json",
+      "titulo": "Fruticultura – atividades financiadas – Banco do Nordeste",
+      "link": "https://www.bnb.gov.br/atividades-financiadas/fruticultura",
+      "antes": [
+        "agro",
+        "industria"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "agro",
+          "industria"
+        ]
+      ]
+    },
+    {
+      "fonte": "BNB",
+      "arquivo": "bnb_standardized.json",
+      "titulo": "Grãos – atividades financiadas – Banco do Nordeste",
+      "link": "https://www.bnb.gov.br/atividades-financiadas/graos",
+      "antes": [
+        "agro",
+        "industria"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "agro",
+          "industria"
+        ]
+      ]
+    },
+    {
+      "fonte": "BNB",
+      "arquivo": "bnb_standardized.json",
+      "titulo": "Industrial – atividades financiadas – Banco do Nordeste",
+      "link": "https://www.bnb.gov.br/atividades-financiadas/industrial",
+      "antes": [
+        "inovacao",
+        "industria"
+      ],
+      "depois": [
+        "industria"
+      ],
+      "historico_merge": [
+        [
+          "inovacao",
+          "industria"
+        ]
+      ]
+    },
+    {
+      "fonte": "BNB",
+      "arquivo": "bnb_standardized.json",
+      "titulo": "Meio Ambiente – atividades financiadas – Banco do Nordeste",
+      "link": "https://www.bnb.gov.br/atividades-financiadas/meio-ambiente",
+      "antes": [
+        "agro",
+        "sustentabilidade",
+        "inovacao"
+      ],
+      "depois": [],
+      "historico_merge": [
+        [
+          "agro",
+          "sustentabilidade",
+          "inovacao"
+        ]
+      ]
+    }
+  ]
+}

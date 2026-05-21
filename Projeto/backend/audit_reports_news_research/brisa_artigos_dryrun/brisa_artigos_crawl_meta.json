@@ -1,0 +1,35 @@
+{
+  "source_id": "brisa_artigos",
+  "source_name": "BRISA",
+  "method": "rss",
+  "seed_urls_used": [
+    "https://brisabr.com.br/artigos/feed/"
+  ],
+  "max_items": 10,
+  "time_window_months": 24,
+  "raw_total": 8,
+  "within_window_total": 0,
+  "without_date_total": 0,
+  "raw_by_seed_kind": {
+    "mixed": 8
+  },
+  "feed_kind_caps_applied": {},
+  "page_enrich_fetch_total": 8,
+  "errors": [],
+  "theme_filter_stats": {
+    "extracted_total": 8,
+    "skipped_duplicate_link": 0,
+    "rejected_exclude_keyword": 0,
+    "rejected_exclude_medical_generic": 0,
+    "rejected_require_any_keyword": 0,
+    "rejected_feed_kind_cap": 0,
+    "passed_theme_filters": 8,
+    "matched_keyword_counts": {},
+    "reject_samples": []
+  },
+  "discarded_post_enrich": [],
+  "discarded_post_enrich_total": 0,
+  "feed_items_available": 8,
+  "note_permalink": "Feed /artigos/feed/ usa permalinks slug na raiz (sem /artigos/ no path); filtrar /news/ e páginas institucionais.",
+  "time_window_label": "24_months_pesquisa"
+}

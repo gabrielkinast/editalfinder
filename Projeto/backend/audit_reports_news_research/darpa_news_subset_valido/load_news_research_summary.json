@@ -1,0 +1,51 @@
+{
+  "data_execucao": "2026-05-20T01:42:41Z",
+  "modo": "apply",
+  "source": "darpa_news",
+  "wave": null,
+  "payload_noticia_path": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_news_research\\darpa_news_subset_valido\\darpa_news_wave1_payload_noticia.json",
+  "payload_pesquisa_path": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_news_research\\darpa_news_subset_valido\\darpa_news_wave1_payload_pesquisa.json",
+  "payload_review_path": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_news_research\\darpa_news_subset_valido\\darpa_news_wave1_review_candidates.json",
+  "input_dir": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_news_research\\darpa_news_subset_valido",
+  "total_noticia": 10,
+  "total_pesquisa": 0,
+  "would_upsert_noticia": 10,
+  "would_upsert_pesquisa": 0,
+  "inserted_noticia": 0,
+  "updated_noticia": 10,
+  "inserted_pesquisa": 0,
+  "updated_pesquisa": 0,
+  "skipped": 0,
+  "errors_count": 0,
+  "review_candidates_ignored": 0,
+  "arrays_normalized_count": 10,
+  "arrays_normalized_sample": [
+    "noticia:https://www.darpa.mil/news/2026/darpa-xrq-73-demonstrates-hybrid-electric-flight:area_cientifica",
+    "noticia:https://www.darpa.mil/news/2026/rethinking-robotics:area_cientifica",
+    "noticia:https://www.darpa.mil/news/2026/quantum-computing-different-qubits-better-together:area_cientifica",
+    "noticia:https://www.darpa.mil/news/2026/uh-60mx-black-hawk-army:area_cientifica",
+    "noticia:https://www.darpa.mil/news/2026/bio-attribution-challenge:area_cientifica",
+    "noticia:https://www.darpa.mil/news/2026/qbi-stage-a-qbit:area_cientifica",
+    "noticia:https://www.darpa.mil/news/2026/darpa-new-x-76-speed-of-jet-freedom-of-helicopter:area_cientifica",
+    "noticia:https://www.darpa.mil/news/2026/upgrading-biomass-waste-into-strategic-materials:area_cientifica",
+    "noticia:https://www.darpa.mil/news/2026/rockn-enables-gps-free-operations:area_cientifica",
+    "noticia:https://www.darpa.mil/news/2026/protein-sequencing-launches:area_cientifica"
+  ],
+  "environment_guard": {
+    "editalfinder_env": "staging",
+    "has_supabase_url": true,
+    "has_service_key": true,
+    "has_anon_key": true,
+    "has_allow_staging_apply": true,
+    "url_host_masked": "dof***.co",
+    "block_reason": ""
+  },
+  "environment_safe": true,
+  "env_files_loaded": [
+    "D:\\Computational_Physics\\My Projects\\edital\\.env.staging",
+    "D:\\Computational_Physics\\My Projects\\edital\\CORE\\.env"
+  ],
+  "apply_executado": true,
+  "apply_block_reason": "",
+  "apply_status": "applied"
+}

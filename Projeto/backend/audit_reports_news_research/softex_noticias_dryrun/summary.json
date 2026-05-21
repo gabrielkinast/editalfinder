@@ -1,0 +1,47 @@
+{
+  "fonte": "softex_noticias",
+  "nome_exibicao": "SOFTEX",
+  "data_execucao": "2026-05-17T04:14:36Z",
+  "modo": "dry_run",
+  "apply": false,
+  "diagnostico": {
+    "url_hub": "https://softex.br/noticias/",
+    "rss_seed": "https://softex.br/feed/",
+    "rss_noticias_feed": "https://softex.br/noticias/feed/ (403 — não usar)",
+    "robots_txt": "Disallow: /wp-admin/ (resto permitido)",
+    "cms": "WordPress",
+    "listagem": "RSS 2.0 global; hub HTML /noticias/",
+    "permalink": "Slugs na raiz do domínio (ex. /softex-participa-da-inauguracao-.../)",
+    "data_publicacao": "pubDate RSS + enrich meta opcional",
+    "autor": "dc:creator quando presente no feed",
+    "imagem": "og:image no enrich (budget limitado)",
+    "copyright": "Apenas resumo RSS/meta; sem corpo integral"
+  },
+  "config": {
+    "max_items": 10,
+    "time_window_months": 12,
+    "page_enrich_max": 8
+  },
+  "totais": {
+    "raw_apos_filtros": 10,
+    "standardized": 10,
+    "within_window_12m": 10,
+    "sem_data": 0,
+    "page_enrich_fetches": 8,
+    "discarded_post_enrich": 0
+  },
+  "tipo_conteudo_counts": {
+    "noticia": 10
+  },
+  "validacao_status_counts": {
+    "valido": 10
+  },
+  "warnings": [],
+  "errors": [],
+  "paths": {
+    "standardized": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_news_research\\softex_noticias_dryrun\\standardized\\softex_noticias_standardized.json",
+    "exemplos": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_news_research\\softex_noticias_dryrun\\standardized\\exemplos.json",
+    "raw": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_news_research\\softex_noticias_dryrun\\raw\\softex_noticias_raw.json",
+    "crawl_meta": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_news_research\\softex_noticias_dryrun\\softex_noticias_crawl_meta.json"
+  }
+}

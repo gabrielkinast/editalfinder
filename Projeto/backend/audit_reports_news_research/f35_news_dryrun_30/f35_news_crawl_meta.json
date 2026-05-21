@@ -1,0 +1,37 @@
+{
+  "source_id": "f35_news",
+  "source_name": "F-35 News & Features",
+  "method": "json_feed",
+  "seed_urls_used": [
+    "https://www.f35.com/content/lockheed-martin/data/feeds/f35feed.json"
+  ],
+  "max_items": 30,
+  "time_window_months": 12,
+  "raw_total": 30,
+  "within_window_total": 30,
+  "without_date_total": 0,
+  "raw_by_seed_kind": {
+    "mixed": 30
+  },
+  "feed_kind_caps_applied": {},
+  "page_enrich_fetch_total": 0,
+  "errors": [],
+  "theme_filter_stats": {
+    "extracted_total": 30,
+    "skipped_duplicate_link": 0,
+    "rejected_exclude_keyword": 0,
+    "rejected_exclude_medical_generic": 0,
+    "rejected_require_any_keyword": 0,
+    "rejected_feed_kind_cap": 0,
+    "passed_theme_filters": 30,
+    "matched_keyword_counts": {},
+    "reject_samples": []
+  },
+  "discarded_post_enrich": [],
+  "discarded_post_enrich_total": 0,
+  "feed_json_url": "https://www.f35.com/content/lockheed-martin/data/feeds/f35feed.json",
+  "listing_url": "https://www.f35.com/f35/news-and-features.html",
+  "listing_method": "aem_json_feed",
+  "note_spa": "Hub HTML é SPA (Algolia InstantSearch); listagem estável via JSON /content/lockheed-martin/data/feeds/f35feed.json referenciado em data-path.",
+  "note_no_rss": "Sem RSS dedicado; feed JSON oficial no DOM."
+}

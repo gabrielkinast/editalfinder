@@ -1,0 +1,247 @@
+{
+  "fonte": "nato_news",
+  "nome_exibicao": "NATO",
+  "fonte_recurso": "nato_news",
+  "data_execucao": "2026-05-20T02:56:52Z",
+  "origem_dryrun_ampliado": "audit_reports_news_research/nato_news_dryrun_100/standardized/nato_news_standardized.json",
+  "subset_standardized": "audit_reports_news_research/nato_news_subset_top20/standardized/nato_news_standardized.json",
+  "dryrun_ampliado": {
+    "max_items": 100,
+    "total_raw": 99,
+    "standardized": 93,
+    "total_valido": 26,
+    "review": 6,
+    "descartados_ruido": 0,
+    "errors_count": 0
+  },
+  "comparacao_30_vs_100": "audit_reports_news_research/nato_news_dryrun_100/comparacao_dryrun_30_vs_100.json",
+  "subset": {
+    "criterios": [
+      "validacao_status=valido",
+      "data_publicacao dentro de 12 meses",
+      "ordenar data_publicacao desc",
+      "top 20",
+      "apenas standardized (exclui review_candidates)"
+    ],
+    "escolhidos": 20,
+    "candidatos_validos_na_origem": 26,
+    "rejeitados_na_filtragem_subset": 67
+  },
+  "loader_dryrun": {
+    "comando": "C:\\Program Files\\Python312\\python.exe D:\\Computational_Physics\\My Projects\\edital\\scripts\\load_news_research_sources.py --dry-run --source nato_news --input-dir audit_reports_news_research/nato_news_subset_top20",
+    "would_upsert_noticia": 20,
+    "would_upsert_pesquisa": 0,
+    "errors_count": 0,
+    "apply_status": "dry_run_only",
+    "summary_path": "audit_reports_news_research/nato_news_subset_top20/load_news_research_summary.json"
+  },
+  "distribuicao_eixos_estrategicos": {
+    "geopolitica_tecnologica": 20,
+    "defesa": 8,
+    "inovacao": 2,
+    "industria_estrategica": 2,
+    "nuclear": 2,
+    "computacao": 1
+  },
+  "itens": [
+    {
+      "titulo": "NATO Military Committee concludes its 195th Chiefs of Defence Meeting",
+      "data_publicacao": "2026-05-19",
+      "link": "https://www.nato.int/en/news-and-events/articles/news/2026/05/19/nato-military-committee-concludes-its-195th-chiefs-of-defence-meeting",
+      "relevancia_nato": "media",
+      "eixo_estrategico": [
+        "defesa",
+        "geopolitica_tecnologica"
+      ]
+    },
+    {
+      "titulo": "NATO Assistant Secretary General for Defence Industry, Innovation and Armaments visits the Republic of Korea and Japan",
+      "data_publicacao": "2026-05-15",
+      "link": "https://www.nato.int/en/news-and-events/articles/news/2026/05/15/nato-assistant-secretary-general-for-defence-industry-innovation-and-armaments-visits-the-republic-of-korea-and-japan",
+      "relevancia_nato": "alta",
+      "eixo_estrategico": [
+        "defesa",
+        "geopolitica_tecnologica",
+        "inovacao",
+        "industria_estrategica"
+      ]
+    },
+    {
+      "titulo": "NATO hosts Centres of Excellence Marketplace",
+      "data_publicacao": "2026-05-13",
+      "link": "https://www.nato.int/en/news-and-events/articles/news/2026/05/13/nato-hosts-centres-of-excellence-marketplace",
+      "relevancia_nato": "media",
+      "eixo_estrategico": [
+        "geopolitica_tecnologica"
+      ]
+    },
+    {
+      "titulo": "The Netherlands takes on Chair of NATO’s Transatlantic Quantum Community",
+      "data_publicacao": "2026-05-13",
+      "link": "https://www.nato.int/en/news-and-events/articles/news/2026/05/13/the-netherlands-takes-on-chair-of-natos-transatlantic-quantum-community",
+      "relevancia_nato": "media",
+      "eixo_estrategico": [
+        "geopolitica_tecnologica",
+        "computacao"
+      ]
+    },
+    {
+      "titulo": "NATO Secretary General at B9 and Nordic Allies Summit in Bucharest: We need a stronger Europe in a stronger NATO",
+      "data_publicacao": "2026-05-13",
+      "link": "https://www.nato.int/en/news-and-events/articles/news/2026/05/13/nato-secretary-general-at-b9-and-nordic-allies-summit",
+      "relevancia_nato": "media",
+      "eixo_estrategico": [
+        "geopolitica_tecnologica"
+      ]
+    },
+    {
+      "titulo": "NATO Secretary General visits Montenegro and praises its contributions to NATO and stability in the Western Balkans",
+      "data_publicacao": "2026-05-12",
+      "link": "https://www.nato.int/en/news-and-events/articles/news/2026/05/12/nato-secretary-general-visits-montenegro-and-praises-its-contributions-to-nato-and-stability-in-the-western-balkans",
+      "relevancia_nato": "media",
+      "eixo_estrategico": [
+        "geopolitica_tecnologica"
+      ]
+    },
+    {
+      "titulo": "NATO’s Special Representative for the Caucasus and Central Asia visits Georgia",
+      "data_publicacao": "2026-05-11",
+      "link": "https://www.nato.int/en/news-and-events/articles/news/2026/05/11/natos-special-representative-for-the-caucasus-and-central-asia-visits-georgia",
+      "relevancia_nato": "media",
+      "eixo_estrategico": [
+        "defesa",
+        "geopolitica_tecnologica"
+      ]
+    },
+    {
+      "titulo": "The Chair of the NATO Military Committee visits Romania",
+      "data_publicacao": "2026-05-08",
+      "link": "https://www.nato.int/en/news-and-events/articles/news/2026/05/08/the-chair-of-the-nato-military-committee-visits-romania",
+      "relevancia_nato": "media",
+      "eixo_estrategico": [
+        "geopolitica_tecnologica"
+      ]
+    },
+    {
+      "titulo": "Lieutenant General Remigijus Baltrėnas addresses GFOAC at the NATO Defence College",
+      "data_publicacao": "2026-05-08",
+      "link": "https://www.nato.int/en/news-and-events/articles/news/2026/05/08/lieutenant-general-remigijus-baltrenas-addresses-gfoac-at-the-nato-defence-college",
+      "relevancia_nato": "media",
+      "eixo_estrategico": [
+        "defesa",
+        "geopolitica_tecnologica"
+      ]
+    },
+    {
+      "titulo": "NATO High Level Group discusses nuclear deterrence ahead of June NPG meeting",
+      "data_publicacao": "2026-05-08",
+      "link": "https://www.nato.int/en/news-and-events/articles/news/2026/05/08/nato-high-level-group-discusses-nuclear-deterrence-ahead-of-june-npg-meeting",
+      "relevancia_nato": "alta",
+      "eixo_estrategico": [
+        "geopolitica_tecnologica",
+        "nuclear"
+      ]
+    },
+    {
+      "titulo": "NATO and Bosnia and Herzegovina discuss strengthening cooperation",
+      "data_publicacao": "2026-05-06",
+      "link": "https://www.nato.int/en/news-and-events/articles/news/2026/05/06/nato-and-bosnia-and-herzegovina-discuss-strengthening-cooperation",
+      "relevancia_nato": "media",
+      "eixo_estrategico": [
+        "geopolitica_tecnologica"
+      ]
+    },
+    {
+      "titulo": "NATO Deputy Secretary General visits Athens to highlight the importance of a strong defence industry",
+      "data_publicacao": "2026-05-05",
+      "link": "https://www.nato.int/en/news-and-events/articles/news/2026/05/05/nato-deputy-secretary-general-visits-athens-to-highlight-the-importance-of-a-strong-defence-industry",
+      "relevancia_nato": "alta",
+      "eixo_estrategico": [
+        "defesa",
+        "geopolitica_tecnologica",
+        "industria_estrategica"
+      ]
+    },
+    {
+      "titulo": "NATO Secretary General attends the European Political Community Summit in Armenia",
+      "data_publicacao": "2026-05-04",
+      "link": "https://www.nato.int/en/news-and-events/articles/news/2026/05/04/nato-secretary-general-attends-the-european-political-community-summit-in-armenia",
+      "relevancia_nato": "media",
+      "eixo_estrategico": [
+        "geopolitica_tecnologica"
+      ]
+    },
+    {
+      "titulo": "NATO reaffirms strong commitment to nuclear Non-Proliferation Treaty at UN review conference",
+      "data_publicacao": "2026-04-30",
+      "link": "https://www.nato.int/en/news-and-events/articles/news/2026/04/30/nato-reaffirms-strong-commitment-to-nuclear-non-proliferation-treaty-at-un-review-conference",
+      "relevancia_nato": "media",
+      "eixo_estrategico": [
+        "geopolitica_tecnologica",
+        "nuclear"
+      ]
+    },
+    {
+      "titulo": "NATO Young Professionals Programme is now open for applications",
+      "data_publicacao": "2026-04-29",
+      "link": "https://www.nato.int/en/news-and-events/articles/news/2026/04/29/nato-young-professionals-programme-is-now-open-for-applications",
+      "relevancia_nato": "media",
+      "eixo_estrategico": [
+        "geopolitica_tecnologica"
+      ]
+    },
+    {
+      "titulo": "Senior national officials for resilience meet at NATO to address the crucial role of resilience in Allied security",
+      "data_publicacao": "2026-04-28",
+      "link": "https://www.nato.int/en/news-and-events/articles/news/2026/04/28/senior-national-officials-for-resilience-meet-at-nato-to-address-the-crucial-role-of-resilience-in-allied-security",
+      "relevancia_nato": "media",
+      "eixo_estrategico": [
+        "geopolitica_tecnologica",
+        "defesa"
+      ]
+    },
+    {
+      "titulo": "NATO logistics directors meet to further strengthen logistics readiness",
+      "data_publicacao": "2026-04-28",
+      "link": "https://www.nato.int/en/news-and-events/articles/news/2026/04/28/nato-logistics-directors-meet-to-further-strengthen-logistics-readiness",
+      "relevancia_nato": "alta",
+      "eixo_estrategico": [
+        "defesa",
+        "geopolitica_tecnologica"
+      ]
+    },
+    {
+      "titulo": "NATO Deputy Secretary General visits United Kingdom to discuss defence innovation",
+      "data_publicacao": "2026-04-27",
+      "link": "https://www.nato.int/en/news-and-events/articles/news/2026/04/27/nato-deputy-secretary-general-visits-united-kingdom-to-discuss-defence-innovation",
+      "relevancia_nato": "alta",
+      "eixo_estrategico": [
+        "defesa",
+        "geopolitica_tecnologica",
+        "inovacao"
+      ]
+    },
+    {
+      "titulo": "The Chair of the NATO Military Committee visits Ukraine and attends the Kyiv Security Forum",
+      "data_publicacao": "2026-04-24",
+      "link": "https://www.nato.int/en/news-and-events/articles/news/2026/04/24/the-chair-of-the-nato-military-committee-visits-ukraine-and-attends-the-kyiv-security-forum",
+      "relevancia_nato": "media",
+      "eixo_estrategico": [
+        "geopolitica_tecnologica"
+      ]
+    },
+    {
+      "titulo": "NATO and the European Union call for more sustained, coordinated support to Ukraine at joint meeting",
+      "data_publicacao": "2026-04-23",
+      "link": "https://www.nato.int/en/news-and-events/articles/news/2026/04/23/nato-and-the-european-union-call-for-more-sustained-coordinated-support-to-ukraine-at-joint-meeting",
+      "relevancia_nato": "media",
+      "eixo_estrategico": [
+        "geopolitica_tecnologica"
+      ]
+    }
+  ],
+  "observacao": "Fonte oficial/institucional da OTAN (NATO). Não confundir com fonte jornalística independente. Aplicar apenas lote controlado (subset top 20) para não dominar a aba Notícias. Apply não executado nesta tarefa.",
+  "apply_staging": {
+    "executado": false
+  }
+}

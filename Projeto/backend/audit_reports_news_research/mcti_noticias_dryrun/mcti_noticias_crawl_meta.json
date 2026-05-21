@@ -1,0 +1,526 @@
+{
+  "source_id": "mcti_noticias",
+  "source_name": "MCTI Notícias",
+  "method": "govbr_plone_listing",
+  "seed_urls_used": [
+    "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias",
+    "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2025",
+    "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026"
+  ],
+  "max_items": 30,
+  "time_window_months": 12,
+  "raw_total": 22,
+  "within_window_total": 22,
+  "without_date_total": 0,
+  "raw_by_seed_kind": {
+    "mixed": 22
+  },
+  "feed_kind_caps_applied": {},
+  "page_enrich_fetch_total": 10,
+  "errors": [],
+  "theme_filter_stats": {
+    "rejected_lm_routing": 0,
+    "lm_sent_review": 0,
+    "rejected_mcti_non_path": 0,
+    "mcti_sent_review": 2,
+    "mcti_sent_discard": 6,
+    "extracted_total": 30,
+    "skipped_duplicate_link": 0,
+    "rejected_exclude_keyword": 0,
+    "rejected_exclude_medical_generic": 0,
+    "rejected_require_any_keyword": 0,
+    "rejected_feed_kind_cap": 0,
+    "passed_theme_filters": 30,
+    "matched_keyword_counts": {},
+    "reject_samples": []
+  },
+  "discarded_post_enrich": [],
+  "discarded_post_enrich_total": 0,
+  "listing_url": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias",
+  "listing_method": "mcti_govbr_plone_listing",
+  "note_no_rss": "RSS/Atom em /noticias/rss.xml e /atom.xml retornam 404; listagem HTML hub + /noticias/YYYY.",
+  "feeds_tested_404": [
+    "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/rss.xml",
+    "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/atom.xml"
+  ],
+  "review_candidates": [
+    {
+      "titulo": "MCTI colabora com 1ª Conferência Nacional dos Objetivos de Desenvolvimento Sustentável da ONU",
+      "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/mcti-colabora-com-1a-conferencia-nacional-dos-objetivos-de-desenvolvimento-sustentavel-da-onu",
+      "data_publicacao_raw": "2026-05-01",
+      "descricao": "Unidades de pesquisa do MCTI promovem Conferências Livres preparatórias até 20 de maio",
+      "relevancia_mcti": "media",
+      "motivos_relevancia": [
+        "pesquisa"
+      ],
+      "motivos_descarte": [
+        "conferência nacional"
+      ],
+      "possivel_edital": false,
+      "eixos_detectados": [
+        "pesquisa"
+      ],
+      "motivo": "sinais_administrativos_com_tecnico_fraco",
+      "routing": "review_relevancia"
+    },
+    {
+      "titulo": "MCTI reforça apoio à ética na pesquisa durante 72ª Reunião Ordinária do Concea",
+      "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/mcti-reforca-apoio-a-etica-na-pesquisa-durante-72a-reuniao-ordinaria-do-concea",
+      "data_publicacao_raw": "2026-05-01",
+      "descricao": "Secretária de Políticas e Programas Estratégicos, Andrea Latgé, participou do evento e defendeu fortalecimento da regulamentação e da pesquisa ética no país",
+      "relevancia_mcti": "media",
+      "motivos_relevancia": [
+        "pesquisa"
+      ],
+      "motivos_descarte": [
+        "reunião",
+        "reuniao"
+      ],
+      "possivel_edital": false,
+      "eixos_detectados": [
+        "pesquisa"
+      ],
+      "motivo": "sinais_administrativos_com_tecnico_fraco",
+      "routing": "review_relevancia"
+    }
+  ],
+  "review_candidates_total": 2,
+  "descartados_ruido": [
+    {
+      "titulo": "Mast conta com programação especial na 24ª Semana Nacional dos Museus",
+      "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/mast-conta-com-programacao-especial-na-24a-semana-nacional-dos-museus",
+      "data_publicacao_raw": "2026-05-01",
+      "descricao": "De 18 a 23 de maio, museu promove lançamento de livro, mesas-redondas e exibição de documentário",
+      "relevancia_mcti": "baixa",
+      "motivos_relevancia": [],
+      "motivos_descarte": [
+        "semana nacional"
+      ],
+      "possivel_edital": false,
+      "eixos_detectados": [],
+      "motivo": "apenas_sinais_administrativos",
+      "routing": "descartado_ruido"
+    },
+    {
+      "titulo": "ENTREVISTA | O que precisamos saber sobre o El Niño e seus impactos para o Brasil?",
+      "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/entrevista-o-que-precisamos-saber-sobre-o-el-nino-e-seus-impactos-para-o-brasil",
+      "data_publicacao_raw": "2026-05-01",
+      "descricao": "",
+      "relevancia_mcti": "baixa",
+      "motivos_relevancia": [],
+      "motivos_descarte": [],
+      "possivel_edital": false,
+      "eixos_detectados": [],
+      "motivo": "sem_sinal_tecnico",
+      "routing": "descartado_ruido"
+    },
+    {
+      "titulo": "MCTI lança EDinova para acelerar descarbonização da construção civil no Brasil",
+      "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/mcti-lanca-edinova-para-acelerar-descarbonizacao-da-construcao-civil-no-brasil",
+      "data_publicacao_raw": "2026-05-01",
+      "descricao": "",
+      "relevancia_mcti": "baixa",
+      "motivos_relevancia": [],
+      "motivos_descarte": [],
+      "possivel_edital": false,
+      "eixos_detectados": [],
+      "motivo": "sem_sinal_tecnico",
+      "routing": "descartado_ruido"
+    },
+    {
+      "titulo": "Com apoio da Lei do Bem, Agrosystem desenvolve soluções de agricultura de precisão",
+      "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/com-apoio-da-lei-do-bem-agrosystem-desenvolve-solucoes-de-agricultura-de-precisao",
+      "data_publicacao_raw": "2026-05-01",
+      "descricao": "",
+      "relevancia_mcti": "baixa",
+      "motivos_relevancia": [],
+      "motivos_descarte": [],
+      "possivel_edital": false,
+      "eixos_detectados": [],
+      "motivo": "sem_sinal_tecnico",
+      "routing": "descartado_ruido"
+    },
+    {
+      "titulo": "Inscrições para olimpíada de matemática para professores estão abertas até 29 de maio",
+      "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/inscricoes-para-olimpiada-de-matematica-para-professores-estao-abertas-ate-29-de-maio",
+      "data_publicacao_raw": "2026-05-01",
+      "descricao": "",
+      "relevancia_mcti": "baixa",
+      "motivos_relevancia": [],
+      "motivos_descarte": [],
+      "possivel_edital": false,
+      "eixos_detectados": [],
+      "motivo": "sem_sinal_tecnico",
+      "routing": "descartado_ruido"
+    },
+    {
+      "titulo": "Cartas Celestes do Mast ajudam a localizar estrelas, planetas e constelações",
+      "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/cartas-celestes-do-mast-ajudam-a-localizar-estrelas-planetas-e-constelacoes",
+      "data_publicacao_raw": "2026-05-01",
+      "descricao": "",
+      "relevancia_mcti": "baixa",
+      "motivos_relevancia": [],
+      "motivos_descarte": [],
+      "possivel_edital": false,
+      "eixos_detectados": [],
+      "motivo": "sem_sinal_tecnico",
+      "routing": "descartado_ruido"
+    }
+  ],
+  "descartados_ruido_total": 6,
+  "mcti_pre_relevance_raw": [
+    {
+      "titulo": "MCTI inaugura novas linhas de luz do Sirius e amplia capacidade de pesquisas em áreas estratégicas",
+      "descricao": "Agenda em Campinas (SP), com a presença do presidente Lula e da ministra Luciana Santos, marcou a entrega de quatro novas linhas de luz síncrotron, o avanço do Projeto Orion e investimentos em inovação em saúde",
+      "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/mcti-inaugura-novas-linhas-de-luz-do-sirius-e-amplia-capacidade-de-pesquisas-em-areas-estrategicas",
+      "data_publicacao_raw": "2026-05-01",
+      "source_method": "mcti_govbr_listing",
+      "feed_categories": [],
+      "seed_url": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias",
+      "seed_kind": "mixed",
+      "_matched_keywords": [],
+      "_page_enriched": true,
+      "imagem_url": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/mcti-inaugura-novas-linhas-de-luz-do-sirius-e-amplia-capacidade-de-pesquisas-em-areas-estrategicas/jvcihwbc.jpg/@@images/3e6bc77d-bc42-407c-99c1-827d298b28af.jpeg"
+    },
+    {
+      "titulo": "Estudantes brasileiros ganham oito prêmios na maior feira internacional de ciências e engenharia",
+      "descricao": "Os brasileiros levaram ideias sobre saúde, agricultura, meio ambiente, tecnologia e inteligência artificial",
+      "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/estudantes-brasileiros-ganham-oito-premios-na-maior-feira-internacional-de-ciencias-e-engenharia",
+      "data_publicacao_raw": "2026-05-01",
+      "source_method": "mcti_govbr_listing",
+      "feed_categories": [],
+      "seed_url": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias",
+      "seed_kind": "mixed",
+      "_matched_keywords": [],
+      "_page_enriched": true,
+      "imagem_url": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/estudantes-brasileiros-ganham-oito-premios-na-maior-feira-internacional-de-ciencias-e-engenharia/whatsapp-image-2026-05-18-at-17-12-51.jpeg/@@images/e1ef66bb-df7d-4da2-a628-ace083d8ed67.jpeg"
+    },
+    {
+      "titulo": "Projeto conecta estudantes da Amazônia e da Mata Atlântica para transformar casas e escolas em pontos de monitoramento climático",
+      "descricao": "Iniciativa da Itaipu Binacional, da Itaipu Parquetec e do INPE levou estações meteorológicas, pluviômetros e desafios educativos para estudantes de Belém e Foz do Iguaçu",
+      "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/projeto-conecta-estudantes-da-amazonia-e-da-mata-atlantica-para-transformar-casas-e-escolas-em-pontos-de-monitoramento-climatico",
+      "data_publicacao_raw": "2026-05-01",
+      "source_method": "mcti_govbr_listing",
+      "feed_categories": [],
+      "seed_url": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias",
+      "seed_kind": "mixed",
+      "_matched_keywords": [],
+      "_page_enriched": true,
+      "imagem_url": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/projeto-conecta-estudantes-da-amazonia-e-da-mata-atlantica-para-transformar-casas-e-escolas-em-pontos-de-monitoramento-climatico/ta-errada-a-concordancia-segue-materia-sobre-estudo-do-cemaden-e-inpe-que-deixa-mais-confiavel-as-previsoes-sobre-enxurradas.jpg/@@images/d597cf80-fc7b-49d6-a2bd-ea5ca8a90d9a.jpeg"
+    },
+    {
+      "titulo": "MCTI colabora com 1ª Conferência Nacional dos Objetivos de Desenvolvimento Sustentável da ONU",
+      "descricao": "Unidades de pesquisa do MCTI promovem Conferências Livres preparatórias até 20 de maio",
+      "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/mcti-colabora-com-1a-conferencia-nacional-dos-objetivos-de-desenvolvimento-sustentavel-da-onu",
+      "data_publicacao_raw": "2026-05-01",
+      "source_method": "mcti_govbr_listing",
+      "feed_categories": [],
+      "seed_url": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias",
+      "seed_kind": "mixed",
+      "_matched_keywords": [],
+      "_page_enriched": true,
+      "imagem_url": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/mcti-colabora-com-1a-conferencia-nacional-dos-objetivos-de-desenvolvimento-sustentavel-da-onu/whatsapp-image-2026-05-18-at-15-21-01.jpeg/@@images/2f4e9421-9e89-42e8-842b-58bc4ca325ee.jpeg"
+    },
+    {
+      "titulo": "Mast conta com programação especial na 24ª Semana Nacional dos Museus",
+      "descricao": "De 18 a 23 de maio, museu promove lançamento de livro, mesas-redondas e exibição de documentário",
+      "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/mast-conta-com-programacao-especial-na-24a-semana-nacional-dos-museus",
+      "data_publicacao_raw": "2026-05-01",
+      "source_method": "mcti_govbr_listing",
+      "feed_categories": [],
+      "seed_url": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias",
+      "seed_kind": "mixed",
+      "_matched_keywords": [],
+      "_page_enriched": true,
+      "imagem_url": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/mast-conta-com-programacao-especial-na-24a-semana-nacional-dos-museus/divulgacaomast.jpg/@@images/ca06c395-23a0-46e5-afa7-55b2f0e892a0.jpeg"
+    },
+    {
+      "titulo": "Nota de pesar – Naire Galvão",
+      "descricao": "É com profunda tristeza que o Ministério da Ciência, Tecnologia e Inovação (MCTI) lamenta o falecimento da servidora Naire Bezerra Galvão, ocorrido no sábado (9).",
+      "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/nota-de-pesar-2013-naire-galvao",
+      "data_publicacao_raw": "2026-05-01",
+      "source_method": "mcti_govbr_listing",
+      "feed_categories": [],
+      "seed_url": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias",
+      "seed_kind": "mixed",
+      "_matched_keywords": [],
+      "_page_enriched": true,
+      "imagem_url": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/nota-de-pesar-2013-naire-galvao/whatsapp-image-2026-05-15-at-17-58-40.jpeg/@@images/40e19181-a36c-4900-b4ec-d5b3db791af9.jpeg"
+    },
+    {
+      "titulo": "Técnica tradicional de reflorestamento já plantou mais de 250kg de sementes no interior da Amazônia em 2026",
+      "descricao": "Iniciativa é uma parceria entre o Instituto Mamirauá e o Comitê Olímpico do Brasil (COB)",
+      "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/tecnica-tradicional-de-reflorestamento-ja-plantou-mais-de-250kg-de-sementes-no-interior-da-amazonia-em-2026",
+      "data_publicacao_raw": "2026-05-01",
+      "source_method": "mcti_govbr_listing",
+      "feed_categories": [],
+      "seed_url": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias",
+      "seed_kind": "mixed",
+      "_matched_keywords": [],
+      "_page_enriched": true,
+      "imagem_url": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/tecnica-tradicional-de-reflorestamento-ja-plantou-mais-de-250kg-de-sementes-no-interior-da-amazonia-em-2026/whatsapp-image-2026-05-15-at-13-55-40.jpeg/@@images/67d78985-9127-441c-88fe-159b7a4b03b6.jpeg"
+    },
+    {
+      "titulo": "Unidades de pesquisa do MCTI participam de encontro internacional para cooperação científica na Amazônia",
+      "descricao": "Ao lado de outros cinco institutos de países amazônicos, as unidades compõem a Rede Bioamazônia",
+      "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/unidades-de-pesquisa-do-mcti-participam-de-encontro-internacional-para-cooperacao-cientifica-na-amazonia",
+      "data_publicacao_raw": "2026-05-01",
+      "source_method": "mcti_govbr_listing",
+      "feed_categories": [],
+      "seed_url": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias",
+      "seed_kind": "mixed",
+      "_matched_keywords": [],
+      "_page_enriched": true,
+      "imagem_url": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/unidades-de-pesquisa-do-mcti-participam-de-encontro-internacional-para-cooperacao-cientifica-na-amazonia/padrao-mcti-capa-22.jpg/@@images/e3c45a53-5fc9-4855-b638-9d257e6b8bb3.jpeg"
+    },
+    {
+      "titulo": "MCTI e CNPq lançam chamada BRICS com R$ 33 milhões para projetos internacionais de pesquisa",
+      "descricao": "Iniciativa apoia cooperação científica entre países do bloco em áreas estratégicas como inteligência artificial, saúde, energia e hidrogênio verde",
+      "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/mcti-e-cnpq-lancam-chamada-brics-com-r-33-milhoes-para-projetos-internacionais-de-pesquisa",
+      "data_publicacao_raw": "2026-05-01",
+      "source_method": "mcti_govbr_listing",
+      "feed_categories": [],
+      "seed_url": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias",
+      "seed_kind": "mixed",
+      "_matched_keywords": [],
+      "_page_enriched": true,
+      "imagem_url": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/mcti-e-cnpq-lancam-chamada-brics-com-r-33-milhoes-para-projetos-internacionais-de-pesquisa/padrao-mcti-capa-11.jpg/@@images/f03af805-0274-484c-8d49-b7997035305d.jpeg"
+    },
+    {
+      "titulo": "MCTI reforça apoio à ética na pesquisa durante 72ª Reunião Ordinária do Concea",
+      "descricao": "Secretária de Políticas e Programas Estratégicos, Andrea Latgé, participou do evento e defendeu fortalecimento da regulamentação e da pesquisa ética no país",
+      "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/mcti-reforca-apoio-a-etica-na-pesquisa-durante-72a-reuniao-ordinaria-do-concea",
+      "data_publicacao_raw": "2026-05-01",
+      "source_method": "mcti_govbr_listing",
+      "feed_categories": [],
+      "seed_url": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias",
+      "seed_kind": "mixed",
+      "_matched_keywords": [],
+      "_page_enriched": true,
+      "imagem_url": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/mcti-reforca-apoio-a-etica-na-pesquisa-durante-72a-reuniao-ordinaria-do-concea/kklklghk.jpg/@@images/6d887b8e-a670-47dd-bbb5-d3195afbc9a2.jpeg"
+    },
+    {
+      "titulo": "ENTREVISTA | O que precisamos saber sobre o El Niño e seus impactos para o Brasil?",
+      "descricao": "",
+      "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/entrevista-o-que-precisamos-saber-sobre-o-el-nino-e-seus-impactos-para-o-brasil",
+      "data_publicacao_raw": "2026-05-01",
+      "source_method": "mcti_govbr_listing",
+      "feed_categories": [],
+      "seed_url": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias",
+      "seed_kind": "mixed",
+      "_matched_keywords": []
+    },
+    {
+      "titulo": "MCTI expande infovias para interligar 180 mil pesquisadores no Brasil",
+      "descricao": "",
+      "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/mcti-expande-infovias-para-interligar-180-mil-pesquisadores-no-brasil",
+      "data_publicacao_raw": "2026-05-01",
+      "source_method": "mcti_govbr_listing",
+      "feed_categories": [],
+      "seed_url": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias",
+      "seed_kind": "mixed",
+      "_matched_keywords": []
+    },
+    {
+      "titulo": "Da TV para o espaço: conheça o SCD-1, primeiro e mais antigo satélite brasileiro em operação",
+      "descricao": "",
+      "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/da-tv-para-o-espaco-conheca-o-scd-1-primeiro-e-mais-antigo-satelite-brasileiro-em-operacao",
+      "data_publicacao_raw": "2026-05-01",
+      "source_method": "mcti_govbr_listing",
+      "feed_categories": [],
+      "seed_url": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias",
+      "seed_kind": "mixed",
+      "_matched_keywords": []
+    },
+    {
+      "titulo": "MCTI auxilia parceria entre Ceitec e empresa chinesa para produção de semicondutores",
+      "descricao": "",
+      "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/mcti-auxilia-parceria-entre-ceitec-e-empresa-chinesa-para-producao-de-semicondutores",
+      "data_publicacao_raw": "2026-05-01",
+      "source_method": "mcti_govbr_listing",
+      "feed_categories": [],
+      "seed_url": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias",
+      "seed_kind": "mixed",
+      "_matched_keywords": []
+    },
+    {
+      "titulo": "MCTI lança GT para transformar riqueza mineral em tecnologia, indústria e desenvolvimento sustentável",
+      "descricao": "",
+      "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/mcti-lanca-gt-para-transformar-riqueza-mineral-em-tecnologia-industria-e-desenvolvimento-sustentavel",
+      "data_publicacao_raw": "2026-05-01",
+      "source_method": "mcti_govbr_listing",
+      "feed_categories": [],
+      "seed_url": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias",
+      "seed_kind": "mixed",
+      "_matched_keywords": []
+    },
+    {
+      "titulo": "Pesquisa do Cemaden e INPE usa inteligência artificial para tornar previsões de enxurradas mais confiáveis",
+      "descricao": "",
+      "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/pesquisa-do-cemaden-e-inpe-usa-inteligencia-artificial-para-tornar-previsoes-de-enxurradas-mais-confiaveis",
+      "data_publicacao_raw": "2026-05-01",
+      "source_method": "mcti_govbr_listing",
+      "feed_categories": [],
+      "seed_url": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias",
+      "seed_kind": "mixed",
+      "_matched_keywords": []
+    },
+    {
+      "titulo": "Inscrições prorrogadas: projeto de Inteligência Artificial do MCTI oferece bolsa de R$ 12,5 mil para pesquisa",
+      "descricao": "",
+      "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/inscricoes-prorrogadas-projeto-de-inteligencia-artificial-do-mcti-oferece-bolsa-de-r-12-5-mil-para-pesquisa",
+      "data_publicacao_raw": "2026-05-01",
+      "source_method": "mcti_govbr_listing",
+      "feed_categories": [],
+      "seed_url": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias",
+      "seed_kind": "mixed",
+      "_matched_keywords": []
+    },
+    {
+      "titulo": "MCTI lança EDinova para acelerar descarbonização da construção civil no Brasil",
+      "descricao": "",
+      "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/mcti-lanca-edinova-para-acelerar-descarbonizacao-da-construcao-civil-no-brasil",
+      "data_publicacao_raw": "2026-05-01",
+      "source_method": "mcti_govbr_listing",
+      "feed_categories": [],
+      "seed_url": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias",
+      "seed_kind": "mixed",
+      "_matched_keywords": []
+    },
+    {
+      "titulo": "Com apoio da Lei do Bem, Agrosystem desenvolve soluções de agricultura de precisão",
+      "descricao": "",
+      "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/com-apoio-da-lei-do-bem-agrosystem-desenvolve-solucoes-de-agricultura-de-precisao",
+      "data_publicacao_raw": "2026-05-01",
+      "source_method": "mcti_govbr_listing",
+      "feed_categories": [],
+      "seed_url": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias",
+      "seed_kind": "mixed",
+      "_matched_keywords": []
+    },
+    {
+      "titulo": "Construção de estratégia de longo prazo para ação climática deve ter ciência e transparência como guias",
+      "descricao": "",
+      "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/construcao-de-estrategia-de-longo-prazo-para-acao-climatica-deve-ter-ciencia-e-transparencia-como-guias",
+      "data_publicacao_raw": "2026-05-01",
+      "source_method": "mcti_govbr_listing",
+      "feed_categories": [],
+      "seed_url": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias",
+      "seed_kind": "mixed",
+      "_matched_keywords": []
+    },
+    {
+      "titulo": "Inscrições para olimpíada de matemática para professores estão abertas até 29 de maio",
+      "descricao": "",
+      "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/inscricoes-para-olimpiada-de-matematica-para-professores-estao-abertas-ate-29-de-maio",
+      "data_publicacao_raw": "2026-05-01",
+      "source_method": "mcti_govbr_listing",
+      "feed_categories": [],
+      "seed_url": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias",
+      "seed_kind": "mixed",
+      "_matched_keywords": []
+    },
+    {
+      "titulo": "MCTI investe R$ 188 milhões em inovação industrial, infraestrutura científica e fortalecimento da pesquisa em Alagoas",
+      "descricao": "",
+      "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/mcti-investe-r-188-milhoes-em-inovacao-industrial-infraestrutura-cientifica-e-fortalecimento-da-pesquisa-em-alagoas",
+      "data_publicacao_raw": "2026-05-01",
+      "source_method": "mcti_govbr_listing",
+      "feed_categories": [],
+      "seed_url": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias",
+      "seed_kind": "mixed",
+      "_matched_keywords": []
+    },
+    {
+      "titulo": "23ª Semana Nacional de Ciência e Tecnologia homenageará mulheres cientistas",
+      "descricao": "",
+      "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/23a-semana-nacional-de-ciencia-e-tecnologia-homenageara-mulheres-cientistas",
+      "data_publicacao_raw": "2026-05-01",
+      "source_method": "mcti_govbr_listing",
+      "feed_categories": [],
+      "seed_url": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias",
+      "seed_kind": "mixed",
+      "_matched_keywords": []
+    },
+    {
+      "titulo": "Entre ciência e resistência: ABC completa 110 anos como pilar do conhecimento no Brasil",
+      "descricao": "",
+      "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/entre-ciencia-e-resistencia-abc-completa-110-anos-como-pilar-do-conhecimento-no-brasil",
+      "data_publicacao_raw": "2026-05-01",
+      "source_method": "mcti_govbr_listing",
+      "feed_categories": [],
+      "seed_url": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias",
+      "seed_kind": "mixed",
+      "_matched_keywords": []
+    },
+    {
+      "titulo": "MCTI e CNPq lançam edital de R$ 2,5 milhões para apoiar eventos de inovação e empreendedorismo",
+      "descricao": "",
+      "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/mcti-e-cnpq-lancam-edital-de-r-2-5-milhoes-para-apoiar-eventos-de-inovacao-e-empreendedorismo",
+      "data_publicacao_raw": "2026-05-01",
+      "source_method": "mcti_govbr_listing",
+      "feed_categories": [],
+      "seed_url": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias",
+      "seed_kind": "mixed",
+      "_matched_keywords": []
+    },
+    {
+      "titulo": "Cartas Celestes do Mast ajudam a localizar estrelas, planetas e constelações",
+      "descricao": "",
+      "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/cartas-celestes-do-mast-ajudam-a-localizar-estrelas-planetas-e-constelacoes",
+      "data_publicacao_raw": "2026-05-01",
+      "source_method": "mcti_govbr_listing",
+      "feed_categories": [],
+      "seed_url": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias",
+      "seed_kind": "mixed",
+      "_matched_keywords": []
+    },
+    {
+      "titulo": "Governo do Brasil lança edital de arborização e mapeamento de ilhas de calor",
+      "descricao": "",
+      "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/governo-do-brasil-lanca-edital-de-arborizacao-e-mapeamento-de-ilhas-de-calor",
+      "data_publicacao_raw": "2026-05-01",
+      "source_method": "mcti_govbr_listing",
+      "feed_categories": [],
+      "seed_url": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias",
+      "seed_kind": "mixed",
+      "_matched_keywords": []
+    },
+    {
+      "titulo": "Expansão da área protegida do Pantanal amplia o desenvolvimento de pesquisas sobre a fauna e flora",
+      "descricao": "",
+      "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/expansao-da-area-protegida-do-pantanal-amplia-o-desenvolvimento-de-pesquisas-sobre-a-fauna-e-flora",
+      "data_publicacao_raw": "2026-05-01",
+      "source_method": "mcti_govbr_listing",
+      "feed_categories": [],
+      "seed_url": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias",
+      "seed_kind": "mixed",
+      "_matched_keywords": []
+    },
+    {
+      "titulo": "Prêmio Almirante Álvaro Alberto reconhece contribuição da ciência amazônica para o Brasil",
+      "descricao": "",
+      "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/premio-almirante-alvaro-alberto-reconhece-contribuicao-da-ciencia-amazonica-para-o-brasil",
+      "data_publicacao_raw": "2026-05-01",
+      "source_method": "mcti_govbr_listing",
+      "feed_categories": [],
+      "seed_url": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias",
+      "seed_kind": "mixed",
+      "_matched_keywords": []
+    },
+    {
+      "titulo": "MCTI e União Europeia reforçam parceria estratégica em ciência, tecnologia e inovação",
+      "descricao": "",
+      "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/mcti-e-uniao-europeia-reforcam-parceria-estrategica-em-ciencia-tecnologia-e-inovacao",
+      "data_publicacao_raw": "2026-05-01",
+      "source_method": "mcti_govbr_listing",
+      "feed_categories": [],
+      "seed_url": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias",
+      "seed_kind": "mixed",
+      "_matched_keywords": []
+    }
+  ],
+  "mcti_pre_relevance_total": 30,
+  "note_relevance": "Filtro forte CT&I: descarte se só sinais administrativos; review se admin+ técnico fraco; possivel_edital não roteia para Radar.",
+  "note_fomento_separado": "MCTI Fomento permanece em Radar/Editais (mcti_fomento), não neste pipeline."
+}

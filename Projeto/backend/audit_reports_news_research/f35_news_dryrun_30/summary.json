@@ -1,0 +1,101 @@
+{
+  "fonte": "f35_news",
+  "nome_exibicao": "F-35 News & Features",
+  "data_execucao": "2026-05-18T15:31:03Z",
+  "modo": "dry_run",
+  "apply": false,
+  "output_dir": "f35_news_dryrun_30",
+  "diagnostico": {
+    "url_base": "https://www.f35.com",
+    "hub_html": "https://www.f35.com/f35/news-and-features.html",
+    "feed_json": "https://www.f35.com/content/lockheed-martin/data/feeds/f35feed.json",
+    "rss": "não disponível (listagem via JSON AEM + Algolia no browser)",
+    "robots_txt": "https://www.f35.com/robots.txt — Allow paths regionais; sem Disallow em /f35/",
+    "cms": "Adobe AEM (Lockheed Martin F-35)",
+    "listagem": "JSON estático f35feed.json (data-path no hub); hub renderizado com Algolia InstantSearch",
+    "data_publicacao": "campo Date (RFC822, ex. Wed, 13 May 2026 … MDT)",
+    "imagem": "Thumbnail Image no feed (absolutizada para f35.com)",
+    "autor": "F-35 / Lockheed Martin (metadado feed)",
+    "copyright": "Apenas Description do feed; enrich opcional og:description; sem corpo integral"
+  },
+  "config": {
+    "max_items": 30,
+    "time_window_months": 12,
+    "page_enrich_max": 6
+  },
+  "feed_inventory": {
+    "feed_fetch_ok": true,
+    "feed_json_url": "https://www.f35.com/content/lockheed-martin/data/feeds/f35feed.json",
+    "total_no_feed": 302,
+    "total_dentro_janela_meses": 80,
+    "total_com_path_news_features": 302,
+    "total_elegivel_pos_filtros_pipeline": 80,
+    "time_window_months": 12,
+    "content_type_tags_no_feed": {
+      "Feature": 139,
+      "News": 106,
+      "3rd Party Article": 57
+    }
+  },
+  "totais": {
+    "raw_apos_filtros": 30,
+    "standardized": 30,
+    "within_window_12m": 30,
+    "sem_data": 0,
+    "page_enrich_fetches": 0,
+    "discarded_post_enrich": 0,
+    "total_valido": 30,
+    "total_incompleto": 0,
+    "errors_count": 0
+  },
+  "validacao_status_counts": {
+    "valido": 30
+  },
+  "distribuicao": {
+    "categoria_principal": {
+      "News": 30
+    },
+    "content_type_tag": {
+      "News": 30
+    },
+    "general_tags_top": {
+      "Capabilities": 11,
+      "F-35": 7,
+      "United States Air Force": 5,
+      "Finland": 4,
+      "Training": 3,
+      "Japan": 3,
+      "United States Navy": 3,
+      "United States of America": 3,
+      "Netherlands": 2,
+      "United Kingdom": 2,
+      "Sustainment": 2,
+      "Production": 2,
+      "Denmark": 1,
+      "Canada": 1,
+      "Germany": 1
+    },
+    "eixo_estrategico": {
+      "aeroespacial": 30,
+      "defesa": 30,
+      "aviacao_militar": 28,
+      "tecnologia_militar": 14,
+      "industria_estrategica": 14,
+      "geopolitica_tecnologica": 7
+    }
+  },
+  "warnings": [
+    {
+      "tipo": "cap_max_items",
+      "elegivel_no_feed": 80,
+      "max_items": 30
+    }
+  ],
+  "errors": [],
+  "paths": {
+    "standardized": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_news_research\\f35_news_dryrun_30\\standardized\\f35_news_standardized.json",
+    "exemplos": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_news_research\\f35_news_dryrun_30\\standardized\\exemplos.json",
+    "raw": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_news_research\\f35_news_dryrun_30\\raw\\f35_news_raw.json",
+    "crawl_meta": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_news_research\\f35_news_dryrun_30\\f35_news_crawl_meta.json"
+  }
+}

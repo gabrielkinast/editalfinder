@@ -1,0 +1,47 @@
+{
+  "data_execucao": "2026-05-17T04:07:43Z",
+  "modo": "apply",
+  "source": "exercito_brasileiro",
+  "wave": null,
+  "payload_noticia_path": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_news_research\\exercito_brasileiro_subset_valido\\exercito_brasileiro_subset_valido_payload_noticia.json",
+  "payload_pesquisa_path": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_news_research\\exercito_brasileiro_subset_valido\\exercito_brasileiro_subset_valido_payload_pesquisa.json",
+  "payload_review_path": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_news_research\\exercito_brasileiro_subset_valido\\exercito_brasileiro_subset_valido_review_candidates.json",
+  "input_dir": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_news_research\\exercito_brasileiro_subset_valido",
+  "total_noticia": 6,
+  "total_pesquisa": 0,
+  "would_upsert_noticia": 6,
+  "would_upsert_pesquisa": 0,
+  "inserted_noticia": 6,
+  "updated_noticia": 0,
+  "inserted_pesquisa": 0,
+  "updated_pesquisa": 0,
+  "skipped": 0,
+  "errors_count": 0,
+  "review_candidates_ignored": 0,
+  "arrays_normalized_count": 6,
+  "arrays_normalized_sample": [
+    "noticia:https://www.eb.mil.br/web/noticias/w/programa-forcas-blindadas-atualiza-frota-de-veiculos-de-combate-do-exercito-brasileiro:area_cientifica",
+    "noticia:https://www.eb.mil.br/web/noticias/w/exercito-consolida-alinhamento-operacional-da-capacidade-de-defesa-quimica-biologica-radiologica-e-nuclear:area_cientifica",
+    "noticia:https://www.eb.mil.br/web/noticias/w/evento-destaca-capacidades-das-tropas-de-infantaria-do-exercito:area_cientifica",
+    "noticia:https://www.eb.mil.br/web/noticias/w/cadetes-da-academia-militar-representam-o-brasil-em-competicao-militar-internacional:area_cientifica",
+    "noticia:https://www.eb.mil.br/web/noticias/w/novo-artigo-do-eblog:area_cientifica",
+    "noticia:https://www.eb.mil.br/web/noticias/w/forcas-militares-e-civis-aperfeicoam-prontidao-para-emergencias-climaticas-em-santa-catarina:area_cientifica"
+  ],
+  "environment_guard": {
+    "editalfinder_env": "staging",
+    "has_supabase_url": true,
+    "has_service_key": true,
+    "has_anon_key": true,
+    "has_allow_staging_apply": true,
+    "url_host_masked": "dof***.co",
+    "block_reason": ""
+  },
+  "environment_safe": true,
+  "env_files_loaded": [
+    "D:\\Computational_Physics\\My Projects\\edital\\.env.staging",
+    "D:\\Computational_Physics\\My Projects\\edital\\CORE\\.env"
+  ],
+  "apply_executado": true,
+  "apply_block_reason": "",
+  "apply_status": "applied"
+}

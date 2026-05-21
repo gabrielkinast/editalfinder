@@ -1,0 +1,50 @@
+{
+  "data_execucao": "2026-05-14T21:46:49Z",
+  "modo": "apply_staging",
+  "staging_flag": true,
+  "apply_staging_requested": true,
+  "input_dir": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_main_pipeline\\concursos_wave1_ibfc\\standardized",
+  "output_dir": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_main_pipeline\\concursos_wave1_ibfc\\loader_apply_staging",
+  "sources_selected": [
+    "ibfc"
+  ],
+  "total_items": 1,
+  "would_upsert_total": 1,
+  "inserted": 1,
+  "updated": 0,
+  "upserted_total": 1,
+  "errors_count": 0,
+  "map_errors_count": 0,
+  "apply_errors_count": 0,
+  "errors_total_written": 0,
+  "duplicate_fonte_link_in_batch": 0,
+  "expired_items_count": 0,
+  "expired_items": [],
+  "by_source": {
+    "ibfc": {
+      "would_upsert": 1,
+      "errors": 0
+    }
+  },
+  "tipo_selecao_counts": {
+    "processo_seletivo": 1
+  },
+  "status_counts": {
+    "inscricoes_abertas": 1
+  },
+  "validacao_status_counts": {
+    "valido": 1
+  },
+  "environment_guard": {
+    "editalfinder_env": "staging",
+    "has_supabase_url": true,
+    "has_service_key": true,
+    "has_anon_key": true,
+    "has_allow_staging_apply": true,
+    "url_host_masked": "dof***.co",
+    "block_reason": "",
+    "production_blocked": false
+  },
+  "apply_status": "applied",
+  "apply_block_reason": ""
+}

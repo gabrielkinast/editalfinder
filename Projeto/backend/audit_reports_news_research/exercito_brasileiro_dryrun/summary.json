@@ -1,0 +1,58 @@
+{
+  "fonte": "exercito_brasileiro",
+  "nome_exibicao": "Exército Brasileiro",
+  "data_execucao": "2026-05-17T03:38:38Z",
+  "modo": "dry_run",
+  "apply": false,
+  "destino_produto": "public.noticia (via vw_noticias_front, após apply futuro)",
+  "diagnostico": {
+    "url_portal": "https://www.eb.mil.br/web/guest",
+    "url_noticiario": "https://www.eb.mil.br/web/guest/noticiario-do-exercito",
+    "padrao_detalhe": "https://www.eb.mil.br/web/noticias/w/{slug}",
+    "rss": "Não identificado (listagem HTML Liferay)",
+    "robots_txt": "User-agent: * / Disallow: (vazio)",
+    "cms": "Liferay",
+    "listagem": "HTML guest + noticiário; links /web/noticias/w/",
+    "data_publicacao": "div.dates — Publicado em DD/MM/AAAA (+ enrich)",
+    "autor": "Institucional (Exército Brasileiro); sem byline editorial consistente",
+    "imagem": "og:image no enrich",
+    "copyright": "Resumo/meta; sem corpo integral"
+  },
+  "config": {
+    "max_items": 10,
+    "time_window_months": 12,
+    "page_enrich_max": 10,
+    "seed_urls": [
+      "https://www.eb.mil.br/web/guest",
+      "https://www.eb.mil.br/web/guest/noticiario-do-exercito"
+    ]
+  },
+  "totais": {
+    "raw_apos_filtros": 10,
+    "standardized": 10,
+    "within_window_12m": 10,
+    "sem_data": 0,
+    "page_enrich_fetches": 10,
+    "discarded_post_enrich": 0
+  },
+  "tipo_conteudo_counts": {
+    "noticia": 10
+  },
+  "validacao_status_counts": {
+    "valido": 6,
+    "incompleto": 4
+  },
+  "warnings": [
+    {
+      "tipo": "sem_rss",
+      "detalhe": "Sem RSS útil; seeds guest + noticiario-do-exercito."
+    }
+  ],
+  "errors": [],
+  "paths": {
+    "standardized": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_news_research\\exercito_brasileiro_dryrun\\standardized\\exercito_brasileiro_standardized.json",
+    "exemplos": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_news_research\\exercito_brasileiro_dryrun\\standardized\\exemplos.json",
+    "raw": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_news_research\\exercito_brasileiro_dryrun\\raw\\exercito_brasileiro_raw.json",
+    "crawl_meta": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_news_research\\exercito_brasileiro_dryrun\\exercito_brasileiro_crawl_meta.json"
+  }
+}

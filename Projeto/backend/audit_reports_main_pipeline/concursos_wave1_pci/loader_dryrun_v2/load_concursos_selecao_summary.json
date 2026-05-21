@@ -1,0 +1,52 @@
+{
+  "data_execucao": "2026-05-13T19:12:46Z",
+  "modo": "dry_run",
+  "staging_flag": false,
+  "apply_staging_requested": false,
+  "input_dir": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_main_pipeline\\concursos_wave1_pci\\standardized",
+  "output_dir": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_main_pipeline\\concursos_wave1_pci\\loader_dryrun_v2",
+  "sources_selected": [
+    "pci_concursos"
+  ],
+  "total_items": 12,
+  "would_upsert_total": 12,
+  "inserted": 0,
+  "updated": 0,
+  "upserted_total": 0,
+  "errors_count": 0,
+  "map_errors_count": 0,
+  "apply_errors_count": 0,
+  "errors_total_written": 0,
+  "duplicate_fonte_link_in_batch": 0,
+  "expired_items_count": 0,
+  "expired_items": [],
+  "by_source": {
+    "pci_concursos": {
+      "would_upsert": 12,
+      "errors": 0
+    }
+  },
+  "tipo_selecao_counts": {
+    "concurso_publico": 8,
+    "processo_seletivo": 4
+  },
+  "status_counts": {
+    "ativo": 12
+  },
+  "validacao_status_counts": {
+    "incompleto": 12
+  },
+  "environment_guard": {
+    "editalfinder_env": "staging",
+    "has_supabase_url": true,
+    "has_service_key": true,
+    "has_anon_key": true,
+    "has_allow_staging_apply": false,
+    "url_host_masked": "dof***.co",
+    "block_reason": "",
+    "production_blocked": false
+  },
+  "apply_status": "dry_run_only",
+  "apply_block_reason": "",
+  "nota": "Nenhuma escrita no Supabase (dry-run)."
+}

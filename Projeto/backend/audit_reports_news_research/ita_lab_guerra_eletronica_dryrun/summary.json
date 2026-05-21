@@ -1,0 +1,76 @@
+{
+  "fonte": "ita_lab_guerra_eletronica",
+  "nome_exibicao": "ITA — Laboratório de Guerra Eletrônica",
+  "data_execucao": "2026-05-17T04:33:30Z",
+  "modo": "dry_run",
+  "apply": false,
+  "destino_produto": "public.pesquisa (via vw_pesquisas_front, após apply futuro)",
+  "diagnostico": {
+    "url": "http://www.ita.br/laboratorios/guerraeletronica",
+    "tipo_pagina": "página institucional estática de laboratório",
+    "cms": "Drupal (site ITA)",
+    "rss": "Não aplicável",
+    "recorrencia": "Portal institucional único (não série temporal)",
+    "datas": "Sem data de publicação",
+    "destino": "public.pesquisa — tipo_pesquisa=portal_institucional",
+    "https": "HTTPS www.ita.br com timeout frequente; usar HTTP no crawl"
+  },
+  "config": {
+    "max_items": 1,
+    "time_window_months": 24,
+    "page_enrich_max": 1,
+    "method": "ita_institutional_portal"
+  },
+  "totais": {
+    "raw_apos_filtros": 1,
+    "standardized": 1,
+    "within_window_24m": 0,
+    "sem_data": 1,
+    "page_enrich_fetches": 1,
+    "discarded_post_enrich": 0
+  },
+  "tipo_conteudo_counts": {
+    "pesquisa": 1
+  },
+  "tipo_pesquisa_counts": {
+    "portal_institucional": 1
+  },
+  "validacao_status_counts": {
+    "incompleto": 1
+  },
+  "itens": [
+    {
+      "titulo": "Laboratório de Guerra Eletrônica",
+      "link": "http://www.ita.br/laboratorios/guerraeletronica",
+      "data_publicacao": null,
+      "tipo_pesquisa": "portal_institucional",
+      "categoria": "laboratorio",
+      "eixo_estrategico": [
+        "engenharia",
+        "ciencia_tecnologia",
+        "defesa",
+        "tecnologia_militar",
+        "computacao_cyber"
+      ],
+      "validacao_status": "incompleto",
+      "resumo_len": 496
+    }
+  ],
+  "warnings": [
+    {
+      "tipo": "sem_data_publicacao",
+      "count": 1,
+      "detalhe": "Esperado para catálogo/portal ITA; janela 24m não filtra standardized."
+    }
+  ],
+  "errors": [],
+  "crawl_meta": {
+    "page_kind": "portal_institucional",
+    "note_static_lab": "Página única de laboratório (missão/visão); não é feed de notícias; tipo_pesquisa=portal_institucional."
+  },
+  "paths": {
+    "standardized": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_news_research\\ita_lab_guerra_eletronica_dryrun\\standardized\\ita_lab_guerra_eletronica_standardized.json",
+    "raw": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_news_research\\ita_lab_guerra_eletronica_dryrun\\raw\\ita_lab_guerra_eletronica_raw.json",
+    "crawl_meta": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_news_research\\ita_lab_guerra_eletronica_dryrun\\ita_lab_guerra_eletronica_crawl_meta.json"
+  }
+}

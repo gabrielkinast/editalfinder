@@ -1,0 +1,81 @@
+{
+  "generated_at": "2026-05-17T07:05:05.943864+00:00",
+  "source_id": "mcti_fomento_transformacao_digital",
+  "pipeline": "radar_editais_dryrun_v2",
+  "curacao": "strict_allowlist_blocklist",
+  "apply_executed": false,
+  "noticia_loader": false,
+  "candidatos_fila": 47,
+  "page_enrich_fetches": 28,
+  "total_standardized": 46,
+  "total_review": 39,
+  "total_descartados": 1703,
+  "por_decisao_descartados": {
+    "descartado_ruido": 644,
+    "institucional_latente": 1059
+  },
+  "pronto_para_apply": 8,
+  "por_tipo": {
+    "edital_chamada": 30,
+    "radar_oportunidade": 16
+  },
+  "por_status": {
+    "incompleto": 29,
+    "latente": 3,
+    "ativo": 14
+  },
+  "por_validacao": {
+    "incompleto": 38,
+    "valido": 8
+  },
+  "comparacao_v1_v2": {
+    "v1_total_standardized": 50,
+    "v2_total_standardized": 46,
+    "delta_standardized": 4,
+    "v1_valido": 15,
+    "v2_valido": 8,
+    "delta_valido": -7,
+    "v1_review": 36,
+    "v2_review": 39,
+    "delta_review": 3,
+    "v1_pronto_apply": 15,
+    "v2_pronto_apply": 8,
+    "delta_pronto_apply": -7,
+    "links_removidos_do_standardized": 18,
+    "links_removidos_amostra": [
+      "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti",
+      "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/correg/comunicados-corregedoria",
+      "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/oceano-e-antartica",
+      "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/transformacaodigital",
+      "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/transformacaodigital/Camaras%204.0",
+      "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/transformacaodigital/Internet%20das%20Coisas",
+      "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/transformacaodigital/capacitacao-tecnologica",
+      "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/transformacaodigital/comunicacoes-avancadas",
+      "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/transformacaodigital/cooperacao-internacional",
+      "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/transformacaodigital/e-digital",
+      "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/transformacaodigital/estrategia-brasileira-de-inteligencia-artificial",
+      "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/transformacaodigital/internet-das-coisas-2",
+      "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/transformacaodigital/observatorio-de-tecnologias-digitais",
+      "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/transformacaodigital/plano-brasileiro-de-inteligencia-artificial",
+      "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/transformacaodigital/seguranca-cibernetica"
+    ],
+    "descartados_total_registros": 1703,
+    "descartados_links_unicos": 367,
+    "ruidos_removidos": 18,
+    "v1_path": "audit_reports_radar\\mcti_fomento_dryrun"
+  },
+  "seeds": [
+    "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/transformacaodigital/fomento-1",
+    "https://www.gov.br/mcti/pt-br/acesso-a-informacao/editais/",
+    "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/chamamento-oceano",
+    "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/bolsa-cientifica",
+    "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/chamamento-vacina"
+  ],
+  "errors": [],
+  "output_paths": {
+    "standardized": "audit_reports_radar\\mcti_fomento_dryrun_v2\\standardized\\mcti_fomento_standardized.json",
+    "review": "audit_reports_radar\\mcti_fomento_dryrun_v2\\review_candidates.json",
+    "descartados": "audit_reports_radar\\mcti_fomento_dryrun_v2\\descartados_ruido.json"
+  },
+  "diagnostic_input": "audit_reports_news_research/mcti_fomento_diagnostic/"
+}

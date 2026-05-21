@@ -1,0 +1,211 @@
+[
+  {
+    "titulo": "Concurso Público para a NAV Brasil Serviços de Navegação Aérea S.A.",
+    "tipo_selecao": "concurso_publico",
+    "categoria": "banca_fgv_conhecimento",
+    "orgao": "NAV Brasil Serviços de Navegação Aérea S.A.",
+    "instituicao": "NAV Brasil Serviços de Navegação Aérea S.A.",
+    "banca": "FGV",
+    "cargo": null,
+    "curso": null,
+    "area": null,
+    "nivel_escolaridade": "medio",
+    "estado": null,
+    "municipio": null,
+    "regiao": null,
+    "modalidade": null,
+    "numero_vagas": null,
+    "salario_min": null,
+    "salario_max": null,
+    "taxa_inscricao": null,
+    "data_publicacao": "2026-04-24",
+    "data_inicio_inscricao": null,
+    "data_fim_inscricao": null,
+    "data_prova": "2026-05-14",
+    "status": "ativo",
+    "link": "https://conhecimento.fgv.br/concursos/navbrasil26",
+    "link_edital": "https://conhecimento.fgv.br/sites/default/files/concursos/edital-01-2026-nav-brasil_retificado_08_05.pdf",
+    "fonte": "fgv",
+    "fonte_tipo": "banca",
+    "validacao_status": "incompleto",
+    "qualidade_dado": "media",
+    "tags": [
+      "fgv",
+      "wave1"
+    ],
+    "extras": {
+      "crawler": "main_fgv_concursos",
+      "wave": "concursos_wave1_fgv",
+      "fetched_at_utc": "2026-05-14T19:52:46.845801+00:00",
+      "fgv_listing_url": "https://conhecimento.fgv.br/concursos",
+      "official_link_missing": false,
+      "extracted_fields": [
+        "data_prova_texto"
+      ],
+      "missing_core_fields": [
+        "data_fim_inscricao",
+        "estado",
+        "numero_vagas"
+      ],
+      "extraction_confidence": "alta",
+      "source_is_aggregator": false,
+      "value_extraction_notes": [
+        "vagas_sem_contexto_certame_ou_excluidas_rodape"
+      ],
+      "tipo_selecao_evidencia": "texto:concurso_publico",
+      "possible_fee_detected": false,
+      "possible_salary_detected": false,
+      "pdf_checked": true,
+      "pdf_date_extraction_notes": [
+        "schedule_html:extract_prova_from_text",
+        "pdf_fetch:pdf_download_ok",
+        "pdf_text:CORE_pdf_enrichment",
+        "schedule_pdf:extract_prova_from_text"
+      ],
+      "source_standardized_key": "fgv",
+      "loader": "load_concursos_selecao",
+      "origem_pipeline": "concursos_wave1_manual"
+    },
+    "ativo": true
+  },
+  {
+    "titulo": "Concurso Público para o Tribunal de Justiça do Estado de Santa Catarina",
+    "tipo_selecao": "concurso_publico",
+    "categoria": "banca_fgv_conhecimento",
+    "orgao": "Tribunal de Justiça do Estado de Santa Catarina",
+    "instituicao": "Tribunal de Justiça do Estado de Santa Catarina",
+    "banca": "FGV",
+    "cargo": null,
+    "curso": null,
+    "area": null,
+    "nivel_escolaridade": "medio",
+    "estado": null,
+    "municipio": null,
+    "regiao": null,
+    "modalidade": null,
+    "numero_vagas": null,
+    "salario_min": null,
+    "salario_max": null,
+    "taxa_inscricao": null,
+    "data_publicacao": "2026-03-27",
+    "data_inicio_inscricao": null,
+    "data_fim_inscricao": null,
+    "data_prova": "2026-06-28",
+    "status": "ativo",
+    "link": "https://conhecimento.fgv.br/concursos/tjscservidor26",
+    "link_edital": "https://conhecimento.fgv.br/sites/default/files/concursos/edital-retificado.pdf",
+    "fonte": "fgv",
+    "fonte_tipo": "banca",
+    "validacao_status": "incompleto",
+    "qualidade_dado": "media",
+    "tags": [
+      "fgv",
+      "wave1"
+    ],
+    "extras": {
+      "crawler": "main_fgv_concursos",
+      "wave": "concursos_wave1_fgv",
+      "fetched_at_utc": "2026-05-14T19:52:51.965957+00:00",
+      "fgv_listing_url": "https://conhecimento.fgv.br/concursos",
+      "official_link_missing": false,
+      "extracted_fields": [
+        "data_prova_texto"
+      ],
+      "missing_core_fields": [
+        "data_fim_inscricao",
+        "estado",
+        "numero_vagas"
+      ],
+      "extraction_confidence": "alta",
+      "source_is_aggregator": false,
+      "value_extraction_notes": [
+        "vagas_sem_contexto_certame_ou_excluidas_rodape"
+      ],
+      "tipo_selecao_evidencia": "texto:concurso_publico",
+      "possible_fee_detected": false,
+      "possible_salary_detected": false,
+      "pdf_checked": true,
+      "pdf_date_extraction_notes": [
+        "schedule_html:extract_prova_from_text",
+        "pdf_fetch:pdf_download_ok",
+        "pdf_text:CORE_pdf_enrichment",
+        "schedule_pdf:match:prova_por_extenso"
+      ],
+      "source_standardized_key": "fgv",
+      "loader": "load_concursos_selecao",
+      "origem_pipeline": "concursos_wave1_manual"
+    },
+    "ativo": true
+  },
+  {
+    "titulo": "Concurso Público para a Prefeitura de Macaé",
+    "tipo_selecao": "concurso_publico",
+    "categoria": "banca_fgv_conhecimento",
+    "orgao": "Prefeitura de Macaé",
+    "instituicao": "Prefeitura de Macaé",
+    "banca": "FGV",
+    "cargo": null,
+    "curso": null,
+    "area": null,
+    "nivel_escolaridade": null,
+    "estado": null,
+    "municipio": "Macaé",
+    "regiao": null,
+    "modalidade": null,
+    "numero_vagas": null,
+    "salario_min": null,
+    "salario_max": null,
+    "taxa_inscricao": null,
+    "data_publicacao": "2026-03-27",
+    "data_inicio_inscricao": "2026-03-30",
+    "data_fim_inscricao": "2026-04-30",
+    "data_prova": "2026-05-14",
+    "status": "prova_proxima",
+    "link": "https://conhecimento.fgv.br/concursos/prefeiturademacae26",
+    "link_edital": "https://conhecimento.fgv.br/sites/default/files/concursos/minuta-edital-macae-saude-publicacao_0.pdf",
+    "fonte": "fgv",
+    "fonte_tipo": "banca",
+    "validacao_status": "valido",
+    "qualidade_dado": "alta",
+    "tags": [
+      "fgv",
+      "wave1"
+    ],
+    "extras": {
+      "crawler": "main_fgv_concursos",
+      "wave": "concursos_wave1_fgv",
+      "fetched_at_utc": "2026-05-14T19:52:56.823229+00:00",
+      "fgv_listing_url": "https://conhecimento.fgv.br/concursos",
+      "official_link_missing": false,
+      "extracted_fields": [
+        "data_fim_inscricao_texto",
+        "data_inicio_inscricao_texto",
+        "data_prova_texto"
+      ],
+      "missing_core_fields": [
+        "estado",
+        "numero_vagas"
+      ],
+      "extraction_confidence": "alta",
+      "source_is_aggregator": false,
+      "value_extraction_notes": [
+        "vagas_sem_contexto_certame_ou_excluidas_rodape"
+      ],
+      "tipo_selecao_evidencia": "texto:concurso_publico",
+      "possible_fee_detected": false,
+      "possible_salary_detected": false,
+      "pdf_checked": true,
+      "pdf_date_extraction_notes": [
+        "schedule_html:extract_prova_from_text",
+        "pdf_fetch:pdf_download_ok",
+        "pdf_text:CORE_pdf_enrichment",
+        "schedule_pdf:match:periodo_inscricoes_por_extenso",
+        "schedule_pdf:extract_prova_from_text"
+      ],
+      "source_standardized_key": "fgv",
+      "loader": "load_concursos_selecao",
+      "origem_pipeline": "concursos_wave1_manual"
+    },
+    "ativo": true
+  }
+]

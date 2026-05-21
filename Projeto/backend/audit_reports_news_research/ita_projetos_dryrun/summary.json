@@ -1,0 +1,116 @@
+{
+  "fonte": "ita_projetos",
+  "nome_exibicao": "ITA Projetos",
+  "data_execucao": "2026-05-17T04:33:26Z",
+  "modo": "dry_run",
+  "apply": false,
+  "destino_produto": "public.pesquisa (via vw_pesquisas_front, após apply futuro)",
+  "diagnostico": {
+    "url": "http://www.ita.br/projetos",
+    "tipo_pagina": "listagem/catálogo Drupal de projetos de pesquisa",
+    "cms": "Drupal (site ITA)",
+    "rss": "Não identificado no hub",
+    "recorrencia": "Catálogo institucional (não feed de notícias)",
+    "datas": "Ausentes nas fichas auditadas; validacao_status tipicamente incompleto",
+    "destino": "public.pesquisa — tipo_pesquisa=projeto_pesquisa",
+    "https": "HTTPS www.ita.br com timeout frequente; usar HTTP no crawl"
+  },
+  "config": {
+    "max_items": 12,
+    "time_window_months": 24,
+    "page_enrich_max": 10,
+    "method": "ita_projetos_listing"
+  },
+  "totais": {
+    "raw_apos_filtros": 4,
+    "standardized": 4,
+    "within_window_24m": 0,
+    "sem_data": 4,
+    "page_enrich_fetches": 4,
+    "discarded_post_enrich": 0
+  },
+  "tipo_conteudo_counts": {
+    "pesquisa": 4
+  },
+  "tipo_pesquisa_counts": {
+    "projeto_pesquisa": 4
+  },
+  "validacao_status_counts": {
+    "incompleto": 4
+  },
+  "itens": [
+    {
+      "titulo": "Abordagens analíticas em inteligência de mercado",
+      "link": "http://www.ita.br/projetos/abordagensanalticasemintelignciademercado",
+      "data_publicacao": null,
+      "tipo_pesquisa": "projeto_pesquisa",
+      "categoria": "projeto",
+      "eixo_estrategico": [
+        "engenharia",
+        "ciencia_tecnologia"
+      ],
+      "validacao_status": "incompleto",
+      "resumo_len": 105
+    },
+    {
+      "titulo": "Centro de Pesquisa em Engenharia para a Mobilidade Aérea do Futuro (CPE-MAF)",
+      "link": "http://www.ita.br/projetos/cpemaf",
+      "data_publicacao": null,
+      "tipo_pesquisa": "projeto_pesquisa",
+      "categoria": "projeto",
+      "eixo_estrategico": [
+        "engenharia",
+        "ciencia_tecnologia",
+        "energia"
+      ],
+      "validacao_status": "incompleto",
+      "resumo_len": 569
+    },
+    {
+      "titulo": "Curso de Especialização em Engenharia Aeronáutica",
+      "link": "http://www.ita.br/projetos/cursodeespecializaoemengenhariaaeronutica",
+      "data_publicacao": null,
+      "tipo_pesquisa": "projeto_pesquisa",
+      "categoria": "projeto",
+      "eixo_estrategico": [
+        "engenharia",
+        "ciencia_tecnologia",
+        "aeroespacial"
+      ],
+      "validacao_status": "incompleto",
+      "resumo_len": 49
+    },
+    {
+      "titulo": "Estudo Experimental da Emissão de Poluentes em Queimadores de Gás Natural",
+      "link": "http://www.ita.br/projetos/estudoexperimentaldaemissodepoluentesemqueimadoresdegsnatural",
+      "data_publicacao": null,
+      "tipo_pesquisa": "projeto_pesquisa",
+      "categoria": "projeto",
+      "eixo_estrategico": [
+        "engenharia",
+        "ciencia_tecnologia",
+        "energia"
+      ],
+      "validacao_status": "incompleto",
+      "resumo_len": 73
+    }
+  ],
+  "warnings": [
+    {
+      "tipo": "sem_data_publicacao",
+      "count": 4,
+      "detalhe": "Esperado para catálogo/portal ITA; janela 24m não filtra standardized."
+    }
+  ],
+  "errors": [],
+  "crawl_meta": {
+    "listing_method": "ita_drupal_projetos_hub",
+    "note_no_rss": "Hub /projetos sem RSS; HTTPS www.ita.br costuma timeout — usar HTTP.",
+    "note_no_publication_date": "Catálogo institucional; datas de projeto ausentes no HTML."
+  },
+  "paths": {
+    "standardized": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_news_research\\ita_projetos_dryrun\\standardized\\ita_projetos_standardized.json",
+    "raw": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_news_research\\ita_projetos_dryrun\\raw\\ita_projetos_raw.json",
+    "crawl_meta": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_news_research\\ita_projetos_dryrun\\ita_projetos_crawl_meta.json"
+  }
+}

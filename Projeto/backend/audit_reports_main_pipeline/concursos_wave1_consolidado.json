@@ -1,0 +1,284 @@
+{
+  "wave": "concursos_wave1",
+  "titulo": "Concursos & Seleções — Wave 1 (consolidado)",
+  "consolidado_em_utc": "2026-05-16T21:00:00Z",
+  "nota": "Agregação somente de artefatos em audit_reports_main_pipeline/concursos_wave1_* (crawler_summary, standardized, loader_dryrun, loader_apply_staging). Nenhum apply executado nesta consolidação.",
+  "fontes_avaliadas": 9,
+  "tabela_fontes": [
+    {
+      "fonte": "pci_concursos",
+      "tipo": "agregador",
+      "total_bruto": 24,
+      "standardized": 12,
+      "aplicados_staging": 12,
+      "errors_count_dryrun": 0,
+      "validos": 0,
+      "incompletos": 12,
+      "qualidade_geral": "media",
+      "status": "aplicada",
+      "recomendacao": "Manter como descoberta editorial; não usar como fonte de edital oficial. Re-apply opcional quando melhorar extração de datas.",
+      "wave_dir": "concursos_wave1_pci",
+      "apply_report": "concursos_wave1_pci/loader_apply_staging"
+    },
+    {
+      "fonte": "fundatec",
+      "tipo": "regional",
+      "total_bruto": 10,
+      "standardized": 7,
+      "aplicados_staging": 2,
+      "errors_count_dryrun": 0,
+      "validos": 2,
+      "incompletos": 5,
+      "qualidade_geral": "media",
+      "status": "aplicada",
+      "recomendacao": "Rodar crawler v4 e aplicar apenas subset valido (2 itens em staging). Melhorar taxa de valido no crawl completo.",
+      "wave_dir": "concursos_wave1_fundatec",
+      "apply_report": "concursos_wave1_fundatec_subset_valido/loader_apply_staging",
+      "subset_nota": "Apply via concursos_wave1_fundatec_subset_valido (criterio validacao_status=valido)."
+    },
+    {
+      "fonte": "quadrix",
+      "tipo": "banca oficial",
+      "total_bruto": 10,
+      "standardized": 10,
+      "aplicados_staging": 10,
+      "errors_count_dryrun": 0,
+      "validos": 10,
+      "incompletos": 0,
+      "qualidade_geral": "media",
+      "status": "aplicada",
+      "recomendacao": "Melhor rendimento da wave; manter crawl periodico (abertos + em andamento) e re-apply.",
+      "wave_dir": "concursos_wave1_quadrix",
+      "apply_report": "concursos_wave1_quadrix/loader_apply_staging"
+    },
+    {
+      "fonte": "legalle",
+      "tipo": "banca oficial",
+      "total_bruto": 60,
+      "standardized": 5,
+      "aplicados_staging": 5,
+      "errors_count_dryrun": 0,
+      "validos": 5,
+      "incompletos": 0,
+      "qualidade_geral": "media",
+      "status": "aplicada",
+      "recomendacao": "Boa qualidade no subset ativo; alto descarte por recencia na listagem. Continuar rodando.",
+      "wave_dir": "concursos_wave1_legalle",
+      "apply_report": "concursos_wave1_legalle/loader_apply_staging"
+    },
+    {
+      "fonte": "objetiva",
+      "tipo": "banca oficial",
+      "total_bruto": 12,
+      "standardized": 3,
+      "aplicados_staging": 3,
+      "errors_count_dryrun": 0,
+      "validos": 3,
+      "incompletos": 0,
+      "qualidade_geral": "media",
+      "status": "aplicada",
+      "recomendacao": "CMS selecao.net; volume ativo baixo mas dry-run e apply limpos. Re-apply periodico.",
+      "wave_dir": "concursos_wave1_objetiva",
+      "apply_report": "concursos_wave1_objetiva/loader_apply_staging"
+    },
+    {
+      "fonte": "ibfc",
+      "tipo": "banca oficial",
+      "total_bruto": 10,
+      "standardized": 1,
+      "aplicados_staging": 1,
+      "errors_count_dryrun": 0,
+      "validos": 1,
+      "incompletos": 0,
+      "qualidade_geral": "media",
+      "status": "aplicada",
+      "recomendacao": "Mesma familia Quadrix; quase todo bruto descartado por recencia. Manter crawl leve.",
+      "wave_dir": "concursos_wave1_ibfc",
+      "apply_report": "concursos_wave1_ibfc/loader_apply_staging"
+    },
+    {
+      "fonte": "fgv",
+      "tipo": "banca oficial",
+      "total_bruto": 32,
+      "standardized": 3,
+      "aplicados_staging": 0,
+      "errors_count_dryrun": 0,
+      "validos": 1,
+      "incompletos": 2,
+      "qualidade_geral": "media",
+      "status": "latente",
+      "recomendacao": "Subset valido com 1 item (Macae) com inscricao encerrada na corrida de referencia; aguardar certames Em Andamento ou re-crawl. Apply nao executado.",
+      "wave_dir": "concursos_wave1_fgv",
+      "apply_report": null,
+      "subset_ref": "concursos_wave1_fgv_subset_valido"
+    },
+    {
+      "fonte": "cebraspe",
+      "tipo": "banca oficial",
+      "total_bruto": 12,
+      "standardized": 0,
+      "aplicados_staging": 0,
+      "errors_count_dryrun": 0,
+      "validos": 0,
+      "incompletos": 0,
+      "qualidade_geral": "n/a",
+      "status": "latente",
+      "recomendacao": "API PAS publica; 12 subprogramas descartados (etapa encerrada). Site geral SPA. Latente ate volume ativo.",
+      "wave_dir": "concursos_wave1_cebraspe",
+      "apply_report": null,
+      "nota_bruto": "total_bruto_api na API cebraspe/pas/subprogramas"
+    },
+    {
+      "fonte": "aocp",
+      "tipo": "banca oficial",
+      "total_bruto": 1,
+      "standardized": 0,
+      "aplicados_staging": 0,
+      "errors_count_dryrun": 0,
+      "validos": 0,
+      "incompletos": 0,
+      "qualidade_geral": "n/a",
+      "status": "latente",
+      "recomendacao": "API link.aocp.com.br; 230 concursos na lista, 1 IN_PROGRESS descartado (resultado final). Latente ate oportunidade ativa.",
+      "wave_dir": "concursos_wave1_aocp",
+      "apply_report": null,
+      "nota_bruto": "total_bruto_lista_filtrada IN_PROGRESS; lista API total 230"
+    }
+  ],
+  "totais_gerais": {
+    "total_standardized": 41,
+    "total_validos": 22,
+    "total_incompletos": 19,
+    "total_aplicados_staging": 33,
+    "total_latente_standardized_zero": 2,
+    "loader_dryrun_errors_count_soma": 0,
+    "descricao_apply": "33 upserts em staging: PCI 12 + Fundatec subset 2 + Quadrix 10 + Legalle 5 + Objetiva 3 + IBFC 1. FGV/Cebraspe/AOCP sem apply."
+  },
+  "maior_rendimento": [
+    {
+      "fonte": "quadrix",
+      "standardized": 10,
+      "validos": 10,
+      "taxa_valido": 1.0
+    },
+    {
+      "fonte": "legalle",
+      "standardized": 5,
+      "validos": 5,
+      "taxa_valido": 1.0
+    },
+    {
+      "fonte": "objetiva",
+      "standardized": 3,
+      "validos": 3,
+      "taxa_valido": 1.0
+    },
+    {
+      "fonte": "pci_concursos",
+      "standardized": 12,
+      "validos": 0,
+      "nota": "Volume alto aplicado; validacao incompleta por design agregador"
+    }
+  ],
+  "campos": {
+    "mais_completos_pct_sobre_41": {
+      "titulo": 100.0,
+      "tipo_selecao": 100.0,
+      "banca": 100.0,
+      "link_edital": 100.0,
+      "nivel_escolaridade": 90.2,
+      "orgao": 85.4,
+      "taxa_inscricao": 75.6,
+      "numero_vagas": 70.7,
+      "instituicao": 63.4,
+      "data_fim_inscricao": 53.7,
+      "data_prova": 48.8,
+      "cargo": 43.9,
+      "salario_min": 46.3,
+      "salario_max": 46.3,
+      "estado": 31.7,
+      "municipio": 31.7,
+      "area": 0.0
+    },
+    "mais_completos": [
+      "titulo",
+      "tipo_selecao",
+      "banca",
+      "link_edital",
+      "nivel_escolaridade",
+      "orgao",
+      "taxa_inscricao",
+      "numero_vagas"
+    ],
+    "ainda_fracos": [
+      "area",
+      "estado",
+      "municipio",
+      "cargo",
+      "salario_min",
+      "salario_max",
+      "data_prova",
+      "data_fim_inscricao"
+    ]
+  },
+  "classificacao": {
+    "boas_para_continuar_rodando": [
+      "quadrix",
+      "legalle",
+      "objetiva",
+      "fundatec"
+    ],
+    "uteis_como_descoberta": [
+      "pci_concursos"
+    ],
+    "latentes": [
+      "cebraspe",
+      "aocp",
+      "fgv"
+    ],
+    "precisam_melhoria": [
+      "pci_concursos",
+      "fundatec",
+      "ibfc",
+      "fgv"
+    ]
+  },
+  "proximas_fontes_recomendadas": [
+    {
+      "nome": "FCC",
+      "tipo": "banca oficial",
+      "prioridade": 1,
+      "motivo": "HTML estruturado; complementa bancas selecao.net ja dominadas."
+    },
+    {
+      "nome": "Vunesp / Vestibulares",
+      "tipo": "universidade",
+      "prioridade": 2,
+      "motivo": "Expandir modulo para ingresso; stub existente; atencao a WAF."
+    },
+    {
+      "nome": "Residencias / Formacao",
+      "tipo": "residencia",
+      "prioridade": 3,
+      "motivo": "Wave futura com tipo_selecao dedicado e curadoria forte."
+    },
+    {
+      "nome": "Concursos no Brasil",
+      "tipo": "agregador",
+      "prioridade": 2,
+      "motivo": "Segundo agregador apos PCI; validar links oficiais e dedupe."
+    }
+  ],
+  "referencias_docs": {
+    "pci": "docs/CONCURSOS_WAVE1_CRAWLER_PILOT.md",
+    "fundatec": "docs/CONCURSOS_WAVE1_FUNDATEC_CRAWLER.md",
+    "quadrix": "docs/CONCURSOS_WAVE1_QUADRIX_CRAWLER.md",
+    "ibfc": "docs/CONCURSOS_WAVE1_IBFC_CRAWLER.md",
+    "legalle": "docs/CONCURSOS_WAVE1_LEGALLE_CRAWLER.md",
+    "objetiva": "docs/CONCURSOS_WAVE1_OBJETIVA_CRAWLER.md",
+    "fgv": "docs/CONCURSOS_WAVE1_FGV_CRAWLER.md",
+    "cebraspe": "docs/CONCURSOS_WAVE1_CEBRASPE_CRAWLER.md",
+    "aocp": "docs/CONCURSOS_WAVE1_AOCP_CRAWLER.md",
+    "catalogo": "docs/CONCURSOS_FONTES_WAVE1.md"
+  }
+}

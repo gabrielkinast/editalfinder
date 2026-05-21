@@ -232,15 +232,24 @@ def route_item(source_id: str, item: Dict[str, Any]) -> Tuple[str, str]:
             return "pesquisa", "eurekalert_tipo_conteudo_pesquisa"
         return "noticia", "eurekalert_tipo_conteudo_noticia"
 
-    if source_id in ("nasa_news", "darpa_news"):
+    if source_id in ("brisa_artigos", "defesanet", "brisa_news", "exercito_brasileiro", "softex_noticias"):
+        if source_id == "brisa_artigos":
+            return "pesquisa", "brisa_artigos_feed_pesquisa"
+        return "noticia", f"{source_id}_noticias_estrategicas"
+
+    if source_id == "darpa_news":
+        return "noticia", "darpa_news_somente_public_noticia"
+
+    if source_id == "nasa_news":
         if tipo == "pesquisa":
             return "pesquisa", "tipo_conteudo_pesquisa_fonte_news"
         return "noticia", "tipo_conteudo_noticia_ou_default_news"
 
     if source_id == "darpa_opportunities_research":
-        if tipo == "noticia":
-            return "noticia", "tipo_conteudo_noticia"
-        return "pesquisa", "default_pesquisa_darpa_opp"
+        return "review_for_edital", "darpa_opportunity_rss_nao_auto_edital"
+
+    if source_id == "darpa_programs_research":
+        return "pesquisa", "darpa_program_catalogo_sitemap"
 
     if legacy == "edital":
         if tipo == "pesquisa":

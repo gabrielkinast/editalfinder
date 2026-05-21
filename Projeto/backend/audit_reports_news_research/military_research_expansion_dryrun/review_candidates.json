@@ -1,0 +1,62 @@
+[
+  {
+    "titulo": "ARL Broad Agency Announcement (BAA) forms repository",
+    "link": "https://arl.devcom.army.mil/baa-forms",
+    "descricao": "For Federal forms that are not listed on this site, please visit http://www.forms.gov.",
+    "routing": "review_for_edital",
+    "review_reason": "recurso_baa_opportunity_arl",
+    "destino_sugerido": "Radar/Editais",
+    "review_for_edital": true,
+    "source_id": "arl_resources"
+  },
+  {
+    "titulo": "BAA Forms",
+    "link": "https://arl.devcom.army.mil/resources/baa-forms",
+    "descricao": "For Federal forms that are not listed on this site, please visit http://www.forms.gov.",
+    "routing": "review_for_edital",
+    "review_reason": "recurso_baa_opportunity_arl",
+    "destino_sugerido": "Radar/Editais",
+    "review_for_edital": true,
+    "source_id": "arl_resources"
+  },
+  {
+    "titulo": "Meink, Allvin, Saltzman outline strategies, priorities necessary to secure the nation",
+    "link": "https://www.spaceforce.mil/News/Article-Display/Article/4227796/meink-allvin-saltzman-outline-strategies-priorities-necessary-to-secure-the-nat",
+    "data_publicacao_raw": "2025-06-26",
+    "descricao": "June 26, 2025 Meink, Allvin, Saltzman outline strategies, priorities necessary to secure the nation DAF senior leaders highlighted the recent U.S. strike on Iran as a vivid example for what is possible – but also at risk – unless Congress ensures sufficient, uninterrupted funding for the Air Force and Space Force.",
+    "relevancia_military": "media",
+    "motivos_relevancia": [
+      "space"
+    ],
+    "motivos_descarte": [],
+    "possivel_edital": true,
+    "eixos_detectados": [
+      "espaco"
+    ],
+    "motivo": "sinal_opportunity",
+    "destino_sugerido": "Radar/Editais",
+    "routing": "review_relevancia",
+    "source_id": "space_force_news"
+  },
+  {
+    "titulo": "Remarks by CSO Gen. Chance Saltzman at the 2025 Space Force Association’s Spacepower Conference",
+    "link": "https://www.spaceforce.mil/News/Article-Display/Article/4357367/remarks-by-cso-gen-chance-saltzman-at-the-2025-space-force-associations-spacepo",
+    "data_publicacao_raw": "",
+    "descricao": "Dec. 11, 2025 Remarks by CSO Gen. Chance Saltzman at the 2025 Space Force Association’s Spacepower Conference As delivered by CSO Gen. Chance Saltzman at the 2025 Space Force Association’s Spacepower Conference.",
+    "relevancia_military": "media",
+    "motivos_relevancia": [
+      "space"
+    ],
+    "motivos_descarte": [
+      "remarks by"
+    ],
+    "possivel_edital": false,
+    "eixos_detectados": [
+      "espaco"
+    ],
+    "motivo": "institucional_com_tecnico_fraco",
+    "destino_sugerido": "Radar/Editais",
+    "routing": "review_relevancia",
+    "source_id": "space_force_news"
+  }
+]

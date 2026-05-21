@@ -1,0 +1,152 @@
+{
+  "fonte": "arl_news",
+  "nome_exibicao": "ARL",
+  "loader_source_id": "arl_news",
+  "destino": "public.noticia",
+  "data_execucao": "2026-05-20T06:14:32Z",
+  "origem_dryrun": "audit_reports_news_research/military_research_expansion_dryrun",
+  "origem_standardized": "audit_reports_news_research/military_research_expansion_dryrun/standardized/arl_news_standardized.json",
+  "subset_standardized": "audit_reports_news_research/arl_news_subset_valido/standardized/arl_news_standardized.json",
+  "totais_origem": 12,
+  "validos_no_dryrun": 12,
+  "filtros": {
+    "fonte_recurso": "arl_news",
+    "validacao_status": "valido",
+    "tipo_conteudo": "noticia",
+    "janela_meses": 12,
+    "excluido": [
+      "review_candidates",
+      "fontes_latentes"
+    ]
+  },
+  "subset": {
+    "escolhidos": 12,
+    "rejeitados_na_filtragem": 0
+  },
+  "loader_dryrun": {
+    "comando": "C:\\Program Files\\Python312\\python.exe D:\\Computational_Physics\\My Projects\\edital\\scripts\\load_news_research_sources.py --dry-run --source arl_news --input-dir audit_reports_news_research/arl_news_subset_valido",
+    "would_upsert_noticia": 12,
+    "would_upsert_pesquisa": 0,
+    "errors_count": 0,
+    "apply_status": "dry_run_only",
+    "routing_skipped_count": 0
+  },
+  "eixos_estrategicos": {
+    "defesa": 12,
+    "pesquisa": 11,
+    "autonomia": 3,
+    "materiais_avancados": 2,
+    "inovacao": 2,
+    "inteligencia_artificial": 2,
+    "ia": 2,
+    "guerra_eletronica": 1
+  },
+  "itens_excluidos": [],
+  "itens": [
+    {
+      "titulo": "Army invention identifies bio-materials for future military technology",
+      "data_publicacao": "2026-05-18",
+      "link": "https://arl.devcom.army.mil/news/army-invention-identifies-bio-materials-for-future-military-technology",
+      "fonte_recurso": "arl_news",
+      "tipo_pesquisa": null,
+      "tipo_recurso": null
+    },
+    {
+      "titulo": "Army researchers unlock the power of performance data to enhance Soldier lethality and readiness",
+      "data_publicacao": "2026-05-13",
+      "link": "https://arl.devcom.army.mil/news/army-researchers-unlock-the-power-of-performance-data-to-enhance-soldier-lethality-and-readiness",
+      "fonte_recurso": "arl_news",
+      "tipo_pesquisa": null,
+      "tipo_recurso": null
+    },
+    {
+      "titulo": "Army Research Office to launch academic initiative for sensitive, high-impact research",
+      "data_publicacao": "2026-05-04",
+      "link": "https://arl.devcom.army.mil/news/army-research-office-to-launch-academic-initiative-for-sensitive-high-impact-research",
+      "fonte_recurso": "arl_news",
+      "tipo_pesquisa": null,
+      "tipo_recurso": null
+    },
+    {
+      "titulo": "Army Research Laboratory, U.S. Military Academy deepen strategic collaboration to shape tomorrow’s leaders and technologies",
+      "data_publicacao": "2026-05-04",
+      "link": "https://arl.devcom.army.mil/news/army-research-laboratory-u-s-military-academy-deepen-strategic-collaboration-to-shape-tomorrows-leaders-and-technologies",
+      "fonte_recurso": "arl_news",
+      "tipo_pesquisa": null,
+      "tipo_recurso": null
+    },
+    {
+      "titulo": "Army’s Catalyst Pathfinder driving Soldier innovation at Combat Training Centers",
+      "data_publicacao": "2026-04-29",
+      "link": "https://arl.devcom.army.mil/news/armys-catalyst-pathfinder-driving-soldier-innovation-at-combat-training-centers",
+      "fonte_recurso": "arl_news",
+      "tipo_pesquisa": null,
+      "tipo_recurso": null
+    },
+    {
+      "titulo": "Army partnerships prepare academia for industry success in ground autonomy",
+      "data_publicacao": "2026-04-29",
+      "link": "https://arl.devcom.army.mil/news/army-partnerships-prepare-academia-for-industry-success-in-ground-autonomy",
+      "fonte_recurso": "arl_news",
+      "tipo_pesquisa": null,
+      "tipo_recurso": null
+    },
+    {
+      "titulo": "Army Research Laboratory, Virginia National Guard partner to shape electronic warfare technologies",
+      "data_publicacao": "2026-04-23",
+      "link": "https://arl.devcom.army.mil/news/army-research-laboratory-virginia-national-guard-partner-to-shape-electronic-warfare-technologies",
+      "fonte_recurso": "arl_news",
+      "tipo_pesquisa": null,
+      "tipo_recurso": null
+    },
+    {
+      "titulo": "Army researchers expand industry’s possibilities in advanced manufacturing",
+      "data_publicacao": "2026-04-16",
+      "link": "https://arl.devcom.army.mil/news/army-researchers-expand-industrys-possibilities-in-advanced-manufacturing",
+      "fonte_recurso": "arl_news",
+      "tipo_pesquisa": null,
+      "tipo_recurso": null
+    },
+    {
+      "titulo": "Army research leans into easy to produce drones for Soldier experiments",
+      "data_publicacao": "2026-03-31",
+      "link": "https://arl.devcom.army.mil/news/army-research-leans-into-easy-to-produce-drones-for-soldier-experiments",
+      "fonte_recurso": "arl_news",
+      "tipo_pesquisa": null,
+      "tipo_recurso": null
+    },
+    {
+      "titulo": "Army’s fundamental research lab partnering with industry to advance AI",
+      "data_publicacao": "2026-03-25",
+      "link": "https://arl.devcom.army.mil/news/armys-fundamental-research-lab-partnering-with-industry-to-advance-ai",
+      "fonte_recurso": "arl_news",
+      "tipo_pesquisa": null,
+      "tipo_recurso": null
+    },
+    {
+      "titulo": "Army researchers partner with Navy to provide expeditionary AI translation tool",
+      "data_publicacao": "2026-03-24",
+      "link": "https://arl.devcom.army.mil/news/army-researchers-partner-with-navy-to-provide-expeditionary-ai-translation-tool",
+      "fonte_recurso": "arl_news",
+      "tipo_pesquisa": null,
+      "tipo_recurso": null
+    },
+    {
+      "titulo": "Army Research Laboratory, Soldiers collaborate to experiment with 3D-printed drone",
+      "data_publicacao": "2026-03-18",
+      "link": "https://arl.devcom.army.mil/news/army-research-laboratory-soldiers-collaborate-to-experiment-with-3d-printed-drone",
+      "fonte_recurso": "arl_news",
+      "tipo_pesquisa": null,
+      "tipo_recurso": null
+    }
+  ],
+  "observacoes": [
+    "ARL DEVCOM media center (arl_news) — notícias válidas 12 meses.",
+    "Distinto de afrl_news (.af.mil) já aplicado em rodada anterior.",
+    "Apply não executado nesta tarefa."
+  ],
+  "apply_staging": {
+    "executado": false
+  },
+  "janela_meses": 12
+}

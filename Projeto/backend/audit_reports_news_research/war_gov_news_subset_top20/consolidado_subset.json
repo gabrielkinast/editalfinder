@@ -1,0 +1,250 @@
+{
+  "fonte": "war_gov_news",
+  "nome_exibicao": "U.S. Department of Defense / War.gov",
+  "fonte_recurso": "war_gov_news",
+  "data_execucao": "2026-05-20T01:12:54Z",
+  "origem_dryrun_ampliado": "audit_reports_news_research/war_gov_news_dryrun_100/standardized/war_gov_news_standardized.json",
+  "subset_standardized": "audit_reports_news_research/war_gov_news_subset_top20/standardized/war_gov_news_standardized.json",
+  "dryrun_ampliado": {
+    "max_items": 100,
+    "total_raw": 99,
+    "standardized": 36,
+    "total_valido": 36,
+    "descartados_ruido": 63,
+    "errors_count": 0
+  },
+  "comparacao_30_vs_100": "audit_reports_news_research/war_gov_news_dryrun_100/comparacao_dryrun_30_vs_100.json",
+  "subset": {
+    "criterios": [
+      "validacao_status=valido",
+      "data_publicacao dentro de 12 meses",
+      "ordenar data_publicacao desc",
+      "top 20",
+      "itens já passaram filtro técnico forte no crawl"
+    ],
+    "escolhidos": 20,
+    "candidatos_validos_na_origem": 36,
+    "rejeitados_na_filtragem_subset": 0
+  },
+  "loader_dryrun": {
+    "comando": "C:\\Program Files\\Python312\\python.exe D:\\Computational_Physics\\My Projects\\edital\\scripts\\load_news_research_sources.py --dry-run --source war_gov_news --input-dir audit_reports_news_research/war_gov_news_subset_top20",
+    "would_upsert_noticia": 20,
+    "would_upsert_pesquisa": 0,
+    "errors_count": 0,
+    "apply_status": "dry_run_only",
+    "summary_path": "audit_reports_news_research/war_gov_news_subset_top20/load_news_research_summary.json"
+  },
+  "distribuicao_eixos_estrategicos": {
+    "autonomia": 10,
+    "ciencia": 9,
+    "defesa": 4,
+    "geopolitica_tecnologica": 3,
+    "engenharia_avancada": 2,
+    "aeroespacial": 2,
+    "industria_estrategica": 2,
+    "pesquisa": 1,
+    "nuclear": 1,
+    "espaco": 1
+  },
+  "itens": [
+    {
+      "titulo": "Senior Leaders Discuss Recruiting STEM Candidates Into Special Ops",
+      "data_publicacao": "2026-05-19",
+      "link": "https://www.war.gov/News/News-Stories/Article/Article/4496409/senior-leaders-discuss-recruiting-stem-candidates-into-special-ops/",
+      "relevancia_war_gov": "alta",
+      "eixo_estrategico": [
+        "ciencia",
+        "engenharia_avancada"
+      ]
+    },
+    {
+      "titulo": "Defeating the Swarm: Project Flytrap Accelerates NATO's Counter-Drone Lethality",
+      "data_publicacao": "2026-05-19",
+      "link": "https://www.war.gov/News/News-Stories/Article/Article/4495825/defeating-the-swarm-project-flytrap-accelerates-natos-counter-drone-lethality/",
+      "relevancia_war_gov": "alta",
+      "eixo_estrategico": [
+        "autonomia",
+        "ciencia",
+        "defesa",
+        "geopolitica_tecnologica"
+      ]
+    },
+    {
+      "titulo": "Joint Interagency Task Force 401 Awards $500 Million Counter-UAS Contract",
+      "data_publicacao": "2026-05-18",
+      "link": "https://www.war.gov/News/News-Stories/Article/Article/4495165/joint-interagency-task-force-401-awards-500-million-counter-uas-contract/",
+      "relevancia_war_gov": "media",
+      "eixo_estrategico": [
+        "autonomia",
+        "ciencia"
+      ]
+    },
+    {
+      "titulo": "Air Force Reserve Wing Assists in Downed Aircraft Rescue off Florida Coast",
+      "data_publicacao": "2026-05-14",
+      "link": "https://www.war.gov/News/News-Stories/Article/Article/4486918/air-force-reserve-wing-assists-in-downed-aircraft-rescue-off-florida-coast/",
+      "relevancia_war_gov": "media",
+      "eixo_estrategico": [
+        "aeroespacial"
+      ]
+    },
+    {
+      "titulo": "Joint Interagency Task Force Enables Standardized Counter-UAS Assessment",
+      "data_publicacao": "2026-05-12",
+      "link": "https://www.war.gov/News/News-Stories/Article/Article/4484863/joint-interagency-task-force-enables-standardized-counter-uas-assessment/",
+      "relevancia_war_gov": "media",
+      "eixo_estrategico": [
+        "autonomia",
+        "ciencia"
+      ]
+    },
+    {
+      "titulo": "War Department Multiyear Purchases Spur Industrial Base Investments",
+      "data_publicacao": "2026-05-12",
+      "link": "https://www.war.gov/News/News-Stories/Article/Article/4484583/war-department-multiyear-purchases-spur-industrial-base-investments/",
+      "relevancia_war_gov": "media",
+      "eixo_estrategico": [
+        "industria_estrategica"
+      ]
+    },
+    {
+      "titulo": "Soldiers Conduct Baltic Balloon Training",
+      "data_publicacao": "2026-05-12",
+      "link": "https://www.war.gov/News/News-Stories/Article/Article/4484259/soldiers-conduct-baltic-balloon-training/",
+      "relevancia_war_gov": "media",
+      "eixo_estrategico": [
+        "geopolitica_tecnologica"
+      ]
+    },
+    {
+      "titulo": "Army Paratroopers Integrate Drones, Night Operations in Historic Company Live Fire",
+      "data_publicacao": "2026-05-11",
+      "link": "https://www.war.gov/News/News-Stories/Article/Article/4483100/army-paratroopers-integrate-drones-night-operations-in-historic-company-live-fi/",
+      "relevancia_war_gov": "media",
+      "eixo_estrategico": [
+        "autonomia"
+      ]
+    },
+    {
+      "titulo": "Bumblebee V1 System Sharpens 10th Mountain Division's Counter-Drone Edge",
+      "data_publicacao": "2026-05-07",
+      "link": "https://www.war.gov/News/News-Stories/Article/Article/4479880/bumblebee-v1-system-sharpens-10th-mountain-divisions-counter-drone-edge/",
+      "relevancia_war_gov": "alta",
+      "eixo_estrategico": [
+        "autonomia",
+        "ciencia",
+        "defesa"
+      ]
+    },
+    {
+      "titulo": "Pentagon Lab Day Demonstrates Best of War Department Research",
+      "data_publicacao": "2026-05-06",
+      "link": "https://www.war.gov/News/News-Stories/Article/Article/4479499/pentagon-lab-day-demonstrates-best-of-war-department-research/",
+      "relevancia_war_gov": "media",
+      "eixo_estrategico": [
+        "pesquisa"
+      ]
+    },
+    {
+      "titulo": "Site Selections Announced for Directed-Energy Counter-Drone Program",
+      "data_publicacao": "2026-05-06",
+      "link": "https://www.war.gov/News/News-Stories/Article/Article/4479463/site-selections-announced-for-directed-energy-counter-drone-program/",
+      "relevancia_war_gov": "alta",
+      "eixo_estrategico": [
+        "autonomia",
+        "aeroespacial",
+        "ciencia",
+        "defesa"
+      ]
+    },
+    {
+      "titulo": "F-22 Raptors Arrive in Japan, Strengthen Indo-Pacific Airpower",
+      "data_publicacao": "2026-05-06",
+      "link": "https://www.war.gov/News/News-Stories/Article/Article/4478801/f-22-raptors-arrive-in-japan-strengthen-indo-pacific-airpower/",
+      "relevancia_war_gov": "media",
+      "eixo_estrategico": [
+        "geopolitica_tecnologica"
+      ]
+    },
+    {
+      "titulo": "Coast Guard Great Lakes District Set to Use Autonomous Sail Drones",
+      "data_publicacao": "2026-05-05",
+      "link": "https://www.war.gov/News/News-Stories/Article/Article/4477650/coast-guard-great-lakes-district-set-to-use-autonomous-sail-drones/",
+      "relevancia_war_gov": "media",
+      "eixo_estrategico": [
+        "autonomia"
+      ]
+    },
+    {
+      "titulo": "Project Flytrap 5.0 Puts Emerging Tech in Warfighters' Hands",
+      "data_publicacao": "2026-05-04",
+      "link": "https://www.war.gov/News/News-Stories/Article/Article/4476789/project-flytrap-50-puts-emerging-tech-in-warfighters-hands/",
+      "relevancia_war_gov": "alta",
+      "eixo_estrategico": [
+        "autonomia",
+        "ciencia"
+      ]
+    },
+    {
+      "titulo": "Eerie Company: A New Threat at the Joint Multinational Readiness Center",
+      "data_publicacao": "2026-05-04",
+      "link": "https://www.war.gov/News/News-Stories/Article/Article/4476715/eerie-company-a-new-threat-at-the-joint-multinational-readiness-center/",
+      "relevancia_war_gov": "media",
+      "eixo_estrategico": [
+        "autonomia",
+        "ciencia"
+      ]
+    },
+    {
+      "titulo": "Synchronized Logistics Enable Engineer Unit Deployment",
+      "data_publicacao": "2026-05-01",
+      "link": "https://www.war.gov/News/News-Stories/Article/Article/4475414/synchronized-logistics-enable-engineer-unit-deployment/",
+      "relevancia_war_gov": "media",
+      "eixo_estrategico": [
+        "engenharia_avancada"
+      ]
+    },
+    {
+      "titulo": "War Department's $1.5 Trillion Budget Proposal Includes Sizable Nuclear Triad Investment",
+      "data_publicacao": "2026-04-30",
+      "link": "https://www.war.gov/News/News-Stories/Article/Article/4474675/war-departments-15-trillion-budget-proposal-includes-sizable-nuclear-triad-inve/",
+      "relevancia_war_gov": "media",
+      "eixo_estrategico": [
+        "nuclear"
+      ]
+    },
+    {
+      "titulo": "Spacecom Takes Operational Control of Facility in Alabama",
+      "data_publicacao": "2026-04-30",
+      "link": "https://www.war.gov/News/News-Stories/Article/Article/4474297/spacecom-takes-operational-control-of-facility-in-alabama/",
+      "relevancia_war_gov": "media",
+      "eixo_estrategico": [
+        "espaco"
+      ]
+    },
+    {
+      "titulo": "Joint Interagency Task Force 401, Paratroopers Test New Counter-UAS",
+      "data_publicacao": "2026-04-29",
+      "link": "https://www.war.gov/News/News-Stories/Article/Article/4473408/joint-interagency-task-force-401-paratroopers-test-new-counter-uas/",
+      "relevancia_war_gov": "alta",
+      "eixo_estrategico": [
+        "autonomia",
+        "ciencia",
+        "defesa"
+      ]
+    },
+    {
+      "titulo": "Hegseth, Caine Say Budget Increases Lethality, Strengthens Defense Industrial Base",
+      "data_publicacao": "2026-04-29",
+      "link": "https://www.war.gov/News/News-Stories/Article/Article/4473246/hegseth-caine-say-budget-increases-lethality-strengthens-defense-industrial-base/",
+      "relevancia_war_gov": "media",
+      "eixo_estrategico": [
+        "industria_estrategica"
+      ]
+    }
+  ],
+  "observacao": "Fonte oficial governamental dos EUA (U.S. Department of Defense / War.gov). Não confundir com fonte jornalística independente. Aplicar apenas lote controlado (subset top 20) para não dominar a aba Notícias. Apply não executado nesta tarefa.",
+  "apply_staging": {
+    "executado": false
+  }
+}

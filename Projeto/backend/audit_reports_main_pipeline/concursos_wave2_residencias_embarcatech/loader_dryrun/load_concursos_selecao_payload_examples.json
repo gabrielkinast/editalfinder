@@ -1,0 +1,140 @@
+[
+  {
+    "titulo": "EmbarcaTech — https://embarcatech.cepedi.org.br/index.html",
+    "tipo_selecao": "residencia",
+    "categoria": "residencia_tecnologica",
+    "orgao": "Softex — Programa EmbarcaTech",
+    "instituicao": "CEPEDI — Bahia",
+    "banca": "Softex",
+    "cargo": null,
+    "curso": "Sistemas Embarcados / IoT",
+    "area": "TIC / Sistemas Embarcados",
+    "nivel_escolaridade": "superior",
+    "estado": null,
+    "municipio": null,
+    "regiao": null,
+    "modalidade": null,
+    "numero_vagas": null,
+    "salario_min": 3100.0,
+    "salario_max": 3100.0,
+    "taxa_inscricao": null,
+    "data_publicacao": "2025-04-07",
+    "data_inicio_inscricao": null,
+    "data_fim_inscricao": null,
+    "data_prova": null,
+    "status": "ativo",
+    "link": "https://embarcatech.cepedi.org.br/index.html",
+    "link_edital": null,
+    "fonte": "embarcatech",
+    "fonte_tipo": "governo",
+    "validacao_status": "incompleto",
+    "qualidade_dado": "baixa",
+    "tags": [
+      "embarcatech",
+      "softex",
+      "residencia_tecnologica",
+      "wave2"
+    ],
+    "extras": {
+      "crawler": "main_residencias_embarcatech",
+      "wave": "concursos_wave2_residencias_embarcatech",
+      "fetched_at_utc": "2026-05-16T22:40:07.145107+00:00",
+      "listing_urls": [
+        "https://embarcatech.softex.br/inscricoes/",
+        "https://embarcatech.softex.br/capacitacao-e-residencia/"
+      ],
+      "hub_label": "https://embarcatech.cepedi.org.br/index.html",
+      "pdf_enrichment": {},
+      "extracted_fields": [
+        "bolsa_texto"
+      ],
+      "missing_core_fields": [
+        "data_fim_inscricao",
+        "data_prova",
+        "estado",
+        "link_edital",
+        "numero_vagas"
+      ],
+      "extraction_confidence": "media",
+      "source_is_aggregator": true,
+      "aggregator_note": "Hub Softex lista editais de IFs executoras",
+      "value_extraction_notes": [
+        "edital_pdf_nao_encontrado_no_html"
+      ],
+      "valor_tipo": "bolsa",
+      "source_standardized_key": "embarcatech",
+      "loader": "load_concursos_selecao",
+      "origem_pipeline": "concursos_wave1_manual"
+    },
+    "ativo": true
+  },
+  {
+    "titulo": "EmbarcaTech — https://embarcatech.cepedi.org.br/",
+    "tipo_selecao": "residencia",
+    "categoria": "residencia_tecnologica",
+    "orgao": "Softex — Programa EmbarcaTech",
+    "instituicao": "CEPEDI — Bahia",
+    "banca": "Softex",
+    "cargo": null,
+    "curso": "Sistemas Embarcados / IoT",
+    "area": "TIC / Sistemas Embarcados",
+    "nivel_escolaridade": "superior",
+    "estado": null,
+    "municipio": null,
+    "regiao": null,
+    "modalidade": null,
+    "numero_vagas": null,
+    "salario_min": 3100.0,
+    "salario_max": 3100.0,
+    "taxa_inscricao": null,
+    "data_publicacao": "2025-04-07",
+    "data_inicio_inscricao": null,
+    "data_fim_inscricao": null,
+    "data_prova": null,
+    "status": "ativo",
+    "link": "https://embarcatech.cepedi.org.br",
+    "link_edital": null,
+    "fonte": "embarcatech",
+    "fonte_tipo": "governo",
+    "validacao_status": "incompleto",
+    "qualidade_dado": "baixa",
+    "tags": [
+      "embarcatech",
+      "softex",
+      "residencia_tecnologica",
+      "wave2"
+    ],
+    "extras": {
+      "crawler": "main_residencias_embarcatech",
+      "wave": "concursos_wave2_residencias_embarcatech",
+      "fetched_at_utc": "2026-05-16T22:40:08.953259+00:00",
+      "listing_urls": [
+        "https://embarcatech.softex.br/inscricoes/",
+        "https://embarcatech.softex.br/capacitacao-e-residencia/"
+      ],
+      "hub_label": "https://embarcatech.cepedi.org.br/",
+      "pdf_enrichment": {},
+      "extracted_fields": [
+        "bolsa_texto"
+      ],
+      "missing_core_fields": [
+        "data_fim_inscricao",
+        "data_prova",
+        "estado",
+        "link_edital",
+        "numero_vagas"
+      ],
+      "extraction_confidence": "media",
+      "source_is_aggregator": true,
+      "aggregator_note": "Hub Softex lista editais de IFs executoras",
+      "value_extraction_notes": [
+        "edital_pdf_nao_encontrado_no_html"
+      ],
+      "valor_tipo": "bolsa",
+      "source_standardized_key": "embarcatech",
+      "loader": "load_concursos_selecao",
+      "origem_pipeline": "concursos_wave1_manual"
+    },
+    "ativo": true
+  }
+]

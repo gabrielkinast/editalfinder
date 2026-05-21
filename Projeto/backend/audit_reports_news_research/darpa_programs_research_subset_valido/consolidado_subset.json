@@ -1,0 +1,274 @@
+{
+  "fonte": "darpa_programs_research",
+  "nome_exibicao": "DARPA Research Programs",
+  "fonte_recurso": "darpa_programs_research",
+  "data_execucao": "2026-05-20T01:44:59Z",
+  "origem": "audit_reports_news_research/darpa_strategic_dryrun/standardized/darpa_programs_research_standardized.json",
+  "subset_standardized": "audit_reports_news_research/darpa_programs_research_subset_valido/standardized/darpa_programs_research_standardized.json",
+  "origem_totais": {
+    "total_standardized_origem": 40,
+    "valido_filtrado": 25,
+    "rejeitados_filtragem": 15
+  },
+  "subset": {
+    "criterios": [
+      "validacao_status=valido",
+      "tipo_conteudo=pesquisa",
+      "tipo_pesquisa=programa_pesquisa",
+      "fonte_recurso=darpa_programs_research"
+    ],
+    "escolhidos": 25
+  },
+  "loader_dryrun": {
+    "comando": "C:\\Program Files\\Python312\\python.exe D:\\Computational_Physics\\My Projects\\edital\\scripts\\load_news_research_sources.py --dry-run --source darpa_programs_research --input-dir audit_reports_news_research/darpa_programs_research_subset_valido",
+    "would_upsert_noticia": 0,
+    "would_upsert_pesquisa": 25,
+    "errors_count": 0,
+    "apply_status": "dry_run_only",
+    "summary_path": "audit_reports_news_research/darpa_programs_research_subset_valido/load_news_research_summary.json"
+  },
+  "distribuicao_eixos_estrategicos": {
+    "engenharia_avancada": 10,
+    "defesa": 8,
+    "materiais_avancados": 4,
+    "sensores": 2,
+    "comunicacoes": 1,
+    "ia": 1,
+    "microeletronica": 1,
+    "semicondutores": 1,
+    "espaco": 1,
+    "aeroespacial": 1,
+    "propulsao": 1,
+    "guerra_eletronica": 1
+  },
+  "distribuicao_area_tecnologica": {
+    "defesa": 25,
+    "aeroespacial": 25,
+    "ia": 25,
+    "robotica": 25,
+    "sensores": 25,
+    "materiais_avancados": 25,
+    "computacao": 25,
+    "cyber": 25,
+    "hipersonicos": 25,
+    "espaco": 25,
+    "autonomia": 25,
+    "engenharia_avancada": 25,
+    "comunicacoes": 1,
+    "microeletronica": 1,
+    "semicondutores": 1
+  },
+  "itens": [
+    {
+      "titulo": "Media Forensics",
+      "data_publicacao": "2026-05-15",
+      "link": "https://www.darpa.mil/research/programs/media-forensics",
+      "eixo_estrategico": [
+        "engenharia_avancada"
+      ]
+    },
+    {
+      "titulo": "Robotic Servicing Of Geosynchronous Satellites",
+      "data_publicacao": "2026-05-15",
+      "link": "https://www.darpa.mil/research/programs/robotic-servicing-of-geosynchronous-satellites",
+      "eixo_estrategico": [
+        "defesa",
+        "comunicacoes"
+      ]
+    },
+    {
+      "titulo": "Discord",
+      "data_publicacao": "2026-05-15",
+      "link": "https://www.darpa.mil/research/programs/discord",
+      "eixo_estrategico": [
+        "ia",
+        "sensores"
+      ]
+    },
+    {
+      "titulo": "Automated Process For Codesign Of Radiation Hardening And Security",
+      "data_publicacao": "2026-05-15",
+      "link": "https://www.darpa.mil/research/programs/automated-process-for-codesign-of-radiation-hardening-and-security",
+      "eixo_estrategico": [
+        "microeletronica"
+      ]
+    },
+    {
+      "titulo": "Nascent National Security Economic Theory",
+      "data_publicacao": "2026-05-14",
+      "link": "https://www.darpa.mil/research/programs/nascent-national-security-economic-theory",
+      "eixo_estrategico": [
+        "defesa"
+      ]
+    },
+    {
+      "titulo": "Protean",
+      "data_publicacao": "2026-05-14",
+      "link": "https://www.darpa.mil/research/programs/protean",
+      "eixo_estrategico": [
+        "engenharia_avancada"
+      ]
+    },
+    {
+      "titulo": "Amped",
+      "data_publicacao": "2026-05-14",
+      "link": "https://www.darpa.mil/research/programs/amped",
+      "eixo_estrategico": [
+        "semicondutores"
+      ]
+    },
+    {
+      "titulo": "Bark",
+      "data_publicacao": "2026-05-14",
+      "link": "https://www.darpa.mil/research/programs/bark",
+      "eixo_estrategico": [
+        "defesa"
+      ]
+    },
+    {
+      "titulo": "Warrior Web",
+      "data_publicacao": "2026-05-13",
+      "link": "https://www.darpa.mil/research/programs/warrior-web",
+      "eixo_estrategico": [
+        "engenharia_avancada"
+      ]
+    },
+    {
+      "titulo": "Wound Stasis System",
+      "data_publicacao": "2026-05-13",
+      "link": "https://www.darpa.mil/research/programs/wound-stasis-system",
+      "eixo_estrategico": [
+        "engenharia_avancada"
+      ]
+    },
+    {
+      "titulo": "Extended Solids",
+      "data_publicacao": "2026-05-13",
+      "link": "https://www.darpa.mil/research/programs/extended-solids",
+      "eixo_estrategico": [
+        "espaco",
+        "aeroespacial",
+        "materiais_avancados",
+        "propulsao",
+        "defesa"
+      ]
+    },
+    {
+      "titulo": "Z Man",
+      "data_publicacao": "2026-05-13",
+      "link": "https://www.darpa.mil/research/programs/z-man",
+      "eixo_estrategico": [
+        "materiais_avancados"
+      ]
+    },
+    {
+      "titulo": "Transformative Apps",
+      "data_publicacao": "2026-05-13",
+      "link": "https://www.darpa.mil/research/programs/transformative-apps",
+      "eixo_estrategico": [
+        "defesa"
+      ]
+    },
+    {
+      "titulo": "Transparent Computing",
+      "data_publicacao": "2026-05-13",
+      "link": "https://www.darpa.mil/research/programs/transparent-computing",
+      "eixo_estrategico": [
+        "engenharia_avancada"
+      ]
+    },
+    {
+      "titulo": "Vetting Commodity It Software And Firmware",
+      "data_publicacao": "2026-05-13",
+      "link": "https://www.darpa.mil/research/programs/vetting-commodity-it-software-and-firmware",
+      "eixo_estrategico": [
+        "defesa"
+      ]
+    },
+    {
+      "titulo": "Visual Media Reasoning",
+      "data_publicacao": "2026-05-13",
+      "link": "https://www.darpa.mil/research/programs/visual-media-reasoning",
+      "eixo_estrategico": [
+        "engenharia_avancada"
+      ]
+    },
+    {
+      "titulo": "Xdata",
+      "data_publicacao": "2026-05-13",
+      "link": "https://www.darpa.mil/research/programs/xdata",
+      "eixo_estrategico": [
+        "engenharia_avancada"
+      ]
+    },
+    {
+      "titulo": "Thermal Management Technologies",
+      "data_publicacao": "2026-05-13",
+      "link": "https://www.darpa.mil/research/programs/thermal-management-technologies/active-cooling-modules",
+      "eixo_estrategico": [
+        "materiais_avancados"
+      ]
+    },
+    {
+      "titulo": "Thermal Management Technologies",
+      "data_publicacao": "2026-05-13",
+      "link": "https://www.darpa.mil/research/programs/thermal-management-technologies/thermal-ground-plane",
+      "eixo_estrategico": [
+        "engenharia_avancada"
+      ]
+    },
+    {
+      "titulo": "Thermal Management Technologies",
+      "data_publicacao": "2026-05-13",
+      "link": "https://www.darpa.mil/research/programs/thermal-management-technologies",
+      "eixo_estrategico": [
+        "materiais_avancados"
+      ]
+    },
+    {
+      "titulo": "Thz Electronics",
+      "data_publicacao": "2026-05-13",
+      "link": "https://www.darpa.mil/research/programs/thz-electronics",
+      "eixo_estrategico": [
+        "engenharia_avancada"
+      ]
+    },
+    {
+      "titulo": "Transmit And Receive Optimized Photonics",
+      "data_publicacao": "2026-05-13",
+      "link": "https://www.darpa.mil/research/programs/transmit-and-receive-optimized-photonics",
+      "eixo_estrategico": [
+        "defesa",
+        "guerra_eletronica"
+      ]
+    },
+    {
+      "titulo": "Trusted Integrated Circuits",
+      "data_publicacao": "2026-05-13",
+      "link": "https://www.darpa.mil/research/programs/trusted-integrated-circuits",
+      "eixo_estrategico": [
+        "defesa"
+      ]
+    },
+    {
+      "titulo": "Upward Falling Payloads",
+      "data_publicacao": "2026-05-13",
+      "link": "https://www.darpa.mil/research/programs/upward-falling-payloads",
+      "eixo_estrategico": [
+        "engenharia_avancada"
+      ]
+    },
+    {
+      "titulo": "Video Synthetic Aperture Radar",
+      "data_publicacao": "2026-05-13",
+      "link": "https://www.darpa.mil/research/programs/video-synthetic-aperture-radar",
+      "eixo_estrategico": [
+        "sensores"
+      ]
+    }
+  ],
+  "observacao": "Catálogo de programas DARPA (pesquisa estratégica). Destino: public.pesquisa (programa_pesquisa). Apply não executado nesta tarefa.",
+  "apply_staging": {
+    "executado": false
+  }
+}

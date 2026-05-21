@@ -1,0 +1,85 @@
+{
+  "fonte": "lockheed_martin_news",
+  "nome_exibicao": "Lockheed Martin Newsroom",
+  "data_execucao": "2026-05-18T16:20:31Z",
+  "modo": "dry_run",
+  "apply": false,
+  "output_dir": "lockheed_martin_news_dryrun_30",
+  "diagnostico": {
+    "url_base": "https://www.lockheedmartin.com",
+    "hub_html": "https://www.lockheedmartin.com/en-us/news.html",
+    "feed_json": "https://www.lockheedmartin.com/content/lockheed-martin/data/feeds/newsfeed.json",
+    "rss": "não encontrado; feed JSON AEM",
+    "robots_txt": "Allow /en-us; Disallow parcial news-releases/in-the-news",
+    "cms": "Adobe AEM + news.lockheedmartin.com",
+    "listagem": "JSON newsfeed.json; hub SPA Algolia",
+    "rotas_institucionais": "/capabilities/, /suppliers/ → rejeitado",
+    "copyright": "Description do feed; sem corpo integral"
+  },
+  "config": {
+    "max_items": 30,
+    "time_window_months": 12,
+    "page_enrich_max": 6
+  },
+  "feed_inventory": {
+    "feed_fetch_ok": true,
+    "feed_json_url": "https://www.lockheedmartin.com/content/lockheed-martin/data/feeds/newsfeed.json",
+    "total_no_feed": 2756,
+    "total_dentro_janela_meses": 381,
+    "total_elegivel_pos_filtros_basicos": 162,
+    "total_elegivel_pos_filtros_pipeline": 162,
+    "time_window_months": 12
+  },
+  "filtros": {
+    "rejected_require_any": 5,
+    "rejected_exclude": 0,
+    "rejected_lm_routing": 0,
+    "lm_sent_review": 0
+  },
+  "totais": {
+    "raw_apos_filtros": 30,
+    "standardized": 30,
+    "within_window_12m": 30,
+    "review_candidates": 0,
+    "sem_data": 0,
+    "page_enrich_fetches": 1,
+    "total_valido": 30,
+    "total_incompleto": 0,
+    "errors_count": 0
+  },
+  "validacao_status_counts": {
+    "valido": 30
+  },
+  "distribuicao": {
+    "eixo_estrategico": {
+      "ia_cyber": 13,
+      "espaco": 12,
+      "aeroespacial": 11,
+      "defesa": 10,
+      "industria_estrategica": 10,
+      "sensores_radar": 5,
+      "engenharia": 3,
+      "guerra_eletronica": 3,
+      "materiais_avancados": 2,
+      "hipersonicos": 1
+    },
+    "story_type": {
+      "Feature": 15,
+      "Press Release": 15
+    }
+  },
+  "warnings": [
+    {
+      "tipo": "cap_max_items",
+      "elegivel_pipeline": 162,
+      "max_items": 30
+    }
+  ],
+  "errors": [],
+  "observacao": "Fonte corporativa ampla; aplicar lote controlado (subset ≤20). Filtro forte de relevância técnica ativo.",
+  "paths": {
+    "standardized": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_news_research\\lockheed_martin_news_dryrun_30\\standardized\\lockheed_martin_news_standardized.json",
+    "raw": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_news_research\\lockheed_martin_news_dryrun_30\\raw\\lockheed_martin_news_raw.json",
+    "review_candidates": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_news_research\\lockheed_martin_news_dryrun_30\\review_candidates.json"
+  }
+}

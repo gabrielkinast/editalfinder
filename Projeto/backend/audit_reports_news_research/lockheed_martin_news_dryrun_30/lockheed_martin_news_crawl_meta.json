@@ -1,0 +1,93 @@
+{
+  "source_id": "lockheed_martin_news",
+  "source_name": "Lockheed Martin Newsroom",
+  "method": "lm_json_feed",
+  "seed_urls_used": [
+    "https://www.lockheedmartin.com/content/lockheed-martin/data/feeds/newsfeed.json"
+  ],
+  "max_items": 30,
+  "time_window_months": 12,
+  "raw_total": 30,
+  "within_window_total": 30,
+  "without_date_total": 0,
+  "raw_by_seed_kind": {
+    "mixed": 30
+  },
+  "feed_kind_caps_applied": {},
+  "page_enrich_fetch_total": 1,
+  "errors": [],
+  "theme_filter_stats": {
+    "rejected_lm_routing": 0,
+    "lm_sent_review": 0,
+    "extracted_total": 35,
+    "skipped_duplicate_link": 0,
+    "rejected_exclude_keyword": 0,
+    "rejected_exclude_medical_generic": 0,
+    "rejected_require_any_keyword": 5,
+    "rejected_feed_kind_cap": 0,
+    "passed_theme_filters": 30,
+    "matched_keyword_counts": {
+      "missile": 7,
+      "engineering": 1,
+      "space": 7,
+      "aircraft": 8,
+      "helicopter": 2,
+      "orion": 1,
+      "sensor": 4,
+      "radar": 3,
+      "artificial intelligence": 2,
+      "defense": 8,
+      "launch": 5,
+      "defence": 1,
+      "fighter": 2,
+      "sikorsky": 2,
+      "hypersonic": 1,
+      "propulsion": 1,
+      "skunk works": 3,
+      "stealth": 1,
+      "satellite": 2,
+      "autonomous": 2,
+      "unmanned": 1,
+      "electronic warfare": 1,
+      "multi-domain": 1,
+      "weapon": 1,
+      "material": 1
+    },
+    "reject_samples": [
+      {
+        "link": "https://news.lockheedmartin.com/2026-05-18-Lockheed-Martin-Named-Preferred-Combat-System-Integration-Partner-for-Australias-Next-Generation-Nuclear-Subs",
+        "titulo": "Lockheed Martin Named Preferred Combat System Integration",
+        "excluded_reason": "require_any_keyword_no_match"
+      },
+      {
+        "link": "https://www.lockheedmartin.com/en-us/news/features/2026/first-quarter-highlights.html",
+        "titulo": "First Quarter Highlights",
+        "excluded_reason": "require_any_keyword_no_match"
+      },
+      {
+        "link": "https://news.lockheedmartin.com/2026-04-23-peru-selecciona-el-f-16-block-70-de-lockheed-martin-para-fortalecer-su-soberania-y-alianza-estrategica-con-ee-uu",
+        "titulo": "Perú selecciona el F-16 Block 70 de Lockheed Martin para fortalecer su soberanía y alianza estratégica con EE. UU.",
+        "excluded_reason": "require_any_keyword_no_match"
+      },
+      {
+        "link": "https://news.lockheedmartin.com/2026-04-23-Lockheed-Martin-Reports-First-Quarter-2026-Financial-Results",
+        "titulo": "Lockheed Martin Reports First Quarter 2026 Financial Results",
+        "excluded_reason": "require_any_keyword_no_match"
+      },
+      {
+        "link": "https://www.lockheedmartin.com/en-us/news/features/2026/lockheed-martin-to-mature-technology-and-architecture-studies-for-NASA-flagship-telescope.html",
+        "titulo": "Lockheed Martin to Mature Technology and Architecture Studies for NASA Flagship Telescope",
+        "excluded_reason": "require_any_keyword_no_match"
+      }
+    ]
+  },
+  "discarded_post_enrich": [],
+  "discarded_post_enrich_total": 0,
+  "feed_json_url": "https://www.lockheedmartin.com/content/lockheed-martin/data/feeds/newsfeed.json",
+  "listing_url": "https://www.lockheedmartin.com/en-us/news.html",
+  "listing_method": "aem_json_feed",
+  "review_candidates": [],
+  "review_candidates_total": 0,
+  "note_spa": "Hub /en-us/news.html é SPA (Algolia); feed JSON newsfeed.json. robots Disallow em /en-us/news/news-releases e in-the-news — usar URLs news.lockheedmartin.com e /en-us/news/features|press.",
+  "note_routing": "capabilities/suppliers/who-we-are → rejeitado; Supplier/3rd Party/Statement → review."
+}

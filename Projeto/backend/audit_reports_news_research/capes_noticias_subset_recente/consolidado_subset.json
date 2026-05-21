@@ -1,0 +1,158 @@
+{
+  "fonte": "capes_noticias",
+  "data_execucao": "2026-05-17T05:55:44Z",
+  "apply_executado": false,
+  "origem_standardized": "audit_reports_news_research/capes_noticias_dryrun/standardized/capes_noticias_standardized.json",
+  "subset_standardized": "audit_reports_news_research/capes_noticias_subset_recente/standardized/capes_noticias_standardized.json",
+  "janela_publica_meses": 12,
+  "corte_data_minima": "2025-05-22",
+  "totais": {
+    "original": 10,
+    "recente": 7,
+    "excluido": 3,
+    "valido_original": 10
+  },
+  "itens_incluidos": [
+    {
+      "titulo": "CAPES e CNPq debatem equidade de gênero",
+      "data_publicacao": "2026-02-12",
+      "link": "https://www.gov.br/capes/pt-br/assuntos/noticias/capes-e-cnpq-debatem-equidade-de-genero",
+      "categoria": "Formação",
+      "eixo_estrategico": [
+        "ciencia_tecnologia",
+        "formacao_cientifica"
+      ],
+      "imagem_url": "https://www.gov.br/capes/logo.png",
+      "validacao_status": "valido"
+    },
+    {
+      "titulo": "Projeto aproxima meninas e mulheres da área de transição energética",
+      "data_publicacao": "2026-02-11",
+      "link": "https://www.gov.br/capes/pt-br/assuntos/noticias/projeto-aproxima-meninas-e-mulheres-da-area-de-transicao-energetica",
+      "categoria": "Ciência",
+      "eixo_estrategico": [
+        "ciencia_tecnologia"
+      ],
+      "imagem_url": "https://www.gov.br/capes/logo.png",
+      "validacao_status": "valido"
+    },
+    {
+      "titulo": "Censo da Pós-Graduação registra 70% de participação",
+      "data_publicacao": "2026-02-03",
+      "link": "https://www.gov.br/capes/pt-br/assuntos/noticias/censo-da-pos-graduacao-registra-70-de-participacao",
+      "categoria": "Pós-graduação",
+      "eixo_estrategico": [
+        "ciencia_tecnologia",
+        "pos_graduacao"
+      ],
+      "imagem_url": "https://www.gov.br/capes/logo.png",
+      "validacao_status": "valido"
+    },
+    {
+      "titulo": "CAPES realiza sete treinamentos em fevereiro",
+      "data_publicacao": "2026-01-30",
+      "link": "https://www.gov.br/capes/pt-br/assuntos/noticias/capes-realiza-sete-treinamentos-em-fevereiro",
+      "categoria": "Ciência",
+      "eixo_estrategico": [
+        "ciencia_tecnologia"
+      ],
+      "imagem_url": "https://www.gov.br/capes/logo.png",
+      "validacao_status": "valido"
+    },
+    {
+      "titulo": "CAPES atualiza regras para repasses de recursos financeiros",
+      "data_publicacao": "2026-01-28",
+      "link": "https://www.gov.br/capes/pt-br/assuntos/noticias/capes-atualiza-regras-para-repasses-de-recursos-financeiros",
+      "categoria": "Inovação",
+      "eixo_estrategico": [
+        "ciencia_tecnologia",
+        "inovacao",
+        "engenharia"
+      ],
+      "imagem_url": "https://www.gov.br/capes/logo.png",
+      "validacao_status": "valido"
+    },
+    {
+      "titulo": "Sobre o Qualis Periódicos na Avaliação Quadrienal 2021-2024",
+      "data_publicacao": "2026-01-20",
+      "link": "https://www.gov.br/capes/pt-br/assuntos/noticias/sobre-o-qualis-periodicos-na-avaliacao-quadrienal-2021-2024",
+      "categoria": "Ciência",
+      "eixo_estrategico": [
+        "ciencia_tecnologia"
+      ],
+      "imagem_url": "https://www.gov.br/capes/logo.png",
+      "validacao_status": "valido"
+    },
+    {
+      "titulo": "Divulgados inscritos de chamada para pesquisas na Alemanha",
+      "data_publicacao": "2025-12-29",
+      "link": "https://www.gov.br/capes/pt-br/assuntos/noticias/divulgados-inscritos-de-chamada-para-pesquisas-na-alemanha",
+      "categoria": "Bolsas",
+      "eixo_estrategico": [
+        "ciencia_tecnologia",
+        "bolsas_fomento"
+      ],
+      "imagem_url": "https://www.gov.br/capes/logo.png",
+      "validacao_status": "valido"
+    }
+  ],
+  "itens_excluidos": [
+    {
+      "titulo": "Instituições de todas as regiões do país aderiram ao GoPG",
+      "data_publicacao": "2025-05-08",
+      "link": "https://www.gov.br/capes/pt-br/assuntos/noticias/instituicoes-de-todas-as-regioes-do-pais-aderiram-ao-gopg",
+      "categoria": "Ciência",
+      "eixo_estrategico": [
+        "ciencia_tecnologia"
+      ],
+      "imagem_url": "https://www.gov.br/capes/logo.png",
+      "validacao_status": "valido",
+      "motivo": "fora_janela_12m"
+    },
+    {
+      "titulo": "MEC institui Comitê de Governança do Mais Professores",
+      "data_publicacao": "2025-04-29",
+      "link": "https://www.gov.br/capes/pt-br/assuntos/noticias/mec-institui-comite-de-governanca-do-mais-professores",
+      "categoria": "Formação",
+      "eixo_estrategico": [
+        "ciencia_tecnologia",
+        "formacao_cientifica"
+      ],
+      "imagem_url": null,
+      "validacao_status": "valido",
+      "motivo": "fora_janela_12m"
+    },
+    {
+      "titulo": "Aberta seleção para mestrado profissional em roteiro nos EUA",
+      "data_publicacao": "2025-02-28",
+      "link": "https://www.gov.br/capes/pt-br/assuntos/noticias/aberta-selecao-para-mestrado-profissional-em-roteiro-nos-eua",
+      "categoria": "Bolsas",
+      "eixo_estrategico": [
+        "ciencia_tecnologia",
+        "bolsas_fomento"
+      ],
+      "imagem_url": null,
+      "validacao_status": "valido",
+      "motivo": "fora_janela_12m"
+    }
+  ],
+  "loader_dryrun": {
+    "comando": "C:\\Program Files\\Python312\\python.exe D:\\Computational_Physics\\My Projects\\edital\\scripts\\load_news_research_sources.py --dry-run --source capes_noticias --input-dir audit_reports_news_research/capes_noticias_subset_recente",
+    "input_dir": "audit_reports_news_research/capes_noticias_subset_recente",
+    "would_upsert_noticia": 7,
+    "would_upsert_pesquisa": 0,
+    "errors_count": 0,
+    "skipped": 0,
+    "apply_status": "dry_run_only",
+    "total_noticia_input": 7,
+    "summary_path": "audit_reports_news_research/capes_noticias_subset_recente/load_news_research_summary.json"
+  },
+  "payload_pronto_apply": {
+    "noticia": "audit_reports_news_research/capes_noticias_subset_recente/capes_noticias_payload_noticia.json",
+    "registos": 7
+  },
+  "apply_staging": {
+    "executado": false,
+    "powershell": "# NÃO EXECUTADO — apply staging (executar manualmente após validar .env.staging)\n$env:EDITALFINDER_ENV='staging'\n$env:EDITALFINDER_ALLOW_STAGING_APPLY='true'\npython scripts/load_news_research_sources.py `\n  --apply --staging --test-db-before-apply `\n  --source capes_noticias `\n  --input-dir audit_reports_news_research/capes_noticias_subset_recente"
+  }
+}

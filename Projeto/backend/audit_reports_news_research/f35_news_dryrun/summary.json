@@ -1,0 +1,44 @@
+{
+  "fonte": "f35_news",
+  "nome_exibicao": "F-35 News & Features",
+  "data_execucao": "2026-05-18T15:12:18Z",
+  "modo": "dry_run",
+  "apply": false,
+  "diagnostico": {
+    "url_base": "https://www.f35.com",
+    "hub_html": "https://www.f35.com/f35/news-and-features.html",
+    "feed_json": "https://www.f35.com/content/lockheed-martin/data/feeds/f35feed.json",
+    "rss": "não disponível (listagem via JSON AEM + Algolia no browser)",
+    "robots_txt": "https://www.f35.com/robots.txt — Allow paths regionais; sem Disallow em /f35/",
+    "cms": "Adobe AEM (Lockheed Martin F-35)",
+    "listagem": "JSON estático f35feed.json (data-path no hub); hub renderizado com Algolia InstantSearch",
+    "data_publicacao": "campo Date (RFC822, ex. Wed, 13 May 2026 … MDT)",
+    "imagem": "Thumbnail Image no feed (absolutizada para f35.com)",
+    "autor": "F-35 / Lockheed Martin (metadado feed)",
+    "copyright": "Apenas Description do feed; enrich opcional og:description; sem corpo integral"
+  },
+  "config": {
+    "max_items": 10,
+    "time_window_months": 12,
+    "page_enrich_max": 6
+  },
+  "totais": {
+    "raw_apos_filtros": 10,
+    "standardized": 10,
+    "within_window_12m": 10,
+    "sem_data": 0,
+    "page_enrich_fetches": 0,
+    "discarded_post_enrich": 0
+  },
+  "validacao_status_counts": {
+    "valido": 10
+  },
+  "warnings": [],
+  "errors": [],
+  "paths": {
+    "standardized": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_news_research\\f35_news_dryrun\\standardized\\f35_news_standardized.json",
+    "exemplos": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_news_research\\f35_news_dryrun\\standardized\\exemplos.json",
+    "raw": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_news_research\\f35_news_dryrun\\raw\\f35_news_raw.json",
+    "crawl_meta": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_news_research\\f35_news_dryrun\\f35_news_crawl_meta.json"
+  }
+}

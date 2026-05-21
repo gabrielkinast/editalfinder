@@ -1,0 +1,111 @@
+{
+  "titulo_relatorio": "Validação pós-apply — Fundatec subset válido (staging)",
+  "gerado_em_utc": "2026-05-14T18:15:00Z",
+  "fonte_dados_loader": "audit_reports_main_pipeline/concursos_wave1_fundatec_subset_valido/loader_apply_staging",
+  "ficheiros_lidos": [
+    "loader_apply_staging/load_concursos_selecao_summary.json",
+    "loader_apply_staging/load_concursos_selecao_errors.json",
+    "loader_apply_staging/load_concursos_selecao_warnings.json",
+    "loader_apply_staging/load_concursos_selecao_by_source.json",
+    "loader_apply_staging/load_concursos_selecao_payload_examples.json"
+  ],
+  "resumo_apply": {
+    "data_execucao_loader": "2026-05-14T18:08:13Z",
+    "modo": "apply_staging",
+    "apply_status": "applied",
+    "staging_flag": true,
+    "apply_staging_requested": true,
+    "total_items_input": 2,
+    "would_upsert_total": 2,
+    "inserted": 2,
+    "updated": 0,
+    "upserted_total": 2,
+    "total_aplicado_loader": 2,
+    "errors_count": 0,
+    "map_errors_count": 0,
+    "apply_errors_count": 0,
+    "errors_total_written": 0,
+    "warnings_count": 0,
+    "duplicate_fonte_link_in_batch": 0,
+    "expired_items_count": 0,
+    "environment_guard": {
+      "editalfinder_env": "staging",
+      "has_allow_staging_apply": true,
+      "production_blocked": false
+    }
+  },
+  "erros": {
+    "load_concursos_selecao_errors": [],
+    "load_concursos_selecao_warnings": [],
+    "nota": "Nenhum erro nem aviso registado pelo loader neste apply."
+  },
+  "titulos_aplicados": [
+    "Prefeitura de Porto Alegre/RS abre inscrições para concursos públicos nas áreas de Farmácia e Medicina Veterinária - Fundatec",
+    "Prefeitura de Morro Reuter/RS abre inscrições para Concurso Público - Fundatec"
+  ],
+  "links_noticia_aplicados": [
+    "https://www2.fundatec.org.br/2026/05/07/prefeitura-de-porto-alegre-rs-abre-inscricoes-para-concursos-publicos-nas-areas-de-farmacia-e-medicina-veterinaria",
+    "https://www2.fundatec.org.br/2026/05/06/prefeitura-de-morro-reuter-rs-abre-inscricoes-para-concurso-publico"
+  ],
+  "validacao_view": {
+    "view_listagem_frontend": "vw_concursos_front",
+    "config_frontend": "VITE_VIEW_CONCURSOS (default: vw_concursos_front) em frontend/EditalFinder-React/src/config/env.js",
+    "tabela_base": "public.concurso_selecao",
+    "documentacao_view": "docs/sql/UPDATE_VW_CONCURSOS_FRONT_RECENCY.sql",
+    "criterios_resumo": "A view expõe linhas com ativo=true, validacao_status em ('valido','incompleto'), status fora de cancelado/suspenso, e recência: data_fim_inscricao >= CURRENT_DATE OU data_prova >= CURRENT_DATE OU, sem ambas as datas, criado_em ou data_publicacao nos últimos 90 dias.",
+    "expectativa_pos_apply": "Os 2 registos aplicados têm validacao_status=valido, link_edital preenchido e data_fim_inscricao preenchida; devem satisfazer o ramo de recência por data enquanto fim de inscrições ou prova ainda forem >= hoje na base (ou cair na janela de 90 dias se as datas estiverem no passado em relação ao dia da consulta).",
+    "validacao_nao_automatica": "Este relatório não executa SQL no Supabase. Confirmar em staging: Table Editor em concurso_selecao ou SELECT em vw_concursos_front filtrando fonte='fundatec' e link nas URLs acima.",
+    "sugestao_sql_staging": "SELECT id_concurso, titulo, fonte, validacao_status, status, data_fim_inscricao, data_prova, link, link_edital, criado_em FROM public.vw_concursos_front WHERE fonte = 'fundatec' AND link IN ('https://www2.fundatec.org.br/2026/05/07/prefeitura-de-porto-alegre-rs-abre-inscricoes-para-concursos-publicos-nas-areas-de-farmacia-e-medicina-veterinaria','https://www2.fundatec.org.br/2026/05/06/prefeitura-de-morro-reuter-rs-abre-inscricoes-para-concurso-publico');"
+  },
+  "checklist_visual_rota_concursos": [
+    "Abrir o front de staging e navegar para a rota /concursos (ConcursosPage; serviço fetchConcursos usa a view configurada em VITE_VIEW_CONCURSOS).",
+    "Confirmar que aparecem dois cards (ou linhas) identificáveis pelos títulos de Porto Alegre (Farmácia/Medicina Veterinária) e Morro Reuter, banca Fundatec.",
+    "Verificar campos visíveis: tipo concurso público, estado RS, município, datas de fim de inscrição e prova coerentes com o payload aplicado.",
+    "Se a UI expuser link da notícia e/ou edital, testar abertura; edital deve apontar para index_concursos.php?concurso=1090 e 1053.",
+    "Confirmar ausência de erros de rede na consola ao carregar a lista (401/403 RLS indicariam problema de política ou view).",
+    "Se algum card não aparecer: verificar na tabela base se ativo=true e se a view de recência não excluiu o registo (datas de fim/prova já passadas em relação ao CURRENT_DATE do servidor PostgreSQL)."
+  ],
+  "itens_fundatec_fora_do_subset": {
+    "criterio_subset": "Apenas validacao_status = valido (link_edital + data_fim_inscricao).",
+    "total_standardized_v4_referencia": 7,
+    "total_aplicado_subset": 2,
+    "total_nao_aplicados_com_standardized": 5,
+    "linhas": [
+      {
+        "titulo": "Polícia Penal do RS abre concurso público com 213 vagas e salários de até R$ 9,7 mil - Fundatec",
+        "validacao_status": "incompleto",
+        "motivo_fora_subset": "Sem data_fim_inscricao extraída do texto principal apesar de link_edital ao portal.",
+        "limitacoes": "Loader/crawler não infere fim de inscrições sem frase explícita capturável; vagas podem ficar null por ambiguidade; salário/taxa podem ter notas valor_ambiguo."
+      },
+      {
+        "titulo": "IPE Prev abre concurso público com 121 vagas e salários de até R$ 10 mil - Fundatec",
+        "validacao_status": "incompleto",
+        "motivo_fora_subset": "Sem data_fim_inscricao.",
+        "limitacoes": "Mesmo padrão: oportunidade com portal mas corpo da notícia sem data de encerramento de inscrições no formato esperado."
+      },
+      {
+        "titulo": "Assembleia Legislativa do RS abre seleção de estágio com 34 vagas e inscrições gratuitas - Fundatec",
+        "validacao_status": "incompleto",
+        "motivo_fora_subset": "Sem data_fim_inscricao.",
+        "limitacoes": "Estágio inferido pelo título; sem fim de inscrições no texto principal não entra no subset conservador."
+      },
+      {
+        "titulo": "Câmara Municipal de Palhoça/SC abre Concurso Público com salários de até R$ 9,5 mil - Fundatec",
+        "validacao_status": "incompleto",
+        "motivo_fora_subset": "Sem data_fim_inscricao.",
+        "limitacoes": "Idem; possíveis ambiguidades de valores e vagas nas notas de extração."
+      },
+      {
+        "titulo": "Exame POSCOMP 2026 abre inscrições em todo o país - Fundatec",
+        "validacao_status": "incompleto",
+        "motivo_fora_subset": "Sem data_fim_inscricao.",
+        "limitacoes": "Notícia nacional com link ao portal; fim de inscrições não capturado — candidato a revisão manual ou segunda fonte antes de apply."
+      }
+    ],
+    "nota_crawler_descartados": "Além destes 5 incompletos no standardized v4, o crawl descartou 3 URLs (noticia_nao_oportunidade_ativa); esses nem chegaram ao standardized — ver crawler_summary.json da wave1 Fundatec."
+  },
+  "escopo_geracao_relatorio": {
+    "executou_novo_apply": false,
+    "alterou_codigo_fonte": false
+  }
+}

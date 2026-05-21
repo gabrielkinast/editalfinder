@@ -1,0 +1,77 @@
+{
+  "generated_at": "2026-05-18T15:31:03Z",
+  "feed": {
+    "total_no_feed": 302,
+    "total_dentro_12_meses": 80,
+    "total_elegivel_pipeline_sem_cap": 80,
+    "content_type_tags_no_feed": {
+      "Feature": 139,
+      "News": 106,
+      "3rd Party Article": 57
+    }
+  },
+  "dryrun_original": {
+    "diretorio": "f35_news_dryrun",
+    "max_items_config": 10,
+    "total_processado": 10,
+    "within_window": 10,
+    "total_valido": 10,
+    "total_incompleto": null,
+    "errors_count": 0,
+    "validacao_status_counts": {
+      "valido": 10
+    },
+    "distribuicao": {}
+  },
+  "dryrun_ampliado": {
+    "diretorio": "f35_news_dryrun_30",
+    "max_items_config": 30,
+    "total_processado": 30,
+    "within_window": 30,
+    "total_valido": 30,
+    "total_incompleto": 0,
+    "errors_count": 0,
+    "validacao_status_counts": {
+      "valido": 30
+    },
+    "distribuicao": {
+      "categoria_principal": {
+        "News": 30
+      },
+      "content_type_tag": {
+        "News": 30
+      },
+      "general_tags_top": {
+        "Capabilities": 11,
+        "F-35": 7,
+        "United States Air Force": 5,
+        "Finland": 4,
+        "Training": 3,
+        "Japan": 3,
+        "United States Navy": 3,
+        "United States of America": 3,
+        "Netherlands": 2,
+        "United Kingdom": 2,
+        "Sustainment": 2,
+        "Production": 2,
+        "Denmark": 1,
+        "Canada": 1,
+        "Germany": 1
+      },
+      "eixo_estrategico": {
+        "aeroespacial": 30,
+        "defesa": 30,
+        "aviacao_militar": 28,
+        "tecnologia_militar": 14,
+        "industria_estrategica": 14,
+        "geopolitica_tecnologica": 7
+      }
+    }
+  },
+  "delta": {
+    "processado": 20,
+    "valido": 20,
+    "incompleto": 0
+  },
+  "nota": "O feed tem mais itens elegíveis que max_items; dry-run original cap=10, ampliado cap=30. Apply não executado."
+}

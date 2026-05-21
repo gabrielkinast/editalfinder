@@ -1,0 +1,493 @@
+{
+  "fonte": "military_research_expansion",
+  "data_execucao": "2026-05-20T06:00:48Z",
+  "modo": "dry_run",
+  "apply": false,
+  "diagnostico": {
+    "https://www.afmc.af.mil/News/": {
+      "url": "https://www.afmc.af.mil/News/",
+      "status": 403,
+      "bytes": 380,
+      "ok": false
+    },
+    "https://www.afnwc.af.mil/News/": {
+      "url": "https://www.afnwc.af.mil/News/",
+      "status": 403,
+      "bytes": 383,
+      "ok": false
+    },
+    "https://www.spaceforce.mil/News/": {
+      "url": "https://www.spaceforce.mil/News/",
+      "status": 403,
+      "bytes": 379,
+      "ok": false
+    },
+    "https://afresearchlab.com/technology/": {
+      "url": "https://afresearchlab.com/technology/",
+      "status": 200,
+      "bytes": 133180,
+      "ok": true
+    },
+    "https://arl.devcom.army.mil/media-center/": {
+      "url": "https://arl.devcom.army.mil/media-center/",
+      "status": 200,
+      "bytes": 234402,
+      "ok": true
+    },
+    "https://arl.devcom.army.mil/resources/": {
+      "url": "https://arl.devcom.army.mil/resources/",
+      "status": 200,
+      "bytes": 208451,
+      "ok": true
+    },
+    "wayback": "DOD_AFMIL_WAYBACK_FALLBACK=1 para hubs .af.mil bloqueados"
+  },
+  "config_overrides": {
+    "arl_news": {
+      "max_items": 30,
+      "time_window_months": 12,
+      "page_enrich_max": 12
+    },
+    "space_force_news": {
+      "max_items": 30,
+      "time_window_months": 12,
+      "page_enrich_max": 15
+    },
+    "afnwc_news": {
+      "max_items": 30,
+      "time_window_months": 12,
+      "page_enrich_max": 15
+    },
+    "afmc_news": {
+      "max_items": 30,
+      "time_window_months": 12,
+      "page_enrich_max": 15
+    },
+    "afrl_technology_areas": {
+      "max_items": 20,
+      "time_window_months": 24,
+      "page_enrich_max": 12
+    },
+    "arl_resources": {
+      "max_items": 20,
+      "time_window_months": 24,
+      "page_enrich_max": 8
+    },
+    "afnwc_innovation": {
+      "max_items": 20,
+      "time_window_months": 24,
+      "page_enrich_max": 0
+    },
+    "afnwc_weapon_systems": {
+      "max_items": 20,
+      "time_window_months": 24,
+      "page_enrich_max": 0
+    }
+  },
+  "por_fonte": {
+    "afrl_technology_areas": {
+      "destino": "pesquisa",
+      "raw_analisado": 12,
+      "raw_pos_filtro": 12,
+      "standardized": 12,
+      "validos": 12,
+      "incompletos": 0,
+      "review": 0,
+      "descartados": 0,
+      "eixos": {
+        "defesa": 10,
+        "aeroespacial": 4,
+        "pesquisa": 4,
+        "engenharia_avancada": 4,
+        "espaco": 3,
+        "autonomia": 2,
+        "computacao": 2,
+        "inovacao": 2,
+        "propulsao": 1,
+        "hipersonicos": 1,
+        "inteligencia_artificial": 1,
+        "ia": 1
+      },
+      "exemplos_mantidos": [
+        {
+          "titulo": "AEROSPACE",
+          "link": "https://afresearchlab.com/technology/aerospace",
+          "validacao_status": "valido",
+          "data_publicacao": null,
+          "eixo_estrategico": [
+            "aeroespacial",
+            "defesa",
+            "propulsao",
+            "hipersonicos",
+            "autonomia",
+            "espaco"
+          ]
+        },
+        {
+          "titulo": "ARTIFICIAL INTELLIGENCE",
+          "link": "https://afresearchlab.com/technology/artificial-intelligence",
+          "validacao_status": "valido",
+          "data_publicacao": null,
+          "eixo_estrategico": [
+            "inteligencia_artificial",
+            "computacao",
+            "defesa",
+            "ia",
+            "autonomia"
+          ]
+        },
+        {
+          "titulo": "BASIC RESEARCH",
+          "link": "https://afresearchlab.com/technology/basic-research",
+          "validacao_status": "valido",
+          "data_publicacao": null,
+          "eixo_estrategico": [
+            "pesquisa",
+            "defesa",
+            "engenharia_avancada"
+          ]
+        }
+      ],
+      "exemplos_descartados": [],
+      "destino_sugerido": "pesquisa",
+      "recomendacao": "apply_controlado",
+      "listing_method": "afrl_technology_areas_html",
+      "errors": []
+    },
+    "arl_news": {
+      "destino": "noticia",
+      "raw_analisado": 12,
+      "raw_pos_filtro": 12,
+      "standardized": 12,
+      "validos": 12,
+      "incompletos": 0,
+      "review": 0,
+      "descartados": 0,
+      "eixos": {
+        "defesa": 12,
+        "pesquisa": 11,
+        "autonomia": 3,
+        "materiais_avancados": 2,
+        "inovacao": 2,
+        "inteligencia_artificial": 2,
+        "ia": 2,
+        "guerra_eletronica": 1
+      },
+      "exemplos_mantidos": [
+        {
+          "titulo": "Army invention identifies bio-materials for future military technology",
+          "link": "https://arl.devcom.army.mil/news/army-invention-identifies-bio-materials-for-future-military-technology",
+          "validacao_status": "valido",
+          "data_publicacao": "2026-05-18",
+          "eixo_estrategico": [
+            "materiais_avancados",
+            "pesquisa",
+            "defesa"
+          ]
+        },
+        {
+          "titulo": "Army researchers unlock the power of performance data to enhance Soldier lethality and readiness",
+          "link": "https://arl.devcom.army.mil/news/army-researchers-unlock-the-power-of-performance-data-to-enhance-soldier-lethality-and-readiness",
+          "validacao_status": "valido",
+          "data_publicacao": "2026-05-13",
+          "eixo_estrategico": [
+            "defesa",
+            "pesquisa"
+          ]
+        },
+        {
+          "titulo": "Army Research Office to launch academic initiative for sensitive, high-impact research",
+          "link": "https://arl.devcom.army.mil/news/army-research-office-to-launch-academic-initiative-for-sensitive-high-impact-research",
+          "validacao_status": "valido",
+          "data_publicacao": "2026-05-04",
+          "eixo_estrategico": [
+            "pesquisa",
+            "defesa",
+            "inovacao"
+          ]
+        }
+      ],
+      "exemplos_descartados": [],
+      "destino_sugerido": "noticia",
+      "recomendacao": "apply_controlado",
+      "listing_method": "arl_news_listing_html",
+      "errors": []
+    },
+    "arl_resources": {
+      "destino": "pesquisa",
+      "raw_analisado": 20,
+      "raw_pos_filtro": 20,
+      "standardized": 20,
+      "validos": 20,
+      "incompletos": 0,
+      "review": 2,
+      "descartados": 0,
+      "eixos": {
+        "pesquisa": 4,
+        "engenharia_avancada": 1,
+        "defesa": 1,
+        "ia": 1,
+        "inovacao": 1,
+        "cyber": 1
+      },
+      "exemplos_mantidos": [
+        {
+          "titulo": "ARL Broad Agency Announcement (BAA) forms repository",
+          "link": "https://arl.devcom.army.mil/baa-forms",
+          "validacao_status": "valido",
+          "data_publicacao": "2022-09-25",
+          "eixo_estrategico": []
+        },
+        {
+          "titulo": "Auditory Hazard Assessment Algorithm for Humans (AHAAH)",
+          "link": "https://arl.devcom.army.mil/resources/ahaah",
+          "validacao_status": "valido",
+          "data_publicacao": "2022-09-25",
+          "eixo_estrategico": []
+        },
+        {
+          "titulo": "Army Research Risk Assessment Protection Program (ARRP)",
+          "link": "https://arl.devcom.army.mil/resources/arrp",
+          "validacao_status": "valido",
+          "data_publicacao": "2025-12-02",
+          "eixo_estrategico": [
+            "pesquisa"
+          ]
+        }
+      ],
+      "exemplos_descartados": [],
+      "destino_sugerido": "Radar/Editais",
+      "recomendacao": "apply_controlado",
+      "listing_method": "arl_resources_html",
+      "errors": []
+    },
+    "afnwc_innovation": {
+      "destino": "pesquisa",
+      "raw_analisado": 4,
+      "raw_pos_filtro": 4,
+      "standardized": 4,
+      "validos": 4,
+      "incompletos": 0,
+      "review": 0,
+      "descartados": 0,
+      "eixos": {
+        "inovacao": 3,
+        "nuclear": 1,
+        "defesa": 1,
+        "engenharia_avancada": 1,
+        "aeroespacial": 1
+      },
+      "exemplos_mantidos": [
+        {
+          "titulo": "AFNWC Innovation",
+          "link": "https://www.afnwc.af.mil/Innovation/",
+          "validacao_status": "valido",
+          "data_publicacao": null,
+          "eixo_estrategico": [
+            "nuclear",
+            "defesa",
+            "inovacao",
+            "engenharia_avancada",
+            "aeroespacial"
+          ]
+        },
+        {
+          "titulo": "Fact Sheets",
+          "link": "https://www.afnwc.af.mil/About-Us/Fact-Sheets",
+          "validacao_status": "valido",
+          "data_publicacao": null,
+          "eixo_estrategico": []
+        },
+        {
+          "titulo": "Innovation",
+          "link": "https://www.afnwc.af.mil/Innovation",
+          "validacao_status": "valido",
+          "data_publicacao": null,
+          "eixo_estrategico": [
+            "inovacao"
+          ]
+        }
+      ],
+      "exemplos_descartados": [],
+      "destino_sugerido": "pesquisa",
+      "recomendacao": "precisa_melhoria",
+      "listing_method": "afnwc_portal_html",
+      "errors": []
+    },
+    "afnwc_weapon_systems": {
+      "destino": "pesquisa",
+      "raw_analisado": 1,
+      "raw_pos_filtro": 1,
+      "standardized": 1,
+      "validos": 1,
+      "incompletos": 0,
+      "review": 0,
+      "descartados": 0,
+      "eixos": {
+        "nuclear": 1,
+        "sistemas_de_armas": 1,
+        "defesa": 1,
+        "engenharia_avancada": 1
+      },
+      "exemplos_mantidos": [
+        {
+          "titulo": "AFNWC Weapon Systems",
+          "link": "https://www.afnwc.af.mil/Weapon-Systems/",
+          "validacao_status": "valido",
+          "data_publicacao": null,
+          "eixo_estrategico": [
+            "nuclear",
+            "sistemas_de_armas",
+            "defesa",
+            "engenharia_avancada"
+          ]
+        }
+      ],
+      "exemplos_descartados": [],
+      "destino_sugerido": "pesquisa",
+      "recomendacao": "precisa_melhoria",
+      "listing_method": "afnwc_portal_html",
+      "errors": []
+    },
+    "space_force_news": {
+      "destino": "noticia",
+      "raw_analisado": 30,
+      "raw_pos_filtro": 28,
+      "standardized": 28,
+      "validos": 18,
+      "incompletos": 10,
+      "review": 2,
+      "descartados": 0,
+      "eixos": {
+        "espaco": 28,
+        "industria_estrategica": 7,
+        "sensores": 1,
+        "satelites": 1,
+        "pesquisa": 1,
+        "guerra_eletronica": 1,
+        "defesa": 1
+      },
+      "exemplos_mantidos": [
+        {
+          "titulo": "Milestone sensor upgrade enhances Space Force identifying, tracking capability",
+          "link": "https://www.spaceforce.mil/News/Article-Display/Article/4261327/milestone-sensor-upgrade-enhances-space-force-identifying-tracking-capability",
+          "validacao_status": "valido",
+          "data_publicacao": "2025-07-31",
+          "eixo_estrategico": [
+            "sensores",
+            "espaco",
+            "industria_estrategica"
+          ]
+        },
+        {
+          "titulo": "CMSSF strengthens allied partnerships during first European tour",
+          "link": "https://www.spaceforce.mil/News/Article-Display/Article/4259819/cmssf-strengthens-allied-partnerships-during-first-european-tour",
+          "validacao_status": "valido",
+          "data_publicacao": "2025-07-30",
+          "eixo_estrategico": [
+            "espaco",
+            "industria_estrategica"
+          ]
+        },
+        {
+          "titulo": "US Space Force scheduled to launch eighth X-37B mission",
+          "link": "https://www.spaceforce.mil/News/Article-Display/Article/4256759/us-space-force-scheduled-to-launch-eighth-x-37b-mission",
+          "validacao_status": "valido",
+          "data_publicacao": "2025-07-28",
+          "eixo_estrategico": [
+            "espaco",
+            "industria_estrategica"
+          ]
+        }
+      ],
+      "exemplos_descartados": [],
+      "destino_sugerido": "noticia",
+      "recomendacao": "apply_controlado",
+      "listing_method": "dod_afmil_news_listing_html",
+      "errors": []
+    },
+    "afnwc_news": {
+      "destino": "noticia",
+      "raw_analisado": 0,
+      "raw_pos_filtro": 0,
+      "standardized": 0,
+      "validos": 0,
+      "incompletos": 0,
+      "review": 0,
+      "descartados": 0,
+      "eixos": {},
+      "exemplos_mantidos": [],
+      "exemplos_descartados": [],
+      "destino_sugerido": "noticia",
+      "recomendacao": "nao_recomendado",
+      "listing_method": "dod_afmil_news_listing_html",
+      "errors": []
+    },
+    "afmc_news": {
+      "destino": "noticia",
+      "raw_analisado": 30,
+      "raw_pos_filtro": 9,
+      "standardized": 9,
+      "validos": 0,
+      "incompletos": 9,
+      "review": 0,
+      "descartados": 21,
+      "eixos": {
+        "ia": 4,
+        "engenharia_avancada": 4,
+        "inovacao": 2,
+        "logistica_militar": 2,
+        "cyber": 1,
+        "aeroespacial": 1,
+        "materiais_avancados": 1,
+        "defesa": 1,
+        "simulacao_modelagem": 1,
+        "pesquisa": 1
+      },
+      "exemplos_mantidos": [],
+      "exemplos_descartados": [
+        {
+          "titulo": "Beyond the flightline: TPS Enlisted Test Course enhances readiness",
+          "link": "https://www.afmc.af.mil/News/Article-Display/Article/4367172/beyond-the-flightline-tps-enlisted-test-course-enhances-readiness",
+          "motivo": "sem_sinal_tecnico"
+        },
+        {
+          "titulo": "75th ABW tests readiness in Bison Forge 25-1 exercise",
+          "link": "https://www.afmc.af.mil/News/Article-Display/Article/4367183/75th-abw-tests-readiness-in-bison-forge-25-1-exercise",
+          "motivo": "sem_sinal_tecnico"
+        },
+        {
+          "titulo": "2025 AFMC Year in Review",
+          "link": "https://www.afmc.af.mil/News/Article-Display/Article/4361616/2025-afmc-year-in-review",
+          "motivo": "sem_sinal_tecnico"
+        },
+        {
+          "titulo": "C3BM’s Engagement Day strengthens collaboration",
+          "link": "https://www.afmc.af.mil/News/Article-Display/Article/4365588/c3bms-engagement-day-strengthens-collaboration",
+          "motivo": "sem_sinal_tecnico"
+        }
+      ],
+      "destino_sugerido": "noticia",
+      "recomendacao": "latente",
+      "listing_method": "dod_afmil_news_listing_html",
+      "errors": []
+    }
+  },
+  "recomendacoes": {
+    "afrl_technology_areas": "apply_controlado",
+    "arl_news": "apply_controlado",
+    "arl_resources": "apply_controlado",
+    "afnwc_innovation": "precisa_melhoria",
+    "afnwc_weapon_systems": "precisa_melhoria",
+    "space_force_news": "apply_controlado",
+    "afnwc_news": "nao_recomendado",
+    "afmc_news": "latente"
+  },
+  "totais": {
+    "fontes": 8,
+    "review_total": 4,
+    "descartados_total": 21,
+    "standardized_total": 86,
+    "validos_total": 67
+  }
+}

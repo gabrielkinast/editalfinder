@@ -1,0 +1,140 @@
+[
+  {
+    "titulo": "Vestibular 2027",
+    "tipo_selecao": "vestibular",
+    "categoria": "vestibular_unicamp",
+    "orgao": "Unicamp / Comvest",
+    "instituicao": "Universidade Estadual de Campinas",
+    "banca": "Comvest",
+    "cargo": null,
+    "curso": "Graduação — Vestibular Unicamp",
+    "area": "Graduação",
+    "nivel_escolaridade": "ensino_medio",
+    "estado": "SP",
+    "municipio": "Campinas",
+    "regiao": null,
+    "modalidade": null,
+    "numero_vagas": null,
+    "salario_min": null,
+    "salario_max": null,
+    "taxa_inscricao": null,
+    "data_publicacao": null,
+    "data_inicio_inscricao": null,
+    "data_fim_inscricao": null,
+    "data_prova": "2026-10-18",
+    "status": "ativo",
+    "link": "https://www.comvest.unicamp.br/ingresso-2027/vestibular-2027/",
+    "link_edital": "https://www.comvest.unicamp.br/wp-content/uploads/2025/06/Manual-Programa_provas_VU2026.pdf",
+    "fonte": "comvest",
+    "fonte_tipo": "universidade",
+    "validacao_status": "incompleto",
+    "qualidade_dado": "media",
+    "tags": [
+      "comvest",
+      "unicamp",
+      "wave2",
+      "vestibular"
+    ],
+    "extras": {
+      "crawler": "main_vestibulares_comvest",
+      "wave": "concursos_wave2_vestibulares_comvest",
+      "fetched_at_utc": "2026-05-16T21:14:46.874193+00:00",
+      "seed_url": "https://www.comvest.unicamp.br/ingresso-2027/vestibular-2027/",
+      "pdf_enrichment": {
+        "fetch_note": "pdf_download_ok",
+        "schedule": {
+          "data_inicio_inscricao": null,
+          "data_fim_inscricao": null,
+          "data_prova": null,
+          "schedule_notes": []
+        }
+      },
+      "extracted_fields": [
+        "data_prova",
+        "link_edital"
+      ],
+      "missing_core_fields": [
+        "data_fim_inscricao",
+        "numero_vagas"
+      ],
+      "extraction_confidence": "alta",
+      "value_extraction_notes": [
+        "cronograma_inscricao_ainda_generico_ou_ausente",
+        "pdf:pdf_download_ok"
+      ],
+      "source_standardized_key": "comvest",
+      "loader": "load_concursos_selecao",
+      "origem_pipeline": "concursos_wave1_manual"
+    },
+    "ativo": true
+  },
+  {
+    "titulo": "Vagas Olímpicas 2027",
+    "tipo_selecao": "programa_ingresso",
+    "categoria": "vagas_olimpicas_unicamp",
+    "orgao": "Unicamp / Comvest",
+    "instituicao": "Universidade Estadual de Campinas",
+    "banca": "Comvest",
+    "cargo": null,
+    "curso": "Vagas Olímpicas",
+    "area": "Graduação",
+    "nivel_escolaridade": "ensino_medio",
+    "estado": "SP",
+    "municipio": "Campinas",
+    "regiao": null,
+    "modalidade": null,
+    "numero_vagas": null,
+    "salario_min": null,
+    "salario_max": null,
+    "taxa_inscricao": null,
+    "data_publicacao": null,
+    "data_inicio_inscricao": null,
+    "data_fim_inscricao": null,
+    "data_prova": null,
+    "status": "ativo",
+    "link": "https://www.comvest.unicamp.br/ingresso-2027/vagas-olimpicas-2027/",
+    "link_edital": "https://www.comvest.unicamp.br/wp-content/uploads/2025/10/Edital-Vagas-Olimpicas-2026.pdf",
+    "fonte": "comvest",
+    "fonte_tipo": "universidade",
+    "validacao_status": "incompleto",
+    "qualidade_dado": "media",
+    "tags": [
+      "comvest",
+      "unicamp",
+      "wave2",
+      "programa_ingresso"
+    ],
+    "extras": {
+      "crawler": "main_vestibulares_comvest",
+      "wave": "concursos_wave2_vestibulares_comvest",
+      "fetched_at_utc": "2026-05-16T21:14:49.980194+00:00",
+      "seed_url": "https://www.comvest.unicamp.br/ingresso-2027/vagas-olimpicas-2027/",
+      "pdf_enrichment": {
+        "fetch_note": "pdf_download_ok",
+        "schedule": {
+          "data_inicio_inscricao": null,
+          "data_fim_inscricao": null,
+          "data_prova": null,
+          "schedule_notes": []
+        }
+      },
+      "extracted_fields": [
+        "link_edital"
+      ],
+      "missing_core_fields": [
+        "data_fim_inscricao",
+        "data_prova",
+        "numero_vagas"
+      ],
+      "extraction_confidence": "media",
+      "value_extraction_notes": [
+        "cronograma_inscricao_ainda_generico_ou_ausente",
+        "pdf:pdf_download_ok"
+      ],
+      "source_standardized_key": "comvest",
+      "loader": "load_concursos_selecao",
+      "origem_pipeline": "concursos_wave1_manual"
+    },
+    "ativo": true
+  }
+]

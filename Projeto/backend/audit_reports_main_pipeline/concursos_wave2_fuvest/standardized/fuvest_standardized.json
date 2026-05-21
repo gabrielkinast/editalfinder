@@ -1,0 +1,120 @@
+[
+  {
+    "titulo": "Vestibular da USP – 2027",
+    "tipo_selecao": "vestibular",
+    "categoria": "vestibular_usp",
+    "orgao": "Fuvest — Fundação Universitária para o Vestibular",
+    "instituicao": "Universidade de São Paulo (USP)",
+    "banca": "Fuvest",
+    "cargo": null,
+    "curso": "Graduação — Vestibular USP",
+    "area": "USP",
+    "nivel_escolaridade": "ensino_medio",
+    "estado": "SP",
+    "municipio": "São Paulo",
+    "regiao": null,
+    "modalidade": null,
+    "numero_vagas": null,
+    "salario_min": null,
+    "salario_max": null,
+    "taxa_inscricao": 228.0,
+    "data_publicacao": "2026-05-04",
+    "data_inicio_inscricao": "2026-08-17",
+    "data_fim_inscricao": "2026-10-09",
+    "data_prova": "2026-11-15",
+    "status": "inscricoes_abertas",
+    "link": "https://www.fuvest.br/vestibular-da-usp",
+    "link_edital": null,
+    "fonte": "fuvest",
+    "fonte_tipo": "universidade",
+    "validacao_status": "incompleto",
+    "qualidade_dado": "media",
+    "tags": [
+      "fuvest",
+      "usp",
+      "wave2",
+      "vestibular"
+    ],
+    "extras": {
+      "crawler": "main_fuvest_concursos",
+      "wave": "concursos_wave2_fuvest",
+      "fetched_at_utc": "2026-05-16T21:47:06.244913+00:00",
+      "fuvest_hub_kind": "vestibular",
+      "fuvest_origin": "hub",
+      "pdf_enrichment": {},
+      "extracted_fields": [
+        "data_fim_inscricao",
+        "data_inicio_inscricao",
+        "data_prova",
+        "taxa_inscricao"
+      ],
+      "missing_core_fields": [
+        "link_edital",
+        "numero_vagas"
+      ],
+      "extraction_confidence": "alta",
+      "value_extraction_notes": [
+        "edital_pdf_nao_encontrado_no_html"
+      ]
+    },
+    "ativo": true
+  },
+  {
+    "titulo": "Pós-Graduação",
+    "tipo_selecao": "programa_ingresso",
+    "categoria": "pos_graduacao_usp",
+    "orgao": "Fuvest — Fundação Universitária para o Vestibular",
+    "instituicao": "Universidade de São Paulo (USP)",
+    "banca": "Fuvest",
+    "cargo": null,
+    "curso": "Pós-graduação stricto sensu / lato sensu",
+    "area": "USP",
+    "nivel_escolaridade": "superior",
+    "estado": "SP",
+    "municipio": "São Paulo",
+    "regiao": null,
+    "modalidade": null,
+    "numero_vagas": null,
+    "salario_min": null,
+    "salario_max": null,
+    "taxa_inscricao": null,
+    "data_publicacao": null,
+    "data_inicio_inscricao": null,
+    "data_fim_inscricao": null,
+    "data_prova": null,
+    "status": "ativo",
+    "link": "https://www.fuvest.br/pos-graduacao",
+    "link_edital": null,
+    "fonte": "fuvest",
+    "fonte_tipo": "universidade",
+    "validacao_status": "incompleto",
+    "qualidade_dado": "baixa",
+    "tags": [
+      "fuvest",
+      "usp",
+      "wave2",
+      "pos"
+    ],
+    "extras": {
+      "crawler": "main_fuvest_concursos",
+      "wave": "concursos_wave2_fuvest",
+      "fetched_at_utc": "2026-05-16T21:47:57.741636+00:00",
+      "fuvest_hub_kind": "pos",
+      "fuvest_origin": "hub",
+      "pdf_enrichment": {},
+      "extracted_fields": [],
+      "missing_core_fields": [
+        "data_fim_inscricao",
+        "data_prova",
+        "link_edital",
+        "numero_vagas"
+      ],
+      "extraction_confidence": "media",
+      "value_extraction_notes": [
+        "edital_pdf_nao_encontrado_no_html",
+        "data_fim_inscricao_ausente"
+      ]
+    },
+    "ativo": true
+  }
+]

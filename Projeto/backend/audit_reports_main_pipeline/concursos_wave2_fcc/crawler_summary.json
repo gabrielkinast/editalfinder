@@ -1,0 +1,234 @@
+{
+  "fonte": "fcc",
+  "collected_at_utc": "2026-05-17T00:30:49.622116+00:00",
+  "listing_urls": [
+    "https://www.concursosfcc.com.br/concursoInscricaoAberta.html"
+  ],
+  "allow_detail_despite_robots": true,
+  "robots_skipped_detail_count": 0,
+  "total_bruto_listing": 4,
+  "total_discarded_all": 0,
+  "discarded": [],
+  "total_standardized": 4,
+  "validacao_counts": {
+    "valido": 2,
+    "incompleto": 2
+  },
+  "errors": [],
+  "field_fill": {
+    "titulo": 4,
+    "tipo_selecao": 4,
+    "categoria": 4,
+    "orgao": 4,
+    "instituicao": 4,
+    "banca": 4,
+    "cargo": 4,
+    "curso": 0,
+    "area": 0,
+    "nivel_escolaridade": 1,
+    "estado": 0,
+    "municipio": 1,
+    "regiao": 0,
+    "modalidade": 0,
+    "numero_vagas": 0,
+    "salario_min": 4,
+    "salario_max": 4,
+    "taxa_inscricao": 4,
+    "data_publicacao": 4,
+    "data_inicio_inscricao": 2,
+    "data_fim_inscricao": 2,
+    "data_prova": 2,
+    "status": 4,
+    "link": 4,
+    "link_edital": 4,
+    "fonte": 4,
+    "fonte_tipo": 4,
+    "validacao_status": 4,
+    "qualidade_dado": 4,
+    "tags": 4,
+    "extras": 4,
+    "ativo": 4
+  },
+  "fields_always_missing": [
+    "curso",
+    "area",
+    "estado",
+    "regiao",
+    "modalidade",
+    "numero_vagas"
+  ],
+  "standardized_path": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_main_pipeline\\concursos_wave2_fcc\\standardized\\fcc_standardized.json",
+  "exemplos_payload": [
+    {
+      "titulo": "Câmara Municipal de Presidente Prudente — Diversos Cargos",
+      "tipo_selecao": "concurso_publico",
+      "categoria": "banca_fcc_concurso",
+      "orgao": "Câmara Municipal de Presidente Prudente",
+      "instituicao": "Câmara Municipal de Presidente Prudente",
+      "banca": "FCC",
+      "cargo": "Diversos Cargos",
+      "curso": null,
+      "area": null,
+      "nivel_escolaridade": "medio",
+      "estado": null,
+      "municipio": "Presidente Prudente — Diversos Cargos Câmara Municipal de Presidente Prudente",
+      "regiao": null,
+      "modalidade": null,
+      "numero_vagas": null,
+      "salario_min": 5311.0,
+      "salario_max": 22010.63,
+      "taxa_inscricao": 100.0,
+      "data_publicacao": "2026-04-17",
+      "data_inicio_inscricao": "2026-04-22",
+      "data_fim_inscricao": "2026-05-21",
+      "data_prova": null,
+      "status": "inscricoes_abertas",
+      "link": "https://www.concursosfcc.com.br/concursos/cmprp126/index.html",
+      "link_edital": "https://www.concursosfcc.com.br/concursos/cmprp126/cmprp126_edital_de_abertura_de_inscricoes.pdf",
+      "fonte": "fcc",
+      "fonte_tipo": "banca",
+      "validacao_status": "valido",
+      "qualidade_dado": "media",
+      "tags": [
+        "fcc",
+        "banca",
+        "wave2"
+      ],
+      "extras": {
+        "crawler": "main_fcc_concursos",
+        "wave": "concursos_wave2_fcc",
+        "fetched_at_utc": "2026-05-17T00:30:42.681379+00:00",
+        "listing_urls": [
+          "https://www.concursosfcc.com.br/concursoInscricaoAberta.html"
+        ],
+        "fcc_codigo": "cmprp126",
+        "missing_core_fields": [
+          "data_prova",
+          "estado",
+          "link_edital",
+          "numero_vagas"
+        ],
+        "extraction_confidence": "alta",
+        "value_extraction_notes": [
+          "detail_fetched_despite_robots_disallow_concursos"
+        ],
+        "robots_detail_blocked": true
+      },
+      "ativo": true
+    },
+    {
+      "titulo": "PLANEJAR - Associação Brasileira de Planejamento Financeiro — 53° Exame para Certificação - CFP®",
+      "tipo_selecao": "concurso_publico",
+      "categoria": "banca_fcc_concurso",
+      "orgao": "PLANEJAR - Associação Brasileira de Planejamento Financeiro",
+      "instituicao": "PLANEJAR - Associação Brasileira de Planejamento Financeiro",
+      "banca": "FCC",
+      "cargo": "53° Exame para Certificação - CFP®",
+      "curso": null,
+      "area": null,
+      "nivel_escolaridade": null,
+      "estado": null,
+      "municipio": null,
+      "regiao": null,
+      "modalidade": null,
+      "numero_vagas": null,
+      "salario_min": 819.0,
+      "salario_max": 2840.0,
+      "taxa_inscricao": 689.0,
+      "data_publicacao": "2026-01-12",
+      "data_inicio_inscricao": null,
+      "data_fim_inscricao": null,
+      "data_prova": "2026-07-26",
+      "status": "ativo",
+      "link": "https://www.concursosfcc.com.br/concursos/plane226/index.html",
+      "link_edital": "https://www.concursosfcc.com.br/concursos/plane226/edital_exames_2026.pdf",
+      "fonte": "fcc",
+      "fonte_tipo": "banca",
+      "validacao_status": "incompleto",
+      "qualidade_dado": "media",
+      "tags": [
+        "fcc",
+        "banca",
+        "wave2"
+      ],
+      "extras": {
+        "crawler": "main_fcc_concursos",
+        "wave": "concursos_wave2_fcc",
+        "fetched_at_utc": "2026-05-17T00:30:44.982114+00:00",
+        "listing_urls": [
+          "https://www.concursosfcc.com.br/concursoInscricaoAberta.html"
+        ],
+        "fcc_codigo": "plane226",
+        "missing_core_fields": [
+          "data_fim_inscricao",
+          "estado",
+          "link_edital",
+          "numero_vagas"
+        ],
+        "extraction_confidence": "alta",
+        "value_extraction_notes": [
+          "detail_fetched_despite_robots_disallow_concursos"
+        ],
+        "robots_detail_blocked": true
+      },
+      "ativo": true
+    },
+    {
+      "titulo": "PLANEJAR - Associação Brasileira de Planejamento Financeiro — 54° Exame para Certificação - CFP®",
+      "tipo_selecao": "concurso_publico",
+      "categoria": "banca_fcc_concurso",
+      "orgao": "PLANEJAR - Associação Brasileira de Planejamento Financeiro",
+      "instituicao": "PLANEJAR - Associação Brasileira de Planejamento Financeiro",
+      "banca": "FCC",
+      "cargo": "54° Exame para Certificação - CFP®",
+      "curso": null,
+      "area": null,
+      "nivel_escolaridade": null,
+      "estado": null,
+      "municipio": null,
+      "regiao": null,
+      "modalidade": null,
+      "numero_vagas": null,
+      "salario_min": 819.0,
+      "salario_max": 2840.0,
+      "taxa_inscricao": 689.0,
+      "data_publicacao": "2026-01-12",
+      "data_inicio_inscricao": null,
+      "data_fim_inscricao": null,
+      "data_prova": "2026-10-18",
+      "status": "ativo",
+      "link": "https://www.concursosfcc.com.br/concursos/plane326/index.html",
+      "link_edital": "https://www.concursosfcc.com.br/concursos/plane326/edital_exames_2026.pdf",
+      "fonte": "fcc",
+      "fonte_tipo": "banca",
+      "validacao_status": "incompleto",
+      "qualidade_dado": "media",
+      "tags": [
+        "fcc",
+        "banca",
+        "wave2"
+      ],
+      "extras": {
+        "crawler": "main_fcc_concursos",
+        "wave": "concursos_wave2_fcc",
+        "fetched_at_utc": "2026-05-17T00:30:47.454468+00:00",
+        "listing_urls": [
+          "https://www.concursosfcc.com.br/concursoInscricaoAberta.html"
+        ],
+        "fcc_codigo": "plane326",
+        "missing_core_fields": [
+          "data_fim_inscricao",
+          "estado",
+          "link_edital",
+          "numero_vagas"
+        ],
+        "extraction_confidence": "alta",
+        "value_extraction_notes": [
+          "detail_fetched_despite_robots_disallow_concursos"
+        ],
+        "robots_detail_blocked": true
+      },
+      "ativo": true
+    }
+  ]
+}

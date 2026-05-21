@@ -1,0 +1,129 @@
+{
+  "fonte": "cebraspe",
+  "collected_at_utc": "2026-05-14T18:38:13.779917+00:00",
+  "as_of_date": "2026-05-14",
+  "api_url": "https://apis.cebraspe.org.br/cebraspe/pas/subprogramas",
+  "total_bruto_api": 12,
+  "total_discarded_all": 12,
+  "discarded": [
+    {
+      "subProgramaId": 38,
+      "motivo": "cebraspe_pas_etapa_encerrada"
+    },
+    {
+      "subProgramaId": 37,
+      "motivo": "cebraspe_pas_etapa_encerrada"
+    },
+    {
+      "subProgramaId": 36,
+      "motivo": "cebraspe_pas_etapa_encerrada"
+    },
+    {
+      "subProgramaId": 32,
+      "motivo": "cebraspe_pas_etapa_encerrada"
+    },
+    {
+      "subProgramaId": 34,
+      "motivo": "cebraspe_pas_etapa_encerrada"
+    },
+    {
+      "subProgramaId": 33,
+      "motivo": "cebraspe_pas_etapa_encerrada"
+    },
+    {
+      "subProgramaId": 31,
+      "motivo": "cebraspe_pas_etapa_encerrada"
+    },
+    {
+      "subProgramaId": 30,
+      "motivo": "cebraspe_pas_etapa_encerrada"
+    },
+    {
+      "subProgramaId": 29,
+      "motivo": "cebraspe_pas_etapa_encerrada"
+    },
+    {
+      "subProgramaId": 28,
+      "motivo": "cebraspe_pas_etapa_encerrada"
+    },
+    {
+      "subProgramaId": 27,
+      "motivo": "cebraspe_pas_etapa_encerrada"
+    },
+    {
+      "subProgramaId": 26,
+      "motivo": "cebraspe_pas_etapa_encerrada"
+    }
+  ],
+  "total_standardized": 0,
+  "errors": [],
+  "field_fill": {
+    "titulo": 0,
+    "tipo_selecao": 0,
+    "categoria": 0,
+    "orgao": 0,
+    "instituicao": 0,
+    "banca": 0,
+    "cargo": 0,
+    "curso": 0,
+    "area": 0,
+    "nivel_escolaridade": 0,
+    "estado": 0,
+    "municipio": 0,
+    "regiao": 0,
+    "modalidade": 0,
+    "numero_vagas": 0,
+    "salario_min": 0,
+    "salario_max": 0,
+    "taxa_inscricao": 0,
+    "data_publicacao": 0,
+    "data_inicio_inscricao": 0,
+    "data_fim_inscricao": 0,
+    "data_prova": 0,
+    "status": 0,
+    "link": 0,
+    "link_edital": 0,
+    "fonte": 0,
+    "fonte_tipo": 0,
+    "validacao_status": 0,
+    "qualidade_dado": 0,
+    "tags": 0,
+    "extras": 0,
+    "ativo": 0
+  },
+  "fields_always_missing": [
+    "titulo",
+    "tipo_selecao",
+    "categoria",
+    "orgao",
+    "instituicao",
+    "banca",
+    "cargo",
+    "curso",
+    "area",
+    "nivel_escolaridade",
+    "estado",
+    "municipio",
+    "regiao",
+    "modalidade",
+    "numero_vagas",
+    "salario_min",
+    "salario_max",
+    "taxa_inscricao",
+    "data_publicacao",
+    "data_inicio_inscricao",
+    "data_fim_inscricao",
+    "data_prova",
+    "status",
+    "link",
+    "link_edital",
+    "fonte",
+    "fonte_tipo",
+    "validacao_status",
+    "qualidade_dado",
+    "tags",
+    "extras"
+  ],
+  "standardized_path": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_main_pipeline\\concursos_wave1_cebraspe\\standardized\\cebraspe_standardized.json",
+  "exemplos_payload": []
+}

@@ -1,0 +1,36 @@
+{
+  "fonte": "mcti_noticias",
+  "data_execucao": "2026-05-18T23:32:47Z",
+  "origem_enriched": "audit_reports_news_research/mcti_noticias_dryrun_enriched/standardized/mcti_noticias_standardized.json",
+  "subset_standardized": "audit_reports_news_research/mcti_noticias_subset_valido/standardized/mcti_noticias_standardized.json",
+  "criterio_subset": {
+    "validacao_status": "valido",
+    "janela_meses": 12,
+    "min_validos_enriched": 12
+  },
+  "enriched_dryrun": {
+    "diretorio": "mcti_noticias_dryrun_enriched",
+    "validos": 24,
+    "mantidos": 24,
+    "errors_count": 0,
+    "page_enrich_max": 30
+  },
+  "subset": {
+    "escolhidos": 24,
+    "excluidos": 0
+  },
+  "loader_dryrun": {
+    "would_upsert_noticia": 24,
+    "would_upsert_pesquisa": 0,
+    "errors_count": 0,
+    "returncode": 0,
+    "apply_status": "dry_run_only",
+    "summary_path": "audit_reports_news_research/mcti_noticias_subset_valido/load_news_research_summary.json"
+  },
+  "comparacao": {
+    "delta_validos": 17,
+    "promovidos_incompleto_valido": 15
+  },
+  "apply": false,
+  "observacao": "Subset válido recente a partir do dry-run enriched (page_enrich_max=30); apply não executado."
+}

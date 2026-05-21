@@ -1,0 +1,539 @@
+{
+  "documento": "consolidado_frente_militar_tecnico_cientifica",
+  "produto": "EditalFinder",
+  "data_geracao": "2026-05-20T12:00:00Z",
+  "escopo": "Defesa, aeroespacial, espaço, pesquisa aplicada, indústria estratégica (fontes oficiais e corporativas selecionadas)",
+  "governanca": {
+    "apply_automatico_edital": false,
+    "review_for_edital_nunca_auto_edital": true,
+    "schema_alterado": false,
+    "frontend_alterado": false,
+    "nota_jornalismo": "Fontes oficiais governamentais, instituições internacionais e comunicados corporativos de defesa — não são imprensa independente."
+  },
+  "resumo_executivo": {
+    "fontes_aplicadas_total": 11,
+    "registros_aplicados_total": 187,
+    "public_noticia": {
+      "fontes": 8,
+      "registros": 132
+    },
+    "public_pesquisa": {
+      "fontes": 3,
+      "registros": 55
+    },
+    "fontes_latentes_ou_review": 9,
+    "ambiente_apply": "staging (EDITALFINDER_ENV=staging, ALLOW_STAGING_APPLY)",
+    "pipeline_principal": "scripts/crawl_news_research_sources.py + scripts/news_research/military_af_research.py + scripts/load_news_research_sources.py",
+    "config": "config/news_research_sources.json",
+    "conclusao": "Frente militar internacional com cobertura de notícias e pesquisa estratégica em produção (staging): OTAN, DoD, DARPA, AFRL, ARL, USSF, F-35 e Lockheed Martin. Oportunidades (BAA/RFI) e hubs .af.mil bloqueados permanecem em review ou latente até melhoria de listagem Wayback/enrich."
+  },
+  "fontes_aplicadas": {
+    "public.noticia": [
+      {
+        "source_id": "f35_news",
+        "nome_exibicao": "F-35 Lightning II (Lockheed Martin)",
+        "classificacao_fonte": "corporativa_programa",
+        "registros_aplicados": 20,
+        "inserted": 20,
+        "updated": 0,
+        "subset_dir": "audit_reports_news_research/f35_news_subset_top20",
+        "apply_summary": "audit_reports_news_research/f35_news_subset_top20/load_news_research_summary.json",
+        "data_apply": "2026-05-18T16:01:24Z",
+        "janela": "12 meses",
+        "tipo_conteudo": "noticia"
+      },
+      {
+        "source_id": "lockheed_martin_news",
+        "nome_exibicao": "Lockheed Martin Newsroom",
+        "classificacao_fonte": "corporativa_industria",
+        "registros_aplicados": 20,
+        "inserted": 0,
+        "updated": 20,
+        "subset_dir": "audit_reports_news_research/lockheed_martin_news_subset_top20",
+        "apply_summary": "audit_reports_news_research/lockheed_martin_news_subset_top20/load_news_research_summary.json",
+        "data_apply": "2026-05-20T01:42:19Z",
+        "janela": "12 meses",
+        "tipo_conteudo": "noticia"
+      },
+      {
+        "source_id": "darpa_news",
+        "nome_exibicao": "DARPA",
+        "classificacao_fonte": "agencia_pesquisa_defesa",
+        "registros_aplicados": 10,
+        "inserted": 0,
+        "updated": 10,
+        "subset_dir": "audit_reports_news_research/darpa_news_subset_valido",
+        "apply_summary": "audit_reports_news_research/darpa_news_subset_valido/load_news_research_summary.json",
+        "data_apply": "2026-05-20T01:42:41Z",
+        "janela": "12 meses",
+        "tipo_conteudo": "noticia"
+      },
+      {
+        "source_id": "war_gov_news",
+        "nome_exibicao": "U.S. Department of Defense / War.gov",
+        "classificacao_fonte": "governo_oficial",
+        "registros_aplicados": 20,
+        "inserted": 20,
+        "updated": 0,
+        "subset_dir": "audit_reports_news_research/war_gov_news_subset_top20",
+        "apply_summary": "audit_reports_news_research/war_gov_news_subset_top20/load_news_research_summary.json",
+        "data_apply": "2026-05-20T01:40:49Z",
+        "janela": "12 meses",
+        "tipo_conteudo": "noticia"
+      },
+      {
+        "source_id": "nato_news",
+        "nome_exibicao": "NATO",
+        "classificacao_fonte": "instituicao_internacional",
+        "registros_aplicados": 20,
+        "inserted": 20,
+        "updated": 0,
+        "subset_dir": "audit_reports_news_research/nato_news_subset_top20",
+        "apply_summary": "audit_reports_news_research/nato_news_subset_top20/load_news_research_summary.json",
+        "data_apply": "2026-05-20T02:58:50Z",
+        "janela": "12 meses",
+        "tipo_conteudo": "noticia"
+      },
+      {
+        "source_id": "afrl_news",
+        "nome_exibicao": "U.S. Air Force Research Laboratory (AFRL)",
+        "classificacao_fonte": "governo_laboratorio",
+        "registros_aplicados": 12,
+        "inserted": 12,
+        "updated": 0,
+        "subset_dir": "audit_reports_news_research/afrl_news_subset_valido",
+        "apply_summary": "audit_reports_news_research/afrl_news_subset_valido/load_news_research_summary.json",
+        "data_apply": "2026-05-20T04:35:13Z",
+        "janela": "12 meses",
+        "tipo_conteudo": "noticia",
+        "notas": "Listagem via Wayback quando hub .af.mil retorna 403"
+      },
+      {
+        "source_id": "arl_news",
+        "nome_exibicao": "U.S. Army DEVCOM ARL",
+        "classificacao_fonte": "governo_laboratorio",
+        "registros_aplicados": 12,
+        "inserted": 12,
+        "updated": 0,
+        "subset_dir": "audit_reports_news_research/arl_news_subset_valido",
+        "apply_summary": "audit_reports_news_research/arl_news_subset_valido/load_news_research_summary.json",
+        "data_apply": "2026-05-20T06:25:03Z",
+        "janela": "12 meses",
+        "tipo_conteudo": "noticia",
+        "notas": "Distinto de afrl_news (.af.mil); media-center HTTP 200"
+      },
+      {
+        "source_id": "space_force_news",
+        "nome_exibicao": "U.S. Space Force",
+        "classificacao_fonte": "governo_forca",
+        "registros_aplicados": 18,
+        "inserted": 18,
+        "updated": 0,
+        "subset_dir": "audit_reports_news_research/space_force_news_subset_valido",
+        "apply_summary": "audit_reports_news_research/space_force_news_subset_valido/load_news_research_summary.json",
+        "data_apply": "2026-05-20T06:25:35Z",
+        "janela": "12 meses",
+        "tipo_conteudo": "noticia",
+        "notas": "Hub /News/ 403 live; subset com Wayback-first + filtro 12m"
+      }
+    ],
+    "public.pesquisa": [
+      {
+        "source_id": "darpa_programs_research",
+        "nome_exibicao": "DARPA Research Programs",
+        "classificacao_fonte": "agencia_programas",
+        "registros_aplicados": 25,
+        "inserted": 0,
+        "updated": 25,
+        "subset_dir": "audit_reports_news_research/darpa_programs_research_subset_valido",
+        "apply_summary": "audit_reports_news_research/darpa_programs_research_subset_valido/load_news_research_summary.json",
+        "data_apply": "2026-05-20T01:45:46Z",
+        "tipo_pesquisa": "programa_pesquisa",
+        "tipo_recurso": "programa_estrategico",
+        "tipo_oportunidade": "pesquisa_estrategica",
+        "notas": "SQL corretivo tipos: docs/sql/FIX_DARPA_PROGRAMS_RESEARCH_TYPES.sql"
+      },
+      {
+        "source_id": "afrl_technology_areas",
+        "nome_exibicao": "AFRL Technology Areas",
+        "classificacao_fonte": "catalogo_institucional",
+        "registros_aplicados": 12,
+        "inserted": 12,
+        "updated": 0,
+        "subset_dir": "audit_reports_news_research/afrl_technology_areas_subset_valido",
+        "apply_summary": "audit_reports_news_research/afrl_technology_areas_subset_valido/load_news_research_summary.json",
+        "data_apply": "2026-05-20T06:24:26Z",
+        "tipo_pesquisa": "area_tecnologica",
+        "tipo_recurso": "area_tecnologica",
+        "tipo_oportunidade": "pesquisa_estrategica",
+        "notas": "Catálogo afresearchlab.com/technology/ sem data_publicacao (catalogo_institucional)"
+      },
+      {
+        "source_id": "arl_resources",
+        "nome_exibicao": "ARL Resources",
+        "classificacao_fonte": "portal_recursos",
+        "registros_aplicados": 18,
+        "inserted": 18,
+        "updated": 0,
+        "subset_dir": "audit_reports_news_research/arl_resources_subset_valido",
+        "apply_summary": "audit_reports_news_research/arl_resources_subset_valido/load_news_research_summary.json",
+        "data_apply": "2026-05-20T06:25:19Z",
+        "notas": "2 BAA excluídos do subset; tipos conforme classificação (portal/documento/programa)"
+      }
+    ]
+  },
+  "totais_por_fonte": {
+    "f35_news": { "tabela": "public.noticia", "registros": 20 },
+    "lockheed_martin_news": { "tabela": "public.noticia", "registros": 20 },
+    "darpa_news": { "tabela": "public.noticia", "registros": 10 },
+    "war_gov_news": { "tabela": "public.noticia", "registros": 20 },
+    "nato_news": { "tabela": "public.noticia", "registros": 20 },
+    "afrl_news": { "tabela": "public.noticia", "registros": 12 },
+    "arl_news": { "tabela": "public.noticia", "registros": 12 },
+    "space_force_news": { "tabela": "public.noticia", "registros": 18 },
+    "darpa_programs_research": { "tabela": "public.pesquisa", "registros": 25 },
+    "afrl_technology_areas": { "tabela": "public.pesquisa", "registros": 12 },
+    "arl_resources": { "tabela": "public.pesquisa", "registros": 18 }
+  },
+  "noticias_vs_pesquisas": {
+    "noticias": {
+      "fontes": 8,
+      "registros": 132,
+      "percentual_do_lote": 70.6
+    },
+    "pesquisas": {
+      "fontes": 3,
+      "registros": 55,
+      "percentual_do_lote": 29.4
+    },
+    "observacao": "Notícias = sinal temporal (12m) e narrativa operacional; pesquisas = programas, áreas tecnológicas e recursos institucionais (janela até 24m onde aplicável)."
+  },
+  "eixos_estrategicos": {
+    "metodo": "Contagem de menções por item (um item pode ter vários eixos); agregado dos subsets aplicados.",
+    "agregado_top25": {
+      "defesa": 83,
+      "aeroespacial": 37,
+      "espaco": 31,
+      "geopolitica_tecnologica": 30,
+      "industria_estrategica": 29,
+      "pesquisa": 25,
+      "engenharia_avancada": 20,
+      "aviacao_militar": 19,
+      "autonomia": 17,
+      "ia_cyber": 10,
+      "materiais_avancados": 10,
+      "tecnologia_militar": 9,
+      "ciencia": 9,
+      "inovacao": 8,
+      "ia": 5,
+      "guerra_eletronica": 4,
+      "engenharia": 3,
+      "nuclear": 3,
+      "computacao": 3,
+      "inteligencia_artificial": 3,
+      "sensores": 3,
+      "sensores_radar": 2,
+      "hipersonicos": 2,
+      "quantum": 2,
+      "comunicacoes": 2
+    },
+    "por_fonte": {
+      "f35_news": {
+        "aeroespacial": 20,
+        "defesa": 20,
+        "aviacao_militar": 19,
+        "industria_estrategica": 10,
+        "tecnologia_militar": 9,
+        "geopolitica_tecnologica": 7
+      },
+      "lockheed_martin_news": {
+        "ia_cyber": 10,
+        "aeroespacial": 9,
+        "industria_estrategica": 8,
+        "espaco": 7,
+        "defesa": 6
+      },
+      "darpa_news": {
+        "engenharia_avancada": 3,
+        "materiais_avancados": 2,
+        "quantum": 2,
+        "robotica": 1,
+        "autonomia": 1,
+        "defesa": 1
+      },
+      "war_gov_news": {
+        "autonomia": 10,
+        "ciencia": 9,
+        "defesa": 4,
+        "geopolitica_tecnologica": 3,
+        "engenharia_avancada": 2,
+        "aeroespacial": 2
+      },
+      "nato_news": {
+        "geopolitica_tecnologica": 20,
+        "defesa": 8,
+        "inovacao": 2,
+        "industria_estrategica": 2,
+        "nuclear": 2
+      },
+      "afrl_news": {
+        "defesa": 12,
+        "pesquisa": 4,
+        "espaco": 1,
+        "inovacao": 1,
+        "aeroespacial": 1,
+        "autonomia": 1
+      },
+      "arl_news": {
+        "defesa": 12,
+        "pesquisa": 11,
+        "autonomia": 3,
+        "materiais_avancados": 2,
+        "inovacao": 2,
+        "inteligencia_artificial": 2,
+        "ia": 2
+      },
+      "space_force_news": {
+        "espaco": 18,
+        "industria_estrategica": 7,
+        "sensores": 1,
+        "satelites": 1,
+        "defesa": 1
+      },
+      "darpa_programs_research": {
+        "engenharia_avancada": 10,
+        "defesa": 8,
+        "materiais_avancados": 4,
+        "sensores": 2,
+        "ia": 1,
+        "espaco": 1,
+        "guerra_eletronica": 1
+      },
+      "afrl_technology_areas": {
+        "defesa": 10,
+        "engenharia_avancada": 4,
+        "pesquisa": 4,
+        "aeroespacial": 4,
+        "espaco": 3,
+        "autonomia": 2,
+        "computacao": 2,
+        "inovacao": 2
+      },
+      "arl_resources": {
+        "pesquisa": 4,
+        "engenharia_avancada": 1,
+        "defesa": 1,
+        "ia": 1,
+        "inovacao": 1,
+        "cyber": 1
+      }
+    }
+  },
+  "fontes_latentes": [
+    {
+      "source_id": "afrl_air_warfare_research",
+      "destino_planejado": "public.pesquisa",
+      "status": "latente",
+      "motivo": "Diretoria RA 403; 1 registro institucional com highlights em extras; sem data de publicação no portal.",
+      "artefato": "audit_reports_news_research/afrl_strategic_dryrun/"
+    },
+    {
+      "source_id": "afrl_space_warfare_research",
+      "destino_planejado": "public.pesquisa",
+      "status": "latente",
+      "motivo": "Diretoria RJ 403; mesmo padrão RA — pesquisa institucional + cards Read More não promovidos a notícia sem fetch live.",
+      "artefato": "audit_reports_news_research/afrl_strategic_dryrun/"
+    },
+    {
+      "source_id": "afrl_technology_transition",
+      "destino_planejado": "public.pesquisa",
+      "status": "latente",
+      "motivo": "Diretoria RR (Technology Transition); portal_estrategico; possivel_edital em extras; incompleto sem data.",
+      "artefato": "audit_reports_news_research/afrl_strategic_dryrun/"
+    },
+    {
+      "source_id": "afrl_mission_highlights",
+      "destino_planejado": "public.noticia",
+      "status": "latente",
+      "motivo": "Highlights com data fora de 12m ou sem data; depende de enrich live das páginas RA/RJ/RR.",
+      "artefato": "audit_reports_news_research/afrl_strategic_dryrun/"
+    },
+    {
+      "source_id": "afnwc_innovation",
+      "destino_planejado": "public.pesquisa",
+      "status": "precisa_melhoria",
+      "motivo": "4 válidos no dry-run mas portal Wayback + cards sem data; revisar antes de subset/apply.",
+      "artefato": "audit_reports_news_research/military_research_expansion_dryrun/"
+    },
+    {
+      "source_id": "afnwc_weapon_systems",
+      "destino_planejado": "public.pesquisa",
+      "status": "precisa_melhoria",
+      "motivo": "Hub Weapon-Systems 403; apenas 1 registro portal no dry-run.",
+      "artefato": "audit_reports_news_research/military_research_expansion_dryrun/"
+    },
+    {
+      "source_id": "afmc_news",
+      "destino_planejado": "public.noticia",
+      "status": "latente",
+      "motivo": "Hub AFMC /News/ 403 live; Wayback parcial; 0 válidos (9 incompletos, 21 descartados por relevância/data).",
+      "artefato": "audit_reports_news_research/military_research_expansion_dryrun/"
+    },
+    {
+      "source_id": "afnwc_news",
+      "destino_planejado": "public.noticia",
+      "status": "latente",
+      "motivo": "0 itens no lote dry-run (Wayback falhou ou listagem vazia); relevância nuclear exige sinal técnico forte.",
+      "artefato": "audit_reports_news_research/military_research_expansion_dryrun/"
+    }
+  ],
+  "review_candidates": [
+    {
+      "grupo": "darpa_opportunities_research",
+      "destino": "review_for_edital / Radar",
+      "quantidade_dryrun": 9,
+      "motivo": "RFI/BAA/solicitation via RSS opportunities.xml — nunca public.edital automático.",
+      "artefato": "audit_reports_news_research/darpa_strategic_dryrun/review_candidates.json",
+      "exemplos": [
+        "RFI: Biomolecule Purification",
+        "BAA/RFI com sinal em título ou URL"
+      ]
+    },
+    {
+      "grupo": "arl_resources_baa",
+      "destino": "Radar/Editais",
+      "quantidade": 2,
+      "motivo": "BAA forms repository (possivel_edital); excluídos do subset aplicado em public.pesquisa.",
+      "artefato": "audit_reports_news_research/military_research_expansion_dryrun/review_candidates.json",
+      "links": [
+        "https://arl.devcom.army.mil/baa-forms",
+        "https://arl.devcom.army.mil/resources/baa-forms"
+      ]
+    },
+    {
+      "grupo": "space_force_news_review",
+      "destino": "Radar/Editais ou descarte",
+      "quantidade": 2,
+      "motivo": "sinal_opportunity ou institucional_com_tecnico_fraco (discurso/orçamento, remarks).",
+      "artefato": "audit_reports_news_research/military_research_expansion_dryrun/review_candidates.json"
+    },
+    {
+      "grupo": "afrl_strategic_review",
+      "destino": "review_for_edital",
+      "quantidade": 1,
+      "motivo": "SBIR/AFWERX/SpaceWERX ou sinal de oportunidade em notícia AFRL.",
+      "artefato": "audit_reports_news_research/afrl_strategic_dryrun/"
+    }
+  ],
+  "observacao_produto": {
+    "titulo": "Fontes oficiais e corporativas — não jornalismo independente",
+    "pontos": [
+      "Cada registro identifica fonte institucional (DARPA, DoD, NATO, AFRL, ARL, USSF, Lockheed Martin, F-35 program) via campos fonte e fonte_recurso.",
+      "Conteúdo é comunicação institucional, release ou catálogo de pesquisa — útil para vigilância tecnológica e contexto de editais, não para substituir cobertura jornalística.",
+      "Oportunidades de funding (BAA/RFI) são roteadas para review/Radar, não para o feed de notícias como se fossem matérias.",
+      "Filtros de relevância técnica reduzem cerimônias, discursos e notas puramente administrativas."
+    ]
+  },
+  "diferencial_editalfinder": {
+    "pontos": [
+      "Separação explícita entre pipeline de editais (concursos, chamadas BR) e frente notícias/pesquisas estratégicas.",
+      "Roteamento por tipo: notícia operacional → public.noticia; programas/áreas/recursos → public.pesquisa; oportunidades → review/Radar.",
+      "Curadoria por eixo estratégico (defesa, espaço, IA, hipersonicos, etc.) alinhada a CT&I e indústria de defesa.",
+      "Cobertura internacional oficial (OTAN, DoD, DARPA) + laboratórios (AFRL/ARL) + indústria (LM, F-35) num único inventário auditável.",
+      "Dry-run, subsets e load_news_research_summary.json por fonte — rastreabilidade de apply sem misturar com public.edital.",
+      "Política de retenção: notícias 12m no feed; pesquisas até 24m (ver DATA_RETENTION_AND_EXPIRATION_POLICY.md)."
+    ]
+  },
+  "proximas_fontes_futuras": [
+    {
+      "source_id": "afmc_news",
+      "prioridade": "alta",
+      "acao": "Estabilizar Wayback-first + enrich data; reforçar sinais técnicos AFMC (readiness, test course)."
+    },
+    {
+      "source_id": "afnwc_news",
+      "prioridade": "alta",
+      "acao": "Recuperar listagem nuclear enterprise; filtro relevância nuclear + técnico."
+    },
+    {
+      "source_id": "afnwc_innovation",
+      "prioridade": "media",
+      "acao": "Subset após validação manual dos 4 portais válidos."
+    },
+    {
+      "source_id": "afrl_mission_highlights",
+      "prioridade": "media",
+      "acao": "Promover highlights com data 12m quando RA/RJ/RR acessíveis."
+    },
+    {
+      "source_id": "afrl_air_warfare_research",
+      "prioridade": "baixa",
+      "acao": "Pesquisa institucional + extras.highlights; apply quando schema de portal estável."
+    },
+    {
+      "source_id": "nato_publications",
+      "prioridade": "baixa",
+      "acao": "Publicações OTAN fora do path news/ → pesquisa (fase seguinte)."
+    },
+    {
+      "source_id": "defesanet",
+      "prioridade": "media",
+      "acao": "Frente BR defesa já em dry-run; apply controlado separado do lote internacional."
+    },
+    {
+      "source_id": "ime_ita_concursos",
+      "prioridade": "baixa",
+      "acao": "Concursos militares/aero — módulo concursos, não notícias."
+    }
+  ],
+  "comandos_sql_validacao": {
+    "descricao": "Executar em staging/produção com service role ou SQL editor; ajustar filtro ativo conforme vw_*_front.",
+    "queries": [
+      {
+        "nome": "contagem_noticia_por_fonte_militar",
+        "sql": "SELECT fonte_recurso, COUNT(*) AS n, COUNT(*) FILTER (WHERE ativo IS TRUE) AS ativos\nFROM public.noticia\nWHERE fonte_recurso IN (\n  'f35_news','lockheed_martin_news','darpa_news','war_gov_news','nato_news',\n  'afrl_news','arl_news','space_force_news'\n)\nGROUP BY fonte_recurso\nORDER BY n DESC;"
+      },
+      {
+        "nome": "contagem_pesquisa_por_fonte_militar",
+        "sql": "SELECT fonte_recurso, COUNT(*) AS n, COUNT(*) FILTER (WHERE ativo IS TRUE) AS ativos\nFROM public.pesquisa\nWHERE fonte_recurso IN (\n  'darpa_programs_research','afrl_technology_areas','arl_resources'\n)\nGROUP BY fonte_recurso\nORDER BY n DESC;"
+      },
+      {
+        "nome": "total_frente_militar",
+        "sql": "SELECT 'noticia' AS tabela, COUNT(*) AS total\nFROM public.noticia\nWHERE fonte_recurso IN ('f35_news','lockheed_martin_news','darpa_news','war_gov_news','nato_news','afrl_news','arl_news','space_force_news')\nUNION ALL\nSELECT 'pesquisa', COUNT(*)\nFROM public.pesquisa\nWHERE fonte_recurso IN ('darpa_programs_research','afrl_technology_areas','arl_resources');"
+      },
+      {
+        "nome": "darpa_programs_tipos",
+        "sql": "SELECT fonte_recurso,\n  extras->>'tipo_pesquisa' AS tipo_pesquisa,\n  extras->>'tipo_recurso' AS tipo_recurso,\n  COUNT(*)\nFROM public.pesquisa\nWHERE fonte_recurso = 'darpa_programs_research'\nGROUP BY 1,2,3;"
+      },
+      {
+        "nome": "afrl_technology_sem_data",
+        "sql": "SELECT id, titulo, data_publicacao, validacao_status, ativo\nFROM public.pesquisa\nWHERE fonte_recurso = 'afrl_technology_areas'\nORDER BY titulo;"
+      },
+      {
+        "nome": "misroute_darpa_news_em_pesquisa",
+        "sql": "SELECT id, titulo, link, fonte_recurso\nFROM public.pesquisa\nWHERE lower(trim(coalesce(fonte_recurso,''))) IN ('darpa news','darpa_news')\n   OR (link ILIKE '%darpa.mil/news/%' AND coalesce(fonte_recurso,'') <> 'darpa_programs_research');"
+      },
+      {
+        "nome": "vw_noticias_front_militar",
+        "sql": "SELECT fonte_recurso, COUNT(*) AS visiveis\nFROM public.vw_noticias_front\nWHERE fonte_recurso IN ('f35_news','lockheed_martin_news','darpa_news','war_gov_news','nato_news','afrl_news','arl_news','space_force_news')\nGROUP BY fonte_recurso;"
+      },
+      {
+        "nome": "vw_pesquisas_front_militar",
+        "sql": "SELECT fonte_recurso, COUNT(*) AS visiveis\nFROM public.vw_pesquisas_front\nWHERE fonte_recurso IN ('darpa_programs_research','afrl_technology_areas','arl_resources')\nGROUP BY fonte_recurso;"
+      }
+    ],
+    "referencias_sql": [
+      "docs/sql/FIX_DARPA_PROGRAMS_RESEARCH_TYPES.sql",
+      "docs/sql/UPDATE_VW_PESQUISAS_FRONT_ATIVO.sql"
+    ]
+  },
+  "artefatos_relacionados": [
+    "audit_reports_news_research/military_research_expansion_dryrun/",
+    "audit_reports_news_research/military_strategic_consolidado/",
+    "audit_reports_news_research/afrl_strategic_dryrun/",
+    "audit_reports_news_research/darpa_strategic_dryrun/",
+    "scripts/news_research/military_af_research.py",
+    "scripts/news_research/build_military_expansion_subsets_valido.py",
+    "docs/STRATEGIC_NEWS_RESEARCH_SOURCES.md"
+  ]
+}

@@ -1,0 +1,297 @@
+{
+  "fonte": "darpa_strategic",
+  "data_execucao": "2026-05-19T00:17:20Z",
+  "modo": "dry_run",
+  "apply": false,
+  "diagnostico": {
+    "feeds": [
+      {
+        "id": "news_rss",
+        "url": "https://www.darpa.mil/rss/news.xml",
+        "status": 200,
+        "ok": true,
+        "bytes": 5203
+      },
+      {
+        "id": "opportunities_rss",
+        "url": "https://www.darpa.mil/rss/opportunities.xml",
+        "status": 200,
+        "ok": true,
+        "bytes": 6500
+      }
+    ],
+    "hubs": [
+      {
+        "id": "news",
+        "url": "https://www.darpa.mil/news",
+        "status": 200,
+        "ok": true
+      },
+      {
+        "id": "programs",
+        "url": "https://www.darpa.mil/research/programs",
+        "status": 200,
+        "ok": true
+      },
+      {
+        "id": "opportunities",
+        "url": "https://www.darpa.mil/work-with-us/opportunities",
+        "status": 200,
+        "ok": true
+      }
+    ],
+    "robots_txt": {
+      "status": 200,
+      "lines": 73,
+      "allow_news": false,
+      "sample": [
+        "#",
+        "# robots.txt",
+        "#",
+        "# This file is to prevent the crawling and indexing of certain parts",
+        "# of your site by web crawlers and spiders run by sites like Yahoo!",
+        "# and Google. By telling these \"robots\" where not to go on your site,",
+        "# you save bandwidth and server resources.",
+        "#",
+        "# This file will be ignored unless it is at the root of your host:",
+        "# Used:    http://example.com/robots.txt",
+        "# Ignored: http://example.com/site/robots.txt",
+        "#"
+      ]
+    },
+    "cms": "Drupal (darpa.mil)",
+    "news": "RSS news.xml + hub /news",
+    "programs": "sitemap.xml /research/programs/{slug} (hub SPA)",
+    "opportunities": "RSS opportunities.xml (links canônicos por âncora)",
+    "solicitations": "via opportunities RSS (RFI/BAA/título)"
+  },
+  "config": {
+    "darpa_news": {
+      "max_items": 45,
+      "time_window_months": 12,
+      "page_enrich_max": 20
+    },
+    "darpa_programs_research": {
+      "max_items": 40,
+      "time_window_months": 24,
+      "page_enrich_max": 25
+    },
+    "darpa_opportunities_research": {
+      "max_items": 40,
+      "time_window_months": 12,
+      "page_enrich_max": 10
+    }
+  },
+  "totais_por_rota": {
+    "darpa_news": {
+      "raw": 10,
+      "raw_meta": 10,
+      "standardized_noticias": 10,
+      "total": 10,
+      "validacao_status_counts": {
+        "valido": 10
+      },
+      "total_valido": 10,
+      "total_incompleto": 0
+    },
+    "darpa_programs_research": {
+      "raw": 40,
+      "raw_meta": 40,
+      "standardized_pesquisas": 40,
+      "total": 40,
+      "validacao_status_counts": {
+        "valido": 25,
+        "incompleto": 15
+      },
+      "total_valido": 25,
+      "total_incompleto": 15
+    },
+    "darpa_opportunities_research": {
+      "raw": 9,
+      "raw_meta": 9,
+      "review_opportunities": 9,
+      "nao_standardized_edital": true
+    }
+  },
+  "agregado": {
+    "review_total": 9,
+    "descartados_total": 0,
+    "errors_count": 0
+  },
+  "eixos": {
+    "noticias": {
+      "engenharia_avancada": 3,
+      "materiais_avancados": 2,
+      "quantum": 2,
+      "robotica": 1,
+      "autonomia": 1,
+      "defesa": 1
+    },
+    "programas": {
+      "engenharia_avancada": 22,
+      "defesa": 9,
+      "materiais_avancados": 4,
+      "ia": 2,
+      "sensores": 2,
+      "espaco": 2,
+      "comunicacoes": 1,
+      "microeletronica": 1,
+      "semicondutores": 1,
+      "aeroespacial": 1,
+      "propulsao": 1,
+      "guerra_eletronica": 1
+    }
+  },
+  "exemplos": {
+    "noticias_mantidas": [
+      {
+        "titulo": "DARPA XRQ-73 demonstrates hybrid-electric flight",
+        "link": "https://www.darpa.mil/news/2026/darpa-xrq-73-demonstrates-hybrid-electric-flight",
+        "validacao_status": "valido",
+        "data_publicacao": "2026-05-06",
+        "eixo_estrategico": [
+          "engenharia_avancada"
+        ]
+      },
+      {
+        "titulo": "Rethinking robotics with physical intelligence",
+        "link": "https://www.darpa.mil/news/2026/rethinking-robotics",
+        "validacao_status": "valido",
+        "data_publicacao": "2026-04-28",
+        "eixo_estrategico": [
+          "robotica",
+          "materiais_avancados"
+        ]
+      },
+      {
+        "titulo": "For quantum computing, different qubits are better together",
+        "link": "https://www.darpa.mil/news/2026/quantum-computing-different-qubits-better-together",
+        "validacao_status": "valido",
+        "data_publicacao": "2026-04-13",
+        "eixo_estrategico": [
+          "quantum"
+        ]
+      },
+      {
+        "titulo": "DARPA-developed autonomous helicopter technology transitions to U.S. Army",
+        "link": "https://www.darpa.mil/news/2026/uh-60mx-black-hawk-army",
+        "validacao_status": "valido",
+        "data_publicacao": "2026-03-19",
+        "eixo_estrategico": [
+          "autonomia"
+        ]
+      },
+      {
+        "titulo": "Translate your bio-attribution research into national security impact",
+        "link": "https://www.darpa.mil/news/2026/bio-attribution-challenge",
+        "validacao_status": "valido",
+        "data_publicacao": "2026-03-11",
+        "eixo_estrategico": [
+          "defesa"
+        ]
+      }
+    ],
+    "programas_mantidos": [
+      {
+        "titulo": "Media Forensics",
+        "link": "https://www.darpa.mil/research/programs/media-forensics",
+        "validacao_status": "valido",
+        "data_publicacao": "2026-05-15",
+        "eixo_estrategico": [
+          "engenharia_avancada"
+        ]
+      },
+      {
+        "titulo": "Robotic Servicing Of Geosynchronous Satellites",
+        "link": "https://www.darpa.mil/research/programs/robotic-servicing-of-geosynchronous-satellites",
+        "validacao_status": "valido",
+        "data_publicacao": "2026-05-15",
+        "eixo_estrategico": [
+          "defesa",
+          "comunicacoes"
+        ]
+      },
+      {
+        "titulo": "Discord",
+        "link": "https://www.darpa.mil/research/programs/discord",
+        "validacao_status": "valido",
+        "data_publicacao": "2026-05-15",
+        "eixo_estrategico": [
+          "ia",
+          "sensores"
+        ]
+      },
+      {
+        "titulo": "Automated Process For Codesign Of Radiation Hardening And Security",
+        "link": "https://www.darpa.mil/research/programs/automated-process-for-codesign-of-radiation-hardening-and-security",
+        "validacao_status": "valido",
+        "data_publicacao": "2026-05-15",
+        "eixo_estrategico": [
+          "microeletronica"
+        ]
+      },
+      {
+        "titulo": "Nascent National Security Economic Theory",
+        "link": "https://www.darpa.mil/research/programs/nascent-national-security-economic-theory",
+        "validacao_status": "valido",
+        "data_publicacao": "2026-05-14",
+        "eixo_estrategico": [
+          "defesa"
+        ]
+      }
+    ],
+    "review": [
+      {
+        "titulo": "RFI: Biomolecule Purification",
+        "link": "https://www.darpa.mil/work-with-us/opportunities#rfi-biomolecule-purification",
+        "validacao_status": "valido",
+        "data_publicacao": "2026-05-15",
+        "eixo_estrategico": []
+      },
+      {
+        "titulo": "RFI: Graphene Production and Manufacturing",
+        "link": "https://www.darpa.mil/work-with-us/opportunities#rfi-graphene-production-and-manufacturing",
+        "validacao_status": "valido",
+        "data_publicacao": "2026-05-11",
+        "eixo_estrategico": []
+      },
+      {
+        "titulo": "DNA-Protein Epigenetic Chemistry Engineering (D-PECHE)",
+        "link": "https://www.darpa.mil/work-with-us/opportunities#dna-protein-epigenetic-chemistry-engineering-d-peche",
+        "validacao_status": "valido",
+        "data_publicacao": "2026-05-08",
+        "eixo_estrategico": []
+      },
+      {
+        "titulo": "SBIR: Low Resource Computing",
+        "link": "https://www.darpa.mil/work-with-us/opportunities#sbir-low-resource-computing",
+        "validacao_status": "valido",
+        "data_publicacao": "2026-05-06",
+        "eixo_estrategico": []
+      },
+      {
+        "titulo": "SBIR: Automated Process for Codesign of Radiation Hardening and Security",
+        "link": "https://www.darpa.mil/work-with-us/opportunities#sbir-automated-process-for-codesign-of-radiation-hardening-and-security",
+        "validacao_status": "valido",
+        "data_publicacao": "2026-05-06",
+        "eixo_estrategico": [
+          "engenharia_avancada"
+        ]
+      }
+    ],
+    "descartados": []
+  },
+  "recomendacao_apply": {
+    "recomendado": true,
+    "noticias_validas": 10,
+    "pesquisas_validas": 25,
+    "apply": false,
+    "nota": "Subset sugerido: notícias válidas do dry-run (≤12m) após roteamento; opportunities permanecem em review_for_edital/Radar; não apply automático."
+  },
+  "paths": {
+    "dir": "audit_reports_news_research/darpa_strategic_dryrun",
+    "news_std": "standardized/darpa_news_standardized.json",
+    "programs_std": "standardized/darpa_programs_research_standardized.json",
+    "review": "review_candidates.json"
+  }
+}

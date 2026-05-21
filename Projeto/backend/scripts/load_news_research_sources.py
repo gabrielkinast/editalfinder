@@ -60,6 +60,76 @@ SOURCE_FILES = {
         "pesquisa": "eurekalert_wave1_payload_pesquisa.json",
         "review": "eurekalert_wave1_review_candidates.json",
     },
+    "exercito_brasileiro": {
+        "noticia": "exercito_brasileiro_subset_valido_payload_noticia.json",
+        "pesquisa": "exercito_brasileiro_subset_valido_payload_pesquisa.json",
+        "review": "exercito_brasileiro_subset_valido_review_candidates.json",
+    },
+    "softex_noticias": {
+        "noticia": "softex_noticias_payload_noticia.json",
+        "pesquisa": "softex_noticias_payload_pesquisa.json",
+        "review": "softex_noticias_review_candidates.json",
+    },
+    "capes_noticias": {
+        "noticia": "capes_noticias_payload_noticia.json",
+        "pesquisa": "capes_noticias_payload_pesquisa.json",
+        "review": "capes_noticias_review_candidates.json",
+    },
+    "f35_news": {
+        "noticia": "standardized/f35_news_standardized.json",
+        "pesquisa": "f35_news_payload_pesquisa.json",
+        "review": "f35_news_review_candidates.json",
+    },
+    "lockheed_martin_news": {
+        "noticia": "standardized/lockheed_martin_news_standardized.json",
+        "pesquisa": "lockheed_martin_news_payload_pesquisa.json",
+        "review": "lockheed_martin_news_review_candidates.json",
+    },
+    "mcti_noticias": {
+        "noticia": "standardized/mcti_noticias_standardized.json",
+        "pesquisa": "mcti_noticias_payload_pesquisa.json",
+        "review": "mcti_noticias_review_candidates.json",
+    },
+    "war_gov_news": {
+        "noticia": "standardized/war_gov_news_standardized.json",
+        "pesquisa": "war_gov_news_payload_pesquisa.json",
+        "review": "war_gov_news_review_candidates.json",
+    },
+    "nato_news": {
+        "noticia": "standardized/nato_news_standardized.json",
+        "pesquisa": "nato_news_payload_pesquisa.json",
+        "review": "nato_news_review_candidates.json",
+    },
+    "afrl_news": {
+        "noticia": "standardized/afrl_news_standardized.json",
+        "pesquisa": "afrl_news_payload_pesquisa.json",
+        "review": "afrl_news_review_candidates.json",
+    },
+    "darpa_programs_research": {
+        "noticia": "darpa_programs_payload_noticia.json",
+        "pesquisa": "standardized/darpa_programs_research_standardized.json",
+        "review": "darpa_programs_review_candidates.json",
+    },
+    "afrl_technology_areas": {
+        "noticia": "afrl_technology_areas_payload_noticia.json",
+        "pesquisa": "standardized/afrl_technology_areas_standardized.json",
+        "review": "afrl_technology_areas_review_candidates.json",
+    },
+    "arl_news": {
+        "noticia": "standardized/arl_news_standardized.json",
+        "pesquisa": "arl_news_payload_pesquisa.json",
+        "review": "arl_news_review_candidates.json",
+    },
+    "arl_resources": {
+        "noticia": "arl_resources_payload_noticia.json",
+        "pesquisa": "standardized/arl_resources_standardized.json",
+        "review": "arl_resources_review_candidates.json",
+    },
+    "space_force_news": {
+        "noticia": "standardized/space_force_news_standardized.json",
+        "pesquisa": "space_force_news_payload_pesquisa.json",
+        "review": "space_force_news_review_candidates.json",
+    },
 }
 
 # Presets de ficheiros por onda (payloads gerados localmente, ex.: build_nasa_wave2_payloads.py)
@@ -83,6 +153,101 @@ WAVE_FILE_PRESETS: Dict[str, Dict[str, str]] = {
         "noticia": "eurekalert_wave1_payload_noticia.json",
         "pesquisa": "eurekalert_wave1_payload_pesquisa.json",
         "review": "eurekalert_wave1_review_candidates.json",
+    },
+    "exercito_brasileiro_subset_valido": {
+        "noticia": "exercito_brasileiro_subset_valido_payload_noticia.json",
+        "pesquisa": "exercito_brasileiro_subset_valido_payload_pesquisa.json",
+        "review": "exercito_brasileiro_subset_valido_review_candidates.json",
+    },
+    "softex_noticias_dryrun": {
+        "noticia": "softex_noticias_payload_noticia.json",
+        "pesquisa": "softex_noticias_payload_pesquisa.json",
+        "review": "softex_noticias_review_candidates.json",
+    },
+    "capes_noticias_subset_recente": {
+        "noticia": "capes_noticias_payload_noticia.json",
+        "pesquisa": "capes_noticias_payload_pesquisa.json",
+        "review": "capes_noticias_review_candidates.json",
+    },
+    "f35_news_subset_top20": {
+        "noticia": "standardized/f35_news_standardized.json",
+        "pesquisa": "f35_news_payload_pesquisa.json",
+        "review": "f35_news_review_candidates.json",
+    },
+    "lockheed_martin_news": {
+        "noticia": "standardized/lockheed_martin_news_standardized.json",
+        "pesquisa": "lockheed_martin_news_payload_pesquisa.json",
+        "review": "lockheed_martin_news_review_candidates.json",
+    },
+    "lockheed_martin_news_subset_top20": {
+        "noticia": "standardized/lockheed_martin_news_standardized.json",
+        "pesquisa": "lockheed_martin_news_payload_pesquisa.json",
+        "review": "lockheed_martin_news_review_candidates.json",
+    },
+    "war_gov_news_subset_top20": {
+        "noticia": "standardized/war_gov_news_standardized.json",
+        "pesquisa": "war_gov_news_payload_pesquisa.json",
+        "review": "war_gov_news_review_candidates.json",
+    },
+    "nato_news_subset_top20": {
+        "noticia": "standardized/nato_news_standardized.json",
+        "pesquisa": "nato_news_payload_pesquisa.json",
+        "review": "nato_news_review_candidates.json",
+    },
+    "afrl_news_subset_valido": {
+        "noticia": "standardized/afrl_news_standardized.json",
+        "pesquisa": "afrl_news_payload_pesquisa.json",
+        "review": "afrl_news_review_candidates.json",
+    },
+    "afrl_technology_areas": {
+        "noticia": "afrl_technology_areas_payload_noticia.json",
+        "pesquisa": "standardized/afrl_technology_areas_standardized.json",
+        "review": "afrl_technology_areas_review_candidates.json",
+    },
+    "arl_news": {
+        "noticia": "standardized/arl_news_standardized.json",
+        "pesquisa": "arl_news_payload_pesquisa.json",
+        "review": "arl_news_review_candidates.json",
+    },
+    "arl_resources": {
+        "noticia": "arl_resources_payload_noticia.json",
+        "pesquisa": "standardized/arl_resources_standardized.json",
+        "review": "arl_resources_review_candidates.json",
+    },
+    "space_force_news": {
+        "noticia": "standardized/space_force_news_standardized.json",
+        "pesquisa": "space_force_news_payload_pesquisa.json",
+        "review": "space_force_news_review_candidates.json",
+    },
+    "darpa_programs_research_subset_valido": {
+        "noticia": "darpa_programs_payload_noticia.json",
+        "pesquisa": "standardized/darpa_programs_research_standardized.json",
+        "review": "darpa_programs_review_candidates.json",
+    },
+    "darpa_programs_research_subset_valido_v2": {
+        "noticia": "darpa_programs_payload_noticia.json",
+        "pesquisa": "standardized/darpa_programs_research_standardized.json",
+        "review": "darpa_programs_review_candidates.json",
+    },
+    "afrl_technology_areas_subset_valido": {
+        "noticia": "afrl_technology_areas_payload_noticia.json",
+        "pesquisa": "standardized/afrl_technology_areas_standardized.json",
+        "review": "afrl_technology_areas_review_candidates.json",
+    },
+    "arl_news_subset_valido": {
+        "noticia": "standardized/arl_news_standardized.json",
+        "pesquisa": "arl_news_payload_pesquisa.json",
+        "review": "arl_news_review_candidates.json",
+    },
+    "arl_resources_subset_valido": {
+        "noticia": "arl_resources_payload_noticia.json",
+        "pesquisa": "standardized/arl_resources_standardized.json",
+        "review": "arl_resources_review_candidates.json",
+    },
+    "space_force_news_subset_valido": {
+        "noticia": "standardized/space_force_news_standardized.json",
+        "pesquisa": "space_force_news_payload_pesquisa.json",
+        "review": "space_force_news_review_candidates.json",
     },
 }
 
@@ -149,11 +314,19 @@ def _load_json(path: Path, default: Any) -> Any:
 
 
 def _resolve_payload_path(input_dir: Path, default_relative: str, override: str) -> Path:
-    """Caminho absoluto ou relativo a input_dir."""
+    """Caminho absoluto, relativo ao repo (ROOT) ou a input_dir."""
     o = (override or "").strip()
     if o:
         p = Path(o)
-        return p if p.is_absolute() else (input_dir / p)
+        if p.is_absolute():
+            return p
+        from_root = ROOT / p
+        if from_root.is_file():
+            return from_root
+        from_input = input_dir / p
+        if from_input.is_file():
+            return from_input
+        return from_root
     return input_dir / default_relative
 
 
@@ -196,7 +369,26 @@ def _validate_noticia_payload(row: Dict[str, Any]) -> List[str]:
 
 def _validate_pesquisa_payload(row: Dict[str, Any]) -> List[str]:
     miss: List[str] = []
-    for k in ("titulo", "descricao", "link", "data_publicacao", "tipo_pesquisa", "validacao_status"):
+    ex = row.get("extras") if isinstance(row.get("extras"), dict) else {}
+    fr = str(row.get("fonte_recurso") or "").strip()
+    catalog_sem_data = bool(
+        ex.get("catalogo_institucional")
+        or ex.get("pesquisa_sem_data_catalogo")
+        or (
+            str(row.get("tipo_pesquisa") or "") in ("area_tecnologica", "portal_institucional")
+            and fr
+            in (
+                "afrl_technology_areas",
+                "arl_resources",
+                "afnwc_innovation",
+                "afnwc_weapon_systems",
+            )
+        )
+    )
+    required = ["titulo", "descricao", "link", "tipo_pesquisa", "validacao_status"]
+    if not catalog_sem_data:
+        required.append("data_publicacao")
+    for k in required:
         if row.get(k) in (None, "", [], {}):
             miss.append(k)
     if row.get("qualidade_dado") is None:
@@ -249,7 +441,68 @@ def _row_noticia_from_payload(p: Dict[str, Any], arrays_normalized: List[str]) -
     )
 
 
-def _row_pesquisa_from_payload(p: Dict[str, Any], arrays_normalized: List[str]) -> Dict[str, Any]:
+def _is_darpa_news_misroute(fonte_recurso: str) -> bool:
+    fr = fonte_recurso.strip().lower()
+    return fr in ("darpa news", "darpa_news")
+
+
+def _row_allowed_for_noticia(row: Dict[str, Any], source_id: str) -> Tuple[bool, str]:
+    fr = str(row.get("fonte_recurso") or "").strip()
+    if source_id == "darpa_programs_research" or fr == "darpa_programs_research":
+        return False, "darpa_programs_somente_pesquisa"
+    if source_id == "darpa_opportunities_research":
+        return False, "darpa_opportunities_review_only"
+    if _is_darpa_news_misroute(fr) and source_id != "darpa_news":
+        return False, "darpa_news_nao_em_noticia_de_outra_fonte"
+    return True, ""
+
+
+def _row_allowed_for_pesquisa(row: Dict[str, Any], source_id: str) -> Tuple[bool, str]:
+    fr = str(row.get("fonte_recurso") or "").strip()
+    if source_id == "darpa_news":
+        return False, "darpa_news_somente_noticia"
+    if source_id == "darpa_opportunities_research":
+        return False, "darpa_opportunities_review_only"
+    if _is_darpa_news_misroute(fr):
+        return False, "darpa_news_nunca_em_pesquisa"
+    if source_id == "darpa_programs_research":
+        if fr and fr != "darpa_programs_research":
+            return False, f"fonte_recurso_inesperada:{fr}"
+        tc = str(row.get("tipo_conteudo") or "").strip().lower()
+        tp = str(row.get("tipo_pesquisa") or "").strip()
+        if tc and tc != "pesquisa":
+            return False, "tipo_conteudo_nao_pesquisa"
+        if tp and tp != "programa_pesquisa":
+            return False, "tipo_pesquisa_nao_programa"
+    return True, ""
+
+
+def _pesquisa_type_fields(p: Dict[str, Any], source_id: str) -> Dict[str, Optional[str]]:
+    ex = p.get("extras") if isinstance(p.get("extras"), dict) else {}
+    fr = str(p.get("fonte_recurso") or source_id or "").strip()
+    tipo_pesquisa = str(p.get("tipo_pesquisa") or ex.get("tipo_pesquisa") or "").strip() or None
+    tipo_recurso = str(p.get("tipo_recurso") or ex.get("tipo_recurso") or "").strip() or None
+    tipo_oportunidade = str(p.get("tipo_oportunidade") or ex.get("tipo_oportunidade") or "").strip() or None
+    if fr == "darpa_programs_research" or source_id == "darpa_programs_research":
+        tipo_pesquisa = tipo_pesquisa or "programa_pesquisa"
+        tipo_recurso = tipo_recurso or "programa_estrategico"
+        tipo_oportunidade = tipo_oportunidade or "pesquisa_estrategica"
+    if fr == "afrl_technology_areas" or source_id == "afrl_technology_areas":
+        tipo_pesquisa = tipo_pesquisa or "area_tecnologica"
+        tipo_recurso = tipo_recurso or "area_tecnologica"
+        tipo_oportunidade = tipo_oportunidade or "pesquisa_estrategica"
+    if fr == "arl_resources" or source_id == "arl_resources":
+        tipo_oportunidade = tipo_oportunidade or "pesquisa_estrategica"
+    return {
+        "tipo_pesquisa": tipo_pesquisa,
+        "tipo_recurso": tipo_recurso,
+        "tipo_oportunidade": tipo_oportunidade,
+    }
+
+
+def _row_pesquisa_from_payload(
+    p: Dict[str, Any], arrays_normalized: List[str], source_id: str = ""
+) -> Dict[str, Any]:
     ex = dict(p.get("extras") or {})
     raw_docs = p.get("documentos")
     docs = _normalize_documentos(raw_docs)
@@ -259,27 +512,36 @@ def _row_pesquisa_from_payload(p: Dict[str, Any], arrays_normalized: List[str]) 
     at = _norm_attr(p, "area_tecnologica", arrays_normalized, "pesquisa")
     se = _norm_attr(p, "setor_estrategico", arrays_normalized, "pesquisa")
     tg = _norm_attr(p, "tags", arrays_normalized, "pesquisa")
-    ex = {**ex, "tipo_pesquisa": p.get("tipo_pesquisa"), "documentos": docs}
+    types = _pesquisa_type_fields(p, source_id)
+    ex = {
+        **ex,
+        "tipo_pesquisa": types["tipo_pesquisa"],
+        "tipo_recurso": types["tipo_recurso"],
+        "tipo_oportunidade": types["tipo_oportunidade"],
+        "documentos": docs,
+    }
+    display_fonte = str(p.get("fonte") or "").strip() or "DARPA"
+    fonte_recurso = str(p.get("fonte_recurso") or source_id or "").strip()
     return sanitize_for_postgres(
         {
             "titulo": p.get("titulo"),
             "descricao": p.get("descricao"),
             "resumo": (p.get("descricao") or "")[:1200] if p.get("descricao") else None,
             "link": str(p.get("link") or "").strip(),
-            "fonte": p.get("fonte_recurso"),
-            "fonte_recurso": p.get("fonte_recurso"),
+            "fonte": display_fonte,
+            "fonte_recurso": fonte_recurso,
             "data_publicacao": p.get("data_publicacao"),
             "pais": p.get("pais"),
             "regiao": p.get("regiao"),
             "idioma": p.get("idioma_original"),
             "idioma_original": p.get("idioma_original"),
-            "origem_portal": ex.get("origem_portal") or p.get("fonte_recurso"),
+            "origem_portal": ex.get("origem_portal") or display_fonte,
             "area_cientifica": ac,
             "area_tecnologica": at,
             "setor_estrategico": se,
             "tags": tg,
-            "tipo_oportunidade": None,
-            "tipo_recurso": None,
+            "tipo_oportunidade": types["tipo_oportunidade"],
+            "tipo_recurso": types["tipo_recurso"],
             "content_type": "pesquisa",
             "url_documento": p.get("pdf_url"),
             "qualidade_dado": p.get("qualidade_dado"),
@@ -377,9 +639,16 @@ def main() -> int:
     arrays_normalized: List[str] = []
     examples: List[Dict[str, Any]] = []
 
+    routing_skipped: List[Dict[str, Any]] = []
+
     prepared_n: List[Dict[str, Any]] = []
     for i, row in enumerate(raw_n):
         if not isinstance(row, dict):
+            skipped += 1
+            continue
+        ok_route, why_route = _row_allowed_for_noticia(row, src)
+        if not ok_route:
+            routing_skipped.append({"table": "noticia", "index": i, "link": row.get("link"), "motivo": why_route})
             skipped += 1
             continue
         miss = _validate_noticia_payload(row)
@@ -398,18 +667,39 @@ def main() -> int:
         if not isinstance(row, dict):
             skipped += 1
             continue
+        ok_route, why_route = _row_allowed_for_pesquisa(row, src)
+        if not ok_route:
+            routing_skipped.append({"table": "pesquisa", "index": i, "link": row.get("link"), "motivo": why_route})
+            skipped += 1
+            continue
         miss = _validate_pesquisa_payload(row)
         if miss:
             errors.append({"table": "pesquisa", "index": i, "link": row.get("link"), "erro": "validacao", "missing": miss})
             skipped += 1
             continue
         an: List[str] = []
-        prepared_p.append(_row_pesquisa_from_payload(row, an))
+        prepared_p.append(_row_pesquisa_from_payload(row, an, source_id=src))
         arrays_normalized.extend(an)
         if len(examples) < 10:
             examples.append({"table": "pesquisa", "link": prepared_p[-1].get("link"), "titulo": prepared_p[-1].get("titulo")})
 
     review_ignored = len(raw_rev)
+
+    def _count_pesquisa_field(key: str) -> int:
+        n = 0
+        for r in prepared_p:
+            if r.get(key):
+                n += 1
+                continue
+            ex = r.get("extras") if isinstance(r.get("extras"), dict) else {}
+            if ex.get(key):
+                n += 1
+        return n
+
+    pesquisa_n = len(prepared_p)
+    tipo_pesquisa_filled = _count_pesquisa_field("tipo_pesquisa")
+    tipo_recurso_filled = sum(1 for r in prepared_p if r.get("tipo_recurso"))
+    tipo_oportunidade_filled = sum(1 for r in prepared_p if r.get("tipo_oportunidade"))
 
     env_safe, env_guard = _confirm_staging_allowed(bool(args.staging))
 
@@ -433,6 +723,12 @@ def main() -> int:
         "skipped": skipped,
         "errors_count": len(errors),
         "review_candidates_ignored": review_ignored,
+        "routing_skipped": routing_skipped,
+        "routing_skipped_count": len(routing_skipped),
+        "pesquisa_tipo_pesquisa_filled": tipo_pesquisa_filled,
+        "pesquisa_tipo_pesquisa_total": pesquisa_n,
+        "pesquisa_tipo_recurso_filled": tipo_recurso_filled,
+        "pesquisa_tipo_oportunidade_filled": tipo_oportunidade_filled,
         "arrays_normalized_count": len(arrays_normalized),
         "arrays_normalized_sample": arrays_normalized[:40],
         "environment_guard": env_guard,
@@ -553,6 +849,10 @@ def main() -> int:
         f"- total_pesquisa (input): **{summary['total_pesquisa']}**",
         f"- would_upsert_noticia: **{summary['would_upsert_noticia']}**",
         f"- would_upsert_pesquisa: **{summary['would_upsert_pesquisa']}**",
+        f"- pesquisa tipo_pesquisa preenchido: **{summary.get('pesquisa_tipo_pesquisa_filled', 0)}** / **{summary.get('pesquisa_tipo_pesquisa_total', 0)}**",
+        f"- pesquisa tipo_recurso preenchido: **{summary.get('pesquisa_tipo_recurso_filled', 0)}** / **{summary.get('pesquisa_tipo_pesquisa_total', 0)}**",
+        f"- pesquisa tipo_oportunidade preenchido: **{summary.get('pesquisa_tipo_oportunidade_filled', 0)}** / **{summary.get('pesquisa_tipo_pesquisa_total', 0)}**",
+        f"- routing_skipped: **{summary.get('routing_skipped_count', 0)}**",
         f"- inserted_noticia / updated_noticia: **{summary['inserted_noticia']}** / **{summary['updated_noticia']}**",
         f"- inserted_pesquisa / updated_pesquisa: **{summary['inserted_pesquisa']}** / **{summary['updated_pesquisa']}**",
         f"- skipped: **{summary['skipped']}**",

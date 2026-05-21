@@ -251,7 +251,11 @@ def _confidence(areas: List[str], tipos: List[str], kws: int) -> str:
 def enrich_opportunity_classification(item: Dict[str, Any]) -> None:
     """
     Enriquece item['extras'] in-place com áreas, tipos, público, setores e metadados de classificação.
-    Respeita valores já preenchidos pelo crawler (listas/str não vazias têm precedência no merge leve).
+
+    `setor_estrategico`: por defeito **substitui** o valor anterior pelo resultado taxonómico do pipeline
+    (sem união com listas antigas contaminadas). Quando `extras["setor_estrategico_crawler_locked"]` é
+    verdadeiro, a lista existente não é alterada aqui (curadoria do crawler). Alterações anteriores podem
+    ficar em `extras["setor_estrategico_historico_merge"]` (últimas 5 listas).
     """
     extras = item.get("extras")
     if not isinstance(extras, dict):
@@ -303,7 +307,7 @@ def enrich_opportunity_classification(item: Dict[str, Any]) -> None:
     _merge_list("area", _prune_area(areas_kw, norm))
     _merge_list("publico_alvo", _prune_profile(pub_alvo, norm))
     _merge_list("setor_economico", _unique_preserve(setor_econ + areas_kw[:3]))
-    _merge_list("setor_estrategico", setor_estr)
+    _apply_taxonomy_setor_estrategico(extras, setor_estr)
     extras["setor_economico"] = _unique_preserve(extras.get("setor_economico") or [])
     extras["area"] = _prune_area(_unique_preserve(extras.get("area") or []), norm)
     extras["publico_alvo"] = _prune_profile(_unique_preserve(extras.get("publico_alvo") or []), norm)
@@ -3507,6 +3511,32 @@ def _as_str_list(value: Any) -> List[str]:
     if isinstance(value, str) and value.strip():
         return [value.strip()]
     return []
+
+
+def _setor_estrategico_crawler_locked(extras: Dict[str, Any]) -> bool:
+    v = extras.get("setor_estrategico_crawler_locked")
+    if v is True:
+        return True
+    if isinstance(v, (int, float)) and v == 1:
+        return True
+    if isinstance(v, str) and v.strip().lower() in ("true", "yes", "1", "on"):
+        return True
+    return False
+
+
+def _apply_taxonomy_setor_estrategico(extras: Dict[str, Any], computed: List[str]) -> None:
+    """Substitui `setor_estrategico` pelo resultado do classificador global, salvo lock de crawler."""
+    new_list = _unique_preserve(computed)[:4]
+    if _setor_estrategico_crawler_locked(extras):
+        return
+    old = _as_str_list(extras.get("setor_estrategico"))
+    if old and sorted(old) != sorted(new_list):
+        hist = extras.get("setor_estrategico_historico_merge")
+        if not isinstance(hist, list):
+            hist = []
+        hist = [old] + hist
+        extras["setor_estrategico_historico_merge"] = hist[:5]
+    extras["setor_estrategico"] = new_list
 
 
 def _trim_eu_innovation_setors_by_evidence(item: Dict[str, Any], *, max_items: int = 3) -> None:

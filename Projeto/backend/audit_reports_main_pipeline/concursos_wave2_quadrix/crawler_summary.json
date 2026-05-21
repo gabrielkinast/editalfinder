@@ -1,0 +1,324 @@
+{
+  "fonte": "quadrix",
+  "collected_at_utc": "2026-05-16T21:16:32.823286+00:00",
+  "listing_urls": [
+    "https://concursos.quadrix.org.br/index/abertos/",
+    "https://concursos.quadrix.org.br/index/1/?ord=&dir=&pg=2&q=&pp=10",
+    "https://concursos.quadrix.org.br/index/1/?ord=&dir=&pg=3&q=&pp=10"
+  ],
+  "total_bruto_urls": 20,
+  "total_discarded_all": 9,
+  "discarded": [
+    {
+      "url": "https://concursos.quadrix.org.br/informacoes/3042",
+      "titulo": "Conselho Regional de Biomedicina da 6a Região (CRBM-PR)",
+      "motivo": "data_fim_inscricao_passada_sem_prova_futura"
+    },
+    {
+      "url": "https://concursos.quadrix.org.br/informacoes/3004",
+      "titulo": "Conselho Regional de Medicina Veterinária do Estado do Rio Grande do Norte - (CRMV-RN)",
+      "motivo": "data_fim_inscricao_passada_sem_prova_futura"
+    },
+    {
+      "url": "https://concursos.quadrix.org.br/informacoes/1009",
+      "titulo": "Conselho Regional de Técnicos em Radiologia da 12a Região (CRTR-MS-MT)",
+      "motivo": "data_fim_inscricao_passada_sem_prova_futura"
+    },
+    {
+      "url": "https://concursos.quadrix.org.br/informacoes/1017",
+      "titulo": "Conselho Regional de Fonoaudiologia 1a Região (CREFONO-RJ)",
+      "motivo": "data_fim_inscricao_passada_sem_prova_futura"
+    },
+    {
+      "url": "https://concursos.quadrix.org.br/informacoes/3001",
+      "titulo": "Conselho Regional de Enfermagem do Acre (COREN-AC)",
+      "motivo": "data_fim_inscricao_passada_sem_prova_futura"
+    },
+    {
+      "url": "https://concursos.quadrix.org.br/informacoes/3003",
+      "titulo": "Conselho Regional de Serviço Social da 10a Região (CRESS-RS)",
+      "motivo": "data_fim_inscricao_passada_sem_prova_futura"
+    },
+    {
+      "url": "https://concursos.quadrix.org.br/informacoes/1013",
+      "titulo": "Conselho Regional de Farmácia do Distrito Federal (CRF-DF)",
+      "motivo": "data_fim_inscricao_passada_sem_prova_futura"
+    },
+    {
+      "url": "https://concursos.quadrix.org.br/informacoes/3031",
+      "titulo": "Conselho Regional de Farmácia do Estado do Paraná (CRF-PR)",
+      "motivo": "data_fim_inscricao_passada_sem_prova_futura"
+    },
+    {
+      "url": "https://concursos.quadrix.org.br/informacoes/13",
+      "titulo": "Secretaria de Estado de Saúde de São Paulo (SES-SP)",
+      "motivo": "data_fim_inscricao_passada_sem_prova_futura"
+    }
+  ],
+  "total_standardized": 11,
+  "errors": [],
+  "field_fill": {
+    "titulo": 11,
+    "tipo_selecao": 11,
+    "categoria": 11,
+    "orgao": 11,
+    "instituicao": 11,
+    "banca": 11,
+    "cargo": 11,
+    "curso": 0,
+    "area": 0,
+    "nivel_escolaridade": 11,
+    "estado": 0,
+    "municipio": 0,
+    "regiao": 0,
+    "modalidade": 0,
+    "numero_vagas": 11,
+    "salario_min": 0,
+    "salario_max": 0,
+    "taxa_inscricao": 11,
+    "data_publicacao": 11,
+    "data_inicio_inscricao": 11,
+    "data_fim_inscricao": 11,
+    "data_prova": 11,
+    "status": 11,
+    "link": 11,
+    "link_edital": 11,
+    "fonte": 11,
+    "fonte_tipo": 11,
+    "validacao_status": 11,
+    "qualidade_dado": 11,
+    "tags": 11,
+    "extras": 11,
+    "ativo": 11
+  },
+  "fields_always_missing": [
+    "curso",
+    "area",
+    "estado",
+    "municipio",
+    "regiao",
+    "modalidade",
+    "salario_min",
+    "salario_max"
+  ],
+  "standardized_path": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_main_pipeline\\concursos_wave2_quadrix\\standardized\\quadrix_standardized.json",
+  "exemplos_payload": [
+    {
+      "titulo": "Conselho Nacional de Técnicos em Radiologia (CONTER)",
+      "tipo_selecao": "concurso_publico",
+      "categoria": "banca_quadrix_concurso",
+      "orgao": "Conselho Nacional de Técnicos em Radiologia (CONTER)",
+      "instituicao": "Conselho Nacional de Técnicos em Radiologia (CONTER)",
+      "banca": "Quadrix",
+      "cargo": "Assistente Operacional/ Administrativo Geral",
+      "curso": null,
+      "area": null,
+      "nivel_escolaridade": "medio",
+      "estado": null,
+      "municipio": null,
+      "regiao": null,
+      "modalidade": null,
+      "numero_vagas": 8,
+      "salario_min": null,
+      "salario_max": null,
+      "taxa_inscricao": 60.0,
+      "data_publicacao": "2026-05-11",
+      "data_inicio_inscricao": "2026-05-11",
+      "data_fim_inscricao": "2026-06-22",
+      "data_prova": "2026-08-16",
+      "status": "inscricoes_abertas",
+      "link": "https://concursos.quadrix.org.br/informacoes/3032",
+      "link_edital": "https://anexos.cdn.selecao.net.br/uploads/861/concursos/3032/anexos/27773b2e-26e9-4f95-82ba-3cf631b93c77.pdf",
+      "fonte": "quadrix",
+      "fonte_tipo": "banca",
+      "validacao_status": "valido",
+      "qualidade_dado": "media",
+      "tags": [
+        "quadrix",
+        "wave1"
+      ],
+      "extras": {
+        "crawler": "main_quadrix_concursos",
+        "wave": "concursos_wave1_quadrix",
+        "fetched_at_utc": "2026-05-16T21:15:51.486694+00:00",
+        "quadrix_listing_urls": [
+          "https://concursos.quadrix.org.br/index/abertos/",
+          "https://concursos.quadrix.org.br/index/1/?ord=&dir=&pg=2&q=&pp=10",
+          "https://concursos.quadrix.org.br/index/1/?ord=&dir=&pg=3&q=&pp=10"
+        ],
+        "official_link_missing": false,
+        "extracted_fields": [
+          "data_fim_inscricao_texto",
+          "data_inicio_inscricao_texto",
+          "data_prova_texto",
+          "numero_vagas_texto",
+          "taxa_inscricao_texto"
+        ],
+        "missing_core_fields": [
+          "estado"
+        ],
+        "extraction_confidence": "media",
+        "source_is_aggregator": false,
+        "value_extraction_notes": [
+          "valor_ambiguo_excluido_de_salario:60.0",
+          "valor_ambiguo_excluido_de_salario:65.0",
+          "valor_ambiguo_excluido_de_salario:65.0",
+          "valor_ambiguo_excluido_de_salario:65.0",
+          "valor_ambiguo_excluido_de_salario:65.0",
+          "valor_ambiguo_excluido_de_salario:65.0",
+          "valor_ambiguo_excluido_de_salario:65.0"
+        ],
+        "tipo_selecao_evidencia": "texto:concurso_publico",
+        "possible_fee_detected": true,
+        "possible_salary_detected": false,
+        "quadrix_situacao": "situação: em andamento"
+      },
+      "ativo": true
+    },
+    {
+      "titulo": "Conselho Regional dos Técnicos Industriais do Espírito Santo (CRT-ES)",
+      "tipo_selecao": "processo_seletivo",
+      "categoria": "banca_quadrix_concurso",
+      "orgao": "Conselho Regional dos Técnicos Industriais do Espírito Santo (CRT-ES)",
+      "instituicao": "Conselho Regional dos Técnicos Industriais do Espírito Santo (CRT-ES)",
+      "banca": "Quadrix",
+      "cargo": "Auxiliar Administrativo",
+      "curso": null,
+      "area": null,
+      "nivel_escolaridade": "medio",
+      "estado": null,
+      "municipio": null,
+      "regiao": null,
+      "modalidade": null,
+      "numero_vagas": 5,
+      "salario_min": null,
+      "salario_max": null,
+      "taxa_inscricao": 65.0,
+      "data_publicacao": "2026-04-29",
+      "data_inicio_inscricao": "2026-04-29",
+      "data_fim_inscricao": "2026-06-08",
+      "data_prova": "2026-07-07",
+      "status": "inscricoes_abertas",
+      "link": "https://concursos.quadrix.org.br/informacoes/3063",
+      "link_edital": "https://anexos.cdn.selecao.net.br/uploads/861/concursos/3063/anexos/8b6bda2a-1566-4097-8481-184809b1a9da.pdf",
+      "fonte": "quadrix",
+      "fonte_tipo": "banca",
+      "validacao_status": "valido",
+      "qualidade_dado": "media",
+      "tags": [
+        "quadrix",
+        "wave1"
+      ],
+      "extras": {
+        "crawler": "main_quadrix_concursos",
+        "wave": "concursos_wave1_quadrix",
+        "fetched_at_utc": "2026-05-16T21:15:53.631790+00:00",
+        "quadrix_listing_urls": [
+          "https://concursos.quadrix.org.br/index/abertos/",
+          "https://concursos.quadrix.org.br/index/1/?ord=&dir=&pg=2&q=&pp=10",
+          "https://concursos.quadrix.org.br/index/1/?ord=&dir=&pg=3&q=&pp=10"
+        ],
+        "official_link_missing": false,
+        "extracted_fields": [
+          "data_fim_inscricao_texto",
+          "data_inicio_inscricao_texto",
+          "data_prova_texto",
+          "numero_vagas_texto",
+          "taxa_inscricao_texto"
+        ],
+        "missing_core_fields": [
+          "estado"
+        ],
+        "extraction_confidence": "media",
+        "source_is_aggregator": false,
+        "value_extraction_notes": [
+          "valor_ambiguo_excluido_de_salario:68.0",
+          "valor_ambiguo_excluido_de_salario:70.0",
+          "valor_ambiguo_excluido_de_salario:70.0"
+        ],
+        "tipo_selecao_evidencia": "texto:processo_seletivo",
+        "possible_fee_detected": true,
+        "possible_salary_detected": false,
+        "quadrix_situacao": "situação: em andamento"
+      },
+      "ativo": true
+    },
+    {
+      "titulo": "Conselho Regional de Corretores de Imóveis da 09a Região (CRECI-BA)",
+      "tipo_selecao": "concurso_publico",
+      "categoria": "banca_quadrix_concurso",
+      "orgao": "Conselho Regional de Corretores de Imóveis da 09a Região (CRECI-BA)",
+      "instituicao": "Conselho Regional de Corretores de Imóveis da 09a Região (CRECI-BA)",
+      "banca": "Quadrix",
+      "cargo": "PST-Assistente Administrativo-Alagoinhas",
+      "curso": null,
+      "area": null,
+      "nivel_escolaridade": "medio",
+      "estado": null,
+      "municipio": null,
+      "regiao": null,
+      "modalidade": null,
+      "numero_vagas": 13,
+      "salario_min": null,
+      "salario_max": null,
+      "taxa_inscricao": 60.0,
+      "data_publicacao": "2026-04-09",
+      "data_inicio_inscricao": "2026-04-09",
+      "data_fim_inscricao": "2026-05-20",
+      "data_prova": "2026-06-28",
+      "status": "inscricoes_abertas",
+      "link": "https://concursos.quadrix.org.br/informacoes/3043",
+      "link_edital": "https://anexos.cdn.selecao.net.br/uploads/861/concursos/3043/anexos/9934ed5d-9080-48e4-b1a3-e7ca2c1f0f32.pdf",
+      "fonte": "quadrix",
+      "fonte_tipo": "banca",
+      "validacao_status": "valido",
+      "qualidade_dado": "media",
+      "tags": [
+        "quadrix",
+        "wave1"
+      ],
+      "extras": {
+        "crawler": "main_quadrix_concursos",
+        "wave": "concursos_wave1_quadrix",
+        "fetched_at_utc": "2026-05-16T21:15:55.806883+00:00",
+        "quadrix_listing_urls": [
+          "https://concursos.quadrix.org.br/index/abertos/",
+          "https://concursos.quadrix.org.br/index/1/?ord=&dir=&pg=2&q=&pp=10",
+          "https://concursos.quadrix.org.br/index/1/?ord=&dir=&pg=3&q=&pp=10"
+        ],
+        "official_link_missing": false,
+        "extracted_fields": [
+          "data_fim_inscricao_texto",
+          "data_inicio_inscricao_texto",
+          "data_prova_texto",
+          "numero_vagas_texto",
+          "taxa_inscricao_texto"
+        ],
+        "missing_core_fields": [
+          "estado"
+        ],
+        "extraction_confidence": "media",
+        "source_is_aggregator": false,
+        "value_extraction_notes": [
+          "valor_ambiguo_excluido_de_salario:60.0",
+          "valor_ambiguo_excluido_de_salario:60.0",
+          "valor_ambiguo_excluido_de_salario:60.0",
+          "valor_ambiguo_excluido_de_salario:60.0",
+          "valor_ambiguo_excluido_de_salario:60.0",
+          "valor_ambiguo_excluido_de_salario:60.0",
+          "valor_ambiguo_excluido_de_salario:60.0",
+          "valor_ambiguo_excluido_de_salario:60.0",
+          "valor_ambiguo_excluido_de_salario:60.0",
+          "valor_ambiguo_excluido_de_salario:60.0",
+          "valor_ambiguo_excluido_de_salario:60.0",
+          "valor_ambiguo_excluido_de_salario:65.0"
+        ],
+        "tipo_selecao_evidencia": "texto:concurso_publico",
+        "possible_fee_detected": true,
+        "possible_salary_detected": false,
+        "quadrix_situacao": "situação: em andamento"
+      },
+      "ativo": true
+    }
+  ]
+}

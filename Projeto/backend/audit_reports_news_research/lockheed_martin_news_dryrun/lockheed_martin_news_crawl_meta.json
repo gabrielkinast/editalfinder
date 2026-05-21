@@ -1,0 +1,60 @@
+{
+  "source_id": "lockheed_martin_news",
+  "source_name": "Lockheed Martin Newsroom",
+  "method": "lm_json_feed",
+  "seed_urls_used": [
+    "https://www.lockheedmartin.com/content/lockheed-martin/data/feeds/newsfeed.json"
+  ],
+  "max_items": 10,
+  "time_window_months": 12,
+  "raw_total": 10,
+  "within_window_total": 10,
+  "without_date_total": 0,
+  "raw_by_seed_kind": {
+    "mixed": 10
+  },
+  "feed_kind_caps_applied": {},
+  "page_enrich_fetch_total": 0,
+  "errors": [],
+  "theme_filter_stats": {
+    "rejected_lm_routing": 0,
+    "lm_sent_review": 0,
+    "extracted_total": 11,
+    "skipped_duplicate_link": 0,
+    "rejected_exclude_keyword": 0,
+    "rejected_exclude_medical_generic": 0,
+    "rejected_require_any_keyword": 1,
+    "rejected_feed_kind_cap": 0,
+    "passed_theme_filters": 10,
+    "matched_keyword_counts": {
+      "missile": 5,
+      "engineering": 1,
+      "space": 1,
+      "aircraft": 2,
+      "helicopter": 1,
+      "orion": 1,
+      "sensor": 2,
+      "radar": 1,
+      "artificial intelligence": 1,
+      "defense": 3,
+      "launch": 3,
+      "defence": 1
+    },
+    "reject_samples": [
+      {
+        "link": "https://news.lockheedmartin.com/2026-05-18-Lockheed-Martin-Named-Preferred-Combat-System-Integration-Partner-for-Australias-Next-Generation-Nuclear-Subs",
+        "titulo": "Lockheed Martin Named Preferred Combat System Integration",
+        "excluded_reason": "require_any_keyword_no_match"
+      }
+    ]
+  },
+  "discarded_post_enrich": [],
+  "discarded_post_enrich_total": 0,
+  "feed_json_url": "https://www.lockheedmartin.com/content/lockheed-martin/data/feeds/newsfeed.json",
+  "listing_url": "https://www.lockheedmartin.com/en-us/news.html",
+  "listing_method": "aem_json_feed",
+  "review_candidates": [],
+  "review_candidates_total": 0,
+  "note_spa": "Hub /en-us/news.html é SPA (Algolia); feed JSON newsfeed.json. robots Disallow em /en-us/news/news-releases e in-the-news — usar URLs news.lockheedmartin.com e /en-us/news/features|press.",
+  "note_routing": "capabilities/suppliers/who-we-are → rejeitado; Supplier/3rd Party/Statement → review."
+}

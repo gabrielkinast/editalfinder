@@ -1,0 +1,99 @@
+{
+  "data_execucao": "2026-05-13T17:50:11Z",
+  "modo": "dry_run",
+  "staging_flag": false,
+  "apply_staging_requested": false,
+  "input_dir": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_main_pipeline\\concursos_wave1_manual\\standardized",
+  "output_dir": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_main_pipeline\\concursos_wave1_manual\\loader_dryrun_recency",
+  "sources_selected": [
+    "concursos_wave1_manual"
+  ],
+  "total_items": 6,
+  "would_upsert_total": 6,
+  "inserted": 0,
+  "updated": 0,
+  "upserted_total": 0,
+  "errors_count": 0,
+  "map_errors_count": 0,
+  "apply_errors_count": 0,
+  "errors_total_written": 0,
+  "duplicate_fonte_link_in_batch": 0,
+  "expired_items_count": 6,
+  "expired_items": [
+    {
+      "fonte": "concursos_wave1_manual",
+      "link": "https://example.gov.br/concursos/cpnu-tecnologia-exemplo",
+      "titulo": "Concurso Público Nacional Unificado — Bloco Tecnologia (exemplo manual)",
+      "motivo": "fora_regra_recencia_vw_concursos_front"
+    },
+    {
+      "fonte": "concursos_wave1_manual",
+      "link": "https://vestibular.uniexemplo.edu.br/verao-2026",
+      "titulo": "Vestibular de Verão — Universidade Exemplo (manual)",
+      "motivo": "fora_regra_recencia_vw_concursos_front"
+    },
+    {
+      "fonte": "concursos_wave1_manual",
+      "link": "https://ifexemplo.edu.br/concursos/prof-substituto-fisica-2025",
+      "titulo": "Processo Seletivo Simplificado — Professor Substituto de Física (manual)",
+      "motivo": "fora_regra_recencia_vw_concursos_front"
+    },
+    {
+      "fonte": "concursos_wave1_manual",
+      "link": "https://concursos.estado-exemplo.rs.gov.br/tecnico-admin-2025",
+      "titulo": "Concurso Público — Técnico Administrativo em Educação (manual)",
+      "motivo": "fora_regra_recencia_vw_concursos_front"
+    },
+    {
+      "fonte": "concursos_wave1_manual",
+      "link": "https://residencia.huexemplo.org.br/edital-2026",
+      "titulo": "Programa de Residência Médica — Hospital Universitário Exemplo (manual)",
+      "motivo": "fora_regra_recencia_vw_concursos_front"
+    },
+    {
+      "fonte": "concursos_wave1_manual",
+      "link": "https://fundacao-exemplo.org/bolsas/talento-jovem-2026",
+      "titulo": "Bolsa de Estudos — Programa Talento Jovem (manual)",
+      "motivo": "fora_regra_recencia_vw_concursos_front"
+    }
+  ],
+  "by_source": {
+    "concursos_wave1_manual": {
+      "would_upsert": 6,
+      "errors": 0
+    }
+  },
+  "tipo_selecao_counts": {
+    "concurso_publico": 1,
+    "vestibular": 1,
+    "professor": 1,
+    "tecnico_administrativo": 1,
+    "residencia": 1,
+    "bolsa_estudo": 1
+  },
+  "status_counts": {
+    "inscricoes_abertas": 1,
+    "inscricoes_encerradas": 1,
+    "encerrado": 1,
+    "prova_proxima": 1,
+    "suspenso": 1,
+    "ativo": 1
+  },
+  "validacao_status_counts": {
+    "valido": 3,
+    "incompleto": 3
+  },
+  "environment_guard": {
+    "editalfinder_env": "staging",
+    "has_supabase_url": true,
+    "has_service_key": true,
+    "has_anon_key": true,
+    "has_allow_staging_apply": false,
+    "url_host_masked": "dof***.co",
+    "block_reason": "",
+    "production_blocked": false
+  },
+  "apply_status": "dry_run_only",
+  "apply_block_reason": "",
+  "nota": "Nenhuma escrita no Supabase (dry-run)."
+}

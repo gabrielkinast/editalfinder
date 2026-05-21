@@ -1,0 +1,764 @@
+{
+  "fonte": "mcti_fomento_transformacao_digital",
+  "url": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/transformacaodigital/fomento-1",
+  "data_execucao": "2026-05-17T06:13:13Z",
+  "modo": "diagnostico",
+  "apply": false,
+  "fetch": {
+    "url": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/transformacaodigital/fomento-1",
+    "from_cache": false,
+    "status": 200,
+    "bytes": 197732
+  },
+  "diagnostico_pagina": {
+    "cms": "gov.br / Plone (Zope) — padrão CAPES/MCTI",
+    "titulo_html": "Fomento — Ministério da Ciência, Tecnologia e Inovação",
+    "h1": [
+      "Fomento"
+    ],
+    "estrutura": "Página hub institucional (#content-core) com links para programas, arquivos e editais",
+    "rss_util": false,
+    "rss_notas": "Feeds por pasta podem existir mas conexão instável no ambiente de auditoria",
+    "robots": {
+      "https://www.gov.br/robots.txt": "permitido (sem Disallow específico mcti)",
+      "https://www.gov.br/mcti/robots.txt": "Disallow vazio para User-agent * (mcti)"
+    },
+    "listagem_oportunidades_ativas": true,
+    "noticias_no_escopo": 0,
+    "pdfs_content_core": 1
+  },
+  "datas_prazos_no_texto": {
+    "datas_dd_mm_yyyy": [],
+    "prazos_texto": []
+  },
+  "contagens": {
+    "links_content_core": 7,
+    "links_pagina_completa": 387,
+    "por_classificacao_content_core": {
+      "radar_oportunidade": 3,
+      "institucional_latente": 4
+    },
+    "por_classificacao_pagina_completa": {
+      "institucional_latente": 338,
+      "radar_oportunidade": 31,
+      "edital_chamada": 18
+    }
+  },
+  "texto_hub_amostra": [
+    "Elenca-se abaixo os instrumentos legais que podem ser utilizados pelos interessados para financiar os projetos de Transformação Digital, nos ambientes da Câmaras 4.0, os quais são:",
+    "1) Emendas parlamentares – As emendas parlamentares, seja de bancada ou individual, podem ser instrumentos aplicados para apoiar projetos de instituições científicas e tecnológicas públicas ou privadas. Para sua utilização a entidade deve procurar um parlamentar, Deputado Federal ou Senador da regiã",
+    "www.gov.br/mcti/pt-br/acompanhe-o-mcti/transformacaodigital/arquivoscamaracidades/iniciativas/emendas_2022_issuu.pdf",
+    "2) Chamadas Públicas - A entidade pode buscar os recursos por meio de Chamadas Públicas, publicadas em editais da FINEP e CNPq, em seus sites (",
+    "), que apoiam instituições de pesquisa científica e tecnológica e fomentando a inovação na indústria brasileira.",
+    "3) Lei das TICs (Lei nº 8.248/1991 e Lei nº 13.969/2019), disponível no site",
+    "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/lei-de-tics",
+    "– Esta Lei trata de investimentos de empresas em atividades de pesquisa, desenvolvimento e inovação (PD&I) de tecnologias da informação e comunicação (TIC). Esta legislação dispõe sobre possibilidade das empresas incentivadas aplicarem recursos em Programas e Projetos Prioritários de Interesse Nacio"
+  ],
+  "itens_content_core": [
+    {
+      "titulo": "www.gov.br/mcti/pt-br/acompanhe-o-mcti/transformacaodigital/arquivoscamaracidades/iniciativas/emendas_2022_issuu.pdf",
+      "link": "http://www.gov.br/mcti/pt-br/acompanhe-o-mcti/transformacaodigital/arquivoscamaracidades/iniciativas/emendas_2022_issuu.pdf",
+      "classificacao": "radar_oportunidade",
+      "motivo": "pdf_programa_ou_anexo",
+      "contexto_amostra": "1) Emendas parlamentares – As emendas parlamentares, seja de bancada ou individual, podem ser instrumentos aplicados para apoiar projetos de instituições científicas e tecnológicas públicas ou privada",
+      "is_pdf": true
+    },
+    {
+      "titulo": "http://www.finep.gov.br/",
+      "link": "http://www.finep.gov.br/",
+      "classificacao": "institucional_latente",
+      "motivo": "sem_sinal_oportunidade",
+      "contexto_amostra": "2) Chamadas Públicas - A entidade pode buscar os recursos por meio de Chamadas Públicas, publicadas em editais da FINEP e CNPq, em seus sites (http://www.finep.gov.br/; www.gov.br/cnpq/pt-br), e da EM",
+      "is_pdf": false
+    },
+    {
+      "titulo": "www.gov.br/cnpq/pt-br",
+      "link": "http://www.gov.br/cnpq/pt-br",
+      "classificacao": "institucional_latente",
+      "motivo": "sem_sinal_oportunidade",
+      "contexto_amostra": "2) Chamadas Públicas - A entidade pode buscar os recursos por meio de Chamadas Públicas, publicadas em editais da FINEP e CNPq, em seus sites (http://www.finep.gov.br/; www.gov.br/cnpq/pt-br), e da EM",
+      "is_pdf": false
+    },
+    {
+      "titulo": "https://embrapii.org.br/",
+      "link": "https://embrapii.org.br/",
+      "classificacao": "institucional_latente",
+      "motivo": "sem_sinal_oportunidade",
+      "contexto_amostra": "2) Chamadas Públicas - A entidade pode buscar os recursos por meio de Chamadas Públicas, publicadas em editais da FINEP e CNPq, em seus sites (http://www.finep.gov.br/; www.gov.br/cnpq/pt-br), e da EM",
+      "is_pdf": false
+    },
+    {
+      "titulo": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/lei-de-tics",
+      "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/lei-de-tics",
+      "classificacao": "radar_oportunidade",
+      "motivo": "programa_ou_linha_fomento",
+      "contexto_amostra": "3) Lei das TICs (Lei nº 8.248/1991 e Lei nº 13.969/2019), disponível no site https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/lei-de-tics – Esta Lei trata de investimentos de empresas em atividades de p",
+      "is_pdf": false
+    },
+    {
+      "titulo": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/lei-de-tics/lei-de-tics-ppi",
+      "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/lei-de-tics/lei-de-tics-ppi",
+      "classificacao": "radar_oportunidade",
+      "motivo": "programa_ou_linha_fomento",
+      "contexto_amostra": "3) Lei das TICs (Lei nº 8.248/1991 e Lei nº 13.969/2019), disponível no site https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/lei-de-tics – Esta Lei trata de investimentos de empresas em atividades de p",
+      "is_pdf": false
+    },
+    {
+      "titulo": "www.gov.br/mcti/pt-br/acompanhe-o-mcti/lei-de-tics/lei-de-tics-ppi",
+      "link": "http://www.gov.br/mcti/pt-br/acompanhe-o-mcti/lei-de-tics/lei-de-tics-ppi",
+      "classificacao": "institucional_latente",
+      "motivo": "pagina_institucional_mcti",
+      "contexto_amostra": "Para apresentar os projetos de interesse em TIC, a entidade deve ser credenciada no CATI - Comitê da Área de Tecnologia da Informação (https://inovacaodigital.mcti.gov.br/ComiteTiCati/instituicoesCred",
+      "is_pdf": false
+    }
+  ],
+  "itens_oportunidade_destaque": [
+    {
+      "titulo": "www.gov.br/mcti/pt-br/acompanhe-o-mcti/transformacaodigital/arquivoscamaracidades/iniciativas/emendas_2022_issuu.pdf",
+      "link": "http://www.gov.br/mcti/pt-br/acompanhe-o-mcti/transformacaodigital/arquivoscamaracidades/iniciativas/emendas_2022_issuu.pdf",
+      "classificacao": "radar_oportunidade",
+      "motivo": "pdf_programa_ou_anexo",
+      "contexto_amostra": "1) Emendas parlamentares – As emendas parlamentares, seja de bancada ou individual, podem ser instrumentos aplicados para apoiar projetos de instituições científicas e tecnológicas públicas ou privada",
+      "is_pdf": true
+    },
+    {
+      "titulo": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/lei-de-tics",
+      "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/lei-de-tics",
+      "classificacao": "radar_oportunidade",
+      "motivo": "programa_ou_linha_fomento",
+      "contexto_amostra": "3) Lei das TICs (Lei nº 8.248/1991 e Lei nº 13.969/2019), disponível no site https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/lei-de-tics – Esta Lei trata de investimentos de empresas em atividades de p",
+      "is_pdf": false
+    },
+    {
+      "titulo": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/lei-de-tics/lei-de-tics-ppi",
+      "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/lei-de-tics/lei-de-tics-ppi",
+      "classificacao": "radar_oportunidade",
+      "motivo": "programa_ou_linha_fomento",
+      "contexto_amostra": "3) Lei das TICs (Lei nº 8.248/1991 e Lei nº 13.969/2019), disponível no site https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/lei-de-tics – Esta Lei trata de investimentos de empresas em atividades de p",
+      "is_pdf": false
+    }
+  ],
+  "itens_noticia_destaque": [],
+  "itens_edital_site_nav": [
+    {
+      "titulo": "Chamamento Oceano",
+      "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/chamamento-oceano",
+      "classificacao": "edital_chamada",
+      "motivo": "titulo_ou_url_edital_chamamento",
+      "contexto_amostra": "Chamamento Oceano Decreto 9.190/2017 Portaria MCTIC 1.917/2020 Portaria Interministerial ME/MCTI nº 2828/2021 Estudo de Publicização Documentos relacionados ao Edital Comunicado de Republicação chamam",
+      "is_pdf": false
+    },
+    {
+      "titulo": "Estudo de Publicização",
+      "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/chamamento-oceano/arquivos/estudodepublicizacaodequalificacaodeospesquisaoceano.pdf",
+      "classificacao": "edital_chamada",
+      "motivo": "pdf_edital_ou_chamamento",
+      "contexto_amostra": "Estudo de Publicização",
+      "is_pdf": true
+    },
+    {
+      "titulo": "Comunicado de Republicação chamamento público nº 25/2021, de 06 de agosto de 2021",
+      "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/chamamento-oceano/comunicado",
+      "classificacao": "edital_chamada",
+      "motivo": "titulo_ou_url_edital_chamamento",
+      "contexto_amostra": "Comunicado de Republicação chamamento público nº 25/2021, de 06 de agosto de 2021",
+      "is_pdf": false
+    },
+    {
+      "titulo": "Licitações e Contratos",
+      "link": "https://www.gov.br/mcti/pt-br/acesso-a-informacao/licitacoes-contratos",
+      "classificacao": "edital_chamada",
+      "motivo": "licitacao_contratacao_publica",
+      "contexto_amostra": "Licitações e Contratos",
+      "is_pdf": false
+    },
+    {
+      "titulo": "Contratos de Gestão/Organizações Sociais",
+      "link": "https://www.gov.br/mcti/pt-br/acesso-a-informacao/contratos-de-gestao-organizacoes-sociais",
+      "classificacao": "edital_chamada",
+      "motivo": "licitacao_contratacao_publica",
+      "contexto_amostra": "Contratos de Gestão/Organizações Sociais Centro Nacional de Pesquisa em Energia e Materiais - CNPEM Institucionais CGEE - Centro de Gestão e Estudos Estratégicos Empresa Brasileira de Pesquisa e Inova",
+      "is_pdf": false
+    },
+    {
+      "titulo": "Centro Nacional de Pesquisa em Energia e Materiais - CNPEM",
+      "link": "https://www.gov.br/mcti/pt-br/acesso-a-informacao/contratos-de-gestao-organizacoes-sociais/centro-nacional-de-pesquisa-em-energia-e-materiais-cnpem",
+      "classificacao": "edital_chamada",
+      "motivo": "licitacao_contratacao_publica",
+      "contexto_amostra": "Centro Nacional de Pesquisa em Energia e Materiais - CNPEM",
+      "is_pdf": false
+    },
+    {
+      "titulo": "Institucionais",
+      "link": "https://www.gov.br/mcti/pt-br/acesso-a-informacao/contratos-de-gestao-organizacoes-sociais/institucionais-1",
+      "classificacao": "edital_chamada",
+      "motivo": "licitacao_contratacao_publica",
+      "contexto_amostra": "Institucionais",
+      "is_pdf": false
+    },
+    {
+      "titulo": "CGEE - Centro de Gestão e Estudos Estratégicos",
+      "link": "https://www.gov.br/mcti/pt-br/acesso-a-informacao/contratos-de-gestao-organizacoes-sociais/cgee-centro-de-gestao-e-estudos-estrategicos-1",
+      "classificacao": "edital_chamada",
+      "motivo": "licitacao_contratacao_publica",
+      "contexto_amostra": "CGEE - Centro de Gestão e Estudos Estratégicos",
+      "is_pdf": false
+    },
+    {
+      "titulo": "Empresa Brasileira de Pesquisa e Inovação Industrial",
+      "link": "https://www.gov.br/mcti/pt-br/acesso-a-informacao/contratos-de-gestao-organizacoes-sociais/empresa-brasileira-de-pesquisa-e-inovacao-industrial",
+      "classificacao": "edital_chamada",
+      "motivo": "licitacao_contratacao_publica",
+      "contexto_amostra": "Empresa Brasileira de Pesquisa e Inovação Industrial",
+      "is_pdf": false
+    },
+    {
+      "titulo": "Instituto de Desenvolvimento Sustentável Mamirauá - IDSM",
+      "link": "https://www.gov.br/mcti/pt-br/acesso-a-informacao/contratos-de-gestao-organizacoes-sociais/instituto-de-desenvolvimento-sustentavel-mamiraua-idsm",
+      "classificacao": "edital_chamada",
+      "motivo": "licitacao_contratacao_publica",
+      "contexto_amostra": "Instituto de Desenvolvimento Sustentável Mamirauá - IDSM",
+      "is_pdf": false
+    },
+    {
+      "titulo": "Instituto de Matemática Pura e Aplicada - IMPA",
+      "link": "https://www.gov.br/mcti/pt-br/acesso-a-informacao/contratos-de-gestao-organizacoes-sociais/instituto-de-matematica-pura-e-aplicada-impa",
+      "classificacao": "edital_chamada",
+      "motivo": "licitacao_contratacao_publica",
+      "contexto_amostra": "Instituto de Matemática Pura e Aplicada - IMPA",
+      "is_pdf": false
+    },
+    {
+      "titulo": "Rede Nacional de Ensino e Pesquisa - RNP",
+      "link": "https://www.gov.br/mcti/pt-br/acesso-a-informacao/contratos-de-gestao-organizacoes-sociais/rede-nacional-de-ensino-e-pesquisa-rnp",
+      "classificacao": "edital_chamada",
+      "motivo": "licitacao_contratacao_publica",
+      "contexto_amostra": "Rede Nacional de Ensino e Pesquisa - RNP",
+      "is_pdf": false
+    },
+    {
+      "titulo": "INPO - Instituto Nacional de Pesquisas Oceânicas",
+      "link": "https://www.gov.br/mcti/pt-br/acesso-a-informacao/contratos-de-gestao-organizacoes-sociais/inpo",
+      "classificacao": "edital_chamada",
+      "motivo": "licitacao_contratacao_publica",
+      "contexto_amostra": "INPO - Instituto Nacional de Pesquisas Oceânicas",
+      "is_pdf": false
+    },
+    {
+      "titulo": "Editais",
+      "link": "https://www.gov.br/mcti/pt-br/acesso-a-informacao/editais",
+      "classificacao": "edital_chamada",
+      "motivo": "titulo_ou_url_edital_chamamento",
+      "contexto_amostra": "Editais EDITAL DE CHAMAMENTO PÚBLICO Nº 66/2024/SEI-MCTI EDITAL DE CHAMAMENTO PÚBLICO Nº 4/2021/SEI-MCTI EDITAL DE CHAMAMENTO PÚBLICO Nº 144/2020",
+      "is_pdf": false
+    },
+    {
+      "titulo": "EDITAL DE CHAMAMENTO PÚBLICO Nº 66/2024/SEI-MCTI",
+      "link": "https://www.gov.br/mcti/pt-br/acesso-a-informacao/editais/edital-no-66-2024-sei-mcti",
+      "classificacao": "edital_chamada",
+      "motivo": "titulo_ou_url_edital_chamamento",
+      "contexto_amostra": "EDITAL DE CHAMAMENTO PÚBLICO Nº 66/2024/SEI-MCTI",
+      "is_pdf": false
+    },
+    {
+      "titulo": "EDITAL DE CHAMAMENTO PÚBLICO Nº 4/2021/SEI-MCTI",
+      "link": "https://www.in.gov.br/web/dou/-/edital-de-chamamento-publico-n-4/2021/sei-mcti-312094007",
+      "classificacao": "edital_chamada",
+      "motivo": "titulo_ou_url_edital_chamamento",
+      "contexto_amostra": "EDITAL DE CHAMAMENTO PÚBLICO Nº 4/2021/SEI-MCTI",
+      "is_pdf": false
+    },
+    {
+      "titulo": "EDITAL DE CHAMAMENTO PÚBLICO Nº 144/2020",
+      "link": "https://www.gov.br/mcti/pt-br/acesso-a-informacao/editais/edital-no-144-2020-sei-mctic",
+      "classificacao": "edital_chamada",
+      "motivo": "titulo_ou_url_edital_chamamento",
+      "contexto_amostra": "EDITAL DE CHAMAMENTO PÚBLICO Nº 144/2020",
+      "is_pdf": false
+    },
+    {
+      "titulo": "Consultar minhas solicitações",
+      "link": "https://www.gov.br/governodigital/pt-br/acessibilidade-e-usuario/atendimento-gov.br/duvidas-na-plataforma-de-automacao/cidadao/consultar-as-minhas-solicitacoes",
+      "classificacao": "edital_chamada",
+      "motivo": "licitacao_contratacao_publica",
+      "contexto_amostra": "Consultar minhas solicitações",
+      "is_pdf": false
+    }
+  ],
+  "itens_radar_programas_site_nav": [
+    {
+      "titulo": "Assuntos",
+      "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti",
+      "classificacao": "radar_oportunidade",
+      "motivo": "programa_ou_linha_fomento",
+      "contexto_amostra": "Assuntos Notícias 2026 2025 2024 2023 2022 2021 Coronavirus Bolsa Científica Perguntas e Respostas Mentoria Olímpica Fique por Dentro Saiba Mais Agente Transformador da Ciência Bens Sensíveis Legislaç",
+      "is_pdf": false
+    },
+    {
+      "titulo": "Bolsa Científica",
+      "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/bolsa-cientifica",
+      "classificacao": "radar_oportunidade",
+      "motivo": "programa_ou_linha_fomento",
+      "contexto_amostra": "Bolsa Científica Perguntas e Respostas Mentoria Olímpica Fique por Dentro Saiba Mais",
+      "is_pdf": false
+    },
+    {
+      "titulo": "Chamamento Vacinas Nacionais",
+      "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/chamamento-vacina",
+      "classificacao": "radar_oportunidade",
+      "motivo": "programa_ou_linha_fomento",
+      "contexto_amostra": "Chamamento Vacinas Nacionais",
+      "is_pdf": false
+    },
+    {
+      "titulo": "Transformação Digital",
+      "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/transformacaodigital",
+      "classificacao": "radar_oportunidade",
+      "motivo": "programa_ou_linha_fomento",
+      "contexto_amostra": "Transformação Digital Câmaras 4.0 Estratégia Brasileira de Inteligência Artificial Cooperação Internacional E-Digital Comunicações Avançadas Segurança Cibernética Fomento Internet das Coisas Capacitaç",
+      "is_pdf": false
+    },
+    {
+      "titulo": "Fomento",
+      "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/transformacaodigital/fomento-1",
+      "classificacao": "radar_oportunidade",
+      "motivo": "programa_ou_linha_fomento",
+      "contexto_amostra": "Fomento",
+      "is_pdf": false
+    },
+    {
+      "titulo": "Arquivos Fomento",
+      "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/transformacaodigital/Fomento",
+      "classificacao": "radar_oportunidade",
+      "motivo": "programa_ou_linha_fomento",
+      "contexto_amostra": "Arquivos Fomento",
+      "is_pdf": false
+    },
+    {
+      "titulo": "Oceano e Antártica",
+      "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/oceano-e-antartica",
+      "classificacao": "radar_oportunidade",
+      "motivo": "programa_ou_linha_fomento",
+      "contexto_amostra": "Oceano e Antártica Consulta pública para projetos de uso de navios para pesquisa oceânica Chamamento Oceano Publicações",
+      "is_pdf": false
+    },
+    {
+      "titulo": "Chamamento Oceano",
+      "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/oceano-e-antartica/chamamento-oceano",
+      "classificacao": "radar_oportunidade",
+      "motivo": "programa_ou_linha_fomento",
+      "contexto_amostra": "Chamamento Oceano",
+      "is_pdf": false
+    },
+    {
+      "titulo": "Documentos relacionados ao Edital",
+      "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/chamamento-oceano/documentos-relacionados-ao-edital",
+      "classificacao": "radar_oportunidade",
+      "motivo": "programa_ou_linha_fomento",
+      "contexto_amostra": "Documentos relacionados ao Edital",
+      "is_pdf": false
+    },
+    {
+      "titulo": "Comunicado de Sessão Pública de Habilitação de Propostas",
+      "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/chamamento-oceano/comunicado-de-sessao-publica-de-habilitacao-de-propostas",
+      "classificacao": "radar_oportunidade",
+      "motivo": "comunicado_processo_seletivo",
+      "contexto_amostra": "Comunicado de Sessão Pública de Habilitação de Propostas",
+      "is_pdf": false
+    },
+    {
+      "titulo": "Comunicado sobre a convocação para apresentação oral da proposta",
+      "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/chamamento-oceano/comunicado-sobre-a-convocacao-para-apresentacao-oral-da-proposta",
+      "classificacao": "radar_oportunidade",
+      "motivo": "comunicado_processo_seletivo",
+      "contexto_amostra": "Comunicado sobre a convocação para apresentação oral da proposta",
+      "is_pdf": false
+    },
+    {
+      "titulo": "Comunicados Corregedoria",
+      "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/correg/comunicados-corregedoria",
+      "classificacao": "radar_oportunidade",
+      "motivo": "comunicado_chamamento",
+      "contexto_amostra": "Comunicados Corregedoria",
+      "is_pdf": false
+    },
+    {
+      "titulo": "Acesso à Informação",
+      "link": "https://www.gov.br/mcti/pt-br/acesso-a-informacao",
+      "classificacao": "radar_oportunidade",
+      "motivo": "programa_ou_linha_fomento",
+      "contexto_amostra": "Acesso à Informação Institucional O Ministério A Ministra Agenda de Autoridades Base Jurídica do Ministério Competências Composição Comissão de ética Ouvidoria Corregedoria Desenvolvimento de Pessoas ",
+      "is_pdf": false
+    },
+    {
+      "titulo": "Institucional",
+      "link": "https://www.gov.br/mcti/pt-br/acesso-a-informacao/institucional",
+      "classificacao": "radar_oportunidade",
+      "motivo": "programa_ou_linha_fomento",
+      "contexto_amostra": "Institucional O Ministério A Ministra Agenda de Autoridades Base Jurídica do Ministério Competências Composição Comissão de ética Ouvidoria Corregedoria Desenvolvimento de Pessoas Estrutura Organizaci",
+      "is_pdf": false
+    },
+    {
+      "titulo": "PGD | Programa de Gestão e Desempenho",
+      "link": "https://www.gov.br/mcti/pt-br/acesso-a-informacao/institucional/programa-de-gestao",
+      "classificacao": "radar_oportunidade",
+      "motivo": "programa_ou_linha_fomento",
+      "contexto_amostra": "PGD | Programa de Gestão e Desempenho",
+      "is_pdf": false
+    },
+    {
+      "titulo": "Ações e Programas",
+      "link": "https://www.gov.br/mcti/pt-br/acesso-a-informacao/acoes-e-programas",
+      "classificacao": "radar_oportunidade",
+      "motivo": "programa_ou_linha_fomento",
+      "contexto_amostra": "Ações e Programas Ações e Programas Carta de Serviços Renúncia de Receitas Fundo de Amparo ao Trabalhador - FAT",
+      "is_pdf": false
+    },
+    {
+      "titulo": "Ações e Programas",
+      "link": "https://www.gov.br/mcti/pt-br/acesso-a-informacao/acoes-e-programas/acoes-e-programas",
+      "classificacao": "radar_oportunidade",
+      "motivo": "programa_ou_linha_fomento",
+      "contexto_amostra": "Ações e Programas",
+      "is_pdf": false
+    },
+    {
+      "titulo": "Carta de Serviços",
+      "link": "https://www.gov.br/mcti/pt-br/acesso-a-informacao/acoes-e-programas/carta-de-servicos",
+      "classificacao": "radar_oportunidade",
+      "motivo": "programa_ou_linha_fomento",
+      "contexto_amostra": "Carta de Serviços",
+      "is_pdf": false
+    },
+    {
+      "titulo": "Renúncia de Receitas",
+      "link": "https://www.gov.br/mcti/pt-br/acesso-a-informacao/acoes-e-programas/renuncia-de-despesas",
+      "classificacao": "radar_oportunidade",
+      "motivo": "programa_ou_linha_fomento",
+      "contexto_amostra": "Renúncia de Receitas",
+      "is_pdf": false
+    },
+    {
+      "titulo": "Fundo de Amparo ao Trabalhador - FAT",
+      "link": "https://www.gov.br/mcti/pt-br/acesso-a-informacao/acoes-e-programas/fundo-de-amparo-ao-trabalhador-fat",
+      "classificacao": "radar_oportunidade",
+      "motivo": "programa_ou_linha_fomento",
+      "contexto_amostra": "Fundo de Amparo ao Trabalhador - FAT",
+      "is_pdf": false
+    },
+    {
+      "titulo": "Servidores",
+      "link": "https://www.gov.br/mcti/pt-br/acesso-a-informacao/servidores",
+      "classificacao": "radar_oportunidade",
+      "motivo": "programa_ou_linha_fomento",
+      "contexto_amostra": "Servidores Servidores Para o Servidor Programa de Gestão e Desempenho (PGD) Concurso Público",
+      "is_pdf": false
+    },
+    {
+      "titulo": "Secretaria de Políticas e Programas Estratégicos - SEPPE",
+      "link": "https://www.gov.br/mcti/pt-br/composicao/seppe",
+      "classificacao": "radar_oportunidade",
+      "motivo": "programa_ou_linha_fomento",
+      "contexto_amostra": "Secretaria de Políticas e Programas Estratégicos - SEPPE",
+      "is_pdf": false
+    },
+    {
+      "titulo": "Secretaria de Ciência e Tecnologia para Transformação Digital - SETAD",
+      "link": "https://www.gov.br/mcti/pt-br/composicao/setad",
+      "classificacao": "radar_oportunidade",
+      "motivo": "programa_ou_linha_fomento",
+      "contexto_amostra": "Secretaria de Ciência e Tecnologia para Transformação Digital - SETAD",
+      "is_pdf": false
+    },
+    {
+      "titulo": "Editais e Comunicados",
+      "link": "https://www.gov.br/mcti/pt-br/centrais-de-conteudo/comunicados-mcti",
+      "classificacao": "radar_oportunidade",
+      "motivo": "comunicado_chamamento",
+      "contexto_amostra": "Editais e Comunicados",
+      "is_pdf": false
+    },
+    {
+      "titulo": "Compartilhe por Facebook",
+      "link": "http://www.facebook.com/sharer.php?u=https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/transformacaodigital/fomento-1",
+      "classificacao": "radar_oportunidade",
+      "motivo": "programa_ou_linha_fomento",
+      "contexto_amostra": "Compartilhe: Compartilhe por Facebook Compartilhe por Twitter Compartilhe por LinkedIn Compartilhe por WhatsApp link para Copiar para área de transferência",
+      "is_pdf": false
+    }
+  ],
+  "arquivos_fomento": {
+    "meta": {
+      "url": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/transformacaodigital/Fomento",
+      "fetched": true,
+      "status": 200,
+      "bytes": 191483,
+      "links_total_content_core": 381
+    },
+    "links_filtrados": [
+      {
+        "titulo": "Assuntos",
+        "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti",
+        "classificacao": "radar_oportunidade",
+        "motivo": "programa_ou_linha_fomento",
+        "contexto_amostra": "Assuntos Notícias 2026 2025 2024 2023 2022 2021 Coronavirus Bolsa Científica Perguntas e Respostas Mentoria Olímpica Fique por Dentro Saiba Mais Agente Transformador da Ciência Bens Sensíveis Legislaç",
+        "is_pdf": false
+      },
+      {
+        "titulo": "Bolsa Científica",
+        "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/bolsa-cientifica",
+        "classificacao": "radar_oportunidade",
+        "motivo": "programa_ou_linha_fomento",
+        "contexto_amostra": "Bolsa Científica Perguntas e Respostas Mentoria Olímpica Fique por Dentro Saiba Mais",
+        "is_pdf": false
+      },
+      {
+        "titulo": "Chamamento Vacinas Nacionais",
+        "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/chamamento-vacina",
+        "classificacao": "radar_oportunidade",
+        "motivo": "programa_ou_linha_fomento",
+        "contexto_amostra": "Chamamento Vacinas Nacionais",
+        "is_pdf": false
+      },
+      {
+        "titulo": "Transformação Digital",
+        "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/transformacaodigital",
+        "classificacao": "radar_oportunidade",
+        "motivo": "programa_ou_linha_fomento",
+        "contexto_amostra": "Transformação Digital Câmaras 4.0 Estratégia Brasileira de Inteligência Artificial Cooperação Internacional E-Digital Comunicações Avançadas Segurança Cibernética Fomento Internet das Coisas Capacitaç",
+        "is_pdf": false
+      },
+      {
+        "titulo": "Oceano e Antártica",
+        "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/oceano-e-antartica",
+        "classificacao": "radar_oportunidade",
+        "motivo": "programa_ou_linha_fomento",
+        "contexto_amostra": "Oceano e Antártica Consulta pública para projetos de uso de navios para pesquisa oceânica Chamamento Oceano Publicações",
+        "is_pdf": false
+      },
+      {
+        "titulo": "Chamamento Oceano",
+        "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/oceano-e-antartica/chamamento-oceano",
+        "classificacao": "radar_oportunidade",
+        "motivo": "programa_ou_linha_fomento",
+        "contexto_amostra": "Chamamento Oceano",
+        "is_pdf": false
+      },
+      {
+        "titulo": "Chamamento Oceano",
+        "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/chamamento-oceano",
+        "classificacao": "edital_chamada",
+        "motivo": "titulo_ou_url_edital_chamamento",
+        "contexto_amostra": "Chamamento Oceano Decreto 9.190/2017 Portaria MCTIC 1.917/2020 Portaria Interministerial ME/MCTI nº 2828/2021 Estudo de Publicização Documentos relacionados ao Edital Comunicado de Republicação chamam",
+        "is_pdf": false
+      },
+      {
+        "titulo": "Estudo de Publicização",
+        "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/chamamento-oceano/arquivos/estudodepublicizacaodequalificacaodeospesquisaoceano.pdf",
+        "classificacao": "edital_chamada",
+        "motivo": "pdf_edital_ou_chamamento",
+        "contexto_amostra": "Estudo de Publicização",
+        "is_pdf": true
+      },
+      {
+        "titulo": "Documentos relacionados ao Edital",
+        "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/chamamento-oceano/documentos-relacionados-ao-edital",
+        "classificacao": "radar_oportunidade",
+        "motivo": "programa_ou_linha_fomento",
+        "contexto_amostra": "Documentos relacionados ao Edital",
+        "is_pdf": false
+      },
+      {
+        "titulo": "Comunicado de Republicação chamamento público nº 25/2021, de 06 de agosto de 2021",
+        "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/chamamento-oceano/comunicado",
+        "classificacao": "edital_chamada",
+        "motivo": "titulo_ou_url_edital_chamamento",
+        "contexto_amostra": "Comunicado de Republicação chamamento público nº 25/2021, de 06 de agosto de 2021",
+        "is_pdf": false
+      },
+      {
+        "titulo": "Comunicado de Sessão Pública de Habilitação de Propostas",
+        "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/chamamento-oceano/comunicado-de-sessao-publica-de-habilitacao-de-propostas",
+        "classificacao": "radar_oportunidade",
+        "motivo": "comunicado_processo_seletivo",
+        "contexto_amostra": "Comunicado de Sessão Pública de Habilitação de Propostas",
+        "is_pdf": false
+      },
+      {
+        "titulo": "Comunicado sobre a convocação para apresentação oral da proposta",
+        "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/chamamento-oceano/comunicado-sobre-a-convocacao-para-apresentacao-oral-da-proposta",
+        "classificacao": "radar_oportunidade",
+        "motivo": "comunicado_processo_seletivo",
+        "contexto_amostra": "Comunicado sobre a convocação para apresentação oral da proposta",
+        "is_pdf": false
+      },
+      {
+        "titulo": "Comunicados Corregedoria",
+        "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/correg/comunicados-corregedoria",
+        "classificacao": "radar_oportunidade",
+        "motivo": "comunicado_chamamento",
+        "contexto_amostra": "Comunicados Corregedoria",
+        "is_pdf": false
+      },
+      {
+        "titulo": "Acesso à Informação",
+        "link": "https://www.gov.br/mcti/pt-br/acesso-a-informacao",
+        "classificacao": "radar_oportunidade",
+        "motivo": "programa_ou_linha_fomento",
+        "contexto_amostra": "Acesso à Informação Institucional O Ministério A Ministra Agenda de Autoridades Base Jurídica do Ministério Competências Composição Comissão de ética Ouvidoria Corregedoria Desenvolvimento de Pessoas ",
+        "is_pdf": false
+      },
+      {
+        "titulo": "Institucional",
+        "link": "https://www.gov.br/mcti/pt-br/acesso-a-informacao/institucional",
+        "classificacao": "radar_oportunidade",
+        "motivo": "programa_ou_linha_fomento",
+        "contexto_amostra": "Institucional O Ministério A Ministra Agenda de Autoridades Base Jurídica do Ministério Competências Composição Comissão de ética Ouvidoria Corregedoria Desenvolvimento de Pessoas Estrutura Organizaci",
+        "is_pdf": false
+      },
+      {
+        "titulo": "PGD | Programa de Gestão e Desempenho",
+        "link": "https://www.gov.br/mcti/pt-br/acesso-a-informacao/institucional/programa-de-gestao",
+        "classificacao": "radar_oportunidade",
+        "motivo": "programa_ou_linha_fomento",
+        "contexto_amostra": "PGD | Programa de Gestão e Desempenho",
+        "is_pdf": false
+      },
+      {
+        "titulo": "Ações e Programas",
+        "link": "https://www.gov.br/mcti/pt-br/acesso-a-informacao/acoes-e-programas",
+        "classificacao": "radar_oportunidade",
+        "motivo": "programa_ou_linha_fomento",
+        "contexto_amostra": "Ações e Programas Ações e Programas Carta de Serviços Renúncia de Receitas Fundo de Amparo ao Trabalhador - FAT",
+        "is_pdf": false
+      },
+      {
+        "titulo": "Ações e Programas",
+        "link": "https://www.gov.br/mcti/pt-br/acesso-a-informacao/acoes-e-programas/acoes-e-programas",
+        "classificacao": "radar_oportunidade",
+        "motivo": "programa_ou_linha_fomento",
+        "contexto_amostra": "Ações e Programas",
+        "is_pdf": false
+      },
+      {
+        "titulo": "Carta de Serviços",
+        "link": "https://www.gov.br/mcti/pt-br/acesso-a-informacao/acoes-e-programas/carta-de-servicos",
+        "classificacao": "radar_oportunidade",
+        "motivo": "programa_ou_linha_fomento",
+        "contexto_amostra": "Carta de Serviços",
+        "is_pdf": false
+      },
+      {
+        "titulo": "Renúncia de Receitas",
+        "link": "https://www.gov.br/mcti/pt-br/acesso-a-informacao/acoes-e-programas/renuncia-de-despesas",
+        "classificacao": "radar_oportunidade",
+        "motivo": "programa_ou_linha_fomento",
+        "contexto_amostra": "Renúncia de Receitas",
+        "is_pdf": false
+      },
+      {
+        "titulo": "Fundo de Amparo ao Trabalhador - FAT",
+        "link": "https://www.gov.br/mcti/pt-br/acesso-a-informacao/acoes-e-programas/fundo-de-amparo-ao-trabalhador-fat",
+        "classificacao": "radar_oportunidade",
+        "motivo": "programa_ou_linha_fomento",
+        "contexto_amostra": "Fundo de Amparo ao Trabalhador - FAT",
+        "is_pdf": false
+      },
+      {
+        "titulo": "Licitações e Contratos",
+        "link": "https://www.gov.br/mcti/pt-br/acesso-a-informacao/licitacoes-contratos",
+        "classificacao": "edital_chamada",
+        "motivo": "licitacao_contratacao_publica",
+        "contexto_amostra": "Licitações e Contratos",
+        "is_pdf": false
+      },
+      {
+        "titulo": "Servidores",
+        "link": "https://www.gov.br/mcti/pt-br/acesso-a-informacao/servidores",
+        "classificacao": "radar_oportunidade",
+        "motivo": "programa_ou_linha_fomento",
+        "contexto_amostra": "Servidores Servidores Para o Servidor Programa de Gestão e Desempenho (PGD) Concurso Público",
+        "is_pdf": false
+      },
+      {
+        "titulo": "Contratos de Gestão/Organizações Sociais",
+        "link": "https://www.gov.br/mcti/pt-br/acesso-a-informacao/contratos-de-gestao-organizacoes-sociais",
+        "classificacao": "edital_chamada",
+        "motivo": "licitacao_contratacao_publica",
+        "contexto_amostra": "Contratos de Gestão/Organizações Sociais Centro Nacional de Pesquisa em Energia e Materiais - CNPEM Institucionais CGEE - Centro de Gestão e Estudos Estratégicos Empresa Brasileira de Pesquisa e Inova",
+        "is_pdf": false
+      },
+      {
+        "titulo": "Centro Nacional de Pesquisa em Energia e Materiais - CNPEM",
+        "link": "https://www.gov.br/mcti/pt-br/acesso-a-informacao/contratos-de-gestao-organizacoes-sociais/centro-nacional-de-pesquisa-em-energia-e-materiais-cnpem",
+        "classificacao": "edital_chamada",
+        "motivo": "licitacao_contratacao_publica",
+        "contexto_amostra": "Centro Nacional de Pesquisa em Energia e Materiais - CNPEM",
+        "is_pdf": false
+      },
+      {
+        "titulo": "Institucionais",
+        "link": "https://www.gov.br/mcti/pt-br/acesso-a-informacao/contratos-de-gestao-organizacoes-sociais/institucionais-1",
+        "classificacao": "edital_chamada",
+        "motivo": "licitacao_contratacao_publica",
+        "contexto_amostra": "Institucionais",
+        "is_pdf": false
+      },
+      {
+        "titulo": "CGEE - Centro de Gestão e Estudos Estratégicos",
+        "link": "https://www.gov.br/mcti/pt-br/acesso-a-informacao/contratos-de-gestao-organizacoes-sociais/cgee-centro-de-gestao-e-estudos-estrategicos-1",
+        "classificacao": "edital_chamada",
+        "motivo": "licitacao_contratacao_publica",
+        "contexto_amostra": "CGEE - Centro de Gestão e Estudos Estratégicos",
+        "is_pdf": false
+      },
+      {
+        "titulo": "Empresa Brasileira de Pesquisa e Inovação Industrial",
+        "link": "https://www.gov.br/mcti/pt-br/acesso-a-informacao/contratos-de-gestao-organizacoes-sociais/empresa-brasileira-de-pesquisa-e-inovacao-industrial",
+        "classificacao": "edital_chamada",
+        "motivo": "licitacao_contratacao_publica",
+        "contexto_amostra": "Empresa Brasileira de Pesquisa e Inovação Industrial",
+        "is_pdf": false
+      },
+      {
+        "titulo": "Instituto de Desenvolvimento Sustentável Mamirauá - IDSM",
+        "link": "https://www.gov.br/mcti/pt-br/acesso-a-informacao/contratos-de-gestao-organizacoes-sociais/instituto-de-desenvolvimento-sustentavel-mamiraua-idsm",
+        "classificacao": "edital_chamada",
+        "motivo": "licitacao_contratacao_publica",
+        "contexto_amostra": "Instituto de Desenvolvimento Sustentável Mamirauá - IDSM",
+        "is_pdf": false
+      },
+      {
+        "titulo": "Instituto de Matemática Pura e Aplicada - IMPA",
+        "link": "https://www.gov.br/mcti/pt-br/acesso-a-informacao/contratos-de-gestao-organizacoes-sociais/instituto-de-matematica-pura-e-aplicada-impa",
+        "classificacao": "edital_chamada",
+        "motivo": "licitacao_contratacao_publica",
+        "contexto_amostra": "Instituto de Matemática Pura e Aplicada - IMPA",
+        "is_pdf": false
+      }
+    ]
+  },
+  "rss_probes": [
+    {
+      "url": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/transformacaodigital/fomento-1/RSS",
+      "ok": false,
+      "is_feed_xml": false,
+      "status": null
+    },
+    {
+      "url": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/transformacaodigital/RSS",
+      "ok": false,
+      "is_feed_xml": false,
+      "status": null
+    }
+  ],
+  "recomendacao_produto": {
+    "rota_principal": "Radar / Editais",
+    "nao_noticias": true,
+    "nao_news_research_apply": true,
+    "motivo": "Hub gov.br de programas e chamamentos (Transformação Digital); conteúdo é oportunidades/editais e comunicados de processo, não feed de notícias editoriais.",
+    "pipeline_sugerido": "Crawler dedicado editais/radar (review_for_edital) — fora de crawl_news_research_sources notícia",
+    "source_id_sugerido": "mcti_fomento_transformacao_digital"
+  },
+  "errors": []
+}
