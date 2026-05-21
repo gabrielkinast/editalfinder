@@ -143,7 +143,7 @@ export function suggestResumoPublicavel(cliente, edital, radarMatch, sectorKey) 
     blocoOp = ` A empresa pode usar este espaco para deixar o resumo especifico antes de direcionar a um edital.`;
   }
 
-  const texto = `Este relatorio inicial consolida a intencao de ${ne} em avancar com iniciativas de inovacao vinculadas a ${areas}. O projeto podera envolver aprimoramento de capacidades tecnologicas, organizacionais e de mercado, conforme o escopo for detalhado pela equipe.${blocoOp} Recomenda-se revisar valores, garantias e requisitos oficiais no regulamento antes de qualquer envio.${radarNote}`;
+  const texto = `Este pré-projeto consolida a intenção de ${ne} em transformar a oportunidade em proposta inicial. Há alinhamento preliminar entre ${areas} e os temas estratégicos considerados no edital.${blocoOp} Recomenda-se validar com o cliente os valores, prazos e requisitos oficiais no regulamento antes de qualquer envio.${radarNote}`;
 
   return {
     texto,

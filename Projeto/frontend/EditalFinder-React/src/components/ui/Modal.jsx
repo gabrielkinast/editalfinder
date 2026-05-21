@@ -1,10 +1,19 @@
 import { useEffect } from 'react';
+import { createPortal } from 'react-dom';
 
 /**
  * Modal reutilizável (overlay + conteúdo). Usa classes `.modal` / `.modal-content` do global.css.
- * @param {{ hideCloseButton?: boolean }} props — se true, omite o botão × (ex.: quando o conteúdo já tem "Fechar").
+ * @param {{ hideCloseButton?: boolean; portal?: boolean; zIndex?: number }} props
+ *   portal — renderiza em document.body (evita clipping do layout da página).
  */
-export default function Modal({ children, onClose, className = '', hideCloseButton = false }) {
+export default function Modal({
+  children,
+  onClose,
+  className = '',
+  hideCloseButton = false,
+  portal = false,
+  zIndex,
+}) {
   useEffect(() => {
     const prev = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
@@ -21,10 +30,15 @@ export default function Modal({ children, onClose, className = '', hideCloseButt
     return () => document.removeEventListener('keydown', onKeyDown);
   }, [onClose]);
 
-  return (
+  const overlayStyle =
+    zIndex != null
+      ? { display: 'flex', zIndex }
+      : { display: 'flex' };
+
+  const node = (
     <div
       className="modal"
-      style={{ display: 'flex' }}
+      style={overlayStyle}
       role="presentation"
       onClick={onClose}
     >
@@ -43,4 +57,10 @@ export default function Modal({ children, onClose, className = '', hideCloseButt
       </div>
     </div>
   );
+
+  if (portal && typeof document !== 'undefined') {
+    return createPortal(node, document.body);
+  }
+
+  return node;
 }

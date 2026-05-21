@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback, useMemo } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import * as XLSX from 'xlsx';
 import Header from '../components/layout/Header';
 import EditalCard from '../components/dashboard/EditalCard';
@@ -80,6 +81,8 @@ function buildFilterSuggestions(totalOriginal, dbg, _filters, searchQuery = '') 
 }
 
 export default function Dashboard() {
+  const location = useLocation();
+  const navigate = useNavigate();
   const { settings } = useSettings();
   const { prefs, updatePrefs } = useEditaisPagePrefs();
   const favHook = useEditalFavorites();
@@ -96,6 +99,12 @@ export default function Dashboard() {
   const [exportScope, setExportScope] = useState('filtered');
   const [favIds, setFavIds] = useState(loadFavoriteIds);
   const [showPipelineDebugPanel, setShowPipelineDebugPanel] = useState(false);
+
+  useEffect(() => {
+    if (!location.state?.somenteFavoritos) return;
+    setFilters((f) => ({ ...f, toggleSomenteFavoritos: true }));
+    navigate(location.pathname, { replace: true, state: {} });
+  }, [location.state, location.pathname, navigate]);
 
   const debouncedSearch = useDebouncedValue(globalSearchRaw, 300);
   const searchTokens = useMemo(() => tokenizeSearchQuery(debouncedSearch), [debouncedSearch]);

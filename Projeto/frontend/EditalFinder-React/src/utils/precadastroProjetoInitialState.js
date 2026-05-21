@@ -1,3 +1,5 @@
+import { clienteEnrichedForApps } from './cliente/clientePerfilConsultivo';
+
 /**
  * Estado inicial vazio do formulário de pré-cadastro de projeto para editais.
  * Inspirado estruturalmente em modelo oficial de apresentação de projeto / linha de crédito.
@@ -40,10 +42,27 @@ export function precadastroEmptyState() {
     bloco1_setor_empresa: '',
 
     bloco_estr_edital_ref_titulo: '',
+    bloco_estr_oportunidade_fonte: '',
+    bloco_estr_oportunidade_prazo: '',
+    bloco_estr_oportunidade_link: '',
+    bloco_estr_oportunidades_selecionadas: '',
+    bloco_estr_score_compatibilidade: '',
+    bloco_estr_alertas_radar: '',
     bloco_estr_tipo_recurso_pdf: '',
     bloco_estr_ref_fin_texto: '',
     bloco_estr_aderencia_nivel: '',
     bloco_estr_status_precadastro: 'rascunho',
+    bloco_estr_plano_trabalho: '',
+    bloco_estr_orcamento_resumo: '',
+    bloco_estr_orcamento_contrapartida: '',
+    bloco_estr_orcamento_categorias: '',
+    bloco_estr_orcamento_observacoes: '',
+    bloco_estr_docs_cliente: '',
+    bloco_estr_docs_tecnicos: '',
+    bloco_estr_docs_financeiros: '',
+    bloco_estr_docs_edital_regulamento: '',
+    bloco_estr_riscos_pendencias: '',
+    bloco_estr_checklist_inicial: '',
 
     bloco_estr_resumo_executivo: '',
     bloco_estr_objetivo_geral: '',
@@ -210,6 +229,23 @@ export function precadastroEmptyState() {
   };
 }
 
+/**
+ * Garante campos novos em rascunhos antigos (localStorage v1/v2) sem apagar dados existentes.
+ * @param {Record<string, unknown>} form
+ */
+export function migratePrecadForm(form) {
+  const empty = precadastroEmptyState();
+  const out = { ...empty, ...(form && typeof form === 'object' ? form : {}) };
+  if (hasText(out.bloco_estr_docs_recomendados) && !hasText(out.bloco_estr_docs_cliente)) {
+    /* mantém agregado legado; split só quando autofill ou edição nova */
+  }
+  return out;
+}
+
+function hasText(v) {
+  return v != null && String(v).trim() !== '';
+}
+
 function deepMergeClienteDraft(base, draft) {
   if (!draft || typeof draft !== 'object') return base;
   const out = { ...base };
@@ -236,25 +272,43 @@ export function buildInitialPrecadastroState(cliente, extras = {}) {
   const base = precadastroEmptyState();
   if (!cliente) return base;
 
-  base.bloco1_cnpj = val(cliente.cnpj);
-  base.bloco1_razao_social = val(cliente.razao_social);
-  base.bloco1_nome_fantasia = val(cliente.nome_empresa);
-  base.bloco1_data_constituicao = val(cliente.data_abertura);
-  base.bloco1_municipio = val(cliente.cidade);
-  base.bloco1_uf = val(cliente.estado);
-  base.bloco1_cnae = val(cliente.cnae_principal);
-  base.bloco1_porte_empresa = val(cliente.porte_empresa);
-  base.bloco1_setor_empresa = val(cliente.setor);
+  const c = clienteEnrichedForApps(cliente);
+  const cont = c.contatoPrincipal || {};
+  const eco = c.dadosEconomicos || {};
+  const loc = c.perfilConsultivo?.localizacao || {};
 
-  base.bloco1_principais_atividades = [val(cliente.descricao_projeto), val(cliente.area_inovacao), val(cliente.setor)]
+  base.bloco1_cnpj = val(c.cnpj);
+  base.bloco1_razao_social = val(c.razao_social);
+  base.bloco1_nome_fantasia = val(c.nome_empresa);
+  base.bloco1_data_constituicao = val(c.data_abertura);
+  base.bloco1_data_inicio_operacao = val(loc.data_inicio_operacao);
+  base.bloco1_municipio = val(c.cidade);
+  base.bloco1_uf = val(c.estado);
+  base.bloco1_cnae = val(c.cnae_principal);
+  base.bloco1_porte_empresa = val(c.porte_empresa);
+  base.bloco1_setor_empresa = val(c.setor);
+  base.bloco1_nome_contato = val(cont.nome || c.nome_contato);
+  base.bloco1_email_contato = val(cont.email || c.email);
+  base.bloco1_telefone_contato = val(cont.telefone || c.telefone);
+  base.bloco1_cargo_contato = val(cont.cargo);
+  base.bloco1_cpf_contato = val(cont.cpf);
+  base.bloco1_site = val(c.site);
+  base.bloco1_ebitda = val(eco.ebitda);
+  base.bloco1_parte_grupo_economico = val(eco.grupo_economico);
+
+  base.bloco1_principais_atividades = [
+    val(c.descricao_projeto),
+    val(c.area_inovacao),
+    val(c.setor),
+  ]
     .filter(Boolean)
     .join('\n\n');
 
-  if (cliente.faturamento_anual != null && cliente.faturamento_anual !== '') {
-    base.bloco1_receita_rob_ultimo = String(cliente.faturamento_anual);
+  if (c.faturamento_anual != null && c.faturamento_anual !== '') {
+    base.bloco1_receita_rob_ultimo = String(c.faturamento_anual);
   }
-  if (cliente.numero_funcionarios != null && cliente.numero_funcionarios !== '') {
-    base.bloco1_total_empregados = String(cliente.numero_funcionarios);
+  if (c.numero_funcionarios != null && c.numero_funcionarios !== '') {
+    base.bloco1_total_empregados = String(c.numero_funcionarios);
   }
 
   const edTit = extras.editalTitulo || extras.edital?.titulo || extras.radarMatch?.tituloEdital;
@@ -286,14 +340,14 @@ export function loadPrecadEnvelope(clienteId, initialFromCliente, editalFingerpr
       const parsed = JSON.parse(raw);
       if (parsed && typeof parsed === 'object' && parsed.version === ENVELOPE_VERSION && parsed.form) {
         return {
-          form: deepMergeClienteDraft(initialFromCliente, parsed.form),
+          form: migratePrecadForm(deepMergeClienteDraft(initialFromCliente, parsed.form)),
           fieldIntel: typeof parsed.fieldIntel === 'object' && parsed.fieldIntel ? parsed.fieldIntel : {},
           hadStoredDraft: true,
           editalFingerprint: fp,
         };
       }
       return {
-        form: deepMergeClienteDraft(initialFromCliente, parsed),
+        form: migratePrecadForm(deepMergeClienteDraft(initialFromCliente, parsed)),
         fieldIntel: {},
         hadStoredDraft: true,
         editalFingerprint: fp,

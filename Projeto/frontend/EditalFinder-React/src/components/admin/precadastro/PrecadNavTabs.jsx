@@ -1,12 +1,19 @@
 const TABS = [
   { id: 'visao', label: 'Visão geral' },
-  { id: 'contexto', label: 'Contexto e projeto' },
+  { id: 'resumo', label: 'Resumo' },
+  { id: 'aderencia', label: 'Aderência' },
+  { id: 'escopo', label: 'Escopo e plano' },
+  { id: 'orcamento', label: 'Orçamento' },
+  { id: 'riscos', label: 'Riscos e passos' },
   { id: 'completo', label: 'Formulário completo' },
 ];
 
-export default function PrecadNavTabs({ active, onChange }) {
+export default function PrecadNavTabs({ active, onChange, compact = false }) {
   return (
-    <nav className="precad-nav-tabs" aria-label="Seções do pré-cadastro">
+    <nav
+      className={`precad-nav-tabs${compact ? ' precad-nav-tabs--compact' : ''}`}
+      aria-label="Seções do pré-projeto consultivo"
+    >
       {TABS.map((t) => (
         <button
           key={t.id}

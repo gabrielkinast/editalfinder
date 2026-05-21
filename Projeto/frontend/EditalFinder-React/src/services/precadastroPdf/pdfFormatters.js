@@ -28,6 +28,17 @@ export function valEssential(v) {
   return s;
 }
 
+/** Relatorio executivo: vazio -> null (nao exibir "Nao informado"). */
+export function valExecutive(v) {
+  const s = stripUnsafePdfChars(v);
+  if (s.trim() === '') return null;
+  return s;
+}
+
+export function isNaoInformado(v) {
+  return `${v ?? ''}`.trim() === LABEL_NAO_INFORMADO;
+}
+
 /** Opcional vazio -> null (omitir linha na tabela) */
 export function valOptional(v) {
   const s = stripUnsafePdfChars(v);

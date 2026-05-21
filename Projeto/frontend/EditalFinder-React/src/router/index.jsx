@@ -10,7 +10,9 @@ import Noticias from '../pages/Noticias';
 import Pesquisas from '../pages/Pesquisas';
 import PortaisEstrategicosPage from '../pages/PortaisEstrategicos/PortaisEstrategicosPage';
 import ConcursosPage from '../pages/Concursos/ConcursosPage';
+import ConsultorWorkspace from '../pages/ConsultorWorkspace';
 import ProtectedRoute from './ProtectedRoute';
+import { ENABLE_CONSULTOR_WORKSPACE } from '../config/env';
 
 export default function AppRoutes() {
   return (
@@ -33,6 +35,21 @@ export default function AppRoutes() {
           </ProtectedRoute>
         } 
       />
+      {ENABLE_CONSULTOR_WORKSPACE ? (
+        <Route
+          path="/workspace-consultor"
+          element={
+            <ProtectedRoute requiredPermission="canViewCadastros">
+              <ConsultorWorkspace />
+            </ProtectedRoute>
+          }
+        />
+      ) : (
+        <Route
+          path="/workspace-consultor"
+          element={<Navigate to="/dashboard" replace />}
+        />
+      )}
       <Route 
         path="/radar-fomento" 
         element={

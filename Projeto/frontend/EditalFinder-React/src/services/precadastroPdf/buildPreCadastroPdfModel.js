@@ -1,6 +1,15 @@
 import { computeCompletion, buildProjectSuggestions, buildProjectSummary } from '../../utils/precadastro/projectIntel';
 import { calculatePreCadastroCompleteness } from '../../utils/precadastro/calculatePreCadastroCompleteness.js';
-import { stripUnsafePdfChars, valEssential, valOptional, LABEL_NAO_INFORMADO } from './pdfFormatters';
+import {
+  stripUnsafePdfChars,
+  valEssential,
+  valExecutive,
+  valOptional,
+  isNaoInformado,
+  LABEL_NAO_INFORMADO,
+} from './pdfFormatters';
+import { clienteEnrichedForApps } from '../../utils/cliente/clientePerfilConsultivo';
+import { partitionSelectedOpportunities, pickPrimaryOpportunity } from '../../utils/consultor/opportunitySelection';
 
 function hasText(v) {
   return v != null && String(v).trim() !== '';
@@ -25,7 +34,7 @@ function moneyRange(c) {
  * }} input
  */
 export function buildPreCadastroPdfModel({ cliente = null, edital = null, radarMatch = null, formData = {} }) {
-  const c = cliente || {};
+  const c = clienteEnrichedForApps(cliente || {});
   const f = formData || {};
   const sug = buildProjectSuggestions(c, edital, radarMatch);
   const completion = computeCompletion(f);
@@ -69,39 +78,39 @@ export function buildPreCadastroPdfModel({ cliente = null, edital = null, radarM
     `a linhas de fomento, credito ou editais de inovacao. Os campos foram pre-preenchidos com base no cadastro ` +
     `do cliente e podem ser complementados pela equipe responsavel.`;
 
+  const pendenciasCliente = [];
+
+  function execRow(label, rawValue) {
+    const value = valExecutive(rawValue);
+    if (value == null) {
+      pendenciasCliente.push(`${label} a completar com o cliente.`);
+      return null;
+    }
+    return { label, value, essential: true };
+  }
+
   const executiveRows = [
-    { label: 'Empresa', value: valEssential(empresaNome), essential: true },
-    { label: 'Setor', value: valEssential(f.bloco1_setor_empresa || c.setor), essential: true },
-    { label: 'Porte', value: valEssential(f.bloco1_porte_empresa || c.porte_empresa), essential: true },
-    {
-      label: 'Localizacao',
-      value: valEssential([f.bloco1_municipio || c.cidade, (f.bloco1_uf || c.estado || '').toString().toUpperCase()].filter(Boolean).join(' / ') || LABEL_NAO_INFORMADO),
-      essential: true,
-    },
-    {
-      label: 'Linha / produto destacado',
-      value: valEssential(linhaReco),
-      essential: true,
-    },
-    { label: 'Tipo de recurso (referencia)', value: valEssential(tipoRecurso), essential: true },
-    {
-      label: 'Valor de interesse',
-      value: valEssential(moneyRange(c) || f.bloco2_recursos_adicionais_valor || LABEL_NAO_INFORMADO),
-      essential: true,
-    },
-    {
-      label: 'Prazo / limite (referencia)',
-      value: valEssential(
-        valOptional(edital?.prazo_envio) ||
-          (Array.isArray(f.bloco2_metas_fisicas) &&
-            f.bloco2_metas_fisicas.map((r) => r?.fim).filter(Boolean)[0]) ||
-          LABEL_NAO_INFORMADO,
-      ),
-      essential: true,
-    },
-    { label: 'Principais pontos de aderencia', value: valEssential(f.bloco_estr_principais_aderencias || sug.principaisAderencias), essential: true },
-    { label: 'Pendencias principais', value: valEssential(f.bloco_estr_pontos_complementar || f.bloco_estr_pendencias || sug.pontosComplementar), essential: true },
-  ];
+    execRow('Empresa', empresaNome),
+    execRow('Setor', f.bloco1_setor_empresa || c.setor),
+    execRow('Porte', f.bloco1_porte_empresa || c.porte_empresa),
+    execRow(
+      'Localizacao',
+      [f.bloco1_municipio || c.cidade, (f.bloco1_uf || c.estado || '').toString().toUpperCase()]
+        .filter(Boolean)
+        .join(' / '),
+    ),
+    execRow('Linha / produto destacado', linhaReco),
+    execRow('Tipo de recurso (referencia)', tipoRecurso),
+    execRow('Valor de interesse', moneyRange(c) || f.bloco2_recursos_adicionais_valor),
+    execRow(
+      'Prazo / limite (referencia)',
+      valOptional(edital?.prazo_envio) ||
+        (Array.isArray(f.bloco2_metas_fisicas) &&
+          f.bloco2_metas_fisicas.map((r) => r?.fim).filter(Boolean)[0]),
+    ),
+    execRow('Principais pontos de aderencia', f.bloco_estr_principais_aderencias || sug.principaisAderencias),
+    execRow('Pendencias principais', f.bloco_estr_pontos_complementar || f.bloco_estr_pendencias || sug.pontosComplementar),
+  ].filter(Boolean);
 
   /** Geracao de pendencias criticas */
   const alertasEssenciais = [];
@@ -127,7 +136,46 @@ export function buildPreCadastroPdfModel({ cliente = null, edital = null, radarM
     );
   }
 
-  const pendenciasSecao = [...alertasEssenciais, ...(f.bloco_estr_obs_internas ? [] : [])];
+  function consultorPair(label, raw) {
+    const value = valExecutive(raw);
+    if (value == null) {
+      pendenciasCliente.push(`${label} a completar com o cliente.`);
+      return null;
+    }
+    return [label, value];
+  }
+
+  const consultorSections = [
+    consultorPair('Resumo executivo', f.bloco_estr_resumo_executivo || f.bloco2_resumo_publicavel || intro),
+    consultorPair('Aderencia ao edital', f.bloco_estr_motivo_recomendacao || sug.motivoRecomendacao),
+    consultorPair(
+      'Escopo inicial',
+      [f.bloco_estr_problema_oportunidade, f.bloco_estr_solucao_proposta, f.bloco_estr_diferencial_inovador]
+        .filter((x) => hasText(x))
+        .join('\n\n'),
+    ),
+    consultorPair('Plano de trabalho', f.bloco_estr_plano_trabalho),
+    consultorPair(
+      'Orcamento preliminar',
+      f.bloco_estr_orcamento_resumo || f.bloco2_recursos_adicionais_valor || moneyRange(c),
+    ),
+    consultorPair(
+      'Documentos necessarios',
+      f.bloco_estr_docs_recomendados ||
+        [f.bloco_estr_docs_cliente, f.bloco_estr_docs_tecnicos, f.bloco_estr_docs_financeiros]
+          .filter((x) => hasText(x))
+          .join('\n'),
+    ),
+    consultorPair('Riscos e pendencias', f.bloco_estr_riscos_pendencias || f.bloco_estr_lacunas),
+    consultorPair('Proximos passos', f.bloco_estr_proximos_passos || sug.proximosPassos),
+  ].filter(Boolean);
+
+  const oportunidadesPdf = buildOportunidadesPdfTable(f.bloco_estr_oportunidades_selecionadas);
+
+  const pendenciasSecao = [
+    ...pendenciasCliente,
+    ...alertasEssenciais,
+  ];
   if (!hasText(f.bloco2_compromiso_social) && !hasText(f.bloco2_imp_eco_outros_txt)) {
     /* nao forca - opcional */
   }
@@ -140,8 +188,8 @@ export function buildPreCadastroPdfModel({ cliente = null, edital = null, radarM
       dataFilename: new Date().toISOString().split('T')[0],
     },
     cover: {
-      tituloPrincipal: 'Pre-cadastro de Projeto',
-      subtituloDoc: 'Relatorio de pre-enquadramento para edital / linha de fomento',
+      tituloPrincipal: 'Relatorio preliminar de oportunidades de fomento',
+      subtituloDoc: 'Pre-enquadramento consultivo para tomada de decisao',
       empresa: empresaNome,
       editalOuLinha: editalTitulo || 'Nenhum edital especifico associado (pre-cadastro geral)',
       dataGeracao: new Date().toLocaleString('pt-BR'),
@@ -153,6 +201,9 @@ export function buildPreCadastroPdfModel({ cliente = null, edital = null, radarM
       intro,
       linhas: executiveRows,
     },
+    consultorSections,
+    oportunidadesPdf,
+    pendenciasCliente,
     enquadramento: {
       linhas: linhasAlt,
       editalTitulo: editalTitulo || null,
@@ -190,26 +241,8 @@ export function buildPreCadastroPdfModel({ cliente = null, edital = null, radarM
         telefone: valOptional(f.bloco1_telefone_contato),
       },
     },
-    economicoLinhas: [
-      ['CNAE principal', valEssential(f.bloco1_cnae)],
-      ['Receita operacional (ultimo exercicio)', valEssential(f.bloco1_receita_rob_ultimo)],
-      ['EBITDA', valEssential(f.bloco1_ebitda)],
-      ['Total empregados (quadro)', valEssential(f.bloco1_total_empregados)],
-      ['Grupo economico', valEssential(f.bloco1_parte_grupo_economico)],
-      ...filterOptionalRows([
-        ['Faturamento grupo', valOptional(f.bloco1_faturamento_grupo)],
-        ['Data referencia receita/EBITDA', valOptional(f.bloco1_data_ref_receita)],
-        ['Num. empregados (data receita)', valOptional(f.bloco1_num_pessoas_receita_ref)],
-        ['Despesa empregados (ano)', valOptional(f.bloco1_despesa_empregados_receita)],
-        ['Doutores', valOptional(f.bloco1_doutores)],
-        ['Mestres', valOptional(f.bloco1_mestres)],
-        ['Graduados', valOptional(f.bloco1_graduados)],
-        ['Fundamental/medio', valOptional(f.bloco1_fund_medio)],
-        ['Antecedentes financiador (sim/nao)', valOptional(f.bloco1_orgao_antecedentes_sim)],
-        ['Detalhe antecedentes', valOptional(f.bloco1_orgao_antecedentes_texto)],
-        ['Principais atividades', valOptional(f.bloco1_principais_atividades)],
-      ]),
-    ],
+    economicoLinhas: buildEconomicoLinhasPdf(c, f),
+    economicoEmptyMessage: 'Dados economicos ainda nao informados.',
     projeto: {
       titulo: valEssential(f.bloco2_titulo_projeto),
       resumoPublicavel: valEssential(f.bloco2_resumo_publicavel || f.bloco_estr_resumo_executivo || buildProjectSummary(c, edital, radarMatch)),
@@ -300,7 +333,48 @@ export function buildPreCadastroPdfModel({ cliente = null, edital = null, radarM
     projetoResumoGerado: buildProjectSummary(c, edital, radarMatch),
     completion,
     rawForm: f,
-    rodapeTituloCurto: 'Pre-cadastro de projeto',
+    rodapeTituloCurto: 'Relatorio preliminar de fomento',
+  };
+}
+
+function parseOportunidadesJson(raw) {
+  if (!raw || !String(raw).trim()) return [];
+  try {
+    const j = JSON.parse(raw);
+    return Array.isArray(j) ? j : [];
+  } catch {
+    return [];
+  }
+}
+
+function buildOportunidadesPdfTable(rawJson) {
+  const list = parseOportunidadesJson(rawJson).map((o) => ({
+    key: o.key,
+    titulo: o.titulo || 'Oportunidade',
+    scorePct: o.score ?? o.scorePct,
+    compatibilidade: o.compatibilidade,
+    fonte_recurso: o.fonte_recurso,
+    prazo_envio: o.prazo ?? o.prazo_envio,
+    link: o.link,
+  }));
+  if (!list.length) return { hasRows: false, principal: [], complementares: [], observacao: [] };
+
+  const primary = pickPrimaryOpportunity(list, list.find((o) => o.principal)?.key);
+  const part = partitionSelectedOpportunities(list, primary);
+
+  const rowPdf = (o) => [
+    stripUnsafePdfChars(o.titulo || '—'),
+    `${o.scorePct ?? '—'}%`,
+    stripUnsafePdfChars(o.compatibilidade || '—'),
+    stripUnsafePdfChars(o.fonte_recurso || '—'),
+    stripUnsafePdfChars(o.prazo_envio || '—'),
+  ];
+
+  return {
+    hasRows: true,
+    principal: part.primary ? [rowPdf(part.primary)] : [],
+    complementares: part.complementares.map(rowPdf),
+    observacao: part.observacao.map(rowPdf),
   };
 }
 
@@ -312,6 +386,28 @@ function normSetor(setor, edital) {
 
 function filterOptionalRows(rows) {
   return rows.filter(([, val]) => val != null && String(val).trim() !== '');
+}
+
+function buildEconomicoLinhasPdf(c, f) {
+  const eco = c.dadosEconomicos || {};
+  const candidates = [
+    ['CNAE principal', valExecutive(f.bloco1_cnae || c.cnae_principal)],
+    [
+      'Receita operacional (ultimo exercicio)',
+      valExecutive(f.bloco1_receita_rob_ultimo || c.faturamento_anual),
+    ],
+    ['EBITDA', valExecutive(f.bloco1_ebitda || eco.ebitda)],
+    ['Total empregados (quadro)', valExecutive(f.bloco1_total_empregados || c.numero_funcionarios)],
+    ['Grupo economico', valExecutive(f.bloco1_parte_grupo_economico || eco.grupo_economico)],
+    ['Faixa de faturamento', valExecutive(eco.faixa_faturamento)],
+    ['Capacidade de contrapartida', valExecutive(eco.contrapartida_capacidade)],
+    ...filterOptionalRows([
+      ['Faturamento grupo', valOptional(f.bloco1_faturamento_grupo)],
+      ['Data referencia receita/EBITDA', valOptional(f.bloco1_data_ref_receita)],
+      ['Principais atividades', valExecutive(f.bloco1_principais_atividades || c.descricao_projeto)],
+    ]),
+  ];
+  return candidates.filter(([, val]) => val != null && !isNaoInformado(val));
 }
 
 function buildUsosFontes(listaRaw) {
@@ -331,7 +427,11 @@ function buildUsosFontes(listaRaw) {
   const lista = Array.isArray(listaRaw) ? listaRaw : [];
   const temValor = lista.some((r) => r && Object.values(r).some((v) => hasText(v)));
   if (!temValor) {
-    return { empty: true, rows: padrao, message: 'Quadro financeiro ainda nao preenchido. Utilize os campos correspondentes na aba Formulario completo.' };
+    return {
+      empty: true,
+      rows: padrao,
+      message: 'Orcamento preliminar ainda nao preenchido.',
+    };
   }
 
   /** Mescla primeiro as linhas do usuario, limita linhas extras */
