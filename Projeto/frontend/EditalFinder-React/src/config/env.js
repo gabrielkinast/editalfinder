@@ -3,6 +3,8 @@
  * Nunca coloque chaves reais aqui — use .env.local
  */
 
+import { DEFAULT_SUPPORT_EMAIL } from '../constants/editalFeedbackConfig';
+
 function trimStr(v) {
   if (v == null) return '';
   return String(v).trim();
@@ -27,6 +29,15 @@ export const APP_ENV = str('VITE_APP_ENV', 'local');
 
 export const APP_NAME = str('VITE_APP_NAME', 'EditalFinder');
 
+/**
+ * URL pública da app (com basename, sem barra final).
+ * Produção: https://seudominio.com/editalfinder
+ */
+export const PUBLIC_SITE_URL = str('VITE_PUBLIC_SITE_URL');
+
+/** URL absoluta do callback de confirmação de e-mail. */
+export const AUTH_CALLBACK_URL = str('VITE_AUTH_CALLBACK_URL');
+
 /** URL do projeto Supabase */
 export const SUPABASE_URL = str('VITE_SUPABASE_URL');
 
@@ -45,11 +56,16 @@ export const VIEW_PESQUISAS = str('VITE_VIEW_PESQUISAS', 'vw_pesquisas_front');
 export const VIEW_FORNECEDORES = str('VITE_VIEW_FORNECEDORES', 'vw_fornecedores_front');
 export const VIEW_INVESTIMENTOS = str('VITE_VIEW_INVESTIMENTOS', 'vw_investimentos_front');
 
+/** Concursos & Seleções — views públicas (RLS + anon) */
+export const VIEW_CONCURSOS = str('VITE_VIEW_CONCURSOS', 'vw_concursos_front');
+export const VIEW_VESTIBULARES = str('VITE_VIEW_VESTIBULARES', 'vw_vestibulares_front');
+
 /** Feature flags */
 export const FEATURE_PORTAIS_ESTRATEGICOS = truthyEnv('VITE_ENABLE_PORTAIS_ESTRATEGICOS', true);
 export const FEATURE_FORNECEDORES = truthyEnv('VITE_ENABLE_FORNECEDORES', true);
 export const FEATURE_INVESTIMENTOS = truthyEnv('VITE_ENABLE_INVESTIMENTOS', true);
 export const FEATURE_RADAR = truthyEnv('VITE_ENABLE_RADAR', true);
+export const ENABLE_CONCURSOS = truthyEnv('VITE_ENABLE_CONCURSOS', true);
 /** Favoritos persistentes (RLS + anon) — view leitura, tabela escrita. */
 export const VIEW_EDITAIS_FAVORITOS = str(
   'VITE_VIEW_EDITAIS_FAVORITOS',
@@ -57,6 +73,12 @@ export const VIEW_EDITAIS_FAVORITOS = str(
 );
 export const TABLE_EDITAL_FAVORITO = str('VITE_TABLE_EDITAL_FAVORITO', 'edital_favorito');
 export const FEATURE_EDITAL_FAVORITOS = truthyEnv('VITE_ENABLE_EDITAL_FAVORITOS', true);
+/** POST JSON para reporte de problemas em editais (Edge Function ou API). */
+export const EDITAL_FEEDBACK_ENDPOINT = str('VITE_EDITAL_FEEDBACK_ENDPOINT');
+/** Em DEV: simular sucesso quando endpoint ausente (testes de UI). */
+export const EDITAL_FEEDBACK_MOCK_DEV = truthyEnv('VITE_EDITAL_FEEDBACK_MOCK_DEV', false);
+/** E-mail de suporte (referência; envio real no backend). */
+export const SUPPORT_EMAIL = str('VITE_SUPPORT_EMAIL') || DEFAULT_SUPPORT_EMAIL;
 export const ENABLE_DEBUG_PIPELINE = truthyEnv('VITE_ENABLE_DEBUG_PIPELINE', false);
 
 /**

@@ -1,0 +1,182 @@
+.concurso-card {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius, 8px);
+  box-shadow: var(--shadow-card);
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: border-color var(--transition, 200ms ease-out);
+}
+
+.concurso-card:hover {
+  border-color: var(--color-card-hover-border, var(--color-primary));
+}
+
+.concurso-card__head {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.concurso-card__title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-text);
+  line-height: 1.35;
+  margin: 0;
+}
+
+.concurso-card__aggregator {
+  margin: 0;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--color-muted);
+  letter-spacing: 0.02em;
+}
+
+.concurso-card__missing-hint {
+  color: var(--color-muted);
+  font-style: italic;
+  font-weight: 500;
+}
+
+.concurso-card__tipo {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.concurso-card__status {
+  color: var(--color-muted);
+}
+
+.concurso-card__badges {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.concurso-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 6px;
+  line-height: 1.2;
+}
+
+.concurso-badge--ok {
+  background: var(--badge-ok-bg);
+  color: var(--badge-ok-text);
+}
+
+.concurso-badge--warn {
+  background: var(--badge-warn-bg);
+  color: var(--badge-warn-text);
+}
+
+.concurso-badge--bad {
+  background: var(--badge-bad-bg);
+  color: var(--badge-bad-text);
+}
+
+.concurso-badge--muted {
+  background: var(--badge-muted-bg);
+  color: var(--badge-muted-text);
+}
+
+.concurso-badge--info {
+  background: var(--badge-info-bg);
+  color: var(--badge-info-text);
+}
+
+.concurso-card__dl {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px 12px;
+  font-size: 13px;
+}
+
+@media (min-width: 520px) {
+  .concurso-card__dl {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.concurso-card__dl dt {
+  color: var(--color-muted);
+  font-weight: 600;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin: 0;
+}
+
+.concurso-card__dl dd {
+  margin: 2px 0 0;
+  color: var(--color-text);
+}
+
+.concurso-card__dias {
+  color: var(--color-muted);
+  font-weight: 500;
+}
+
+.concurso-card__tags {
+  font-size: 12px;
+  color: var(--color-muted);
+  border-top: 1px solid var(--color-border);
+  padding-top: 10px;
+}
+
+.concurso-card__tags-label {
+  font-weight: 700;
+  margin-right: 8px;
+  color: var(--color-text);
+}
+
+.concurso-card__tags-val {
+  color: var(--color-muted);
+}
+
+.concurso-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 4px;
+}
+
+.concurso-card__btn {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+.concurso-card__btn.btn-primary {
+  background: var(--color-primary);
+  color: var(--color-on-primary, #fff);
+}
+
+.concurso-card__btn.btn-secondary {
+  background: var(--color-surface-soft);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+}
+
+.concurso-card__btn.btn-primary:hover,
+.concurso-card__btn.btn-secondary:hover {
+  filter: brightness(1.05);
+}

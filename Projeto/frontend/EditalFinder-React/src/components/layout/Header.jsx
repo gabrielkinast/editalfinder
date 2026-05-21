@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { useAuth } from '../../contexts/AuthContext';
 import { usePermissions } from '../../hooks/usePermissions';
 import { useSettings } from '../../contexts/SettingsContext';
+import { ENABLE_CONCURSOS } from '../../config/env';
 import Modal from '../ui/Modal';
 import SettingsForm from '../admin/SettingsForm';
 
@@ -31,16 +32,18 @@ export default function Header({ onSearch, searchPlaceholder = 'Buscar editais..
             )}
           </div>
           
-          <button 
-            className="menu-toggle-mobile" 
+          <button
+            type="button"
+            className="menu-toggle-mobile"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label="Menu"
+            aria-expanded={isMenuOpen}
+            aria-controls="main-nav"
           >
-            {isMenuOpen ? '✕' : '☰'}
+            {isMenuOpen ? 'Fechar' : 'Menu'}
           </button>
         </div>
 
-        <nav className={`main-nav ${isMenuOpen ? 'open' : ''}`}>
+        <nav id="main-nav" className={`main-nav ${isMenuOpen ? 'open' : ''}`}>
           <NavLink 
             to="/dashboard" 
             className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}
@@ -64,7 +67,7 @@ export default function Header({ onSearch, searchPlaceholder = 'Buscar editais..
             className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}
             onClick={() => setIsMenuOpen(false)}
           >
-            🎯 Radar
+            Radar
           </NavLink>
           {import.meta.env.VITE_ENABLE_INDICE === 'true' && (
             <NavLink
@@ -72,7 +75,7 @@ export default function Header({ onSearch, searchPlaceholder = 'Buscar editais..
               className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}
               onClick={() => setIsMenuOpen(false)}
             >
-              📊 Índice
+              Índice
             </NavLink>
           )}
           <NavLink
@@ -80,22 +83,31 @@ export default function Header({ onSearch, searchPlaceholder = 'Buscar editais..
             className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}
             onClick={() => setIsMenuOpen(false)}
           >
-            📰 Notícias
+            Notícias
           </NavLink>
           <NavLink
             to="/pesquisas"
             className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}
             onClick={() => setIsMenuOpen(false)}
           >
-            🔬 Pesquisas
+            Pesquisas
           </NavLink>
           <NavLink
             to="/portais-estrategicos"
             className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}
             onClick={() => setIsMenuOpen(false)}
           >
-            🌐 Portais
+            Portais
           </NavLink>
+          {ENABLE_CONCURSOS && (
+            <NavLink
+              to="/concursos"
+              className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Concursos
+            </NavLink>
+          )}
         </nav>
 
         <div className={`header-right ${isMenuOpen ? 'open' : ''}`}>
@@ -109,15 +121,15 @@ export default function Header({ onSearch, searchPlaceholder = 'Buscar editais..
             />
           )}
           {permissions.canManageUsers && (
-            <button 
+            <button
+              type="button"
               onClick={() => {
                 setIsSettingsOpen(true);
                 setIsMenuOpen(false);
-              }} 
-              className="btn-logout" 
-              style={{ borderColor: 'var(--primary-blue)', color: 'var(--primary-blue)' }}
+              }}
+              className="btn-logout btn-header-settings"
             >
-              ⚙️ Configurações
+              Configurações
             </button>
           )}
           <button onClick={handleLogout} className="btn-logout">Sair</button>

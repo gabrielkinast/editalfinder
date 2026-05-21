@@ -13,44 +13,30 @@ import {
   normalizeEditalLink,
 } from '../services/favoritosService';
 import { getFavoriteDeadlineSummary } from '../utils/deadlineAlerts';
+import { resolveAppUserId } from '../utils/appUserId';
+
+const LOGIN_MESSAGE = 'Entre na sua conta para favoritar editais.';
 
 function backendFavoritosConfigured() {
   return FEATURE_EDITAL_FAVORITOS && isSupabaseConfigured;
 }
 
-/**
- * Resolve o id numérico usado em edital_favorito.id_usuario.
- * Produção: só a partir do utilizador em sessão (AuthContext / localStorage).
- * Desenvolvimento: se não houver id no utilizador, usa VITE_DEV_FAVORITOS_USER_ID ou 1.
- */
+/** @deprecated Preferir resolveAppUserId — mantido para compatibilidade. */
 export function resolveFavoriteUserId(user, hookUserIdOverride) {
-  if (hookUserIdOverride != null && hookUserIdOverride !== '') {
-    const o = Number(hookUserIdOverride);
-    if (Number.isFinite(o) && o > 0) return o;
-  }
-  const raw = user?.id_usuario;
-  if (raw != null && raw !== '' && Number.isFinite(Number(raw)) && Number(raw) > 0) {
-    return Number(raw);
-  }
-  if (import.meta.env.DEV) {
-    const d = Number(import.meta.env.VITE_DEV_FAVORITOS_USER_ID);
-    return Number.isFinite(d) && d > 0 ? d : 1;
-  }
-  return null;
+  return resolveAppUserId(user, hookUserIdOverride);
 }
 
 /**
  * Favoritos persistentes (Supabase) + resumo de alertas de prazo.
- * Requer utilizador com `id_usuario` em produção; sem isso, usa favoritos locais (localStorage) nas páginas.
  */
 export function useEditalFavorites(options = {}) {
-  const { user } = useAuth();
+  const { user, loading: authLoading } = useAuth();
   const { userId: hookUserIdOverride } = options;
 
-  const favoriteUserId = useMemo(
-    () => resolveFavoriteUserId(user, hookUserIdOverride),
-    [user, hookUserIdOverride],
-  );
+  const favoriteUserId = useMemo(() => {
+    if (authLoading) return null;
+    return resolveFavoriteUserId(user, hookUserIdOverride);
+  }, [user, hookUserIdOverride, authLoading]);
 
   const favoritosRemoteEnabled = useMemo(
     () => backendFavoritosConfigured() && favoriteUserId != null,
@@ -61,27 +47,34 @@ export function useEditalFavorites(options = {}) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [toggleError, setToggleError] = useState(null);
+  const [optimisticKeys, setOptimisticKeys] = useState(() => new Set());
+
+  const editalFavoriteKey = useCallback((edital) => {
+    const id = getEditalNumericoId(edital);
+    const link = normalizeEditalLink(edital);
+    if (id != null) return `id:${id}`;
+    if (link) return `link:${link}`;
+    return edital?.id ? String(edital.id) : null;
+  }, []);
 
   useEffect(() => {
-    if (!import.meta.env.DEV) return undefined;
+    if (!import.meta.env.DEV || authLoading) return undefined;
     let cancelled = false;
     (async () => {
       const { data: sessWrap } = await supabase.auth.getSession();
       if (cancelled) return;
-      console.info('[useEditalFavorites][DEV]', {
-        currentUser_id_usuario: user?.id_usuario,
+      console.info('[favoritos] hook', {
+        appUser_id_usuario: user?.id_usuario ?? null,
         favoriteUserId,
+        auth_user_id: sessWrap?.session?.user?.id ?? user?.auth_user_id ?? null,
         favoritosRemoteEnabled,
-        FEATURE_EDITAL_FAVORITOS,
-        isSupabaseConfigured,
-        hasSupabaseSession: !!sessWrap?.session?.user,
-        auth_user_id: sessWrap?.session?.user?.id ?? null,
+        authLoading,
       });
     })();
     return () => {
       cancelled = true;
     };
-  }, [user?.id_usuario, favoriteUserId, favoritosRemoteEnabled]);
+  }, [user?.id_usuario, user?.auth_user_id, favoriteUserId, favoritosRemoteEnabled, authLoading]);
 
   const refreshFavorites = useCallback(async () => {
     if (!favoritosRemoteEnabled) {
@@ -89,17 +82,25 @@ export function useEditalFavorites(options = {}) {
       return;
     }
     try {
-      const rows = await fetchFavoritos({ id_usuario: favoriteUserId });
+      const rows = await fetchFavoritos({
+        id_usuario: favoriteUserId,
+        auth_user_id: user?.auth_user_id,
+      });
       setFavorites(rows);
+      setOptimisticKeys(new Set());
     } catch (e) {
       setError(e);
       setFavorites([]);
     }
-  }, [favoritosRemoteEnabled, favoriteUserId]);
+  }, [favoritosRemoteEnabled, favoriteUserId, user?.auth_user_id]);
 
   useEffect(() => {
     let alive = true;
     (async () => {
+      if (authLoading) {
+        setLoading(true);
+        return;
+      }
       if (!favoritosRemoteEnabled) {
         setFavorites([]);
         setLoading(false);
@@ -109,8 +110,14 @@ export function useEditalFavorites(options = {}) {
       setLoading(true);
       setError(null);
       try {
-        const rows = await fetchFavoritos({ id_usuario: favoriteUserId });
-        if (alive) setFavorites(rows);
+        const rows = await fetchFavoritos({
+          id_usuario: favoriteUserId,
+          auth_user_id: user?.auth_user_id,
+        });
+        if (alive) {
+          setFavorites(rows);
+          setOptimisticKeys(new Set());
+        }
       } catch (e) {
         if (alive) {
           setError(e);
@@ -123,68 +130,86 @@ export function useEditalFavorites(options = {}) {
     return () => {
       alive = false;
     };
-  }, [favoritosRemoteEnabled, favoriteUserId]);
+  }, [favoritosRemoteEnabled, favoriteUserId, user?.auth_user_id, authLoading]);
 
   const isFavorite = useCallback(
     (edital) => {
       if (!edital || !favoritosRemoteEnabled) return false;
+      const key = editalFavoriteKey(edital);
+      if (key && optimisticKeys.has(key)) return true;
       return favorites.some((r) => r && r.ativo !== false && favoritoRowMatchesEdital(r, edital));
     },
-    [favorites, favoritosRemoteEnabled],
+    [favorites, favoritosRemoteEnabled, optimisticKeys, editalFavoriteKey],
   );
 
   const clearToggleError = useCallback(() => setToggleError(null), []);
 
   const toggleFavorite = useCallback(
     async (edital, opts = {}) => {
-      if (!favoritosRemoteEnabled || !edital) {
-        return { ok: false, skipped: true };
+      if (!edital) return { ok: false, skipped: true };
+      if (!favoritosRemoteEnabled || favoriteUserId == null) {
+        return {
+          ok: false,
+          skipped: true,
+          needsLogin: true,
+          message: LOGIN_MESSAGE,
+        };
       }
-      setToggleError(null);
-      const merged = { ...opts };
-      const uid = opts.id_usuario ?? opts.userId ?? hookUserIdOverride ?? favoriteUserId;
-      if (uid != null) merged.id_usuario = Number(uid);
 
+      setToggleError(null);
+      const key = editalFavoriteKey(edital);
       const wasFavorite = favorites.some(
         (r) => r && r.ativo !== false && favoritoRowMatchesEdital(r, edital),
       );
 
+      if (key) {
+        setOptimisticKeys((prev) => {
+          const next = new Set(prev);
+          if (wasFavorite) next.delete(key);
+          else next.add(key);
+          return next;
+        });
+      }
+
+      const merged = {
+        ...opts,
+        id_usuario: favoriteUserId,
+        auth_user_id: user?.auth_user_id ?? opts.auth_user_id,
+        contexto: opts.contexto ?? 'editais',
+      };
+
       const res = await toggleFavoritoRequest(edital, favorites, merged);
 
       if (!res.ok) {
+        if (key) {
+          setOptimisticKeys((prev) => {
+            const next = new Set(prev);
+            if (wasFavorite) next.add(key);
+            else next.delete(key);
+            return next;
+          });
+        }
         const err = res.error;
         const msg =
+          res.message ||
           (typeof err === 'object' && err && (err.message || err.hint || err.details)) ||
-          String(err || 'toggle_favorito_failed');
+          String(err || 'Não foi possível atualizar favoritos.');
         setToggleError(msg);
-        if (import.meta.env.DEV) {
-          console.warn('[useEditalFavorites] toggle falhou', {
-            ok: res.ok,
-            id_edital: getEditalNumericoId(edital),
-            tem_link: Boolean(normalizeEditalLink(edital)),
-            wasFavorite,
-            code: typeof err === 'object' && err ? err.code : undefined,
-            message: typeof err === 'object' && err ? err.message : undefined,
-            details: typeof err === 'object' && err ? err.details : undefined,
-            hint: typeof err === 'object' && err ? err.hint : undefined,
-          });
-          if (err && typeof err === 'object') console.error('[useEditalFavorites] toggle erro bruto', err);
-        }
       } else {
         setToggleError(null);
-        if (import.meta.env.DEV) {
-          console.info('[useEditalFavorites] toggle ok', {
-            id_edital: getEditalNumericoId(edital),
-            wasFavorite,
-            agora_favorito: !wasFavorite,
-          });
-        }
       }
 
       await refreshFavorites();
       return res;
     },
-    [favorites, favoritosRemoteEnabled, favoriteUserId, hookUserIdOverride, refreshFavorites],
+    [
+      favorites,
+      favoritosRemoteEnabled,
+      favoriteUserId,
+      user?.auth_user_id,
+      refreshFavorites,
+      editalFavoriteKey,
+    ],
   );
 
   const favoriteAlertsSummary = useMemo(() => getFavoriteDeadlineSummary(favorites), [favorites]);
@@ -202,6 +227,8 @@ export function useEditalFavorites(options = {}) {
       favoriteAlertsSummary,
       favoritosRemoteEnabled,
       favoriteUserId,
+      needsLoginForFavorites: backendFavoritosConfigured() && !authLoading && favoriteUserId == null,
+      loginMessage: LOGIN_MESSAGE,
     }),
     [
       favorites,
@@ -215,6 +242,7 @@ export function useEditalFavorites(options = {}) {
       favoriteAlertsSummary,
       favoritosRemoteEnabled,
       favoriteUserId,
+      authLoading,
     ],
   );
 }

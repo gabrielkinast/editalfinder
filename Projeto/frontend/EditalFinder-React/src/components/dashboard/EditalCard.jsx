@@ -3,7 +3,11 @@ import { formatCurrency, formatDateLoose } from '../../utils/formatters';
 import { prazoVencido } from '../../utils/edital/dates';
 import { resumirEdital, formatTipoAmigavel, humanizeTaxonomyList } from '../../utils/edital/formatEditalUi';
 import { coerceStringArray } from '../../utils/edital/coerceArrays';
+import { resolveActionLinks } from '../../utils/edital/linkHealth';
+import { showReviewPrazoBadge } from '../../utils/edital/editalVisibility';
+import { onEditalLinkClick, siteLinkCampoEscolhido } from '../../utils/edital/logEditalLinkClick';
 import HighlightedText from './HighlightedText';
+import EditalReportProblemButton from '../editais/EditalReportProblemButton';
 
 const ORG_WEBSITES = {
   FINEP: 'https://www.finep.gov.br',
@@ -39,13 +43,15 @@ export default function EditalCard({
   const navigate = useNavigate();
 
   const orgLabel = (edital.orgao || '').toUpperCase?.() || edital.orgao;
+  const actions = resolveActionLinks(edital);
   const siteLink =
-    edital.linkOriginal ||
-    edital.orgSite ||
-    ORG_WEBSITES[orgLabel] ||
+    actions.site ||
+    (!actions.siteDisabled ? edital.orgSite || ORG_WEBSITES[orgLabel] : null) ||
     null;
-  const pdfLink = edital.pdfUrl || null;
-  const inscricaoLink = edital.linkInscricao || null;
+  const pdfLink = actions.pdf;
+  const inscricaoLink = actions.inscricao;
+  const linkHealth = actions.health;
+  const siteCampo = siteLinkCampoEscolhido(edital, actions, orgLabel, ORG_WEBSITES);
   const idNumerico = String(edital.id).replace('manual-', '');
   const deadline = edital.prazo_envio_raw || edital.dataLimite;
   const expired = deadline ? prazoVencido(deadline) : false;
@@ -65,6 +71,8 @@ export default function EditalCard({
   if (pdfLink) badges.push({ k: 'PDF', c: 'ok' });
   if (edital.pais_raw && !/brasil|brazil/i.test(edital.pais_raw))
     badges.push({ k: 'Internacional', c: 'info' });
+  if (linkHealth.showUnavailableBadge) badges.push({ k: 'Link indisponível', c: 'warn' });
+  if (showReviewPrazoBadge(edital)) badges.push({ k: 'Revisar prazo', c: 'warn' });
 
   const tipoR = String(edital.tipo_recurso_raw || '').toLowerCase();
   if (tipoR.includes('cred') || tipoR.includes('financi')) badges.push({ k: 'Crédito / finan.', c: 'info' });
@@ -203,22 +211,48 @@ export default function EditalCard({
 
       <div className="edital-actions edital-actions-balanced">
         {inscricaoLink ? (
-          <a href={inscricaoLink} target="_blank" rel="noreferrer" className="btn-inscricao dash-action">
+          <a
+            href={inscricaoLink}
+            target="_blank"
+            rel="noreferrer"
+            className="btn-inscricao dash-action"
+            onClick={onEditalLinkClick(edital, 'link_inscricao', inscricaoLink)}
+          >
             Inscrição
           </a>
         ) : siteLink ? (
-          <a href={siteLink} target="_blank" rel="noreferrer" className="btn-view dash-action">
+          <a
+            href={siteLink}
+            target="_blank"
+            rel="noreferrer"
+            className="btn-view dash-action"
+            onClick={onEditalLinkClick(edital, siteCampo, siteLink)}
+          >
             Site
           </a>
+        ) : actions.inscDisabled || actions.siteDisabled ? (
+          <span className="dash-action-muted" title="Link indisponível (auditoria)">
+            Link indisponível
+          </span>
         ) : (
           <span className="dash-action-muted">Sem link</span>
         )}
 
-        {pdfLink && (
-          <a href={pdfLink} target="_blank" rel="noreferrer" className="btn-pdf dash-action">
+        {pdfLink ? (
+          <a
+            href={pdfLink}
+            target="_blank"
+            rel="noreferrer"
+            className="btn-pdf dash-action"
+            onClick={onEditalLinkClick(edital, 'pdf_url', pdfLink)}
+          >
             PDF
           </a>
-        )}
+        ) : actions.pdfDisabled ? (
+          <span className="dash-action-muted" title="PDF indisponível (auditoria)">
+            PDF indispon.
+          </span>
+        ) : null}
 
         <button
           type="button"
@@ -229,6 +263,10 @@ export default function EditalCard({
         >
           Detalhes
         </button>
+      </div>
+
+      <div className="edital-card-report-row">
+        <EditalReportProblemButton edital={edital} variant="card" />
       </div>
     </div>
   );

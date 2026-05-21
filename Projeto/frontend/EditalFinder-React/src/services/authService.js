@@ -1,6 +1,18 @@
 import { supabase, isSupabaseConfigured } from './api';
+import { authSignupDevLog, formatSupabaseError } from '../utils/authSignupDevLog';
+import {
+  getAuthCallbackRedirectUrl,
+  getAuthRedirectLogMeta,
+} from '../utils/authCallbackRoute';
 
 const STORAGE_KEY = 'editalFinderUser';
+
+/** Perfil padrão para novos utilizadores (regra de negócio existente). */
+const DEFAULT_SIGNUP_PROFILE = {
+  tipo_usuario: 'Consultor',
+  nivel_acesso: 2,
+  status: 'Ativo',
+};
 
 /** Normaliza e-mail para comparação e gravação (trim + minúsculas). */
 export function normalizeAuthEmail(email) {
@@ -107,6 +119,121 @@ export async function getCurrentProfile() {
 }
 
 /**
+ * Cria linha em `public.usuario` para o utilizador Auth autenticado (requer sessão JWT).
+ * @returns {Promise<object|null>} linha criada ou null em erro
+ */
+export async function createInternalProfileRow({
+  authUserId,
+  nome,
+  email,
+  tipo_usuario = DEFAULT_SIGNUP_PROFILE.tipo_usuario,
+  nivel_acesso = DEFAULT_SIGNUP_PROFILE.nivel_acesso,
+  status = DEFAULT_SIGNUP_PROFILE.status,
+}) {
+  if (!isSupabaseConfigured || !authUserId) return null;
+
+  const insertRow = {
+    auth_user_id: authUserId,
+    nome: String(nome ?? '').trim(),
+    nome_email: normalizeAuthEmail(email),
+    tipo_usuario,
+    nivel_acesso,
+    status,
+  };
+
+  authSignupDevLog('profile_insert_start', {
+    payload: insertRow,
+    auth_user_id: authUserId,
+  });
+
+  const session = await getCurrentSession();
+  authSignupDevLog('profile_insert_session', {
+    hasSession: !!session,
+    hasAccessToken: !!session?.access_token,
+    auth_uid_from_session: session?.user?.id ?? null,
+    auth_uid_expected: authUserId,
+    auth_uid_match: session?.user?.id === authUserId,
+  });
+
+  const { data: created, error: insErr } = await supabase
+    .from('usuario')
+    .insert([insertRow])
+    .select('id_usuario, nome, nome_email, tipo_usuario, nivel_acesso, status, auth_user_id')
+    .single();
+
+  if (insErr) {
+    authSignupDevLog('profile_insert_error', {
+      ...formatSupabaseError(insErr),
+      auth_user_id: authUserId,
+    });
+    return { error: insErr, row: null };
+  }
+
+  authSignupDevLog('profile_insert_ok', {
+    id_usuario: created?.id_usuario,
+    auth_user_id: created?.auth_user_id,
+  });
+  return { error: null, row: created };
+}
+
+/**
+ * Garante perfil interno após login/confirmação de e-mail (fallback se trigger SQL não existir).
+ */
+export async function ensureInternalProfileFromAuthUser(authUser, overrides = {}) {
+  if (!authUser?.id || !isSupabaseConfigured) return null;
+
+  const existing = await fetchProfileByAuthUserId(authUser.id);
+  if (existing) {
+    return buildAppUser(existing, authUser.id);
+  }
+
+  const session = await getCurrentSession();
+  if (!session?.access_token) {
+    authSignupDevLog('ensure_profile_skip_no_session', { auth_user_id: authUser.id });
+    return null;
+  }
+
+  const emailNorm = normalizeAuthEmail(overrides.email ?? authUser.email);
+  const nomeTrim =
+    String(overrides.nome ?? authUser.user_metadata?.nome ?? '').trim() ||
+    emailNorm.split('@')[0] ||
+    'Utilizador';
+
+  const result = await createInternalProfileRow({
+    authUserId: authUser.id,
+    nome: nomeTrim,
+    email: emailNorm,
+  });
+
+  if (result.error) {
+    if (result.error.code === '23505') {
+      const row = await fetchProfileByAuthUserId(authUser.id);
+      return row ? buildAppUser(row, authUser.id) : null;
+    }
+    return null;
+  }
+
+  return result.row ? buildAppUser(result.row, authUser.id) : null;
+}
+
+function profileInsertErrorMessage(insErr) {
+  const code = insErr?.code;
+  if (code === '23505') {
+    return 'Já existe uma conta com este e-mail.';
+  }
+  if (code === '42501' || /permission denied|row-level security|RLS/i.test(insErr?.message || '')) {
+    return (
+      'Conta criada no login seguro, mas o perfil interno não pôde ser gravado (permissão RLS). ' +
+      'Um administrador deve aplicar a política de cadastro ou o trigger automático no Supabase.'
+    );
+  }
+  return (
+    'Não foi possível concluir o cadastro (perfil interno). ' +
+    'Se confirmou o e-mail, tente entrar novamente; se persistir, contacte o suporte.'
+  );
+}
+
+/**
  * Login com Supabase Auth (fonte de verdade da sessão).
  */
 export async function loginWithSupabaseAuth(email, password) {
@@ -130,8 +257,13 @@ export async function loginWithSupabaseAuth(email, password) {
     throw new Error('Sessão inválida após login.');
   }
 
-  const profile = await fetchProfileByAuthUserId(authId);
+  let profile = await fetchProfileByAuthUserId(authId);
   if (!profile) {
+    const ensured = await ensureInternalProfileFromAuthUser(data.user, { email: emailNorm });
+    if (ensured) {
+      persistProfileCache(ensured);
+      return ensured;
+    }
     await supabase.auth.signOut();
     throw new Error('Perfil interno não encontrado para este usuário.');
   }
@@ -218,6 +350,11 @@ export async function login(email, password) {
 
 /**
  * Registo: Supabase Auth + perfil em `public.usuario` (sem gravar `senha` na tabela).
+ *
+ * @returns {Promise<
+ *   | { status: 'complete'; user: object }
+ *   | { status: 'pending_email_confirmation'; email: string; authUserId: string; message: string }
+ * >}
  */
 export async function registerWithSupabaseAuth({ nome, email, password }) {
   if (!isSupabaseConfigured) {
@@ -236,15 +373,29 @@ export async function registerWithSupabaseAuth({ nome, email, password }) {
     throw new Error('A senha deve ter pelo menos 6 caracteres.');
   }
 
+  authSignupDevLog('signUp_start', { email: emailNorm, nome: nomeTrim });
+
+  const emailRedirectTo = getAuthCallbackRedirectUrl();
+  authSignupDevLog('signUp_redirect', getAuthRedirectLogMeta(emailRedirectTo));
+
   const { data: signData, error: signErr } = await supabase.auth.signUp({
     email: emailNorm,
     password: pwd,
     options: {
       data: { nome: nomeTrim },
+      emailRedirectTo,
     },
   });
 
   if (signErr) {
+    const errText = `${signErr.message || ''} ${signErr.code || ''}`.toLowerCase();
+    if (/email rate limit exceeded|rate limit exceeded.*email/i.test(errText)) {
+      authSignupDevLog('email_rate_limit_exceeded', formatSupabaseError(signErr));
+      throw new Error(
+        'Limite temporário de envio de e-mails atingido. Tente novamente mais tarde ou use uma conta já criada.',
+      );
+    }
+    authSignupDevLog('signUp_error', formatSupabaseError(signErr));
     if (/already registered|already exists|User already/i.test(signErr.message || '')) {
       throw new Error('Já existe uma conta com este e-mail.');
     }
@@ -252,46 +403,63 @@ export async function registerWithSupabaseAuth({ nome, email, password }) {
   }
 
   const authUser = signData.user;
+  const session = signData.session;
+
+  authSignupDevLog('signUp_result', {
+    userId: authUser?.id ?? null,
+    hasUser: !!authUser?.id,
+    hasSession: !!session,
+    hasAccessToken: !!session?.access_token,
+    emailConfirmedAt: authUser?.email_confirmed_at ?? null,
+  });
+
   if (!authUser?.id) {
     throw new Error('Registo incompleto. Tente novamente.');
   }
 
-  const insertRow = {
-    auth_user_id: authUser.id,
+  if (!session?.access_token) {
+    authSignupDevLog('signUp_pending_email', {
+      auth_user_id: authUser.id,
+      note: 'Sem sessão JWT — não inserir em public.usuario com cliente anon (RLS).',
+    });
+    return {
+      status: 'pending_email_confirmation',
+      email: emailNorm,
+      authUserId: authUser.id,
+      message: 'Conta criada. Confirme seu e-mail e depois faça login.',
+    };
+  }
+
+  let profileResult = await createInternalProfileRow({
+    authUserId: authUser.id,
     nome: nomeTrim,
-    nome_email: emailNorm,
-    tipo_usuario: 'Consultor',
-    nivel_acesso: 2,
-    status: 'Ativo',
-  };
+    email: emailNorm,
+  });
 
-  const { data: created, error: insErr } = await supabase
-    .from('usuario')
-    .insert([insertRow])
-    .select('id_usuario, nome, nome_email, tipo_usuario, nivel_acesso, status, auth_user_id')
-    .single();
-
-  if (insErr) {
-    await supabase.auth.signOut();
-    clearProfileCache();
-    if (insErr.code === '23505') {
-      throw new Error('Já existe uma conta com este e-mail.');
-    }
-    console.warn('[authService] register insert', insErr.code || insErr.message);
-    throw new Error('Conta criada no Auth, mas falhou ao criar o perfil interno. Contacte o suporte.');
+  if (profileResult.error) {
+    authSignupDevLog('profile_insert_retry_refresh', { auth_user_id: authUser.id });
+    await supabase.auth.refreshSession();
+    profileResult = await createInternalProfileRow({
+      authUserId: authUser.id,
+      nome: nomeTrim,
+      email: emailNorm,
+    });
   }
 
-  if (!signData.session) {
-    await supabase.auth.signOut();
+  if (profileResult.error) {
     clearProfileCache();
-    throw new Error(
-      'Conta criada. Confirme o link enviado ao seu e-mail para iniciar sessão (ou desative confirmação de e-mail no Supabase para testes locais).',
-    );
+    throw new Error(profileInsertErrorMessage(profileResult.error));
   }
 
-  const user = buildAppUser(created, authUser.id);
+  const user = buildAppUser(profileResult.row, authUser.id);
   persistProfileCache(user);
-  return user;
+
+  authSignupDevLog('signUp_complete', {
+    id_usuario: user.id_usuario,
+    auth_user_id: authUser.id,
+  });
+
+  return { status: 'complete', user };
 }
 
 /** Compatível com `Login` / `AuthContext` que enviam `senha`. */
@@ -313,7 +481,6 @@ export async function logout() {
 /**
  * Auth custom + tabela `usuario` (senha em texto no MVP antigo).
  * TODO: substituir por hash ou remover após migração total para Supabase Auth.
- * Não expor tipo/nível/status vindos do cliente no insert público — aqui só leitura legado DEV.
  */
 export const authService = {
   normalizeAuthEmail,
@@ -325,6 +492,8 @@ export const authService = {
   getCurrentSession,
   getCurrentProfile,
   fetchProfileByAuthUserId,
+  createInternalProfileRow,
+  ensureInternalProfileFromAuthUser,
   loginWithSupabaseAuth,
   login,
   registerWithSupabaseAuth,

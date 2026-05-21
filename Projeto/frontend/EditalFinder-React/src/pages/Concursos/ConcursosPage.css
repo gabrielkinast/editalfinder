@@ -1,0 +1,279 @@
+/* Concursos & Seleções — layout tipo portais; tokens --color-* / --badge-* / tema .theme-dark */
+
+.concursos-layout {
+  align-items: flex-start;
+}
+
+.concursos-page .main-content {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.concursos-sidebar .concursos-filters-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  margin-bottom: 12px;
+}
+
+.concursos-filters-title {
+  margin: 0;
+  font-size: 16px;
+  color: var(--color-text);
+}
+
+.concursos-clear-btn {
+  background: var(--portais-clear-btn-bg, var(--color-input-bg));
+  border: 1px solid var(--color-border);
+  color: var(--color-primary);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.concursos-clear-btn:hover {
+  background: var(--portais-clear-hover, rgba(30, 136, 229, 0.08));
+}
+
+.concursos-filters-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.concursos-sidebar .filter-label {
+  line-height: 1.45;
+  margin: 0 0 4px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--color-text);
+  text-transform: none;
+}
+
+.concursos-sidebar .filter-input-large,
+.concursos-sidebar .filter-select {
+  width: 100%;
+}
+
+.concursos-sidebar .filter-check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--color-text);
+  cursor: pointer;
+  user-select: none;
+}
+
+.concursos-main .concursos-subtitle {
+  margin-top: 8px;
+  font-size: 14px;
+  color: var(--color-muted);
+  max-width: 720px;
+  line-height: 1.5;
+}
+
+.concursos-header-block {
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.concursos-tabs {
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.concursos-stats-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.concursos-stat-chip {
+  background: var(--portais-stat-bg, var(--color-surface-soft));
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 10px 14px;
+  min-width: 110px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.concursos-stat-chip strong {
+  font-size: 18px;
+  color: var(--color-text);
+}
+
+.concursos-stat-chip span {
+  font-size: 11px;
+  color: var(--color-muted);
+}
+
+.concursos-stat-chip--ok {
+  border-color: rgba(22, 163, 74, 0.35);
+  background: var(--stat-open-bg);
+}
+
+.concursos-stat-chip--ok strong {
+  color: var(--stat-open-text);
+}
+
+.concursos-stat-chip--warn {
+  border-color: rgba(202, 138, 4, 0.4);
+  background: var(--stat-q-bg);
+}
+
+.concursos-stat-chip--warn strong {
+  color: var(--stat-q-text);
+}
+
+.concursos-stat-chip--tab {
+  background: var(--portais-stat-tab-bg, rgba(30, 136, 229, 0.08));
+  border-color: var(--portais-stat-tab-border, rgba(30, 136, 229, 0.45));
+}
+
+.concursos-stat-chip--tab strong {
+  color: var(--portais-stat-tab-strong, var(--color-primary));
+}
+
+.theme-dark .concursos-stat-chip--tab {
+  box-shadow: 0 1px 0 rgba(96, 165, 250, 0.15);
+}
+
+.concursos-count-line {
+  font-size: 13px;
+  color: var(--color-muted);
+  margin: 0 0 16px;
+}
+
+.concursos-cards-grid {
+  gap: 18px;
+}
+
+.concursos-filter-section-label {
+  margin: 14px 0 4px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+.concursos-clear-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.concursos-stat-chip--info {
+  border-color: rgba(30, 136, 229, 0.35);
+  background: var(--portais-stat-tab-bg, rgba(30, 136, 229, 0.08));
+}
+
+.concursos-stat-chip--info strong {
+  color: var(--portais-stat-tab-strong, var(--color-primary));
+}
+
+.concursos-stat-chip--valid {
+  border-color: rgba(22, 163, 74, 0.4);
+  background: var(--stat-open-bg);
+}
+
+.concursos-stat-chip--valid strong {
+  color: var(--stat-open-text);
+}
+
+.concursos-active-filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 10px;
+  margin-bottom: 12px;
+  padding: 10px 12px;
+  background: var(--portais-stat-bg, var(--color-surface-soft));
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+}
+
+.concursos-active-filters-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-muted);
+  flex-shrink: 0;
+}
+
+.concursos-filter-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.concursos-filter-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  font-size: 12px;
+  line-height: 1.35;
+  color: var(--color-text);
+  background: var(--color-input-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.concursos-filter-chip:hover:not(:disabled) {
+  background: var(--portais-clear-hover, rgba(30, 136, 229, 0.08));
+  border-color: var(--portais-stat-tab-border, rgba(30, 136, 229, 0.45));
+}
+
+.concursos-filter-chip.is-locked {
+  cursor: default;
+  opacity: 0.85;
+}
+
+.concursos-filter-chip:disabled {
+  cursor: default;
+}
+
+.concursos-filter-chip-x {
+  font-size: 14px;
+  line-height: 1;
+  color: var(--color-muted);
+}
+
+.concursos-empty-clear-btn {
+  margin-top: 16px;
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-primary);
+  background: var(--portais-clear-btn-bg, var(--color-input-bg));
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.concursos-empty-clear-btn:hover {
+  background: var(--portais-clear-hover, rgba(30, 136, 229, 0.08));
+}
+
+.concursos-count-line strong {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+  .concursos-layout .sidebar {
+    max-height: none;
+    overflow-x: visible;
+    overflow-y: visible;
+  }
+}

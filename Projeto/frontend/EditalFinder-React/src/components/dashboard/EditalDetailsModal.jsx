@@ -4,6 +4,8 @@ import { formatTipoAmigavel } from '../../utils/edital/formatEditalUi';
 import { coerceStringArray } from '../../utils/edital/coerceArrays';
 import { prazoVencido } from '../../utils/edital/dates';
 import { humanizeTechnicalLabel } from '../../utils/portaisDisplayLabels';
+import { onEditalLinkClick } from '../../utils/edital/logEditalLinkClick';
+import EditalReportProblemButton from '../editais/EditalReportProblemButton';
 
 function Row({ label, children }) {
   return (
@@ -62,7 +64,12 @@ export default function EditalDetailsModal({ edital, onClose }) {
           <Row label="Fonte / órgão">{edital.fonte_recurso_display || edital.orgao}</Row>
           <Row label="Link oficial">
             {edital.linkOriginal ? (
-              <a href={edital.linkOriginal} target="_blank" rel="noreferrer">
+              <a
+                href={edital.linkOriginal}
+                target="_blank"
+                rel="noreferrer"
+                onClick={onEditalLinkClick(edital, 'link', edital.linkOriginal)}
+              >
                 Abrir site
               </a>
             ) : (
@@ -71,7 +78,12 @@ export default function EditalDetailsModal({ edital, onClose }) {
           </Row>
           <Row label="PDF">
             {edital.pdfUrl ? (
-              <a href={edital.pdfUrl} target="_blank" rel="noreferrer">
+              <a
+                href={edital.pdfUrl}
+                target="_blank"
+                rel="noreferrer"
+                onClick={onEditalLinkClick(edital, 'pdf_url', edital.pdfUrl)}
+              >
                 Abrir PDF
               </a>
             ) : (
@@ -118,7 +130,8 @@ export default function EditalDetailsModal({ edital, onClose }) {
           )}
         </div>
       </div>
-      <div className="edital-detail-footer">
+      <div className="edital-detail-footer edital-detail-footer-actions">
+        <EditalReportProblemButton edital={edital} variant="details" />
         <button type="button" className="btn-view" onClick={onClose}>
           Fechar
         </button>
