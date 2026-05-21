@@ -1,0 +1,552 @@
+{
+  "audited_at": "2026-05-20T22:39:57Z",
+  "rule_version": "editais_visibility_v1",
+  "origin": "supabase:edital source=all",
+  "total_analisado": 1232,
+  "visiveis": 242,
+  "review": 504,
+  "hidden": 486,
+  "por_visibility": {
+    "visible_recent_strong_signal": 190,
+    "review_missing_deadline": 504,
+    "hidden_institutional": 109,
+    "visible_continuous_flow": 4,
+    "hidden_historical": 198,
+    "hidden_expired": 36,
+    "hidden_duplicate": 75,
+    "hidden_resultado": 50,
+    "hidden_not_opportunity": 18,
+    "visible_current": 48
+  },
+  "hidden_por_motivo": {
+    "hidden_institutional": 109,
+    "hidden_historical": 198,
+    "hidden_expired": 36,
+    "hidden_duplicate": 75,
+    "hidden_resultado": 50,
+    "hidden_not_opportunity": 18
+  },
+  "por_fonte_recurso": {
+    "AMAZUL": 20,
+    "BASA": 30,
+    "UKRI Funding": 12,
+    "ESA OSIP": 17,
+    "EIT": 16,
+    "University of Science and Technology of China": 6,
+    "NSFC": 30,
+    "MOST China": 16,
+    "China International Tendering (MOFCOM)": 131,
+    "China MOD (public)": 2,
+    "CGN": 16,
+    "CAS": 31,
+    "BNDES": 38,
+    "Apex Brasil": 4,
+    "WELLCOME": 11,
+    "Thales Suppliers": 2,
+    "Softex": 2,
+    "Ministério da Saúde": 1,
+    "Rheinmetall Suppliers": 2,
+    "Petrobras": 4,
+    "NUCLEP": 20,
+    "NSF": 10,
+    "NATO DIANA": 2,
+    "MMA / FNMA": 2,
+    "MCTI": 3,
+    "MAPA": 1,
+    "Lockheed Martin Suppliers": 16,
+    "RIKEN": 11,
+    "QST": 5,
+    "NIMS": 13,
+    "NEDO": 16,
+    "Japan MOD": 2,
+    "Mitsubishi Heavy Industries (Suppliers)": 12,
+    "MEXT": 1,
+    "KEK": 29,
+    "JSPS": 14,
+    "KAKENHI": 26,
+    "JETRO Government Procurement": 11,
+    "IHI Corporation (Suppliers)": 8,
+    "ATLA": 14,
+    "AIST": 9,
+    "IPEN": 14,
+    "IMPA": 1,
+    "IARPA": 8,
+    "HORIZON_EUROPE": 25,
+    "Grants.gov": 127,
+    "General Dynamics Suppliers": 10,
+    "FNDE": 1,
+    "Fundação Araucária": 88,
+    "FAPESC": 10,
+    "FAPERGS": 6,
+    "FAPEMIG": 7,
+    "European Defence Fund": 18,
+    "Eureka Network": 23,
+    "ERC": 8,
+    "EMBRAPII": 21,
+    "ELETRONUCLEAR": 1,
+    "DOE_ARPAE": 14,
+    "DoD SBIR/STTR": 15,
+    "DIU": 9,
+    "Ministério da Defesa": 10,
+    "DARPA Opportunities": 15,
+    "CONFAP": 5,
+    "Compras.gov Defesa": 1,
+    "CNPQ": 14,
+    "CNEN": 1,
+    "China Tendering & Bidding": 6,
+    "CAEA": 1,
+    "CBPF": 1,
+    "CAPES": 1,
+    "CAIXA": 2,
+    "BAE Systems Suppliers": 3,
+    "BADESUL": 7,
+    "ANP": 2,
+    "ANEEL": 27,
+    "Ambev": 7,
+    "AFWERX": 8,
+    "PLATAFORMA_INDUSTRIA": 1,
+    "SENAI": 22,
+    "BDMG": 38,
+    "EIC": 14,
+    "BNB": 24
+  },
+  "fontes_maior_ruido": [
+    {
+      "fonte_recurso": "China International Tendering (MOFCOM)",
+      "total": 131,
+      "hidden": 131,
+      "hidden_pct": 100.0,
+      "recommendation": "precisa_melhoria_crawler"
+    },
+    {
+      "fonte_recurso": "EMBRAPII",
+      "total": 21,
+      "hidden": 21,
+      "hidden_pct": 100.0,
+      "recommendation": "precisa_melhoria_crawler"
+    },
+    {
+      "fonte_recurso": "NUCLEP",
+      "total": 20,
+      "hidden": 20,
+      "hidden_pct": 100.0,
+      "recommendation": "precisa_melhoria_crawler"
+    },
+    {
+      "fonte_recurso": "JETRO Government Procurement",
+      "total": 11,
+      "hidden": 11,
+      "hidden_pct": 100.0,
+      "recommendation": "precisa_melhoria_crawler"
+    },
+    {
+      "fonte_recurso": "IARPA",
+      "total": 8,
+      "hidden": 8,
+      "hidden_pct": 100.0,
+      "recommendation": "precisa_melhoria_crawler"
+    },
+    {
+      "fonte_recurso": "Ambev",
+      "total": 7,
+      "hidden": 7,
+      "hidden_pct": 100.0,
+      "recommendation": "precisa_melhoria_crawler"
+    },
+    {
+      "fonte_recurso": "China Tendering & Bidding",
+      "total": 6,
+      "hidden": 6,
+      "hidden_pct": 100.0,
+      "recommendation": "precisa_melhoria_crawler"
+    },
+    {
+      "fonte_recurso": "MCTI",
+      "total": 3,
+      "hidden": 3,
+      "hidden_pct": 100.0,
+      "recommendation": "precisa_melhoria_crawler"
+    },
+    {
+      "fonte_recurso": "ANP",
+      "total": 2,
+      "hidden": 2,
+      "hidden_pct": 100.0,
+      "recommendation": "precisa_melhoria_crawler"
+    },
+    {
+      "fonte_recurso": "China MOD (public)",
+      "total": 2,
+      "hidden": 2,
+      "hidden_pct": 100.0,
+      "recommendation": "precisa_melhoria_crawler"
+    },
+    {
+      "fonte_recurso": "NATO DIANA",
+      "total": 2,
+      "hidden": 2,
+      "hidden_pct": 100.0,
+      "recommendation": "precisa_melhoria_crawler"
+    },
+    {
+      "fonte_recurso": "Compras.gov Defesa",
+      "total": 1,
+      "hidden": 1,
+      "hidden_pct": 100.0,
+      "recommendation": "precisa_melhoria_crawler"
+    },
+    {
+      "fonte_recurso": "IMPA",
+      "total": 1,
+      "hidden": 1,
+      "hidden_pct": 100.0,
+      "recommendation": "precisa_melhoria_crawler"
+    },
+    {
+      "fonte_recurso": "MEXT",
+      "total": 1,
+      "hidden": 1,
+      "hidden_pct": 100.0,
+      "recommendation": "precisa_melhoria_crawler"
+    },
+    {
+      "fonte_recurso": "DOE_ARPAE",
+      "total": 14,
+      "hidden": 13,
+      "hidden_pct": 92.9,
+      "recommendation": "precisa_melhoria_crawler"
+    }
+  ],
+  "fontes_mais_atuais": [
+    {
+      "fonte_recurso": "FAPESC",
+      "visible_current": 6,
+      "total": 10,
+      "pct": 60.0
+    },
+    {
+      "fonte_recurso": "FAPERGS",
+      "visible_current": 3,
+      "total": 6,
+      "pct": 50.0
+    },
+    {
+      "fonte_recurso": "Grants.gov",
+      "visible_current": 36,
+      "total": 127,
+      "pct": 28.3
+    },
+    {
+      "fonte_recurso": "CONFAP",
+      "visible_current": 1,
+      "total": 5,
+      "pct": 20.0
+    },
+    {
+      "fonte_recurso": "CNPQ",
+      "visible_current": 2,
+      "total": 14,
+      "pct": 14.3
+    },
+    {
+      "fonte_recurso": "China International Tendering (MOFCOM)",
+      "visible_current": 0,
+      "total": 131,
+      "pct": 0.0
+    },
+    {
+      "fonte_recurso": "BNDES",
+      "visible_current": 0,
+      "total": 38,
+      "pct": 0.0
+    },
+    {
+      "fonte_recurso": "BDMG",
+      "visible_current": 0,
+      "total": 38,
+      "pct": 0.0
+    },
+    {
+      "fonte_recurso": "EMBRAPII",
+      "visible_current": 0,
+      "total": 21,
+      "pct": 0.0
+    },
+    {
+      "fonte_recurso": "NUCLEP",
+      "visible_current": 0,
+      "total": 20,
+      "pct": 0.0
+    }
+  ],
+  "exemplos_por_fonte": {
+    "China International Tendering (MOFCOM)": {
+      "ruido": [
+        {
+          "id_edital": 1814,
+          "titulo": "中国共产党德钦县委员会机构编...",
+          "visibility": "hidden_historical",
+          "reason": "Sem prazo futuro, fluxo contínuo ou sinal forte recente."
+        },
+        {
+          "id_edital": 1813,
+          "titulo": "全国各部门及地方机电进出口办公室",
+          "visibility": "hidden_historical",
+          "reason": "Sem prazo futuro, fluxo contínuo ou sinal forte recente."
+        },
+        {
+          "id_edital": 1812,
+          "titulo": "中国邮政储蓄银行广西区分行20...",
+          "visibility": "hidden_historical",
+          "reason": "Sem prazo futuro, fluxo contínuo ou sinal forte recente."
+        }
+      ],
+      "bons": []
+    },
+    "EMBRAPII": {
+      "ruido": [
+        {
+          "id_edital": 853,
+          "titulo": "Chamada Pública para Capacitação em Maturidade para Grupos de Pesquisa em ICTs da Região Norte n°01/",
+          "visibility": "hidden_institutional",
+          "reason": "Sinais de página institucional (home, conduta, governança, etc.)."
+        },
+        {
+          "id_edital": 852,
+          "titulo": "Chamada Pública Unidades Embrapii nº 01/2025",
+          "visibility": "hidden_institutional",
+          "reason": "Sinais de página institucional (home, conduta, governança, etc.)."
+        },
+        {
+          "id_edital": 851,
+          "titulo": "Chamada Pública Centro de Competência Embrapii nº 01/2025",
+          "visibility": "hidden_institutional",
+          "reason": "Sinais de página institucional (home, conduta, governança, etc.)."
+        }
+      ],
+      "bons": []
+    },
+    "NUCLEP": {
+      "ruido": [
+        {
+          "id_edital": 1449,
+          "titulo": "Convênios e Transferências",
+          "visibility": "hidden_institutional",
+          "reason": "Sinais de página institucional (home, conduta, governança, etc.)."
+        },
+        {
+          "id_edital": 1448,
+          "titulo": "Auditorias",
+          "visibility": "hidden_institutional",
+          "reason": "Sinais de página institucional (home, conduta, governança, etc.)."
+        },
+        {
+          "id_edital": 1447,
+          "titulo": "Paticipação Social",
+          "visibility": "hidden_institutional",
+          "reason": "Sinais de página institucional (home, conduta, governança, etc.)."
+        }
+      ],
+      "bons": []
+    },
+    "JETRO Government Procurement": {
+      "ruido": [
+        {
+          "id_edital": 1240,
+          "titulo": "National Government",
+          "visibility": "hidden_historical",
+          "reason": "Referência temporal ≤2024 sem prazo futuro nem fluxo contínuo."
+        },
+        {
+          "id_edital": 1239,
+          "titulo": "National Government",
+          "visibility": "hidden_duplicate",
+          "reason": "hash_deduplicacao duplicado."
+        },
+        {
+          "id_edital": 1238,
+          "titulo": "National Government",
+          "visibility": "hidden_duplicate",
+          "reason": "hash_deduplicacao duplicado."
+        }
+      ],
+      "bons": []
+    },
+    "IARPA": {
+      "ruido": [
+        {
+          "id_edital": 1183,
+          "titulo": "Intelligence Community Centers for Academic Excellence",
+          "visibility": "hidden_expired",
+          "reason": "Prazo de envio/inscrição encerrado sem fluxo contínuo."
+        },
+        {
+          "id_edital": 1182,
+          "titulo": "Intelligence Community Centers For Academic Excellence",
+          "visibility": "hidden_expired",
+          "reason": "Prazo de envio/inscrição encerrado sem fluxo contínuo."
+        },
+        {
+          "id_edital": 1181,
+          "titulo": "BROAD AGENCY ANNOUNCEMENT FOR Entangled Logical Qubits (ELQ)",
+          "visibility": "hidden_expired",
+          "reason": "Prazo de envio/inscrição encerrado sem fluxo contínuo."
+        }
+      ],
+      "bons": []
+    },
+    "Ambev": {
+      "ruido": [
+        {
+          "id_edital": 443,
+          "titulo": "Health And Wellness",
+          "visibility": "hidden_historical",
+          "reason": "Sem prazo futuro, fluxo contínuo ou sinal forte recente."
+        },
+        {
+          "id_edital": 442,
+          "titulo": "Inclusive Growth",
+          "visibility": "hidden_historical",
+          "reason": "Sem prazo futuro, fluxo contínuo ou sinal forte recente."
+        },
+        {
+          "id_edital": 441,
+          "titulo": "Nature And Biodiversity",
+          "visibility": "hidden_historical",
+          "reason": "Sem prazo futuro, fluxo contínuo ou sinal forte recente."
+        }
+      ],
+      "bons": []
+    },
+    "China Tendering & Bidding": {
+      "ruido": [
+        {
+          "id_edital": 728,
+          "titulo": "中国招标投标公共服务平台",
+          "visibility": "hidden_historical",
+          "reason": "Sem prazo futuro, fluxo contínuo ou sinal forte recente."
+        },
+        {
+          "id_edital": 727,
+          "titulo": "问题内容：广安祥瑞物业管理有限公司参与广安市主城区城南片区环卫作业采购服务项目(项目编号:511601202100044)公开招标采购活动并中标，提交的投标文件中业绩情况与事实不符，属于提供虚假材料谋",
+          "visibility": "hidden_historical",
+          "reason": "Sem prazo futuro, fluxo contínuo ou sinal forte recente."
+        },
+        {
+          "id_edital": 726,
+          "titulo": "【山西】吉县苹果全产业链--数智蜂箱采购项目",
+          "visibility": "hidden_historical",
+          "reason": "Sem prazo futuro, fluxo contínuo ou sinal forte recente."
+        }
+      ],
+      "bons": []
+    },
+    "MCTI": {
+      "ruido": [
+        {
+          "id_edital": 1415,
+          "titulo": "EDITAL CHAMAMENTO PÚBLICO Nº 11, DE 15 DE JUNHO DE 2021",
+          "visibility": "hidden_historical",
+          "reason": "Referência temporal ≤2024 sem prazo futuro nem fluxo contínuo."
+        },
+        {
+          "id_edital": 1414,
+          "titulo": "EDITAL Nº 17/2021/MCTI - PROCESSO DE ESCOLHA NOVO DIRETOR MAST/MCTI",
+          "visibility": "hidden_historical",
+          "reason": "Referência temporal ≤2024 sem prazo futuro nem fluxo contínuo."
+        },
+        {
+          "id_edital": 1413,
+          "titulo": "EDITAL Nº 18/2021/MCTI - PROCESSO DE ESCOLHA NOVO DIRETOR OBSERVATÓRIO NACIONAL/MCTI",
+          "visibility": "hidden_historical",
+          "reason": "Referência temporal ≤2024 sem prazo futuro nem fluxo contínuo."
+        }
+      ],
+      "bons": []
+    }
+  },
+  "recomendacoes_por_fonte": {
+    "China International Tendering (MOFCOM)": "precisa_melhoria_crawler",
+    "BNDES": "precisa_melhoria_crawler",
+    "BDMG": "precisa_melhoria_crawler",
+    "EMBRAPII": "precisa_melhoria_crawler",
+    "NUCLEP": "precisa_melhoria_crawler",
+    "Fundação Araucária": "manter_com_curadoria",
+    "AMAZUL": "precisa_melhoria_crawler",
+    "Grants.gov": "manter_com_curadoria",
+    "DOE_ARPAE": "precisa_melhoria_crawler",
+    "CNPQ": "precisa_melhoria_crawler",
+    "IPEN": "precisa_melhoria_crawler",
+    "Mitsubishi Heavy Industries (Suppliers)": "precisa_melhoria_crawler",
+    "JETRO Government Procurement": "precisa_melhoria_crawler",
+    "ANEEL": "revisar_manual",
+    "BNB": "manter_ativa",
+    "IARPA": "precisa_melhoria_crawler",
+    "BASA": "manter_com_curadoria",
+    "DoD SBIR/STTR": "latente",
+    "IHI Corporation (Suppliers)": "precisa_melhoria_crawler",
+    "Ambev": "precisa_melhoria_crawler",
+    "EIT": "revisar_manual",
+    "FAPEMIG": "precisa_melhoria_crawler",
+    "China Tendering & Bidding": "precisa_melhoria_crawler",
+    "SENAI": "manter_ativa",
+    "European Defence Fund": "manter_com_curadoria",
+    "DARPA Opportunities": "manter_com_curadoria",
+    "WELLCOME": "revisar_manual",
+    "FAPESC": "manter_ativa",
+    "Eureka Network": "manter_ativa",
+    "ESA OSIP": "manter_ativa",
+    "NIMS": "manter_com_curadoria",
+    "Ministério da Defesa": "manter_com_curadoria",
+    "DIU": "manter_com_curadoria",
+    "Apex Brasil": "precisa_melhoria_crawler",
+    "MCTI": "precisa_melhoria_crawler",
+    "CAS": "manter_com_curadoria",
+    "NSFC": "manter_com_curadoria",
+    "KAKENHI": "manter_com_curadoria",
+    "Lockheed Martin Suppliers": "manter_com_curadoria",
+    "ATLA": "manter_com_curadoria",
+    "General Dynamics Suppliers": "manter_com_curadoria",
+    "CONFAP": "manter_ativa",
+    "Petrobras": "latente",
+    "ANP": "precisa_melhoria_crawler",
+    "China MOD (public)": "precisa_melhoria_crawler",
+    "NATO DIANA": "precisa_melhoria_crawler",
+    "MOST China": "manter_com_curadoria",
+    "UKRI Funding": "manter_ativa",
+    "NSF": "manter_com_curadoria",
+    "AFWERX": "manter_com_curadoria",
+    "FAPERGS": "manter_ativa",
+    "QST": "manter_com_curadoria",
+    "CAIXA": "latente",
+    "Japan MOD": "latente",
+    "MMA / FNMA": "latente",
+    "Compras.gov Defesa": "precisa_melhoria_crawler",
+    "IMPA": "precisa_melhoria_crawler",
+    "MEXT": "precisa_melhoria_crawler",
+    "KEK": "manter_ativa",
+    "HORIZON_EUROPE": "manter_com_curadoria",
+    "CGN": "manter_com_curadoria",
+    "NEDO": "manter_com_curadoria",
+    "EIC": "manter_ativa",
+    "JSPS": "manter_com_curadoria",
+    "RIKEN": "manter_com_curadoria",
+    "AIST": "manter_ativa",
+    "ERC": "manter_ativa",
+    "BADESUL": "manter_com_curadoria",
+    "University of Science and Technology of China": "manter_ativa",
+    "BAE Systems Suppliers": "manter_com_curadoria",
+    "Rheinmetall Suppliers": "manter_com_curadoria",
+    "Softex": "manter_com_curadoria",
+    "Thales Suppliers": "manter_com_curadoria",
+    "CAEA": "manter_com_curadoria",
+    "CAPES": "manter_com_curadoria",
+    "CBPF": "manter_com_curadoria",
+    "CNEN": "manter_ativa",
+    "ELETRONUCLEAR": "manter_com_curadoria",
+    "FNDE": "manter_com_curadoria",
+    "MAPA": "manter_com_curadoria",
+    "Ministério da Saúde": "manter_com_curadoria",
+    "PLATAFORMA_INDUSTRIA": "manter_ativa"
+  }
+}

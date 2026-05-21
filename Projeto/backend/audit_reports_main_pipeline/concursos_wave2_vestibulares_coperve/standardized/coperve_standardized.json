@@ -1,0 +1,605 @@
+[
+  {
+    "titulo": "Vestibular Unificado UFSC/IFSC/IFC 2026",
+    "tipo_selecao": "vestibular",
+    "categoria": "vestibular_ufsc_coperve",
+    "orgao": "Coperve — Comissão Permanente do Vestibular / UFSC",
+    "instituicao": "Universidade Federal de Santa Catarina (UFSC)",
+    "banca": "Coperve",
+    "cargo": null,
+    "curso": null,
+    "area": null,
+    "nivel_escolaridade": "ensino_medio",
+    "estado": "SC",
+    "municipio": "Florianópolis",
+    "regiao": null,
+    "modalidade": null,
+    "numero_vagas": null,
+    "salario_min": null,
+    "salario_max": null,
+    "taxa_inscricao": null,
+    "data_publicacao": "2025-09-04",
+    "data_inicio_inscricao": null,
+    "data_fim_inscricao": null,
+    "data_prova": null,
+    "status": "ativo",
+    "link": "https://vestibularunificado2026.ufsc.br/edital",
+    "link_edital": "http://vestibularunificado2026.paginas.ufsc.br/files/2026/01/Histórico-Escolar-2026-1.pdf",
+    "fonte": "coperve",
+    "fonte_tipo": "universidade",
+    "validacao_status": "incompleto",
+    "qualidade_dado": "media",
+    "tags": [
+      "coperve",
+      "ufsc",
+      "wave2",
+      "vestibular"
+    ],
+    "extras": {
+      "crawler": "main_vestibulares_coperve",
+      "wave": "concursos_wave2_vestibulares_coperve",
+      "fetched_at_utc": "2026-05-16T20:19:19.562130+00:00",
+      "listing_urls": [
+        "https://coperve.ufsc.br/",
+        "https://coperve.ufsc.br/proximos-vestibulares/",
+        "https://coperve.paginas.ufsc.br/proximos-vestibulares/"
+      ],
+      "portal_inscricao_url": null,
+      "official_link_missing": false,
+      "extracted_fields": [],
+      "missing_core_fields": [
+        "data_fim_inscricao",
+        "data_prova",
+        "numero_vagas"
+      ],
+      "extraction_confidence": "media",
+      "source_is_aggregator": false,
+      "value_extraction_notes": [],
+      "tipo_selecao_evidencia": "texto:vestibular",
+      "diagnostico_fontes_alternativas": {
+        "vunesp": "403/WAF ou DNS",
+        "comvest": "robots Disallow /",
+        "fuvest": "SSL variável por ambiente"
+      }
+    },
+    "ativo": true
+  },
+  {
+    "titulo": "Coperve – Comissão Permanente do Vestibular",
+    "tipo_selecao": "programa_ingresso",
+    "categoria": "vestibular_ufsc_coperve",
+    "orgao": "Coperve — Comissão Permanente do Vestibular / UFSC",
+    "instituicao": "Universidade Federal de Santa Catarina (UFSC)",
+    "banca": "Coperve",
+    "cargo": null,
+    "curso": null,
+    "area": null,
+    "nivel_escolaridade": "ensino_medio",
+    "estado": "SC",
+    "municipio": "Florianópolis",
+    "regiao": null,
+    "modalidade": null,
+    "numero_vagas": null,
+    "salario_min": null,
+    "salario_max": null,
+    "taxa_inscricao": null,
+    "data_publicacao": "2025-09-03",
+    "data_inicio_inscricao": null,
+    "data_fim_inscricao": null,
+    "data_prova": null,
+    "status": "ativo",
+    "link": "https://coperve.paginas.ufsc.br/processo-seletivo-suplementares",
+    "link_edital": null,
+    "fonte": "coperve",
+    "fonte_tipo": "universidade",
+    "validacao_status": "incompleto",
+    "qualidade_dado": "baixa",
+    "tags": [
+      "coperve",
+      "ufsc",
+      "wave2",
+      "vestibular"
+    ],
+    "extras": {
+      "crawler": "main_vestibulares_coperve",
+      "wave": "concursos_wave2_vestibulares_coperve",
+      "fetched_at_utc": "2026-05-16T20:19:26.523704+00:00",
+      "listing_urls": [
+        "https://coperve.ufsc.br/",
+        "https://coperve.ufsc.br/proximos-vestibulares/",
+        "https://coperve.paginas.ufsc.br/proximos-vestibulares/"
+      ],
+      "portal_inscricao_url": null,
+      "official_link_missing": true,
+      "extracted_fields": [],
+      "missing_core_fields": [
+        "data_fim_inscricao",
+        "data_prova",
+        "link_edital",
+        "numero_vagas"
+      ],
+      "extraction_confidence": "media",
+      "source_is_aggregator": false,
+      "value_extraction_notes": [
+        "edital_pdf_nao_encontrado_no_html"
+      ],
+      "tipo_selecao_evidencia": "texto:processo_seletivo_ingresso",
+      "diagnostico_fontes_alternativas": {
+        "vunesp": "403/WAF ou DNS",
+        "comvest": "robots Disallow /",
+        "fuvest": "SSL variável por ambiente"
+      }
+    },
+    "ativo": true
+  },
+  {
+    "titulo": "Coperve – Comissão Permanente do Vestibular",
+    "tipo_selecao": "programa_ingresso",
+    "categoria": "vestibular_ufsc_coperve",
+    "orgao": "Coperve — Comissão Permanente do Vestibular / UFSC",
+    "instituicao": "Universidade Federal de Santa Catarina (UFSC)",
+    "banca": "Coperve",
+    "cargo": null,
+    "curso": "graduação ao grupo étnico-racial negro",
+    "area": null,
+    "nivel_escolaridade": "ensino_medio",
+    "estado": "SC",
+    "municipio": "Florianópolis",
+    "regiao": null,
+    "modalidade": null,
+    "numero_vagas": null,
+    "salario_min": null,
+    "salario_max": null,
+    "taxa_inscricao": null,
+    "data_publicacao": "2025-11-01",
+    "data_inicio_inscricao": null,
+    "data_fim_inscricao": null,
+    "data_prova": null,
+    "status": "ativo",
+    "link": "https://coperve.paginas.ufsc.br/vagas-suplementares-para-negros",
+    "link_edital": null,
+    "fonte": "coperve",
+    "fonte_tipo": "universidade",
+    "validacao_status": "incompleto",
+    "qualidade_dado": "baixa",
+    "tags": [
+      "coperve",
+      "ufsc",
+      "wave2",
+      "vestibular"
+    ],
+    "extras": {
+      "crawler": "main_vestibulares_coperve",
+      "wave": "concursos_wave2_vestibulares_coperve",
+      "fetched_at_utc": "2026-05-16T20:19:28.944675+00:00",
+      "listing_urls": [
+        "https://coperve.ufsc.br/",
+        "https://coperve.ufsc.br/proximos-vestibulares/",
+        "https://coperve.paginas.ufsc.br/proximos-vestibulares/"
+      ],
+      "portal_inscricao_url": null,
+      "official_link_missing": true,
+      "extracted_fields": [],
+      "missing_core_fields": [
+        "data_fim_inscricao",
+        "data_prova",
+        "link_edital",
+        "numero_vagas"
+      ],
+      "extraction_confidence": "media",
+      "source_is_aggregator": false,
+      "value_extraction_notes": [
+        "edital_pdf_nao_encontrado_no_html"
+      ],
+      "tipo_selecao_evidencia": "texto:processo_seletivo_ingresso",
+      "diagnostico_fontes_alternativas": {
+        "vunesp": "403/WAF ou DNS",
+        "comvest": "robots Disallow /",
+        "fuvest": "SSL variável por ambiente"
+      }
+    },
+    "ativo": true
+  },
+  {
+    "titulo": "Coperve – Comissão Permanente do Vestibular",
+    "tipo_selecao": "programa_ingresso",
+    "categoria": "vestibular_ufsc_coperve",
+    "orgao": "Coperve — Comissão Permanente do Vestibular / UFSC",
+    "instituicao": "Universidade Federal de Santa Catarina (UFSC)",
+    "banca": "Coperve",
+    "cargo": null,
+    "curso": "graduação em Letras-Libras",
+    "area": null,
+    "nivel_escolaridade": "ensino_medio",
+    "estado": "SC",
+    "municipio": "Florianópolis",
+    "regiao": null,
+    "modalidade": null,
+    "numero_vagas": null,
+    "salario_min": null,
+    "salario_max": null,
+    "taxa_inscricao": null,
+    "data_publicacao": "2025-09-03",
+    "data_inicio_inscricao": null,
+    "data_fim_inscricao": null,
+    "data_prova": null,
+    "status": "ativo",
+    "link": "https://coperve.paginas.ufsc.br/processo-seletivo-libras",
+    "link_edital": null,
+    "fonte": "coperve",
+    "fonte_tipo": "universidade",
+    "validacao_status": "incompleto",
+    "qualidade_dado": "baixa",
+    "tags": [
+      "coperve",
+      "ufsc",
+      "wave2",
+      "vestibular"
+    ],
+    "extras": {
+      "crawler": "main_vestibulares_coperve",
+      "wave": "concursos_wave2_vestibulares_coperve",
+      "fetched_at_utc": "2026-05-16T20:19:31.973847+00:00",
+      "listing_urls": [
+        "https://coperve.ufsc.br/",
+        "https://coperve.ufsc.br/proximos-vestibulares/",
+        "https://coperve.paginas.ufsc.br/proximos-vestibulares/"
+      ],
+      "portal_inscricao_url": null,
+      "official_link_missing": true,
+      "extracted_fields": [],
+      "missing_core_fields": [
+        "data_fim_inscricao",
+        "data_prova",
+        "link_edital",
+        "numero_vagas"
+      ],
+      "extraction_confidence": "media",
+      "source_is_aggregator": false,
+      "value_extraction_notes": [
+        "edital_pdf_nao_encontrado_no_html"
+      ],
+      "tipo_selecao_evidencia": "texto:processo_seletivo_ingresso",
+      "diagnostico_fontes_alternativas": {
+        "vunesp": "403/WAF ou DNS",
+        "comvest": "robots Disallow /",
+        "fuvest": "SSL variável por ambiente"
+      }
+    },
+    "ativo": true
+  },
+  {
+    "titulo": "Coperve – Comissão Permanente do Vestibular",
+    "tipo_selecao": "programa_ingresso",
+    "categoria": "vestibular_ufsc_coperve",
+    "orgao": "Coperve — Comissão Permanente do Vestibular / UFSC",
+    "instituicao": "Universidade Federal de Santa Catarina (UFSC)",
+    "banca": "Coperve",
+    "cargo": null,
+    "curso": "Licenciatura em Educação do Campo",
+    "area": null,
+    "nivel_escolaridade": "ensino_medio",
+    "estado": "SC",
+    "municipio": "Florianópolis",
+    "regiao": null,
+    "modalidade": null,
+    "numero_vagas": null,
+    "salario_min": null,
+    "salario_max": null,
+    "taxa_inscricao": null,
+    "data_publicacao": "2025-08-19",
+    "data_inicio_inscricao": null,
+    "data_fim_inscricao": null,
+    "data_prova": null,
+    "status": "ativo",
+    "link": "https://coperve.paginas.ufsc.br/processo-seletivo-educacao-do-campo",
+    "link_edital": null,
+    "fonte": "coperve",
+    "fonte_tipo": "universidade",
+    "validacao_status": "incompleto",
+    "qualidade_dado": "baixa",
+    "tags": [
+      "coperve",
+      "ufsc",
+      "wave2",
+      "vestibular"
+    ],
+    "extras": {
+      "crawler": "main_vestibulares_coperve",
+      "wave": "concursos_wave2_vestibulares_coperve",
+      "fetched_at_utc": "2026-05-16T20:19:34.326548+00:00",
+      "listing_urls": [
+        "https://coperve.ufsc.br/",
+        "https://coperve.ufsc.br/proximos-vestibulares/",
+        "https://coperve.paginas.ufsc.br/proximos-vestibulares/"
+      ],
+      "portal_inscricao_url": null,
+      "official_link_missing": true,
+      "extracted_fields": [],
+      "missing_core_fields": [
+        "data_fim_inscricao",
+        "data_prova",
+        "link_edital",
+        "numero_vagas"
+      ],
+      "extraction_confidence": "media",
+      "source_is_aggregator": false,
+      "value_extraction_notes": [
+        "edital_pdf_nao_encontrado_no_html"
+      ],
+      "tipo_selecao_evidencia": "texto:processo_seletivo_ingresso",
+      "diagnostico_fontes_alternativas": {
+        "vunesp": "403/WAF ou DNS",
+        "comvest": "robots Disallow /",
+        "fuvest": "SSL variável por ambiente"
+      }
+    },
+    "ativo": true
+  },
+  {
+    "titulo": "Coperve – Comissão Permanente do Vestibular",
+    "tipo_selecao": "programa_ingresso",
+    "categoria": "vestibular_ufsc_coperve",
+    "orgao": "Coperve — Comissão Permanente do Vestibular / UFSC",
+    "instituicao": "Universidade Federal de Santa Catarina (UFSC)",
+    "banca": "Coperve",
+    "cargo": null,
+    "curso": null,
+    "area": null,
+    "nivel_escolaridade": "ensino_medio",
+    "estado": "SC",
+    "municipio": "Florianópolis",
+    "regiao": null,
+    "modalidade": null,
+    "numero_vagas": null,
+    "salario_min": null,
+    "salario_max": null,
+    "taxa_inscricao": null,
+    "data_publicacao": null,
+    "data_inicio_inscricao": null,
+    "data_fim_inscricao": null,
+    "data_prova": null,
+    "status": "ativo",
+    "link": "https://coperve.paginas.ufsc.br/processo-seletivo-refugiados",
+    "link_edital": null,
+    "fonte": "coperve",
+    "fonte_tipo": "universidade",
+    "validacao_status": "incompleto",
+    "qualidade_dado": "baixa",
+    "tags": [
+      "coperve",
+      "ufsc",
+      "wave2",
+      "vestibular"
+    ],
+    "extras": {
+      "crawler": "main_vestibulares_coperve",
+      "wave": "concursos_wave2_vestibulares_coperve",
+      "fetched_at_utc": "2026-05-16T20:19:36.816440+00:00",
+      "listing_urls": [
+        "https://coperve.ufsc.br/",
+        "https://coperve.ufsc.br/proximos-vestibulares/",
+        "https://coperve.paginas.ufsc.br/proximos-vestibulares/"
+      ],
+      "portal_inscricao_url": null,
+      "official_link_missing": true,
+      "extracted_fields": [],
+      "missing_core_fields": [
+        "data_fim_inscricao",
+        "data_prova",
+        "link_edital",
+        "numero_vagas"
+      ],
+      "extraction_confidence": "media",
+      "source_is_aggregator": false,
+      "value_extraction_notes": [
+        "edital_pdf_nao_encontrado_no_html"
+      ],
+      "tipo_selecao_evidencia": "texto:processo_seletivo_ingresso",
+      "diagnostico_fontes_alternativas": {
+        "vunesp": "403/WAF ou DNS",
+        "comvest": "robots Disallow /",
+        "fuvest": "SSL variável por ambiente"
+      }
+    },
+    "ativo": true
+  },
+  {
+    "titulo": "Coperve – Comissão Permanente do Vestibular",
+    "tipo_selecao": "programa_ingresso",
+    "categoria": "vestibular_ufsc_coperve",
+    "orgao": "Coperve — Comissão Permanente do Vestibular / UFSC",
+    "instituicao": "Universidade Federal de Santa Catarina (UFSC)",
+    "banca": "Coperve",
+    "cargo": null,
+    "curso": null,
+    "area": null,
+    "nivel_escolaridade": "ensino_medio",
+    "estado": "SC",
+    "municipio": "Florianópolis",
+    "regiao": null,
+    "modalidade": null,
+    "numero_vagas": null,
+    "salario_min": null,
+    "salario_max": null,
+    "taxa_inscricao": null,
+    "data_publicacao": null,
+    "data_inicio_inscricao": null,
+    "data_fim_inscricao": null,
+    "data_prova": null,
+    "status": "ativo",
+    "link": "https://coperve.ufsc.br/proximos-vestibulares",
+    "link_edital": "http://coperve.paginas.ufsc.br/files/2026/02/Programa-Vestibular-2027.pdf",
+    "fonte": "coperve",
+    "fonte_tipo": "universidade",
+    "validacao_status": "incompleto",
+    "qualidade_dado": "media",
+    "tags": [
+      "coperve",
+      "ufsc",
+      "wave2",
+      "vestibular"
+    ],
+    "extras": {
+      "crawler": "main_vestibulares_coperve",
+      "wave": "concursos_wave2_vestibulares_coperve",
+      "fetched_at_utc": "2026-05-16T20:19:39.156406+00:00",
+      "listing_urls": [
+        "https://coperve.ufsc.br/",
+        "https://coperve.ufsc.br/proximos-vestibulares/",
+        "https://coperve.paginas.ufsc.br/proximos-vestibulares/"
+      ],
+      "portal_inscricao_url": null,
+      "official_link_missing": false,
+      "extracted_fields": [],
+      "missing_core_fields": [
+        "data_fim_inscricao",
+        "data_prova",
+        "numero_vagas"
+      ],
+      "extraction_confidence": "media",
+      "source_is_aggregator": false,
+      "value_extraction_notes": [],
+      "tipo_selecao_evidencia": "texto:processo_seletivo_ingresso",
+      "diagnostico_fontes_alternativas": {
+        "vunesp": "403/WAF ou DNS",
+        "comvest": "robots Disallow /",
+        "fuvest": "SSL variável por ambiente"
+      }
+    },
+    "ativo": true
+  },
+  {
+    "titulo": "Coperve – Comissão Permanente do Vestibular",
+    "tipo_selecao": "programa_ingresso",
+    "categoria": "vestibular_ufsc_coperve",
+    "orgao": "Coperve — Comissão Permanente do Vestibular / UFSC",
+    "instituicao": "Universidade Federal de Santa Catarina (UFSC)",
+    "banca": "Coperve",
+    "cargo": null,
+    "curso": null,
+    "area": null,
+    "nivel_escolaridade": "ensino_medio",
+    "estado": "SC",
+    "municipio": "Florianópolis",
+    "regiao": null,
+    "modalidade": null,
+    "numero_vagas": null,
+    "salario_min": null,
+    "salario_max": null,
+    "taxa_inscricao": null,
+    "data_publicacao": null,
+    "data_inicio_inscricao": null,
+    "data_fim_inscricao": null,
+    "data_prova": null,
+    "status": "ativo",
+    "link": "https://coperve.paginas.ufsc.br/proximos-vestibulares",
+    "link_edital": "http://coperve.paginas.ufsc.br/files/2026/02/Programa-Vestibular-2027.pdf",
+    "fonte": "coperve",
+    "fonte_tipo": "universidade",
+    "validacao_status": "incompleto",
+    "qualidade_dado": "media",
+    "tags": [
+      "coperve",
+      "ufsc",
+      "wave2",
+      "vestibular"
+    ],
+    "extras": {
+      "crawler": "main_vestibulares_coperve",
+      "wave": "concursos_wave2_vestibulares_coperve",
+      "fetched_at_utc": "2026-05-16T20:19:42.119197+00:00",
+      "listing_urls": [
+        "https://coperve.ufsc.br/",
+        "https://coperve.ufsc.br/proximos-vestibulares/",
+        "https://coperve.paginas.ufsc.br/proximos-vestibulares/"
+      ],
+      "portal_inscricao_url": null,
+      "official_link_missing": false,
+      "extracted_fields": [],
+      "missing_core_fields": [
+        "data_fim_inscricao",
+        "data_prova",
+        "numero_vagas"
+      ],
+      "extraction_confidence": "media",
+      "source_is_aggregator": false,
+      "value_extraction_notes": [],
+      "tipo_selecao_evidencia": "texto:processo_seletivo_ingresso",
+      "diagnostico_fontes_alternativas": {
+        "vunesp": "403/WAF ou DNS",
+        "comvest": "robots Disallow /",
+        "fuvest": "SSL variável por ambiente"
+      }
+    },
+    "ativo": true
+  },
+  {
+    "titulo": "http://coperve.paginas.ufsc.br/files/2026/02/Programa-Vestibular-2027.pdf",
+    "tipo_selecao": "vestibular",
+    "categoria": "vestibular_ufsc_coperve",
+    "orgao": "Coperve — Comissão Permanente do Vestibular / UFSC",
+    "instituicao": "Universidade Federal de Santa Catarina (UFSC)",
+    "banca": "Coperve",
+    "cargo": null,
+    "curso": null,
+    "area": null,
+    "nivel_escolaridade": "ensino_medio",
+    "estado": "SC",
+    "municipio": "Florianópolis",
+    "regiao": null,
+    "modalidade": null,
+    "numero_vagas": null,
+    "salario_min": null,
+    "salario_max": null,
+    "taxa_inscricao": null,
+    "data_publicacao": null,
+    "data_inicio_inscricao": null,
+    "data_fim_inscricao": null,
+    "data_prova": null,
+    "status": "ativo",
+    "link": "http://coperve.paginas.ufsc.br/files/2026/02/Programa-Vestibular-2027.pdf",
+    "link_edital": null,
+    "fonte": "coperve",
+    "fonte_tipo": "universidade",
+    "validacao_status": "incompleto",
+    "qualidade_dado": "baixa",
+    "tags": [
+      "coperve",
+      "ufsc",
+      "wave2",
+      "vestibular"
+    ],
+    "extras": {
+      "crawler": "main_vestibulares_coperve",
+      "wave": "concursos_wave2_vestibulares_coperve",
+      "fetched_at_utc": "2026-05-16T20:19:44.139509+00:00",
+      "listing_urls": [
+        "https://coperve.ufsc.br/",
+        "https://coperve.ufsc.br/proximos-vestibulares/",
+        "https://coperve.paginas.ufsc.br/proximos-vestibulares/"
+      ],
+      "portal_inscricao_url": null,
+      "official_link_missing": true,
+      "extracted_fields": [],
+      "missing_core_fields": [
+        "data_fim_inscricao",
+        "data_prova",
+        "link_edital",
+        "numero_vagas"
+      ],
+      "extraction_confidence": "media",
+      "source_is_aggregator": false,
+      "value_extraction_notes": [
+        "edital_pdf_nao_encontrado_no_html"
+      ],
+      "tipo_selecao_evidencia": "texto:vestibular",
+      "diagnostico_fontes_alternativas": {
+        "vunesp": "403/WAF ou DNS",
+        "comvest": "robots Disallow /",
+        "fuvest": "SSL variável por ambiente"
+      }
+    },
+    "ativo": true
+  }
+]

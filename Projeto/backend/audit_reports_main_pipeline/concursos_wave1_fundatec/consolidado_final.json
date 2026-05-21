@@ -1,0 +1,41 @@
+{
+  "wave": "concursos_wave1_fundatec",
+  "fonte": "fundatec",
+  "consolidado_em_utc": "2026-05-14T17:56:32Z",
+  "nota_versao": "Crawler v4: texto e links só do artigo principal (entry-content / post-content); link_edital só no corpo; descarte noticia_nao_oportunidade_ativa (prova realizada, participação, resultado, etc.) salvo data_fim futura; sem link_edital e sem data_fim não preenche vagas/salário/taxa; qualidade baixa sem link e sem data_fim. Dry-run v4. Apply não executado.",
+  "artefatos": {
+    "standardized": "audit_reports_main_pipeline/concursos_wave1_fundatec/standardized/fundatec_standardized.json",
+    "crawler_summary": "audit_reports_main_pipeline/concursos_wave1_fundatec/crawler_summary.json",
+    "loader_dryrun_v4_summary": "audit_reports_main_pipeline/concursos_wave1_fundatec/loader_dryrun_v4/load_concursos_selecao_summary.json",
+    "loader_dryrun_v4_errors": "audit_reports_main_pipeline/concursos_wave1_fundatec/loader_dryrun_v4/load_concursos_selecao_errors.json"
+  },
+  "totais_referencia_crawl": {
+    "urls_brutas_listagem": 10,
+    "descartados_total": 3,
+    "descartados_por_motivo": {
+      "noticia_nao_oportunidade_ativa": 3
+    },
+    "standardized_gravados": 7,
+    "loader_total_items": 7,
+    "loader_would_upsert_total": 7,
+    "loader_errors_count": 0
+  },
+  "regras_v3_mantidas": {
+    "remuneracao": "R$ 40–250: prioridade taxa com léxico; valores «full» nessa faixa sem léxico de taxa → ambíguo (fora de salário). «até R$ X mil» → salario_max.",
+    "vagas": "parse_vagas_certame(paragraph_scope=True, title_for_crosscheck=título) sobre article_text_main_only.",
+    "confianca": "pci_adjust_confidence_for_ambiguity conforme notas de valor/vagas.",
+    "datas": "data_fim só com contexto explícito de inscrições."
+  },
+  "regras_v4": {
+    "html": "extract_fundatec_article_text: article .entry-content (ou .post-content / article); remove aside, nav, footer, widgets, relacionados, comentários; link_edital só de <a> nesse fragmento.",
+    "baixa_confianca": "official_link_missing e sem data_fim_inscricao: numero_vagas, salario_min/max e taxa_inscricao suprimidos (não propagar lixo de layout).",
+    "descarte": "Título/corpo com padrões de prova/resultado/participação/retificação sem link, etc.; motivo discarded: noticia_nao_oportunidade_ativa. Exceção: data_fim_inscricao >= hoje.",
+    "validacao_qualidade": "valido = link_edital e data_fim; incompleto = link sem data_fim ou sem link; qualidade_dado baixa quando falta link e data_fim (sobrepõe heurística PCI nesse caso)."
+  },
+  "recomendacao_apply": "Dry-run v4 sem erros. Subset validacao_status=valido após conferência no portal; apply não executado.",
+  "comando_apply_staging": {
+    "powershell": "$env:EDITALFINDER_ENV=\"staging\"; $env:EDITALFINDER_ALLOW_STAGING_APPLY=\"1\"; python scripts/load_concursos_selecao.py --input-dir audit_reports_main_pipeline/concursos_wave1_fundatec/standardized --output-dir audit_reports_main_pipeline/concursos_wave1_fundatec/loader_apply_staging --sources fundatec --apply-staging --staging",
+    "bash": "EDITALFINDER_ENV=staging EDITALFINDER_ALLOW_STAGING_APPLY=1 python scripts/load_concursos_selecao.py --input-dir audit_reports_main_pipeline/concursos_wave1_fundatec/standardized --output-dir audit_reports_main_pipeline/concursos_wave1_fundatec/loader_apply_staging --sources fundatec --apply-staging --staging",
+    "nao_executado": true
+  }
+}

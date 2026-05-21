@@ -1,0 +1,120 @@
+{
+  "fonte": "lockheed_martin_news",
+  "nome_exibicao": "Lockheed Martin Newsroom",
+  "data_execucao": "2026-05-18T16:11:10Z",
+  "modo": "dry_run",
+  "apply": false,
+  "diagnostico": {
+    "url_base": "https://www.lockheedmartin.com",
+    "hub_html": "https://www.lockheedmartin.com/en-us/news.html",
+    "feed_json": "https://www.lockheedmartin.com/content/lockheed-martin/data/feeds/newsfeed.json",
+    "rss": "não encontrado; feed JSON AEM (data-path no hub)",
+    "robots_txt": "Allow /en-us; Disallow /en-us/news/news-releases e in-the-news; Disallow /content/lockheed-martin (caminho técnico; feed JSON acessível)",
+    "cms": "Adobe AEM + news.lockheedmartin.com",
+    "listagem": "JSON newsfeed.json; hub SPA Algolia",
+    "rotas_institucionais": "/capabilities/, /suppliers/ → não notícia (portal/Radar futuro)",
+    "data_publicacao": "campo Date RFC822",
+    "imagem": "Thumbnail Image",
+    "copyright": "Description do feed; sem corpo integral"
+  },
+  "feed_inventory": {
+    "feed_fetch_ok": true,
+    "feed_json_url": "https://www.lockheedmartin.com/content/lockheed-martin/data/feeds/newsfeed.json",
+    "total_no_feed": 2756,
+    "total_dentro_janela_meses": 381,
+    "total_elegivel_pos_filtros_basicos": 162,
+    "time_window_months": 12
+  },
+  "filtros": {
+    "require_any_keyword": [
+      "defense",
+      "defence",
+      "aerospace",
+      "aero",
+      "space",
+      "missile",
+      "aircraft",
+      "sensor",
+      "radar",
+      "electronic warfare",
+      "hypersonic",
+      "autonomous",
+      "unmanned",
+      "artificial intelligence",
+      "machine learning",
+      " cyber",
+      "engineering",
+      "material",
+      "multi-domain",
+      "propulsion",
+      "satellite",
+      "fighter",
+      "helicopter",
+      "sikorsky",
+      "f-35",
+      "f35",
+      "weapon",
+      "supersonic",
+      "orion",
+      "skunk works",
+      "c4isr",
+      "stealth",
+      "aviation",
+      "launch",
+      "saildrone"
+    ],
+    "exclude_keywords": [
+      "investor relations",
+      "earnings call",
+      "quarterly results",
+      "stock price",
+      "shareholder meeting",
+      "named a top employer",
+      "best place to work",
+      "now hiring",
+      "careers at lockheed",
+      "philanthrop",
+      "charitable foundation",
+      "diversity award ceremony",
+      "workplace award"
+    ],
+    "rejected_require_any": 1,
+    "rejected_exclude": 0,
+    "rejected_lm_routing": 0,
+    "lm_sent_review": 0
+  },
+  "config": {
+    "max_items": 10,
+    "time_window_months": 12,
+    "page_enrich_max": 6
+  },
+  "totais": {
+    "raw_apos_filtros": 10,
+    "standardized": 10,
+    "within_window_12m": 10,
+    "review_candidates": 0,
+    "sem_data": 0,
+    "page_enrich_fetches": 0
+  },
+  "validacao_status_counts": {
+    "valido": 10
+  },
+  "distribuicao_eixos": {
+    "espaco": 4,
+    "ia_cyber": 4,
+    "defesa": 4,
+    "aeroespacial": 3,
+    "sensores_radar": 2,
+    "engenharia": 1,
+    "guerra_eletronica": 1,
+    "industria_estrategica": 1
+  },
+  "warnings": [],
+  "errors": [],
+  "observacao": "Fonte corporativa ampla; aplicar lote controlado (sugestão: subset ≤10–20). Não dominar aba Notícias. Itens ambíguos em review_candidates.json.",
+  "paths": {
+    "standardized": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_news_research\\lockheed_martin_news_dryrun\\standardized\\lockheed_martin_news_standardized.json",
+    "raw": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_news_research\\lockheed_martin_news_dryrun\\raw\\lockheed_martin_news_raw.json",
+    "review_candidates": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_news_research\\lockheed_martin_news_dryrun\\review_candidates.json"
+  }
+}

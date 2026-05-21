@@ -1,0 +1,51 @@
+{
+  "data_execucao": "2026-05-17T01:08:22Z",
+  "modo": "dry_run",
+  "staging_flag": false,
+  "apply_staging_requested": false,
+  "input_dir": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_main_pipeline\\concursos_wave2_militar_aeroespacial_ita\\standardized",
+  "output_dir": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_main_pipeline\\concursos_wave2_militar_aeroespacial_ita\\loader_dryrun",
+  "sources_selected": [
+    "ita"
+  ],
+  "total_items": 1,
+  "would_upsert_total": 1,
+  "inserted": 0,
+  "updated": 0,
+  "upserted_total": 0,
+  "errors_count": 0,
+  "map_errors_count": 0,
+  "apply_errors_count": 0,
+  "errors_total_written": 0,
+  "duplicate_fonte_link_in_batch": 0,
+  "expired_items_count": 0,
+  "expired_items": [],
+  "by_source": {
+    "ita": {
+      "would_upsert": 1,
+      "errors": 0
+    }
+  },
+  "tipo_selecao_counts": {
+    "vestibular": 1
+  },
+  "status_counts": {
+    "ativo": 1
+  },
+  "validacao_status_counts": {
+    "incompleto": 1
+  },
+  "environment_guard": {
+    "editalfinder_env": "staging",
+    "has_supabase_url": true,
+    "has_service_key": true,
+    "has_anon_key": true,
+    "has_allow_staging_apply": false,
+    "url_host_masked": "dof***.co",
+    "block_reason": "",
+    "production_blocked": false
+  },
+  "apply_status": "dry_run_only",
+  "apply_block_reason": "",
+  "nota": "Nenhuma escrita no Supabase (dry-run)."
+}

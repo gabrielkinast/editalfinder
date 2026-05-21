@@ -1,0 +1,60 @@
+{
+  "wave": "concursos_wave1_fgv_subset_valido",
+  "fonte": "fgv",
+  "consolidado_em_utc": "2026-05-14T20:19:22Z",
+  "nota_versao": "Subset conservador: apenas validacao_status=valido do standardized FGV v2 (crawler + PDF). Dry-run do loader sobre o subset. Apply staging não executado.",
+  "referencia_crawl_fgv_v2": {
+    "total_urls_brutas_listagem": 32,
+    "total_descartados": 29,
+    "total_standardized_original": 3,
+    "pdf_enrichment_referencia": {
+      "attempts": 3,
+      "download_ok": 3,
+      "text_extracted": 3,
+      "skipped_limit_reached": 0
+    },
+    "loader_dryrun_v2_original": {
+      "errors_count": 0,
+      "would_upsert_total": 3,
+      "validacao_status_counts": {
+        "valido": 1,
+        "incompleto": 2
+      }
+    },
+    "artefato_standardized_original": "audit_reports_main_pipeline/concursos_wave1_fgv/standardized/fgv_standardized.json"
+  },
+  "subset_valido": {
+    "criterio": "validacao_status == \"valido\"",
+    "total_subset": 1,
+    "itens": [
+      {
+        "titulo": "Concurso Público para a Prefeitura de Macaé",
+        "data_inicio_inscricao": "2026-03-30",
+        "data_fim_inscricao": "2026-04-30",
+        "data_prova": "2026-05-14",
+        "link_edital": "https://conhecimento.fgv.br/sites/default/files/concursos/minuta-edital-macae-saude-publicacao_0.pdf",
+        "link": "https://conhecimento.fgv.br/concursos/prefeiturademacae26",
+        "qualidade_dado": "alta",
+        "validacao_status": "valido"
+      }
+    ]
+  },
+  "artefatos_subset": {
+    "standardized": "audit_reports_main_pipeline/concursos_wave1_fgv_subset_valido/standardized/fgv_standardized.json",
+    "loader_dryrun_summary": "audit_reports_main_pipeline/concursos_wave1_fgv_subset_valido/loader_dryrun/load_concursos_selecao_summary.json",
+    "loader_dryrun_errors": "audit_reports_main_pipeline/concursos_wave1_fgv_subset_valido/loader_dryrun/load_concursos_selecao_errors.json"
+  },
+  "loader_subset_dryrun": {
+    "total_items": 1,
+    "would_upsert_total": 1,
+    "errors_count": 0,
+    "map_errors_count": 0,
+    "data_execucao": "2026-05-14T20:19:22Z"
+  },
+  "recomendacao_apply": "Revisar link_edital e datas no portal FGV antes do primeiro upsert em staging. Usar apenas este subset (1 linha) para apply conservador.",
+  "comando_apply_staging": {
+    "powershell": "$env:EDITALFINDER_ENV=\"staging\"; $env:EDITALFINDER_ALLOW_STAGING_APPLY=\"1\"; python scripts/load_concursos_selecao.py --input-dir audit_reports_main_pipeline/concursos_wave1_fgv_subset_valido/standardized --output-dir audit_reports_main_pipeline/concursos_wave1_fgv_subset_valido/loader_apply_staging --sources fgv --apply-staging --staging",
+    "bash": "EDITALFINDER_ENV=staging EDITALFINDER_ALLOW_STAGING_APPLY=1 python scripts/load_concursos_selecao.py --input-dir audit_reports_main_pipeline/concursos_wave1_fgv_subset_valido/standardized --output-dir audit_reports_main_pipeline/concursos_wave1_fgv_subset_valido/loader_apply_staging --sources fgv --apply-staging --staging",
+    "nao_executado": true
+  }
+}

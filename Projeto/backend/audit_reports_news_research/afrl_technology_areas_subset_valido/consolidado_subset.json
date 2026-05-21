@@ -1,0 +1,161 @@
+{
+  "fonte": "afrl_technology_areas",
+  "nome_exibicao": "AFRL",
+  "loader_source_id": "afrl_technology_areas",
+  "destino": "public.pesquisa",
+  "data_execucao": "2026-05-20T06:14:32Z",
+  "origem_dryrun": "audit_reports_news_research/military_research_expansion_dryrun",
+  "origem_standardized": "audit_reports_news_research/military_research_expansion_dryrun/standardized/afrl_technology_areas_standardized.json",
+  "subset_standardized": "audit_reports_news_research/afrl_technology_areas_subset_valido/standardized/afrl_technology_areas_standardized.json",
+  "totais_origem": 12,
+  "validos_no_dryrun": 12,
+  "filtros": {
+    "fonte_recurso": "afrl_technology_areas",
+    "validacao_status": "valido",
+    "tipo_pesquisa": "area_tecnologica",
+    "tipo_recurso": "area_tecnologica",
+    "tipo_oportunidade": "pesquisa_estrategica",
+    "excluido": [
+      "review_candidates",
+      "fontes_latentes"
+    ]
+  },
+  "subset": {
+    "escolhidos": 12,
+    "rejeitados_na_filtragem": 0
+  },
+  "loader_dryrun": {
+    "comando": "C:\\Program Files\\Python312\\python.exe D:\\Computational_Physics\\My Projects\\edital\\scripts\\load_news_research_sources.py --dry-run --source afrl_technology_areas --input-dir audit_reports_news_research/afrl_technology_areas_subset_valido",
+    "would_upsert_noticia": 0,
+    "would_upsert_pesquisa": 12,
+    "errors_count": 0,
+    "apply_status": "dry_run_only",
+    "routing_skipped_count": 0
+  },
+  "eixos_estrategicos": {
+    "defesa": 10,
+    "engenharia_avancada": 4,
+    "pesquisa": 4,
+    "aeroespacial": 4,
+    "espaco": 3,
+    "computacao": 2,
+    "inovacao": 2,
+    "autonomia": 2,
+    "sistemas_de_armas": 1,
+    "materiais_avancados": 1,
+    "comunicacoes": 1,
+    "cyber": 1,
+    "energia_dirigida": 1,
+    "inteligencia_artificial": 1,
+    "ia": 1,
+    "propulsao": 1,
+    "hipersonicos": 1
+  },
+  "itens_excluidos": [],
+  "itens": [
+    {
+      "titulo": "MUNITIONS",
+      "data_publicacao": null,
+      "link": "https://afresearchlab.com/technology/munitions",
+      "fonte_recurso": "afrl_technology_areas",
+      "tipo_pesquisa": "area_tecnologica",
+      "tipo_recurso": "area_tecnologica"
+    },
+    {
+      "titulo": "MATERIALS & MANUFACTURING",
+      "data_publicacao": null,
+      "link": "https://afresearchlab.com/technology/materials-manufacturing",
+      "fonte_recurso": "afrl_technology_areas",
+      "tipo_pesquisa": "area_tecnologica",
+      "tipo_recurso": "area_tecnologica"
+    },
+    {
+      "titulo": "INTEGRATED CAPABILITIES",
+      "data_publicacao": null,
+      "link": "https://afresearchlab.com/technology/integrated-capabilities",
+      "fonte_recurso": "afrl_technology_areas",
+      "tipo_pesquisa": "area_tecnologica",
+      "tipo_recurso": "area_tecnologica"
+    },
+    {
+      "titulo": "INFORMATION",
+      "data_publicacao": null,
+      "link": "https://afresearchlab.com/technology/information",
+      "fonte_recurso": "afrl_technology_areas",
+      "tipo_pesquisa": "area_tecnologica",
+      "tipo_recurso": "area_tecnologica"
+    },
+    {
+      "titulo": "HUMAN PERFORMANCE",
+      "data_publicacao": null,
+      "link": "https://afresearchlab.com/technology/human-performance",
+      "fonte_recurso": "afrl_technology_areas",
+      "tipo_pesquisa": "area_tecnologica",
+      "tipo_recurso": "area_tecnologica"
+    },
+    {
+      "titulo": "DIRECTED ENERGY",
+      "data_publicacao": null,
+      "link": "https://afresearchlab.com/technology/directed-energy",
+      "fonte_recurso": "afrl_technology_areas",
+      "tipo_pesquisa": "area_tecnologica",
+      "tipo_recurso": "area_tecnologica"
+    },
+    {
+      "titulo": "CROSS DOMAIN",
+      "data_publicacao": null,
+      "link": "https://afresearchlab.com/technology/cross-domain",
+      "fonte_recurso": "afrl_technology_areas",
+      "tipo_pesquisa": "area_tecnologica",
+      "tipo_recurso": "area_tecnologica"
+    },
+    {
+      "titulo": "BASIC RESEARCH",
+      "data_publicacao": null,
+      "link": "https://afresearchlab.com/technology/basic-research",
+      "fonte_recurso": "afrl_technology_areas",
+      "tipo_pesquisa": "area_tecnologica",
+      "tipo_recurso": "area_tecnologica"
+    },
+    {
+      "titulo": "Air Force Vanguards",
+      "data_publicacao": null,
+      "link": "https://afresearchlab.com/technology/vanguards",
+      "fonte_recurso": "afrl_technology_areas",
+      "tipo_pesquisa": "area_tecnologica",
+      "tipo_recurso": "area_tecnologica"
+    },
+    {
+      "titulo": "ARTIFICIAL INTELLIGENCE",
+      "data_publicacao": null,
+      "link": "https://afresearchlab.com/technology/artificial-intelligence",
+      "fonte_recurso": "afrl_technology_areas",
+      "tipo_pesquisa": "area_tecnologica",
+      "tipo_recurso": "area_tecnologica"
+    },
+    {
+      "titulo": "AFRL TECH ARCHIVES",
+      "data_publicacao": null,
+      "link": "https://afresearchlab.com/technology/science-technology-strategy",
+      "fonte_recurso": "afrl_technology_areas",
+      "tipo_pesquisa": "area_tecnologica",
+      "tipo_recurso": "area_tecnologica"
+    },
+    {
+      "titulo": "AEROSPACE",
+      "data_publicacao": null,
+      "link": "https://afresearchlab.com/technology/aerospace",
+      "fonte_recurso": "afrl_technology_areas",
+      "tipo_pesquisa": "area_tecnologica",
+      "tipo_recurso": "area_tecnologica"
+    }
+  ],
+  "observacoes": [
+    "Catálogo AFRL Technology Areas (sem data de publicação; catalogo_institucional).",
+    "Fonte oficial afrl_technology_areas → public.pesquisa.",
+    "Apply não executado nesta tarefa."
+  ],
+  "apply_staging": {
+    "executado": false
+  }
+}

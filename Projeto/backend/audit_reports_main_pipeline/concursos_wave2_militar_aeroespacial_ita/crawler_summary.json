@@ -1,0 +1,129 @@
+{
+  "fonte": "ita",
+  "collected_at_utc": "2026-05-17T01:08:21.962744+00:00",
+  "seed_urls": [
+    "https://www.vestibular.ita.br/principal.htm",
+    "https://www.vestibular.ita.br/topo.htm"
+  ],
+  "enrich_pdf": true,
+  "total_bruto_listing": 1,
+  "total_discarded_all": 0,
+  "discarded": [],
+  "total_standardized": 1,
+  "validacao_counts": {
+    "valido": 0,
+    "incompleto": 1
+  },
+  "errors": [],
+  "field_fill": {
+    "titulo": 1,
+    "tipo_selecao": 1,
+    "categoria": 1,
+    "orgao": 1,
+    "instituicao": 1,
+    "banca": 1,
+    "cargo": 0,
+    "curso": 1,
+    "area": 1,
+    "nivel_escolaridade": 1,
+    "estado": 1,
+    "municipio": 1,
+    "regiao": 0,
+    "modalidade": 0,
+    "numero_vagas": 0,
+    "salario_min": 0,
+    "salario_max": 0,
+    "taxa_inscricao": 0,
+    "data_publicacao": 0,
+    "data_inicio_inscricao": 0,
+    "data_fim_inscricao": 0,
+    "data_prova": 1,
+    "status": 1,
+    "link": 1,
+    "link_edital": 1,
+    "fonte": 1,
+    "fonte_tipo": 1,
+    "validacao_status": 1,
+    "qualidade_dado": 1,
+    "tags": 1,
+    "extras": 1,
+    "ativo": 1
+  },
+  "fields_always_missing": [
+    "cargo",
+    "regiao",
+    "modalidade",
+    "numero_vagas",
+    "salario_min",
+    "salario_max",
+    "taxa_inscricao",
+    "data_publicacao",
+    "data_inicio_inscricao",
+    "data_fim_inscricao"
+  ],
+  "standardized_path": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_main_pipeline\\concursos_wave2_militar_aeroespacial_ita\\standardized\\ita_standardized.json",
+  "exemplos_payload": [
+    {
+      "titulo": "ITA — Vestibular 2027",
+      "tipo_selecao": "vestibular",
+      "categoria": "militar_aeroespacial_ita_vestibular",
+      "orgao": "Instituto Tecnológico de Aeronáutica (ITA)",
+      "instituicao": "Instituto Tecnológico de Aeronáutica",
+      "banca": "ITA — Comissão de Vestibular",
+      "cargo": null,
+      "curso": "Graduação em Engenharia (vestibular ITA)",
+      "area": "Engenharia / Aeroespacial",
+      "nivel_escolaridade": "medio",
+      "estado": "SP",
+      "municipio": "São José dos Campos",
+      "regiao": null,
+      "modalidade": null,
+      "numero_vagas": null,
+      "salario_min": null,
+      "salario_max": null,
+      "taxa_inscricao": null,
+      "data_publicacao": null,
+      "data_inicio_inscricao": null,
+      "data_fim_inscricao": null,
+      "data_prova": "2026-09-27",
+      "status": "ativo",
+      "link": "https://www.vestibular.ita.br/principal.htm",
+      "link_edital": "https://www.vestibular.ita.br/instrucoes/edital_2026_retificado.pdf",
+      "fonte": "ita",
+      "fonte_tipo": "instituicao",
+      "validacao_status": "incompleto",
+      "qualidade_dado": "media",
+      "tags": [
+        "ita",
+        "vestibular",
+        "militar_aeroespacial",
+        "wave2"
+      ],
+      "extras": {
+        "crawler": "main_militar_aeroespacial_ita",
+        "wave": "concursos_wave2_militar_aeroespacial_ita",
+        "fetched_at_utc": "2026-05-17T01:08:21.962744+00:00",
+        "seed_urls": [
+          "https://www.vestibular.ita.br/principal.htm",
+          "https://www.vestibular.ita.br/topo.htm"
+        ],
+        "pdf_enrichment": {
+          "pdf_url": "https://www.vestibular.ita.br/instrucoes/edital_2026_retificado.pdf",
+          "fetch_note": "pdf_download_ok",
+          "text_len": 2
+        },
+        "data_prova_2_fase_fim": "2026-10-23",
+        "vestibular_year": 2027,
+        "missing_core_fields": [
+          "data_fim_inscricao",
+          "numero_vagas"
+        ],
+        "extraction_confidence": "alta",
+        "value_extraction_notes": [
+          "edital_pdf_sem_texto_extraivel"
+        ]
+      },
+      "ativo": true
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "wave": "concursos_wave2_aocp_subset_valido",
+  "titulo": "Concursos & Seleções — Wave 2 AOCP (subset válido)",
+  "consolidado_em_utc": "2026-05-16T21:22:03Z",
+  "criterio_filtro": "validacao_status = \"valido\"",
+  "fonte_origem": "aocp",
+  "arquivo_origem": "audit_reports_main_pipeline/concursos_wave2_aocp/standardized/aocp_standardized.json",
+  "arquivo_subset": "audit_reports_main_pipeline/concursos_wave2_aocp_subset_valido/standardized/aocp_standardized.json",
+  "contagens": {
+    "standardized_origem": 2,
+    "subset_valido": 1,
+    "excluidos_incompleto": 1
+  },
+  "excluidos": [
+    {
+      "titulo": "CBM/RJ - Corpo de Bombeiros do Estado do Rio de Janeiro",
+      "validacao_status": "incompleto",
+      "motivo_exclusao": "sem link_edital",
+      "link": "https://www.institutoaocp.org.br/concursos/693/",
+      "aocp_list_id": 693
+    }
+  ],
+  "loader_dryrun": {
+    "input_dir": "audit_reports_main_pipeline/concursos_wave2_aocp_subset_valido/standardized",
+    "output_dir": "audit_reports_main_pipeline/concursos_wave2_aocp_subset_valido/loader_dryrun",
+    "modo": "dry_run",
+    "total_items": 1,
+    "would_upsert_total": 1,
+    "errors_count": 0,
+    "apply_status": "dry_run_only",
+    "tipo_selecao_counts": {
+      "concurso_publico": 1
+    },
+    "validacao_status_counts": {
+      "valido": 1
+    }
+  },
+  "itens_subset": [
+    {
+      "titulo": "CESAMA - COMPANHIA DE SANEAMENTO MUNICIPAL - MG",
+      "tipo_selecao": "concurso_publico",
+      "validacao_status": "valido",
+      "qualidade_dado": "media",
+      "data_inicio_inscricao": "2026-06-10",
+      "data_fim_inscricao": "2026-07-10",
+      "data_prova": null,
+      "link": "https://www.institutoaocp.org.br/concursos/690/",
+      "link_edital": "https://arquivos-site.institutoaocp.org.br/publicacoes/4e834cb0-6c46-469f-8a72-d3fc4641beff.pdf",
+      "aocp_list_id": 690,
+      "aocp_api_status_list": "NEW"
+    }
+  ],
+  "recomendacao_apply": "Dry-run OK (1 would_upsert, errors_count=0). Apply em staging opcional quando aprovar o subset; não executado nesta tarefa.",
+  "nota": "Subset derivado do crawl Wave 2 AOCP (API link.institutoaocp.org.br). Apenas registos com edital PDF e data_fim_inscricao."
+}

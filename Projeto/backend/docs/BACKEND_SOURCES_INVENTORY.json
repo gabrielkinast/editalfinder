@@ -1,0 +1,3269 @@
+{
+  "generated_at": "2026-05-20T12:00:00+00:00",
+  "editais_visibility_audit": {
+    "script": "scripts/audit_editais_visibility_noise.py",
+    "policy_doc": "docs/EDITAIS_VISIBILITY_AND_NOISE_POLICY.md",
+    "view_sql": "docs/sql/UPDATE_VW_EDITAIS_FRONT_VISIBILITY.sql",
+    "rule_version": "editais_visibility_v1",
+    "note": "Run audit before apply; curadoria_front in extras is manual"
+  },
+  "totals": {
+    "sources": 157,
+    "descoberta": 1,
+    "aplicada": 60,
+    "implementada_latente": 15,
+    "nao_recomendado": 12,
+    "precisa_melhoria": 17,
+    "pronta_para_apply": 52
+  },
+  "sources": [
+    {
+      "source_id": "pci_concursos",
+      "name": "PCI Concursos",
+      "module": "concursos_selecoes",
+      "source_type": "agregador",
+      "pipeline_script": "concursos/main_pci_concursos.py",
+      "config_file": "docs/CONCURSOS_FONTES_WAVE1.md",
+      "artifacts_dir": "audit_reports_main_pipeline/concursos_wave1_pci",
+      "destination": "public.concurso_selecao → vw_concursos_front",
+      "status": "descoberta",
+      "status_reason": "Agregador; 12 apply staging; 0 validos",
+      "last_known_result": {
+        "standardized": 12,
+        "validos": 0,
+        "errors_count": 0,
+        "would_upsert": 12,
+        "apply_executed": true
+      },
+      "notes": ""
+    },
+    {
+      "source_id": "fundatec",
+      "name": "Fundatec",
+      "module": "concursos_selecoes",
+      "source_type": "banca",
+      "pipeline_script": "concursos/main_fundatec_concursos.py",
+      "config_file": "docs/CONCURSOS_FONTES_WAVE1.md",
+      "artifacts_dir": "audit_reports_main_pipeline/concursos_wave1_fundatec",
+      "destination": "public.concurso_selecao → vw_concursos_front",
+      "status": "aplicada",
+      "status_reason": "Subset 2 validos apply staging",
+      "last_known_result": {
+        "standardized": 7,
+        "validos": 2,
+        "errors_count": 0,
+        "would_upsert": 2,
+        "apply_executed": true
+      },
+      "notes": ""
+    },
+    {
+      "source_id": "quadrix",
+      "name": "Quadrix",
+      "module": "concursos_selecoes",
+      "source_type": "banca",
+      "pipeline_script": "concursos/main_quadrix_concursos.py",
+      "config_file": "docs/CONCURSOS_FONTES_WAVE1.md",
+      "artifacts_dir": "audit_reports_main_pipeline/concursos_wave1_quadrix",
+      "destination": "public.concurso_selecao → vw_concursos_front",
+      "status": "aplicada",
+      "status_reason": "10/10 validos wave1",
+      "last_known_result": {
+        "standardized": 10,
+        "validos": 10,
+        "errors_count": 0,
+        "would_upsert": 10,
+        "apply_executed": true
+      },
+      "notes": ""
+    },
+    {
+      "source_id": "legalle",
+      "name": "Legalle",
+      "module": "concursos_selecoes",
+      "source_type": "banca",
+      "pipeline_script": "concursos/main_legalle_concursos.py",
+      "config_file": "docs/CONCURSOS_FONTES_WAVE1.md",
+      "artifacts_dir": "audit_reports_main_pipeline/concursos_wave1_legalle",
+      "destination": "public.concurso_selecao → vw_concursos_front",
+      "status": "aplicada",
+      "status_reason": "5 validos apply",
+      "last_known_result": {
+        "standardized": 5,
+        "validos": 5,
+        "errors_count": 0,
+        "would_upsert": 5,
+        "apply_executed": true
+      },
+      "notes": ""
+    },
+    {
+      "source_id": "objetiva",
+      "name": "Objetiva",
+      "module": "concursos_selecoes",
+      "source_type": "banca",
+      "pipeline_script": "concursos/main_objetiva_concursos.py",
+      "config_file": "docs/CONCURSOS_FONTES_WAVE1.md",
+      "artifacts_dir": "audit_reports_main_pipeline/concursos_wave1_objetiva",
+      "destination": "public.concurso_selecao → vw_concursos_front",
+      "status": "aplicada",
+      "status_reason": "3 validos apply",
+      "last_known_result": {
+        "standardized": 3,
+        "validos": 3,
+        "errors_count": 0,
+        "would_upsert": 3,
+        "apply_executed": true
+      },
+      "notes": ""
+    },
+    {
+      "source_id": "ibfc",
+      "name": "IBFC",
+      "module": "concursos_selecoes",
+      "source_type": "banca",
+      "pipeline_script": "concursos/main_ibfc_concursos.py",
+      "config_file": "docs/CONCURSOS_FONTES_WAVE1.md",
+      "artifacts_dir": "audit_reports_main_pipeline/concursos_wave1_ibfc",
+      "destination": "public.concurso_selecao → vw_concursos_front",
+      "status": "aplicada",
+      "status_reason": "1 valido apply",
+      "last_known_result": {
+        "standardized": 1,
+        "validos": 1,
+        "errors_count": 0,
+        "would_upsert": 1,
+        "apply_executed": true
+      },
+      "notes": ""
+    },
+    {
+      "source_id": "fgv",
+      "name": "FGV Conhecimento",
+      "module": "concursos_selecoes",
+      "source_type": "banca",
+      "pipeline_script": "concursos/main_fgv_concursos.py",
+      "config_file": "docs/CONCURSOS_FONTES_WAVE1.md",
+      "artifacts_dir": "audit_reports_main_pipeline/concursos_wave1_fgv",
+      "destination": "public.concurso_selecao → vw_concursos_front",
+      "status": "implementada_latente",
+      "status_reason": "3 std, 1 valido; sem apply",
+      "last_known_result": {
+        "standardized": 3,
+        "validos": 1,
+        "errors_count": 0,
+        "would_upsert": 0,
+        "apply_executed": false
+      },
+      "notes": ""
+    },
+    {
+      "source_id": "cebraspe",
+      "name": "Cebraspe",
+      "module": "concursos_selecoes",
+      "source_type": "banca",
+      "pipeline_script": "concursos/main_cebraspe_concursos.py",
+      "config_file": "docs/CONCURSOS_FONTES_WAVE1.md",
+      "artifacts_dir": "audit_reports_main_pipeline/concursos_wave1_cebraspe",
+      "destination": "public.concurso_selecao → vw_concursos_front",
+      "status": "implementada_latente",
+      "status_reason": "PAS API; 0 std ativo wave1",
+      "last_known_result": {
+        "standardized": 0,
+        "validos": 0,
+        "errors_count": 0,
+        "would_upsert": 0,
+        "apply_executed": false
+      },
+      "notes": ""
+    },
+    {
+      "source_id": "aocp",
+      "name": "AOCP",
+      "module": "concursos_selecoes",
+      "source_type": "banca",
+      "pipeline_script": "concursos/main_aocp_concursos.py",
+      "config_file": "docs/CONCURSOS_FONTES_WAVE1.md",
+      "artifacts_dir": "audit_reports_main_pipeline/concursos_wave2_aocp",
+      "destination": "public.concurso_selecao → vw_concursos_front",
+      "status": "implementada_latente",
+      "status_reason": "Wave2: 2 std, 1 valido; sem apply",
+      "last_known_result": {
+        "standardized": 2,
+        "validos": 1,
+        "errors_count": 0,
+        "would_upsert": 0,
+        "apply_executed": false
+      },
+      "notes": ""
+    },
+    {
+      "source_id": "avancasp",
+      "name": "Avança SP",
+      "module": "concursos_selecoes",
+      "source_type": "banca",
+      "pipeline_script": "concursos/main_avancasp_concursos.py",
+      "config_file": "docs/CONCURSOS_FONTES_WAVE1.md",
+      "artifacts_dir": "audit_reports_main_pipeline/concursos_wave2_avancasp",
+      "destination": "public.concurso_selecao → vw_concursos_front",
+      "status": "aplicada",
+      "status_reason": "Wave2: 5/5 validos staging apply",
+      "last_known_result": {
+        "standardized": 5,
+        "validos": 5,
+        "errors_count": 0,
+        "would_upsert": 5,
+        "apply_executed": true
+      },
+      "notes": ""
+    },
+    {
+      "source_id": "fcc",
+      "name": "FCC",
+      "module": "concursos_selecoes",
+      "source_type": "banca",
+      "pipeline_script": "concursos/main_fcc_concursos.py",
+      "config_file": "docs/CONCURSOS_FONTES_WAVE1.md",
+      "artifacts_dir": "audit_reports_main_pipeline/concursos_wave2_fcc",
+      "destination": "public.concurso_selecao → vw_concursos_front",
+      "status": "nao_recomendado",
+      "status_reason": "robots.txt; modo completo bloqueado; 2/4 validos",
+      "last_known_result": {
+        "standardized": 4,
+        "validos": 2,
+        "errors_count": 0,
+        "would_upsert": 0,
+        "apply_executed": false
+      },
+      "notes": ""
+    },
+    {
+      "source_id": "consulplan",
+      "name": "Consulplan",
+      "module": "concursos_selecoes",
+      "source_type": "banca",
+      "pipeline_script": "concursos/main_consulplan_concursos.py",
+      "config_file": "docs/CONCURSOS_FONTES_WAVE1.md",
+      "artifacts_dir": "audit_reports_main_pipeline/concursos_wave2_consulplan",
+      "destination": "public.concurso_selecao → vw_concursos_front",
+      "status": "precisa_melhoria",
+      "status_reason": "0/10 validos; PDF enrich fraco",
+      "last_known_result": {
+        "standardized": 10,
+        "validos": 0,
+        "errors_count": 0,
+        "would_upsert": 0,
+        "apply_executed": false
+      },
+      "notes": ""
+    },
+    {
+      "source_id": "fuvest",
+      "name": "Fuvest",
+      "module": "concursos_selecoes",
+      "source_type": "universidade",
+      "pipeline_script": "concursos/main_fuvest_concursos.py",
+      "config_file": "docs/CONCURSOS_FONTES_WAVE1.md",
+      "artifacts_dir": "audit_reports_main_pipeline/concursos_wave2_fuvest",
+      "destination": "public.concurso_selecao → vw_concursos_front",
+      "status": "precisa_melhoria",
+      "status_reason": "0/2 validos",
+      "last_known_result": {
+        "standardized": 2,
+        "validos": 0,
+        "errors_count": 0,
+        "would_upsert": 0,
+        "apply_executed": false
+      },
+      "notes": ""
+    },
+    {
+      "source_id": "comvest",
+      "name": "Comvest (Unicamp)",
+      "module": "concursos_selecoes",
+      "source_type": "universidade",
+      "pipeline_script": "concursos/main_vestibulares_comvest.py",
+      "config_file": "docs/CONCURSOS_FONTES_WAVE1.md",
+      "artifacts_dir": "audit_reports_main_pipeline/concursos_wave2_comvest",
+      "destination": "public.concurso_selecao → vw_concursos_front",
+      "status": "precisa_melhoria",
+      "status_reason": "Sem data_fim_inscricao no site",
+      "last_known_result": {
+        "standardized": 2,
+        "validos": 0,
+        "errors_count": 0,
+        "would_upsert": 0,
+        "apply_executed": false
+      },
+      "notes": ""
+    },
+    {
+      "source_id": "coperve",
+      "name": "Coperve UFSC",
+      "module": "concursos_selecoes",
+      "source_type": "universidade",
+      "pipeline_script": "concursos/main_vestibulares_coperve.py",
+      "config_file": "docs/CONCURSOS_FONTES_WAVE1.md",
+      "artifacts_dir": "audit_reports_main_pipeline/concursos_wave2_coperve",
+      "destination": "public.concurso_selecao → vw_concursos_front",
+      "status": "implementada_latente",
+      "status_reason": "9 std, 0 validos",
+      "last_known_result": {
+        "standardized": 9,
+        "validos": 0,
+        "errors_count": 0,
+        "would_upsert": 0,
+        "apply_executed": false
+      },
+      "notes": ""
+    },
+    {
+      "source_id": "ufrgs_cv",
+      "name": "UFRGS/COPERSE",
+      "module": "concursos_selecoes",
+      "source_type": "universidade",
+      "pipeline_script": "concursos/main_vestibulares_ufrgs.py",
+      "config_file": "docs/CONCURSOS_FONTES_WAVE1.md",
+      "artifacts_dir": "audit_reports_main_pipeline/concursos_wave2_ufrgs_cv",
+      "destination": "public.concurso_selecao → vw_concursos_front",
+      "status": "implementada_latente",
+      "status_reason": "7 std, 0 validos",
+      "last_known_result": {
+        "standardized": 7,
+        "validos": 0,
+        "errors_count": 0,
+        "would_upsert": 0,
+        "apply_executed": false
+      },
+      "notes": ""
+    },
+    {
+      "source_id": "ita_vestibular",
+      "name": "ITA Vestibular",
+      "module": "concursos_selecoes",
+      "source_type": "universidade",
+      "pipeline_script": "concursos/main_militar_aeroespacial_ita.py",
+      "config_file": "docs/CONCURSOS_FONTES_WAVE1.md",
+      "artifacts_dir": "audit_reports_main_pipeline/concursos_wave2_militar_aeroespacial_ita",
+      "destination": "public.concurso_selecao → vw_concursos_front",
+      "status": "precisa_melhoria",
+      "status_reason": "PDF escaneado; 0/1 valido",
+      "last_known_result": {
+        "standardized": 1,
+        "validos": 0,
+        "errors_count": 0,
+        "would_upsert": 0,
+        "apply_executed": false
+      },
+      "notes": ""
+    },
+    {
+      "source_id": "ime",
+      "name": "IME (CFG/CFrm/CG/CP)",
+      "module": "concursos_selecoes",
+      "source_type": "instituicao_militar",
+      "pipeline_script": "concursos/main_militar_aeroespacial_ime.py",
+      "config_file": "docs/CONCURSOS_FONTES_WAVE1.md",
+      "artifacts_dir": "audit_reports_main_pipeline/concursos_wave2_militar_aeroespacial_ime",
+      "destination": "public.concurso_selecao → vw_concursos_front",
+      "status": "precisa_melhoria",
+      "status_reason": "5 std; OCR/datas PDF",
+      "last_known_result": {
+        "standardized": 5,
+        "validos": 0,
+        "errors_count": 0,
+        "would_upsert": 0,
+        "apply_executed": false
+      },
+      "notes": ""
+    },
+    {
+      "source_id": "embarcatech",
+      "name": "EmbarcaTech (Softex)",
+      "module": "concursos_selecoes",
+      "source_type": "residencia",
+      "pipeline_script": "concursos/main_residencias_embarcatech.py",
+      "config_file": "docs/CONCURSOS_FONTES_WAVE1.md",
+      "artifacts_dir": "audit_reports_main_pipeline/concursos_wave2_residencias_embarcatech",
+      "destination": "public.concurso_selecao → vw_concursos_front",
+      "status": "precisa_melhoria",
+      "status_reason": "2 std; fetch errors",
+      "last_known_result": {
+        "standardized": 2,
+        "validos": 0,
+        "errors_count": 2,
+        "would_upsert": 0,
+        "apply_executed": false
+      },
+      "notes": ""
+    },
+    {
+      "source_id": "mcti_fomento_transformacao_digital",
+      "name": "MCTI Fomento (Transformação Digital)",
+      "module": "radar_editais",
+      "source_type": "governo",
+      "pipeline_script": "scripts/radar/run_mcti_fomento_dryrun_v3.py",
+      "config_file": "docs/MCTI_FOMENTO_RADAR_EDITAIS_PLAN.md",
+      "artifacts_dir": "audit_reports_radar/mcti_fomento_dryrun_v3",
+      "destination": "public.edital (futuro; apply_status não_recomendado)",
+      "status": "nao_recomendado",
+      "status_reason": "Curadoria v3: 5 prontos técnicos são editais/chamamentos históricos (2020–2024); sem oportunidade ativa",
+      "last_known_result": {
+        "standardized": 5,
+        "validos": 5,
+        "errors_count": 0,
+        "would_upsert": 0,
+        "apply_executed": false
+      },
+      "notes": "apply_status=não_recomendado; reexecutar periodicamente"
+    },
+    {
+      "source_id": "nasa_news",
+      "name": "NASA News (multi-feed)",
+      "module": "noticias_pesquisas",
+      "source_type": "noticia+pesquisa",
+      "pipeline_script": "scripts/crawl_news_research_sources.py; scripts/build_*_payloads.py",
+      "config_file": "config/news_research_sources.json",
+      "artifacts_dir": "audit_reports_news_research_loader/ (nasa_news)",
+      "destination": "public.noticia + public.pesquisa (roteamento por item) → vw_noticias_front / vw_pesquisas_front",
+      "status": "pronta_para_apply",
+      "status_reason": "Feeds oficiais verificados (HTTP 200). Resumo mínimo e data obrigatórios na auditoria; dedupe global por link.",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": 0,
+        "would_upsert": null,
+        "apply_executed": false
+      },
+      "notes": ""
+    },
+    {
+      "source_id": "darpa_news",
+      "name": "DARPA News",
+      "module": "noticias_pesquisas",
+      "source_type": "noticia",
+      "pipeline_script": "scripts/crawl_news_research_sources.py; scripts/news_research/run_darpa_strategic_dryrun.py",
+      "config_file": "config/news_research_sources.json",
+      "artifacts_dir": "audit_reports_news_research/darpa_news_subset_valido",
+      "destination": "public.noticia → vw_noticias_front",
+      "status": "aplicada_staging",
+      "status_reason": "Apply staging: 10 notícias (subset válido).",
+      "last_known_result": {
+        "standardized": 10,
+        "validos": 10,
+        "errors_count": 0,
+        "would_upsert": 10,
+        "would_upsert_noticia": 10,
+        "apply_executed": true
+      },
+      "notes": "Frente militar consolidado; ver military_strategic_consolidado/consolidado_militar.json"
+    },
+    {
+      "source_id": "darpa_programs_research",
+      "name": "DARPA Research Programs",
+      "module": "noticias_pesquisas",
+      "source_type": "pesquisa",
+      "pipeline_script": "scripts/crawl_news_research_sources.py; scripts/news_research/build_darpa_programs_research_subset_valido_v2.py",
+      "config_file": "config/news_research_sources.json",
+      "artifacts_dir": "audit_reports_news_research/darpa_programs_research_subset_valido",
+      "destination": "public.pesquisa → vw_pesquisas_front",
+      "status": "aplicada_staging",
+      "status_reason": "Apply staging: 25 programas; tipos programa_pesquisa/programa_estrategico.",
+      "last_known_result": {
+        "standardized": 25,
+        "validos": 25,
+        "errors_count": 0,
+        "would_upsert": 25,
+        "would_upsert_pesquisa": 25,
+        "apply_executed": true
+      },
+      "notes": "Frente militar consolidado; SQL FIX_DARPA_PROGRAMS_RESEARCH_TYPES.sql se necessário"
+    },
+    {
+      "source_id": "darpa_opportunities_research",
+      "name": "DARPA R&D Opportunities",
+      "module": "noticias_pesquisas",
+      "source_type": "review_radar",
+      "pipeline_script": "scripts/crawl_news_research_sources.py; scripts/news_research/run_darpa_strategic_dryrun.py",
+      "config_file": "config/news_research_sources.json",
+      "artifacts_dir": "audit_reports_news_research/darpa_strategic_dryrun/review_candidates.json",
+      "destination": "review_for_edital / Radar (não public.edital automático)",
+      "status": "pronta_para_apply",
+      "status_reason": "RSS opportunities.xml; links canônicos por âncora; sempre review_for_edital no roteador.",
+      "last_known_result": {
+        "standardized": 0,
+        "validos": null,
+        "errors_count": 0,
+        "review_candidates": 9,
+        "would_upsert": null,
+        "apply_executed": false
+      },
+      "notes": "Não gerar standardized para edital sem revisão humana"
+    },
+    {
+      "source_id": "iaea_news_publications",
+      "name": "IAEA News and Publications",
+      "module": "noticias_pesquisas",
+      "source_type": "noticia+pesquisa",
+      "pipeline_script": "scripts/crawl_news_research_sources.py; scripts/build_*_payloads.py",
+      "config_file": "config/news_research_sources.json",
+      "artifacts_dir": "audit_reports_news_research_loader/ (iaea_news_publications)",
+      "destination": "public.noticia + public.pesquisa (roteamento por item) → vw_noticias_front / vw_pesquisas_front",
+      "status": "pronta_para_apply",
+      "status_reason": "Wave 1: seeds separados news vs publications; enriquecimento HTML limitado (meta/og/JSON-LD/1º parágrafo); sem apply até build+validação; fonte_recurso=iaea_news_publications no standardized.",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": 0,
+        "would_upsert": null,
+        "apply_executed": false
+      },
+      "notes": ""
+    },
+    {
+      "source_id": "eurekalert_science_filtered",
+      "name": "EurekAlert (tópicos filtrados, volume baixo)",
+      "module": "noticias_pesquisas",
+      "source_type": "noticia+pesquisa",
+      "pipeline_script": "scripts/crawl_news_research_sources.py; scripts/build_*_payloads.py",
+      "config_file": "config/news_research_sources.json",
+      "artifacts_dir": "audit_reports_news_research_loader/ (eurekalert_science_filtered)",
+      "destination": "public.noticia + public.pesquisa (roteamento por item) → vw_noticias_front / vw_pesquisas_front",
+      "status": "precisa_melhoria",
+      "status_reason": "Wave 1: require_any em título+resumo+categorias+URL; exclude medicina/saúde genérica; max_items 30; listing oficial + descoberta RSS quando disponível. Algumas redes bloqueiam bots (WAF); sem bypass d",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": 0,
+        "would_upsert": null,
+        "apply_executed": false
+      },
+      "notes": ""
+    },
+    {
+      "source_id": "defesanet",
+      "name": "DefesaNet",
+      "module": "noticias_pesquisas",
+      "source_type": "noticia",
+      "pipeline_script": "scripts/crawl_news_research_sources.py; scripts/news_research/run_*_dryrun.py",
+      "config_file": "config/news_research_sources.json",
+      "artifacts_dir": "audit_reports_news_research/defesanet_dryrun",
+      "destination": "public.noticia → vw_noticias_front / vw_pesquisas_front",
+      "status": "pronta_para_apply",
+      "status_reason": "Piloto Notícias Estratégicas BR. WordPress RSS oficial; robots permite crawl. Resumo do feed (sem artigo integral); enrich opcional og:image e data. Seções: terrestre, naval, VANT, aeroespacial, indús",
+      "last_known_result": {
+        "standardized": 10,
+        "validos": 10,
+        "errors_count": 0,
+        "would_upsert": null,
+        "apply_executed": false
+      },
+      "notes": ""
+    },
+    {
+      "source_id": "brisa_news",
+      "name": "BRISA",
+      "module": "noticias_pesquisas",
+      "source_type": "noticia",
+      "pipeline_script": "scripts/crawl_news_research_sources.py; scripts/news_research/run_*_dryrun.py",
+      "config_file": "config/news_research_sources.json",
+      "artifacts_dir": "audit_reports_news_research/brisa_news_dryrun",
+      "destination": "public.noticia → vw_noticias_front / vw_pesquisas_front",
+      "status": "implementada_latente",
+      "status_reason": "Piloto Notícias Estratégicas BR — feed WordPress só /news/ (volume baixo no feed ~4 itens). Não misturar com /artigos/. Resumo RSS; enrich og:image. Defesa/aeroespacial só por heurística no texto.",
+      "last_known_result": {
+        "standardized": 4,
+        "validos": 4,
+        "errors_count": 0,
+        "would_upsert": null,
+        "apply_executed": false
+      },
+      "notes": ""
+    },
+    {
+      "source_id": "brisa_artigos",
+      "name": "BRISA",
+      "module": "noticias_pesquisas",
+      "source_type": "pesquisa",
+      "pipeline_script": "scripts/crawl_news_research_sources.py; scripts/news_research/run_*_dryrun.py",
+      "config_file": "config/news_research_sources.json",
+      "artifacts_dir": "audit_reports_news_research/brisa_artigos_dryrun",
+      "destination": "public.pesquisa → vw_noticias_front / vw_pesquisas_front",
+      "status": "implementada_latente",
+      "status_reason": "Piloto Pesquisas/Artigos Estratégicos BR — RSS /artigos/feed/ (URLs slug na raiz, sem /artigos/ no path). Excluir /news/. Janela 24m; tipo_conteudo pesquisa; resumo RSS sem corpo integral.",
+      "last_known_result": {
+        "standardized": 8,
+        "validos": 7,
+        "errors_count": 0,
+        "would_upsert": null,
+        "apply_executed": false
+      },
+      "notes": ""
+    },
+    {
+      "source_id": "exercito_brasileiro",
+      "name": "Exército Brasileiro",
+      "module": "noticias_pesquisas",
+      "source_type": "noticia",
+      "pipeline_script": "scripts/crawl_news_research_sources.py; scripts/news_research/run_*_dryrun.py",
+      "config_file": "config/news_research_sources.json",
+      "artifacts_dir": "audit_reports_news_research/exercito_brasileiro_dryrun",
+      "destination": "public.noticia → vw_noticias_front / vw_pesquisas_front",
+      "status": "pronta_para_apply",
+      "status_reason": "Piloto Notícias Estratégicas BR — Liferay; sem RSS útil. Listagem HTML guest + noticiário; detalhe /web/noticias/w/{slug}; data em .dates (Publicado em DD/MM/AAAA); enrich og:image/resumo; janela 12m.",
+      "last_known_result": {
+        "standardized": 10,
+        "validos": 6,
+        "errors_count": 0,
+        "would_upsert": null,
+        "apply_executed": false
+      },
+      "notes": ""
+    },
+    {
+      "source_id": "softex_noticias",
+      "name": "SOFTEX",
+      "module": "noticias_pesquisas",
+      "source_type": "noticia",
+      "pipeline_script": "scripts/crawl_news_research_sources.py; scripts/news_research/run_*_dryrun.py",
+      "config_file": "config/news_research_sources.json",
+      "artifacts_dir": "audit_reports_news_research/softex_noticias_dryrun",
+      "destination": "public.noticia → vw_noticias_front / vw_pesquisas_front",
+      "status": "pronta_para_apply",
+      "status_reason": "Piloto Notícias Estratégicas BR — WordPress RSS https://softex.br/feed/ (hub /noticias/). Permalinks na raiz; categorias RSS (Notícias, Brasil IT+, etc.). Resumo RSS; enrich og:image; janela 12m.",
+      "last_known_result": {
+        "standardized": 10,
+        "validos": 10,
+        "errors_count": 0,
+        "would_upsert": null,
+        "apply_executed": false
+      },
+      "notes": ""
+    },
+    {
+      "source_id": "ita_projetos",
+      "name": "ITA Projetos",
+      "module": "noticias_pesquisas",
+      "source_type": "pesquisa",
+      "pipeline_script": "scripts/crawl_news_research_sources.py; scripts/news_research/run_*_dryrun.py",
+      "config_file": "config/news_research_sources.json",
+      "artifacts_dir": "audit_reports_news_research/ita_projetos_dryrun",
+      "destination": "public.pesquisa → vw_noticias_front / vw_pesquisas_front",
+      "status": "precisa_melhoria",
+      "status_reason": "Pesquisas Estratégicas BR — hub Drupal /projetos com fichas /projetos/{slug}; sem RSS/datas de publicação; resumo meta/1º parágrafo (sem corpo integral); HTTPS costuma falhar — seed HTTP.",
+      "last_known_result": {
+        "standardized": 4,
+        "validos": null,
+        "errors_count": 0,
+        "would_upsert": null,
+        "apply_executed": false
+      },
+      "notes": ""
+    },
+    {
+      "source_id": "ita_lab_guerra_eletronica",
+      "name": "ITA — Laboratório de Guerra Eletrônica",
+      "module": "noticias_pesquisas",
+      "source_type": "pesquisa",
+      "pipeline_script": "scripts/crawl_news_research_sources.py; scripts/news_research/run_*_dryrun.py",
+      "config_file": "config/news_research_sources.json",
+      "artifacts_dir": "audit_reports_news_research/ita_lab_guerra_eletronica_dryrun",
+      "destination": "public.pesquisa → vw_noticias_front / vw_pesquisas_front",
+      "status": "implementada_latente",
+      "status_reason": "Pesquisas Estratégicas BR — página institucional estática do LAB-GE (missão/visão); tipo_pesquisa portal_institucional; não é notícia recorrente; um registro por URL canônica.",
+      "last_known_result": {
+        "standardized": 1,
+        "validos": null,
+        "errors_count": 0,
+        "would_upsert": null,
+        "apply_executed": false
+      },
+      "notes": ""
+    },
+    {
+      "source_id": "capes_noticias",
+      "name": "CAPES Notícias",
+      "module": "noticias_pesquisas",
+      "source_type": "noticia",
+      "pipeline_script": "scripts/crawl_news_research_sources.py; scripts/news_research/run_*_dryrun.py",
+      "config_file": "config/news_research_sources.json",
+      "artifacts_dir": "audit_reports_news_research/capes_noticias_dryrun",
+      "destination": "public.noticia → vw_noticias_front / vw_pesquisas_front",
+      "status": "pronta_para_apply",
+      "status_reason": "Piloto Notícias Estratégicas BR — gov.br/Plone; RSS rss.xml (guid=URL); hub HTML espelha listagem; resumo RSS/lead; enrich og:image e data .documentPublished; janela 12m; robots CAPES Disallow vazio.",
+      "last_known_result": {
+        "standardized": 10,
+        "validos": 10,
+        "errors_count": 0,
+        "would_upsert": null,
+        "apply_executed": false
+      },
+      "notes": ""
+    },
+    {
+      "source_id": "mcti_noticias",
+      "name": "MCTI Notícias",
+      "module": "noticias_pesquisas",
+      "source_type": "noticia",
+      "pipeline_script": "scripts/crawl_news_research_sources.py; scripts/news_research/run_mcti_noticias_dryrun.py",
+      "config_file": "config/news_research_sources.json",
+      "artifacts_dir": "audit_reports_news_research/mcti_noticias_dryrun",
+      "destination": "public.noticia → vw_noticias_front",
+      "status": "pronta_para_apply",
+      "status_reason": "Notícias Estratégicas BR — gov.br/Plone MCTI; sem RSS (404); listagem HTML; filtro forte CT&I; separado de MCTI Fomento/Radar; possivel_edital em extras sem roteamento automático.",
+      "last_known_result": {
+        "standardized": 22,
+        "validos": 7,
+        "errors_count": 0,
+        "would_upsert": null,
+        "apply_executed": false
+      },
+      "notes": "Dry-run 2026-05-18: 30 raw, 2 review, 6 descartados_ruido; enrich page_enrich_max=10."
+    },
+    {
+      "source_id": "war_gov_news",
+      "name": "U.S. Department of Defense / War.gov News",
+      "module": "noticias_pesquisas",
+      "source_type": "noticia",
+      "pipeline_script": "scripts/crawl_news_research_sources.py; scripts/news_research/run_war_gov_news_dryrun.py",
+      "config_file": "config/news_research_sources.json",
+      "artifacts_dir": "audit_reports_news_research/war_gov_news_subset_top20",
+      "destination": "public.noticia → vw_noticias_front",
+      "status": "aplicada_staging",
+      "status_reason": "Apply staging: 20 notícias (subset top20).",
+      "last_known_result": {
+        "standardized": 20,
+        "validos": 20,
+        "errors_count": 0,
+        "would_upsert": 20,
+        "would_upsert_noticia": 20,
+        "apply_executed": true
+      },
+      "notes": "Frente militar consolidado; fonte oficial DoD — não jornalismo independente"
+    },
+    {
+      "source_id": "nato_news",
+      "name": "NATO News",
+      "module": "noticias_pesquisas",
+      "source_type": "noticia",
+      "pipeline_script": "scripts/crawl_news_research_sources.py; scripts/news_research/run_nato_news_dryrun.py",
+      "config_file": "config/news_research_sources.json",
+      "artifacts_dir": "audit_reports_news_research/nato_news_subset_top20",
+      "destination": "public.noticia → vw_noticias_front",
+      "status": "aplicada_staging",
+      "status_reason": "Apply staging: 20 notícias (subset top20).",
+      "last_known_result": {
+        "standardized": 20,
+        "validos": 20,
+        "errors_count": 0,
+        "would_upsert": 20,
+        "would_upsert_noticia": 20,
+        "apply_executed": true
+      },
+      "notes": "Frente militar consolidado; fonte oficial OTAN"
+    },
+    {
+      "source_id": "afrl_news",
+      "name": "AFRL News",
+      "module": "noticias_pesquisas",
+      "source_type": "noticia",
+      "pipeline_script": "scripts/crawl_news_research_sources.py; scripts/news_research/run_afrl_strategic_dryrun.py",
+      "config_file": "config/news_research_sources.json",
+      "artifacts_dir": "audit_reports_news_research/afrl_news_subset_valido",
+      "destination": "public.noticia → vw_noticias_front",
+      "status": "aplicada_staging",
+      "status_reason": "Apply staging: 12 notícias (subset válido 12m).",
+      "last_known_result": {
+        "standardized": 12,
+        "validos": 12,
+        "errors_count": 0,
+        "would_upsert": 12,
+        "would_upsert_noticia": 12,
+        "apply_executed": true
+      },
+      "notes": "Frente militar consolidado; Wayback quando hub 403"
+    },
+    {
+      "source_id": "afrl_air_warfare_research",
+      "name": "AFRL Air Warfare Directorate (RA)",
+      "module": "noticias_pesquisas",
+      "source_type": "pesquisa",
+      "pipeline_script": "scripts/crawl_news_research_sources.py; scripts/news_research/run_afrl_strategic_dryrun.py",
+      "config_file": "config/news_research_sources.json",
+      "artifacts_dir": "audit_reports_news_research/afrl_strategic_dryrun",
+      "destination": "public.pesquisa → vw_pesquisas_front",
+      "status": "latente",
+      "status_reason": "Registro institucional RA + extras.highlights; sem data_publicacao.",
+      "last_known_result": {
+        "standardized": 1,
+        "validos": 0,
+        "errors_count": 0,
+        "would_upsert": null,
+        "apply_executed": false
+      },
+      "notes": "Dry-run 2026-05-20: ~45 highlights em extras; fetch live /RA/ quando rede permitir."
+    },
+    {
+      "source_id": "afrl_space_warfare_research",
+      "name": "AFRL Space Warfare Directorate (RJ)",
+      "module": "noticias_pesquisas",
+      "source_type": "pesquisa",
+      "pipeline_script": "scripts/crawl_news_research_sources.py; scripts/news_research/run_afrl_strategic_dryrun.py",
+      "config_file": "config/news_research_sources.json",
+      "artifacts_dir": "audit_reports_news_research/afrl_strategic_dryrun",
+      "destination": "public.pesquisa → vw_pesquisas_front",
+      "status": "latente",
+      "status_reason": "Registro institucional RJ + extras.highlights.",
+      "last_known_result": {
+        "standardized": 1,
+        "validos": 0,
+        "errors_count": 0,
+        "would_upsert": null,
+        "apply_executed": false
+      },
+      "notes": "Dry-run 2026-05-20: fixture RJ; validar highlights live."
+    },
+    {
+      "source_id": "afrl_technology_transition",
+      "name": "AFRL Technology Transition Office (RR)",
+      "module": "noticias_pesquisas",
+      "source_type": "pesquisa",
+      "pipeline_script": "scripts/crawl_news_research_sources.py; scripts/news_research/run_afrl_strategic_dryrun.py",
+      "config_file": "config/news_research_sources.json",
+      "artifacts_dir": "audit_reports_news_research/afrl_strategic_dryrun",
+      "destination": "public.pesquisa → vw_pesquisas_front",
+      "status": "latente",
+      "status_reason": "portal_estrategico RR; possivel_edital se SBIR/AFWERX.",
+      "last_known_result": {
+        "standardized": 1,
+        "validos": 0,
+        "errors_count": 0,
+        "would_upsert": null,
+        "apply_executed": false
+      },
+      "notes": "Dry-run 2026-05-20: extras.highlights + flag oportunidade quando aplicável."
+    },
+    {
+      "source_id": "afrl_mission_highlights",
+      "name": "AFRL Mission Organization Highlights",
+      "module": "noticias_pesquisas",
+      "source_type": "noticia",
+      "pipeline_script": "scripts/crawl_news_research_sources.py; scripts/news_research/run_afrl_strategic_dryrun.py",
+      "config_file": "config/news_research_sources.json",
+      "artifacts_dir": "audit_reports_news_research/afrl_strategic_dryrun",
+      "destination": "public.noticia → vw_noticias_front",
+      "status": "latente",
+      "status_reason": "Highlights RA/RJ/RR com data_publicacao e filtro técnico; janela 12m em produção.",
+      "last_known_result": {
+        "standardized": 2,
+        "validos": 2,
+        "errors_count": 0,
+        "would_upsert": null,
+        "apply_executed": false
+      },
+      "notes": "Dry-run 2026-05-20: 2 válidos (janela 24m no script); maioria dos cards fora de 12m ou sem data parseável."
+    },
+    {
+      "source_id": "abdi",
+      "name": "Abdi",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "abdi/main_abdi.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "abdi/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "aplicada",
+      "status_reason": "source_readiness.json → ready",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready"
+    },
+    {
+      "source_id": "afwerx",
+      "name": "Afwerx",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "afwerx/main_afwerx.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "afwerx/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "aplicada",
+      "status_reason": "source_readiness.json → ready",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready"
+    },
+    {
+      "source_id": "aneel",
+      "name": "Aneel",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "aneel/main_aneel.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "aneel/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "aplicada",
+      "status_reason": "source_readiness.json → ready",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready"
+    },
+    {
+      "source_id": "anp",
+      "name": "Anp",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "anp/main_anp.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "anp/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "aplicada",
+      "status_reason": "source_readiness.json → ready",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready"
+    },
+    {
+      "source_id": "bndes",
+      "name": "Bndes",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "bndes/main_bndes.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "bndes/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "aplicada",
+      "status_reason": "source_readiness.json → ready",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready"
+    },
+    {
+      "source_id": "brde",
+      "name": "Brde",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "brde/main_brde.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "brde/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "aplicada",
+      "status_reason": "source_readiness.json → ready",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready"
+    },
+    {
+      "source_id": "caixa",
+      "name": "Caixa",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "caixa/main_caixa.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "caixa/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "aplicada",
+      "status_reason": "source_readiness.json → ready",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready"
+    },
+    {
+      "source_id": "capes",
+      "name": "Capes",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "capes/main_capes.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "capes/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "aplicada",
+      "status_reason": "source_readiness.json → ready",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready"
+    },
+    {
+      "source_id": "cbpf",
+      "name": "Cbpf",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "cbpf/main_cbpf.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "cbpf/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "aplicada",
+      "status_reason": "source_readiness.json → ready",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready"
+    },
+    {
+      "source_id": "china_caea",
+      "name": "China Caea",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "china_caea/main_china_caea.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "china_caea/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "aplicada",
+      "status_reason": "source_readiness.json → ready",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready"
+    },
+    {
+      "source_id": "china_cas",
+      "name": "China Cas",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "china_cas/main_china_cas.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "china_cas/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "aplicada",
+      "status_reason": "source_readiness.json → ready",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready"
+    },
+    {
+      "source_id": "china_cgn",
+      "name": "China Cgn",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "china_cgn/main_china_cgn.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "china_cgn/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "aplicada",
+      "status_reason": "source_readiness.json → ready",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready"
+    },
+    {
+      "source_id": "china_mod_public",
+      "name": "China Mod Public",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "china_mod_public/main_china_mod_public.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "china_mod_public/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "aplicada",
+      "status_reason": "source_readiness.json → ready",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready"
+    },
+    {
+      "source_id": "china_mofcom_tendering",
+      "name": "China Mofcom Tendering",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "china_mofcom_tendering/main_china_mofcom_tendering.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "china_mofcom_tendering/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "aplicada",
+      "status_reason": "source_readiness.json → ready",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready"
+    },
+    {
+      "source_id": "china_most",
+      "name": "China Most",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "china_most/main_china_most.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "china_most/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "aplicada",
+      "status_reason": "source_readiness.json → ready",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready"
+    },
+    {
+      "source_id": "china_tendering_bidding",
+      "name": "China Tendering Bidding",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "china_tendering_bidding/main_china_tendering_bidding.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "china_tendering_bidding/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "aplicada",
+      "status_reason": "source_readiness.json → ready",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready"
+    },
+    {
+      "source_id": "cnen",
+      "name": "Cnen",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "cnen/main_cnen.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "cnen/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "aplicada",
+      "status_reason": "source_readiness.json → ready",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready"
+    },
+    {
+      "source_id": "cnpq",
+      "name": "Cnpq",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "cnpq/main_cnpq.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "cnpq/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "aplicada",
+      "status_reason": "source_readiness.json → ready",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready"
+    },
+    {
+      "source_id": "compras_defesa",
+      "name": "Compras Defesa",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "compras_defesa/main_compras_defesa.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "compras_defesa/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "aplicada",
+      "status_reason": "source_readiness.json → ready",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready"
+    },
+    {
+      "source_id": "confap",
+      "name": "Confap",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "confap/main_confap.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "confap/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "aplicada",
+      "status_reason": "source_readiness.json → ready",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready"
+    },
+    {
+      "source_id": "darpa_opportunities",
+      "name": "Darpa Opportunities",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "darpa_opportunities/main_darpa_opportunities.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "darpa_opportunities/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "aplicada",
+      "status_reason": "source_readiness.json → ready",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready"
+    },
+    {
+      "source_id": "defesa",
+      "name": "Defesa",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "defesa/main_defesa.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "defesa/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "aplicada",
+      "status_reason": "source_readiness.json → ready",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready"
+    },
+    {
+      "source_id": "diu",
+      "name": "Diu",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "diu/main_diu.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "diu/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "aplicada",
+      "status_reason": "source_readiness.json → ready",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready"
+    },
+    {
+      "source_id": "dod_sbir_sttr",
+      "name": "Dod Sbir Sttr",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "dod_sbir_sttr/main_dod_sbir_sttr.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "dod_sbir_sttr/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "aplicada",
+      "status_reason": "source_readiness.json → ready",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready"
+    },
+    {
+      "source_id": "eletronuclear",
+      "name": "Eletronuclear",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "eletronuclear/main_eletronuclear.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "eletronuclear/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "aplicada",
+      "status_reason": "source_readiness.json → ready",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready"
+    },
+    {
+      "source_id": "embrapii",
+      "name": "Embrapii",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "embrapii/main_embrapii.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "embrapii/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "aplicada",
+      "status_reason": "source_readiness.json → ready",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready"
+    },
+    {
+      "source_id": "european_defence_fund",
+      "name": "European Defence Fund",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "european_defence_fund/main_european_defence_fund.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "european_defence_fund/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "aplicada",
+      "status_reason": "source_readiness.json → ready",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready"
+    },
+    {
+      "source_id": "fapemig",
+      "name": "Fapemig",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "fapemig/main_fapemig.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "fapemig/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "aplicada",
+      "status_reason": "source_readiness.json → ready",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready"
+    },
+    {
+      "source_id": "fapergs",
+      "name": "Fapergs",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "fapergs/main_fapergs.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "fapergs/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "aplicada",
+      "status_reason": "source_readiness.json → ready",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready"
+    },
+    {
+      "source_id": "fapesc",
+      "name": "Fapesc",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "fapesc/main_fapesc.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "fapesc/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "aplicada",
+      "status_reason": "source_readiness.json → ready",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready"
+    },
+    {
+      "source_id": "fapesp",
+      "name": "Fapesp",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "fapesp/main_fapesp.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "fapesp/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "aplicada",
+      "status_reason": "source_readiness.json → ready",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready"
+    },
+    {
+      "source_id": "fappr",
+      "name": "Fappr",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "fappr/main_fappr.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "fappr/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "aplicada",
+      "status_reason": "source_readiness.json → ready",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready"
+    },
+    {
+      "source_id": "finep",
+      "name": "Finep",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "finep/main_finep.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "finep/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "aplicada",
+      "status_reason": "source_readiness.json → ready",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready"
+    },
+    {
+      "source_id": "fnde",
+      "name": "Fnde",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "fnde/main_fnde.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "fnde/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "aplicada",
+      "status_reason": "source_readiness.json → ready",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready"
+    },
+    {
+      "source_id": "general_dynamics_suppliers",
+      "name": "General Dynamics Suppliers",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "general_dynamics_suppliers/main_general_dynamics_suppliers.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "general_dynamics_suppliers/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "aplicada",
+      "status_reason": "source_readiness.json → ready",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready"
+    },
+    {
+      "source_id": "grants_gov",
+      "name": "Grants Gov",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "grants_gov/main_grants_gov.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "grants_gov/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "aplicada",
+      "status_reason": "source_readiness.json → ready",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready"
+    },
+    {
+      "source_id": "impa",
+      "name": "Impa",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "impa/main_impa.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "impa/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "aplicada",
+      "status_reason": "source_readiness.json → ready",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready"
+    },
+    {
+      "source_id": "inb",
+      "name": "Inb",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "inb/main_inb.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "inb/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "aplicada",
+      "status_reason": "source_readiness.json → ready",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready"
+    },
+    {
+      "source_id": "ipen",
+      "name": "Ipen",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "ipen/main_ipen.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "ipen/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "aplicada",
+      "status_reason": "source_readiness.json → ready",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready"
+    },
+    {
+      "source_id": "japan_aist",
+      "name": "Japan Aist",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "japan_aist/main_japan_aist.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "japan_aist/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "aplicada",
+      "status_reason": "source_readiness.json → ready",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready"
+    },
+    {
+      "source_id": "japan_atla",
+      "name": "Japan Atla",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "japan_atla/main_japan_atla.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "japan_atla/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "aplicada",
+      "status_reason": "source_readiness.json → ready",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready"
+    },
+    {
+      "source_id": "japan_ihi",
+      "name": "Japan Ihi",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "japan_ihi/main_japan_ihi.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "japan_ihi/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "aplicada",
+      "status_reason": "source_readiness.json → ready",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready"
+    },
+    {
+      "source_id": "japan_jetro_procurement",
+      "name": "Japan Jetro Procurement",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "japan_jetro_procurement/main_japan_jetro_procurement.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "japan_jetro_procurement/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "aplicada",
+      "status_reason": "source_readiness.json → ready",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready"
+    },
+    {
+      "source_id": "japan_jsps",
+      "name": "Japan Jsps",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "japan_jsps/main_japan_jsps.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "japan_jsps/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "aplicada",
+      "status_reason": "source_readiness.json → ready",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready"
+    },
+    {
+      "source_id": "japan_kakenhi",
+      "name": "Japan Kakenhi",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "japan_kakenhi/main_japan_kakenhi.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "japan_kakenhi/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "aplicada",
+      "status_reason": "source_readiness.json → ready",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready"
+    },
+    {
+      "source_id": "japan_kek",
+      "name": "Japan Kek",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "japan_kek/main_japan_kek.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "japan_kek/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "aplicada",
+      "status_reason": "source_readiness.json → ready",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready"
+    },
+    {
+      "source_id": "japan_mext",
+      "name": "Japan Mext",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "japan_mext/main_japan_mext.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "japan_mext/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "aplicada",
+      "status_reason": "source_readiness.json → ready",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready"
+    },
+    {
+      "source_id": "japan_mitsubishi_heavy",
+      "name": "Japan Mitsubishi Heavy",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "japan_mitsubishi_heavy/main_japan_mitsubishi_heavy.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "japan_mitsubishi_heavy/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "aplicada",
+      "status_reason": "source_readiness.json → ready",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready"
+    },
+    {
+      "source_id": "japan_mod",
+      "name": "Japan Mod",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "japan_mod/main_japan_mod.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "japan_mod/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "aplicada",
+      "status_reason": "source_readiness.json → ready",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready"
+    },
+    {
+      "source_id": "japan_nedo",
+      "name": "Japan Nedo",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "japan_nedo/main_japan_nedo.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "japan_nedo/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "aplicada",
+      "status_reason": "source_readiness.json → ready",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready"
+    },
+    {
+      "source_id": "japan_nims",
+      "name": "Japan Nims",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "japan_nims/main_japan_nims.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "japan_nims/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "aplicada",
+      "status_reason": "source_readiness.json → ready",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready"
+    },
+    {
+      "source_id": "japan_qst",
+      "name": "Japan Qst",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "japan_qst/main_japan_qst.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "japan_qst/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "aplicada",
+      "status_reason": "source_readiness.json → ready",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready"
+    },
+    {
+      "source_id": "japan_riken",
+      "name": "Japan Riken",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "japan_riken/main_japan_riken.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "japan_riken/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "aplicada",
+      "status_reason": "source_readiness.json → ready",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready"
+    },
+    {
+      "source_id": "lockheed_martin_suppliers",
+      "name": "Lockheed Martin Suppliers",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "lockheed_martin_suppliers/main_lockheed_martin_suppliers.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "lockheed_martin_suppliers/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "aplicada",
+      "status_reason": "source_readiness.json → ready",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready"
+    },
+    {
+      "source_id": "amazul",
+      "name": "Amazul",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "amazul/main_amazul.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "amazul/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "pronta_para_apply",
+      "status_reason": "source_readiness.json → ready_with_notes",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes"
+    },
+    {
+      "source_id": "ambev",
+      "name": "Ambev",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "ambev/main_ambev.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "ambev/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "pronta_para_apply",
+      "status_reason": "source_readiness.json → ready_with_notes",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes"
+    },
+    {
+      "source_id": "apex",
+      "name": "Apex",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "apex/main_apex.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "apex/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "pronta_para_apply",
+      "status_reason": "source_readiness.json → ready_with_notes",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes"
+    },
+    {
+      "source_id": "badesul",
+      "name": "Badesul",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "badesul/main_badesul.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "badesul/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "pronta_para_apply",
+      "status_reason": "source_readiness.json → ready_with_notes",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes"
+    },
+    {
+      "source_id": "bae_systems_suppliers",
+      "name": "Bae Systems Suppliers",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "bae_systems_suppliers/main_bae_systems_suppliers.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "bae_systems_suppliers/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "pronta_para_apply",
+      "status_reason": "source_readiness.json → ready_with_notes",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes"
+    },
+    {
+      "source_id": "banco_da_amazonia",
+      "name": "Banco Da Amazonia",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "banco_da_amazonia/main_banco_da_amazonia.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "banco_da_amazonia/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "pronta_para_apply",
+      "status_reason": "source_readiness.json → ready_with_notes",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes"
+    },
+    {
+      "source_id": "bdmg",
+      "name": "Bdmg",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "bdmg/main_bdmg.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "bdmg/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "pronta_para_apply",
+      "status_reason": "source_readiness.json → ready_with_notes",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes"
+    },
+    {
+      "source_id": "bnb",
+      "name": "Bnb",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "bnb/main_bnb.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "bnb/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "pronta_para_apply",
+      "status_reason": "source_readiness.json → ready_with_notes",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes"
+    },
+    {
+      "source_id": "china_nsfc",
+      "name": "China Nsfc",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "china_nsfc/main_china_nsfc.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "china_nsfc/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "pronta_para_apply",
+      "status_reason": "source_readiness.json → ready_with_notes",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes"
+    },
+    {
+      "source_id": "china_university_procurement",
+      "name": "China University Procurement",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "china_university_procurement/main_china_university_procurement.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "china_university_procurement/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "pronta_para_apply",
+      "status_reason": "source_readiness.json → ready_with_notes",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes"
+    },
+    {
+      "source_id": "doe_arpae",
+      "name": "Doe Arpae",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "doe_arpae/main_doe_arpae.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "doe_arpae/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "pronta_para_apply",
+      "status_reason": "source_readiness.json → ready_with_notes",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes"
+    },
+    {
+      "source_id": "eic",
+      "name": "Eic",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "eic/main_eic.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "eic/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "pronta_para_apply",
+      "status_reason": "source_readiness.json → ready_with_notes",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes"
+    },
+    {
+      "source_id": "eit",
+      "name": "Eit",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "eit/main_eit.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "eit/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "pronta_para_apply",
+      "status_reason": "source_readiness.json → ready_with_notes",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes"
+    },
+    {
+      "source_id": "erc",
+      "name": "Erc",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "erc/main_erc.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "erc/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "pronta_para_apply",
+      "status_reason": "source_readiness.json → ready_with_notes",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes"
+    },
+    {
+      "source_id": "esa_osip",
+      "name": "Esa Osip",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "esa_osip/main_esa_osip.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "esa_osip/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "pronta_para_apply",
+      "status_reason": "source_readiness.json → ready_with_notes",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes"
+    },
+    {
+      "source_id": "eureka_network",
+      "name": "Eureka Network",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "eureka_network/main_eureka_network.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "eureka_network/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "pronta_para_apply",
+      "status_reason": "source_readiness.json → ready_with_notes",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes"
+    },
+    {
+      "source_id": "faperg",
+      "name": "Faperg",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "faperg/main_faperg.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "faperg/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "pronta_para_apply",
+      "status_reason": "source_readiness.json → ready_with_notes",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes"
+    },
+    {
+      "source_id": "horizon_europe",
+      "name": "Horizon Europe",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "horizon_europe/main_horizon_europe.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "horizon_europe/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "pronta_para_apply",
+      "status_reason": "source_readiness.json → ready_with_notes",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes"
+    },
+    {
+      "source_id": "iarpa",
+      "name": "Iarpa",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "iarpa/main_iarpa.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "iarpa/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "pronta_para_apply",
+      "status_reason": "source_readiness.json → ready_with_notes",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes"
+    },
+    {
+      "source_id": "mapa",
+      "name": "Mapa",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "mapa/main_mapa.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "mapa/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "pronta_para_apply",
+      "status_reason": "source_readiness.json → ready_with_notes",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes"
+    },
+    {
+      "source_id": "mma",
+      "name": "Mma",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "mma/main_mma.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "mma/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "pronta_para_apply",
+      "status_reason": "source_readiness.json → ready_with_notes",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes"
+    },
+    {
+      "source_id": "nato_diana",
+      "name": "Nato Diana",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "nato_diana/main_nato_diana.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "nato_diana/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "pronta_para_apply",
+      "status_reason": "source_readiness.json → ready_with_notes",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes"
+    },
+    {
+      "source_id": "nsf",
+      "name": "Nsf",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "nsf/main_nsf.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "nsf/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "pronta_para_apply",
+      "status_reason": "source_readiness.json → ready_with_notes",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes"
+    },
+    {
+      "source_id": "nuclep",
+      "name": "Nuclep",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "nuclep/main_nuclep.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "nuclep/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "pronta_para_apply",
+      "status_reason": "source_readiness.json → ready_with_notes",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes"
+    },
+    {
+      "source_id": "petrobras",
+      "name": "Petrobras",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "petrobras/main_petrobras.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "petrobras/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "pronta_para_apply",
+      "status_reason": "source_readiness.json → ready_with_notes",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes"
+    },
+    {
+      "source_id": "plataforma_industria",
+      "name": "Plataforma Industria",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "plataforma_industria/main_plataforma_industria.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "plataforma_industria/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "pronta_para_apply",
+      "status_reason": "source_readiness.json → ready_with_notes",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes"
+    },
+    {
+      "source_id": "pncp",
+      "name": "Pncp",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "pncp/main_pncp.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "pncp/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "pronta_para_apply",
+      "status_reason": "source_readiness.json → ready_with_notes",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes"
+    },
+    {
+      "source_id": "pncp_defesa",
+      "name": "Pncp Defesa",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "pncp_defesa/main_pncp_defesa.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "pncp_defesa/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "pronta_para_apply",
+      "status_reason": "source_readiness.json → ready_with_notes",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes"
+    },
+    {
+      "source_id": "rheinmetall_suppliers",
+      "name": "Rheinmetall Suppliers",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "rheinmetall_suppliers/main_rheinmetall_suppliers.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "rheinmetall_suppliers/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "pronta_para_apply",
+      "status_reason": "source_readiness.json → ready_with_notes",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes"
+    },
+    {
+      "source_id": "saude",
+      "name": "Saude",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "saude/main_saude.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "saude/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "pronta_para_apply",
+      "status_reason": "source_readiness.json → ready_with_notes",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes"
+    },
+    {
+      "source_id": "senai",
+      "name": "Senai",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "senai/main_senai.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "senai/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "pronta_para_apply",
+      "status_reason": "source_readiness.json → ready_with_notes",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes"
+    },
+    {
+      "source_id": "softex",
+      "name": "Softex",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "softex/main_softex.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "softex/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "pronta_para_apply",
+      "status_reason": "source_readiness.json → ready_with_notes",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes"
+    },
+    {
+      "source_id": "thales_suppliers",
+      "name": "Thales Suppliers",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "thales_suppliers/main_thales_suppliers.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "thales_suppliers/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "pronta_para_apply",
+      "status_reason": "source_readiness.json → ready_with_notes",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes"
+    },
+    {
+      "source_id": "ukri_funding",
+      "name": "Ukri Funding",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "ukri_funding/main_ukri_funding.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "ukri_funding/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "pronta_para_apply",
+      "status_reason": "source_readiness.json → ready_with_notes",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes"
+    },
+    {
+      "source_id": "wellcome",
+      "name": "Wellcome",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "wellcome/main_wellcome.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "wellcome/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "pronta_para_apply",
+      "status_reason": "source_readiness.json → ready_with_notes",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes"
+    },
+    {
+      "source_id": "china_avic",
+      "name": "China Avic",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "china_avic/main_china_avic.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "china_avic/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "precisa_melhoria",
+      "status_reason": "source_readiness.json → needs_manual_review",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; needs_manual_review"
+    },
+    {
+      "source_id": "china_norinco",
+      "name": "China Norinco",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "china_norinco/main_china_norinco.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "china_norinco/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "precisa_melhoria",
+      "status_reason": "source_readiness.json → needs_manual_review",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; needs_manual_review"
+    },
+    {
+      "source_id": "eurostars",
+      "name": "Eurostars",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "eurostars/main_eurostars.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "eurostars/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "precisa_melhoria",
+      "status_reason": "source_readiness.json → needs_manual_review",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; needs_manual_review"
+    },
+    {
+      "source_id": "fonplata",
+      "name": "Fonplata",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "fonplata/main_fonplata.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "fonplata/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "precisa_melhoria",
+      "status_reason": "source_readiness.json → needs_manual_review",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; needs_manual_review"
+    },
+    {
+      "source_id": "innovate_uk",
+      "name": "Innovate Uk",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "innovate_uk/main_innovate_uk.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "innovate_uk/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "precisa_melhoria",
+      "status_reason": "source_readiness.json → needs_manual_review",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; needs_manual_review"
+    },
+    {
+      "source_id": "japan_jaea",
+      "name": "Japan Jaea",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "japan_jaea/main_japan_jaea.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "japan_jaea/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "precisa_melhoria",
+      "status_reason": "source_readiness.json → needs_manual_review",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; needs_manual_review"
+    },
+    {
+      "source_id": "japan_jst",
+      "name": "Japan Jst",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "japan_jst/main_japan_jst.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "japan_jst/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "precisa_melhoria",
+      "status_reason": "source_readiness.json → needs_manual_review",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; needs_manual_review"
+    },
+    {
+      "source_id": "japan_kawasaki_heavy",
+      "name": "Japan Kawasaki Heavy",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "japan_kawasaki_heavy/main_japan_kawasaki_heavy.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "japan_kawasaki_heavy/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "precisa_melhoria",
+      "status_reason": "source_readiness.json → needs_manual_review",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; needs_manual_review"
+    },
+    {
+      "source_id": "bid_lab",
+      "name": "Bid Lab",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "bid_lab/main_bid_lab.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "bid_lab/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "nao_recomendado",
+      "status_reason": "source_readiness.json → blocked",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; blocked"
+    },
+    {
+      "source_id": "caf",
+      "name": "Caf",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "caf/main_caf.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "caf/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "nao_recomendado",
+      "status_reason": "source_readiness.json → blocked",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; blocked"
+    },
+    {
+      "source_id": "china_cnnc",
+      "name": "China Cnnc",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "china_cnnc/main_china_cnnc.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "china_cnnc/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "nao_recomendado",
+      "status_reason": "source_readiness.json → blocked",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; blocked"
+    },
+    {
+      "source_id": "dcta_ita_iae",
+      "name": "Dcta Ita Iae",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "dcta_ita_iae/main_dcta_ita_iae.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "dcta_ita_iae/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "nao_recomendado",
+      "status_reason": "source_readiness.json → blocked",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; blocked"
+    },
+    {
+      "source_id": "esa_star",
+      "name": "Esa Star",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "esa_star/main_esa_star.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "esa_star/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "nao_recomendado",
+      "status_reason": "source_readiness.json → blocked",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; blocked"
+    },
+    {
+      "source_id": "japan_e_rad",
+      "name": "Japan E Rad",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "japan_e_rad/main_japan_e_rad.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "japan_e_rad/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "nao_recomendado",
+      "status_reason": "source_readiness.json → blocked",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; blocked"
+    },
+    {
+      "source_id": "japan_jaxa",
+      "name": "Japan Jaxa",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "japan_jaxa/main_japan_jaxa.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "japan_jaxa/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "nao_recomendado",
+      "status_reason": "source_readiness.json → blocked",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; blocked"
+    },
+    {
+      "source_id": "marinha",
+      "name": "Marinha",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "marinha/main_marinha.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "marinha/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "nao_recomendado",
+      "status_reason": "source_readiness.json → blocked",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; blocked"
+    },
+    {
+      "source_id": "sam_gov",
+      "name": "Sam Gov",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "sam_gov/main_sam_gov.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "sam_gov/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "nao_recomendado",
+      "status_reason": "source_readiness.json → blocked",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; blocked"
+    },
+    {
+      "source_id": "science_scraper",
+      "name": "Science Scraper",
+      "module": "editais_radar",
+      "source_type": "instituicao_governo_internacional",
+      "pipeline_script": "science_scraper/main_science_scraper.py",
+      "config_file": "config/source_readiness.json",
+      "artifacts_dir": "science_scraper/outputs/; audit_reports_retransform/standardized/",
+      "destination": "public.edital → vw_editais_front",
+      "status": "nao_recomendado",
+      "status_reason": "source_readiness.json → blocked",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": null,
+        "would_upsert": null,
+        "apply_executed": null
+      },
+      "notes": "Loader: scripts/load_ready_sources.py; blocked"
+    },
+    {
+      "module": "noticias_pesquisas",
+      "pipeline_script": "scripts/crawl_news_research_sources.py; scripts/news_research/run_military_research_expansion_dryrun.py",
+      "config_file": "config/news_research_sources.json",
+      "artifacts_dir": "audit_reports_news_research/military_research_expansion_dryrun",
+      "last_known_result": {
+        "standardized": 4,
+        "validos": 2,
+        "errors_count": 0,
+        "would_upsert": null,
+        "apply_executed": false
+      },
+      "source_id": "afmc_news",
+      "name": "AFMC News",
+      "source_type": "noticia",
+      "destination": "public.noticia → vw_noticias_front",
+      "status": "latente",
+      "status_reason": "Hub 403 live; listagem ArticleCS via Wayback; datas no listing esparsas.",
+      "notes": "Dry-run military_research_expansion 2026-05-20 (prioridade probe)."
+    },
+    {
+      "module": "noticias_pesquisas",
+      "pipeline_script": "scripts/crawl_news_research_sources.py; scripts/news_research/run_military_research_expansion_dryrun.py",
+      "config_file": "config/news_research_sources.json",
+      "artifacts_dir": "audit_reports_news_research/military_research_expansion_dryrun",
+      "last_known_result": {
+        "standardized": 0,
+        "validos": 0,
+        "errors_count": 0,
+        "would_upsert": null,
+        "apply_executed": false
+      },
+      "source_id": "afnwc_news",
+      "name": "AFNWC News",
+      "source_type": "noticia",
+      "destination": "public.noticia → vw_noticias_front",
+      "status": "latente",
+      "status_reason": "Nuclear enterprise; 403 + Wayback; filtro relevância nuclear.",
+      "notes": "Dry-run military_research_expansion 2026-05-20 (prioridade probe)."
+    },
+    {
+      "module": "noticias_pesquisas",
+      "source_id": "space_force_news",
+      "name": "U.S. Space Force News",
+      "source_type": "noticia",
+      "destination": "public.noticia → vw_noticias_front",
+      "status": "aplicada_staging",
+      "status_reason": "Subset 12m: 18 itens; loader dry-run would_upsert_noticia=18.",
+      "pipeline_script": "scripts/crawl_news_research_sources.py; scripts/news_research/build_military_expansion_subsets_valido.py",
+      "config_file": "config/news_research_sources.json",
+      "artifacts_dir": "audit_reports_news_research/space_force_news_subset_valido",
+      "last_known_result": {
+        "standardized": 18,
+        "validos": 18,
+        "errors_count": 0,
+        "would_upsert": 18,
+        "would_upsert_noticia": 18,
+        "would_upsert_pesquisa": 0,
+        "apply_executed": true
+      },
+      "notes": "Frente militar consolidado; apply staging 2026-05-20"
+    },
+    {
+      "module": "noticias_pesquisas",
+      "source_id": "arl_news",
+      "name": "ARL Media Center News",
+      "source_type": "noticia",
+      "destination": "public.noticia → vw_noticias_front",
+      "status": "aplicada_staging",
+      "status_reason": "Subset 12m: 12 itens; loader dry-run would_upsert_noticia=12.",
+      "pipeline_script": "scripts/crawl_news_research_sources.py; scripts/news_research/build_military_expansion_subsets_valido.py",
+      "config_file": "config/news_research_sources.json",
+      "artifacts_dir": "audit_reports_news_research/arl_news_subset_valido",
+      "last_known_result": {
+        "standardized": 12,
+        "validos": 12,
+        "errors_count": 0,
+        "would_upsert": 12,
+        "would_upsert_noticia": 12,
+        "would_upsert_pesquisa": 0,
+        "apply_executed": false
+      },
+      "notes": "Frente militar consolidado; apply staging 2026-05-20"
+    },
+    {
+      "module": "noticias_pesquisas",
+      "source_id": "afrl_technology_areas",
+      "name": "AFRL Technology Areas (afresearchlab.com)",
+      "source_type": "pesquisa",
+      "destination": "public.pesquisa → vw_pesquisas_front",
+      "status": "aplicada_staging",
+      "status_reason": "Apply staging: 12 áreas tecnológicas (catálogo sem data).",
+      "pipeline_script": "scripts/crawl_news_research_sources.py; scripts/news_research/build_military_expansion_subsets_valido.py",
+      "config_file": "config/news_research_sources.json",
+      "artifacts_dir": "audit_reports_news_research/afrl_technology_areas_subset_valido",
+      "last_known_result": {
+        "standardized": 12,
+        "validos": 12,
+        "errors_count": 0,
+        "would_upsert": 12,
+        "would_upsert_noticia": 0,
+        "would_upsert_pesquisa": 12,
+        "apply_executed": true
+      },
+      "notes": "Frente militar consolidado; apply staging 2026-05-20"
+    },
+    {
+      "module": "noticias_pesquisas",
+      "pipeline_script": "scripts/crawl_news_research_sources.py; scripts/news_research/run_military_research_expansion_dryrun.py",
+      "config_file": "config/news_research_sources.json",
+      "artifacts_dir": "audit_reports_news_research/military_research_expansion_dryrun",
+      "last_known_result": {
+        "standardized": 5,
+        "validos": 0,
+        "errors_count": 0,
+        "would_upsert": null,
+        "apply_executed": false
+      },
+      "source_id": "afnwc_innovation",
+      "name": "AFNWC Innovation",
+      "source_type": "pesquisa",
+      "destination": "public.pesquisa → vw_pesquisas_front",
+      "status": "precisa_melhoria",
+      "status_reason": "Portal + cards Wayback; 17 válidos.",
+      "notes": "Dry-run military_research_expansion 2026-05-20 (prioridade probe)."
+    },
+    {
+      "module": "noticias_pesquisas",
+      "pipeline_script": "scripts/crawl_news_research_sources.py; scripts/news_research/run_military_research_expansion_dryrun.py",
+      "config_file": "config/news_research_sources.json",
+      "artifacts_dir": "audit_reports_news_research/military_research_expansion_dryrun",
+      "last_known_result": {
+        "standardized": 1,
+        "validos": 1,
+        "errors_count": 0,
+        "would_upsert": null,
+        "apply_executed": false
+      },
+      "source_id": "afnwc_weapon_systems",
+      "name": "AFNWC Weapon Systems",
+      "source_type": "pesquisa",
+      "destination": "public.pesquisa → vw_pesquisas_front",
+      "status": "precisa_melhoria",
+      "status_reason": "Hub Weapon-Systems 403; só registro portal no dry-run.",
+      "notes": "Dry-run military_research_expansion 2026-05-20 (prioridade probe)."
+    },
+    {
+      "module": "noticias_pesquisas",
+      "source_id": "arl_resources",
+      "name": "ARL Resources",
+      "source_type": "pesquisa",
+      "destination": "public.pesquisa → vw_pesquisas_front",
+      "status": "aplicada_staging",
+      "status_reason": "Subset: 18 recursos; 2 BAA excluídos; loader dry-run would_upsert_pesquisa=18.",
+      "pipeline_script": "scripts/crawl_news_research_sources.py; scripts/news_research/build_military_expansion_subsets_valido.py",
+      "config_file": "config/news_research_sources.json",
+      "artifacts_dir": "audit_reports_news_research/arl_resources_subset_valido",
+      "last_known_result": {
+        "standardized": 18,
+        "validos": 18,
+        "errors_count": 0,
+        "would_upsert": 18,
+        "would_upsert_noticia": 0,
+        "would_upsert_pesquisa": 18,
+        "apply_executed": true
+      },
+      "notes": "Frente militar consolidado; BAA fora do subset (review Radar)"
+    },
+    {
+      "source_id": "f35_news",
+      "name": "F-35 Lightning II News",
+      "module": "noticias_pesquisas",
+      "source_type": "noticia",
+      "pipeline_script": "scripts/crawl_news_research_sources.py",
+      "config_file": "config/news_research_sources.json",
+      "artifacts_dir": "audit_reports_news_research/f35_news_subset_top20",
+      "destination": "public.noticia → vw_noticias_front",
+      "status": "aplicada_staging",
+      "status_reason": "Apply staging: 20 notícias; fonte corporativa programa F-35.",
+      "last_known_result": {
+        "standardized": 20,
+        "validos": 20,
+        "errors_count": 0,
+        "would_upsert": 20,
+        "would_upsert_noticia": 20,
+        "apply_executed": true
+      },
+      "notes": "Frente militar consolidado; não é jornalismo independente"
+    },
+    {
+      "source_id": "lockheed_martin_news",
+      "name": "Lockheed Martin Newsroom",
+      "module": "noticias_pesquisas",
+      "source_type": "noticia",
+      "pipeline_script": "scripts/crawl_news_research_sources.py",
+      "config_file": "config/news_research_sources.json",
+      "artifacts_dir": "audit_reports_news_research/lockheed_martin_news_subset_top20",
+      "destination": "public.noticia → vw_noticias_front",
+      "status": "aplicada_staging",
+      "status_reason": "Apply staging: 20 notícias; comunicação corporativa defesa/aero.",
+      "last_known_result": {
+        "standardized": 20,
+        "validos": 20,
+        "errors_count": 0,
+        "would_upsert": 20,
+        "would_upsert_noticia": 20,
+        "apply_executed": true
+      },
+      "notes": "Frente militar consolidado"
+    }
+  ],
+  "meta": {
+    "edital_readiness_counts": {
+      "ready": 54,
+      "ready_with_notes": 36,
+      "needs_manual_review": 8,
+      "blocked": 10,
+      "reprocess_after_fix": 0
+    },
+    "news_research_config_count": 13,
+    "concursos_tracked_count": 19,
+    "military_strategic_front": {
+      "consolidado_json": "audit_reports_news_research/military_strategic_consolidado/consolidado_militar.json",
+      "consolidado_md": "audit_reports_news_research/military_strategic_consolidado/consolidado_militar.md",
+      "data_consolidado": "2026-05-20",
+      "fontes_aplicadas": 11,
+      "registros_total": 187,
+      "public_noticia": {
+        "fontes": 8,
+        "registros": 132,
+        "source_ids": [
+          "f35_news",
+          "lockheed_martin_news",
+          "darpa_news",
+          "war_gov_news",
+          "nato_news",
+          "afrl_news",
+          "arl_news",
+          "space_force_news"
+        ]
+      },
+      "public_pesquisa": {
+        "fontes": 3,
+        "registros": 55,
+        "source_ids": [
+          "darpa_programs_research",
+          "afrl_technology_areas",
+          "arl_resources"
+        ]
+      },
+      "latente_review_source_ids": [
+        "darpa_opportunities_research",
+        "afrl_air_warfare_research",
+        "afrl_space_warfare_research",
+        "afrl_technology_transition",
+        "afrl_mission_highlights",
+        "afnwc_innovation",
+        "afnwc_weapon_systems",
+        "afmc_news",
+        "afnwc_news"
+      ]
+    }
+  }
+}

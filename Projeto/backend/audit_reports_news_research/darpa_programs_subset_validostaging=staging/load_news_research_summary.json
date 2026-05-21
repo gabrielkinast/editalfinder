@@ -1,0 +1,40 @@
+{
+  "data_execucao": "2026-05-19T21:20:43Z",
+  "modo": "apply",
+  "source": "darpa_programs_research",
+  "wave": null,
+  "payload_noticia_path": "audit_reports_news_research\\darpa_programs_subset_validostaging=staging\\darpa_programs_payload_noticia.json",
+  "payload_pesquisa_path": "audit_reports_news_research\\darpa_programs_subset_validostaging=staging\\standardized\\darpa_programs_research_standardized.json",
+  "payload_review_path": "audit_reports_news_research\\darpa_programs_subset_validostaging=staging\\darpa_programs_review_candidates.json",
+  "input_dir": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_news_research\\darpa_programs_subset_validostaging=staging",
+  "total_noticia": 0,
+  "total_pesquisa": 0,
+  "would_upsert_noticia": 0,
+  "would_upsert_pesquisa": 0,
+  "inserted_noticia": 0,
+  "updated_noticia": 0,
+  "inserted_pesquisa": 0,
+  "updated_pesquisa": 0,
+  "skipped": 0,
+  "errors_count": 0,
+  "review_candidates_ignored": 0,
+  "arrays_normalized_count": 0,
+  "arrays_normalized_sample": [],
+  "environment_guard": {
+    "editalfinder_env": "staging",
+    "has_supabase_url": true,
+    "has_service_key": true,
+    "has_anon_key": true,
+    "has_allow_staging_apply": true,
+    "url_host_masked": "dof***.co",
+    "block_reason": ""
+  },
+  "environment_safe": true,
+  "env_files_loaded": [
+    "D:\\Computational_Physics\\My Projects\\edital\\.env.staging",
+    "D:\\Computational_Physics\\My Projects\\edital\\CORE\\.env"
+  ],
+  "apply_executado": true,
+  "apply_block_reason": "",
+  "apply_status": "applied"
+}

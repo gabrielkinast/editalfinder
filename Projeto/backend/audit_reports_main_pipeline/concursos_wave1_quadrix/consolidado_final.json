@@ -1,0 +1,181 @@
+{
+  "wave": "concursos_wave1_quadrix",
+  "fonte": "quadrix",
+  "consolidado_em_utc": "2026-05-14T21:00:00Z",
+  "nota_versao": "Consolidado pré-apply: crawler main_quadrix_concursos; listagens /index/abertos/ + /index/1/; 10 URLs dedupe; 0 descartados no crawl; standardized 10; loader dry-run errors_count=0, would_upsert_total=10; pytest tests/test_quadrix_crawler.py 4 passed. Apply não executado.",
+  "artefatos": {
+    "standardized": "audit_reports_main_pipeline/concursos_wave1_quadrix/standardized/quadrix_standardized.json",
+    "crawler_summary": "audit_reports_main_pipeline/concursos_wave1_quadrix/crawler_summary.json",
+    "loader_dryrun_summary": "audit_reports_main_pipeline/concursos_wave1_quadrix/loader_dryrun/load_concursos_selecao_summary.json",
+    "loader_dryrun_errors": "audit_reports_main_pipeline/concursos_wave1_quadrix/loader_dryrun/load_concursos_selecao_errors.json",
+    "loader_dryrun_payload_examples": "audit_reports_main_pipeline/concursos_wave1_quadrix/loader_dryrun/load_concursos_selecao_payload_examples.json"
+  },
+  "referencia_crawl_utc": "2026-05-14T20:37:48.741242+00:00",
+  "totais_crawler": {
+    "urls_brutas_candidatas": 10,
+    "descartados_total": 0,
+    "descartados_por_motivo": {},
+    "standardized_gravados": 10,
+    "crawler_errors": 0
+  },
+  "totais_loader_dryrun": {
+    "total_items": 10,
+    "would_upsert_total": 10,
+    "errors_count": 0,
+    "map_errors_count": 0,
+    "duplicate_fonte_link_in_batch": 0,
+    "expired_items_count": 0,
+    "errors_json_linhas": 0
+  },
+  "distribuicao_validacao_status": {
+    "valido": 10,
+    "incompleto": 0
+  },
+  "distribuicao_qualidade_dado": {
+    "media": 10,
+    "alta": 0,
+    "baixa": 0
+  },
+  "distribuicao_tipo_selecao": {
+    "concurso_publico": 6,
+    "processo_seletivo": 4
+  },
+  "distribuicao_status": {
+    "inscricoes_abertas": 10
+  },
+  "campos_bem_preenchidos": [
+    "titulo",
+    "tipo_selecao",
+    "categoria",
+    "orgao",
+    "instituicao",
+    "banca",
+    "cargo",
+    "nivel_escolaridade",
+    "numero_vagas",
+    "taxa_inscricao",
+    "data_publicacao",
+    "data_inicio_inscricao",
+    "data_fim_inscricao",
+    "data_prova",
+    "status",
+    "link",
+    "link_edital",
+    "fonte",
+    "fonte_tipo",
+    "validacao_status",
+    "qualidade_dado",
+    "tags",
+    "extras",
+    "ativo"
+  ],
+  "campos_geralmente_ausentes": [
+    "estado",
+    "municipio",
+    "area",
+    "curso",
+    "salario_min",
+    "salario_max",
+    "regiao",
+    "modalidade"
+  ],
+  "revisao_datas": {
+    "resumo": "Todas as datas vêm de texto oficial Quadrix (bloco inscrições + cronograma «Prova objetiva»). `data_publicacao` coincide com `data_inicio_inscricao` na maioria; exceção: SEDES (`data_publicacao` 2026-05-13, `data_inicio_inscricao` 2026-06-09) — alinhar com página ao vivo antes de messaging público.",
+    "data_fim_inscricao_unicas": ["2026-05-18", "2026-05-20", "2026-06-08", "2026-06-22", "2026-07-13"],
+    "observacao_prazo_curto": "Vários certames com fim de inscrição em 2026-05-18 ou 2026-05-20 (curto prazo face à referência de crawl 2026-05-14); útil para staging/histórico, atenção no front se a data já passou."
+  },
+  "revisao_link_edital": {
+    "resumo": "Todos os `link_edital` apontam para PDF em `anexos.cdn.selecao.net.br` com path `/uploads/861/concursos/{id}/anexos/*.pdf`, coerente com a plataforma Quadrix/seleção. Nenhum `official_link_missing`. Recomenda-se abrir 1–2 PDFs por amostragem antes do primeiro apply.",
+    "host_pdf": "anexos.cdn.selecao.net.br"
+  },
+  "revisao_taxas_vagas": {
+    "resumo": "`numero_vagas` e `taxa_inscricao` extraídos da primeira linha de `#blocoListaVagas` (pilotagem). Taxas típicas 60–84 em concursos regionais; exames de suficiência com taxa 1500.0 e 2500.0 — valores elevados mas plausíveis; classificados como `revisar_valor` para confirmação humana.",
+    "faixa_taxa_min": 60.0,
+    "faixa_taxa_max": 2500.0,
+    "nota_numero_vagas": "Certames com múltiplos cargos: o crawler usa a primeira linha da tabela; totais agregados podem diferir do edital completo."
+  },
+  "riscos_restantes": [
+    "Ausência de `estado`/`municipio` na maioria dos registos: filtros geográficos no produto podem ficar vazios até enriquecimento PCI ou parsing adicional (ex.: cargo com sufixo «-Alagoinhas»).",
+    "`numero_vagas` / `cargo` só da primeira linha da tabela de vagas.",
+    "`data_prova` depende do evento «Prova objetiva» no cronograma; alterações de calendário no site não refletem até novo crawl.",
+    "Catálogo limitado às duas listagens e ao dedupe (~10 URLs neste snapshot); corridas futuras podem devolver mais ou menos linhas.",
+    "Registos com fim de inscrição muito próximo da data de crawl podem aparecer «atrasados» no front sem re-crawl."
+  ],
+  "classificacao_por_registro": [
+    {
+      "link": "https://www.quadrix.org.br/informacoes/3032",
+      "titulo": "Conselho Nacional de Técnicos em Radiologia (CONTER)",
+      "classificacao": "pronto_para_apply",
+      "motivo": "Datas de inscrição e prova com margem; taxa e vagas na faixa habitual; PDF presente."
+    },
+    {
+      "link": "https://www.quadrix.org.br/informacoes/3063",
+      "titulo": "Conselho Regional dos Técnicos Industriais do Espírito Santo (CRT-ES)",
+      "classificacao": "pronto_para_apply",
+      "motivo": "Janela de inscrição e prova distante da data de referência do crawl; sem alertas específicos."
+    },
+    {
+      "link": "https://www.quadrix.org.br/informacoes/3043",
+      "titulo": "Conselho Regional de Corretores de Imóveis da 09a Região (CRECI-BA)",
+      "classificacao": "revisar_data",
+      "motivo": "Fim de inscrição 2026-05-20 (prazo curto vs. crawl 2026-05-14); confirmar vigência antes de destacar no produto."
+    },
+    {
+      "link": "https://www.quadrix.org.br/informacoes/3046",
+      "titulo": "Conselho Regional de Educação Física da 11a Região (CREF-MS)",
+      "classificacao": "revisar_data",
+      "motivo": "Fim de inscrição 2026-05-20; mesmo raciocínio de prazo curto."
+    },
+    {
+      "link": "https://www.quadrix.org.br/informacoes/3051",
+      "titulo": "Conselho Regional de Fonoaudiologia 2a Região (CREFONO-SP)",
+      "classificacao": "revisar_data",
+      "motivo": "Fim de inscrição 2026-05-20."
+    },
+    {
+      "link": "https://www.quadrix.org.br/informacoes/1018",
+      "titulo": "Conselho Regional dos Representantes Comerciais do Estado do Piauí (CORE-PI)",
+      "classificacao": "revisar_data",
+      "motivo": "Fim de inscrição 2026-05-20."
+    },
+    {
+      "link": "https://www.quadrix.org.br/informacoes/3059",
+      "titulo": "Exame de suficiência - certificado de área de atuação em Administração em Saúde 2026",
+      "classificacao": "revisar_valor",
+      "motivo": "Taxa 1500.0 e fim de inscrição 2026-05-18; confirmar no edital PDF e regra de produto (exame vs. concurso)."
+    },
+    {
+      "link": "https://www.quadrix.org.br/informacoes/3058",
+      "titulo": "Exame de suficiência - certificado de área de atuação em Auditoria Médica 2026",
+      "classificacao": "revisar_valor",
+      "motivo": "Taxa 1500.0; mesmo tipo de certame."
+    },
+    {
+      "link": "https://www.quadrix.org.br/informacoes/1012",
+      "titulo": "Exame de suficiência - título de especialista em Medicina Preventiva e Social 2026",
+      "classificacao": "revisar_valor",
+      "motivo": "Taxa 2500.0; confirmar valor e política de exibição."
+    },
+    {
+      "link": "https://www.quadrix.org.br/informacoes/3056",
+      "titulo": "Secretaria de Desenvolvimento Social do Distrito Federal (SEDES)",
+      "classificacao": "revisar_data",
+      "motivo": "`data_inicio_inscricao` (2026-06-09) posterior a `data_publicacao` (2026-05-13); verificar coerência com página Quadrix e com `status`."
+    }
+  ],
+  "contagem_classificacao": {
+    "pronto_para_apply": 2,
+    "revisar_data": 5,
+    "revisar_link": 0,
+    "revisar_valor": 3,
+    "descartar": 0
+  },
+  "recomendacao_apply": "apply_todos_staging_pos_amostragem",
+  "recomendacao_apply_detalhe": "Dry-run sem erros e 10/10 `valido`: recomenda-se **apply de todos os 10** em **staging** após amostragem rápida (PDF + datas nos casos `revisar_data` e `revisar_valor`). Não é necessário rever o crawler para desbloquear a carga. Alternativa mais conservadora: aplicar primeiro só `pronto_para_apply` (2) e expandir após revalidação manual — aceitável se a política de produto preferir carga incremental.",
+  "comando_apply_staging": {
+    "powershell": "$env:EDITALFINDER_ENV=\"staging\"; $env:EDITALFINDER_ALLOW_STAGING_APPLY=\"1\"; python scripts/load_concursos_selecao.py --input-dir audit_reports_main_pipeline/concursos_wave1_quadrix/standardized --output-dir audit_reports_main_pipeline/concursos_wave1_quadrix/loader_apply_staging --sources quadrix --apply-staging --staging",
+    "bash": "EDITALFINDER_ENV=staging EDITALFINDER_ALLOW_STAGING_APPLY=1 python scripts/load_concursos_selecao.py --input-dir audit_reports_main_pipeline/concursos_wave1_quadrix/standardized --output-dir audit_reports_main_pipeline/concursos_wave1_quadrix/loader_apply_staging --sources quadrix --apply-staging --staging",
+    "nao_executado": true,
+    "nota": "Exige credenciais Supabase e política interna de staging; este consolidado não executa o comando."
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "generated_at": "2026-05-17T06:35:54.719646+00:00",
+  "source_id": "mcti_fomento_transformacao_digital",
+  "pipeline": "radar_editais_dryrun",
+  "apply_executed": false,
+  "noticia_loader": false,
+  "candidatos_fila": 76,
+  "page_enrich_fetches": 28,
+  "total_standardized": 50,
+  "total_review": 36,
+  "por_tipo": {
+    "edital_chamada": 17,
+    "radar_oportunidade": 33
+  },
+  "por_status": {
+    "incompleto": 33,
+    "latente": 2,
+    "ativo": 15
+  },
+  "por_validacao": {
+    "incompleto": 35,
+    "valido": 15
+  },
+  "seeds": [
+    "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/transformacaodigital/fomento-1",
+    "https://www.gov.br/mcti/pt-br/acesso-a-informacao/editais/",
+    "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/chamamento-oceano",
+    "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/bolsa-cientifica",
+    "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/chamamento-vacina"
+  ],
+  "errors": [],
+  "output_paths": {
+    "standardized": "audit_reports_radar\\mcti_fomento_dryrun\\standardized\\mcti_fomento_standardized.json",
+    "review": "audit_reports_radar\\mcti_fomento_dryrun\\review_candidates.json"
+  },
+  "diagnostic_input": "audit_reports_news_research/mcti_fomento_diagnostic/"
+}

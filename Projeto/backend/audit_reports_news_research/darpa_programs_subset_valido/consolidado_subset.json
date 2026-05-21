@@ -1,0 +1,751 @@
+{
+  "fonte": "darpa_programs_research",
+  "data_execucao": "2026-05-19T21:19:30Z",
+  "apply_executado": false,
+  "destino": "public.pesquisa",
+  "tipo_pesquisa": "programa_pesquisa",
+  "origem_standardized": "audit_reports_news_research/darpa_strategic_dryrun/standardized/darpa_programs_research_standardized.json",
+  "subset_standardized": "audit_reports_news_research/darpa_programs_subset_valido/standardized/darpa_programs_research_standardized.json",
+  "janela_publica_meses": 24,
+  "corte_data_minima": "2024-05-29",
+  "totais": {
+    "original": 40,
+    "subset_escolhido": 25,
+    "excluido": 15,
+    "valido_original": 25,
+    "incompletos_nao_incluidos": 15
+  },
+  "incompletos_portal_institucional_latente": [
+    {
+      "titulo": "Wireless Network Defense",
+      "data_publicacao": "2026-05-13",
+      "link": "https://www.darpa.mil/research/programs/wireless-network-defense",
+      "fonte_recurso": "darpa_programs_research",
+      "tipo_pesquisa": "programa_pesquisa",
+      "eixo_estrategico": [
+        "defesa"
+      ],
+      "validacao_status": "incompleto",
+      "tipo_conteudo": "pesquisa",
+      "motivo": "incompleto_candidato_portal_institucional"
+    },
+    {
+      "titulo": "System F6",
+      "data_publicacao": "2026-05-13",
+      "link": "https://www.darpa.mil/research/programs/system-f6",
+      "fonte_recurso": "darpa_programs_research",
+      "tipo_pesquisa": "programa_pesquisa",
+      "eixo_estrategico": [
+        "engenharia_avancada"
+      ],
+      "validacao_status": "incompleto",
+      "tipo_conteudo": "pesquisa",
+      "motivo": "incompleto_candidato_portal_institucional"
+    },
+    {
+      "titulo": "Tactically Expandable Maritime Platform",
+      "data_publicacao": "2026-05-13",
+      "link": "https://www.darpa.mil/research/programs/tactically-expandable-maritime-platform",
+      "fonte_recurso": "darpa_programs_research",
+      "tipo_pesquisa": "programa_pesquisa",
+      "eixo_estrategico": [
+        "engenharia_avancada"
+      ],
+      "validacao_status": "incompleto",
+      "tipo_conteudo": "pesquisa",
+      "motivo": "incompleto_candidato_portal_institucional"
+    },
+    {
+      "titulo": "Tern",
+      "data_publicacao": "2026-05-13",
+      "link": "https://www.darpa.mil/research/programs/tern",
+      "fonte_recurso": "darpa_programs_research",
+      "tipo_pesquisa": "programa_pesquisa",
+      "eixo_estrategico": [
+        "engenharia_avancada"
+      ],
+      "validacao_status": "incompleto",
+      "tipo_conteudo": "pesquisa",
+      "motivo": "incompleto_candidato_portal_institucional"
+    },
+    {
+      "titulo": "Vertical Takeoff And Landing Experimental Plane",
+      "data_publicacao": "2026-05-13",
+      "link": "https://www.darpa.mil/research/programs/vertical-takeoff-and-landing-experimental-plane",
+      "fonte_recurso": "darpa_programs_research",
+      "tipo_pesquisa": "programa_pesquisa",
+      "eixo_estrategico": [
+        "engenharia_avancada"
+      ],
+      "validacao_status": "incompleto",
+      "tipo_conteudo": "pesquisa",
+      "motivo": "incompleto_candidato_portal_institucional"
+    },
+    {
+      "titulo": "Vulture",
+      "data_publicacao": "2026-05-13",
+      "link": "https://www.darpa.mil/research/programs/vulture",
+      "fonte_recurso": "darpa_programs_research",
+      "tipo_pesquisa": "programa_pesquisa",
+      "eixo_estrategico": [
+        "engenharia_avancada"
+      ],
+      "validacao_status": "incompleto",
+      "tipo_conteudo": "pesquisa",
+      "motivo": "incompleto_candidato_portal_institucional"
+    },
+    {
+      "titulo": "Tactical Undersea Network Architectures",
+      "data_publicacao": "2026-05-13",
+      "link": "https://www.darpa.mil/research/programs/tactical-undersea-network-architectures",
+      "fonte_recurso": "darpa_programs_research",
+      "tipo_pesquisa": "programa_pesquisa",
+      "eixo_estrategico": [
+        "engenharia_avancada"
+      ],
+      "validacao_status": "incompleto",
+      "tipo_conteudo": "pesquisa",
+      "motivo": "incompleto_candidato_portal_institucional"
+    },
+    {
+      "titulo": "Technologies For Host Resilience",
+      "data_publicacao": "2026-05-13",
+      "link": "https://www.darpa.mil/research/programs/technologies-for-host-resilience",
+      "fonte_recurso": "darpa_programs_research",
+      "tipo_pesquisa": "programa_pesquisa",
+      "eixo_estrategico": [
+        "engenharia_avancada"
+      ],
+      "validacao_status": "incompleto",
+      "tipo_conteudo": "pesquisa",
+      "motivo": "incompleto_candidato_portal_institucional"
+    },
+    {
+      "titulo": "Experimental Space Plane",
+      "data_publicacao": "2026-05-13",
+      "link": "https://www.darpa.mil/research/programs/experimental-space-plane",
+      "fonte_recurso": "darpa_programs_research",
+      "tipo_pesquisa": "programa_pesquisa",
+      "eixo_estrategico": [
+        "espaco"
+      ],
+      "validacao_status": "incompleto",
+      "tipo_conteudo": "pesquisa",
+      "motivo": "incompleto_candidato_portal_institucional"
+    },
+    {
+      "titulo": "Tactical Boost Glide",
+      "data_publicacao": "2026-05-13",
+      "link": "https://www.darpa.mil/research/programs/tactical-boost-glide",
+      "fonte_recurso": "darpa_programs_research",
+      "tipo_pesquisa": "programa_pesquisa",
+      "eixo_estrategico": [
+        "engenharia_avancada"
+      ],
+      "validacao_status": "incompleto",
+      "tipo_conteudo": "pesquisa",
+      "motivo": "incompleto_candidato_portal_institucional"
+    },
+    {
+      "titulo": "Tailorable Feedstock And Forming",
+      "data_publicacao": "2026-05-13",
+      "link": "https://www.darpa.mil/research/programs/tailorable-feedstock-and-forming",
+      "fonte_recurso": "darpa_programs_research",
+      "tipo_pesquisa": "programa_pesquisa",
+      "eixo_estrategico": [
+        "engenharia_avancada"
+      ],
+      "validacao_status": "incompleto",
+      "tipo_conteudo": "pesquisa",
+      "motivo": "incompleto_candidato_portal_institucional"
+    },
+    {
+      "titulo": "Trace",
+      "data_publicacao": "2026-05-13",
+      "link": "https://www.darpa.mil/research/programs/trace",
+      "fonte_recurso": "darpa_programs_research",
+      "tipo_pesquisa": "programa_pesquisa",
+      "eixo_estrategico": [
+        "engenharia_avancada"
+      ],
+      "validacao_status": "incompleto",
+      "tipo_conteudo": "pesquisa",
+      "motivo": "incompleto_candidato_portal_institucional"
+    },
+    {
+      "titulo": "Transformative Design",
+      "data_publicacao": "2026-05-13",
+      "link": "https://www.darpa.mil/research/programs/transformative-design",
+      "fonte_recurso": "darpa_programs_research",
+      "tipo_pesquisa": "programa_pesquisa",
+      "eixo_estrategico": [
+        "engenharia_avancada"
+      ],
+      "validacao_status": "incompleto",
+      "tipo_conteudo": "pesquisa",
+      "motivo": "incompleto_candidato_portal_institucional"
+    },
+    {
+      "titulo": "Explainable Artificial Intelligence",
+      "data_publicacao": "2026-05-13",
+      "link": "https://www.darpa.mil/research/programs/explainable-artificial-intelligence",
+      "fonte_recurso": "darpa_programs_research",
+      "tipo_pesquisa": "programa_pesquisa",
+      "eixo_estrategico": [
+        "ia"
+      ],
+      "validacao_status": "incompleto",
+      "tipo_conteudo": "pesquisa",
+      "motivo": "incompleto_candidato_portal_institucional"
+    },
+    {
+      "titulo": "Targeted Neuroplasticity Training",
+      "data_publicacao": "2026-05-13",
+      "link": "https://www.darpa.mil/research/programs/targeted-neuroplasticity-training",
+      "fonte_recurso": "darpa_programs_research",
+      "tipo_pesquisa": "programa_pesquisa",
+      "eixo_estrategico": [
+        "engenharia_avancada"
+      ],
+      "validacao_status": "incompleto",
+      "tipo_conteudo": "pesquisa",
+      "motivo": "incompleto_candidato_portal_institucional"
+    }
+  ],
+  "itens_incluidos": [
+    {
+      "titulo": "Media Forensics",
+      "data_publicacao": "2026-05-15",
+      "link": "https://www.darpa.mil/research/programs/media-forensics",
+      "fonte_recurso": "darpa_programs_research",
+      "tipo_pesquisa": "programa_pesquisa",
+      "eixo_estrategico": [
+        "engenharia_avancada"
+      ],
+      "validacao_status": "valido",
+      "tipo_conteudo": "pesquisa"
+    },
+    {
+      "titulo": "Robotic Servicing Of Geosynchronous Satellites",
+      "data_publicacao": "2026-05-15",
+      "link": "https://www.darpa.mil/research/programs/robotic-servicing-of-geosynchronous-satellites",
+      "fonte_recurso": "darpa_programs_research",
+      "tipo_pesquisa": "programa_pesquisa",
+      "eixo_estrategico": [
+        "defesa",
+        "comunicacoes"
+      ],
+      "validacao_status": "valido",
+      "tipo_conteudo": "pesquisa"
+    },
+    {
+      "titulo": "Discord",
+      "data_publicacao": "2026-05-15",
+      "link": "https://www.darpa.mil/research/programs/discord",
+      "fonte_recurso": "darpa_programs_research",
+      "tipo_pesquisa": "programa_pesquisa",
+      "eixo_estrategico": [
+        "ia",
+        "sensores"
+      ],
+      "validacao_status": "valido",
+      "tipo_conteudo": "pesquisa"
+    },
+    {
+      "titulo": "Automated Process For Codesign Of Radiation Hardening And Security",
+      "data_publicacao": "2026-05-15",
+      "link": "https://www.darpa.mil/research/programs/automated-process-for-codesign-of-radiation-hardening-and-security",
+      "fonte_recurso": "darpa_programs_research",
+      "tipo_pesquisa": "programa_pesquisa",
+      "eixo_estrategico": [
+        "microeletronica"
+      ],
+      "validacao_status": "valido",
+      "tipo_conteudo": "pesquisa"
+    },
+    {
+      "titulo": "Nascent National Security Economic Theory",
+      "data_publicacao": "2026-05-14",
+      "link": "https://www.darpa.mil/research/programs/nascent-national-security-economic-theory",
+      "fonte_recurso": "darpa_programs_research",
+      "tipo_pesquisa": "programa_pesquisa",
+      "eixo_estrategico": [
+        "defesa"
+      ],
+      "validacao_status": "valido",
+      "tipo_conteudo": "pesquisa"
+    },
+    {
+      "titulo": "Protean",
+      "data_publicacao": "2026-05-14",
+      "link": "https://www.darpa.mil/research/programs/protean",
+      "fonte_recurso": "darpa_programs_research",
+      "tipo_pesquisa": "programa_pesquisa",
+      "eixo_estrategico": [
+        "engenharia_avancada"
+      ],
+      "validacao_status": "valido",
+      "tipo_conteudo": "pesquisa"
+    },
+    {
+      "titulo": "Amped",
+      "data_publicacao": "2026-05-14",
+      "link": "https://www.darpa.mil/research/programs/amped",
+      "fonte_recurso": "darpa_programs_research",
+      "tipo_pesquisa": "programa_pesquisa",
+      "eixo_estrategico": [
+        "semicondutores"
+      ],
+      "validacao_status": "valido",
+      "tipo_conteudo": "pesquisa"
+    },
+    {
+      "titulo": "Bark",
+      "data_publicacao": "2026-05-14",
+      "link": "https://www.darpa.mil/research/programs/bark",
+      "fonte_recurso": "darpa_programs_research",
+      "tipo_pesquisa": "programa_pesquisa",
+      "eixo_estrategico": [
+        "defesa"
+      ],
+      "validacao_status": "valido",
+      "tipo_conteudo": "pesquisa"
+    },
+    {
+      "titulo": "Warrior Web",
+      "data_publicacao": "2026-05-13",
+      "link": "https://www.darpa.mil/research/programs/warrior-web",
+      "fonte_recurso": "darpa_programs_research",
+      "tipo_pesquisa": "programa_pesquisa",
+      "eixo_estrategico": [
+        "engenharia_avancada"
+      ],
+      "validacao_status": "valido",
+      "tipo_conteudo": "pesquisa"
+    },
+    {
+      "titulo": "Wound Stasis System",
+      "data_publicacao": "2026-05-13",
+      "link": "https://www.darpa.mil/research/programs/wound-stasis-system",
+      "fonte_recurso": "darpa_programs_research",
+      "tipo_pesquisa": "programa_pesquisa",
+      "eixo_estrategico": [
+        "engenharia_avancada"
+      ],
+      "validacao_status": "valido",
+      "tipo_conteudo": "pesquisa"
+    },
+    {
+      "titulo": "Extended Solids",
+      "data_publicacao": "2026-05-13",
+      "link": "https://www.darpa.mil/research/programs/extended-solids",
+      "fonte_recurso": "darpa_programs_research",
+      "tipo_pesquisa": "programa_pesquisa",
+      "eixo_estrategico": [
+        "espaco",
+        "aeroespacial",
+        "materiais_avancados",
+        "propulsao",
+        "defesa"
+      ],
+      "validacao_status": "valido",
+      "tipo_conteudo": "pesquisa"
+    },
+    {
+      "titulo": "Z Man",
+      "data_publicacao": "2026-05-13",
+      "link": "https://www.darpa.mil/research/programs/z-man",
+      "fonte_recurso": "darpa_programs_research",
+      "tipo_pesquisa": "programa_pesquisa",
+      "eixo_estrategico": [
+        "materiais_avancados"
+      ],
+      "validacao_status": "valido",
+      "tipo_conteudo": "pesquisa"
+    },
+    {
+      "titulo": "Transformative Apps",
+      "data_publicacao": "2026-05-13",
+      "link": "https://www.darpa.mil/research/programs/transformative-apps",
+      "fonte_recurso": "darpa_programs_research",
+      "tipo_pesquisa": "programa_pesquisa",
+      "eixo_estrategico": [
+        "defesa"
+      ],
+      "validacao_status": "valido",
+      "tipo_conteudo": "pesquisa"
+    },
+    {
+      "titulo": "Transparent Computing",
+      "data_publicacao": "2026-05-13",
+      "link": "https://www.darpa.mil/research/programs/transparent-computing",
+      "fonte_recurso": "darpa_programs_research",
+      "tipo_pesquisa": "programa_pesquisa",
+      "eixo_estrategico": [
+        "engenharia_avancada"
+      ],
+      "validacao_status": "valido",
+      "tipo_conteudo": "pesquisa"
+    },
+    {
+      "titulo": "Vetting Commodity It Software And Firmware",
+      "data_publicacao": "2026-05-13",
+      "link": "https://www.darpa.mil/research/programs/vetting-commodity-it-software-and-firmware",
+      "fonte_recurso": "darpa_programs_research",
+      "tipo_pesquisa": "programa_pesquisa",
+      "eixo_estrategico": [
+        "defesa"
+      ],
+      "validacao_status": "valido",
+      "tipo_conteudo": "pesquisa"
+    },
+    {
+      "titulo": "Visual Media Reasoning",
+      "data_publicacao": "2026-05-13",
+      "link": "https://www.darpa.mil/research/programs/visual-media-reasoning",
+      "fonte_recurso": "darpa_programs_research",
+      "tipo_pesquisa": "programa_pesquisa",
+      "eixo_estrategico": [
+        "engenharia_avancada"
+      ],
+      "validacao_status": "valido",
+      "tipo_conteudo": "pesquisa"
+    },
+    {
+      "titulo": "Xdata",
+      "data_publicacao": "2026-05-13",
+      "link": "https://www.darpa.mil/research/programs/xdata",
+      "fonte_recurso": "darpa_programs_research",
+      "tipo_pesquisa": "programa_pesquisa",
+      "eixo_estrategico": [
+        "engenharia_avancada"
+      ],
+      "validacao_status": "valido",
+      "tipo_conteudo": "pesquisa"
+    },
+    {
+      "titulo": "Thermal Management Technologies",
+      "data_publicacao": "2026-05-13",
+      "link": "https://www.darpa.mil/research/programs/thermal-management-technologies/active-cooling-modules",
+      "fonte_recurso": "darpa_programs_research",
+      "tipo_pesquisa": "programa_pesquisa",
+      "eixo_estrategico": [
+        "materiais_avancados"
+      ],
+      "validacao_status": "valido",
+      "tipo_conteudo": "pesquisa"
+    },
+    {
+      "titulo": "Thermal Management Technologies",
+      "data_publicacao": "2026-05-13",
+      "link": "https://www.darpa.mil/research/programs/thermal-management-technologies/thermal-ground-plane",
+      "fonte_recurso": "darpa_programs_research",
+      "tipo_pesquisa": "programa_pesquisa",
+      "eixo_estrategico": [
+        "engenharia_avancada"
+      ],
+      "validacao_status": "valido",
+      "tipo_conteudo": "pesquisa"
+    },
+    {
+      "titulo": "Thermal Management Technologies",
+      "data_publicacao": "2026-05-13",
+      "link": "https://www.darpa.mil/research/programs/thermal-management-technologies",
+      "fonte_recurso": "darpa_programs_research",
+      "tipo_pesquisa": "programa_pesquisa",
+      "eixo_estrategico": [
+        "materiais_avancados"
+      ],
+      "validacao_status": "valido",
+      "tipo_conteudo": "pesquisa"
+    },
+    {
+      "titulo": "Thz Electronics",
+      "data_publicacao": "2026-05-13",
+      "link": "https://www.darpa.mil/research/programs/thz-electronics",
+      "fonte_recurso": "darpa_programs_research",
+      "tipo_pesquisa": "programa_pesquisa",
+      "eixo_estrategico": [
+        "engenharia_avancada"
+      ],
+      "validacao_status": "valido",
+      "tipo_conteudo": "pesquisa"
+    },
+    {
+      "titulo": "Transmit And Receive Optimized Photonics",
+      "data_publicacao": "2026-05-13",
+      "link": "https://www.darpa.mil/research/programs/transmit-and-receive-optimized-photonics",
+      "fonte_recurso": "darpa_programs_research",
+      "tipo_pesquisa": "programa_pesquisa",
+      "eixo_estrategico": [
+        "defesa",
+        "guerra_eletronica"
+      ],
+      "validacao_status": "valido",
+      "tipo_conteudo": "pesquisa"
+    },
+    {
+      "titulo": "Trusted Integrated Circuits",
+      "data_publicacao": "2026-05-13",
+      "link": "https://www.darpa.mil/research/programs/trusted-integrated-circuits",
+      "fonte_recurso": "darpa_programs_research",
+      "tipo_pesquisa": "programa_pesquisa",
+      "eixo_estrategico": [
+        "defesa"
+      ],
+      "validacao_status": "valido",
+      "tipo_conteudo": "pesquisa"
+    },
+    {
+      "titulo": "Upward Falling Payloads",
+      "data_publicacao": "2026-05-13",
+      "link": "https://www.darpa.mil/research/programs/upward-falling-payloads",
+      "fonte_recurso": "darpa_programs_research",
+      "tipo_pesquisa": "programa_pesquisa",
+      "eixo_estrategico": [
+        "engenharia_avancada"
+      ],
+      "validacao_status": "valido",
+      "tipo_conteudo": "pesquisa"
+    },
+    {
+      "titulo": "Video Synthetic Aperture Radar",
+      "data_publicacao": "2026-05-13",
+      "link": "https://www.darpa.mil/research/programs/video-synthetic-aperture-radar",
+      "fonte_recurso": "darpa_programs_research",
+      "tipo_pesquisa": "programa_pesquisa",
+      "eixo_estrategico": [
+        "sensores"
+      ],
+      "validacao_status": "valido",
+      "tipo_conteudo": "pesquisa"
+    }
+  ],
+  "itens_excluidos": [
+    {
+      "titulo": "Wireless Network Defense",
+      "data_publicacao": "2026-05-13",
+      "link": "https://www.darpa.mil/research/programs/wireless-network-defense",
+      "fonte_recurso": "darpa_programs_research",
+      "tipo_pesquisa": "programa_pesquisa",
+      "eixo_estrategico": [
+        "defesa"
+      ],
+      "validacao_status": "incompleto",
+      "tipo_conteudo": "pesquisa",
+      "motivo": "validacao_status=incompleto"
+    },
+    {
+      "titulo": "System F6",
+      "data_publicacao": "2026-05-13",
+      "link": "https://www.darpa.mil/research/programs/system-f6",
+      "fonte_recurso": "darpa_programs_research",
+      "tipo_pesquisa": "programa_pesquisa",
+      "eixo_estrategico": [
+        "engenharia_avancada"
+      ],
+      "validacao_status": "incompleto",
+      "tipo_conteudo": "pesquisa",
+      "motivo": "validacao_status=incompleto"
+    },
+    {
+      "titulo": "Tactically Expandable Maritime Platform",
+      "data_publicacao": "2026-05-13",
+      "link": "https://www.darpa.mil/research/programs/tactically-expandable-maritime-platform",
+      "fonte_recurso": "darpa_programs_research",
+      "tipo_pesquisa": "programa_pesquisa",
+      "eixo_estrategico": [
+        "engenharia_avancada"
+      ],
+      "validacao_status": "incompleto",
+      "tipo_conteudo": "pesquisa",
+      "motivo": "validacao_status=incompleto"
+    },
+    {
+      "titulo": "Tern",
+      "data_publicacao": "2026-05-13",
+      "link": "https://www.darpa.mil/research/programs/tern",
+      "fonte_recurso": "darpa_programs_research",
+      "tipo_pesquisa": "programa_pesquisa",
+      "eixo_estrategico": [
+        "engenharia_avancada"
+      ],
+      "validacao_status": "incompleto",
+      "tipo_conteudo": "pesquisa",
+      "motivo": "validacao_status=incompleto"
+    },
+    {
+      "titulo": "Vertical Takeoff And Landing Experimental Plane",
+      "data_publicacao": "2026-05-13",
+      "link": "https://www.darpa.mil/research/programs/vertical-takeoff-and-landing-experimental-plane",
+      "fonte_recurso": "darpa_programs_research",
+      "tipo_pesquisa": "programa_pesquisa",
+      "eixo_estrategico": [
+        "engenharia_avancada"
+      ],
+      "validacao_status": "incompleto",
+      "tipo_conteudo": "pesquisa",
+      "motivo": "validacao_status=incompleto"
+    },
+    {
+      "titulo": "Vulture",
+      "data_publicacao": "2026-05-13",
+      "link": "https://www.darpa.mil/research/programs/vulture",
+      "fonte_recurso": "darpa_programs_research",
+      "tipo_pesquisa": "programa_pesquisa",
+      "eixo_estrategico": [
+        "engenharia_avancada"
+      ],
+      "validacao_status": "incompleto",
+      "tipo_conteudo": "pesquisa",
+      "motivo": "validacao_status=incompleto"
+    },
+    {
+      "titulo": "Tactical Undersea Network Architectures",
+      "data_publicacao": "2026-05-13",
+      "link": "https://www.darpa.mil/research/programs/tactical-undersea-network-architectures",
+      "fonte_recurso": "darpa_programs_research",
+      "tipo_pesquisa": "programa_pesquisa",
+      "eixo_estrategico": [
+        "engenharia_avancada"
+      ],
+      "validacao_status": "incompleto",
+      "tipo_conteudo": "pesquisa",
+      "motivo": "validacao_status=incompleto"
+    },
+    {
+      "titulo": "Technologies For Host Resilience",
+      "data_publicacao": "2026-05-13",
+      "link": "https://www.darpa.mil/research/programs/technologies-for-host-resilience",
+      "fonte_recurso": "darpa_programs_research",
+      "tipo_pesquisa": "programa_pesquisa",
+      "eixo_estrategico": [
+        "engenharia_avancada"
+      ],
+      "validacao_status": "incompleto",
+      "tipo_conteudo": "pesquisa",
+      "motivo": "validacao_status=incompleto"
+    },
+    {
+      "titulo": "Experimental Space Plane",
+      "data_publicacao": "2026-05-13",
+      "link": "https://www.darpa.mil/research/programs/experimental-space-plane",
+      "fonte_recurso": "darpa_programs_research",
+      "tipo_pesquisa": "programa_pesquisa",
+      "eixo_estrategico": [
+        "espaco"
+      ],
+      "validacao_status": "incompleto",
+      "tipo_conteudo": "pesquisa",
+      "motivo": "validacao_status=incompleto"
+    },
+    {
+      "titulo": "Tactical Boost Glide",
+      "data_publicacao": "2026-05-13",
+      "link": "https://www.darpa.mil/research/programs/tactical-boost-glide",
+      "fonte_recurso": "darpa_programs_research",
+      "tipo_pesquisa": "programa_pesquisa",
+      "eixo_estrategico": [
+        "engenharia_avancada"
+      ],
+      "validacao_status": "incompleto",
+      "tipo_conteudo": "pesquisa",
+      "motivo": "validacao_status=incompleto"
+    },
+    {
+      "titulo": "Tailorable Feedstock And Forming",
+      "data_publicacao": "2026-05-13",
+      "link": "https://www.darpa.mil/research/programs/tailorable-feedstock-and-forming",
+      "fonte_recurso": "darpa_programs_research",
+      "tipo_pesquisa": "programa_pesquisa",
+      "eixo_estrategico": [
+        "engenharia_avancada"
+      ],
+      "validacao_status": "incompleto",
+      "tipo_conteudo": "pesquisa",
+      "motivo": "validacao_status=incompleto"
+    },
+    {
+      "titulo": "Trace",
+      "data_publicacao": "2026-05-13",
+      "link": "https://www.darpa.mil/research/programs/trace",
+      "fonte_recurso": "darpa_programs_research",
+      "tipo_pesquisa": "programa_pesquisa",
+      "eixo_estrategico": [
+        "engenharia_avancada"
+      ],
+      "validacao_status": "incompleto",
+      "tipo_conteudo": "pesquisa",
+      "motivo": "validacao_status=incompleto"
+    },
+    {
+      "titulo": "Transformative Design",
+      "data_publicacao": "2026-05-13",
+      "link": "https://www.darpa.mil/research/programs/transformative-design",
+      "fonte_recurso": "darpa_programs_research",
+      "tipo_pesquisa": "programa_pesquisa",
+      "eixo_estrategico": [
+        "engenharia_avancada"
+      ],
+      "validacao_status": "incompleto",
+      "tipo_conteudo": "pesquisa",
+      "motivo": "validacao_status=incompleto"
+    },
+    {
+      "titulo": "Explainable Artificial Intelligence",
+      "data_publicacao": "2026-05-13",
+      "link": "https://www.darpa.mil/research/programs/explainable-artificial-intelligence",
+      "fonte_recurso": "darpa_programs_research",
+      "tipo_pesquisa": "programa_pesquisa",
+      "eixo_estrategico": [
+        "ia"
+      ],
+      "validacao_status": "incompleto",
+      "tipo_conteudo": "pesquisa",
+      "motivo": "validacao_status=incompleto"
+    },
+    {
+      "titulo": "Targeted Neuroplasticity Training",
+      "data_publicacao": "2026-05-13",
+      "link": "https://www.darpa.mil/research/programs/targeted-neuroplasticity-training",
+      "fonte_recurso": "darpa_programs_research",
+      "tipo_pesquisa": "programa_pesquisa",
+      "eixo_estrategico": [
+        "engenharia_avancada"
+      ],
+      "validacao_status": "incompleto",
+      "tipo_conteudo": "pesquisa",
+      "motivo": "validacao_status=incompleto"
+    }
+  ],
+  "eixos_estrategicos": {
+    "engenharia_avancada": 10,
+    "defesa": 8,
+    "materiais_avancados": 4,
+    "sensores": 2,
+    "comunicacoes": 1,
+    "ia": 1,
+    "microeletronica": 1,
+    "semicondutores": 1,
+    "espaco": 1,
+    "aeroespacial": 1,
+    "propulsao": 1,
+    "guerra_eletronica": 1
+  },
+  "loader_dryrun": {
+    "comando": "C:\\Program Files\\Python312\\python.exe D:\\Computational_Physics\\My Projects\\edital\\scripts\\load_news_research_sources.py --dry-run --source darpa_programs_research --input-dir audit_reports_news_research/darpa_programs_subset_valido",
+    "input_dir": "audit_reports_news_research/darpa_programs_subset_valido",
+    "would_upsert_pesquisa": 25,
+    "would_upsert_noticia": 0,
+    "errors_count": 0,
+    "skipped": 0,
+    "apply_status": "dry_run_only",
+    "total_pesquisa_input": 25,
+    "summary_path": "audit_reports_news_research/darpa_programs_subset_valido/load_news_research_summary.json"
+  },
+  "apply_staging": {
+    "executado": false,
+    "powershell": "# NÃO EXECUTADO — apply staging pesquisa\n$env:EDITALFINDER_ENV='staging'\n$env:EDITALFINDER_ALLOW_STAGING_APPLY='true'\npython scripts/load_news_research_sources.py `\n  --apply --staging --test-db-before-apply `\n  --source darpa_programs_research `\n  --input-dir audit_reports_news_research/darpa_programs_subset_valido"
+  },
+  "observacao": "Programas DARPA são pesquisa estratégica (programa_pesquisa), não notícia. 15 incompletos do dry-run estratégico ficam fora do subset; candidatos a portal_institucional se forem enriquecidos no futuro."
+}

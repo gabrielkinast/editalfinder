@@ -1,0 +1,30 @@
+{
+  "collected_at": "2026-05-21T00:20:13Z",
+  "api_mode": "legacy_search2_fallback",
+  "statuses": [
+    "forecasted",
+    "posted"
+  ],
+  "max_pages": 3,
+  "page_size": 25,
+  "max_items": 50,
+  "robots_url": "https://simpler.grants.gov/robots.txt",
+  "rate_limit_sleep_sec": 0.35,
+  "api_key_missing": true,
+  "note": "Defina SIMPLER_GRANTS_API_KEY para API Simpler; usando api.grants.gov search2 + links simpler.grants.gov/opportunity/{id}",
+  "raw_hit_count": 50,
+  "pipeline_item_count": 30,
+  "discarded_historic_count": 0,
+  "output_dir": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_main_pipeline\\grants_simpler_dryrun",
+  "items_written": 30,
+  "review_candidates": 7,
+  "historic_statuses_excluded": [
+    "archived",
+    "closed"
+  ],
+  "dryrun_params": {
+    "max_pages": 3,
+    "max_items": 50,
+    "page_size": 25
+  }
+}

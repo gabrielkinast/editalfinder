@@ -1,0 +1,279 @@
+{
+  "generated_at": "2026-05-20T22:39:56Z",
+  "rule_version": "editais_visibility_v1",
+  "step": 1,
+  "safe_visibilities": [
+    "hidden_duplicate",
+    "hidden_institutional",
+    "hidden_invalid_link",
+    "hidden_resultado"
+  ],
+  "deferred_to_step2": [
+    "hidden_expired",
+    "hidden_historical",
+    "hidden_not_opportunity",
+    "review_link_suspicious",
+    "review_missing_deadline",
+    "review_possible_continuous_flow",
+    "review_possible_opportunity",
+    "hidden_historical",
+    "hidden_expired",
+    "hidden_not_opportunity"
+  ],
+  "total_to_update": 326,
+  "with_link_health": 93,
+  "por_visibility": {
+    "hidden_resultado": 50,
+    "hidden_institutional": 109,
+    "hidden_duplicate": 75,
+    "hidden_invalid_link": 92
+  },
+  "por_fonte_recurso": {
+    "Grants.gov": 85,
+    "BNDES": 30,
+    "BDMG": 24,
+    "EMBRAPII": 21,
+    "NUCLEP": 19,
+    "Fundação Araucária": 17,
+    "AMAZUL": 15,
+    "DOE_ARPAE": 13,
+    "BNB": 9,
+    "ANEEL": 9,
+    "CNPQ": 9,
+    "IARPA": 8,
+    "China International Tendering (MOFCOM)": 7,
+    "BASA": 6,
+    "FAPEMIG": 6,
+    "DARPA Opportunities": 5,
+    "SENAI": 4,
+    "JETRO Government Procurement": 4,
+    "WELLCOME": 4,
+    "Eureka Network": 3,
+    "Ministério da Defesa": 3,
+    "IPEN": 3,
+    "NIMS": 3,
+    "CAS": 2,
+    "FAPESC": 2,
+    "China MOD (public)": 2,
+    "EIT": 2,
+    "ANP": 1,
+    "CAIXA": 1,
+    "CONFAP": 1,
+    "DoD SBIR/STTR": 1,
+    "FAPERGS": 1,
+    "IMPA": 1,
+    "ATLA": 1,
+    "MMA / FNMA": 1,
+    "NATO DIANA": 1,
+    "NSF": 1,
+    "UKRI Funding": 1
+  },
+  "exemplos_por_visibility": {
+    "hidden_resultado": [
+      {
+        "id_edital": 7,
+        "titulo": "BNDES Automático - Linha Projeto deInvestimento Rural",
+        "fonte_recurso": "BASA",
+        "source": "visibility_audit"
+      },
+      {
+        "id_edital": 46,
+        "titulo": "Conte com taxas e prazos exclusivos para seu negócio ir mais longe.",
+        "fonte_recurso": "BDMG",
+        "source": "visibility_audit"
+      },
+      {
+        "id_edital": 47,
+        "titulo": "Financie o desenvolvimento de sua Média Empresa com opções de crédito diferenciadas",
+        "fonte_recurso": "BDMG",
+        "source": "visibility_audit"
+      },
+      {
+        "id_edital": 48,
+        "titulo": "Financie o desenvolvimento de sua Grande Empresa com opções de crédito diferenciadas!",
+        "fonte_recurso": "BDMG",
+        "source": "visibility_audit"
+      },
+      {
+        "id_edital": 49,
+        "titulo": "No BDMG, você tem mais vantagens.",
+        "fonte_recurso": "BDMG",
+        "source": "visibility_audit"
+      }
+    ],
+    "hidden_institutional": [
+      {
+        "id_edital": 10,
+        "titulo": "Relatórios do FNO",
+        "fonte_recurso": "BASA",
+        "source": "visibility_audit"
+      },
+      {
+        "id_edital": 23,
+        "titulo": "Financiamento de Veículo Produtor Rural",
+        "fonte_recurso": "BASA",
+        "source": "visibility_audit"
+      },
+      {
+        "id_edital": 25,
+        "titulo": "PRONAF A",
+        "fonte_recurso": "BASA",
+        "source": "visibility_audit"
+      },
+      {
+        "id_edital": 27,
+        "titulo": "Correspondentes Bancários",
+        "fonte_recurso": "BDMG",
+        "source": "visibility_audit"
+      },
+      {
+        "id_edital": 29,
+        "titulo": "O LabAgroMinas é um Programa desenvolvido em parceria entre o BDMG e a Embrapa Cerrados para o fomen",
+        "fonte_recurso": "BDMG",
+        "source": "visibility_audit"
+      }
+    ],
+    "hidden_duplicate": [
+      {
+        "id_edital": 12,
+        "titulo": "Renegociação de Dívidas",
+        "fonte_recurso": "BASA",
+        "source": "visibility_audit"
+      },
+      {
+        "id_edital": 16,
+        "titulo": "Giro Produtor Rural",
+        "fonte_recurso": "BASA",
+        "source": "visibility_audit"
+      },
+      {
+        "id_edital": 39,
+        "titulo": "Licitações e Contratos",
+        "fonte_recurso": "BDMG",
+        "source": "visibility_audit"
+      },
+      {
+        "id_edital": 45,
+        "titulo": "Conte com taxas e prazos exclusivos para seu negócio ir mais longe.",
+        "fonte_recurso": "BDMG",
+        "source": "visibility_audit"
+      },
+      {
+        "id_edital": 117,
+        "titulo": "Open funding opportunities",
+        "fonte_recurso": "Eureka Network",
+        "source": "visibility_audit"
+      }
+    ],
+    "hidden_invalid_link": [
+      {
+        "id_edital": 1066,
+        "titulo": "DoW Peer Reviewed Medical, Technology/Therapeutic Development Award",
+        "fonte_recurso": "Grants.gov",
+        "source": "grants_link_health"
+      },
+      {
+        "id_edital": 1067,
+        "titulo": "DoW Peer Reviewed Medical, Platform Clinical Translation Award",
+        "fonte_recurso": "Grants.gov",
+        "source": "grants_link_health"
+      },
+      {
+        "id_edital": 1068,
+        "titulo": "BROAD AGENCY ANNOUNCEMENT (BAA) for Extramural Biomedical and Human Performance Research and Develop",
+        "fonte_recurso": "Grants.gov",
+        "source": "grants_link_health"
+      },
+      {
+        "id_edital": 1069,
+        "titulo": "UNITED STATES ARMY RESEARCH INSTITUTE FOR THE BEHAVIORAL AND SOCIAL SCIENCES (ARI) BROAD AGENCY ANNO",
+        "fonte_recurso": "Grants.gov",
+        "source": "grants_link_health"
+      },
+      {
+        "id_edital": 1070,
+        "titulo": "Tactical Behaviors for Autonomous Maneuver",
+        "fonte_recurso": "Grants.gov",
+        "source": "grants_link_health"
+      }
+    ]
+  },
+  "deferred_counts": {
+    "review_missing_deadline": 504,
+    "hidden_historical": 198,
+    "hidden_expired": 36,
+    "hidden_not_opportunity": 18
+  },
+  "deferred_examples": {
+    "review_missing_deadline": [
+      {
+        "id_edital": 2097,
+        "titulo": "FNO Amazônia Empresarial",
+        "fonte_recurso": "BASA"
+      },
+      {
+        "id_edital": 2096,
+        "titulo": "FNO Amazônia Rural",
+        "fonte_recurso": "BASA"
+      },
+      {
+        "id_edital": 2095,
+        "titulo": "Linhas de Fomento",
+        "fonte_recurso": "BASA"
+      }
+    ],
+    "hidden_historical": [
+      {
+        "id_edital": 2048,
+        "titulo": "Celeste In-Orbit Demonstrator – Call for LEO-PNT experimentation opportunities",
+        "fonte_recurso": "ESA OSIP"
+      },
+      {
+        "id_edital": 2044,
+        "titulo": "INDustrialisation / Serialisation Support Campaign",
+        "fonte_recurso": "ESA OSIP"
+      },
+      {
+        "id_edital": 2041,
+        "titulo": "InnoNext Call",
+        "fonte_recurso": "EIT"
+      }
+    ],
+    "hidden_expired": [
+      {
+        "id_edital": 2046,
+        "titulo": "Call for Inter-Disciplinary Scientists and Guest Investigators for TGO",
+        "fonte_recurso": "ESA OSIP"
+      },
+      {
+        "id_edital": 1432,
+        "titulo": "Quem Somos",
+        "fonte_recurso": "NUCLEP"
+      },
+      {
+        "id_edital": 1419,
+        "titulo": "NATO DIANA — Programme FAQ (challenges, eligibility, portal)",
+        "fonte_recurso": "NATO DIANA"
+      }
+    ],
+    "hidden_not_opportunity": [
+      {
+        "id_edital": 1348,
+        "titulo": "05 DIGITAL INNOVATION",
+        "fonte_recurso": "Mitsubishi Heavy Industries (Suppliers)"
+      },
+      {
+        "id_edital": 1347,
+        "titulo": "04 R&D CENTER, FACILITY",
+        "fonte_recurso": "Mitsubishi Heavy Industries (Suppliers)"
+      },
+      {
+        "id_edital": 1346,
+        "titulo": "02 INNOVATION",
+        "fonte_recurso": "Mitsubishi Heavy Industries (Suppliers)"
+      }
+    ]
+  },
+  "sql_file": "docs/sql/APPLY_EDITAIS_CURADORIA_FRONT_SAFE_STEP1.sql",
+  "not_executed": true
+}

@@ -1307,9 +1307,9 @@ def main() -> int:
             if args.apply_staging:
                 if not args.apply_deactivation:
                     cmd.append("--dry-run")
-                else:
+    else:
                     cmd += ["--apply", "--staging"]
-            else:
+    else:
                 cmd.append("--dry-run")
             st = run_command_step("clean_removed_items", cmd, cwd=ROOT)
             write_last_run_artifacts(

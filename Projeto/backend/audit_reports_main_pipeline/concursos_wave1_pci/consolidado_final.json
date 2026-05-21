@@ -1,0 +1,450 @@
+{
+  "wave": "concursos_wave1_pci",
+  "fonte": "pci_concursos",
+  "consolidado_em_utc": "2026-05-13T19:31:38Z",
+  "artefatos": {
+    "standardized": "D:/Computational_Physics/My Projects/edital/audit_reports_main_pipeline/concursos_wave1_pci/standardized/pci_concursos_standardized.json",
+    "crawler_summary": "D:/Computational_Physics/My Projects/edital/audit_reports_main_pipeline/concursos_wave1_pci/crawler_summary.json",
+    "loader_dryrun_v2_summary": "D:/Computational_Physics/My Projects/edital/audit_reports_main_pipeline/concursos_wave1_pci/loader_dryrun_v2/load_concursos_selecao_summary.json"
+  },
+  "totais": {
+    "itens_standardized": 12,
+    "crawler_urls_brutas": 24,
+    "crawler_descartados": 0,
+    "crawler_erros": 0,
+    "loader_would_upsert": 12,
+    "loader_errors_count": 0
+  },
+  "qualidade_antes_vs_depois": {
+    "resumo": "Antes do refactor do parser: milhares em vagas mal lidos (ex.: 1.100→100), salários em mil e «até R$» inconsistentes, órgão/UF/município quase sempre null, qualidade_dado fixa, extras mínimos.",
+    "depois": "Após melhoria: parse_vagas com milhar PT-BR; parse_salario_min_max_br; infer_orgao_local_from_title (UF no título); infer_nivel_escolaridade; extras de qualidade (extracted_fields, missing_core_fields, extraction_confidence, official_link_missing, pci_noticia_url); qualidade_dado baixa/media.",
+    "metricas_depois_crawler_field_fill": {
+      "titulo": 12,
+      "tipo_selecao": 12,
+      "categoria": 12,
+      "orgao": 9,
+      "instituicao": 2,
+      "banca": 12,
+      "cargo": 0,
+      "curso": 0,
+      "area": 0,
+      "nivel_escolaridade": 12,
+      "estado": 4,
+      "municipio": 4,
+      "regiao": 0,
+      "modalidade": 0,
+      "numero_vagas": 11,
+      "salario_min": 8,
+      "salario_max": 12,
+      "taxa_inscricao": 0,
+      "data_publicacao": 0,
+      "data_inicio_inscricao": 0,
+      "data_fim_inscricao": 0,
+      "data_prova": 0,
+      "status": 12,
+      "link": 12,
+      "link_edital": 12,
+      "fonte": 12,
+      "fonte_tipo": 12,
+      "validacao_status": 12,
+      "qualidade_dado": 12,
+      "tags": 12,
+      "extras": 12,
+      "ativo": 12
+    },
+    "distribuicao_qualidade_dado_amostra": {
+      "baixa": 3,
+      "media": 9
+    },
+    "distribuicao_extraction_confidence": {
+      "baixa": 3,
+      "media": 5,
+      "alta": 4
+    }
+  },
+  "cobertura_campos": {
+    "denominador": 12,
+    "taxas_por_campo": {
+      "titulo": {
+        "preenchidos": 12,
+        "taxa": 1.0
+      },
+      "tipo_selecao": {
+        "preenchidos": 12,
+        "taxa": 1.0
+      },
+      "categoria": {
+        "preenchidos": 12,
+        "taxa": 1.0
+      },
+      "orgao": {
+        "preenchidos": 9,
+        "taxa": 0.75
+      },
+      "instituicao": {
+        "preenchidos": 2,
+        "taxa": 0.167
+      },
+      "banca": {
+        "preenchidos": 12,
+        "taxa": 1.0
+      },
+      "cargo": {
+        "preenchidos": 0,
+        "taxa": 0.0
+      },
+      "curso": {
+        "preenchidos": 0,
+        "taxa": 0.0
+      },
+      "area": {
+        "preenchidos": 0,
+        "taxa": 0.0
+      },
+      "nivel_escolaridade": {
+        "preenchidos": 12,
+        "taxa": 1.0
+      },
+      "estado": {
+        "preenchidos": 4,
+        "taxa": 0.333
+      },
+      "municipio": {
+        "preenchidos": 4,
+        "taxa": 0.333
+      },
+      "regiao": {
+        "preenchidos": 0,
+        "taxa": 0.0
+      },
+      "modalidade": {
+        "preenchidos": 0,
+        "taxa": 0.0
+      },
+      "numero_vagas": {
+        "preenchidos": 11,
+        "taxa": 0.917
+      },
+      "salario_min": {
+        "preenchidos": 8,
+        "taxa": 0.667
+      },
+      "salario_max": {
+        "preenchidos": 12,
+        "taxa": 1.0
+      },
+      "taxa_inscricao": {
+        "preenchidos": 0,
+        "taxa": 0.0
+      },
+      "data_publicacao": {
+        "preenchidos": 0,
+        "taxa": 0.0
+      },
+      "data_inicio_inscricao": {
+        "preenchidos": 0,
+        "taxa": 0.0
+      },
+      "data_fim_inscricao": {
+        "preenchidos": 0,
+        "taxa": 0.0
+      },
+      "data_prova": {
+        "preenchidos": 0,
+        "taxa": 0.0
+      },
+      "status": {
+        "preenchidos": 12,
+        "taxa": 1.0
+      },
+      "link": {
+        "preenchidos": 12,
+        "taxa": 1.0
+      },
+      "link_edital": {
+        "preenchidos": 12,
+        "taxa": 1.0
+      },
+      "fonte": {
+        "preenchidos": 12,
+        "taxa": 1.0
+      },
+      "fonte_tipo": {
+        "preenchidos": 12,
+        "taxa": 1.0
+      },
+      "validacao_status": {
+        "preenchidos": 12,
+        "taxa": 1.0
+      },
+      "qualidade_dado": {
+        "preenchidos": 12,
+        "taxa": 1.0
+      },
+      "tags": {
+        "preenchidos": 12,
+        "taxa": 1.0
+      },
+      "extras": {
+        "preenchidos": 12,
+        "taxa": 1.0
+      },
+      "ativo": {
+        "preenchidos": 12,
+        "taxa": 1.0
+      }
+    },
+    "campos_sempre_ausentes_wave": [
+      "cargo",
+      "curso",
+      "area",
+      "regiao",
+      "modalidade",
+      "taxa_inscricao",
+      "data_publicacao",
+      "data_inicio_inscricao",
+      "data_fim_inscricao",
+      "data_prova"
+    ]
+  },
+  "loader_dryrun_v2": {
+    "data_execucao": "2026-05-13T19:12:46Z",
+    "modo": "dry_run",
+    "would_upsert_total": 12,
+    "errors_count": 0,
+    "tipo_selecao_counts": {
+      "concurso_publico": 8,
+      "processo_seletivo": 4
+    },
+    "validacao_status_counts": {
+      "incompleto": 12
+    },
+    "apply_status": "dry_run_only",
+    "environment_guard": {
+      "editalfinder_env": "staging",
+      "has_supabase_url": true,
+      "has_service_key": true,
+      "has_anon_key": true,
+      "has_allow_staging_apply": false,
+      "url_host_masked": "dof***.co",
+      "block_reason": "",
+      "production_blocked": false
+    }
+  },
+  "exemplos_bons": [
+    {
+      "titulo": "Exército Brasileiro: Concurso nacional abre 1.100 vagas para cursos de formação de sargentos",
+      "orgao": "Exército Brasileiro",
+      "instituicao": null,
+      "estado": null,
+      "municipio": null,
+      "numero_vagas": 1100,
+      "salario_min": 95.0,
+      "salario_max": 95.0,
+      "link_edital": "https://www.esa.eb.mil.br/",
+      "qualidade_dado": "media",
+      "validacao_status": "incompleto",
+      "extras": {
+        "crawler": "main_pci_concursos",
+        "wave": "concursos_wave1_pci",
+        "fetched_at_utc": "2026-05-13T19:12:22.455438+00:00",
+        "pci_noticia_url": "https://www.pciconcursos.com.br/noticias/exercito-brasileiro-concurso-nacional-abre-1100-vagas-para-cursos-de-formacao-de-sargentos",
+        "official_link_missing": false,
+        "extracted_fields": [
+          "nivel_escolaridade_texto",
+          "numero_vagas_texto",
+          "orgao_title",
+          "salario_texto"
+        ],
+        "missing_core_fields": [
+          "data_fim_inscricao",
+          "data_prova",
+          "estado",
+          "instituicao"
+        ],
+        "extraction_confidence": "media"
+      }
+    },
+    {
+      "titulo": "Marinha divulga concurso para a Escola Naval com 49 vagas de nível médio",
+      "orgao": "Marinha do Brasil",
+      "instituicao": null,
+      "estado": null,
+      "municipio": null,
+      "numero_vagas": 49,
+      "salario_min": 110.0,
+      "salario_max": 1719.26,
+      "link_edital": "https://www.marinha.mil.br/sspm/",
+      "qualidade_dado": "media",
+      "validacao_status": "incompleto",
+      "extras": {
+        "crawler": "main_pci_concursos",
+        "wave": "concursos_wave1_pci",
+        "fetched_at_utc": "2026-05-13T19:12:24.712214+00:00",
+        "pci_noticia_url": "https://www.pciconcursos.com.br/noticias/marinha-divulga-concurso-para-a-escola-naval-com-49-vagas-de-nivel-medio",
+        "official_link_missing": false,
+        "extracted_fields": [
+          "nivel_escolaridade_texto",
+          "numero_vagas_texto",
+          "orgao_title",
+          "salario_texto"
+        ],
+        "missing_core_fields": [
+          "data_fim_inscricao",
+          "data_prova",
+          "estado",
+          "instituicao"
+        ],
+        "extraction_confidence": "media"
+      }
+    },
+    {
+      "titulo": "NAV BRASIL retifica concurso público com salários de até R$ 10.868,68",
+      "orgao": null,
+      "instituicao": null,
+      "estado": null,
+      "municipio": null,
+      "numero_vagas": 32,
+      "salario_min": null,
+      "salario_max": 10868.68,
+      "link_edital": "https://www.navbrasil.gov.br/",
+      "qualidade_dado": "baixa",
+      "validacao_status": "incompleto",
+      "extras": {
+        "crawler": "main_pci_concursos",
+        "wave": "concursos_wave1_pci",
+        "fetched_at_utc": "2026-05-13T19:12:20.019580+00:00",
+        "pci_noticia_url": "https://www.pciconcursos.com.br/noticias/nav-brasil-retifica-concurso-publico-com-salarios-de-ate-10868",
+        "official_link_missing": false,
+        "extracted_fields": [
+          "nivel_escolaridade_texto",
+          "numero_vagas_texto",
+          "salario_texto"
+        ],
+        "missing_core_fields": [
+          "data_fim_inscricao",
+          "data_prova",
+          "orgao",
+          "estado",
+          "instituicao"
+        ],
+        "extraction_confidence": "baixa"
+      }
+    }
+  ],
+  "exemplos_incompletos_ou_frageis": [
+    {
+      "titulo": "Câmara de Arujá - SP abre concurso público com salários de até R$ 15,6 mil",
+      "nota": "salario_max possivelmente truncado (titulo menciona mil; valor numerico baixo)",
+      "salario_max": 15.6,
+      "link": "https://www.pciconcursos.com.br/noticias/camara-de-aruja-sp-abre-concurso-publico-com-salarios-de-ate-15-6-mil"
+    },
+    {
+      "titulo": "Câmara de Presidente Prudente - SP abre concurso público com salários de até R$ 22 mil",
+      "nota": "salario_max possivelmente truncado (titulo menciona mil; valor numerico baixo)",
+      "salario_max": 22.0,
+      "link": "https://www.pciconcursos.com.br/noticias/camara-de-presidente-prudente-sp-abre-concurso-publico-com-salarios-de-ate-22-mil"
+    },
+    {
+      "titulo": "NAV BRASIL retifica concurso público com salários de até R$ 10.868,68",
+      "orgao": null,
+      "estado": null,
+      "data_fim_inscricao": null,
+      "numero_vagas": 32,
+      "salario_max": 10868.68,
+      "qualidade_dado": "baixa",
+      "extras": {
+        "crawler": "main_pci_concursos",
+        "wave": "concursos_wave1_pci",
+        "fetched_at_utc": "2026-05-13T19:12:20.019580+00:00",
+        "pci_noticia_url": "https://www.pciconcursos.com.br/noticias/nav-brasil-retifica-concurso-publico-com-salarios-de-ate-10868",
+        "official_link_missing": false,
+        "extracted_fields": [
+          "nivel_escolaridade_texto",
+          "numero_vagas_texto",
+          "salario_texto"
+        ],
+        "missing_core_fields": [
+          "data_fim_inscricao",
+          "data_prova",
+          "orgao",
+          "estado",
+          "instituicao"
+        ],
+        "extraction_confidence": "baixa"
+      }
+    },
+    {
+      "titulo": "ESFCEx - BA: Seleção para Oficiais oferece vagas em diversas especialidades de nível superior",
+      "orgao": null,
+      "estado": null,
+      "data_fim_inscricao": null,
+      "numero_vagas": 4,
+      "salario_max": 150.0,
+      "qualidade_dado": "baixa",
+      "extras": {
+        "crawler": "main_pci_concursos",
+        "wave": "concursos_wave1_pci",
+        "fetched_at_utc": "2026-05-13T19:12:26.930491+00:00",
+        "pci_noticia_url": "https://www.pciconcursos.com.br/noticias/esfcex-ba-selecao-para-oficiais-oferece-vagas-em-diversas-especialidades-de-nivel-superior",
+        "official_link_missing": false,
+        "extracted_fields": [
+          "nivel_escolaridade_texto",
+          "numero_vagas_texto",
+          "salario_texto"
+        ],
+        "missing_core_fields": [
+          "data_fim_inscricao",
+          "data_prova",
+          "orgao",
+          "estado",
+          "instituicao"
+        ],
+        "extraction_confidence": "baixa",
+        "cadastro_reserva": true
+      }
+    },
+    {
+      "titulo": "EsPCEx - SP abre concurso com 440 vagas para curso de formação de oficiais de carreira",
+      "orgao": null,
+      "estado": null,
+      "data_fim_inscricao": null,
+      "numero_vagas": 440,
+      "salario_max": 100.0,
+      "qualidade_dado": "baixa",
+      "extras": {
+        "crawler": "main_pci_concursos",
+        "wave": "concursos_wave1_pci",
+        "fetched_at_utc": "2026-05-13T19:12:29.136995+00:00",
+        "pci_noticia_url": "https://www.pciconcursos.com.br/noticias/espcex-sp-abre-concurso-com-440-vagas-para-curso-de-formacao-de-oficiais-de-carreira",
+        "official_link_missing": false,
+        "extracted_fields": [
+          "nivel_escolaridade_texto",
+          "numero_vagas_texto",
+          "salario_texto"
+        ],
+        "missing_core_fields": [
+          "data_fim_inscricao",
+          "data_prova",
+          "orgao",
+          "estado",
+          "instituicao"
+        ],
+        "extraction_confidence": "baixa"
+      }
+    }
+  ],
+  "riscos_agregador": [
+    "Texto editorial: datas de inscrição/prova podem não aparecer no HTML → validacao_status incompleto em massa.",
+    "Primeiro link externo como link_edital pode não ser o edital oficial.",
+    "Valores R$ no corpo podem ser taxa ou referência, não salário base.",
+    "Títulos com hífen em valores (ex.: 15-6 mil) podem gerar salario_max numericamente errado até ajuste adicional do parser.",
+    "Heurísticas de nível de escolaridade podem alinhar-se a texto genérico repetido nas notícias."
+  ],
+  "recomendacao_apply_staging": "Aprovado com ressalvas para apply em staging: dry-run sem erros, 12 upserts previstos, dados úteis para API/front de teste. Curadoria posterior recomendada (datas, salários, órgãos). Não aplicar em produção nesta wave.",
+  "comando_apply_staging": {
+    "powershell": "$env:EDITALFINDER_ENV=\"staging\"; $env:EDITALFINDER_ALLOW_STAGING_APPLY=\"1\"; python scripts/load_concursos_selecao.py --input-dir audit_reports_main_pipeline/concursos_wave1_pci/standardized --output-dir audit_reports_main_pipeline/concursos_wave1_pci/loader_apply_staging --sources pci_concursos --apply-staging --staging",
+    "bash": "EDITALFINDER_ENV=staging EDITALFINDER_ALLOW_STAGING_APPLY=1 python scripts/load_concursos_selecao.py --input-dir audit_reports_main_pipeline/concursos_wave1_pci/standardized --output-dir audit_reports_main_pipeline/concursos_wave1_pci/loader_apply_staging --sources pci_concursos --apply-staging --staging",
+    "nota": "Não executar sem rever .env (SUPABASE_URL, chave de serviço) e política de staging. Este consolidado não executa apply."
+  }
+}

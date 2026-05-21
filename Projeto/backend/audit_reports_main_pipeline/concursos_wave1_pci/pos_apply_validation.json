@@ -1,0 +1,138 @@
+{
+  "relatorio": "pos_apply_wave1_pci_staging",
+  "gerado_em_utc": "2026-05-13T23:30:00Z",
+  "fonte": "pci_concursos",
+  "tabela_alvo": "public.concurso_selecao",
+  "view_consumo": "public.vw_concursos_front",
+  "artefatos_apply": {
+    "pasta": "audit_reports_main_pipeline/concursos_wave1_pci/loader_apply_staging",
+    "resumo_json": "audit_reports_main_pipeline/concursos_wave1_pci/loader_apply_staging/load_concursos_selecao_summary.json",
+    "exemplos_payload": "audit_reports_main_pipeline/concursos_wave1_pci/loader_apply_staging/load_concursos_selecao_payload_examples.json",
+    "erros_json": "audit_reports_main_pipeline/concursos_wave1_pci/loader_apply_staging/load_concursos_selecao_errors.json",
+    "avisos_json": "audit_reports_main_pipeline/concursos_wave1_pci/loader_apply_staging/load_concursos_selecao_warnings.json"
+  },
+  "resumo_apply_loader": {
+    "data_execucao": "2026-05-13T23:17:24Z",
+    "modo": "apply_staging",
+    "apply_status": "applied",
+    "staging_flag": true,
+    "total_items_processados": 12,
+    "would_upsert_total": 12,
+    "inserted": 0,
+    "updated": 12,
+    "upserted_total": 12,
+    "errors_count": 0,
+    "map_errors_count": 0,
+    "apply_errors_count": 0,
+    "duplicate_fonte_link_in_batch": 0,
+    "expired_items_count": 0,
+    "apply_block_reason": "",
+    "nota_inserted_zero": "Upsert por (fonte, link): 0 inserts e 12 updates indica que os 12 links já existiam em staging (re-aplicação ou carga anterior)."
+  },
+  "distribuicoes": {
+    "validacao_status": {
+      "incompleto": 12
+    },
+    "qualidade_dado": {
+      "media": 12
+    },
+    "tipo_selecao": {
+      "concurso_publico": 8,
+      "processo_seletivo": 4
+    },
+    "status": {
+      "ativo": 12
+    }
+  },
+  "cobertura_campos_amostra_payload": {
+    "denominador": 12,
+    "descricao": "Contagens sobre load_concursos_selecao_payload_examples.json (12 linhas = lote aplicado).",
+    "preenchidos_por_campo": {
+      "titulo": 12,
+      "link_edital": 12,
+      "fonte_tipo": 12,
+      "nivel_escolaridade": 12,
+      "taxa_inscricao": 12,
+      "orgao": 9,
+      "instituicao": 2,
+      "estado": 4,
+      "municipio": 4,
+      "numero_vagas": 11,
+      "salario_min": 9,
+      "salario_max": 9,
+      "validacao_status": 12,
+      "qualidade_dado": 12
+    },
+    "sempre_ausentes_no_lote": [
+      "data_fim_inscricao",
+      "data_prova",
+      "data_publicacao",
+      "cargo",
+      "curso"
+    ],
+    "ausencia_parcial": {
+      "salario_min_e_salario_max_ambos_ausentes": 3,
+      "nota": "Ex.: itens em que só taxa ou texto sem remuneração clara foi classificada (Exército, ESFCEx, EsPCEx na amostra)."
+    }
+  },
+  "campos_mais_preenchidos": [
+    "titulo, link, fonte, banca, tipo_selecao, status, tags, extras, ativo (12/12)",
+    "link_edital (12/12)",
+    "taxa_inscricao (12/12) após separação taxa/salário",
+    "nivel_escolaridade inferido (12/12)",
+    "extras.source_is_aggregator (12/12 nos exemplos)"
+  ],
+  "campos_ainda_ausentes_ou_frageis": [
+    "data_fim_inscricao, data_prova, data_publicacao: 0/12 no lote — esperado para agregador sem frases datadas.",
+    "cargo, curso: 0/12.",
+    "orgao: 3/12 sem órgão inferido (ex.: NAV, ESFCEx, EsPCEx).",
+    "salario_min/max: 3/12 sem faixa (apenas taxa ou sem contexto de remuneração).",
+    "valor_ambiguo: alguns extras.value_extraction_notes (ex.: Arujá, Rio Claro) — revisar no órgão."
+  ],
+  "exemplos_aplicados": [
+    {
+      "titulo": "NAV BRASIL retifica concurso público com salários de até R$ 10.868,68",
+      "link": "https://www.pciconcursos.com.br/noticias/nav-brasil-retifica-concurso-publico-com-salarios-de-ate-10868",
+      "validacao_status": "incompleto",
+      "qualidade_dado": "media"
+    },
+    {
+      "titulo": "Exército Brasileiro: Concurso nacional abre 1.100 vagas para cursos de formação de sargentos",
+      "link": "https://www.pciconcursos.com.br/noticias/exercito-brasileiro-concurso-nacional-abre-1100-vagas-para-cursos-de-formacao-de-sargentos",
+      "validacao_status": "incompleto",
+      "qualidade_dado": "media"
+    },
+    {
+      "titulo": "Marinha divulga concurso para a Escola Naval com 49 vagas de nível médio",
+      "link": "https://www.pciconcursos.com.br/noticias/marinha-divulga-concurso-para-a-escola-naval-com-49-vagas-de-nivel-medio",
+      "validacao_status": "incompleto",
+      "qualidade_dado": "media"
+    },
+    {
+      "titulo": "Câmara de Presidente Prudente - SP abre concurso público com salários de até R$ 22 mil",
+      "link": "https://www.pciconcursos.com.br/noticias/camara-de-presidente-prudente-sp-abre-concurso-publico-com-salarios-de-ate-22-mil",
+      "validacao_status": "incompleto",
+      "qualidade_dado": "media"
+    }
+  ],
+  "riscos_restantes_agregador": [
+    "Nenhuma linha com validacao_status valido: prazos não vêm do HTML de forma fiável — a UI deve continuar a tratar como dados parciais.",
+    "link_edital é heurístico (primeiro link externo útil), não garantia de edital PDF.",
+    "Salário vs taxa: heurística; casos sem sal_min/max podem significar só taxa capturada ou ausência de remuneração explícita no texto.",
+    "qualidade_dado = media em todo o lote: critério alto (datas + órgão + local) não atingido por nenhum item — coerente com dados atuais.",
+    "extras.origem_pipeline no loader pode mostrar concursos_wave1_manual (metadado do loader); não invalida fonte pci_concursos."
+  ],
+  "recomendacao_fonte_pci_wave1": "Manter pci_concursos na Wave 1 como fonte de descoberta em staging: apply técnico saudável (0 erros), tipos e status consistentes, separação taxa/salário e extras úteis. Não promover a produção sem curadoria ou fontes primárias para prazos e valores. Próximos incrementos: opcionalmente SQL de auditoria em vw_concursos_front filtrando fonte=pci_concursos.",
+  "checklist_manual_pos_apply": [
+    "[ ] Abrir /concursos em staging e confirmar listagem sem erro.",
+    "[ ] Cards: título, badges “Dados parciais”, texto “Fonte agregadora”, inscrição/prova “não identificada” quando aplicável.",
+    "[ ] Filtros (tipo, status, texto): comportamento esperado com 12 itens PCI misturados a outros.",
+    "[ ] Taxa vs salário: exemplos NAV (faixa + taxa), Marinha/IME (salário + taxa), Exército/ESFCEx/EsPCEx (só taxa ou sem salário) — aceitável como parcial.",
+    "[ ] Datas ausentes: confirmar que não há data falsa; utilizador direcionado ao link PCI / órgão.",
+    "[ ] public.vw_concursos_front: SELECT com fonte pci_concursos (ou coluna equivalente na view) para contagem 12 e colunas expostas corretas."
+  ],
+  "coerencia": {
+    "loader_vs_bd": "O relatório baseia-se nos ficheiros do apply; a confirmação final de linhas em public.concurso_selecao é feita via Supabase/SQL no checklist.",
+    "erros_e_avisos_ficheiros": "load_concursos_selecao_errors.json e load_concursos_selecao_warnings.json vazios ([])."
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "generated_at": "2026-05-18T16:20:31Z",
+  "feed": {
+    "total_no_feed": 2756,
+    "total_dentro_12_meses": 381,
+    "total_elegivel_pipeline": 162
+  },
+  "dryrun_original": {
+    "diretorio": "lockheed_martin_news_dryrun",
+    "max_items_config": 10,
+    "total_processado": 10,
+    "total_valido": null,
+    "total_incompleto": null,
+    "review_candidates": 0,
+    "errors_count": null,
+    "validacao_status_counts": {
+      "valido": 10
+    },
+    "distribuicao": {}
+  },
+  "dryrun_ampliado": {
+    "diretorio": "lockheed_martin_news_dryrun_30",
+    "max_items_config": 30,
+    "total_processado": 30,
+    "total_valido": 30,
+    "total_incompleto": 0,
+    "review_candidates": 0,
+    "errors_count": 0,
+    "validacao_status_counts": {
+      "valido": 30
+    },
+    "distribuicao": {
+      "eixo_estrategico": {
+        "ia_cyber": 13,
+        "espaco": 12,
+        "aeroespacial": 11,
+        "defesa": 10,
+        "industria_estrategica": 10,
+        "sensores_radar": 5,
+        "engenharia": 3,
+        "guerra_eletronica": 3,
+        "materiais_avancados": 2,
+        "hipersonicos": 1
+      },
+      "story_type": {
+        "Feature": 15,
+        "Press Release": 15
+      }
+    }
+  },
+  "delta": {
+    "processado": 20,
+    "valido": 30
+  },
+  "nota": "Fonte corporativa; cap max_items; apply não executado."
+}

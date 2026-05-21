@@ -1,0 +1,36 @@
+{
+  "source_id": "capes_noticias",
+  "source_name": "CAPES Notícias",
+  "method": "rss",
+  "seed_urls_used": [
+    "https://www.gov.br/capes/pt-br/assuntos/noticias/rss.xml"
+  ],
+  "max_items": 10,
+  "time_window_months": 12,
+  "raw_total": 10,
+  "within_window_total": 7,
+  "without_date_total": 0,
+  "raw_by_seed_kind": {
+    "mixed": 10
+  },
+  "feed_kind_caps_applied": {},
+  "page_enrich_fetch_total": 8,
+  "errors": [],
+  "theme_filter_stats": {
+    "extracted_total": 10,
+    "skipped_duplicate_link": 0,
+    "rejected_exclude_keyword": 0,
+    "rejected_exclude_medical_generic": 0,
+    "rejected_require_any_keyword": 0,
+    "rejected_feed_kind_cap": 0,
+    "passed_theme_filters": 10,
+    "matched_keyword_counts": {},
+    "reject_samples": []
+  },
+  "discarded_post_enrich": [],
+  "discarded_post_enrich_total": 0,
+  "feed_url": "https://www.gov.br/capes/pt-br/assuntos/noticias/rss.xml",
+  "listing_url": "https://www.gov.br/capes/pt-br/assuntos/noticias",
+  "note_rss_guid": "Feed Plone usa <guid> como URL canônica (link RSS vazio).",
+  "note_sort": "Itens ordenados por pubDate desc antes do cap max_items."
+}

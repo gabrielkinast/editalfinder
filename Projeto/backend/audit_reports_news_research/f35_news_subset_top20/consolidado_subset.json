@@ -1,0 +1,290 @@
+{
+  "fonte": "f35_news",
+  "data_execucao": "2026-05-18T15:53:42Z",
+  "origem_dryrun_ampliado": "audit_reports_news_research/f35_news_dryrun_30/standardized/f35_news_standardized.json",
+  "subset_standardized": "audit_reports_news_research/f35_news_subset_top20/standardized/f35_news_standardized.json",
+  "feed": {
+    "total_no_feed": 302,
+    "elegiveis_12m": 80,
+    "dryrun_ampliado_processados": 30,
+    "dryrun_ampliado_validos": 30
+  },
+  "subset": {
+    "criterios": [
+      "validacao_status=valido",
+      "data_publicacao dentro de 12 meses",
+      "ordenar data_publicacao desc",
+      "top 20"
+    ],
+    "escolhidos": 20,
+    "candidatos_validos_na_origem": 30,
+    "rejeitados_na_filtragem": 0
+  },
+  "loader_dryrun": {
+    "comando": "C:\\Program Files\\Python312\\python.exe D:\\Computational_Physics\\My Projects\\edital\\scripts\\load_news_research_sources.py --dry-run --source f35_news --input-dir audit_reports_news_research/f35_news_subset_top20",
+    "would_upsert_noticia": 20,
+    "would_upsert_pesquisa": 0,
+    "errors_count": 0,
+    "apply_status": "dry_run_only",
+    "summary_path": "audit_reports_news_research/f35_news_subset_top20/load_news_research_summary.json"
+  },
+  "distribuicao_eixos_estrategicos": {
+    "aeroespacial": 20,
+    "defesa": 20,
+    "aviacao_militar": 19,
+    "industria_estrategica": 10,
+    "tecnologia_militar": 9,
+    "geopolitica_tecnologica": 7
+  },
+  "itens": [
+    {
+      "titulo": "Denmark's F-35s in the Netherlands",
+      "data_publicacao": "2026-05-13",
+      "link": "https://www.f35.com/f35/news-and-features/Denmarks_F-35s_in_the_Netherlands.html",
+      "categoria": "News",
+      "eixo_estrategico": [
+        "aeroespacial",
+        "defesa",
+        "aviacao_militar",
+        "tecnologia_militar",
+        "geopolitica_tecnologica"
+      ]
+    },
+    {
+      "titulo": "UK Ministry of Defence and Lockheed Martin Skunk Works®..",
+      "data_publicacao": "2026-04-30",
+      "link": "https://www.f35.com/f35/news-and-features/UK_Ministry_of_Defence_and_Lockheed_Martin_Skunk_Works_Demonstrate_Ready-Now_Interoperability.html",
+      "categoria": "News",
+      "eixo_estrategico": [
+        "aeroespacial",
+        "defesa",
+        "industria_estrategica",
+        "geopolitica_tecnologica"
+      ]
+    },
+    {
+      "titulo": "35th Fighter Wing Welcomes First Fifth Generation USAF F-35",
+      "data_publicacao": "2026-04-28",
+      "link": "https://www.f35.com/f35/news-and-features/35th-Fighter-Wing-welcomes-first-fifth-generation-USA-F-35-to-Misawa-AB.html",
+      "categoria": "News",
+      "eixo_estrategico": [
+        "aeroespacial",
+        "defesa",
+        "aviacao_militar",
+        "tecnologia_militar",
+        "geopolitica_tecnologica"
+      ]
+    },
+    {
+      "titulo": "UK F-35 Milestone Achieved, Mission Continues",
+      "data_publicacao": "2026-04-24",
+      "link": "https://www.f35.com/f35/news-and-features/UK_F-35_Milestone_Achieved_Mission_Continues.html",
+      "categoria": "News",
+      "eixo_estrategico": [
+        "aeroespacial",
+        "defesa",
+        "aviacao_militar",
+        "industria_estrategica",
+        "geopolitica_tecnologica"
+      ]
+    },
+    {
+      "titulo": "MAS and Lockheed Martin Announce F-35 Sustainment..",
+      "data_publicacao": "2026-04-21",
+      "link": "https://www.f35.com/f35/news-and-features/MAS_and_Lockheed_Martin_Announce_F-35_Sustainment_Partnership_in_Quebec.html",
+      "categoria": "News",
+      "eixo_estrategico": [
+        "aeroespacial",
+        "defesa",
+        "aviacao_militar",
+        "industria_estrategica"
+      ]
+    },
+    {
+      "titulo": "Air Force Pilot Flies F-35A Multi-Role Fighter for the First",
+      "data_publicacao": "2026-04-16",
+      "link": "https://www.f35.com/f35/news-and-features/Air_Force_Pilot_Flies_F-35A_Multi-Role_Fighter_for_the_First_Time.html",
+      "categoria": "News",
+      "eixo_estrategico": [
+        "aeroespacial",
+        "defesa",
+        "aviacao_militar",
+        "industria_estrategica",
+        "tecnologia_militar"
+      ]
+    },
+    {
+      "titulo": "RTX’s Pratt & Whitney Awarded $6.6 Billion F135 Production..",
+      "data_publicacao": "2026-03-31",
+      "link": "https://www.f35.com/f35/news-and-features/RTXs_Pratt_Whitney_Awarded_6_Billion_F135_Production_Contract_to_Definitize_Lots_18_19_.html",
+      "categoria": "News",
+      "eixo_estrategico": [
+        "aeroespacial",
+        "defesa",
+        "aviacao_militar",
+        "industria_estrategica",
+        "tecnologia_militar"
+      ]
+    },
+    {
+      "titulo": "Hill AFB Fighter Squadron Chosen as Top in the Air Force",
+      "data_publicacao": "2026-03-30",
+      "link": "https://www.f35.com/f35/news-and-features/Hill_AFB_Fighter_Squadron_Chosen_as_Top_in_the_Air_Force.html",
+      "categoria": "News",
+      "eixo_estrategico": [
+        "aeroespacial",
+        "defesa",
+        "aviacao_militar",
+        "tecnologia_militar"
+      ]
+    },
+    {
+      "titulo": "IAM Union Applauds Record Number Of Bipartisan Members..",
+      "data_publicacao": "2026-03-26",
+      "link": "https://www.f35.com/f35/news-and-features/IAM_Union_Applauds_Record_Number_Of_Bipartisan_Members_Of_Congress_For_Strong_Funding_Request_For_F35_Program.html",
+      "categoria": "News",
+      "eixo_estrategico": [
+        "aeroespacial",
+        "defesa",
+        "aviacao_militar"
+      ]
+    },
+    {
+      "titulo": "Raptors and Lightning: VaANG Airmen Bridge the Gap..",
+      "data_publicacao": "2026-03-26",
+      "link": "https://www.f35.com/f35/news-and-features/Raptors_and_Lightning_VaANG_Airmen_Bridge_the_Gap_Between_F-22_and_F-35.html",
+      "categoria": "News",
+      "eixo_estrategico": [
+        "aeroespacial",
+        "defesa",
+        "aviacao_militar",
+        "industria_estrategica",
+        "tecnologia_militar"
+      ]
+    },
+    {
+      "titulo": "First Netherlands F-35 Deployment to Japan..",
+      "data_publicacao": "2026-03-24",
+      "link": "https://www.f35.com/f35/news-and-features/First_Netherlands_F35_Deployment_to_Japan_for_Trilateral_Exercise_with_US_Japan.html",
+      "categoria": "News",
+      "eixo_estrategico": [
+        "aeroespacial",
+        "defesa",
+        "aviacao_militar",
+        "tecnologia_militar",
+        "geopolitica_tecnologica"
+      ]
+    },
+    {
+      "titulo": "Germany’s First F-35A Advances to Final Assembly",
+      "data_publicacao": "2026-03-23",
+      "link": "https://www.f35.com/f35/news-and-features/Germanys_First_F35A_Advances_to_Final_Assembly.html",
+      "categoria": "News",
+      "eixo_estrategico": [
+        "aeroespacial",
+        "defesa",
+        "aviacao_militar",
+        "industria_estrategica",
+        "tecnologia_militar",
+        "geopolitica_tecnologica"
+      ]
+    },
+    {
+      "titulo": "Lockheed Martin Finalizes Industry Project Agreements..",
+      "data_publicacao": "2026-03-18",
+      "link": "https://www.f35.com/content/lockheed-martin/f35/news-and-features/Lockheed_Martin_Applying_AI_to_Enhance_F35_Combat_Identification_System/Lockheed_Martin_Finalizes_Industry_Project_Agreements_for_Czech_F35_Program.html",
+      "categoria": "News",
+      "eixo_estrategico": [
+        "aeroespacial",
+        "defesa",
+        "aviacao_militar",
+        "industria_estrategica"
+      ]
+    },
+    {
+      "titulo": "Lockheed Martin Applying AI to Enhance F-35 Combat..",
+      "data_publicacao": "2026-02-23",
+      "link": "https://www.f35.com/f35/news-and-features/Lockheed_Martin_Applying_AI_to_Enhance_F35_Combat_Identification_System.html",
+      "categoria": "News",
+      "eixo_estrategico": [
+        "aeroespacial",
+        "defesa",
+        "aviacao_militar",
+        "industria_estrategica"
+      ]
+    },
+    {
+      "titulo": "NORAD Detects and Tracks Russian Aircraft Operating..",
+      "data_publicacao": "2026-02-19",
+      "link": "https://www.f35.com/f35/news-and-features/NORAD_detects_and_tracks_Russian_aircraft_operating_in_the_Alaskan_Air_Defense_Identification_Zone.html",
+      "categoria": "News",
+      "eixo_estrategico": [
+        "aeroespacial",
+        "defesa",
+        "aviacao_militar"
+      ]
+    },
+    {
+      "titulo": "Choose Your Fighter: F-35A vs. F-35B",
+      "data_publicacao": "2026-02-16",
+      "link": "https://www.f35.com/f35/news-and-features/Choose-Your-Fighter-F35A-vs-F35B.html",
+      "categoria": "News",
+      "eixo_estrategico": [
+        "aeroespacial",
+        "defesa",
+        "aviacao_militar"
+      ]
+    },
+    {
+      "titulo": "Kearsarge Conducts F-35B Flight Operations",
+      "data_publicacao": "2026-02-10",
+      "link": "https://www.f35.com/f35/news-and-features/Kearsarge_Conducts_F35B_Flight_Operations_for_the_First_Time.html",
+      "categoria": "News",
+      "eixo_estrategico": [
+        "aeroespacial",
+        "defesa",
+        "aviacao_militar"
+      ]
+    },
+    {
+      "titulo": "Japan Fields F-35B Fighters at Nyutabaru Air Base",
+      "data_publicacao": "2026-02-07",
+      "link": "https://www.f35.com/f35/news-and-features/Japan_fields_F-35B_fighters_at_Nyutabaru_Air_Base.html",
+      "categoria": "News",
+      "eixo_estrategico": [
+        "aeroespacial",
+        "defesa",
+        "aviacao_militar",
+        "tecnologia_militar",
+        "geopolitica_tecnologica"
+      ]
+    },
+    {
+      "titulo": "Patria and RTX’s Pratt & Whitney Agree on Final Assembly..",
+      "data_publicacao": "2026-02-05",
+      "link": "https://www.f35.com/f35/news-and-features/Patria_and_RTXs_Pratt_and_Whitney_Agree_on_Final_Assembly.html",
+      "categoria": "News",
+      "eixo_estrategico": [
+        "aeroespacial",
+        "defesa",
+        "aviacao_militar",
+        "industria_estrategica"
+      ]
+    },
+    {
+      "titulo": "US Shoots Down Iranian Drone Approaching Aircraft Carrier",
+      "data_publicacao": "2026-02-03",
+      "link": "https://www.f35.com/f35/news-and-features/US_shoots_down_Iranian_drone_approaching_aircraft_carrier_official_says.html",
+      "categoria": "News",
+      "eixo_estrategico": [
+        "aeroespacial",
+        "defesa",
+        "aviacao_militar"
+      ]
+    }
+  ],
+  "observacao": "Fonte institucional/corporativa (Lockheed Martin / programa F-35). Aplicar apenas lote controlado (20 itens) para não dominar a aba Notícias. Apply staging não executado nesta tarefa.",
+  "apply_staging": {
+    "executado": false
+  }
+}

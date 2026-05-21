@@ -1,0 +1,53 @@
+{
+  "data_execucao": "2026-05-14T19:53:39Z",
+  "modo": "dry_run",
+  "staging_flag": false,
+  "apply_staging_requested": false,
+  "input_dir": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_main_pipeline\\concursos_wave1_fgv\\standardized",
+  "output_dir": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_main_pipeline\\concursos_wave1_fgv\\loader_dryrun_v2",
+  "sources_selected": [
+    "fgv"
+  ],
+  "total_items": 3,
+  "would_upsert_total": 3,
+  "inserted": 0,
+  "updated": 0,
+  "upserted_total": 0,
+  "errors_count": 0,
+  "map_errors_count": 0,
+  "apply_errors_count": 0,
+  "errors_total_written": 0,
+  "duplicate_fonte_link_in_batch": 0,
+  "expired_items_count": 0,
+  "expired_items": [],
+  "by_source": {
+    "fgv": {
+      "would_upsert": 3,
+      "errors": 0
+    }
+  },
+  "tipo_selecao_counts": {
+    "concurso_publico": 3
+  },
+  "status_counts": {
+    "ativo": 2,
+    "prova_proxima": 1
+  },
+  "validacao_status_counts": {
+    "incompleto": 2,
+    "valido": 1
+  },
+  "environment_guard": {
+    "editalfinder_env": "staging",
+    "has_supabase_url": true,
+    "has_service_key": true,
+    "has_anon_key": true,
+    "has_allow_staging_apply": false,
+    "url_host_masked": "dof***.co",
+    "block_reason": "",
+    "production_blocked": false
+  },
+  "apply_status": "dry_run_only",
+  "apply_block_reason": "",
+  "nota": "Nenhuma escrita no Supabase (dry-run)."
+}

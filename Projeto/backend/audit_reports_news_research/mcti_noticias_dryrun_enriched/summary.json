@@ -1,0 +1,232 @@
+{
+  "fonte": "mcti_noticias",
+  "nome_exibicao": "MCTI Notícias",
+  "data_execucao": "2026-05-18T23:32:46Z",
+  "modo": "dry_run",
+  "apply": false,
+  "output_dir": "mcti_noticias_dryrun_enriched",
+  "diagnostico": {
+    "url_base": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias",
+    "cms": "gov.br / Plone",
+    "rss_atom": "404 — usar listagem HTML",
+    "feeds_testados": [
+      {
+        "url": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/rss.xml",
+        "status": null,
+        "ok": false
+      },
+      {
+        "url": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/atom.xml",
+        "status": null,
+        "ok": false
+      },
+      {
+        "url": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/feed/RSS",
+        "status": null,
+        "ok": false
+      },
+      {
+        "url": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/feed/Atom",
+        "status": null,
+        "ok": false
+      }
+    ],
+    "listagem": {
+      "hub_fetch_ok": true,
+      "hub_url": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias",
+      "article_links_on_hub": 30,
+      "sample_links": [
+        "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/mcti-inaugura-novas-linhas-de-luz-do-sirius-e-amplia-capacidade-de-pesquisas-em-areas-estrategicas",
+        "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/estudantes-brasileiros-ganham-oito-premios-na-maior-feira-internacional-de-ciencias-e-engenharia",
+        "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/projeto-conecta-estudantes-da-amazonia-e-da-mata-atlantica-para-transformar-casas-e-escolas-em-pontos-de-monitoramento-climatico",
+        "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/mcti-colabora-com-1a-conferencia-nacional-dos-objetivos-de-desenvolvimento-sustentavel-da-onu",
+        "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/mast-conta-com-programacao-especial-na-24a-semana-nacional-dos-museus",
+        "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/nota-de-pesar-2013-naire-galvao",
+        "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/tecnica-tradicional-de-reflorestamento-ja-plantou-mais-de-250kg-de-sementes-no-interior-da-amazonia-em-2026",
+        "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/unidades-de-pesquisa-do-mcti-participam-de-encontro-internacional-para-cooperacao-cientifica-na-amazonia"
+      ]
+    },
+    "detalhe": "og:description, #content-core, .documentPublished, og:image",
+    "robots_txt": "gov.br/robots.txt — acesso pode retornar 403 em alguns clientes; crawler HTTP padrão",
+    "separacao_fomento": "MCTI Fomento permanece Radar/Editais (não alterado)"
+  },
+  "config": {
+    "max_items": 30,
+    "time_window_months": 12,
+    "page_enrich_max": 30,
+    "seed_urls": [
+      "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias",
+      "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2025",
+      "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026"
+    ]
+  },
+  "totais": {
+    "total_raw": 30,
+    "dentro_12_meses": 30,
+    "standardized": 24,
+    "review": 2,
+    "descartados_ruido": 4,
+    "raw_apos_relevancia": 24,
+    "within_window_standardized": 24,
+    "sem_data": 0,
+    "page_enrich_fetches": 30,
+    "total_valido": 24,
+    "total_incompleto": 0,
+    "errors_count": 0
+  },
+  "filtros": {
+    "mcti_sent_discard": 4,
+    "mcti_sent_review": 2,
+    "rejected_mcti_non_path": 0,
+    "discarded_post_enrich": 0
+  },
+  "validacao_status_counts": {
+    "valido": 24
+  },
+  "distribuicao": {
+    "eixo_estrategico": {
+      "ciencia": 11,
+      "pesquisa": 10,
+      "inovacao": 7,
+      "tecnologia": 7,
+      "ia": 5,
+      "fomento": 4,
+      "clima_cientifico": 3,
+      "energia": 1,
+      "espaco": 1,
+      "semicondutores": 1,
+      "defesa": 1,
+      "computacao": 1
+    },
+    "relevancia_mcti": {
+      "alta": 15,
+      "media": 9
+    }
+  },
+  "exemplos": {
+    "mantidos": [
+      {
+        "titulo": "MCTI inaugura novas linhas de luz do Sirius e amplia capacidade de pesquisas em áreas estratégicas",
+        "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/mcti-inaugura-novas-linhas-de-luz-do-sirius-e-amplia-capacidade-de-pesquisas-em-areas-estrategicas",
+        "relevancia_mcti": "alta",
+        "motivos_relevancia": [
+          "pesquisa",
+          "inovação",
+          "síncrotron",
+          "sirius"
+        ],
+        "motivos_descarte": [
+          "agenda"
+        ]
+      },
+      {
+        "titulo": "Estudantes brasileiros ganham oito prêmios na maior feira internacional de ciências e engenharia",
+        "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/estudantes-brasileiros-ganham-oito-premios-na-maior-feira-internacional-de-ciencias-e-engenharia",
+        "relevancia_mcti": "alta",
+        "motivos_relevancia": [
+          "ciência",
+          "ciencia",
+          "tecnologia",
+          "inteligência artificial"
+        ],
+        "motivos_descarte": []
+      },
+      {
+        "titulo": "Projeto conecta estudantes da Amazônia e da Mata Atlântica para transformar casas e escolas em pontos de monitoramento climático",
+        "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/projeto-conecta-estudantes-da-amazonia-e-da-mata-atlantica-para-transformar-casas-e-escolas-em-pontos-de-monitoramento-climatico",
+        "relevancia_mcti": "media",
+        "motivos_relevancia": [
+          "clima"
+        ],
+        "motivos_descarte": []
+      },
+      {
+        "titulo": "Nota de pesar – Naire Galvão",
+        "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/nota-de-pesar-2013-naire-galvao",
+        "relevancia_mcti": "alta",
+        "motivos_relevancia": [
+          "ciência",
+          "tecnologia",
+          "inovação"
+        ],
+        "motivos_descarte": []
+      },
+      {
+        "titulo": "Técnica tradicional de reflorestamento já plantou mais de 250kg de sementes no interior da Amazônia em 2026",
+        "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/tecnica-tradicional-de-reflorestamento-ja-plantou-mais-de-250kg-de-sementes-no-interior-da-amazonia-em-2026",
+        "relevancia_mcti": "media",
+        "motivos_relevancia": [
+          "instituto"
+        ],
+        "motivos_descarte": []
+      }
+    ],
+    "descartados": [
+      {
+        "titulo": "Mast conta com programação especial na 24ª Semana Nacional dos Museus",
+        "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/mast-conta-com-programacao-especial-na-24a-semana-nacional-dos-museus",
+        "relevancia_mcti": "baixa",
+        "motivos_relevancia": [],
+        "motivos_descarte": [
+          "semana nacional"
+        ]
+      },
+      {
+        "titulo": "MCTI lança EDinova para acelerar descarbonização da construção civil no Brasil",
+        "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/mcti-lanca-edinova-para-acelerar-descarbonizacao-da-construcao-civil-no-brasil",
+        "relevancia_mcti": "baixa",
+        "motivos_relevancia": [],
+        "motivos_descarte": []
+      },
+      {
+        "titulo": "Inscrições para olimpíada de matemática para professores estão abertas até 29 de maio",
+        "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/inscricoes-para-olimpiada-de-matematica-para-professores-estao-abertas-ate-29-de-maio",
+        "relevancia_mcti": "baixa",
+        "motivos_relevancia": [],
+        "motivos_descarte": []
+      },
+      {
+        "titulo": "Cartas Celestes do Mast ajudam a localizar estrelas, planetas e constelações",
+        "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/cartas-celestes-do-mast-ajudam-a-localizar-estrelas-planetas-e-constelacoes",
+        "relevancia_mcti": "baixa",
+        "motivos_relevancia": [],
+        "motivos_descarte": []
+      }
+    ],
+    "review": [
+      {
+        "titulo": "MCTI colabora com 1ª Conferência Nacional dos Objetivos de Desenvolvimento Sustentável da ONU",
+        "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/mcti-colabora-com-1a-conferencia-nacional-dos-objetivos-de-desenvolvimento-sustentavel-da-onu",
+        "relevancia_mcti": "media",
+        "motivos_relevancia": [
+          "pesquisa"
+        ],
+        "motivos_descarte": [
+          "conferência nacional"
+        ]
+      },
+      {
+        "titulo": "MCTI reforça apoio à ética na pesquisa durante 72ª Reunião Ordinária do Concea",
+        "link": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/2026/05/mcti-reforca-apoio-a-etica-na-pesquisa-durante-72a-reuniao-ordinaria-do-concea",
+        "relevancia_mcti": "media",
+        "motivos_relevancia": [
+          "pesquisa"
+        ],
+        "motivos_descarte": [
+          "reunião",
+          "reuniao"
+        ]
+      }
+    ]
+  },
+  "warnings": [],
+  "errors": [],
+  "paths": {
+    "standardized": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_news_research\\mcti_noticias_dryrun_enriched\\standardized\\mcti_noticias_standardized.json",
+    "raw": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_news_research\\mcti_noticias_dryrun_enriched\\raw\\mcti_noticias_raw.json",
+    "review_candidates": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_news_research\\mcti_noticias_dryrun_enriched\\review_candidates.json",
+    "descartados_ruido": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_news_research\\mcti_noticias_dryrun_enriched\\descartados_ruido.json"
+  },
+  "variante": "enriched",
+  "comparacao_com": "mcti_noticias_dryrun"
+}

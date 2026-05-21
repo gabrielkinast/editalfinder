@@ -1,0 +1,269 @@
+{
+  "fonte": "space_force_news",
+  "nome_exibicao": "U.S. Space Force",
+  "loader_source_id": "space_force_news",
+  "destino": "public.noticia",
+  "data_execucao": "2026-05-20T06:14:33Z",
+  "origem_dryrun": "audit_reports_news_research/military_research_expansion_dryrun",
+  "origem_standardized": "audit_reports_news_research/military_research_expansion_dryrun/standardized/space_force_news_standardized.json",
+  "subset_standardized": "audit_reports_news_research/space_force_news_subset_valido/standardized/space_force_news_standardized.json",
+  "totais_origem": 28,
+  "validos_no_dryrun": 18,
+  "filtros": {
+    "fonte_recurso": "space_force_news",
+    "validacao_status": "valido",
+    "tipo_conteudo": "noticia",
+    "janela_meses": 12,
+    "excluido": [
+      "review_candidates",
+      "fontes_latentes"
+    ]
+  },
+  "subset": {
+    "escolhidos": 18,
+    "rejeitados_na_filtragem": 10
+  },
+  "loader_dryrun": {
+    "comando": "C:\\Program Files\\Python312\\python.exe D:\\Computational_Physics\\My Projects\\edital\\scripts\\load_news_research_sources.py --dry-run --source space_force_news --input-dir audit_reports_news_research/space_force_news_subset_valido",
+    "would_upsert_noticia": 18,
+    "would_upsert_pesquisa": 0,
+    "errors_count": 0,
+    "apply_status": "dry_run_only",
+    "routing_skipped_count": 0
+  },
+  "eixos_estrategicos": {
+    "espaco": 18,
+    "industria_estrategica": 7,
+    "sensores": 1,
+    "satelites": 1,
+    "pesquisa": 1,
+    "guerra_eletronica": 1,
+    "defesa": 1
+  },
+  "itens_excluidos": [
+    {
+      "link": "https://www.spaceforce.mil/News/Article-Display/Article/4369622/space-force-year-in-photos",
+      "titulo": "Space Force Year in Photos",
+      "fonte_recurso": "space_force_news",
+      "validacao_status": "incompleto",
+      "motivo": "validacao_status!=valido"
+    },
+    {
+      "link": "https://www.spaceforce.mil/News/Article-Display/Article/4368589/a-promise-fulfilled-a-story-of-service-legacy-and-love",
+      "titulo": "A promise fulfilled: A story of service, legacy and love",
+      "fonte_recurso": "space_force_news",
+      "validacao_status": "incompleto",
+      "motivo": "validacao_status!=valido"
+    },
+    {
+      "link": "https://www.spaceforce.mil/News/Article-Display/Article/4367584/us-space-forces-japan-celebrates-first-year-of-activation",
+      "titulo": "US Space Forces Japan celebrates first year of activation",
+      "fonte_recurso": "space_force_news",
+      "validacao_status": "incompleto",
+      "motivo": "validacao_status!=valido"
+    },
+    {
+      "link": "https://www.spaceforce.mil/News/Article-Display/Article/4365558/hegseth-senior-leaders-honor-militarys-top-recruiters",
+      "titulo": "Hegseth, senior leaders honor military's top recruiters",
+      "fonte_recurso": "space_force_news",
+      "validacao_status": "incompleto",
+      "motivo": "validacao_status!=valido"
+    },
+    {
+      "link": "https://www.spaceforce.mil/News/Article-Display/Article/4365080/cso-delivers-birthday-message-to-guardians",
+      "titulo": "CSO delivers birthday message to Guardians",
+      "fonte_recurso": "space_force_news",
+      "validacao_status": "incompleto",
+      "motivo": "validacao_status!=valido"
+    },
+    {
+      "link": "https://www.spaceforce.mil/News/Article-Display/Article/4363618/sld-45-ksc-nasa-host-reverse-industry-day-to-shape-future-of-space-launch",
+      "titulo": "SLD 45, KSC, NASA host Reverse Industry Day to shape future of space launch",
+      "fonte_recurso": "space_force_news",
+      "validacao_status": "incompleto",
+      "motivo": "validacao_status!=valido"
+    },
+    {
+      "link": "https://www.spaceforce.mil/News/Article-Display/Article/4363559/space-systems-command-stands-up-system-delta-80",
+      "titulo": "Space Systems Command stands up System Delta 80",
+      "fonte_recurso": "space_force_news",
+      "validacao_status": "incompleto",
+      "motivo": "validacao_status!=valido"
+    },
+    {
+      "link": "https://www.spaceforce.mil/News/Article-Display/Article/4361162/daf-updates-medical-shaving-profile-guidance-to-align-with-secretary-of-war-gro",
+      "titulo": "DAF updates medical shaving profile guidance to align with Secretary of War grooming policy",
+      "fonte_recurso": "space_force_news",
+      "validacao_status": "incompleto",
+      "motivo": "validacao_status!=valido"
+    },
+    {
+      "link": "https://www.spaceforce.mil/News/Article-Display/Article/4358783/cmssf-highlights-evolving-warfighter-demands-space-threats-at-spacepower-2025",
+      "titulo": "CMSSF highlights evolving warfighter demands, space threats at Spacepower 2025",
+      "fonte_recurso": "space_force_news",
+      "validacao_status": "incompleto",
+      "motivo": "validacao_status!=valido"
+    },
+    {
+      "link": "https://www.spaceforce.mil/News/Article-Display/Article/4357243/spaceforeur-af-team-competes-in-guardian-arena-for-the-first-time",
+      "titulo": "SPACEFOREUR-AF team competes in Guardian Arena for the first time",
+      "fonte_recurso": "space_force_news",
+      "validacao_status": "incompleto",
+      "motivo": "validacao_status!=valido"
+    }
+  ],
+  "itens": [
+    {
+      "titulo": "Milestone sensor upgrade enhances Space Force identifying, tracking capability",
+      "data_publicacao": "2025-07-31",
+      "link": "https://www.spaceforce.mil/News/Article-Display/Article/4261327/milestone-sensor-upgrade-enhances-space-force-identifying-tracking-capability",
+      "fonte_recurso": "space_force_news",
+      "tipo_pesquisa": null,
+      "tipo_recurso": null
+    },
+    {
+      "titulo": "CMSSF strengthens allied partnerships during first European tour",
+      "data_publicacao": "2025-07-30",
+      "link": "https://www.spaceforce.mil/News/Article-Display/Article/4259819/cmssf-strengthens-allied-partnerships-during-first-european-tour",
+      "fonte_recurso": "space_force_news",
+      "tipo_pesquisa": null,
+      "tipo_recurso": null
+    },
+    {
+      "titulo": "US Space Force scheduled to launch eighth X-37B mission",
+      "data_publicacao": "2025-07-28",
+      "link": "https://www.spaceforce.mil/News/Article-Display/Article/4256759/us-space-force-scheduled-to-launch-eighth-x-37b-mission",
+      "fonte_recurso": "space_force_news",
+      "tipo_pesquisa": null,
+      "tipo_recurso": null
+    },
+    {
+      "titulo": "SecAF visits Asia-Pacific to strengthen alliances, assess readiness",
+      "data_publicacao": "2025-07-25",
+      "link": "https://www.spaceforce.mil/News/Article-Display/Article/4255852/secaf-visits-asia-pacific-to-strengthen-alliances-assess-readiness",
+      "fonte_recurso": "space_force_news",
+      "tipo_pesquisa": null,
+      "tipo_recurso": null
+    },
+    {
+      "titulo": "Vandenberg SFB hosts NASA TRACERS mission brief",
+      "data_publicacao": "2025-07-25",
+      "link": "https://www.spaceforce.mil/News/Article-Display/Article/4255669/vandenberg-sfb-hosts-nasa-tracers-mission-brief",
+      "fonte_recurso": "space_force_news",
+      "tipo_pesquisa": null,
+      "tipo_recurso": null
+    },
+    {
+      "titulo": "Senate confirms Lohmeier to be nation’s 29th Air Force Under Secretary",
+      "data_publicacao": "2025-07-24",
+      "link": "https://www.spaceforce.mil/News/Article-Display/Article/4254718/senate-confirms-lohmeier-to-be-nations-29th-air-force-under-secretary",
+      "fonte_recurso": "space_force_news",
+      "tipo_pesquisa": null,
+      "tipo_recurso": null
+    },
+    {
+      "titulo": "DAF kicks off department-level exercise series in Pacific",
+      "data_publicacao": "2025-07-08",
+      "link": "https://www.spaceforce.mil/News/Article-Display/Article/4236489/daf-kicks-off-department-level-exercise-series-in-pacific",
+      "fonte_recurso": "space_force_news",
+      "tipo_pesquisa": null,
+      "tipo_recurso": null
+    },
+    {
+      "titulo": "US Space Force unveils International Partnership Strategy to strengthen space security",
+      "data_publicacao": "2025-07-08",
+      "link": "https://www.spaceforce.mil/News/Article-Display/Article/4234434/us-space-force-unveils-international-partnership-strategy-to-strengthen-space-s",
+      "fonte_recurso": "space_force_news",
+      "tipo_pesquisa": null,
+      "tipo_recurso": null
+    },
+    {
+      "titulo": "Space Systems Command set to strengthen operational environment with enhanced global weather sensing",
+      "data_publicacao": "2025-07-03",
+      "link": "https://www.spaceforce.mil/News/Article-Display/Article/4234397/space-systems-command-set-to-strengthen-operational-environment-with-enhanced-g",
+      "fonte_recurso": "space_force_news",
+      "tipo_pesquisa": null,
+      "tipo_recurso": null
+    },
+    {
+      "titulo": "Nobody wins alone: A community mindset approach",
+      "data_publicacao": "2025-07-02",
+      "link": "https://www.spaceforce.mil/News/Article-Display/Article/4233765/nobody-wins-alone-a-community-mindset-approach",
+      "fonte_recurso": "space_force_news",
+      "tipo_pesquisa": null,
+      "tipo_recurso": null
+    },
+    {
+      "titulo": "US Space Force launches Civilian Human Capital Evaluation and Accountability Program",
+      "data_publicacao": "2025-07-01",
+      "link": "https://www.spaceforce.mil/News/Article-Display/Article/4231835/us-space-force-launches-civilian-human-capital-evaluation-and-accountability-pr",
+      "fonte_recurso": "space_force_news",
+      "tipo_pesquisa": null,
+      "tipo_recurso": null
+    },
+    {
+      "titulo": "Air Force and Space Force exceed annual recruiting goals, demonstrating Americans’ desire to serve",
+      "data_publicacao": "2025-06-30",
+      "link": "https://www.spaceforce.mil/News/Article-Display/Article/4230425/air-force-and-space-force-exceed-annual-recruiting-goals-demonstrating-american",
+      "fonte_recurso": "space_force_news",
+      "tipo_pesquisa": null,
+      "tipo_recurso": null
+    },
+    {
+      "titulo": "USSPACECOM DCOM highlights strategic partnerships at Prague Security Space Conference",
+      "data_publicacao": "2025-06-26",
+      "link": "https://www.spaceforce.mil/News/Article-Display/Article/4226926/usspacecom-dcom-highlights-strategic-partnerships-at-prague-security-space-conf",
+      "fonte_recurso": "space_force_news",
+      "tipo_pesquisa": null,
+      "tipo_recurso": null
+    },
+    {
+      "titulo": "Families invited to take on national summer reading challenge",
+      "data_publicacao": "2025-06-25",
+      "link": "https://www.spaceforce.mil/News/Article-Display/Article/4226388/families-invited-to-take-on-national-summer-reading-challenge",
+      "fonte_recurso": "space_force_news",
+      "tipo_pesquisa": null,
+      "tipo_recurso": null
+    },
+    {
+      "titulo": "DAF joins with Disney, Pixar to bring military family story to life in ‘Elio’",
+      "data_publicacao": "2025-06-24",
+      "link": "https://www.spaceforce.mil/News/Article-Display/Article/4225050/daf-joins-with-disney-pixar-to-bring-military-family-story-to-life-in-elio",
+      "fonte_recurso": "space_force_news",
+      "tipo_pesquisa": null,
+      "tipo_recurso": null
+    },
+    {
+      "titulo": "Guardians strengthen multinational partnerships and demonstrate electronic warfare during African Lion 2025",
+      "data_publicacao": "2025-05-28",
+      "link": "https://www.spaceforce.mil/News/Article-Display/Article/4199441/guardians-strengthen-multinational-partnerships-and-demonstrate-electronic-warf",
+      "fonte_recurso": "space_force_news",
+      "tipo_pesquisa": null,
+      "tipo_recurso": null
+    },
+    {
+      "titulo": "Operational Test Launch GT 253 is a 'Glory Trip' for wing",
+      "data_publicacao": "2025-05-27",
+      "link": "https://www.spaceforce.mil/News/Article-Display/Article/4197573/operational-test-launch-gt-253-is-a-glory-trip-for-wing",
+      "fonte_recurso": "space_force_news",
+      "tipo_pesquisa": null,
+      "tipo_recurso": null
+    },
+    {
+      "titulo": "Minuteman III test launch showcases readiness of US nuclear force's safe, effective deterrent",
+      "data_publicacao": "2025-05-27",
+      "link": "https://www.spaceforce.mil/News/Article-Display/Article/4197640/minuteman-iii-test-launch-showcases-readiness-of-us-nuclear-forces-safe-effecti",
+      "fonte_recurso": "space_force_news",
+      "tipo_pesquisa": null,
+      "tipo_recurso": null
+    }
+  ],
+  "observacoes": [
+    "Notícias USSF (spaceforce.mil) via listagem Wayback-first quando live 403.",
+    "Apply não executado nesta tarefa."
+  ],
+  "apply_staging": {
+    "executado": false
+  },
+  "janela_meses": 12
+}

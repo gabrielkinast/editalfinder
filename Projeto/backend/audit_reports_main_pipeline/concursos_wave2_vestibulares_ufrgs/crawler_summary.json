@@ -1,0 +1,327 @@
+{
+  "fonte": "ufrgs_cv",
+  "collected_at_utc": "2026-05-16T20:29:46.343382+00:00",
+  "listing_urls": [
+    "https://vestibular.ufrgs.br/",
+    "https://www.ufrgs.br/coperse/concurso-vestibular/"
+  ],
+  "known_process_urls": [
+    "https://www.ufrgs.br/coperse/concurso-vestibular/",
+    "https://www.ufrgs.br/coperse/processo-seletivo-simplificado-cln-2026-1/",
+    "https://www.ufrgs.br/coperse/processo-seletivo-estudantes-indigenas/",
+    "https://www.ufrgs.br/coperse/psu-2024-extravestibular/",
+    "https://www.ufrgs.br/coperse/processo-seletivo-especifico-para-ingresso-de-estudantes-indigenas-2024/"
+  ],
+  "total_bruto_urls": 17,
+  "total_discarded_all": 10,
+  "discarded": [
+    {
+      "url": "https://www.ufrgs.br/coperse/processo-seletivo-simplificado-cln-2026-1",
+      "titulo": "Processo seletivo simplificado – CLN 2026/1 - COPERSE",
+      "motivo": "data_fim_inscricao_passada_sem_prova_futura"
+    },
+    {
+      "url": "https://www.ufrgs.br/coperse/psu-2024-extravestibular",
+      "titulo": "PROCESSO SELETIVO UNIFICADO – PSU 2024",
+      "motivo": "data_prova_passada_sem_fim_inscricao"
+    },
+    {
+      "url": "https://www.ufrgs.br/coperse/processo-seletivo-especifico-para-ingresso-de-estudantes-indigenas-2024",
+      "titulo": "Processo Seletivo Específico para Ingresso de Estudantes Indígenas – PSEI 2024",
+      "motivo": "data_prova_passada_sem_fim_inscricao"
+    },
+    {
+      "url": "https://www.ufrgs.br/coperse/psu-2026",
+      "titulo": "PSU 2026 - COPERSE",
+      "motivo": "ufrgs_inscricoes_encerradas"
+    },
+    {
+      "url": "https://www.ufrgs.br/coperse/psu-2025",
+      "titulo": "PSU 2025 - COPERSE",
+      "motivo": "ufrgs_inscricoes_encerradas"
+    },
+    {
+      "url": "https://www.ufrgs.br/coperse/pse-licenciatura-em-ciencias-biologicas-ead-2024-2",
+      "titulo": "PS – Licenciatura em Ciências Biológicas EaD – 2025/1",
+      "motivo": "ufrgs_inscricoes_encerradas"
+    },
+    {
+      "url": "https://www.ufrgs.br/coperse/processos-seletivos-3/pse-licenciatura-em-computacao-e-robotica-educativa-ead-2024-2",
+      "titulo": "PS – Licenciatura em Computação e Robótica Educativa EaD – 2025/1",
+      "motivo": "ufrgs_inscricoes_encerradas"
+    },
+    {
+      "url": "https://www.ufrgs.br/coperse/pse-licenciatura-em-geografia-ead-2024-2",
+      "titulo": "PS – Licenciatura em Geografia EaD – 2025/1",
+      "motivo": "ufrgs_inscricoes_encerradas"
+    },
+    {
+      "url": "https://www.ufrgs.br/coperse/pse-bacharelado-em-cooperativismo-ead-2024-2",
+      "titulo": "PS – Bacharelado em Cooperativismo EaD – 2025/1",
+      "motivo": "ufrgs_inscricoes_encerradas"
+    },
+    {
+      "url": "https://www.ufrgs.br/coperse/cv-2024",
+      "titulo": "CV 2024 - COPERSE",
+      "motivo": "sem_datas_e_sem_indicio_recente"
+    }
+  ],
+  "total_standardized": 7,
+  "errors": [],
+  "field_fill": {
+    "titulo": 7,
+    "tipo_selecao": 7,
+    "categoria": 7,
+    "orgao": 7,
+    "instituicao": 7,
+    "banca": 7,
+    "cargo": 0,
+    "curso": 0,
+    "area": 0,
+    "nivel_escolaridade": 7,
+    "estado": 7,
+    "municipio": 7,
+    "regiao": 0,
+    "modalidade": 0,
+    "numero_vagas": 0,
+    "salario_min": 0,
+    "salario_max": 0,
+    "taxa_inscricao": 0,
+    "data_publicacao": 1,
+    "data_inicio_inscricao": 0,
+    "data_fim_inscricao": 0,
+    "data_prova": 0,
+    "status": 7,
+    "link": 7,
+    "link_edital": 0,
+    "fonte": 7,
+    "fonte_tipo": 7,
+    "validacao_status": 7,
+    "qualidade_dado": 7,
+    "tags": 7,
+    "extras": 7,
+    "ativo": 7
+  },
+  "fields_always_missing": [
+    "cargo",
+    "curso",
+    "area",
+    "regiao",
+    "modalidade",
+    "numero_vagas",
+    "salario_min",
+    "salario_max",
+    "taxa_inscricao",
+    "data_inicio_inscricao",
+    "data_fim_inscricao",
+    "data_prova",
+    "link_edital"
+  ],
+  "diagnostico_portal": {
+    "hub": "https://vestibular.ufrgs.br",
+    "coperse": "https://www.ufrgs.br/coperse",
+    "cv_legado": "www.ufrgs.br/cv/ inacessível em testes HTTP",
+    "tipo_conteudo": "HTML WordPress + PDF editais"
+  },
+  "standardized_path": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_main_pipeline\\concursos_wave2_vestibulares_ufrgs\\standardized\\ufrgs_cv_standardized.json",
+  "exemplos_payload": [
+    {
+      "titulo": "Vestibular UFRGS 2027 - COPERSE",
+      "tipo_selecao": "vestibular",
+      "categoria": "vestibular_ufrgs_cv",
+      "orgao": "UFRGS",
+      "instituicao": "Universidade Federal do Rio Grande do Sul",
+      "banca": "CV/UFRGS — COPERSE",
+      "cargo": null,
+      "curso": null,
+      "area": null,
+      "nivel_escolaridade": "ensino_medio",
+      "estado": "RS",
+      "municipio": "Porto Alegre",
+      "regiao": null,
+      "modalidade": null,
+      "numero_vagas": null,
+      "salario_min": null,
+      "salario_max": null,
+      "taxa_inscricao": null,
+      "data_publicacao": null,
+      "data_inicio_inscricao": null,
+      "data_fim_inscricao": null,
+      "data_prova": null,
+      "status": "ativo",
+      "link": "https://www.ufrgs.br/coperse/concurso-vestibular",
+      "link_edital": null,
+      "fonte": "ufrgs_cv",
+      "fonte_tipo": "universidade",
+      "validacao_status": "incompleto",
+      "qualidade_dado": "baixa",
+      "tags": [
+        "ufrgs",
+        "ufrgs_cv",
+        "coperse",
+        "wave2",
+        "vestibular"
+      ],
+      "extras": {
+        "crawler": "main_vestibulares_ufrgs",
+        "wave": "concursos_wave2_vestibulares_ufrgs",
+        "fetched_at_utc": "2026-05-16T20:28:42.078792+00:00",
+        "listing_urls": [
+          "https://vestibular.ufrgs.br/",
+          "https://www.ufrgs.br/coperse/concurso-vestibular/"
+        ],
+        "portal_hub": "https://vestibular.ufrgs.br",
+        "coperse_base": "https://www.ufrgs.br/coperse",
+        "official_link_missing": true,
+        "extracted_fields": [],
+        "missing_core_fields": [
+          "data_fim_inscricao",
+          "data_prova",
+          "link_edital",
+          "numero_vagas"
+        ],
+        "extraction_confidence": "media",
+        "source_is_aggregator": false,
+        "value_extraction_notes": [
+          "edital_pdf_nao_encontrado_no_html"
+        ],
+        "tipo_selecao_evidencia": "texto:vestibular",
+        "pdf_enrichment": {},
+        "nota_cv_coperse": "Conteúdo oficial migrado para www.ufrgs.br/coperse; vestibular.ufrgs.br é hub."
+      },
+      "ativo": true
+    },
+    {
+      "titulo": "Processo Seletivo Estudantes Indígenas - COPERSE",
+      "tipo_selecao": "programa_ingresso",
+      "categoria": "vestibular_ufrgs_cv",
+      "orgao": "UFRGS",
+      "instituicao": "Universidade Federal do Rio Grande do Sul",
+      "banca": "CV/UFRGS — COPERSE",
+      "cargo": null,
+      "curso": null,
+      "area": null,
+      "nivel_escolaridade": "ensino_medio",
+      "estado": "RS",
+      "municipio": "Porto Alegre",
+      "regiao": null,
+      "modalidade": null,
+      "numero_vagas": null,
+      "salario_min": null,
+      "salario_max": null,
+      "taxa_inscricao": null,
+      "data_publicacao": null,
+      "data_inicio_inscricao": null,
+      "data_fim_inscricao": null,
+      "data_prova": null,
+      "status": "ativo",
+      "link": "https://www.ufrgs.br/coperse/processo-seletivo-estudantes-indigenas",
+      "link_edital": null,
+      "fonte": "ufrgs_cv",
+      "fonte_tipo": "universidade",
+      "validacao_status": "incompleto",
+      "qualidade_dado": "baixa",
+      "tags": [
+        "ufrgs",
+        "ufrgs_cv",
+        "coperse",
+        "wave2",
+        "vestibular"
+      ],
+      "extras": {
+        "crawler": "main_vestibulares_ufrgs",
+        "wave": "concursos_wave2_vestibulares_ufrgs",
+        "fetched_at_utc": "2026-05-16T20:28:50.706135+00:00",
+        "listing_urls": [
+          "https://vestibular.ufrgs.br/",
+          "https://www.ufrgs.br/coperse/concurso-vestibular/"
+        ],
+        "portal_hub": "https://vestibular.ufrgs.br",
+        "coperse_base": "https://www.ufrgs.br/coperse",
+        "official_link_missing": true,
+        "extracted_fields": [],
+        "missing_core_fields": [
+          "data_fim_inscricao",
+          "data_prova",
+          "link_edital",
+          "numero_vagas"
+        ],
+        "extraction_confidence": "media",
+        "source_is_aggregator": false,
+        "value_extraction_notes": [
+          "edital_pdf_nao_encontrado_no_html"
+        ],
+        "tipo_selecao_evidencia": "texto:processo_seletivo_ufrgs",
+        "pdf_enrichment": {},
+        "nota_cv_coperse": "Conteúdo oficial migrado para www.ufrgs.br/coperse; vestibular.ufrgs.br é hub."
+      },
+      "ativo": true
+    },
+    {
+      "titulo": "CV 2025 - COPERSE",
+      "tipo_selecao": "vestibular",
+      "categoria": "vestibular_ufrgs_cv",
+      "orgao": "UFRGS",
+      "instituicao": "Universidade Federal do Rio Grande do Sul",
+      "banca": "CV/UFRGS — COPERSE",
+      "cargo": null,
+      "curso": null,
+      "area": null,
+      "nivel_escolaridade": "ensino_medio",
+      "estado": "RS",
+      "municipio": "Porto Alegre",
+      "regiao": null,
+      "modalidade": null,
+      "numero_vagas": null,
+      "salario_min": null,
+      "salario_max": null,
+      "taxa_inscricao": null,
+      "data_publicacao": null,
+      "data_inicio_inscricao": null,
+      "data_fim_inscricao": null,
+      "data_prova": null,
+      "status": "ativo",
+      "link": "https://www.ufrgs.br/coperse/cv-2025",
+      "link_edital": null,
+      "fonte": "ufrgs_cv",
+      "fonte_tipo": "universidade",
+      "validacao_status": "incompleto",
+      "qualidade_dado": "baixa",
+      "tags": [
+        "ufrgs",
+        "ufrgs_cv",
+        "coperse",
+        "wave2",
+        "vestibular"
+      ],
+      "extras": {
+        "crawler": "main_vestibulares_ufrgs",
+        "wave": "concursos_wave2_vestibulares_ufrgs",
+        "fetched_at_utc": "2026-05-16T20:29:31.639569+00:00",
+        "listing_urls": [
+          "https://vestibular.ufrgs.br/",
+          "https://www.ufrgs.br/coperse/concurso-vestibular/"
+        ],
+        "portal_hub": "https://vestibular.ufrgs.br",
+        "coperse_base": "https://www.ufrgs.br/coperse",
+        "official_link_missing": true,
+        "extracted_fields": [],
+        "missing_core_fields": [
+          "data_fim_inscricao",
+          "data_prova",
+          "link_edital",
+          "numero_vagas"
+        ],
+        "extraction_confidence": "media",
+        "source_is_aggregator": false,
+        "value_extraction_notes": [
+          "edital_pdf_nao_encontrado_no_html"
+        ],
+        "tipo_selecao_evidencia": "texto:vestibular",
+        "pdf_enrichment": {},
+        "nota_cv_coperse": "Conteúdo oficial migrado para www.ufrgs.br/coperse; vestibular.ufrgs.br é hub."
+      },
+      "ativo": true
+    }
+  ]
+}

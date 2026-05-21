@@ -1,0 +1,90 @@
+{
+  "wave": "concursos_wave1_fundatec_subset_valido",
+  "fonte": "fundatec",
+  "filtro": "validacao_status = \"valido\" (link_edital + data_fim_inscricao)",
+  "consolidado_em_utc": "2026-05-14T18:02:04Z",
+  "origem_v4": {
+    "standardized_path": "audit_reports_main_pipeline/concursos_wave1_fundatec/standardized/fundatec_standardized.json",
+    "total_itens_original": 7,
+    "nota": "Fundatec v4 full standardized (dry-run v4: 7 itens, errors_count = 0)."
+  },
+  "subset": {
+    "total_itens": 2,
+    "standardized_path": "audit_reports_main_pipeline/concursos_wave1_fundatec_subset_valido/standardized/fundatec_standardized.json",
+    "loader_dryrun_summary": "audit_reports_main_pipeline/concursos_wave1_fundatec_subset_valido/loader_dryrun/load_concursos_selecao_summary.json",
+    "loader_total_items": 2,
+    "loader_would_upsert_total": 2,
+    "loader_errors_count": 0
+  },
+  "titulos_incluidos": [
+    "Prefeitura de Porto Alegre/RS abre inscrições para concursos públicos nas áreas de Farmácia e Medicina Veterinária - Fundatec",
+    "Prefeitura de Morro Reuter/RS abre inscrições para Concurso Público - Fundatec"
+  ],
+  "campos_principais_por_item": [
+    {
+      "titulo": "Prefeitura de Porto Alegre/RS abre inscrições para concursos públicos nas áreas de Farmácia e Medicina Veterinária - Fundatec",
+      "tipo_selecao": "concurso_publico",
+      "orgao": "Prefeitura de Porto Alegre",
+      "estado": "RS",
+      "municipio": "Porto Alegre",
+      "banca": "Fundatec",
+      "nivel_escolaridade": "superior",
+      "numero_vagas": null,
+      "salario_min": 2755.73,
+      "salario_max": 2755.73,
+      "taxa_inscricao": 211.44,
+      "qualidade_dado": "alta",
+      "status": "inscricoes_abertas",
+      "link_noticia": "https://www2.fundatec.org.br/2026/05/07/prefeitura-de-porto-alegre-rs-abre-inscricoes-para-concursos-publicos-nas-areas-de-farmacia-e-medicina-veterinaria"
+    },
+    {
+      "titulo": "Prefeitura de Morro Reuter/RS abre inscrições para Concurso Público - Fundatec",
+      "tipo_selecao": "concurso_publico",
+      "orgao": "Prefeitura de Morro Reuter",
+      "estado": "RS",
+      "municipio": "Morro Reuter",
+      "banca": "Fundatec",
+      "nivel_escolaridade": "medio",
+      "numero_vagas": null,
+      "salario_min": 2092.6,
+      "salario_max": 5864.07,
+      "taxa_inscricao": null,
+      "qualidade_dado": "alta",
+      "status": "inscricoes_abertas",
+      "link_noticia": "https://www2.fundatec.org.br/2026/05/06/prefeitura-de-morro-reuter-rs-abre-inscricoes-para-concurso-publico"
+    }
+  ],
+  "datas": [
+    {
+      "titulo": "Prefeitura de Porto Alegre/RS …",
+      "data_publicacao": "2026-04-17",
+      "data_inicio_inscricao": null,
+      "data_fim_inscricao": "2026-05-15",
+      "data_prova": "2026-07-05"
+    },
+    {
+      "titulo": "Prefeitura de Morro Reuter/RS …",
+      "data_publicacao": "2026-05-29",
+      "data_inicio_inscricao": null,
+      "data_fim_inscricao": "2026-05-29",
+      "data_prova": "2026-06-28"
+    }
+  ],
+  "links_edital": [
+    {
+      "titulo": "Prefeitura de Porto Alegre/RS …",
+      "link_edital": "https://www.fundatec.org.br/portal/concursos/index_concursos.php?concurso=1090"
+    },
+    {
+      "titulo": "Prefeitura de Morro Reuter/RS …",
+      "link_edital": "https://www.fundatec.org.br/portal/concursos/index_concursos.php?concurso=1053"
+    }
+  ],
+  "recomendacao": "Apply conservador em staging apenas com este subset, após conferência manual no portal Fundatec. Apply não executado nesta entrega.",
+  "comando_apply_staging": {
+    "powershell": "$env:EDITALFINDER_ENV=\"staging\"; $env:EDITALFINDER_ALLOW_STAGING_APPLY=\"1\"; python scripts/load_concursos_selecao.py --input-dir audit_reports_main_pipeline/concursos_wave1_fundatec_subset_valido/standardized --output-dir audit_reports_main_pipeline/concursos_wave1_fundatec_subset_valido/loader_apply_staging --sources fundatec --apply-staging --staging",
+    "bash": "EDITALFINDER_ENV=staging EDITALFINDER_ALLOW_STAGING_APPLY=1 python scripts/load_concursos_selecao.py --input-dir audit_reports_main_pipeline/concursos_wave1_fundatec_subset_valido/standardized --output-dir audit_reports_main_pipeline/concursos_wave1_fundatec_subset_valido/loader_apply_staging --sources fundatec --apply-staging --staging",
+    "nao_executado": true,
+    "nota": "Usa o mesmo standardized filtrado (apenas valido). Criar loader_apply_staging ao rodar apply."
+  }
+}

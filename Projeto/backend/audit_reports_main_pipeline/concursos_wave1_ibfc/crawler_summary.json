@@ -1,0 +1,173 @@
+{
+  "fonte": "ibfc",
+  "collected_at_utc": "2026-05-14T21:38:08.798736+00:00",
+  "listing_urls": [
+    "https://concursos.ibfc.org.br/index/abertos/",
+    "https://concursos.ibfc.org.br/index/1/"
+  ],
+  "total_bruto_urls": 10,
+  "total_discarded_all": 9,
+  "discarded": [
+    {
+      "url": "https://concursos.ibfc.org.br/informacoes/495",
+      "titulo": "MGS - Minas Gerais Administração e Serviços S/A Estado do Espírito Santo",
+      "motivo": "data_fim_inscricao_passada_sem_prova_futura"
+    },
+    {
+      "url": "https://concursos.ibfc.org.br/informacoes/493",
+      "titulo": "MGS - Minas Gerais Administração e Serviços S/A Estado de Minas Gerais",
+      "motivo": "data_fim_inscricao_passada_sem_prova_futura"
+    },
+    {
+      "url": "https://concursos.ibfc.org.br/informacoes/489",
+      "titulo": "MGS - Minas Gerais Administração e Serviços S/A Estado do Espírito Santo",
+      "motivo": "data_fim_inscricao_passada_sem_prova_futura"
+    },
+    {
+      "url": "https://concursos.ibfc.org.br/informacoes/490",
+      "titulo": "Secretaria da Educação do Estado da Bahia Nível Médio, Superior e Professor Orientador de Estágio em Saúde",
+      "motivo": "data_fim_inscricao_passada_sem_prova_futura"
+    },
+    {
+      "url": "https://concursos.ibfc.org.br/informacoes/485",
+      "titulo": "Poder Judiciário Tribunal de Justiça do Estado de Pernambuco",
+      "motivo": "data_fim_inscricao_passada_sem_prova_futura"
+    },
+    {
+      "url": "https://concursos.ibfc.org.br/informacoes/477",
+      "titulo": "Estado do Paraná Corpo de Bombeiros Militar Soldado CBMPR-2025",
+      "motivo": "data_fim_inscricao_passada_sem_prova_futura"
+    },
+    {
+      "url": "https://concursos.ibfc.org.br/informacoes/476",
+      "titulo": "Estado do Paraná Polícia Militar Soldado PMPR-2025",
+      "motivo": "data_fim_inscricao_passada_sem_prova_futura"
+    },
+    {
+      "url": "https://concursos.ibfc.org.br/informacoes/470",
+      "titulo": "Ministério das Comunicações Empresa Brasileira de Correios e Telégrafos Concurso Público Nacional",
+      "motivo": "data_fim_inscricao_passada_sem_prova_futura"
+    },
+    {
+      "url": "https://concursos.ibfc.org.br/informacoes/466",
+      "titulo": "Tribunal Regional Federal da 5a Região",
+      "motivo": "data_fim_inscricao_passada_sem_prova_futura"
+    }
+  ],
+  "total_standardized": 1,
+  "errors": [],
+  "field_fill": {
+    "titulo": 1,
+    "tipo_selecao": 1,
+    "categoria": 1,
+    "orgao": 1,
+    "instituicao": 1,
+    "banca": 1,
+    "cargo": 0,
+    "curso": 0,
+    "area": 0,
+    "nivel_escolaridade": 0,
+    "estado": 0,
+    "municipio": 0,
+    "regiao": 0,
+    "modalidade": 0,
+    "numero_vagas": 0,
+    "salario_min": 0,
+    "salario_max": 0,
+    "taxa_inscricao": 0,
+    "data_publicacao": 1,
+    "data_inicio_inscricao": 1,
+    "data_fim_inscricao": 1,
+    "data_prova": 0,
+    "status": 1,
+    "link": 1,
+    "link_edital": 1,
+    "fonte": 1,
+    "fonte_tipo": 1,
+    "validacao_status": 1,
+    "qualidade_dado": 1,
+    "tags": 1,
+    "extras": 1,
+    "ativo": 1
+  },
+  "fields_always_missing": [
+    "cargo",
+    "curso",
+    "area",
+    "nivel_escolaridade",
+    "estado",
+    "municipio",
+    "regiao",
+    "modalidade",
+    "numero_vagas",
+    "salario_min",
+    "salario_max",
+    "taxa_inscricao",
+    "data_prova"
+  ],
+  "standardized_path": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_main_pipeline\\concursos_wave1_ibfc\\standardized\\ibfc_standardized.json",
+  "exemplos_payload": [
+    {
+      "titulo": "IBFC - Instituto Brasileiro de Formação e Capacitação - Jovem Aprendiz 2o Semestre 2026",
+      "tipo_selecao": "processo_seletivo",
+      "categoria": "banca_ibfc_concurso",
+      "orgao": "IBFC - Instituto Brasileiro de Formação e Capacitação - Jovem Aprendiz 2o Semestre 2026",
+      "instituicao": "IBFC - Instituto Brasileiro de Formação e Capacitação - Jovem Aprendiz 2o Semestre 2026",
+      "banca": "IBFC",
+      "cargo": null,
+      "curso": null,
+      "area": null,
+      "nivel_escolaridade": null,
+      "estado": null,
+      "municipio": null,
+      "regiao": null,
+      "modalidade": null,
+      "numero_vagas": null,
+      "salario_min": null,
+      "salario_max": null,
+      "taxa_inscricao": null,
+      "data_publicacao": "2026-04-07",
+      "data_inicio_inscricao": "2026-04-07",
+      "data_fim_inscricao": "2026-05-21",
+      "data_prova": null,
+      "status": "inscricoes_abertas",
+      "link": "https://concursos.ibfc.org.br/informacoes/494",
+      "link_edital": "https://anexos.cdn.selecao.net.br/uploads/747/concursos/494/anexos/11bb57ed-cb48-468c-92cb-821a7ddd9956.pdf",
+      "fonte": "ibfc",
+      "fonte_tipo": "banca",
+      "validacao_status": "valido",
+      "qualidade_dado": "media",
+      "tags": [
+        "ibfc",
+        "wave1"
+      ],
+      "extras": {
+        "crawler": "main_ibfc_concursos",
+        "wave": "concursos_wave1_ibfc",
+        "fetched_at_utc": "2026-05-14T21:37:45.839549+00:00",
+        "ibfc_listing_urls": [
+          "https://concursos.ibfc.org.br/index/abertos/",
+          "https://concursos.ibfc.org.br/index/1/"
+        ],
+        "official_link_missing": false,
+        "extracted_fields": [
+          "data_fim_inscricao_texto",
+          "data_inicio_inscricao_texto"
+        ],
+        "missing_core_fields": [
+          "data_prova",
+          "estado",
+          "numero_vagas"
+        ],
+        "extraction_confidence": "alta",
+        "source_is_aggregator": false,
+        "value_extraction_notes": [],
+        "tipo_selecao_evidencia": "texto:processo_seletivo",
+        "possible_fee_detected": false,
+        "possible_salary_detected": false,
+        "ibfc_situacao": "situação: em andamento"
+      },
+      "ativo": true
+    }
+  ]
+}

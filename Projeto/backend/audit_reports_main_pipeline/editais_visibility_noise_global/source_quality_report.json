@@ -1,0 +1,2464 @@
+{
+  "sources": [
+    {
+      "fonte_recurso": "China International Tendering (MOFCOM)",
+      "total": 131,
+      "visible_current": 0,
+      "visible_other": 0,
+      "review": 0,
+      "hidden": 131,
+      "hidden_by_reason": {
+        "hidden_historical": 124,
+        "hidden_duplicate": 7
+      },
+      "noise_examples": [
+        {
+          "id_edital": 1814,
+          "titulo": "中国共产党德钦县委员会机构编...",
+          "visibility": "hidden_historical",
+          "reason": "Sem prazo futuro, fluxo contínuo ou sinal forte recente."
+        },
+        {
+          "id_edital": 1813,
+          "titulo": "全国各部门及地方机电进出口办公室",
+          "visibility": "hidden_historical",
+          "reason": "Sem prazo futuro, fluxo contínuo ou sinal forte recente."
+        },
+        {
+          "id_edital": 1812,
+          "titulo": "中国邮政储蓄银行广西区分行20...",
+          "visibility": "hidden_historical",
+          "reason": "Sem prazo futuro, fluxo contínuo ou sinal forte recente."
+        },
+        {
+          "id_edital": 1811,
+          "titulo": "云南文化艺术职业学院（云南省...",
+          "visibility": "hidden_historical",
+          "reason": "Sem prazo futuro, fluxo contínuo ou sinal forte recente."
+        },
+        {
+          "id_edital": 1810,
+          "titulo": "【缙云县天然气有限公司2026-2...",
+          "visibility": "hidden_historical",
+          "reason": "Sem prazo futuro, fluxo contínuo ou sinal forte recente."
+        }
+      ],
+      "good_examples": [],
+      "recommendation": "precisa_melhoria_crawler"
+    },
+    {
+      "fonte_recurso": "BNDES",
+      "total": 38,
+      "visible_current": 0,
+      "visible_other": 0,
+      "review": 5,
+      "hidden": 33,
+      "hidden_by_reason": {
+        "hidden_institutional": 3,
+        "hidden_resultado": 8,
+        "hidden_historical": 3,
+        "hidden_duplicate": 19
+      },
+      "noise_examples": [
+        {
+          "id_edital": 1682,
+          "titulo": "Fundos de investimento em empresas e projetos",
+          "visibility": "hidden_institutional",
+          "reason": "Sinais de página institucional (home, conduta, governança, etc.)."
+        },
+        {
+          "id_edital": 1680,
+          "titulo": "Chamada Pública BNDES Fundo Mercado de Acesso",
+          "visibility": "hidden_resultado",
+          "reason": "Resultado/homologação/ata sem chamada ativa associada."
+        },
+        {
+          "id_edital": 1678,
+          "titulo": "Fundos da série Criatec",
+          "visibility": "hidden_historical",
+          "reason": "Referência temporal ≤2024 sem prazo futuro nem fluxo contínuo."
+        },
+        {
+          "id_edital": 1676,
+          "titulo": "Seleção de Gestor do Fundo Nordeste",
+          "visibility": "hidden_institutional",
+          "reason": "Sinais de página institucional (home, conduta, governança, etc.)."
+        },
+        {
+          "id_edital": 1672,
+          "titulo": "Primeira Chamada Multissetorial para a Seleção de Fundos de Investimento",
+          "visibility": "hidden_resultado",
+          "reason": "Resultado/homologação/ata sem chamada ativa associada."
+        }
+      ],
+      "good_examples": [],
+      "recommendation": "precisa_melhoria_crawler"
+    },
+    {
+      "fonte_recurso": "BDMG",
+      "total": 38,
+      "visible_current": 0,
+      "visible_other": 12,
+      "review": 1,
+      "hidden": 25,
+      "hidden_by_reason": {
+        "hidden_resultado": 8,
+        "hidden_duplicate": 8,
+        "hidden_institutional": 8,
+        "hidden_expired": 1
+      },
+      "noise_examples": [
+        {
+          "id_edital": 156,
+          "titulo": "Conte com taxas e prazos exclusivos para seu negócio ir mais longe.",
+          "visibility": "hidden_resultado",
+          "reason": "Resultado/homologação/ata sem chamada ativa associada."
+        },
+        {
+          "id_edital": 155,
+          "titulo": "Conte com taxas e prazos exclusivos para seu negócio ir mais longe.",
+          "visibility": "hidden_duplicate",
+          "reason": "hash_deduplicacao duplicado."
+        },
+        {
+          "id_edital": 154,
+          "titulo": "Conte com taxas e prazos exclusivos para seu negócio ir mais longe.",
+          "visibility": "hidden_duplicate",
+          "reason": "hash_deduplicacao duplicado."
+        },
+        {
+          "id_edital": 153,
+          "titulo": "Conte com taxas e prazos exclusivos para seu negócio ir mais longe.",
+          "visibility": "hidden_duplicate",
+          "reason": "hash_deduplicacao duplicado."
+        },
+        {
+          "id_edital": 152,
+          "titulo": "Cartilha de projeto 2024",
+          "visibility": "hidden_resultado",
+          "reason": "Resultado/homologação/ata sem chamada ativa associada."
+        }
+      ],
+      "good_examples": [],
+      "recommendation": "precisa_melhoria_crawler"
+    },
+    {
+      "fonte_recurso": "EMBRAPII",
+      "total": 21,
+      "visible_current": 0,
+      "visible_other": 0,
+      "review": 0,
+      "hidden": 21,
+      "hidden_by_reason": {
+        "hidden_institutional": 21
+      },
+      "noise_examples": [
+        {
+          "id_edital": 853,
+          "titulo": "Chamada Pública para Capacitação em Maturidade para Grupos de Pesquisa em ICTs da Região Norte n°01/",
+          "visibility": "hidden_institutional",
+          "reason": "Sinais de página institucional (home, conduta, governança, etc.)."
+        },
+        {
+          "id_edital": 852,
+          "titulo": "Chamada Pública Unidades Embrapii nº 01/2025",
+          "visibility": "hidden_institutional",
+          "reason": "Sinais de página institucional (home, conduta, governança, etc.)."
+        },
+        {
+          "id_edital": 851,
+          "titulo": "Chamada Pública Centro de Competência Embrapii nº 01/2025",
+          "visibility": "hidden_institutional",
+          "reason": "Sinais de página institucional (home, conduta, governança, etc.)."
+        },
+        {
+          "id_edital": 850,
+          "titulo": "Chamada Pública Unidades Embrapii nº 02/2025",
+          "visibility": "hidden_institutional",
+          "reason": "Sinais de página institucional (home, conduta, governança, etc.)."
+        },
+        {
+          "id_edital": 849,
+          "titulo": "Chamada Pública Centro de Competência Embrapii nº 02/2025",
+          "visibility": "hidden_institutional",
+          "reason": "Sinais de página institucional (home, conduta, governança, etc.)."
+        }
+      ],
+      "good_examples": [],
+      "recommendation": "precisa_melhoria_crawler"
+    },
+    {
+      "fonte_recurso": "NUCLEP",
+      "total": 20,
+      "visible_current": 0,
+      "visible_other": 0,
+      "review": 0,
+      "hidden": 20,
+      "hidden_by_reason": {
+        "hidden_institutional": 19,
+        "hidden_expired": 1
+      },
+      "noise_examples": [
+        {
+          "id_edital": 1449,
+          "titulo": "Convênios e Transferências",
+          "visibility": "hidden_institutional",
+          "reason": "Sinais de página institucional (home, conduta, governança, etc.)."
+        },
+        {
+          "id_edital": 1448,
+          "titulo": "Auditorias",
+          "visibility": "hidden_institutional",
+          "reason": "Sinais de página institucional (home, conduta, governança, etc.)."
+        },
+        {
+          "id_edital": 1447,
+          "titulo": "Paticipação Social",
+          "visibility": "hidden_institutional",
+          "reason": "Sinais de página institucional (home, conduta, governança, etc.)."
+        },
+        {
+          "id_edital": 1446,
+          "titulo": "Institucional",
+          "visibility": "hidden_institutional",
+          "reason": "Sinais de página institucional (home, conduta, governança, etc.)."
+        },
+        {
+          "id_edital": 1445,
+          "titulo": "Segmento de Óleo & Gás",
+          "visibility": "hidden_institutional",
+          "reason": "Sinais de página institucional (home, conduta, governança, etc.)."
+        }
+      ],
+      "good_examples": [],
+      "recommendation": "precisa_melhoria_crawler"
+    },
+    {
+      "fonte_recurso": "Fundação Araucária",
+      "total": 88,
+      "visible_current": 0,
+      "visible_other": 2,
+      "review": 69,
+      "hidden": 17,
+      "hidden_by_reason": {
+        "hidden_institutional": 17
+      },
+      "noise_examples": [
+        {
+          "id_edital": 1008,
+          "titulo": "CP 02/26: PIBIS",
+          "visibility": "hidden_institutional",
+          "reason": "Sinais de página institucional (home, conduta, governança, etc.)."
+        },
+        {
+          "id_edital": 1007,
+          "titulo": "CP 03/26: PIBEX",
+          "visibility": "hidden_institutional",
+          "reason": "Sinais de página institucional (home, conduta, governança, etc.)."
+        },
+        {
+          "id_edital": 1006,
+          "titulo": "CP 05/26: Eventos - ASI (jul/26 - jan/27)",
+          "visibility": "hidden_institutional",
+          "reason": "Sinais de página institucional (home, conduta, governança, etc.)."
+        },
+        {
+          "id_edital": 983,
+          "titulo": "PI 23/25. NAPI PITIS (Saúde)",
+          "visibility": "hidden_institutional",
+          "reason": "Sinais de página institucional (home, conduta, governança, etc.)."
+        },
+        {
+          "id_edital": 963,
+          "titulo": "PI 44/25. NAPI Governança e Bioinovação",
+          "visibility": "hidden_institutional",
+          "reason": "Sinais de página institucional (home, conduta, governança, etc.)."
+        }
+      ],
+      "good_examples": [
+        {
+          "id_edital": 932,
+          "titulo": "CP 09/22: Acolhida a Ucranianos",
+          "visibility": "visible_continuous_flow",
+          "reason": "Fluxo contínuo ou chamada permanente."
+        },
+        {
+          "id_edital": 930,
+          "titulo": "CP 15/24: Permanência de Ucranianos",
+          "visibility": "visible_continuous_flow",
+          "reason": "Fluxo contínuo ou chamada permanente."
+        }
+      ],
+      "recommendation": "manter_com_curadoria"
+    },
+    {
+      "fonte_recurso": "AMAZUL",
+      "total": 20,
+      "visible_current": 0,
+      "visible_other": 1,
+      "review": 2,
+      "hidden": 17,
+      "hidden_by_reason": {
+        "hidden_resultado": 7,
+        "hidden_institutional": 7,
+        "hidden_duplicate": 1,
+        "hidden_historical": 1,
+        "hidden_expired": 1
+      },
+      "noise_examples": [
+        {
+          "id_edital": 436,
+          "titulo": "Dispensa de Licitação por Valor 04/2023",
+          "visibility": "hidden_resultado",
+          "reason": "Resultado/homologação/ata sem chamada ativa associada."
+        },
+        {
+          "id_edital": 435,
+          "titulo": "Dispensa de Licitação por Valor 02/2023",
+          "visibility": "hidden_institutional",
+          "reason": "Sinais de página institucional (home, conduta, governança, etc.)."
+        },
+        {
+          "id_edital": 434,
+          "titulo": "Dispensa de Licitação por Valor 01/2023",
+          "visibility": "hidden_resultado",
+          "reason": "Resultado/homologação/ata sem chamada ativa associada."
+        },
+        {
+          "id_edital": 431,
+          "titulo": "Dispensa de Licitação por Valor 04/2024",
+          "visibility": "hidden_duplicate",
+          "reason": "hash_deduplicacao duplicado."
+        },
+        {
+          "id_edital": 430,
+          "titulo": "Dispensa de Licitação por Valor 07/2025",
+          "visibility": "hidden_resultado",
+          "reason": "Resultado/homologação/ata sem chamada ativa associada."
+        }
+      ],
+      "good_examples": [],
+      "recommendation": "precisa_melhoria_crawler"
+    },
+    {
+      "fonte_recurso": "Grants.gov",
+      "total": 127,
+      "visible_current": 36,
+      "visible_other": 0,
+      "review": 78,
+      "hidden": 13,
+      "hidden_by_reason": {
+        "hidden_duplicate": 1,
+        "hidden_expired": 12
+      },
+      "noise_examples": [
+        {
+          "id_edital": 1140,
+          "titulo": "Updated National Dislocated Worker Grant Program Guidance and Application Information",
+          "visibility": "hidden_duplicate",
+          "reason": "hash_deduplicacao duplicado."
+        },
+        {
+          "id_edital": 1123,
+          "titulo": "DoW Ovarian Cancer, Clinical Trial Award",
+          "visibility": "hidden_expired",
+          "reason": "Prazo de envio/inscrição encerrado sem fluxo contínuo."
+        },
+        {
+          "id_edital": 1110,
+          "titulo": "DoW, Ovarian Cancer, Ovarian Cancer Clinical Trial Academy – Early-Career Investigator Award",
+          "visibility": "hidden_expired",
+          "reason": "Prazo de envio/inscrição encerrado sem fluxo contínuo."
+        },
+        {
+          "id_edital": 1109,
+          "titulo": "DoW, Ovarian Cancer, Investigator-Initiated Research Award",
+          "visibility": "hidden_expired",
+          "reason": "Prazo de envio/inscrição encerrado sem fluxo contínuo."
+        },
+        {
+          "id_edital": 1107,
+          "titulo": "DoW, Ovarian Cancer, Ovarian Cancer Academy – Early-Career Investigator Award",
+          "visibility": "hidden_expired",
+          "reason": "Prazo de envio/inscrição encerrado sem fluxo contínuo."
+        }
+      ],
+      "good_examples": [
+        {
+          "id_edital": 1146,
+          "titulo": "Protecting U.S. Critical Energy Investments Through C-UAS and UAS Surveillance Capabilities in Iraq",
+          "visibility": "visible_current",
+          "reason": "Prazo futuro (2026-08-06)."
+        },
+        {
+          "id_edital": 1141,
+          "titulo": "Updated National Dislocated Worker Grant Program Guidance and Application Information",
+          "visibility": "visible_current",
+          "reason": "Prazo futuro (2026-08-05)."
+        },
+        {
+          "id_edital": 1134,
+          "titulo": "DoW Pancreatic Cancer Research Program, Translational Research Partnership Award",
+          "visibility": "visible_current",
+          "reason": "Prazo futuro (2026-07-10)."
+        }
+      ],
+      "recommendation": "manter_com_curadoria"
+    },
+    {
+      "fonte_recurso": "DOE_ARPAE",
+      "total": 14,
+      "visible_current": 0,
+      "visible_other": 0,
+      "review": 1,
+      "hidden": 13,
+      "hidden_by_reason": {
+        "hidden_duplicate": 13
+      },
+      "noise_examples": [
+        {
+          "id_edital": 816,
+          "titulo": "DE-FOA-0003555",
+          "visibility": "hidden_duplicate",
+          "reason": "Link normalizado já visto nesta auditoria."
+        },
+        {
+          "id_edital": 815,
+          "titulo": "DE-FOA-0003552",
+          "visibility": "hidden_duplicate",
+          "reason": "Link normalizado já visto nesta auditoria."
+        },
+        {
+          "id_edital": 814,
+          "titulo": "DE-FOA-0003554",
+          "visibility": "hidden_duplicate",
+          "reason": "Link normalizado já visto nesta auditoria."
+        },
+        {
+          "id_edital": 813,
+          "titulo": "DE-FOA-0003537",
+          "visibility": "hidden_duplicate",
+          "reason": "Link normalizado já visto nesta auditoria."
+        },
+        {
+          "id_edital": 812,
+          "titulo": "DE-FOA-0003536",
+          "visibility": "hidden_duplicate",
+          "reason": "Link normalizado já visto nesta auditoria."
+        }
+      ],
+      "good_examples": [],
+      "recommendation": "precisa_melhoria_crawler"
+    },
+    {
+      "fonte_recurso": "CNPQ",
+      "total": 14,
+      "visible_current": 2,
+      "visible_other": 0,
+      "review": 0,
+      "hidden": 12,
+      "hidden_by_reason": {
+        "hidden_resultado": 7,
+        "hidden_expired": 3,
+        "hidden_institutional": 2
+      },
+      "noise_examples": [
+        {
+          "id_edital": 748,
+          "titulo": "Chamada Pública CNPq/MCTI/FNDCT Nº 25/2025 - Transporte Aquaviário e Construção Naval",
+          "visibility": "hidden_resultado",
+          "reason": "Resultado/homologação/ata sem chamada ativa associada."
+        },
+        {
+          "id_edital": 747,
+          "titulo": "Chamada CNPq/MS-SCTIE-Decit Nº 30/2025 - Pesquisas Estratégicas em Terapias Avançadas e Terapias Bas",
+          "visibility": "hidden_resultado",
+          "reason": "Resultado/homologação/ata sem chamada ativa associada."
+        },
+        {
+          "id_edital": 746,
+          "titulo": "Chamada CNPq/Decit/SCTIE/MS - Nº 32/2025 - Pesquisas Inovadoras para a Saúde das Mulheres",
+          "visibility": "hidden_resultado",
+          "reason": "Resultado/homologação/ata sem chamada ativa associada."
+        },
+        {
+          "id_edital": 745,
+          "titulo": "Chamada CNPq Nº 26/2025 Auxílio à Promoção de Eventos Científicos, Tecnológicos e/ou de Inovação - A",
+          "visibility": "hidden_resultado",
+          "reason": "Resultado/homologação/ata sem chamada ativa associada."
+        },
+        {
+          "id_edital": 744,
+          "titulo": "CHAMADA PÚBLICA CNPq/MPA Nº 03/2026 PROGRAMA JOVEM CIENTISTA DA PESCA ARTESANAL - INICIAÇÃO CIENTÍFI",
+          "visibility": "hidden_resultado",
+          "reason": "Resultado/homologação/ata sem chamada ativa associada."
+        }
+      ],
+      "good_examples": [
+        {
+          "id_edital": 737,
+          "titulo": "Chamada CNPq/MCTI Nº 11/2026 – RENAMA e NAMs",
+          "visibility": "visible_current",
+          "reason": "Prazo futuro (2026-07-03)."
+        },
+        {
+          "id_edital": 735,
+          "titulo": "Chamada CNPq/SETEC/MCTI N° 13/2026 - Apoio a Eventos de Promoção do Empreendedorismo e da Inovação n",
+          "visibility": "visible_current",
+          "reason": "Prazo futuro (2026-05-28)."
+        }
+      ],
+      "recommendation": "precisa_melhoria_crawler"
+    },
+    {
+      "fonte_recurso": "IPEN",
+      "total": 14,
+      "visible_current": 0,
+      "visible_other": 1,
+      "review": 2,
+      "hidden": 11,
+      "hidden_by_reason": {
+        "hidden_historical": 8,
+        "hidden_resultado": 3
+      },
+      "noise_examples": [
+        {
+          "id_edital": 1198,
+          "titulo": "Gestão de Projetos",
+          "visibility": "hidden_historical",
+          "reason": "Sem prazo futuro, fluxo contínuo ou sinal forte recente."
+        },
+        {
+          "id_edital": 1196,
+          "titulo": "Indústria",
+          "visibility": "hidden_historical",
+          "reason": "Sem prazo futuro, fluxo contínuo ou sinal forte recente."
+        },
+        {
+          "id_edital": 1195,
+          "titulo": "Meio Ambiente",
+          "visibility": "hidden_resultado",
+          "reason": "Resultado/homologação/ata sem chamada ativa associada."
+        },
+        {
+          "id_edital": 1194,
+          "titulo": "Energia",
+          "visibility": "hidden_historical",
+          "reason": "Sem prazo futuro, fluxo contínuo ou sinal forte recente."
+        },
+        {
+          "id_edital": 1193,
+          "titulo": "Áreas de Pesquisa",
+          "visibility": "hidden_historical",
+          "reason": "Sem prazo futuro, fluxo contínuo ou sinal forte recente."
+        }
+      ],
+      "good_examples": [],
+      "recommendation": "precisa_melhoria_crawler"
+    },
+    {
+      "fonte_recurso": "Mitsubishi Heavy Industries (Suppliers)",
+      "total": 12,
+      "visible_current": 0,
+      "visible_other": 0,
+      "review": 1,
+      "hidden": 11,
+      "hidden_by_reason": {
+        "hidden_not_opportunity": 11
+      },
+      "noise_examples": [
+        {
+          "id_edital": 1348,
+          "titulo": "05 DIGITAL INNOVATION",
+          "visibility": "hidden_not_opportunity",
+          "reason": "Conteúdo classificado como notícia/portal/página institucional, sem chamada ativa."
+        },
+        {
+          "id_edital": 1347,
+          "titulo": "04 R&D CENTER, FACILITY",
+          "visibility": "hidden_not_opportunity",
+          "reason": "Conteúdo classificado como notícia/portal/página institucional, sem chamada ativa."
+        },
+        {
+          "id_edital": 1346,
+          "titulo": "02 INNOVATION",
+          "visibility": "hidden_not_opportunity",
+          "reason": "Conteúdo classificado como notícia/portal/página institucional, sem chamada ativa."
+        },
+        {
+          "id_edital": 1345,
+          "titulo": "Space & Defense",
+          "visibility": "hidden_not_opportunity",
+          "reason": "Conteúdo classificado como notícia/portal/página institucional, sem chamada ativa."
+        },
+        {
+          "id_edital": 1344,
+          "titulo": "Energy & Environment",
+          "visibility": "hidden_not_opportunity",
+          "reason": "Conteúdo classificado como notícia/portal/página institucional, sem chamada ativa."
+        }
+      ],
+      "good_examples": [],
+      "recommendation": "precisa_melhoria_crawler"
+    },
+    {
+      "fonte_recurso": "JETRO Government Procurement",
+      "total": 11,
+      "visible_current": 0,
+      "visible_other": 0,
+      "review": 0,
+      "hidden": 11,
+      "hidden_by_reason": {
+        "hidden_historical": 7,
+        "hidden_duplicate": 4
+      },
+      "noise_examples": [
+        {
+          "id_edital": 1240,
+          "titulo": "National Government",
+          "visibility": "hidden_historical",
+          "reason": "Referência temporal ≤2024 sem prazo futuro nem fluxo contínuo."
+        },
+        {
+          "id_edital": 1239,
+          "titulo": "National Government",
+          "visibility": "hidden_duplicate",
+          "reason": "hash_deduplicacao duplicado."
+        },
+        {
+          "id_edital": 1238,
+          "titulo": "National Government",
+          "visibility": "hidden_duplicate",
+          "reason": "hash_deduplicacao duplicado."
+        },
+        {
+          "id_edital": 1237,
+          "titulo": "National Government",
+          "visibility": "hidden_duplicate",
+          "reason": "hash_deduplicacao duplicado."
+        },
+        {
+          "id_edital": 1236,
+          "titulo": "National Government",
+          "visibility": "hidden_duplicate",
+          "reason": "hash_deduplicacao duplicado."
+        }
+      ],
+      "good_examples": [],
+      "recommendation": "precisa_melhoria_crawler"
+    },
+    {
+      "fonte_recurso": "ANEEL",
+      "total": 27,
+      "visible_current": 0,
+      "visible_other": 9,
+      "review": 8,
+      "hidden": 10,
+      "hidden_by_reason": {
+        "hidden_resultado": 2,
+        "hidden_institutional": 5,
+        "hidden_duplicate": 2,
+        "hidden_historical": 1
+      },
+      "noise_examples": [
+        {
+          "id_edital": 468,
+          "titulo": "Demais Projetos",
+          "visibility": "hidden_resultado",
+          "reason": "Resultado/homologação/ata sem chamada ativa associada."
+        },
+        {
+          "id_edital": 467,
+          "titulo": "2ª Chamada Pública",
+          "visibility": "hidden_institutional",
+          "reason": "Sinais de página institucional (home, conduta, governança, etc.)."
+        },
+        {
+          "id_edital": 466,
+          "titulo": "1ª Chamada Pública",
+          "visibility": "hidden_institutional",
+          "reason": "Sinais de página institucional (home, conduta, governança, etc.)."
+        },
+        {
+          "id_edital": 460,
+          "titulo": "PDI ANEEL",
+          "visibility": "hidden_duplicate",
+          "reason": "hash_deduplicacao duplicado."
+        },
+        {
+          "id_edital": 457,
+          "titulo": "Programas Setoriais",
+          "visibility": "hidden_institutional",
+          "reason": "Sinais de página institucional (home, conduta, governança, etc.)."
+        }
+      ],
+      "good_examples": [],
+      "recommendation": "revisar_manual"
+    },
+    {
+      "fonte_recurso": "BNB",
+      "total": 24,
+      "visible_current": 0,
+      "visible_other": 14,
+      "review": 1,
+      "hidden": 9,
+      "hidden_by_reason": {
+        "hidden_resultado": 9
+      },
+      "noise_examples": [
+        {
+          "id_edital": 77,
+          "titulo": "Piscicultura – atividades financiadas – Banco do Nordeste",
+          "visibility": "hidden_resultado",
+          "reason": "Resultado/homologação/ata sem chamada ativa associada."
+        },
+        {
+          "id_edital": 72,
+          "titulo": "Grãos – atividades financiadas – Banco do Nordeste",
+          "visibility": "hidden_resultado",
+          "reason": "Resultado/homologação/ata sem chamada ativa associada."
+        },
+        {
+          "id_edital": 71,
+          "titulo": "Fruticultura – atividades financiadas – Banco do Nordeste",
+          "visibility": "hidden_resultado",
+          "reason": "Resultado/homologação/ata sem chamada ativa associada."
+        },
+        {
+          "id_edital": 70,
+          "titulo": "Floricultura - Atividades Financiadas - Banco do Nordeste",
+          "visibility": "hidden_resultado",
+          "reason": "Resultado/homologação/ata sem chamada ativa associada."
+        },
+        {
+          "id_edital": 67,
+          "titulo": "Carcinicultura – atividades financiadas – Banco do Nordeste",
+          "visibility": "hidden_resultado",
+          "reason": "Resultado/homologação/ata sem chamada ativa associada."
+        }
+      ],
+      "good_examples": [],
+      "recommendation": "manter_ativa"
+    },
+    {
+      "fonte_recurso": "IARPA",
+      "total": 8,
+      "visible_current": 0,
+      "visible_other": 0,
+      "review": 0,
+      "hidden": 8,
+      "hidden_by_reason": {
+        "hidden_expired": 8
+      },
+      "noise_examples": [
+        {
+          "id_edital": 1183,
+          "titulo": "Intelligence Community Centers for Academic Excellence",
+          "visibility": "hidden_expired",
+          "reason": "Prazo de envio/inscrição encerrado sem fluxo contínuo."
+        },
+        {
+          "id_edital": 1182,
+          "titulo": "Intelligence Community Centers For Academic Excellence",
+          "visibility": "hidden_expired",
+          "reason": "Prazo de envio/inscrição encerrado sem fluxo contínuo."
+        },
+        {
+          "id_edital": 1181,
+          "titulo": "BROAD AGENCY ANNOUNCEMENT FOR Entangled Logical Qubits (ELQ)",
+          "visibility": "hidden_expired",
+          "reason": "Prazo de envio/inscrição encerrado sem fluxo contínuo."
+        },
+        {
+          "id_edital": 1180,
+          "titulo": "TrojAI",
+          "visibility": "hidden_expired",
+          "reason": "Prazo de envio/inscrição encerrado sem fluxo contínuo."
+        },
+        {
+          "id_edital": 1179,
+          "titulo": "SuperCables",
+          "visibility": "hidden_expired",
+          "reason": "Prazo de envio/inscrição encerrado sem fluxo contínuo."
+        }
+      ],
+      "good_examples": [],
+      "recommendation": "precisa_melhoria_crawler"
+    },
+    {
+      "fonte_recurso": "BASA",
+      "total": 30,
+      "visible_current": 0,
+      "visible_other": 0,
+      "review": 23,
+      "hidden": 7,
+      "hidden_by_reason": {
+        "hidden_institutional": 3,
+        "hidden_duplicate": 2,
+        "hidden_resultado": 1,
+        "hidden_expired": 1
+      },
+      "noise_examples": [
+        {
+          "id_edital": 25,
+          "titulo": "PRONAF A",
+          "visibility": "hidden_institutional",
+          "reason": "Sinais de página institucional (home, conduta, governança, etc.)."
+        },
+        {
+          "id_edital": 23,
+          "titulo": "Financiamento de Veículo Produtor Rural",
+          "visibility": "hidden_institutional",
+          "reason": "Sinais de página institucional (home, conduta, governança, etc.)."
+        },
+        {
+          "id_edital": 16,
+          "titulo": "Giro Produtor Rural",
+          "visibility": "hidden_duplicate",
+          "reason": "hash_deduplicacao duplicado."
+        },
+        {
+          "id_edital": 12,
+          "titulo": "Renegociação de Dívidas",
+          "visibility": "hidden_duplicate",
+          "reason": "hash_deduplicacao duplicado."
+        },
+        {
+          "id_edital": 10,
+          "titulo": "Relatórios do FNO",
+          "visibility": "hidden_institutional",
+          "reason": "Sinais de página institucional (home, conduta, governança, etc.)."
+        }
+      ],
+      "good_examples": [],
+      "recommendation": "manter_com_curadoria"
+    },
+    {
+      "fonte_recurso": "DoD SBIR/STTR",
+      "total": 15,
+      "visible_current": 0,
+      "visible_other": 0,
+      "review": 8,
+      "hidden": 7,
+      "hidden_by_reason": {
+        "hidden_historical": 6,
+        "hidden_institutional": 1
+      },
+      "noise_examples": [
+        {
+          "id_edital": 803,
+          "titulo": "FAST",
+          "visibility": "hidden_historical",
+          "reason": "Referência temporal ≤2024 sem prazo futuro nem fluxo contínuo."
+        },
+        {
+          "id_edital": 801,
+          "titulo": "Frequently Asked Questions",
+          "visibility": "hidden_institutional",
+          "reason": "Sinais de página institucional (home, conduta, governança, etc.)."
+        },
+        {
+          "id_edital": 798,
+          "titulo": "Data Resources",
+          "visibility": "hidden_historical",
+          "reason": "Referência temporal ≤2024 sem prazo futuro nem fluxo contínuo."
+        },
+        {
+          "id_edital": 795,
+          "titulo": "Archived Annual Reports",
+          "visibility": "hidden_historical",
+          "reason": "Referência temporal ≤2024 sem prazo futuro nem fluxo contínuo."
+        },
+        {
+          "id_edital": 794,
+          "titulo": "Success Stories",
+          "visibility": "hidden_historical",
+          "reason": "Referência temporal ≤2024 sem prazo futuro nem fluxo contínuo."
+        }
+      ],
+      "good_examples": [],
+      "recommendation": "latente"
+    },
+    {
+      "fonte_recurso": "IHI Corporation (Suppliers)",
+      "total": 8,
+      "visible_current": 0,
+      "visible_other": 0,
+      "review": 1,
+      "hidden": 7,
+      "hidden_by_reason": {
+        "hidden_not_opportunity": 7
+      },
+      "noise_examples": [
+        {
+          "id_edital": 1229,
+          "titulo": "IHI AEROSPACE and ArianeGroup Sign Cooperation Agreement for the Operation of an SSA Ground-Based Op",
+          "visibility": "hidden_not_opportunity",
+          "reason": "Conteúdo classificado como notícia/portal/página institucional, sem chamada ativa."
+        },
+        {
+          "id_edital": 1228,
+          "titulo": "IHI signs JCDA with PETRONAS and Gentari for demonstration of an ammonia-powered gas turbine",
+          "visibility": "hidden_not_opportunity",
+          "reason": "Conteúdo classificado como notícia/portal/página institucional, sem chamada ativa."
+        },
+        {
+          "id_edital": 1227,
+          "titulo": "IHI, Subsidiaries of Babcock Power Inc. Sign Strategic Collaboration Agreement for Low-Carbon Fuel C",
+          "visibility": "hidden_not_opportunity",
+          "reason": "Conteúdo classificado como notícia/portal/página institucional, sem chamada ativa."
+        },
+        {
+          "id_edital": 1226,
+          "titulo": "IHI will participate as a speaker at a prime seminar at “SEA JAPAN 2026”, an international maritime ",
+          "visibility": "hidden_not_opportunity",
+          "reason": "Conteúdo classificado como notícia/portal/página institucional, sem chamada ativa."
+        },
+        {
+          "id_edital": 1224,
+          "titulo": "Aero Engine, Space & Defense",
+          "visibility": "hidden_not_opportunity",
+          "reason": "Conteúdo classificado como notícia/portal/página institucional, sem chamada ativa."
+        }
+      ],
+      "good_examples": [],
+      "recommendation": "precisa_melhoria_crawler"
+    },
+    {
+      "fonte_recurso": "Ambev",
+      "total": 7,
+      "visible_current": 0,
+      "visible_other": 0,
+      "review": 0,
+      "hidden": 7,
+      "hidden_by_reason": {
+        "hidden_historical": 7
+      },
+      "noise_examples": [
+        {
+          "id_edital": 443,
+          "titulo": "Health And Wellness",
+          "visibility": "hidden_historical",
+          "reason": "Sem prazo futuro, fluxo contínuo ou sinal forte recente."
+        },
+        {
+          "id_edital": 442,
+          "titulo": "Inclusive Growth",
+          "visibility": "hidden_historical",
+          "reason": "Sem prazo futuro, fluxo contínuo ou sinal forte recente."
+        },
+        {
+          "id_edital": 441,
+          "titulo": "Nature And Biodiversity",
+          "visibility": "hidden_historical",
+          "reason": "Sem prazo futuro, fluxo contínuo ou sinal forte recente."
+        },
+        {
+          "id_edital": 440,
+          "titulo": "Sustainable Agriculture",
+          "visibility": "hidden_historical",
+          "reason": "Sem prazo futuro, fluxo contínuo ou sinal forte recente."
+        },
+        {
+          "id_edital": 439,
+          "titulo": "Circular Economy",
+          "visibility": "hidden_historical",
+          "reason": "Sem prazo futuro, fluxo contínuo ou sinal forte recente."
+        }
+      ],
+      "good_examples": [],
+      "recommendation": "precisa_melhoria_crawler"
+    },
+    {
+      "fonte_recurso": "EIT",
+      "total": 16,
+      "visible_current": 0,
+      "visible_other": 7,
+      "review": 3,
+      "hidden": 6,
+      "hidden_by_reason": {
+        "hidden_historical": 4,
+        "hidden_institutional": 2
+      },
+      "noise_examples": [
+        {
+          "id_edital": 2041,
+          "titulo": "InnoNext Call",
+          "visibility": "hidden_historical",
+          "reason": "Sem prazo futuro, fluxo contínuo ou sinal forte recente."
+        },
+        {
+          "id_edital": 2040,
+          "titulo": "Citizens on the Move 2026",
+          "visibility": "hidden_historical",
+          "reason": "Sem prazo futuro, fluxo contínuo ou sinal forte recente."
+        },
+        {
+          "id_edital": 2037,
+          "titulo": "Venture Incubation Program",
+          "visibility": "hidden_institutional",
+          "reason": "Sinais de página institucional (home, conduta, governança, etc.)."
+        },
+        {
+          "id_edital": 2036,
+          "titulo": "Women2Invest",
+          "visibility": "hidden_historical",
+          "reason": "Sem prazo futuro, fluxo contínuo ou sinal forte recente."
+        },
+        {
+          "id_edital": 2034,
+          "titulo": "EIT Jumpstarter 2026",
+          "visibility": "hidden_historical",
+          "reason": "Sem prazo futuro, fluxo contínuo ou sinal forte recente."
+        }
+      ],
+      "good_examples": [],
+      "recommendation": "revisar_manual"
+    },
+    {
+      "fonte_recurso": "FAPEMIG",
+      "total": 7,
+      "visible_current": 0,
+      "visible_other": 1,
+      "review": 0,
+      "hidden": 6,
+      "hidden_by_reason": {
+        "hidden_institutional": 5,
+        "hidden_resultado": 1
+      },
+      "noise_examples": [
+        {
+          "id_edital": 908,
+          "titulo": "Guias Relacionados",
+          "visibility": "hidden_institutional",
+          "reason": "Sinais de página institucional (home, conduta, governança, etc.)."
+        },
+        {
+          "id_edital": 907,
+          "titulo": "Guias Relacionados",
+          "visibility": "hidden_institutional",
+          "reason": "Sinais de página institucional (home, conduta, governança, etc.)."
+        },
+        {
+          "id_edital": 906,
+          "titulo": "Guias passo a passo",
+          "visibility": "hidden_institutional",
+          "reason": "Sinais de página institucional (home, conduta, governança, etc.)."
+        },
+        {
+          "id_edital": 905,
+          "titulo": "Guias passo a passo",
+          "visibility": "hidden_institutional",
+          "reason": "Sinais de página institucional (home, conduta, governança, etc.)."
+        },
+        {
+          "id_edital": 904,
+          "titulo": "Guias Relacionados",
+          "visibility": "hidden_institutional",
+          "reason": "Sinais de página institucional (home, conduta, governança, etc.)."
+        }
+      ],
+      "good_examples": [],
+      "recommendation": "precisa_melhoria_crawler"
+    },
+    {
+      "fonte_recurso": "China Tendering & Bidding",
+      "total": 6,
+      "visible_current": 0,
+      "visible_other": 0,
+      "review": 0,
+      "hidden": 6,
+      "hidden_by_reason": {
+        "hidden_historical": 6
+      },
+      "noise_examples": [
+        {
+          "id_edital": 728,
+          "titulo": "中国招标投标公共服务平台",
+          "visibility": "hidden_historical",
+          "reason": "Sem prazo futuro, fluxo contínuo ou sinal forte recente."
+        },
+        {
+          "id_edital": 727,
+          "titulo": "问题内容：广安祥瑞物业管理有限公司参与广安市主城区城南片区环卫作业采购服务项目(项目编号:511601202100044)公开招标采购活动并中标，提交的投标文件中业绩情况与事实不符，属于提供虚假材料谋",
+          "visibility": "hidden_historical",
+          "reason": "Sem prazo futuro, fluxo contínuo ou sinal forte recente."
+        },
+        {
+          "id_edital": 726,
+          "titulo": "【山西】吉县苹果全产业链--数智蜂箱采购项目",
+          "visibility": "hidden_historical",
+          "reason": "Sem prazo futuro, fluxo contínuo ou sinal forte recente."
+        },
+        {
+          "id_edital": 725,
+          "titulo": "问题内容：武乡县中小学校护眼灯具配备项目 （项目编号： 1404292021AGK000005）的政府采购活动中，该项目招标文件中服务部分3项内容、技术部分2项内容评标标准中的分值设置未与评审因素的量",
+          "visibility": "hidden_historical",
+          "reason": "Sem prazo futuro, fluxo contínuo ou sinal forte recente."
+        },
+        {
+          "id_edital": 724,
+          "titulo": "【四川】存在提供虚假材料谋取中标、成交行为。",
+          "visibility": "hidden_historical",
+          "reason": "Sem prazo futuro, fluxo contínuo ou sinal forte recente."
+        }
+      ],
+      "good_examples": [],
+      "recommendation": "precisa_melhoria_crawler"
+    },
+    {
+      "fonte_recurso": "SENAI",
+      "total": 22,
+      "visible_current": 0,
+      "visible_other": 15,
+      "review": 2,
+      "hidden": 5,
+      "hidden_by_reason": {
+        "hidden_historical": 1,
+        "hidden_institutional": 2,
+        "hidden_resultado": 2
+      },
+      "noise_examples": [
+        {
+          "id_edital": 407,
+          "titulo": "Estudos e Pesquisas em Saúde e Segurança na Indústria (SESI)",
+          "visibility": "hidden_historical",
+          "reason": "Referência temporal ≤2024 sem prazo futuro nem fluxo contínuo."
+        },
+        {
+          "id_edital": 405,
+          "titulo": "Smart Factory- FINEP (SENAI)",
+          "visibility": "hidden_institutional",
+          "reason": "Sinais de página institucional (home, conduta, governança, etc.)."
+        },
+        {
+          "id_edital": 404,
+          "titulo": "Smart Factory (SENAI)",
+          "visibility": "hidden_institutional",
+          "reason": "Sinais de página institucional (home, conduta, governança, etc.)."
+        },
+        {
+          "id_edital": 397,
+          "titulo": "Missão Industrial (SENAI)",
+          "visibility": "hidden_resultado",
+          "reason": "Resultado/homologação/ata sem chamada ativa associada."
+        },
+        {
+          "id_edital": 396,
+          "titulo": "Habitats de Inovação (SENAI)",
+          "visibility": "hidden_resultado",
+          "reason": "Resultado/homologação/ata sem chamada ativa associada."
+        }
+      ],
+      "good_examples": [],
+      "recommendation": "manter_ativa"
+    },
+    {
+      "fonte_recurso": "European Defence Fund",
+      "total": 18,
+      "visible_current": 0,
+      "visible_other": 0,
+      "review": 13,
+      "hidden": 5,
+      "hidden_by_reason": {
+        "hidden_historical": 5
+      },
+      "noise_examples": [
+        {
+          "id_edital": 901,
+          "titulo": "EU Aeronautics Industry",
+          "visibility": "hidden_historical",
+          "reason": "Sem prazo futuro, fluxo contínuo ou sinal forte recente."
+        },
+        {
+          "id_edital": 891,
+          "titulo": "SSA | Europe's Eyes on Space",
+          "visibility": "hidden_historical",
+          "reason": "Sem prazo futuro, fluxo contínuo ou sinal forte recente."
+        },
+        {
+          "id_edital": 888,
+          "titulo": "Transition Pathway",
+          "visibility": "hidden_historical",
+          "reason": "Referência temporal ≤2024 sem prazo futuro nem fluxo contínuo."
+        },
+        {
+          "id_edital": 887,
+          "titulo": "Targeted consultation on EU Space Law",
+          "visibility": "hidden_historical",
+          "reason": "Referência temporal ≤2024 sem prazo futuro nem fluxo contínuo."
+        },
+        {
+          "id_edital": 884,
+          "titulo": "Consultation on the new European Defence Industrial Strategy",
+          "visibility": "hidden_historical",
+          "reason": "Referência temporal ≤2024 sem prazo futuro nem fluxo contínuo."
+        }
+      ],
+      "good_examples": [],
+      "recommendation": "manter_com_curadoria"
+    },
+    {
+      "fonte_recurso": "DARPA Opportunities",
+      "total": 15,
+      "visible_current": 0,
+      "visible_other": 0,
+      "review": 10,
+      "hidden": 5,
+      "hidden_by_reason": {
+        "hidden_duplicate": 4,
+        "hidden_institutional": 1
+      },
+      "noise_examples": [
+        {
+          "id_edital": 768,
+          "titulo": "R&D Opportunities",
+          "visibility": "hidden_duplicate",
+          "reason": "hash_deduplicacao duplicado."
+        },
+        {
+          "id_edital": 767,
+          "titulo": "R&D Opportunities",
+          "visibility": "hidden_duplicate",
+          "reason": "hash_deduplicacao duplicado."
+        },
+        {
+          "id_edital": 766,
+          "titulo": "R&D Opportunities",
+          "visibility": "hidden_duplicate",
+          "reason": "hash_deduplicacao duplicado."
+        },
+        {
+          "id_edital": 756,
+          "titulo": "Offices",
+          "visibility": "hidden_institutional",
+          "reason": "Sinais de página institucional (home, conduta, governança, etc.)."
+        },
+        {
+          "id_edital": 755,
+          "titulo": "R&D Opportunities",
+          "visibility": "hidden_duplicate",
+          "reason": "hash_deduplicacao duplicado."
+        }
+      ],
+      "good_examples": [],
+      "recommendation": "manter_com_curadoria"
+    },
+    {
+      "fonte_recurso": "WELLCOME",
+      "total": 11,
+      "visible_current": 0,
+      "visible_other": 5,
+      "review": 2,
+      "hidden": 4,
+      "hidden_by_reason": {
+        "hidden_duplicate": 4
+      },
+      "noise_examples": [
+        {
+          "id_edital": 1470,
+          "titulo": "JavaScript is disabled",
+          "visibility": "hidden_duplicate",
+          "reason": "hash_deduplicacao duplicado."
+        },
+        {
+          "id_edital": 1469,
+          "titulo": "JavaScript is disabled",
+          "visibility": "hidden_duplicate",
+          "reason": "hash_deduplicacao duplicado."
+        },
+        {
+          "id_edital": 1468,
+          "titulo": "JavaScript is disabled",
+          "visibility": "hidden_duplicate",
+          "reason": "hash_deduplicacao duplicado."
+        },
+        {
+          "id_edital": 1467,
+          "titulo": "JavaScript is disabled",
+          "visibility": "hidden_duplicate",
+          "reason": "hash_deduplicacao duplicado."
+        }
+      ],
+      "good_examples": [],
+      "recommendation": "revisar_manual"
+    },
+    {
+      "fonte_recurso": "FAPESC",
+      "total": 10,
+      "visible_current": 6,
+      "visible_other": 0,
+      "review": 0,
+      "hidden": 4,
+      "hidden_by_reason": {
+        "hidden_expired": 2,
+        "hidden_institutional": 2
+      },
+      "noise_examples": [
+        {
+          "id_edital": 920,
+          "titulo": "EDITAL DE CHAMADA PÚBLICA FAPESC/SEA N.º 19/2026 PROGRAMA DE APOIO AO DESENVOLVIMENTO DA GESTÃO DA S",
+          "visibility": "hidden_expired",
+          "reason": "Prazo de envio/inscrição encerrado sem fluxo contínuo."
+        },
+        {
+          "id_edital": 919,
+          "titulo": "EDITAL SUPLEMENTAR FAPESC N.º 20/2026 À CHAMADA TRANSNACIONAL CONJUNTA BIODIVTRANSFORM (2024-2025) “",
+          "visibility": "hidden_expired",
+          "reason": "Prazo de envio/inscrição encerrado sem fluxo contínuo."
+        },
+        {
+          "id_edital": 917,
+          "titulo": "EDITAL DE CHAMADA PÚBLICA FAPESC/JUCESC N.º 23/2026 PROGRAMA ESTADUAL DE MODERNIZAÇÃO DO AMBIENTE DE",
+          "visibility": "hidden_institutional",
+          "reason": "Sinais de página institucional (home, conduta, governança, etc.)."
+        },
+        {
+          "id_edital": 916,
+          "titulo": "EDITAL DE CHAMADA PÚBLICA FAPESC/CIASC N.º 22/2026 PROGRAMA DE INOVAÇÃO DO CIASC",
+          "visibility": "hidden_institutional",
+          "reason": "Sinais de página institucional (home, conduta, governança, etc.)."
+        }
+      ],
+      "good_examples": [
+        {
+          "id_edital": 924,
+          "titulo": "EDITAL DE CHAMADA PÚBLICA FAPESC N.º 14/2026 PROGRAMA MULHERES+TEC 5ª EDIÇÃO",
+          "visibility": "visible_current",
+          "reason": "Prazo futuro (2026-05-21)."
+        },
+        {
+          "id_edital": 923,
+          "titulo": "EDITAL DE CHAMADA PÚBLICA FAPESC N.º 15/2026 PRÊMIO INOVAÇÃO CATARINENSE PROFESSOR CASPAR ERICH STEM",
+          "visibility": "visible_current",
+          "reason": "Prazo futuro (2026-06-30)."
+        },
+        {
+          "id_edital": 922,
+          "titulo": "EDITAL DE CHAMADA PÚBLICA FAPESC N.º 16/2026 PROGRAMA DE CIÊNCIA, TECNOLOGIA E INOVAÇÃO DE APOIO AOS",
+          "visibility": "visible_current",
+          "reason": "Prazo futuro (2026-06-22)."
+        }
+      ],
+      "recommendation": "manter_ativa"
+    },
+    {
+      "fonte_recurso": "Eureka Network",
+      "total": 23,
+      "visible_current": 0,
+      "visible_other": 15,
+      "review": 5,
+      "hidden": 3,
+      "hidden_by_reason": {
+        "hidden_institutional": 2,
+        "hidden_duplicate": 1
+      },
+      "noise_examples": [
+        {
+          "id_edital": 140,
+          "titulo": "Webinar – Applying to Eurostars: What to consider when writing a proposal",
+          "visibility": "hidden_institutional",
+          "reason": "Sinais de página institucional (home, conduta, governança, etc.)."
+        },
+        {
+          "id_edital": 138,
+          "titulo": "2025 Eurostars call 9 experts list",
+          "visibility": "hidden_institutional",
+          "reason": "Sinais de página institucional (home, conduta, governança, etc.)."
+        },
+        {
+          "id_edital": 117,
+          "titulo": "Open funding opportunities",
+          "visibility": "hidden_duplicate",
+          "reason": "Link normalizado já visto nesta auditoria."
+        }
+      ],
+      "good_examples": [],
+      "recommendation": "manter_ativa"
+    },
+    {
+      "fonte_recurso": "ESA OSIP",
+      "total": 17,
+      "visible_current": 0,
+      "visible_other": 13,
+      "review": 1,
+      "hidden": 3,
+      "hidden_by_reason": {
+        "hidden_historical": 2,
+        "hidden_expired": 1
+      },
+      "noise_examples": [
+        {
+          "id_edital": 2048,
+          "titulo": "Celeste In-Orbit Demonstrator – Call for LEO-PNT experimentation opportunities",
+          "visibility": "hidden_historical",
+          "reason": "Sem prazo futuro, fluxo contínuo ou sinal forte recente."
+        },
+        {
+          "id_edital": 2046,
+          "titulo": "Call for Inter-Disciplinary Scientists and Guest Investigators for TGO",
+          "visibility": "hidden_expired",
+          "reason": "Prazo de envio/inscrição encerrado sem fluxo contínuo."
+        },
+        {
+          "id_edital": 2044,
+          "titulo": "INDustrialisation / Serialisation Support Campaign",
+          "visibility": "hidden_historical",
+          "reason": "Sem prazo futuro, fluxo contínuo ou sinal forte recente."
+        }
+      ],
+      "good_examples": [
+        {
+          "id_edital": 2057,
+          "titulo": "ARTES COMPETITIVENESS & GROWTH - CALL FOR OUTLINE PROPOSALS",
+          "visibility": "visible_continuous_flow",
+          "reason": "Fluxo contínuo ou chamada permanente."
+        }
+      ],
+      "recommendation": "manter_ativa"
+    },
+    {
+      "fonte_recurso": "NIMS",
+      "total": 13,
+      "visible_current": 0,
+      "visible_other": 2,
+      "review": 8,
+      "hidden": 3,
+      "hidden_by_reason": {
+        "hidden_duplicate": 3
+      },
+      "noise_examples": [
+        {
+          "id_edital": 1376,
+          "titulo": "メインコンテンツへ移動",
+          "visibility": "hidden_duplicate",
+          "reason": "hash_deduplicacao duplicado."
+        },
+        {
+          "id_edital": 1375,
+          "titulo": "メインコンテンツへ移動",
+          "visibility": "hidden_duplicate",
+          "reason": "hash_deduplicacao duplicado."
+        },
+        {
+          "id_edital": 1374,
+          "titulo": "メインコンテンツへ移動",
+          "visibility": "hidden_duplicate",
+          "reason": "hash_deduplicacao duplicado."
+        }
+      ],
+      "good_examples": [],
+      "recommendation": "manter_com_curadoria"
+    },
+    {
+      "fonte_recurso": "Ministério da Defesa",
+      "total": 10,
+      "visible_current": 0,
+      "visible_other": 0,
+      "review": 7,
+      "hidden": 3,
+      "hidden_by_reason": {
+        "hidden_institutional": 3
+      },
+      "noise_examples": [
+        {
+          "id_edital": 774,
+          "titulo": "Programa de Gestão e Desempenho (PGD)",
+          "visibility": "hidden_institutional",
+          "reason": "Sinais de página institucional (home, conduta, governança, etc.)."
+        },
+        {
+          "id_edital": 773,
+          "titulo": "Consulta Pública ao Inteiro Teor dos Processos de Licitações e Contratos",
+          "visibility": "hidden_institutional",
+          "reason": "Sinais de página institucional (home, conduta, governança, etc.)."
+        },
+        {
+          "id_edital": 770,
+          "titulo": "Ações e Programas",
+          "visibility": "hidden_institutional",
+          "reason": "Sinais de página institucional (home, conduta, governança, etc.)."
+        }
+      ],
+      "good_examples": [],
+      "recommendation": "manter_com_curadoria"
+    },
+    {
+      "fonte_recurso": "DIU",
+      "total": 9,
+      "visible_current": 0,
+      "visible_other": 0,
+      "review": 6,
+      "hidden": 3,
+      "hidden_by_reason": {
+        "hidden_historical": 3
+      },
+      "noise_examples": [
+        {
+          "id_edital": 788,
+          "titulo": "Protecting U.S. Space Capabilities: Defense Innovation Unit and U.S. Space Force Leverage Commercial",
+          "visibility": "hidden_historical",
+          "reason": "Referência temporal ≤2024 sem prazo futuro nem fluxo contínuo."
+        },
+        {
+          "id_edital": 786,
+          "titulo": "Defense Innovation Unit Launches First CSO Under New Emerging Technology Portfolio",
+          "visibility": "hidden_historical",
+          "reason": "Referência temporal ≤2024 sem prazo futuro nem fluxo contínuo."
+        },
+        {
+          "id_edital": 785,
+          "titulo": "Defense Innovation Unit and DoD Collaborate To Strengthen Synthetic Media Detection Capabilities",
+          "visibility": "hidden_historical",
+          "reason": "Referência temporal ≤2024 sem prazo futuro nem fluxo contínuo."
+        }
+      ],
+      "good_examples": [],
+      "recommendation": "manter_com_curadoria"
+    },
+    {
+      "fonte_recurso": "Apex Brasil",
+      "total": 4,
+      "visible_current": 0,
+      "visible_other": 0,
+      "review": 1,
+      "hidden": 3,
+      "hidden_by_reason": {
+        "hidden_historical": 2,
+        "hidden_expired": 1
+      },
+      "noise_examples": [
+        {
+          "id_edital": 1559,
+          "titulo": "licitações e contratos",
+          "visibility": "hidden_historical",
+          "reason": "Sem prazo futuro, fluxo contínuo ou sinal forte recente."
+        },
+        {
+          "id_edital": 1558,
+          "titulo": "IAra Global Encontre mercados para exportação e muito mais com a IAra. É simples e gratuito. Acesse ",
+          "visibility": "hidden_historical",
+          "reason": "Sem prazo futuro, fluxo contínuo ou sinal forte recente."
+        },
+        {
+          "id_edital": 474,
+          "titulo": "Exporta Mais Brasil - E-commerce 2026",
+          "visibility": "hidden_expired",
+          "reason": "Prazo de envio/inscrição encerrado sem fluxo contínuo."
+        }
+      ],
+      "good_examples": [],
+      "recommendation": "precisa_melhoria_crawler"
+    },
+    {
+      "fonte_recurso": "MCTI",
+      "total": 3,
+      "visible_current": 0,
+      "visible_other": 0,
+      "review": 0,
+      "hidden": 3,
+      "hidden_by_reason": {
+        "hidden_historical": 3
+      },
+      "noise_examples": [
+        {
+          "id_edital": 1415,
+          "titulo": "EDITAL CHAMAMENTO PÚBLICO Nº 11, DE 15 DE JUNHO DE 2021",
+          "visibility": "hidden_historical",
+          "reason": "Referência temporal ≤2024 sem prazo futuro nem fluxo contínuo."
+        },
+        {
+          "id_edital": 1414,
+          "titulo": "EDITAL Nº 17/2021/MCTI - PROCESSO DE ESCOLHA NOVO DIRETOR MAST/MCTI",
+          "visibility": "hidden_historical",
+          "reason": "Referência temporal ≤2024 sem prazo futuro nem fluxo contínuo."
+        },
+        {
+          "id_edital": 1413,
+          "titulo": "EDITAL Nº 18/2021/MCTI - PROCESSO DE ESCOLHA NOVO DIRETOR OBSERVATÓRIO NACIONAL/MCTI",
+          "visibility": "hidden_historical",
+          "reason": "Referência temporal ≤2024 sem prazo futuro nem fluxo contínuo."
+        }
+      ],
+      "good_examples": [],
+      "recommendation": "precisa_melhoria_crawler"
+    },
+    {
+      "fonte_recurso": "CAS",
+      "total": 31,
+      "visible_current": 0,
+      "visible_other": 1,
+      "review": 28,
+      "hidden": 2,
+      "hidden_by_reason": {
+        "hidden_duplicate": 2
+      },
+      "noise_examples": [
+        {
+          "id_edital": 602,
+          "titulo": "Research News",
+          "visibility": "hidden_duplicate",
+          "reason": "hash_deduplicacao duplicado."
+        },
+        {
+          "id_edital": 577,
+          "titulo": "科研进展",
+          "visibility": "hidden_duplicate",
+          "reason": "hash_deduplicacao duplicado."
+        }
+      ],
+      "good_examples": [],
+      "recommendation": "manter_com_curadoria"
+    },
+    {
+      "fonte_recurso": "NSFC",
+      "total": 30,
+      "visible_current": 0,
+      "visible_other": 9,
+      "review": 19,
+      "hidden": 2,
+      "hidden_by_reason": {
+        "hidden_historical": 2
+      },
+      "noise_examples": [
+        {
+          "id_edital": 722,
+          "titulo": "Guide to Programs",
+          "visibility": "hidden_historical",
+          "reason": "Referência temporal ≤2024 sem prazo futuro nem fluxo contínuo."
+        },
+        {
+          "id_edital": 721,
+          "titulo": "Application and Review Process",
+          "visibility": "hidden_historical",
+          "reason": "Referência temporal ≤2024 sem prazo futuro nem fluxo contínuo."
+        }
+      ],
+      "good_examples": [],
+      "recommendation": "manter_com_curadoria"
+    },
+    {
+      "fonte_recurso": "KAKENHI",
+      "total": 26,
+      "visible_current": 0,
+      "visible_other": 3,
+      "review": 21,
+      "hidden": 2,
+      "hidden_by_reason": {
+        "hidden_historical": 1,
+        "hidden_expired": 1
+      },
+      "noise_examples": [
+        {
+          "id_edital": 1265,
+          "titulo": "学術変革領域研究",
+          "visibility": "hidden_historical",
+          "reason": "Referência temporal ≤2024 sem prazo futuro nem fluxo contínuo."
+        },
+        {
+          "id_edital": 1252,
+          "titulo": "科研費FAQ",
+          "visibility": "hidden_expired",
+          "reason": "Registro marcado ativo=false."
+        }
+      ],
+      "good_examples": [],
+      "recommendation": "manter_com_curadoria"
+    },
+    {
+      "fonte_recurso": "Lockheed Martin Suppliers",
+      "total": 16,
+      "visible_current": 0,
+      "visible_other": 0,
+      "review": 14,
+      "hidden": 2,
+      "hidden_by_reason": {
+        "hidden_historical": 2
+      },
+      "noise_examples": [
+        {
+          "id_edital": 1409,
+          "titulo": "Small Business Programs",
+          "visibility": "hidden_historical",
+          "reason": "Referência temporal ≤2024 sem prazo futuro nem fluxo contínuo."
+        },
+        {
+          "id_edital": 1397,
+          "titulo": "Military and Veteran Support",
+          "visibility": "hidden_historical",
+          "reason": "Referência temporal ≤2024 sem prazo futuro nem fluxo contínuo."
+        }
+      ],
+      "good_examples": [],
+      "recommendation": "manter_com_curadoria"
+    },
+    {
+      "fonte_recurso": "ATLA",
+      "total": 14,
+      "visible_current": 0,
+      "visible_other": 2,
+      "review": 10,
+      "hidden": 2,
+      "hidden_by_reason": {
+        "hidden_duplicate": 1,
+        "hidden_historical": 1
+      },
+      "noise_examples": [
+        {
+          "id_edital": 1213,
+          "titulo": "防衛装備庁について",
+          "visibility": "hidden_duplicate",
+          "reason": "hash_deduplicacao duplicado."
+        },
+        {
+          "id_edital": 1208,
+          "titulo": "Defense Equipment and Technology Cooperation page",
+          "visibility": "hidden_historical",
+          "reason": "Referência temporal ≤2024 sem prazo futuro nem fluxo contínuo."
+        }
+      ],
+      "good_examples": [],
+      "recommendation": "manter_com_curadoria"
+    },
+    {
+      "fonte_recurso": "General Dynamics Suppliers",
+      "total": 10,
+      "visible_current": 0,
+      "visible_other": 0,
+      "review": 8,
+      "hidden": 2,
+      "hidden_by_reason": {
+        "hidden_historical": 1,
+        "hidden_expired": 1
+      },
+      "noise_examples": [
+        {
+          "id_edital": 1017,
+          "titulo": "CYBERSECURITY",
+          "visibility": "hidden_historical",
+          "reason": "Referência temporal ≤2024 sem prazo futuro nem fluxo contínuo."
+        },
+        {
+          "id_edital": 1014,
+          "titulo": "Supplier FAQs",
+          "visibility": "hidden_expired",
+          "reason": "Registro marcado ativo=false."
+        }
+      ],
+      "good_examples": [],
+      "recommendation": "manter_com_curadoria"
+    },
+    {
+      "fonte_recurso": "CONFAP",
+      "total": 5,
+      "visible_current": 1,
+      "visible_other": 2,
+      "review": 0,
+      "hidden": 2,
+      "hidden_by_reason": {
+        "hidden_expired": 1,
+        "hidden_institutional": 1
+      },
+      "noise_examples": [
+        {
+          "id_edital": 754,
+          "titulo": "premio confap de ciencia tecnologia inovacao professora niede guidon 5 edicao 2025",
+          "visibility": "hidden_expired",
+          "reason": "Prazo de envio/inscrição encerrado sem fluxo contínuo."
+        },
+        {
+          "id_edital": 753,
+          "titulo": "premio confap de boas praticas em fomento a ct i 5 edicao 2025",
+          "visibility": "hidden_institutional",
+          "reason": "Sinais de página institucional (home, conduta, governança, etc.)."
+        }
+      ],
+      "good_examples": [
+        {
+          "id_edital": 751,
+          "titulo": "chamada confap brasillinois 2026",
+          "visibility": "visible_current",
+          "reason": "Prazo futuro (2026-05-26)."
+        }
+      ],
+      "recommendation": "manter_ativa"
+    },
+    {
+      "fonte_recurso": "Petrobras",
+      "total": 4,
+      "visible_current": 0,
+      "visible_other": 0,
+      "review": 2,
+      "hidden": 2,
+      "hidden_by_reason": {
+        "hidden_historical": 2
+      },
+      "noise_examples": [
+        {
+          "id_edital": 1451,
+          "titulo": "Inscrições Projetos Incentivados",
+          "visibility": "hidden_historical",
+          "reason": "Sem prazo futuro, fluxo contínuo ou sinal forte recente."
+        },
+        {
+          "id_edital": 1450,
+          "titulo": "Inscrições Projetos Não Incentivados",
+          "visibility": "hidden_historical",
+          "reason": "Sem prazo futuro, fluxo contínuo ou sinal forte recente."
+        }
+      ],
+      "good_examples": [],
+      "recommendation": "latente"
+    },
+    {
+      "fonte_recurso": "ANP",
+      "total": 2,
+      "visible_current": 0,
+      "visible_other": 0,
+      "review": 0,
+      "hidden": 2,
+      "hidden_by_reason": {
+        "hidden_expired": 1,
+        "hidden_resultado": 1
+      },
+      "noise_examples": [
+        {
+          "id_edital": 472,
+          "titulo": "Consultas e Audiências Públicas",
+          "visibility": "hidden_expired",
+          "reason": "Prazo de envio/inscrição encerrado sem fluxo contínuo."
+        },
+        {
+          "id_edital": 471,
+          "titulo": "Edital de Chamada Pública",
+          "visibility": "hidden_resultado",
+          "reason": "Resultado/homologação/ata sem chamada ativa associada."
+        }
+      ],
+      "good_examples": [],
+      "recommendation": "precisa_melhoria_crawler"
+    },
+    {
+      "fonte_recurso": "China MOD (public)",
+      "total": 2,
+      "visible_current": 0,
+      "visible_other": 0,
+      "review": 0,
+      "hidden": 2,
+      "hidden_by_reason": {
+        "hidden_institutional": 1,
+        "hidden_duplicate": 1
+      },
+      "noise_examples": [
+        {
+          "id_edital": 1740,
+          "titulo": "2026年5月上旬国防部例行新闻发布",
+          "visibility": "hidden_institutional",
+          "reason": "Sinais de página institucional (home, conduta, governança, etc.)."
+        },
+        {
+          "id_edital": 1739,
+          "titulo": "2026年5月上旬国防部例行新闻发布",
+          "visibility": "hidden_duplicate",
+          "reason": "hash_deduplicacao duplicado."
+        }
+      ],
+      "good_examples": [],
+      "recommendation": "precisa_melhoria_crawler"
+    },
+    {
+      "fonte_recurso": "NATO DIANA",
+      "total": 2,
+      "visible_current": 0,
+      "visible_other": 0,
+      "review": 0,
+      "hidden": 2,
+      "hidden_by_reason": {
+        "hidden_expired": 1,
+        "hidden_institutional": 1
+      },
+      "noise_examples": [
+        {
+          "id_edital": 1419,
+          "titulo": "NATO DIANA — Programme FAQ (challenges, eligibility, portal)",
+          "visibility": "hidden_expired",
+          "reason": "Registro marcado ativo=false."
+        },
+        {
+          "id_edital": 1418,
+          "titulo": "Decision Superiority for NATO Warfighters — DIANA challenge call",
+          "visibility": "hidden_institutional",
+          "reason": "Sinais de página institucional (home, conduta, governança, etc.)."
+        }
+      ],
+      "good_examples": [],
+      "recommendation": "precisa_melhoria_crawler"
+    },
+    {
+      "fonte_recurso": "MOST China",
+      "total": 16,
+      "visible_current": 0,
+      "visible_other": 7,
+      "review": 8,
+      "hidden": 1,
+      "hidden_by_reason": {
+        "hidden_historical": 1
+      },
+      "noise_examples": [
+        {
+          "id_edital": 701,
+          "titulo": "关于征集2026年度科技评估国家标准制修订计划项目的通知",
+          "visibility": "hidden_historical",
+          "reason": "Referência temporal ≤2024 sem prazo futuro nem fluxo contínuo."
+        }
+      ],
+      "good_examples": [],
+      "recommendation": "manter_com_curadoria"
+    },
+    {
+      "fonte_recurso": "UKRI Funding",
+      "total": 12,
+      "visible_current": 0,
+      "visible_other": 10,
+      "review": 1,
+      "hidden": 1,
+      "hidden_by_reason": {
+        "hidden_institutional": 1
+      },
+      "noise_examples": [
+        {
+          "id_edital": 2066,
+          "titulo": "Funding opportunity: BBSRC new investigator award: applicant-led mode",
+          "visibility": "hidden_institutional",
+          "reason": "Sinais de página institucional (home, conduta, governança, etc.)."
+        }
+      ],
+      "good_examples": [],
+      "recommendation": "manter_ativa"
+    },
+    {
+      "fonte_recurso": "NSF",
+      "total": 10,
+      "visible_current": 0,
+      "visible_other": 3,
+      "review": 6,
+      "hidden": 1,
+      "hidden_by_reason": {
+        "hidden_institutional": 1
+      },
+      "noise_examples": [
+        {
+          "id_edital": 1424,
+          "titulo": "YouTube",
+          "visibility": "hidden_institutional",
+          "reason": "Sinais de página institucional (home, conduta, governança, etc.)."
+        }
+      ],
+      "good_examples": [],
+      "recommendation": "manter_com_curadoria"
+    },
+    {
+      "fonte_recurso": "AFWERX",
+      "total": 8,
+      "visible_current": 0,
+      "visible_other": 0,
+      "review": 7,
+      "hidden": 1,
+      "hidden_by_reason": {
+        "hidden_historical": 1
+      },
+      "noise_examples": [
+        {
+          "id_edital": 414,
+          "titulo": "Phase III",
+          "visibility": "hidden_historical",
+          "reason": "Referência temporal ≤2024 sem prazo futuro nem fluxo contínuo."
+        }
+      ],
+      "good_examples": [],
+      "recommendation": "manter_com_curadoria"
+    },
+    {
+      "fonte_recurso": "FAPERGS",
+      "total": 6,
+      "visible_current": 3,
+      "visible_other": 0,
+      "review": 2,
+      "hidden": 1,
+      "hidden_by_reason": {
+        "hidden_resultado": 1
+      },
+      "noise_examples": [
+        {
+          "id_edital": 909,
+          "titulo": "FAPERGS - Fundação de Amparo à pesquisa do Estado do RS",
+          "visibility": "hidden_resultado",
+          "reason": "Resultado/homologação/ata sem chamada ativa associada."
+        }
+      ],
+      "good_examples": [
+        {
+          "id_edital": 913,
+          "titulo": "EDITAL FAPERGS 03/2026 - PROGRAMA DE APOIO AOS ECOSSISTEMAS DE INOVAÇÃO - EDIÇÃO 2026 - FAPERGS - Fu",
+          "visibility": "visible_current",
+          "reason": "Prazo futuro (2026-07-31)."
+        },
+        {
+          "id_edital": 911,
+          "titulo": "EDITAL FAPERGS 04/2026 - PROBIC/PROBITI (Edição 2026 - 2028) - FAPERGS - Fundação de Amparo à pesqui",
+          "visibility": "visible_current",
+          "reason": "Prazo futuro (2026-06-15)."
+        },
+        {
+          "id_edital": 910,
+          "titulo": "FAPERGS - Fundação de Amparo à pesquisa do Estado do RS",
+          "visibility": "visible_current",
+          "reason": "Prazo futuro (2026-05-20)."
+        }
+      ],
+      "recommendation": "manter_ativa"
+    },
+    {
+      "fonte_recurso": "QST",
+      "total": 5,
+      "visible_current": 0,
+      "visible_other": 0,
+      "review": 4,
+      "hidden": 1,
+      "hidden_by_reason": {
+        "hidden_historical": 1
+      },
+      "noise_examples": [
+        {
+          "id_edital": 1384,
+          "titulo": "[Press Release]3GeV Electron Acceleration Succeeded at 3GeV synchrotron radiation facility NanoTeras",
+          "visibility": "hidden_historical",
+          "reason": "Referência temporal ≤2024 sem prazo futuro nem fluxo contínuo."
+        }
+      ],
+      "good_examples": [],
+      "recommendation": "manter_com_curadoria"
+    },
+    {
+      "fonte_recurso": "CAIXA",
+      "total": 2,
+      "visible_current": 0,
+      "visible_other": 0,
+      "review": 1,
+      "hidden": 1,
+      "hidden_by_reason": {
+        "hidden_duplicate": 1
+      },
+      "noise_examples": [
+        {
+          "id_edital": 572,
+          "titulo": "Regulamento",
+          "visibility": "hidden_duplicate",
+          "reason": "hash_deduplicacao duplicado."
+        }
+      ],
+      "good_examples": [],
+      "recommendation": "latente"
+    },
+    {
+      "fonte_recurso": "Japan MOD",
+      "total": 2,
+      "visible_current": 0,
+      "visible_other": 0,
+      "review": 1,
+      "hidden": 1,
+      "hidden_by_reason": {
+        "hidden_historical": 1
+      },
+      "noise_examples": [
+        {
+          "id_edital": 1349,
+          "titulo": "Measures on Defense Equipment and Technology Cooperation",
+          "visibility": "hidden_historical",
+          "reason": "Referência temporal ≤2024 sem prazo futuro nem fluxo contínuo."
+        }
+      ],
+      "good_examples": [],
+      "recommendation": "latente"
+    },
+    {
+      "fonte_recurso": "MMA / FNMA",
+      "total": 2,
+      "visible_current": 0,
+      "visible_other": 0,
+      "review": 1,
+      "hidden": 1,
+      "hidden_by_reason": {
+        "hidden_duplicate": 1
+      },
+      "noise_examples": [
+        {
+          "id_edital": 1416,
+          "titulo": "Editais de Chamamento Público",
+          "visibility": "hidden_duplicate",
+          "reason": "hash_deduplicacao duplicado."
+        }
+      ],
+      "good_examples": [],
+      "recommendation": "latente"
+    },
+    {
+      "fonte_recurso": "Compras.gov Defesa",
+      "total": 1,
+      "visible_current": 0,
+      "visible_other": 0,
+      "review": 0,
+      "hidden": 1,
+      "hidden_by_reason": {
+        "hidden_historical": 1
+      },
+      "noise_examples": [
+        {
+          "id_edital": 749,
+          "titulo": "Compras.gov Defesa - Índice de Licitações",
+          "visibility": "hidden_historical",
+          "reason": "Sem prazo futuro, fluxo contínuo ou sinal forte recente."
+        }
+      ],
+      "good_examples": [],
+      "recommendation": "precisa_melhoria_crawler"
+    },
+    {
+      "fonte_recurso": "IMPA",
+      "total": 1,
+      "visible_current": 0,
+      "visible_other": 0,
+      "review": 0,
+      "hidden": 1,
+      "hidden_by_reason": {
+        "hidden_institutional": 1
+      },
+      "noise_examples": [
+        {
+          "id_edital": 1184,
+          "titulo": "Escola de Verão",
+          "visibility": "hidden_institutional",
+          "reason": "Sinais de página institucional (home, conduta, governança, etc.)."
+        }
+      ],
+      "good_examples": [],
+      "recommendation": "precisa_melhoria_crawler"
+    },
+    {
+      "fonte_recurso": "MEXT",
+      "total": 1,
+      "visible_current": 0,
+      "visible_other": 0,
+      "review": 0,
+      "hidden": 1,
+      "hidden_by_reason": {
+        "hidden_historical": 1
+      },
+      "noise_examples": [
+        {
+          "id_edital": 1336,
+          "titulo": "Science and Technology",
+          "visibility": "hidden_historical",
+          "reason": "Referência temporal ≤2024 sem prazo futuro nem fluxo contínuo."
+        }
+      ],
+      "good_examples": [],
+      "recommendation": "precisa_melhoria_crawler"
+    },
+    {
+      "fonte_recurso": "KEK",
+      "total": 29,
+      "visible_current": 0,
+      "visible_other": 23,
+      "review": 6,
+      "hidden": 0,
+      "hidden_by_reason": {},
+      "noise_examples": [],
+      "good_examples": [],
+      "recommendation": "manter_ativa"
+    },
+    {
+      "fonte_recurso": "HORIZON_EUROPE",
+      "total": 25,
+      "visible_current": 0,
+      "visible_other": 0,
+      "review": 25,
+      "hidden": 0,
+      "hidden_by_reason": {},
+      "noise_examples": [],
+      "good_examples": [],
+      "recommendation": "manter_com_curadoria"
+    },
+    {
+      "fonte_recurso": "CGN",
+      "total": 16,
+      "visible_current": 0,
+      "visible_other": 2,
+      "review": 14,
+      "hidden": 0,
+      "hidden_by_reason": {},
+      "noise_examples": [],
+      "good_examples": [],
+      "recommendation": "manter_com_curadoria"
+    },
+    {
+      "fonte_recurso": "NEDO",
+      "total": 16,
+      "visible_current": 0,
+      "visible_other": 4,
+      "review": 12,
+      "hidden": 0,
+      "hidden_by_reason": {},
+      "noise_examples": [],
+      "good_examples": [],
+      "recommendation": "manter_com_curadoria"
+    },
+    {
+      "fonte_recurso": "EIC",
+      "total": 14,
+      "visible_current": 0,
+      "visible_other": 13,
+      "review": 1,
+      "hidden": 0,
+      "hidden_by_reason": {},
+      "noise_examples": [],
+      "good_examples": [],
+      "recommendation": "manter_ativa"
+    },
+    {
+      "fonte_recurso": "JSPS",
+      "total": 14,
+      "visible_current": 0,
+      "visible_other": 0,
+      "review": 14,
+      "hidden": 0,
+      "hidden_by_reason": {},
+      "noise_examples": [],
+      "good_examples": [],
+      "recommendation": "manter_com_curadoria"
+    },
+    {
+      "fonte_recurso": "RIKEN",
+      "total": 11,
+      "visible_current": 0,
+      "visible_other": 0,
+      "review": 11,
+      "hidden": 0,
+      "hidden_by_reason": {},
+      "noise_examples": [],
+      "good_examples": [],
+      "recommendation": "manter_com_curadoria"
+    },
+    {
+      "fonte_recurso": "AIST",
+      "total": 9,
+      "visible_current": 0,
+      "visible_other": 5,
+      "review": 4,
+      "hidden": 0,
+      "hidden_by_reason": {},
+      "noise_examples": [],
+      "good_examples": [],
+      "recommendation": "manter_ativa"
+    },
+    {
+      "fonte_recurso": "ERC",
+      "total": 8,
+      "visible_current": 0,
+      "visible_other": 7,
+      "review": 1,
+      "hidden": 0,
+      "hidden_by_reason": {},
+      "noise_examples": [],
+      "good_examples": [],
+      "recommendation": "manter_ativa"
+    },
+    {
+      "fonte_recurso": "BADESUL",
+      "total": 7,
+      "visible_current": 0,
+      "visible_other": 1,
+      "review": 6,
+      "hidden": 0,
+      "hidden_by_reason": {},
+      "noise_examples": [],
+      "good_examples": [],
+      "recommendation": "manter_com_curadoria"
+    },
+    {
+      "fonte_recurso": "University of Science and Technology of China",
+      "total": 6,
+      "visible_current": 0,
+      "visible_other": 3,
+      "review": 3,
+      "hidden": 0,
+      "hidden_by_reason": {},
+      "noise_examples": [],
+      "good_examples": [],
+      "recommendation": "manter_ativa"
+    },
+    {
+      "fonte_recurso": "BAE Systems Suppliers",
+      "total": 3,
+      "visible_current": 0,
+      "visible_other": 0,
+      "review": 3,
+      "hidden": 0,
+      "hidden_by_reason": {},
+      "noise_examples": [],
+      "good_examples": [],
+      "recommendation": "manter_com_curadoria"
+    },
+    {
+      "fonte_recurso": "Rheinmetall Suppliers",
+      "total": 2,
+      "visible_current": 0,
+      "visible_other": 0,
+      "review": 2,
+      "hidden": 0,
+      "hidden_by_reason": {},
+      "noise_examples": [],
+      "good_examples": [],
+      "recommendation": "manter_com_curadoria"
+    },
+    {
+      "fonte_recurso": "Softex",
+      "total": 2,
+      "visible_current": 0,
+      "visible_other": 0,
+      "review": 2,
+      "hidden": 0,
+      "hidden_by_reason": {},
+      "noise_examples": [],
+      "good_examples": [],
+      "recommendation": "manter_com_curadoria"
+    },
+    {
+      "fonte_recurso": "Thales Suppliers",
+      "total": 2,
+      "visible_current": 0,
+      "visible_other": 0,
+      "review": 2,
+      "hidden": 0,
+      "hidden_by_reason": {},
+      "noise_examples": [],
+      "good_examples": [],
+      "recommendation": "manter_com_curadoria"
+    },
+    {
+      "fonte_recurso": "CAEA",
+      "total": 1,
+      "visible_current": 0,
+      "visible_other": 0,
+      "review": 1,
+      "hidden": 0,
+      "hidden_by_reason": {},
+      "noise_examples": [],
+      "good_examples": [],
+      "recommendation": "manter_com_curadoria"
+    },
+    {
+      "fonte_recurso": "CAPES",
+      "total": 1,
+      "visible_current": 0,
+      "visible_other": 0,
+      "review": 1,
+      "hidden": 0,
+      "hidden_by_reason": {},
+      "noise_examples": [],
+      "good_examples": [],
+      "recommendation": "manter_com_curadoria"
+    },
+    {
+      "fonte_recurso": "CBPF",
+      "total": 1,
+      "visible_current": 0,
+      "visible_other": 0,
+      "review": 1,
+      "hidden": 0,
+      "hidden_by_reason": {},
+      "noise_examples": [],
+      "good_examples": [],
+      "recommendation": "manter_com_curadoria"
+    },
+    {
+      "fonte_recurso": "CNEN",
+      "total": 1,
+      "visible_current": 0,
+      "visible_other": 1,
+      "review": 0,
+      "hidden": 0,
+      "hidden_by_reason": {},
+      "noise_examples": [],
+      "good_examples": [],
+      "recommendation": "manter_ativa"
+    },
+    {
+      "fonte_recurso": "ELETRONUCLEAR",
+      "total": 1,
+      "visible_current": 0,
+      "visible_other": 0,
+      "review": 1,
+      "hidden": 0,
+      "hidden_by_reason": {},
+      "noise_examples": [],
+      "good_examples": [],
+      "recommendation": "manter_com_curadoria"
+    },
+    {
+      "fonte_recurso": "FNDE",
+      "total": 1,
+      "visible_current": 0,
+      "visible_other": 0,
+      "review": 1,
+      "hidden": 0,
+      "hidden_by_reason": {},
+      "noise_examples": [],
+      "good_examples": [],
+      "recommendation": "manter_com_curadoria"
+    },
+    {
+      "fonte_recurso": "MAPA",
+      "total": 1,
+      "visible_current": 0,
+      "visible_other": 0,
+      "review": 1,
+      "hidden": 0,
+      "hidden_by_reason": {},
+      "noise_examples": [],
+      "good_examples": [],
+      "recommendation": "manter_com_curadoria"
+    },
+    {
+      "fonte_recurso": "Ministério da Saúde",
+      "total": 1,
+      "visible_current": 0,
+      "visible_other": 0,
+      "review": 1,
+      "hidden": 0,
+      "hidden_by_reason": {},
+      "noise_examples": [],
+      "good_examples": [],
+      "recommendation": "manter_com_curadoria"
+    },
+    {
+      "fonte_recurso": "PLATAFORMA_INDUSTRIA",
+      "total": 1,
+      "visible_current": 0,
+      "visible_other": 1,
+      "review": 0,
+      "hidden": 0,
+      "hidden_by_reason": {},
+      "noise_examples": [],
+      "good_examples": [
+        {
+          "id_edital": 409,
+          "titulo": "INOVA MES (SESI)",
+          "visibility": "visible_continuous_flow",
+          "reason": "Fluxo contínuo ou chamada permanente."
+        }
+      ],
+      "recommendation": "manter_ativa"
+    }
+  ]
+}

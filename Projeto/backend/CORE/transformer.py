@@ -2947,6 +2947,12 @@ def _transform_item_with_result(item: Any, source_name: str) -> TransformResult:
                 defense_patch.pop("documentos", None)
             _extras_apply_patch_preserve_nonempty(out["extras"], defense_patch)
     _enrich_grants_gov_catalog_extras(out)
+    try:
+        from link_health import stamp_structural_link_health
+
+        stamp_structural_link_health(out, source_key="grants_gov")
+    except ImportError:
+        pass
     out["extras"]["content_hash"] = content_hash # Salva hash nos extras para auditoria
     
     primary_pdf = str(out["extras"].get("pdf_url") or "") or pdf_url or _pick_primary_pdf(

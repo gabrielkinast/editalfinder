@@ -1,0 +1,346 @@
+{
+  "fonte": "afrl_strategic",
+  "data_execucao": "2026-05-20T04:26:41Z",
+  "modo": "dry_run",
+  "apply": false,
+  "diagnostico": {
+    "news_hub": {
+      "url": "https://www.afrl.af.mil/News/",
+      "status": null,
+      "ok": false,
+      "bytes": 0
+    },
+    "ra": {
+      "url": "https://www.afrl.af.mil/RA/",
+      "status": null,
+      "ok": false,
+      "bytes": 0
+    },
+    "rj": {
+      "url": "https://www.afrl.af.mil/RJ/",
+      "status": null,
+      "ok": false,
+      "bytes": 0
+    },
+    "rr": {
+      "url": "https://www.afrl.af.mil/RR/",
+      "status": null,
+      "ok": false,
+      "bytes": 0
+    },
+    "note": "Diretorias 403 → fixtures/news_research/afrl_{RA,RJ,RR}_directorate.html; News → Wayback se necessário."
+  },
+  "config": {
+    "afrl_news": {
+      "max_items": 30,
+      "time_window_months": 12,
+      "page_enrich_max": 25
+    },
+    "afrl_mission_highlights": {
+      "max_items": 15,
+      "time_window_months": 24,
+      "page_enrich_max": 15
+    },
+    "afrl_air_warfare_research": {
+      "max_items": 1,
+      "time_window_months": 24,
+      "page_enrich_max": 0
+    },
+    "afrl_space_warfare_research": {
+      "max_items": 1,
+      "time_window_months": 24,
+      "page_enrich_max": 0
+    },
+    "afrl_technology_transition": {
+      "max_items": 1,
+      "time_window_months": 24,
+      "page_enrich_max": 0
+    }
+  },
+  "totais": {
+    "noticias_analisadas": 13,
+    "highlights_analisados": 45,
+    "highlights_com_data": 10,
+    "highlights_sem_data": 35,
+    "registros_institucionais": 3,
+    "standardized_noticia_news": 12,
+    "standardized_noticia_highlights": 2,
+    "standardized_pesquisa": 3,
+    "review_total": 1,
+    "descartados_total": 0,
+    "errors_count": 0
+  },
+  "por_fonte": {
+    "afrl_news": {
+      "raw": 12,
+      "total": 12,
+      "validacao_status_counts": {
+        "valido": 12
+      },
+      "total_valido": 12,
+      "total_incompleto": 0
+    },
+    "afrl_mission_highlights": {
+      "raw": 2,
+      "total": 2,
+      "validacao_status_counts": {
+        "valido": 2
+      },
+      "total_valido": 2,
+      "total_incompleto": 0
+    },
+    "afrl_air_warfare_research": {
+      "raw": 1,
+      "total": 1,
+      "validacao_status_counts": {
+        "incompleto": 1
+      },
+      "total_valido": 0,
+      "total_incompleto": 1,
+      "highlights_captured": 45
+    },
+    "afrl_space_warfare_research": {
+      "raw": 1,
+      "total": 1,
+      "validacao_status_counts": {
+        "incompleto": 1
+      },
+      "total_valido": 0,
+      "total_incompleto": 1,
+      "highlights_captured": 12
+    },
+    "afrl_technology_transition": {
+      "raw": 1,
+      "total": 1,
+      "validacao_status_counts": {
+        "incompleto": 1
+      },
+      "total_valido": 0,
+      "total_incompleto": 1,
+      "highlights_captured": 12
+    }
+  },
+  "eixos": {
+    "noticias_news": {
+      "defesa": 12,
+      "pesquisa": 4,
+      "espaco": 1,
+      "inovacao": 1,
+      "aeroespacial": 1,
+      "autonomia": 1
+    },
+    "noticias_highlights": {
+      "defesa": 2,
+      "pesquisa": 2,
+      "aeroespacial": 1,
+      "propulsao": 1,
+      "espaco": 1
+    },
+    "pesquisa_diretorias": {
+      "aeroespacial": 3,
+      "defesa": 3,
+      "propulsao": 3,
+      "autonomia": 3,
+      "espaco": 3,
+      "pesquisa": 3,
+      "inovacao": 3,
+      "sensores": 2,
+      "engenharia_avancada": 2,
+      "hipersonicos": 1,
+      "energia_dirigida": 1,
+      "materiais_avancados": 1,
+      "satelites": 1,
+      "cislunar": 1,
+      "comunicacoes": 1
+    }
+  },
+  "extras_highlights": {
+    "highlights_em_extras_total": 69,
+    "highlights_com_data_em_extras": 13
+  },
+  "exemplos": {
+    "noticias_news": [
+      {
+        "titulo": "AFRL welcomes new Space Vehicles director",
+        "link": "https://www.afrl.af.mil/News/Article-Display/Article/4257487/afrl-welcomes-new-space-vehicles-director",
+        "validacao_status": "valido",
+        "data_publicacao": "2025-07-28",
+        "fonte_recurso": "afrl_news",
+        "eixo_estrategico": [
+          "defesa",
+          "espaco",
+          "pesquisa"
+        ],
+        "diretoria_origem": null,
+        "highlights_total": null,
+        "possivel_edital": false
+      },
+      {
+        "titulo": "509th CONS Airman selected for competitive Project Arc assignment",
+        "link": "https://www.afrl.af.mil/News/Article-Display/Article/4247867/509th-cons-airman-selected-for-competitive-project-arc-assignment",
+        "validacao_status": "valido",
+        "data_publicacao": "2025-07-15",
+        "fonte_recurso": "afrl_news",
+        "eixo_estrategico": [
+          "defesa"
+        ],
+        "diretoria_origem": null,
+        "highlights_total": null,
+        "possivel_edital": false
+      },
+      {
+        "titulo": "Air Force Battle Lab advances the kill chain with AI, C2 Innovation",
+        "link": "https://www.afrl.af.mil/News/Article-Display/Article/4252782/air-force-battle-lab-advances-the-kill-chain-with-ai-c2-innovation",
+        "validacao_status": "valido",
+        "data_publicacao": "2025-07-11",
+        "fonte_recurso": "afrl_news",
+        "eixo_estrategico": [
+          "defesa",
+          "inovacao"
+        ],
+        "diretoria_origem": null,
+        "highlights_total": null,
+        "possivel_edital": false
+      },
+      {
+        "titulo": "An expanding force: Aeromedical Nurse Practitioners elevate flight medicine readiness",
+        "link": "https://www.afrl.af.mil/News/Article-Display/Article/4238986/an-expanding-force-aeromedical-nurse-practitioners-elevate-flight-medicine-read",
+        "validacao_status": "valido",
+        "data_publicacao": "2025-07-09",
+        "fonte_recurso": "afrl_news",
+        "eixo_estrategico": [
+          "defesa",
+          "aeroespacial"
+        ],
+        "diretoria_origem": null,
+        "highlights_total": null,
+        "possivel_edital": false
+      }
+    ],
+    "noticias_highlights": [
+      {
+        "titulo": "WRIGHT-PATTERSON AIR FORCE BASE, Ohio (AFRL) – The Air Force Research Laboratory, or AFRL, Aerospace Propulsion Outreach Program, or APOP, will hold its 16th an",
+        "link": "https://www.afrl.af.mil/News/Article-Display/Article/4147299/university-students-to-present-new-aerospace-propulsion-concepts-at-air-force-m",
+        "validacao_status": "valido",
+        "data_publicacao": "2025-04-17",
+        "fonte_recurso": "afrl_mission_highlights",
+        "eixo_estrategico": [
+          "defesa",
+          "aeroespacial",
+          "propulsao",
+          "espaco",
+          "pesquisa"
+        ],
+        "diretoria_origem": "RA",
+        "highlights_total": null,
+        "possivel_edital": false
+      },
+      {
+        "titulo": "On June 28, 2024, the Air Force Research Laboratory Munitions Directorate at Eglin Air Force Base, Florida, welcomed its new commander, Col. Matthew Caspers, fu",
+        "link": "https://www.afrl.af.mil/News/Article-Display/Article/3833358/afrl-munitions-directorate-fuels-engine-to-accelerate-with-induction-of-new-com",
+        "validacao_status": "valido",
+        "data_publicacao": "2024-06-28",
+        "fonte_recurso": "afrl_mission_highlights",
+        "eixo_estrategico": [
+          "defesa",
+          "pesquisa"
+        ],
+        "diretoria_origem": "RA",
+        "highlights_total": null,
+        "possivel_edital": false
+      }
+    ],
+    "pesquisa_diretorias": [
+      {
+        "titulo": "Air Warfare Directorate",
+        "link": "https://www.afrl.af.mil/RA/",
+        "validacao_status": "incompleto",
+        "data_publicacao": null,
+        "fonte_recurso": "afrl_air_warfare_research",
+        "eixo_estrategico": [
+          "aeroespacial",
+          "defesa",
+          "propulsao",
+          "autonomia",
+          "hipersonicos",
+          "sensores",
+          "engenharia_avancada",
+          "energia_dirigida",
+          "espaco",
+          "pesquisa",
+          "inovacao",
+          "materiais_avancados"
+        ],
+        "diretoria_origem": null,
+        "highlights_total": 45,
+        "possivel_edital": null
+      },
+      {
+        "titulo": "Space Warfare Directorate",
+        "link": "https://www.afrl.af.mil/RJ/",
+        "validacao_status": "incompleto",
+        "data_publicacao": null,
+        "fonte_recurso": "afrl_space_warfare_research",
+        "eixo_estrategico": [
+          "espaco",
+          "satelites",
+          "propulsao",
+          "cislunar",
+          "defesa",
+          "sensores",
+          "comunicacoes",
+          "aeroespacial",
+          "autonomia",
+          "pesquisa",
+          "inovacao"
+        ],
+        "diretoria_origem": null,
+        "highlights_total": 12,
+        "possivel_edital": null
+      },
+      {
+        "titulo": "Technology Transition Office",
+        "link": "https://www.afrl.af.mil/RR/",
+        "validacao_status": "incompleto",
+        "data_publicacao": null,
+        "fonte_recurso": "afrl_technology_transition",
+        "eixo_estrategico": [
+          "transferencia_tecnologica",
+          "inovacao",
+          "defesa",
+          "aeroespacial",
+          "small_business",
+          "sbir_sttr",
+          "propulsao",
+          "autonomia",
+          "espaco",
+          "engenharia_avancada",
+          "pesquisa"
+        ],
+        "diretoria_origem": null,
+        "highlights_total": 12,
+        "possivel_edital": null
+      }
+    ],
+    "review": [
+      {
+        "titulo": "AFWERX welcomes new director during change of leadership ceremony",
+        "link": "https://www.afrl.af.mil/News/Article-Display/Article/4219581/afwerx-welcomes-new-director-during-change-of-leadership-ceremony",
+        "data_publicacao_raw": "2025-06-17",
+        "descricao": "June 17, 2025 AFWERX welcomes new director during change of leadership ceremony AFWERX welcomed its new director and chief commercialization officer for the Department of the Air Force, Col. Nathan Stuckey, during a change of leadership ceremony at Wright-Patterson Air Force Base, Ohio, June 17, 2025.",
+        "relevancia_afrl": "media",
+        "motivos_relevancia": [
+          "afrl"
+        ],
+        "motivos_descarte": [
+          "ceremony"
+        ],
+        "possivel_edital": true,
+        "motivo": "institucional_com_tecnico_fraco",
+        "routing": "review_relevancia"
+      }
+    ],
+    "descartados": []
+  },
+  "recomendacao": "apply_controlado"
+}

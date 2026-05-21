@@ -1,0 +1,53 @@
+{
+  "fonte": "brisa_news",
+  "nome_exibicao": "BRISA",
+  "data_execucao": "2026-05-17T02:10:38Z",
+  "modo": "dry_run",
+  "apply": false,
+  "diagnostico": {
+    "url_listagem": "https://brisabr.com.br/news/",
+    "rss_seed": "https://brisabr.com.br/news/feed/",
+    "robots_txt": "Disallow: /wp-admin/ (resto permitido)",
+    "cms": "WordPress",
+    "listagem": "RSS 2.0 seção News; HTML /news/ espelha os mesmos ~4 posts",
+    "data_publicacao": "pubDate RSS + enrich meta opcional",
+    "autor": "dc:creator (ex.: Pamela Souza)",
+    "imagem": "og:image no enrich (budget limitado)",
+    "copyright": "Apenas resumo RSS/meta; sem corpo integral",
+    "nao_concursos": "Secção /news/ apenas — /artigos/ excluído"
+  },
+  "config": {
+    "max_items": 10,
+    "time_window_months": 12,
+    "page_enrich_max": 8
+  },
+  "totais": {
+    "raw_apos_filtros": 4,
+    "standardized": 4,
+    "within_window_12m": 0,
+    "sem_data": 0,
+    "page_enrich_fetches": 4,
+    "discarded_post_enrich": 0
+  },
+  "validacao_status_counts": {
+    "valido": 4
+  },
+  "warnings": [
+    {
+      "tipo": "volume_baixo_feed",
+      "detalhe": "O feed /news/feed/ publica poucos itens (típico 4); não usar feed global sem filtro /news/."
+    },
+    {
+      "tipo": "fora_janela_12m",
+      "count": 4,
+      "detalhe": "Itens mantidos com data_publicacao; ver within_window no meta."
+    }
+  ],
+  "errors": [],
+  "paths": {
+    "standardized": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_news_research\\brisa_news_dryrun\\standardized\\brisa_news_standardized.json",
+    "exemplos": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_news_research\\brisa_news_dryrun\\standardized\\exemplos.json",
+    "raw": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_news_research\\brisa_news_dryrun\\raw\\brisa_news_raw.json",
+    "crawl_meta": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_news_research\\brisa_news_dryrun\\brisa_news_crawl_meta.json"
+  }
+}

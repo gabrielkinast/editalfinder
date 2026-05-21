@@ -1,0 +1,52 @@
+{
+  "fonte": "defesanet",
+  "nome_exibicao": "DefesaNet",
+  "data_execucao": "2026-05-17T01:55:27Z",
+  "modo": "dry_run",
+  "apply": false,
+  "diagnostico": {
+    "url_base": "https://www.defesanet.com.br/",
+    "rss_seed": "https://www.defesanet.com.br/?feed=rss2",
+    "robots_txt": "User-agent: * / Disallow: (vazio) — Yoast",
+    "sitemap": "https://www.defesanet.com.br/sitemap_index.xml",
+    "cms": "WordPress",
+    "listagem": "RSS 2.0 (primário); seções no path (/terrestre, /vant, /naval, …)",
+    "data_publicacao": "pubDate RSS + enrich meta/JSON-LD opcional",
+    "autor": "dc:creator no RSS (ex.: Ricardo Fan)",
+    "imagem": "og:image no enrich de página (budget limitado)",
+    "copyright": "Apenas resumo RSS/HTML meta; sem corpo integral do artigo"
+  },
+  "config": {
+    "max_items": 10,
+    "time_window_months": 12,
+    "page_enrich_max": 8
+  },
+  "totais": {
+    "raw_apos_filtros": 10,
+    "standardized": 10,
+    "within_window_12m": 10,
+    "sem_data": 0,
+    "page_enrich_fetches": 8,
+    "discarded_post_enrich": 0
+  },
+  "validacao_status_counts": {
+    "valido": 10
+  },
+  "sections_count": {
+    "terrestre": 2,
+    "avibras-aeroco": 1,
+    "ael": 1,
+    "vant": 2,
+    "defesa": 1,
+    "seguranca": 1,
+    "aviacao": 2
+  },
+  "warnings": [],
+  "errors": [],
+  "paths": {
+    "standardized": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_news_research\\defesanet_dryrun\\standardized\\defesanet_standardized.json",
+    "exemplos": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_news_research\\defesanet_dryrun\\standardized\\exemplos.json",
+    "raw": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_news_research\\defesanet_dryrun\\raw\\defesanet_raw.json",
+    "crawl_meta": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_news_research\\defesanet_dryrun\\defesanet_crawl_meta.json"
+  }
+}

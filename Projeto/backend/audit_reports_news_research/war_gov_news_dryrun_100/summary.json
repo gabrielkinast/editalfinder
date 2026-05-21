@@ -1,0 +1,187 @@
+{
+  "fonte": "war_gov_news",
+  "nome_exibicao": "U.S. Department of Defense / War.gov",
+  "fonte_recurso": "war_gov_news",
+  "data_execucao": "2026-05-20T01:12:27Z",
+  "modo": "dry_run",
+  "apply": false,
+  "output_dir": "war_gov_news_dryrun_100",
+  "diagnostico": {
+    "hub": {
+      "url": "https://www.war.gov/news/",
+      "status": null,
+      "ok": false,
+      "note": "Hub HTML opcional; listagem principal via RSS."
+    },
+    "rss_news_stories": {
+      "ok": true,
+      "url": "https://www.defense.gov/DesktopModules/ArticleCS/RSS.ashx?ContentType=1&Site=945&max=100",
+      "final_url": "https://www.war.gov/DesktopModules/ArticleCS/RSS.ashx?ContentType=1&Site=945&max=100",
+      "status": 200,
+      "bytes": 95544,
+      "sections_in_feed": {
+        "news_stories": 100
+      }
+    },
+    "robots_txt": "https://www.war.gov/robots.txt",
+    "detalhe_html": "Artigo pode retornar 403; resumo via RSS description",
+    "fonte_oficial": "U.S. Department of Defense / War.gov (não jornalismo independente)"
+  },
+  "config": {
+    "max_items": 100,
+    "time_window_months": 12,
+    "seed_urls": [
+      "https://www.defense.gov/DesktopModules/ArticleCS/RSS.ashx?ContentType=1&Site=945&max=100"
+    ]
+  },
+  "totais": {
+    "total_raw": 99,
+    "dentro_12_meses": 99,
+    "standardized": 36,
+    "review": 0,
+    "descartados_ruido": 63,
+    "raw_apos_relevancia": 36,
+    "within_window_standardized": 36,
+    "total_valido": 36,
+    "total_incompleto": 0,
+    "errors_count": 0
+  },
+  "filtros": {
+    "war_gov_sent_discard": 63,
+    "war_gov_sent_review": null,
+    "rejected_war_gov_path": null
+  },
+  "validacao_status_counts": {
+    "valido": 36
+  },
+  "distribuicao": {
+    "eixo_estrategico": {
+      "ciencia": 17,
+      "autonomia": 15,
+      "engenharia_avancada": 5,
+      "defesa": 5,
+      "aeroespacial": 5,
+      "espaco": 5,
+      "geopolitica_tecnologica": 3,
+      "industria_estrategica": 3,
+      "pesquisa": 2,
+      "nuclear": 1,
+      "sensores": 1,
+      "hipersonicos": 1
+    },
+    "relevancia_war_gov": {
+      "media": 25,
+      "alta": 11
+    },
+    "war_gov_section": {
+      "news_stories": 36
+    }
+  },
+  "avaliacao_fonte": "excelente_para_subset_top_10_20_e_apply_controlado",
+  "exemplos": {
+    "mantidos": [
+      {
+        "titulo": "Senior Leaders Discuss Recruiting STEM Candidates Into Special Ops",
+        "link": "https://www.war.gov/News/News-Stories/Article/Article/4496409/senior-leaders-discuss-recruiting-stem-candidates-into-special-ops/",
+        "relevancia_war_gov": "alta",
+        "war_gov_section": "news_stories",
+        "motivos_relevancia": [
+          "science",
+          "engineering",
+          "stem"
+        ],
+        "motivos_descarte": []
+      },
+      {
+        "titulo": "Defeating the Swarm: Project Flytrap Accelerates NATO's Counter-Drone Lethality",
+        "link": "https://www.war.gov/News/News-Stories/Article/Article/4495825/defeating-the-swarm-project-flytrap-accelerates-natos-counter-drone-lethality/",
+        "relevancia_war_gov": "alta",
+        "war_gov_section": "news_stories",
+        "motivos_relevancia": [
+          "drone",
+          "unmanned",
+          "stem",
+          "counter-drone",
+          "nato"
+        ],
+        "motivos_descarte": []
+      },
+      {
+        "titulo": "Joint Interagency Task Force 401 Awards $500 Million Counter-UAS Contract",
+        "link": "https://www.war.gov/News/News-Stories/Article/Article/4495165/joint-interagency-task-force-401-awards-500-million-counter-uas-contract/",
+        "relevancia_war_gov": "media",
+        "war_gov_section": "news_stories",
+        "motivos_relevancia": [
+          "unmanned",
+          "stem"
+        ],
+        "motivos_descarte": []
+      },
+      {
+        "titulo": "Air Force Reserve Wing Assists in Downed Aircraft Rescue off Florida Coast",
+        "link": "https://www.war.gov/News/News-Stories/Article/Article/4486918/air-force-reserve-wing-assists-in-downed-aircraft-rescue-off-florida-coast/",
+        "relevancia_war_gov": "media",
+        "war_gov_section": "news_stories",
+        "motivos_relevancia": [
+          "aircraft"
+        ],
+        "motivos_descarte": []
+      },
+      {
+        "titulo": "Joint Interagency Task Force Enables Standardized Counter-UAS Assessment",
+        "link": "https://www.war.gov/News/News-Stories/Article/Article/4484863/joint-interagency-task-force-enables-standardized-counter-uas-assessment/",
+        "relevancia_war_gov": "media",
+        "war_gov_section": "news_stories",
+        "motivos_relevancia": [
+          "unmanned",
+          "stem"
+        ],
+        "motivos_descarte": []
+      }
+    ],
+    "descartados": [
+      {
+        "titulo": "Special Ops Convention Convenes Under 'Peace Through Strength' Strategy",
+        "link": "https://www.war.gov/News/News-Stories/Article/Article/4496381/special-ops-convention-convenes-under-peace-through-strength-strategy/",
+        "relevancia_war_gov": null,
+        "war_gov_section": null,
+        "motivos_relevancia": [],
+        "motivos_descarte": []
+      },
+      {
+        "titulo": "National Defense Strategy Prioritizes America First, Leader Says",
+        "link": "https://www.war.gov/News/News-Stories/Article/Article/4496022/national-defense-strategy-prioritizes-america-first-leader-says/",
+        "relevancia_war_gov": null,
+        "war_gov_section": null,
+        "motivos_relevancia": [],
+        "motivos_descarte": []
+      },
+      {
+        "titulo": "Coast Guard's Newest Polar Icebreaker Returns Home Following Arctic Deployment",
+        "link": "https://www.war.gov/News/News-Stories/Article/Article/4495876/coast-guards-newest-polar-icebreaker-returns-home-following-arctic-deployment/",
+        "relevancia_war_gov": null,
+        "war_gov_section": null,
+        "motivos_relevancia": [],
+        "motivos_descarte": []
+      },
+      {
+        "titulo": "At Fort Campbell, Hegseth Underscores Significance of Purple Hearts, Enlistments",
+        "link": "https://www.war.gov/News/News-Stories/Article/Article/4495094/at-fort-campbell-hegseth-underscores-significance-of-purple-hearts-enlistments/",
+        "relevancia_war_gov": null,
+        "war_gov_section": null,
+        "motivos_relevancia": [],
+        "motivos_descarte": []
+      },
+      {
+        "titulo": "Army Advances Barracks Modernization Efforts to Improve Quality of Life",
+        "link": "https://www.war.gov/News/News-Stories/Article/Article/4494938/army-advances-barracks-modernization-efforts-to-improve-quality-of-life/",
+        "relevancia_war_gov": null,
+        "war_gov_section": null,
+        "motivos_relevancia": [],
+        "motivos_descarte": []
+      }
+    ],
+    "review": []
+  },
+  "errors": []
+}

@@ -1,0 +1,214 @@
+{
+  "fonte": "arl_resources",
+  "nome_exibicao": "ARL",
+  "loader_source_id": "arl_resources",
+  "destino": "public.pesquisa",
+  "data_execucao": "2026-05-20T06:14:32Z",
+  "origem_dryrun": "audit_reports_news_research/military_research_expansion_dryrun",
+  "origem_standardized": "audit_reports_news_research/military_research_expansion_dryrun/standardized/arl_resources_standardized.json",
+  "subset_standardized": "audit_reports_news_research/arl_resources_subset_valido/standardized/arl_resources_standardized.json",
+  "totais_origem": 20,
+  "validos_no_dryrun": 20,
+  "filtros": {
+    "fonte_recurso": "arl_resources",
+    "validacao_status": "valido",
+    "excluido": [
+      "baa",
+      "review_for_edital",
+      "possivel_edital",
+      "destino Radar/Editais",
+      "review_candidates",
+      "fontes_latentes"
+    ]
+  },
+  "subset": {
+    "escolhidos": 18,
+    "rejeitados_na_filtragem": 2
+  },
+  "loader_dryrun": {
+    "comando": "C:\\Program Files\\Python312\\python.exe D:\\Computational_Physics\\My Projects\\edital\\scripts\\load_news_research_sources.py --dry-run --source arl_resources --input-dir audit_reports_news_research/arl_resources_subset_valido",
+    "would_upsert_noticia": 0,
+    "would_upsert_pesquisa": 18,
+    "errors_count": 0,
+    "apply_status": "dry_run_only",
+    "routing_skipped_count": 0
+  },
+  "eixos_estrategicos": {
+    "pesquisa": 4,
+    "engenharia_avancada": 1,
+    "defesa": 1,
+    "ia": 1,
+    "inovacao": 1,
+    "cyber": 1
+  },
+  "itens_excluidos": [
+    {
+      "link": "https://arl.devcom.army.mil/baa-forms",
+      "titulo": "ARL Broad Agency Announcement (BAA) forms repository",
+      "fonte_recurso": "arl_resources",
+      "validacao_status": "valido",
+      "motivo": "baa_ou_review_for_edital"
+    },
+    {
+      "link": "https://arl.devcom.army.mil/resources/baa-forms",
+      "titulo": "BAA Forms",
+      "fonte_recurso": "arl_resources",
+      "validacao_status": "valido",
+      "motivo": "baa_ou_review_for_edital"
+    }
+  ],
+  "itens": [
+    {
+      "titulo": "Army Research Risk Assessment Protection Program (ARRP)",
+      "data_publicacao": "2025-12-02",
+      "link": "https://arl.devcom.army.mil/resources/arrp",
+      "fonte_recurso": "arl_resources",
+      "tipo_pesquisa": "portal_institucional",
+      "tipo_recurso": "portal_estrategico"
+    },
+    {
+      "titulo": "Human Research Protection Program (HRPP)",
+      "data_publicacao": "2022-09-26",
+      "link": "https://arl.devcom.army.mil/resources/human-research-protection-program",
+      "fonte_recurso": "arl_resources",
+      "tipo_pesquisa": "portal_institucional",
+      "tipo_recurso": "portal_estrategico"
+    },
+    {
+      "titulo": "Laser Induced Spectroscopy (LIBS) Elemental Database",
+      "data_publicacao": "2022-09-26",
+      "link": "https://arl.devcom.army.mil/resources/libs",
+      "fonte_recurso": "arl_resources",
+      "tipo_pesquisa": "portal_institucional",
+      "tipo_recurso": "portal_estrategico"
+    },
+    {
+      "titulo": "Auditory Hazard Assessment Algorithm for Humans (AHAAH)",
+      "data_publicacao": "2022-09-25",
+      "link": "https://arl.devcom.army.mil/resources/ahaah",
+      "fonte_recurso": "arl_resources",
+      "tipo_pesquisa": "portal_institucional",
+      "tipo_recurso": "portal_estrategico"
+    },
+    {
+      "titulo": "Executive Summary of the Development and Validation of AHAAH",
+      "data_publicacao": "2022-09-25",
+      "link": "https://arl.devcom.army.mil/resources/ahaah/ahaah-executive-summary",
+      "fonte_recurso": "arl_resources",
+      "tipo_pesquisa": "portal_institucional",
+      "tipo_recurso": "portal_estrategico"
+    },
+    {
+      "titulo": "MIL-STD-1474D Impulse Noise Hazard Prediction",
+      "data_publicacao": "2022-09-25",
+      "link": "https://arl.devcom.army.mil/resources/ahaah/mil-std-1474d",
+      "fonte_recurso": "arl_resources",
+      "tipo_pesquisa": "portal_institucional",
+      "tipo_recurso": "portal_estrategico"
+    },
+    {
+      "titulo": "AIBS Peer Review of AHAAH",
+      "data_publicacao": null,
+      "link": "https://arl.devcom.army.mil/resources/ahaah/aibs-peer-review-of-ahaah",
+      "fonte_recurso": "arl_resources",
+      "tipo_pesquisa": "portal_institucional",
+      "tipo_recurso": "portal_estrategico"
+    },
+    {
+      "titulo": "Clarification of the AIBS Peer Review of AHAAH",
+      "data_publicacao": null,
+      "link": "https://arl.devcom.army.mil/resources/ahaah/clarification-aibs-peer-review-of-ahaah",
+      "fonte_recurso": "arl_resources",
+      "tipo_pesquisa": "portal_institucional",
+      "tipo_recurso": "portal_estrategico"
+    },
+    {
+      "titulo": "Examination of and Response to Auditory Standard Issues",
+      "data_publicacao": null,
+      "link": "https://arl.devcom.army.mil/resources/ahaah/examination-of-and-response-to-auditory-standard-issues",
+      "fonte_recurso": "arl_resources",
+      "tipo_pesquisa": "portal_institucional",
+      "tipo_recurso": "portal_estrategico"
+    },
+    {
+      "titulo": "Stability of the AHAAH Model",
+      "data_publicacao": null,
+      "link": "https://arl.devcom.army.mil/resources/ahaah/ahaah-stability",
+      "fonte_recurso": "arl_resources",
+      "tipo_pesquisa": "portal_institucional",
+      "tipo_recurso": "portal_estrategico"
+    },
+    {
+      "titulo": "HRPP Submission Process",
+      "data_publicacao": null,
+      "link": "https://arl.devcom.army.mil/resources/human-research-protection-program/hrpp-review-process",
+      "fonte_recurso": "arl_resources",
+      "tipo_pesquisa": "portal_institucional",
+      "tipo_recurso": "portal_estrategico"
+    },
+    {
+      "titulo": "HRPP Frequently Asked Questions",
+      "data_publicacao": null,
+      "link": "https://arl.devcom.army.mil/resources/human-research-protection-program/hrpp-faq",
+      "fonte_recurso": "arl_resources",
+      "tipo_pesquisa": "portal_institucional",
+      "tipo_recurso": "portal_estrategico"
+    },
+    {
+      "titulo": "Army AI Innovations Institute (A2I2) CRA",
+      "data_publicacao": null,
+      "link": "https://arl.devcom.army.mil/cras/a2i2-cra",
+      "fonte_recurso": "arl_resources",
+      "tipo_pesquisa": "programa_pesquisa",
+      "tipo_recurso": "programa_estrategico"
+    },
+    {
+      "titulo": "Adversarial Resilient Cyber Effects for Decision Dominance Collaborative Research Program (ARCEDD-CRP)",
+      "data_publicacao": null,
+      "link": "https://arl.devcom.army.mil/cras/arcedd-crp",
+      "fonte_recurso": "arl_resources",
+      "tipo_pesquisa": "programa_pesquisa",
+      "tipo_recurso": "programa_estrategico"
+    },
+    {
+      "titulo": "Distributed and Collaborative Intelligent Systems and Technology (DCIST) CRA",
+      "data_publicacao": null,
+      "link": "https://arl.devcom.army.mil/cras/dcist-cra",
+      "fonte_recurso": "arl_resources",
+      "tipo_pesquisa": "programa_pesquisa",
+      "tipo_recurso": "programa_estrategico"
+    },
+    {
+      "titulo": "Collective Judgement Formation CRA",
+      "data_publicacao": null,
+      "link": "https://arl.devcom.army.mil/cras/cjf-cra",
+      "fonte_recurso": "arl_resources",
+      "tipo_pesquisa": "programa_pesquisa",
+      "tipo_recurso": "programa_estrategico"
+    },
+    {
+      "titulo": "Internet of Battlefield Things (IoBT) CRA",
+      "data_publicacao": null,
+      "link": "https://arl.devcom.army.mil/cras/iobt-cra",
+      "fonte_recurso": "arl_resources",
+      "tipo_pesquisa": "programa_pesquisa",
+      "tipo_recurso": "programa_estrategico"
+    },
+    {
+      "titulo": "Scalable, Adaptive, and Resilient Autonomy (SARA) CRA",
+      "data_publicacao": null,
+      "link": "https://arl.devcom.army.mil/cras/sara-cra",
+      "fonte_recurso": "arl_resources",
+      "tipo_pesquisa": "programa_pesquisa",
+      "tipo_recurso": "programa_estrategico"
+    }
+  ],
+  "observacoes": [
+    "Recursos ARL (PDF/CRA/portais); tipo_pesquisa/tipo_recurso conforme classificação no dry-run.",
+    "BAA e itens review_for_edital excluídos do subset de staging.",
+    "Apply não executado nesta tarefa."
+  ],
+  "apply_staging": {
+    "executado": false
+  }
+}

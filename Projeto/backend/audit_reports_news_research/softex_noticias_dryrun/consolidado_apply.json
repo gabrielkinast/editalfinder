@@ -1,0 +1,183 @@
+{
+  "fonte": "softex_noticias",
+  "data_execucao": "2026-05-17T04:20:27Z",
+  "apply_executado": false,
+  "origem_standardized": "audit_reports_news_research/softex_noticias_dryrun/standardized/softex_noticias_standardized.json",
+  "payload_noticia": "audit_reports_news_research/softex_noticias_dryrun/softex_noticias_payload_noticia.json",
+  "totais": {
+    "standardized_total": 10,
+    "valido_no_payload": 10,
+    "total_noticias": 10
+  },
+  "loader_dryrun": {
+    "comando": "C:\\Program Files\\Python312\\python.exe D:\\Computational_Physics\\My Projects\\edital\\scripts\\load_news_research_sources.py --dry-run --source softex_noticias --input-dir audit_reports_news_research/softex_noticias_dryrun",
+    "input_dir": "audit_reports_news_research/softex_noticias_dryrun",
+    "would_upsert_noticia": 10,
+    "would_upsert_pesquisa": 0,
+    "errors_count": 0,
+    "skipped": 0,
+    "apply_status": "dry_run_only",
+    "total_noticia_input": 10,
+    "summary_path": "audit_reports_news_research/softex_noticias_dryrun/load_news_research_summary.json"
+  },
+  "noticias": [
+    {
+      "titulo": "Softex participa da inauguração do laboratório de IA do Instituto Atlântico",
+      "data_publicacao": "2026-05-15",
+      "link": "https://softex.br/softex-participa-da-inauguracao-do-laboratorio-de-ia-do-instituto-atlantico/",
+      "categoria": "Notícias",
+      "eixo_estrategico": [
+        "tecnologia",
+        "inovacao",
+        "engenharia",
+        "industria",
+        "software",
+        "computacao_ia"
+      ],
+      "imagem_url": "https://softex.br/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-15-at-09.15.31.jpeg",
+      "validacao_status": "valido",
+      "tipo_conteudo": "noticia"
+    },
+    {
+      "titulo": "Inscrições abertas para o XChange 2026",
+      "data_publicacao": "2026-05-14",
+      "link": "https://softex.br/inscricoes-abertas-para-o-xchange-2026/",
+      "categoria": "Notícias",
+      "eixo_estrategico": [
+        "tecnologia",
+        "inovacao",
+        "engenharia",
+        "industria",
+        "software"
+      ],
+      "imagem_url": "https://softex.br/wp-content/uploads/2026/05/Banner-responsivo-Softex-840x412-3.png",
+      "validacao_status": "valido",
+      "tipo_conteudo": "noticia"
+    },
+    {
+      "titulo": "Livro “Mulheres em Tecnologia” mostra em detalhes por que diversidade se tornou estratégica para empresas e governos",
+      "data_publicacao": "2026-05-12",
+      "link": "https://softex.br/livro-mulheres-em-tecnologia-mostra-em-detalhes-por-que-diversidade-se-tornou-estrategica-para-empresas-e-governos/",
+      "categoria": "Softex Mulher",
+      "eixo_estrategico": [
+        "tecnologia",
+        "inovacao",
+        "industria",
+        "software"
+      ],
+      "imagem_url": "https://softex.br/wp-content/uploads/2026/05/ChatGPT-Image-12-de-mai.-de-2026-09_14_27.png",
+      "validacao_status": "valido",
+      "tipo_conteudo": "noticia"
+    },
+    {
+      "titulo": "Softex apoia edição 2026 do Energy Summit no Rio",
+      "data_publicacao": "2026-05-12",
+      "link": "https://softex.br/softex-apoia-edicao-2026-do-energy-summit-no-rio/",
+      "categoria": "Notícias",
+      "eixo_estrategico": [
+        "tecnologia",
+        "inovacao",
+        "engenharia",
+        "industria",
+        "software"
+      ],
+      "imagem_url": "https://softex.br/wp-content/uploads/2026/05/wordpress_featured_1200x628.png",
+      "validacao_status": "valido",
+      "tipo_conteudo": "noticia"
+    },
+    {
+      "titulo": "Programa de conexão de startups com mercado canadense conta com o apoio do Brasil IT+",
+      "data_publicacao": "2026-05-11",
+      "link": "https://softex.br/programa-de-conexao-de-startups-com-mercado-canadense-conta-com-o-apoio-do-brasil-it/",
+      "categoria": "Notícias",
+      "eixo_estrategico": [
+        "tecnologia",
+        "inovacao",
+        "industria",
+        "software"
+      ],
+      "imagem_url": "https://softex.br/wp-content/uploads/2026/05/jorono-banner-2681245-scaled.jpg",
+      "validacao_status": "valido",
+      "tipo_conteudo": "noticia"
+    },
+    {
+      "titulo": "EvoSystems detalha estratégia de expansão global no podcast Pelo Mundo com o Brasil IT+",
+      "data_publicacao": "2026-05-11",
+      "link": "https://softex.br/evosystems-detalha-estrategia-de-expansao-global-no-podcast-pelo-mundo-com-o-brasil-it/",
+      "categoria": "Notícias",
+      "eixo_estrategico": [
+        "tecnologia",
+        "inovacao",
+        "engenharia",
+        "industria",
+        "software"
+      ],
+      "imagem_url": "https://softex.br/wp-content/uploads/2026/05/BG-PODCAST-1-1.png",
+      "validacao_status": "valido",
+      "tipo_conteudo": "noticia"
+    },
+    {
+      "titulo": "Brasil IT+ é destaque no Midsize Enterprise Summit Spring 2026",
+      "data_publicacao": "2026-05-11",
+      "link": "https://softex.br/brasil-it-e-destaque-no-midsize-enterprise-summit-spring-2026/",
+      "categoria": "Notícias",
+      "eixo_estrategico": [
+        "tecnologia",
+        "inovacao",
+        "industria"
+      ],
+      "imagem_url": "https://softex.br/wp-content/uploads/2026/05/MES-scaled.jpeg",
+      "validacao_status": "valido",
+      "tipo_conteudo": "noticia"
+    },
+    {
+      "titulo": "Softex defende estratégia nacional para autonomia tecnológica em painel do XI Congresso da ABIPTI",
+      "data_publicacao": "2026-05-06",
+      "link": "https://softex.br/softex-defende-estrategia-nacional-para-autonomia-tecnologica-em-painel-do-xi-congresso-da-abipti/",
+      "categoria": "Notícias",
+      "eixo_estrategico": [
+        "tecnologia",
+        "inovacao",
+        "engenharia",
+        "industria",
+        "software"
+      ],
+      "imagem_url": "https://softex.br/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-06-at-15.07.19-1.jpeg",
+      "validacao_status": "valido",
+      "tipo_conteudo": "noticia"
+    },
+    {
+      "titulo": "FavEla empoder@ abre inscrições para apoiar mulheres empreendedoras em Manaus",
+      "data_publicacao": "2026-04-30",
+      "link": "https://softex.br/favela-empoder-abre-inscricoes-para-apoiar-mulheres-empreendedoras-em-manaus/",
+      "categoria": "Notícias",
+      "eixo_estrategico": [
+        "tecnologia",
+        "inovacao"
+      ],
+      "imagem_url": null,
+      "validacao_status": "valido",
+      "tipo_conteudo": "noticia"
+    },
+    {
+      "titulo": "Inscrições abertas para o Amazônia Geek, programa de formação de talentos em games",
+      "data_publicacao": "2026-04-29",
+      "link": "https://softex.br/inscricoes-abertas-para-o-amazonia-geek-programa-de-formacao-de-talentos-em-games/",
+      "categoria": "Notícias",
+      "eixo_estrategico": [
+        "tecnologia",
+        "inovacao",
+        "industria",
+        "software"
+      ],
+      "imagem_url": null,
+      "validacao_status": "valido",
+      "tipo_conteudo": "noticia"
+    }
+  ],
+  "apply_staging": {
+    "executado": false,
+    "powershell": "# NÃO EXECUTADO — apply staging (executar manualmente após validar .env.staging)\n$env:EDITALFINDER_ENV='staging'\n$env:EDITALFINDER_ALLOW_STAGING_APPLY='true'\npython scripts/load_news_research_sources.py `\n  --apply --staging --test-db-before-apply `\n  --source softex_noticias `\n  --input-dir audit_reports_news_research/softex_noticias_dryrun",
+    "bash": "# NÃO EXECUTADO\nexport EDITALFINDER_ENV=staging\nexport EDITALFINDER_ALLOW_STAGING_APPLY=true\npython scripts/load_news_research_sources.py \\\n  --apply --staging --test-db-before-apply \\\n  --source softex_noticias \\\n  --input-dir audit_reports_news_research/softex_noticias_dryrun"
+  }
+}

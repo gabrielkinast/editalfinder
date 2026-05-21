@@ -1,0 +1,203 @@
+{
+  "fonte": "nato_news",
+  "nome_exibicao": "NATO",
+  "fonte_recurso": "nato_news",
+  "data_execucao": "2026-05-20T02:56:40Z",
+  "modo": "dry_run",
+  "apply": false,
+  "output_dir": "nato_news_dryrun_100",
+  "diagnostico": {
+    "hub": {
+      "url": "https://www.nato.int/en/news-and-events/articles/news",
+      "status": 200,
+      "ok": true,
+      "bytes": 277294,
+      "has_general_search": true,
+      "has_content_type_news_tag": false,
+      "note": "Listagem via sitemap; hub é SPA (general_search)."
+    },
+    "sitemap": {
+      "url": "https://www.nato.int/sitemap.xml",
+      "ok": true,
+      "status": 200,
+      "bytes": 10485672
+    },
+    "rss": {
+      "candidates": [
+        {
+          "url": "https://www.nato.int/rss/en/natohq/news.xml",
+          "status": null,
+          "bytes": 0
+        },
+        {
+          "url": "https://www.nato.int/cps/en/natohq/news_rss.htm",
+          "status": null,
+          "bytes": 0
+        },
+        {
+          "url": "https://www.nato.int/en/news-and-events/articles/news.rss",
+          "status": null,
+          "bytes": 0
+        }
+      ],
+      "ok": false
+    },
+    "robots_txt": {
+      "url": "https://www.nato.int/robots.txt",
+      "ok": true,
+      "status": 200,
+      "snippet": "User-agent: *\nDisallow: */newsletter/*\nSitemap: https://www.nato.int/sitemap.xml"
+    },
+    "detalhe": "AEM .model.json + og:image; sem corpo integral",
+    "classificacao": {
+      "news": "public.noticia",
+      "speeches_statements": "review ou descarte",
+      "institucional_protocolo": "descarte",
+      "publications_reports": "pesquisa futuro (fora deste crawl)"
+    }
+  },
+  "config": {
+    "max_items": 100,
+    "time_window_months": 12,
+    "seed_urls": [
+      "https://www.nato.int/sitemap.xml"
+    ],
+    "listing_url": "https://www.nato.int/en/news-and-events/articles/news"
+  },
+  "totais": {
+    "total_raw": 99,
+    "dentro_12_meses": 99,
+    "standardized": 93,
+    "review": 6,
+    "descartados_ruido": 0,
+    "raw_apos_relevancia": 93,
+    "within_window_standardized": 93,
+    "total_valido": 26,
+    "total_incompleto": 67,
+    "errors_count": 0
+  },
+  "filtros": {
+    "nato_sent_discard": null,
+    "nato_sent_review": 6,
+    "rejected_nato_path": null
+  },
+  "validacao_status_counts": {
+    "valido": 26,
+    "incompleto": 67
+  },
+  "distribuicao": {
+    "eixo_estrategico": {
+      "geopolitica_tecnologica": 93,
+      "defesa": 29,
+      "inovacao": 7,
+      "industria_estrategica": 7,
+      "nuclear": 4,
+      "computacao": 1,
+      "autonomia": 1,
+      "cyber": 1,
+      "espaco": 1
+    },
+    "relevancia_nato": {
+      "media": 75,
+      "alta": 18
+    }
+  },
+  "avaliacao_fonte": "excelente_para_subset_top_10_20_e_apply_controlado",
+  "exemplos": {
+    "mantidos": [
+      {
+        "titulo": "NATO Military Committee concludes its 195th Chiefs of Defence Meeting",
+        "link": "https://www.nato.int/en/news-and-events/articles/news/2026/05/19/nato-military-committee-concludes-its-195th-chiefs-of-defence-meeting",
+        "relevancia_nato": "media",
+        "motivos_relevancia": [
+          "defence",
+          "nato"
+        ],
+        "motivos_descarte": [
+          "agenda"
+        ]
+      },
+      {
+        "titulo": "NATO Assistant Secretary General for Defence Industry, Innovation and Armaments visits the Republic of Korea and Japan",
+        "link": "https://www.nato.int/en/news-and-events/articles/news/2026/05/15/nato-assistant-secretary-general-for-defence-industry-innovation-and-armaments-visits-the-republic-of-korea-and-japan",
+        "relevancia_nato": "alta",
+        "motivos_relevancia": [
+          "defence",
+          "nato",
+          "innovation",
+          "industry",
+          "defence industry",
+          "armament"
+        ],
+        "motivos_descarte": []
+      },
+      {
+        "titulo": "NATO hosts Centres of Excellence Marketplace",
+        "link": "https://www.nato.int/en/news-and-events/articles/news/2026/05/13/nato-hosts-centres-of-excellence-marketplace",
+        "relevancia_nato": "media",
+        "motivos_relevancia": [
+          "nato"
+        ],
+        "motivos_descarte": []
+      },
+      {
+        "titulo": "The Netherlands takes on Chair of NATO’s Transatlantic Quantum Community",
+        "link": "https://www.nato.int/en/news-and-events/articles/news/2026/05/13/the-netherlands-takes-on-chair-of-natos-transatlantic-quantum-community",
+        "relevancia_nato": "media",
+        "motivos_relevancia": [
+          "nato",
+          "quantum"
+        ],
+        "motivos_descarte": []
+      },
+      {
+        "titulo": "NATO Secretary General at B9 and Nordic Allies Summit in Bucharest: We need a stronger Europe in a stronger NATO",
+        "link": "https://www.nato.int/en/news-and-events/articles/news/2026/05/13/nato-secretary-general-at-b9-and-nordic-allies-summit",
+        "relevancia_nato": "media",
+        "motivos_relevancia": [
+          "nato"
+        ],
+        "motivos_descarte": []
+      }
+    ],
+    "descartados": [],
+    "review": [
+      {
+        "titulo": "Deep Dive Recap: Gender perspectives in Education, Training, Exercises and Evaluation and Professional Military Education",
+        "link": "https://www.nato.int/en/news-and-events/articles/news/2026/05/15/deep-dive-recap-gender-perspectives-in-military-education",
+        "relevancia_nato": null,
+        "motivos_relevancia": [],
+        "motivos_descarte": []
+      },
+      {
+        "titulo": "NATO hosts senior communications officials from across the Alliance",
+        "link": "https://www.nato.int/en/news-and-events/articles/news/2026/05/11/nato-hosts-senior-communications-officials-from-across-the-alliance",
+        "relevancia_nato": null,
+        "motivos_relevancia": [],
+        "motivos_descarte": []
+      },
+      {
+        "titulo": "The Chairs of the NATO Military Committee and of the EU Military Committee reaffirm strong commitment to regional stability in a joint visit to the Western Balkans",
+        "link": "https://www.nato.int/en/news-and-events/articles/news/2026/04/30/the-chairs-of-the-nato-military-committee-and-of-the-eu-military-committee-reaffirm-strong-commitment-to-regional-stability-in-a-joint-visit-to-the",
+        "relevancia_nato": null,
+        "motivos_relevancia": [],
+        "motivos_descarte": []
+      },
+      {
+        "titulo": "NATO Military Committee visited KFOR",
+        "link": "https://www.nato.int/en/news-and-events/articles/news/2026/04/28/nato-military-committee-visited-kfor",
+        "relevancia_nato": null,
+        "motivos_relevancia": [],
+        "motivos_descarte": []
+      },
+      {
+        "titulo": "Natos Special Representative For The Southern Neighbourhood Wraps Up His First Official Visit To The Kingdom Of Saudi Arabia",
+        "link": "https://www.nato.int/en/news-and-events/articles/news/2026/02/13/natos-special-representative-for-the-southern-neighbourhood-wraps-up-his-first-official-visit-to-the-kingdom-of-saudi-arabia",
+        "relevancia_nato": null,
+        "motivos_relevancia": [],
+        "motivos_descarte": []
+      }
+    ]
+  },
+  "errors": []
+}

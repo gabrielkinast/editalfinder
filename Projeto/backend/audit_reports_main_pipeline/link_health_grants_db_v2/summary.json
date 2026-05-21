@@ -1,0 +1,33 @@
+{
+  "source": "grants",
+  "origin": "supabase:edital",
+  "audited_at": "2026-05-20T22:23:11Z",
+  "items_count": 100,
+  "urls_checked": 308,
+  "items_with_any_broken_essential": 94,
+  "link_status_counts": {
+    "ok": 15,
+    "broken_404": 8,
+    "suspicious": 6,
+    "broken_spa_not_found": 279
+  },
+  "recommendation_counts": {
+    "manter": 15,
+    "ocultar_botao_pdf": 8,
+    "corrigir_url": 6,
+    "marcar_link_quebrado": 279
+  },
+  "by_campo": {
+    "link": 100,
+    "url_detalhe": 100,
+    "origem": 100,
+    "pdf_url": 1,
+    "documentos[0].url": 1,
+    "documentos[1].url": 1,
+    "documentos[2].url": 1,
+    "documentos[3].url": 1,
+    "documentos[4].url": 1,
+    "documentos[5].url": 1,
+    "documentos[6].url": 1
+  }
+}

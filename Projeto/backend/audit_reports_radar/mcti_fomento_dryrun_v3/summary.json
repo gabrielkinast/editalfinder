@@ -1,0 +1,71 @@
+{
+  "generated_at": "2026-05-17T08:02:17.951650+00:00",
+  "source_id": "mcti_fomento_transformacao_digital",
+  "pipeline": "radar_editais_dryrun_v3",
+  "curacao": "v3_conservadora",
+  "apply_executed": false,
+  "candidatos_fila": 45,
+  "page_enrich_fetches": 28,
+  "total_pronto_para_apply": 5,
+  "total_standardized": 5,
+  "total_review": 35,
+  "total_institucional_latente": 1173,
+  "total_descartados": 687,
+  "por_tipo_pronto": {
+    "edital_chamada": 5
+  },
+  "comparacao_v2_v3": {
+    "v2_total_standardized": 46,
+    "v3_total_pronto": 5,
+    "delta_pronto_vs_v2_std": 41,
+    "v2_valido": 8,
+    "v3_valido": 5,
+    "v2_review": 39,
+    "v3_review": 35,
+    "delta_review": -4,
+    "v2_pronto_apply": 8,
+    "v3_pronto_apply": 5,
+    "delta_pronto_apply": -3,
+    "links_removidos_v2_std": 41,
+    "links_removidos_amostra": [
+      "https://www.gov.br/mcti/pt-br/acesso-a-informacao/editais/edital-no-144-2020-sei-mctic",
+      "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/bolsa-cientifica",
+      "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/bolsa-cientifica/bolsa-cientifica",
+      "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/bolsa-cientifica/mentoria-olimpica-fique-por-dentro",
+      "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/bolsa-cientifica/perguntas-e-repostas",
+      "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/bolsa-cientifica/saiba-mais",
+      "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/chamamento-oceano",
+      "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/chamamento-oceano/01_resultado_preliminar_da_1a_fase.pdf",
+      "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/chamamento-oceano/01resultado-preliminar-1a-fase_relatorio_dou-1.pdf",
+      "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/chamamento-oceano/02_relatorio_de_avaliacao_tecnica_chamamento_oceano.pdf",
+      "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/chamamento-oceano/03_recursos_contra_o_resultado_preliminar_da_1_fase.pdf",
+      "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/chamamento-oceano/04_extrato_dou_resultado_da_1_fase_edital_n31_2021.pdf",
+      "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/chamamento-oceano/05_comunicado_pedidos_de_reconsideracao.pdf",
+      "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/chamamento-oceano/Edital-INMAR-Apresentacao-das-Propostas-do-Edital-31-2021",
+      "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/chamamento-oceano/arquivos/comunicado_contrarrazoes.pdf",
+      "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/chamamento-oceano/arquivos/despacho_gm.pdf",
+      "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/chamamento-oceano/arquivos/estudodepublicizacaodequalificacaodeospesquisaoceano.pdf",
+      "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/chamamento-oceano/arquivos/parecer_80_2022_cca_conjur_recurso_edital_de_chamamento_n-_31_2021_p_oceanicas.pdf",
+      "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/chamamento-oceano/arquivos/portaria_mcti_n-_4748_2021___comissao_de_chamamento.pdf/@@download/file/Portaria_MCTI_n._4748_2021___Comissao_de_Chamamento.pdf",
+      "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/chamamento-oceano/arquivos/resultado-dos-recursos-site.pdf"
+    ],
+    "v3_institucional_latente": 1173,
+    "v3_descartados": 687
+  },
+  "seeds": [
+    "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/transformacaodigital/fomento-1",
+    "https://www.gov.br/mcti/pt-br/acesso-a-informacao/editais/",
+    "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/chamamento-oceano",
+    "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/bolsa-cientifica",
+    "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/chamamento-vacina"
+  ],
+  "errors": [],
+  "output_paths": {
+    "standardized": "audit_reports_radar\\mcti_fomento_dryrun_v3\\standardized\\mcti_fomento_standardized.json",
+    "review": "audit_reports_radar/mcti_fomento_dryrun_v3/review_candidates.json",
+    "institucional_latente": "audit_reports_radar/mcti_fomento_dryrun_v3/institucional_latente.json",
+    "descartados": "audit_reports_radar/mcti_fomento_dryrun_v3/descartados_ruido.json",
+    "comparacao": "audit_reports_radar/mcti_fomento_dryrun_v3/comparacao_v2_v3.json"
+  },
+  "nota_standardized": "Apenas itens com nivel_curacao=pronto_para_apply (>=2 sinais fortes v3)."
+}

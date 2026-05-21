@@ -1,0 +1,338 @@
+{
+  "fonte": "objetiva",
+  "collected_at_utc": "2026-05-16T19:54:31.860648+00:00",
+  "listing_urls": [
+    "https://concursos.objetivas.com.br/index/abertos/",
+    "https://concursos.objetivas.com.br/index/1/"
+  ],
+  "total_bruto_urls": 12,
+  "total_discarded_all": 9,
+  "discarded": [
+    {
+      "url": "https://concursos.objetivas.com.br/informacoes/2593",
+      "titulo": "CHAPECÓ/SC 2026 - Município - Processo Seletivo Público 01/2026",
+      "motivo": "data_fim_inscricao_passada_sem_prova_futura"
+    },
+    {
+      "url": "https://concursos.objetivas.com.br/informacoes/2594",
+      "titulo": "COARACI/BA - Município - Concurso Público 01/2026",
+      "motivo": "data_fim_inscricao_passada_sem_prova_futura"
+    },
+    {
+      "url": "https://concursos.objetivas.com.br/informacoes/2591",
+      "titulo": "GRUPO HOSPITALAR CONCEIÇÃO (GHC) - Gerência de Ensino e Pesquisa - Processo Seletivo Mestrado Profissional APTSUS",
+      "motivo": "data_fim_inscricao_passada_sem_prova_futura"
+    },
+    {
+      "url": "https://concursos.objetivas.com.br/informacoes/2587",
+      "titulo": "CONSÓRCIO INTERMUNICIPAL DE SERVIÇOS DO VALE DO TAQUARI (CONSISA) - Lajeado/RS - Concurso Público 01/2026",
+      "motivo": "data_fim_inscricao_passada_sem_prova_futura"
+    },
+    {
+      "url": "https://concursos.objetivas.com.br/informacoes/2584",
+      "titulo": "AUTARQUIA MUNICIPAL DE TURISMO (GRAMADOTUR ) - Gramado/RS - Concurso Público 01/2026",
+      "motivo": "data_fim_inscricao_passada_sem_prova_futura"
+    },
+    {
+      "url": "https://concursos.objetivas.com.br/informacoes/2583",
+      "titulo": "COMPANHIA DE DESENVOLVIMENTO DE PASSO FUNDO (CODEPAS) - Concurso Público 01/2026",
+      "motivo": "data_fim_inscricao_passada_sem_prova_futura"
+    },
+    {
+      "url": "https://concursos.objetivas.com.br/informacoes/2576",
+      "titulo": "EREBANGO/RS - Município - Concurso Público 01/2026",
+      "motivo": "data_fim_inscricao_passada_sem_prova_futura"
+    },
+    {
+      "url": "https://concursos.objetivas.com.br/informacoes/2577",
+      "titulo": "SOSSÊGO/PB - Município - Concurso Público 001/2026",
+      "motivo": "data_fim_inscricao_passada_sem_prova_futura"
+    },
+    {
+      "url": "https://concursos.objetivas.com.br/informacoes/2531",
+      "titulo": "TRENSURB - Empresa de Trens Urbanos de Porto Alegre S.A - Concurso Público 01/2025",
+      "motivo": "data_fim_inscricao_passada_sem_prova_futura"
+    }
+  ],
+  "total_standardized": 3,
+  "errors": [],
+  "field_fill": {
+    "titulo": 3,
+    "tipo_selecao": 3,
+    "categoria": 3,
+    "orgao": 3,
+    "instituicao": 3,
+    "banca": 3,
+    "cargo": 3,
+    "curso": 0,
+    "area": 0,
+    "nivel_escolaridade": 1,
+    "estado": 0,
+    "municipio": 0,
+    "regiao": 0,
+    "modalidade": 0,
+    "numero_vagas": 3,
+    "salario_min": 0,
+    "salario_max": 0,
+    "taxa_inscricao": 3,
+    "data_publicacao": 3,
+    "data_inicio_inscricao": 3,
+    "data_fim_inscricao": 3,
+    "data_prova": 0,
+    "status": 3,
+    "link": 3,
+    "link_edital": 3,
+    "fonte": 3,
+    "fonte_tipo": 3,
+    "validacao_status": 3,
+    "qualidade_dado": 3,
+    "tags": 3,
+    "extras": 3,
+    "ativo": 3
+  },
+  "fields_always_missing": [
+    "curso",
+    "area",
+    "estado",
+    "municipio",
+    "regiao",
+    "modalidade",
+    "salario_min",
+    "salario_max",
+    "data_prova"
+  ],
+  "standardized_path": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_main_pipeline\\concursos_wave1_objetiva\\standardized\\objetiva_standardized.json",
+  "exemplos_payload": [
+    {
+      "titulo": "CIRÍACO/RS - Município - Concurso Público 01/2026",
+      "tipo_selecao": "concurso_publico",
+      "categoria": "banca_objetiva_concurso",
+      "orgao": "CIRÍACO/RS - Município - Concurso Público 01/2026",
+      "instituicao": "CIRÍACO/RS - Município - Concurso Público 01/2026",
+      "banca": "Objetiva Concursos",
+      "cargo": "Agente de Combate a Endemias",
+      "curso": null,
+      "area": null,
+      "nivel_escolaridade": "fundamental",
+      "estado": null,
+      "municipio": null,
+      "regiao": null,
+      "modalidade": null,
+      "numero_vagas": 23,
+      "salario_min": null,
+      "salario_max": null,
+      "taxa_inscricao": 150.0,
+      "data_publicacao": "2026-05-06",
+      "data_inicio_inscricao": "2026-05-11",
+      "data_fim_inscricao": "2026-06-11",
+      "data_prova": null,
+      "status": "inscricoes_abertas",
+      "link": "https://concursos.objetivas.com.br/informacoes/2592",
+      "link_edital": "https://anexos.cdn.selecao.net.br/uploads/361/concursos/2592/anexos/7fa81a92-e2c7-4f07-ac12-f81a58cc3103.pdf",
+      "fonte": "objetiva",
+      "fonte_tipo": "banca",
+      "validacao_status": "valido",
+      "qualidade_dado": "media",
+      "tags": [
+        "objetiva",
+        "wave1"
+      ],
+      "extras": {
+        "crawler": "main_objetiva_concursos",
+        "wave": "concursos_wave1_objetiva",
+        "fetched_at_utc": "2026-05-16T19:54:09.343726+00:00",
+        "objetiva_listing_urls": [
+          "https://concursos.objetivas.com.br/index/abertos/",
+          "https://concursos.objetivas.com.br/index/1/"
+        ],
+        "official_link_missing": false,
+        "extracted_fields": [
+          "data_fim_inscricao_texto",
+          "data_inicio_inscricao_texto",
+          "numero_vagas_texto",
+          "taxa_inscricao_texto"
+        ],
+        "missing_core_fields": [
+          "data_prova",
+          "estado"
+        ],
+        "extraction_confidence": "media",
+        "source_is_aggregator": false,
+        "value_extraction_notes": [
+          "valor_ambiguo_excluido_de_salario:120.0",
+          "valor_ambiguo_excluido_de_salario:150.0",
+          "valor_ambiguo_excluido_de_salario:180.0",
+          "valor_ambiguo_excluido_de_salario:180.0",
+          "valor_ambiguo_excluido_de_salario:180.0",
+          "valor_ambiguo_excluido_de_salario:120.0",
+          "valor_ambiguo_excluido_de_salario:150.0",
+          "valor_ambiguo_excluido_de_salario:120.0",
+          "valor_ambiguo_excluido_de_salario:120.0",
+          "valor_ambiguo_excluido_de_salario:180.0",
+          "valor_ambiguo_excluido_de_salario:180.0",
+          "valor_ambiguo_excluido_de_salario:180.0",
+          "valor_ambiguo_excluido_de_salario:180.0",
+          "valor_ambiguo_excluido_de_salario:180.0",
+          "valor_ambiguo_excluido_de_salario:180.0",
+          "valor_ambiguo_excluido_de_salario:180.0",
+          "valor_ambiguo_excluido_de_salario:120.0",
+          "valor_ambiguo_excluido_de_salario:150.0",
+          "valor_ambiguo_excluido_de_salario:180.0",
+          "valor_ambiguo_excluido_de_salario:120.0",
+          "valor_ambiguo_excluido_de_salario:150.0"
+        ],
+        "tipo_selecao_evidencia": "texto:concurso_publico",
+        "possible_fee_detected": true,
+        "possible_salary_detected": false,
+        "objetiva_situacao": "situação: em andamento"
+      },
+      "ativo": true
+    },
+    {
+      "titulo": "WESTFÁLIA/RS - Município - Processo Seletivo Público 01/2026",
+      "tipo_selecao": "processo_seletivo",
+      "categoria": "banca_objetiva_concurso",
+      "orgao": "WESTFÁLIA/RS - Município - Processo Seletivo Público 01/2026",
+      "instituicao": "WESTFÁLIA/RS - Município - Processo Seletivo Público 01/2026",
+      "banca": "Objetiva Concursos",
+      "cargo": "Agente de Combate a Endemias",
+      "curso": null,
+      "area": null,
+      "nivel_escolaridade": null,
+      "estado": null,
+      "municipio": null,
+      "regiao": null,
+      "modalidade": null,
+      "numero_vagas": 1,
+      "salario_min": null,
+      "salario_max": null,
+      "taxa_inscricao": 150.0,
+      "data_publicacao": "2026-05-06",
+      "data_inicio_inscricao": "2026-05-12",
+      "data_fim_inscricao": "2026-06-10",
+      "data_prova": null,
+      "status": "inscricoes_abertas",
+      "link": "https://concursos.objetivas.com.br/informacoes/2589",
+      "link_edital": "https://anexos.cdn.selecao.net.br/uploads/361/concursos/2589/anexos/9d2b6b07-1cbb-47a6-8e66-98028753ada5.pdf",
+      "fonte": "objetiva",
+      "fonte_tipo": "banca",
+      "validacao_status": "valido",
+      "qualidade_dado": "media",
+      "tags": [
+        "objetiva",
+        "wave1"
+      ],
+      "extras": {
+        "crawler": "main_objetiva_concursos",
+        "wave": "concursos_wave1_objetiva",
+        "fetched_at_utc": "2026-05-16T19:54:11.494008+00:00",
+        "objetiva_listing_urls": [
+          "https://concursos.objetivas.com.br/index/abertos/",
+          "https://concursos.objetivas.com.br/index/1/"
+        ],
+        "official_link_missing": false,
+        "extracted_fields": [
+          "data_fim_inscricao_texto",
+          "data_inicio_inscricao_texto",
+          "numero_vagas_texto",
+          "taxa_inscricao_texto"
+        ],
+        "missing_core_fields": [
+          "data_prova",
+          "estado"
+        ],
+        "extraction_confidence": "alta",
+        "source_is_aggregator": false,
+        "value_extraction_notes": [],
+        "tipo_selecao_evidencia": "texto:processo_seletivo",
+        "possible_fee_detected": true,
+        "possible_salary_detected": false,
+        "objetiva_situacao": "situação: em andamento"
+      },
+      "ativo": true
+    },
+    {
+      "titulo": "WESTFÁLIA/RS - Município - Concurso Público 01/2026",
+      "tipo_selecao": "concurso_publico",
+      "categoria": "banca_objetiva_concurso",
+      "orgao": "WESTFÁLIA/RS - Município - Concurso Público 01/2026",
+      "instituicao": "WESTFÁLIA/RS - Município - Concurso Público 01/2026",
+      "banca": "Objetiva Concursos",
+      "cargo": "Agente Administrativo",
+      "curso": null,
+      "area": null,
+      "nivel_escolaridade": null,
+      "estado": null,
+      "municipio": null,
+      "regiao": null,
+      "modalidade": null,
+      "numero_vagas": 21,
+      "salario_min": null,
+      "salario_max": null,
+      "taxa_inscricao": 150.0,
+      "data_publicacao": "2026-05-06",
+      "data_inicio_inscricao": "2026-05-12",
+      "data_fim_inscricao": "2026-06-10",
+      "data_prova": null,
+      "status": "inscricoes_abertas",
+      "link": "https://concursos.objetivas.com.br/informacoes/2590",
+      "link_edital": "https://anexos.cdn.selecao.net.br/uploads/361/concursos/2590/anexos/0fa6a897-66cd-422c-b5e4-fbaf9a848d9d.pdf",
+      "fonte": "objetiva",
+      "fonte_tipo": "banca",
+      "validacao_status": "valido",
+      "qualidade_dado": "media",
+      "tags": [
+        "objetiva",
+        "wave1"
+      ],
+      "extras": {
+        "crawler": "main_objetiva_concursos",
+        "wave": "concursos_wave1_objetiva",
+        "fetched_at_utc": "2026-05-16T19:54:13.745386+00:00",
+        "objetiva_listing_urls": [
+          "https://concursos.objetivas.com.br/index/abertos/",
+          "https://concursos.objetivas.com.br/index/1/"
+        ],
+        "official_link_missing": false,
+        "extracted_fields": [
+          "data_fim_inscricao_texto",
+          "data_inicio_inscricao_texto",
+          "numero_vagas_texto",
+          "taxa_inscricao_texto"
+        ],
+        "missing_core_fields": [
+          "data_prova",
+          "estado"
+        ],
+        "extraction_confidence": "media",
+        "source_is_aggregator": false,
+        "value_extraction_notes": [
+          "valor_ambiguo_excluido_de_salario:200.0",
+          "valor_ambiguo_excluido_de_salario:200.0",
+          "valor_ambiguo_excluido_de_salario:200.0",
+          "valor_ambiguo_excluido_de_salario:200.0",
+          "valor_ambiguo_excluido_de_salario:200.0",
+          "valor_ambiguo_excluido_de_salario:200.0",
+          "valor_ambiguo_excluido_de_salario:150.0",
+          "valor_ambiguo_excluido_de_salario:150.0",
+          "valor_ambiguo_excluido_de_salario:200.0",
+          "valor_ambiguo_excluido_de_salario:150.0",
+          "valor_ambiguo_excluido_de_salario:75.0",
+          "valor_ambiguo_excluido_de_salario:200.0",
+          "valor_ambiguo_excluido_de_salario:200.0",
+          "valor_ambiguo_excluido_de_salario:200.0",
+          "valor_ambiguo_excluido_de_salario:200.0",
+          "valor_ambiguo_excluido_de_salario:200.0",
+          "valor_ambiguo_excluido_de_salario:200.0",
+          "valor_ambiguo_excluido_de_salario:200.0",
+          "valor_ambiguo_excluido_de_salario:75.0"
+        ],
+        "tipo_selecao_evidencia": "texto:concurso_publico",
+        "possible_fee_detected": true,
+        "possible_salary_detected": false,
+        "objetiva_situacao": "situação: em andamento"
+      },
+      "ativo": true
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "fonte": "brisa_artigos",
+  "nome_exibicao": "BRISA",
+  "data_execucao": "2026-05-17T02:27:41Z",
+  "modo": "dry_run",
+  "apply": false,
+  "destino_produto": "public.pesquisa (via vw_pesquisas_front, após apply futuro)",
+  "diagnostico": {
+    "url_listagem": "https://brisabr.com.br/artigos/",
+    "rss_seed": "https://brisabr.com.br/artigos/feed/",
+    "robots_txt": "Disallow: /wp-admin/ (resto permitido)",
+    "cms": "WordPress",
+    "listagem": "RSS 2.0 categoria Artigos; HTML /artigos/ espelha ~8 posts",
+    "permalink": "Slugs na raiz (ex. /desenvolvimento_software_customizado/) — não exige /artigos/ no path",
+    "data_publicacao": "pubDate RSS + enrich meta opcional",
+    "autor": "dc:creator (ex.: Pamela Souza, Maicol Peixe)",
+    "imagem": "og:image no enrich (budget limitado)",
+    "copyright": "Apenas resumo RSS/meta; sem corpo integral",
+    "nao_noticias": "Exclui URLs /news/; não mistura com brisa_news",
+    "nao_concursos": "Não roteia para concurso_selecao"
+  },
+  "config": {
+    "max_items": 10,
+    "time_window_months": 24,
+    "page_enrich_max": 8
+  },
+  "totais": {
+    "raw_apos_filtros": 8,
+    "standardized": 8,
+    "within_window_24m": 0,
+    "sem_data": 0,
+    "page_enrich_fetches": 8,
+    "discarded_post_enrich": 0,
+    "feed_extracted": 8
+  },
+  "tipo_conteudo_counts": {
+    "pesquisa": 8
+  },
+  "validacao_status_counts": {
+    "valido": 7,
+    "incompleto": 1
+  },
+  "warnings": [
+    {
+      "tipo": "fora_janela_24m",
+      "count": 8,
+      "detalhe": "Itens mantidos no standardized; view pública usa 24 meses."
+    }
+  ],
+  "errors": [],
+  "paths": {
+    "standardized": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_news_research\\brisa_artigos_dryrun\\standardized\\brisa_artigos_standardized.json",
+    "exemplos": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_news_research\\brisa_artigos_dryrun\\standardized\\exemplos.json",
+    "raw": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_news_research\\brisa_artigos_dryrun\\raw\\brisa_artigos_raw.json",
+    "crawl_meta": "D:\\Computational_Physics\\My Projects\\edital\\audit_reports_news_research\\brisa_artigos_dryrun\\brisa_artigos_crawl_meta.json"
+  }
+}

@@ -1,0 +1,67 @@
+[
+  {
+    "titulo": "ITA — Vestibular 2027",
+    "tipo_selecao": "vestibular",
+    "categoria": "militar_aeroespacial_ita_vestibular",
+    "orgao": "Instituto Tecnológico de Aeronáutica (ITA)",
+    "instituicao": "Instituto Tecnológico de Aeronáutica",
+    "banca": "ITA — Comissão de Vestibular",
+    "cargo": null,
+    "curso": "Graduação em Engenharia (vestibular ITA)",
+    "area": "Engenharia / Aeroespacial",
+    "nivel_escolaridade": "medio",
+    "estado": "SP",
+    "municipio": "São José dos Campos",
+    "regiao": null,
+    "modalidade": null,
+    "numero_vagas": null,
+    "salario_min": null,
+    "salario_max": null,
+    "taxa_inscricao": null,
+    "data_publicacao": null,
+    "data_inicio_inscricao": null,
+    "data_fim_inscricao": null,
+    "data_prova": "2026-09-27",
+    "status": "ativo",
+    "link": "https://www.vestibular.ita.br/principal.htm",
+    "link_edital": "https://www.vestibular.ita.br/instrucoes/edital_2026_retificado.pdf",
+    "fonte": "ita",
+    "fonte_tipo": "instituicao",
+    "validacao_status": "incompleto",
+    "qualidade_dado": "media",
+    "tags": [
+      "ita",
+      "vestibular",
+      "militar_aeroespacial",
+      "wave2"
+    ],
+    "extras": {
+      "crawler": "main_militar_aeroespacial_ita",
+      "wave": "concursos_wave2_militar_aeroespacial_ita",
+      "fetched_at_utc": "2026-05-17T01:08:21.962744+00:00",
+      "seed_urls": [
+        "https://www.vestibular.ita.br/principal.htm",
+        "https://www.vestibular.ita.br/topo.htm"
+      ],
+      "pdf_enrichment": {
+        "pdf_url": "https://www.vestibular.ita.br/instrucoes/edital_2026_retificado.pdf",
+        "fetch_note": "pdf_download_ok",
+        "text_len": 2
+      },
+      "data_prova_2_fase_fim": "2026-10-23",
+      "vestibular_year": 2027,
+      "missing_core_fields": [
+        "data_fim_inscricao",
+        "numero_vagas"
+      ],
+      "extraction_confidence": "alta",
+      "value_extraction_notes": [
+        "edital_pdf_sem_texto_extraivel"
+      ],
+      "source_standardized_key": "ita",
+      "loader": "load_concursos_selecao",
+      "origem_pipeline": "concursos_wave1_manual"
+    },
+    "ativo": true
+  }
+]

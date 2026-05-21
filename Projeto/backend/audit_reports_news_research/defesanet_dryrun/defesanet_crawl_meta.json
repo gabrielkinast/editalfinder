@@ -1,0 +1,41 @@
+{
+  "source_id": "defesanet",
+  "source_name": "DefesaNet",
+  "method": "rss",
+  "seed_urls_used": [
+    "https://www.defesanet.com.br/?feed=rss2"
+  ],
+  "max_items": 10,
+  "time_window_months": 12,
+  "raw_total": 10,
+  "within_window_total": 10,
+  "without_date_total": 0,
+  "raw_by_seed_kind": {
+    "mixed": 10
+  },
+  "feed_kind_caps_applied": {},
+  "page_enrich_fetch_total": 8,
+  "errors": [],
+  "theme_filter_stats": {
+    "extracted_total": 10,
+    "skipped_duplicate_link": 0,
+    "rejected_exclude_keyword": 0,
+    "rejected_exclude_medical_generic": 0,
+    "rejected_require_any_keyword": 0,
+    "rejected_feed_kind_cap": 0,
+    "passed_theme_filters": 10,
+    "matched_keyword_counts": {},
+    "reject_samples": []
+  },
+  "discarded_post_enrich": [],
+  "discarded_post_enrich_total": 0,
+  "sections_count": {
+    "terrestre": 2,
+    "avibras-aeroco": 1,
+    "ael": 1,
+    "vant": 2,
+    "defesa": 1,
+    "seguranca": 1,
+    "aviacao": 2
+  }
+}

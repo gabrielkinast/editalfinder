@@ -1,0 +1,163 @@
+{
+  "fonte": "afrl_news",
+  "nome_exibicao": "AFRL",
+  "loader_source_id": "afrl_news",
+  "data_execucao": "2026-05-20T04:32:55Z",
+  "origem_dryrun": "audit_reports_news_research/afrl_strategic_dryrun",
+  "subset_standardized": "audit_reports_news_research/afrl_news_subset_valido/standardized/afrl_news_standardized.json",
+  "totais_origem": {
+    "afrl_news_standardized": 12,
+    "afrl_mission_highlights_standardized": 2
+  },
+  "validos_no_dryrun": {
+    "afrl_news": 12,
+    "afrl_mission_highlights": 2
+  },
+  "highlights_validos_fora_12m": 2,
+  "filtros": {
+    "fonte_recurso": [
+      "afrl_mission_highlights",
+      "afrl_news"
+    ],
+    "tipo_conteudo": "noticia",
+    "validacao_status": "valido",
+    "janela_meses": 12,
+    "excluido": [
+      "afrl_air_warfare_research",
+      "afrl_space_warfare_research",
+      "afrl_technology_transition",
+      "pesquisa_incompleta",
+      "review_candidates"
+    ]
+  },
+  "contagem_por_fonte_recurso": {
+    "afrl_news": 12,
+    "afrl_mission_highlights": 0
+  },
+  "subset": {
+    "escolhidos": 12,
+    "rejeitados_na_filtragem": 2
+  },
+  "loader_dryrun": {
+    "comando": "C:\\Program Files\\Python312\\python.exe D:\\Computational_Physics\\My Projects\\edital\\scripts\\load_news_research_sources.py --dry-run --source afrl_news --input-dir audit_reports_news_research/afrl_news_subset_valido",
+    "would_upsert_noticia": 12,
+    "would_upsert_pesquisa": 0,
+    "errors_count": 0,
+    "apply_status": "dry_run_only",
+    "routing_skipped_count": 0
+  },
+  "eixos_estrategicos": {
+    "defesa": 12,
+    "pesquisa": 4,
+    "espaco": 1,
+    "inovacao": 1,
+    "aeroespacial": 1,
+    "autonomia": 1
+  },
+  "itens": [
+    {
+      "titulo": "AFRL welcomes new Space Vehicles director",
+      "data_publicacao": "2025-07-28",
+      "link": "https://www.afrl.af.mil/News/Article-Display/Article/4257487/afrl-welcomes-new-space-vehicles-director",
+      "fonte_recurso": "afrl_news",
+      "diretoria_origem": null,
+      "relevancia_afrl": "alta"
+    },
+    {
+      "titulo": "509th CONS Airman selected for competitive Project Arc assignment",
+      "data_publicacao": "2025-07-15",
+      "link": "https://www.afrl.af.mil/News/Article-Display/Article/4247867/509th-cons-airman-selected-for-competitive-project-arc-assignment",
+      "fonte_recurso": "afrl_news",
+      "diretoria_origem": null,
+      "relevancia_afrl": "media"
+    },
+    {
+      "titulo": "Air Force Battle Lab advances the kill chain with AI, C2 Innovation",
+      "data_publicacao": "2025-07-11",
+      "link": "https://www.afrl.af.mil/News/Article-Display/Article/4252782/air-force-battle-lab-advances-the-kill-chain-with-ai-c2-innovation",
+      "fonte_recurso": "afrl_news",
+      "diretoria_origem": null,
+      "relevancia_afrl": "media"
+    },
+    {
+      "titulo": "An expanding force: Aeromedical Nurse Practitioners elevate flight medicine readiness",
+      "data_publicacao": "2025-07-09",
+      "link": "https://www.afrl.af.mil/News/Article-Display/Article/4238986/an-expanding-force-aeromedical-nurse-practitioners-elevate-flight-medicine-read",
+      "fonte_recurso": "afrl_news",
+      "diretoria_origem": null,
+      "relevancia_afrl": "media"
+    },
+    {
+      "titulo": "Air Force advances human-machine teaming with autonomous collaborative platforms",
+      "data_publicacao": "2025-07-03",
+      "link": "https://www.afrl.af.mil/News/Article-Display/Article/4234556/air-force-advances-human-machine-teaming-with-autonomous-collaborative-platforms",
+      "fonte_recurso": "afrl_news",
+      "diretoria_origem": null,
+      "relevancia_afrl": "media"
+    },
+    {
+      "titulo": "AFRL welcomes new command chief during change of responsibility ceremony",
+      "data_publicacao": "2025-06-26",
+      "link": "https://www.afrl.af.mil/News/Article-Display/Article/4227078/afrl-welcomes-new-command-chief-during-change-of-responsibility-ceremony",
+      "fonte_recurso": "afrl_news",
+      "diretoria_origem": null,
+      "relevancia_afrl": "alta"
+    },
+    {
+      "titulo": "Air Force DASH sprint pioneers human-machine teaming for faster battle management decisions",
+      "data_publicacao": "2025-06-16",
+      "link": "https://www.afrl.af.mil/News/Article-Display/Article/4217341/air-force-dash-sprint-pioneers-human-machine-teaming-for-faster-battle-manageme",
+      "fonte_recurso": "afrl_news",
+      "diretoria_origem": null,
+      "relevancia_afrl": "media"
+    },
+    {
+      "titulo": "Wright-Patt hosts Bengals rookies for visit with troops, families",
+      "data_publicacao": "2025-06-09",
+      "link": "https://www.afrl.af.mil/News/Article-Display/Article/4211215/wright-patt-hosts-bengals-rookies-for-visit-with-troops-families",
+      "fonte_recurso": "afrl_news",
+      "diretoria_origem": null,
+      "relevancia_afrl": "media"
+    },
+    {
+      "titulo": "New AFRL chamber to enhance human, equipment performance in extreme environments",
+      "data_publicacao": "2025-06-05",
+      "link": "https://www.afrl.af.mil/News/Article-Display/Article/4207462/new-afrl-chamber-to-enhance-human-equipment-performance-in-extreme-environments",
+      "fonte_recurso": "afrl_news",
+      "diretoria_origem": null,
+      "relevancia_afrl": "alta"
+    },
+    {
+      "titulo": "AFGSC releases Comprehensive Health Risk Assessments for Missile Community Cancer Study",
+      "data_publicacao": "2025-06-05",
+      "link": "https://www.afrl.af.mil/News/Article-Display/Article/4207181/afgsc-releases-comprehensive-health-risk-assessments-for-missile-community-canc",
+      "fonte_recurso": "afrl_news",
+      "diretoria_origem": null,
+      "relevancia_afrl": "media"
+    },
+    {
+      "titulo": "Air Force Demonstrates Low-Cost Maritime Defense Capability with QUICKSINK",
+      "data_publicacao": "2025-06-04",
+      "link": "https://www.afrl.af.mil/News/Article-Display/Article/4205812/air-force-demonstrates-low-cost-maritime-defense-capability-with-quicksink",
+      "fonte_recurso": "afrl_news",
+      "diretoria_origem": null,
+      "relevancia_afrl": "media"
+    },
+    {
+      "titulo": "Cannon Air Force Base hosts 16th annual Medic Rodeo",
+      "data_publicacao": "2025-06-03",
+      "link": "https://www.afrl.af.mil/News/Article-Display/Article/4205704/cannon-air-force-base-hosts-16th-annual-medic-rodeo",
+      "fonte_recurso": "afrl_news",
+      "diretoria_origem": null,
+      "relevancia_afrl": "media"
+    }
+  ],
+  "observacoes": [
+    "Fonte oficial/institucional AFRL (U.S. Air Force Research Laboratory); apply controlado.",
+    "RA/RJ/RR permanecem latentes/incompletos (pesquisa sem data) — não incluídos neste subset.",
+    "Apply não executado nesta tarefa."
+  ],
+  "apply_staging": {
+    "executado": false
+  }
+}
