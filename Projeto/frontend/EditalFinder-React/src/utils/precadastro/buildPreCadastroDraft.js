@@ -11,6 +11,31 @@ import {
   hintImpactsForSector,
 } from './preCadastroTemplates';
 import {
+  buildConsultorExecutiveSummary,
+  buildConsultorFitNarrative,
+  buildConsultorRisks,
+  buildConsultorNextSteps,
+  buildConsultorWorkPlan,
+  buildConsultorBudgetSummary,
+  buildBudgetCategoriesHint,
+  buildStructuredDocumentsChecklist,
+  buildInitialChecklist,
+  collectRadarAlerts,
+  collectRadarPositiveReasons,
+  formatOportunidadeMeta,
+  formatScoreCompatLabel,
+} from './consultorAutofill';
+import { logPrecadastro } from './precadastroLog';
+import {
+  buildMultiExecutiveSummary,
+  buildMultiFitNarrative,
+  buildMultiRisks,
+  buildMultiNextSteps,
+  buildMultiDocuments,
+  buildMultiBudget,
+  serializeOportunidadesSelecionadas,
+} from './multiOpportunityAutofill';
+import {
   SOURCE_AUTO,
   SOURCE_CLIENTE,
   SOURCE_EDITAL,
@@ -21,9 +46,15 @@ import {
   CONF_LOW,
   isProtectedManual,
 } from './preCadastroTypes';
+import { clienteEnrichedForApps } from '../cliente/clientePerfilConsultivo';
 
 function hasText(v) {
   return v != null && String(v).trim() !== '';
+}
+
+function tituloCurto(t, max = 90) {
+  const s = String(t || '').trim();
+  return s.length > max ? `${s.slice(0, max)}…` : s;
 }
 
 function clone(obj) {
@@ -68,6 +99,9 @@ function intelEntry(source, confidence, explanation, needsReview = true) {
  * @param {object|null} params.cliente
  * @param {object|null} params.edital
  * @param {object|null} params.radarMatch
+ * @param {object[]} [params.oportunidadesSelecionadas]
+ * @param {object|null} [params.oportunidadePrincipal]
+ * @param {object[]} [params.oportunidadesRelacionadas]
  * @param {Record<string, unknown>} params.existingForm
  * @param {import('./preCadastroTypes.js').FieldIntelMap} params.existingFieldIntel
  * @param {{ overwriteManual?: boolean }} [params.options]
@@ -76,6 +110,9 @@ export function buildPreCadastroDraft({
   cliente = null,
   edital = null,
   radarMatch = null,
+  oportunidadesSelecionadas = [],
+  oportunidadePrincipal = null,
+  oportunidadesRelacionadas = [],
   existingForm = {},
   existingFieldIntel = {},
   options = {},
@@ -83,9 +120,30 @@ export function buildPreCadastroDraft({
   const overwriteManual = !!options.overwriteManual;
   /** Exceto quando `overwriteManual`, nunca sobrescreve valor já preenchido (string ou boolean). */
   const onlyFillEmpty = !overwriteManual;
-  const c = cliente || {};
-  const e = normEdital(edital);
-  const editalTitulo = `${e?.titulo || ''}`.trim() || `${radarMatch?.tituloEdital || ''}`.trim();
+  const c = clienteEnrichedForApps(cliente || {});
+  const cont = c.contatoPrincipal || {};
+  const eco = c.dadosEconomicos || {};
+  const loc = c.perfilConsultivo?.localizacao || {};
+  const multiList = Array.isArray(oportunidadesSelecionadas) ? oportunidadesSelecionadas : [];
+  const primary =
+    oportunidadePrincipal ||
+    (multiList.length ? multiList[0] : null);
+  const related =
+    oportunidadesRelacionadas?.length > 0
+      ? oportunidadesRelacionadas
+      : multiList.length > 1 && primary
+        ? multiList.filter((o) => o.key !== primary.key)
+        : [];
+
+  let editalUse = edital;
+  let radarUse = radarMatch;
+  if (primary && multiList.length > 0) {
+    editalUse = primary.edital ?? edital;
+    radarUse = primary.radarMatch ?? radarMatch;
+  }
+
+  const e = normEdital(editalUse);
+  const editalTitulo = `${e?.titulo || ''}`.trim() || `${radarUse?.tituloEdital || ''}`.trim();
 
   let form = { ...existingForm };
   let fieldIntel = { ...existingFieldIntel };
@@ -146,6 +204,28 @@ export function buildPreCadastroDraft({
   setCliente('bloco1_cnae', c.cnae_principal, 'CNAE principal do cadastro.');
   setCliente('bloco1_porte_empresa', c.porte_empresa, 'Porte do cadastro.');
   setCliente('bloco1_setor_empresa', c.setor, 'Setor do cadastro.');
+  setCliente('bloco1_nome_contato', cont.nome || c.nome_contato, 'Contato principal do cadastro.');
+  setCliente('bloco1_email_contato', cont.email || c.email, 'E-mail do cadastro do cliente.');
+  setCliente('bloco1_telefone_contato', cont.telefone || c.telefone, 'Telefone do cadastro.');
+  setCliente('bloco1_cargo_contato', cont.cargo, 'Cargo do responsavel no cadastro.');
+  setCliente('bloco1_cpf_contato', cont.cpf, 'CPF do contato (quando informado).');
+  setCliente('bloco1_site', c.site, 'Site da empresa no cadastro.');
+  setCliente(
+    'bloco1_data_inicio_operacao',
+    loc.data_inicio_operacao,
+    'Inicio de operacao informado no perfil do cliente.',
+  );
+  setCliente('bloco1_ebitda', eco.ebitda, 'EBITDA informado no perfil economico do cliente.');
+  setCliente(
+    'bloco1_parte_grupo_economico',
+    eco.grupo_economico,
+    'Grupo economico declarado no cadastro.',
+  );
+  setCliente(
+    'bloco1_principais_atividades',
+    c.descricao_projeto || c.perfilTecnologico?.principais_atividades,
+    'Principais atividades do cadastro.',
+  );
 
   if (c.faturamento_anual != null && c.faturamento_anual !== '' && canWrite('bloco1_receita_rob_ultimo')) {
     const empty = !hasText(form.bloco1_receita_rob_ultimo);
@@ -158,6 +238,95 @@ export function buildPreCadastroDraft({
         true,
       );
       autogerados.push('bloco1_receita_rob_ultimo');
+    }
+  }
+
+  const diag = c.diagnosticoConsultor || c.perfilConsultivo?.diagnostico_consultor || {};
+  const tecPerfil = c.perfilTecnologico || c.perfilConsultivo?.perfil_tecnologico || {};
+
+  if (hasText(tecPerfil.descricao_projeto) && canWrite('bloco1_principais_atividades')) {
+    const empty = !hasText(form.bloco1_principais_atividades);
+    if (!onlyFillEmpty || empty) {
+      form.bloco1_principais_atividades = String(tecPerfil.descricao_projeto).trim();
+      fieldIntel.bloco1_principais_atividades = intelEntry(
+        SOURCE_CLIENTE,
+        CONF_HIGH,
+        'Projeto/necessidade informados no briefing consultivo do cliente.',
+        true,
+      );
+      autogerados.push('bloco1_principais_atividades');
+    }
+  }
+
+  if (hasText(diag.contexto_cliente) && canWrite('bloco1_principais_atividades')) {
+    const cur = form.bloco1_principais_atividades;
+    const ctx = String(diag.contexto_cliente).trim();
+    const empty = !hasText(cur);
+    if ((!onlyFillEmpty || empty) && !cur.includes(ctx.slice(0, 40))) {
+      form.bloco1_principais_atividades = hasText(cur) ? `${cur}\n\nContexto: ${ctx}` : ctx;
+      fieldIntel.bloco1_principais_atividades = intelEntry(
+        SOURCE_CLIENTE,
+        CONF_MEDIUM,
+        'Contexto do cliente (briefing consultivo).',
+        true,
+      );
+    }
+  }
+
+  if (hasText(diag.observacoes_internas) && canWrite('bloco_estr_obs_internas')) {
+    const empty = !hasText(form.bloco_estr_obs_internas);
+    if (!onlyFillEmpty || empty) {
+      form.bloco_estr_obs_internas = String(diag.observacoes_internas).trim();
+      fieldIntel.bloco_estr_obs_internas = intelEntry(
+        SOURCE_CLIENTE,
+        CONF_MEDIUM,
+        'Observações internas do consultor (briefing).',
+        false,
+      );
+      autogerados.push('bloco_estr_obs_internas');
+    }
+  }
+
+  const temasBrief =
+    tecPerfil.temas_prioritarios || tecPerfil.areas_tecnologicas || c.interesse_temas || c.area_inovacao;
+  if (hasText(temasBrief) && canWrite('bloco_estr_principais_aderencias')) {
+    const empty = !hasText(form.bloco_estr_principais_aderencias);
+    if (!onlyFillEmpty || empty) {
+      form.bloco_estr_principais_aderencias = `Temas prioritários (briefing): ${String(temasBrief).trim()}`;
+      fieldIntel.bloco_estr_principais_aderencias = intelEntry(
+        SOURCE_CLIENTE,
+        CONF_MEDIUM,
+        'Temas/áreas do briefing consultivo.',
+        true,
+      );
+    }
+  }
+
+  const prefTipos = c.preferencias_fomento_tipos || c.preferenciasFomento?.tipos_recurso;
+  if (Array.isArray(prefTipos) && prefTipos.length && canWrite('bloco_estr_tipo_recurso_pdf')) {
+    const labels = prefTipos.join(', ');
+    const empty = !hasText(form.bloco_estr_tipo_recurso_pdf);
+    if (!onlyFillEmpty || empty) {
+      form.bloco_estr_tipo_recurso_pdf = labels;
+      fieldIntel.bloco_estr_tipo_recurso_pdf = intelEntry(
+        SOURCE_CLIENTE,
+        CONF_MEDIUM,
+        'Tipos de recurso indicados no briefing.',
+        true,
+      );
+    }
+  }
+
+  if (hasText(diag.lacunas) && canWrite('bloco_estr_lacunas')) {
+    const empty = !hasText(form.bloco_estr_lacunas);
+    if (!onlyFillEmpty || empty) {
+      form.bloco_estr_lacunas = String(diag.lacunas).trim();
+      fieldIntel.bloco_estr_lacunas = intelEntry(
+        SOURCE_CLIENTE,
+        CONF_MEDIUM,
+        'Lacunas registradas no perfil consultivo do cliente.',
+        true,
+      );
     }
   }
 
@@ -236,11 +405,58 @@ export function buildPreCadastroDraft({
     }
   }
 
+  /** ---- Meta oportunidade (edital) ---- */
+  if (e) {
+    const meta = formatOportunidadeMeta(e, radarMatch);
+    if (meta.fonte) {
+      assign('bloco_estr_oportunidade_fonte', meta.fonte, {
+        source: SOURCE_EDITAL,
+        confidence: CONF_HIGH,
+        explanation: 'Fonte/orgao informado na ficha da oportunidade.',
+        needsReview: false,
+      });
+    }
+    if (meta.prazo) {
+      assign('bloco_estr_oportunidade_prazo', meta.prazo, {
+        source: SOURCE_EDITAL,
+        confidence: CONF_HIGH,
+        explanation: 'Prazo informado na oportunidade — confirmar no portal oficial.',
+        needsReview: true,
+      });
+    }
+    if (meta.link) {
+      assign('bloco_estr_oportunidade_link', meta.link, {
+        source: SOURCE_EDITAL,
+        confidence: CONF_MEDIUM,
+        explanation: 'Link da oportunidade na base — validar se ainda esta ativo.',
+        needsReview: true,
+      });
+    }
+  }
+
   /** ---- C) Radar ---- */
   if (radarMatch) {
-    if (typeof radarMatch.scorePct === 'number' && canWrite('bloco_estr_aderencia_nivel')) {
+    const scoreLbl = formatScoreCompatLabel(radarMatch);
+    if (scoreLbl) {
+      assign('bloco_estr_score_compatibilidade', scoreLbl, {
+        source: SOURCE_RADAR,
+        confidence: CONF_MEDIUM,
+        explanation: 'Referencia de compatibilidade do Radar (nao altera o score).',
+        needsReview: true,
+      });
+    }
+    const alertas = collectRadarAlerts(radarUse);
+    if (alertas.length) {
+      assign('bloco_estr_alertas_radar', alertas.map((a) => `• ${a}`).join('\n'), {
+        source: SOURCE_RADAR,
+        confidence: CONF_MEDIUM,
+        explanation: 'Alertas e penalidades reportados pelo Radar.',
+        needsReview: true,
+      });
+    }
+    if (typeof radarUse.scorePct === 'number' && canWrite('bloco_estr_aderencia_nivel')) {
       const lbl =
-        radarMatch.scorePct >= 70 ? 'alta' : radarMatch.scorePct >= 40 ? 'media' : 'baixa';
+        radarUse.scorePct >= 70 ? 'alta' : radarUse.scorePct >= 40 ? 'media' : 'baixa';
       const empty = !hasText(form.bloco_estr_aderencia_nivel);
       if (!onlyFillEmpty || empty) {
         form.bloco_estr_aderencia_nivel = lbl;
@@ -253,8 +469,8 @@ export function buildPreCadastroDraft({
         autogerados.push('bloco_estr_aderencia_nivel');
       }
     }
-    const razoes = Array.isArray(radarMatch.razoes) ? radarMatch.razoes : [];
-    const explRadar = [...razoes.slice(0, 4)].join('\n• ');
+    const razoes = collectRadarPositiveReasons(radarUse);
+    const explRadar = razoes.slice(0, 4).join('\n• ');
     if (explRadar && canWrite('bloco_estr_principais_aderencias')) {
       const base = hasText(form.bloco_estr_principais_aderencias)
         ? `${form.bloco_estr_principais_aderencias}\n\n`
@@ -292,13 +508,13 @@ export function buildPreCadastroDraft({
   }
 
   /** ---- Sugestões textuais (auto) sobre projectIntel + templates ---- */
-  const sug = buildProjectSuggestions(c, e || (editalTitulo ? { titulo: editalTitulo } : null), radarMatch);
+  const sug = buildProjectSuggestions(c, e || (editalTitulo ? { titulo: editalTitulo } : null), radarUse);
   const sectorKey = classifySectorKey(c);
   const titTpl = suggestTituloProjeto(c, editalTitulo, sectorKey);
   const resTpl = suggestResumoPublicavel(c, e, radarMatch, sectorKey);
   const probTpl = suggestProblemaOportunidade(c);
   const solTpl = suggestSolucaoProposta(c, sectorKey);
-  const objTpl = suggestObjetivoGeral(c, e, radarMatch);
+  const objTpl = suggestObjetivoGeral(c, e, radarUse);
   const fin = suggestFinalidadesBlocos(c, sectorKey);
 
   const pushAuto = (key, val, expl, conf = CONF_MEDIUM) =>
@@ -306,7 +522,26 @@ export function buildPreCadastroDraft({
 
   pushAuto('bloco2_titulo_projeto', titTpl.texto, titTpl.explanation);
   pushAuto('bloco2_resumo_publicavel', resTpl.texto, resTpl.explanation);
-  pushAuto('bloco_estr_resumo_executivo', resTpl.texto, 'Resumo sintetico espelhado no campo estrategico (para consistencia nas abas).');
+  const execConsultor =
+    multiList.length > 0 && primary
+      ? buildMultiExecutiveSummary(c, multiList, primary)
+      : buildConsultorExecutiveSummary(c, e, radarUse);
+  pushAuto(
+    'bloco_estr_resumo_executivo',
+    execConsultor || resTpl.texto,
+    multiList.length > 1
+      ? 'Resumo executivo com estrategia multi-oportunidade.'
+      : 'Resumo executivo consultivo (cliente + oportunidade + proximos passos de validacao).',
+  );
+  pushAuto(
+    'bloco_estr_motivo_recomendacao',
+    multiList.length > 0 && primary
+      ? buildMultiFitNarrative(c, multiList, primary, related)
+      : buildConsultorFitNarrative(c, e, radarUse),
+    multiList.length > 1
+      ? 'Aderencia consolidada das oportunidades selecionadas.'
+      : 'Narrativa de aderencia em linguagem consultiva (cadastro, edital e Radar).',
+  );
   pushAuto('bloco_estr_problema_oportunidade', probTpl.texto, probTpl.explanation);
   pushAuto('bloco_estr_solucao_proposta', solTpl.texto, solTpl.explanation);
   pushAuto('bloco_estr_objetivo_geral', objTpl.texto, objTpl.explanation);
@@ -327,8 +562,73 @@ export function buildPreCadastroDraft({
   if (!hasText(form.bloco_estr_lacunas)) {
     pushAuto('bloco_estr_lacunas', sug.lacunas, 'Lacunas modeladas pela heuristica — nao substitui revisao tecnica/legal.');
   }
-  pushAuto('bloco_estr_docs_recomendados', sug.docsRecomendados, 'Lista modelo de documentos sugeridos.');
-  pushAuto('bloco_estr_proximos_passos', sug.proximosPassos, 'Lista sugerida de proximos passos internos.');
+  const docsStruct = buildStructuredDocumentsChecklist(c, e, radarMatch);
+  pushAuto('bloco_estr_docs_cliente', docsStruct.cliente, 'Checklist documentos do cliente.');
+  pushAuto('bloco_estr_docs_tecnicos', docsStruct.tecnicos, 'Checklist documentos tecnicos.');
+  pushAuto('bloco_estr_docs_financeiros', docsStruct.financeiros, 'Checklist documentos financeiros/juridicos.');
+  pushAuto('bloco_estr_docs_edital_regulamento', docsStruct.edital, 'Checklist documentos do edital/regulamento.');
+  pushAuto('bloco_estr_docs_recomendados', docsStruct.agregado, 'Visao agregada dos documentos (compativel com campo legado).');
+  pushAuto(
+    'bloco_estr_proximos_passos',
+    multiList.length > 1 && primary
+      ? buildMultiNextSteps(multiList, primary)
+      : buildConsultorNextSteps(c, e) || sug.proximosPassos,
+    'Proximos passos consultivos.',
+  );
+  pushAuto(
+    'bloco_estr_riscos_pendencias',
+    multiList.length > 1 ? buildMultiRisks(c, multiList) : buildConsultorRisks(c, e, radarUse),
+    'Riscos e pendencias identificados automaticamente.',
+  );
+  pushAuto('bloco_estr_checklist_inicial', buildInitialChecklist(c, e, radarUse), 'Checklist inicial para acompanhamento com o cliente.');
+  pushAuto('bloco_estr_plano_trabalho', buildConsultorWorkPlan(c, e), 'Plano de trabalho preliminar em fases.');
+  pushAuto(
+    'bloco_estr_orcamento_resumo',
+    multiList.length > 1 && primary
+      ? buildMultiBudget(primary, multiList)
+      : buildConsultorBudgetSummary(c, e),
+    'Resumo financeiro preliminar.',
+  );
+  pushAuto('bloco_estr_orcamento_categorias', buildBudgetCategoriesHint(), 'Categorias sugeridas de gasto para detalhar orcamento.');
+  if (e?.contrapartida != null && e.contrapartida !== '') {
+    pushAuto('bloco_estr_orcamento_contrapartida', String(e.contrapartida), 'Contrapartida citada na ficha da oportunidade.');
+  }
+  pushAuto(
+    'bloco_estr_orcamento_observacoes',
+    'Revisar orcamento com o cliente e anexar planilha detalhada antes da submissao. Valores finais dependem do regulamento do edital.',
+    'Observacoes financeiras orientativas.',
+  );
+  if (!hasText(form.bloco_estr_pendencias)) {
+    pushAuto(
+      'bloco_estr_pendencias',
+      multiList.length > 1 ? buildMultiRisks(c, multiList) : buildConsultorRisks(c, e, radarUse),
+      'Pendencias criticas espelhadas na secao de riscos.',
+    );
+  }
+
+  if (multiList.length > 0 && primary) {
+    pushAuto(
+      'bloco_estr_oportunidades_selecionadas',
+      serializeOportunidadesSelecionadas(multiList, primary.key),
+      'JSON leve das oportunidades selecionadas (armazenamento local).',
+    );
+    pushAuto(
+      'bloco_estr_edital_ref_titulo',
+      multiList.length > 1
+        ? `${tituloCurto(primary.titulo)} (+ ${multiList.length - 1} complementar${multiList.length > 2 ? 'es' : ''})`
+        : primary.titulo,
+      'Titulo da oportunidade principal no conjunto selecionado.',
+    );
+    if (canWrite('bloco_estr_oportunidade_fonte') && primary.fonte_recurso) {
+      assign('bloco_estr_oportunidade_fonte', primary.fonte_recurso, {
+        source: SOURCE_EDITAL,
+        confidence: CONF_HIGH,
+        explanation: 'Fonte da oportunidade principal.',
+        needsReview: false,
+      });
+    }
+  }
+
   pushAuto('bloco_estr_diferencial_inovador', sug.diferencialInovador, 'Diferencial orientativos do motor atual.');
   pushAuto('bloco_estr_publico_mercado', sug.publicoMercado, 'Publico inicial baseado cadastro quando possivel.');
   pushAuto('bloco_estr_resultados_esperados', sug.resultadosEsperados, 'Orientacao geral sobre resultados esperados.');
@@ -360,6 +660,12 @@ export function buildPreCadastroDraft({
   }
 
   const sugestaoImpactos = hintImpactsForSector(sectorKey);
+
+  logPrecadastro('draft_autofill_success', {
+    autogerados_count: autogerados.length,
+    pendencias_count: pendencias.length,
+    edital_titulo: editalTitulo || null,
+  });
 
   return {
     mergedForm: form,

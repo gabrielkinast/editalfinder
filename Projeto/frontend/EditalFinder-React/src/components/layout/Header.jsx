@@ -1,15 +1,16 @@
 import { NavLink, useNavigate } from 'react-router-dom';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useAuth } from '../../contexts/AuthContext';
 import { usePermissions } from '../../hooks/usePermissions';
 import { useSettings } from '../../contexts/SettingsContext';
-import { ENABLE_CONCURSOS } from '../../config/env';
+import { ENABLE_CONCURSOS, ENABLE_CONSULTOR_WORKSPACE } from '../../config/env';
+import { logConsultorWorkspace } from '../../utils/consultorWorkspaceLog';
 import Modal from '../ui/Modal';
 import SettingsForm from '../admin/SettingsForm';
 
 export default function Header({ onSearch, searchPlaceholder = 'Buscar editais...' }) {
   const navigate = useNavigate();
-  const { logout } = useAuth();
+  const { logout, user } = useAuth();
   const permissions = usePermissions();
   const { settings } = useSettings();
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
@@ -20,18 +21,34 @@ export default function Header({ onSearch, searchPlaceholder = 'Buscar editais..
     navigate('/login');
   };
 
+  const workspaceMenuVisible =
+    ENABLE_CONSULTOR_WORKSPACE && Boolean(permissions.canViewCadastros);
+
+  useEffect(() => {
+    logConsultorWorkspace('menu_gate', {
+      ENABLE_CONSULTOR_WORKSPACE,
+      canViewCadastros: permissions.canViewCadastros,
+      userRole: user?.tipo ?? user?.tipo_usuario ?? null,
+      menuVisible: workspaceMenuVisible,
+    });
+  }, [
+    permissions.canViewCadastros,
+    user?.tipo,
+    user?.tipo_usuario,
+    workspaceMenuVisible,
+  ]);
+
   return (
     <header className="header">
       <div className="header-content">
-        <div className="header-top-mobile">
-          <div className="logo-header" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+        <div className="header-left">
+          <div className="logo-header">
             {settings.logoImage ? (
-              <img src={settings.logoImage} alt="Logo" style={{ maxHeight: '70px', width: 'auto' }} />
+              <img src={settings.logoImage} alt="Logo" className="logo-header-img" />
             ) : (
               <span>{settings.logoText}</span>
             )}
           </div>
-          
           <button
             type="button"
             className="menu-toggle-mobile"
@@ -43,22 +60,30 @@ export default function Header({ onSearch, searchPlaceholder = 'Buscar editais..
           </button>
         </div>
 
-        <nav id="main-nav" className={`main-nav ${isMenuOpen ? 'open' : ''}`}>
-          <NavLink 
-            to="/dashboard" 
+        <nav id="main-nav" className={`main-nav header-nav ${isMenuOpen ? 'open' : ''}`}>
+          <NavLink
+            to="/dashboard"
             className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}
             onClick={() => setIsMenuOpen(false)}
           >
             Editais
           </NavLink>
-          {/* Permissão para acessar a página de cadastros */}
           {permissions.canViewCadastros && (
-            <NavLink 
-              to="/cadastros" 
+            <NavLink
+              to="/cadastros"
               className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}
               onClick={() => setIsMenuOpen(false)}
             >
               Cadastros
+            </NavLink>
+          )}
+          {ENABLE_CONSULTOR_WORKSPACE && permissions.canViewCadastros && (
+            <NavLink
+              to="/workspace-consultor"
+              className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Workspace
             </NavLink>
           )}
           <NavLink
@@ -110,7 +135,7 @@ export default function Header({ onSearch, searchPlaceholder = 'Buscar editais..
           )}
         </nav>
 
-        <div className={`header-right ${isMenuOpen ? 'open' : ''}`}>
+        <div className={`header-actions header-right ${isMenuOpen ? 'open' : ''}`}>
           {onSearch && (
             <input
               type="text"
@@ -132,7 +157,9 @@ export default function Header({ onSearch, searchPlaceholder = 'Buscar editais..
               Configurações
             </button>
           )}
-          <button onClick={handleLogout} className="btn-logout">Sair</button>
+          <button type="button" onClick={handleLogout} className="btn-logout">
+            Sair
+          </button>
         </div>
       </div>
 
@@ -147,4 +174,3 @@ export default function Header({ onSearch, searchPlaceholder = 'Buscar editais..
     </header>
   );
 }
-

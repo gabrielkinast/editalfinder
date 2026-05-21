@@ -44,7 +44,7 @@ export function stampFooters(doc, clientNameShort) {
   const pw = doc.internal.pageSize.getWidth();
   const ph = doc.internal.pageSize.getHeight();
   const d = new Date().toLocaleDateString('pt-BR');
-  const leftLine = `Gerado pelo EditalFinder · Pre-cadastro de projeto · ${clientNameShort || 'Cliente'} · ${d}`;
+  const leftLine = `Gerado pelo EditalFinder · Relatorio preliminar de fomento · ${clientNameShort || 'Cliente'} · ${d}`;
   for (let i = 1; i <= n; i += 1) {
     doc.setPage(i);
     doc.setDrawColor(...[226, 232, 240]);
@@ -195,11 +195,48 @@ function drawCover(doc, model, theme) {
       cellPadding: 2,
     },
     theme: 'plain',
-    body: [['Pendencias / alertas internos automatizados']].concat((model.alertasEssenciais || []).length ? model.alertasEssenciais.map((a) => [a]) : [['Nenhum alerta critico automatizado despontado nesta versao.']]),
+    body: [['Pendencias para completar com o cliente']].concat(
+      (model.pendenciasLista || []).length
+        ? model.pendenciasLista.map((a) => [a])
+        : [['Nenhuma pendencia automatica detectada nesta versao.']],
+    ),
     columnStyles: { 0: { cellWidth: 'auto' } },
   });
 
   doc.addPage();
+}
+
+function renderOportunidadesPdfSection(doc, model, theme) {
+  const opp = model.oportunidadesPdf;
+  const head = [['Oportunidade', 'Score', 'Compat.', 'Fonte', 'Prazo']];
+  let y = banner(doc, theme, doc.lastAutoTable?.finalY ? doc.lastAutoTable.finalY + 14 : M + 14, 'Oportunidades selecionadas', 'Principal, complementares e observacao');
+
+  const blocks = [
+    ['Principal', opp.principal],
+    ['Complementares', opp.complementares],
+    ['Em observacao', opp.observacao],
+  ];
+
+  for (const [sectionTitle, rows] of blocks) {
+    if (!rows?.length) continue;
+    y = ensureVerticalSpace(doc, y, 40);
+    doc.setFont('helvetica', 'bold');
+    doc.setFontSize(9);
+    doc.setTextColor(...theme.textColor);
+    doc.text(sectionTitle, M, y);
+    y += 6;
+    autoTable(doc, {
+      startY: y,
+      margin: { left: M, right: M },
+      head,
+      headStyles: { fillColor: theme.primaryColor, fontSize: 8, textColor: [255, 255, 255] },
+      body: rows,
+      styles: { fontSize: 7.8, overflow: 'linebreak' },
+      theme: 'plain',
+      lineWidth: 0,
+    });
+    y = doc.lastAutoTable.finalY + 10;
+  }
 }
 
 function tableTwoCol(doc, theme, title, subtitle, pairs, extraY = M + 10) {
@@ -236,6 +273,23 @@ export function renderPreCadastroDocument(doc, model, theme, rawForm) {
   const S = theme.secondaryColor || theme.primaryColor;
 
   drawCover(doc, model, theme);
+
+  if (model.consultorSections?.length) {
+    tableTwoCol(
+      doc,
+      theme,
+      'Relatorio executivo',
+      'Visao consultiva para tomada de decisao',
+      model.consultorSections,
+    );
+  }
+
+  if (model.oportunidadesPdf?.hasRows) {
+    renderOportunidadesPdfSection(doc, model, theme);
+  }
+
+  doc.addPage();
+  banner(doc, theme, M + 12, 'Anexo tecnico', 'Formulario completo e dados cadastrais de apoio');
 
   let cursorY = banner(doc, theme, M + 12, 'Enquadramento em linhas / produtos');
 
@@ -326,12 +380,17 @@ export function renderPreCadastroDocument(doc, model, theme, rawForm) {
 
   banner(doc, theme, cursorY + 4, 'Dados economicos da empresa');
 
+  const economicoBody =
+    model.economicoLinhas?.length > 0
+      ? model.economicoLinhas
+      : [[{ content: model.economicoEmptyMessage || 'Dados economicos ainda nao informados.', colSpan: 2, styles: { fontStyle: 'italic' } }]];
+
   autoTable(doc, {
     startY: cursorY + 18,
     margin: { left: M, right: M },
     head: [['Indicador', 'Valor observado']],
     headStyles: { fillColor: S, textColor: [255, 255, 255] },
-    body: model.economicoLinhas,
+    body: economicoBody,
     alternateRowStyles: { fillColor: [252, 252, 254] },
     columnStyles: { 0: { cellWidth: 72, fontStyle: 'bold' }, 1: { cellWidth: 'auto' } },
     styles: { fontSize: 8.2 },
@@ -447,7 +506,7 @@ export function renderPreCadastroDocument(doc, model, theme, rawForm) {
     autoTable(doc, {
       startY: doc.lastAutoTable.finalY + 6,
       margin: { left: M, right: M },
-      body: ufs.rows.map((r) => [{ content: ufs.message || 'Quadro ainda pendente.', colSpan: 6, styles: { fontStyle: 'italic' } }]),
+      body: [[{ content: ufs.message || 'Orcamento preliminar ainda nao preenchido.', colSpan: 6, styles: { fontStyle: 'italic' } }]],
     });
   } else {
     autoTable(doc, {

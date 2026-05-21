@@ -3,10 +3,10 @@ import PrecadFieldMeta from './PrecadFieldMeta';
 export default function PrecadProjectScope({ form, fieldIntel, onChangeTxt }) {
   return (
     <section id="precad-contexto-projeto" className="precad-scope-section">
-      <h3 className="precad-section-title">Projeto / escopo</h3>
-      <p className="precad-muted small">
-        Campos alinhados à narrativa estratégica do documento. O formulário institucional completo permanece na aba
-        seguinte para detalhes técnicos finos.
+      <h3 className="precad-section-title">C) Escopo inicial</h3>
+      <p className="precad-section-hint precad-muted small">
+        Problema, solução, diferencial e entregáveis — linguagem clara para o cliente. Detalhes técnicos finos ficam no
+        formulário completo.
       </p>
 
       <div className="precad-form-grid">

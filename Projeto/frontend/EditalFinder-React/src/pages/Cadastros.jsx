@@ -1,9 +1,11 @@
 import { useState, useEffect, useMemo, useCallback } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Header from '../components/layout/Header';
 import AdminTable from '../components/admin/AdminTable';
 import UserForm from '../components/admin/UserForm';
 import ClientForm from '../components/admin/ClientForm';
 import ProjetoPrecadastroForm from '../components/admin/ProjetoPrecadastroForm';
+import { readPreProjetoContext } from '../utils/precadastro/openPreProjetoFromOpportunity';
 import EditalForm from '../components/admin/EditalForm';
 import Modal from '../components/ui/Modal';
 import { dataService } from '../services/dataService';
@@ -19,6 +21,10 @@ import {
   sanitizeClientWritePayload,
   sessionUserId,
 } from '../utils/permissions';
+import {
+  clientPayloadFromFormState,
+  mergeClientWritePayload,
+} from '../utils/cliente/clientePerfilConsultivo';
 import {
   buildInitialPrecadastroState,
   loadPrecadEnvelope,
@@ -49,9 +55,16 @@ function precadBadgeDisplay(info) {
 }
 
 export default function Cadastros() {
+  const navigate = useNavigate();
   const permissions = usePermissions();
   const { user, loading: authLoading } = useAuth();
-  const [activeTab, setActiveTab] = useState(permissions.canManageUsers ? 'usuarios' : 'clientes');
+  const adminCadastros = isAdminUser(user);
+  const showClientesTab = adminCadastros;
+  const [activeTab, setActiveTab] = useState(() => {
+    if (permissions.canManageUsers) return 'usuarios';
+    if (isAdminUser(user)) return 'clientes';
+    return 'editais-cadastrados';
+  });
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -70,21 +83,14 @@ export default function Cadastros() {
   const precadContext = useMemo(() => {
     const id = precadCliente?.id_cliente;
     if (id == null) return { editalAssociado: null, radarMatch: null };
-    try {
-      const raw = sessionStorage.getItem(`precadastro_context_${id}`);
-      if (!raw) return { editalAssociado: null, radarMatch: null };
-      const j = JSON.parse(raw);
-      const titulo = j.titulo || j.titulo_edital || j.tituloEdital;
-      return {
-        editalAssociado: titulo ? { titulo: String(titulo) } : null,
-        radarMatch: titulo
-          ? { tituloEdital: String(titulo), scorePct: typeof j.scorePct === 'number' ? j.scorePct : undefined }
-          : null,
-      };
-    } catch {
-      return { editalAssociado: null, radarMatch: null };
-    }
+    return readPreProjetoContext(id);
   }, [precadCliente?.id_cliente]);
+
+  useEffect(() => {
+    if (!showClientesTab && activeTab === 'clientes') {
+      setActiveTab(permissions.canManageUsers ? 'usuarios' : 'editais-cadastrados');
+    }
+  }, [showClientesTab, activeTab, permissions.canManageUsers]);
 
   const loadData = useCallback(async () => {
     setLoading(true);
@@ -269,14 +275,17 @@ export default function Cadastros() {
             alert('Você não tem permissão para editar este cliente.');
             return;
           }
-          const patch = sanitizeClientWritePayload(user, formData);
+          const patch = sanitizeClientWritePayload(
+            user,
+            mergeClientWritePayload(editingItem, formData),
+          );
           await dataService.updateClient(editingItem.id_cliente, patch, { user });
         } else {
           if (!isAdminUser(user) && sessionUserId(user) == null) {
             alert('Sua sessão não tem id_usuario. Faça login novamente para cadastrar clientes.');
             return;
           }
-          const payload = attachOwnerToClientPayload(user, formData);
+          const payload = attachOwnerToClientPayload(user, clientPayloadFromFormState(formData));
           await dataService.createClient(payload, { user });
         }
       } else if (activeTab === 'editais-cadastrados') {
@@ -428,13 +437,15 @@ export default function Cadastros() {
                 <span className="icon">👤</span> Usuários
               </button>
             )}
-            <button
-              type="button"
-              className={`sidebar-link ${activeTab === 'clientes' ? 'active' : ''}`}
-              onClick={() => setActiveTab('clientes')}
-            >
-              <span className="icon">🏢</span> Clientes
-            </button>
+            {showClientesTab ? (
+              <button
+                type="button"
+                className={`sidebar-link ${activeTab === 'clientes' ? 'active' : ''}`}
+                onClick={() => setActiveTab('clientes')}
+              >
+                <span className="icon">🏢</span> Clientes
+              </button>
+            ) : null}
             <button
               type="button"
               className={`sidebar-link ${activeTab === 'editais-cadastrados' ? 'active' : ''}`}
@@ -446,13 +457,40 @@ export default function Cadastros() {
         </aside>
         <main className="admin-main">
           <section className="admin-section active">
-            {activeTab === 'clientes' && (
+            {!adminCadastros && (
+              <div className="cad-workspace-redirect-banner" role="status">
+                <div>
+                  <strong>Gestão de clientes no Workspace</strong>
+                  <p className="cad-hero-sub" style={{ margin: '6px 0 0' }}>
+                    A gestão de clientes e pré-projetos agora fica no Workspace do Consultor. Cadastros
+                    permanece focado em administração (usuários e editais).
+                  </p>
+                </div>
+                <button
+                  type="button"
+                  className="btn-primary"
+                  onClick={() => navigate('/workspace-consultor')}
+                >
+                  Ir para Workspace
+                </button>
+              </div>
+            )}
+
+            {activeTab === 'clientes' && showClientesTab && (
               <>
                 <div className="cad-hero cad-hero-clientes">
                   <div className="cad-hero-text">
                     <h2 className="cad-hero-title">Clientes</h2>
                     <p className="cad-hero-sub">
-                      Gerencie perfis de empresas, instituições e projetos usados no Radar de Fomento.
+                      Acesso administrativo legado. O fluxo principal de clientes e pré-projetos está no{' '}
+                      <button
+                        type="button"
+                        className="cad-inline-link"
+                        onClick={() => navigate('/workspace-consultor')}
+                      >
+                        Workspace do Consultor
+                      </button>
+                      .
                     </p>
                   </div>
                   {permissions.canCreate && (
@@ -551,7 +589,7 @@ export default function Cadastros() {
               </div>
             )}
 
-            {activeTab === 'clientes' ? (
+            {activeTab === 'clientes' && showClientesTab ? (
               <div className="cad-filters-panel">
                 <div className="cad-filters-grid">
                   <label className="cad-filter-field cad-filter-grow">
@@ -738,7 +776,11 @@ export default function Cadastros() {
         <Modal
           onClose={() => setIsModalOpen(false)}
           className={
-            activeTab === 'clientes' || activeTab === 'editais-cadastrados' ? 'modal-large' : ''
+            activeTab === 'clientes'
+              ? 'modal-large modal-client-form'
+              : activeTab === 'editais-cadastrados'
+                ? 'modal-large'
+                : ''
           }
         >
           <div className="modal-header">

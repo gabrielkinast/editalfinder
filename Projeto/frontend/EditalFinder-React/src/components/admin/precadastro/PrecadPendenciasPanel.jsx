@@ -9,13 +9,25 @@ export default function PrecadPendenciasPanel({
 }) {
   const rq = completeness?.requiredMissing || [];
   const rec = completeness?.recommendedMissing || [];
+  const consult = completeness?.consultivePendencies || [];
 
   return (
     <div className="precad-pend-panel">
       <h3 className="precad-subtitle">Pendências</h3>
       <p className="precad-muted small">
         {rq.length} obrigatória{rq.length === 1 ? '' : 's'} · {rec.length} recomendada{rec.length === 1 ? '' : 's'}
+        {consult.length ? ` · ${consult.length} ação${consult.length === 1 ? '' : 'ões'} consultiva${consult.length === 1 ? '' : 's'}` : ''}
       </p>
+      {consult.length ? (
+        <div className="precad-pend-block precad-pend-block--consult">
+          <h4>Para fechar com o cliente</h4>
+          <ul className="precad-pend-list">
+            {consult.map((t) => (
+              <li key={`cv-${t}`}>{t}</li>
+            ))}
+          </ul>
+        </div>
+      ) : null}
       {rq.length ? (
         <div className="precad-pend-block">
           <h4>Obrigatórias</h4>

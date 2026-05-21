@@ -27,6 +27,7 @@ import {
   radarPerfPreWorker,
   radarPerfWorkerEvent,
 } from '../utils/radarPerfLog';
+import { isNonFatalRadarError } from '../utils/radar/radarErrorClassification';
 
 const radarMatchCache = new Map();
 const MAX_CACHE_ENTRIES = 24;
@@ -157,6 +158,8 @@ export function useRadarMatches({
   const abortRef = useRef(null);
   const workerJobIdRef = useRef(null);
   const resultsSnapshotRef = useRef({ resultsForClienteId: '', count: 0 });
+  const clienteRef = useRef(cliente);
+  clienteRef.current = cliente;
   const [reloadNonce, setReloadNonce] = useState(0);
 
   resultsSnapshotRef.current = {
@@ -205,6 +208,9 @@ export function useRadarMatches({
       return;
     }
 
+    const clienteActive = clienteRef.current;
+    if (!clienteActive) return;
+
     const edsCatalog = Array.isArray(editais) ? editais : [];
     const headId = edsCatalog[0]?.id;
     const tailId = edsCatalog[edsCatalog.length - 1]?.id;
@@ -226,7 +232,7 @@ export function useRadarMatches({
     };
 
     const cacheKey = [
-      buildRadarCacheKey(cliente, edsCatalog.length, headId, tailId, mergedOptions),
+      buildRadarCacheKey(clienteActive, edsCatalog.length, headId, tailId, mergedOptions),
       editaisSig,
       `pf:${RADAR_USE_CATALOG_PREFILTER ? RADAR_PREFILTER_VERSION : 'off'}`,
       `v${reloadNonce}`,
@@ -321,7 +327,7 @@ export function useRadarMatches({
       const sessionLookupT0 = nowMs();
       const sessionLoad = loadRadarSessionCache({
         clienteId,
-        cliente,
+        cliente: clienteActive,
         editais: edsCatalog,
         options: mergedOptions,
         ...sessionFp,
@@ -491,6 +497,7 @@ export function useRadarMatches({
       const partialRows = sanitizeRadarResults(p.rows, { source: sourceLabel });
       setResults(partialRows);
       setResultsForClienteId(clienteId);
+      setError(null);
       setIsPartial(true);
       setComputeSource(sourceLabel);
       cachePut(cacheKey, {
@@ -548,7 +555,7 @@ export function useRadarMatches({
       if (perfId) {
         radarPerfMark(perfId, 'worker_fallback', { jobId, cliente_id: clienteId, reason });
       }
-      const out = await recomendarEditaisAsync(cliente, edsWorker, mergedOptions, {
+      const out = await recomendarEditaisAsync(clienteActive, edsWorker, mergedOptions, {
         chunkSize,
         signal: ac.signal,
         onProgress: onProgressCb,
@@ -588,7 +595,7 @@ export function useRadarMatches({
             const workerOut = await runRadarMatchViaWorker(
               {
                 jobId,
-                cliente,
+                cliente: clienteActive,
                 editais: edsWorker,
                 options: mergedOptions,
                 chunkSize,
@@ -646,8 +653,8 @@ export function useRadarMatches({
         cachePut(cacheKey, payload);
         saveRadarSessionCache({
           clienteId,
-          cliente,
-          editais: eds,
+          cliente: clienteActive,
+          editais: edsCatalog,
           options: mergedOptions,
           rows: fullRows,
           meta: out.meta,
@@ -656,12 +663,14 @@ export function useRadarMatches({
         });
         setResults(fullRows);
         setResultsForClienteId(clienteId);
-        setMeta(metaOut);
+        setMeta(out.meta ?? null);
+        setError(null);
         setIsPartial(false);
         setIsCalculating(false);
         setIsSessionRefreshing(false);
 
         const itemsTotal = out.rows?.length ?? 0;
+        const metaOut = out.meta;
         if (import.meta.env?.DEV) {
           const m = out.meta;
           const fullLabel = source === 'worker' ? 'worker_full' : 'full_results';
@@ -722,14 +731,18 @@ export function useRadarMatches({
           workerJobIdRef.current = null;
         }
       } catch (e) {
-        if (e?.name === 'AbortError') {
+        if (e?.name === 'AbortError' || isNonFatalRadarError(e)) {
           if (generationRef.current === gen) {
             workerJobIdRef.current = null;
             setIsPreparing(false);
             if (sessionBootstrap) setIsSessionRefreshing(false);
           }
           if (import.meta.env?.DEV) {
-            radarPerfWorkerEvent('worker_cancel', { jobId, cliente_id: clienteId });
+            radarPerfWorkerEvent('worker_cancel', {
+              jobId,
+              cliente_id: clienteId,
+              non_fatal: isNonFatalRadarError(e),
+            });
           }
           return;
         }
@@ -737,9 +750,12 @@ export function useRadarMatches({
         workerJobIdRef.current = null;
         setIsSessionRefreshing(false);
         setIsPreparing(false);
+        const snapNow = resultsSnapshotRef.current;
+        const keepExistingResults =
+          snapNow.resultsForClienteId === clienteId && snapNow.count > 0;
         console.error('[useRadarMatches]', e);
         setError(e?.message || 'Não foi possível calcular o radar.');
-        if (!sessionBootstrap) {
+        if (!sessionBootstrap && !keepExistingResults) {
           setResults([]);
           setResultsForClienteId('');
           setIsPartial(false);
@@ -768,12 +784,14 @@ export function useRadarMatches({
     };
   }, [
     enabled,
-    cliente,
     clienteId,
     editaisSig,
     optKey,
     reloadNonce,
     chunkSize,
+    catalogFingerprintProp,
+    clienteFingerprintProp,
+    optionsFingerprintProp,
   ]);
 
   const pct =

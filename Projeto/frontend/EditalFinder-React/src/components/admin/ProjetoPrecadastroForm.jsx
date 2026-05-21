@@ -4,7 +4,9 @@ import {
   savePrecadEnvelope,
   fingerprintPrecadContext,
   loadPrecadEnvelope,
+  migratePrecadForm,
 } from '../../utils/precadastroProjetoInitialState';
+import { logPrecadastro } from '../../utils/precadastro/precadastroLog';
 import {
   exportPrecadastroProjetoPdf,
   buildPrecadastroProjetoPdfBlob,
@@ -32,14 +34,33 @@ import PrecadLegacyFormBody from './precadastro/PrecadLegacyFormBody';
 import PrecadIntelToolbar from './precadastro/PrecadIntelToolbar';
 import PrecadPendenciasPanel from './precadastro/PrecadPendenciasPanel';
 import PrecadImpactHints from './precadastro/PrecadImpactHints';
+import PrecadExecutiveSummary from './precadastro/PrecadExecutiveSummary';
+import PrecadWorkPlanSection from './precadastro/PrecadWorkPlanSection';
+import PrecadBudgetSection from './precadastro/PrecadBudgetSection';
+import PrecadDocumentsRisksSection from './precadastro/PrecadDocumentsRisksSection';
+import PrecadOpportunitiesConsidered from './precadastro/PrecadOpportunitiesConsidered';
+import { calculateClientProfileCompleteness } from '../../utils/cliente/calculateClientProfileCompleteness';
 
 /** Primeira montagem: carrega envelope local ou primeiro rascunho inteligente. */
-function iniciarPacoteInteligente(cliente, editalAssociado, radarMatch) {
-  const base = buildInitialPrecadastroState(cliente, { edital: editalAssociado, radarMatch });
+function iniciarPacoteInteligente(cliente, editalAssociado, radarMatch, initialEnvelope = null) {
   const fp = fingerprintPrecadContext(editalAssociado, '', radarMatch);
+  if (initialEnvelope?.form) {
+    return {
+      form: migratePrecadForm(initialEnvelope.form),
+      fieldIntel: initialEnvelope.fieldIntel || {},
+      editalFingerprint: fp,
+      hadStoredDraft: true,
+    };
+  }
+  const base = buildInitialPrecadastroState(cliente, { edital: editalAssociado, radarMatch });
   const env = loadPrecadEnvelope(cliente?.id_cliente, base, fp);
   if (env.hadStoredDraft) {
-    return { form: env.form, fieldIntel: env.fieldIntel, editalFingerprint: fp };
+    return {
+      form: migratePrecadForm(env.form),
+      fieldIntel: env.fieldIntel,
+      editalFingerprint: fp,
+      hadStoredDraft: true,
+    };
   }
   const draft = buildPreCadastroDraft({
     cliente,
@@ -49,7 +70,12 @@ function iniciarPacoteInteligente(cliente, editalAssociado, radarMatch) {
     existingFieldIntel: env.fieldIntel,
     options: {},
   });
-  return { form: draft.mergedForm, fieldIntel: draft.mergedFieldIntel, editalFingerprint: fp };
+  return {
+    form: migratePrecadForm(draft.mergedForm),
+    fieldIntel: draft.mergedFieldIntel,
+    editalFingerprint: fp,
+    hadStoredDraft: false,
+  };
 }
 
 const STATUS_LABEL = {
@@ -59,17 +85,32 @@ const STATUS_LABEL = {
 };
 
 const NAV_FIELD_TARGETS = [
-  { id: 'precad-strip', label: 'Resumo empresa' },
-  { id: 'precad-contexto-projeto', label: 'Projeto / narrativa' },
-  { id: 'precad-linhas-produtos', label: 'Linhas de produto' },
+  { id: 'precad-resumo-executivo', label: 'Resumo executivo' },
+  { id: 'precad-fit-aderencia', label: 'Aderência' },
+  { id: 'precad-contexto-projeto', label: 'Escopo' },
+  { id: 'precad-plano-trabalho', label: 'Plano de trabalho' },
+  { id: 'precad-orcamento', label: 'Orçamento' },
+  { id: 'precad-documentos', label: 'Documentos' },
+  { id: 'precad-proximos-passos', label: 'Próximos passos' },
 ];
 
-export default function ProjetoPrecadastroForm({ cliente, onCancel, editalAssociado = null, radarMatch = null }) {
+export default function ProjetoPrecadastroForm({
+  cliente,
+  onCancel,
+  editalAssociado = null,
+  radarMatch = null,
+  onDraftSaved = null,
+  initialEnvelope = null,
+  oportunidadesSelecionadas = null,
+  modalSize = 'default',
+}) {
   const theme = useMemo(() => getClientTheme(cliente), [cliente]);
   const cssVars = useMemo(() => themeToCssVars(theme), [theme]);
 
   const packRef = useRef(null);
-  if (!packRef.current) packRef.current = iniciarPacoteInteligente(cliente, editalAssociado, radarMatch);
+  if (!packRef.current) {
+    packRef.current = iniciarPacoteInteligente(cliente, editalAssociado, radarMatch, initialEnvelope);
+  }
   const { editalFingerprint } = packRef.current;
 
   const [form, setForm] = useState(() => packRef.current.form);
@@ -83,7 +124,20 @@ export default function ProjetoPrecadastroForm({ cliente, onCancel, editalAssoci
   );
 
   const impactHints = useMemo(() => hintImpactsForSector(classifySectorKey(cliente)), [cliente]);
-  const completeness = useMemo(() => calculatePreCadastroCompleteness(form), [form]);
+  const completeness = useMemo(() => {
+    const c = calculatePreCadastroCompleteness(form);
+    logPrecadastro('completeness_calculated', {
+      score: c.score,
+      status: c.status,
+      consultive_count: c.consultivePendencies?.length ?? 0,
+    });
+    return c;
+  }, [form]);
+
+  const clientProfileCompleteness = useMemo(
+    () => (cliente ? calculateClientProfileCompleteness(cliente) : null),
+    [cliente],
+  );
 
   const empresaSlug = useMemo(
     () =>
@@ -178,8 +232,7 @@ export default function ProjetoPrecadastroForm({ cliente, onCancel, editalAssoci
       bloco2_metas_fisicas: (prev.bloco2_metas_fisicas || []).filter((_, idx) => idx !== i),
     }));
 
-  const refPdfUrl =
-    `${import.meta.env.BASE_URL.replace(/\/$/, '')}` + `/docs/formulario-apresentacao-projeto-referencia.pdf`;
+  const hadStoredDraft = packRef.current?.hadStoredDraft === true;
 
   const scrollToPrecadAnchor = (id) => {
     window.requestAnimationFrame(() => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' }));
@@ -201,13 +254,17 @@ export default function ProjetoPrecadastroForm({ cliente, onCancel, editalAssoci
       editalFingerprint,
     );
     alert('Rascunho (com meta de inteligência) guardado neste navegador.');
+    onDraftSaved?.();
   };
 
   const handlePdf = () => {
+    logPrecadastro('pdf_export_start', { id_cliente: cliente?.id_cliente });
     try {
       exportPrecadastroProjetoPdf(form, buildPdfMeta());
+      logPrecadastro('pdf_export_success', { id_cliente: cliente?.id_cliente });
     } catch (e) {
       console.error(e);
+      logPrecadastro('pdf_export_error', { message: e?.message });
       alert('Falha ao gerar PDF.');
     }
   };
@@ -228,59 +285,111 @@ export default function ProjetoPrecadastroForm({ cliente, onCancel, editalAssoci
     form.bloco_estr_edital_ref_titulo || editalAssociado?.titulo || radarMatch?.tituloEdital || '';
 
   const aderenciaChip = form.bloco_estr_aderencia_nivel || suggestions.aderenciaNivel;
+  const isWorkspaceFull = modalSize === 'workspaceLarge';
+
+  const profileHint =
+    clientProfileCompleteness && clientProfileCompleteness.score < 70 ? (
+      <p className="precad-client-profile-hint" role="status">
+        Perfil do cliente: {clientProfileCompleteness.score}% completo —{' '}
+        {clientProfileCompleteness.radarImprovementHint} Completar o cadastro reduz pendências no PDF.
+      </p>
+    ) : null;
+
+  const intelToolbar = (
+    <PrecadIntelToolbar
+      defaultOpen={!hadStoredDraft}
+      onSmartDraft={() => {
+        if (
+          window.confirm(
+            'Gerar sugestões automáticas usando cadastro, edital e Radar (mantém textos marcados como manuais e só preenche campos ainda vazios)?',
+          )
+        ) {
+          reaplicarSugestoesInteligentes();
+        }
+      }}
+      onFillLacunas={() => reaplicarSugestoesInteligentes()}
+      onLimparAutos={() => {
+        const cleared = clearAutoSuggestions(form, fieldIntel);
+        setForm(cleared.form);
+        setFieldIntel(cleared.fieldIntel);
+      }}
+      onRevisarPendencias={() => {
+        setTab('visao');
+        scrollToPrecadAnchor('precad-pend-anchor');
+      }}
+      onScrollProject={() => {
+        setTab('escopo');
+        scrollToPrecadAnchor('precad-contexto-projeto');
+      }}
+    />
+  );
 
   return (
-    <div className="precad-wrap precad-prof-wrap" style={cssVars}>
-      <PrecadastroHeader
-        empresaNome={cliente?.nome_empresa}
-        clientId={cliente?.id_cliente}
-        editalTitulo={editalTituloHeader}
-        aderenciaLabel={aderenciaChip}
-        completudePct={completeness.score}
-        pendencias={{
-          obrigatorias: completeness.requiredMissing.length,
-          recomendadas: completeness.recommendedMissing.length,
-        }}
-        statusLabel={STATUS_LABEL[form.bloco_estr_status_precadastro] || STATUS_LABEL.rascunho}
-        logoUrl={theme.logoUrl || undefined}
-        onSaveDraft={handleSalvarRascunho}
-        onExportPdf={handlePdf}
-        onPreviewPdf={handlePreview}
-        onClose={onCancel}
-      />
-
-      <PrecadIntelToolbar
-        onSmartDraft={() => {
-          if (
-            window.confirm(
-              'Gerar rascunho inteligente usando cadastro, edital e Radar (mantém textos marcados como manuais e só preenche campos ainda vazios)?',
-            )
-          ) {
-            reaplicarSugestoesInteligentes();
-          }
-        }}
-        onFillLacunas={() => reaplicarSugestoesInteligentes()}
-        onLimparAutos={() => {
-          const cleared = clearAutoSuggestions(form, fieldIntel);
-          setForm(cleared.form);
-          setFieldIntel(cleared.fieldIntel);
-        }}
-        onRevisarPendencias={() => {
-          setTab('visao');
-          scrollToPrecadAnchor('precad-pend-anchor');
-        }}
-        onScrollProject={() => {
-          setTab('contexto');
-          scrollToPrecadAnchor('precad-contexto-projeto');
-        }}
-      />
-
-      <PrecadNavTabs active={tab} onChange={setTab} />
+    <div
+      className={`precad-wrap precad-prof-wrap${
+        modalSize === 'large' || isWorkspaceFull ? ' precad-wrap--workspace-large' : ''
+      }${isWorkspaceFull ? ' precad-wrap--workspace-full' : ''}`}
+      style={cssVars}
+    >
+      {isWorkspaceFull ? (
+        <div className="precad-workspace-top">
+          <p className="precad-workspace-flow-hint" role="note">
+            Os campos foram preenchidos a partir do perfil do cliente e das oportunidades selecionadas. Revise
+            antes de enviar ao cliente.
+          </p>
+          <PrecadastroHeader
+            empresaNome={cliente?.nome_empresa}
+            clientId={cliente?.id_cliente}
+            editalTitulo={editalTituloHeader}
+            aderenciaLabel={aderenciaChip}
+            completudePct={completeness.score}
+            pendencias={{
+              obrigatorias: completeness.requiredMissing.length,
+              recomendadas: completeness.recommendedMissing.length,
+            }}
+            statusLabel={STATUS_LABEL[form.bloco_estr_status_precadastro] || STATUS_LABEL.rascunho}
+            logoUrl={theme.logoUrl || undefined}
+            onSaveDraft={handleSalvarRascunho}
+            onExportPdf={handlePdf}
+            onPreviewPdf={handlePreview}
+            onClose={onCancel}
+          />
+          {profileHint}
+          <PrecadNavTabs active={tab} onChange={setTab} compact />
+        </div>
+      ) : (
+        <>
+          <PrecadastroHeader
+            empresaNome={cliente?.nome_empresa}
+            clientId={cliente?.id_cliente}
+            editalTitulo={editalTituloHeader}
+            aderenciaLabel={aderenciaChip}
+            completudePct={completeness.score}
+            pendencias={{
+              obrigatorias: completeness.requiredMissing.length,
+              recomendadas: completeness.recommendedMissing.length,
+            }}
+            statusLabel={STATUS_LABEL[form.bloco_estr_status_precadastro] || STATUS_LABEL.rascunho}
+            logoUrl={theme.logoUrl || undefined}
+            onSaveDraft={handleSalvarRascunho}
+            onExportPdf={handlePdf}
+            onPreviewPdf={handlePreview}
+            onClose={onCancel}
+          />
+          {profileHint}
+          <PrecadNavTabs active={tab} onChange={setTab} />
+        </>
+      )}
 
       <div className="precad-scroll precad-prof-scroll">
+        {intelToolbar}
         {tab === 'visao' && (
           <div className="precad-tab-panel">
             <PrecadImpactHints hints={impactHints} />
+            <PrecadOpportunitiesConsidered
+              form={form}
+              oportunidadesSelecionadas={oportunidadesSelecionadas}
+            />
 
             <div className="precad-visao-grid">
               <PrecadCompletionStatus form={form} completeness={completeness} />
@@ -306,7 +415,16 @@ export default function ProjetoPrecadastroForm({ cliente, onCancel, editalAssoci
               completeness={completeness}
               fieldTargets={NAV_FIELD_TARGETS}
               onNavigateField={(id) => {
-                if (id === 'precad-contexto-projeto' || id === 'precad-linhas-produtos') setTab('contexto');
+                if (id === 'precad-resumo-executivo') setTab('resumo');
+                else if (id === 'precad-fit-aderencia') setTab('aderencia');
+                else if (id === 'precad-contexto-projeto' || id === 'precad-plano-trabalho') setTab('escopo');
+                else if (id === 'precad-orcamento') setTab('orcamento');
+                else if (
+                  id === 'precad-documentos' ||
+                  id === 'precad-proximos-passos' ||
+                  id === 'precad-riscos'
+                )
+                  setTab('riscos');
                 scrollToPrecadAnchor(id);
               }}
             />
@@ -321,15 +439,53 @@ export default function ProjetoPrecadastroForm({ cliente, onCancel, editalAssoci
           </div>
         )}
 
-        {tab === 'contexto' && (
+        {tab === 'resumo' && (
+          <div className="precad-tab-panel">
+            <PrecadExecutiveSummary
+              form={form}
+              fieldIntel={fieldIntel}
+              onChangeTxt={onChangeTxt}
+              clienteNome={cliente?.nome_empresa || cliente?.razao_social}
+            />
+          </div>
+        )}
+
+        {tab === 'aderencia' && (
+          <div className="precad-tab-panel">
+            <PrecadFitSection form={form} fieldIntel={fieldIntel} onChangeTxt={onChangeTxt} />
+          </div>
+        )}
+
+        {tab === 'escopo' && (
           <div className="precad-tab-panel precad-context-stack">
-            <PrecadCompanyStrip form={form} />
+            <PrecadProjectScope form={form} fieldIntel={fieldIntel} onChangeTxt={onChangeTxt} />
+            <PrecadWorkPlanSection
+              form={form}
+              fieldIntel={fieldIntel}
+              onChangeTxt={onChangeTxt}
+              onGoCompleto={() => setTab('completo')}
+            />
             <div id="precad-linhas-produtos">
               <PrecadProductLines form={form} onChangeChk={onChangeChk} linesMeta={suggestions.linhasMeta} />
             </div>
-            <PrecadProjectScope form={form} fieldIntel={fieldIntel} onChangeTxt={onChangeTxt} />
-            <PrecadFitSection form={form} fieldIntel={fieldIntel} onChangeTxt={onChangeTxt} />
             <PrecadObservations form={form} onChangeTxt={onChangeTxt} />
+          </div>
+        )}
+
+        {tab === 'orcamento' && (
+          <div className="precad-tab-panel">
+            <PrecadBudgetSection
+              form={form}
+              fieldIntel={fieldIntel}
+              onChangeTxt={onChangeTxt}
+              onChangeChk={onChangeChk}
+            />
+          </div>
+        )}
+
+        {tab === 'riscos' && (
+          <div className="precad-tab-panel">
+            <PrecadDocumentsRisksSection form={form} fieldIntel={fieldIntel} onChangeTxt={onChangeTxt} />
           </div>
         )}
 
@@ -355,12 +511,13 @@ export default function ProjetoPrecadastroForm({ cliente, onCancel, editalAssoci
         )}
       </div>
 
-      <div className="precad-footer precad-footer-prof">
-        <a className="precad-ref-link" href={refPdfUrl} target="_blank" rel="noopener noreferrer">
-          Ver modelo oficial (PDF)
-        </a>
-        <span className="precad-muted small">Origem das sugestões aparece nos campos da aba Contexto com badges.</span>
-      </div>
+      {!isWorkspaceFull ? (
+        <div className="precad-footer precad-footer-prof precad-footer--cadastros">
+          <span className="precad-muted small">
+            Rascunho salvo localmente neste navegador. Use Salvar rascunho antes de fechar.
+          </span>
+        </div>
+      ) : null}
     </div>
   );
 }

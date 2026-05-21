@@ -1,4 +1,5 @@
 import { useState, useEffect, useMemo, useCallback, useRef } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import Header from '../components/layout/Header';
 import ListaClientes from '../components/radar/ListaClientes';
 import RadarResultsSkeleton from '../components/radar/RadarResultsSkeleton';
@@ -69,6 +70,7 @@ function salvarFavoritos(favs) {
 }
 
 export default function RadarFomento() {
+  const [searchParams] = useSearchParams();
   const { user } = useAuth();
   const favHook = useEditalFavorites();
   const favoritosRemote = favHook.favoritosRemoteEnabled;
@@ -183,6 +185,17 @@ export default function RadarFomento() {
       setClienteIdSelecionado(idClienteKey(clientes[0], 0));
     }
   }, [loading, clientes, clienteIdSelecionado]);
+
+  /** Deep link: /radar-fomento?cliente=<id> — aplica só quando o query param muda (não sobrescreve clique manual). */
+  useEffect(() => {
+    if (loading || clientes.length === 0) return;
+    const q = searchParams.get('cliente');
+    if (!q) return;
+    const found = clientePorIdNaLista(clientes, q);
+    if (!found) return;
+    const idx = clientes.indexOf(found);
+    setClienteIdSelecionado(idClienteKey(found, idx >= 0 ? idx : 0));
+  }, [loading, clientes, searchParams]);
 
   // Conjunto de IDs de editais realmente existentes (carregados agora)
   const editaisIdsExistentes = useMemo(

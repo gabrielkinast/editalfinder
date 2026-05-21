@@ -52,8 +52,28 @@ export default function PrecadCompletionStatus({ form, completeness }) {
           {!checks.objetivo ? <span className="hint">pendente</span> : null}
         </li>
         <li className={checks.escopo ? 'ok' : 'pendente'}>
-          Problema / escopo (finalidade)
+          Escopo inicial
           {!checks.escopo ? <span className="hint">pendente</span> : null}
+        </li>
+        <li className={checks.aderencia ? 'ok' : 'pendente'}>
+          Aderência ao edital
+          {!checks.aderencia ? <span className="hint">pendente</span> : null}
+        </li>
+        <li className={checks.documentos ? 'ok' : 'pendente'}>
+          Documentos listados
+          {!checks.documentos ? <span className="hint">pendente</span> : null}
+        </li>
+        <li className={checks.riscos ? 'ok' : 'pendente'}>
+          Riscos mapeados
+          {!checks.riscos ? <span className="hint">pendente</span> : null}
+        </li>
+        <li className={checks.orcamento ? 'ok' : 'pendente'}>
+          Orçamento preliminar
+          {!checks.orcamento ? <span className="hint">pendente</span> : null}
+        </li>
+        <li className={checks.cronograma ? 'ok' : 'pendente'}>
+          Plano / cronograma
+          {!checks.cronograma ? <span className="hint">pendente</span> : null}
         </li>
       </ul>
     </div>

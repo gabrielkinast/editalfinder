@@ -80,6 +80,15 @@ export const EDITAL_FEEDBACK_MOCK_DEV = truthyEnv('VITE_EDITAL_FEEDBACK_MOCK_DEV
 /** E-mail de suporte (referência; envio real no backend). */
 export const SUPPORT_EMAIL = str('VITE_SUPPORT_EMAIL') || DEFAULT_SUPPORT_EMAIL;
 export const ENABLE_DEBUG_PIPELINE = truthyEnv('VITE_ENABLE_DEBUG_PIPELINE', false);
+/** Workspace do Consultor — rota /workspace-consultor e item de menu. */
+export const ENABLE_CONSULTOR_WORKSPACE = truthyEnv('VITE_ENABLE_CONSULTOR_WORKSPACE', false);
+
+if (import.meta.env.DEV) {
+  console.info('[consultor-workspace] env_flag', {
+    raw: import.meta.env.VITE_ENABLE_CONSULTOR_WORKSPACE,
+    parsed: ENABLE_CONSULTOR_WORKSPACE,
+  });
+}
 
 /**
  * Em desenvolvimento: avisa se faltar configuração crítica para dados remotos.

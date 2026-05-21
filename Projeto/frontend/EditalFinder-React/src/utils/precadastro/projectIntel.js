@@ -135,10 +135,10 @@ export function buildProjectSuggestions(cliente, edital, radarMatch) {
   ]);
 
   const motivoRecomendacao = joinSentences([
-    'Sugestão gerada a partir do cadastro do cliente (porte, setor, localização, temas de interesse e área de inovação).',
-    editalTitulo ? `Enriquecida pelo edital de referência: “${editalTitulo.slice(0, 100)}…”.` : '',
+    `Esta oportunidade parece aderente ao perfil de ${c.nome_empresa || 'a empresa'} porque há alinhamento entre o cadastro (porte, setor e temas) e o contexto do edital.`,
+    editalTitulo ? ` Referência: “${editalTitulo.slice(0, 100)}${editalTitulo.length > 100 ? '…' : ''}”.` : '',
     typeof radarMatch?.scorePct === 'number'
-      ? `O radar de fomento indicou aderência numérica de ${Math.round(radarMatch.scorePct)}% (referência orientativa).`
+      ? ` O Radar de Fomento indicou compatibilidade aproximada de ${Math.round(radarMatch.scorePct)}% — use como referência interna até validar elegibilidade no regulamento.`
       : '',
   ]);
 
