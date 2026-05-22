@@ -1,5 +1,10 @@
 import { normalizeText } from './normalizeText';
 import { prazoVencido, diasAtePrazoDashboard, isPrazoVencidoEdital } from './dates';
+import { editalMatchesPrazoQuery } from '../editais/editalDeadlineStatus';
+import {
+  editalMatchesModalidadeQuery,
+  editalMatchesScopeQuery,
+} from '../editais/editaisQueryFilters';
 import { isTituloRuidoso } from './noise';
 import { editalMatchesAllSearchTokens } from './search';
 import { coerceStringArray } from './coerceArrays';
@@ -20,6 +25,9 @@ export const INITIAL_SIDEBAR_FILTERS = () => ({
   valorMax: '',
   valorPreset: '',
   prazoPreset: '',
+  queryScope: '',
+  queryModalidade: '',
+  queryFonte: '',
   perfil_ideal: {},
   setor_estrategico: {},
   area_tecnologica: {},
@@ -232,16 +240,40 @@ function passesValorPreset(e, f, n) {
 
 function passesPrazoQuick(e, f) {
   if (!f.prazoPreset) return true;
+
+  const dashboardPresets = new Set([
+    'vencendo_7',
+    'vencendo_30',
+    'sem_prazo',
+    'encerrados',
+    'prazo_confortavel',
+    'prazo_invalido',
+  ]);
+  if (dashboardPresets.has(f.prazoPreset)) {
+    return editalMatchesPrazoQuery(e, f.prazoPreset);
+  }
+
+  if (f.prazoPreset === 'd7') return editalMatchesPrazoQuery(e, 'vencendo_7');
+  if (f.prazoPreset === 'd30') return editalMatchesPrazoQuery(e, 'vencendo_30');
+
   const p = prazoReferencia(e);
-  if (f.prazoPreset === 'sem') return !p;
-  if (f.prazoPreset === 'encerrados') return !!(p && isPrazoVencidoEdital(e));
+  if (f.prazoPreset === 'sem') return editalMatchesPrazoQuery(e, 'sem_prazo');
+  if (f.prazoPreset === 'encerrados') return editalMatchesPrazoQuery(e, 'encerrados');
 
   const d = diasAtePrazoDashboard(p);
   if (d == null) return false;
-  if (f.prazoPreset === 'd7') return d >= 0 && d <= 7;
-  if (f.prazoPreset === 'd30') return d >= 0 && d <= 30;
   if (f.prazoPreset === 'd90') return d >= 0 && d <= 90;
   return true;
+}
+
+function passesQueryScope(e, f) {
+  if (!f.queryScope) return true;
+  return editalMatchesScopeQuery(e, f.queryScope);
+}
+
+function passesQueryModalidade(e, f) {
+  if (!f.queryModalidade) return true;
+  return editalMatchesModalidadeQuery(e, f.queryModalidade);
 }
 
 function valorNum(e) {
@@ -305,6 +337,8 @@ function passAdvancedSidebar(e, sidebar) {
   if (!passesValorPreset(e, f, nVal)) return false;
 
   if (!passesPrazoQuick(e, f)) return false;
+  if (!passesQueryScope(e, f)) return false;
+  if (!passesQueryModalidade(e, f)) return false;
 
   const areaChunks = coerceStringArray(e.area).map(normalizeText);
   const areaExtra = coerceStringArray(e.area_cientifica_raw).map(normalizeText);

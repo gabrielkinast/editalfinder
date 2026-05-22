@@ -1,4 +1,5 @@
 import { parseDateLoose, startOfTodayLocal } from './edital/dates';
+import { getFirstParsableDeadlineRaw } from './dashboard/dashboardDeadlineFields';
 
 /** @typedef {'prazo_indefinido'|'prazo_confortavel'|'vence_15_dias'|'vence_7_dias'|'vence_3_dias'|'vence_hoje'|'encerrado'} DeadlineAlertStatus */
 
@@ -9,16 +10,18 @@ import { parseDateLoose, startOfTodayLocal } from './edital/dates';
  */
 export function parsePrazoEnvio(edital) {
   if (!edital || typeof edital !== 'object') return null;
+  const fromScan = getFirstParsableDeadlineRaw(edital);
+  if (fromScan) return fromScan;
   const raw =
+    edital.prazo_envio_raw ??
+    edital.fim_inscricao_raw ??
+    edital.dataLimite ??
     edital.prazo_envio ??
     edital.prazo ??
     edital.data_limite ??
-    edital.dataLimite ??
     edital.prazo_final ??
     edital.encerramento ??
     edital.fim_inscricao ??
-    edital.prazo_envio_raw ??
-    edital.fim_inscricao_raw ??
     null;
   if (raw == null || raw === '') return null;
   const s = String(raw).trim();

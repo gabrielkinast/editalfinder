@@ -252,14 +252,38 @@ export default function EditaisFiltersSidebar({
         <select
           className="filter-select"
           value={filters.prazoPreset}
-          onChange={(e) => patch({ prazoPreset: e.target.value })}
+          onChange={(e) => {
+            const v = e.target.value;
+            patch({
+              prazoPreset: v,
+              ...(v === 'encerrados' ? { toggleIncluirEncerrados: true } : {}),
+            });
+          }}
         >
-          <option value="">(qualquer dentro das regras rápidas)</option>
-          <option value="d7">Fecha em até 7 dias</option>
-          <option value="d30">Fecha em até 30 dias</option>
-          <option value="d90">Fecha em até 90 dias</option>
-          <option value="sem">Sem prazo informado</option>
-          <option value="encerrados">Somente encerrados / vencidos</option>
+          <option value="">Todos</option>
+          <option value="vencendo_7">Vencendo em 7 dias</option>
+          <option value="vencendo_30">Vencendo em 30 dias</option>
+          <option value="prazo_confortavel">Prazo confortável</option>
+          <option value="sem_prazo">Sem prazo estruturado</option>
+          <option value="encerrados">Encerrados</option>
+          <option value="prazo_invalido">Prazo inválido</option>
+          <option value="d90">Fecha em até 90 dias (legado)</option>
+        </select>
+      </CollapseSection>
+
+      <CollapseSection title="Escopo geográfico">
+        <select
+          className="filter-select"
+          value={filters.queryScope || 'todos'}
+          onChange={(e) => {
+            const v = e.target.value;
+            patch({ queryScope: v === 'todos' ? '' : v });
+          }}
+        >
+          <option value="todos">Todos</option>
+          <option value="brasil">Brasil</option>
+          <option value="internacional">Internacional</option>
+          <option value="multilateral">Multilateral</option>
         </select>
       </CollapseSection>
 

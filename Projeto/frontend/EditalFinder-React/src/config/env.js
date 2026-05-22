@@ -82,11 +82,19 @@ export const SUPPORT_EMAIL = str('VITE_SUPPORT_EMAIL') || DEFAULT_SUPPORT_EMAIL;
 export const ENABLE_DEBUG_PIPELINE = truthyEnv('VITE_ENABLE_DEBUG_PIPELINE', false);
 /** Workspace do Consultor — rota /workspace-consultor e item de menu. */
 export const ENABLE_CONSULTOR_WORKSPACE = truthyEnv('VITE_ENABLE_CONSULTOR_WORKSPACE', false);
+/** Workspace Científico — rota /workspace-cientifico e item de menu. */
+export const ENABLE_SCIENTIFIC_WORKSPACE = truthyEnv('VITE_ENABLE_SCIENTIFIC_WORKSPACE', false);
+/** IA científica — apenas via backend/Edge Function; nunca true com chave no Vite. */
+export const ENABLE_SCIENTIFIC_AI = truthyEnv('VITE_ENABLE_SCIENTIFIC_AI', false);
 
 if (import.meta.env.DEV) {
   console.info('[consultor-workspace] env_flag', {
     raw: import.meta.env.VITE_ENABLE_CONSULTOR_WORKSPACE,
     parsed: ENABLE_CONSULTOR_WORKSPACE,
+  });
+  console.info('[scientific-workspace] env_flag', {
+    raw: import.meta.env.VITE_ENABLE_SCIENTIFIC_WORKSPACE,
+    parsed: ENABLE_SCIENTIFIC_WORKSPACE,
   });
 }
 
