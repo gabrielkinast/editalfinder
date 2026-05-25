@@ -78,7 +78,7 @@ export default function ConsultorTrackedOpportunitiesCard({
   );
 
   const handleViewFavorites = useCallback(() => {
-    navigate('/dashboard', { state: { somenteFavoritos: true } });
+    navigate('/editais', { state: { somenteFavoritos: true } });
   }, [navigate]);
 
   if (!cliente) return null;

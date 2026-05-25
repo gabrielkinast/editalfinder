@@ -3,10 +3,12 @@ import { useEffect, useState } from 'react';
 import { useAuth } from '../../contexts/AuthContext';
 import { usePermissions } from '../../hooks/usePermissions';
 import { useSettings } from '../../contexts/SettingsContext';
-import { ENABLE_CONCURSOS, ENABLE_CONSULTOR_WORKSPACE } from '../../config/env';
+import { ENABLE_CONSULTOR_WORKSPACE } from '../../config/env';
 import { logConsultorWorkspace } from '../../utils/consultorWorkspaceLog';
 import Modal from '../ui/Modal';
 import SettingsForm from '../admin/SettingsForm';
+import AppReportProblemButton from '../feedback/AppReportProblemButton';
+import AppNavigationMenu from './AppNavigationMenu';
 
 export default function Header({ onSearch, searchPlaceholder = 'Buscar editais...' }) {
   const navigate = useNavigate();
@@ -14,7 +16,6 @@ export default function Header({ onSearch, searchPlaceholder = 'Buscar editais..
   const permissions = usePermissions();
   const { settings } = useSettings();
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleLogout = () => {
     logout();
@@ -39,119 +40,44 @@ export default function Header({ onSearch, searchPlaceholder = 'Buscar editais..
   ]);
 
   return (
-    <header className="header">
-      <div className="header-content">
+    <header className="header app-header">
+      <div className="header-content header-content--toolbar">
         <div className="header-left">
-          <div className="logo-header">
+          <AppNavigationMenu onOpenSettings={() => setIsSettingsOpen(true)} />
+          <NavLink to="/dashboard" className="logo-header logo-header-link" title="Ir para o Dashboard">
             {settings.logoImage ? (
               <img src={settings.logoImage} alt="Logo" className="logo-header-img" />
             ) : (
-              <span>{settings.logoText}</span>
+              <span>{settings.logoText || 'EditalFinder'}</span>
             )}
-          </div>
-          <button
-            type="button"
-            className="menu-toggle-mobile"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-expanded={isMenuOpen}
-            aria-controls="main-nav"
-          >
-            {isMenuOpen ? 'Fechar' : 'Menu'}
-          </button>
+          </NavLink>
         </div>
 
-        <nav id="main-nav" className={`main-nav header-nav ${isMenuOpen ? 'open' : ''}`}>
-          <NavLink
-            to="/dashboard"
-            className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Editais
-          </NavLink>
-          {permissions.canViewCadastros && (
-            <NavLink
-              to="/cadastros"
-              className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Cadastros
-            </NavLink>
-          )}
-          {ENABLE_CONSULTOR_WORKSPACE && permissions.canViewCadastros && (
-            <NavLink
-              to="/workspace-consultor"
-              className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Workspace
-            </NavLink>
-          )}
-          <NavLink
-            to="/radar-fomento"
-            title="Radar de Fomento"
-            className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Radar
-          </NavLink>
-          {import.meta.env.VITE_ENABLE_INDICE === 'true' && (
-            <NavLink
-              to="/indice"
-              className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Índice
-            </NavLink>
-          )}
-          <NavLink
-            to="/noticias"
-            className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Notícias
-          </NavLink>
-          <NavLink
-            to="/pesquisas"
-            className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Pesquisas
-          </NavLink>
-          <NavLink
-            to="/portais-estrategicos"
-            className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Portais
-          </NavLink>
-          {ENABLE_CONCURSOS && (
-            <NavLink
-              to="/concursos"
-              className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Concursos
-            </NavLink>
-          )}
-        </nav>
-
-        <div className={`header-actions header-right ${isMenuOpen ? 'open' : ''}`}>
-          {onSearch && (
+        {onSearch && (
+          <div className="header-center">
             <input
-              type="text"
+              type="search"
               id="globalSearch"
               placeholder={searchPlaceholder}
               className="search-input-header"
               onChange={(e) => onSearch(e.target.value)}
+              aria-label={searchPlaceholder}
             />
-          )}
+          </div>
+        )}
+
+        <div className="header-actions header-right">
+          <AppReportProblemButton
+            origem="user_report"
+            tipo="outro"
+            label="Reportar problema"
+            variant="link"
+            className="header-report-problem"
+          />
           {permissions.canManageUsers && (
             <button
               type="button"
-              onClick={() => {
-                setIsSettingsOpen(true);
-                setIsMenuOpen(false);
-              }}
+              onClick={() => setIsSettingsOpen(true)}
               className="btn-logout btn-header-settings"
             >
               Configurações
