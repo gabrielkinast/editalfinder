@@ -1,7 +1,6 @@
 import {
   ENABLE_CONCURSOS,
   ENABLE_CONSULTOR_WORKSPACE,
-  ENABLE_SCIENTIFIC_WORKSPACE,
   FEATURE_RADAR,
 } from '../../config/env';
 
@@ -31,12 +30,6 @@ export function buildAppNavigationSections(permissions = {}) {
       to: '/workspace-consultor',
       label: 'Workspace do Consultor',
       show: ENABLE_CONSULTOR_WORKSPACE && Boolean(permissions.canViewCadastros),
-    },
-    {
-      id: 'workspace-cientifico',
-      to: '/workspace-cientifico',
-      label: 'Workspace Científico',
-      show: ENABLE_SCIENTIFIC_WORKSPACE,
     },
   ].filter((i) => i.show !== false);
 

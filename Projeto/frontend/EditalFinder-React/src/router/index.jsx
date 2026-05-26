@@ -1,4 +1,4 @@
-import { ENABLE_CONSULTOR_WORKSPACE, ENABLE_SCIENTIFIC_WORKSPACE } from '../config/env';
+import { ENABLE_CONSULTOR_WORKSPACE } from '../config/env';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import Login from '../pages/Login';
 import AuthCallback from '../pages/AuthCallback';
@@ -13,10 +13,8 @@ import Pesquisas from '../pages/Pesquisas';
 import PortaisEstrategicosPage from '../pages/PortaisEstrategicos/PortaisEstrategicosPage';
 import ConcursosPage from '../pages/Concursos/ConcursosPage';
 import ConsultorWorkspace from '../pages/ConsultorWorkspace';
-import ScientificWorkspace from '../pages/ScientificWorkspace';
 import ProtectedRoute from './ProtectedRoute';
 import { withAppErrorBoundary } from './withAppErrorBoundary';
-import { SCIENTIFIC_LOCAL_STORAGE_KEYS } from '../utils/scientific/clearScientificWorkspaceLocalCache';
 
 export default function AppRoutes() {
   return (
@@ -65,24 +63,8 @@ export default function AppRoutes() {
       ) : (
         <Route path="/workspace-consultor" element={<Navigate to="/dashboard" replace />} />
       )}
-      {ENABLE_SCIENTIFIC_WORKSPACE ? (
-        <Route
-          path="/workspace-cientifico"
-          element={
-            <ProtectedRoute>
-              {withAppErrorBoundary('workspace_cientifico', 'workspace_cientifico', <ScientificWorkspace />, {
-                fallbackTitle: 'Não foi possível carregar o Workspace Científico',
-                fallbackMessage:
-                  'Ocorreu um erro ao renderizar esta página. Seus dados no servidor não foram alterados.',
-                allowClearLocalCache: true,
-                clearLocalCacheKeys: SCIENTIFIC_LOCAL_STORAGE_KEYS,
-              })}
-            </ProtectedRoute>
-          }
-        />
-      ) : (
-        <Route path="/workspace-cientifico" element={<Navigate to="/dashboard" replace />} />
-      )}
+      <Route path="/workspace-cientifico" element={<Navigate to="/dashboard" replace />} />
+      <Route path="/workspace-cientifico/*" element={<Navigate to="/dashboard" replace />} />
       <Route
         path="/radar-fomento"
         element={

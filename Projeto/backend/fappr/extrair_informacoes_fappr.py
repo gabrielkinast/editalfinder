@@ -86,25 +86,53 @@ class FapprScraper:
                         # Datas e prazos costumam estar na descrição ou no título
                         data_pub = extract_date(titulo) or extract_date(descricao)
                         
-                        # FAPPR costuma não ter data de fim explícita no HTML, mas vamos tentar
                         fim_insc = None
-                        prazo_match = re.search(r'até\s+(\d{2}/\d{2}/\d{4})', descricao.lower() + " " + titulo.lower())
-                        if prazo_match:
-                            fim_insc = extract_date(prazo_match.group(1))
+                        prazo_raw = None
+                        deadline_src = None
+                        try:
+                            from CORE.source_deadline_parsers import parse_araucaria_deadlines
 
-                        editais_list.append(EditalFappr(
-                            titulo=titulo,
-                            link=edital_link,
-                            descricao=descricao or titulo,
-                            data_publicacao=data_pub,
-                            fim_inscricao=fim_insc,
-                            situacao="Aberto",
-                            extras={
-                                "anexos": anexos,
-                                "fonte_original": current_url,
-                                "tipo_chamada": titulo.split(":")[0] if ":" in titulo else "Chamada"
-                            }
-                        ))
+                            parsed = parse_araucaria_deadlines(
+                                f"{titulo} {descricao}",
+                                has_pdf=bool(anexos),
+                            )
+                            fim_insc = parsed.get("fim_inscricao") or parsed.get("prazo_data")
+                            prazo_raw = parsed.get("fim_inscricao_raw") or parsed.get("prazo_envio_raw")
+                            deadline_src = parsed.get("deadline_source_field")
+                        except Exception:
+                            prazo_match = re.search(
+                                r"até\s+(\d{2}/\d{2}/\d{4})",
+                                (descricao + " " + titulo).lower(),
+                            )
+                            if prazo_match:
+                                fim_insc = extract_date(prazo_match.group(1))
+                                prazo_raw = prazo_match.group(1)
+                                deadline_src = "ate"
+
+                        ex = {
+                            "anexos": anexos,
+                            "fonte_original": current_url,
+                            "tipo_chamada": titulo.split(":")[0] if ":" in titulo else "Chamada",
+                        }
+                        if prazo_raw:
+                            ex["deadline"] = fim_insc
+                            ex["fim_inscricao_original"] = prazo_raw
+                        if deadline_src:
+                            ex["deadline_source_field"] = deadline_src
+                            ex["deadline_source"] = deadline_src
+                        if fim_insc is None and anexos:
+                            ex["deadline_requires_pdf"] = True
+                        editais_list.append(
+                            EditalFappr(
+                                titulo=titulo,
+                                link=edital_link,
+                                descricao=descricao or titulo,
+                                data_publicacao=data_pub,
+                                fim_inscricao=fim_insc,
+                                situacao="Aberto",
+                                extras=ex,
+                            )
+                        )
 
     def process_detail_page(self, url: str, titulo: str, source: str) -> Optional[EditalFappr]:
         # Para FAPPR, a maioria das informações já está na página de listagem

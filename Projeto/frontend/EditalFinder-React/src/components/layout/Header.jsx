@@ -5,6 +5,7 @@ import { usePermissions } from '../../hooks/usePermissions';
 import { useSettings } from '../../contexts/SettingsContext';
 import { ENABLE_CONSULTOR_WORKSPACE } from '../../config/env';
 import { logConsultorWorkspace } from '../../utils/consultorWorkspaceLog';
+import { logConsultorWorkspaceAvailabilityCheck } from '../../utils/consultorWorkspaceAvailability';
 import Modal from '../ui/Modal';
 import SettingsForm from '../admin/SettingsForm';
 import AppReportProblemButton from '../feedback/AppReportProblemButton';
@@ -26,6 +27,11 @@ export default function Header({ onSearch, searchPlaceholder = 'Buscar editais..
     ENABLE_CONSULTOR_WORKSPACE && Boolean(permissions.canViewCadastros);
 
   useEffect(() => {
+    logConsultorWorkspaceAvailabilityCheck({
+      canViewCadastros: permissions.canViewCadastros,
+      userRole: user?.tipo ?? user?.tipo_usuario ?? null,
+      menuVisible: workspaceMenuVisible,
+    });
     logConsultorWorkspace('menu_gate', {
       ENABLE_CONSULTOR_WORKSPACE,
       canViewCadastros: permissions.canViewCadastros,

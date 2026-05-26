@@ -3,7 +3,6 @@ import { useAppFeedback } from '../../../contexts/AppFeedbackContext';
 import {
   ENABLE_CONCURSOS,
   ENABLE_CONSULTOR_WORKSPACE,
-  ENABLE_SCIENTIFIC_WORKSPACE,
 } from '../../../config/env';
 
 function ActionGroup({ title, children }) {
@@ -40,15 +39,9 @@ export default function DashboardQuickActions({ permissions = {} }) {
           {permissions.canViewCadastros && <QuickLink to="/cadastros">Cadastros</QuickLink>}
         </ActionGroup>
 
-        {(ENABLE_CONSULTOR_WORKSPACE && permissions.canViewCadastros) ||
-        ENABLE_SCIENTIFIC_WORKSPACE ? (
+        {ENABLE_CONSULTOR_WORKSPACE && permissions.canViewCadastros ? (
           <ActionGroup title="Workspaces">
-            {ENABLE_CONSULTOR_WORKSPACE && permissions.canViewCadastros && (
-              <QuickLink to="/workspace-consultor">Workspace do Consultor</QuickLink>
-            )}
-            {ENABLE_SCIENTIFIC_WORKSPACE && (
-              <QuickLink to="/workspace-cientifico">Workspace Científico</QuickLink>
-            )}
+            <QuickLink to="/workspace-consultor">Workspace do Consultor</QuickLink>
           </ActionGroup>
         ) : null}
 
