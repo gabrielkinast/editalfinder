@@ -41,6 +41,83 @@ O frontend não deve tratar todos esses dados como “editais”. Cada módulo t
 
 **Retenção e expiração (sem delete por vencimento):** [`DATA_RETENTION_AND_EXPIRATION_POLICY.md`](./DATA_RETENTION_AND_EXPIRATION_POLICY.md) — o histórico fica nas tabelas base; as **views públicas** (`vw_*_front`) definem o que aparece nas listagens (editais após `prazo_envio`, notícias 12m, pesquisas 24m, concursos por datas de inscrição/prova).
 
+### Navegação global (Header)
+
+A navegação principal **não** usa mais abas horizontais com scroll no header (evita overflow e abas cortadas).
+
+| Peça | Função |
+|------|--------|
+| `AppNavigationMenu.jsx` | Botão hambúrguer (☰) + drawer lateral com grupos (Principal, Workspaces, Conteúdo, Sistema) |
+| `appNavigationConfig.js` | Itens, permissões (`canViewCadastros`, `canManageUsers`) e feature flags (`VITE_ENABLE_*`) |
+| `Header.jsx` | Esquerda: menu + logo; centro: busca de editais; direita: Reportar problema, Configurações, Sair |
+
+Comportamento: fecha com **Esc**, clique no overlay ou após navegar; item ativo destacado; rotas inalteradas.
+
+### Dashboard principal (home)
+
+| Rota | Página |
+|------|--------|
+| `/` → `/dashboard` | **Dashboard** — resumo (métricas, gráficos CSS, atalhos, listas recentes) |
+| `/editais` | **Editais** — listagem completa com filtros (antiga home) |
+| `/edital/:id` | Detalhe do edital (menu **Editais** ativo) |
+
+**Dados:** `useDashboardData` → `dataService.getEditais`, `getNoticias`, `getPesquisas`, `getClients` (se `canViewCadastros`); falhas parciais com `EmptyOrErrorState`.
+
+**Componentes:** `src/components/dashboard/home/*` (métricas, atalhos, gráficos de barras, listas, Radar).
+
+**Pós-login:** redireciona para `/dashboard` (não `/editais`).
+
+### Dashboard 1B (layout executivo)
+
+Refinamento visual e hierarquia em `/dashboard` (sem alteração de schema/SQL):
+
+| Bloco | Conteúdo |
+|-------|----------|
+| Topo | Título, subtítulo, “Atualizado em…”, **Atualizar dados**, **Reportar problema** (header) |
+| Métricas | 6 cards com valor + contexto (`DashboardMetricCard`) |
+| Prioridades | `DashboardPriorityPanel` — até 4 itens (vencendo, abertos, relatos, radar) |
+| Atalhos | `DashboardQuickActions` — grupos Operação / Workspaces / Conteúdo / Sistema |
+| Gráficos | Top 6 por fonte, tipo e situação de prazos (`dashboardAggregations`: `normalizeDashboardLabel`, `buildTopBuckets`) |
+| Listas | Editais recentes e vencendo (5 itens, badges de prazo, link Abrir) |
+| Conteúdo | Notícias e pesquisas (5 por coluna) |
+| Radar | Resumo agregado (totais, briefing, perfil) — **sem lista de nomes**; CTAs Radar / Workspace Consultor |
+
+**Estilos:** `src/styles/dashboard.css` (importado em `pages/Dashboard.jsx`).
+
+**Helpers:** `src/utils/dashboard/dashboardAggregations.js`, `buildDashboardPriorities.js`.
+
+### Dashboard 1C — Qualidade de dados e classificação
+
+Auditoria e métricas mais honestas (sem alteração de schema/SQL):
+
+| Tema | Implementação |
+|------|----------------|
+| Auditoria DEV | `auditDashboardDataQuality.js` → log `[dashboard] data_quality_audit`; painel `DashboardDataQualityPanel` só em `import.meta.env.DEV` |
+| Prazo | `extractDashboardDeadline` / `collectDeadlineCandidates` em `dashboardDeadlineFields.js` (vários campos + `extras`); `parsePrazoEnvio` alinhado |
+| Gráfico prazos | Buckets: 7d, 30d, confortável, encerrados, sem prazo, inválido; aviso se &gt;55% sem prazo |
+| Modalidade | `getDashboardEditalType` — buckets estimados (não agrupa por `area` truncada); gráfico **Editais por modalidade** |
+| Fonte / escopo | `getDashboardSourceScope` (Brasil / Internacional / Multilateral); badges no gráfico de fontes |
+| Filtro escopo | `DashboardScopeFilter` + `localStorage` `dashboard_scope_filter`; afeta métricas, gráficos, listas de editais |
+| Conteúdo | `classifyContentScope` + filtros Todos/Brasil/Internacional em notícias e pesquisas |
+| Métricas | **Oportunidades ativas/prováveis** = só prazo futuro válido; `semPrazoEstruturado` fora da contagem de abertos |
+
+**Limitação conhecida:** se o backend/view não preencher `prazo_envio` / `fim_inscricao`, a maior parte da base aparecerá como “sem prazo” — o Dashboard exibe aviso em vez de tratar como bug visual.
+
+### Dashboard → Editais (query params)
+
+Links do Dashboard usam `buildEditaisUrl` (`src/utils/editais/editaisQueryFilters.js`):
+
+| Param | Exemplo | Efeito em `/editais` |
+|-------|---------|----------------------|
+| `prazo` | `vencendo_7` | `prazoPreset` + filtro via `getEditalDeadlineStatus` (mesmo que Dashboard) |
+| `scope` | `brasil` | `queryScope` + `editalMatchesScope` |
+| `modalidade` | `fomento` | `queryModalidade` |
+| `fonte` | `FAPESC` | `fonteBusca` |
+
+Ex.: **Ver editais vencendo** → `/editais?prazo=vencendo_7` (com `&scope=brasil` se o escopo do Dashboard estiver ativo).
+
+Chips removíveis e dropdown **Prazo** na sidebar sincronizam com a URL.
+
 ---
 
 ## 2. Tabelas principais
@@ -290,9 +367,48 @@ Este ficheiro é documentação de produto/contrato para equipas de frontend; al
 
 Futuro documentado (não implementado): `canManageUsers`, `canManageClients`, `canUseWorkspace`.
 
-Ativar: `VITE_ENABLE_CONSULTOR_WORKSPACE=true` em `.env.local`.
+Ativar: `VITE_ENABLE_CONSULTOR_WORKSPACE=true` em `.env.local` (default **true** em `.env.example`).
+
+**Visibilidade no menu:** flag ativa **e** `canViewCadastros` (perfis ADMIN, CONSULTOR, FUNCIONARIO). Em DEV, ver log `[workspace-consultor] availability_check` no console.
 
 **Planos:** [`CONSULTOR_WORKSPACE_PLAN.md`](./CONSULTOR_WORKSPACE_PLAN.md), [`PRE_PROJETO_CONSULTOR_IMPROVEMENTS.md`](./PRE_PROJETO_CONSULTOR_IMPROVEMENTS.md).
+
+---
+
+## 7b. Remoção do Workspace Científico (2026)
+
+O **Workspace Científico** foi **desconectado** do EditalFinder:
+
+| Aspecto | Estado |
+|---------|--------|
+| Rota `/workspace-cientifico` | Redireciona para `/dashboard` |
+| Menu hambúrguer | Item removido |
+| Flag `VITE_ENABLE_SCIENTIFIC_WORKSPACE` | Removida |
+| Código fonte | Arquivado em `frontend/EditalFinder-React/archive/scientific_workspace_reference/` |
+
+**Motivo:** módulo será migrado para app pessoal separado; o produto oficial mantém **Workspace do Consultor**.
+
+Documentação histórica: `docs/SCIENTIFIC_WORKSPACE_PLAN.md`, `docs/frontend/SCIENTIFIC_WORKSPACE_REMOVAL_PLAN.md`.
+
+Dados `scientific_workspace_*` no `localStorage` do navegador **não são apagados** pelo EditalFinder.
+
+### Feedback universal (`app_feedback`)
+
+Ver [`APP_FEEDBACK_SYSTEM.md`](./APP_FEEDBACK_SYSTEM.md). Resumo:
+
+| Peça | Função |
+|------|--------|
+| `app_feedback` (SQL) | Relatos da aplicação — separado de `edital_feedback` |
+| `AppFeedbackProvider` | Modal, toast com “Reportar problema”, fila offline |
+| `AppErrorBoundary` | Fallback por rota + botão de reporte |
+| `globalErrorReporter` | `window.error` / `unhandledrejection` |
+| `handleAppActionError` | Toast + contexto em falhas de ação/API |
+| `AppReportProblemButton` | Header e telas de erro |
+| `EmptyOrErrorState` | Falha de dados sem crash |
+
+Ativar: `VITE_ENABLE_SCIENTIFIC_WORKSPACE=true` em `.env.local`.
+
+**Plano:** [`SCIENTIFIC_WORKSPACE_PLAN.md`](./SCIENTIFIC_WORKSPACE_PLAN.md).
 
 ---
 

@@ -1,6 +1,5 @@
 import { useAppFeedback } from '../../contexts/AppFeedbackContext';
 import { buildAppFeedbackPayload } from '../../utils/feedback/buildAppFeedbackPayload';
-import { logScientificWorkspace } from '../../utils/scientific/scientificWorkspaceLog';
 
 export default function AppReportProblemButton({
   origem = 'user_report',
@@ -32,14 +31,6 @@ export default function AppReportProblemButton({
             extraContext,
           })
         : null;
-
-    if (origem === 'workspace_cientifico' || origem === 'workspace_cientifico_dev') {
-      logScientificWorkspace('app_feedback_opened', {
-        origem,
-        pagina,
-        componente,
-      });
-    }
 
     openAppFeedbackModal({
       origem,

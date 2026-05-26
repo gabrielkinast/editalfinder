@@ -39,6 +39,12 @@ def _enrich_item(item: dict) -> dict:
     item.setdefault("programa", "fundacao_araucaria")
     item.setdefault("acao", "chamada_publica")
     item.setdefault("tipo_recurso", "fomento")
+    try:
+        from CORE.source_deadline_parsers import enrich_araucaria_crawler_item
+
+        item = enrich_araucaria_crawler_item(item)
+    except Exception:
+        pass
     return item
 
 
