@@ -1,0 +1,232 @@
+{
+  "total": 1232,
+  "prazo_status_before": {
+    "sem_prazo": 1025,
+    "prazo_confortavel": 40,
+    "encerrado": 148,
+    "vencendo_7": 8,
+    "vencendo_30": 11
+  },
+  "prazo_status_after": {
+    "sem_prazo": 1025,
+    "prazo_confortavel": 40,
+    "encerrado": 148,
+    "vencendo_7": 8,
+    "vencendo_30": 11
+  },
+  "prazo_confidence_after": {
+    "nenhuma": 1025,
+    "alta": 116,
+    "baixa": 91
+  },
+  "gains_prazo_data_db_columns": 91,
+  "gains_prazo_data_new_inference": 0,
+  "still_sem_prazo": 1025,
+  "low_confidence_prazo": 91,
+  "tipo_registro": {
+    "desconhecido": 317,
+    "edital": 821,
+    "portal": 24,
+    "concurso": 23,
+    "pesquisa": 32,
+    "noticia": 15
+  },
+  "modalidade_normalizada": {
+    "outro": 150,
+    "compra_licitacao": 220,
+    "premio_desafio": 66,
+    "fomento_chamada_publica": 248,
+    "noticia_institucional": 246,
+    "bolsa_formacao": 289,
+    "concurso_selecao": 2,
+    "evento_capacitacao": 3,
+    "pesquisa_publicacao": 2,
+    "pesquisa_cientifica": 6
+  },
+  "escopo_geografico": {
+    "internacional": 636,
+    "brasil": 448,
+    "multilateral": 141,
+    "desconhecido": 7
+  },
+  "qualidade_flags": {
+    "kind_baixa_confianca": 408,
+    "kind_desconhecido": 317,
+    "modalidade_baixa_confianca": 150,
+    "revisao_humana": 570,
+    "sem_prazo": 1025,
+    "possivel_noticia_em_edital": 201,
+    "titulo_parece_noticia": 1,
+    "escopo_desconhecido": 7,
+    "prazo_baixa_confianca": 91,
+    "prazo_texto_derivado": 91
+  },
+  "kind_changes_count": 411,
+  "top_fontes_gain": [
+    [
+      "KEK",
+      16
+    ],
+    [
+      "Eureka Network",
+      10
+    ],
+    [
+      "EIC",
+      10
+    ],
+    [
+      "European Defence Fund",
+      9
+    ],
+    [
+      "UKRI Funding",
+      9
+    ],
+    [
+      "DIU",
+      7
+    ],
+    [
+      "NSFC",
+      6
+    ],
+    [
+      "JETRO Government Procurement",
+      6
+    ],
+    [
+      "EIT",
+      4
+    ],
+    [
+      "CAS",
+      2
+    ],
+    [
+      "ERC",
+      2
+    ],
+    [
+      "Lockheed Martin Suppliers",
+      2
+    ],
+    [
+      "WELLCOME",
+      2
+    ],
+    [
+      "DoD SBIR/STTR",
+      1
+    ],
+    [
+      "ATLA",
+      1
+    ],
+    [
+      "Mitsubishi Heavy Industries (Suppliers)",
+      1
+    ],
+    [
+      "QST",
+      1
+    ],
+    [
+      "NSF",
+      1
+    ],
+    [
+      "ESA OSIP",
+      1
+    ]
+  ],
+  "top_fontes_sem_prazo": [
+    [
+      "China International Tendering (MOFCOM)",
+      131
+    ],
+    [
+      "Fundação Araucária",
+      88
+    ],
+    [
+      "Grants.gov",
+      79
+    ],
+    [
+      "BNDES",
+      38
+    ],
+    [
+      "BDMG",
+      37
+    ],
+    [
+      "BASA",
+      30
+    ],
+    [
+      "CAS",
+      29
+    ],
+    [
+      "ANEEL",
+      27
+    ],
+    [
+      "KAKENHI",
+      26
+    ],
+    [
+      "HORIZON_EUROPE",
+      25
+    ],
+    [
+      "BNB",
+      24
+    ],
+    [
+      "NSFC",
+      24
+    ],
+    [
+      "SENAI",
+      22
+    ],
+    [
+      "NUCLEP",
+      20
+    ],
+    [
+      "CGN",
+      16
+    ],
+    [
+      "MOST China",
+      16
+    ],
+    [
+      "NEDO",
+      16
+    ],
+    [
+      "ESA OSIP",
+      15
+    ],
+    [
+      "DARPA Opportunities",
+      15
+    ],
+    [
+      "DoD SBIR/STTR",
+      14
+    ]
+  ],
+  "changes_by_field": {
+    "tipo_registro": 411,
+    "modalidade_normalizada": 1232,
+    "escopo_geografico": 1232,
+    "fonte_normalizada": 1232,
+    "prazo_data": 207
+  }
+}

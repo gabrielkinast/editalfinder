@@ -1,0 +1,42 @@
+# Dry-run payload de backfill — Backend 6
+
+**Registros:** 1232
+
+## Campos que ganhariam valor
+
+- `prazo_status`: 1232
+- `prazo_confidence`: 1232
+- `tipo_registro`: 1232
+- `kind_confidence`: 1232
+- `kind_reasons`: 1232
+- `modalidade_normalizada`: 1232
+- `modalidade_label`: 1232
+- `modalidade_confidence`: 1232
+- `modalidade_reasons`: 1232
+- `escopo_geografico`: 1232
+- `escopo_confidence`: 1232
+- `fonte_normalizada`: 1232
+- `fonte_original`: 1232
+- `source_scope`: 1232
+- `area_tematica_normalizada`: 1232
+- `area_tematica_label`: 1232
+- `area_tematica_confidence`: 1232
+- `area_tematica_reasons`: 1232
+- `pais_origem`: 1225
+- `qualidade_flags`: 1174
+- `area_tematica_secondary`: 878
+- `prazo_data`: 207
+- `prazo_raw`: 207
+- `prazo_source_field`: 207
+- `prazo_notes`: 91
+
+**Mudariam tipo_registro:** 1232
+**Mudariam área temática:** 1232
+**Prazo com baixa confiança:** 91
+
+## Baixa confiança
+
+- `area_tematica_confidence_baixa`: 565
+- `prazo_confidence_baixa`: 91
+
+Nenhum UPDATE foi executado. Ver `sample_update_payload.json` e `risky_updates_review.json`.
