@@ -1,0 +1,1067 @@
+{
+  "total_records": 1232,
+  "sources_count": 82,
+  "sources_ranked": [
+    {
+      "fonte_recurso": "China International Tendering (MOFCOM)",
+      "total": 131,
+      "com_prazo_db": 0,
+      "sem_prazo": 131,
+      "prazo_texto_derivado": 0,
+      "pct_sem_prazo": 100.0,
+      "top_campos_prazo": [],
+      "crawler_provavel": "china_mofcom_tendering/main_china_mofcom_tendering.py",
+      "recomendacao": "Extrair bid/tender closing date no detail HTML; flag deadline_missing_in_source se só publicação."
+    },
+    {
+      "fonte_recurso": "Fundação Araucária",
+      "total": 88,
+      "com_prazo_db": 0,
+      "sem_prazo": 88,
+      "prazo_texto_derivado": 0,
+      "pct_sem_prazo": 100.0,
+      "top_campos_prazo": [],
+      "crawler_provavel": "fappr/main_fappr.py + extrair_informacoes_fappr.py",
+      "recomendacao": "Expandir regex PT + texto PDF já extraído; deadline_requires_pdf quando só link PDF."
+    },
+    {
+      "fonte_recurso": "Grants.gov",
+      "total": 127,
+      "com_prazo_db": 48,
+      "sem_prazo": 79,
+      "prazo_texto_derivado": 0,
+      "pct_sem_prazo": 62.2,
+      "top_campos_prazo": [
+        [
+          "prazo_envio",
+          48
+        ]
+      ],
+      "crawler_provavel": "grants_gov/main_simpler_grants_gov.py",
+      "recomendacao": "Garantir close_date ISO em fim_inscricao; não usar postedDate como prazo."
+    },
+    {
+      "fonte_recurso": "BNDES",
+      "total": 38,
+      "com_prazo_db": 0,
+      "sem_prazo": 38,
+      "prazo_texto_derivado": 0,
+      "pct_sem_prazo": 100.0,
+      "top_campos_prazo": [],
+      "crawler_provavel": "transformer.py (genérico) / scraper da fonte",
+      "recomendacao": "Revisar crawler e preencher prazo_envio_raw + extras.deadline antes do loader."
+    },
+    {
+      "fonte_recurso": "BDMG",
+      "total": 38,
+      "com_prazo_db": 1,
+      "sem_prazo": 37,
+      "prazo_texto_derivado": 0,
+      "pct_sem_prazo": 97.4,
+      "top_campos_prazo": [
+        [
+          "prazo_envio",
+          1
+        ]
+      ],
+      "crawler_provavel": "transformer.py (genérico) / scraper da fonte",
+      "recomendacao": "Revisar crawler e preencher prazo_envio_raw + extras.deadline antes do loader."
+    },
+    {
+      "fonte_recurso": "BASA",
+      "total": 30,
+      "com_prazo_db": 0,
+      "sem_prazo": 30,
+      "prazo_texto_derivado": 0,
+      "pct_sem_prazo": 100.0,
+      "top_campos_prazo": [],
+      "crawler_provavel": "transformer.py (genérico) / scraper da fonte",
+      "recomendacao": "Revisar crawler e preencher prazo_envio_raw + extras.deadline antes do loader."
+    },
+    {
+      "fonte_recurso": "CAS",
+      "total": 31,
+      "com_prazo_db": 0,
+      "sem_prazo": 29,
+      "prazo_texto_derivado": 2,
+      "pct_sem_prazo": 93.5,
+      "top_campos_prazo": [
+        [
+          "texto_derivado",
+          2
+        ]
+      ],
+      "crawler_provavel": "transformer.py (genérico) / scraper da fonte",
+      "recomendacao": "Revisar crawler e preencher prazo_envio_raw + extras.deadline antes do loader."
+    },
+    {
+      "fonte_recurso": "ANEEL",
+      "total": 27,
+      "com_prazo_db": 0,
+      "sem_prazo": 27,
+      "prazo_texto_derivado": 0,
+      "pct_sem_prazo": 100.0,
+      "top_campos_prazo": [],
+      "crawler_provavel": "transformer.py (genérico) / scraper da fonte",
+      "recomendacao": "Revisar crawler e preencher prazo_envio_raw + extras.deadline antes do loader."
+    },
+    {
+      "fonte_recurso": "KAKENHI",
+      "total": 26,
+      "com_prazo_db": 0,
+      "sem_prazo": 26,
+      "prazo_texto_derivado": 0,
+      "pct_sem_prazo": 100.0,
+      "top_campos_prazo": [],
+      "crawler_provavel": "transformer.py (genérico) / scraper da fonte",
+      "recomendacao": "Revisar crawler e preencher prazo_envio_raw + extras.deadline antes do loader."
+    },
+    {
+      "fonte_recurso": "HORIZON_EUROPE",
+      "total": 25,
+      "com_prazo_db": 0,
+      "sem_prazo": 25,
+      "prazo_texto_derivado": 0,
+      "pct_sem_prazo": 100.0,
+      "top_campos_prazo": [],
+      "crawler_provavel": "transformer.py (genérico) / scraper da fonte",
+      "recomendacao": "Revisar crawler e preencher prazo_envio_raw + extras.deadline antes do loader."
+    },
+    {
+      "fonte_recurso": "BNB",
+      "total": 24,
+      "com_prazo_db": 0,
+      "sem_prazo": 24,
+      "prazo_texto_derivado": 0,
+      "pct_sem_prazo": 100.0,
+      "top_campos_prazo": [],
+      "crawler_provavel": "transformer.py (genérico) / scraper da fonte",
+      "recomendacao": "Revisar crawler e preencher prazo_envio_raw + extras.deadline antes do loader."
+    },
+    {
+      "fonte_recurso": "NSFC",
+      "total": 30,
+      "com_prazo_db": 0,
+      "sem_prazo": 24,
+      "prazo_texto_derivado": 6,
+      "pct_sem_prazo": 80.0,
+      "top_campos_prazo": [
+        [
+          "texto_derivado",
+          6
+        ]
+      ],
+      "crawler_provavel": "transformer.py (genérico) / scraper da fonte",
+      "recomendacao": "Revisar crawler e preencher prazo_envio_raw + extras.deadline antes do loader."
+    },
+    {
+      "fonte_recurso": "SENAI",
+      "total": 22,
+      "com_prazo_db": 0,
+      "sem_prazo": 22,
+      "prazo_texto_derivado": 0,
+      "pct_sem_prazo": 100.0,
+      "top_campos_prazo": [],
+      "crawler_provavel": "transformer.py (genérico) / scraper da fonte",
+      "recomendacao": "Revisar crawler e preencher prazo_envio_raw + extras.deadline antes do loader."
+    },
+    {
+      "fonte_recurso": "NUCLEP",
+      "total": 20,
+      "com_prazo_db": 0,
+      "sem_prazo": 20,
+      "prazo_texto_derivado": 0,
+      "pct_sem_prazo": 100.0,
+      "top_campos_prazo": [],
+      "crawler_provavel": "transformer.py (genérico) / scraper da fonte",
+      "recomendacao": "Revisar crawler e preencher prazo_envio_raw + extras.deadline antes do loader."
+    },
+    {
+      "fonte_recurso": "CGN",
+      "total": 16,
+      "com_prazo_db": 0,
+      "sem_prazo": 16,
+      "prazo_texto_derivado": 0,
+      "pct_sem_prazo": 100.0,
+      "top_campos_prazo": [],
+      "crawler_provavel": "transformer.py (genérico) / scraper da fonte",
+      "recomendacao": "Revisar crawler e preencher prazo_envio_raw + extras.deadline antes do loader."
+    },
+    {
+      "fonte_recurso": "MOST China",
+      "total": 16,
+      "com_prazo_db": 0,
+      "sem_prazo": 16,
+      "prazo_texto_derivado": 0,
+      "pct_sem_prazo": 100.0,
+      "top_campos_prazo": [],
+      "crawler_provavel": "transformer.py (genérico) / scraper da fonte",
+      "recomendacao": "Extrair bid/tender closing date no detail HTML; flag deadline_missing_in_source se só publicação."
+    },
+    {
+      "fonte_recurso": "NEDO",
+      "total": 16,
+      "com_prazo_db": 0,
+      "sem_prazo": 16,
+      "prazo_texto_derivado": 0,
+      "pct_sem_prazo": 100.0,
+      "top_campos_prazo": [],
+      "crawler_provavel": "transformer.py (genérico) / scraper da fonte",
+      "recomendacao": "Revisar crawler e preencher prazo_envio_raw + extras.deadline antes do loader."
+    },
+    {
+      "fonte_recurso": "DARPA Opportunities",
+      "total": 15,
+      "com_prazo_db": 0,
+      "sem_prazo": 15,
+      "prazo_texto_derivado": 0,
+      "pct_sem_prazo": 100.0,
+      "top_campos_prazo": [],
+      "crawler_provavel": "transformer.py (genérico) / scraper da fonte",
+      "recomendacao": "Revisar crawler e preencher prazo_envio_raw + extras.deadline antes do loader."
+    },
+    {
+      "fonte_recurso": "ESA OSIP",
+      "total": 17,
+      "com_prazo_db": 1,
+      "sem_prazo": 15,
+      "prazo_texto_derivado": 1,
+      "pct_sem_prazo": 88.2,
+      "top_campos_prazo": [
+        [
+          "prazo_envio",
+          1
+        ],
+        [
+          "texto_derivado",
+          1
+        ]
+      ],
+      "crawler_provavel": "transformer.py (genérico) / scraper da fonte",
+      "recomendacao": "Revisar crawler e preencher prazo_envio_raw + extras.deadline antes do loader."
+    },
+    {
+      "fonte_recurso": "DOE_ARPAE",
+      "total": 14,
+      "com_prazo_db": 0,
+      "sem_prazo": 14,
+      "prazo_texto_derivado": 0,
+      "pct_sem_prazo": 100.0,
+      "top_campos_prazo": [],
+      "crawler_provavel": "transformer.py (genérico) / scraper da fonte",
+      "recomendacao": "Revisar crawler e preencher prazo_envio_raw + extras.deadline antes do loader."
+    },
+    {
+      "fonte_recurso": "IPEN",
+      "total": 14,
+      "com_prazo_db": 0,
+      "sem_prazo": 14,
+      "prazo_texto_derivado": 0,
+      "pct_sem_prazo": 100.0,
+      "top_campos_prazo": [],
+      "crawler_provavel": "transformer.py (genérico) / scraper da fonte",
+      "recomendacao": "Revisar crawler e preencher prazo_envio_raw + extras.deadline antes do loader."
+    },
+    {
+      "fonte_recurso": "JSPS",
+      "total": 14,
+      "com_prazo_db": 0,
+      "sem_prazo": 14,
+      "prazo_texto_derivado": 0,
+      "pct_sem_prazo": 100.0,
+      "top_campos_prazo": [],
+      "crawler_provavel": "transformer.py (genérico) / scraper da fonte",
+      "recomendacao": "Revisar crawler e preencher prazo_envio_raw + extras.deadline antes do loader."
+    },
+    {
+      "fonte_recurso": "DoD SBIR/STTR",
+      "total": 15,
+      "com_prazo_db": 0,
+      "sem_prazo": 14,
+      "prazo_texto_derivado": 1,
+      "pct_sem_prazo": 93.3,
+      "top_campos_prazo": [
+        [
+          "texto_derivado",
+          1
+        ]
+      ],
+      "crawler_provavel": "transformer.py (genérico) / scraper da fonte",
+      "recomendacao": "Revisar crawler e preencher prazo_envio_raw + extras.deadline antes do loader."
+    },
+    {
+      "fonte_recurso": "Lockheed Martin Suppliers",
+      "total": 16,
+      "com_prazo_db": 0,
+      "sem_prazo": 14,
+      "prazo_texto_derivado": 2,
+      "pct_sem_prazo": 87.5,
+      "top_campos_prazo": [
+        [
+          "texto_derivado",
+          2
+        ]
+      ],
+      "crawler_provavel": "transformer.py (genérico) / scraper da fonte",
+      "recomendacao": "Revisar crawler e preencher prazo_envio_raw + extras.deadline antes do loader."
+    },
+    {
+      "fonte_recurso": "NIMS",
+      "total": 13,
+      "com_prazo_db": 0,
+      "sem_prazo": 13,
+      "prazo_texto_derivado": 0,
+      "pct_sem_prazo": 100.0,
+      "top_campos_prazo": [],
+      "crawler_provavel": "transformer.py (genérico) / scraper da fonte",
+      "recomendacao": "Revisar crawler e preencher prazo_envio_raw + extras.deadline antes do loader."
+    },
+    {
+      "fonte_recurso": "ATLA",
+      "total": 14,
+      "com_prazo_db": 0,
+      "sem_prazo": 13,
+      "prazo_texto_derivado": 1,
+      "pct_sem_prazo": 92.9,
+      "top_campos_prazo": [
+        [
+          "texto_derivado",
+          1
+        ]
+      ],
+      "crawler_provavel": "transformer.py (genérico) / scraper da fonte",
+      "recomendacao": "Revisar crawler e preencher prazo_envio_raw + extras.deadline antes do loader."
+    },
+    {
+      "fonte_recurso": "Eureka Network",
+      "total": 23,
+      "com_prazo_db": 0,
+      "sem_prazo": 13,
+      "prazo_texto_derivado": 10,
+      "pct_sem_prazo": 56.5,
+      "top_campos_prazo": [
+        [
+          "texto_derivado",
+          10
+        ]
+      ],
+      "crawler_provavel": "transformer.py (genérico) / scraper da fonte",
+      "recomendacao": "Revisar crawler e preencher prazo_envio_raw + extras.deadline antes do loader."
+    },
+    {
+      "fonte_recurso": "KEK",
+      "total": 29,
+      "com_prazo_db": 0,
+      "sem_prazo": 13,
+      "prazo_texto_derivado": 16,
+      "pct_sem_prazo": 44.8,
+      "top_campos_prazo": [
+        [
+          "texto_derivado",
+          16
+        ]
+      ],
+      "crawler_provavel": "transformer.py (genérico) / scraper da fonte",
+      "recomendacao": "Revisar crawler e preencher prazo_envio_raw + extras.deadline antes do loader."
+    },
+    {
+      "fonte_recurso": "EIT",
+      "total": 16,
+      "com_prazo_db": 0,
+      "sem_prazo": 12,
+      "prazo_texto_derivado": 4,
+      "pct_sem_prazo": 75.0,
+      "top_campos_prazo": [
+        [
+          "texto_derivado",
+          4
+        ]
+      ],
+      "crawler_provavel": "transformer.py (genérico) / scraper da fonte",
+      "recomendacao": "Revisar crawler e preencher prazo_envio_raw + extras.deadline antes do loader."
+    },
+    {
+      "fonte_recurso": "RIKEN",
+      "total": 11,
+      "com_prazo_db": 0,
+      "sem_prazo": 11,
+      "prazo_texto_derivado": 0,
+      "pct_sem_prazo": 100.0,
+      "top_campos_prazo": [],
+      "crawler_provavel": "transformer.py (genérico) / scraper da fonte",
+      "recomendacao": "Revisar crawler e preencher prazo_envio_raw + extras.deadline antes do loader."
+    },
+    {
+      "fonte_recurso": "Mitsubishi Heavy Industries (Suppliers)",
+      "total": 12,
+      "com_prazo_db": 0,
+      "sem_prazo": 11,
+      "prazo_texto_derivado": 1,
+      "pct_sem_prazo": 91.7,
+      "top_campos_prazo": [
+        [
+          "texto_derivado",
+          1
+        ]
+      ],
+      "crawler_provavel": "transformer.py (genérico) / scraper da fonte",
+      "recomendacao": "Revisar crawler e preencher prazo_envio_raw + extras.deadline antes do loader."
+    },
+    {
+      "fonte_recurso": "EMBRAPII",
+      "total": 21,
+      "com_prazo_db": 10,
+      "sem_prazo": 11,
+      "prazo_texto_derivado": 0,
+      "pct_sem_prazo": 52.4,
+      "top_campos_prazo": [
+        [
+          "prazo_envio",
+          10
+        ]
+      ],
+      "crawler_provavel": "transformer.py (genérico) / scraper da fonte",
+      "recomendacao": "Revisar crawler e preencher prazo_envio_raw + extras.deadline antes do loader."
+    },
+    {
+      "fonte_recurso": "Ministério da Defesa",
+      "total": 10,
+      "com_prazo_db": 0,
+      "sem_prazo": 10,
+      "prazo_texto_derivado": 0,
+      "pct_sem_prazo": 100.0,
+      "top_campos_prazo": [],
+      "crawler_provavel": "transformer.py (genérico) / scraper da fonte",
+      "recomendacao": "Revisar crawler e preencher prazo_envio_raw + extras.deadline antes do loader."
+    },
+    {
+      "fonte_recurso": "General Dynamics Suppliers",
+      "total": 10,
+      "com_prazo_db": 0,
+      "sem_prazo": 10,
+      "prazo_texto_derivado": 0,
+      "pct_sem_prazo": 100.0,
+      "top_campos_prazo": [],
+      "crawler_provavel": "transformer.py (genérico) / scraper da fonte",
+      "recomendacao": "Revisar crawler e preencher prazo_envio_raw + extras.deadline antes do loader."
+    },
+    {
+      "fonte_recurso": "AIST",
+      "total": 9,
+      "com_prazo_db": 0,
+      "sem_prazo": 9,
+      "prazo_texto_derivado": 0,
+      "pct_sem_prazo": 100.0,
+      "top_campos_prazo": [],
+      "crawler_provavel": "transformer.py (genérico) / scraper da fonte",
+      "recomendacao": "Revisar crawler e preencher prazo_envio_raw + extras.deadline antes do loader."
+    },
+    {
+      "fonte_recurso": "NSF",
+      "total": 10,
+      "com_prazo_db": 0,
+      "sem_prazo": 9,
+      "prazo_texto_derivado": 1,
+      "pct_sem_prazo": 90.0,
+      "top_campos_prazo": [
+        [
+          "texto_derivado",
+          1
+        ]
+      ],
+      "crawler_provavel": "china_mofcom_tendering/main_china_mofcom_tendering.py",
+      "recomendacao": "Revisar crawler e preencher prazo_envio_raw + extras.deadline antes do loader."
+    },
+    {
+      "fonte_recurso": "WELLCOME",
+      "total": 11,
+      "com_prazo_db": 0,
+      "sem_prazo": 9,
+      "prazo_texto_derivado": 2,
+      "pct_sem_prazo": 81.8,
+      "top_campos_prazo": [
+        [
+          "texto_derivado",
+          2
+        ]
+      ],
+      "crawler_provavel": "transformer.py (genérico) / scraper da fonte",
+      "recomendacao": "Revisar crawler e preencher prazo_envio_raw + extras.deadline antes do loader."
+    },
+    {
+      "fonte_recurso": "European Defence Fund",
+      "total": 18,
+      "com_prazo_db": 0,
+      "sem_prazo": 9,
+      "prazo_texto_derivado": 9,
+      "pct_sem_prazo": 50.0,
+      "top_campos_prazo": [
+        [
+          "texto_derivado",
+          9
+        ]
+      ],
+      "crawler_provavel": "transformer.py (genérico) / scraper da fonte",
+      "recomendacao": "Revisar crawler e preencher prazo_envio_raw + extras.deadline antes do loader."
+    },
+    {
+      "fonte_recurso": "AFWERX",
+      "total": 8,
+      "com_prazo_db": 0,
+      "sem_prazo": 8,
+      "prazo_texto_derivado": 0,
+      "pct_sem_prazo": 100.0,
+      "top_campos_prazo": [],
+      "crawler_provavel": "transformer.py (genérico) / scraper da fonte",
+      "recomendacao": "Revisar crawler e preencher prazo_envio_raw + extras.deadline antes do loader."
+    },
+    {
+      "fonte_recurso": "IHI Corporation (Suppliers)",
+      "total": 8,
+      "com_prazo_db": 0,
+      "sem_prazo": 8,
+      "prazo_texto_derivado": 0,
+      "pct_sem_prazo": 100.0,
+      "top_campos_prazo": [],
+      "crawler_provavel": "transformer.py (genérico) / scraper da fonte",
+      "recomendacao": "Revisar crawler e preencher prazo_envio_raw + extras.deadline antes do loader."
+    },
+    {
+      "fonte_recurso": "Ambev",
+      "total": 7,
+      "com_prazo_db": 0,
+      "sem_prazo": 7,
+      "prazo_texto_derivado": 0,
+      "pct_sem_prazo": 100.0,
+      "top_campos_prazo": [],
+      "crawler_provavel": "transformer.py (genérico) / scraper da fonte",
+      "recomendacao": "Revisar crawler e preencher prazo_envio_raw + extras.deadline antes do loader."
+    },
+    {
+      "fonte_recurso": "BADESUL",
+      "total": 7,
+      "com_prazo_db": 0,
+      "sem_prazo": 7,
+      "prazo_texto_derivado": 0,
+      "pct_sem_prazo": 100.0,
+      "top_campos_prazo": [],
+      "crawler_provavel": "transformer.py (genérico) / scraper da fonte",
+      "recomendacao": "Revisar crawler e preencher prazo_envio_raw + extras.deadline antes do loader."
+    },
+    {
+      "fonte_recurso": "FAPEMIG",
+      "total": 7,
+      "com_prazo_db": 0,
+      "sem_prazo": 7,
+      "prazo_texto_derivado": 0,
+      "pct_sem_prazo": 100.0,
+      "top_campos_prazo": [],
+      "crawler_provavel": "transformer.py (genérico) / scraper da fonte",
+      "recomendacao": "Revisar crawler e preencher prazo_envio_raw + extras.deadline antes do loader."
+    },
+    {
+      "fonte_recurso": "China Tendering & Bidding",
+      "total": 6,
+      "com_prazo_db": 0,
+      "sem_prazo": 6,
+      "prazo_texto_derivado": 0,
+      "pct_sem_prazo": 100.0,
+      "top_campos_prazo": [],
+      "crawler_provavel": "transformer.py (genérico) / scraper da fonte",
+      "recomendacao": "Extrair bid/tender closing date no detail HTML; flag deadline_missing_in_source se só publicação."
+    },
+    {
+      "fonte_recurso": "University of Science and Technology of China",
+      "total": 6,
+      "com_prazo_db": 0,
+      "sem_prazo": 6,
+      "prazo_texto_derivado": 0,
+      "pct_sem_prazo": 100.0,
+      "top_campos_prazo": [],
+      "crawler_provavel": "transformer.py (genérico) / scraper da fonte",
+      "recomendacao": "Extrair bid/tender closing date no detail HTML; flag deadline_missing_in_source se só publicação."
+    },
+    {
+      "fonte_recurso": "ERC",
+      "total": 8,
+      "com_prazo_db": 0,
+      "sem_prazo": 6,
+      "prazo_texto_derivado": 2,
+      "pct_sem_prazo": 75.0,
+      "top_campos_prazo": [
+        [
+          "texto_derivado",
+          2
+        ]
+      ],
+      "crawler_provavel": "transformer.py (genérico) / scraper da fonte",
+      "recomendacao": "Revisar crawler e preencher prazo_envio_raw + extras.deadline antes do loader."
+    },
+    {
+      "fonte_recurso": "AMAZUL",
+      "total": 20,
+      "com_prazo_db": 14,
+      "sem_prazo": 6,
+      "prazo_texto_derivado": 0,
+      "pct_sem_prazo": 30.0,
+      "top_campos_prazo": [
+        [
+          "prazo_envio",
+          14
+        ]
+      ],
+      "crawler_provavel": "transformer.py (genérico) / scraper da fonte",
+      "recomendacao": "Revisar crawler e preencher prazo_envio_raw + extras.deadline antes do loader."
+    },
+    {
+      "fonte_recurso": "JETRO Government Procurement",
+      "total": 11,
+      "com_prazo_db": 0,
+      "sem_prazo": 5,
+      "prazo_texto_derivado": 6,
+      "pct_sem_prazo": 45.5,
+      "top_campos_prazo": [
+        [
+          "texto_derivado",
+          6
+        ]
+      ],
+      "crawler_provavel": "transformer.py (genérico) / scraper da fonte",
+      "recomendacao": "Revisar crawler e preencher prazo_envio_raw + extras.deadline antes do loader."
+    },
+    {
+      "fonte_recurso": "Petrobras",
+      "total": 4,
+      "com_prazo_db": 0,
+      "sem_prazo": 4,
+      "prazo_texto_derivado": 0,
+      "pct_sem_prazo": 100.0,
+      "top_campos_prazo": [],
+      "crawler_provavel": "transformer.py (genérico) / scraper da fonte",
+      "recomendacao": "Revisar crawler e preencher prazo_envio_raw + extras.deadline antes do loader."
+    },
+    {
+      "fonte_recurso": "QST",
+      "total": 5,
+      "com_prazo_db": 0,
+      "sem_prazo": 4,
+      "prazo_texto_derivado": 1,
+      "pct_sem_prazo": 80.0,
+      "top_campos_prazo": [
+        [
+          "texto_derivado",
+          1
+        ]
+      ],
+      "crawler_provavel": "transformer.py (genérico) / scraper da fonte",
+      "recomendacao": "Revisar crawler e preencher prazo_envio_raw + extras.deadline antes do loader."
+    },
+    {
+      "fonte_recurso": "EIC",
+      "total": 14,
+      "com_prazo_db": 0,
+      "sem_prazo": 4,
+      "prazo_texto_derivado": 10,
+      "pct_sem_prazo": 28.6,
+      "top_campos_prazo": [
+        [
+          "texto_derivado",
+          10
+        ]
+      ],
+      "crawler_provavel": "transformer.py (genérico) / scraper da fonte",
+      "recomendacao": "Revisar crawler e preencher prazo_envio_raw + extras.deadline antes do loader."
+    },
+    {
+      "fonte_recurso": "BAE Systems Suppliers",
+      "total": 3,
+      "com_prazo_db": 0,
+      "sem_prazo": 3,
+      "prazo_texto_derivado": 0,
+      "pct_sem_prazo": 100.0,
+      "top_campos_prazo": [],
+      "crawler_provavel": "transformer.py (genérico) / scraper da fonte",
+      "recomendacao": "Revisar crawler e preencher prazo_envio_raw + extras.deadline antes do loader."
+    },
+    {
+      "fonte_recurso": "MCTI",
+      "total": 3,
+      "com_prazo_db": 0,
+      "sem_prazo": 3,
+      "prazo_texto_derivado": 0,
+      "pct_sem_prazo": 100.0,
+      "top_campos_prazo": [],
+      "crawler_provavel": "transformer.py (genérico) / scraper da fonte",
+      "recomendacao": "Revisar crawler e preencher prazo_envio_raw + extras.deadline antes do loader."
+    },
+    {
+      "fonte_recurso": "Apex Brasil",
+      "total": 4,
+      "com_prazo_db": 1,
+      "sem_prazo": 3,
+      "prazo_texto_derivado": 0,
+      "pct_sem_prazo": 75.0,
+      "top_campos_prazo": [
+        [
+          "prazo_envio",
+          1
+        ]
+      ],
+      "crawler_provavel": "transformer.py (genérico) / scraper da fonte",
+      "recomendacao": "Revisar crawler e preencher prazo_envio_raw + extras.deadline antes do loader."
+    },
+    {
+      "fonte_recurso": "FAPERGS",
+      "total": 6,
+      "com_prazo_db": 3,
+      "sem_prazo": 3,
+      "prazo_texto_derivado": 0,
+      "pct_sem_prazo": 50.0,
+      "top_campos_prazo": [
+        [
+          "prazo_envio",
+          3
+        ]
+      ],
+      "crawler_provavel": "transformer.py (genérico) / scraper da fonte",
+      "recomendacao": "Revisar crawler e preencher prazo_envio_raw + extras.deadline antes do loader."
+    },
+    {
+      "fonte_recurso": "UKRI Funding",
+      "total": 12,
+      "com_prazo_db": 0,
+      "sem_prazo": 3,
+      "prazo_texto_derivado": 9,
+      "pct_sem_prazo": 25.0,
+      "top_campos_prazo": [
+        [
+          "texto_derivado",
+          9
+        ]
+      ],
+      "crawler_provavel": "transformer.py (genérico) / scraper da fonte",
+      "recomendacao": "Revisar crawler e preencher prazo_envio_raw + extras.deadline antes do loader."
+    },
+    {
+      "fonte_recurso": "CAIXA",
+      "total": 2,
+      "com_prazo_db": 0,
+      "sem_prazo": 2,
+      "prazo_texto_derivado": 0,
+      "pct_sem_prazo": 100.0,
+      "top_campos_prazo": [],
+      "crawler_provavel": "transformer.py (genérico) / scraper da fonte",
+      "recomendacao": "Revisar crawler e preencher prazo_envio_raw + extras.deadline antes do loader."
+    },
+    {
+      "fonte_recurso": "Japan MOD",
+      "total": 2,
+      "com_prazo_db": 0,
+      "sem_prazo": 2,
+      "prazo_texto_derivado": 0,
+      "pct_sem_prazo": 100.0,
+      "top_campos_prazo": [],
+      "crawler_provavel": "transformer.py (genérico) / scraper da fonte",
+      "recomendacao": "Revisar crawler e preencher prazo_envio_raw + extras.deadline antes do loader."
+    },
+    {
+      "fonte_recurso": "MMA / FNMA",
+      "total": 2,
+      "com_prazo_db": 0,
+      "sem_prazo": 2,
+      "prazo_texto_derivado": 0,
+      "pct_sem_prazo": 100.0,
+      "top_campos_prazo": [],
+      "crawler_provavel": "transformer.py (genérico) / scraper da fonte",
+      "recomendacao": "Revisar crawler e preencher prazo_envio_raw + extras.deadline antes do loader."
+    },
+    {
+      "fonte_recurso": "Softex",
+      "total": 2,
+      "com_prazo_db": 0,
+      "sem_prazo": 2,
+      "prazo_texto_derivado": 0,
+      "pct_sem_prazo": 100.0,
+      "top_campos_prazo": [],
+      "crawler_provavel": "transformer.py (genérico) / scraper da fonte",
+      "recomendacao": "Revisar crawler e preencher prazo_envio_raw + extras.deadline antes do loader."
+    },
+    {
+      "fonte_recurso": "Thales Suppliers",
+      "total": 2,
+      "com_prazo_db": 0,
+      "sem_prazo": 2,
+      "prazo_texto_derivado": 0,
+      "pct_sem_prazo": 100.0,
+      "top_campos_prazo": [],
+      "crawler_provavel": "transformer.py (genérico) / scraper da fonte",
+      "recomendacao": "Revisar crawler e preencher prazo_envio_raw + extras.deadline antes do loader."
+    },
+    {
+      "fonte_recurso": "Rheinmetall Suppliers",
+      "total": 2,
+      "com_prazo_db": 0,
+      "sem_prazo": 2,
+      "prazo_texto_derivado": 0,
+      "pct_sem_prazo": 100.0,
+      "top_campos_prazo": [],
+      "crawler_provavel": "transformer.py (genérico) / scraper da fonte",
+      "recomendacao": "Revisar crawler e preencher prazo_envio_raw + extras.deadline antes do loader."
+    },
+    {
+      "fonte_recurso": "China MOD (public)",
+      "total": 2,
+      "com_prazo_db": 0,
+      "sem_prazo": 2,
+      "prazo_texto_derivado": 0,
+      "pct_sem_prazo": 100.0,
+      "top_campos_prazo": [],
+      "crawler_provavel": "transformer.py (genérico) / scraper da fonte",
+      "recomendacao": "Extrair bid/tender closing date no detail HTML; flag deadline_missing_in_source se só publicação."
+    },
+    {
+      "fonte_recurso": "CONFAP",
+      "total": 5,
+      "com_prazo_db": 3,
+      "sem_prazo": 2,
+      "prazo_texto_derivado": 0,
+      "pct_sem_prazo": 40.0,
+      "top_campos_prazo": [
+        [
+          "prazo_envio",
+          3
+        ]
+      ],
+      "crawler_provavel": "transformer.py (genérico) / scraper da fonte",
+      "recomendacao": "Revisar crawler e preencher prazo_envio_raw + extras.deadline antes do loader."
+    },
+    {
+      "fonte_recurso": "DIU",
+      "total": 9,
+      "com_prazo_db": 0,
+      "sem_prazo": 2,
+      "prazo_texto_derivado": 7,
+      "pct_sem_prazo": 22.2,
+      "top_campos_prazo": [
+        [
+          "texto_derivado",
+          7
+        ]
+      ],
+      "crawler_provavel": "transformer.py (genérico) / scraper da fonte",
+      "recomendacao": "Revisar crawler e preencher prazo_envio_raw + extras.deadline antes do loader."
+    },
+    {
+      "fonte_recurso": "PLATAFORMA_INDUSTRIA",
+      "total": 1,
+      "com_prazo_db": 0,
+      "sem_prazo": 1,
+      "prazo_texto_derivado": 0,
+      "pct_sem_prazo": 100.0,
+      "top_campos_prazo": [],
+      "crawler_provavel": "transformer.py (genérico) / scraper da fonte",
+      "recomendacao": "Revisar crawler e preencher prazo_envio_raw + extras.deadline antes do loader."
+    },
+    {
+      "fonte_recurso": "CAPES",
+      "total": 1,
+      "com_prazo_db": 0,
+      "sem_prazo": 1,
+      "prazo_texto_derivado": 0,
+      "pct_sem_prazo": 100.0,
+      "top_campos_prazo": [],
+      "crawler_provavel": "transformer.py (genérico) / scraper da fonte",
+      "recomendacao": "Revisar crawler e preencher prazo_envio_raw + extras.deadline antes do loader."
+    },
+    {
+      "fonte_recurso": "CBPF",
+      "total": 1,
+      "com_prazo_db": 0,
+      "sem_prazo": 1,
+      "prazo_texto_derivado": 0,
+      "pct_sem_prazo": 100.0,
+      "top_campos_prazo": [],
+      "crawler_provavel": "transformer.py (genérico) / scraper da fonte",
+      "recomendacao": "Revisar crawler e preencher prazo_envio_raw + extras.deadline antes do loader."
+    },
+    {
+      "fonte_recurso": "CAEA",
+      "total": 1,
+      "com_prazo_db": 0,
+      "sem_prazo": 1,
+      "prazo_texto_derivado": 0,
+      "pct_sem_prazo": 100.0,
+      "top_campos_prazo": [],
+      "crawler_provavel": "transformer.py (genérico) / scraper da fonte",
+      "recomendacao": "Revisar crawler e preencher prazo_envio_raw + extras.deadline antes do loader."
+    },
+    {
+      "fonte_recurso": "Compras.gov Defesa",
+      "total": 1,
+      "com_prazo_db": 0,
+      "sem_prazo": 1,
+      "prazo_texto_derivado": 0,
+      "pct_sem_prazo": 100.0,
+      "top_campos_prazo": [],
+      "crawler_provavel": "transformer.py (genérico) / scraper da fonte",
+      "recomendacao": "Revisar crawler e preencher prazo_envio_raw + extras.deadline antes do loader."
+    },
+    {
+      "fonte_recurso": "FNDE",
+      "total": 1,
+      "com_prazo_db": 0,
+      "sem_prazo": 1,
+      "prazo_texto_derivado": 0,
+      "pct_sem_prazo": 100.0,
+      "top_campos_prazo": [],
+      "crawler_provavel": "transformer.py (genérico) / scraper da fonte",
+      "recomendacao": "Revisar crawler e preencher prazo_envio_raw + extras.deadline antes do loader."
+    },
+    {
+      "fonte_recurso": "CNEN",
+      "total": 1,
+      "com_prazo_db": 0,
+      "sem_prazo": 1,
+      "prazo_texto_derivado": 0,
+      "pct_sem_prazo": 100.0,
+      "top_campos_prazo": [],
+      "crawler_provavel": "transformer.py (genérico) / scraper da fonte",
+      "recomendacao": "Revisar crawler e preencher prazo_envio_raw + extras.deadline antes do loader."
+    },
+    {
+      "fonte_recurso": "MEXT",
+      "total": 1,
+      "com_prazo_db": 0,
+      "sem_prazo": 1,
+      "prazo_texto_derivado": 0,
+      "pct_sem_prazo": 100.0,
+      "top_campos_prazo": [],
+      "crawler_provavel": "transformer.py (genérico) / scraper da fonte",
+      "recomendacao": "Revisar crawler e preencher prazo_envio_raw + extras.deadline antes do loader."
+    },
+    {
+      "fonte_recurso": "MAPA",
+      "total": 1,
+      "com_prazo_db": 0,
+      "sem_prazo": 1,
+      "prazo_texto_derivado": 0,
+      "pct_sem_prazo": 100.0,
+      "top_campos_prazo": [],
+      "crawler_provavel": "transformer.py (genérico) / scraper da fonte",
+      "recomendacao": "Revisar crawler e preencher prazo_envio_raw + extras.deadline antes do loader."
+    },
+    {
+      "fonte_recurso": "Ministério da Saúde",
+      "total": 1,
+      "com_prazo_db": 0,
+      "sem_prazo": 1,
+      "prazo_texto_derivado": 0,
+      "pct_sem_prazo": 100.0,
+      "top_campos_prazo": [],
+      "crawler_provavel": "transformer.py (genérico) / scraper da fonte",
+      "recomendacao": "Revisar crawler e preencher prazo_envio_raw + extras.deadline antes do loader."
+    },
+    {
+      "fonte_recurso": "ELETRONUCLEAR",
+      "total": 1,
+      "com_prazo_db": 0,
+      "sem_prazo": 1,
+      "prazo_texto_derivado": 0,
+      "pct_sem_prazo": 100.0,
+      "top_campos_prazo": [],
+      "crawler_provavel": "transformer.py (genérico) / scraper da fonte",
+      "recomendacao": "Revisar crawler e preencher prazo_envio_raw + extras.deadline antes do loader."
+    },
+    {
+      "fonte_recurso": "IMPA",
+      "total": 1,
+      "com_prazo_db": 0,
+      "sem_prazo": 1,
+      "prazo_texto_derivado": 0,
+      "pct_sem_prazo": 100.0,
+      "top_campos_prazo": [],
+      "crawler_provavel": "transformer.py (genérico) / scraper da fonte",
+      "recomendacao": "Revisar crawler e preencher prazo_envio_raw + extras.deadline antes do loader."
+    },
+    {
+      "fonte_recurso": "NATO DIANA",
+      "total": 2,
+      "com_prazo_db": 1,
+      "sem_prazo": 1,
+      "prazo_texto_derivado": 0,
+      "pct_sem_prazo": 50.0,
+      "top_campos_prazo": [
+        [
+          "prazo_envio",
+          1
+        ]
+      ],
+      "crawler_provavel": "transformer.py (genérico) / scraper da fonte",
+      "recomendacao": "Revisar crawler e preencher prazo_envio_raw + extras.deadline antes do loader."
+    },
+    {
+      "fonte_recurso": "CNPQ",
+      "total": 14,
+      "com_prazo_db": 14,
+      "sem_prazo": 0,
+      "prazo_texto_derivado": 0,
+      "pct_sem_prazo": 0.0,
+      "top_campos_prazo": [
+        [
+          "prazo_envio",
+          14
+        ]
+      ],
+      "crawler_provavel": "transformer.py (genérico) / scraper da fonte",
+      "recomendacao": "Revisar crawler e preencher prazo_envio_raw + extras.deadline antes do loader."
+    },
+    {
+      "fonte_recurso": "FAPESC",
+      "total": 10,
+      "com_prazo_db": 10,
+      "sem_prazo": 0,
+      "prazo_texto_derivado": 0,
+      "pct_sem_prazo": 0.0,
+      "top_campos_prazo": [
+        [
+          "prazo_envio",
+          10
+        ]
+      ],
+      "crawler_provavel": "transformer.py (genérico) / scraper da fonte",
+      "recomendacao": "Revisar crawler e preencher prazo_envio_raw + extras.deadline antes do loader."
+    },
+    {
+      "fonte_recurso": "IARPA",
+      "total": 8,
+      "com_prazo_db": 8,
+      "sem_prazo": 0,
+      "prazo_texto_derivado": 0,
+      "pct_sem_prazo": 0.0,
+      "top_campos_prazo": [
+        [
+          "prazo_envio",
+          8
+        ]
+      ],
+      "crawler_provavel": "transformer.py (genérico) / scraper da fonte",
+      "recomendacao": "Revisar crawler e preencher prazo_envio_raw + extras.deadline antes do loader."
+    },
+    {
+      "fonte_recurso": "ANP",
+      "total": 2,
+      "com_prazo_db": 2,
+      "sem_prazo": 0,
+      "prazo_texto_derivado": 0,
+      "pct_sem_prazo": 0.0,
+      "top_campos_prazo": [
+        [
+          "prazo_envio",
+          2
+        ]
+      ],
+      "crawler_provavel": "transformer.py (genérico) / scraper da fonte",
+      "recomendacao": "Revisar crawler e preencher prazo_envio_raw + extras.deadline antes do loader."
+    }
+  ]
+}

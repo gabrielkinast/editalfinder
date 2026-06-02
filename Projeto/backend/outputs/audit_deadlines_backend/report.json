@@ -1,0 +1,1881 @@
+{
+  "total": 1232,
+  "status": {
+    "sem_prazo": 1025,
+    "prazo_confortavel": 40,
+    "encerrado": 148,
+    "vencendo_7": 8,
+    "vencendo_30": 11
+  },
+  "confidence": {
+    "nenhuma": 1025,
+    "alta": 116,
+    "baixa": 91
+  },
+  "top_source_fields": [
+    [
+      "prazo_envio",
+      116
+    ],
+    [
+      "texto_derivado",
+      91
+    ]
+  ],
+  "structured_count": 207,
+  "raw_only_count": 0,
+  "none_count": 1025,
+  "text_extracted_count": 91,
+  "top_fontes_sem_prazo": [
+    [
+      "China International Tendering (MOFCOM)",
+      131
+    ],
+    [
+      "Fundação Araucária",
+      88
+    ],
+    [
+      "Grants.gov",
+      79
+    ],
+    [
+      "BNDES",
+      38
+    ],
+    [
+      "BDMG",
+      37
+    ],
+    [
+      "BASA",
+      30
+    ],
+    [
+      "CAS",
+      29
+    ],
+    [
+      "ANEEL",
+      27
+    ],
+    [
+      "KAKENHI",
+      26
+    ],
+    [
+      "HORIZON_EUROPE",
+      25
+    ],
+    [
+      "BNB",
+      24
+    ],
+    [
+      "NSFC",
+      24
+    ],
+    [
+      "SENAI",
+      22
+    ],
+    [
+      "NUCLEP",
+      20
+    ],
+    [
+      "CGN",
+      16
+    ],
+    [
+      "MOST China",
+      16
+    ],
+    [
+      "NEDO",
+      16
+    ],
+    [
+      "ESA OSIP",
+      15
+    ],
+    [
+      "DARPA Opportunities",
+      15
+    ],
+    [
+      "DoD SBIR/STTR",
+      14
+    ],
+    [
+      "DOE_ARPAE",
+      14
+    ],
+    [
+      "IPEN",
+      14
+    ],
+    [
+      "JSPS",
+      14
+    ],
+    [
+      "Lockheed Martin Suppliers",
+      14
+    ],
+    [
+      "Eureka Network",
+      13
+    ]
+  ],
+  "examples_by_fonte": {
+    "CAS": [
+      {
+        "id_edital": 582,
+        "titulo": "工程热物理所等在压缩空气储能压缩机研发方面取得突破",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 593,
+        "titulo": "汪克强出席第四届中国（安徽）科技创新成果转化交易会及“融合点”行动安徽专场对接会",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 1711,
+        "titulo": "【人民日报】研究团队把生物防伪“写进”材料本体",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      }
+    ],
+    "BASA": [
+      {
+        "id_edital": 2,
+        "titulo": "Conta PJ",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 21,
+        "titulo": "Energia Verde",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 13,
+        "titulo": "Amazônia Rural Verde",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      }
+    ],
+    "China International Tendering (MOFCOM)": [
+      {
+        "id_edital": 629,
+        "titulo": "滚插齿加工机重新招标澄清或变更公告(1)",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 624,
+        "titulo": "珠海京东方晶芯科技有限公司Mini/Micro LED COB显示...",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 630,
+        "titulo": "数控滚齿机重新招标澄清或变更公告(1)",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      }
+    ],
+    "CGN": [
+      {
+        "id_edital": 1726,
+        "titulo": "中广核能源国际韩国大山二期项目完成燃气轮机首次点火",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 606,
+        "titulo": "中广核陆丰核电5号机组圆满完成冷试",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 1727,
+        "titulo": "中广核广东太平岭核电厂2号机组首次核燃料装载工作圆满完...",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      }
+    ],
+    "SENAI": [
+      {
+        "id_edital": 408,
+        "titulo": "Linhas de Cuidado na Saúde Suplementar SESI e ANS (SESI)",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 387,
+        "titulo": "Smart Factory- BNDES (SENAI)",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 388,
+        "titulo": "Agenda.Tech (SENAI) 2026 Chamada: Mapeamento de Oportunidades e Tencologias para Powrshoring no Bras",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      }
+    ],
+    "BDMG": [
+      {
+        "id_edital": 28,
+        "titulo": "English",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 30,
+        "titulo": "Sobre o BDMG",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 43,
+        "titulo": "Eventos",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      }
+    ],
+    "Grants.gov": [
+      {
+        "id_edital": 1127,
+        "titulo": "DoW Amyotrophic Lateral Sclerosis Research Program, Pilot Clinical Trial Award",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 1128,
+        "titulo": "FY25 Long Range Broad Agency Announcement (BAA) for Navy and Marine Corps Science and Technology",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 1131,
+        "titulo": "DoW Breast Cancer, Breakthrough Award Level 3",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      }
+    ],
+    "EIT": [
+      {
+        "id_edital": 2034,
+        "titulo": "EIT Jumpstarter 2026",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 2027,
+        "titulo": "Call for EIT Knowledge and Innovation Communities",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 2030,
+        "titulo": "Open Calls",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      }
+    ],
+    "BAE Systems Suppliers": [
+      {
+        "id_edital": 483,
+        "titulo": "Login to your account",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 484,
+        "titulo": "Responsible supply chain | BAE Systems UK suppliers",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 482,
+        "titulo": "New supplier registration (HICX)",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      }
+    ],
+    "PLATAFORMA_INDUSTRIA": [
+      {
+        "id_edital": 409,
+        "titulo": "INOVA MES (SESI)",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      }
+    ],
+    "ESA OSIP": [
+      {
+        "id_edital": 2044,
+        "titulo": "INDustrialisation / Serialisation Support Campaign",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 2045,
+        "titulo": "Announcement of Opportunity: Science opportunities on Uncrewed Autonomous Free Flying Platforms in L",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 2054,
+        "titulo": "The ESA Marketplace",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      }
+    ],
+    "AFWERX": [
+      {
+        "id_edital": 410,
+        "titulo": "SBIR/STTR Overview",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 412,
+        "titulo": "Specific Topic",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 413,
+        "titulo": "STRATFI/TACFI",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      }
+    ],
+    "BNB": [
+      {
+        "id_edital": 69,
+        "titulo": "Educação – atividades financiadas – Banco do Nordeste",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 72,
+        "titulo": "Grãos – atividades financiadas – Banco do Nordeste",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 75,
+        "titulo": "Ovinocaprinocultura – atividades financiadas – Banco do Nordeste",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      }
+    ],
+    "Ambev": [
+      {
+        "id_edital": 439,
+        "titulo": "Circular Economy",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 440,
+        "titulo": "Sustainable Agriculture",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 442,
+        "titulo": "Inclusive Growth",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      }
+    ],
+    "CAIXA": [
+      {
+        "id_edital": 573,
+        "titulo": "Regulamento",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 572,
+        "titulo": "Regulamento",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      }
+    ],
+    "CAPES": [
+      {
+        "id_edital": 574,
+        "titulo": "CAPES - Página de Editais e Programas",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      }
+    ],
+    "CBPF": [
+      {
+        "id_edital": 575,
+        "titulo": "Chamada Pública",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      }
+    ],
+    "CAEA": [
+      {
+        "id_edital": 576,
+        "titulo": "通知公告",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      }
+    ],
+    "ANEEL": [
+      {
+        "id_edital": 444,
+        "titulo": "ANEEL - adsp2024778 2",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 445,
+        "titulo": "ANEEL - Call for Projects H2 PDI",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 446,
+        "titulo": "Sistemas de Armazenamento de Energia",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      }
+    ],
+    "Ministério da Defesa": [
+      {
+        "id_edital": 779,
+        "titulo": "Projeto Soldado Cidadão",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 771,
+        "titulo": "Programa de Gestão e Melhoria da Qualidade (PGMQ)",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 778,
+        "titulo": "Programa Forças no Esporte e João do Pulo",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      }
+    ],
+    "Eureka Network": [
+      {
+        "id_edital": 140,
+        "titulo": "Webinar – Applying to Eurostars: What to consider when writing a proposal",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 110,
+        "titulo": "Innowwide",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 131,
+        "titulo": "Open call for Network Projects applications",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      }
+    ],
+    "AMAZUL": [
+      {
+        "id_edital": 422,
+        "titulo": "Dispensa de Licitação 05/2024",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 421,
+        "titulo": "Dispensa de Licitação 02/2024",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 432,
+        "titulo": "Dispensa de Licitação por Valor 06/2024",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      }
+    ],
+    "NUCLEP": [
+      {
+        "id_edital": 1430,
+        "titulo": "NUCLEP",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 1433,
+        "titulo": "Expertise",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 1444,
+        "titulo": "Segmento de Energia",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      }
+    ],
+    "MOST China": [
+      {
+        "id_edital": 704,
+        "titulo": "科技部党组传达学习习近平总书记在加强基础研究座谈会上的重要讲话精神",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 705,
+        "titulo": "科技部组织召开科技监督工作座谈会暨2026年重大项目监督检查启动会",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 699,
+        "titulo": "国家科技基础条件平台中心2026年高层次人才公开招聘公告",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      }
+    ],
+    "Apex Brasil": [
+      {
+        "id_edital": 473,
+        "titulo": "Exporta Mais Brasil | Alimentos Funcionais e Suplementos Alimentares 2026",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 1558,
+        "titulo": "IAra Global Encontre mercados para exportação e muito mais com a IAra. É simples e gratuito. Acesse ",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 1559,
+        "titulo": "licitações e contratos",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      }
+    ],
+    "BADESUL": [
+      {
+        "id_edital": 476,
+        "titulo": "Lista de entidades inscritas",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 481,
+        "titulo": "RETIFICADO Edital Subvenção para Proj Sociais",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 478,
+        "titulo": "Edital Subvenção Econ. Projetos de Impacto Social",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      }
+    ],
+    "NSFC": [
+      {
+        "id_edital": 1832,
+        "titulo": "国家自然科学基金委员会召开2026年项目评审工作动员部署会议",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 1831,
+        "titulo": "习近平对国家自然科学基金委员会工作作出重要指示",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 1833,
+        "titulo": "2026年度浙江、安徽、江西、湖北、湖南五省国家自然科学基金项目资金监督检查进场会在杭州召开",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      }
+    ],
+    "BNDES": [
+      {
+        "id_edital": 556,
+        "titulo": "Chamada Pública para Seleção de Fundo de Investimento em Participações no Complexo de Saúde - 2025",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 554,
+        "titulo": "Chamada Pública para Seleção de Fundos de Investimento em Índice de Mercado – Fundos de Índice (ETFs",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 555,
+        "titulo": "Chamada Pública para Seleção de Fundos com Foco em Mitigação Climática - Chamada de Clima",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      }
+    ],
+    "China Tendering & Bidding": [
+      {
+        "id_edital": 728,
+        "titulo": "中国招标投标公共服务平台",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 723,
+        "titulo": "有效期内公告数量统计",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 725,
+        "titulo": "问题内容：武乡县中小学校护眼灯具配备项目 （项目编号： 1404292021AGK000005）的政府采购活动中，该项目招标文件中服务部分3项内容、技术部分2项内容评标标准中的分值设置未与评审因素的量",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      }
+    ],
+    "Fundação Araucária": [
+      {
+        "id_edital": 943,
+        "titulo": "CP 11/25. PIBIS",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 926,
+        "titulo": "CP 10/26: Pró PET (Pesquisa-Ensino-Extensão)",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 927,
+        "titulo": "CP 09/26: Interconexões Catalunha",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      }
+    ],
+    "University of Science and Technology of China": [
+      {
+        "id_edital": 731,
+        "titulo": "霍英东教育基金会2026年高等院校青年教师基金项目申报通知",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 732,
+        "titulo": "基金委通知：可持续发展国际合作科学计划2026年度项目（第一批）",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 733,
+        "titulo": "基金委通知：一批国际合作交流项目",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      }
+    ],
+    "Compras.gov Defesa": [
+      {
+        "id_edital": 749,
+        "titulo": "Compras.gov Defesa - Índice de Licitações",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      }
+    ],
+    "DARPA Opportunities": [
+      {
+        "id_edital": 756,
+        "titulo": "Offices",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 758,
+        "titulo": "Academia",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 759,
+        "titulo": "Industry",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      }
+    ],
+    "DIU": [
+      {
+        "id_edital": 788,
+        "titulo": "Protecting U.S. Space Capabilities: Defense Innovation Unit and U.S. Space Force Leverage Commercial",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 781,
+        "titulo": "Defense Innovation Unit Announces New Director, Designation as Defense Field Activity",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      }
+    ],
+    "DoD SBIR/STTR": [
+      {
+        "id_edital": 789,
+        "titulo": "Lab to Market Hub",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 790,
+        "titulo": "Participating Federal Agencies",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 792,
+        "titulo": "Impact, Mission, and Goals",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      }
+    ],
+    "European Defence Fund": [
+      {
+        "id_edital": 893,
+        "titulo": "Research, Development and Innovation",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 891,
+        "titulo": "SSA | Europe's Eyes on Space",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 892,
+        "titulo": "Entrepreneurship",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      }
+    ],
+    "DOE_ARPAE": [
+      {
+        "id_edital": 816,
+        "titulo": "DE-FOA-0003555",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 817,
+        "titulo": "DE-FOA-0003551",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 804,
+        "titulo": "RFI-0000094 — ARPA-E eXCHANGE",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      }
+    ],
+    "EMBRAPII": [
+      {
+        "id_edital": 843,
+        "titulo": "Chamada Pública 03/2022 – RESULTADO FINAL",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 833,
+        "titulo": "PROJETOS DE ALTO IMPACTO",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 852,
+        "titulo": "Chamada Pública Unidades Embrapii nº 01/2025",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      }
+    ],
+    "ERC": [
+      {
+        "id_edital": 854,
+        "titulo": "Starting Grant",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 856,
+        "titulo": "Advanced Grant",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 858,
+        "titulo": "Synergy Grant",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      }
+    ],
+    "FAPEMIG": [
+      {
+        "id_edital": 903,
+        "titulo": "Guias passo a passo",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 902,
+        "titulo": "Auxílios e Bolsas",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 904,
+        "titulo": "Guias Relacionados",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      }
+    ],
+    "FAPERGS": [
+      {
+        "id_edital": 912,
+        "titulo": "Chamada CONFAP–Brasillinois 2026 - FAPERGS - Fundação de Amparo à pesquisa do Estado do RS",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 914,
+        "titulo": "Programa Horizon Europe da Comunidade Europeia - FAPERGS - Fundação de Amparo à pesquisa do Estado d",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 909,
+        "titulo": "FAPERGS - Fundação de Amparo à pesquisa do Estado do RS",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      }
+    ],
+    "General Dynamics Suppliers": [
+      {
+        "id_edital": 1018,
+        "titulo": "ETHICS & CONDUCT BLUE BOOK (v7)",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 1015,
+        "titulo": "Mentor-Protégé Program",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 1016,
+        "titulo": "SUPPLIERS",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      }
+    ],
+    "FNDE": [
+      {
+        "id_edital": 1013,
+        "titulo": "FNDE - Página de Programas e Chamadas",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      }
+    ],
+    "HORIZON_EUROPE": [
+      {
+        "id_edital": 1151,
+        "titulo": "HORIZON-CL2-2021-DEMOCRACY-01-01",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 1152,
+        "titulo": "HORIZON-CL2-2021-DEMOCRACY-01-02",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 1153,
+        "titulo": "HORIZON-CL2-2021-DEMOCRACY-01-03",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      }
+    ],
+    "IPEN": [
+      {
+        "id_edital": 1185,
+        "titulo": "Programa de Política Nuclear - PPA",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 1187,
+        "titulo": "Emergência Radiológica IPEN",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 1188,
+        "titulo": "Centros de Pesquisa",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      }
+    ],
+    "AIST": [
+      {
+        "id_edital": 1199,
+        "titulo": "産総研ブランドストーリー",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 1200,
+        "titulo": "東北センター",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 1201,
+        "titulo": "臨海副都心センター",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      }
+    ],
+    "JETRO Government Procurement": [
+      {
+        "id_edital": 1235,
+        "titulo": "Points of attention",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 1231,
+        "titulo": "About Government Procurement",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 1232,
+        "titulo": "Points of attention",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      }
+    ],
+    "ATLA": [
+      {
+        "id_edital": 1209,
+        "titulo": "Request for Tender page",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 1210,
+        "titulo": "Naval Systems Research Center page",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 1211,
+        "titulo": "Ground Systems Research Center page",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      }
+    ],
+    "IHI Corporation (Suppliers)": [
+      {
+        "id_edital": 1222,
+        "titulo": "Resources, Energy & Environment",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 1223,
+        "titulo": "Industrial Systems & General-purpose Machinery",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 1224,
+        "titulo": "Aero Engine, Space & Defense",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      }
+    ],
+    "JSPS": [
+      {
+        "id_edital": 1280,
+        "titulo": "科研費における研究データの管理・利活用",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 1267,
+        "titulo": "基盤研究（A・B・C）・挑戦的研究・若手研究",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 1268,
+        "titulo": "研究成果公開促進費",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      }
+    ],
+    "KAKENHI": [
+      {
+        "id_edital": 1251,
+        "titulo": "科研費ハンドブック",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 1243,
+        "titulo": "外国人研究者招へい事業",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 1245,
+        "titulo": "調達情報",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      }
+    ],
+    "CNEN": [
+      {
+        "id_edital": 734,
+        "titulo": "Edital de Chamamento Público para Credenciamento 01/2020",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      }
+    ],
+    "KEK": [
+      {
+        "id_edital": 1307,
+        "titulo": "安全への取り組み",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 1308,
+        "titulo": "素粒子原子核研究所（IPNS）",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 1309,
+        "titulo": "加速器研究施設（ACCL）",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      }
+    ],
+    "NEDO": [
+      {
+        "id_edital": 1362,
+        "titulo": "グリーンイノベーション基金事業の基本方針（本文）（802KB）",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 1363,
+        "titulo": "公募要領（552KB）",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 1351,
+        "titulo": "「半導体・デジタル産業戦略の戦略的実行に向けた調査分析」の実施体制の決定について",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      }
+    ],
+    "Mitsubishi Heavy Industries (Suppliers)": [
+      {
+        "id_edital": 1345,
+        "titulo": "Space & Defense",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 1337,
+        "titulo": "Nuclear Energy Systems",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 1338,
+        "titulo": "Research & Innovation Center",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      }
+    ],
+    "MEXT": [
+      {
+        "id_edital": 1336,
+        "titulo": "Science and Technology",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      }
+    ],
+    "Japan MOD": [
+      {
+        "id_edital": 1349,
+        "titulo": "Measures on Defense Equipment and Technology Cooperation",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 1350,
+        "titulo": "Japan Ministry of Defense (Japanese)",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      }
+    ],
+    "NIMS": [
+      {
+        "id_edital": 1367,
+        "titulo": "The Strength of NIMS's Research in Numbers",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 1368,
+        "titulo": "Our Research Achievements",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 1369,
+        "titulo": "Researcher and Engineer Positions",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      }
+    ],
+    "Petrobras": [
+      {
+        "id_edital": 1451,
+        "titulo": "Inscrições Projetos Incentivados",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 1452,
+        "titulo": "Regulamento Seleção Pública 2023.1 – Projetos Incentivados",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 1450,
+        "titulo": "Inscrições Projetos Não Incentivados",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      }
+    ],
+    "QST": [
+      {
+        "id_edital": 1380,
+        "titulo": "Quantum Technology Innovation",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 1381,
+        "titulo": "Quantum Medicine",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 1382,
+        "titulo": "Quantum Energy",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      }
+    ],
+    "RIKEN": [
+      {
+        "id_edital": 1385,
+        "titulo": "TRIP Headquarters",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 1386,
+        "titulo": "Advanced General Intelligence for Science Program (AGIS)",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 1387,
+        "titulo": "Fundamental Quantum Science Program",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      }
+    ],
+    "Lockheed Martin Suppliers": [
+      {
+        "id_edital": 1397,
+        "titulo": "Military and Veteran Support",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 1398,
+        "titulo": "C4ISR All-Domain Battle Management System",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 1399,
+        "titulo": "Electronic Warfare, Deterrence and Protection",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      }
+    ],
+    "MAPA": [
+      {
+        "id_edital": 1412,
+        "titulo": "MAPA - Página de Editais e Programas",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      }
+    ],
+    "MCTI": [
+      {
+        "id_edital": 1413,
+        "titulo": "EDITAL Nº 18/2021/MCTI - PROCESSO DE ESCOLHA NOVO DIRETOR OBSERVATÓRIO NACIONAL/MCTI",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 1414,
+        "titulo": "EDITAL Nº 17/2021/MCTI - PROCESSO DE ESCOLHA NOVO DIRETOR MAST/MCTI",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 1415,
+        "titulo": "EDITAL CHAMAMENTO PÚBLICO Nº 11, DE 15 DE JUNHO DE 2021",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      }
+    ],
+    "MMA / FNMA": [
+      {
+        "id_edital": 1417,
+        "titulo": "Editais de Chamamento Público",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 1416,
+        "titulo": "Editais de Chamamento Público",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      }
+    ],
+    "NSF": [
+      {
+        "id_edital": 1420,
+        "titulo": "Search Site Content",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 1421,
+        "titulo": "Help Page Content",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 1422,
+        "titulo": "“How to…” Blog Series",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      }
+    ],
+    "Softex": [
+      {
+        "id_edital": 1458,
+        "titulo": "Softex e CAIXA lançam Programa Amazônia Geek para capacitar jovens e mulheres em vulnerabilidade na ",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 1457,
+        "titulo": "Inscrições abertas para o Amazônia Geek, programa de formação de talentos em games",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      }
+    ],
+    "Thales Suppliers": [
+      {
+        "id_edital": 1459,
+        "titulo": "Supplier Relations | Thales Group",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 1460,
+        "titulo": "Thales Security Requirements - Purchasing",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      }
+    ],
+    "WELLCOME": [
+      {
+        "id_edital": 1471,
+        "titulo": "JavaScript is disabled",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 1461,
+        "titulo": "Research funding",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 1462,
+        "titulo": "Find a funding opportunity",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      }
+    ],
+    "Rheinmetall Suppliers": [
+      {
+        "id_edital": 1454,
+        "titulo": "Become a supplier",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 1455,
+        "titulo": "Rheinmetall procurement portal",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      }
+    ],
+    "Ministério da Saúde": [
+      {
+        "id_edital": 1456,
+        "titulo": "Fomento à Pesquisa em Saúde",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      }
+    ],
+    "NATO DIANA": [
+      {
+        "id_edital": 1419,
+        "titulo": "NATO DIANA — Programme FAQ (challenges, eligibility, portal)",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      }
+    ],
+    "CONFAP": [
+      {
+        "id_edital": 750,
+        "titulo": "chamada nexbio amazonia 2026",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 752,
+        "titulo": "chamada marie sk odowska curie intercambio de pessoal 2026",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      }
+    ],
+    "EIC": [
+      {
+        "id_edital": 89,
+        "titulo": "EIC Transition",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 96,
+        "titulo": "Advanced Innovation Challenges- Pilot",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 88,
+        "titulo": "EIC Pathfinder",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      }
+    ],
+    "ELETRONUCLEAR": [
+      {
+        "id_edital": 832,
+        "titulo": "Eletronuclear - Página de Licitações e Oportunidades",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      }
+    ],
+    "UKRI Funding": [
+      {
+        "id_edital": 2061,
+        "titulo": "Funding opportunity: Centre for Quantum Commercialisation Skills",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 2070,
+        "titulo": "RSS feed",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 2066,
+        "titulo": "Funding opportunity: BBSRC new investigator award: applicant-led mode",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      }
+    ],
+    "IMPA": [
+      {
+        "id_edital": 1184,
+        "titulo": "Escola de Verão",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      }
+    ],
+    "China MOD (public)": [
+      {
+        "id_edital": 1739,
+        "titulo": "2026年5月上旬国防部例行新闻发布",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      },
+      {
+        "id_edital": 1740,
+        "titulo": "2026年5月上旬国防部例行新闻发布",
+        "prazo_status": "sem_prazo",
+        "prazo_raw": null,
+        "prazo_source_field": null,
+        "notes": []
+      }
+    ]
+  }
+}

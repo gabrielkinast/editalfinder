@@ -1,0 +1,80 @@
+{
+  "total": 1232,
+  "technology_innovation_before": 24,
+  "technology_innovation_after": 0,
+  "before_distribution": {
+    "aeroespacial": 684,
+    "Indústria": 124,
+    "Bolsas": 85,
+    "Agro": 50,
+    "sem_classificacao": 49,
+    "Startups": 48,
+    "Energia": 48,
+    "Saúde": 32,
+    "Defesa nacional": 30,
+    "Meio ambiente": 29,
+    "tecnologia_inovacao": 24,
+    "Inteligência artificial": 12,
+    "Big data": 10,
+    "Energia renovável": 2,
+    "Bioeconomia": 2,
+    "Petróleo e gás": 1,
+    "nuclear": 1,
+    "Biotecnologia": 1
+  },
+  "after_distribution": {
+    "sem_classificacao": 371,
+    "multissetorial": 170,
+    "defesa_seguranca": 130,
+    "educacao_pesquisa": 106,
+    "industria": 104,
+    "saude": 96,
+    "energia": 71,
+    "startups": 41,
+    "agronegocio": 39,
+    "nuclear": 30,
+    "meio_ambiente": 19,
+    "espaco": 15,
+    "computacao_ia": 15,
+    "cultura_social": 10,
+    "aeroespacial": 9,
+    "economia_negocios": 3,
+    "biotecnologia": 2,
+    "materiais": 1
+  },
+  "backend_6_compare": {
+    "aeroespacial": {
+      "backend_5_after": 1093,
+      "backend_6_after": 9,
+      "delta": -1084
+    },
+    "espaco": {
+      "backend_5_after": 0,
+      "backend_6_after": 15,
+      "delta": 15
+    },
+    "defesa_seguranca": {
+      "backend_5_after": 26,
+      "backend_6_after": 130,
+      "delta": 104
+    },
+    "tecnologias_estrategicas": {
+      "backend_5_after": 0,
+      "backend_6_after": 0,
+      "delta": 0
+    },
+    "multissetorial": {
+      "backend_5_after": 0,
+      "backend_6_after": 170,
+      "delta": 170
+    },
+    "sem_classificacao": {
+      "backend_5_after": 41,
+      "backend_6_after": 371,
+      "delta": 330
+    }
+  },
+  "reclassified_from_tech_count": 24,
+  "aerospace_tag_downgraded_count": 309,
+  "low_confidence_count": 300
+}
