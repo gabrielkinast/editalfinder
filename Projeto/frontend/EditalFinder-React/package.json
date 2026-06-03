@@ -2,7 +2,7 @@
   "homepage": "https://gabrielkinast.github.io/editalfinder",
   "name": "editalfinder-react",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -10,11 +10,15 @@
     "lint": "eslint .",
     "test": "node --test src/utils/radarMatch.test.js",
     "preview": "vite preview",
+    "desktop:dev": "tauri dev",
+    "desktop:build": "tauri build",
+    "desktop:release": "npm run desktop:build && python ../../scripts/create_desktop_release.py",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.99.2",
+    "@tauri-apps/api": "^2.11.0",
     "jspdf": "^4.2.1",
     "jspdf-autotable": "^5.0.7",
     "react": "^19.2.4",
@@ -25,6 +29,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.39.4",
+    "@tauri-apps/cli": "^2.11.2",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.0",

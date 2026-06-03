@@ -1,4 +1,4 @@
-# --- Ambientes virtuais ---
+# --- Ambientes virtuais (Python) ---
 .venv/
 venv/
 env/
@@ -7,10 +7,15 @@ CORE/venv/
 __pycache__/
 *.py[cod]
 *$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
 
 # --- Variáveis de ambiente e secrets ---
 .env
 .env.*
+!.env.example
+!.env.*.example
 CORE/.env
 CORE/.env.*
 *.key
@@ -24,16 +29,23 @@ supabase*.json
 # --- Logs ---
 *.log
 logs/
-*.trace
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+pipeline_run.log
 
-# --- Caches ---
-.pytest_cache/
-.mypy_cache/
-.ruff_cache/
+# --- Caches / temp ---
 .cache/
+tmp/
+temp/
+*.tmp
+*.bak
+*.swp
+*~
 .ipynb_checkpoints/
 
-# --- Node / frontend ---
+# --- Node / frontend builds ---
 node_modules/
 dist/
 build/
@@ -46,6 +58,11 @@ Thumbs.db
 .vscode/
 .idea/
 
+# --- Supabase local CLI ---
+.supabase/
+supabase/.branches/
+supabase/.temp/
+
 # --- Bancos locais / dumps ---
 *.db
 *.sqlite
@@ -54,15 +71,28 @@ Thumbs.db
 *.sql.gz
 *.backup
 
-# --- Temporários ---
-tmp/
-temp/
-*.tmp
-*.bak
-*.swp
-*~
+# --- Dados gerados / exports privados (não versionar dumps de produção) ---
+outputs/
+exports/
+downloads/
+audit_reports*/
+audit_reports_*/
 
-# --- Relatórios / artefactos potencialmente sensíveis (apply, validação, consola) ---
+# Planilhas/CSV de saída de pipeline (manter fixtures/ e docs/ versionados se forem seed)
+**/outputs/**/*.csv
+**/outputs/**/*.xlsx
+**/outputs/**/*.json
+audit_reports/**/*.csv
+audit_reports/**/*.xlsx
+audit_reports/**/*.json
+
+# --- Artefactos HTML/JS de probe local ---
+_*.html
+_*.js
+_*_probe/
+_probe_*.py
+
+# --- Relatórios sensíveis (subconjuntos já usados no pipeline) ---
 audit_reports_loader_ready/
 audit_reports_retransform/
 audit_reports_main_pipeline/*apply*/

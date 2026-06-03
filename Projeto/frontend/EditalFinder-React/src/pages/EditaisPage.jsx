@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import { useLocation, useNavigate, useSearchParams } from 'react-router-dom';
 import * as XLSX from 'xlsx';
 import Header from '../components/layout/Header';
+import HelpPageLink from '../components/help/HelpPageLink';
 import EditalCard from '../components/dashboard/EditalCard';
 import EditaisFiltersSidebar from '../components/dashboard/EditaisFiltersSidebar';
 import EditaisStatsBar from '../components/dashboard/EditaisStatsBar';
@@ -741,7 +742,10 @@ export default function EditaisPage() {
 
         <main className="main-content">
           <div className="content-header editai-dash-header">
-            <h2>Editais Disponíveis</h2>
+            <div>
+              <h2>Editais Disponíveis</h2>
+              <HelpPageLink sectionId="editais" label="Como filtrar editais?" />
+            </div>
             <div className="content-actions editai-dash-actions">
               <EditaisStatsBar
                 filteredCount={sortedFiltered.length}

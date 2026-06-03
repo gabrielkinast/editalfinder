@@ -8,8 +8,15 @@
 node_modules/
 dist/
 dist-ssr/
+dist-desktop/
 build/
 .vite/
+
+# Tauri / Rust (não versionar artefatos compilados)
+src-tauri/target/
+
+# Instaladores desktop (gerados localmente)
+*.msi
 
 # Logs
 logs

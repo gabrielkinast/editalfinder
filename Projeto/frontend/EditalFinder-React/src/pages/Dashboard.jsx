@@ -13,6 +13,7 @@ import DashboardScopeFilter from '../components/dashboard/home/DashboardScopeFil
 import DashboardDataQualityPanel from '../components/dashboard/home/DashboardDataQualityPanel';
 import EmptyOrErrorState from '../components/common/EmptyOrErrorState';
 import AppReportProblemButton from '../components/feedback/AppReportProblemButton';
+import HelpPageLink from '../components/help/HelpPageLink';
 import '../styles/dashboard.css';
 
 function formatUpdatedAt(date) {
@@ -86,6 +87,7 @@ export default function Dashboard() {
             <p className="home-dash-eyebrow">Central executiva</p>
             <h1 className="home-dash-title">Dashboard</h1>
             <p className="home-dash-subtitle">Resumo recente do EditalFinder</p>
+            <HelpPageLink sectionId="dashboard" label="Como usar o Dashboard?" />
             <p className="home-dash-updated">{formatUpdatedAt(lastUpdated)}</p>
           </div>
           <div className="home-dash-header-actions">

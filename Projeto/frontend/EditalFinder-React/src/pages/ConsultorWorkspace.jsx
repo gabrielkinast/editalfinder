@@ -5,6 +5,7 @@ import ConsultorClienteList from '../components/consultor/ConsultorClienteList';
 import ConsultorRecommendedSection from '../components/consultor/ConsultorRecommendedSection';
 import ConsultorAllOpportunitiesModal from '../components/consultor/ConsultorAllOpportunitiesModal';
 import ConsultorWorkspaceErrorBoundary from '../components/consultor/ConsultorWorkspaceErrorBoundary';
+import HelpPageLink from '../components/help/HelpPageLink';
 import { CONSULTOR_ENABLE_ALL_OPPORTUNITIES_MODAL } from '../utils/consultor/consultorWorkspaceConstants';
 import { derivePortfolioStatusMessage } from '../utils/consultor/derivePortfolioStatusMessage';
 import { resolveAnalyzedOpportunityCount } from '../utils/consultor/resolveAnalyzedOpportunityCount';
@@ -806,6 +807,7 @@ function ConsultorWorkspaceContent() {
               Use o perfil do cliente para gerar uma carteira de oportunidades, selecione as mais promissoras e
               transforme em pré-projeto consultivo.
             </p>
+            <HelpPageLink sectionId="workspace-consultor" label="Como usar este Workspace?" />
           </div>
         </header>
 

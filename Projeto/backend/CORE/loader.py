@@ -879,6 +879,13 @@ def upsert_routed_item(
     taxonomy_replace_keys: Optional[Set[str]] = None,
 ) -> Tuple[str, str, Optional[int]]:
     """Roteia item normalizado para edital, noticia ou pesquisa."""
+    try:
+        from opportunity_enricher import apply_backend_enrichment_if_enabled
+
+        # Feature flag: não grava colunas novas; só extras.backend_enrichment quando ativo.
+        apply_backend_enrichment_if_enabled(item_normalizado)
+    except ImportError:
+        pass
     destination = get_destination_table(item_normalizado)
     if destination in ("noticia", "pesquisa"):
         row = map_to_content_schema(item_normalizado, destination)

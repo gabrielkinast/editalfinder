@@ -12738,6 +12738,20 @@ button, input:not([type="range"]), select, textarea {
     -webkit-overflow-scrolling: touch;
 }
 
+.app-nav-version {
+    margin: 8px 20px 0;
+    padding-top: 12px;
+    border-top: 1px solid var(--border-color, rgba(128, 128, 128, 0.25));
+    font-size: 12px;
+    color: var(--color-muted, #888);
+}
+
+.settings-app-version {
+    margin: 16px 0 0;
+    font-size: 13px;
+    color: var(--color-muted, #888);
+}
+
 .app-nav-group {
     padding: 0 12px 16px;
 }
