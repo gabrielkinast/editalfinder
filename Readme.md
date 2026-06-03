@@ -1,4 +1,4 @@
-# 🔎 EditalFinder
+#  EditalFinder
 
 **EditalFinder** é uma plataforma de inteligência de oportunidades voltada à coleta, organização, auditoria e apresentação de editais, chamadas públicas, linhas de fomento, crédito, pesquisa, inovação, fornecedores e portais estratégicos.
 
@@ -10,7 +10,7 @@ O EditalFinder automatiza parte desse processo: coleta dados, transforma informa
 
 ---
 
-## 🚀 Visão do Projeto
+##  Visão do Projeto
 
 Encontrar oportunidades relevantes costuma ser um processo manual, fragmentado e sujeito a erros. O EditalFinder busca centralizar e qualificar esse fluxo, permitindo que empresas, pesquisadores, instituições e equipes de inovação acompanhem oportunidades com mais precisão.
 
@@ -25,9 +25,9 @@ A plataforma foi pensada para responder perguntas como:
 
 ---
 
-## ✨ Principais Módulos
+##  Principais Módulos
 
-### 📄 Editais e Chamadas
+###  Editais e Chamadas
 
 Coleta e estrutura editais, chamadas públicas, linhas de crédito, programas de fomento, oportunidades de pesquisa, inovação, defesa, energia, indústria, ciência e tecnologia.
 
@@ -48,7 +48,7 @@ Os dados são normalizados em uma tabela principal de editais, com campos como:
 
 ---
 
-### 🎯 Radar de Fomento
+###  Radar de Fomento
 
 O Radar de Fomento cruza oportunidades disponíveis com o perfil de um cliente/projeto.
 
@@ -64,7 +64,7 @@ A ideia é apoiar uma decisão mais rápida sobre quais editais fazem sentido pa
 
 ---
 
-### 🧾 Cadastro de Clientes e Pré-cadastro de Projetos
+###  Cadastro de Clientes e Pré-cadastro de Projetos
 
 O sistema possui um módulo de cadastro de clientes e projetos, permitindo organizar informações que podem ser usadas para:
 
@@ -75,7 +75,7 @@ O sistema possui um módulo de cadastro de clientes e projetos, permitindo organ
 
 ---
 
-### 📰 Notícias Científicas
+###  Notícias Científicas
 
 Além de editais, o EditalFinder também organiza notícias relevantes de ciência, tecnologia, inovação, energia, defesa, espaço e temas estratégicos.
 
@@ -83,7 +83,7 @@ Essas notícias ficam separadas dos editais para evitar ruído no fluxo principa
 
 ---
 
-### 🔬 Pesquisas e Publicações
+###  Pesquisas e Publicações
 
 O projeto também possui uma camada para pesquisas, publicações, relatórios técnicos e documentos científicos relevantes.
 
@@ -91,7 +91,7 @@ Esse módulo permite acompanhar tendências de pesquisa e desenvolvimento sem mi
 
 ---
 
-### 🌐 Portais Estratégicos: Fornecedores & Investimentos
+###  Portais Estratégicos: Fornecedores & Investimentos
 
 Nem toda oportunidade estratégica é um edital.
 
@@ -119,7 +119,7 @@ Exemplos de uso:
 
 ---
 
-## 🧠 Arquitetura Geral
+##  Arquitetura Geral
 
 ```mermaid
 flowchart LR
@@ -157,7 +157,7 @@ O fluxo principal segue a lógica:
 
 ---
 
-## 🗄️ Modelo de Dados
+##  Modelo de Dados
 
 O backend usa PostgreSQL/Supabase com tabelas e views organizadas por tipo de informação.
 
@@ -182,7 +182,7 @@ O backend usa PostgreSQL/Supabase com tabelas e views organizadas por tipo de in
 
 ---
 
-## 🧩 Portais Estratégicos
+##  Portais Estratégicos
 
 A tabela `portal_estrategico` foi criada para separar conteúdos que são úteis, mas não devem ser tratados como editais tradicionais.
 
@@ -212,7 +212,7 @@ Campos importantes:
 
 ---
 
-## ⚙️ Pipeline de Dados
+##  Pipeline de Dados
 
 O projeto possui diferentes scripts para executar etapas específicas do pipeline.
 
@@ -247,7 +247,7 @@ python scripts/load_portais_estrategicos.py --dry-run
 
 ---
 
-## 🛡️ Segurança Operacional
+##  Segurança Operacional
 
 O projeto usa uma política conservadora para evitar alterações acidentais no banco.
 
@@ -275,7 +275,7 @@ SUPABASE_SERVICE_ROLE_KEY=...
 
 ---
 
-## 🧪 Auditorias e Validação
+##  Auditorias e Validação
 
 O EditalFinder gera relatórios de auditoria em várias etapas do pipeline.
 
@@ -303,7 +303,7 @@ audit_reports_loader_ready/
 
 ---
 
-## 🧹 Recovery Waves
+##  Recovery Waves
 
 O projeto utiliza o conceito de **Recovery Waves**: rodadas pequenas e auditáveis para corrigir dados, crawlers e classificações sem alterar tudo de uma vez.
 
@@ -339,7 +339,7 @@ public.portal_estrategico
 
 ---
 
-## 📁 Estrutura do Projeto
+##  Estrutura do Projeto
 
 Estrutura aproximada:
 
@@ -376,7 +376,7 @@ EditalFinder/
 
 ---
 
-## 🖥️ Frontend
+##  Frontend
 
 O frontend consome views específicas do banco, evitando misturar conteúdos diferentes.
 
@@ -404,7 +404,7 @@ Portais Estratégicos
 
 ---
 
-## 🧾 Relatórios PDF
+##  Relatórios PDF
 
 O sistema possui geração de relatórios PDF para pré-cadastro de projetos, com foco em organizar informações de cliente, dados do projeto e compatibilidade com editais.
 
@@ -412,7 +412,7 @@ Esse módulo está em evolução, com melhorias de layout, identidade visual e p
 
 ---
 
-## 🧰 Tecnologias Utilizadas
+##  Tecnologias Utilizadas
 
 - **Python** — crawlers, transformação, auditorias e loaders;
 - **PostgreSQL / Supabase** — banco de dados, views e staging;
@@ -424,7 +424,7 @@ Esse módulo está em evolução, com melhorias de layout, identidade visual e p
 
 ---
 
-## ▶️ Como Rodar Localmente
+##  Como Rodar Localmente
 
 ### 1. Criar ambiente virtual
 
@@ -479,7 +479,7 @@ python main.py daily --dry-run
 
 ---
 
-## 🧪 Exemplos de Comandos
+##  Exemplos de Comandos
 
 Listar fontes por readiness:
 
@@ -507,7 +507,7 @@ python scripts/validate_portais_estrategicos_after_load.py --staging
 
 ---
 
-## ⚠️ Apply em Staging
+##  Apply em Staging
 
 Aplicações reais devem ser feitas com cuidado.
 
@@ -532,30 +532,7 @@ O apply exige variáveis de ambiente e guardas de segurança.
 
 ---
 
-## 🗺️ Roadmap
-
-- [x] Pipeline de editais e chamadas
-- [x] Normalização em JSON padronizado
-- [x] Loaders com dry-run
-- [x] Ambiente staging
-- [x] Validação global pós-carga
-- [x] Notícias científicas
-- [x] Pesquisas e publicações
-- [x] Radar de Fomento
-- [x] Relatórios PDF
-- [x] Recovery Waves
-- [x] Tabela `portal_estrategico`
-- [x] Primeira carga de fornecedores estratégicos
-- [ ] Primeira onda de investimentos
-- [ ] Página frontend de Portais Estratégicos
-- [ ] Melhorias no frontend de filtros e performance
-- [ ] Testes automatizados
-- [ ] GitHub Actions / CI
-- [ ] Documentação técnica expandida
-
----
-
-## 🔐 Boas Práticas
+##  Boas Práticas
 
 Antes de versionar o projeto:
 
@@ -584,7 +561,7 @@ node_modules/
 
 ---
 
-## 📌 Status
+##  Status
 
 Este projeto está em desenvolvimento ativo.
 
@@ -600,7 +577,3 @@ O foco atual é evoluir o EditalFinder de um agregador de editais para uma plata
 - internacionalização.
 
 ---
-
-## 📄 Licença
-
-Licença: a definir.
