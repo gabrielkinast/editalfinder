@@ -311,13 +311,22 @@ def build_pipeline_item(
     situacao = "Aberto" if _status_prazo_from_row(status, close) != "encerrado" else "Encerrado"
     pub = posted or datetime.now(timezone.utc).date().isoformat()
 
-    return {
+    if close:
+        extras["grants_close_date"] = close
+        extras["deadline"] = close
+        extras["deadline_source_field"] = "close_date"
+        extras["deadline_source"] = "close_date"
+    elif posted:
+        extras["deadline_missing_in_source"] = True
+
+    item = {
         "titulo": title[:250] or "Funding Opportunity",
         "descricao": (mapped.get("summary") or desc)[:3500],
         "link": link,
         "fonte": "Grants.gov",
         "data_publicacao": pub,
         "fim_inscricao": close,
+        "prazo_envio_raw": str(mapped.get("close_date") or "") or None,
         "situacao": situacao,
         "valor": mapped.get("award_ceiling") or mapped.get("award_floor"),
         "programa": "tecnologias_estrategicas",
@@ -326,6 +335,20 @@ def build_pipeline_item(
         "status_prazo": _status_prazo_from_row(status, close),
         "extras": extras,
     }
+    try:
+        from CORE.source_deadline_parsers import enrich_grants_crawler_item
+
+        api_row = {
+            "close_date": mapped.get("close_date"),
+            "posted_date": mapped.get("posted_date"),
+            "closeDate": mapped.get("close_date"),
+            "postedDate": mapped.get("posted_date"),
+            "applicationDueDate": mapped.get("application_due_date"),
+        }
+        item = enrich_grants_crawler_item(item, api_row=api_row)
+    except Exception:
+        pass
+    return item
 
 
 def fetch_simpler_search_page(

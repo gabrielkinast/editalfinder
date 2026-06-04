@@ -1,6 +1,7 @@
 import { useState, useEffect, useMemo, useCallback, useRef } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import Header from '../components/layout/Header';
+import HelpPageLink from '../components/help/HelpPageLink';
 import ListaClientes from '../components/radar/ListaClientes';
 import RadarResultsSkeleton from '../components/radar/RadarResultsSkeleton';
 import RadarResultsGrid from '../components/radar/RadarResultsGrid';
@@ -501,6 +502,7 @@ export default function RadarFomento() {
         <div className="radar-page-title-strip" role="note">
           <h1 className="radar-page-h1">Radar de Fomento</h1>
           <p className="radar-page-h1-sub">Compatibilidade entre clientes e oportunidades de fomento</p>
+          <HelpPageLink sectionId="radar" label="Como interpretar o Radar?" />
         </div>
 
         <div className="radar-page">

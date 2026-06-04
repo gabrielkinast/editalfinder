@@ -6,6 +6,8 @@ import {
   buildAppNavigationSections,
   isNavItemActive,
 } from './appNavigationConfig';
+import AppHelpButton from '../help/AppHelpButton';
+import { APP_VERSION_LABEL } from '../../config/appVersion';
 
 function HamburgerIcon() {
   return (
@@ -165,6 +167,9 @@ export default function AppNavigationMenu({ onOpenSettings }) {
           <div className="app-nav-group app-nav-group--system">
             <p className="app-nav-group-label">Sistema</p>
             <ul className="app-nav-list" role="menu">
+              <li role="none">
+                <AppHelpButton variant="menu" />
+              </li>
               {permissions.canManageUsers && (
                 <li role="none">
                   <button
@@ -189,6 +194,9 @@ export default function AppNavigationMenu({ onOpenSettings }) {
               </li>
             </ul>
           </div>
+          <p className="app-nav-version" aria-label="Versão do aplicativo">
+            {APP_VERSION_LABEL}
+          </p>
         </nav>
           </aside>
         </>

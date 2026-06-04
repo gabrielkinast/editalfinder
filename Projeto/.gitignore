@@ -1,0 +1,10 @@
+# Releases desktop — artefatos locais (não versionar binários)
+/releases/*.exe
+/releases/*.msi
+/releases/*.zip
+/releases/*.7z
+/releases/*.blockmap
+/releases/README_RELEASE_*.txt
+/releases/SHA256SUMS_*.txt
+!/releases/README.md
+!/releases/.gitkeep

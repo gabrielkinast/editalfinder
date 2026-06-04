@@ -8,6 +8,7 @@ import { calcularScore } from '../services/matchService';
 import { classificarEdital } from '../services/classificationService';
 import { resolveActionLinks } from '../utils/edital/linkHealth';
 import EditalReportProblemButton from '../components/editais/EditalReportProblemButton';
+import HelpPageLink from '../components/help/HelpPageLink';
 
 // Perfis representativos para cálculo dinâmico de compatibilidade
 // Campos alinhados com os nomes esperados pelo matchService.js
@@ -251,6 +252,7 @@ export default function EditalDetalhes() {
         <button className="detalhes-btn-voltar" onClick={() => navigate(-1)}>
           ← Voltar para Editais
         </button>
+        <HelpPageLink sectionId="edital-detalhe" label="Como ler o detalhe do edital?" />
 
         {/* Cabeçalho do edital */}
         <div className="detalhes-hero">
