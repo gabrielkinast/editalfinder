@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useSettings } from '../../contexts/SettingsContext';
 import { usePermissions } from '../../hooks/usePermissions';
 import { applyTheme, getSavedThemePreference, saveThemePreference } from '../../config/theme';
+import { APP_VERSION_LABEL } from '../../config/appVersion';
 
 export default function SettingsForm({ onCancel }) {
   const { settings, updateSettings } = useSettings();
@@ -149,6 +150,8 @@ export default function SettingsForm({ onCancel }) {
           <span>{formData.primaryYellow}</span>
         </div>
       </div>
+
+      <p className="settings-app-version">{APP_VERSION_LABEL}</p>
 
       <div className="modal-actions">
         <button type="button" className="btn-cancel" onClick={onCancel}>Cancelar</button>

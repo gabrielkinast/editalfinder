@@ -9,7 +9,8 @@ export async function fetchEditaisCatalog() {
 }
 
 export async function fetchEditalById(id) {
-  return dataService.getEditalById(id);
+  const result = await dataService.getEditalById(id);
+  return result?.edital ?? null;
 }
 
 export async function fetchAnexosByEdital(idEdital) {

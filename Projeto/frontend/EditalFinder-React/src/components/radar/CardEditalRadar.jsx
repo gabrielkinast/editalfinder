@@ -1,8 +1,11 @@
 import { memo } from 'react';
 import { useNavigate } from 'react-router-dom';
+import ExternalActionButton, { EXTERNAL_ACTION_TYPES } from '../../utils/externalActions';
+import { resolveActionLinks } from '../../utils/edital/linkHealth';
 import { CRITERIOS } from '../../services/matchService';
 import { getDisplayTitle } from '../../utils/displayTitle';
 import { normalizeRadarCardEdital } from '../../utils/radar/radarResultShape';
+import EditalStatusBadges from '../editais/EditalStatusBadges';
 
 function CardEditalRadar({
   edital: editalIn,
@@ -56,8 +59,10 @@ function CardEditalRadar({
     compatLabel === 'Média' ? 'radar-score-bar--media' :
     'radar-score-bar--baixa';
 
-  const siteLink = edital.linkInscricao || edital.linkOriginal || edital.orgSite || null;
-  const pdfLink = edital.pdfUrl || null;
+  const actions = resolveActionLinks(edital);
+  const inscricaoLink = actions.inscricao;
+  const siteLink = actions.site;
+  const pdfLink = actions.pdf;
   const scorePct = Number.isFinite(Number(score)) ? Math.min(100, Math.max(0, Math.round(Number(score)))) : 0;
 
   const mostraCriterios = CRITERIOS.some((c) => Number.isFinite(safeDetalhes[c.key]));
@@ -65,7 +70,7 @@ function CardEditalRadar({
   const temExplicacao = positivos.length > 0 || alertas.length > 0 || dimensoes.length > 0;
 
   return (
-    <div className={`radar-card ${compatLabel === 'Alta' ? 'radar-card-destaque' : ''} ${expirado ? 'radar-card-expirado' : ''}`}>
+    <div className={`radar-card ${compatLabel === 'Alta' ? 'radar-card-destaque' : ''} ${expirado ? 'radar-card-expirado' : ''}`} data-testid="radar-card">
       <div className="radar-card-header">
         <div className="radar-card-titulo-wrap">
           <h3 className="radar-card-titulo">{tituloCard}</h3>
@@ -83,6 +88,10 @@ function CardEditalRadar({
         >
           {favorito ? '★' : '☆'}
         </button>
+      </div>
+
+      <div className="radar-card-status-badges">
+        <EditalStatusBadges edital={editalIn} maxVisible={2} compact />
       </div>
 
       {(expirado || rotuloPrazo === 'curto' || safeBadges.length > 0) && (
@@ -227,17 +236,39 @@ function CardEditalRadar({
       </div>
 
       <div className="radar-card-acoes">
-        {siteLink ? (
-          <a href={siteLink} target="_blank" rel="noopener noreferrer" className="radar-btn-site">
-            {edital.linkInscricao ? '✅ Inscrição' : '🌐 Site'}
-          </a>
+        {inscricaoLink ? (
+          <ExternalActionButton
+            item={edital}
+            actionType={EXTERNAL_ACTION_TYPES.EDITAL_INSCRICAO}
+            url={inscricaoLink}
+            label="✅ Inscrição"
+            className="radar-btn-site"
+            logEdital
+            logCampo="link_inscricao"
+          />
+        ) : siteLink ? (
+          <ExternalActionButton
+            item={edital}
+            actionType={EXTERNAL_ACTION_TYPES.EDITAL_PRIMARY}
+            url={siteLink}
+            label="🌐 Site"
+            className="radar-btn-site"
+            logEdital
+            logCampo="link"
+          />
         ) : (
           <span className="radar-btn-site disabled">🌐 Site</span>
         )}
         {pdfLink ? (
-          <a href={pdfLink} target="_blank" rel="noopener noreferrer" className="radar-btn-pdf">
-            📄 PDF
-          </a>
+          <ExternalActionButton
+            item={edital}
+            actionType={EXTERNAL_ACTION_TYPES.EDITAL_PDF}
+            url={pdfLink}
+            label="📄 PDF"
+            className="radar-btn-pdf"
+            logEdital
+            logCampo="pdf_url"
+          />
         ) : (
           <span className="radar-btn-pdf disabled">📄 PDF</span>
         )}

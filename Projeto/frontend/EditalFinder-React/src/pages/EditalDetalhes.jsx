@@ -8,6 +8,12 @@ import { calcularScore } from '../services/matchService';
 import { classificarEdital } from '../services/classificationService';
 import { resolveActionLinks } from '../utils/edital/linkHealth';
 import EditalReportProblemButton from '../components/editais/EditalReportProblemButton';
+import AppReportProblemButton from '../components/feedback/AppReportProblemButton';
+import EditalStatusBadges from '../components/editais/EditalStatusBadges';
+import HelpPageLink from '../components/help/HelpPageLink';
+import ExternalActionButton, { EXTERNAL_ACTION_TYPES } from '../utils/externalActions';
+import { getEditalDetailErrorMessage } from '../utils/edital/editalDetailLookup';
+import { logDetailDebug } from '../utils/qa/detailDebug';
 
 // Perfis representativos para cálculo dinâmico de compatibilidade
 // Campos alinhados com os nomes esperados pelo matchService.js
@@ -125,6 +131,8 @@ export default function EditalDetalhes() {
   const [anexos, setAnexos]   = useState([]);
   const [loading, setLoading] = useState(true);
   const [erro, setErro]       = useState(null);
+  const [errorKind, setErrorKind] = useState(null);
+  const [anexosAviso, setAnexosAviso] = useState(null);
 
   // ⚠️ Todos os hooks ANTES dos early returns (Regras de Hooks)
   const perfisCompativeis = useMemo(() => {
@@ -161,19 +169,69 @@ export default function EditalDetalhes() {
 
   useEffect(() => {
     async function load() {
-      try {
-        const [ed, anx] = await Promise.all([
-          dataService.getEditalById(id),
-          dataService.getAnexosByEdital(id),
-        ]);
-        setEdital(ed);
-        setAnexos(anx);
-      } catch (e) {
-        setErro('Não foi possível carregar os dados do edital.');
-        console.error(e);
-      } finally {
-        setLoading(false);
+      setLoading(true);
+      setErro(null);
+      setErrorKind(null);
+      setAnexosAviso(null);
+      setEdital(null);
+      setAnexos([]);
+
+      const [editalSettled, anexosSettled] = await Promise.allSettled([
+        dataService.getEditalById(id),
+        dataService.getAnexosByEditalSafe(id),
+      ]);
+
+      let lookupResult = null;
+      if (editalSettled.status === 'fulfilled') {
+        lookupResult = editalSettled.value;
+      } else {
+        lookupResult = {
+          edital: null,
+          errorKind: 'supabase',
+          routeParam: String(id ?? ''),
+          normalizedId: String(id ?? ''),
+          lookupBaseFound: false,
+          lookupViewFound: false,
+        };
+        console.error(editalSettled.reason);
       }
+
+      let anexosResult = { ok: true, data: [], error: null };
+      if (anexosSettled.status === 'fulfilled') {
+        anexosResult = anexosSettled.value;
+      } else {
+        anexosResult = {
+          ok: false,
+          data: [],
+          error: { message: String(anexosSettled.reason?.message ?? anexosSettled.reason) },
+        };
+      }
+
+      logDetailDebug({
+        routeParam: lookupResult.routeParam,
+        normalizedId: lookupResult.normalizedId,
+        lookupBaseFound: lookupResult.lookupBaseFound,
+        lookupViewFound: lookupResult.lookupViewFound,
+        finalFound: Boolean(lookupResult.edital),
+        lookupMode: lookupResult.lookupMode,
+        attachmentsOk: anexosResult.ok,
+        attachmentsError: anexosResult.error?.message ?? null,
+        errorKind: lookupResult.errorKind,
+      });
+
+      if (!lookupResult.edital) {
+        setErrorKind(lookupResult.errorKind || 'not_found');
+        setErro(getEditalDetailErrorMessage(lookupResult.errorKind));
+        setLoading(false);
+        return;
+      }
+
+      setEdital(lookupResult.edital);
+      setAnexos(anexosResult.ok ? anexosResult.data : []);
+      if (!anexosResult.ok) {
+        setAnexosAviso('Não foi possível carregar os anexos deste edital.');
+      }
+      setLoading(false);
     }
     load();
   }, [id]);
@@ -189,11 +247,28 @@ export default function EditalDetalhes() {
 
   if (erro || !edital) {
     return (
-      <div className="page-wrapper">
+      <div className="page-wrapper" data-testid="edital-detail-error">
         <Header />
         <div className="detalhes-erro">
-          <p>{erro || 'Edital não encontrado.'}</p>
-          <button className="detalhes-btn-voltar" onClick={() => navigate(-1)}>← Voltar</button>
+          <p data-testid="edital-detail-error-message">{erro || 'Edital não encontrado.'}</p>
+          <div className="detalhes-erro-actions">
+            <button className="detalhes-btn-voltar" onClick={() => navigate(-1)} data-testid="edital-detail-back">
+              ← Voltar
+            </button>
+            <AppReportProblemButton
+              origem="edital_detail_load"
+              pagina="EditalDetalhes"
+              componente="EditalDetalhes"
+              acao="load_edital_failed"
+              label="Reportar problema"
+              variant="secondary"
+              extraContext={{
+                routeParam: id,
+                errorKind: errorKind || 'unknown',
+                lookupMode: 'base_then_view',
+              }}
+            />
+          </div>
         </div>
       </div>
     );
@@ -251,6 +326,7 @@ export default function EditalDetalhes() {
         <button className="detalhes-btn-voltar" onClick={() => navigate(-1)}>
           ← Voltar para Editais
         </button>
+        <HelpPageLink sectionId="edital-detalhe" label="Como ler o detalhe do edital?" />
 
         {/* Cabeçalho do edital */}
         <div className="detalhes-hero">
@@ -262,6 +338,9 @@ export default function EditalDetalhes() {
               </span>
             ) : null}
             <h1 className="detalhes-titulo">{tituloPagina}</h1>
+            <div className="detalhes-status-badges">
+              <EditalStatusBadges edital={edital} maxVisible={99} />
+            </div>
           </div>
         </div>
 
@@ -331,6 +410,12 @@ export default function EditalDetalhes() {
             <section className="detalhes-secao">
               <h2 className="detalhes-secao-titulo">📎 Documentos e PDFs</h2>
 
+              {anexosAviso ? (
+                <p className="detalhes-anexos-aviso" role="status" data-testid="edital-detail-anexos-warning">
+                  {anexosAviso}
+                </p>
+              ) : null}
+
               {/* PDF principal — href só com URL válida */}
               {pdfUrl ? (
                 <div className="detalhes-doc-principal">
@@ -339,14 +424,15 @@ export default function EditalDetalhes() {
                     <span className="detalhes-doc-nome">Edital Principal (PDF)</span>
                     <span className="detalhes-doc-tipo">Documento oficial do edital</span>
                   </div>
-                  <a
-                    href={pdfUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <ExternalActionButton
+                    item={edital}
+                    actionType={EXTERNAL_ACTION_TYPES.EDITAL_PDF}
+                    url={pdfUrl}
+                    label="📥 Baixar PDF"
                     className="detalhes-doc-btn detalhes-doc-btn-pdf"
-                  >
-                    📥 Baixar PDF
-                  </a>
+                    logEdital
+                    logCampo="pdf_url"
+                  />
                 </div>
               ) : (
                 <p className="detalhes-sem-doc">PDF principal não cadastrado.</p>
@@ -371,14 +457,13 @@ export default function EditalDetalhes() {
                         )}
                       </div>
                       {urlAnexo ? (
-                        <a
-                          href={urlAnexo}
-                          target="_blank"
-                          rel="noopener noreferrer"
+                        <ExternalActionButton
+                          item={edital}
+                          actionType={EXTERNAL_ACTION_TYPES.GENERIC_URL}
+                          url={urlAnexo}
+                          label="📥 Abrir"
                           className="detalhes-doc-btn"
-                        >
-                          📥 Abrir
-                        </a>
+                        />
                       ) : (
                         <span className="detalhes-doc-btn-disabled">Sem link</span>
                       )}
@@ -401,34 +486,37 @@ export default function EditalDetalhes() {
             {temAcoesLaterais ? (
               <div className="detalhes-acoes">
                 {linkInscricao && (
-                  <a
-                    href={linkInscricao}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <ExternalActionButton
+                    item={edital}
+                    actionType={EXTERNAL_ACTION_TYPES.EDITAL_INSCRICAO}
+                    url={linkInscricao}
+                    label="✅ Ir para Inscrição"
                     className="detalhes-btn-inscricao"
-                  >
-                    ✅ Ir para Inscrição
-                  </a>
+                    logEdital
+                    logCampo="link_inscricao"
+                  />
                 )}
                 {linkSite && (
-                  <a
-                    href={linkSite}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <ExternalActionButton
+                    item={edital}
+                    actionType={EXTERNAL_ACTION_TYPES.EDITAL_PRIMARY}
+                    url={linkSite}
+                    label="🌐 Acessar Site do Edital"
                     className="detalhes-btn-site"
-                  >
-                    🌐 Acessar Site do Edital
-                  </a>
+                    logEdital
+                    logCampo="link"
+                  />
                 )}
                 {pdfUrl && (
-                  <a
-                    href={pdfUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <ExternalActionButton
+                    item={edital}
+                    actionType={EXTERNAL_ACTION_TYPES.EDITAL_PDF}
+                    url={pdfUrl}
+                    label="📄 Baixar PDF Principal"
                     className="detalhes-btn-pdf"
-                  >
-                    📄 Baixar PDF Principal
-                  </a>
+                    logEdital
+                    logCampo="pdf_url"
+                  />
                 )}
                 {linkActions.inscDisabled && !linkInscricao && (
                   <span className="detalhes-doc-btn-disabled">Inscrição — link indisponível</span>

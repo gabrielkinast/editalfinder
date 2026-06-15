@@ -42,6 +42,11 @@ TABLES_AVAILABLE = {
     "pesquisa": False,
 }
 DEFAULT_ORG_ID = None
+_ORGANIZATION_LOOKUP_AVAILABLE: Optional[bool] = None
+_ORGANIZATION_LOOKUP_WARNED = False
+_INVALID_EDITAL_ORG_KEYS = frozenset(
+    {"organizacao", "organizacao_responsavel", "organization", "org"}
+)
 
 # Após migrar o Supabase (seção 7 do schema_sql_completo.sql), defina no .env:
 # EDITALFINDER_EXTENDED_SCHEMA=true
@@ -195,9 +200,86 @@ def _allowed_upsert_keys() -> frozenset:
     return _LEGACY_EDITAL_COLUMNS
 
 
+def is_missing_organization_table_error(exc: Exception) -> bool:
+    """Detecta PGRST205 — tabela public.organizacao ausente no schema cache PostgREST."""
+    code = getattr(exc, "code", None)
+    if code == "PGRST205":
+        return True
+    parts = [str(exc)]
+    msg_attr = getattr(exc, "message", None)
+    if msg_attr:
+        parts.append(str(msg_attr))
+    blob = " ".join(parts).lower()
+    if "pgrst205" in blob:
+        return True
+    if "could not find the table" in blob and "organizacao" in blob:
+        return True
+    if "schema cache" in blob and "organizacao" in blob:
+        return True
+    for arg in getattr(exc, "args", ()) or ():
+        if isinstance(arg, dict):
+            if str(arg.get("code") or "").upper() == "PGRST205":
+                return True
+            nested = str(arg.get("message") or arg).lower()
+            if "could not find the table" in nested and "organizacao" in nested:
+                return True
+    return False
+
+
+def disable_organization_lookup_for_session() -> None:
+    """Marca lookup de organização como indisponível pelo resto da execução."""
+    global _ORGANIZATION_LOOKUP_AVAILABLE
+    _ORGANIZATION_LOOKUP_AVAILABLE = False
+
+
+def reset_organization_lookup_state() -> None:
+    """Reinicia estado de lookup (uso em testes)."""
+    global DEFAULT_ORG_ID, _ORGANIZATION_LOOKUP_AVAILABLE, _ORGANIZATION_LOOKUP_WARNED
+    DEFAULT_ORG_ID = None
+    _ORGANIZATION_LOOKUP_AVAILABLE = None
+    _ORGANIZATION_LOOKUP_WARNED = False
+
+
+def _log_organization_lookup_unavailable_once(exc: Exception) -> None:
+    global _ORGANIZATION_LOOKUP_WARNED
+    if _ORGANIZATION_LOOKUP_WARNED:
+        return
+    _ORGANIZATION_LOOKUP_WARNED = True
+    logger.warning(
+        "Lookup public.organizacao indisponível (organização opcional); "
+        "usando orgao_responsavel textual. Detalhe: %s",
+        exc,
+    )
+
+
+def resolve_orgao_responsavel_text(
+    item: Dict[str, Any],
+    extras: Optional[Dict[str, Any]] = None,
+) -> str:
+    """Fallback textual quando id_organizacao não está disponível."""
+    ex = extras if isinstance(extras, dict) else {}
+    for candidate in (
+        item.get("orgao_responsavel"),
+        ex.get("orgao_responsavel"),
+        ex.get("agency"),
+        ex.get("orgao_contratante"),
+        ex.get("instituicao"),
+        item.get("fonte"),
+        item.get("fonte_recurso"),
+    ):
+        if candidate is not None and str(candidate).strip():
+            return str(candidate).strip()
+    return "Não informado"
+
+
 def _strip_payload(row: Dict[str, Any]) -> Dict[str, Any]:
     allowed = _allowed_upsert_keys()
-    return {k: v for k, v in row.items() if k in allowed}
+    out = {k: v for k, v in row.items() if k in allowed and k not in _INVALID_EDITAL_ORG_KEYS}
+    if out.get("id_organizacao") is None:
+        out.pop("id_organizacao", None)
+    for bad in _INVALID_EDITAL_ORG_KEYS:
+        out.pop(bad, None)
+    return out
 
 
 def get_current_db_editais() -> Dict[str, Any]:
@@ -216,24 +298,40 @@ def get_current_db_editais() -> Dict[str, Any]:
         return {}
 
 
-def get_default_org_id():
-    """Busca a primeira organização disponível no banco para usar como padrão."""
-    global DEFAULT_ORG_ID
-    if DEFAULT_ORG_ID is not None:
+def get_default_org_id() -> Optional[int]:
+    """
+    Busca id_organizacao padrão — opcional.
+
+    Se public.organizacao não existir (PGRST205), desativa lookup na sessão e retorna None.
+    """
+    global DEFAULT_ORG_ID, _ORGANIZATION_LOOKUP_AVAILABLE
+
+    if _ORGANIZATION_LOOKUP_AVAILABLE is False:
+        return None
+
+    if _ORGANIZATION_LOOKUP_AVAILABLE is True:
         return DEFAULT_ORG_ID
 
     try:
         response = supabase.table("organizacao").select("id_organizacao").limit(1).execute()
-        if response and hasattr(response, "data") and response.data and len(response.data) > 0:
+        _ORGANIZATION_LOOKUP_AVAILABLE = True
+        if response and hasattr(response, "data") and response.data:
             org_data = response.data[0]
             if isinstance(org_data, dict):
                 DEFAULT_ORG_ID = org_data.get("id_organizacao")
-                logger.info("Usando organização ID: %s", DEFAULT_ORG_ID)
+                if DEFAULT_ORG_ID is not None:
+                    logger.info("Usando organização ID: %s", DEFAULT_ORG_ID)
                 return DEFAULT_ORG_ID
+        DEFAULT_ORG_ID = None
+        return None
     except Exception as exc:
-        logger.warning("Não foi possível buscar organização padrão: %s", exc)
-
-    return 11  # Fallback para o ID 11 se falhar
+        if is_missing_organization_table_error(exc):
+            disable_organization_lookup_for_session()
+            _log_organization_lookup_unavailable_once(exc)
+            DEFAULT_ORG_ID = None
+            return None
+        logger.error("Erro ao buscar organização padrão (não-PGRST205): %s", exc)
+        raise
 
 
 def detect_optional_tables():
@@ -338,13 +436,16 @@ def map_to_db_schema(item):
     if pub is not None and not isinstance(pub, str):
         pub = _serialize_publico_alvo(pub)
 
-    return {
+    orgao_text = resolve_orgao_responsavel_text(item, extras)
+    extras.setdefault("orgao_responsavel", orgao_text)
+
+    mapped: Dict[str, Any] = {
         "titulo": item.get("titulo"),
         "descricao": item.get("descricao"),
         "link": item.get("link"),
         "fonte_recurso": item.get("fonte"),
         "data_publicacao": item.get("data_publicacao"),
-        "prazo_envio": item.get("fim_inscricao"),
+        "prazo_envio": item.get("fim_inscricao") or item.get("prazo_envio"),
         "situacao": item.get("situacao"),
         "valor_maximo": clean_monetary_value(item.get("valor")),
         "valor_minimo": item.get("valor_minimo") or extras.get("valor_minimo"),
@@ -365,8 +466,14 @@ def map_to_db_schema(item):
         "justificativa": item.get("justificativa"),
         "recomendacao": item.get("recomendacao"),
         "compatibilidade": item.get("compatibilidade"),
-        "id_organizacao": get_default_org_id(),
-    }, extras
+    }
+    org_id = get_default_org_id()
+    if org_id is not None:
+        mapped["id_organizacao"] = org_id
+    if EXTENDED_SCHEMA:
+        mapped["orgao_responsavel"] = orgao_text
+
+    return mapped, extras
 
 
 def get_destination_table(item: Dict[str, Any]) -> str:
@@ -873,12 +980,74 @@ def inserir_ou_atualizar_conteudo(table_name: str, row: Dict[str, Any]) -> Tuple
         return "erro", None
 
 
+def _apply_loader_deadline_backfill(item: Dict[str, Any]) -> Dict[str, Any]:
+    """Backend 10.2A: backfill de prazo no payload pré-upsert (feature flag)."""
+    try:
+        from deadline_backfill import apply_deadline_backfill_to_payload
+
+        return apply_deadline_backfill_to_payload(item)
+    except ImportError:
+        return item
+
+
+def _guard_grants_link_pre_upsert(
+    item_normalizado: Dict[str, Any],
+    mapped: Dict[str, Any],
+    extras_new: Dict[str, Any],
+) -> None:
+    """
+    Backend 10.3A: nunca faz upsert de link page-not-found / inseguro p/ Grants.gov.
+
+    Conservador quanto ao link UNIQUE: só reescreve o link quando o atual está
+    claramente quebrado (page-not-found / rota legada / inseguro) e há um link
+    canônico seguro. Caso contrário apenas carimba extras com o status.
+    """
+    try:
+        from grants_link_resolver import (
+            is_grants_gov_record,
+            is_safe_grants_link,
+            normalize_grants_gov_link,
+        )
+    except ImportError:
+        return
+    probe = {
+        "fonte": mapped.get("fonte") or item_normalizado.get("fonte"),
+        "link": mapped.get("link"),
+        "extras": extras_new if isinstance(extras_new, dict) else {},
+    }
+    if not is_grants_gov_record(probe):
+        return
+    res = normalize_grants_gov_link(probe)
+    if isinstance(extras_new, dict):
+        extras_new["grants_link_status"] = res["link_status"]
+        extras_new["grants_link_reason"] = res["reason"]
+        if res.get("opportunity_id"):
+            extras_new["grants_opportunity_id"] = res["opportunity_id"]
+        if res.get("opportunity_number"):
+            extras_new["grants_opportunity_number"] = res["opportunity_number"]
+        if res.get("canonical_link"):
+            extras_new["grants_canonical_link"] = res["canonical_link"]
+    canonical = res.get("canonical_link")
+    if res.get("old_link_invalid") and canonical and is_safe_grants_link(canonical):
+        if isinstance(extras_new, dict):
+            extras_new["grants_old_link"] = mapped.get("link")
+        mapped["link"] = canonical
+
+
 def upsert_routed_item(
     item_normalizado: Dict[str, Any],
     *,
     taxonomy_replace_keys: Optional[Set[str]] = None,
 ) -> Tuple[str, str, Optional[int]]:
     """Roteia item normalizado para edital, noticia ou pesquisa."""
+    item_normalizado = _apply_loader_deadline_backfill(item_normalizado)
+    try:
+        from opportunity_enricher import apply_backend_enrichment_if_enabled
+
+        # Feature flag: não grava colunas novas; só extras.backend_enrichment quando ativo.
+        apply_backend_enrichment_if_enabled(item_normalizado)
+    except ImportError:
+        pass
     destination = get_destination_table(item_normalizado)
     if destination in ("noticia", "pesquisa"):
         row = map_to_content_schema(item_normalizado, destination)
@@ -887,6 +1056,7 @@ def upsert_routed_item(
         status, row_id = inserir_ou_atualizar_conteudo(destination, row)
         return destination, status, row_id
     mapped, extras_new = map_to_db_schema(item_normalizado)
+    _guard_grants_link_pre_upsert(item_normalizado, mapped, extras_new)
     if not mapped.get("link"):
         return "edital", "sem_link", None
     if is_expired_deadline(mapped.get("prazo_envio")):
@@ -928,6 +1098,7 @@ def load_standardized_json(file_path):
         for item in data:
             try:
                 item_normalizado = normalizar(item)
+                item_normalizado = _apply_loader_deadline_backfill(item_normalizado)
                 destination = get_destination_table(item_normalizado)
                 if destination in ("noticia", "pesquisa"):
                     status, row_id = inserir_ou_atualizar_conteudo(

@@ -8,11 +8,21 @@ import {
   REGIOES_BR,
   STATUS_PRESET_OPTIONS,
 } from '../../utils/edital/editalCatalogConstants';
+import { SEMANTIC_STATUS_FILTER_OPTIONS } from '../../utils/edital/editalStatusBadges';
 
-function CollapseSection({ title, children, defaultOpen }) {
+function CollapseSection({ title, children, defaultOpen, sectionTestId, summaryTestId }) {
   return (
-    <details className="editai-filter-collapse" open={defaultOpen}>
-      <summary className="editai-filter-summary">{title}</summary>
+    <details
+      className="editai-filter-collapse"
+      open={defaultOpen}
+      {...(sectionTestId ? { 'data-testid': sectionTestId } : {})}
+    >
+      <summary
+        className="editai-filter-summary"
+        {...(summaryTestId ? { 'data-testid': summaryTestId } : {})}
+      >
+        {title}
+      </summary>
       <div className="editai-filter-collapse-body">{children}</div>
     </details>
   );
@@ -182,6 +192,30 @@ export default function EditaisFiltersSidebar({
           />
           Apenas alta qualidade (≥70)
         </label>
+      </CollapseSection>
+
+      <CollapseSection
+        title="Filtrar por status"
+        defaultOpen={false}
+        sectionTestId="semantic-status-section"
+        summaryTestId="semantic-status-section-toggle"
+      >
+        <p className="editai-help">Múltipla seleção: exibe editais que correspondam a qualquer status marcado.</p>
+        <div className="checkbox-list" data-testid="semantic-status-filters">
+          {SEMANTIC_STATUS_FILTER_OPTIONS.map((opt) => (
+            <label key={opt.id} className="checkbox-label">
+              <input
+                type="checkbox"
+                data-testid={`semantic-status-${opt.id}`}
+                checked={!!filters.semanticStatusSelections?.[opt.id]}
+                onChange={(e) =>
+                  toggleObjKey('semanticStatusSelections', opt.id, e.target.checked)
+                }
+              />
+              {opt.label}
+            </label>
+          ))}
+        </div>
       </CollapseSection>
 
       <CollapseSection title="Status (filtro adicional)" defaultOpen={false}>
@@ -445,6 +479,7 @@ export default function EditaisFiltersSidebar({
           className="filter-input-valor"
           style={{ width: '100%' }}
           placeholder="Buscar fonte..."
+          data-testid="editais-fonte-busca"
           value={filters.fonteBusca}
           onChange={(e) => patch({ fonteBusca: e.target.value })}
         />

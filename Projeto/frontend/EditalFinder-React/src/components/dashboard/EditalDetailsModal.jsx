@@ -4,8 +4,10 @@ import { formatTipoAmigavel } from '../../utils/edital/formatEditalUi';
 import { coerceStringArray } from '../../utils/edital/coerceArrays';
 import { prazoVencido } from '../../utils/edital/dates';
 import { humanizeTechnicalLabel } from '../../utils/portaisDisplayLabels';
-import { onEditalLinkClick } from '../../utils/edital/logEditalLinkClick';
+import { ExternalActionLink, EXTERNAL_ACTION_TYPES } from '../../utils/externalActions';
+import { resolveActionLinks } from '../../utils/edital/linkHealth';
 import EditalReportProblemButton from '../editais/EditalReportProblemButton';
+import EditalStatusBadges from '../editais/EditalStatusBadges';
 
 function Row({ label, children }) {
   return (
@@ -33,6 +35,10 @@ export default function EditalDetailsModal({ edital, onClose }) {
     if (!vs) alerts.push({ tipo: 'info', t: 'Classificação / dados amplos — revise a fonte.' });
   }
 
+  const ex = edital.extras_raw && typeof edital.extras_raw === 'object' ? edital.extras_raw : {};
+  const semPrazoReason = String(ex.sem_prazo_reason || '').trim();
+  const deadlineSource = String(ex.deadline_source_field || ex.deadline_source || '').trim();
+
   function listaPieces(...chunks) {
     const acc = [];
     for (const c of chunks) {
@@ -41,6 +47,8 @@ export default function EditalDetailsModal({ edital, onClose }) {
     const u = [...new Set(acc)].slice(0, 14);
     return u.length ? u.map((x) => humanizeTechnicalLabel(x)).join(', ') : '—';
   }
+
+  const actions = resolveActionLinks(edital);
 
   return (
     <Modal onClose={onClose}>
@@ -58,34 +66,45 @@ export default function EditalDetailsModal({ edital, onClose }) {
           </div>
         )}
         <h3 className="edital-detail-title">{edital.titulo}</h3>
+        <div className="edital-detail-status-badges">
+          <EditalStatusBadges edital={edital} maxVisible={99} />
+        </div>
+        {semPrazoReason ? (
+          <p className="edital-detail-aux-note">{semPrazoReason}</p>
+        ) : null}
+        {deadlineSource ? (
+          <p className="edital-detail-aux-note">Fonte do prazo: {deadlineSource}</p>
+        ) : null}
         <p className="edital-detail-desc">{edital.descricao || 'Descrição não informada.'}</p>
 
         <div className="edital-detail-grid">
           <Row label="Fonte / órgão">{edital.fonte_recurso_display || edital.orgao}</Row>
           <Row label="Link oficial">
-            {edital.linkOriginal ? (
-              <a
-                href={edital.linkOriginal}
-                target="_blank"
-                rel="noreferrer"
-                onClick={onEditalLinkClick(edital, 'link', edital.linkOriginal)}
+            {actions.site ? (
+              <ExternalActionLink
+                item={edital}
+                actionType={EXTERNAL_ACTION_TYPES.EDITAL_PRIMARY}
+                url={actions.site}
+                logEdital
+                logCampo="link"
               >
                 Abrir site
-              </a>
+              </ExternalActionLink>
             ) : (
               '—'
             )}
           </Row>
           <Row label="PDF">
-            {edital.pdfUrl ? (
-              <a
-                href={edital.pdfUrl}
-                target="_blank"
-                rel="noreferrer"
-                onClick={onEditalLinkClick(edital, 'pdf_url', edital.pdfUrl)}
+            {actions.pdf ? (
+              <ExternalActionLink
+                item={edital}
+                actionType={EXTERNAL_ACTION_TYPES.EDITAL_PDF}
+                url={actions.pdf}
+                logEdital
+                logCampo="pdf_url"
               >
                 Abrir PDF
-              </a>
+              </ExternalActionLink>
             ) : (
               'Sem PDF cadastrado'
             )}

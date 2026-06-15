@@ -1,153 +1,224 @@
-import { TABLE_APP_FEEDBACK, APP_FEEDBACK_PENDING_KEY } from '../constants/appFeedbackConfig';
-import { buildAppFeedbackPayload, sanitizeAppFeedbackForLog } from '../utils/feedback/buildAppFeedbackPayload';
-import { resolveAppUserId } from '../utils/appUserId';
+import {
+  TABLE_APP_FEEDBACK,
+  APP_FEEDBACK_EMAIL_FUNCTION,
+  ENABLE_APP_FEEDBACK_MAILTO,
+  MSG_APP_FEEDBACK_VALIDATION,
+  MSG_APP_FEEDBACK_FAILED,
+} from '../constants/appFeedbackConfig';
+import {
+  buildAppFeedbackPayload,
+  validateAppFeedbackPayload,
+  mapToRemoteAppFeedbackRow,
+  sanitizeAppFeedbackForLog,
+} from '../utils/feedback/appFeedbackPayload.js';
+import {
+  readAppFeedbackQueue,
+  saveAppFeedbackLocal,
+  writeAppFeedbackQueue,
+} from '../utils/feedback/appFeedbackQueue.js';
+import {
+  openSupportEmailComposer,
+  openSupportMailto,
+} from '../utils/feedback/appFeedbackMailto.js';
+import {
+  classifyAppFeedbackRemoteError,
+} from '../utils/feedback/postgrestFeedbackErrors.js';
+import {
+  executeAppFeedbackSubmit,
+  executeFlushPendingAppFeedback,
+} from '../utils/feedback/appFeedbackSubmitFlow.js';
 import { logAppFeedback } from '../utils/feedback/appFeedbackLog';
 
-export const MSG_APP_FEEDBACK_AUTH_LOADING = 'Carregando sua conta…';
-export const MSG_APP_FEEDBACK_NOT_AUTHENTICATED = 'Entre na sua conta para enviar o relatório.';
-export const MSG_APP_FEEDBACK_NO_PROFILE =
-  'Não encontramos seu perfil interno. Saia e entre novamente.';
-const ERR_GENERIC = 'Não foi possível enviar o relatório agora. Tente novamente.';
-
-function loadPending() {
-  try {
-    const raw = localStorage.getItem(APP_FEEDBACK_PENDING_KEY);
-    if (!raw) return [];
-    const parsed = JSON.parse(raw);
-    return Array.isArray(parsed) ? parsed : [];
-  } catch {
-    return [];
-  }
-}
-
-function savePending(list) {
-  try {
-    localStorage.setItem(APP_FEEDBACK_PENDING_KEY, JSON.stringify(list.slice(0, 20)));
-  } catch {
-    /* ignore */
-  }
-}
-
-export function savePendingAppFeedback(payload) {
-  const list = loadPending();
-  list.unshift({ ...payload, _pendingAt: new Date().toISOString() });
-  savePending(list);
-  logAppFeedback('pending_saved', sanitizeAppFeedbackForLog(payload));
-}
-
-/**
- * @param {object|null} appUser
- * @param {boolean} authenticated
- */
-export function buildAppFeedbackRow(payload, appUser, authUserId = null) {
-  const idUsuario = resolveAppUserId(appUser);
+function buildEmailInvokeBody(payload) {
   return {
-    id_usuario: idUsuario,
-    user_auth_id: authUserId || appUser?.auth_user_id || null,
+    id_local: payload.id_local,
+    tipo: payload.tipo ?? payload.tipo_feedback,
+    tipo_label: payload.tipo_label ?? null,
     tipo_feedback: payload.tipo_feedback,
+    categoria: payload.categoria,
+    runtime: payload.runtime ?? null,
+    platform_context: payload.platform_context ?? null,
+    severidade: payload.severidade,
+    descricao: payload.descricao ?? payload.comentario,
+    comentario: payload.comentario ?? payload.descricao,
+    email_contato: payload.email_contato ?? null,
+    pagina_url: payload.pagina_url ?? payload.metadata?.pagina_url ?? null,
+    rota: payload.rota,
+    pagina: payload.pagina,
     origem: payload.origem,
-    rota: payload.rota ?? null,
-    pagina: payload.pagina ?? null,
-    componente: payload.componente ?? null,
-    acao: payload.acao ?? null,
-    mensagem_erro: payload.mensagem_erro ?? null,
-    stack_erro: payload.stack_erro ?? null,
-    comentario: payload.comentario ?? null,
-    status: 'novo',
-    prioridade: payload.tipo_feedback === 'erro_pagina' || payload.tipo_feedback === 'erro_global' ? 'alta' : 'normal',
-    user_agent: payload.user_agent ?? null,
-    app_version: payload.app_version ?? null,
-    extras: payload.extras ?? {},
+    user_agent: payload.user_agent,
+    app_version: payload.app_version,
+    app_env: payload.app_env,
+    is_desktop: payload.is_desktop,
+    created_at: payload.created_at,
+    mensagem_erro: payload.mensagem_erro,
+    stack_erro: payload.stack_erro,
+    metadata: payload.metadata ?? {},
   };
 }
 
 /**
- * @param {object} payload — saída de buildAppFeedbackPayload
- * @param {{ appUser?: object|null; authenticated?: boolean; authLoading?: boolean; authUserId?: string|null }} [options]
+ * Edge Function + Resend — opcional/futuro (não é o fluxo principal).
  */
-export async function createAppFeedback(payload, options = {}) {
-  const { appUser = null, authenticated = false, authLoading = false, authUserId = null } = options;
-
-  logAppFeedback('submit_start', sanitizeAppFeedbackForLog(payload));
-
-  if (authLoading) {
-    return { ok: false, error: MSG_APP_FEEDBACK_AUTH_LOADING, code: 'auth_loading' };
-  }
-
-  if (!authenticated && resolveAppUserId(appUser) == null) {
-    return { ok: false, error: MSG_APP_FEEDBACK_NOT_AUTHENTICATED, code: 'not_authenticated' };
-  }
-
+export async function sendAppFeedbackEmail(payload) {
   const { supabase, isSupabaseConfigured } = await import('./api');
 
   if (!isSupabaseConfigured) {
-    savePendingAppFeedback(payload);
-    return {
-      ok: false,
-      error: ERR_GENERIC,
-      code: 'supabase_not_configured',
-      pending: true,
-    };
+    const err = new Error('Supabase not configured');
+    err.code = 'supabase_not_configured';
+    throw err;
   }
 
-  const row = buildAppFeedbackRow(payload, appUser, authUserId);
+  const { data, error } = await supabase.functions.invoke(APP_FEEDBACK_EMAIL_FUNCTION, {
+    body: buildEmailInvokeBody(payload),
+  });
 
+  if (error) throw error;
+
+  if (!data?.ok) {
+    const err = new Error(data?.message || 'Feedback email failed');
+    err.code = data?.status || 'email_failed';
+    throw err;
+  }
+
+  return data;
+}
+
+/**
+ * Insert remoto em app_feedback (opcional / best-effort).
+ */
+export async function sendAppFeedbackRemote(payload, options = {}) {
+  const { appUser = null, authUserId = null } = options;
+  const { supabase, isSupabaseConfigured } = await import('./api');
+
+  if (!isSupabaseConfigured) {
+    const err = new Error('Supabase not configured');
+    err.code = 'supabase_not_configured';
+    throw err;
+  }
+
+  const row = mapToRemoteAppFeedbackRow(payload, appUser, authUserId);
   const { data, error } = await supabase
     .from(TABLE_APP_FEEDBACK)
     .insert([row])
     .select('id_feedback')
     .single();
 
-  if (error) {
-    logAppFeedback('submit_db_error', {
-      code: error.code,
-      message: error.message,
+  if (error) throw error;
+  return data;
+}
+
+export { saveAppFeedbackLocal };
+
+const submitDeps = {
+  openEmailComposer: ENABLE_APP_FEEDBACK_MAILTO
+    ? openSupportEmailComposer
+    : async () => ({ ok: false, reason: 'email_composer_disabled' }),
+  saveLocal: saveAppFeedbackLocal,
+  flushPending: (options) => flushPendingAppFeedback(options),
+};
+
+/**
+ * Função principal — UI deve chamar apenas esta.
+ * Prioridade: Gmail Web Compose → mailto → fila local. Edge Function/Supabase não são obrigatórios.
+ */
+export async function submitAppFeedback(input = {}, context = {}, options = {}) {
+  const payload = buildAppFeedbackPayload(input ?? {}, context ?? {});
+  const validation = validateAppFeedbackPayload(payload);
+
+  if (!validation.valid) {
+    if (import.meta.env.DEV) {
+      logAppFeedback('submit_invalid_payload', { errors: validation.errors });
+    }
+    return {
+      ok: false,
+      status: 'invalid_payload',
+      errors: validation.errors,
+      message: MSG_APP_FEEDBACK_VALIDATION,
+      technicalReason: validation.errors,
+    };
+  }
+
+  logAppFeedback('submit_start', sanitizeAppFeedbackForLog(payload));
+
+  const result = await executeAppFeedbackSubmit(payload, options, submitDeps);
+
+  if (result.ok) {
+    logAppFeedback('submit_success', {
+      status: result.status,
+      id_local: payload.id_local,
+      method: result.method,
     });
-    savePendingAppFeedback(payload);
-    return { ok: false, error: ERR_GENERIC, code: error.code || 'insert_failed', pending: true };
+  } else if (import.meta.env.DEV) {
+    logAppFeedback('submit_failed', {
+      status: result.status,
+      reason: result.reason,
+    });
   }
 
-  logAppFeedback('submit_success', { id_feedback: data?.id_feedback });
-  return { ok: true, id_feedback: data?.id_feedback };
+  return result;
 }
 
-/**
- * @param {Error|unknown} error
- * @param {object} context
- */
+/** @deprecated Use submitAppFeedback — alias de compatibilidade. */
+export async function createAppFeedback(payload, options = {}) {
+  return submitAppFeedback(
+    {
+      tipo: payload?.tipo_feedback ?? payload?.tipo,
+      descricao: payload?.comentario ?? payload?.descricao,
+      comment: payload?.comentario ?? payload?.descricao,
+    },
+    { payload },
+    options,
+  );
+}
+
 export function createAppFeedbackFromError(error, context = {}) {
-  const payload = buildAppFeedbackPayload({
-    tipo: context.tipo || 'erro_global',
-    origem: context.origem || 'user_report',
-    pagina: context.pagina,
-    componente: context.componente,
-    acao: context.acao,
+  const ctx = context ?? {};
+  return buildAppFeedbackPayload({
+    tipo: ctx.tipo || 'browser_error',
+    origem: ctx.origem || 'user_report',
+    pagina: ctx.pagina,
+    componente: ctx.componente,
+    acao: ctx.acao,
     error,
-    errorInfo: context.errorInfo,
-    comment: context.comment,
-    extraContext: context.extraContext,
+    errorInfo: ctx.errorInfo,
+    comment: ctx.comment,
+    extraContext: ctx.extraContext,
   });
-  return payload;
+}
+
+/** @deprecated Use saveAppFeedbackLocal via queue module. */
+export function savePendingAppFeedback(payload) {
+  saveAppFeedbackLocal(payload, 'legacy_api');
 }
 
 /**
- * Reenvia fila local (best-effort).
+ * Reenvia fila local — tenta abrir mailto por item pendente.
  */
-export async function flushPendingAppFeedback(options = {}) {
-  const pending = loadPending();
-  if (!pending.length) return { flushed: 0 };
+export async function flushPendingAppFeedback(_options = {}) {
+  const queue = readAppFeedbackQueue();
+  const flushResult = await executeFlushPendingAppFeedback(queue, {}, {
+    openEmailComposer: openSupportEmailComposer,
+  });
 
-  let flushed = 0;
-  const remaining = [];
+  writeAppFeedbackQueue(flushResult.remaining);
+  logAppFeedback('pending_flush', {
+    sent: flushResult.sent,
+    remaining: flushResult.remaining.length,
+    channel: 'mailto',
+  });
 
-  for (const item of pending) {
-    const { _pendingAt, ...payload } = item;
-    const result = await createAppFeedback(payload, options);
-    if (result.ok) flushed += 1;
-    else remaining.push(item);
-  }
-
-  savePending(remaining);
-  logAppFeedback('pending_flush', { flushed, remaining: remaining.length });
-  return { flushed, remaining: remaining.length };
+  return flushResult;
 }
+
+/** Compat: buildAppFeedbackRow para imports antigos. */
+export function buildAppFeedbackRow(payload, appUser, authUserId = null) {
+  return mapToRemoteAppFeedbackRow(payload, appUser, authUserId);
+}
+
+export {
+  executeAppFeedbackSubmit,
+  executeFlushPendingAppFeedback,
+  openSupportEmailComposer,
+  openSupportMailto,
+};

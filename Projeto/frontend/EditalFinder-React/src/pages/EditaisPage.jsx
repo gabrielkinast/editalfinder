@@ -1,16 +1,16 @@
 import { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import { useLocation, useNavigate, useSearchParams } from 'react-router-dom';
-import * as XLSX from 'xlsx';
+import { exportRowsToXlsx } from '../utils/export/spreadsheetExport';
 import Header from '../components/layout/Header';
+import HelpPageLink from '../components/help/HelpPageLink';
 import EditalCard from '../components/dashboard/EditalCard';
 import EditaisFiltersSidebar from '../components/dashboard/EditaisFiltersSidebar';
 import EditaisStatsBar from '../components/dashboard/EditaisStatsBar';
 import ActiveFiltersChips from '../components/dashboard/ActiveFiltersChips';
 import EditalDetailsModal from '../components/dashboard/EditalDetailsModal';
 import { dataService } from '../services/dataService';
-import { formatCurrency, formatDateLoose } from '../utils/formatters';
 import { useSettings } from '../contexts/SettingsContext';
-import { exportLandscapeTablePdf, formatDashboardFiltersForPdf } from '../services/pdfExportService';
+import { exportEditaisToPdf } from '../services/pdfExportService';
 import {
   filterCatalog,
   INITIAL_SIDEBAR_FILTERS,
@@ -31,6 +31,12 @@ import {
   getDeadlineAlertStatus,
 } from '../utils/deadlineAlerts';
 import { logEditaisVisibilityDev } from '../utils/edital/editalVisibility';
+import {
+  getEditalStatusDetailLabels,
+  getEditalStatusLabel,
+  SEMANTIC_STATUS_FILTER_OPTIONS,
+} from '../utils/edital/editalStatusBadges';
+import { logEditaisClientCounts } from '../utils/debugDataCounts';
 import {
   applyQueryFiltersToSidebar,
   logEditaisDeadlineFilterResult,
@@ -98,6 +104,7 @@ export default function EditaisPage() {
   const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
   const skipUrlSyncRef = useRef(false);
+  const dataCountDbgLoggedRef = useRef(false);
   const { settings } = useSettings();
   const { prefs, updatePrefs } = useEditaisPagePrefs();
   const favHook = useEditalFavorites();
@@ -310,6 +317,17 @@ export default function EditaisPage() {
   );
 
   const statsFiltered = useMemo(() => summarizeCatalogFlags(filteredEditaisRaw), [filteredEditaisRaw]);
+
+  // DESKTOP 1.1G — diagnóstico web vs EXE/Tauri (só com VITE_DEBUG_DATA_COUNTS=1).
+  // Loga uma vez por carga: catalogCount (recebido) vs filteredCount (após filtros).
+  useEffect(() => {
+    if (loading || dataCountDbgLoggedRef.current) return;
+    dataCountDbgLoggedRef.current = true;
+    logEditaisClientCounts({
+      catalogCount: allEditais.length,
+      filteredCount: sortedFiltered.length,
+    });
+  }, [loading, allEditais.length, sortedFiltered.length]);
 
   const facetTipoPool = useMemo(
     () =>
@@ -597,14 +615,26 @@ export default function EditaisPage() {
         ),
       });
     }
+    Object.entries(filters.semanticStatusSelections || {})
+      .filter(([, v]) => v)
+      .forEach(([k]) => {
+        const opt = SEMANTIC_STATUS_FILTER_OPTIONS.find((o) => o.id === k);
+        out.push({
+          key: `sem-st-${k}`,
+          label: `Status: ${opt?.label || k}`,
+          onRemove: rm(() =>
+            setFilters((f) => ({
+              ...f,
+              semanticStatusSelections: { ...f.semanticStatusSelections, [k]: false },
+            })),
+          ),
+        });
+      });
     return out;
   }, [filters, scopeFilter]);
 
-  /** Linhas extras no PDF sobre ordenação / escopo. */
-  function buildExportFilterLines() {
-    const base = formatDashboardFiltersForPdf({ ...filters, resourceType: filters.resourceTypeLegacy, regiao: filters.regiaoLegacy }, debouncedSearch);
-    const extras = [`Ordenação: ${sortId}`, `Exportação: ${exportScope}`];
-    return [...extras, ...base.filter((ln) => !extras.includes(ln))];
+  function buildExportFilterExtras() {
+    return [`Ordenação: ${sortId}`, `Exportação: ${exportScope}`];
   }
 
   function resolveExportDataset() {
@@ -624,50 +654,16 @@ export default function EditaisPage() {
         alert('Nenhum edital para exportar.');
         return;
       }
-      const cols = [
-        'Título',
-        'Fonte',
-        'Tipo oport.',
-        'Tipo recurso',
-        'Perfil',
-        'Setor',
-        'Área tecnológica',
-        'Prazo',
-        'Valor',
-        'Status',
-        'Qualidade',
-        'Link',
-        'PDF',
-      ];
-      const tableRows = rows.map((e) => [
-        e.titulo,
-        getFonte(e),
-        e.tipo_oportunidade_raw || '',
-        e.tipo_recurso_raw || e.tipoRecurso || '',
-        coerceStringArray(e.perfil_ideal_raw).slice(0, 4).join('; '),
-        coerceStringArray(e.setor_estrategico_raw).slice(0, 4).join('; '),
-        coerceStringArray(e.area_tecnologica_raw).slice(0, 4).join('; '),
-        (e.prazo_envio_raw || e.dataLimite) ? formatDateLoose(e.prazo_envio_raw || e.dataLimite) : '',
-        formatCurrency(Number(e.valor_principal_num ?? e.valor ?? 0)),
-        [e.validacao_status_raw, e.situacao_raw].filter(Boolean).join(' / ') || '—',
-        e.qualidade_dado_raw != null ? `${e.qualidade_dado_raw}` : '—',
-        e.link_original || e.linkOriginal || '',
-        e.pdf_url_raw || e.pdfUrl || '',
-      ]);
-
       alert(`Exportando ${rows.length} editais (${exportScope}).`);
 
-      await exportLandscapeTablePdf({
+      await exportEditaisToPdf(rows, {
         fileNameStem: `editais_${exportScope}`,
-        reportTitle: 'Relatório de editais',
         brandName: settings.logoText,
         logoImage: settings.logoImage,
-        filterLines: buildExportFilterLines(),
-        totalExported: rows.length,
+        filters: { ...filters, resourceType: filters.resourceTypeLegacy, regiao: filters.regiaoLegacy },
+        globalSearch: debouncedSearch,
+        filterLinesExtra: buildExportFilterExtras(),
         totalInDataset: allEditais.length,
-        tableHead: [cols],
-        tableBody: tableRows,
-        autoTableOptions: {},
       });
     } catch (error) {
       console.error('Erro ao gerar PDF:', error);
@@ -675,7 +671,7 @@ export default function EditaisPage() {
     }
   };
 
-  const handleExportExcel = () => {
+  const handleExportExcel = async () => {
     try {
       const rows = resolveExportDataset();
       if (!rows.length) {
@@ -685,6 +681,8 @@ export default function EditaisPage() {
       alert(`Exportando ${rows.length} editais (${exportScope}).`);
       const data = rows.map((e) => ({
         Título: e.titulo,
+        Status: getEditalStatusLabel(e),
+        'Status Detalhado': getEditalStatusDetailLabels(e),
         Fonte: getFonte(e),
         tipo_oportunidade: e.tipo_oportunidade_raw || '',
         tipo_recurso: e.tipo_recurso_raw || e.tipoRecurso || '',
@@ -700,10 +698,10 @@ export default function EditaisPage() {
         link: e.link_original || e.linkOriginal || '',
         pdf_url: e.pdf_url_raw || e.pdfUrl || '',
       }));
-      const worksheet = XLSX.utils.json_to_sheet(data);
-      const workbook = XLSX.utils.book_new();
-      XLSX.utils.book_append_sheet(workbook, worksheet, 'Editais');
-      XLSX.writeFile(workbook, `editais_${exportScope}_${new Date().toISOString().slice(0, 10)}.xlsx`);
+      await exportRowsToXlsx(data, {
+        sheetName: 'Editais',
+        fileName: `editais_${exportScope}_${new Date().toISOString().slice(0, 10)}.xlsx`,
+      });
     } catch (error) {
       console.error('Erro ao gerar Excel:', error);
       alert('Erro ao gerar planilha.');
@@ -716,7 +714,7 @@ export default function EditaisPage() {
     <>
       <Header onSearch={setGlobalSearchRaw} />
 
-      <div className={`dashboard-container editais-dash-v2 prefs-density-${prefs.density || 'normal'}`}>
+      <div className={`dashboard-container editais-dash-v2 prefs-density-${prefs.density || 'normal'}`} data-testid="editais-page">
         <button
           type="button"
           className="filter-toggle-mobile"
@@ -741,7 +739,10 @@ export default function EditaisPage() {
 
         <main className="main-content">
           <div className="content-header editai-dash-header">
-            <h2>Editais Disponíveis</h2>
+            <div>
+              <h2>Editais Disponíveis</h2>
+              <HelpPageLink sectionId="editais" label="Como filtrar editais?" />
+            </div>
             <div className="content-actions editai-dash-actions">
               <EditaisStatsBar
                 filteredCount={sortedFiltered.length}
@@ -763,7 +764,7 @@ export default function EditaisPage() {
               />
 
               <div className="editais-quick-actions" aria-label="Ações rápidas de filtro">
-                <button type="button" className="btn-relax-filters" onClick={relaxFilters}>
+                <button type="button" className="btn-relax-filters" onClick={relaxFilters} data-testid="relax-filters-button">
                   Relaxar filtros
                 </button>
                 <button
@@ -819,7 +820,12 @@ export default function EditaisPage() {
                     ))}
                   </select>
                 </label>
-                <button type="button" onClick={handleExportPDF} className="btn-export">
+                <button
+                  type="button"
+                  onClick={handleExportPDF}
+                  className="btn-export"
+                  data-testid="editais-export-pdf"
+                >
                   📄 PDF
                 </button>
                 <button
@@ -827,6 +833,7 @@ export default function EditaisPage() {
                   onClick={handleExportExcel}
                   className="btn-export btn-export-sheet"
                   style={{ backgroundColor: '#27ae60' }}
+                  data-testid="editais-export-xlsx"
                 >
                   📊 Planilha
                 </button>
@@ -881,7 +888,7 @@ export default function EditaisPage() {
           ) : null}
 
           {loading ? (
-            <div className="dashboard-skel-wrap">
+            <div className="dashboard-skel-wrap" data-testid="editais-loading" aria-busy="true">
               <div className="dashboard-skeleton-grid">
                 {[1, 2, 3, 4, 5, 6].map((n) => (
                   <div key={n} className="dashboard-skeleton-card" />

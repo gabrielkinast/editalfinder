@@ -127,6 +127,13 @@
   gap: 14px;
 }
 
+.home-dash-metrics-note {
+  margin: 8px 2px 0;
+  font-size: 12.5px;
+  line-height: 1.45;
+  color: var(--color-text-muted, #6b7280);
+}
+
 .home-dash-metric-card {
   background: var(--color-surface);
   border: 1px solid var(--color-border);

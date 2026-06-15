@@ -1,0 +1,65 @@
+# =========================================================
+# EditalFinder — monorepo (raiz)
+# =========================================================
+
+# Releases desktop — artefatos locais (não versionar binários)
+/releases/*.exe
+/releases/*.msi
+/releases/*.zip
+/releases/*.7z
+/releases/*.blockmap
+/releases/README_RELEASE_*.txt
+/releases/SHA256SUMS_*.txt
+!/releases/README.md
+!/releases/.gitkeep
+
+# --- Variáveis de ambiente (nunca commitar secrets) ---
+.env
+.env.local
+.env.*
+!.env.example
+!.env.*.example
+
+# --- Chaves, tokens e credenciais ---
+*.pem
+*.key
+*.p12
+*.pfx
+*.secret
+*.token
+*.credentials
+*credentials*.json
+*service_role*
+*service-role*
+secrets/
+.secrets/
+
+# --- Supabase local / exports com chaves ---
+.supabase/
+**/service_role*.json
+**/supabase/.temp/
+**/supabase/.branches/
+
+# --- Playwright / E2E (sessão autenticada, cookies, tokens) ---
+**/playwright/.auth/
+
+# --- Logs de QA (podem refletir env do shell antes da sanitização) ---
+**/qa/artifacts/logs/
+
+# --- Python venvs locais ---
+.venv/
+.venv-qa/
+venv/
+env/
+
+# --- Caches de teste ---
+.pytest_cache/
+__pycache__/
+*.py[cod]
+
+# --- Sistema / IDE ---
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+!**/.vscode/extensions.json

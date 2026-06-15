@@ -1,4 +1,5 @@
 import { usePermissions } from '../../hooks/usePermissions';
+import { openExternalUrl, EXTERNAL_ACTION_TYPES } from '../../utils/externalActions';
 
 function formatCell(raw) {
   if (raw == null || raw === '') return '—';
@@ -93,7 +94,7 @@ export default function AdminTable({ columns, data, onEdit, onDelete, extraRowAc
                           <button
                             type="button"
                             className="btn-action btn-open-pdf"
-                            onClick={() => window.open(item.pdf_url, '_blank')}
+                            onClick={() => openExternalUrl(item.pdf_url, { actionType: EXTERNAL_ACTION_TYPES.EDITAL_PDF })}
                           >
                             Abrir PDF
                           </button>
@@ -102,7 +103,7 @@ export default function AdminTable({ columns, data, onEdit, onDelete, extraRowAc
                           <button
                             type="button"
                             className="btn-action btn-open-link"
-                            onClick={() => window.open(item.link, '_blank')}
+                            onClick={() => openExternalUrl(item.link, { actionType: EXTERNAL_ACTION_TYPES.EDITAL_PRIMARY })}
                           >
                             Abrir Link
                           </button>

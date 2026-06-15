@@ -2,37 +2,60 @@
   "homepage": "https://gabrielkinast.github.io/editalfinder",
   "name": "editalfinder-react",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && cpy dist/index.html dist --rename=404.html --flat",
+    "build:tauri": "vite build --mode tauri",
     "lint": "eslint .",
-    "test": "node --test src/utils/radarMatch.test.js",
+    "test": "node --test src/utils/radarMatch.test.js src/utils/externalActions/externalActions.test.js src/utils/admin/buildEditalWritePayload.test.js src/utils/admin/manualCadastroEdital.test.js src/utils/supabase/supabaseErrorClassifier.test.js src/utils/admin/manualEditalPolicy.test.js src/utils/qa/grantsGovSource.test.js src/utils/security/security1_0bMigration.test.js src/utils/edital/editalVisibility.test.js src/utils/edital/editalStatusBadges.test.js src/utils/edital/officialEditalUrl.test.js src/utils/edital/getEditalActionUrls.test.js src/utils/edital/editalDetailLookup.test.js src/utils/qa/qaUtils.test.js src/utils/qa/detailDebug.test.js src/utils/debugRuntimeDataSource.test.js src/utils/dashboard/dashboardCountSemantics.test.js src/utils/feedback/appFeedback.test.js src/utils/feedback/appFeedbackGuidance.test.js src/utils/feedback/appFeedbackSeverity.test.js src/utils/feedback/appFeedbackMailto.test.js src/utils/feedback/appFeedbackClipboard.test.js src/utils/feedback/appFeedbackSensitive.test.js src/utils/feedback/appFeedbackModuleImports.test.js src/utils/feedback/appFeedbackSubmitFlow.test.js src/utils/pdf/editaisPdfFormatters.test.js src/utils/export/spreadsheetExport.test.js qa/qaArtifactUtils.test.js ../../backend/supabase/functions/_shared/appFeedbackEmailLogic.test.js",
     "preview": "vite preview",
+    "e2e": "playwright test",
+    "e2e:report": "playwright show-report qa/artifacts/playwright/html",
+    "e2e:install": "npm install -D @playwright/test && npx playwright install chromium",
+    "qa:unit": "npm test",
+    "qa:build": "npm run build",
+    "qa:e2e": "npm run e2e",
+    "qa:results": "node qa/generate-qa-results.mjs",
+    "qa:summary": "node qa/generate-qa-summary.mjs",
+    "qa:local": "node qa/run-local-qa.mjs",
+    "desktop:dev": "tauri dev",
+    "build:desktop": "tauri build",
+    "desktop:build": "tauri build",
+    "desktop:release": "npm test && npm run desktop:build && python ../../scripts/create_desktop_release.py",
+    "desktop:release:quick": "npm run desktop:build && python ../../scripts/create_desktop_release.py",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.99.2",
+    "@tauri-apps/api": "^2.11.0",
+    "@tauri-apps/plugin-opener": "^2.5.0",
+    "exceljs": "^4.4.0",
     "jspdf": "^4.2.1",
     "jspdf-autotable": "^5.0.7",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
-    "react-router-dom": "^7.13.1",
-    "react-window": "^1.8.11",
-    "xlsx": "^0.18.5"
+    "react-router-dom": "^7.17.0",
+    "react-window": "^1.8.11"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.4",
+    "@playwright/test": "^1.60.0",
+    "@tauri-apps/cli": "^2.11.2",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.0",
+    "cpy-cli": "^7.0.0",
     "eslint": "^9.39.4",
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.5.2",
     "gh-pages": "^6.3.0",
     "globals": "^17.4.0",
-    "vite": "^8.0.0"
+    "vite": "^8.0.16"
+  },
+  "overrides": {
+    "uuid": "^11.1.0"
   }
 }

@@ -16,6 +16,7 @@ import {
   submitEditalFeedback,
 } from '../../services/editalFeedbackService';
 import { logEditalFeedback } from '../../utils/edital/editalFeedbackLog';
+import { getReportProblemGuidanceText } from '../../utils/feedback/appFeedbackGuidance';
 
 const MSG_OUTRO_MIN =
   'Descreva o problema encontrado com pelo menos 10 caracteres.';
@@ -280,6 +281,9 @@ export default function EditalFeedbackModal({ edital, isOpen, onClose, onSubmitt
               <p className="edital-feedback-intro">
                 Ajude-nos a melhorar a qualidade das oportunidades. Explique o problema encontrado neste
                 item.
+              </p>
+              <p className="edital-feedback-guidance" data-testid="edital-feedback-guidance">
+                {getReportProblemGuidanceText()}
               </p>
 
               {authBlockMessage ? (

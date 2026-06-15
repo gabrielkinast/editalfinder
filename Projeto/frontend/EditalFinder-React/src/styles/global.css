@@ -9788,6 +9788,31 @@ button, input:not([type="range"]), select, textarea {
 .edital-b-bad  { background: var(--badge-bad-bg); color: var(--badge-bad-text); }
 .edital-b-info { background: var(--badge-info-bg); color: var(--badge-info-text); }
 .edital-b-muted{ background: var(--badge-muted-bg); color: var(--badge-muted-text); }
+.edital-b-neutral {
+    background: var(--badge-muted-bg);
+    color: var(--badge-muted-text);
+    border: 1px solid var(--color-border, rgba(0, 0, 0, 0.12));
+}
+
+/* FRONTEND 1.2A — container de badges de status (validade/prazo/semântica) */
+.edital-status-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    align-items: center;
+}
+.edital-status-badges--compact { gap: 3px; }
+.edital-status-badges--compact .edital-badge-mini { font-size: 8.5px; padding: 1px 6px; }
+.edital-status-more { cursor: default; opacity: 0.85; }
+.edital-detail-status-badges { margin: 6px 0 4px; }
+.edital-detail-aux-note {
+    font-size: 11px;
+    color: var(--color-muted);
+    margin: 2px 0;
+}
+.detalhes-status-badges { margin-top: 8px; }
+.radar-card-status-badges:empty { display: none; }
+.radar-card-status-badges { margin: 2px 0 6px; }
 
 .edital-muted-soft { font-size: 11px; color: var(--color-muted); font-weight: 500; }
 
@@ -12598,6 +12623,44 @@ button, input:not([type="range"]), select, textarea {
     margin-top: 8px;
 }
 
+.app-feedback-fallback {
+    margin-top: 12px;
+    padding: 14px;
+    border-radius: 8px;
+    border: 1px solid var(--color-border, #dde3ea);
+    background: var(--color-surface-muted, #f6f8fa);
+}
+
+.app-feedback-fallback-title {
+    font-weight: 600;
+    margin: 0 0 8px;
+    font-size: 14px;
+}
+
+.app-feedback-fallback-email {
+    margin: 8px 0 12px;
+    font-size: 14px;
+}
+
+.app-feedback-fallback-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.app-feedback-fallback-preview {
+    font-family: ui-monospace, monospace;
+    font-size: 12px;
+    margin-top: 6px;
+}
+
+.app-feedback-copy-ok {
+    color: var(--color-success, #1e7e34);
+    font-size: 13px;
+    margin: 0 0 8px;
+}
+
 .app-feedback-link-btn {
     background: none;
     border: none;
@@ -12736,6 +12799,20 @@ button, input:not([type="range"]), select, textarea {
     overflow-y: auto;
     padding: 12px 0 24px;
     -webkit-overflow-scrolling: touch;
+}
+
+.app-nav-version {
+    margin: 8px 20px 0;
+    padding-top: 12px;
+    border-top: 1px solid var(--border-color, rgba(128, 128, 128, 0.25));
+    font-size: 12px;
+    color: var(--color-muted, #888);
+}
+
+.settings-app-version {
+    margin: 16px 0 0;
+    font-size: 13px;
+    color: var(--color-muted, #888);
 }
 
 .app-nav-group {

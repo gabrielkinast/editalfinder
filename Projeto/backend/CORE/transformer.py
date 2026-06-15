@@ -158,6 +158,13 @@ def _enrich_grants_gov_catalog_extras(item: Dict[str, Any]) -> None:
         ex.setdefault("agency", agency)
     if "view-opportunity" in link.lower():
         ex.setdefault("origem_portal", ex.get("origem_portal") or "Grants.gov")
+    close = ex.get("closeDate") or ex.get("close_date") or ex.get("grants_close_date")
+    if close and not item.get("fim_inscricao"):
+        iso = normalize_date_str(str(close), locale="en_US")
+        if iso:
+            item["fim_inscricao"] = iso
+            ex.setdefault("grants_close_date", iso)
+            ex.setdefault("deadline_source_field", "closeDate")
 
 
 import sys
@@ -2808,6 +2815,14 @@ def _transform_item_with_result(item: Any, source_name: str) -> TransformResult:
             enrich_patch["fim_inscricao_original"] = raw_s
         elif normalize_date_str(raw_s) != fim_inscricao:
             enrich_patch["fim_inscricao_original"] = raw_s
+    for _rk in ("prazo_envio_raw", "fim_inscricao_raw"):
+        _rv = work.get(_rk) or extras_raw.get(_rk)
+        if _rv:
+            enrich_patch[_rk] = str(_rv).strip()[:200]
+    for _dk in ("deadline", "deadline_source", "deadline_source_field", "grants_close_date"):
+        _dv = extras_raw.get(_dk)
+        if _dv is not None and _dv != "":
+            enrich_patch[_dk] = _dv
 
     desc_enriched, desc_extras = enrich_description(
         work,
@@ -2947,6 +2962,13 @@ def _transform_item_with_result(item: Any, source_name: str) -> TransformResult:
                 defense_patch.pop("documentos", None)
             _extras_apply_patch_preserve_nonempty(out["extras"], defense_patch)
     _enrich_grants_gov_catalog_extras(out)
+    try:
+        from grants_link_resolver import apply_link_resolution_to_item, is_grants_gov_record
+
+        if is_grants_gov_record(out):
+            apply_link_resolution_to_item(out, rewrite_link="if_broken")
+    except ImportError:
+        pass
     try:
         from link_health import stamp_structural_link_health
 
@@ -3154,6 +3176,14 @@ def _transform_item_with_result(item: Any, source_name: str) -> TransformResult:
     out["extras"]["content_type_detectado"] = _content_type_final(str(out.get("link") or ""), ct_final)
     if item_valor:
         out["extras"]["valor_total_texto"] = out["extras"].get("valor_total_texto") or str(item_valor)
+
+    try:
+        from opportunity_enricher import apply_backend_enrichment_if_enabled
+
+        # Feature flag: EDITALFINDER_ENABLE_BACKEND_ENRICHMENT — ver opportunity_enricher.py
+        apply_backend_enrichment_if_enabled(out)
+    except ImportError:
+        pass
 
     sanitized = sanitize_for_postgres(out)
     return TransformResult(

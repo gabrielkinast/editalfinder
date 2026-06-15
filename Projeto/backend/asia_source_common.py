@@ -542,7 +542,7 @@ def scrape_asia_html_portal(
 
                 annotate_kept_extras(extras, gate)
 
-                items.append({
+                item = {
                     "titulo": title[:250],
                     "descricao": (body or title)[:1500],
                     "link": url,
@@ -555,7 +555,19 @@ def scrape_asia_html_portal(
                     "acao": acao,
                     "tipo_recurso": tipo_recurso,
                     "extras": extras,
-                })
+                }
+                if country == "china" or "mofcom" in source_label.lower():
+                    try:
+                        from CORE.source_deadline_parsers import enrich_china_crawler_item
+
+                        item = enrich_china_crawler_item(
+                            item,
+                            detail_html=raw_html,
+                            listing_text=body or "",
+                        )
+                    except Exception:
+                        pass
+                items.append(item)
 
         if len(items) >= max_items:
             break

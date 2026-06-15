@@ -15,6 +15,20 @@ import {
   sanitizeClientWritePayload,
 } from '../utils/permissions';
 import { mapRawEditalRow } from '../utils/edital/editalRowMapper';
+import { buildEditalWritePayload } from '../utils/admin/buildEditalWritePayload';
+import {
+  CREATE_EDITAL_RETURN_COLUMNS,
+  buildManualEditalOrFilter,
+  filterManualCadastroEditais,
+  logCadastrosDebug,
+  mergeCadastrosEditalRows,
+} from '../utils/admin/manualCadastroEdital';
+import { logEditalDataCounts } from '../utils/debugDataCounts';
+import {
+  lookupEditalForDetail,
+  lookupAnexosForDetail,
+} from '../utils/edital/editalDetailLookup';
+import { filterPublicVisibleEditais } from '../utils/edital/editalVisibility';
 
 const IS_DEV = import.meta.env.DEV;
 
@@ -154,21 +168,45 @@ export const dataService = {
       }
     }
 
-    const mapped = (rows || []).map(mapRawEditalRow);
+    const mapped = filterPublicVisibleEditais((rows || []).map(mapRawEditalRow));
     if (IS_DEV) {
       logDevEditais({ view: viewName, count: mapped.length, phase: 'final_mapped' });
+    }
+    // Diagnóstico opcional (web vs desktop/Tauri): só roda com VITE_DEBUG_DATA_COUNTS.
+    try {
+      await logEditalDataCounts({ supabase, viewName, catalogCount: mapped.length });
+    } catch (dbgErr) {
+      if (IS_DEV) console.warn('[dataService.getEditais] data-count debug falhou:', dbgErr?.message || dbgErr);
     }
     return mapped;
   },
 
   async createEdital(data) {
-    const { error } = await supabase.from('edital').insert([data]);
+    const row = buildEditalWritePayload(data, { manualCadastro: true });
+    logCadastrosDebug('create payload keys', { keys: Object.keys(row) });
+
+    const { data: inserted, error } = await supabase
+      .from('edital')
+      .insert([row])
+      .select(CREATE_EDITAL_RETURN_COLUMNS)
+      .single();
+
     if (error) throw error;
+
+    logCadastrosDebug('insert success id_edital', { id_edital: inserted?.id_edital ?? null });
+    return inserted;
   },
 
   async updateEdital(id, data) {
-    const { error } = await supabase.from('edital').update(data).eq('id_edital', id);
+    const row = buildEditalWritePayload(data, { manualCadastro: true });
+    const { data: updated, error } = await supabase
+      .from('edital')
+      .update(row)
+      .eq('id_edital', id)
+      .select(CREATE_EDITAL_RETURN_COLUMNS)
+      .single();
     if (error) throw error;
+    return updated;
   },
 
   async deleteEdital(id) {
@@ -176,36 +214,69 @@ export const dataService = {
     if (error) throw error;
   },
 
+  /**
+   * Lookup robusto: base (.maybeSingle) → fallback view → errorKind classificado.
+   */
   async getEditalById(idEdital) {
-    if (!isSupabaseConfigured) return null;
-    const { data, error } = await supabase
-      .from('edital')
-      .select('*')
-      .eq('id_edital', idEdital)
-      .single();
-    if (error) throw error;
-    return data;
+    return lookupEditalForDetail(supabase, {
+      routeParam: idEdital,
+      viewName: VIEW_EDITAIS,
+      isConfigured: isSupabaseConfigured,
+    });
   },
 
+  /**
+   * Anexos com retorno estruturado — falha não lança (detalhe continua renderizando).
+   * @param {unknown} idEdital
+   */
+  async getAnexosByEditalSafe(idEdital) {
+    return lookupAnexosForDetail(supabase, idEdital, {
+      isConfigured: isSupabaseConfigured,
+    });
+  },
+
+  /** @deprecated Preferir getAnexosByEditalSafe — mantido para compatibilidade. */
   async getAnexosByEdital(idEdital) {
-    if (!isSupabaseConfigured) return [];
-    const { data, error } = await supabase
-      .from('edital_anexo')
-      .select('*')
-      .eq('id_edital', idEdital)
-      .order('criado_em', { ascending: true });
-    if (error) throw error;
-    return data || [];
+    const result = await lookupAnexosForDetail(supabase, idEdital, {
+      isConfigured: isSupabaseConfigured,
+    });
+    if (!result.ok) throw result.error || new Error('anexos_fetch_failed');
+    return result.data;
   },
 
-  async getAllEditaisAdmin() {
+  async getAllEditaisAdmin(options = {}) {
     if (!isSupabaseConfigured) return [];
-    const { data, error } = await supabase
+    const { pinRows = [] } = options;
+    const orFilter = buildManualEditalOrFilter();
+
+    logCadastrosDebug('list filters', { orFilter, pinCount: pinRows.length });
+
+    let rows = [];
+    const filteredQuery = await supabase
       .from('edital')
-      .select('*')
-      .order('id_edital', { ascending: true });
-    if (error) throw error;
-    return data;
+      .select(CREATE_EDITAL_RETURN_COLUMNS)
+      .or(orFilter)
+      .order('id_edital', { ascending: false });
+
+    if (filteredQuery.error) {
+      if (IS_DEV) {
+        console.warn('[dataService.getAllEditaisAdmin] filtered query failed:', filteredQuery.error.message);
+      }
+      const fallback = await supabase
+        .from('edital')
+        .select(CREATE_EDITAL_RETURN_COLUMNS)
+        .order('id_edital', { ascending: false })
+        .limit(800);
+      if (fallback.error) throw fallback.error;
+      rows = filterManualCadastroEditais(fallback.data);
+    } else {
+      rows = filteredQuery.data || [];
+      rows = filterManualCadastroEditais(rows);
+    }
+
+    const merged = mergeCadastrosEditalRows(rows, pinRows);
+    logCadastrosDebug('reload list count', { remote: rows.length, merged: merged.length });
+    return merged;
   },
 
   // --- USUÁRIOS ---
@@ -303,7 +374,7 @@ export const dataService = {
     if (!isSupabaseConfigured) return [];
     const { data, error } = await supabase.from('organizacao').select('*').order('id_organizacao', { ascending: true });
     if (error) throw error;
-    return data;
+    return data || [];
   },
 
   async createOrganization(data) {

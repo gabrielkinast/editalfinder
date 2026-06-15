@@ -1,0 +1,198 @@
+{
+  "generated_at": "2026-06-15T15:40:23.171Z",
+  "patch": "QA 1.3A — Standardized QA scripts",
+  "environment": {
+    "node": "v24.15.0",
+    "platform": "win32",
+    "authConfigured": true,
+    "authEmailMasked": "e***@gmail.com",
+    "writeTestsEnabled": false,
+    "ci": false,
+    "hasSupabaseUrl": true
+  },
+  "A_unit": {
+    "status": "passed",
+    "passed": 301,
+    "failed": 0,
+    "skipped": 0,
+    "total": 301,
+    "duration_sec": 4.192,
+    "log": "qa/artifacts/logs/unit.log"
+  },
+  "B_build": {
+    "status": "passed",
+    "duration_sec": 5.678,
+    "log": "qa/artifacts/logs/build.log"
+  },
+  "C_e2e": {
+    "status": "passed",
+    "passed": 18,
+    "failed": 0,
+    "skipped": 1,
+    "duration_sec": 116.773,
+    "results": "qa/artifacts/playwright/results.json",
+    "html": "qa/artifacts/playwright/html",
+    "log": "qa/artifacts/logs/e2e.log"
+  },
+  "e2e_specs": [
+    {
+      "title": "authenticate for E2E",
+      "file": "tests/e2e/auth.setup.js",
+      "project": "auth-setup",
+      "status": "passed",
+      "duration_ms": 5846
+    },
+    {
+      "title": "app-load: raiz redireciona para login quando não autenticado [P0]",
+      "file": "tests/e2e/smoke.spec.js",
+      "project": "public",
+      "status": "passed",
+      "duration_ms": 2589
+    },
+    {
+      "title": "login-page: formulário renderiza sem erro fatal [P0]",
+      "file": "tests/e2e/smoke.spec.js",
+      "project": "public",
+      "status": "passed",
+      "duration_ms": 2059
+    },
+    {
+      "title": "protected-route: /editais redireciona para login sem auth [P0]",
+      "file": "tests/e2e/smoke.spec.js",
+      "project": "public",
+      "status": "passed",
+      "duration_ms": 2252
+    },
+    {
+      "title": "protected-route: /dashboard redireciona para login sem auth [P0]",
+      "file": "tests/e2e/smoke.spec.js",
+      "project": "public",
+      "status": "passed",
+      "duration_ms": 2375
+    },
+    {
+      "title": "router-basename: assets da SPA carregam (sem tela em branco) [P0]",
+      "file": "tests/e2e/smoke.spec.js",
+      "project": "public",
+      "status": "passed",
+      "duration_ms": 1879
+    },
+    {
+      "title": "editais carrega fora do login com stats ou cards [P0]",
+      "file": "tests/e2e/authenticated-smoke.spec.js",
+      "project": "authenticated",
+      "status": "passed",
+      "duration_ms": 43325
+    },
+    {
+      "title": "abre modal novo edital sem salvar [P2]",
+      "file": "tests/e2e/cadastros-smoke.spec.js",
+      "project": "authenticated",
+      "status": "passed",
+      "duration_ms": 38998
+    },
+    {
+      "title": "cria edital manual com flag E2E_ALLOW_WRITE_TESTS [P3]",
+      "file": "tests/e2e/cadastros-smoke.spec.js",
+      "project": "authenticated",
+      "status": "skipped",
+      "duration_ms": 1267
+    },
+    {
+      "title": "dashboard renderiza KPIs e link para editais [P2]",
+      "file": "tests/e2e/dashboard-smoke.spec.js",
+      "project": "authenticated",
+      "status": "passed",
+      "duration_ms": 31716
+    },
+    {
+      "title": "abre os primeiros 10 editais e registra detalhes quebrados [P1]",
+      "file": "tests/e2e/editais-detail.spec.js",
+      "project": "authenticated",
+      "status": "passed",
+      "duration_ms": 81730
+    },
+    {
+      "title": "export XLSX e PDF iniciam download [P2]",
+      "file": "tests/e2e/editais-export.spec.js",
+      "project": "authenticated",
+      "status": "passed",
+      "duration_ms": 43080
+    },
+    {
+      "title": "busca por título do card + filtro status sem erro fatal [P2]",
+      "file": "tests/e2e/editais-filters.spec.js",
+      "project": "authenticated",
+      "status": "passed",
+      "duration_ms": 57131
+    },
+    {
+      "title": "aplica e remove filtro Aberto sem quebrar lista [P2]",
+      "file": "tests/e2e/editais-status-filter.spec.js",
+      "project": "authenticated",
+      "status": "passed",
+      "duration_ms": 32240
+    },
+    {
+      "title": "botões externos de cards não usam URLs inválidas [P2]",
+      "file": "tests/e2e/external-links.spec.js",
+      "project": "authenticated",
+      "status": "passed",
+      "duration_ms": 31116
+    },
+    {
+      "title": "botões externos não apontam para page-not-found [P1]",
+      "file": "tests/e2e/grants-links.spec.js",
+      "project": "authenticated",
+      "status": "passed",
+      "duration_ms": 15846
+    },
+    {
+      "title": "radar renderiza placeholder ou cards [P2]",
+      "file": "tests/e2e/radar-smoke.spec.js",
+      "project": "authenticated",
+      "status": "passed",
+      "duration_ms": 5835
+    },
+    {
+      "title": "modal geral mostra ambiente + orientação de reporte [P1]",
+      "file": "tests/e2e/report-problem.spec.js",
+      "project": "authenticated",
+      "status": "passed",
+      "duration_ms": 8101
+    },
+    {
+      "title": "botão de envio Gmail ou fallback existe sem enviar e-mail [P2]",
+      "file": "tests/e2e/report-problem.spec.js",
+      "project": "authenticated",
+      "status": "passed",
+      "duration_ms": 4888
+    }
+  ],
+  "steps": {
+    "unit": {
+      "exitCode": 0,
+      "duration_sec": 4.192,
+      "command": "npm test",
+      "log": "qa/artifacts/logs/unit.log"
+    },
+    "build": {
+      "exitCode": 0,
+      "duration_sec": 5.678,
+      "command": "npm run build",
+      "log": "qa/artifacts/logs/build.log"
+    },
+    "e2e": {
+      "exitCode": 0,
+      "duration_sec": 116.773,
+      "command": "npm run e2e",
+      "log": "qa/artifacts/logs/e2e.log"
+    }
+  },
+  "artifacts": {
+    "logs": "qa/artifacts/logs",
+    "playwright": "qa/artifacts/playwright",
+    "qa_run_state": "qa/artifacts/qa_run_state.json",
+    "qa_summary_latest": "qa/artifacts/qa_summary_latest.md"
+  }
+}

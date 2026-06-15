@@ -2,7 +2,9 @@
 
 Documento central de referência para **quais fontes existem**, **qual pipeline as alimenta**, **status operacional** e **onde ficam os artefatos**. Gerado por leitura de código, configs e relatórios de auditoria — **sem** execução de crawlers ou apply.
 
-**Versão estruturada (máquina):** [`BACKEND_SOURCES_INVENTORY.json`](./BACKEND_SOURCES_INVENTORY.json) (`generated_at` no JSON).
+**Atualização 2026-06 (Backend 10.1):** [`backend/BACKEND_SOURCES_INVENTORY_2026_06.md`](./backend/BACKEND_SOURCES_INVENTORY_2026_06.md) — resumo executivo, ruído, prioridades 10.1 e lacunas.
+
+**Versão estruturada (máquina):** [`BACKEND_SOURCES_INVENTORY.json`](./BACKEND_SOURCES_INVENTORY.json) (`generated_at` no JSON; campos `backend_10_1_audit`, `noise_risk`, `recommended_action`).
 
 **Visibilidade aba Editais (ruído global):** auditoria `scripts/audit_editais_visibility_noise.py` — política [`EDITAIS_VISIBILITY_AND_NOISE_POLICY.md`](./EDITAIS_VISIBILITY_AND_NOISE_POLICY.md). Não confundir com status `ready` do loader: uma fonte pode estar “aplicada” e ainda gerar ruído na view até curadoria/SQL da view.
 
@@ -10,23 +12,26 @@ Documento central de referência para **quais fontes existem**, **qual pipeline 
 
 ## Resumo executivo
 
-| Métrica | Valor (inventário atual) |
+| Métrica | Valor (inventário 2026-06) |
 |---------|--------------------------|
-| **Fontes mapeadas** | **157** |
+| **Fontes mapeadas** | **159** |
 | **aplicada** | 60 (majoritariamente editais `ready` + concursos wave1/wave2 com staging) |
 | **pronta_para_apply** | 43 (editais `ready_with_notes` + pilotos notícias BR/internacional com dry-run limpo) |
+| **dryrun_ok** | 19 (news internacional/militar — classificação fina pendente) |
 | **implementada_latente** | 8 |
-| **precisa_melhoria** | 17 |
+| **precisa_melhoria** | 16 |
 | **nao_recomendado** | 12 |
 | **descoberta** | 1 (`pci_concursos`) |
+| **Ruído alto (dry-run 10.1)** | 7 fontes com `is_noise` ≥5% — ver doc 2026-06 |
+| **Prioridade Backend 10.1** | Corrigir classificador **antes** de novas fontes |
 
 **Por módulo (contagem aproximada):**
 
 | Módulo | Fontes no inventário | Destaque |
 |--------|---------------------:|----------|
-| Editais / Radar (legado) | ~102 (`config/source_readiness.json`) | 54 `ready` + 36 `ready_with_notes` + 8 review + 10 blocked |
+| Editais / Radar (legado) | **107** (`config/source_readiness.json`) | 54 `ready` + 36 `ready_with_notes` + 8 review + 10 blocked |
 | Concursos & Seleções | 19 | 33 upserts wave1 staging + Avança SP wave2; várias latentes |
-| Notícias / Pesquisas | 24 (`config/news_research_sources.json`) | BR pilotos + DARPA + NATO + War.gov + AFRL + expansão militar (AFMC/AFNWC/Space Force/ARL/tech areas); ondas NASA/IAEA/EurekAlert |
+| Notícias / Pesquisas | **32** (`config/news_research_sources.json`) | BR pilotos + DARPA + NATO + War.gov + AFRL + expansão militar; ondas NASA/IAEA/EurekAlert |
 | Radar dedicado (MCTI) | 1 | **`apply_status`: não_recomendado** (lote histórico) |
 
 **Melhores fontes operacionais hoje**
@@ -302,11 +307,15 @@ python main.py daily --skip-apply
 
 ## 13. Próximas fontes recomendadas
 
-1. **Concursos:** reativar Cebraspe/AOCP quando houver edital ativo; melhorar Comvest/Fuvest (datas).
-2. **Notícias BR:** apply piloto DefesaNet/SOFTEX/CAPES após decisão de produto.
-3. **MCTI:** monitoramento periódico v3 (sem apply do arquivo atual).
-4. **Editais:** promover `ready_with_notes` com retransform + validação staging.
-5. **Residências / EmbarcaTech:** estabilizar crawl após erros HTTP.
+**Ordem pós-inventário 2026-06:** Backend **10.1A–D** (classificador/ruído/prazo) **antes** de novas fontes ou apply amplo.
+
+1. **Backend 10.1A–B:** actionability + semântica `is_noise` (ver `backend/BACKEND_SOURCES_INVENTORY_2026_06.md` §9).
+2. **Backend 10.1C:** perfis BDMG, BNB, China, suppliers.
+3. **Backend 10.1D:** prazo BNDES, DOE_ARPAE, Grants.gov.
+4. **Concursos:** Cebraspe/AOCP quando ativo; Comvest/Fuvest (datas).
+5. **Notícias BR:** apply piloto após decisão produto (não misturar edital).
+6. **Editais:** `ready_with_notes` só após 10.1 persistido.
+7. **10.1E:** novas fontes — gap analysis se cobertura ainda baixa.
 
 ---
 

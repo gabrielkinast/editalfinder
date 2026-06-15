@@ -1,0 +1,11 @@
+para fazer testes na plataforma, com o e2e, é necessário colocar no terminal o seguinte comando:
+
+cd "caminho/para/o/EditalFinder-React"
+
+$env:E2E_USER_EMAIL="EMAIL_REAL_AQUI"
+$env:E2E_USER_PASSWORD="SENHA_REAL_AQUI"
+
+npm run e2e
+
+Remove-Item Env:E2E_USER_EMAIL
+Remove-Item Env:E2E_USER_PASSWORD

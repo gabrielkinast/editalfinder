@@ -5,10 +5,12 @@ import { usePermissions } from '../../hooks/usePermissions';
 import { useSettings } from '../../contexts/SettingsContext';
 import { ENABLE_CONSULTOR_WORKSPACE } from '../../config/env';
 import { logConsultorWorkspace } from '../../utils/consultorWorkspaceLog';
+import { logConsultorWorkspaceAvailabilityCheck } from '../../utils/consultorWorkspaceAvailability';
 import Modal from '../ui/Modal';
 import SettingsForm from '../admin/SettingsForm';
 import AppReportProblemButton from '../feedback/AppReportProblemButton';
 import AppNavigationMenu from './AppNavigationMenu';
+import AppHelpButton from '../help/AppHelpButton';
 
 export default function Header({ onSearch, searchPlaceholder = 'Buscar editais...' }) {
   const navigate = useNavigate();
@@ -26,6 +28,11 @@ export default function Header({ onSearch, searchPlaceholder = 'Buscar editais..
     ENABLE_CONSULTOR_WORKSPACE && Boolean(permissions.canViewCadastros);
 
   useEffect(() => {
+    logConsultorWorkspaceAvailabilityCheck({
+      canViewCadastros: permissions.canViewCadastros,
+      userRole: user?.tipo ?? user?.tipo_usuario ?? null,
+      menuVisible: workspaceMenuVisible,
+    });
     logConsultorWorkspace('menu_gate', {
       ENABLE_CONSULTOR_WORKSPACE,
       canViewCadastros: permissions.canViewCadastros,
@@ -60,6 +67,7 @@ export default function Header({ onSearch, searchPlaceholder = 'Buscar editais..
               id="globalSearch"
               placeholder={searchPlaceholder}
               className="search-input-header"
+              data-testid="editais-search-input"
               onChange={(e) => onSearch(e.target.value)}
               aria-label={searchPlaceholder}
             />
@@ -67,6 +75,8 @@ export default function Header({ onSearch, searchPlaceholder = 'Buscar editais..
         )}
 
         <div className="header-actions header-right">
+          <AppHelpButton variant="icon" />
+          <AppHelpButton variant="header" />
           <AppReportProblemButton
             origem="user_report"
             tipo="outro"

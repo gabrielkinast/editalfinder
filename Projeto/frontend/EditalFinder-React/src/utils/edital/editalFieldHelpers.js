@@ -1,4 +1,4 @@
-import { coerceStringArray } from './coerceArrays';
+import { coerceStringArray } from './coerceArrays.js';
 
 /** Alias semântico para campos array/string do banco. */
 export function asArray(value) {

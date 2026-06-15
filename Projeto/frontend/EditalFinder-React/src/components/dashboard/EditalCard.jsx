@@ -5,9 +5,11 @@ import { resumirEdital, formatTipoAmigavel, humanizeTaxonomyList } from '../../u
 import { coerceStringArray } from '../../utils/edital/coerceArrays';
 import { resolveActionLinks } from '../../utils/edital/linkHealth';
 import { showReviewPrazoBadge } from '../../utils/edital/editalVisibility';
-import { onEditalLinkClick, siteLinkCampoEscolhido } from '../../utils/edital/logEditalLinkClick';
+import { siteLinkCampoEscolhido } from '../../utils/edital/logEditalLinkClick';
+import ExternalActionButton, { EXTERNAL_ACTION_TYPES } from '../../utils/externalActions';
 import HighlightedText from './HighlightedText';
 import EditalReportProblemButton from '../editais/EditalReportProblemButton';
+import EditalStatusBadges from '../editais/EditalStatusBadges';
 
 const ORG_WEBSITES = {
   FINEP: 'https://www.finep.gov.br',
@@ -60,10 +62,6 @@ export default function EditalCard({
   const q = Number(edital.qualidade_dado_raw ?? 0);
 
   const badges = [];
-  if (expired) badges.push({ k: 'Encerrado', c: 'bad' });
-  else if (deadline) badges.push({ k: 'Aberto', c: 'ok' });
-  else badges.push({ k: 'Sem prazo', c: 'warn' });
-
   if (!Number.isNaN(q) && q >= 70) badges.push({ k: 'Alta qualidade', c: 'ok' });
   if (vs === 'incompleto') badges.push({ k: 'Incompleto', c: 'warn' });
   if (vs === 'acesso_limitado') badges.push({ k: 'Acesso limitado', c: 'warn' });
@@ -86,6 +84,10 @@ export default function EditalCard({
   return (
     <div
       className={`edital-card ${edital.isManual ? 'edital-card-manual' : ''} edital-card-density-${density}`}
+      data-testid="edital-card"
+      data-edital-id={idNumerico}
+      data-source={edital.orgao || edital.fonte_recurso || ''}
+      data-fonte={edital.fonte_recurso_display || edital.fonte_recurso || edital.fonte || ''}
     >
       <div className="edital-card-top-row">
         <div className="edital-title-wrap">
@@ -110,7 +112,8 @@ export default function EditalCard({
 
       <div className="edital-badges-row">
         <span className="edital-badge edital-badge-fonte">{edital.orgao || 'Fonte não informada'}</span>
-        {badges.slice(0, 6).map((b) => (
+        <EditalStatusBadges edital={edital} maxVisible={3} compact />
+        {badges.slice(0, 5).map((b) => (
           <span key={b.k} className={badgeClass(b.c)}>
             {b.k}
           </span>
@@ -211,25 +214,25 @@ export default function EditalCard({
 
       <div className="edital-actions edital-actions-balanced">
         {inscricaoLink ? (
-          <a
-            href={inscricaoLink}
-            target="_blank"
-            rel="noreferrer"
+          <ExternalActionButton
+            item={edital}
+            actionType={EXTERNAL_ACTION_TYPES.EDITAL_INSCRICAO}
+            url={inscricaoLink}
+            label="Inscrição"
             className="btn-inscricao dash-action"
-            onClick={onEditalLinkClick(edital, 'link_inscricao', inscricaoLink)}
-          >
-            Inscrição
-          </a>
+            logEdital
+            logCampo="link_inscricao"
+          />
         ) : siteLink ? (
-          <a
-            href={siteLink}
-            target="_blank"
-            rel="noreferrer"
+          <ExternalActionButton
+            item={edital}
+            actionType={EXTERNAL_ACTION_TYPES.EDITAL_PRIMARY}
+            url={siteLink}
+            label="Site"
             className="btn-view dash-action"
-            onClick={onEditalLinkClick(edital, siteCampo, siteLink)}
-          >
-            Site
-          </a>
+            logEdital
+            logCampo={siteCampo}
+          />
         ) : actions.inscDisabled || actions.siteDisabled ? (
           <span className="dash-action-muted" title="Link indisponível (auditoria)">
             Link indisponível
@@ -239,15 +242,15 @@ export default function EditalCard({
         )}
 
         {pdfLink ? (
-          <a
-            href={pdfLink}
-            target="_blank"
-            rel="noreferrer"
+          <ExternalActionButton
+            item={edital}
+            actionType={EXTERNAL_ACTION_TYPES.EDITAL_PDF}
+            url={pdfLink}
+            label="PDF"
             className="btn-pdf dash-action"
-            onClick={onEditalLinkClick(edital, 'pdf_url', pdfLink)}
-          >
-            PDF
-          </a>
+            logEdital
+            logCampo="pdf_url"
+          />
         ) : actions.pdfDisabled ? (
           <span className="dash-action-muted" title="PDF indisponível (auditoria)">
             PDF indispon.
@@ -257,6 +260,7 @@ export default function EditalCard({
         <button
           type="button"
           className="btn-detalhes dash-action-outline"
+          data-testid="edital-open-detail"
           onClick={() =>
             typeof onOpenDetails === 'function' ? onOpenDetails(edital) : navigate(`/edital/${idNumerico}`)
           }
