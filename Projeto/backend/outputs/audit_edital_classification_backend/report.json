@@ -1,0 +1,3332 @@
+{
+  "total": 1232,
+  "kind": {
+    "desconhecido": 317,
+    "edital": 821,
+    "portal": 24,
+    "concurso": 23,
+    "pesquisa": 32,
+    "noticia": 15
+  },
+  "modalidade_normalizada": {
+    "outro": 150,
+    "compra_licitacao": 220,
+    "premio_desafio": 66,
+    "fomento_chamada_publica": 248,
+    "noticia_institucional": 246,
+    "bolsa_formacao": 289,
+    "concurso_selecao": 2,
+    "evento_capacitacao": 3,
+    "pesquisa_publicacao": 2,
+    "pesquisa_cientifica": 6
+  },
+  "escopo_geografico": {
+    "internacional": 636,
+    "brasil": 448,
+    "multilateral": 141,
+    "desconhecido": 7
+  },
+  "top_fontes_normalizadas": [
+    [
+      "China International Technology Transfer Center",
+      131
+    ],
+    [
+      "Grants.gov (EUA)",
+      127
+    ],
+    [
+      "Fundação Araucária",
+      88
+    ],
+    [
+      "BDMG",
+      38
+    ],
+    [
+      "BNDES",
+      38
+    ],
+    [
+      "CAS",
+      31
+    ],
+    [
+      "BASA",
+      30
+    ],
+    [
+      "NSFC",
+      30
+    ],
+    [
+      "KEK",
+      29
+    ],
+    [
+      "ANEEL",
+      27
+    ],
+    [
+      "KAKENHI",
+      26
+    ],
+    [
+      "HORIZON_EUROPE",
+      25
+    ],
+    [
+      "BNB",
+      24
+    ],
+    [
+      "Eureka Network",
+      23
+    ],
+    [
+      "SENAI",
+      22
+    ],
+    [
+      "EMBRAPII",
+      21
+    ],
+    [
+      "AMAZUL",
+      20
+    ],
+    [
+      "NUCLEP",
+      20
+    ],
+    [
+      "European Defence Fund",
+      18
+    ],
+    [
+      "ESA OSIP",
+      17
+    ],
+    [
+      "CGN",
+      16
+    ],
+    [
+      "EIT",
+      16
+    ],
+    [
+      "MOST China",
+      16
+    ],
+    [
+      "NEDO",
+      16
+    ],
+    [
+      "Lockheed Martin Suppliers",
+      16
+    ],
+    [
+      "DARPA Opportunities",
+      15
+    ],
+    [
+      "DoD SBIR/STTR",
+      15
+    ],
+    [
+      "CNPq",
+      14
+    ],
+    [
+      "DOE_ARPAE",
+      14
+    ],
+    [
+      "EIC",
+      14
+    ]
+  ],
+  "top_tipo_oportunidade_raw": [
+    [
+      "noticia_institucional",
+      230
+    ],
+    [
+      "licitacao",
+      200
+    ],
+    [
+      "grant",
+      163
+    ],
+    [
+      "funding_opportunity",
+      135
+    ],
+    [
+      "programa_pdi",
+      116
+    ],
+    [
+      "chamada_publica",
+      86
+    ],
+    [
+      "supplier_portal",
+      77
+    ],
+    [
+      "pesquisa_colaborativa",
+      71
+    ],
+    [
+      "investimento",
+      35
+    ],
+    [
+      "call_for_proposals",
+      31
+    ],
+    [
+      "programa_agregado",
+      27
+    ],
+    [
+      "procurement",
+      14
+    ],
+    [
+      "space_opportunity",
+      13
+    ],
+    [
+      "research_grant",
+      8
+    ],
+    [
+      "programa_credito",
+      7
+    ],
+    [
+      "innovation_programme",
+      5
+    ],
+    [
+      "programa",
+      4
+    ],
+    [
+      "edital",
+      2
+    ],
+    [
+      "cadastro_fornecedor",
+      2
+    ],
+    [
+      "accelerator",
+      2
+    ]
+  ],
+  "area_tecnologia_samples": [
+    [
+      "['Tecnologia e inovação', 'Bolsas']",
+      5
+    ],
+    [
+      "['Tecnologia e inovação']",
+      4
+    ],
+    [
+      "['Agro', 'Biotecnologia']",
+      2
+    ],
+    [
+      "['Bolsas', 'Tecnologia e inovação']",
+      2
+    ],
+    [
+      "['Saúde', 'Tecnologia e inovação', 'Bolsas']",
+      1
+    ],
+    [
+      "['Indústria', 'Tecnologia e inovação']",
+      1
+    ],
+    [
+      "['Biotecnologia', 'Saúde', 'Indústria', 'Bolsas', ",
+      1
+    ]
+  ],
+  "review_candidates_count": 201,
+  "review_candidates": [
+    {
+      "id_edital": 30,
+      "titulo": "Sobre o BDMG",
+      "fonte_recurso": "BDMG",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Meio ambiente",
+        "Saúde",
+        "Bolsas"
+      ]
+    },
+    {
+      "id_edital": 43,
+      "titulo": "Eventos",
+      "fonte_recurso": "BDMG",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Agro",
+        "Energia",
+        "Saneamento",
+        "Indústria",
+        "Bolsas"
+      ]
+    },
+    {
+      "id_edital": 31,
+      "titulo": "Atuação",
+      "fonte_recurso": "BDMG",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Meio ambiente",
+        "Saúde",
+        "Bolsas"
+      ]
+    },
+    {
+      "id_edital": 32,
+      "titulo": "Nossa Essência",
+      "fonte_recurso": "BDMG",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Meio ambiente",
+        "Saúde",
+        "Bolsas"
+      ]
+    },
+    {
+      "id_edital": 33,
+      "titulo": "Responsabilidade Social, Ambiental e Climática",
+      "fonte_recurso": "BDMG",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Meio ambiente",
+        "Saúde",
+        "Bolsas"
+      ]
+    },
+    {
+      "id_edital": 34,
+      "titulo": "Segurança da Informação e Cibernética",
+      "fonte_recurso": "BDMG",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Meio ambiente",
+        "Saúde",
+        "Bolsas"
+      ]
+    },
+    {
+      "id_edital": 35,
+      "titulo": "Proteção de dados e Privacidade",
+      "fonte_recurso": "BDMG",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Meio ambiente",
+        "Saúde",
+        "Bolsas"
+      ]
+    },
+    {
+      "id_edital": 36,
+      "titulo": "Conhecimento",
+      "fonte_recurso": "BDMG",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Meio ambiente",
+        "Saúde",
+        "Bolsas"
+      ]
+    },
+    {
+      "id_edital": 38,
+      "titulo": "Licitações e Contratos",
+      "fonte_recurso": "BDMG",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Bolsas"
+      ]
+    },
+    {
+      "id_edital": 41,
+      "titulo": "Sala de Imprensa",
+      "fonte_recurso": "BDMG",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Agro",
+        "Energia",
+        "Saneamento",
+        "Indústria",
+        "Bolsas"
+      ]
+    },
+    {
+      "id_edital": 42,
+      "titulo": "Notícias",
+      "fonte_recurso": "BDMG",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "titulo_parece_noticia",
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Agro",
+        "Energia",
+        "Saneamento",
+        "Indústria",
+        "Bolsas"
+      ]
+    },
+    {
+      "id_edital": 69,
+      "titulo": "Educação – atividades financiadas – Banco do Nordeste",
+      "fonte_recurso": "BNB",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Energia",
+        "Bolsas",
+        "Meio ambiente"
+      ]
+    },
+    {
+      "id_edital": 72,
+      "titulo": "Grãos – atividades financiadas – Banco do Nordeste",
+      "fonte_recurso": "BNB",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Agro",
+        "Indústria",
+        "Bolsas"
+      ]
+    },
+    {
+      "id_edital": 574,
+      "titulo": "CAPES - Página de Editais e Programas",
+      "fonte_recurso": "CAPES",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Bolsas"
+      ]
+    },
+    {
+      "id_edital": 71,
+      "titulo": "Fruticultura – atividades financiadas – Banco do Nordeste",
+      "fonte_recurso": "BNB",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Agro",
+        "Indústria",
+        "Bolsas"
+      ]
+    },
+    {
+      "id_edital": 444,
+      "titulo": "ANEEL - adsp2024778 2",
+      "fonte_recurso": "ANEEL",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Energia"
+      ]
+    },
+    {
+      "id_edital": 445,
+      "titulo": "ANEEL - Call for Projects H2 PDI",
+      "fonte_recurso": "ANEEL",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Energia"
+      ]
+    },
+    {
+      "id_edital": 779,
+      "titulo": "Projeto Soldado Cidadão",
+      "fonte_recurso": "Ministério da Defesa",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Saúde",
+        "Defesa nacional",
+        "Meio ambiente"
+      ]
+    },
+    {
+      "id_edital": 452,
+      "titulo": "Sandboxes Tarifários",
+      "fonte_recurso": "ANEEL",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Energia"
+      ]
+    },
+    {
+      "id_edital": 21,
+      "titulo": "Energia Verde",
+      "fonte_recurso": "BASA",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Energia",
+        "Bolsas"
+      ]
+    },
+    {
+      "id_edital": 145,
+      "titulo": "Agronegócio Para empresas e cooperativas que exercem as mais diversas atividades ligadas à agropecuária.",
+      "fonte_recurso": "BDMG",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Agro",
+        "Saúde",
+        "Bolsas",
+        "Meio ambiente"
+      ]
+    },
+    {
+      "id_edital": 1430,
+      "titulo": "NUCLEP",
+      "fonte_recurso": "NUCLEP",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Energia",
+        "Meio ambiente",
+        "Petróleo e gás",
+        "Saúde",
+        "Indústria",
+        "Energia renovável"
+      ]
+    },
+    {
+      "id_edital": 448,
+      "titulo": "Guia de Avaliação da Maturidade Tecnológica da ANEEL",
+      "fonte_recurso": "ANEEL",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Energia"
+      ]
+    },
+    {
+      "id_edital": 457,
+      "titulo": "Programas Setoriais",
+      "fonte_recurso": "ANEEL",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Energia",
+        "Saneamento",
+        "Bioeconomia",
+        "Energia renovável"
+      ]
+    },
+    {
+      "id_edital": 455,
+      "titulo": "Programa de Eficiência Energética",
+      "fonte_recurso": "ANEEL",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Energia"
+      ]
+    },
+    {
+      "id_edital": 459,
+      "titulo": "Programa de Pesquisa, Desenvolvimento e Inovação da ANEEL",
+      "fonte_recurso": "ANEEL",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Energia"
+      ]
+    },
+    {
+      "id_edital": 461,
+      "titulo": "Pesquisa e Desenvolvimento e Eficiência Energética",
+      "fonte_recurso": "ANEEL",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Energia"
+      ]
+    },
+    {
+      "id_edital": 472,
+      "titulo": "Consultas e Audiências Públicas",
+      "fonte_recurso": "ANP",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Petróleo e gás"
+      ]
+    },
+    {
+      "id_edital": 476,
+      "titulo": "Lista de entidades inscritas",
+      "fonte_recurso": "BADESUL",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Bolsas"
+      ]
+    },
+    {
+      "id_edital": 13,
+      "titulo": "Amazônia Rural Verde",
+      "fonte_recurso": "BASA",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Agro",
+        "Bolsas"
+      ]
+    },
+    {
+      "id_edital": 14,
+      "titulo": "Fundo da Marinha Mercante",
+      "fonte_recurso": "BASA",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Bolsas"
+      ]
+    },
+    {
+      "id_edital": 15,
+      "titulo": "Antecipação de Cartão",
+      "fonte_recurso": "BASA",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Bolsas"
+      ]
+    },
+    {
+      "id_edital": 22,
+      "titulo": "Máquinas e Equipamentos",
+      "fonte_recurso": "BASA",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Agro",
+        "Bolsas"
+      ]
+    },
+    {
+      "id_edital": 26,
+      "titulo": "Programa Nacional de Fortalecimento da Agricultura Familiar",
+      "fonte_recurso": "BASA",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Agro",
+        "Bolsas"
+      ]
+    },
+    {
+      "id_edital": 47,
+      "titulo": "Financie o desenvolvimento de sua Média Empresa com opções de crédito diferenciadas",
+      "fonte_recurso": "BDMG",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Bolsas"
+      ]
+    },
+    {
+      "id_edital": 54,
+      "titulo": "Rural – crédito e soluções para o campo – Banco do Nordeste",
+      "fonte_recurso": "BNB",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Agro",
+        "Bolsas"
+      ]
+    },
+    {
+      "id_edital": 55,
+      "titulo": "Microcrédito – soluções para pequenos negócios – Banco do Nordeste",
+      "fonte_recurso": "BNB",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Agro",
+        "Bolsas"
+      ]
+    },
+    {
+      "id_edital": 58,
+      "titulo": "Crédito Consignado – empréstimo com desconto em folha para conveniados – Banco do Nordeste",
+      "fonte_recurso": "BNB",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Bolsas"
+      ]
+    },
+    {
+      "id_edital": 60,
+      "titulo": "Miniprodutor Rural – crédito e soluções para o campo – Banco do Nordeste",
+      "fonte_recurso": "BNB",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Agro",
+        "Bolsas"
+      ]
+    },
+    {
+      "id_edital": 1145,
+      "titulo": "FY25 Naval Air Warfare Center Aircraft Division Office-Wide Broad Agency Announcement",
+      "fonte_recurso": "Grants.gov",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "internacional",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "grant",
+      "area": ""
+    },
+    {
+      "id_edital": 1077,
+      "titulo": "ARMY APPLICATIONS LAB BROAD AGENCY ANNOUNCEMENT FOR DISRUPTIVE APPLICATIONS",
+      "fonte_recurso": "Grants.gov",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "internacional",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "grant",
+      "area": ""
+    },
+    {
+      "id_edital": 736,
+      "titulo": "Chamada CNPq/MCTI/FNDCT Nº 12/2026 - Programa PCI",
+      "fonte_recurso": "CNPQ",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Bolsas",
+        "Startups"
+      ]
+    },
+    {
+      "id_edital": 735,
+      "titulo": "Chamada CNPq/SETEC/MCTI N° 13/2026 - Apoio a Eventos de Promoção do Empreendedorismo e da Inovação no Brasil",
+      "fonte_recurso": "CNPQ",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Tecnologia e inovação",
+        "Bolsas"
+      ]
+    },
+    {
+      "id_edital": 737,
+      "titulo": "Chamada CNPq/MCTI Nº 11/2026 – RENAMA e NAMs",
+      "fonte_recurso": "CNPQ",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Bolsas"
+      ]
+    },
+    {
+      "id_edital": 739,
+      "titulo": "Chamada Nº 28/2025 - Apoio a Projetos de Cooperação CNPq-TUBITAK",
+      "fonte_recurso": "CNPQ",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Meio ambiente",
+        "Saúde",
+        "Agro",
+        "Bolsas"
+      ]
+    },
+    {
+      "id_edital": 39,
+      "titulo": "Licitações e Contratos",
+      "fonte_recurso": "BDMG",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Bolsas",
+        "Meio ambiente"
+      ]
+    },
+    {
+      "id_edital": 743,
+      "titulo": "Chamada para Pesquisas Inovadoras em Vacinas CNPq/Decit/SCTIE/MS Nº 31/2025",
+      "fonte_recurso": "CNPQ",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Saúde",
+        "Tecnologia e inovação",
+        "Bolsas"
+      ]
+    },
+    {
+      "id_edital": 747,
+      "titulo": "Chamada CNPq/MS-SCTIE-Decit Nº 30/2025 - Pesquisas Estratégicas em Terapias Avançadas e Terapias Baseadas em Ácidos Nucl",
+      "fonte_recurso": "CNPQ",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Saúde",
+        "Indústria",
+        "Bolsas"
+      ]
+    },
+    {
+      "id_edital": 771,
+      "titulo": "Programa de Gestão e Melhoria da Qualidade (PGMQ)",
+      "fonte_recurso": "Ministério da Defesa",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": ""
+    },
+    {
+      "id_edital": 40,
+      "titulo": "Licitações e Contratos",
+      "fonte_recurso": "BDMG",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Bolsas",
+        "Meio ambiente"
+      ]
+    },
+    {
+      "id_edital": 44,
+      "titulo": "Documentação BDMG",
+      "fonte_recurso": "BDMG",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Bolsas",
+        "Meio ambiente"
+      ]
+    },
+    {
+      "id_edital": 45,
+      "titulo": "Conte com taxas e prazos exclusivos para seu negócio ir mais longe.",
+      "fonte_recurso": "BDMG",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Bolsas"
+      ]
+    },
+    {
+      "id_edital": 1433,
+      "titulo": "Expertise",
+      "fonte_recurso": "NUCLEP",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Indústria",
+        "Energia",
+        "Petróleo e gás",
+        "Saúde"
+      ]
+    },
+    {
+      "id_edital": 778,
+      "titulo": "Programa Forças no Esporte e João do Pulo",
+      "fonte_recurso": "Ministério da Defesa",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Defesa nacional"
+      ]
+    },
+    {
+      "id_edital": 887,
+      "titulo": "Targeted consultation on EU Space Law",
+      "fonte_recurso": "European Defence Fund",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "internacional",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": ""
+    },
+    {
+      "id_edital": 46,
+      "titulo": "Conte com taxas e prazos exclusivos para seu negócio ir mais longe.",
+      "fonte_recurso": "BDMG",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Bolsas"
+      ]
+    },
+    {
+      "id_edital": 456,
+      "titulo": "Programa de Pesquisa, Desenvolvimento e Inovação (PDI)",
+      "fonte_recurso": "ANEEL",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Energia"
+      ]
+    },
+    {
+      "id_edital": 147,
+      "titulo": "Linhas Permanentes de Financiamento Municipal",
+      "fonte_recurso": "BDMG",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Bolsas",
+        "Meio ambiente"
+      ]
+    },
+    {
+      "id_edital": 148,
+      "titulo": "Linhas Permanentes de Financiamento Municipal",
+      "fonte_recurso": "BDMG",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Bolsas",
+        "Meio ambiente"
+      ]
+    },
+    {
+      "id_edital": 149,
+      "titulo": "Linhas Permanentes de Financiamento Municipal",
+      "fonte_recurso": "BDMG",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Bolsas",
+        "Meio ambiente"
+      ]
+    },
+    {
+      "id_edital": 150,
+      "titulo": "Linhas Permanentes de Financiamento Municipal",
+      "fonte_recurso": "BDMG",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Bolsas",
+        "Meio ambiente"
+      ]
+    },
+    {
+      "id_edital": 151,
+      "titulo": "Regulamento das Linhas Permanentes de Financiamento Municipal",
+      "fonte_recurso": "BDMG",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Bolsas"
+      ]
+    },
+    {
+      "id_edital": 49,
+      "titulo": "No BDMG, você tem mais vantagens.",
+      "fonte_recurso": "BDMG",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Bolsas"
+      ]
+    },
+    {
+      "id_edital": 51,
+      "titulo": "Não apenas prover o crédito, mas mensurar o seu impacto",
+      "fonte_recurso": "BDMG",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Bolsas",
+        "Meio ambiente"
+      ]
+    },
+    {
+      "id_edital": 1084,
+      "titulo": "Naval Engineering Education Consortium (NEEC) Broad Agency Announcement for Fiscal Year 2026",
+      "fonte_recurso": "Grants.gov",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "internacional",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "grant",
+      "area": ""
+    },
+    {
+      "id_edital": 3,
+      "titulo": "Crédito e financiamento",
+      "fonte_recurso": "BASA",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Agro",
+        "Bolsas"
+      ]
+    },
+    {
+      "id_edital": 5,
+      "titulo": "FUNGENTUR",
+      "fonte_recurso": "BASA",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Bolsas"
+      ]
+    },
+    {
+      "id_edital": 890,
+      "titulo": "IRIS² | Secure Connectivity",
+      "fonte_recurso": "European Defence Fund",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "internacional",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Agro"
+      ]
+    },
+    {
+      "id_edital": 903,
+      "titulo": "Guias passo a passo",
+      "fonte_recurso": "FAPEMIG",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Bolsas"
+      ]
+    },
+    {
+      "id_edital": 918,
+      "titulo": "EDITAL SUPLEMENTAR FAPESC N.º 21/2026 À CHAMADA TRANSNACIONAL CONJUNTA WATER4ALL “WATER FOR CIRCULAR ECONOMY 2024” APOIO",
+      "fonte_recurso": "FAPESC",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": ""
+    },
+    {
+      "id_edital": 919,
+      "titulo": "EDITAL SUPLEMENTAR FAPESC N.º 20/2026 À CHAMADA TRANSNACIONAL CONJUNTA BIODIVTRANSFORM (2024-2025) “BIODIVERSIDADE E MUD",
+      "fonte_recurso": "FAPESC",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Meio ambiente"
+      ]
+    },
+    {
+      "id_edital": 927,
+      "titulo": "CP 09/26: Interconexões Catalunha",
+      "fonte_recurso": "Fundação Araucária",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": ""
+    },
+    {
+      "id_edital": 928,
+      "titulo": "CP 08/26: Nexus Inovação",
+      "fonte_recurso": "Fundação Araucária",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": ""
+    },
+    {
+      "id_edital": 929,
+      "titulo": "CP 04/26: Interconexões Brasillinois",
+      "fonte_recurso": "Fundação Araucária",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": ""
+    },
+    {
+      "id_edital": 933,
+      "titulo": "PI 13/26: SECTES-PR 2026",
+      "fonte_recurso": "Fundação Araucária",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": ""
+    },
+    {
+      "id_edital": 934,
+      "titulo": "PI 06/26: Mitacs GRI",
+      "fonte_recurso": "Fundação Araucária",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": ""
+    },
+    {
+      "id_edital": 935,
+      "titulo": "CP 19/25. Parceria Renault",
+      "fonte_recurso": "Fundação Araucária",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Bolsas"
+      ]
+    },
+    {
+      "id_edital": 936,
+      "titulo": "CP 18/25. Interconexões: Japão",
+      "fonte_recurso": "Fundação Araucária",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": ""
+    },
+    {
+      "id_edital": 1045,
+      "titulo": "UNITED STATES MILITARY ACADEMY Broad Agency Announcement",
+      "fonte_recurso": "Grants.gov",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "internacional",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "grant",
+      "area": [
+        "Defesa nacional"
+      ]
+    },
+    {
+      "id_edital": 951,
+      "titulo": "CP 03/25. Interconexões: Itália",
+      "fonte_recurso": "Fundação Araucária",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": ""
+    },
+    {
+      "id_edital": 948,
+      "titulo": "CP 06/25. PROPAR",
+      "fonte_recurso": "Fundação Araucária",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": ""
+    },
+    {
+      "id_edital": 964,
+      "titulo": "PI 43/2025 - Em produção",
+      "fonte_recurso": "Fundação Araucária",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": ""
+    },
+    {
+      "id_edital": 954,
+      "titulo": "PI 53/2025. IPASP-PR",
+      "fonte_recurso": "Fundação Araucária",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Inteligência artificial"
+      ]
+    },
+    {
+      "id_edital": 955,
+      "titulo": "PI 52/25. Confap & CNR 2024",
+      "fonte_recurso": "Fundação Araucária",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": ""
+    },
+    {
+      "id_edital": 956,
+      "titulo": "PI 51/25. Ganhando o Mundo da Ciência: UTC",
+      "fonte_recurso": "Fundação Araucária",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": ""
+    },
+    {
+      "id_edital": 957,
+      "titulo": "PI 50/25. Ganhando o Mundo da Ciência: Alberta",
+      "fonte_recurso": "Fundação Araucária",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": ""
+    },
+    {
+      "id_edital": 958,
+      "titulo": "PI 49/25. Ganhando o Mundo da Ciência: Kyoto",
+      "fonte_recurso": "Fundação Araucária",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": ""
+    },
+    {
+      "id_edital": 959,
+      "titulo": "PI 48/2025. Queijos Finos",
+      "fonte_recurso": "Fundação Araucária",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": ""
+    },
+    {
+      "id_edital": 960,
+      "titulo": "PI 47/2025. Ciagro",
+      "fonte_recurso": "Fundação Araucária",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Agro"
+      ]
+    },
+    {
+      "id_edital": 961,
+      "titulo": "PI 46/25. Semana de C&T",
+      "fonte_recurso": "Fundação Araucária",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": ""
+    },
+    {
+      "id_edital": 962,
+      "titulo": "PI 45/2025. INCTs",
+      "fonte_recurso": "Fundação Araucária",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Bolsas"
+      ]
+    },
+    {
+      "id_edital": 965,
+      "titulo": "PI 42/2025: NAPI Agrogenômica - Solos",
+      "fonte_recurso": "Fundação Araucária",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Agro",
+        "Biotecnologia"
+      ]
+    },
+    {
+      "id_edital": 966,
+      "titulo": "PI 41/2025: NAPI Agrogenômica - Feijão",
+      "fonte_recurso": "Fundação Araucária",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Agro",
+        "Biotecnologia"
+      ]
+    },
+    {
+      "id_edital": 967,
+      "titulo": "PI 40/2025: NAPI Agrogenômica - Soja",
+      "fonte_recurso": "Fundação Araucária",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Inteligência artificial",
+        "Agro",
+        "Biotecnologia"
+      ]
+    },
+    {
+      "id_edital": 968,
+      "titulo": "PI 39/2025: CitrusBot1 - Tecnologias para Laranjas",
+      "fonte_recurso": "Fundação Araucária",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": ""
+    },
+    {
+      "id_edital": 969,
+      "titulo": "PI 38/25: Patrulheiros da Sustentabilidade",
+      "fonte_recurso": "Fundação Araucária",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": ""
+    },
+    {
+      "id_edital": 970,
+      "titulo": "PI 37/25: SABIÁ (Guarapuava)",
+      "fonte_recurso": "Fundação Araucária",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": ""
+    },
+    {
+      "id_edital": 971,
+      "titulo": "PI 36/25: InovaOstra",
+      "fonte_recurso": "Fundação Araucária",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": ""
+    },
+    {
+      "id_edital": 972,
+      "titulo": "PI 35/25. PIPAD",
+      "fonte_recurso": "Fundação Araucária",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": ""
+    },
+    {
+      "id_edital": 973,
+      "titulo": "PI 34/25: Dupla-Diplomação",
+      "fonte_recurso": "Fundação Araucária",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": ""
+    },
+    {
+      "id_edital": 974,
+      "titulo": "PI 33/25: NAPI Robótica",
+      "fonte_recurso": "Fundação Araucária",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": ""
+    },
+    {
+      "id_edital": 975,
+      "titulo": "PI 32/25. Resiliência Climática RS",
+      "fonte_recurso": "Fundação Araucária",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Meio ambiente"
+      ]
+    },
+    {
+      "id_edital": 976,
+      "titulo": "PI 30/25: Mobility Confap Italy - MCI",
+      "fonte_recurso": "Fundação Araucária",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Bolsas"
+      ]
+    },
+    {
+      "id_edital": 977,
+      "titulo": "PI 29/25. Pós-Graduação",
+      "fonte_recurso": "Fundação Araucária",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Bolsas"
+      ]
+    },
+    {
+      "id_edital": 978,
+      "titulo": "PI 28/25: Céus Históricos no Planetário",
+      "fonte_recurso": "Fundação Araucária",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": ""
+    },
+    {
+      "id_edital": 979,
+      "titulo": "PI 27/25. Ganhando o Mundo da Ciência: Wageningen",
+      "fonte_recurso": "Fundação Araucária",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": ""
+    },
+    {
+      "id_edital": 980,
+      "titulo": "PI 26/25. Ganhando o Mundo da Ciência: Compiègne",
+      "fonte_recurso": "Fundação Araucária",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": ""
+    },
+    {
+      "id_edital": 981,
+      "titulo": "PI 25/25. Jovens Cientistas (Serrapilheira)",
+      "fonte_recurso": "Fundação Araucária",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": ""
+    },
+    {
+      "id_edital": 982,
+      "titulo": "PI 24/25. NAPI Biogás",
+      "fonte_recurso": "Fundação Araucária",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Energia renovável"
+      ]
+    },
+    {
+      "id_edital": 984,
+      "titulo": "PI 22/25: NAPI Lutas Marciais",
+      "fonte_recurso": "Fundação Araucária",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": ""
+    },
+    {
+      "id_edital": 985,
+      "titulo": "PI 21/25. Wallonie Bruxelles",
+      "fonte_recurso": "Fundação Araucária",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Meio ambiente",
+        "Indústria"
+      ]
+    },
+    {
+      "id_edital": 986,
+      "titulo": "PI 20/25: SECTES-PR 2025",
+      "fonte_recurso": "Fundação Araucária",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": ""
+    },
+    {
+      "id_edital": 987,
+      "titulo": "PI 19/25: Anel de Conectividade",
+      "fonte_recurso": "Fundação Araucária",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": ""
+    },
+    {
+      "id_edital": 988,
+      "titulo": "PI 18/25. Quintas Paraná Faz Ciência",
+      "fonte_recurso": "Fundação Araucária",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": ""
+    },
+    {
+      "id_edital": 989,
+      "titulo": "PI 16/25. ERC - IA",
+      "fonte_recurso": "Fundação Araucária",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Bolsas"
+      ]
+    },
+    {
+      "id_edital": 990,
+      "titulo": "PI 15/25. Mitacs GRA",
+      "fonte_recurso": "Fundação Araucária",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": ""
+    },
+    {
+      "id_edital": 991,
+      "titulo": "PI 14/25. NAPI Proteômica",
+      "fonte_recurso": "Fundação Araucária",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Inteligência artificial",
+        "Meio ambiente",
+        "Saúde"
+      ]
+    },
+    {
+      "id_edital": 992,
+      "titulo": "PI 13/25. NAPI Space",
+      "fonte_recurso": "Fundação Araucária",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Inteligência artificial"
+      ]
+    },
+    {
+      "id_edital": 993,
+      "titulo": "PI 12/25. Economia Azul Sustentável",
+      "fonte_recurso": "Fundação Araucária",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Agro"
+      ]
+    },
+    {
+      "id_edital": 994,
+      "titulo": "PI 11/25. Robalos e Gaiolas Marinhas",
+      "fonte_recurso": "Fundação Araucária",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": ""
+    },
+    {
+      "id_edital": 995,
+      "titulo": "PI 10/25. Biodiversa + 2023",
+      "fonte_recurso": "Fundação Araucária",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Agro",
+        "Meio ambiente"
+      ]
+    },
+    {
+      "id_edital": 997,
+      "titulo": "PI 08/25. Amazônia + 10",
+      "fonte_recurso": "Fundação Araucária",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": ""
+    },
+    {
+      "id_edital": 998,
+      "titulo": "PI 07/25. NAPI Erva-Mate",
+      "fonte_recurso": "Fundação Araucária",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Indústria"
+      ]
+    },
+    {
+      "id_edital": 999,
+      "titulo": "PI 06/25. Programa Wash",
+      "fonte_recurso": "Fundação Araucária",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": ""
+    },
+    {
+      "id_edital": 1000,
+      "titulo": "PI 05/25. FIIL",
+      "fonte_recurso": "Fundação Araucária",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": ""
+    },
+    {
+      "id_edital": 1001,
+      "titulo": "PI 04/25. Grande Reserva Mata Atlântica",
+      "fonte_recurso": "Fundação Araucária",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Meio ambiente"
+      ]
+    },
+    {
+      "id_edital": 1003,
+      "titulo": "PI 02/25. Equinos",
+      "fonte_recurso": "Fundação Araucária",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": ""
+    },
+    {
+      "id_edital": 1004,
+      "titulo": "PI 01/25. NAPI Saúde Pública de Precisão",
+      "fonte_recurso": "Fundação Araucária",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Saúde"
+      ]
+    },
+    {
+      "id_edital": 1005,
+      "titulo": "CP 06/26: Prêmio Confap",
+      "fonte_recurso": "Fundação Araucária",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Tecnologia e inovação"
+      ]
+    },
+    {
+      "id_edital": 1010,
+      "titulo": "PI 07/2026: INCTs",
+      "fonte_recurso": "Fundação Araucária",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Tecnologia e inovação",
+        "Bolsas"
+      ]
+    },
+    {
+      "id_edital": 1011,
+      "titulo": "PI 05/26: Ganhando o Mundo da Ciência: La Trobe",
+      "fonte_recurso": "Fundação Araucária",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": ""
+    },
+    {
+      "id_edital": 1012,
+      "titulo": "PI 01/2026. PELD",
+      "fonte_recurso": "Fundação Araucária",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": ""
+    },
+    {
+      "id_edital": 1013,
+      "titulo": "FNDE - Página de Programas e Chamadas",
+      "fonte_recurso": "FNDE",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": ""
+    },
+    {
+      "id_edital": 9,
+      "titulo": "Plano Safra",
+      "fonte_recurso": "BASA",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Bolsas"
+      ]
+    },
+    {
+      "id_edital": 1412,
+      "titulo": "MAPA - Página de Editais e Programas",
+      "fonte_recurso": "MAPA",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Agro"
+      ]
+    },
+    {
+      "id_edital": 57,
+      "titulo": "Empréstimos e Financiamentos - Soluções para você - Banco do Nordeste",
+      "fonte_recurso": "BNB",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Energia",
+        "Energia renovável",
+        "Indústria",
+        "Bolsas",
+        "Meio ambiente"
+      ]
+    },
+    {
+      "id_edital": 1417,
+      "titulo": "Editais de Chamamento Público",
+      "fonte_recurso": "MMA / FNMA",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Meio ambiente"
+      ]
+    },
+    {
+      "id_edital": 742,
+      "titulo": "CNPq/CAPES/IRD Nº 27/2025 Programa de apoio ao Centro Franco-Brasileiro de Biodiversidade Amazônica",
+      "fonte_recurso": "CNPQ",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Bioeconomia",
+        "Saúde",
+        "Bolsas",
+        "Meio ambiente"
+      ]
+    },
+    {
+      "id_edital": 1439,
+      "titulo": "Diretoria Comercial",
+      "fonte_recurso": "NUCLEP",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Indústria",
+        "Energia",
+        "Petróleo e gás",
+        "Saúde"
+      ]
+    },
+    {
+      "id_edital": 1441,
+      "titulo": "Organograma",
+      "fonte_recurso": "NUCLEP",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Indústria",
+        "Energia",
+        "Petróleo e gás",
+        "Saúde"
+      ]
+    },
+    {
+      "id_edital": 1449,
+      "titulo": "Convênios e Transferências",
+      "fonte_recurso": "NUCLEP",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Indústria"
+      ]
+    },
+    {
+      "id_edital": 475,
+      "titulo": "Badesul divulga projetos contemplados",
+      "fonte_recurso": "BADESUL",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Bolsas"
+      ]
+    },
+    {
+      "id_edital": 64,
+      "titulo": "Agricultura Familiar – atividades financiadas – Banco do Nordeste",
+      "fonte_recurso": "BNB",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Agro",
+        "Bolsas"
+      ]
+    },
+    {
+      "id_edital": 463,
+      "titulo": "Procedimentos dos Programas de Eficiência Energética e de Pesquisa e Desenvolvimento",
+      "fonte_recurso": "ANEEL",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Energia"
+      ]
+    },
+    {
+      "id_edital": 1,
+      "titulo": "Empréstimo e microcrédito",
+      "fonte_recurso": "BASA",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Bolsas"
+      ]
+    },
+    {
+      "id_edital": 469,
+      "titulo": "Desenvolvimento, cuidados e educação pré-escolar",
+      "fonte_recurso": "ANEEL",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Energia"
+      ]
+    },
+    {
+      "id_edital": 24,
+      "titulo": "Renegociação de Dívidas",
+      "fonte_recurso": "BASA",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Agro",
+        "Bolsas"
+      ]
+    },
+    {
+      "id_edital": 4,
+      "titulo": "PRONAF",
+      "fonte_recurso": "BASA",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Bolsas"
+      ]
+    },
+    {
+      "id_edital": 6,
+      "titulo": "BNDES Finame",
+      "fonte_recurso": "BASA",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Bolsas"
+      ]
+    },
+    {
+      "id_edital": 752,
+      "titulo": "chamada marie sk odowska curie intercambio de pessoal 2026",
+      "fonte_recurso": "CONFAP",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Bolsas"
+      ]
+    },
+    {
+      "id_edital": 1432,
+      "titulo": "Quem Somos",
+      "fonte_recurso": "NUCLEP",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Energia",
+        "Petróleo e gás",
+        "Indústria",
+        "Saúde"
+      ]
+    },
+    {
+      "id_edital": 751,
+      "titulo": "chamada confap brasillinois 2026",
+      "fonte_recurso": "CONFAP",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Saúde",
+        "Agro",
+        "Bolsas",
+        "Meio ambiente"
+      ]
+    },
+    {
+      "id_edital": 74,
+      "titulo": "Meio Ambiente – atividades financiadas – Banco do Nordeste",
+      "fonte_recurso": "BNB",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Agro",
+        "Bioeconomia",
+        "Meio ambiente",
+        "Bolsas"
+      ]
+    },
+    {
+      "id_edital": 775,
+      "titulo": "Empreendimentos Estratégicos de Defesa",
+      "fonte_recurso": "Ministério da Defesa",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Indústria",
+        "Defesa nacional"
+      ]
+    },
+    {
+      "id_edital": 776,
+      "titulo": "Programas Sociais",
+      "fonte_recurso": "Ministério da Defesa",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Defesa nacional"
+      ]
+    },
+    {
+      "id_edital": 777,
+      "titulo": "Ações subsidiárias",
+      "fonte_recurso": "Ministério da Defesa",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Saúde",
+        "Defesa nacional"
+      ]
+    },
+    {
+      "id_edital": 10,
+      "titulo": "Relatórios do FNO",
+      "fonte_recurso": "BASA",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": ""
+    },
+    {
+      "id_edital": 12,
+      "titulo": "Renegociação de Dívidas",
+      "fonte_recurso": "BASA",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Bolsas"
+      ]
+    },
+    {
+      "id_edital": 16,
+      "titulo": "Giro Produtor Rural",
+      "fonte_recurso": "BASA",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Agro",
+        "Bolsas"
+      ]
+    },
+    {
+      "id_edital": 27,
+      "titulo": "Correspondentes Bancários",
+      "fonte_recurso": "BDMG",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Bolsas",
+        "Meio ambiente"
+      ]
+    },
+    {
+      "id_edital": 11,
+      "titulo": "Capital de Giro",
+      "fonte_recurso": "BASA",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Bolsas"
+      ]
+    },
+    {
+      "id_edital": 17,
+      "titulo": "Energia Verde - Não Rural",
+      "fonte_recurso": "BASA",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Energia",
+        "Agro",
+        "Bolsas"
+      ]
+    },
+    {
+      "id_edital": 18,
+      "titulo": "Crédito e Financiamentos",
+      "fonte_recurso": "BASA",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Bolsas"
+      ]
+    },
+    {
+      "id_edital": 19,
+      "titulo": "Giro Produtor Rural",
+      "fonte_recurso": "BASA",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Agro",
+        "Bolsas"
+      ]
+    },
+    {
+      "id_edital": 20,
+      "titulo": "FNO Biodiversidade",
+      "fonte_recurso": "BASA",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Bolsas",
+        "Meio ambiente"
+      ]
+    },
+    {
+      "id_edital": 133,
+      "titulo": "Fundo Constitucional de Financiamento do Norte FNOUm fundo do Governo Federal para fomentar o desenvolvimento da região ",
+      "fonte_recurso": "BASA",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Bolsas"
+      ]
+    },
+    {
+      "id_edital": 29,
+      "titulo": "O LabAgroMinas é um Programa desenvolvido em parceria entre o BDMG e a Embrapa Cerrados para o fomento às práticas de ag",
+      "fonte_recurso": "BDMG",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Agro",
+        "Energia",
+        "Saúde",
+        "Bolsas"
+      ]
+    },
+    {
+      "id_edital": 70,
+      "titulo": "Floricultura - Atividades Financiadas - Banco do Nordeste",
+      "fonte_recurso": "BNB",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Agro",
+        "Bolsas"
+      ]
+    },
+    {
+      "id_edital": 77,
+      "titulo": "Piscicultura – atividades financiadas – Banco do Nordeste",
+      "fonte_recurso": "BNB",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Indústria",
+        "Bolsas"
+      ]
+    },
+    {
+      "id_edital": 152,
+      "titulo": "Cartilha de projeto 2024",
+      "fonte_recurso": "BDMG",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Energia",
+        "Saneamento",
+        "Bolsas",
+        "Energia renovável",
+        "Meio ambiente"
+      ]
+    },
+    {
+      "id_edital": 153,
+      "titulo": "Conte com taxas e prazos exclusivos para seu negócio ir mais longe.",
+      "fonte_recurso": "BDMG",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Bolsas"
+      ]
+    },
+    {
+      "id_edital": 154,
+      "titulo": "Conte com taxas e prazos exclusivos para seu negócio ir mais longe.",
+      "fonte_recurso": "BDMG",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Bolsas"
+      ]
+    },
+    {
+      "id_edital": 156,
+      "titulo": "Conte com taxas e prazos exclusivos para seu negócio ir mais longe.",
+      "fonte_recurso": "BDMG",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Bolsas"
+      ]
+    },
+    {
+      "id_edital": 454,
+      "titulo": "Planejamento de Tecnologia da Informação",
+      "fonte_recurso": "ANEEL",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Energia"
+      ]
+    },
+    {
+      "id_edital": 468,
+      "titulo": "Demais Projetos",
+      "fonte_recurso": "ANEEL",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Energia"
+      ]
+    },
+    {
+      "id_edital": 741,
+      "titulo": "Chamada CNPq/Daevs/SVSA/MS Nº 33/2025 - Pesquisa, Extensão e Formação em Epidemiologia e Vigilância em Saúde",
+      "fonte_recurso": "CNPQ",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Saúde",
+        "Bolsas"
+      ]
+    },
+    {
+      "id_edital": 745,
+      "titulo": "Chamada CNPq Nº 26/2025 Auxílio à Promoção de Eventos Científicos, Tecnológicos e/ou de Inovação - ARC",
+      "fonte_recurso": "CNPQ",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Tecnologia e inovação",
+        "Bolsas"
+      ]
+    },
+    {
+      "id_edital": 746,
+      "titulo": "Chamada CNPq/Decit/SCTIE/MS - Nº 32/2025 - Pesquisas Inovadoras para a Saúde das Mulheres",
+      "fonte_recurso": "CNPQ",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Saúde",
+        "Bolsas"
+      ]
+    },
+    {
+      "id_edital": 770,
+      "titulo": "Ações e Programas",
+      "fonte_recurso": "Ministério da Defesa",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": ""
+    },
+    {
+      "id_edital": 773,
+      "titulo": "Consulta Pública ao Inteiro Teor dos Processos de Licitações e Contratos",
+      "fonte_recurso": "Ministério da Defesa",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Defesa nacional",
+        "Saúde"
+      ]
+    },
+    {
+      "id_edital": 774,
+      "titulo": "Programa de Gestão e Desempenho (PGD)",
+      "fonte_recurso": "Ministério da Defesa",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": ""
+    },
+    {
+      "id_edital": 904,
+      "titulo": "Guias Relacionados",
+      "fonte_recurso": "FAPEMIG",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Bolsas"
+      ]
+    },
+    {
+      "id_edital": 937,
+      "titulo": "CP 17/25. Eventos - IES (fev/26 - jan/27)",
+      "fonte_recurso": "Fundação Araucária",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": ""
+    },
+    {
+      "id_edital": 906,
+      "titulo": "Guias passo a passo",
+      "fonte_recurso": "FAPEMIG",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": ""
+    },
+    {
+      "id_edital": 938,
+      "titulo": "CP 16/25: Eventos - ASI (nov/25 - jun/26)",
+      "fonte_recurso": "Fundação Araucária",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": ""
+    },
+    {
+      "id_edital": 963,
+      "titulo": "PI 44/25. NAPI Governança e Bioinovação",
+      "fonte_recurso": "Fundação Araucária",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Agro",
+        "Energia"
+      ]
+    },
+    {
+      "id_edital": 1006,
+      "titulo": "CP 05/26: Eventos - ASI (jul/26 - jan/27)",
+      "fonte_recurso": "Fundação Araucária",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": ""
+    },
+    {
+      "id_edital": 1071,
+      "titulo": "Announcement of Stand Down Grants",
+      "fonte_recurso": "Grants.gov",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "internacional",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "grant",
+      "area": ""
+    },
+    {
+      "id_edital": 1181,
+      "titulo": "BROAD AGENCY ANNOUNCEMENT FOR Entangled Logical Qubits (ELQ)",
+      "fonte_recurso": "IARPA",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "internacional",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "funding_opportunity",
+      "area": ""
+    },
+    {
+      "id_edital": 1184,
+      "titulo": "Escola de Verão",
+      "fonte_recurso": "IMPA",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Bolsas"
+      ]
+    },
+    {
+      "id_edital": 1192,
+      "titulo": "Internacionalização",
+      "fonte_recurso": "IPEN",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Bolsas"
+      ]
+    },
+    {
+      "id_edital": 1416,
+      "titulo": "Editais de Chamamento Público",
+      "fonte_recurso": "MMA / FNMA",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Meio ambiente"
+      ]
+    },
+    {
+      "id_edital": 1431,
+      "titulo": "Página Inicial",
+      "fonte_recurso": "NUCLEP",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Energia",
+        "Meio ambiente",
+        "Petróleo e gás",
+        "Saúde",
+        "Indústria",
+        "Energia renovável"
+      ]
+    },
+    {
+      "id_edital": 1434,
+      "titulo": "Terminal Portuário",
+      "fonte_recurso": "NUCLEP",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Indústria",
+        "Energia",
+        "Petróleo e gás",
+        "Saúde"
+      ]
+    },
+    {
+      "id_edital": 1436,
+      "titulo": "Sala Limpa",
+      "fonte_recurso": "NUCLEP",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Indústria",
+        "Energia",
+        "Petróleo e gás",
+        "Saúde"
+      ]
+    },
+    {
+      "id_edital": 1437,
+      "titulo": "Presidência da empresa",
+      "fonte_recurso": "NUCLEP",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Indústria",
+        "Energia",
+        "Petróleo e gás",
+        "Saúde"
+      ]
+    },
+    {
+      "id_edital": 1438,
+      "titulo": "Diretoria Administrativa",
+      "fonte_recurso": "NUCLEP",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Meio ambiente",
+        "Saúde",
+        "Indústria",
+        "Energia",
+        "Petróleo e gás"
+      ]
+    },
+    {
+      "id_edital": 1440,
+      "titulo": "Diretoria Industrial",
+      "fonte_recurso": "NUCLEP",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Indústria",
+        "Energia",
+        "Petróleo e gás",
+        "Saúde"
+      ]
+    },
+    {
+      "id_edital": 1446,
+      "titulo": "Institucional",
+      "fonte_recurso": "NUCLEP",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Indústria",
+        "Energia",
+        "Petróleo e gás",
+        "Saúde"
+      ]
+    },
+    {
+      "id_edital": 1447,
+      "titulo": "Paticipação Social",
+      "fonte_recurso": "NUCLEP",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Indústria",
+        "Energia",
+        "Petróleo e gás",
+        "Saúde"
+      ]
+    },
+    {
+      "id_edital": 1448,
+      "titulo": "Auditorias",
+      "fonte_recurso": "NUCLEP",
+      "kind": "edital",
+      "modalidade": "noticia_institucional",
+      "scope": "brasil",
+      "reasons": [
+        "modalidade_noticia_em_edital"
+      ],
+      "tipo_oportunidade": "noticia_institucional",
+      "area": [
+        "Indústria",
+        "Energia",
+        "Petróleo e gás",
+        "Saúde"
+      ]
+    }
+  ]
+}
