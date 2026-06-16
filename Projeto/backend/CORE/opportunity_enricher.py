@@ -1,8 +1,7 @@
 """
-Enriquecimento central de oportunidades (Backend 2).
+Enriquecimento central de oportunidades (Backend 2+).
 
-Combina deadline_normalizer + opportunity_classifier em um pacote estável
-para dry-run, preview e integração gradual no pipeline.
+Combina deadline_normalizer + opportunity_classifier + ruído/validade/quality (Backend 9).
 
 Feature flag (não ativar em produção sem dry-run aprovado):
   EDITALFINDER_ENABLE_BACKEND_ENRICHMENT=false|true
@@ -13,10 +12,15 @@ import copy
 import os
 from typing import Any, Dict, List, Optional
 
+from deadline_backfill import apply_deadline_backfill_in_memory
 from deadline_normalizer import normalize_deadline
+from noise_classifier import classify_noise
 from opportunity_classifier import classify_record_full
+from quality_score import compute_quality_score
+from source_quality_profiles import classification_bucket
+from validity_resolver import resolve_validity
 
-ENRICHMENT_VERSION = "backend_8.0"
+ENRICHMENT_VERSION = "backend_10.1e"
 
 # Campos novos expostos no dict enriquecido (não substituem prazo/fim_inscricao legados).
 ENRICHMENT_TOP_LEVEL_KEYS = (
@@ -49,6 +53,29 @@ ENRICHMENT_TOP_LEVEL_KEYS = (
     "area_tematica_confidence",
     "area_tematica_reasons",
     "area_tematica_secondary",
+    # Backend 9–10
+    "actionability_type",
+    "classification_bucket",
+    "noise_score",
+    "is_noise",
+    "noise_type",
+    "is_actionable_opportunity",
+    "actionability_score",
+    "validade_status",
+    "validade_data",
+    "validade_raw",
+    "validade_confidence",
+    "validade_source",
+    "validade_reason",
+    "sem_prazo_kind",
+    "sem_prazo_reason",
+    "deadline_backfill_status",
+    "prazo_detectado",
+    "prazo_fonte",
+    "quality_score",
+    "quality_level",
+    "quality_flags",
+    "review_reasons",
 )
 
 
@@ -62,6 +89,61 @@ def backend_enrichment_enabled() -> bool:
         "yes",
         "on",
     )
+
+
+_NON_PROMOTABLE_ACTIONABILITY = frozenset(
+    {
+        "portal_util",
+        "portal_generico",
+        "resultado",
+        "noticia",
+        "evento",
+        "retificacao",
+        "documento_auxiliar",
+        "sem_oportunidade",
+        "pagina_institucional",
+    }
+)
+
+_USEFUL_VALIDADE_STATUSES = frozenset(
+    {"aberto", "encerrado", "vencendo_7", "vencendo_30", "prazo_invalido"}
+)
+
+
+def _reconcile_actionability_with_validity(
+    noise: Dict[str, Any],
+    validity: Dict[str, Any],
+    deadline: Dict[str, Any],
+) -> Dict[str, Any]:
+    """Promove/demove actionability conforme prazo útil — sem alterar portal/resultado/notícia."""
+    out = dict(noise)
+    at = out.get("actionability_type") or "desconhecido"
+    if at in _NON_PROMOTABLE_ACTIONABILITY:
+        return out
+
+    has_dl = bool(deadline.get("prazo_data")) and deadline.get("prazo_status") not in (
+        "prazo_invalido",
+        "sem_prazo",
+    )
+    vs = validity.get("validade_status")
+
+    if at == "oportunidade_sem_prazo" and has_dl and vs in _USEFUL_VALIDADE_STATUSES - {"prazo_invalido"}:
+        out["actionability_type"] = "oportunidade_principal"
+        out["is_actionable_opportunity"] = True
+        out["actionability_score"] = round(min(1.0, float(out.get("actionability_score") or 0.65) + 0.35), 3)
+        flags = list(out.get("quality_flags") or [])
+        if "oportunidade_sem_prazo" in flags:
+            flags.remove("oportunidade_sem_prazo")
+        out["quality_flags"] = flags
+    # 10.1E: ausência de prazo não rebaixa oportunidade real — sem_prazo ≠ ruído.
+
+    if out.get("actionability_type") != at:
+        out["classification_bucket"] = classification_bucket(
+            out.get("actionability_type") or at,
+            bool(out.get("is_noise")),
+        )
+
+    return out
 
 
 def _existing_structured_deadline(record: Dict[str, Any]) -> Optional[str]:
@@ -81,6 +163,9 @@ def build_qualidade_flags(
     kind: Dict[str, Any],
     modality: Dict[str, Any],
     geo: Dict[str, Any],
+    noise: Optional[Dict[str, Any]] = None,
+    validity: Optional[Dict[str, Any]] = None,
+    quality: Optional[Dict[str, Any]] = None,
 ) -> List[str]:
     flags: List[str] = []
     st = deadline.get("prazo_status")
@@ -116,12 +201,31 @@ def build_qualidade_flags(
     ):
         flags.append("titulo_parece_edital")
 
+    if noise:
+        flags.extend(noise.get("quality_flags") or [])
+        if noise.get("is_noise"):
+            flags.append("backend9_ruido")
+        if noise.get("is_actionable_opportunity"):
+            flags.append("backend9_acionavel")
+
+    if validity:
+        vs = validity.get("validade_status")
+        if vs == "nao_aplicavel":
+            flags.append("validade_nao_aplicavel")
+        elif vs == "sem_prazo":
+            flags.append("validade_sem_prazo")
+
+    if quality:
+        flags.extend(quality.get("quality_flags") or [])
+
     if (
         "prazo_baixa_confianca" in flags
         or "kind_desconhecido" in flags
         or "possivel_noticia_em_edital" in flags
         or "titulo_parece_noticia" in flags
         or "titulo_parece_edital" in flags
+        or "backend9_ruido" in flags
+        or "provavel_ruido" in flags
     ):
         flags.append("revisao_humana")
 
@@ -132,6 +236,8 @@ def _pack_enrichment_fields(
     record: Dict[str, Any],
     full: Dict[str, Any],
     notes: List[str],
+    *,
+    backfill_result: Optional[Dict[str, Any]] = None,
 ) -> Dict[str, Any]:
     dl = full["deadline"]
     kind = full["kind"]
@@ -141,12 +247,51 @@ def _pack_enrichment_fields(
     thematic = full.get("thematic_area") or {}
     flags_deadline = full.get("flags") or {}
 
+    noise = classify_noise(record)
+    validity = resolve_validity(record, noise=noise, deadline=dl, backfill=backfill_result)
+    noise = _reconcile_actionability_with_validity(noise, validity, dl)
+
+    partial = {
+        "prazo_data": dl.get("prazo_data"),
+        "prazo_raw": dl.get("prazo_raw"),
+        "prazo_status": dl.get("prazo_status"),
+        "prazo_confidence": dl.get("prazo_confidence"),
+        "tipo_registro": kind.get("kind"),
+        "modalidade_normalizada": mod.get("modalidade_normalizada"),
+        "fonte_normalizada": src.get("fonte_normalizada"),
+        "actionability_type": noise.get("actionability_type"),
+        "classification_bucket": noise.get("classification_bucket"),
+        "noise_score": noise.get("noise_score"),
+        "is_noise": noise.get("is_noise"),
+        "noise_type": noise.get("noise_type"),
+        "is_actionable_opportunity": noise.get("is_actionable_opportunity"),
+        "actionability_score": noise.get("actionability_score"),
+        "validade_status": validity.get("validade_status"),
+        "validade_data": validity.get("validade_data"),
+        "validade_confidence": validity.get("validade_confidence"),
+        "validade_reason": validity.get("validade_reason"),
+        "sem_prazo_kind": validity.get("sem_prazo_kind"),
+        "sem_prazo_reason": validity.get("sem_prazo_reason"),
+        "deadline_backfill_status": validity.get("deadline_backfill_status"),
+        "prazo_detectado": dl.get("prazo_detectado"),
+        "prazo_fonte": dl.get("prazo_fonte"),
+        "review_reasons": list(noise.get("review_reasons") or []),
+    }
+    quality = compute_quality_score(record, partial)
+
     qualidade = build_qualidade_flags(
         record,
         deadline=dl,
         kind=kind,
         modality=mod,
         geo=geo,
+        noise=noise,
+        validity=validity,
+        quality=quality,
+    )
+
+    review_reasons = sorted(
+        set(list(noise.get("review_reasons") or []) + list(validity.get("validade_notes") or []))
     )
 
     return {
@@ -182,6 +327,28 @@ def _pack_enrichment_fields(
         "is_aberto": flags_deadline.get("is_aberto"),
         "is_vencendo_7": flags_deadline.get("is_vencendo_7"),
         "is_vencendo_30": flags_deadline.get("is_vencendo_30"),
+        "actionability_type": noise.get("actionability_type"),
+        "classification_bucket": noise.get("classification_bucket"),
+        "noise_score": noise.get("noise_score"),
+        "is_noise": noise.get("is_noise"),
+        "noise_type": noise.get("noise_type"),
+        "is_actionable_opportunity": noise.get("is_actionable_opportunity"),
+        "actionability_score": noise.get("actionability_score"),
+        "validade_status": validity.get("validade_status"),
+        "validade_data": validity.get("validade_data"),
+        "validade_raw": validity.get("validade_raw"),
+        "validade_confidence": validity.get("validade_confidence"),
+        "validade_source": validity.get("validade_source"),
+        "validade_reason": validity.get("validade_reason"),
+        "sem_prazo_kind": validity.get("sem_prazo_kind"),
+        "sem_prazo_reason": validity.get("sem_prazo_reason"),
+        "deadline_backfill_status": validity.get("deadline_backfill_status"),
+        "prazo_detectado": dl.get("prazo_detectado"),
+        "prazo_fonte": dl.get("prazo_fonte"),
+        "quality_score": quality.get("quality_score"),
+        "quality_level": quality.get("quality_level"),
+        "quality_flags": quality.get("quality_flags"),
+        "review_reasons": review_reasons,
         "_enrichment_notes": notes,
         "_enrichment_version": ENRICHMENT_VERSION,
     }
@@ -192,16 +359,31 @@ def enrichment_preview_dict(fields: Dict[str, Any]) -> Dict[str, Any]:
     return {k: v for k, v in fields.items() if not k.startswith("_")}
 
 
-def enrich_opportunity_record(record: Dict[str, Any]) -> Dict[str, Any]:
+def enrich_opportunity_record(
+    record: Dict[str, Any],
+    *,
+    with_deadline_backfill: bool = False,
+) -> Dict[str, Any]:
     """
     Retorna cópia enriquecida; não altera o dict original.
 
     Não sobrescreve prazo_envio, fim_inscricao, prazo nem extras existentes.
     Campos novos são adicionados no topo; snapshot completo também em extras.backend_enrichment.
+
+    with_deadline_backfill: aplica deadline_backfill em memória antes do enricher (dry-run).
     """
     notes: List[str] = []
-    full = classify_record_full(record)
-    packed = _pack_enrichment_fields(record, full, notes)
+    work_record = record
+    backfill_result: Optional[Dict[str, Any]] = None
+    if with_deadline_backfill:
+        work_record, backfill_result = apply_deadline_backfill_in_memory(record)
+        if backfill_result.get("deadline_backfill_status") == "new_deadline_found":
+            notes.append("deadline_backfill:new_deadline_found")
+        elif backfill_result.get("sem_prazo_kind"):
+            notes.append(f"sem_prazo_kind:{backfill_result.get('sem_prazo_kind')}")
+
+    full = classify_record_full(work_record)
+    packed = _pack_enrichment_fields(work_record, full, notes, backfill_result=backfill_result)
 
     out = copy.deepcopy(record)
     extras = out.get("extras")

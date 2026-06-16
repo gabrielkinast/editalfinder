@@ -14,7 +14,7 @@ export default function EditaisStatsBar({
   ruidosOcultosHint,
 }) {
   return (
-    <div className="editais-stats-bar" aria-label="Resumo dos editais">
+    <div className="editais-stats-bar" aria-label="Resumo dos editais" data-testid="editais-stats-bar">
       <div className="editais-stats-primary">
         <strong>
           Mostrando {filteredCount}

@@ -13,6 +13,7 @@ export default function Modal({
   hideCloseButton = false,
   portal = false,
   zIndex,
+  closeButtonTestId,
 }) {
   useEffect(() => {
     const prev = document.body.style.overflow;
@@ -49,7 +50,13 @@ export default function Modal({
         onClick={(e) => e.stopPropagation()}
       >
         {!hideCloseButton && (
-          <button type="button" className="close-modal" onClick={onClose} aria-label="Fechar">
+          <button
+            type="button"
+            className="close-modal"
+            onClick={onClose}
+            aria-label="Fechar"
+            {...(closeButtonTestId ? { 'data-testid': closeButtonTestId } : {})}
+          >
             &times;
           </button>
         )}

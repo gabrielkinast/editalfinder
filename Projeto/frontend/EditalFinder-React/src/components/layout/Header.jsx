@@ -67,6 +67,7 @@ export default function Header({ onSearch, searchPlaceholder = 'Buscar editais..
               id="globalSearch"
               placeholder={searchPlaceholder}
               className="search-input-header"
+              data-testid="editais-search-input"
               onChange={(e) => onSearch(e.target.value)}
               aria-label={searchPlaceholder}
             />

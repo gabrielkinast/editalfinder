@@ -1,8 +1,28 @@
-# Variáveis de ambiente (nunca versionar chaves)
+# =========================================================
+# EditalFinder React — arquivos sensíveis e artefatos locais
+# =========================================================
+
+# Variáveis de ambiente (nunca versionar chaves, URLs privadas, senhas E2E)
 .env
 .env.local
 .env.*
 !.env.example
+
+# Chaves, tokens e credenciais
+*.pem
+*.key
+*.p12
+*.pfx
+*.secret
+*.token
+*.credentials
+*credentials*.json
+*service_role*
+*service-role*
+secrets/
+.secrets/
+supabase*.json
+!**/supabase/migrations/**
 
 # Build / dependências
 node_modules/
@@ -12,14 +32,24 @@ dist-desktop/
 build/
 .vite/
 
+# Playwright — sessão E2E (cookies, localStorage exportado; nunca commitar)
+playwright/.auth/
+playwright-report/
+test-results/
+
+# QA — logs e traces podem conter saída de shell / screenshots autenticados
+qa/artifacts/logs/
+qa/artifacts/playwright/test-results/
+qa/artifacts/playwright/debug-e2e/
+
 # Tauri / Rust (não versionar artefatos compilados)
 src-tauri/target/
 
 # Instaladores desktop (gerados localmente)
 *.msi
 
-# Logs
-logs
+# Logs gerais
+logs/
 *.log
 npm-debug.log*
 yarn-debug.log*
@@ -27,7 +57,12 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Arquivos locais de configuração do desenvolvedor
 *.local
+
+# Python venv (desktop smoke / QA Windows)
+.venv-qa/
+.venv/
 
 # Editor directories and files
 .vscode/*

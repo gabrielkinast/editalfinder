@@ -128,6 +128,7 @@ export function filterEditaisForDashboardScope(editais = [], scopeFilter = DASHB
  * @param {string} [scopeFilter]
  */
 export function buildDashboardAggregations(editais = [], scopeFilter = DASHBOARD_SCOPE_ALL) {
+  const catalogCount = Array.isArray(editais) ? editais.length : 0;
   const scoped = filterEditaisForDashboardScope(editais, scopeFilter);
   const list = scoped.slice(0, MAX_PROCESS);
 
@@ -220,6 +221,8 @@ export function buildDashboardAggregations(editais = [], scopeFilter = DASHBOARD
 
   const metrics = {
     totalEditais: list.length,
+    catalogEditais: catalogCount,
+    scopedEditais: scoped.length,
     openEditais,
     oportunidadesProvavelmenteAbertas: openEditais,
     expiringSoon,

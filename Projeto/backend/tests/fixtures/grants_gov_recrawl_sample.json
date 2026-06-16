@@ -1,0 +1,46 @@
+[
+  {
+    "titulo": "Defense Research Grant A",
+    "descricao": "Funding opportunity for military aerospace research",
+    "link": "https://simpler.grants.gov/opportunity/111",
+    "fonte": "Grants.gov",
+    "data_publicacao": "2026-01-15",
+    "fim_inscricao": "2026-09-30",
+    "extras": {
+      "closeDate": "2026-09-30",
+      "close_date": "2026-09-30",
+      "postedDate": "2026-01-15",
+      "opportunity_id": "111",
+      "agency": "DoD"
+    }
+  },
+  {
+    "titulo": "Posted Only Grant",
+    "descricao": "Grant funding program without close date",
+    "link": "https://simpler.grants.gov/opportunity/222",
+    "fonte": "Grants.gov",
+    "data_publicacao": "2026-02-01",
+    "extras": {
+      "postedDate": "2026-02-01",
+      "opportunity_id": "222"
+    }
+  },
+  {
+    "titulo": "No Closing Date Forecast",
+    "descricao": "Forecasted funding opportunity",
+    "link": "https://simpler.grants.gov/opportunity/333",
+    "fonte": "Grants.gov",
+    "extras": {
+      "closeDateExplanation": "No closing date — forecasted",
+      "postedDate": "2026-03-01",
+      "opportunity_id": "333"
+    }
+  },
+  {
+    "titulo": "Wrong Source Item",
+    "descricao": "Should be rejected",
+    "link": "https://example.com/bndes/1",
+    "fonte": "BNDES",
+    "extras": {"closeDate": "2026-12-31"}
+  }
+]

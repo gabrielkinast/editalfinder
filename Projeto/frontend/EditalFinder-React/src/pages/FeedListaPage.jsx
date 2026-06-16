@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback, useMemo, useRef } from 'react';
-import * as XLSX from 'xlsx';
+import { exportRowsToXlsx } from '../utils/export/spreadsheetExport';
 import Header from '../components/layout/Header';
 import FeedItemCard from '../components/feed/FeedItemCard';
 import FeedSidebarFilters from '../components/feed/FeedSidebarFilters';
@@ -135,7 +135,7 @@ export default function FeedListaPage({ title, searchPlaceholder, exportBaseName
     }
   };
 
-  const handleExportExcel = () => {
+  const handleExportExcel = async () => {
     if (filteredItems.length === 0) {
       alert('Nenhum item para exportar.');
       return;
@@ -153,10 +153,15 @@ export default function FeedListaPage({ title, searchPlaceholder, exportBaseName
       Ativo: r.ativo === false ? 'Não' : 'Sim',
       Validação: r.validacao_status,
     }));
-    const worksheet = XLSX.utils.json_to_sheet(data);
-    const workbook = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(workbook, worksheet, title.slice(0, 30));
-    XLSX.writeFile(workbook, `${exportBaseName}_${new Date().toISOString().split('T')[0]}.xlsx`);
+    try {
+      await exportRowsToXlsx(data, {
+        sheetName: title.slice(0, 30),
+        fileName: `${exportBaseName}_${new Date().toISOString().split('T')[0]}.xlsx`,
+      });
+    } catch (err) {
+      console.error(err);
+      alert('Erro ao gerar planilha.');
+    }
   };
 
   return (

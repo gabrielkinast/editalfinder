@@ -158,6 +158,13 @@ def _enrich_grants_gov_catalog_extras(item: Dict[str, Any]) -> None:
         ex.setdefault("agency", agency)
     if "view-opportunity" in link.lower():
         ex.setdefault("origem_portal", ex.get("origem_portal") or "Grants.gov")
+    close = ex.get("closeDate") or ex.get("close_date") or ex.get("grants_close_date")
+    if close and not item.get("fim_inscricao"):
+        iso = normalize_date_str(str(close), locale="en_US")
+        if iso:
+            item["fim_inscricao"] = iso
+            ex.setdefault("grants_close_date", iso)
+            ex.setdefault("deadline_source_field", "closeDate")
 
 
 import sys
@@ -2955,6 +2962,13 @@ def _transform_item_with_result(item: Any, source_name: str) -> TransformResult:
                 defense_patch.pop("documentos", None)
             _extras_apply_patch_preserve_nonempty(out["extras"], defense_patch)
     _enrich_grants_gov_catalog_extras(out)
+    try:
+        from grants_link_resolver import apply_link_resolution_to_item, is_grants_gov_record
+
+        if is_grants_gov_record(out):
+            apply_link_resolution_to_item(out, rewrite_link="if_broken")
+    except ImportError:
+        pass
     try:
         from link_health import stamp_structural_link_health
 

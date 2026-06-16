@@ -4,7 +4,7 @@ from __future__ import annotations
 import json
 import sys
 from pathlib import Path
-from typing import Any, Dict, Iterator, List, Optional
+from typing import Any, Dict, Iterator, List, Optional, Tuple
 
 ROOT = Path(__file__).resolve().parent.parent
 CORE = ROOT / "CORE"
@@ -57,16 +57,48 @@ def iter_records_from_db(
         offset += page_size
 
 
+def _norm_fonte(s: str) -> str:
+    return (s or "").strip().lower().replace(".", "").replace(" ", "_")
+
+
+SOURCE_FILTER_ALIASES: Dict[str, Tuple[str, ...]] = {
+    "grants_gov": ("grants.gov", "grants_gov", "grants gov"),
+    "bndes": ("bndes",),
+    "doe_arpae": ("doe_arpae", "arpa-e", "arpa e", "doe arpa"),
+}
+
+
+def filter_records_by_source(
+    records: List[Dict[str, Any]],
+    source: Optional[str],
+) -> List[Dict[str, Any]]:
+    """Filtra por chave lógica (ex.: grants_gov) ou substring em fonte_recurso."""
+    if not source:
+        return records
+    key = source.strip().lower()
+    aliases = SOURCE_FILTER_ALIASES.get(key, (key,))
+    out: List[Dict[str, Any]] = []
+    for rec in records:
+        fonte = str(rec.get("fonte_recurso") or rec.get("fonte") or "")
+        norm = _norm_fonte(fonte)
+        if any(a.replace(".", "").replace(" ", "_") in norm or a in fonte.lower() for a in aliases):
+            out.append(rec)
+    return out
+
+
 def load_records(
     *,
     from_db: bool = False,
     input_path: Optional[Path] = None,
     limit: Optional[int] = None,
+    source: Optional[str] = None,
 ) -> List[Dict[str, Any]]:
     if from_db:
-        return list(iter_records_from_db(limit=limit))
+        rows = list(iter_records_from_db(limit=limit))
+        return filter_records_by_source(rows, source)
     if input_path and input_path.exists():
-        return load_records_from_json(input_path, limit=limit)
+        rows = load_records_from_json(input_path, limit=limit)
+        return filter_records_by_source(rows, source)
     return []
 
 

@@ -1,5 +1,6 @@
 import { createClient } from '@supabase/supabase-js';
 import { SUPABASE_URL, SUPABASE_ANON_KEY, isSupabaseConfigured, APP_ENV } from '../config/env.js';
+import { IS_TAURI_BUILD } from '../config/routerBase.js';
 
 export { isSupabaseConfigured } from '../config/env.js';
 
@@ -22,7 +23,7 @@ export const supabase = isSupabaseConfigured
   ? createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
       auth: {
         flowType: 'implicit',
-        detectSessionInUrl: true,
+        detectSessionInUrl: !IS_TAURI_BUILD,
         persistSession: true,
         autoRefreshToken: true,
       },

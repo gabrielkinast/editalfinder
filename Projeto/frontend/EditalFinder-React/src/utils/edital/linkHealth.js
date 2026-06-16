@@ -3,6 +3,8 @@
  * Sem link_health → comportamento legado (botões habilitados).
  */
 
+import { resolveEditalActionUrls } from './getEditalActionUrls.js';
+
 const BROKEN = new Set([
   'broken_404',
   'broken_spa_not_found',
@@ -81,9 +83,10 @@ export function isUrlDisabledForCampo(edital, campo, url) {
 }
 
 export function resolveActionLinks(edital) {
-  const site = edital?.linkOriginal || edital?.link_raw || null;
-  const inscricao = edital?.linkInscricao || null;
-  const pdf = edital?.pdfUrl || edital?.pdf_url_raw || null;
+  const resolved = resolveEditalActionUrls(edital);
+  const site = resolved.site;
+  const inscricao = resolved.inscricao;
+  const pdf = resolved.pdf;
 
   const siteDisabled = site ? isUrlDisabledForCampo(edital, 'link', site) : false;
   const inscDisabled = inscricao
@@ -101,5 +104,8 @@ export function resolveActionLinks(edital) {
     inscDisabled,
     pdfDisabled,
     health,
+    siteMeta: resolved.siteMeta,
+    inscricaoMeta: resolved.inscricaoMeta,
+    rejectedUrls: resolved.rejectedUrls,
   };
 }

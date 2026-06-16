@@ -19,11 +19,14 @@ function readTauriAppVersion() {
 
 const appVersion = readTauriAppVersion()
 
-/** Tauri define TAURI_ENV_PLATFORM ao rodar `tauri dev` / `tauri build`. */
-const isTauri = Boolean(process.env.TAURI_ENV_PLATFORM || process.env.TAURI_PLATFORM)
+/**
+ * Desktop: `vite build --mode tauri` (beforeBuildCommand) ou TAURI_ENV_PLATFORM no `tauri dev`.
+ * Não depender só da env do CLI — no Windows ela pode falhar e gerar base `/editalfinder/` no EXE.
+ */
+function resolveIsTauri(mode) {
+  return mode === 'tauri' || Boolean(process.env.TAURI_ENV_PLATFORM || process.env.TAURI_PLATFORM)
+}
 const webBase = '/editalfinder/'
-const assetBase = isTauri ? '/' : webBase
-const routerBasename = isTauri ? '' : '/editalfinder'
 
 /** Em dev web, quem abre só `http://localhost:5173/` cai fora do basename; redireciona para a SPA. */
 function redirectRootToBase() {
@@ -44,15 +47,26 @@ function redirectRootToBase() {
   }
 }
 
-export default defineConfig({
-  plugins: [react(), ...(isTauri ? [] : [redirectRootToBase()])],
-  base: assetBase,
-  define: {
-    'import.meta.env.VITE_ROUTER_BASENAME': JSON.stringify(routerBasename),
-    'import.meta.env.VITE_TAURI': JSON.stringify(isTauri ? '1' : ''),
-    'import.meta.env.VITE_APP_VERSION': JSON.stringify(appVersion),
-  },
-  server: {
-    open: isTauri ? '/' : webBase,
-  },
+export default defineConfig(({ mode }) => {
+  const isTauri = resolveIsTauri(mode)
+  const assetBase = isTauri ? './' : webBase
+  const routerBasename = isTauri ? '' : '/editalfinder'
+
+  return {
+    plugins: [react(), ...(isTauri ? [] : [redirectRootToBase()])],
+    base: assetBase,
+    define: {
+      'import.meta.env.VITE_ROUTER_BASENAME': JSON.stringify(routerBasename),
+      'import.meta.env.VITE_TAURI': JSON.stringify(isTauri ? '1' : ''),
+      'import.meta.env.VITE_APP_VERSION': JSON.stringify(appVersion),
+    },
+    build: {
+      commonjsOptions: {
+        transformMixedEsModules: true,
+      },
+    },
+    server: {
+      open: isTauri ? '/' : webBase,
+    },
+  }
 })

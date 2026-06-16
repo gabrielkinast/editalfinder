@@ -1,0 +1,23 @@
+{
+  "generated_at": "2026-06-15T15:38:16.340Z",
+  "steps": {
+    "unit": {
+      "exitCode": 0,
+      "duration_sec": 4.192,
+      "command": "npm test",
+      "log": "qa/artifacts/logs/unit.log"
+    },
+    "build": {
+      "exitCode": 0,
+      "duration_sec": 5.678,
+      "command": "npm run build",
+      "log": "qa/artifacts/logs/build.log"
+    },
+    "e2e": {
+      "exitCode": 0,
+      "duration_sec": 116.773,
+      "command": "npm run e2e",
+      "log": "qa/artifacts/logs/e2e.log"
+    }
+  }
+}

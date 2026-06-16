@@ -9,6 +9,8 @@ import { isTituloRuidoso } from './noise';
 import { editalMatchesAllSearchTokens } from './search';
 import { coerceStringArray } from './coerceArrays';
 import { editalTemPdf, isSuspeitoValidacao, getFonte } from './editalFieldHelpers';
+import { isCuradoriaHidden } from './editalVisibility';
+import { editalMatchesSemanticStatusSelection } from './editalStatusBadges';
 
 export const INITIAL_SIDEBAR_FILTERS = () => ({
   resourceTypeLegacy: '',
@@ -42,6 +44,8 @@ export const INITIAL_SIDEBAR_FILTERS = () => ({
   qualSuspeitos: false,
   qualLimited: false,
   statusSelections: {},
+  /** FRONTEND 1.2B — filtros semânticos (OR); chaves = getEditalStatusFilterKeys */
+  semanticStatusSelections: {},
   toggleIncluirEncerrados: false,
   toggleIncluirSuspeitos: false,
   toggleMostrarInativos: false,
@@ -387,6 +391,31 @@ export function filterCatalog({
   };
 
   let pool = list;
+
+  pool = step(
+    'curadoriaHidden',
+    pool,
+    (e) => !isCuradoriaHidden(e),
+    filterDebug,
+  );
+
+  const semanticKeys =
+    sidebar.semanticStatusSelections && typeof sidebar.semanticStatusSelections === 'object'
+      ? Object.keys(sidebar.semanticStatusSelections).filter(
+          (k) => sidebar.semanticStatusSelections[k],
+        )
+      : [];
+  if (semanticKeys.length) {
+    pool = step(
+      'semanticStatus',
+      pool,
+      (e) => editalMatchesSemanticStatusSelection(e, sidebar.semanticStatusSelections),
+      filterDebug,
+    );
+  } else {
+    filterDebug.after_semanticStatus = pool.length;
+    filterDebug.removedBy_semanticStatus = 0;
+  }
 
   pool = step(
     'ativo',

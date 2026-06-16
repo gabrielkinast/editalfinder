@@ -495,7 +495,7 @@ export default function RadarFomento() {
   ]);
 
   return (
-    <div className="page-wrapper radar-fomento-page">
+    <div className="page-wrapper radar-fomento-page" data-testid="radar-page">
       <Header />
 
       <div className="radar-fomento-below-header">
@@ -526,7 +526,7 @@ export default function RadarFomento() {
           )}
 
           {!clienteSelecionado ? (
-            <div className="radar-placeholder">
+            <div className="radar-placeholder" data-testid="radar-placeholder">
               <div className="radar-placeholder-icon">🎯</div>
               <h3>Comece por um cliente</h3>
               <p>Selecione um cliente à esquerda para calcular o match com o catálogo de editais e ver o score de compatibilidade.</p>

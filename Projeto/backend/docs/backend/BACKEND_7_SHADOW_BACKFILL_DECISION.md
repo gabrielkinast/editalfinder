@@ -1,6 +1,8 @@
 # Backend 7 — Staging migration e backfill dry-run
 
-Backend 7 prepara **validação em staging** dos campos enriquecidos (Backends 1–6) sem alterar `public.edital` nem o frontend.
+Backend 7 prepara **validação em staging** dos campos enriquecidos (Backends 1–9) sem alterar `public.edital` nem o frontend.
+
+**Antes do backfill real:** revisar campos de ruído, validade e `quality_score` do Backend 9 (`docs/backend/BACKEND_9_NOISE_VALIDITY_QUALITY.md`, dry-runs em `outputs/audit_noise_backend/` e `outputs/backend_9_quality_dry_run/`).
 
 ---
 

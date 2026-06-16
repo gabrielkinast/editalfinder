@@ -1,0 +1,1017 @@
+{
+  "config": {
+    "configFile": "D:\\Computational_Physics\\My Projects\\edital\\frontend\\EditalFinder-React\\playwright.config.js",
+    "rootDir": "D:/Computational_Physics/My Projects/edital/frontend/EditalFinder-React/tests/e2e",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 6
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "D:/Computational_Physics/My Projects/edital/frontend/EditalFinder-React/qa/artifacts/playwright/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 6
+        },
+        "id": "public",
+        "name": "public",
+        "testDir": "D:/Computational_Physics/My Projects/edital/frontend/EditalFinder-React/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "/\\/smoke\\.spec\\.js$/"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "D:/Computational_Physics/My Projects/edital/frontend/EditalFinder-React/qa/artifacts/playwright/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 6
+        },
+        "id": "auth-setup",
+        "name": "auth-setup",
+        "testDir": "D:/Computational_Physics/My Projects/edital/frontend/EditalFinder-React/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "/auth\\.setup\\.js$/"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "D:/Computational_Physics/My Projects/edital/frontend/EditalFinder-React/qa/artifacts/playwright/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 6
+        },
+        "id": "authenticated",
+        "name": "authenticated",
+        "testDir": "D:/Computational_Physics/My Projects/edital/frontend/EditalFinder-React/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "/(authenticated-smoke|dashboard-smoke|radar-smoke|cadastros-smoke|editais-(detail|filters|export|status-filter)|grants-links|external-links|report-problem)\\.spec\\.js$/"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "qa/artifacts/playwright/results.json"
+        }
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "qa/artifacts/playwright/html",
+          "open": "never"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.60.0",
+    "workers": 6,
+    "webServer": {
+      "command": "npm run build && npm run preview -- --host 127.0.0.1 --port 4173",
+      "url": "http://127.0.0.1:4173/editalfinder/",
+      "timeout": 180000,
+      "reuseExistingServer": true
+    }
+  },
+  "suites": [
+    {
+      "title": "auth.setup.js",
+      "file": "auth.setup.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "authenticate for E2E",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "auth-setup",
+              "projectName": "auth-setup",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5846,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-06-15T15:38:40.348Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f376efe52c54b1a876fd-5b8570058f3e335fba06",
+          "file": "auth.setup.js",
+          "line": 9,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "smoke.spec.js",
+      "file": "smoke.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "public smoke [Camada 1]",
+          "file": "smoke.spec.js",
+          "line": 11,
+          "column": 6,
+          "specs": [
+            {
+              "title": "app-load: raiz redireciona para login quando não autenticado [P0]",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "public",
+                  "projectName": "public",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 2589,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-15T15:38:40.412Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "2c14808d47b386fba9eb-83cf1737a4dfb4ca7a43",
+              "file": "smoke.spec.js",
+              "line": 16,
+              "column": 3
+            },
+            {
+              "title": "login-page: formulário renderiza sem erro fatal [P0]",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "public",
+                  "projectName": "public",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 2059,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-15T15:38:43.704Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "2c14808d47b386fba9eb-528b28547cbb620cd223",
+              "file": "smoke.spec.js",
+              "line": 23,
+              "column": 3
+            },
+            {
+              "title": "protected-route: /editais redireciona para login sem auth [P0]",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "public",
+                  "projectName": "public",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 2252,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-15T15:38:45.795Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "2c14808d47b386fba9eb-d3759da5a6f12fd30188",
+              "file": "smoke.spec.js",
+              "line": 32,
+              "column": 3
+            },
+            {
+              "title": "protected-route: /dashboard redireciona para login sem auth [P0]",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "public",
+                  "projectName": "public",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 2375,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-15T15:38:48.065Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "2c14808d47b386fba9eb-0652e58f3046973ed5ea",
+              "file": "smoke.spec.js",
+              "line": 39,
+              "column": 3
+            },
+            {
+              "title": "router-basename: assets da SPA carregam (sem tela em branco) [P0]",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "public",
+                  "projectName": "public",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 1879,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-15T15:38:50.465Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "2c14808d47b386fba9eb-5a24fa1972376850efe2",
+              "file": "smoke.spec.js",
+              "line": 46,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "authenticated-smoke.spec.js",
+      "file": "authenticated-smoke.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "authenticated smoke [Camada 2]",
+          "file": "authenticated-smoke.spec.js",
+          "line": 15,
+          "column": 6,
+          "specs": [
+            {
+              "title": "editais carrega fora do login com stats ou cards [P0]",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "authenticated",
+                  "projectName": "authenticated",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 43325,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-15T15:38:55.879Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "authenticated-smoke-catalog.json",
+                          "contentType": "application/json",
+                          "body": "ewogICJvayI6IHRydWUsCiAgInN0YXRzVGV4dCI6ICJNb3N0cmFuZG8gOTY2IGRlIDEwMjIgcmVjZWJpZG9zIGVkaXRhaXNcblxuRmlsdHJvcyBwYWRyw6NvIGltcGzDrWNpdG9zOiBjYWRhc3RybyBuw6NvIGluYXRpdm8gKGF0aXZvIOKJoCBmYWxzZSksIHNlbSBzdXNwZWl0bywgc2VtIHByYXpvIHZlbmNpZG8gKHByYXpvIG51bG8gw6kgbWFudGlkbyksIHTDrXR1bG9zIGRlIHJ1w61kbyBvY3VsdG9zIGF0w6kgdm9jw6ogbGliZXJhciBuYXMgcHJlZmVyw6puY2lhcy5cblxuQWJlcnRvcyBuZXN0YSBsaXN0YTogMTQ5XG5Db20gUERGIChuZXN0YSBsaXN0YSk6IDM0MFxuQWx0YSBxdWFsaWRhZGUgKG5lc3RhIGxpc3RhKTogNTEzXG5FbmNlcnJhZG9zIG9jdWx0b3M6IDIzXG5TdXNwZWl0b3Mgb2N1bHRvczogMzQiLAogICJwYXJzZWQiOiB7CiAgICAic2hvd2luZyI6IDk2NiwKICAgICJyZWNlaXZlZCI6IDEwMjIsCiAgICAicmF3IjogIk1vc3RyYW5kbyA5NjYgZGUgMTAyMiByZWNlYmlkb3MgZWRpdGFpc1xuXG5GaWx0cm9zIHBhZHLDo28gaW1wbMOtY2l0b3M6IGNhZGFzdHJvIG7Do28gaW5hdGl2byAoYXRpdm8g4omgIGZhbHNlKSwgc2VtIHN1c3BlaXRvLCBzZW0gcHJhem8gdmVuY2lkbyAocHJhem8gbnVsbyDDqSBtYW50aWRvKSwgdMOtdHVsb3MgZGUgcnXDrWRvIG9jdWx0b3MgYXTDqSB2b2PDqiBsaWJlcmFyIG5hcyBwcmVmZXLDqm5jaWFzLlxuXG5BYmVydG9zIG5lc3RhIGxpc3RhOiAxNDlcbkNvbSBQREYgKG5lc3RhIGxpc3RhKTogMzQwXG5BbHRhIHF1YWxpZGFkZSAobmVzdGEgbGlzdGEpOiA1MTNcbkVuY2VycmFkb3Mgb2N1bHRvczogMjNcblN1c3BlaXRvcyBvY3VsdG9zOiAzNCIKICB9LAogICJjYXJkQ291bnQiOiA0MCwKICAidXJsIjogImh0dHA6Ly8xMjcuMC4wLjE6NDE3My9lZGl0YWxmaW5kZXIvZWRpdGFpcyIKfQ=="
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "37ce614450c6e2fc9746-b42967c39138ff6ded5d",
+              "file": "authenticated-smoke.spec.js",
+              "line": 21,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "cadastros-smoke.spec.js",
+      "file": "cadastros-smoke.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "cadastros smoke [Camada 2]",
+          "file": "cadastros-smoke.spec.js",
+          "line": 17,
+          "column": 6,
+          "specs": [
+            {
+              "title": "abre modal novo edital sem salvar [P2]",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "authenticated",
+                  "projectName": "authenticated",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 38998,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-15T15:38:55.937Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "c68f70be480629e5ff9b-3f3438878e31ea2d504b",
+              "file": "cadastros-smoke.spec.js",
+              "line": 23,
+              "column": 3
+            },
+            {
+              "title": "cria edital manual com flag E2E_ALLOW_WRITE_TESTS [P3]",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "SKIP_WRITE_OPT_IN_DISABLED: set E2E_ALLOW_WRITE_TESTS=1 to create a manual edital",
+                      "location": {
+                        "file": "D:\\Computational_Physics\\My Projects\\edital\\frontend\\EditalFinder-React\\tests\\e2e\\_helpers.js",
+                        "line": 43,
+                        "column": 10
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "authenticated",
+                  "projectName": "authenticated",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 1,
+                      "status": "skipped",
+                      "duration": 1267,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-15T15:39:35.807Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "SKIP_WRITE_OPT_IN_DISABLED: set E2E_ALLOW_WRITE_TESTS=1 to create a manual edital",
+                          "location": {
+                            "file": "D:\\Computational_Physics\\My Projects\\edital\\frontend\\EditalFinder-React\\tests\\e2e\\_helpers.js",
+                            "line": 43,
+                            "column": 10
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c68f70be480629e5ff9b-67202b1bd17cdf944a69",
+              "file": "cadastros-smoke.spec.js",
+              "line": 61,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "dashboard-smoke.spec.js",
+      "file": "dashboard-smoke.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "dashboard smoke [Camada 2]",
+          "file": "dashboard-smoke.spec.js",
+          "line": 13,
+          "column": 6,
+          "specs": [
+            {
+              "title": "dashboard renderiza KPIs e link para editais [P2]",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "authenticated",
+                  "projectName": "authenticated",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 31716,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-15T15:38:55.842Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "3157e78a43e15888ad1a-6b215adc3c799aaf7926",
+              "file": "dashboard-smoke.spec.js",
+              "line": 19,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "editais-detail.spec.js",
+      "file": "editais-detail.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "editais detail [Camada 2/3]",
+          "file": "editais-detail.spec.js",
+          "line": 12,
+          "column": 6,
+          "specs": [
+            {
+              "title": "abre os primeiros 10 editais e registra detalhes quebrados [P1]",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "authenticated",
+                  "projectName": "authenticated",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 81730,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-15T15:38:55.892Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "broken-details.json",
+                          "contentType": "application/json",
+                          "body": "ewogICJzYW1wbGVkIjogMTAsCiAgImJyb2tlbiI6IFtdCn0="
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "58f8a0c1994a8da2b0d4-04121b000acf3a5c3614",
+              "file": "editais-detail.spec.js",
+              "line": 18,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "editais-export.spec.js",
+      "file": "editais-export.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "editais export [Camada 2]",
+          "file": "editais-export.spec.js",
+          "line": 13,
+          "column": 6,
+          "specs": [
+            {
+              "title": "export XLSX e PDF iniciam download [P2]",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "authenticated",
+                  "projectName": "authenticated",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 4,
+                      "status": "passed",
+                      "duration": 43080,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-15T15:38:55.938Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "56706a72adb01cbd6b52-8ab3f2dc9c3834a5fb92",
+              "file": "editais-export.spec.js",
+              "line": 19,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "editais-filters.spec.js",
+      "file": "editais-filters.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "editais filters [Camada 2/3]",
+          "file": "editais-filters.spec.js",
+          "line": 15,
+          "column": 6,
+          "specs": [
+            {
+              "title": "busca por título do card + filtro status sem erro fatal [P2]",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "authenticated",
+                  "projectName": "authenticated",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 5,
+                      "status": "passed",
+                      "duration": 57131,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-15T15:38:55.951Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "264224793927da892e0b-1b1a7f2a82475e826b37",
+              "file": "editais-filters.spec.js",
+              "line": 21,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "editais-status-filter.spec.js",
+      "file": "editais-status-filter.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "editais status filter [Camada 2]",
+          "file": "editais-status-filter.spec.js",
+          "line": 17,
+          "column": 6,
+          "specs": [
+            {
+              "title": "aplica e remove filtro Aberto sem quebrar lista [P2]",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "authenticated",
+                  "projectName": "authenticated",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 32240,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-15T15:39:28.468Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "90fd5b6aef1d86d73a83-a894dc0b3065beed1620",
+              "file": "editais-status-filter.spec.js",
+              "line": 23,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "external-links.spec.js",
+      "file": "external-links.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "external links [Camada 2/3]",
+          "file": "external-links.spec.js",
+          "line": 21,
+          "column": 6,
+          "specs": [
+            {
+              "title": "botões externos de cards não usam URLs inválidas [P2]",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "authenticated",
+                  "projectName": "authenticated",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 31116,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-15T15:39:37.221Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "external-urls.json",
+                          "contentType": "application/json",
+                          "body": "ewogICJhbGxVcmxzIjogWwogICAgImh0dHBzOi8vZmFwZXNjLnNjLmdvdi5ici9lZGl0YWwtZGUtY2hhbWFkYS1wdWJsaWNhLWZhcGVzYy1uLW8tMTUtMjAyNi1wcmVtaW8taW5vdmFjYW8tY2F0YXJpbmVuc2UtcHJvZmVzc29yLWNhc3Bhci1lcmljaC1zdGVtbWVyLWVkaWNhby0yMDI2LyIsCiAgICAiaHR0cHM6Ly9mYXBlc2Muc2MuZ292LmJyL2VkaXRhbC1kZS1jaGFtYWRhLXB1YmxpY2EtZmFwZXNjLW4tby0wMTYtMjAyNi1wcm9ncmFtYS1kZS1jaWVuY2lhLXRlY25vbG9naWEtZS1pbm92YWNhby1kZS1hcG9pby1hb3MtZ3J1cG9zLWRlLXBlc3F1aXNhLWRhLWFzc29jaWFjYW8tY2F0YXJpbmVuc2UtZGFzLWZ1bmRhY29lcy1lZHVjYWNpb25haXMtYWNhZmUvIiwKICAgICJodHRwczovL2ZhcGVzYy5zYy5nb3YuYnIvZWRpdGFsLWRlLWNoYW1hZGEtcHVibGljYS1mYXBlc2Mtbi1vLTI0LTIwMjYtcHJvZ3JhbWEtbmFzY2VyLWRlLXByZS1pbmN1YmFjYW8tZGUtaWRlaWFzLWlub3ZhZG9yYXMtcGFyYS1vLWVjb3NzaXN0ZW1hLWNhdGFyaW5lbnNlLWRlLWlub3ZhY2FvLXZpaS1lZGljYW8vIiwKICAgICJodHRwczovL3d3dy5nb3YuYnIvY25wcS9wdC1ici9jaGFtYWRhcy90b2Rhcy1hcy1jaGFtYWRhcy9jaGFtYWRhcy0yMDI2L2NoYW1hZGEtbm8tMTEtMjAyNi9DaGFtYWRhXzExXzIwMjZfUkVOQU1BX05BTXMucGRmIiwKICAgICJodHRwczovL2ZhcGVyZ3MucnMuZ292LmJyL2VkaXRhbC1mYXBlcmdzLTAzLTIwMjYtcHJvZ3JhbWEtZGUtYXBvaW8tYW9zLWVjb3NzaXN0ZW1hcy1kZS1pbm92YWNhby1lZGljYW8tMjAyNiIsCiAgICAiaHR0cHM6Ly9mYXBlcmdzLnJzLmdvdi5ici9lZGl0YWwtZmFwZXJncy0wNC0yMDI2LXByb2JpYy1wcm9iaXRpLWVkaWNhby0yMDI2LTIwMjgiLAogICAgImh0dHBzOi8vd3d3LmdyYW50cy5nb3Yvc2VhcmNoLXJlc3VsdHMtZGV0YWlsLzMzMzQ3MSIsCiAgICAiaHR0cHM6Ly93d3cudWtyaS5vcmcvb3Bwb3J0dW5pdHkvZW52aXJvbm1lbnRhbC1zY2llbmNlcy1nbG9iYWwtcGFydG5lcnNoaXBzLXNlZWRjb3JuLWZ1bmQtMjAyNi8iCiAgXSwKICAiYmFkIjogW10sCiAgInNhbXBsZWRDYXJkcyI6IDgKfQ=="
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e03e59ff33a39ac86a67-0fdab4db0315b3f7fc81",
+              "file": "external-links.spec.js",
+              "line": 28,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "grants-links.spec.js",
+      "file": "grants-links.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "grants links [Camada 2/3]",
+          "file": "grants-links.spec.js",
+          "line": 15,
+          "column": 6,
+          "specs": [
+            {
+              "title": "botões externos não apontam para page-not-found [P1]",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "authenticated",
+                  "projectName": "authenticated",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 15846,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-15T15:39:40.189Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "grants-external-urls.json",
+                          "contentType": "application/json",
+                          "body": "ewogICJncmFudHNDYXJkc0ZvdW5kIjogMSwKICAic3RyYXRlZ2llcyI6IFsKICAgIHsKICAgICAgIm5hbWUiOiAiZG9tX2F0dHJpYnV0ZXMiLAogICAgICAiY291bnQiOiAxLAogICAgICAidG90YWxDYXJkcyI6IDQwCiAgICB9CiAgXSwKICAiZWxhcHNlZERpc2NvdmVyeU1zIjogMTc3LAogICJ1cmxzIjogWwogICAgewogICAgICAidXJsIjogImh0dHBzOi8vd3d3LmdyYW50cy5nb3Yvc2VhcmNoLXJlc3VsdHMtZGV0YWlsLzMzMzQ3MSIsCiAgICAgICJwYWdlTm90Rm91bmQiOiBmYWxzZSwKICAgICAgInNpbXBsZXJPcHBvcnR1bml0eSI6IGZhbHNlLAogICAgICAidmlld09wcG9ydHVuaXR5IjogZmFsc2UsCiAgICAgICJzZWFyY2hSZXN1bHRzRGV0YWlsIjogdHJ1ZSwKICAgICAgImdyYW50c0dvdiI6IHRydWUKICAgIH0KICBdCn0="
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "9d56f5859dcb439983c2-d91d8d6ab1b383d96cf1",
+              "file": "grants-links.spec.js",
+              "line": 22,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "radar-smoke.spec.js",
+      "file": "radar-smoke.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "radar smoke [Camada 2]",
+          "file": "radar-smoke.spec.js",
+          "line": 12,
+          "column": 6,
+          "specs": [
+            {
+              "title": "radar renderiza placeholder ou cards [P2]",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "authenticated",
+                  "projectName": "authenticated",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 4,
+                      "status": "passed",
+                      "duration": 5835,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-15T15:39:40.723Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "0a1807e3e1b89b299ff5-d460d3cb99322cc2298a",
+              "file": "radar-smoke.spec.js",
+              "line": 18,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "report-problem.spec.js",
+      "file": "report-problem.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "report problem [Camada 2]",
+          "file": "report-problem.spec.js",
+          "line": 12,
+          "column": 6,
+          "specs": [
+            {
+              "title": "modal geral mostra ambiente + orientação de reporte [P1]",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "authenticated",
+                  "projectName": "authenticated",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 4,
+                      "status": "passed",
+                      "duration": 8101,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-15T15:39:46.713Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "aaca5f846b15716679ae-08c841dee56b4afb42c7",
+              "file": "report-problem.spec.js",
+              "line": 22,
+              "column": 3
+            },
+            {
+              "title": "botão de envio Gmail ou fallback existe sem enviar e-mail [P2]",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "authenticated",
+                  "projectName": "authenticated",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 4,
+                      "status": "passed",
+                      "duration": 4888,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-15T15:39:54.876Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "aaca5f846b15716679ae-55a6f40d4db5d8478074",
+              "file": "report-problem.spec.js",
+              "line": 43,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-06-15T15:38:29.081Z",
+    "duration": 113271.385,
+    "expected": 18,
+    "skipped": 1,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

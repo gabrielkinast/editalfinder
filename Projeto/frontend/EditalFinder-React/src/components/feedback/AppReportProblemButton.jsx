@@ -54,7 +54,7 @@ export default function AppReportProblemButton({
     .join(' ');
 
   return (
-    <button type="button" className={btnClass} onClick={handleClick}>
+    <button type="button" className={btnClass} onClick={handleClick} data-testid="report-problem-button">
       {label}
     </button>
   );

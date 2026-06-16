@@ -1,20 +1,14 @@
 {
-  "generated_at": "2026-05-20T12:00:00+00:00",
-  "editais_visibility_audit": {
-    "script": "scripts/audit_editais_visibility_noise.py",
-    "policy_doc": "docs/EDITAIS_VISIBILITY_AND_NOISE_POLICY.md",
-    "view_sql": "docs/sql/UPDATE_VW_EDITAIS_FRONT_VISIBILITY.sql",
-    "rule_version": "editais_visibility_v1",
-    "note": "Run audit before apply; curadoria_front in extras is manual"
-  },
+  "generated_at": "2026-06-05T07:52:06+00:00",
   "totals": {
-    "sources": 157,
+    "sources": 159,
     "descoberta": 1,
     "aplicada": 60,
-    "implementada_latente": 15,
+    "implementada_latente": 8,
     "nao_recomendado": 12,
-    "precisa_melhoria": 17,
-    "pronta_para_apply": 52
+    "precisa_melhoria": 16,
+    "pronta_para_apply": 43,
+    "dryrun_ok": 19
   },
   "sources": [
     {
@@ -35,7 +29,10 @@
         "would_upsert": 12,
         "apply_executed": true
       },
-      "notes": ""
+      "notes": "",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "fundatec",
@@ -55,7 +52,10 @@
         "would_upsert": 2,
         "apply_executed": true
       },
-      "notes": ""
+      "notes": "",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "quadrix",
@@ -75,7 +75,10 @@
         "would_upsert": 10,
         "apply_executed": true
       },
-      "notes": ""
+      "notes": "",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "legalle",
@@ -95,7 +98,10 @@
         "would_upsert": 5,
         "apply_executed": true
       },
-      "notes": ""
+      "notes": "",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "objetiva",
@@ -115,7 +121,10 @@
         "would_upsert": 3,
         "apply_executed": true
       },
-      "notes": ""
+      "notes": "",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "ibfc",
@@ -135,7 +144,10 @@
         "would_upsert": 1,
         "apply_executed": true
       },
-      "notes": ""
+      "notes": "",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "fgv",
@@ -155,7 +167,10 @@
         "would_upsert": 0,
         "apply_executed": false
       },
-      "notes": ""
+      "notes": "",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "cebraspe",
@@ -175,7 +190,10 @@
         "would_upsert": 0,
         "apply_executed": false
       },
-      "notes": ""
+      "notes": "",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "aocp",
@@ -195,7 +213,10 @@
         "would_upsert": 0,
         "apply_executed": false
       },
-      "notes": ""
+      "notes": "",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "avancasp",
@@ -215,7 +236,10 @@
         "would_upsert": 5,
         "apply_executed": true
       },
-      "notes": ""
+      "notes": "",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "fcc",
@@ -235,7 +259,10 @@
         "would_upsert": 0,
         "apply_executed": false
       },
-      "notes": ""
+      "notes": "",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "baixa",
+      "recommended_action": "bloquear"
     },
     {
       "source_id": "consulplan",
@@ -255,7 +282,10 @@
         "would_upsert": 0,
         "apply_executed": false
       },
-      "notes": ""
+      "notes": "",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "fuvest",
@@ -275,7 +305,10 @@
         "would_upsert": 0,
         "apply_executed": false
       },
-      "notes": ""
+      "notes": "",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "comvest",
@@ -295,7 +328,10 @@
         "would_upsert": 0,
         "apply_executed": false
       },
-      "notes": ""
+      "notes": "",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "coperve",
@@ -315,7 +351,10 @@
         "would_upsert": 0,
         "apply_executed": false
       },
-      "notes": ""
+      "notes": "",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "ufrgs_cv",
@@ -335,7 +374,10 @@
         "would_upsert": 0,
         "apply_executed": false
       },
-      "notes": ""
+      "notes": "",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "ita_vestibular",
@@ -355,7 +397,10 @@
         "would_upsert": 0,
         "apply_executed": false
       },
-      "notes": ""
+      "notes": "",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "ime",
@@ -375,7 +420,10 @@
         "would_upsert": 0,
         "apply_executed": false
       },
-      "notes": ""
+      "notes": "",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "embarcatech",
@@ -395,7 +443,10 @@
         "would_upsert": 0,
         "apply_executed": false
       },
-      "notes": ""
+      "notes": "",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "mcti_fomento_transformacao_digital",
@@ -415,7 +466,10 @@
         "would_upsert": 0,
         "apply_executed": false
       },
-      "notes": "apply_status=não_recomendado; reexecutar periodicamente"
+      "notes": "apply_status=não_recomendado; reexecutar periodicamente",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "baixa",
+      "recommended_action": "bloquear"
     },
     {
       "source_id": "nasa_news",
@@ -435,70 +489,79 @@
         "would_upsert": null,
         "apply_executed": false
       },
-      "notes": ""
+      "notes": "",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "media",
+      "recommended_action": "candidato_apply"
     },
     {
       "source_id": "darpa_news",
       "name": "DARPA News",
       "module": "noticias_pesquisas",
       "source_type": "noticia",
-      "pipeline_script": "scripts/crawl_news_research_sources.py; scripts/news_research/run_darpa_strategic_dryrun.py",
+      "pipeline_script": "scripts/crawl_news_research_sources.py; scripts/build_*_payloads.py",
       "config_file": "config/news_research_sources.json",
-      "artifacts_dir": "audit_reports_news_research/darpa_news_subset_valido",
-      "destination": "public.noticia → vw_noticias_front",
-      "status": "aplicada_staging",
-      "status_reason": "Apply staging: 10 notícias (subset válido).",
+      "artifacts_dir": "audit_reports_news_research_loader/ (darpa_news)",
+      "destination": "public.noticia → vw_noticias_front / vw_pesquisas_front",
+      "status": "pronta_para_apply",
+      "status_reason": "RSS news.xml (10 itens típicos no feed). Dry-run estratégico darpa_strategic_dryrun/; BAA/RFI em título → review_for_edital; sem hub HTML.",
       "last_known_result": {
-        "standardized": 10,
-        "validos": 10,
+        "standardized": null,
+        "validos": null,
         "errors_count": 0,
-        "would_upsert": 10,
-        "would_upsert_noticia": 10,
-        "apply_executed": true
+        "would_upsert": null,
+        "apply_executed": false
       },
-      "notes": "Frente militar consolidado; ver military_strategic_consolidado/consolidado_militar.json"
+      "notes": "",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "media",
+      "recommended_action": "candidato_apply"
+    },
+    {
+      "source_id": "darpa_opportunities_research",
+      "name": "DARPA R&D Opportunities",
+      "module": "noticias_pesquisas",
+      "source_type": "noticia+pesquisa",
+      "pipeline_script": "scripts/crawl_news_research_sources.py; scripts/build_*_payloads.py",
+      "config_file": "config/news_research_sources.json",
+      "artifacts_dir": "audit_reports_news_research_loader/ (darpa_opportunities_research)",
+      "destination": "public.pesquisa; review_for_edital em dry-run (não auto public.edital) → vw_noticias_front / vw_pesquisas_front",
+      "status": "pronta_para_apply",
+      "status_reason": "Separado de darpa_news. Chamadas abertas (solicitation/BAA/RFI/RFP) → review_for_edital no dry-run; relatórios técnicos sem chamada → public.pesquisa.",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": 0,
+        "would_upsert": null,
+        "apply_executed": false
+      },
+      "notes": "",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "media",
+      "recommended_action": "candidato_apply"
     },
     {
       "source_id": "darpa_programs_research",
       "name": "DARPA Research Programs",
       "module": "noticias_pesquisas",
       "source_type": "pesquisa",
-      "pipeline_script": "scripts/crawl_news_research_sources.py; scripts/news_research/build_darpa_programs_research_subset_valido_v2.py",
+      "pipeline_script": "scripts/crawl_news_research_sources.py; scripts/build_*_payloads.py",
       "config_file": "config/news_research_sources.json",
-      "artifacts_dir": "audit_reports_news_research/darpa_programs_research_subset_valido",
-      "destination": "public.pesquisa → vw_pesquisas_front",
-      "status": "aplicada_staging",
-      "status_reason": "Apply staging: 25 programas; tipos programa_pesquisa/programa_estrategico.",
+      "artifacts_dir": "audit_reports_news_research_loader/ (darpa_programs_research)",
+      "destination": "public.pesquisa → vw_noticias_front / vw_pesquisas_front",
+      "status": "dryrun_ok",
+      "status_reason": "Catálogo de programas via sitemap (/research/programs/{slug}); hub HTML é SPA; tipo_pesquisa=programa_pesquisa; janela 24m por lastmod; enrich og:description.",
       "last_known_result": {
-        "standardized": 25,
-        "validos": 25,
-        "errors_count": 0,
-        "would_upsert": 25,
-        "would_upsert_pesquisa": 25,
-        "apply_executed": true
-      },
-      "notes": "Frente militar consolidado; SQL FIX_DARPA_PROGRAMS_RESEARCH_TYPES.sql se necessário"
-    },
-    {
-      "source_id": "darpa_opportunities_research",
-      "name": "DARPA R&D Opportunities",
-      "module": "noticias_pesquisas",
-      "source_type": "review_radar",
-      "pipeline_script": "scripts/crawl_news_research_sources.py; scripts/news_research/run_darpa_strategic_dryrun.py",
-      "config_file": "config/news_research_sources.json",
-      "artifacts_dir": "audit_reports_news_research/darpa_strategic_dryrun/review_candidates.json",
-      "destination": "review_for_edital / Radar (não public.edital automático)",
-      "status": "pronta_para_apply",
-      "status_reason": "RSS opportunities.xml; links canônicos por âncora; sempre review_for_edital no roteador.",
-      "last_known_result": {
-        "standardized": 0,
+        "standardized": null,
         "validos": null,
         "errors_count": 0,
-        "review_candidates": 9,
         "would_upsert": null,
         "apply_executed": false
       },
-      "notes": "Não gerar standardized para edital sem revisão humana"
+      "notes": "",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "iaea_news_publications",
@@ -518,7 +581,10 @@
         "would_upsert": null,
         "apply_executed": false
       },
-      "notes": ""
+      "notes": "",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "media",
+      "recommended_action": "candidato_apply"
     },
     {
       "source_id": "eurekalert_science_filtered",
@@ -538,7 +604,10 @@
         "would_upsert": null,
         "apply_executed": false
       },
-      "notes": ""
+      "notes": "",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "defesanet",
@@ -558,7 +627,10 @@
         "would_upsert": null,
         "apply_executed": false
       },
-      "notes": ""
+      "notes": "",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "media",
+      "recommended_action": "candidato_apply"
     },
     {
       "source_id": "brisa_news",
@@ -578,7 +650,10 @@
         "would_upsert": null,
         "apply_executed": false
       },
-      "notes": ""
+      "notes": "",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "brisa_artigos",
@@ -598,7 +673,10 @@
         "would_upsert": null,
         "apply_executed": false
       },
-      "notes": ""
+      "notes": "",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "exercito_brasileiro",
@@ -618,7 +696,10 @@
         "would_upsert": null,
         "apply_executed": false
       },
-      "notes": ""
+      "notes": "",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "media",
+      "recommended_action": "candidato_apply"
     },
     {
       "source_id": "softex_noticias",
@@ -638,7 +719,10 @@
         "would_upsert": null,
         "apply_executed": false
       },
-      "notes": ""
+      "notes": "",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "media",
+      "recommended_action": "candidato_apply"
     },
     {
       "source_id": "ita_projetos",
@@ -658,7 +742,10 @@
         "would_upsert": null,
         "apply_executed": false
       },
-      "notes": ""
+      "notes": "",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "ita_lab_guerra_eletronica",
@@ -678,7 +765,10 @@
         "would_upsert": null,
         "apply_executed": false
       },
-      "notes": ""
+      "notes": "",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "capes_noticias",
@@ -698,170 +788,424 @@
         "would_upsert": null,
         "apply_executed": false
       },
-      "notes": ""
+      "notes": "",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "media",
+      "recommended_action": "candidato_apply"
+    },
+    {
+      "source_id": "f35_news",
+      "name": "F-35 News & Features",
+      "module": "noticias_pesquisas",
+      "source_type": "noticia",
+      "pipeline_script": "scripts/crawl_news_research_sources.py; scripts/build_*_payloads.py",
+      "config_file": "config/news_research_sources.json",
+      "artifacts_dir": "audit_reports_news_research_loader/ (f35_news)",
+      "destination": "public.noticia → vw_noticias_front / vw_pesquisas_front",
+      "status": "dryrun_ok",
+      "status_reason": "Piloto Notícias Estratégicas internacional — feed JSON AEM (hub SPA Algolia); News/Feature/3rd Party Article; resumo Description do feed sem corpo integral; janela 12m; robots f35.com sem Disallow em ",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": 0,
+        "would_upsert": null,
+        "apply_executed": false
+      },
+      "notes": "",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
+    },
+    {
+      "source_id": "lockheed_martin_news",
+      "name": "Lockheed Martin Newsroom",
+      "module": "noticias_pesquisas",
+      "source_type": "noticia",
+      "pipeline_script": "scripts/crawl_news_research_sources.py; scripts/build_*_payloads.py",
+      "config_file": "config/news_research_sources.json",
+      "artifacts_dir": "audit_reports_news_research_loader/ (lockheed_martin_news)",
+      "destination": "public.noticia → vw_noticias_front / vw_pesquisas_front",
+      "status": "dryrun_ok",
+      "status_reason": "Newsroom LM — feed JSON AEM (2574 itens); filtro forte relevância técnica; capabilities/suppliers fora; Supplier/CSR/awards → review; max 10; lote controlado (corporativo); sem apply até subset.",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": 0,
+        "would_upsert": null,
+        "apply_executed": false
+      },
+      "notes": "",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "mcti_noticias",
       "name": "MCTI Notícias",
       "module": "noticias_pesquisas",
       "source_type": "noticia",
-      "pipeline_script": "scripts/crawl_news_research_sources.py; scripts/news_research/run_mcti_noticias_dryrun.py",
+      "pipeline_script": "scripts/crawl_news_research_sources.py; scripts/build_*_payloads.py",
       "config_file": "config/news_research_sources.json",
-      "artifacts_dir": "audit_reports_news_research/mcti_noticias_dryrun",
-      "destination": "public.noticia → vw_noticias_front",
-      "status": "pronta_para_apply",
-      "status_reason": "Notícias Estratégicas BR — gov.br/Plone MCTI; sem RSS (404); listagem HTML; filtro forte CT&I; separado de MCTI Fomento/Radar; possivel_edital em extras sem roteamento automático.",
+      "artifacts_dir": "audit_reports_news_research_loader/ (mcti_noticias)",
+      "destination": "public.noticia → vw_noticias_front / vw_pesquisas_front",
+      "status": "dryrun_ok",
+      "status_reason": "Notícias Estratégicas BR — gov.br/Plone MCTI; sem RSS (404); listagem HTML hub+ano; filtro forte CT&I (descarte admin, review ambíguo); separado de MCTI Fomento/Radar; possivel_edital em extras sem ro",
       "last_known_result": {
-        "standardized": 22,
-        "validos": 7,
+        "standardized": null,
+        "validos": null,
         "errors_count": 0,
         "would_upsert": null,
         "apply_executed": false
       },
-      "notes": "Dry-run 2026-05-18: 30 raw, 2 review, 6 descartados_ruido; enrich page_enrich_max=10."
+      "notes": "",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "war_gov_news",
       "name": "U.S. Department of Defense / War.gov News",
       "module": "noticias_pesquisas",
       "source_type": "noticia",
-      "pipeline_script": "scripts/crawl_news_research_sources.py; scripts/news_research/run_war_gov_news_dryrun.py",
+      "pipeline_script": "scripts/crawl_news_research_sources.py; scripts/build_*_payloads.py",
       "config_file": "config/news_research_sources.json",
-      "artifacts_dir": "audit_reports_news_research/war_gov_news_subset_top20",
-      "destination": "public.noticia → vw_noticias_front",
-      "status": "aplicada_staging",
-      "status_reason": "Apply staging: 20 notícias (subset top20).",
+      "artifacts_dir": "audit_reports_news_research_loader/ (war_gov_news)",
+      "destination": "public.noticia → vw_noticias_front / vw_pesquisas_front",
+      "status": "dryrun_ok",
+      "status_reason": "Fonte oficial governamental EUA (war_gov_news); RSS ArticleCS News Stories; hub war.gov/news pode 403; filtro forte defesa/tecnologia; dry-run war_gov_news_dryrun/; sem apply.",
       "last_known_result": {
-        "standardized": 20,
-        "validos": 20,
+        "standardized": null,
+        "validos": null,
         "errors_count": 0,
-        "would_upsert": 20,
-        "would_upsert_noticia": 20,
-        "apply_executed": true
+        "would_upsert": null,
+        "apply_executed": false
       },
-      "notes": "Frente militar consolidado; fonte oficial DoD — não jornalismo independente"
+      "notes": "",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "nato_news",
       "name": "NATO News",
       "module": "noticias_pesquisas",
       "source_type": "noticia",
-      "pipeline_script": "scripts/crawl_news_research_sources.py; scripts/news_research/run_nato_news_dryrun.py",
+      "pipeline_script": "scripts/crawl_news_research_sources.py; scripts/build_*_payloads.py",
       "config_file": "config/news_research_sources.json",
-      "artifacts_dir": "audit_reports_news_research/nato_news_subset_top20",
-      "destination": "public.noticia → vw_noticias_front",
-      "status": "aplicada_staging",
-      "status_reason": "Apply staging: 20 notícias (subset top20).",
+      "artifacts_dir": "audit_reports_news_research_loader/ (nato_news)",
+      "destination": "public.noticia → vw_noticias_front / vw_pesquisas_front",
+      "status": "dryrun_ok",
+      "status_reason": "NATO News oficial (nato_news); hub AEM SPA + tag content-type/news; sem RSS; listagem sitemap /articles/news/YYYY/MM/DD/slug; enrich .model.json; dry-run nato_news_dryrun/; sem apply.",
       "last_known_result": {
-        "standardized": 20,
-        "validos": 20,
+        "standardized": null,
+        "validos": null,
         "errors_count": 0,
-        "would_upsert": 20,
-        "would_upsert_noticia": 20,
-        "apply_executed": true
+        "would_upsert": null,
+        "apply_executed": false
       },
-      "notes": "Frente militar consolidado; fonte oficial OTAN"
+      "notes": "",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "afrl_news",
       "name": "AFRL News",
       "module": "noticias_pesquisas",
       "source_type": "noticia",
-      "pipeline_script": "scripts/crawl_news_research_sources.py; scripts/news_research/run_afrl_strategic_dryrun.py",
+      "pipeline_script": "scripts/crawl_news_research_sources.py; scripts/build_*_payloads.py",
       "config_file": "config/news_research_sources.json",
-      "artifacts_dir": "audit_reports_news_research/afrl_news_subset_valido",
-      "destination": "public.noticia → vw_noticias_front",
-      "status": "aplicada_staging",
-      "status_reason": "Apply staging: 12 notícias (subset válido 12m).",
+      "artifacts_dir": "audit_reports_news_research_loader/ (afrl_news)",
+      "destination": "public.noticia → vw_noticias_front / vw_pesquisas_front",
+      "status": "dryrun_ok",
+      "status_reason": "AFRL News (afrl_news); hub /News/ 403 com bot UA — listagem HTML + paginação ?Page=N; sem RSS AFRL; dry-run afrl_strategic_dryrun/; SBIR/solicitation → possivel_edital em extras; sem apply.",
       "last_known_result": {
-        "standardized": 12,
-        "validos": 12,
+        "standardized": null,
+        "validos": null,
         "errors_count": 0,
-        "would_upsert": 12,
-        "would_upsert_noticia": 12,
-        "apply_executed": true
+        "would_upsert": null,
+        "apply_executed": false
       },
-      "notes": "Frente militar consolidado; Wayback quando hub 403"
+      "notes": "",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "afrl_air_warfare_research",
       "name": "AFRL Air Warfare Directorate (RA)",
       "module": "noticias_pesquisas",
       "source_type": "pesquisa",
-      "pipeline_script": "scripts/crawl_news_research_sources.py; scripts/news_research/run_afrl_strategic_dryrun.py",
+      "pipeline_script": "scripts/crawl_news_research_sources.py; scripts/build_*_payloads.py",
       "config_file": "config/news_research_sources.json",
-      "artifacts_dir": "audit_reports_news_research/afrl_strategic_dryrun",
-      "destination": "public.pesquisa → vw_pesquisas_front",
-      "status": "latente",
-      "status_reason": "Registro institucional RA + extras.highlights; sem data_publicacao.",
+      "artifacts_dir": "audit_reports_news_research_loader/ (afrl_air_warfare_research)",
+      "destination": "public.pesquisa → vw_noticias_front / vw_pesquisas_front",
+      "status": "dryrun_ok",
+      "status_reason": "1 registro pesquisa institucional + extras.highlights (cards RA); highlights com data → afrl_mission_highlights.",
       "last_known_result": {
-        "standardized": 1,
-        "validos": 0,
+        "standardized": null,
+        "validos": null,
         "errors_count": 0,
         "would_upsert": null,
         "apply_executed": false
       },
-      "notes": "Dry-run 2026-05-20: ~45 highlights em extras; fetch live /RA/ quando rede permitir."
+      "notes": "",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "afrl_space_warfare_research",
       "name": "AFRL Space Warfare Directorate (RJ)",
       "module": "noticias_pesquisas",
       "source_type": "pesquisa",
-      "pipeline_script": "scripts/crawl_news_research_sources.py; scripts/news_research/run_afrl_strategic_dryrun.py",
+      "pipeline_script": "scripts/crawl_news_research_sources.py; scripts/build_*_payloads.py",
       "config_file": "config/news_research_sources.json",
-      "artifacts_dir": "audit_reports_news_research/afrl_strategic_dryrun",
-      "destination": "public.pesquisa → vw_pesquisas_front",
-      "status": "latente",
-      "status_reason": "Registro institucional RJ + extras.highlights.",
+      "artifacts_dir": "audit_reports_news_research_loader/ (afrl_space_warfare_research)",
+      "destination": "public.pesquisa → vw_noticias_front / vw_pesquisas_front",
+      "status": "dryrun_ok",
+      "status_reason": "Space Warfare Directorate (RJ); catálogo institucional + highlights em extras.",
       "last_known_result": {
-        "standardized": 1,
-        "validos": 0,
+        "standardized": null,
+        "validos": null,
         "errors_count": 0,
         "would_upsert": null,
         "apply_executed": false
       },
-      "notes": "Dry-run 2026-05-20: fixture RJ; validar highlights live."
+      "notes": "",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "afrl_technology_transition",
       "name": "AFRL Technology Transition Office (RR)",
       "module": "noticias_pesquisas",
       "source_type": "pesquisa",
-      "pipeline_script": "scripts/crawl_news_research_sources.py; scripts/news_research/run_afrl_strategic_dryrun.py",
+      "pipeline_script": "scripts/crawl_news_research_sources.py; scripts/build_*_payloads.py",
       "config_file": "config/news_research_sources.json",
-      "artifacts_dir": "audit_reports_news_research/afrl_strategic_dryrun",
-      "destination": "public.pesquisa → vw_pesquisas_front",
-      "status": "latente",
-      "status_reason": "portal_estrategico RR; possivel_edital se SBIR/AFWERX.",
+      "artifacts_dir": "audit_reports_news_research_loader/ (afrl_technology_transition)",
+      "destination": "public.pesquisa → vw_noticias_front / vw_pesquisas_front",
+      "status": "dryrun_ok",
+      "status_reason": "Technology Transition Office (RR); portal_estrategico; possivel_edital se SBIR/AFWERX/SpaceWERX.",
       "last_known_result": {
-        "standardized": 1,
-        "validos": 0,
+        "standardized": null,
+        "validos": null,
         "errors_count": 0,
         "would_upsert": null,
         "apply_executed": false
       },
-      "notes": "Dry-run 2026-05-20: extras.highlights + flag oportunidade quando aplicável."
+      "notes": "",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "afrl_mission_highlights",
       "name": "AFRL Mission Organization Highlights",
       "module": "noticias_pesquisas",
       "source_type": "noticia",
-      "pipeline_script": "scripts/crawl_news_research_sources.py; scripts/news_research/run_afrl_strategic_dryrun.py",
+      "pipeline_script": "scripts/crawl_news_research_sources.py; scripts/build_*_payloads.py",
       "config_file": "config/news_research_sources.json",
-      "artifacts_dir": "audit_reports_news_research/afrl_strategic_dryrun",
-      "destination": "public.noticia → vw_noticias_front",
-      "status": "latente",
-      "status_reason": "Highlights RA/RJ/RR com data_publicacao e filtro técnico; janela 12m em produção.",
+      "artifacts_dir": "audit_reports_news_research_loader/ (afrl_mission_highlights)",
+      "destination": "public.noticia → vw_noticias_front / vw_pesquisas_front",
+      "status": "dryrun_ok",
+      "status_reason": "Highlights RA/RJ/RR com data → noticia (fonte_recurso=afrl_mission_highlights); sem data só em extras da diretoria; oportunidades → review_for_edital.",
       "last_known_result": {
-        "standardized": 2,
-        "validos": 2,
+        "standardized": null,
+        "validos": null,
         "errors_count": 0,
         "would_upsert": null,
         "apply_executed": false
       },
-      "notes": "Dry-run 2026-05-20: 2 válidos (janela 24m no script); maioria dos cards fora de 12m ou sem data parseável."
+      "notes": "",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
+    },
+    {
+      "source_id": "afmc_news",
+      "name": "AFMC News",
+      "module": "noticias_pesquisas",
+      "source_type": "noticia",
+      "pipeline_script": "scripts/crawl_news_research_sources.py; scripts/build_*_payloads.py",
+      "config_file": "config/news_research_sources.json",
+      "artifacts_dir": "audit_reports_news_research_loader/ (afmc_news)",
+      "destination": "public.noticia → vw_noticias_front / vw_pesquisas_front",
+      "status": "dryrun_ok",
+      "status_reason": "AFMC logística/aquisição/modernização; hub 403 bot — ArticleCS listing + Wayback; dry-run military_research_expansion_dryrun/; sem apply.",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": 0,
+        "would_upsert": null,
+        "apply_executed": false
+      },
+      "notes": "",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
+    },
+    {
+      "source_id": "afnwc_news",
+      "name": "AFNWC News",
+      "module": "noticias_pesquisas",
+      "source_type": "noticia",
+      "pipeline_script": "scripts/crawl_news_research_sources.py; scripts/build_*_payloads.py",
+      "config_file": "config/news_research_sources.json",
+      "artifacts_dir": "audit_reports_news_research_loader/ (afnwc_news)",
+      "destination": "public.noticia → vw_noticias_front / vw_pesquisas_front",
+      "status": "dryrun_ok",
+      "status_reason": "Nuclear enterprise / weapon systems news; mesmo padrão DoD Article-Display; sem apply.",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": 0,
+        "would_upsert": null,
+        "apply_executed": false
+      },
+      "notes": "",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
+    },
+    {
+      "source_id": "space_force_news",
+      "name": "U.S. Space Force News",
+      "module": "noticias_pesquisas",
+      "source_type": "noticia",
+      "pipeline_script": "scripts/crawl_news_research_sources.py; scripts/build_*_payloads.py",
+      "config_file": "config/news_research_sources.json",
+      "artifacts_dir": "audit_reports_news_research_loader/ (space_force_news)",
+      "destination": "public.noticia → vw_noticias_front / vw_pesquisas_front",
+      "status": "dryrun_ok",
+      "status_reason": "Notícias Space Force; hub 403; Wayback fallback; sem apply.",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": 0,
+        "would_upsert": null,
+        "apply_executed": false
+      },
+      "notes": "",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
+    },
+    {
+      "source_id": "arl_news",
+      "name": "Army Research Laboratory Media Center",
+      "module": "noticias_pesquisas",
+      "source_type": "noticia",
+      "pipeline_script": "scripts/crawl_news_research_sources.py; scripts/build_*_payloads.py",
+      "config_file": "config/news_research_sources.json",
+      "artifacts_dir": "audit_reports_news_research_loader/ (arl_news)",
+      "destination": "public.noticia → vw_noticias_front / vw_pesquisas_front",
+      "status": "dryrun_ok",
+      "status_reason": "ARL news via media-center + /news/ (HTTP 200); sem ArticleCS; sem apply.",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": 0,
+        "would_upsert": null,
+        "apply_executed": false
+      },
+      "notes": "",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
+    },
+    {
+      "source_id": "afrl_technology_areas",
+      "name": "AFRL Technology Areas (afresearchlab.com)",
+      "module": "noticias_pesquisas",
+      "source_type": "pesquisa",
+      "pipeline_script": "scripts/crawl_news_research_sources.py; scripts/build_*_payloads.py",
+      "config_file": "config/news_research_sources.json",
+      "artifacts_dir": "audit_reports_news_research_loader/ (afrl_technology_areas)",
+      "destination": "public.pesquisa → vw_noticias_front / vw_pesquisas_front",
+      "status": "dryrun_ok",
+      "status_reason": "Prioridade probe: HTTP 200 direto; enrich og:description por área; tipo_pesquisa=area_tecnologica; dry-run military_research_expansion_dryrun; sem apply.",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": 0,
+        "would_upsert": null,
+        "apply_executed": false
+      },
+      "notes": "",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
+    },
+    {
+      "source_id": "afnwc_innovation",
+      "name": "AFNWC Innovation",
+      "module": "noticias_pesquisas",
+      "source_type": "pesquisa",
+      "pipeline_script": "scripts/crawl_news_research_sources.py; scripts/build_*_payloads.py",
+      "config_file": "config/news_research_sources.json",
+      "artifacts_dir": "audit_reports_news_research_loader/ (afnwc_innovation)",
+      "destination": "public.pesquisa → vw_noticias_front / vw_pesquisas_front",
+      "status": "dryrun_ok",
+      "status_reason": "Portal inovação AFNWC; hub + cards; 403 live — Wayback; pesquisa_estrategica; sem apply.",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": 0,
+        "would_upsert": null,
+        "apply_executed": false
+      },
+      "notes": "",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
+    },
+    {
+      "source_id": "afnwc_weapon_systems",
+      "name": "AFNWC Weapon Systems",
+      "module": "noticias_pesquisas",
+      "source_type": "pesquisa",
+      "pipeline_script": "scripts/crawl_news_research_sources.py; scripts/build_*_payloads.py",
+      "config_file": "config/news_research_sources.json",
+      "artifacts_dir": "audit_reports_news_research_loader/ (afnwc_weapon_systems)",
+      "destination": "public.pesquisa → vw_noticias_front / vw_pesquisas_front",
+      "status": "dryrun_ok",
+      "status_reason": "Sistemas estratégicos AFNWC; tipo_recurso=sistema_estrategico; hub pode 403 — latente parcial; sem apply.",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": 0,
+        "would_upsert": null,
+        "apply_executed": false
+      },
+      "notes": "",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
+    },
+    {
+      "source_id": "arl_resources",
+      "name": "ARL Resources",
+      "module": "noticias_pesquisas",
+      "source_type": "pesquisa",
+      "pipeline_script": "scripts/crawl_news_research_sources.py; scripts/build_*_payloads.py",
+      "config_file": "config/news_research_sources.json",
+      "artifacts_dir": "audit_reports_news_research_loader/ (arl_resources)",
+      "destination": "public.pesquisa → vw_noticias_front / vw_pesquisas_front",
+      "status": "dryrun_ok",
+      "status_reason": "Prioridade probe HTTP 200; BAA/opportunity → review; PDF/técnico → documento; estático → institucional_latente em extras; sem apply.",
+      "last_known_result": {
+        "standardized": null,
+        "validos": null,
+        "errors_count": 0,
+        "would_upsert": null,
+        "apply_executed": false
+      },
+      "notes": "",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "abdi",
@@ -881,7 +1225,10 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready"
+      "notes": "Loader: scripts/load_ready_sources.py; ready",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "afwerx",
@@ -901,7 +1248,19 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready"
+      "notes": "Loader: scripts/load_ready_sources.py; ready",
+      "noise_risk": "baixo",
+      "audit_noise": {
+        "total": 8,
+        "ruido_provavel": 0,
+        "pct_ruido": 0.0
+      },
+      "audit_actionability": {
+        "desconhecido": 8,
+        "acionaveis": 0
+      },
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "aneel",
@@ -921,7 +1280,26 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready"
+      "notes": "Loader: scripts/load_ready_sources.py; ready",
+      "noise_risk": "baixo",
+      "audit_noise": {
+        "total": 27,
+        "ruido_provavel": 0,
+        "pct_ruido": 0.0
+      },
+      "audit_actionability": {
+        "desconhecido": 23,
+        "evento": 1,
+        "oportunidade_sem_prazo": 3,
+        "acionaveis": 3
+      },
+      "audit_validity": {
+        "total": 27,
+        "sem_validade_util": 3,
+        "display": "ANEEL"
+      },
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "anp",
@@ -941,7 +1319,15 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready"
+      "notes": "Loader: scripts/load_ready_sources.py; ready",
+      "noise_risk": "desconhecido",
+      "audit_actionability": {
+        "desconhecido": 1,
+        "oportunidade_principal": 1,
+        "acionaveis": 1
+      },
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "bndes",
@@ -961,7 +1347,26 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready"
+      "notes": "Loader: scripts/load_ready_sources.py; ready",
+      "noise_risk": "baixo",
+      "audit_noise": {
+        "total": 38,
+        "ruido_provavel": 0,
+        "pct_ruido": 0.0
+      },
+      "audit_actionability": {
+        "oportunidade_sem_prazo": 20,
+        "resultado": 4,
+        "desconhecido": 14,
+        "acionaveis": 20
+      },
+      "audit_validity": {
+        "total": 38,
+        "sem_validade_util": 20,
+        "display": "BNDES"
+      },
+      "backend_10_1_priority": "media",
+      "recommended_action": "corrigir_crawler"
     },
     {
       "source_id": "brde",
@@ -981,7 +1386,10 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready"
+      "notes": "Loader: scripts/load_ready_sources.py; ready",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "caixa",
@@ -1001,7 +1409,14 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready"
+      "notes": "Loader: scripts/load_ready_sources.py; ready",
+      "noise_risk": "desconhecido",
+      "audit_actionability": {
+        "desconhecido": 2,
+        "acionaveis": 0
+      },
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "capes",
@@ -1021,7 +1436,14 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready"
+      "notes": "Loader: scripts/load_ready_sources.py; ready",
+      "noise_risk": "desconhecido",
+      "audit_actionability": {
+        "portal_util": 1,
+        "acionaveis": 0
+      },
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "cbpf",
@@ -1041,7 +1463,19 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready"
+      "notes": "Loader: scripts/load_ready_sources.py; ready",
+      "noise_risk": "desconhecido",
+      "audit_actionability": {
+        "oportunidade_sem_prazo": 1,
+        "acionaveis": 1
+      },
+      "audit_validity": {
+        "total": 1,
+        "sem_validade_util": 1,
+        "display": "CBPF"
+      },
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "china_caea",
@@ -1061,7 +1495,10 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready"
+      "notes": "Loader: scripts/load_ready_sources.py; ready",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "china_cas",
@@ -1081,7 +1518,19 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready"
+      "notes": "Loader: scripts/load_ready_sources.py; ready",
+      "noise_risk": "baixo",
+      "audit_noise": {
+        "total": 31,
+        "ruido_provavel": 0,
+        "pct_ruido": 0.0
+      },
+      "audit_actionability": {
+        "desconhecido": 31,
+        "acionaveis": 0
+      },
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "china_cgn",
@@ -1101,7 +1550,10 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready"
+      "notes": "Loader: scripts/load_ready_sources.py; ready",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "china_mod_public",
@@ -1121,7 +1573,10 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready"
+      "notes": "Loader: scripts/load_ready_sources.py; ready",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "china_mofcom_tendering",
@@ -1141,7 +1596,19 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready"
+      "notes": "Loader: scripts/load_ready_sources.py; ready",
+      "noise_risk": "baixo",
+      "audit_noise": {
+        "total": 131,
+        "ruido_provavel": 0,
+        "pct_ruido": 0.0
+      },
+      "audit_actionability": {
+        "desconhecido": 131,
+        "acionaveis": 0
+      },
+      "backend_10_1_priority": "media",
+      "recommended_action": "corrigir_classificador"
     },
     {
       "source_id": "china_most",
@@ -1161,7 +1628,19 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready"
+      "notes": "Loader: scripts/load_ready_sources.py; ready",
+      "noise_risk": "baixo",
+      "audit_noise": {
+        "total": 16,
+        "ruido_provavel": 0,
+        "pct_ruido": 0.0
+      },
+      "audit_actionability": {
+        "desconhecido": 16,
+        "acionaveis": 0
+      },
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "china_tendering_bidding",
@@ -1181,7 +1660,19 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready"
+      "notes": "Loader: scripts/load_ready_sources.py; ready",
+      "noise_risk": "baixo",
+      "audit_noise": {
+        "total": 6,
+        "ruido_provavel": 0,
+        "pct_ruido": 0.0
+      },
+      "audit_actionability": {
+        "desconhecido": 6,
+        "acionaveis": 0
+      },
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "cnen",
@@ -1201,7 +1692,15 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready"
+      "notes": "Loader: scripts/load_ready_sources.py; ready",
+      "noise_risk": "desconhecido",
+      "audit_validity": {
+        "total": 1,
+        "sem_validade_util": 1,
+        "display": "CNEN"
+      },
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "cnpq",
@@ -1221,7 +1720,20 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready"
+      "notes": "Loader: scripts/load_ready_sources.py; ready",
+      "noise_risk": "baixo",
+      "audit_noise": {
+        "total": 14,
+        "ruido_provavel": 0,
+        "pct_ruido": 0.0
+      },
+      "audit_actionability": {
+        "oportunidade_principal": 13,
+        "portal_util": 1,
+        "acionaveis": 13
+      },
+      "backend_10_1_priority": "alta",
+      "recommended_action": "manter"
     },
     {
       "source_id": "compras_defesa",
@@ -1241,7 +1753,10 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready"
+      "notes": "Loader: scripts/load_ready_sources.py; ready",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "confap",
@@ -1261,7 +1776,25 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready"
+      "notes": "Loader: scripts/load_ready_sources.py; ready",
+      "noise_risk": "baixo",
+      "audit_noise": {
+        "total": 5,
+        "ruido_provavel": 0,
+        "pct_ruido": 0.0
+      },
+      "audit_actionability": {
+        "oportunidade_principal": 3,
+        "oportunidade_sem_prazo": 2,
+        "acionaveis": 5
+      },
+      "audit_validity": {
+        "total": 5,
+        "sem_validade_util": 2,
+        "display": "CONFAP"
+      },
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "darpa_opportunities",
@@ -1281,7 +1814,19 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready"
+      "notes": "Loader: scripts/load_ready_sources.py; ready",
+      "noise_risk": "baixo",
+      "audit_noise": {
+        "total": 15,
+        "ruido_provavel": 0,
+        "pct_ruido": 0.0
+      },
+      "audit_actionability": {
+        "desconhecido": 15,
+        "acionaveis": 0
+      },
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "defesa",
@@ -1301,7 +1846,20 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready"
+      "notes": "Loader: scripts/load_ready_sources.py; ready",
+      "noise_risk": "baixo",
+      "audit_noise": {
+        "total": 10,
+        "ruido_provavel": 0,
+        "pct_ruido": 0.0
+      },
+      "audit_actionability": {
+        "desconhecido": 9,
+        "portal_util": 1,
+        "acionaveis": 0
+      },
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "diu",
@@ -1321,7 +1879,19 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready"
+      "notes": "Loader: scripts/load_ready_sources.py; ready",
+      "noise_risk": "baixo",
+      "audit_noise": {
+        "total": 9,
+        "ruido_provavel": 0,
+        "pct_ruido": 0.0
+      },
+      "audit_actionability": {
+        "desconhecido": 9,
+        "acionaveis": 0
+      },
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "dod_sbir_sttr",
@@ -1341,7 +1911,21 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready"
+      "notes": "Loader: scripts/load_ready_sources.py; ready",
+      "noise_risk": "medio",
+      "audit_noise": {
+        "total": 15,
+        "ruido_provavel": 2,
+        "pct_ruido": 13.3
+      },
+      "audit_actionability": {
+        "desconhecido": 12,
+        "portal_generico": 2,
+        "portal_util": 1,
+        "acionaveis": 0
+      },
+      "backend_10_1_priority": "media",
+      "recommended_action": "corrigir_classificador"
     },
     {
       "source_id": "eletronuclear",
@@ -1361,7 +1945,10 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready"
+      "notes": "Loader: scripts/load_ready_sources.py; ready",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "embrapii",
@@ -1381,7 +1968,27 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready"
+      "notes": "Loader: scripts/load_ready_sources.py; ready",
+      "noise_risk": "baixo",
+      "audit_noise": {
+        "total": 21,
+        "ruido_provavel": 0,
+        "pct_ruido": 0.0
+      },
+      "audit_actionability": {
+        "oportunidade_principal": 8,
+        "resultado": 10,
+        "retificacao": 1,
+        "oportunidade_sem_prazo": 2,
+        "acionaveis": 10
+      },
+      "audit_validity": {
+        "total": 21,
+        "sem_validade_util": 2,
+        "display": "EMBRAPII"
+      },
+      "backend_10_1_priority": "media",
+      "recommended_action": "corrigir_classificador"
     },
     {
       "source_id": "european_defence_fund",
@@ -1401,7 +2008,21 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready"
+      "notes": "Loader: scripts/load_ready_sources.py; ready",
+      "noise_risk": "medio",
+      "audit_noise": {
+        "total": 18,
+        "ruido_provavel": 1,
+        "pct_ruido": 5.6
+      },
+      "audit_actionability": {
+        "desconhecido": 16,
+        "noticia": 1,
+        "evento": 1,
+        "acionaveis": 0
+      },
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "fapemig",
@@ -1421,7 +2042,20 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready"
+      "notes": "Loader: scripts/load_ready_sources.py; ready",
+      "noise_risk": "baixo",
+      "audit_noise": {
+        "total": 7,
+        "ruido_provavel": 0,
+        "pct_ruido": 0.0
+      },
+      "audit_actionability": {
+        "desconhecido": 5,
+        "resultado": 2,
+        "acionaveis": 0
+      },
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "fapergs",
@@ -1441,7 +2075,27 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready"
+      "notes": "Loader: scripts/load_ready_sources.py; ready",
+      "noise_risk": "baixo",
+      "audit_noise": {
+        "total": 6,
+        "ruido_provavel": 0,
+        "pct_ruido": 0.0
+      },
+      "audit_actionability": {
+        "desconhecido": 2,
+        "oportunidade_principal": 2,
+        "oportunidade_sem_prazo": 1,
+        "resultado": 1,
+        "acionaveis": 3
+      },
+      "audit_validity": {
+        "total": 6,
+        "sem_validade_util": 1,
+        "display": "FAPERGS"
+      },
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "fapesc",
@@ -1461,7 +2115,19 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready"
+      "notes": "Loader: scripts/load_ready_sources.py; ready",
+      "noise_risk": "baixo",
+      "audit_noise": {
+        "total": 10,
+        "ruido_provavel": 0,
+        "pct_ruido": 0.0
+      },
+      "audit_actionability": {
+        "oportunidade_principal": 10,
+        "acionaveis": 10
+      },
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "fapesp",
@@ -1481,7 +2147,10 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready"
+      "notes": "Loader: scripts/load_ready_sources.py; ready",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "baixa",
+      "recommended_action": "manter"
     },
     {
       "source_id": "fappr",
@@ -1501,7 +2170,26 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready"
+      "notes": "Loader: scripts/load_ready_sources.py; ready",
+      "noise_risk": "baixo",
+      "audit_noise": {
+        "total": 88,
+        "ruido_provavel": 0,
+        "pct_ruido": 0.0
+      },
+      "audit_actionability": {
+        "desconhecido": 84,
+        "oportunidade_sem_prazo": 2,
+        "evento": 2,
+        "acionaveis": 2
+      },
+      "audit_validity": {
+        "total": 88,
+        "sem_validade_util": 2,
+        "display": "Fundação Araucária"
+      },
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "finep",
@@ -1521,7 +2209,10 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready"
+      "notes": "Loader: scripts/load_ready_sources.py; ready",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "baixa",
+      "recommended_action": "manter"
     },
     {
       "source_id": "fnde",
@@ -1541,7 +2232,14 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready"
+      "notes": "Loader: scripts/load_ready_sources.py; ready",
+      "noise_risk": "desconhecido",
+      "audit_actionability": {
+        "desconhecido": 1,
+        "acionaveis": 0
+      },
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "general_dynamics_suppliers",
@@ -1561,7 +2259,19 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready"
+      "notes": "Loader: scripts/load_ready_sources.py; ready",
+      "noise_risk": "baixo",
+      "audit_noise": {
+        "total": 10,
+        "ruido_provavel": 0,
+        "pct_ruido": 0.0
+      },
+      "audit_actionability": {
+        "desconhecido": 10,
+        "acionaveis": 0
+      },
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "grants_gov",
@@ -1581,7 +2291,26 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready"
+      "notes": "Loader: scripts/load_ready_sources.py; ready",
+      "noise_risk": "baixo",
+      "audit_noise": {
+        "total": 127,
+        "ruido_provavel": 0,
+        "pct_ruido": 0.0
+      },
+      "audit_actionability": {
+        "desconhecido": 119,
+        "oportunidade_principal": 3,
+        "oportunidade_sem_prazo": 5,
+        "acionaveis": 8
+      },
+      "audit_validity": {
+        "total": 127,
+        "sem_validade_util": 5,
+        "display": "Grants.gov"
+      },
+      "backend_10_1_priority": "media",
+      "recommended_action": "corrigir_classificador"
     },
     {
       "source_id": "impa",
@@ -1601,7 +2330,10 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready"
+      "notes": "Loader: scripts/load_ready_sources.py; ready",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "inb",
@@ -1621,7 +2353,10 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready"
+      "notes": "Loader: scripts/load_ready_sources.py; ready",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "ipen",
@@ -1641,7 +2376,14 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready"
+      "notes": "Loader: scripts/load_ready_sources.py; ready",
+      "noise_risk": "desconhecido",
+      "audit_actionability": {
+        "desconhecido": 14,
+        "acionaveis": 0
+      },
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "japan_aist",
@@ -1661,7 +2403,10 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready"
+      "notes": "Loader: scripts/load_ready_sources.py; ready",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "japan_atla",
@@ -1681,7 +2426,10 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready"
+      "notes": "Loader: scripts/load_ready_sources.py; ready",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "japan_ihi",
@@ -1701,7 +2449,10 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready"
+      "notes": "Loader: scripts/load_ready_sources.py; ready",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "japan_jetro_procurement",
@@ -1721,7 +2472,10 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready"
+      "notes": "Loader: scripts/load_ready_sources.py; ready",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "japan_jsps",
@@ -1741,7 +2495,10 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready"
+      "notes": "Loader: scripts/load_ready_sources.py; ready",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "japan_kakenhi",
@@ -1761,7 +2518,10 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready"
+      "notes": "Loader: scripts/load_ready_sources.py; ready",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "japan_kek",
@@ -1781,7 +2541,10 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready"
+      "notes": "Loader: scripts/load_ready_sources.py; ready",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "japan_mext",
@@ -1801,7 +2564,10 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready"
+      "notes": "Loader: scripts/load_ready_sources.py; ready",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "japan_mitsubishi_heavy",
@@ -1821,7 +2587,10 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready"
+      "notes": "Loader: scripts/load_ready_sources.py; ready",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "japan_mod",
@@ -1841,7 +2610,10 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready"
+      "notes": "Loader: scripts/load_ready_sources.py; ready",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "japan_nedo",
@@ -1861,7 +2633,10 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready"
+      "notes": "Loader: scripts/load_ready_sources.py; ready",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "japan_nims",
@@ -1881,7 +2656,10 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready"
+      "notes": "Loader: scripts/load_ready_sources.py; ready",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "japan_qst",
@@ -1901,7 +2679,15 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready"
+      "notes": "Loader: scripts/load_ready_sources.py; ready",
+      "noise_risk": "alto",
+      "audit_noise": {
+        "total": 5,
+        "ruido_provavel": 5,
+        "pct_ruido": 100.0
+      },
+      "backend_10_1_priority": "alta",
+      "recommended_action": "mover_modulo"
     },
     {
       "source_id": "japan_riken",
@@ -1921,7 +2707,10 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready"
+      "notes": "Loader: scripts/load_ready_sources.py; ready",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "lockheed_martin_suppliers",
@@ -1941,7 +2730,10 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready"
+      "notes": "Loader: scripts/load_ready_sources.py; ready",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "amazul",
@@ -1961,7 +2753,25 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes"
+      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes",
+      "noise_risk": "baixo",
+      "audit_noise": {
+        "total": 20,
+        "ruido_provavel": 0,
+        "pct_ruido": 0.0
+      },
+      "audit_actionability": {
+        "oportunidade_sem_prazo": 6,
+        "oportunidade_principal": 14,
+        "acionaveis": 20
+      },
+      "audit_validity": {
+        "total": 20,
+        "sem_validade_util": 6,
+        "display": "AMAZUL"
+      },
+      "backend_10_1_priority": "media",
+      "recommended_action": "manter"
     },
     {
       "source_id": "ambev",
@@ -1981,7 +2791,19 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes"
+      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes",
+      "noise_risk": "baixo",
+      "audit_noise": {
+        "total": 7,
+        "ruido_provavel": 0,
+        "pct_ruido": 0.0
+      },
+      "audit_actionability": {
+        "desconhecido": 7,
+        "acionaveis": 0
+      },
+      "backend_10_1_priority": "media",
+      "recommended_action": "candidato_apply"
     },
     {
       "source_id": "apex",
@@ -2001,7 +2823,15 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes"
+      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes",
+      "noise_risk": "desconhecido",
+      "audit_actionability": {
+        "desconhecido": 3,
+        "portal_util": 1,
+        "acionaveis": 0
+      },
+      "backend_10_1_priority": "media",
+      "recommended_action": "candidato_apply"
     },
     {
       "source_id": "badesul",
@@ -2021,7 +2851,26 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes"
+      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes",
+      "noise_risk": "baixo",
+      "audit_noise": {
+        "total": 7,
+        "ruido_provavel": 0,
+        "pct_ruido": 0.0
+      },
+      "audit_actionability": {
+        "desconhecido": 2,
+        "oportunidade_sem_prazo": 4,
+        "resultado": 1,
+        "acionaveis": 4
+      },
+      "audit_validity": {
+        "total": 7,
+        "sem_validade_util": 4,
+        "display": "BADESUL"
+      },
+      "backend_10_1_priority": "media",
+      "recommended_action": "candidato_apply"
     },
     {
       "source_id": "bae_systems_suppliers",
@@ -2041,7 +2890,14 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes"
+      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes",
+      "noise_risk": "desconhecido",
+      "audit_actionability": {
+        "desconhecido": 3,
+        "acionaveis": 0
+      },
+      "backend_10_1_priority": "media",
+      "recommended_action": "candidato_apply"
     },
     {
       "source_id": "banco_da_amazonia",
@@ -2061,7 +2917,28 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes"
+      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes",
+      "noise_risk": "baixo",
+      "audit_noise": {
+        "total": 30,
+        "ruido_provavel": 0,
+        "pct_ruido": 0.0
+      },
+      "audit_actionability": {
+        "retificacao": 1,
+        "desconhecido": 23,
+        "portal_util": 3,
+        "documento_auxiliar": 1,
+        "oportunidade_sem_prazo": 2,
+        "acionaveis": 2
+      },
+      "audit_validity": {
+        "total": 30,
+        "sem_validade_util": 2,
+        "display": "BASA"
+      },
+      "backend_10_1_priority": "media",
+      "recommended_action": "candidato_apply"
     },
     {
       "source_id": "bdmg",
@@ -2081,7 +2958,30 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes"
+      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes",
+      "noise_risk": "alto",
+      "audit_noise": {
+        "total": 38,
+        "ruido_provavel": 11,
+        "pct_ruido": 28.9
+      },
+      "audit_actionability": {
+        "portal_generico": 8,
+        "desconhecido": 15,
+        "portal_util": 3,
+        "resultado": 1,
+        "noticia": 3,
+        "oportunidade_sem_prazo": 7,
+        "documento_auxiliar": 1,
+        "acionaveis": 7
+      },
+      "audit_validity": {
+        "total": 38,
+        "sem_validade_util": 7,
+        "display": "BDMG"
+      },
+      "backend_10_1_priority": "alta",
+      "recommended_action": "corrigir_classificador"
     },
     {
       "source_id": "bnb",
@@ -2101,7 +3001,20 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes"
+      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes",
+      "noise_risk": "baixo",
+      "audit_noise": {
+        "total": 24,
+        "ruido_provavel": 0,
+        "pct_ruido": 0.0
+      },
+      "audit_actionability": {
+        "portal_util": 17,
+        "desconhecido": 7,
+        "acionaveis": 0
+      },
+      "backend_10_1_priority": "alta",
+      "recommended_action": "mover_modulo"
     },
     {
       "source_id": "china_nsfc",
@@ -2121,7 +3034,10 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes"
+      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "media",
+      "recommended_action": "corrigir_classificador"
     },
     {
       "source_id": "china_university_procurement",
@@ -2141,7 +3057,19 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes"
+      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes",
+      "noise_risk": "baixo",
+      "audit_noise": {
+        "total": 6,
+        "ruido_provavel": 0,
+        "pct_ruido": 0.0
+      },
+      "audit_actionability": {
+        "desconhecido": 6,
+        "acionaveis": 0
+      },
+      "backend_10_1_priority": "media",
+      "recommended_action": "candidato_apply"
     },
     {
       "source_id": "doe_arpae",
@@ -2161,7 +3089,25 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes"
+      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes",
+      "noise_risk": "baixo",
+      "audit_noise": {
+        "total": 14,
+        "ruido_provavel": 0,
+        "pct_ruido": 0.0
+      },
+      "audit_actionability": {
+        "oportunidade_sem_prazo": 11,
+        "desconhecido": 3,
+        "acionaveis": 11
+      },
+      "audit_validity": {
+        "total": 14,
+        "sem_validade_util": 11,
+        "display": "DOE_ARPAE"
+      },
+      "backend_10_1_priority": "media",
+      "recommended_action": "candidato_apply"
     },
     {
       "source_id": "eic",
@@ -2181,7 +3127,21 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes"
+      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes",
+      "noise_risk": "medio",
+      "audit_noise": {
+        "total": 14,
+        "ruido_provavel": 1,
+        "pct_ruido": 7.1
+      },
+      "audit_actionability": {
+        "portal_util": 8,
+        "desconhecido": 5,
+        "noticia": 1,
+        "acionaveis": 0
+      },
+      "backend_10_1_priority": "media",
+      "recommended_action": "candidato_apply"
     },
     {
       "source_id": "eit",
@@ -2201,7 +3161,20 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes"
+      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes",
+      "noise_risk": "baixo",
+      "audit_noise": {
+        "total": 16,
+        "ruido_provavel": 0,
+        "pct_ruido": 0.0
+      },
+      "audit_actionability": {
+        "desconhecido": 15,
+        "evento": 1,
+        "acionaveis": 0
+      },
+      "backend_10_1_priority": "media",
+      "recommended_action": "candidato_apply"
     },
     {
       "source_id": "erc",
@@ -2221,7 +3194,25 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes"
+      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes",
+      "noise_risk": "baixo",
+      "audit_noise": {
+        "total": 8,
+        "ruido_provavel": 0,
+        "pct_ruido": 0.0
+      },
+      "audit_actionability": {
+        "oportunidade_sem_prazo": 5,
+        "desconhecido": 3,
+        "acionaveis": 5
+      },
+      "audit_validity": {
+        "total": 8,
+        "sem_validade_util": 4,
+        "display": "ERC"
+      },
+      "backend_10_1_priority": "media",
+      "recommended_action": "candidato_apply"
     },
     {
       "source_id": "esa_osip",
@@ -2241,7 +3232,26 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes"
+      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes",
+      "noise_risk": "baixo",
+      "audit_noise": {
+        "total": 17,
+        "ruido_provavel": 0,
+        "pct_ruido": 0.0
+      },
+      "audit_actionability": {
+        "evento": 2,
+        "desconhecido": 14,
+        "oportunidade_sem_prazo": 1,
+        "acionaveis": 1
+      },
+      "audit_validity": {
+        "total": 17,
+        "sem_validade_util": 1,
+        "display": "ESA OSIP"
+      },
+      "backend_10_1_priority": "media",
+      "recommended_action": "candidato_apply"
     },
     {
       "source_id": "eureka_network",
@@ -2261,7 +3271,21 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes"
+      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes",
+      "noise_risk": "baixo",
+      "audit_noise": {
+        "total": 23,
+        "ruido_provavel": 0,
+        "pct_ruido": 0.0
+      },
+      "audit_actionability": {
+        "portal_util": 10,
+        "evento": 1,
+        "desconhecido": 12,
+        "acionaveis": 0
+      },
+      "backend_10_1_priority": "media",
+      "recommended_action": "mover_modulo"
     },
     {
       "source_id": "faperg",
@@ -2281,7 +3305,10 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes"
+      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "media",
+      "recommended_action": "candidato_apply"
     },
     {
       "source_id": "horizon_europe",
@@ -2301,7 +3328,19 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes"
+      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes",
+      "noise_risk": "baixo",
+      "audit_noise": {
+        "total": 25,
+        "ruido_provavel": 0,
+        "pct_ruido": 0.0
+      },
+      "audit_actionability": {
+        "desconhecido": 25,
+        "acionaveis": 0
+      },
+      "backend_10_1_priority": "media",
+      "recommended_action": "candidato_apply"
     },
     {
       "source_id": "iarpa",
@@ -2321,7 +3360,10 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes"
+      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "media",
+      "recommended_action": "candidato_apply"
     },
     {
       "source_id": "mapa",
@@ -2341,7 +3383,10 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes"
+      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "media",
+      "recommended_action": "candidato_apply"
     },
     {
       "source_id": "mma",
@@ -2361,7 +3406,10 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes"
+      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "media",
+      "recommended_action": "candidato_apply"
     },
     {
       "source_id": "nato_diana",
@@ -2381,7 +3429,10 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes"
+      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "media",
+      "recommended_action": "candidato_apply"
     },
     {
       "source_id": "nsf",
@@ -2401,7 +3452,10 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes"
+      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "media",
+      "recommended_action": "candidato_apply"
     },
     {
       "source_id": "nuclep",
@@ -2421,7 +3475,20 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes"
+      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes",
+      "noise_risk": "medio",
+      "audit_noise": {
+        "total": 20,
+        "ruido_provavel": 1,
+        "pct_ruido": 5.0
+      },
+      "audit_actionability": {
+        "desconhecido": 19,
+        "portal_generico": 1,
+        "acionaveis": 0
+      },
+      "backend_10_1_priority": "media",
+      "recommended_action": "corrigir_classificador"
     },
     {
       "source_id": "petrobras",
@@ -2441,7 +3508,15 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes"
+      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes",
+      "noise_risk": "desconhecido",
+      "audit_validity": {
+        "total": 4,
+        "sem_validade_util": 2,
+        "display": "Petrobras"
+      },
+      "backend_10_1_priority": "media",
+      "recommended_action": "candidato_apply"
     },
     {
       "source_id": "plataforma_industria",
@@ -2461,7 +3536,14 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes"
+      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes",
+      "noise_risk": "desconhecido",
+      "audit_actionability": {
+        "desconhecido": 1,
+        "acionaveis": 0
+      },
+      "backend_10_1_priority": "media",
+      "recommended_action": "candidato_apply"
     },
     {
       "source_id": "pncp",
@@ -2481,7 +3563,10 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes"
+      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "media",
+      "recommended_action": "candidato_apply"
     },
     {
       "source_id": "pncp_defesa",
@@ -2501,7 +3586,10 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes"
+      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "media",
+      "recommended_action": "candidato_apply"
     },
     {
       "source_id": "rheinmetall_suppliers",
@@ -2521,7 +3609,10 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes"
+      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "media",
+      "recommended_action": "candidato_apply"
     },
     {
       "source_id": "saude",
@@ -2541,7 +3632,10 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes"
+      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "media",
+      "recommended_action": "candidato_apply"
     },
     {
       "source_id": "senai",
@@ -2561,7 +3655,26 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes"
+      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes",
+      "noise_risk": "baixo",
+      "audit_noise": {
+        "total": 22,
+        "ruido_provavel": 0,
+        "pct_ruido": 0.0
+      },
+      "audit_actionability": {
+        "desconhecido": 18,
+        "oportunidade_sem_prazo": 1,
+        "resultado": 3,
+        "acionaveis": 1
+      },
+      "audit_validity": {
+        "total": 22,
+        "sem_validade_util": 1,
+        "display": "SENAI"
+      },
+      "backend_10_1_priority": "media",
+      "recommended_action": "candidato_apply"
     },
     {
       "source_id": "softex",
@@ -2581,7 +3694,15 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes"
+      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes",
+      "noise_risk": "desconhecido",
+      "audit_validity": {
+        "total": 2,
+        "sem_validade_util": 1,
+        "display": "Softex"
+      },
+      "backend_10_1_priority": "media",
+      "recommended_action": "candidato_apply"
     },
     {
       "source_id": "thales_suppliers",
@@ -2601,7 +3722,10 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes"
+      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "media",
+      "recommended_action": "candidato_apply"
     },
     {
       "source_id": "ukri_funding",
@@ -2621,7 +3745,10 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes"
+      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "media",
+      "recommended_action": "candidato_apply"
     },
     {
       "source_id": "wellcome",
@@ -2641,7 +3768,10 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes"
+      "notes": "Loader: scripts/load_ready_sources.py; ready_with_notes",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "media",
+      "recommended_action": "candidato_apply"
     },
     {
       "source_id": "china_avic",
@@ -2661,7 +3791,10 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; needs_manual_review"
+      "notes": "Loader: scripts/load_ready_sources.py; needs_manual_review",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "china_norinco",
@@ -2681,7 +3814,10 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; needs_manual_review"
+      "notes": "Loader: scripts/load_ready_sources.py; needs_manual_review",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "eurostars",
@@ -2701,7 +3837,10 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; needs_manual_review"
+      "notes": "Loader: scripts/load_ready_sources.py; needs_manual_review",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "fonplata",
@@ -2721,7 +3860,10 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; needs_manual_review"
+      "notes": "Loader: scripts/load_ready_sources.py; needs_manual_review",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "innovate_uk",
@@ -2741,7 +3883,10 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; needs_manual_review"
+      "notes": "Loader: scripts/load_ready_sources.py; needs_manual_review",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "japan_jaea",
@@ -2761,7 +3906,10 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; needs_manual_review"
+      "notes": "Loader: scripts/load_ready_sources.py; needs_manual_review",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "japan_jst",
@@ -2781,7 +3929,10 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; needs_manual_review"
+      "notes": "Loader: scripts/load_ready_sources.py; needs_manual_review",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "japan_kawasaki_heavy",
@@ -2801,7 +3952,10 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; needs_manual_review"
+      "notes": "Loader: scripts/load_ready_sources.py; needs_manual_review",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "desconhecido",
+      "recommended_action": "avaliar"
     },
     {
       "source_id": "bid_lab",
@@ -2821,7 +3975,10 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; blocked"
+      "notes": "Loader: scripts/load_ready_sources.py; blocked",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "baixa",
+      "recommended_action": "bloquear"
     },
     {
       "source_id": "caf",
@@ -2841,7 +3998,10 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; blocked"
+      "notes": "Loader: scripts/load_ready_sources.py; blocked",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "baixa",
+      "recommended_action": "bloquear"
     },
     {
       "source_id": "china_cnnc",
@@ -2861,7 +4021,10 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; blocked"
+      "notes": "Loader: scripts/load_ready_sources.py; blocked",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "baixa",
+      "recommended_action": "bloquear"
     },
     {
       "source_id": "dcta_ita_iae",
@@ -2881,7 +4044,10 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; blocked"
+      "notes": "Loader: scripts/load_ready_sources.py; blocked",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "baixa",
+      "recommended_action": "bloquear"
     },
     {
       "source_id": "esa_star",
@@ -2901,7 +4067,10 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; blocked"
+      "notes": "Loader: scripts/load_ready_sources.py; blocked",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "baixa",
+      "recommended_action": "bloquear"
     },
     {
       "source_id": "japan_e_rad",
@@ -2921,7 +4090,10 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; blocked"
+      "notes": "Loader: scripts/load_ready_sources.py; blocked",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "baixa",
+      "recommended_action": "bloquear"
     },
     {
       "source_id": "japan_jaxa",
@@ -2941,7 +4113,10 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; blocked"
+      "notes": "Loader: scripts/load_ready_sources.py; blocked",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "baixa",
+      "recommended_action": "bloquear"
     },
     {
       "source_id": "marinha",
@@ -2961,7 +4136,10 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; blocked"
+      "notes": "Loader: scripts/load_ready_sources.py; blocked",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "baixa",
+      "recommended_action": "bloquear"
     },
     {
       "source_id": "sam_gov",
@@ -2981,7 +4159,10 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; blocked"
+      "notes": "Loader: scripts/load_ready_sources.py; blocked",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "baixa",
+      "recommended_action": "bloquear"
     },
     {
       "source_id": "science_scraper",
@@ -3001,217 +4182,10 @@
         "would_upsert": null,
         "apply_executed": null
       },
-      "notes": "Loader: scripts/load_ready_sources.py; blocked"
-    },
-    {
-      "module": "noticias_pesquisas",
-      "pipeline_script": "scripts/crawl_news_research_sources.py; scripts/news_research/run_military_research_expansion_dryrun.py",
-      "config_file": "config/news_research_sources.json",
-      "artifacts_dir": "audit_reports_news_research/military_research_expansion_dryrun",
-      "last_known_result": {
-        "standardized": 4,
-        "validos": 2,
-        "errors_count": 0,
-        "would_upsert": null,
-        "apply_executed": false
-      },
-      "source_id": "afmc_news",
-      "name": "AFMC News",
-      "source_type": "noticia",
-      "destination": "public.noticia → vw_noticias_front",
-      "status": "latente",
-      "status_reason": "Hub 403 live; listagem ArticleCS via Wayback; datas no listing esparsas.",
-      "notes": "Dry-run military_research_expansion 2026-05-20 (prioridade probe)."
-    },
-    {
-      "module": "noticias_pesquisas",
-      "pipeline_script": "scripts/crawl_news_research_sources.py; scripts/news_research/run_military_research_expansion_dryrun.py",
-      "config_file": "config/news_research_sources.json",
-      "artifacts_dir": "audit_reports_news_research/military_research_expansion_dryrun",
-      "last_known_result": {
-        "standardized": 0,
-        "validos": 0,
-        "errors_count": 0,
-        "would_upsert": null,
-        "apply_executed": false
-      },
-      "source_id": "afnwc_news",
-      "name": "AFNWC News",
-      "source_type": "noticia",
-      "destination": "public.noticia → vw_noticias_front",
-      "status": "latente",
-      "status_reason": "Nuclear enterprise; 403 + Wayback; filtro relevância nuclear.",
-      "notes": "Dry-run military_research_expansion 2026-05-20 (prioridade probe)."
-    },
-    {
-      "module": "noticias_pesquisas",
-      "source_id": "space_force_news",
-      "name": "U.S. Space Force News",
-      "source_type": "noticia",
-      "destination": "public.noticia → vw_noticias_front",
-      "status": "aplicada_staging",
-      "status_reason": "Subset 12m: 18 itens; loader dry-run would_upsert_noticia=18.",
-      "pipeline_script": "scripts/crawl_news_research_sources.py; scripts/news_research/build_military_expansion_subsets_valido.py",
-      "config_file": "config/news_research_sources.json",
-      "artifacts_dir": "audit_reports_news_research/space_force_news_subset_valido",
-      "last_known_result": {
-        "standardized": 18,
-        "validos": 18,
-        "errors_count": 0,
-        "would_upsert": 18,
-        "would_upsert_noticia": 18,
-        "would_upsert_pesquisa": 0,
-        "apply_executed": true
-      },
-      "notes": "Frente militar consolidado; apply staging 2026-05-20"
-    },
-    {
-      "module": "noticias_pesquisas",
-      "source_id": "arl_news",
-      "name": "ARL Media Center News",
-      "source_type": "noticia",
-      "destination": "public.noticia → vw_noticias_front",
-      "status": "aplicada_staging",
-      "status_reason": "Subset 12m: 12 itens; loader dry-run would_upsert_noticia=12.",
-      "pipeline_script": "scripts/crawl_news_research_sources.py; scripts/news_research/build_military_expansion_subsets_valido.py",
-      "config_file": "config/news_research_sources.json",
-      "artifacts_dir": "audit_reports_news_research/arl_news_subset_valido",
-      "last_known_result": {
-        "standardized": 12,
-        "validos": 12,
-        "errors_count": 0,
-        "would_upsert": 12,
-        "would_upsert_noticia": 12,
-        "would_upsert_pesquisa": 0,
-        "apply_executed": false
-      },
-      "notes": "Frente militar consolidado; apply staging 2026-05-20"
-    },
-    {
-      "module": "noticias_pesquisas",
-      "source_id": "afrl_technology_areas",
-      "name": "AFRL Technology Areas (afresearchlab.com)",
-      "source_type": "pesquisa",
-      "destination": "public.pesquisa → vw_pesquisas_front",
-      "status": "aplicada_staging",
-      "status_reason": "Apply staging: 12 áreas tecnológicas (catálogo sem data).",
-      "pipeline_script": "scripts/crawl_news_research_sources.py; scripts/news_research/build_military_expansion_subsets_valido.py",
-      "config_file": "config/news_research_sources.json",
-      "artifacts_dir": "audit_reports_news_research/afrl_technology_areas_subset_valido",
-      "last_known_result": {
-        "standardized": 12,
-        "validos": 12,
-        "errors_count": 0,
-        "would_upsert": 12,
-        "would_upsert_noticia": 0,
-        "would_upsert_pesquisa": 12,
-        "apply_executed": true
-      },
-      "notes": "Frente militar consolidado; apply staging 2026-05-20"
-    },
-    {
-      "module": "noticias_pesquisas",
-      "pipeline_script": "scripts/crawl_news_research_sources.py; scripts/news_research/run_military_research_expansion_dryrun.py",
-      "config_file": "config/news_research_sources.json",
-      "artifacts_dir": "audit_reports_news_research/military_research_expansion_dryrun",
-      "last_known_result": {
-        "standardized": 5,
-        "validos": 0,
-        "errors_count": 0,
-        "would_upsert": null,
-        "apply_executed": false
-      },
-      "source_id": "afnwc_innovation",
-      "name": "AFNWC Innovation",
-      "source_type": "pesquisa",
-      "destination": "public.pesquisa → vw_pesquisas_front",
-      "status": "precisa_melhoria",
-      "status_reason": "Portal + cards Wayback; 17 válidos.",
-      "notes": "Dry-run military_research_expansion 2026-05-20 (prioridade probe)."
-    },
-    {
-      "module": "noticias_pesquisas",
-      "pipeline_script": "scripts/crawl_news_research_sources.py; scripts/news_research/run_military_research_expansion_dryrun.py",
-      "config_file": "config/news_research_sources.json",
-      "artifacts_dir": "audit_reports_news_research/military_research_expansion_dryrun",
-      "last_known_result": {
-        "standardized": 1,
-        "validos": 1,
-        "errors_count": 0,
-        "would_upsert": null,
-        "apply_executed": false
-      },
-      "source_id": "afnwc_weapon_systems",
-      "name": "AFNWC Weapon Systems",
-      "source_type": "pesquisa",
-      "destination": "public.pesquisa → vw_pesquisas_front",
-      "status": "precisa_melhoria",
-      "status_reason": "Hub Weapon-Systems 403; só registro portal no dry-run.",
-      "notes": "Dry-run military_research_expansion 2026-05-20 (prioridade probe)."
-    },
-    {
-      "module": "noticias_pesquisas",
-      "source_id": "arl_resources",
-      "name": "ARL Resources",
-      "source_type": "pesquisa",
-      "destination": "public.pesquisa → vw_pesquisas_front",
-      "status": "aplicada_staging",
-      "status_reason": "Subset: 18 recursos; 2 BAA excluídos; loader dry-run would_upsert_pesquisa=18.",
-      "pipeline_script": "scripts/crawl_news_research_sources.py; scripts/news_research/build_military_expansion_subsets_valido.py",
-      "config_file": "config/news_research_sources.json",
-      "artifacts_dir": "audit_reports_news_research/arl_resources_subset_valido",
-      "last_known_result": {
-        "standardized": 18,
-        "validos": 18,
-        "errors_count": 0,
-        "would_upsert": 18,
-        "would_upsert_noticia": 0,
-        "would_upsert_pesquisa": 18,
-        "apply_executed": true
-      },
-      "notes": "Frente militar consolidado; BAA fora do subset (review Radar)"
-    },
-    {
-      "source_id": "f35_news",
-      "name": "F-35 Lightning II News",
-      "module": "noticias_pesquisas",
-      "source_type": "noticia",
-      "pipeline_script": "scripts/crawl_news_research_sources.py",
-      "config_file": "config/news_research_sources.json",
-      "artifacts_dir": "audit_reports_news_research/f35_news_subset_top20",
-      "destination": "public.noticia → vw_noticias_front",
-      "status": "aplicada_staging",
-      "status_reason": "Apply staging: 20 notícias; fonte corporativa programa F-35.",
-      "last_known_result": {
-        "standardized": 20,
-        "validos": 20,
-        "errors_count": 0,
-        "would_upsert": 20,
-        "would_upsert_noticia": 20,
-        "apply_executed": true
-      },
-      "notes": "Frente militar consolidado; não é jornalismo independente"
-    },
-    {
-      "source_id": "lockheed_martin_news",
-      "name": "Lockheed Martin Newsroom",
-      "module": "noticias_pesquisas",
-      "source_type": "noticia",
-      "pipeline_script": "scripts/crawl_news_research_sources.py",
-      "config_file": "config/news_research_sources.json",
-      "artifacts_dir": "audit_reports_news_research/lockheed_martin_news_subset_top20",
-      "destination": "public.noticia → vw_noticias_front",
-      "status": "aplicada_staging",
-      "status_reason": "Apply staging: 20 notícias; comunicação corporativa defesa/aero.",
-      "last_known_result": {
-        "standardized": 20,
-        "validos": 20,
-        "errors_count": 0,
-        "would_upsert": 20,
-        "would_upsert_noticia": 20,
-        "apply_executed": true
-      },
-      "notes": "Frente militar consolidado"
+      "notes": "Loader: scripts/load_ready_sources.py; blocked",
+      "noise_risk": "desconhecido",
+      "backend_10_1_priority": "baixa",
+      "recommended_action": "bloquear"
     }
   ],
   "meta": {
@@ -3222,48 +4196,40 @@
       "blocked": 10,
       "reprocess_after_fix": 0
     },
-    "news_research_config_count": 13,
-    "concursos_tracked_count": 19,
-    "military_strategic_front": {
-      "consolidado_json": "audit_reports_news_research/military_strategic_consolidado/consolidado_militar.json",
-      "consolidado_md": "audit_reports_news_research/military_strategic_consolidado/consolidado_militar.md",
-      "data_consolidado": "2026-05-20",
-      "fontes_aplicadas": 11,
-      "registros_total": 187,
-      "public_noticia": {
-        "fontes": 8,
-        "registros": 132,
-        "source_ids": [
-          "f35_news",
-          "lockheed_martin_news",
-          "darpa_news",
-          "war_gov_news",
-          "nato_news",
-          "afrl_news",
-          "arl_news",
-          "space_force_news"
-        ]
-      },
-      "public_pesquisa": {
-        "fontes": 3,
-        "registros": 55,
-        "source_ids": [
-          "darpa_programs_research",
-          "afrl_technology_areas",
-          "arl_resources"
-        ]
-      },
-      "latente_review_source_ids": [
-        "darpa_opportunities_research",
-        "afrl_air_warfare_research",
-        "afrl_space_warfare_research",
-        "afrl_technology_transition",
-        "afrl_mission_highlights",
-        "afnwc_innovation",
-        "afnwc_weapon_systems",
-        "afmc_news",
-        "afnwc_news"
-      ]
-    }
-  }
+    "news_research_config_count": 32,
+    "concursos_tracked_count": 19
+  },
+  "backend_10_1_audit": {
+    "report_path": "outputs/audit_noise_backend/report.json",
+    "backend_version": "10.1",
+    "total_records_analyzed": 1232,
+    "actionable_count": 136,
+    "ruido_provavel_count": 25,
+    "ruido_provavel_pct": 2.03,
+    "note": "Dry-run staging; Backend 10.1 ainda NAO persistido em public.edital"
+  },
+  "summary_by_status": {
+    "aplicada": 60,
+    "pronta_para_apply": 43,
+    "implementada_latente": 8,
+    "precisa_melhoria": 16,
+    "nao_recomendado": 12,
+    "descoberta": 1,
+    "dryrun_ok": 19
+  },
+  "summary_by_module": {
+    "concursos_selecoes": 19,
+    "radar_editais": 1,
+    "noticias_pesquisas": 32,
+    "editais_radar": 107
+  },
+  "high_noise_sources": [
+    "BDMG",
+    "QST",
+    "NSFC",
+    "DoD SBIR/STTR",
+    "NUCLEP",
+    "European Defence Fund",
+    "EIC"
+  ]
 }

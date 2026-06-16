@@ -1,0 +1,76 @@
+# QA 1.3B — GitHub Actions CI (unit + build + E2E read-only + artefatos)
+name: QA
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+  workflow_dispatch:
+
+concurrency:
+  group: qa-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  qa-frontend:
+    name: QA Frontend
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    defaults:
+      run:
+        working-directory: frontend/EditalFinder-React
+
+    env:
+      CI: true
+      # Read-only E2E — sem E2E_ALLOW_WRITE_TESTS (escrita opt-in bloqueada)
+      E2E_USER_EMAIL: ${{ secrets.E2E_USER_EMAIL }}
+      E2E_USER_PASSWORD: ${{ secrets.E2E_USER_PASSWORD }}
+      VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+      VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: frontend/EditalFinder-React/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Run QA pipeline
+        run: npm run qa:local
+
+      - name: Publish QA summary
+        if: always()
+        run: |
+          if [ -f qa/artifacts/qa_summary_latest.md ]; then
+            cat qa/artifacts/qa_summary_latest.md >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "qa_summary_latest.md not found" >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Upload QA artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: editalfinder-qa-artifacts
+          path: |
+            frontend/EditalFinder-React/qa/artifacts/qa_results.json
+            frontend/EditalFinder-React/qa/artifacts/qa_summary_latest.md
+            frontend/EditalFinder-React/qa/artifacts/qa_run_state.json
+            frontend/EditalFinder-React/qa/artifacts/logs/
+            frontend/EditalFinder-React/qa/artifacts/playwright/results.json
+            frontend/EditalFinder-React/qa/artifacts/playwright/html/
+            frontend/EditalFinder-React/qa/artifacts/playwright/test-results/
+          if-no-files-found: warn
+          retention-days: 14

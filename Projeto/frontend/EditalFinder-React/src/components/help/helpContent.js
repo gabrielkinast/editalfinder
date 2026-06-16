@@ -239,7 +239,7 @@ export const HELP_SECTIONS = [
     id: 'reportar-problema',
     title: 'Reportar problema',
     group: 'Sistema',
-    objective: 'Enviar erros ou sugestões para a equipe corrigir.',
+    objective: 'Registrar erros ou sugestões e enviar ao suporte pelo seu aplicativo de e-mail.',
     blocks: [
       {
         title: 'Problema em um edital específico',
@@ -247,14 +247,14 @@ export const HELP_SECTIONS = [
       },
       {
         title: 'Problema no sistema (site)',
-        body: 'Use o botão “Reportar problema” no topo ou no menu ☰. Exemplos: página não abriu, botão travou, erro na tela.',
+        body: 'Use o botão “Reportar problema” no topo ou no menu ☰. O app abre seu e-mail com o reporte preenchido; revise e envie a mensagem. Exemplos: página não abriu, botão travou, erro na tela.',
       },
     ],
     steps: [
       'Clique em Reportar problema.',
       'Escolha o tipo (edital ou sistema).',
       'Descreva o que aconteceu com clareza.',
-      'Envie.',
+      'Abra o e-mail com o reporte e confirme o envio no seu cliente de e-mail.',
     ],
     tips: ['Quanto mais claro o comentário, mais fácil será corrigir.'],
   },

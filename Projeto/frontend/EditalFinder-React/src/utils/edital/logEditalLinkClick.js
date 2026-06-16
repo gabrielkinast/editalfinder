@@ -1,6 +1,7 @@
 /**
- * Log DEV no clique de links da aba Editais (não altera navegação).
+ * Log DEV no clique de links da aba Editais.
  */
+import { openExternalUrl } from '../externalActions/openExternalUrl';
 
 function extrasOf(edital) {
   const ex = edital?.extras_raw ?? edital?.extras;
@@ -37,10 +38,15 @@ export function logEditalLinkClick(edital, { campoEscolhido, urlFinal }) {
   });
 }
 
-/** Handler para <a> — só loga; não chama preventDefault. */
+/** Handler legado — abre URL externamente (web/Tauri) e loga em DEV. */
 export function onEditalLinkClick(edital, campoEscolhido, urlFinal) {
-  return () => {
-    logEditalLinkClick(edital, { campoEscolhido, urlFinal });
+  return async (e) => {
+    if (e?.preventDefault) e.preventDefault();
+    if (e?.stopPropagation) e.stopPropagation();
+    if (import.meta.env.DEV) {
+      logEditalLinkClick(edital, { campoEscolhido, urlFinal });
+    }
+    await openExternalUrl(urlFinal, { actionType: campoEscolhido });
   };
 }
 

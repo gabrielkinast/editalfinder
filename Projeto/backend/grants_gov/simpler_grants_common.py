@@ -176,6 +176,13 @@ def map_simpler_api_hit(row: Dict[str, Any]) -> Dict[str, Any]:
     opp_num = row.get("opportunity_number") or ""
     posted = _parse_us_date(row.get("post_date"))
     close = _parse_us_date(row.get("close_date"))
+    archive = _parse_us_date(row.get("archive_date") or row.get("archived_date"))
+    close_explanation = (
+        row.get("close_date_explanation")
+        or row.get("closeDateExplanation")
+        or row.get("close_date_description")
+        or ""
+    )
     status = str(row.get("opportunity_status") or "").lower()
     agency = row.get("agency_name") or row.get("top_level_agency_name") or ""
     title = str(row.get("opportunity_title") or row.get("title") or "").strip()
@@ -190,6 +197,8 @@ def map_simpler_api_hit(row: Dict[str, Any]) -> Dict[str, Any]:
         "agency_code": row.get("agency_code"),
         "posted_date": posted,
         "close_date": close,
+        "archive_date": archive,
+        "close_date_explanation": str(close_explanation).strip() or None,
         "opportunity_status": status,
         "funding_instrument": row.get("funding_instrument"),
         "category": row.get("funding_category"),
@@ -214,6 +223,12 @@ def map_legacy_search2_hit(row: Dict[str, Any]) -> Dict[str, Any]:
     status = str(row.get("oppStatus") or "").lower()
     posted = _parse_us_date(row.get("openDate") or row.get("postDate"))
     close = _parse_us_date(row.get("closeDate") or row.get("closeDateFormatted"))
+    archive = _parse_us_date(row.get("archiveDate") or row.get("archivedDate"))
+    close_explanation = (
+        row.get("closeDateExplanation")
+        or row.get("close_date_explanation")
+        or ""
+    )
     link = build_canonical_opportunity_url(legacy_opp_id=legacy_id)
     return {
         "titulo": title,
@@ -222,6 +237,8 @@ def map_legacy_search2_hit(row: Dict[str, Any]) -> Dict[str, Any]:
         "agency_code": row.get("agencyCode"),
         "posted_date": posted,
         "close_date": close or None,
+        "archive_date": archive,
+        "close_date_explanation": str(close_explanation).strip() or None,
         "opportunity_status": status,
         "funding_instrument": row.get("docType"),
         "category": None,
@@ -311,12 +328,26 @@ def build_pipeline_item(
     situacao = "Aberto" if _status_prazo_from_row(status, close) != "encerrado" else "Encerrado"
     pub = posted or datetime.now(timezone.utc).date().isoformat()
 
+    close_explanation = mapped.get("close_date_explanation")
+    archive = mapped.get("archive_date")
+
     if close:
         extras["grants_close_date"] = close
+        extras["closeDate"] = close
+        extras["close_date"] = close
         extras["deadline"] = close
         extras["deadline_source_field"] = "close_date"
         extras["deadline_source"] = "close_date"
-    elif posted:
+    if posted:
+        extras["postedDate"] = posted
+        extras["posted_date"] = posted
+    if archive:
+        extras["archiveDate"] = archive
+        extras["archive_date"] = archive
+    if close_explanation:
+        extras["closeDateExplanation"] = close_explanation
+        extras["close_date_explanation"] = close_explanation
+    if posted and not close:
         extras["deadline_missing_in_source"] = True
 
     item = {
@@ -341,11 +372,20 @@ def build_pipeline_item(
         api_row = {
             "close_date": mapped.get("close_date"),
             "posted_date": mapped.get("posted_date"),
+            "archive_date": mapped.get("archive_date"),
             "closeDate": mapped.get("close_date"),
             "postedDate": mapped.get("posted_date"),
+            "archiveDate": mapped.get("archive_date"),
+            "closeDateExplanation": mapped.get("close_date_explanation"),
             "applicationDueDate": mapped.get("application_due_date"),
         }
         item = enrich_grants_crawler_item(item, api_row=api_row)
+    except Exception:
+        pass
+    try:
+        from CORE.grants_link_resolver import apply_link_resolution_to_item
+
+        apply_link_resolution_to_item(item, rewrite_link="if_broken")
     except Exception:
         pass
     return item

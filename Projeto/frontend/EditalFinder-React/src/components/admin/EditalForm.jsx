@@ -2,28 +2,52 @@ import { useState, useEffect } from 'react';
 import { formatCurrency } from '../../utils/formatters';
 import { dataService } from '../../services/dataService';
 import { classificarEdital } from '../../services/classificationService';
+import { loadOrganizationsSafe } from '../../utils/admin/loadOrganizationsSafe';
+import {
+  buildEditalWritePayload,
+  normalizeEditalFormInitialData,
+} from '../../utils/admin/buildEditalWritePayload';
+import EditalSaveErrorPanel from './EditalSaveErrorPanel.jsx';
 
-export default function EditalForm({ initialData, onSave, onCancel }) {
-  const [formData, setFormData] = useState({
-    titulo: '',
-    descricao: '',
-    objetivo: '',
-    temas: '',
-    publico_alvo: '',
-    fonte_recurso: '',
-    valor_maximo: 0,
-    data_publicacao: '',
-    prazo_envio: '',
-    situacao: 'Aberto',
-    pdf_url: '',
-    link: '',
-    status: 'Ativo',
-    id_organizacao: '',
-    estado: '',
+const EMPTY_FORM = {
+  titulo: '',
+  descricao: '',
+  objetivo: '',
+  temas: '',
+  publico_alvo: '',
+  fonte_recurso: '',
+  valor_maximo: 0,
+  data_publicacao: '',
+  prazo_envio: '',
+  situacao: 'Aberto',
+  pdf_url: '',
+  link: '',
+  status: 'Ativo',
+  id_organizacao: '',
+  orgao_responsavel: '',
+  estado: '',
+};
+
+export default function EditalForm({
+  initialData,
+  onSave,
+  onCancel,
+  saveError = null,
+  onDismissSaveError,
+  pendingDraftsCount = 0,
+  copyStatus = null,
+  onCopyStatusChange,
+}) {
+  const [formData, setFormData] = useState(EMPTY_FORM);
+  const [orgsState, setOrgsState] = useState({
+    ok: false,
+    organizations: [],
+    reason: null,
   });
-
-  const [orgs, setOrgs] = useState([]);
   const [classificacao, setClassificacao] = useState(null);
+
+  const orgs = orgsState.organizations;
+  const orgsAvailable = orgsState.ok && orgs.length > 0;
 
   const estados = [
     { uf: 'AC', nome: 'Acre' },
@@ -53,33 +77,47 @@ export default function EditalForm({ initialData, onSave, onCancel }) {
     { uf: 'SP', nome: 'São Paulo' },
     { uf: 'SE', nome: 'Sergipe' },
     { uf: 'TO', nome: 'Tocantins' },
-    { uf: 'EX', nome: 'Exterior' }
+    { uf: 'EX', nome: 'Exterior' },
   ];
 
   useEffect(() => {
-    dataService.getOrganizations().then(setOrgs);
+    let cancelled = false;
+    loadOrganizationsSafe().then((result) => {
+      if (!cancelled) setOrgsState(result);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  useEffect(() => {
     if (initialData) {
-      setFormData(initialData);
+      setFormData((prev) => ({
+        ...prev,
+        ...normalizeEditalFormInitialData(initialData),
+      }));
+    } else {
+      setFormData(EMPTY_FORM);
     }
   }, [initialData]);
 
   const handleChange = (e) => {
     const { name, value, type } = e.target;
-    
-    // Se mudar a fonte de recurso, tenta encontrar a organização correspondente
+
     if (name === 'fonte_recurso') {
-      const matchedOrg = orgs.find(o => o.nome.toLowerCase() === value.toLowerCase());
-      setFormData(prev => ({
+      const matchedOrg = orgs.find((o) => o.nome.toLowerCase() === value.toLowerCase());
+      setFormData((prev) => ({
         ...prev,
         fonte_recurso: value,
-        id_organizacao: matchedOrg ? matchedOrg.id_organizacao : prev.id_organizacao
+        orgao_responsavel: prev.orgao_responsavel || value,
+        id_organizacao: matchedOrg ? matchedOrg.id_organizacao : prev.id_organizacao,
       }));
       return;
     }
 
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: type === 'number' || type === 'range' ? parseFloat(value) : value
+      [name]: type === 'number' || type === 'range' ? parseFloat(value) : value,
     }));
   };
 
@@ -87,31 +125,55 @@ export default function EditalForm({ initialData, onSave, onCancel }) {
     const resultado = classificarEdital(formData);
     setClassificacao(resultado);
 
-    // Aplica temas automaticamente se o campo estiver vazio
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
       temas: prev.temas || resultado.area.join(', '),
       fonte_recurso: prev.fonte_recurso || resultado.orgao || prev.fonte_recurso,
+      orgao_responsavel: prev.orgao_responsavel || resultado.orgao || prev.orgao_responsavel,
     }));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
-    // Removemos o campo 'organizacao' que vem do Supabase via relacionamento,
-    // pois ele causa erro ao tentar salvar (o Supabase espera apenas colunas reais da tabela).
-    const { organizacao, ...dataToSave } = formData;
-    
-    onSave(dataToSave);
+    onSave(buildEditalWritePayload(formData));
   };
+
+  const handleCopyData = async () => {
+    const payload = buildEditalWritePayload(formData);
+    const text = JSON.stringify(payload, null, 2);
+    try {
+      if (typeof navigator !== 'undefined' && navigator.clipboard?.writeText) {
+        await navigator.clipboard.writeText(text);
+        onCopyStatusChange?.('Dados copiados para a área de transferência.');
+      } else {
+        onCopyStatusChange?.('Clipboard indisponível — copie os campos manualmente.');
+      }
+    } catch {
+      onCopyStatusChange?.('Não foi possível copiar automaticamente.');
+    }
+  };
+
+  const orgHint =
+    orgsState.reason === 'table_not_exposed'
+      ? 'Lista de organizações indisponível neste ambiente; use o campo textual acima.'
+      : orgsState.reason === 'load_failed'
+        ? 'Não foi possível carregar organizações; o cadastro continua sem vínculo.'
+        : null;
 
   return (
     <form onSubmit={handleSubmit} className="modal-form">
+      <EditalSaveErrorPanel
+        saveError={saveError}
+        pendingDraftsCount={pendingDraftsCount}
+        onDismiss={onDismissSaveError}
+        onCopyData={handleCopyData}
+        copyStatus={copyStatus}
+      />
       <div className="form-grid">
         <div className="form-section-title">Informações Principais</div>
         <div className="form-group full-width">
           <label>Título do Edital</label>
-          <input type="text" name="titulo" value={formData.titulo} onChange={handleChange} required />
+          <input type="text" name="titulo" value={formData.titulo} onChange={handleChange} required data-testid="edital-form-titulo" />
         </div>
         <div className="form-group full-width">
           <label>Descrição</label>
@@ -124,7 +186,6 @@ export default function EditalForm({ initialData, onSave, onCancel }) {
 
         <div className="form-section-title">Detalhes e Classificação</div>
 
-        {/* Classificação automática */}
         <div className="form-group full-width" style={{ marginBottom: 0 }}>
           <button
             type="button"
@@ -198,20 +259,43 @@ export default function EditalForm({ initialData, onSave, onCancel }) {
           <input type="range" name="valor_maximo" min="0" max="50000000" step="100000" value={formData.valor_maximo} onChange={handleChange} />
         </div>
         <div className="form-group">
-          <label>Organização Responsável</label>
-          <select name="id_organizacao" value={formData.id_organizacao} onChange={handleChange} required>
-            <option value="">Selecione uma organização...</option>
-            {orgs.map(org => (
-              <option key={org.id_organizacao} value={org.id_organizacao}>{org.nome}</option>
-            ))}
-          </select>
+          <label>Órgão / organização responsável</label>
+          <input
+            type="text"
+            name="orgao_responsavel"
+            value={formData.orgao_responsavel}
+            onChange={handleChange}
+            placeholder="Ex: FINEP, BNDES, universidade emissora"
+          />
         </div>
+        {orgsAvailable ? (
+          <div className="form-group">
+            <label>Vincular organização (opcional)</label>
+            <select name="id_organizacao" value={formData.id_organizacao} onChange={handleChange}>
+              <option value="">Nenhuma</option>
+              {orgs.map((org) => (
+                <option key={org.id_organizacao} value={org.id_organizacao}>
+                  {org.nome}
+                </option>
+              ))}
+            </select>
+          </div>
+        ) : null}
+        {orgHint ? (
+          <div className="form-group full-width">
+            <p className="form-hint" style={{ margin: 0, fontSize: '12px', color: '#666' }}>
+              {orgHint}
+            </p>
+          </div>
+        ) : null}
         <div className="form-group">
           <label>Estado (UF)</label>
           <select name="estado" value={formData.estado} onChange={handleChange}>
             <option value="">Selecione o estado...</option>
-            {estados.map(est => (
-              <option key={est.uf} value={est.nome}>{est.nome}</option>
+            {estados.map((est) => (
+              <option key={est.uf} value={est.nome}>
+                {est.nome}
+              </option>
             ))}
           </select>
         </div>
@@ -247,13 +331,22 @@ export default function EditalForm({ initialData, onSave, onCancel }) {
         </div>
         <div className="form-group full-width">
           <label>Link do Edital</label>
-          <input type="url" name="link" value={formData.link} onChange={handleChange} placeholder="https://exemplo.com/pagina-edital" />
+          <input type="url" name="link" value={formData.link} onChange={handleChange} placeholder="https://exemplo.com/pagina-edital" required data-testid="edital-form-link" />
         </div>
       </div>
 
       <div className="modal-actions">
-        <button type="button" className="btn-cancel" onClick={onCancel}>Cancelar</button>
-        <button type="submit" className="btn-save">Salvar Edital</button>
+        <button
+          type="button"
+          className="btn-cancel"
+          onClick={onCancel}
+          data-testid="edital-form-cancel"
+        >
+          Cancelar
+        </button>
+        <button type="submit" className="btn-save" data-testid="edital-form-submit">
+          Salvar Edital
+        </button>
       </div>
     </form>
   );

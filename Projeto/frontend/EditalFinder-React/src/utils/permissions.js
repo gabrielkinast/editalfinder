@@ -1,4 +1,4 @@
-import { getPermissions, PERMISSIONS } from '../permissions';
+import { getPermissions, PERMISSIONS } from '../permissions.js';
 
 /** id do dono na linha `cliente` (PostgREST / normalizado). */
 export function clientOwnerUserId(client) {

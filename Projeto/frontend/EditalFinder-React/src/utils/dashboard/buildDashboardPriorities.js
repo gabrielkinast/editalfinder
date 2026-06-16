@@ -73,7 +73,7 @@ export function buildDashboardPriorities({
     items.push({
       id: 'reports',
       title: `${pendingReports} relato${pendingReports !== 1 ? 's' : ''} pendente${pendingReports !== 1 ? 's' : ''}`,
-      description: 'Itens na fila local aguardando envio ao suporte.',
+      description: 'Reportes guardados neste dispositivo — abra o e-mail para concluir o envio.',
       badge: 'Sistema',
       badgeVariant: 'neutral',
       to: null,

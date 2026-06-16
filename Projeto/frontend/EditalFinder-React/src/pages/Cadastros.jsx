@@ -30,6 +30,9 @@ import {
   loadPrecadEnvelope,
 } from '../utils/precadastroProjetoInitialState';
 import { calculatePreCadastroCompleteness } from '../utils/precadastro/calculatePreCadastroCompleteness';
+import { processManualEditalSaveError } from '../utils/admin/handleManualEditalSaveError.js';
+import { listPendingManualEditalDrafts } from '../utils/admin/pendingManualEditalDrafts.js';
+import { logCadastrosDebug } from '../utils/admin/manualCadastroEdital.js';
 
 function formatCnpjDisplay(v) {
   if (v == null || v === '') return '—';
@@ -57,8 +60,14 @@ function precadBadgeDisplay(info) {
 export default function Cadastros() {
   const navigate = useNavigate();
   const permissions = usePermissions();
-  const { user, loading: authLoading } = useAuth();
+  const { user, loading: authLoading, authenticated } = useAuth();
   const adminCadastros = isAdminUser(user);
+  const [editalSaveError, setEditalSaveError] = useState(null);
+  const [pendingEditalDraftsCount, setPendingEditalDraftsCount] = useState(() =>
+    listPendingManualEditalDrafts().length,
+  );
+  const [editalCopyStatus, setEditalCopyStatus] = useState(null);
+  const [editalSaveSuccess, setEditalSaveSuccess] = useState(null);
   const showClientesTab = adminCadastros;
   const [activeTab, setActiveTab] = useState(() => {
     if (permissions.canManageUsers) return 'usuarios';
@@ -92,7 +101,7 @@ export default function Cadastros() {
     }
   }, [showClientesTab, activeTab, permissions.canManageUsers]);
 
-  const loadData = useCallback(async () => {
+  const loadData = useCallback(async ({ pinRows = [] } = {}) => {
     setLoading(true);
     try {
       if (isSupabaseConfigured && (activeTab === 'clientes' || activeTab === 'usuarios')) {
@@ -110,7 +119,10 @@ export default function Cadastros() {
       let result = [];
       if (activeTab === 'usuarios') result = await dataService.getUsers();
       else if (activeTab === 'clientes') result = await dataService.getClients({ user });
-      else if (activeTab === 'editais-cadastrados') result = await dataService.getAllEditaisAdmin();
+      else if (activeTab === 'editais-cadastrados') {
+        result = await dataService.getAllEditaisAdmin({ pinRows });
+        logCadastrosDebug('reload list count', { count: result.length, tab: activeTab });
+      }
       setData(result);
     } catch (error) {
       if (import.meta.env.DEV) {
@@ -264,6 +276,14 @@ export default function Cadastros() {
     setFilterMaxInteresse(100000000);
   }, []);
 
+  const openEditalModal = useCallback((item = null) => {
+    setEditingItem(item);
+    setEditalSaveError(null);
+    setEditalCopyStatus(null);
+    setEditalSaveSuccess(null);
+    setIsModalOpen(true);
+  }, []);
+
   const handleSave = async (formData) => {
     try {
       if (activeTab === 'usuarios') {
@@ -289,13 +309,47 @@ export default function Cadastros() {
           await dataService.createClient(payload, { user });
         }
       } else if (activeTab === 'editais-cadastrados') {
-        if (editingItem) await dataService.updateEdital(editingItem.id_edital, formData);
-        else await dataService.createEdital(formData);
+        let savedRow = null;
+        if (editingItem) {
+          savedRow = await dataService.updateEdital(editingItem.id_edital, formData);
+          setEditalSaveSuccess('Edital atualizado com sucesso.');
+        } else {
+          savedRow = await dataService.createEdital(formData);
+          setEditalSaveSuccess(
+            savedRow?.id_edital != null
+              ? `Edital cadastrado com sucesso (ID ${savedRow.id_edital}).`
+              : 'Edital cadastrado com sucesso.',
+          );
+          logCadastrosDebug('insert success id_edital', { id_edital: savedRow?.id_edital ?? null });
+        }
+        setEditalSaveError(null);
+        setEditalCopyStatus(null);
+        setPendingEditalDraftsCount(listPendingManualEditalDrafts().length);
+        setIsModalOpen(false);
+        setEditingItem(null);
+        await loadData({ pinRows: savedRow ? [savedRow] : [] });
+        return;
+      } else {
+        return;
       }
+
       setIsModalOpen(false);
       setEditingItem(null);
       loadData();
     } catch (error) {
+      if (activeTab === 'editais-cadastrados') {
+        const { saveError } = processManualEditalSaveError({
+          error,
+          formPayload: formData,
+          user,
+          authenticated,
+          operation: editingItem ? 'update' : 'insert',
+          editingId: editingItem?.id_edital ?? null,
+        });
+        setEditalSaveError(saveError);
+        setPendingEditalDraftsCount(listPendingManualEditalDrafts().length);
+        return;
+      }
       alert('Erro ao salvar: ' + error.message);
     }
   };
@@ -398,7 +452,11 @@ export default function Cadastros() {
         { key: 'fonte_recurso', label: 'Fonte' },
         { key: 'valor_maximo', label: 'Valor Máx.', render: (v) => formatCurrency(v) },
         { key: 'prazo_envio', label: 'Prazo', render: (v) => (v ? formatDate(v) : '-') },
-        { key: 'status', label: 'Status' },
+        {
+          key: 'status',
+          label: 'Status',
+          render: (_, item) => (item?.ativo === false ? 'Inativo' : 'Ativo'),
+        },
       ];
     }
     return [];
@@ -408,7 +466,21 @@ export default function Cadastros() {
     const props = { initialData: editingItem, onSave: handleSave, onCancel: () => setIsModalOpen(false) };
     if (activeTab === 'usuarios') return <UserForm {...props} />;
     if (activeTab === 'clientes') return <ClientForm {...props} />;
-    if (activeTab === 'editais-cadastrados') return <EditalForm {...props} />;
+    if (activeTab === 'editais-cadastrados') {
+      return (
+        <EditalForm
+          {...props}
+          saveError={editalSaveError}
+          onDismissSaveError={() => {
+            setEditalSaveError(null);
+            setEditalCopyStatus(null);
+          }}
+          pendingDraftsCount={pendingEditalDraftsCount}
+          copyStatus={editalCopyStatus}
+          onCopyStatusChange={setEditalCopyStatus}
+        />
+      );
+    }
     return null;
   };
 
@@ -422,7 +494,7 @@ export default function Cadastros() {
       filterMaxInteresse < 100000000);
 
   return (
-    <div className="admin-body">
+    <div className="admin-body" data-testid="cadastros-page">
       <Header />
       <div className="admin-container">
         <aside className="admin-sidebar">
@@ -450,6 +522,7 @@ export default function Cadastros() {
               type="button"
               className={`sidebar-link ${activeTab === 'editais-cadastrados' ? 'active' : ''}`}
               onClick={() => setActiveTab('editais-cadastrados')}
+              data-testid="cadastros-tab-editais"
             >
               <span className="icon">📄</span> Editais
             </button>
@@ -568,6 +641,12 @@ export default function Cadastros() {
               </>
             )}
 
+            {activeTab === 'editais-cadastrados' && editalSaveSuccess && (
+              <div className="cad-workspace-redirect-banner" role="status">
+                <strong>{editalSaveSuccess}</strong>
+              </div>
+            )}
+
             {activeTab === 'editais-cadastrados' && (
               <div className="cad-hero cad-hero-editais">
                 <div className="cad-hero-text">
@@ -578,10 +657,8 @@ export default function Cadastros() {
                   <button
                     type="button"
                     className="btn-primary cad-hero-cta"
-                    onClick={() => {
-                      setEditingItem(null);
-                      setIsModalOpen(true);
-                    }}
+                    onClick={() => openEditalModal(null)}
+                    data-testid="cadastro-novo-edital"
                   >
                     + Novo edital
                   </button>
@@ -738,6 +815,10 @@ export default function Cadastros() {
                     alert('Você não tem permissão para editar este cliente.');
                     return;
                   }
+                  if (activeTab === 'editais-cadastrados') {
+                    openEditalModal(item);
+                    return;
+                  }
                   setEditingItem(item);
                   setIsModalOpen(true);
                 }}
@@ -775,6 +856,9 @@ export default function Cadastros() {
       {isModalOpen && (
         <Modal
           onClose={() => setIsModalOpen(false)}
+          closeButtonTestId={
+            activeTab === 'editais-cadastrados' ? 'edital-form-close' : undefined
+          }
           className={
             activeTab === 'clientes'
               ? 'modal-large modal-client-form'

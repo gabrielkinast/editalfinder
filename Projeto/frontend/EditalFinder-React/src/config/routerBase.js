@@ -3,7 +3,9 @@
  * Web (GitHub Pages): /editalfinder
  * Desktop (Tauri): vazio — definido em build via vite.config.js (TAURI_ENV_PLATFORM).
  */
-export const ROUTER_BASENAME = import.meta.env.VITE_ROUTER_BASENAME ?? '/editalfinder';
+const viteEnv = typeof import.meta !== 'undefined' ? import.meta.env : undefined;
+
+export const ROUTER_BASENAME = viteEnv?.VITE_ROUTER_BASENAME ?? '/editalfinder';
 
 export const IS_TAURI_BUILD =
-  ROUTER_BASENAME === '' || import.meta.env.VITE_TAURI === '1';
+  ROUTER_BASENAME === '' || viteEnv?.VITE_TAURI === '1';

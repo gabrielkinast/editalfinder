@@ -14,6 +14,10 @@ import DashboardDataQualityPanel from '../components/dashboard/home/DashboardDat
 import EmptyOrErrorState from '../components/common/EmptyOrErrorState';
 import AppReportProblemButton from '../components/feedback/AppReportProblemButton';
 import HelpPageLink from '../components/help/HelpPageLink';
+import {
+  buildDashboardCountContexts,
+  DASHBOARD_COUNT_HELP_TEXT,
+} from '../utils/dashboard/dashboardCountSemantics';
 import '../styles/dashboard.css';
 
 function formatUpdatedAt(date) {
@@ -28,28 +32,6 @@ function formatUpdatedAt(date) {
   } catch {
     return 'Atualizado agora';
   }
-}
-
-function metricContexts(metrics, truncated) {
-  const truncNote = truncated ? ' (amostra da base)' : '';
-  const sem = metrics.semPrazoEstruturado ?? metrics.semPrazo ?? 0;
-  const confirmados = metrics.prazoConfirmado ?? 0;
-  return {
-    total: `${confirmados.toLocaleString('pt-BR')} com prazo confirmado${truncNote}`,
-    open: `Com prazo futuro válido · ${sem.toLocaleString('pt-BR')} sem prazo estruturado`,
-    expiring:
-      metrics.expiringSoon > 0
-        ? 'Requer atenção imediata'
-        : metrics.expiring30 > 0
-          ? `${metrics.expiring30} vencem em até 30 dias`
-          : 'Nenhum prazo crítico em 7 dias',
-    noticias: 'Últimos 30 dias · filtro Brasil/Internacional abaixo',
-    pesquisas: 'Últimos 30 dias · filtro Brasil/Internacional abaixo',
-    reports:
-      metrics.reportedProblemsPending > 0
-        ? 'Na fila local de envio'
-        : 'Fila local em dia',
-  };
 }
 
 export default function Dashboard() {
@@ -76,12 +58,12 @@ export default function Dashboard() {
     dataQualityAudit,
   } = data;
 
-  const ctx = metricContexts(metrics, truncatedEditais);
+  const ctx = buildDashboardCountContexts(metrics, { truncated: truncatedEditais });
 
   return (
     <>
       <Header searchPlaceholder="Buscar editais…" />
-      <div className="page-wrapper home-dashboard-page">
+      <div className="page-wrapper home-dashboard-page" data-testid="dashboard-page">
         <header className="home-dash-header home-dash-header--executive">
           <div className="home-dash-header-text">
             <p className="home-dash-eyebrow">Central executiva</p>
@@ -96,6 +78,7 @@ export default function Dashboard() {
               className="home-dash-btn home-dash-btn--primary"
               onClick={refresh}
               disabled={loading}
+              data-testid="dashboard-refresh-button"
             >
               {loading ? 'Atualizando…' : 'Atualizar dados'}
             </button>
@@ -126,9 +109,9 @@ export default function Dashboard() {
           <div className="home-dash-flow">
             <section className="home-dash-metrics home-dash-block" aria-label="Métricas">
               <DashboardMetricCard
-                label="Editais monitorados"
+                label={ctx.monitoredLabel}
                 value={metrics.totalEditais.toLocaleString('pt-BR')}
-                context={ctx.total}
+                context={ctx.monitored}
                 loading={loading}
                 accent
               />
@@ -166,6 +149,10 @@ export default function Dashboard() {
                 loading={loading}
               />
             </section>
+
+            <p className="home-dash-metrics-note" role="note">
+              {DASHBOARD_COUNT_HELP_TEXT}
+            </p>
 
             <div className="home-dash-block">
               <DashboardPriorityPanel priorities={priorities} loading={loading} />

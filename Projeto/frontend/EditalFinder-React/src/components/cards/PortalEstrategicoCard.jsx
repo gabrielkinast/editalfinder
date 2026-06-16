@@ -1,4 +1,5 @@
 import { useState, useCallback, useMemo } from 'react';
+import ExternalActionButton, { EXTERNAL_ACTION_TYPES } from '../../utils/externalActions';
 import {
   labelPortaisValidacaoBadge,
   labelQualidadeDado,
@@ -141,9 +142,12 @@ export default function PortalEstrategicoCard({ row, tabContext = 'fornecedores'
 
       <div className="portais-card-actions">
         {row?.link ? (
-          <a href={row.link} target="_blank" rel="noopener noreferrer" className="portais-card-btn portais-card-btn-primary">
-            Abrir portal
-          </a>
+          <ExternalActionButton
+            item={row}
+            actionType={EXTERNAL_ACTION_TYPES.PORTAL_PRIMARY}
+            label="Abrir portal"
+            className="portais-card-btn portais-card-btn-primary"
+          />
         ) : (
           <span className="portais-card-btn portais-card-btn-primary portais-card-btn--disabled">Link indisponível</span>
         )}

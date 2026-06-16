@@ -102,7 +102,7 @@ export default function Login() {
   };
 
   return (
-    <div className="login-container">
+    <div className="login-container" data-testid="login-page">
       <div className="login-card">
         <div className="login-header">
           {settings.logoImage ? (
@@ -179,7 +179,7 @@ export default function Login() {
               />
             </div>
 
-            <button type="submit" className="btn-login" disabled={loading}>
+            <button type="submit" className="btn-login" disabled={loading} data-testid="login-submit">
               {loading ? 'Verificando…' : 'Entrar'}
             </button>
 

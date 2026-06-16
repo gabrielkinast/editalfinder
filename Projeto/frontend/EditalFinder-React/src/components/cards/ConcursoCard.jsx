@@ -1,5 +1,6 @@
 import { formatCurrency, formatDate, formatArray } from '../../utils/formatters';
 import { labelTipoSelecao, labelStatus, getConcursoBadges } from '../../utils/concursos/concursosLabels';
+import ExternalActionButton, { EXTERNAL_ACTION_TYPES } from '../../utils/externalActions';
 import './ConcursoCard.css';
 
 function formatDiasLegenda(dias) {
@@ -183,23 +184,20 @@ export default function ConcursoCard({ row }) {
       )}
 
       <footer className="concurso-card__actions">
-        <a
-          href={row.link}
+        <ExternalActionButton
+          item={row}
+          actionType={EXTERNAL_ACTION_TYPES.CONCURSO_PRIMARY}
+          label="Abrir"
           className="btn-primary concurso-card__btn"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Abrir
-        </a>
+        />
         {linkEdital ? (
-          <a
-            href={linkEdital}
+          <ExternalActionButton
+            item={row}
+            actionType={EXTERNAL_ACTION_TYPES.CONCURSO_EDITAL}
+            url={linkEdital}
+            label="Edital"
             className="btn-secondary concurso-card__btn"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Edital
-          </a>
+          />
         ) : null}
       </footer>
     </article>

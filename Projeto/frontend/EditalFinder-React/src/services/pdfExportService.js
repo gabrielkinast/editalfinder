@@ -1,8 +1,27 @@
 import { jsPDF } from 'jspdf';
 import autoTable from 'jspdf-autotable';
+import {
+  buildEditaisPdfColumns,
+  buildEditaisPdfRows,
+  buildPdfFiltersSummary,
+} from '../utils/pdf/editaisPdfFormatters.js';
 
 const MARGIN = 14;
 const TABLE_BOTTOM_MARGIN = 16;
+
+/** Larguras fixas (mm) — soma ~253 em A4 paisagem com margens 14. */
+const EDITAIS_PDF_COLUMN_STYLES = {
+  titulo: { cellWidth: 50 },
+  status: { cellWidth: 24 },
+  fonte: { cellWidth: 26 },
+  tipo: { cellWidth: 24 },
+  area: { cellWidth: 34 },
+  local: { cellWidth: 20 },
+  situacao: { cellWidth: 20 },
+  prazo: { cellWidth: 20 },
+  valor: { cellWidth: 22 },
+  qualidade: { cellWidth: 14 },
+};
 
 function detectImageFormat(dataUrl) {
   if (!dataUrl || typeof dataUrl !== 'string') return 'PNG';
@@ -48,15 +67,88 @@ function addPageFooters(doc, fileStem) {
   const pageCount = doc.internal.getNumberOfPages();
   const pageW = doc.internal.pageSize.getWidth();
   const pageH = doc.internal.pageSize.getHeight();
-  const dateStr = new Date().toISOString().slice(0, 10);
   for (let i = 1; i <= pageCount; i += 1) {
     doc.setPage(i);
-    doc.setFontSize(8);
+    doc.setFontSize(7);
     doc.setTextColor(100, 100, 100);
-    doc.text(`${fileStem} · ${dateStr}`, MARGIN, pageH - 8);
-    doc.text(`Página ${i} de ${pageCount}`, pageW - MARGIN, pageH - 8, { align: 'right' });
+    doc.text('Gerado pelo EditalFinder', MARGIN, pageH - 6);
+    doc.text(`Página ${i} de ${pageCount}`, pageW - MARGIN, pageH - 6, { align: 'right' });
     doc.setTextColor(0, 0, 0);
   }
+}
+
+async function drawReportHeader(doc, {
+  brandName,
+  logoImage,
+  reportTitle,
+  totalExported,
+  totalInDataset,
+  filtersSummary,
+  extraLines = [],
+}) {
+  const pageW = doc.internal.pageSize.getWidth();
+  const maxTextW = pageW - 2 * MARGIN;
+  let y = MARGIN;
+
+  const logoDataUrl = await loadImageAsDataUrl(logoImage);
+  if (logoDataUrl) {
+    const fmt = detectImageFormat(logoDataUrl);
+    const maxH = 18;
+    try {
+      doc.addImage(logoDataUrl, fmt, MARGIN, y, 40, maxH, undefined, 'FAST');
+    } catch {
+      doc.setFontSize(12);
+      doc.setTextColor(30, 80, 180);
+      doc.text(brandName || 'EditalFinder', MARGIN, y + 8);
+    }
+    y += maxH + 6;
+  } else {
+    doc.setFontSize(14);
+    doc.setTextColor(30, 80, 180);
+    doc.text(brandName || 'EditalFinder', MARGIN, y + 6);
+    y += 12;
+  }
+  doc.setTextColor(0, 0, 0);
+
+  doc.setFontSize(16);
+  doc.setFont('helvetica', 'bold');
+  doc.text(reportTitle, MARGIN, y);
+  y += 8;
+
+  doc.setFont('helvetica', 'normal');
+  doc.setFontSize(10);
+  doc.text(
+    `Gerado em: ${new Date().toLocaleString('pt-BR', { dateStyle: 'short', timeStyle: 'short' })}`,
+    MARGIN,
+    y,
+  );
+  y += 6;
+
+  if (totalInDataset != null) {
+    doc.text(`Total exportado: ${totalExported} de ${totalInDataset} registros.`, MARGIN, y);
+  } else {
+    doc.text(`Total exportado: ${totalExported}`, MARGIN, y);
+  }
+  y += 6;
+
+  extraLines.forEach((line) => {
+    doc.splitTextToSize(line, maxTextW).forEach((chunk) => {
+      doc.text(chunk, MARGIN, y);
+      y += 4;
+    });
+  });
+
+  if (filtersSummary) {
+    doc.setFontSize(9);
+    doc.setTextColor(55, 55, 55);
+    doc.splitTextToSize(filtersSummary, maxTextW).forEach((chunk) => {
+      doc.text(chunk, MARGIN, y);
+      y += 4;
+    });
+    doc.setTextColor(0, 0, 0);
+  }
+
+  return Math.min(y + 4, doc.internal.pageSize.getHeight() - 40);
 }
 
 /**
@@ -106,6 +198,11 @@ export function formatDashboardFiltersForPdf(filters, globalSearch) {
     .map(([k]) => k);
   if (fontesSel.length) lines.push(`Fontes: ${fontesSel.join('; ')}`);
 
+  const semanticStatus = Object.entries(filters?.semanticStatusSelections || {})
+    .filter(([, on]) => on)
+    .map(([k]) => k.replace(/_/g, ' '));
+  if (semanticStatus.length) lines.push(`Status semântico: ${semanticStatus.join(', ')}`);
+
   if (lines.length === 0) lines.push('Nenhum filtro adicional (todos os registros visíveis após busca).');
   return lines;
 }
@@ -125,7 +222,62 @@ export function formatFeedFiltersForPdf(sidebarFilters, globalSearch) {
 }
 
 /**
- * PDF paisagem: logo/marca, título, parâmetros, tabela, rodapé com páginas.
+ * PDF tabular de editais — layout dedicado (FRONTEND 1.1D).
+ * Não captura a UI; usa jsPDF + autoTable em paisagem com 9 colunas fixas.
+ */
+export async function exportEditaisToPdf(editais = [], options = {}) {
+  const rows = buildEditaisPdfRows(editais);
+  const columns = buildEditaisPdfColumns();
+  const doc = new jsPDF('l', 'mm', 'a4');
+
+  const filterLines = [
+    ...(options.filterLinesExtra || []),
+    ...formatDashboardFiltersForPdf(options.filters, options.globalSearch),
+  ];
+
+  const startY = await drawReportHeader(doc, {
+    brandName: options.brandName,
+    logoImage: options.logoImage,
+    reportTitle: options.reportTitle || 'Relatório de editais',
+    totalExported: rows.length,
+    totalInDataset: options.totalInDataset ?? null,
+    filtersSummary: buildPdfFiltersSummary(filterLines),
+  });
+
+  autoTable(doc, {
+    columns,
+    body: rows,
+    startY,
+    theme: 'grid',
+    styles: {
+      fontSize: 7,
+      cellPadding: 1.5,
+      overflow: 'linebreak',
+      valign: 'top',
+      minCellHeight: 4,
+    },
+    headStyles: {
+      fillColor: [74, 108, 247],
+      textColor: [255, 255, 255],
+      fontStyle: 'bold',
+      halign: 'center',
+    },
+    columnStyles: EDITAIS_PDF_COLUMN_STYLES,
+    margin: { left: MARGIN, right: MARGIN, bottom: TABLE_BOTTOM_MARGIN },
+    tableWidth: 'wrap',
+    showHead: 'everyPage',
+    rowPageBreak: 'auto',
+  });
+
+  const stem = options.fileNameStem || 'editais';
+  addPageFooters(doc, stem);
+  doc.save(`${stem}_${new Date().toISOString().split('T')[0]}.pdf`);
+}
+
+export { buildEditaisPdfRows, buildEditaisPdfColumns, buildPdfFiltersSummary };
+
+/**
+ * PDF paisagem genérico (notícias, feeds) — mantém assinatura pública.
  */
 export async function exportLandscapeTablePdf({
   fileNameStem,
@@ -140,65 +292,15 @@ export async function exportLandscapeTablePdf({
   autoTableOptions = {},
 }) {
   const doc = new jsPDF('l', 'mm', 'a4');
-  const pageW = doc.internal.pageSize.getWidth();
-  const maxTextW = pageW - 2 * MARGIN;
 
-  let y = MARGIN;
-
-  const logoDataUrl = await loadImageAsDataUrl(logoImage);
-  if (logoDataUrl) {
-    const fmt = detectImageFormat(logoDataUrl);
-    const maxH = 18;
-    const imgW = 40;
-    const imgH = maxH;
-    try {
-      doc.addImage(logoDataUrl, fmt, MARGIN, y, imgW, imgH, undefined, 'FAST');
-    } catch {
-      doc.setFontSize(12);
-      doc.setTextColor(30, 80, 180);
-      doc.text(brandName || 'Edital Finder', MARGIN, y + 8);
-    }
-    y += maxH + 6;
-  } else {
-    doc.setFontSize(14);
-    doc.setTextColor(30, 80, 180);
-    doc.text(brandName || 'Edital Finder', MARGIN, y + 6);
-    y += 12;
-  }
-  doc.setTextColor(0, 0, 0);
-
-  doc.setFontSize(16);
-  doc.setFont('helvetica', 'bold');
-  doc.text(reportTitle, MARGIN, y);
-  y += 8;
-
-  doc.setFont('helvetica', 'normal');
-  doc.setFontSize(10);
-  doc.text(`Gerado em: ${new Date().toLocaleString('pt-BR', { dateStyle: 'short', timeStyle: 'short' })}`, MARGIN, y);
-  y += 6;
-
-  if (totalInDataset != null) {
-    doc.text(`Exportando ${totalExported} de ${totalInDataset} registros carregados do banco.`, MARGIN, y);
-    y += 6;
-  } else {
-    doc.text(`Registros no relatório: ${totalExported}`, MARGIN, y);
-    y += 6;
-  }
-
-  doc.setFontSize(9);
-  doc.setTextColor(55, 55, 55);
-  doc.text('Parâmetros do relatório:', MARGIN, y);
-  y += 5;
-  filterLines.forEach((line) => {
-    doc.splitTextToSize(line, maxTextW).forEach((chunk) => {
-      doc.text(chunk, MARGIN, y);
-      y += 4;
-    });
+  const safeStartY = await drawReportHeader(doc, {
+    brandName,
+    logoImage,
+    reportTitle,
+    totalExported,
+    totalInDataset,
+    filtersSummary: buildPdfFiltersSummary(filterLines),
   });
-  doc.setTextColor(0, 0, 0);
-  y += 4;
-
-  const safeStartY = Math.min(y + 2, doc.internal.pageSize.getHeight() - 40);
 
   const { styles: optsStyles, headStyles: optsHeadStyles, ...restAuto } = autoTableOptions;
 

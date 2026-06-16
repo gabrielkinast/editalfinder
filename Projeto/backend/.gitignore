@@ -13,6 +13,7 @@ __pycache__/
 
 # --- Variáveis de ambiente e secrets ---
 .env
+.env.local
 .env.*
 !.env.example
 !.env.*.example
@@ -20,11 +21,19 @@ CORE/.env
 CORE/.env.*
 *.key
 *.pem
+*.p12
+*.pfx
 *.secret
 *.token
 *.credentials
+*credentials*.json
+*service_role*
+*service-role*
 service_role*.json
 supabase*.json
+!**/supabase/migrations/**
+secrets/
+.secrets/
 
 # --- Logs ---
 *.log

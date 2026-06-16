@@ -49,6 +49,27 @@ def read_version() -> str:
     return "0.1.0"
 
 
+def verify_frontend_dist() -> None:
+    """Garante que o bundle web usa paths relativos (EXE Tauri quebra com /editalfinder/ ou /assets/)."""
+    index = FRONTEND / "dist" / "index.html"
+    if not index.is_file():
+        print(f"Erro: {index} não encontrado. Rode npm run build:tauri antes do tauri build.", file=sys.stderr)
+        sys.exit(1)
+    html = index.read_text(encoding="utf-8")
+    if 'src="/' in html or 'href="/' in html or 'src="/editalfinder/' in html:
+        print(
+            "Erro: dist/index.html usa paths absolutos. "
+            "Use `npm run build:tauri` (beforeBuildCommand) antes de empacotar o EXE.",
+            file=sys.stderr,
+        )
+        sys.exit(1)
+    if "./assets/" not in html:
+        print(
+            "Aviso: dist/index.html não referencia ./assets/ — verifique vite base para Tauri.",
+            file=sys.stderr,
+        )
+
+
 def find_nsis_setup() -> Path | None:
     if not NSIS_DIR.is_dir():
         return None
@@ -119,6 +140,7 @@ def write_sha256sums(version: str, entries: list[tuple[Path, str]]) -> Path:
 
 
 def main() -> int:
+    verify_frontend_dist()
     version = read_version()
     tag = safe_version_tag(version)
     RELEASES_DIR.mkdir(parents=True, exist_ok=True)

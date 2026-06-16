@@ -7,11 +7,9 @@ import {
   useState,
 } from 'react';
 import { useAuth } from './AuthContext';
-import { buildAppFeedbackPayload } from '../utils/feedback/buildAppFeedbackPayload';
 import {
-  createAppFeedback,
   flushPendingAppFeedback,
-  MSG_APP_FEEDBACK_NOT_AUTHENTICATED,
+  submitAppFeedback,
 } from '../services/appFeedbackService';
 import {
   installGlobalErrorReporter,
@@ -24,23 +22,44 @@ import AppFeedbackToast from '../components/feedback/AppFeedbackToast';
 
 const AppFeedbackContext = createContext(null);
 
+function safeFlushPending(onSent) {
+  flushPendingAppFeedback()
+    .then((r) => {
+      if (r?.sent > 0) onSent?.(r.sent);
+    })
+    .catch((error) => {
+      if (import.meta.env.DEV) {
+        console.warn('[AppFeedback] flush failed', error);
+      }
+    });
+}
+
 export function AppFeedbackProvider({ children }) {
   const { user: appUser, authenticated, loading: authLoading } = useAuth();
   const [modalOpen, setModalOpen] = useState(false);
-  const [modalContext, setModalContext] = useState(null);
+  const [modalContext, setModalContext] = useState({});
   const [lastReportable, setLastReportable] = useState(null);
   const [toast, setToast] = useState(null);
 
   const authUserId = appUser?.auth_user_id ?? null;
 
   const openAppFeedbackModal = useCallback((context = {}) => {
-    setModalContext(context);
+    setModalContext(context && typeof context === 'object' ? context : {});
     setModalOpen(true);
+    safeFlushPending((sent) => {
+      setToast({
+        message: `${sent} reporte(s) pendente(s): abrimos o Gmail — revise e envie a mensagem.`,
+        type: 'success',
+        context: null,
+        actionLabel: null,
+      });
+      window.setTimeout(() => setToast(null), 5000);
+    });
   }, []);
 
   const closeAppFeedbackModal = useCallback(() => {
     setModalOpen(false);
-    setModalContext(null);
+    setModalContext({});
   }, []);
 
   const showAppToast = useCallback((message, context = null, type = 'error') => {
@@ -70,59 +89,54 @@ export function AppFeedbackProvider({ children }) {
   );
 
   useEffect(() => {
-    registerGlobalErrorReporterHandlers({
-      onReportableError: (ctx) => setLastReportable(ctx),
-      showErrorToast: showAppErrorToast,
-    });
-    registerActionErrorHandlers({
-      showErrorToast: showAppErrorToast,
-      openFeedbackModal: openAppFeedbackModal,
-      setLastReportable,
-    });
-    installGlobalErrorReporter();
-    return () => uninstallGlobalErrorReporter();
+    try {
+      registerGlobalErrorReporterHandlers({
+        onReportableError: (ctx) => setLastReportable(ctx),
+        showErrorToast: showAppErrorToast,
+      });
+      registerActionErrorHandlers({
+        showErrorToast: showAppErrorToast,
+        openFeedbackModal: openAppFeedbackModal,
+        setLastReportable,
+      });
+      installGlobalErrorReporter();
+    } catch (error) {
+      if (import.meta.env.DEV) {
+        console.warn('[AppFeedback] reporter install failed', error);
+      }
+    }
+    return () => {
+      try {
+        uninstallGlobalErrorReporter();
+      } catch {
+        /* ignore */
+      }
+    };
   }, [showAppErrorToast, openAppFeedbackModal]);
 
-  useEffect(() => {
-    if (!authenticated || authLoading) return;
-    flushPendingAppFeedback({
-      appUser,
-      authenticated,
-      authLoading,
-      authUserId,
-    }).then((r) => {
-      if (r.flushed > 0) {
-        showAppSuccessToast(`${r.flushed} relatório(s) pendente(s) enviado(s).`);
-      }
-    });
-  }, [authenticated, authLoading, appUser, authUserId, showAppSuccessToast]);
-
   const submitFeedback = useCallback(
-    async ({ tipo, comment, context }) => {
-      const base = context?.payload || buildAppFeedbackPayload({
-        tipo: tipo || context?.tipo || 'outro',
-        origem: context?.origem || 'user_report',
-        pagina: context?.pagina,
-        componente: context?.componente,
-        acao: context?.acao,
-        error: context?.error,
-        errorInfo: context?.errorInfo,
-        comment,
-        extraContext: context?.extraContext,
-      });
-
-      const payload = {
-        ...base,
-        tipo_feedback: tipo || base.tipo_feedback,
-        comentario: comment || base.comentario,
-      };
-
-      return createAppFeedback(payload, {
-        appUser,
-        authenticated,
-        authLoading,
-        authUserId,
-      });
+    async ({ tipo, severidade, comment, context }) => {
+      try {
+        return await submitAppFeedback(
+          { tipo, severidade, descricao: comment, comment },
+          context || {},
+          {
+            appUser,
+            authenticated,
+            authLoading,
+            authUserId,
+          },
+        );
+      } catch (error) {
+        if (import.meta.env.DEV) {
+          console.warn('[AppFeedback] submit failed', error);
+        }
+        return {
+          ok: false,
+          status: 'failed',
+          message: 'Não foi possível processar o relatório. Tente novamente.',
+        };
+      }
     },
     [appUser, authenticated, authLoading, authUserId],
   );
@@ -138,11 +152,7 @@ export function AppFeedbackProvider({ children }) {
       submitFeedback,
       authenticated,
       authLoading,
-      authBlockMessage: authLoading
-        ? 'Carregando conta…'
-        : !authenticated
-          ? MSG_APP_FEEDBACK_NOT_AUTHENTICATED
-          : null,
+      authBlockMessage: null,
     }),
     [
       openAppFeedbackModal,
@@ -174,7 +184,7 @@ export function AppFeedbackProvider({ children }) {
         toast={toast}
         onAction={() => {
           const ctx = toast?.context || lastReportable;
-          openAppFeedbackModal(ctx || { origem: 'toast_error', tipo: 'outro' });
+          openAppFeedbackModal(ctx || { origem: 'toast_error', tipo: 'other' });
           setToast(null);
         }}
         onDismiss={() => setToast(null)}

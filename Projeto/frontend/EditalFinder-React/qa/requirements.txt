@@ -1,0 +1,8 @@
+# DESKTOP QA 1.0 — fallback Windows (opcional, não usado no npm test).
+# Instale em um venv dedicado:
+#   python -m venv .venv-qa
+#   .\.venv-qa\Scripts\Activate.ps1
+#   pip install -r qa/requirements.txt
+pywinauto>=0.6.8
+psutil>=5.9
+Pillow>=10.0

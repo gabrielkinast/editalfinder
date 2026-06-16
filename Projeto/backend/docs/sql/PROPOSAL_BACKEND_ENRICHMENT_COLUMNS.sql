@@ -47,6 +47,28 @@ COMMENT ON COLUMN public.edital.fundo_origem IS
   'Fundo/programa de origem do recurso (ex.: FNDCT). Distinto de fonte_normalizada (agência operadora, ex.: FINEP).';
 */
 
+-- Backend 9 — ruído, validade, quality (dry-run antes de backfill):
+/*
+ALTER TABLE public.edital ADD COLUMN IF NOT EXISTS noise_score numeric NULL;
+ALTER TABLE public.edital ADD COLUMN IF NOT EXISTS is_noise boolean NULL;
+ALTER TABLE public.edital ADD COLUMN IF NOT EXISTS noise_type text NULL;
+ALTER TABLE public.edital ADD COLUMN IF NOT EXISTS is_actionable_opportunity boolean NULL;
+ALTER TABLE public.edital ADD COLUMN IF NOT EXISTS actionability_score numeric NULL;
+ALTER TABLE public.edital ADD COLUMN IF NOT EXISTS validade_status text NULL;
+ALTER TABLE public.edital ADD COLUMN IF NOT EXISTS validade_data date NULL;
+ALTER TABLE public.edital ADD COLUMN IF NOT EXISTS validade_confidence text NULL;
+ALTER TABLE public.edital ADD COLUMN IF NOT EXISTS validade_source text NULL;
+ALTER TABLE public.edital ADD COLUMN IF NOT EXISTS quality_score integer NULL;
+ALTER TABLE public.edital ADD COLUMN IF NOT EXISTS quality_level text NULL;
+ALTER TABLE public.edital ADD COLUMN IF NOT EXISTS quality_flags jsonb DEFAULT '[]'::jsonb;
+ALTER TABLE public.edital ADD COLUMN IF NOT EXISTS review_reasons jsonb DEFAULT '[]'::jsonb;
+
+COMMENT ON COLUMN public.edital.validade_status IS
+  'aberto|vencendo_7|vencendo_30|encerrado|sem_prazo|nao_aplicavel|prazo_invalido|desconhecido (Backend 9)';
+COMMENT ON COLUMN public.edital.is_actionable_opportunity IS
+  'True se o registro é oportunidade principal acionável (não resultado/retificação/notícia).';
+*/
+
 -- Backend 8: revisar dry-run FINEP/FNDCT antes de backfill:
 --   python scripts/dry_run_finep_fndct_normalization.py --from-db
 
