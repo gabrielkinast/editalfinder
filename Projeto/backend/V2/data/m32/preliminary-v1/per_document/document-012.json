@@ -1,0 +1,744 @@
+{
+  "diagnostics": [
+    "passive_not_rendered_DOM",
+    "unfrozen_attachments_unavailable"
+  ],
+  "document_id": "M30-F06",
+  "error_cases": [
+    {
+      "case_id": "M30-F06-R1:temporal_status",
+      "certainty": "unresolved_disagreement",
+      "dimension": "temporal_status",
+      "document_id": "M30-F06",
+      "error_codes": [
+        "TEMPORAL_AVAILABILITY_INFERENCE",
+        "REFERENCE_AMBIGUITY"
+      ],
+      "expected_behavior": "Resolve this dimension from same-record evidence; provisional label is comparison, not authority.",
+      "next_action": "Compare full frozen context and request authorized adjudication; do not rewrite labels.",
+      "observed": {
+        "discovery": "confirmed_opportunity",
+        "end": 12437,
+        "modality": "fomento",
+        "segment_id": "segment-0003",
+        "start": 8611,
+        "temporal": "undetermined"
+      },
+      "record_id": "M30-F06-R1",
+      "reference": {
+        "discovery_label": "confirmed_opportunity",
+        "modality": "fomento",
+        "opportunity_label": "genuine_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "open"
+      },
+      "review_status": "provisional",
+      "root_cause": "Context fragmentation or semantic rule/reference ambiguity; see all-overlap graph before adjudication.",
+      "root_cause_confidence": "low",
+      "segment_id": "segment-0003",
+      "severity": "medium",
+      "supporting_evidence": {
+        "end": 9811,
+        "quote": "Chamada Eureka recebe propostas para projetos de resiliência e resposta a desastres\nEmpresas brasileiras com projetos aprovados na etapa internacional podem enviar propostas à Finep até 6 de novembro\nCompartilhe:\nCompartilhe por Facebook\nCompartilhe por Twitter\nCompartilhe por LinkedIn\nCompartilhe por WhatsApp\nlink para Copiar para área de transferência\nPublicado em\n15/10/2026 17h18\nO Ministério da Ciência, Tecnologia e Inovação (MCTI) e a Financiadora de Estudos e Projetos (Finep) recebem, até 6 de novembro, propostas para a fase nacional da chamada do\nPrograma de Cooperação para Inovação da Rede Eureka\nvoltada à resiliência, resposta e recuperação de desastres. A seleção conta com recursos não reembolsáveis do Fundo Nacional de Desenvolvimento Científico e Tecnológico (FNDCT) e é destinada a empresas brasileiras participantes de projetos aprovados na etapa internacional e contemplados com o Selo Eureka.\nA chamada prevê até R$ 7 milhões em recursos de subvenção econômica para a participação brasileira nos projetos. O valor solicitado à Finep em cada proposta deve girar em torno de R$ 1 milhão e R$ 5 milhões, de acordo com o porte da empresa e as regras estabelecidas no edital.\nPod",
+        "start": 8611
+      }
+    },
+    {
+      "case_id": "M30-F06-R1:segmentation",
+      "certainty": "supported_observation",
+      "dimension": "structural",
+      "document_id": "M30-F06",
+      "error_codes": [
+        "SEGMENTATION_BOUNDARY"
+      ],
+      "expected_behavior": "A meaningful record should retain its own associated context; whitespace-only boundary differences are not semantic defects.",
+      "next_action": "Inspect semantic usefulness of boundaries before changing segmentation.",
+      "observed": {
+        "coverage": {
+          "denominator": 3211,
+          "numerator": 3211,
+          "value": 1.0
+        },
+        "fragmentation": 1
+      },
+      "record_id": "M30-F06-R1",
+      "reference": {
+        "discovery_label": "confirmed_opportunity",
+        "modality": "fomento",
+        "opportunity_label": "genuine_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "open"
+      },
+      "review_status": "provisional",
+      "root_cause": "Structure-derived units differ from provisional annotated record spans.",
+      "root_cause_confidence": "high",
+      "segment_id": "segment-0003",
+      "severity": "medium",
+      "supporting_evidence": {
+        "edges": [
+          {
+            "end": 12437,
+            "exact": false,
+            "intersection": 3211,
+            "intersection_end": 12178,
+            "intersection_start": 8967,
+            "iou": 0.8392577104025092,
+            "predicted_purity": 0.8392577104025092,
+            "reference_fraction": 1.0,
+            "segment_id": "segment-0003",
+            "start": 8611
+          }
+        ],
+        "reference_span": [
+          8967,
+          12178
+        ]
+      }
+    }
+  ],
+  "extracted_claims": [
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F06",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "title",
+      "original": "Chamada Eureka recebe propostas para projetos de resiliência e resposta a desastres",
+      "reference_records": [
+        "M30-F06-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0003",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F06",
+        "end": 8694,
+        "page": null,
+        "quote": "Chamada Eureka recebe propostas para projetos de resiliência e resposta a desastres",
+        "raw_sha256": "6e77fcf1ccb413349c81d399cf832a56c7828816fa34400af7e54c4ed6c7493e",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0003",
+        "start": 8611,
+        "text_sha256": "3aeb29325b924a4e49d28baf5eb16714d166a1835e74141668673cdaa4c332ba"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F06",
+      "field_index": 1,
+      "method_version": "m31-deterministic-v2",
+      "name": "unknown_temporal_expression",
+      "original": "15/10/2026",
+      "reference_records": [
+        "M30-F06-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0003",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F06",
+        "end": 8996,
+        "page": null,
+        "quote": "15/10/2026 17h18",
+        "raw_sha256": "6e77fcf1ccb413349c81d399cf832a56c7828816fa34400af7e54c4ed6c7493e",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0003",
+        "start": 8980,
+        "text_sha256": "3aeb29325b924a4e49d28baf5eb16714d166a1835e74141668673cdaa4c332ba"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F06",
+      "field_index": 2,
+      "method_version": "m31-deterministic-v2",
+      "name": "applicant_requirements",
+      "original": "voltada à resiliência, resposta e recuperação de desastres. A seleção conta com recursos não reembolsáveis do Fundo Nacional de Desenvolvimento Científico e Tecnológico (FNDCT) e é destinada a empresas brasileiras participantes de projetos aprovados na etapa internacional e contemplados com o Selo Eureka.",
+      "reference_records": [
+        "M30-F06-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0003",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F06",
+        "end": 9529,
+        "page": null,
+        "quote": "voltada à resiliência, resposta e recuperação de desastres. A seleção conta com recursos não reembolsáveis do Fundo Nacional de Desenvolvimento Científico e Tecnológico (FNDCT) e é destinada a empresas brasileiras participantes de projetos aprovados na etapa internacional e contemplados com o Selo Eureka.",
+        "raw_sha256": "6e77fcf1ccb413349c81d399cf832a56c7828816fa34400af7e54c4ed6c7493e",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0003",
+        "start": 9223,
+        "text_sha256": "3aeb29325b924a4e49d28baf5eb16714d166a1835e74141668673cdaa4c332ba"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F06",
+      "field_index": 3,
+      "method_version": "m31-deterministic-v2",
+      "name": "beneficiary_expression",
+      "original": "voltada à resiliência, resposta e recuperação de desastres. A seleção conta com recursos não reembolsáveis do Fundo Nacional de Desenvolvimento Científico e Tecnológico (FNDCT) e é destinada a empresas brasileiras participantes de projetos aprovados na etapa internacional e contemplados com o Selo Eureka.",
+      "reference_records": [
+        "M30-F06-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0003",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F06",
+        "end": 9529,
+        "page": null,
+        "quote": "voltada à resiliência, resposta e recuperação de desastres. A seleção conta com recursos não reembolsáveis do Fundo Nacional de Desenvolvimento Científico e Tecnológico (FNDCT) e é destinada a empresas brasileiras participantes de projetos aprovados na etapa internacional e contemplados com o Selo Eureka.",
+        "raw_sha256": "6e77fcf1ccb413349c81d399cf832a56c7828816fa34400af7e54c4ed6c7493e",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0003",
+        "start": 9223,
+        "text_sha256": "3aeb29325b924a4e49d28baf5eb16714d166a1835e74141668673cdaa4c332ba"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F06",
+      "field_index": 4,
+      "method_version": "m31-deterministic-v2",
+      "name": "monetary_expression_unresolved",
+      "original": "R$ 7 milhões",
+      "reference_records": [
+        "M30-F06-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0003",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F06",
+        "end": 9807,
+        "page": null,
+        "quote": "A chamada prevê até R$ 7 milhões em recursos de subvenção econômica para a participação brasileira nos projetos. O valor solicitado à Finep em cada proposta deve girar em torno de R$ 1 milhão e R$ 5 milhões, de acordo com o porte da empresa e as regras estabelecidas no edital.",
+        "raw_sha256": "6e77fcf1ccb413349c81d399cf832a56c7828816fa34400af7e54c4ed6c7493e",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0003",
+        "start": 9530,
+        "text_sha256": "3aeb29325b924a4e49d28baf5eb16714d166a1835e74141668673cdaa4c332ba"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F06",
+      "field_index": 5,
+      "method_version": "m31-deterministic-v2",
+      "name": "proposal_amount_expression",
+      "original": "R$ 1 milhão",
+      "reference_records": [
+        "M30-F06-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0003",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F06",
+        "end": 9807,
+        "page": null,
+        "quote": "A chamada prevê até R$ 7 milhões em recursos de subvenção econômica para a participação brasileira nos projetos. O valor solicitado à Finep em cada proposta deve girar em torno de R$ 1 milhão e R$ 5 milhões, de acordo com o porte da empresa e as regras estabelecidas no edital.",
+        "raw_sha256": "6e77fcf1ccb413349c81d399cf832a56c7828816fa34400af7e54c4ed6c7493e",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0003",
+        "start": 9530,
+        "text_sha256": "3aeb29325b924a4e49d28baf5eb16714d166a1835e74141668673cdaa4c332ba"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F06",
+      "field_index": 6,
+      "method_version": "m31-deterministic-v2",
+      "name": "proposal_amount_expression",
+      "original": "R$ 5 milhões",
+      "reference_records": [
+        "M30-F06-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0003",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F06",
+        "end": 9807,
+        "page": null,
+        "quote": "A chamada prevê até R$ 7 milhões em recursos de subvenção econômica para a participação brasileira nos projetos. O valor solicitado à Finep em cada proposta deve girar em torno de R$ 1 milhão e R$ 5 milhões, de acordo com o porte da empresa e as regras estabelecidas no edital.",
+        "raw_sha256": "6e77fcf1ccb413349c81d399cf832a56c7828816fa34400af7e54c4ed6c7493e",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0003",
+        "start": 9530,
+        "text_sha256": "3aeb29325b924a4e49d28baf5eb16714d166a1835e74141668673cdaa4c332ba"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F06",
+      "field_index": 7,
+      "method_version": "m31-deterministic-v2",
+      "name": "applicant_requirements",
+      "original": ") podem participar dos projetos como prestadoras de serviços de pesquisa e extensão, incluindo atividades de desenvolvimento, validação, prototipagem e transferência de tecnologia, conforme as condições previstas no edital.",
+      "reference_records": [
+        "M30-F06-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0003",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F06",
+        "end": 11595,
+        "page": null,
+        "quote": ") podem participar dos projetos como prestadoras de serviços de pesquisa e extensão, incluindo atividades de desenvolvimento, validação, prototipagem e transferência de tecnologia, conforme as condições previstas no edital.",
+        "raw_sha256": "6e77fcf1ccb413349c81d399cf832a56c7828816fa34400af7e54c4ed6c7493e",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0003",
+        "start": 11372,
+        "text_sha256": "3aeb29325b924a4e49d28baf5eb16714d166a1835e74141668673cdaa4c332ba"
+      }
+    }
+  ],
+  "provenance": {
+    "byte_length": 176162,
+    "category_evidence": "Chamada Eureka recebe propostas para projetos de resiliência e resposta a desastres",
+    "content_type": "text/html",
+    "derivation_method": "stdlib-HTMLParser-data-whitespace-v1; excludes script/style/noscript/template; not rendered DOM",
+    "document_category": "institutional_news",
+    "document_id": "M30-F06",
+    "document_version": null,
+    "final_url": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/noticias-julho-outubro-2026/chamada-eureka-recebe-propostas-para-projetos-de-resiliencia-e-resposta-a-desastres",
+    "original_filename": "chamada-eureka-recebe-propostas-para-projetos-de-resiliencia-e-resposta-a-desastres",
+    "original_url": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/noticias-julho-outubro-2026/chamada-eureka-recebe-propostas-para-projetos-de-resiliencia-e-resposta-a-desastres",
+    "publication_date": "2026-10-15",
+    "raw_path": "raw/M30-F06.html",
+    "restrictions": "Research pilot local frozen copy only; no redistribution license inferred. No scripts executed, no forms submitted, no applicant records intentionally collected. Public navigation/staff attribution may remain in original bytes.",
+    "retrieval_status": "acquired",
+    "retrieved_at": "2026-10-19T04:37:54.738001+00:00",
+    "sha256": "6e77fcf1ccb413349c81d399cf832a56c7828816fa34400af7e54c4ed6c7493e",
+    "source_authority_notes": "Public HTTPS page hosted by the named institution; authorship asserted by host/content, not cryptographically authenticated. Not source-readiness approval.",
+    "source_organization": "MCTI",
+    "text_path": "text/M30-F06.txt",
+    "text_sha256": "3aeb29325b924a4e49d28baf5eb16714d166a1835e74141668673cdaa4c332ba"
+  },
+  "records": [
+    {
+      "all_overlap_predictions": [
+        {
+          "discovery": "confirmed_opportunity",
+          "modality": "fomento",
+          "segment_id": "segment-0003",
+          "temporal": "undetermined"
+        }
+      ],
+      "any_exact_boundary": false,
+      "coverage": {
+        "denominator": 3211,
+        "numerator": 3211,
+        "value": 1.0
+      },
+      "covered_characters": 3211,
+      "disagreements": [
+        "temporal_status"
+      ],
+      "discovery_histogram": {
+        "confirmed_opportunity": 1
+      },
+      "document_id": "M30-F06",
+      "edges": [
+        {
+          "end": 12437,
+          "exact": false,
+          "intersection": 3211,
+          "intersection_end": 12178,
+          "intersection_start": 8967,
+          "iou": 0.8392577104025092,
+          "predicted_purity": 0.8392577104025092,
+          "reference_fraction": 1.0,
+          "segment_id": "segment-0003",
+          "start": 8611
+        }
+      ],
+      "end": 12178,
+      "fields": [
+        {
+          "candidates": [
+            {
+              "diagnostic_status": "traceable_not_semantically_certified",
+              "field_index": 0,
+              "method_version": "m31-deterministic-v2",
+              "name": "title",
+              "original": "Chamada Eureka recebe propostas para projetos de resiliência e resposta a desastres",
+              "schema_version": "m31-extraction-v1",
+              "segment_id": "segment-0003",
+              "uncertainty": "heuristic role assignment; not authenticated or normalized",
+              "witness": {
+                "document_id": "M30-F06",
+                "end": 8694,
+                "page": null,
+                "quote": "Chamada Eureka recebe propostas para projetos de resiliência e resposta a desastres",
+                "raw_sha256": "6e77fcf1ccb413349c81d399cf832a56c7828816fa34400af7e54c4ed6c7493e",
+                "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+                "schema_version": "m31-extraction-v1",
+                "segment_id": "segment-0003",
+                "start": 8611,
+                "text_sha256": "3aeb29325b924a4e49d28baf5eb16714d166a1835e74141668673cdaa4c332ba"
+              }
+            }
+          ],
+          "name": "title",
+          "reason": "value occurrences outside this reference unit",
+          "reference_evidence": [
+            {
+              "end": 9222,
+              "evidence_id": "M30-F06-R1-E1",
+              "page": null,
+              "quote": "Programa de Cooperação para Inovação da Rede Eureka",
+              "start": 9171
+            }
+          ],
+          "reference_value": "Programa de Cooperação para Inovação da Rede Eureka",
+          "scope_supported": true,
+          "semantic_adjudication": "not_certified",
+          "status": "ATTRIBUTION_ERROR",
+          "strict_role_value": false
+        },
+        {
+          "candidates": [],
+          "name": "target_audience",
+          "reason": "requested target role outside implemented M31 field scope",
+          "reference_evidence": [
+            {
+              "end": 11118,
+              "evidence_id": "M30-F06-R1-E3",
+              "page": null,
+              "quote": "Na fase nacional, apenas empresas brasileiras que participam de consórcios aprovados na fase internacional e que possuem Selo Eureka podem apresentar propostas.",
+              "start": 10958
+            }
+          ],
+          "reference_value": "Na fase nacional, apenas empresas brasileiras que participam de consórcios aprovados na fase internacional e que possuem Selo Eureka podem apresentar propostas.",
+          "scope_supported": false,
+          "semantic_adjudication": "not_certified",
+          "status": "UNRESOLVED",
+          "strict_role_value": false
+        },
+        {
+          "candidates": [],
+          "name": "submission_deadline",
+          "reason": "no corresponding field; absence is not explicit field abstention",
+          "reference_evidence": [
+            {
+              "end": 12178,
+              "evidence_id": "M30-F06-R1-E4",
+              "page": null,
+              "quote": "O prazo final para o envio das propostas é 6 de novembro, às 17h, no horário de Brasília.",
+              "start": 12089
+            }
+          ],
+          "reference_value": "6 de novembro, às 17h, no horário de Brasília",
+          "scope_supported": true,
+          "semantic_adjudication": "not_certified",
+          "status": "MISSING",
+          "strict_role_value": false
+        },
+        {
+          "candidates": [],
+          "name": "program_budget",
+          "reason": "literal amount retained without requested financial role/qualifiers",
+          "reference_evidence": [
+            {
+              "end": 9642,
+              "evidence_id": "M30-F06-R1-E2",
+              "page": null,
+              "quote": "A chamada prevê até R$ 7 milhões em recursos de subvenção econômica para a participação brasileira nos projetos.",
+              "start": 9530
+            }
+          ],
+          "reference_value": "até R$ 7 milhões",
+          "scope_supported": true,
+          "semantic_adjudication": "not_certified",
+          "status": "PARTIAL",
+          "strict_role_value": false
+        },
+        {
+          "candidates": [],
+          "name": "resource_type",
+          "reason": "requested target role outside implemented M31 field scope",
+          "reference_evidence": [
+            {
+              "end": 9642,
+              "evidence_id": "M30-F06-R1-E2",
+              "page": null,
+              "quote": "A chamada prevê até R$ 7 milhões em recursos de subvenção econômica para a participação brasileira nos projetos.",
+              "start": 9530
+            }
+          ],
+          "reference_value": "subvenção econômica",
+          "scope_supported": false,
+          "semantic_adjudication": "not_certified",
+          "status": "UNRESOLVED",
+          "strict_role_value": false
+        }
+      ],
+      "fragmentation": 1,
+      "location_convention": "html_unicode_codepoints",
+      "physical_reference_evidence_pages": [],
+      "rationale": "Provisional AI source reading: Dated October 2026 ministry news describes a live national-stage subvention call closing 6 November. Eligibility is restricted to previously approved international consortia, not an unrestricted new international call.",
+      "record_id": "M30-F06-R1",
+      "reference": {
+        "discovery_label": "confirmed_opportunity",
+        "modality": "fomento",
+        "opportunity_label": "genuine_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "open"
+      },
+      "reference_characters": 3211,
+      "reference_evidence": [
+        {
+          "end": 9222,
+          "evidence_id": "M30-F06-R1-E1",
+          "page": null,
+          "quote": "Programa de Cooperação para Inovação da Rede Eureka",
+          "start": 9171
+        },
+        {
+          "end": 9642,
+          "evidence_id": "M30-F06-R1-E2",
+          "page": null,
+          "quote": "A chamada prevê até R$ 7 milhões em recursos de subvenção econômica para a participação brasileira nos projetos.",
+          "start": 9530
+        },
+        {
+          "end": 11118,
+          "evidence_id": "M30-F06-R1-E3",
+          "page": null,
+          "quote": "Na fase nacional, apenas empresas brasileiras que participam de consórcios aprovados na fase internacional e que possuem Selo Eureka podem apresentar propostas.",
+          "start": 10958
+        },
+        {
+          "end": 12178,
+          "evidence_id": "M30-F06-R1-E4",
+          "page": null,
+          "quote": "O prazo final para o envio das propostas é 6 de novembro, às 17h, no horário de Brasília.",
+          "start": 12089
+        },
+        {
+          "end": 8996,
+          "evidence_id": "M30-F06-R1-E5",
+          "page": null,
+          "quote": "Publicado em\n15/10/2026 17h18",
+          "start": 8967
+        }
+      ],
+      "representative": "segment-0003",
+      "representative_prediction": {
+        "discovery": "confirmed_opportunity",
+        "end": 12437,
+        "modality": "fomento",
+        "segment_id": "segment-0003",
+        "start": 8611,
+        "temporal": "undetermined"
+      },
+      "representative_quote": "Chamada Eureka recebe propostas para projetos de resiliência e resposta a desastres\nEmpresas brasileiras com projetos aprovados na etapa internacional podem enviar propostas à Finep até 6 de novembro\nCompartilhe:\nCompartilhe por Facebook\nCompartilhe por Twitter\nCompartilhe por LinkedIn\nCompartilhe por WhatsApp\nlink para Copiar para área de transferência\nPublicado em\n15/10/2026 17h18\nO Ministério da Ciência, Tecnologia e Inovação (MCTI) e a Financiadora de Estudos e Projetos (Finep) recebem, até 6 de novembro, propostas para a fase nacional da chamada do\nPrograma de Cooperação para Inovação da Rede Eureka\nvoltada à resiliência, resposta e recuperação de desastres. A seleção conta com recursos não reembolsáveis do Fundo Nacional de Desenvolvimento Científico e Tecnológico (FNDCT) e é destinada a empresas brasileiras participantes de projetos aprovados na etapa internacional e contemplados com o Selo Eureka.\nA chamada prevê até R$ 7 milhões em recursos de subvenção econômica para a participação brasileira nos projetos. O valor solicitado à Finep em cada proposta deve girar em torno de R$ 1 milhão e R$ 5 milhões, de acordo com o porte da empresa e as regras estabelecidas no edital.\nPodem\nser apoiadas soluções tecnológicas relacionadas à prevenção, preparação, resposta e recuperação diante de desastres. Entre os temas previstos estão infraestrutura resiliente, inteligência artificial, sensoriamento remoto, sistemas de comunicação de emergência, tecnologias de busca e salvamento, dispositivos médicos, novos materiais, manufatura avançada, sustentabilidade e gestão de resíduos pós-desastre.\nExemplos de soluções para prevenção, preparação, respostas e recuperação diante de desastres - Ascom/MCTI\nA seleção integra uma ação internacional da\nRede Eureka\n, que reúne instituições de financiamento e inovação de diferentes países. Participaram da etapa internacional organizações da Áustria, Bélgica (Flandres), Brasil, Chile, Espanha, Lituânia, Turquia e Ucrânia.\nOs projetos devem envolver cooperação internacional entre participantes de pelo menos dois países e ter como objetivo o desenvolvimento de produto, processo ou serviço inovador com perspectiva de comercialização. As atividades apoiadas devem estar compreendidas entre os níveis de maturidade tecnológica TRL 4 e TRL 8, e o prazo de execução pode chegar a 36 meses.\nNa fase nacional, apenas empresas brasileiras que participam de consórcios aprovados na fase internacional e que possuem Selo Eureka podem apresentar propostas. As empresas devem detalhar sua participação, em português, na plataforma de apoio e financiamento da Finep e anexar a proposta internacional completa, em inglês, aprovada na primeira etapa.\nAs Instituições Científicas, Tecnológicas e de Inovação (\nICTs\n) podem participar dos projetos como prestadoras de serviços de pesquisa e extensão, incluindo atividades de desenvolvimento, validação, prototipagem e transferência de tecnologia, conforme as condições previstas no edital.\nSegundo o edital, a chamada exige contrapartida financeira das empresas beneficiárias. O percentual mínimo varia conforme o porte da empresa e vai de 10% a 50% do valor total da proposta.\nAlém das condições financeiras, a proposta deve manter correspondência com o projeto aprovado na etapa internacional, incluindo os parceiros participantes, o objeto e os objetivos do projeto. A proposta também precisa incluir cronograma, orçamento e estratégia para desenvolver e comercializar a solução.\nO prazo final para o envio das propostas é 6 de novembro, às 17h, no horário de Brasília. O resultado preliminar da etapa de habilitação está previsto para 17 de novembro, e o resultado da avaliação conclusiva, para 18 de dezembro.\nDúvidas sobre a seleção podem ser encaminhadas para\ncp_projetos_eureka@finep.gov.br\n.\nCategoria\nCiência e Tecnologia",
+      "start": 8967,
+      "status": "overlap",
+      "uncertainty_notes": [
+        "Deadline year comes from dated 2026 article context; original deadline expression preserved.",
+        "Separate international eligibility prerequisite remains mandatory."
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 8579,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0000",
+      "start": 8575,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 8588,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0001",
+      "start": 8580,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 8610,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0002",
+      "start": 8589,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "call-heading-local-v1",
+        "access_heuristic_not_review_authority"
+      ],
+      "discovery": "confirmed_opportunity",
+      "end": 12437,
+      "field_count": 8,
+      "modality": "fomento",
+      "physical_page": null,
+      "reference_records": [
+        "M30-F06-R1"
+      ],
+      "segment_id": "segment-0003",
+      "start": 8611,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 19302,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0004",
+      "start": 19294,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 19313,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0005",
+      "start": 19303,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 19329,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0006",
+      "start": 19314,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    }
+  ],
+  "semantic_reviews": [
+    {
+      "case_id": "M30-F06:segment-0003:discovery:classification",
+      "certainty": "supported_observation",
+      "claim_kind": "discovery",
+      "context_evidence": [
+        {
+          "end": 9222,
+          "page": null,
+          "quote": "Programa de Cooperação para Inovação da Rede Eureka",
+          "start": 9171
+        },
+        {
+          "end": 9642,
+          "page": null,
+          "quote": "A chamada prevê até R$ 7 milhões em recursos de subvenção econômica para a participação brasileira nos projetos.",
+          "start": 9530
+        },
+        {
+          "end": 11118,
+          "page": null,
+          "quote": "Na fase nacional, apenas empresas brasileiras que participam de consórcios aprovados na fase internacional e que possuem Selo Eureka podem apresentar propostas.",
+          "start": 10958
+        },
+        {
+          "end": 12178,
+          "page": null,
+          "quote": "O prazo final para o envio das propostas é 6 de novembro, às 17h, no horário de Brasília.",
+          "start": 12089
+        },
+        {
+          "end": 8996,
+          "page": null,
+          "quote": "Publicado em\n15/10/2026 17h18",
+          "start": 8967
+        }
+      ],
+      "document_id": "M30-F06",
+      "end": 12437,
+      "error_codes": [],
+      "expected_behavior": "Exigir contexto do instrumento e preservar incerteza de acesso/condições.",
+      "expected_claim": "confirmed_opportunity",
+      "field_index": null,
+      "field_name": null,
+      "judgment": "supported",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "quote": "Chamada Eureka recebe propostas para projetos de resiliência e resposta a desastres\nEmpresas brasileiras com projetos aprovados na etapa internacional podem enviar propostas à Finep até 6 de novembro\nCompartilhe:\nCompartilhe por Facebook\nCompartilhe por Twitter\nCompartilhe por LinkedIn\nCompartilhe por WhatsApp\nlink para Copiar para área de transferência\nPublicado em\n15/10/2026 17h18\nO Ministério da Ciência, Tecnologia e Inovação (MCTI) e a Financiadora de Estudos e Projetos (Finep) recebem, até 6 de novembro, propostas para a fase nacional da chamada do\nPrograma de Cooperação para Inovação da Rede Eureka\nvoltada à resiliência, resposta e recuperação de desastres. A seleção conta com recursos não reembolsáveis do Fundo Nacional de Desenvolvimento Científico e Tecnológico (FNDCT) e é destinada a empresas brasileiras participantes de projetos aprovados na etapa internacional e contemplados com o Selo Eureka.\nA chamada prevê até R$ 7 milhões em recursos de subvenção econômica para a participação brasileira nos projetos. O valor solicitado à Finep em cada proposta deve girar em torno de R$ 1 milhão e R$ 5 milhões, de acordo com o porte da empresa e as regras estabelecidas no edital.\nPodem\nser apoiadas soluções tecnológicas relacionadas à prevenção, preparação, resposta e recuperação diante de desastres. Entre os temas previstos estão infraestrutura resiliente, inteligência artificial, sensoriamento remoto, sistemas de comunicação de emergência, tecnologias de busca e salvamento, dispositivos médicos, novos materiais, manufatura avançada, sustentabilidade e gestão de resíduos pós-desastre.\nExemplos de soluções para prevenção, preparação, respostas e recuperação diante de desastres - Ascom/MCTI\nA seleção integra uma ação internacional da\nRede Eureka\n, que reúne instituições de financiamento e inovação de diferentes países. Participaram da etapa internacional organizações da Áustria, Bélgica (Flandres), Brasil, Chile, Espanha, Lituânia, Turquia e Ucrânia.\nOs projetos devem envolver cooperação internacional entre participantes de pelo menos dois países e ter como objetivo o desenvolvimento de produto, processo ou serviço inovador com perspectiva de comercialização. As atividades apoiadas devem estar compreendidas entre os níveis de maturidade tecnológica TRL 4 e TRL 8, e o prazo de execução pode chegar a 36 meses.\nNa fase nacional, apenas empresas brasileiras que participam de consórcios aprovados na fase internacional e que possuem Selo Eureka podem apresentar propostas. As empresas devem detalhar sua participação, em português, na plataforma de apoio e financiamento da Finep e anexar a proposta internacional completa, em inglês, aprovada na primeira etapa.\nAs Instituições Científicas, Tecnológicas e de Inovação (\nICTs\n) podem participar dos projetos como prestadoras de serviços de pesquisa e extensão, incluindo atividades de desenvolvimento, validação, prototipagem e transferência de tecnologia, conforme as condições previstas no edital.\nSegundo o edital, a chamada exige contrapartida financeira das empresas beneficiárias. O percentual mínimo varia conforme o porte da empresa e vai de 10% a 50% do valor total da proposta.\nAlém das condições financeiras, a proposta deve manter correspondência com o projeto aprovado na etapa internacional, incluindo os parceiros participantes, o objeto e os objetivos do projeto. A proposta também precisa incluir cronograma, orçamento e estratégia para desenvolver e comercializar a solução.\nO prazo final para o envio das propostas é 6 de novembro, às 17h, no horário de Brasília. O resultado preliminar da etapa de habilitação está previsto para 17 de novembro, e o resultado da avaliação conclusiva, para 18 de dezembro.\nDúvidas sobre a seleção podem ser encaminhadas para\ncp_projetos_eureka@finep.gov.br\n.\nCategoria\nCiência e Tecnologia",
+      "rationale": "O trecho identifica suporte/financiamento e rota ou intervalo de submissão. Confirmação de instrumento não é garantia de aprovação, elegibilidade completa ou janela aberta.",
+      "root_cause": "classify usa conjunções locais de instrumento/acesso; hierarquia entre páginas não existe.",
+      "root_cause_confidence": "high",
+      "segment_id": "segment-0003",
+      "severity": "info",
+      "start": 8611
+    }
+  ],
+  "status": "processed"
+}

@@ -1,0 +1,65 @@
+[
+  {
+    "name": "full_pytest",
+    "command": ".venv/bin/python -B -m pytest -p no:cacheprovider -q",
+    "output": "........................................................................ [  3%]\n........................................................................ [  7%]\n........................................................................ [ 11%]\n........................................................................ [ 15%]\n........................................................................ [ 19%]\n........................................................................ [ 23%]\n........................................................................ [ 27%]\n........................................................................ [ 31%]\n........................................................................ [ 35%]\n........................................................................ [ 39%]\n........................................................................ [ 43%]\n........................................................................ [ 47%]\n........................................................................ [ 51%]\n........................................................................ [ 55%]\n........................................................................ [ 59%]\n........................................................................ [ 63%]\n........................................................................ [ 67%]\n........................................................................ [ 71%]\n........................................................................ [ 75%]\n........................................................................ [ 79%]\n........................................................................ [ 83%]\n........................................................................ [ 87%]\n........................................................................ [ 91%]\n........................................................................ [ 95%]\n........................................................................ [ 99%]\n..........                                                               [100%]\n1810 passed in 13.98s",
+    "exit_code": 0,
+    "error": null
+  },
+  {
+    "name": "previous_pytest",
+    "command": ".venv/bin/python -B -m pytest -p no:cacheprovider -q --ignore=tests/test_m23c_adversarial.py --ignore=tests/test_m23c_metamorphic.py --ignore=tests/test_m23c_pipeline.py --ignore=tests/test_m23c_product_contracts.py --ignore=tests/test_m23c_resources.py",
+    "output": "........................................................................ [  4%]\n........................................................................ [  8%]\n........................................................................ [ 12%]\n........................................................................ [ 17%]\n........................................................................ [ 21%]\n........................................................................ [ 25%]\n........................................................................ [ 29%]\n........................................................................ [ 34%]\n........................................................................ [ 38%]\n........................................................................ [ 42%]\n........................................................................ [ 46%]\n........................................................................ [ 51%]\n........................................................................ [ 55%]\n........................................................................ [ 59%]\n........................................................................ [ 63%]\n........................................................................ [ 68%]\n........................................................................ [ 72%]\n........................................................................ [ 76%]\n........................................................................ [ 80%]\n........................................................................ [ 85%]\n........................................................................ [ 89%]\n........................................................................ [ 93%]\n........................................................................ [ 97%]\n...................................                                      [100%]\n1691 passed in 9.14s",
+    "exit_code": 0,
+    "error": null
+  },
+  {
+    "name": "new_pytest",
+    "command": ".venv/bin/python -B -m pytest -p no:cacheprovider -q tests/test_m23c*.py",
+    "output": "........................................................................ [ 60%]\n...............................................                          [100%]\n119 passed in 5.29s",
+    "exit_code": 0,
+    "error": null
+  },
+  {
+    "name": "ruff_check",
+    "command": ".venv/bin/ruff check --no-cache src tests",
+    "output": "B023 Function definition does not bind loop variable `unit`\n  --> tests/m23_fixtures.py:70:22\n   |\n68 |                 method_version=\"m23-synthetic-v1\",\n69 |                 confidence=\"1\",\n70 |                 unit=unit,\n   |                      ^^^^\n71 |                 semantic_role=role,\n72 |             )\n   |\n\nB023 Function definition does not bind loop variable `assertions`\n  --> tests/m23_fixtures.py:73:13\n   |\n71 |                 semantic_role=role,\n72 |             )\n73 |             assertions.append(FieldAssertion(field=role, value=original, evidence=(evidence,)))\n   |             ^^^^^^^^^^\n74 |             return SemanticValue(\n75 |                 original=literal,\n   |\n\nB023 Function definition does not bind loop variable `cid`\n  --> tests/m23_fixtures.py:77:34\n   |\n75 |                 original=literal,\n76 |                 provenance=IdentityEvidence(\n77 |                     candidate_id=cid,\n   |                                  ^^^\n78 |                     source_id=source,\n79 |                     execution_id=execution,\n   |\n\nE501 Line too long (102 > 100)\n   --> tests/m23_fixtures.py:147:101\n    |\n145 |                     TemporalClaim(role=row[\"role\"], value=components[\"value\"], format=row[\"format\"])\n146 |                     for row, components in zip(\n147 |                         record.get(\"temporal_events\", []), collections[\"temporal_events\"], strict=True\n    |                                                                                                     ^^\n148 |                     )\n149 |                 ),\n    |\n\nE501 Line too long (104 > 100)\n   --> tests/m23_fixtures.py:166:101\n    |\n164 |                     )\n165 |                     for row, components in zip(\n166 |                         record.get(\"financial_claims\", []), collections[\"financial_claims\"], strict=True\n    |                                                                                                     ^^^^\n167 |                     )\n168 |                 ),\n    |\n\nE501 Line too long (110 > 100)\n   --> tests/m23_fixtures.py:172:101\n    |\n170 |                     OrganizationClaim(role=row[\"role\"], name=components.get(\"name\"))\n171 |                     for row, components in zip(\n172 |                         record.get(\"organization_claims\", []), collections[\"organization_claims\"], strict=True\n    |                                                                                                     ^^^^^^^^^^\n173 |                     )\n174 |                 ),\n    |\n\nE501 Line too long (102 > 100)\n   --> tests/m23_fixtures.py:178:101\n    |\n176 |                     TaxonomyClaim(role=row[\"role\"], value=components[\"value\"])\n177 |                     for row, components in zip(\n178 |                         record.get(\"taxonomy_claims\", []), collections[\"taxonomy_claims\"], strict=True\n    |                                                                                                     ^^\n179 |                     )\n180 |                 ),\n    |\n\nFound 7 errors.",
+    "exit_code": 1,
+    "error": null
+  },
+  {
+    "name": "ruff_format",
+    "command": ".venv/bin/ruff format --check --no-cache src tests",
+    "output": "unformatted: File would be reformatted\n   --> tests/m23_fixtures.py:147:59\n    |\n146 |                     for row, components in zip(\n    -                         record.get(\"temporal_events\", []), collections[\"temporal_events\"], strict=True\n147 +                         record.get(\"temporal_events\", []),\n148 +                         collections[\"temporal_events\"],\n149 +                         strict=True,\n150 |                     )\n--------------------------------------------------------------------------------\n162 |                     FinancialClaim(\n    -                         role=row[\"role\"], value=components.get(\"value\"),\n163 +                         role=row[\"role\"],\n164 +                         value=components.get(\"value\"),\n165 |                         format=row.get(\"format\", \"unspecified\"),\n    -                         currency=row.get(\"currency\"), unit=row.get(\"unit\", \"amount\"),\n166 +                         currency=row.get(\"currency\"),\n167 +                         unit=row.get(\"unit\", \"amount\"),\n168 |                     )\n169 |                     for row, components in zip(\n    -                         record.get(\"financial_claims\", []), collections[\"financial_claims\"], strict=True\n170 +                         record.get(\"financial_claims\", []),\n171 +                         collections[\"financial_claims\"],\n172 +                         strict=True,\n173 |                     )\n--------------------------------------------------------------------------------\n177 |                     for row, components in zip(\n    -                         record.get(\"organization_claims\", []), collections[\"organization_claims\"], strict=True\n178 +                         record.get(\"organization_claims\", []),\n179 +                         collections[\"organization_claims\"],\n180 +                         strict=True,\n181 |                     )\n--------------------------------------------------------------------------------\n185 |                     for row, components in zip(\n    -                         record.get(\"taxonomy_claims\", []), collections[\"taxonomy_claims\"], strict=True\n186 +                         record.get(\"taxonomy_claims\", []),\n187 +                         collections[\"taxonomy_claims\"],\n188 +                         strict=True,\n189 |                     )\n    |\n\n1 file would be reformatted, 83 files already formatted",
+    "exit_code": 1,
+    "error": null
+  },
+  {
+    "name": "mypy",
+    "command": ".venv/bin/mypy --no-incremental --cache-dir=/dev/null src",
+    "output": "Success: no issues found in 28 source files",
+    "exit_code": 0,
+    "error": null
+  },
+  {
+    "name": "git_diff_check",
+    "command": "git diff --check",
+    "output": "",
+    "exit_code": 0,
+    "error": null
+  },
+  {
+    "name": "ruff_except_preexisting",
+    "command": ".venv/bin/ruff check --no-cache --extend-exclude m23_fixtures.py src tests",
+    "output": "All checks passed!",
+    "exit_code": 0,
+    "error": null
+  },
+  {
+    "name": "format_except_preexisting",
+    "command": ".venv/bin/ruff format --check --no-cache --extend-exclude m23_fixtures.py src tests",
+    "output": "83 files already formatted",
+    "exit_code": 0,
+    "error": null
+  }
+]

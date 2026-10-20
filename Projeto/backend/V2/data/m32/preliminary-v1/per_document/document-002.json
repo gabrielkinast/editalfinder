@@ -1,0 +1,4977 @@
+{
+  "diagnostics": [
+    "passive_not_rendered_DOM",
+    "unfrozen_attachments_unavailable"
+  ],
+  "document_id": "M30-C03",
+  "error_cases": [
+    {
+      "case_id": "M30-C03-R1:discovery_label",
+      "certainty": "unresolved_disagreement",
+      "dimension": "discovery_label",
+      "document_id": "M30-C03",
+      "error_codes": [
+        "OPPORTUNITY_EXISTENCE_CONFUSION",
+        "REFERENCE_AMBIGUITY"
+      ],
+      "expected_behavior": "Resolve this dimension from same-record evidence; provisional label is comparison, not authority.",
+      "next_action": "Compare full frozen context and request authorized adjudication; do not rewrite labels.",
+      "observed": {
+        "discovery": "opportunity_signal",
+        "end": 1602,
+        "modality": "credito",
+        "segment_id": "segment-0026",
+        "start": 1307,
+        "temporal": "undetermined"
+      },
+      "record_id": "M30-C03-R1",
+      "reference": {
+        "discovery_label": "confirmed_opportunity",
+        "modality": "credito",
+        "opportunity_label": "genuine_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "undetermined"
+      },
+      "review_status": "provisional",
+      "root_cause": "Context fragmentation or semantic rule/reference ambiguity; see all-overlap graph before adjudication.",
+      "root_cause_confidence": "low",
+      "segment_id": "segment-0026",
+      "severity": "medium",
+      "supporting_evidence": {
+        "end": 1602,
+        "quote": "cada instituição financeira credenciada pode aderir ou não às linhas de financiamento do BNDES, de acordo com suas políticas próprias para concessão do crédito. A decisão final sobre a aceitação ou recusa das propostas protocoladas é de exclusiva responsabilidade do agente financeiro envolvido.",
+        "start": 1307
+      }
+    },
+    {
+      "case_id": "M30-C03-R1:segmentation",
+      "certainty": "supported_observation",
+      "dimension": "structural",
+      "document_id": "M30-C03",
+      "error_codes": [
+        "SEGMENTATION_OVER"
+      ],
+      "expected_behavior": "A meaningful record should retain its own associated context; whitespace-only boundary differences are not semantic defects.",
+      "next_action": "Inspect semantic usefulness of boundaries before changing segmentation.",
+      "observed": {
+        "coverage": {
+          "denominator": 1277,
+          "numerator": 1262,
+          "value": 0.9882537196554424
+        },
+        "fragmentation": 16
+      },
+      "record_id": "M30-C03-R1",
+      "reference": {
+        "discovery_label": "confirmed_opportunity",
+        "modality": "credito",
+        "opportunity_label": "genuine_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "undetermined"
+      },
+      "review_status": "provisional",
+      "root_cause": "Structure-derived units differ from provisional annotated record spans.",
+      "root_cause_confidence": "high",
+      "segment_id": "segment-0026",
+      "severity": "medium",
+      "supporting_evidence": {
+        "edges": [
+          {
+            "end": 365,
+            "exact": false,
+            "intersection": 40,
+            "intersection_end": 365,
+            "intersection_start": 325,
+            "iou": 0.031323414252153486,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.031323414252153486,
+            "segment_id": "segment-0011",
+            "start": 325
+          },
+          {
+            "end": 447,
+            "exact": false,
+            "intersection": 81,
+            "intersection_end": 447,
+            "intersection_start": 366,
+            "iou": 0.06342991386061081,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.06342991386061081,
+            "segment_id": "segment-0012",
+            "start": 366
+          },
+          {
+            "end": 467,
+            "exact": false,
+            "intersection": 19,
+            "intersection_end": 467,
+            "intersection_start": 448,
+            "iou": 0.014878621769772905,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.014878621769772905,
+            "segment_id": "segment-0013",
+            "start": 448
+          },
+          {
+            "end": 493,
+            "exact": false,
+            "intersection": 25,
+            "intersection_end": 493,
+            "intersection_start": 468,
+            "iou": 0.01957713390759593,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.01957713390759593,
+            "segment_id": "segment-0014",
+            "start": 468
+          },
+          {
+            "end": 508,
+            "exact": false,
+            "intersection": 14,
+            "intersection_end": 508,
+            "intersection_start": 494,
+            "iou": 0.01096319498825372,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.01096319498825372,
+            "segment_id": "segment-0015",
+            "start": 494
+          },
+          {
+            "end": 560,
+            "exact": false,
+            "intersection": 51,
+            "intersection_end": 560,
+            "intersection_start": 509,
+            "iou": 0.039937353171495694,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.039937353171495694,
+            "segment_id": "segment-0016",
+            "start": 509
+          },
+          {
+            "end": 612,
+            "exact": false,
+            "intersection": 51,
+            "intersection_end": 612,
+            "intersection_start": 561,
+            "iou": 0.039937353171495694,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.039937353171495694,
+            "segment_id": "segment-0017",
+            "start": 561
+          },
+          {
+            "end": 760,
+            "exact": false,
+            "intersection": 147,
+            "intersection_end": 760,
+            "intersection_start": 613,
+            "iou": 0.11511354737666406,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.11511354737666406,
+            "segment_id": "segment-0018",
+            "start": 613
+          },
+          {
+            "end": 811,
+            "exact": false,
+            "intersection": 50,
+            "intersection_end": 811,
+            "intersection_start": 761,
+            "iou": 0.03915426781519186,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.03915426781519186,
+            "segment_id": "segment-0019",
+            "start": 761
+          },
+          {
+            "end": 907,
+            "exact": false,
+            "intersection": 95,
+            "intersection_end": 907,
+            "intersection_start": 812,
+            "iou": 0.07439310884886452,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.07439310884886452,
+            "segment_id": "segment-0020",
+            "start": 812
+          },
+          {
+            "end": 1003,
+            "exact": false,
+            "intersection": 95,
+            "intersection_end": 1003,
+            "intersection_start": 908,
+            "iou": 0.07439310884886452,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.07439310884886452,
+            "segment_id": "segment-0021",
+            "start": 908
+          },
+          {
+            "end": 1015,
+            "exact": false,
+            "intersection": 11,
+            "intersection_end": 1015,
+            "intersection_start": 1004,
+            "iou": 0.008613938919342208,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.008613938919342208,
+            "segment_id": "segment-0022",
+            "start": 1004
+          },
+          {
+            "end": 1050,
+            "exact": false,
+            "intersection": 34,
+            "intersection_end": 1050,
+            "intersection_start": 1016,
+            "iou": 0.02662490211433046,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.02662490211433046,
+            "segment_id": "segment-0023",
+            "start": 1016
+          },
+          {
+            "end": 1294,
+            "exact": false,
+            "intersection": 243,
+            "intersection_end": 1294,
+            "intersection_start": 1051,
+            "iou": 0.19028974158183243,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.19028974158183243,
+            "segment_id": "segment-0024",
+            "start": 1051
+          },
+          {
+            "end": 1306,
+            "exact": false,
+            "intersection": 11,
+            "intersection_end": 1306,
+            "intersection_start": 1295,
+            "iou": 0.008613938919342208,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.008613938919342208,
+            "segment_id": "segment-0025",
+            "start": 1295
+          },
+          {
+            "end": 1602,
+            "exact": false,
+            "intersection": 295,
+            "intersection_end": 1602,
+            "intersection_start": 1307,
+            "iou": 0.23101018010963195,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.23101018010963195,
+            "segment_id": "segment-0026",
+            "start": 1307
+          }
+        ],
+        "reference_span": [
+          325,
+          1602
+        ]
+      }
+    }
+  ],
+  "extracted_claims": [
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-C03",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "title",
+      "original": "BNDES Crédito Pequenas e Médias Empresas",
+      "reference_records": [
+        "M30-C03-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0011",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-C03",
+        "end": 365,
+        "page": null,
+        "quote": "BNDES Crédito Pequenas e Médias Empresas",
+        "raw_sha256": "4c9a21385258804eb79cd68d00759b07f22d35d446d4db8daaf7378ce70c86b6",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0011",
+        "start": 325,
+        "text_sha256": "d06d1fdaf7644833ecb14d36f2f80f583b6c82e27004ac898e6acaaa44f7b6df"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-C03",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "applicant_requirements",
+      "original": "Quem pode solicitar",
+      "reference_records": [
+        "M30-C03-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0013",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-C03",
+        "end": 467,
+        "page": null,
+        "quote": "Quem pode solicitar",
+        "raw_sha256": "4c9a21385258804eb79cd68d00759b07f22d35d446d4db8daaf7378ce70c86b6",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0013",
+        "start": 448,
+        "text_sha256": "d06d1fdaf7644833ecb14d36f2f80f583b6c82e27004ac898e6acaaa44f7b6df"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-C03",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "borrower_revenue_requirement",
+      "original": "R$ 300 milhões",
+      "reference_records": [
+        "M30-C03-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0017",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-C03",
+        "end": 612,
+        "page": null,
+        "quote": "Médias empresas com faturamento até R$ 300 milhões*",
+        "raw_sha256": "4c9a21385258804eb79cd68d00759b07f22d35d446d4db8daaf7378ce70c86b6",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0017",
+        "start": 561,
+        "text_sha256": "d06d1fdaf7644833ecb14d36f2f80f583b6c82e27004ac898e6acaaa44f7b6df"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-C03",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "monetary_expression_unresolved",
+      "original": "R$ 20 milhões",
+      "reference_records": [
+        "M30-C03-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0020",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-C03",
+        "end": 907,
+        "page": null,
+        "quote": "Empréstimo visando à manutenção e/ou à geração de empregos, no limite de R$ 20 milhões por ano.",
+        "raw_sha256": "4c9a21385258804eb79cd68d00759b07f22d35d446d4db8daaf7378ce70c86b6",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0020",
+        "start": 812,
+        "text_sha256": "d06d1fdaf7644833ecb14d36f2f80f583b6c82e27004ac898e6acaaa44f7b6df"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-C03",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "interest_expression",
+      "original": "Taxa de juros",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0028",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-C03",
+        "end": 1697,
+        "page": null,
+        "quote": "Taxa de juros",
+        "raw_sha256": "4c9a21385258804eb79cd68d00759b07f22d35d446d4db8daaf7378ce70c86b6",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0028",
+        "start": 1684,
+        "text_sha256": "d06d1fdaf7644833ecb14d36f2f80f583b6c82e27004ac898e6acaaa44f7b6df"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-C03",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "interest_expression",
+      "original": "Taxa de juros",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0030",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-C03",
+        "end": 1738,
+        "page": null,
+        "quote": "Taxa de juros",
+        "raw_sha256": "4c9a21385258804eb79cd68d00759b07f22d35d446d4db8daaf7378ce70c86b6",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0030",
+        "start": 1725,
+        "text_sha256": "d06d1fdaf7644833ecb14d36f2f80f583b6c82e27004ac898e6acaaa44f7b6df"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-C03",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "interest_expression",
+      "original": "Custo Financeiro",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0032",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-C03",
+        "end": 1771,
+        "page": null,
+        "quote": "Custo Financeiro",
+        "raw_sha256": "4c9a21385258804eb79cd68d00759b07f22d35d446d4db8daaf7378ce70c86b6",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0032",
+        "start": 1755,
+        "text_sha256": "d06d1fdaf7644833ecb14d36f2f80f583b6c82e27004ac898e6acaaa44f7b6df"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-C03",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "interest_expression",
+      "original": "Custo financeiro",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0040",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-C03",
+        "end": 1854,
+        "page": null,
+        "quote": "Custo financeiro",
+        "raw_sha256": "4c9a21385258804eb79cd68d00759b07f22d35d446d4db8daaf7378ce70c86b6",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0040",
+        "start": 1838,
+        "text_sha256": "d06d1fdaf7644833ecb14d36f2f80f583b6c82e27004ac898e6acaaa44f7b6df"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-C03",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "interest_expression",
+      "original": "Custo financeiro",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0048",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-C03",
+        "end": 2101,
+        "page": null,
+        "quote": "Custo financeiro",
+        "raw_sha256": "4c9a21385258804eb79cd68d00759b07f22d35d446d4db8daaf7378ce70c86b6",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0048",
+        "start": 2085,
+        "text_sha256": "d06d1fdaf7644833ecb14d36f2f80f583b6c82e27004ac898e6acaaa44f7b6df"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-C03",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "interest_expression",
+      "original": ": O custo financeiro Taxa Selic está suspenso, por tempo indeterminado, conforme Circular nº 09/2026, de 22 de janeiro de 2026.",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0057",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-C03",
+        "end": 2463,
+        "page": null,
+        "quote": ": O custo financeiro Taxa Selic está suspenso, por tempo indeterminado, conforme Circular nº 09/2026, de 22 de janeiro de 2026.",
+        "raw_sha256": "4c9a21385258804eb79cd68d00759b07f22d35d446d4db8daaf7378ce70c86b6",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0057",
+        "start": 2336,
+        "text_sha256": "d06d1fdaf7644833ecb14d36f2f80f583b6c82e27004ac898e6acaaa44f7b6df"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-C03",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "repayment_expression",
+      "original": "Prazo de até 5 anos, incluindo carência de até 2 anos. Nos financiamentos em TFB, Taxa Fixa Composta e Taxa Fixa Composta MPME a carência é de até 1 ano.",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0062",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-C03",
+        "end": 2723,
+        "page": null,
+        "quote": "Prazo de até 5 anos, incluindo carência de até 2 anos. Nos financiamentos em TFB, Taxa Fixa Composta e Taxa Fixa Composta MPME a carência é de até 1 ano.",
+        "raw_sha256": "4c9a21385258804eb79cd68d00759b07f22d35d446d4db8daaf7378ce70c86b6",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0062",
+        "start": 2570,
+        "text_sha256": "d06d1fdaf7644833ecb14d36f2f80f583b6c82e27004ac898e6acaaa44f7b6df"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-C03",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "funding_organization_expression",
+      "original": "A linha BNDES Crédito Pequenas Empresas é destinada à manutenção e/ou à geração de empregos, bem como às necessidades do dia a dia das empresas. Por ser uma linha indireta, os recursos do BNDES são repassados pelos Agentes Financeiros Credenciados. A linha foi lançada em 2019 e muitos agentes financeiros já a operam.",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0080",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-C03",
+        "end": 3685,
+        "page": null,
+        "quote": "A linha BNDES Crédito Pequenas Empresas é destinada à manutenção e/ou à geração de empregos, bem como às necessidades do dia a dia das empresas. Por ser uma linha indireta, os recursos do BNDES são repassados pelos Agentes Financeiros Credenciados. A linha foi lançada em 2019 e muitos agentes financeiros já a operam.",
+        "raw_sha256": "4c9a21385258804eb79cd68d00759b07f22d35d446d4db8daaf7378ce70c86b6",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0080",
+        "start": 3367,
+        "text_sha256": "d06d1fdaf7644833ecb14d36f2f80f583b6c82e27004ac898e6acaaa44f7b6df"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-C03",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "funding_organization_expression",
+      "original": "É importante esclarecer que BNDES atua dessa forma, por se tratar de um banco de desenvolvimento. Dessa forma, atua de forma diferente de um banco comercial e não possui, portanto, uma rede de agências. Assim, os financiamentos com recursos do BNDES para Micro, Pequenas e Médias empresas, bem como para Pessoas Físicas são realizados, em sua maior parte, na modalidade indireta, ou seja, através de uma rede de Agentes Financeiros credenciados a repassar os recursos deste BNDES. É através da modalidade de financiamento indireta, ou seja, por meio de um Agente Financeiro repassador, que o BNDES consegue a capilaridade necessária para atender as empresas de menor porte e também pessoas físicas, localizadas/residentes em todas as regiões do Brasil.",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0085",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-C03",
+        "end": 4793,
+        "page": null,
+        "quote": "É importante esclarecer que BNDES atua dessa forma, por se tratar de um banco de desenvolvimento. Dessa forma, atua de forma diferente de um banco comercial e não possui, portanto, uma rede de agências. Assim, os financiamentos com recursos do BNDES para Micro, Pequenas e Médias empresas, bem como para Pessoas Físicas são realizados, em sua maior parte, na modalidade indireta, ou seja, através de uma rede de Agentes Financeiros credenciados a repassar os recursos deste BNDES. É através da modalidade de financiamento indireta, ou seja, por meio de um Agente Financeiro repassador, que o BNDES consegue a capilaridade necessária para atender as empresas de menor porte e também pessoas físicas, localizadas/residentes em todas as regiões do Brasil.",
+        "raw_sha256": "4c9a21385258804eb79cd68d00759b07f22d35d446d4db8daaf7378ce70c86b6",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0085",
+        "start": 4041,
+        "text_sha256": "d06d1fdaf7644833ecb14d36f2f80f583b6c82e27004ac898e6acaaa44f7b6df"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-C03",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "funding_organization_expression",
+      "original": "Assim, no âmbito dessas linhas indiretas, o financiamento é contratado entre o Cliente Final e o Agente Financeiro credenciado, que é o responsável pela análise de crédito e aprovação do financiamento, pois, o agente é quem assume o risco da operação perante o BNDES, decidindo com quais Linhas e Programas irá operar e quais pedidos de financiamento serão aprovados e contratados, de acordo com o limite de crédito e o perfil de cada cliente. Dessa maneira, infelizmente o BNDES não tem poderes para interferir na análise de crédito realizada pelos agentes financeiros repassadores.",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0086",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-C03",
+        "end": 5377,
+        "page": null,
+        "quote": "Assim, no âmbito dessas linhas indiretas, o financiamento é contratado entre o Cliente Final e o Agente Financeiro credenciado, que é o responsável pela análise de crédito e aprovação do financiamento, pois, o agente é quem assume o risco da operação perante o BNDES, decidindo com quais Linhas e Programas irá operar e quais pedidos de financiamento serão aprovados e contratados, de acordo com o limite de crédito e o perfil de cada cliente. Dessa maneira, infelizmente o BNDES não tem poderes para interferir na análise de crédito realizada pelos agentes financeiros repassadores.",
+        "raw_sha256": "4c9a21385258804eb79cd68d00759b07f22d35d446d4db8daaf7378ce70c86b6",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0086",
+        "start": 4794,
+        "text_sha256": "d06d1fdaf7644833ecb14d36f2f80f583b6c82e27004ac898e6acaaa44f7b6df"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-C03",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "financing_amount_expression",
+      "original": "R$ 300 milhões",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0092",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-C03",
+        "end": 6298,
+        "page": null,
+        "quote": "A linha BNDES Crédito Pequenas Empresas é aderente às necessidades do dia-a-dia das micro, pequenas e médias empresas. Podem solicitar financiamento clientes que faturem até R$ 300 milhões, com prazo de até 5 (cinco) anos, com até 2 (dois) anos de carência, até o limite de R$ 20 milhões por ano.",
+        "raw_sha256": "4c9a21385258804eb79cd68d00759b07f22d35d446d4db8daaf7378ce70c86b6",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0092",
+        "start": 6002,
+        "text_sha256": "d06d1fdaf7644833ecb14d36f2f80f583b6c82e27004ac898e6acaaa44f7b6df"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-C03",
+      "field_index": 1,
+      "method_version": "m31-deterministic-v2",
+      "name": "monetary_expression_unresolved",
+      "original": "R$ 20 milhões",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0092",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-C03",
+        "end": 6298,
+        "page": null,
+        "quote": "A linha BNDES Crédito Pequenas Empresas é aderente às necessidades do dia-a-dia das micro, pequenas e médias empresas. Podem solicitar financiamento clientes que faturem até R$ 300 milhões, com prazo de até 5 (cinco) anos, com até 2 (dois) anos de carência, até o limite de R$ 20 milhões por ano.",
+        "raw_sha256": "4c9a21385258804eb79cd68d00759b07f22d35d446d4db8daaf7378ce70c86b6",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0092",
+        "start": 6002,
+        "text_sha256": "d06d1fdaf7644833ecb14d36f2f80f583b6c82e27004ac898e6acaaa44f7b6df"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-C03",
+      "field_index": 2,
+      "method_version": "m31-deterministic-v2",
+      "name": "applicant_requirements",
+      "original": "A linha BNDES Crédito Pequenas Empresas é aderente às necessidades do dia-a-dia das micro, pequenas e médias empresas. Podem solicitar financiamento clientes que faturem até R$ 300 milhões, com prazo de até 5 (cinco) anos, com até 2 (dois) anos de carência, até o limite de R$ 20 milhões por ano.",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0092",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-C03",
+        "end": 6298,
+        "page": null,
+        "quote": "A linha BNDES Crédito Pequenas Empresas é aderente às necessidades do dia-a-dia das micro, pequenas e médias empresas. Podem solicitar financiamento clientes que faturem até R$ 300 milhões, com prazo de até 5 (cinco) anos, com até 2 (dois) anos de carência, até o limite de R$ 20 milhões por ano.",
+        "raw_sha256": "4c9a21385258804eb79cd68d00759b07f22d35d446d4db8daaf7378ce70c86b6",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0092",
+        "start": 6002,
+        "text_sha256": "d06d1fdaf7644833ecb14d36f2f80f583b6c82e27004ac898e6acaaa44f7b6df"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-C03",
+      "field_index": 3,
+      "method_version": "m31-deterministic-v2",
+      "name": "application_instructions",
+      "original": "A linha BNDES Crédito Pequenas Empresas é aderente às necessidades do dia-a-dia das micro, pequenas e médias empresas. Podem solicitar financiamento clientes que faturem até R$ 300 milhões, com prazo de até 5 (cinco) anos, com até 2 (dois) anos de carência, até o limite de R$ 20 milhões por ano.",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0092",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-C03",
+        "end": 6298,
+        "page": null,
+        "quote": "A linha BNDES Crédito Pequenas Empresas é aderente às necessidades do dia-a-dia das micro, pequenas e médias empresas. Podem solicitar financiamento clientes que faturem até R$ 300 milhões, com prazo de até 5 (cinco) anos, com até 2 (dois) anos de carência, até o limite de R$ 20 milhões por ano.",
+        "raw_sha256": "4c9a21385258804eb79cd68d00759b07f22d35d446d4db8daaf7378ce70c86b6",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0092",
+        "start": 6002,
+        "text_sha256": "d06d1fdaf7644833ecb14d36f2f80f583b6c82e27004ac898e6acaaa44f7b6df"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-C03",
+      "field_index": 4,
+      "method_version": "m31-deterministic-v2",
+      "name": "repayment_expression",
+      "original": "A linha BNDES Crédito Pequenas Empresas é aderente às necessidades do dia-a-dia das micro, pequenas e médias empresas. Podem solicitar financiamento clientes que faturem até R$ 300 milhões, com prazo de até 5 (cinco) anos, com até 2 (dois) anos de carência, até o limite de R$ 20 milhões por ano.",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0092",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-C03",
+        "end": 6298,
+        "page": null,
+        "quote": "A linha BNDES Crédito Pequenas Empresas é aderente às necessidades do dia-a-dia das micro, pequenas e médias empresas. Podem solicitar financiamento clientes que faturem até R$ 300 milhões, com prazo de até 5 (cinco) anos, com até 2 (dois) anos de carência, até o limite de R$ 20 milhões por ano.",
+        "raw_sha256": "4c9a21385258804eb79cd68d00759b07f22d35d446d4db8daaf7378ce70c86b6",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0092",
+        "start": 6002,
+        "text_sha256": "d06d1fdaf7644833ecb14d36f2f80f583b6c82e27004ac898e6acaaa44f7b6df"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-C03",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "funding_organization_expression",
+      "original": "Assim, serão negociados junto ao seu banco: o valor financiado, os prazos, as taxas e as garantias da operação de crédito, respeitando as condições gerais definidas pelo BNDES. Dessa maneira, infelizmente o BNDES não tem poderes para interferir na análise de crédito realizada pelos agentes financeiros repassadores.",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0094",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-C03",
+        "end": 7044,
+        "page": null,
+        "quote": "Assim, serão negociados junto ao seu banco: o valor financiado, os prazos, as taxas e as garantias da operação de crédito, respeitando as condições gerais definidas pelo BNDES. Dessa maneira, infelizmente o BNDES não tem poderes para interferir na análise de crédito realizada pelos agentes financeiros repassadores.",
+        "raw_sha256": "4c9a21385258804eb79cd68d00759b07f22d35d446d4db8daaf7378ce70c86b6",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0094",
+        "start": 6728,
+        "text_sha256": "d06d1fdaf7644833ecb14d36f2f80f583b6c82e27004ac898e6acaaa44f7b6df"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-C03",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "funding_organization_expression",
+      "original": "No entanto, esclarecemos que por se tratar de um banco de desenvolvimento, o BNDES atua de forma diferente de um banco comercial, ele não possui uma rede de agências. Dessa forma, os financiamentos com recursos do BNDES para Micro, Pequenas e Médias empresas, bem como para Pessoas Físicas são realizados, em sua maior parte, na modalidade indireta, ou seja, por meio de uma rede de agentes financeiros credenciados a repassar os recursos do BNDES. Ou seja, a fonte de recursos é do BNDES, mas o financiamento é negociado e contratado entre o cliente final e o Agente Financeiro credenciado. Esse é o responsável pela análise de crédito e aprovação do financiamento, pois, o agente é quem assume o risco da operação perante o BNDES, de acordo com o limite de crédito e o perfil de cada cliente. Dessa maneira, infelizmente o BNDES não tem poderes para interferir na análise de crédito realizada pelos agentes financeiros repassadores.",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0111",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-C03",
+        "end": 9761,
+        "page": null,
+        "quote": "No entanto, esclarecemos que por se tratar de um banco de desenvolvimento, o BNDES atua de forma diferente de um banco comercial, ele não possui uma rede de agências. Dessa forma, os financiamentos com recursos do BNDES para Micro, Pequenas e Médias empresas, bem como para Pessoas Físicas são realizados, em sua maior parte, na modalidade indireta, ou seja, por meio de uma rede de agentes financeiros credenciados a repassar os recursos do BNDES. Ou seja, a fonte de recursos é do BNDES, mas o financiamento é negociado e contratado entre o cliente final e o Agente Financeiro credenciado. Esse é o responsável pela análise de crédito e aprovação do financiamento, pois, o agente é quem assume o risco da operação perante o BNDES, de acordo com o limite de crédito e o perfil de cada cliente. Dessa maneira, infelizmente o BNDES não tem poderes para interferir na análise de crédito realizada pelos agentes financeiros repassadores.",
+        "raw_sha256": "4c9a21385258804eb79cd68d00759b07f22d35d446d4db8daaf7378ce70c86b6",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0111",
+        "start": 8827,
+        "text_sha256": "d06d1fdaf7644833ecb14d36f2f80f583b6c82e27004ac898e6acaaa44f7b6df"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-C03",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "funding_organization_expression",
+      "original": "é destinada à manutenção e/ou à geração de empregos, bem como às necessidades do dia a dia das empresas. Por ser uma linha indireta, os recursos do BNDES são repassados pelos Agentes Financeiros Credenciados. A linha foi lançada em 2019 e muitos agentes financeiros já a operam.",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0114",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-C03",
+        "end": 10094,
+        "page": null,
+        "quote": "é destinada à manutenção e/ou à geração de empregos, bem como às necessidades do dia a dia das empresas. Por ser uma linha indireta, os recursos do BNDES são repassados pelos Agentes Financeiros Credenciados. A linha foi lançada em 2019 e muitos agentes financeiros já a operam.",
+        "raw_sha256": "4c9a21385258804eb79cd68d00759b07f22d35d446d4db8daaf7378ce70c86b6",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0114",
+        "start": 9816,
+        "text_sha256": "d06d1fdaf7644833ecb14d36f2f80f583b6c82e27004ac898e6acaaa44f7b6df"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-C03",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "funding_organization_expression",
+      "original": "Dessa maneira, o BNDES não tem poderes para interferir na análise de crédito realizada pelos agentes financeiros repassadores.",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0127",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-C03",
+        "end": 12265,
+        "page": null,
+        "quote": "Dessa maneira, o BNDES não tem poderes para interferir na análise de crédito realizada pelos agentes financeiros repassadores.",
+        "raw_sha256": "4c9a21385258804eb79cd68d00759b07f22d35d446d4db8daaf7378ce70c86b6",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0127",
+        "start": 12139,
+        "text_sha256": "d06d1fdaf7644833ecb14d36f2f80f583b6c82e27004ac898e6acaaa44f7b6df"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-C03",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "funding_organization_expression",
+      "original": "9. Posso usar os recursos da Linha Crédito Pequenas Empresas para adquirir itens importados?",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0134",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-C03",
+        "end": 12850,
+        "page": null,
+        "quote": "9. Posso usar os recursos da Linha Crédito Pequenas Empresas para adquirir itens importados?",
+        "raw_sha256": "4c9a21385258804eb79cd68d00759b07f22d35d446d4db8daaf7378ce70c86b6",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0134",
+        "start": 12758,
+        "text_sha256": "d06d1fdaf7644833ecb14d36f2f80f583b6c82e27004ac898e6acaaa44f7b6df"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-C03",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "borrower_revenue_requirement",
+      "original": "R$ 300 milhões",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0139",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-C03",
+        "end": 13478,
+        "page": null,
+        "quote": "Podem solicitar Pessoas jurídicas de direito privado, sediadas no País, com faturamento até R$ 300 milhões. Também podem solicitar os Empresários individuais, com faturamento até R$ 300 milhões.",
+        "raw_sha256": "4c9a21385258804eb79cd68d00759b07f22d35d446d4db8daaf7378ce70c86b6",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0139",
+        "start": 13284,
+        "text_sha256": "d06d1fdaf7644833ecb14d36f2f80f583b6c82e27004ac898e6acaaa44f7b6df"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-C03",
+      "field_index": 1,
+      "method_version": "m31-deterministic-v2",
+      "name": "borrower_revenue_requirement",
+      "original": "R$ 300 milhões",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0139",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-C03",
+        "end": 13478,
+        "page": null,
+        "quote": "Podem solicitar Pessoas jurídicas de direito privado, sediadas no País, com faturamento até R$ 300 milhões. Também podem solicitar os Empresários individuais, com faturamento até R$ 300 milhões.",
+        "raw_sha256": "4c9a21385258804eb79cd68d00759b07f22d35d446d4db8daaf7378ce70c86b6",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0139",
+        "start": 13284,
+        "text_sha256": "d06d1fdaf7644833ecb14d36f2f80f583b6c82e27004ac898e6acaaa44f7b6df"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-C03",
+      "field_index": 2,
+      "method_version": "m31-deterministic-v2",
+      "name": "applicant_requirements",
+      "original": "Podem solicitar Pessoas jurídicas de direito privado, sediadas no País, com faturamento até R$ 300 milhões. Também podem solicitar os Empresários individuais, com faturamento até R$ 300 milhões.",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0139",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-C03",
+        "end": 13478,
+        "page": null,
+        "quote": "Podem solicitar Pessoas jurídicas de direito privado, sediadas no País, com faturamento até R$ 300 milhões. Também podem solicitar os Empresários individuais, com faturamento até R$ 300 milhões.",
+        "raw_sha256": "4c9a21385258804eb79cd68d00759b07f22d35d446d4db8daaf7378ce70c86b6",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0139",
+        "start": 13284,
+        "text_sha256": "d06d1fdaf7644833ecb14d36f2f80f583b6c82e27004ac898e6acaaa44f7b6df"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-C03",
+      "field_index": 3,
+      "method_version": "m31-deterministic-v2",
+      "name": "application_instructions",
+      "original": "Podem solicitar Pessoas jurídicas de direito privado, sediadas no País, com faturamento até R$ 300 milhões. Também podem solicitar os Empresários individuais, com faturamento até R$ 300 milhões.",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0139",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-C03",
+        "end": 13478,
+        "page": null,
+        "quote": "Podem solicitar Pessoas jurídicas de direito privado, sediadas no País, com faturamento até R$ 300 milhões. Também podem solicitar os Empresários individuais, com faturamento até R$ 300 milhões.",
+        "raw_sha256": "4c9a21385258804eb79cd68d00759b07f22d35d446d4db8daaf7378ce70c86b6",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0139",
+        "start": 13284,
+        "text_sha256": "d06d1fdaf7644833ecb14d36f2f80f583b6c82e27004ac898e6acaaa44f7b6df"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-C03",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "funding_organization_expression",
+      "original": "11. Como posso utilizar os recursos do BNDES Crédito Pequenas Empresas?",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0150",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-C03",
+        "end": 14302,
+        "page": null,
+        "quote": "11. Como posso utilizar os recursos do BNDES Crédito Pequenas Empresas?",
+        "raw_sha256": "4c9a21385258804eb79cd68d00759b07f22d35d446d4db8daaf7378ce70c86b6",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0150",
+        "start": 14231,
+        "text_sha256": "d06d1fdaf7644833ecb14d36f2f80f583b6c82e27004ac898e6acaaa44f7b6df"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-C03",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "funding_organization_expression",
+      "original": "Os recursos da Linha BNDES Crédito Pequenas Empresas visam à manutenção e/ou à geração de empregos.",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0151",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-C03",
+        "end": 14402,
+        "page": null,
+        "quote": "Os recursos da Linha BNDES Crédito Pequenas Empresas visam à manutenção e/ou à geração de empregos.",
+        "raw_sha256": "4c9a21385258804eb79cd68d00759b07f22d35d446d4db8daaf7378ce70c86b6",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0151",
+        "start": 14303,
+        "text_sha256": "d06d1fdaf7644833ecb14d36f2f80f583b6c82e27004ac898e6acaaa44f7b6df"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-C03",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "funding_organization_expression",
+      "original": "O BNDES não veda a concessão do financiamento ao cliente em recuperação judicial. A linha BNDES Crédito Pequenas Empresas é uma linha indireta. Ou seja, os recursos do BNDES são repassados pelos Agentes Financeiros Credenciados. Cabe ao agente avaliar eventuais riscos quanto à capacidade de pagamento de uma empresa nessa situação.",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0159",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-C03",
+        "end": 15306,
+        "page": null,
+        "quote": "O BNDES não veda a concessão do financiamento ao cliente em recuperação judicial. A linha BNDES Crédito Pequenas Empresas é uma linha indireta. Ou seja, os recursos do BNDES são repassados pelos Agentes Financeiros Credenciados. Cabe ao agente avaliar eventuais riscos quanto à capacidade de pagamento de uma empresa nessa situação.",
+        "raw_sha256": "4c9a21385258804eb79cd68d00759b07f22d35d446d4db8daaf7378ce70c86b6",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0159",
+        "start": 14974,
+        "text_sha256": "d06d1fdaf7644833ecb14d36f2f80f583b6c82e27004ac898e6acaaa44f7b6df"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-C03",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "funding_organization_expression",
+      "original": "Ou seja, o financiamento é contratado entre o Cliente Final e o Agente Financeiro credenciado, que é o responsável pela análise de crédito e aprovação do financiamento, pois, o agente é quem assume o risco da operação perante o BNDES, decidindo com quais Linhas e Programas irá operar e quais pedidos de financiamento serão aprovados e contratados, de acordo com o limite de crédito e o perfil de cada cliente. Dessa maneira, infelizmente o BNDES não tem poderes para interferir na análise de crédito realizada pelos agentes financeiros repassadores.",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0160",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-C03",
+        "end": 15857,
+        "page": null,
+        "quote": "Ou seja, o financiamento é contratado entre o Cliente Final e o Agente Financeiro credenciado, que é o responsável pela análise de crédito e aprovação do financiamento, pois, o agente é quem assume o risco da operação perante o BNDES, decidindo com quais Linhas e Programas irá operar e quais pedidos de financiamento serão aprovados e contratados, de acordo com o limite de crédito e o perfil de cada cliente. Dessa maneira, infelizmente o BNDES não tem poderes para interferir na análise de crédito realizada pelos agentes financeiros repassadores.",
+        "raw_sha256": "4c9a21385258804eb79cd68d00759b07f22d35d446d4db8daaf7378ce70c86b6",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0160",
+        "start": 15307,
+        "text_sha256": "d06d1fdaf7644833ecb14d36f2f80f583b6c82e27004ac898e6acaaa44f7b6df"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-C03",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "title",
+      "original": "Linhas e programas similares",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0167",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-C03",
+        "end": 16956,
+        "page": null,
+        "quote": "Linhas e programas similares",
+        "raw_sha256": "4c9a21385258804eb79cd68d00759b07f22d35d446d4db8daaf7378ce70c86b6",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0167",
+        "start": 16928,
+        "text_sha256": "d06d1fdaf7644833ecb14d36f2f80f583b6c82e27004ac898e6acaaa44f7b6df"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-C03",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "funding_organization_expression",
+      "original": "é agente financeiro autorizado a intermediar financiamentos com recursos do BNDES.",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0178",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-C03",
+        "end": 17401,
+        "page": null,
+        "quote": "é agente financeiro autorizado a intermediar financiamentos com recursos do BNDES.",
+        "raw_sha256": "4c9a21385258804eb79cd68d00759b07f22d35d446d4db8daaf7378ce70c86b6",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0178",
+        "start": 17319,
+        "text_sha256": "d06d1fdaf7644833ecb14d36f2f80f583b6c82e27004ac898e6acaaa44f7b6df"
+      }
+    }
+  ],
+  "provenance": {
+    "byte_length": 92997,
+    "category_evidence": "BNDES Crédito Pequenas e Médias Empresas\nEmpréstimo para micro, pequenas e médias empresas e para empresários individuais.",
+    "content_type": "text/html",
+    "derivation_method": "stdlib-HTMLParser-data-whitespace-v1; excludes script/style/noscript/template; not rendered DOM",
+    "document_category": "financing_program",
+    "document_id": "M30-C03",
+    "document_version": null,
+    "final_url": "https://www.bndes.gov.br/wps/portal/site/home/financiamento/produto/bndes-credito-pequenas-e-medias-empresas",
+    "original_filename": "bndes-credito-pequenas-e-medias-empresas",
+    "original_url": "https://www.bndes.gov.br/wps/portal/site/home/financiamento/produto/bndes-credito-pequenas-e-medias-empresas",
+    "publication_date": null,
+    "raw_path": "raw/M30-C03.html",
+    "restrictions": "Research pilot local frozen copy only; no redistribution license inferred. No scripts executed, no forms submitted, no applicant records intentionally collected. Public navigation/staff attribution may remain in original bytes.",
+    "retrieval_status": "acquired",
+    "retrieved_at": "2026-10-19T04:38:04.876967+00:00",
+    "sha256": "4c9a21385258804eb79cd68d00759b07f22d35d446d4db8daaf7378ce70c86b6",
+    "source_authority_notes": "Public HTTPS page hosted by the named institution; authorship asserted by host/content, not cryptographically authenticated. Not source-readiness approval.",
+    "source_organization": "BNDES",
+    "text_path": "text/M30-C03.txt",
+    "text_sha256": "d06d1fdaf7644833ecb14d36f2f80f583b6c82e27004ac898e6acaaa44f7b6df"
+  },
+  "records": [
+    {
+      "all_overlap_predictions": [
+        {
+          "discovery": "opportunity_signal",
+          "modality": "credito",
+          "segment_id": "segment-0011",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "opportunity_signal",
+          "modality": "credito",
+          "segment_id": "segment-0012",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0013",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0014",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0015",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0016",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0017",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0018",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0019",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "opportunity_signal",
+          "modality": "credito",
+          "segment_id": "segment-0020",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0021",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0022",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0023",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "opportunity_signal",
+          "modality": "credito",
+          "segment_id": "segment-0024",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0025",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "opportunity_signal",
+          "modality": "credito",
+          "segment_id": "segment-0026",
+          "temporal": "undetermined"
+        }
+      ],
+      "any_exact_boundary": false,
+      "coverage": {
+        "denominator": 1277,
+        "numerator": 1262,
+        "value": 0.9882537196554424
+      },
+      "covered_characters": 1262,
+      "disagreements": [
+        "discovery_label"
+      ],
+      "discovery_histogram": {
+        "abstain": 11,
+        "opportunity_signal": 5
+      },
+      "document_id": "M30-C03",
+      "edges": [
+        {
+          "end": 365,
+          "exact": false,
+          "intersection": 40,
+          "intersection_end": 365,
+          "intersection_start": 325,
+          "iou": 0.031323414252153486,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.031323414252153486,
+          "segment_id": "segment-0011",
+          "start": 325
+        },
+        {
+          "end": 447,
+          "exact": false,
+          "intersection": 81,
+          "intersection_end": 447,
+          "intersection_start": 366,
+          "iou": 0.06342991386061081,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.06342991386061081,
+          "segment_id": "segment-0012",
+          "start": 366
+        },
+        {
+          "end": 467,
+          "exact": false,
+          "intersection": 19,
+          "intersection_end": 467,
+          "intersection_start": 448,
+          "iou": 0.014878621769772905,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.014878621769772905,
+          "segment_id": "segment-0013",
+          "start": 448
+        },
+        {
+          "end": 493,
+          "exact": false,
+          "intersection": 25,
+          "intersection_end": 493,
+          "intersection_start": 468,
+          "iou": 0.01957713390759593,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.01957713390759593,
+          "segment_id": "segment-0014",
+          "start": 468
+        },
+        {
+          "end": 508,
+          "exact": false,
+          "intersection": 14,
+          "intersection_end": 508,
+          "intersection_start": 494,
+          "iou": 0.01096319498825372,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.01096319498825372,
+          "segment_id": "segment-0015",
+          "start": 494
+        },
+        {
+          "end": 560,
+          "exact": false,
+          "intersection": 51,
+          "intersection_end": 560,
+          "intersection_start": 509,
+          "iou": 0.039937353171495694,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.039937353171495694,
+          "segment_id": "segment-0016",
+          "start": 509
+        },
+        {
+          "end": 612,
+          "exact": false,
+          "intersection": 51,
+          "intersection_end": 612,
+          "intersection_start": 561,
+          "iou": 0.039937353171495694,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.039937353171495694,
+          "segment_id": "segment-0017",
+          "start": 561
+        },
+        {
+          "end": 760,
+          "exact": false,
+          "intersection": 147,
+          "intersection_end": 760,
+          "intersection_start": 613,
+          "iou": 0.11511354737666406,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.11511354737666406,
+          "segment_id": "segment-0018",
+          "start": 613
+        },
+        {
+          "end": 811,
+          "exact": false,
+          "intersection": 50,
+          "intersection_end": 811,
+          "intersection_start": 761,
+          "iou": 0.03915426781519186,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.03915426781519186,
+          "segment_id": "segment-0019",
+          "start": 761
+        },
+        {
+          "end": 907,
+          "exact": false,
+          "intersection": 95,
+          "intersection_end": 907,
+          "intersection_start": 812,
+          "iou": 0.07439310884886452,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.07439310884886452,
+          "segment_id": "segment-0020",
+          "start": 812
+        },
+        {
+          "end": 1003,
+          "exact": false,
+          "intersection": 95,
+          "intersection_end": 1003,
+          "intersection_start": 908,
+          "iou": 0.07439310884886452,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.07439310884886452,
+          "segment_id": "segment-0021",
+          "start": 908
+        },
+        {
+          "end": 1015,
+          "exact": false,
+          "intersection": 11,
+          "intersection_end": 1015,
+          "intersection_start": 1004,
+          "iou": 0.008613938919342208,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.008613938919342208,
+          "segment_id": "segment-0022",
+          "start": 1004
+        },
+        {
+          "end": 1050,
+          "exact": false,
+          "intersection": 34,
+          "intersection_end": 1050,
+          "intersection_start": 1016,
+          "iou": 0.02662490211433046,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.02662490211433046,
+          "segment_id": "segment-0023",
+          "start": 1016
+        },
+        {
+          "end": 1294,
+          "exact": false,
+          "intersection": 243,
+          "intersection_end": 1294,
+          "intersection_start": 1051,
+          "iou": 0.19028974158183243,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.19028974158183243,
+          "segment_id": "segment-0024",
+          "start": 1051
+        },
+        {
+          "end": 1306,
+          "exact": false,
+          "intersection": 11,
+          "intersection_end": 1306,
+          "intersection_start": 1295,
+          "iou": 0.008613938919342208,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.008613938919342208,
+          "segment_id": "segment-0025",
+          "start": 1295
+        },
+        {
+          "end": 1602,
+          "exact": false,
+          "intersection": 295,
+          "intersection_end": 1602,
+          "intersection_start": 1307,
+          "iou": 0.23101018010963195,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.23101018010963195,
+          "segment_id": "segment-0026",
+          "start": 1307
+        }
+      ],
+      "end": 1602,
+      "fields": [
+        {
+          "candidates": [
+            {
+              "diagnostic_status": "traceable_not_semantically_certified",
+              "field_index": 0,
+              "method_version": "m31-deterministic-v2",
+              "name": "title",
+              "original": "BNDES Crédito Pequenas e Médias Empresas",
+              "schema_version": "m31-extraction-v1",
+              "segment_id": "segment-0011",
+              "uncertainty": "heuristic role assignment; not authenticated or normalized",
+              "witness": {
+                "document_id": "M30-C03",
+                "end": 365,
+                "page": null,
+                "quote": "BNDES Crédito Pequenas e Médias Empresas",
+                "raw_sha256": "4c9a21385258804eb79cd68d00759b07f22d35d446d4db8daaf7378ce70c86b6",
+                "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+                "schema_version": "m31-extraction-v1",
+                "segment_id": "segment-0011",
+                "start": 325,
+                "text_sha256": "d06d1fdaf7644833ecb14d36f2f80f583b6c82e27004ac898e6acaaa44f7b6df"
+              }
+            }
+          ],
+          "name": "title",
+          "reason": "same literal and role in record; entailment remains unreviewed",
+          "reference_evidence": [
+            {
+              "end": 447,
+              "evidence_id": "M30-C03-R1-E1",
+              "page": null,
+              "quote": "BNDES Crédito Pequenas e Médias Empresas\nEmpréstimo para micro, pequenas e médias empresas e para empresários individuais.",
+              "start": 325
+            }
+          ],
+          "reference_value": "BNDES Crédito Pequenas e Médias Empresas",
+          "scope_supported": true,
+          "semantic_adjudication": "not_certified",
+          "status": "MATCH",
+          "strict_role_value": true
+        },
+        {
+          "candidates": [],
+          "name": "credit_limit",
+          "reason": "literal amount retained without requested financial role/qualifiers",
+          "reference_evidence": [
+            {
+              "end": 1602,
+              "evidence_id": "M30-C03-R1-E3",
+              "page": null,
+              "quote": "Empréstimo visando à manutenção e/ou à geração de empregos, no limite de R$ 20 milhões por ano.\nSe você é um micro pequeno ou médio empresário, pode enviar sua solicitação pelo BNDES Impulso.\nDirija-se à\ninstituição financeira credenciada\nde sua preferência, que informará a documentação necessária, analisará a possibilidade de concessão do crédito e negociará as garantias. Após aprovada, a operação será encaminhada para homologação e posterior liberação dos recursos pelo BNDES.\nIMPORTANTE:\ncada instituição financeira credenciada pode aderir ou não às linhas de financiamento do BNDES, de acordo com suas políticas próprias para concessão do crédito. A decisão final sobre a aceitação ou recusa das propostas protocoladas é de exclusiva responsabilidade do agente financeiro envolvido.",
+              "start": 812
+            }
+          ],
+          "reference_value": "R$ 20 milhões por ano",
+          "scope_supported": true,
+          "semantic_adjudication": "not_certified",
+          "status": "PARTIAL",
+          "strict_role_value": false
+        },
+        {
+          "candidates": [
+            {
+              "diagnostic_status": "traceable_not_semantically_certified",
+              "field_index": 0,
+              "method_version": "m31-deterministic-v2",
+              "name": "applicant_requirements",
+              "original": "Quem pode solicitar",
+              "schema_version": "m31-extraction-v1",
+              "segment_id": "segment-0013",
+              "uncertainty": "heuristic role assignment; not authenticated or normalized",
+              "witness": {
+                "document_id": "M30-C03",
+                "end": 467,
+                "page": null,
+                "quote": "Quem pode solicitar",
+                "raw_sha256": "4c9a21385258804eb79cd68d00759b07f22d35d446d4db8daaf7378ce70c86b6",
+                "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+                "schema_version": "m31-extraction-v1",
+                "segment_id": "segment-0013",
+                "start": 448,
+                "text_sha256": "d06d1fdaf7644833ecb14d36f2f80f583b6c82e27004ac898e6acaaa44f7b6df"
+              }
+            }
+          ],
+          "name": "applicant_requirements",
+          "reason": "same role has different literals; do not assume reference exhaustive or prediction wrong",
+          "reference_evidence": [
+            {
+              "end": 760,
+              "evidence_id": "M30-C03-R1-E2",
+              "page": null,
+              "quote": "Micro e pequenas empresas e empresários individuais\nMédias empresas com faturamento até R$ 300 milhões*\n* Quando a empresa (beneficiária final) integrar um grupo econômico, a classificação do porte deverá considerar o faturamento consolidado do grupo.",
+              "start": 509
+            }
+          ],
+          "reference_value": "Médias empresas com faturamento até R$ 300 milhões*",
+          "scope_supported": true,
+          "semantic_adjudication": "not_certified",
+          "status": "UNRESOLVED",
+          "strict_role_value": false
+        },
+        {
+          "candidates": [],
+          "name": "resource_type",
+          "reason": "requested target role outside implemented M31 field scope",
+          "reference_evidence": [
+            {
+              "end": 447,
+              "evidence_id": "M30-C03-R1-E1",
+              "page": null,
+              "quote": "BNDES Crédito Pequenas e Médias Empresas\nEmpréstimo para micro, pequenas e médias empresas e para empresários individuais.",
+              "start": 325
+            }
+          ],
+          "reference_value": "Empréstimo",
+          "scope_supported": false,
+          "semantic_adjudication": "not_certified",
+          "status": "UNRESOLVED",
+          "strict_role_value": false
+        },
+        {
+          "candidates": [],
+          "name": "funding_organization",
+          "reason": "no corresponding field; absence is not explicit field abstention",
+          "reference_evidence": [
+            {
+              "end": 1602,
+              "evidence_id": "M30-C03-R1-E3",
+              "page": null,
+              "quote": "Empréstimo visando à manutenção e/ou à geração de empregos, no limite de R$ 20 milhões por ano.\nSe você é um micro pequeno ou médio empresário, pode enviar sua solicitação pelo BNDES Impulso.\nDirija-se à\ninstituição financeira credenciada\nde sua preferência, que informará a documentação necessária, analisará a possibilidade de concessão do crédito e negociará as garantias. Após aprovada, a operação será encaminhada para homologação e posterior liberação dos recursos pelo BNDES.\nIMPORTANTE:\ncada instituição financeira credenciada pode aderir ou não às linhas de financiamento do BNDES, de acordo com suas políticas próprias para concessão do crédito. A decisão final sobre a aceitação ou recusa das propostas protocoladas é de exclusiva responsabilidade do agente financeiro envolvido.",
+              "start": 812
+            }
+          ],
+          "reference_value": "BNDES",
+          "scope_supported": true,
+          "semantic_adjudication": "not_certified",
+          "status": "MISSING",
+          "strict_role_value": false
+        }
+      ],
+      "fragmentation": 16,
+      "location_convention": "html_unicode_codepoints",
+      "physical_reference_evidence_pages": [],
+      "rationale": "A distinct loan instrument provides borrower classes, purpose, annual ceiling and request path. The agent may refuse or not offer the line, so the program is genuine without a guaranteed current application window.",
+      "record_id": "M30-C03-R1",
+      "reference": {
+        "discovery_label": "confirmed_opportunity",
+        "modality": "credito",
+        "opportunity_label": "genuine_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "undetermined"
+      },
+      "reference_characters": 1277,
+      "reference_evidence": [
+        {
+          "end": 447,
+          "evidence_id": "M30-C03-R1-E1",
+          "page": null,
+          "quote": "BNDES Crédito Pequenas e Médias Empresas\nEmpréstimo para micro, pequenas e médias empresas e para empresários individuais.",
+          "start": 325
+        },
+        {
+          "end": 760,
+          "evidence_id": "M30-C03-R1-E2",
+          "page": null,
+          "quote": "Micro e pequenas empresas e empresários individuais\nMédias empresas com faturamento até R$ 300 milhões*\n* Quando a empresa (beneficiária final) integrar um grupo econômico, a classificação do porte deverá considerar o faturamento consolidado do grupo.",
+          "start": 509
+        },
+        {
+          "end": 1602,
+          "evidence_id": "M30-C03-R1-E3",
+          "page": null,
+          "quote": "Empréstimo visando à manutenção e/ou à geração de empregos, no limite de R$ 20 milhões por ano.\nSe você é um micro pequeno ou médio empresário, pode enviar sua solicitação pelo BNDES Impulso.\nDirija-se à\ninstituição financeira credenciada\nde sua preferência, que informará a documentação necessária, analisará a possibilidade de concessão do crédito e negociará as garantias. Após aprovada, a operação será encaminhada para homologação e posterior liberação dos recursos pelo BNDES.\nIMPORTANTE:\ncada instituição financeira credenciada pode aderir ou não às linhas de financiamento do BNDES, de acordo com suas políticas próprias para concessão do crédito. A decisão final sobre a aceitação ou recusa das propostas protocoladas é de exclusiva responsabilidade do agente financeiro envolvido.",
+          "start": 812
+        }
+      ],
+      "representative": "segment-0026",
+      "representative_prediction": {
+        "discovery": "opportunity_signal",
+        "end": 1602,
+        "modality": "credito",
+        "segment_id": "segment-0026",
+        "start": 1307,
+        "temporal": "undetermined"
+      },
+      "representative_quote": "cada instituição financeira credenciada pode aderir ou não às linhas de financiamento do BNDES, de acordo com suas políticas próprias para concessão do crédito. A decisão final sobre a aceitação ou recusa das propostas protocoladas é de exclusiva responsabilidade do agente financeiro envolvido.",
+      "start": 325,
+      "status": "overlap",
+      "uncertainty_notes": [
+        "No verified application cutoff or continuous-availability guarantee in this record. Snapshot existence is not proof of current openness."
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 59,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0000",
+      "start": 41,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 93,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0001",
+      "start": 89,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 101,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0002",
+      "start": 94,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 116,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0003",
+      "start": 102,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 119,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0004",
+      "start": 117,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 122,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0005",
+      "start": 120,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 124,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0006",
+      "start": 123,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 134,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0007",
+      "start": 125,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 151,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0008",
+      "start": 135,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 256,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0009",
+      "start": 254,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 286,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0010",
+      "start": 257,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 365,
+      "field_count": 1,
+      "modality": "credito",
+      "physical_page": null,
+      "reference_records": [
+        "M30-C03-R1"
+      ],
+      "segment_id": "segment-0011",
+      "start": 325,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 447,
+      "field_count": 0,
+      "modality": "credito",
+      "physical_page": null,
+      "reference_records": [
+        "M30-C03-R1"
+      ],
+      "segment_id": "segment-0012",
+      "start": 366,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 467,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-C03-R1"
+      ],
+      "segment_id": "segment-0013",
+      "start": 448,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 493,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-C03-R1"
+      ],
+      "segment_id": "segment-0014",
+      "start": 468,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 508,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-C03-R1"
+      ],
+      "segment_id": "segment-0015",
+      "start": 494,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 560,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-C03-R1"
+      ],
+      "segment_id": "segment-0016",
+      "start": 509,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 612,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-C03-R1"
+      ],
+      "segment_id": "segment-0017",
+      "start": 561,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 760,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-C03-R1"
+      ],
+      "segment_id": "segment-0018",
+      "start": 613,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 811,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-C03-R1"
+      ],
+      "segment_id": "segment-0019",
+      "start": 761,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 907,
+      "field_count": 1,
+      "modality": "credito",
+      "physical_page": null,
+      "reference_records": [
+        "M30-C03-R1"
+      ],
+      "segment_id": "segment-0020",
+      "start": 812,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 1003,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-C03-R1"
+      ],
+      "segment_id": "segment-0021",
+      "start": 908,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 1015,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-C03-R1"
+      ],
+      "segment_id": "segment-0022",
+      "start": 1004,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 1050,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-C03-R1"
+      ],
+      "segment_id": "segment-0023",
+      "start": 1016,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 1294,
+      "field_count": 0,
+      "modality": "credito",
+      "physical_page": null,
+      "reference_records": [
+        "M30-C03-R1"
+      ],
+      "segment_id": "segment-0024",
+      "start": 1051,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 1306,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-C03-R1"
+      ],
+      "segment_id": "segment-0025",
+      "start": 1295,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 1602,
+      "field_count": 0,
+      "modality": "credito",
+      "physical_page": null,
+      "reference_records": [
+        "M30-C03-R1"
+      ],
+      "segment_id": "segment-0026",
+      "start": 1307,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 1683,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0027",
+      "start": 1603,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 1697,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0028",
+      "start": 1684,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 1724,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0029",
+      "start": 1698,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 1738,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0030",
+      "start": 1725,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 1754,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0031",
+      "start": 1739,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 1771,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0032",
+      "start": 1755,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 1778,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0033",
+      "start": 1772,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 1792,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0034",
+      "start": 1779,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 1799,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0035",
+      "start": 1793,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 1825,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0036",
+      "start": 1800,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 1827,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0037",
+      "start": 1826,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 1835,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0038",
+      "start": 1828,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 1837,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0039",
+      "start": 1836,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 1854,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0040",
+      "start": 1838,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 1926,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0041",
+      "start": 1855,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 1928,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0042",
+      "start": 1927,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 2001,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0043",
+      "start": 1929,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 2014,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0044",
+      "start": 2002,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 2016,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0045",
+      "start": 2015,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 2042,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0046",
+      "start": 2017,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 2084,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0047",
+      "start": 2043,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 2101,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0048",
+      "start": 2085,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 2173,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0049",
+      "start": 2102,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 2175,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0050",
+      "start": 2174,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 2241,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0051",
+      "start": 2176,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 2254,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0052",
+      "start": 2242,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 2256,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0053",
+      "start": 2255,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 2282,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0054",
+      "start": 2257,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 2324,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0055",
+      "start": 2283,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 2335,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0056",
+      "start": 2325,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 2463,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0057",
+      "start": 2336,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 2514,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0058",
+      "start": 2464,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 2536,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0059",
+      "start": 2515,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 2562,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0060",
+      "start": 2537,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 2569,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0061",
+      "start": 2563,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 2723,
+      "field_count": 1,
+      "modality": "credito",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0062",
+      "start": 2570,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 2733,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0063",
+      "start": 2724,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 2909,
+      "field_count": 0,
+      "modality": "credito",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0064",
+      "start": 2734,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 3004,
+      "field_count": 0,
+      "modality": "investimentos",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0065",
+      "start": 2910,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 3020,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0066",
+      "start": 3005,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 3032,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0067",
+      "start": 3021,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 3041,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0068",
+      "start": 3033,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 3057,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0069",
+      "start": 3042,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 3087,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0070",
+      "start": 3058,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 3163,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0071",
+      "start": 3088,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 3183,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0072",
+      "start": 3164,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 3203,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0073",
+      "start": 3184,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 3219,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0074",
+      "start": 3204,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 3234,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0075",
+      "start": 3220,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 3247,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0076",
+      "start": 3235,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 3292,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0077",
+      "start": 3248,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 3314,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0078",
+      "start": 3293,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 3366,
+      "field_count": 0,
+      "modality": "credito",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0079",
+      "start": 3315,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 3685,
+      "field_count": 1,
+      "modality": "credito",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0080",
+      "start": 3367,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 3818,
+      "field_count": 0,
+      "modality": "credito",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0081",
+      "start": 3686,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 3868,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0082",
+      "start": 3819,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 3944,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0083",
+      "start": 3869,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 4040,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0084",
+      "start": 3945,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 4793,
+      "field_count": 1,
+      "modality": "credito",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0085",
+      "start": 4041,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 5377,
+      "field_count": 1,
+      "modality": "credito",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0086",
+      "start": 4794,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 5694,
+      "field_count": 0,
+      "modality": "credito",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0087",
+      "start": 5378,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 5744,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0088",
+      "start": 5695,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 5840,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0089",
+      "start": 5745,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 5937,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0090",
+      "start": 5841,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 6001,
+      "field_count": 0,
+      "modality": "credito",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0091",
+      "start": 5938,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "access_heuristic_not_review_authority"
+      ],
+      "discovery": "confirmed_opportunity",
+      "end": 6298,
+      "field_count": 5,
+      "modality": "credito",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0092",
+      "start": 6002,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 6727,
+      "field_count": 0,
+      "modality": "credito",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0093",
+      "start": 6299,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 7044,
+      "field_count": 1,
+      "modality": "credito",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0094",
+      "start": 6728,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 7140,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0095",
+      "start": 7045,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 7237,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0096",
+      "start": 7141,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 7287,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0097",
+      "start": 7238,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 7354,
+      "field_count": 0,
+      "modality": "credito",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0098",
+      "start": 7288,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 7424,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0099",
+      "start": 7355,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 7520,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0100",
+      "start": 7425,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 7617,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0101",
+      "start": 7521,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 7667,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0102",
+      "start": 7618,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 7771,
+      "field_count": 0,
+      "modality": "credito",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0103",
+      "start": 7668,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 8103,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0104",
+      "start": 7772,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 8199,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0105",
+      "start": 8104,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 8296,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0106",
+      "start": 8200,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 8402,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0107",
+      "start": 8297,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 8636,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0108",
+      "start": 8403,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 8729,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0109",
+      "start": 8637,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 8826,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0110",
+      "start": 8730,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 9761,
+      "field_count": 1,
+      "modality": "credito",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0111",
+      "start": 8827,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 9783,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0112",
+      "start": 9762,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 9815,
+      "field_count": 0,
+      "modality": "credito",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0113",
+      "start": 9784,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 10094,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0114",
+      "start": 9816,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 10193,
+      "field_count": 0,
+      "modality": "credito",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0115",
+      "start": 10095,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 10292,
+      "field_count": 0,
+      "modality": "credito",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0116",
+      "start": 10194,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 10508,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0117",
+      "start": 10293,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 10551,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0118",
+      "start": 10509,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 10586,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0119",
+      "start": 10552,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 10870,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0120",
+      "start": 10587,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 11224,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0121",
+      "start": 10871,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 11244,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0122",
+      "start": 11225,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 11248,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0123",
+      "start": 11245,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 11458,
+      "field_count": 0,
+      "modality": "credito",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0124",
+      "start": 11249,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 11929,
+      "field_count": 0,
+      "modality": "credito",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0125",
+      "start": 11459,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 12138,
+      "field_count": 0,
+      "modality": "credito",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0126",
+      "start": 11930,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 12265,
+      "field_count": 1,
+      "modality": "credito",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0127",
+      "start": 12139,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 12361,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0128",
+      "start": 12266,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 12461,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0129",
+      "start": 12362,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 12556,
+      "field_count": 0,
+      "modality": "credito",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0130",
+      "start": 12462,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 12561,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0131",
+      "start": 12557,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 12657,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0132",
+      "start": 12562,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 12757,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0133",
+      "start": 12658,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 12850,
+      "field_count": 1,
+      "modality": "credito",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0134",
+      "start": 12758,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 13019,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0135",
+      "start": 12851,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 13115,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0136",
+      "start": 13020,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 13215,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0137",
+      "start": 13116,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 13283,
+      "field_count": 0,
+      "modality": "credito",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0138",
+      "start": 13216,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 13478,
+      "field_count": 4,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0139",
+      "start": 13284,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 13566,
+      "field_count": 0,
+      "modality": "credito",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0140",
+      "start": 13479,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 13591,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0141",
+      "start": 13567,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 13814,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0142",
+      "start": 13592,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 13910,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0143",
+      "start": 13815,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 13940,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0144",
+      "start": 13911,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 14095,
+      "field_count": 0,
+      "modality": "credito",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0145",
+      "start": 13941,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 14105,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0146",
+      "start": 14096,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 14178,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0147",
+      "start": 14106,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 14208,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0148",
+      "start": 14179,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 14230,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0149",
+      "start": 14209,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 14302,
+      "field_count": 1,
+      "modality": "credito",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0150",
+      "start": 14231,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 14402,
+      "field_count": 1,
+      "modality": "credito",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0151",
+      "start": 14303,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 14443,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0152",
+      "start": 14403,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 14486,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0153",
+      "start": 14444,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 14584,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0154",
+      "start": 14487,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 14621,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0155",
+      "start": 14585,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 14743,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0156",
+      "start": 14622,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 14883,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0157",
+      "start": 14744,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 14973,
+      "field_count": 0,
+      "modality": "credito",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0158",
+      "start": 14884,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 15306,
+      "field_count": 1,
+      "modality": "credito",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0159",
+      "start": 14974,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 15857,
+      "field_count": 1,
+      "modality": "credito",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0160",
+      "start": 15307,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 15927,
+      "field_count": 0,
+      "modality": "credito",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0161",
+      "start": 15858,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 16744,
+      "field_count": 0,
+      "modality": "credito",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0162",
+      "start": 15928,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 16769,
+      "field_count": 0,
+      "modality": "credito",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0163",
+      "start": 16745,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 16831,
+      "field_count": 0,
+      "modality": "credito",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0164",
+      "start": 16770,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 16853,
+      "field_count": 0,
+      "modality": "credito",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0165",
+      "start": 16832,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 16927,
+      "field_count": 0,
+      "modality": "credito",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0166",
+      "start": 16854,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 16956,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0167",
+      "start": 16928,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 16964,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0168",
+      "start": 16957,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 16972,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0169",
+      "start": 16965,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 16976,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0170",
+      "start": 16973,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 17118,
+      "field_count": 0,
+      "modality": "credito",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0171",
+      "start": 16977,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 17156,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0172",
+      "start": 17119,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 17160,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0173",
+      "start": 17157,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 17229,
+      "field_count": 0,
+      "modality": "credito",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0174",
+      "start": 17161,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 17241,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0175",
+      "start": 17230,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 17314,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0176",
+      "start": 17242,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 17318,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0177",
+      "start": 17315,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 17401,
+      "field_count": 1,
+      "modality": "credito",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0178",
+      "start": 17319,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 17416,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0179",
+      "start": 17402,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 17477,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0180",
+      "start": 17417,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 17486,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0181",
+      "start": 17478,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 17488,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0182",
+      "start": 17487,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 17516,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0183",
+      "start": 17489,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 17571,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0184",
+      "start": 17517,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 18337,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0185",
+      "start": 18111,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 18426,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0186",
+      "start": 18338,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 18466,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0187",
+      "start": 18427,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 18527,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0188",
+      "start": 18467,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 18535,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0189",
+      "start": 18528,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 18558,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0190",
+      "start": 18536,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 18575,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0191",
+      "start": 18559,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 18604,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0192",
+      "start": 18594,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 18621,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0193",
+      "start": 18605,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    }
+  ],
+  "semantic_reviews": [
+    {
+      "case_id": "M30-C03:segment-0092:discovery:classification",
+      "certainty": "supported_observation",
+      "claim_kind": "discovery",
+      "context_evidence": [],
+      "document_id": "M30-C03",
+      "end": 6298,
+      "error_codes": [],
+      "expected_behavior": "Exigir contexto do instrumento e preservar incerteza de acesso/condições.",
+      "expected_claim": "confirmed_opportunity",
+      "field_index": null,
+      "field_name": null,
+      "judgment": "supported",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "quote": "A linha BNDES Crédito Pequenas Empresas é aderente às necessidades do dia-a-dia das micro, pequenas e médias empresas. Podem solicitar financiamento clientes que faturem até R$ 300 milhões, com prazo de até 5 (cinco) anos, com até 2 (dois) anos de carência, até o limite de R$ 20 milhões por ano.",
+      "rationale": "O trecho identifica suporte/financiamento e rota ou intervalo de submissão. Confirmação de instrumento não é garantia de aprovação, elegibilidade completa ou janela aberta.",
+      "root_cause": "classify usa conjunções locais de instrumento/acesso; hierarquia entre páginas não existe.",
+      "root_cause_confidence": "high",
+      "segment_id": "segment-0092",
+      "severity": "info",
+      "start": 6002
+    }
+  ],
+  "status": "processed"
+}

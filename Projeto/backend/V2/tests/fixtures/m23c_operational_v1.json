@@ -1,0 +1,13 @@
+{
+  "dataset_version": "m2.3c-operational-v1",
+  "contract_support": ["src/editalfinder_v2/domain/integration.py limits contract", "src/editalfinder_v2/domain/integration_budget.py m2.3a.1-output-budget-v1"],
+  "cases": [
+    {"case_id": "M23C-OPS-SMALL", "builder": "small", "expected_operational_status": "IntegrationReport", "expected_error_code": null},
+    {"case_id": "M23C-OPS-SHARED", "builder": "shared", "expected_operational_status": "IntegrationReport", "expected_error_code": null},
+    {"case_id": "M23C-OPS-NEAR", "builder": "near", "expected_operational_status": "IntegrationReport", "expected_error_code": null},
+    {"case_id": "M23C-OPS-OVER", "builder": "over", "expected_operational_status": "OperationalError", "expected_error_code": "integration_output_budget_exceeded"},
+    {"case_id": "M23C-OPS-DUPLICATE", "builder": "duplicate", "expected_operational_status": "OperationalError", "expected_error_code": "integration_duplicate_candidate_id"},
+    {"case_id": "M23C-OPS-COLLISION", "builder": "collision", "expected_operational_status": "IntegrationReport", "expected_error_code": "integration_snapshot_identity_conflict"},
+    {"case_id": "M23C-OPS-COMPARISONS", "builder": "comparisons", "expected_operational_status": "OperationalError", "expected_error_code": "integration_limits_exceeded"}
+  ]
+}

@@ -1,0 +1,699 @@
+{
+  "diagnostics": [
+    "passive_not_rendered_DOM",
+    "unfrozen_attachments_unavailable"
+  ],
+  "document_id": "M30-F05",
+  "error_cases": [
+    {
+      "case_id": "M30-F05-R1:temporal_status",
+      "certainty": "unresolved_disagreement",
+      "dimension": "temporal_status",
+      "document_id": "M30-F05",
+      "error_codes": [
+        "TEMPORAL_AVAILABILITY_INFERENCE",
+        "REFERENCE_AMBIGUITY"
+      ],
+      "expected_behavior": "Resolve this dimension from same-record evidence; provisional label is comparison, not authority.",
+      "next_action": "Compare full frozen context and request authorized adjudication; do not rewrite labels.",
+      "observed": {
+        "discovery": "confirmed_opportunity",
+        "end": 10879,
+        "modality": "fomento",
+        "segment_id": "segment-0003",
+        "start": 8603,
+        "temporal": "undetermined"
+      },
+      "record_id": "M30-F05-R1",
+      "reference": {
+        "discovery_label": "confirmed_opportunity",
+        "modality": "fomento",
+        "opportunity_label": "genuine_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "open"
+      },
+      "review_status": "provisional",
+      "root_cause": "Context fragmentation or semantic rule/reference ambiguity; see all-overlap graph before adjudication.",
+      "root_cause_confidence": "low",
+      "segment_id": "segment-0003",
+      "severity": "medium",
+      "supporting_evidence": {
+        "end": 9803,
+        "quote": "Chamada para projetos de transformação mineral recebe propostas até 30 de novembro\nSeleção conta com orçamento de mais de R$ 200 milhões e contempla cinco linhas temáticas de pesquisa, desenvolvimento tecnológico e inovação\nCompartilhe:\nCompartilhe por Facebook\nCompartilhe por Twitter\nCompartilhe por LinkedIn\nCompartilhe por WhatsApp\nlink para Copiar para área de transferência\nPublicado em\n24/09/2026 16h35\nFoto: Gil Leonardi/Agência Minas\nA Financiadora de Estudos e Projetos (Finep) prorrogou até 30 de novembro o prazo para que empresas apresentem propostas à chamada pública\nFinep Mais Inovação Brasil, Rodada 2, Transformação Mineral\n. A seleção conta com orçamento de R$ 215 milhões em recursos de subvenção econômica destinado a\nprojetos de pesquisa, desenvolvimento tecnológico e inovação\nA chamada apoia projetos com riscos tecnológicos e potencial de impacto para o desenvolvimento da indústria mineral brasileira, distribuídos em cinco linhas: minerais e materiais críticos; mineração urbana, ímãs de terras raras; tecnologias sustentáveis para mineração; e\ndescarbonização\nda transformação mineral.\nAs propostas devem ser executadas por empresas, em parceria com Instituições Científic",
+        "start": 8603
+      }
+    },
+    {
+      "case_id": "M30-F05-R1:segmentation",
+      "certainty": "supported_observation",
+      "dimension": "structural",
+      "document_id": "M30-F05",
+      "error_codes": [
+        "SEGMENTATION_BOUNDARY"
+      ],
+      "expected_behavior": "A meaningful record should retain its own associated context; whitespace-only boundary differences are not semantic defects.",
+      "next_action": "Inspect semantic usefulness of boundaries before changing segmentation.",
+      "observed": {
+        "coverage": {
+          "denominator": 1595,
+          "numerator": 1595,
+          "value": 1.0
+        },
+        "fragmentation": 1
+      },
+      "record_id": "M30-F05-R1",
+      "reference": {
+        "discovery_label": "confirmed_opportunity",
+        "modality": "fomento",
+        "opportunity_label": "genuine_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "open"
+      },
+      "review_status": "provisional",
+      "root_cause": "Structure-derived units differ from provisional annotated record spans.",
+      "root_cause_confidence": "high",
+      "segment_id": "segment-0003",
+      "severity": "medium",
+      "supporting_evidence": {
+        "edges": [
+          {
+            "end": 10879,
+            "exact": false,
+            "intersection": 1595,
+            "intersection_end": 10780,
+            "intersection_start": 9185,
+            "iou": 0.7007908611599297,
+            "predicted_purity": 0.7007908611599297,
+            "reference_fraction": 1.0,
+            "segment_id": "segment-0003",
+            "start": 8603
+          }
+        ],
+        "reference_span": [
+          9185,
+          10780
+        ]
+      }
+    }
+  ],
+  "extracted_claims": [
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F05",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "title",
+      "original": "Chamada para projetos de transformação mineral recebe propostas até 30 de novembro",
+      "reference_records": [
+        "M30-F05-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0003",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F05",
+        "end": 8685,
+        "page": null,
+        "quote": "Chamada para projetos de transformação mineral recebe propostas até 30 de novembro",
+        "raw_sha256": "c017cefd0d9c2e759297fed888db442a187e4da806a5deb081f2eb9647db1668",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0003",
+        "start": 8603,
+        "text_sha256": "ce00b3dec941b826dc0f7ac42a32fd4288fab75d74b3988ef9b2516e6ff684cc"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F05",
+      "field_index": 1,
+      "method_version": "m31-deterministic-v2",
+      "name": "program_budget",
+      "original": "R$ 200 milhões",
+      "reference_records": [
+        "M30-F05-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0003",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F05",
+        "end": 8826,
+        "page": null,
+        "quote": "Seleção conta com orçamento de mais de R$ 200 milhões e contempla cinco linhas temáticas de pesquisa, desenvolvimento tecnológico e inovação",
+        "raw_sha256": "c017cefd0d9c2e759297fed888db442a187e4da806a5deb081f2eb9647db1668",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0003",
+        "start": 8686,
+        "text_sha256": "ce00b3dec941b826dc0f7ac42a32fd4288fab75d74b3988ef9b2516e6ff684cc"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F05",
+      "field_index": 2,
+      "method_version": "m31-deterministic-v2",
+      "name": "unknown_temporal_expression",
+      "original": "24/09/2026",
+      "reference_records": [
+        "M30-F05-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0003",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F05",
+        "end": 9012,
+        "page": null,
+        "quote": "24/09/2026 16h35",
+        "raw_sha256": "c017cefd0d9c2e759297fed888db442a187e4da806a5deb081f2eb9647db1668",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0003",
+        "start": 8996,
+        "text_sha256": "ce00b3dec941b826dc0f7ac42a32fd4288fab75d74b3988ef9b2516e6ff684cc"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F05",
+      "field_index": 3,
+      "method_version": "m31-deterministic-v2",
+      "name": "program_budget",
+      "original": "R$ 215 milhões",
+      "reference_records": [
+        "M30-F05-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0003",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F05",
+        "end": 9341,
+        "page": null,
+        "quote": ". A seleção conta com orçamento de R$ 215 milhões em recursos de subvenção econômica destinado a",
+        "raw_sha256": "c017cefd0d9c2e759297fed888db442a187e4da806a5deb081f2eb9647db1668",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0003",
+        "start": 9245,
+        "text_sha256": "ce00b3dec941b826dc0f7ac42a32fd4288fab75d74b3988ef9b2516e6ff684cc"
+      }
+    }
+  ],
+  "provenance": {
+    "byte_length": 175374,
+    "category_evidence": "Chamada para projetos de transformação mineral recebe propostas até 30 de novembro",
+    "content_type": "text/html",
+    "derivation_method": "stdlib-HTMLParser-data-whitespace-v1; excludes script/style/noscript/template; not rendered DOM",
+    "document_category": "institutional_news",
+    "document_id": "M30-F05",
+    "document_version": null,
+    "final_url": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/noticias-julho-outubro-2026/chamada-para-projetos-de-transformacao-mineral-recebe-propostas-ate-30-de-novembro",
+    "original_filename": "chamada-para-projetos-de-transformacao-mineral-recebe-propostas-ate-30-de-novembro",
+    "original_url": "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/noticias/noticias-julho-outubro-2026/chamada-para-projetos-de-transformacao-mineral-recebe-propostas-ate-30-de-novembro",
+    "publication_date": "2026-09-24",
+    "raw_path": "raw/M30-F05.html",
+    "restrictions": "Research pilot local frozen copy only; no redistribution license inferred. No scripts executed, no forms submitted, no applicant records intentionally collected. Public navigation/staff attribution may remain in original bytes.",
+    "retrieval_status": "acquired",
+    "retrieved_at": "2026-10-19T04:37:53.002702+00:00",
+    "sha256": "c017cefd0d9c2e759297fed888db442a187e4da806a5deb081f2eb9647db1668",
+    "source_authority_notes": "Public HTTPS page hosted by the named institution; authorship asserted by host/content, not cryptographically authenticated. Not source-readiness approval.",
+    "source_organization": "MCTI",
+    "text_path": "text/M30-F05.txt",
+    "text_sha256": "ce00b3dec941b826dc0f7ac42a32fd4288fab75d74b3988ef9b2516e6ff684cc"
+  },
+  "records": [
+    {
+      "all_overlap_predictions": [
+        {
+          "discovery": "confirmed_opportunity",
+          "modality": "fomento",
+          "segment_id": "segment-0003",
+          "temporal": "undetermined"
+        }
+      ],
+      "any_exact_boundary": false,
+      "coverage": {
+        "denominator": 1595,
+        "numerator": 1595,
+        "value": 1.0
+      },
+      "covered_characters": 1595,
+      "disagreements": [
+        "temporal_status"
+      ],
+      "discovery_histogram": {
+        "confirmed_opportunity": 1
+      },
+      "document_id": "M30-F05",
+      "edges": [
+        {
+          "end": 10879,
+          "exact": false,
+          "intersection": 1595,
+          "intersection_end": 10780,
+          "intersection_start": 9185,
+          "iou": 0.7007908611599297,
+          "predicted_purity": 0.7007908611599297,
+          "reference_fraction": 1.0,
+          "segment_id": "segment-0003",
+          "start": 8603
+        }
+      ],
+      "end": 10780,
+      "fields": [
+        {
+          "candidates": [
+            {
+              "diagnostic_status": "traceable_not_semantically_certified",
+              "field_index": 0,
+              "method_version": "m31-deterministic-v2",
+              "name": "title",
+              "original": "Chamada para projetos de transformação mineral recebe propostas até 30 de novembro",
+              "schema_version": "m31-extraction-v1",
+              "segment_id": "segment-0003",
+              "uncertainty": "heuristic role assignment; not authenticated or normalized",
+              "witness": {
+                "document_id": "M30-F05",
+                "end": 8685,
+                "page": null,
+                "quote": "Chamada para projetos de transformação mineral recebe propostas até 30 de novembro",
+                "raw_sha256": "c017cefd0d9c2e759297fed888db442a187e4da806a5deb081f2eb9647db1668",
+                "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+                "schema_version": "m31-extraction-v1",
+                "segment_id": "segment-0003",
+                "start": 8603,
+                "text_sha256": "ce00b3dec941b826dc0f7ac42a32fd4288fab75d74b3988ef9b2516e6ff684cc"
+              }
+            }
+          ],
+          "name": "title",
+          "reason": "outside provisional scope is not proof of foreign-record ownership",
+          "reference_evidence": [
+            {
+              "end": 9244,
+              "evidence_id": "M30-F05-R1-E1",
+              "page": null,
+              "quote": "Finep Mais Inovação Brasil, Rodada 2, Transformação Mineral",
+              "start": 9185
+            }
+          ],
+          "reference_value": "Finep Mais Inovação Brasil, Rodada 2, Transformação Mineral",
+          "scope_supported": true,
+          "semantic_adjudication": "not_certified",
+          "status": "UNRESOLVED",
+          "strict_role_value": false
+        },
+        {
+          "candidates": [],
+          "name": "target_audience",
+          "reason": "requested target role outside implemented M31 field scope",
+          "reference_evidence": [
+            {
+              "end": 10780,
+              "evidence_id": "M30-F05-R1-E4",
+              "page": null,
+              "quote": "Empresas em parceria com ICTs",
+              "start": 10751
+            }
+          ],
+          "reference_value": "Empresas em parceria com ICTs",
+          "scope_supported": false,
+          "semantic_adjudication": "not_certified",
+          "status": "UNRESOLVED",
+          "strict_role_value": false
+        },
+        {
+          "candidates": [],
+          "name": "submission_deadline",
+          "reason": "no corresponding field; absence is not explicit field abstention",
+          "reference_evidence": [
+            {
+              "end": 10736,
+              "evidence_id": "M30-F05-R1-E3",
+              "page": null,
+              "quote": "30 de novembro de 2026, às 18h, horário de Brasília",
+              "start": 10685
+            }
+          ],
+          "reference_value": "30 de novembro de 2026, às 18h, horário de Brasília",
+          "scope_supported": true,
+          "semantic_adjudication": "not_certified",
+          "status": "MISSING",
+          "strict_role_value": false
+        },
+        {
+          "candidates": [
+            {
+              "diagnostic_status": "traceable_not_semantically_certified",
+              "field_index": 1,
+              "method_version": "m31-deterministic-v2",
+              "name": "program_budget",
+              "original": "R$ 200 milhões",
+              "schema_version": "m31-extraction-v1",
+              "segment_id": "segment-0003",
+              "uncertainty": "heuristic role assignment; not authenticated or normalized",
+              "witness": {
+                "document_id": "M30-F05",
+                "end": 8826,
+                "page": null,
+                "quote": "Seleção conta com orçamento de mais de R$ 200 milhões e contempla cinco linhas temáticas de pesquisa, desenvolvimento tecnológico e inovação",
+                "raw_sha256": "c017cefd0d9c2e759297fed888db442a187e4da806a5deb081f2eb9647db1668",
+                "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+                "schema_version": "m31-extraction-v1",
+                "segment_id": "segment-0003",
+                "start": 8686,
+                "text_sha256": "ce00b3dec941b826dc0f7ac42a32fd4288fab75d74b3988ef9b2516e6ff684cc"
+              }
+            },
+            {
+              "diagnostic_status": "traceable_not_semantically_certified",
+              "field_index": 3,
+              "method_version": "m31-deterministic-v2",
+              "name": "program_budget",
+              "original": "R$ 215 milhões",
+              "schema_version": "m31-extraction-v1",
+              "segment_id": "segment-0003",
+              "uncertainty": "heuristic role assignment; not authenticated or normalized",
+              "witness": {
+                "document_id": "M30-F05",
+                "end": 9341,
+                "page": null,
+                "quote": ". A seleção conta com orçamento de R$ 215 milhões em recursos de subvenção econômica destinado a",
+                "raw_sha256": "c017cefd0d9c2e759297fed888db442a187e4da806a5deb081f2eb9647db1668",
+                "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+                "schema_version": "m31-extraction-v1",
+                "segment_id": "segment-0003",
+                "start": 9245,
+                "text_sha256": "ce00b3dec941b826dc0f7ac42a32fd4288fab75d74b3988ef9b2516e6ff684cc"
+              }
+            }
+          ],
+          "name": "program_budget",
+          "reason": "same literal and role in record; entailment remains unreviewed",
+          "reference_evidence": [
+            {
+              "end": 9341,
+              "evidence_id": "M30-F05-R1-E2",
+              "page": null,
+              "quote": "A seleção conta com orçamento de R$ 215 milhões em recursos de subvenção econômica destinado a",
+              "start": 9247
+            }
+          ],
+          "reference_value": "R$ 215 milhões",
+          "scope_supported": true,
+          "semantic_adjudication": "not_certified",
+          "status": "MATCH",
+          "strict_role_value": true
+        },
+        {
+          "candidates": [],
+          "name": "geographic_eligibility",
+          "reason": "no corresponding field; absence is not explicit field abstention",
+          "reference_evidence": [
+            {
+              "end": 10189,
+              "evidence_id": "M30-F05-R1-E5",
+              "page": null,
+              "quote": "As inscrições estão abertas para empresas de todo o País.",
+              "start": 10132
+            }
+          ],
+          "reference_value": "empresas de todo o País",
+          "scope_supported": true,
+          "semantic_adjudication": "not_certified",
+          "status": "MISSING",
+          "strict_role_value": false
+        },
+        {
+          "candidates": [],
+          "name": "resource_type",
+          "reason": "requested target role outside implemented M31 field scope",
+          "reference_evidence": [
+            {
+              "end": 9341,
+              "evidence_id": "M30-F05-R1-E2",
+              "page": null,
+              "quote": "A seleção conta com orçamento de R$ 215 milhões em recursos de subvenção econômica destinado a",
+              "start": 9247
+            }
+          ],
+          "reference_value": "subvenção econômica",
+          "scope_supported": false,
+          "semantic_adjudication": "not_certified",
+          "status": "UNRESOLVED",
+          "strict_role_value": false
+        }
+      ],
+      "fragmentation": 1,
+      "location_convention": "html_unicode_codepoints",
+      "physical_reference_evidence_pages": [],
+      "rationale": "Provisional AI source reading: Primary ministry news explicitly reports open applications, named subvention selection, eligible applicants and future closing date. News evidence is specific enough to confirm, without relying on page existence.",
+      "record_id": "M30-F05-R1",
+      "reference": {
+        "discovery_label": "confirmed_opportunity",
+        "modality": "fomento",
+        "opportunity_label": "genuine_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "open"
+      },
+      "reference_characters": 1595,
+      "reference_evidence": [
+        {
+          "end": 9244,
+          "evidence_id": "M30-F05-R1-E1",
+          "page": null,
+          "quote": "Finep Mais Inovação Brasil, Rodada 2, Transformação Mineral",
+          "start": 9185
+        },
+        {
+          "end": 9341,
+          "evidence_id": "M30-F05-R1-E2",
+          "page": null,
+          "quote": "A seleção conta com orçamento de R$ 215 milhões em recursos de subvenção econômica destinado a",
+          "start": 9247
+        },
+        {
+          "end": 10736,
+          "evidence_id": "M30-F05-R1-E3",
+          "page": null,
+          "quote": "30 de novembro de 2026, às 18h, horário de Brasília",
+          "start": 10685
+        },
+        {
+          "end": 10780,
+          "evidence_id": "M30-F05-R1-E4",
+          "page": null,
+          "quote": "Empresas em parceria com ICTs",
+          "start": 10751
+        },
+        {
+          "end": 10189,
+          "evidence_id": "M30-F05-R1-E5",
+          "page": null,
+          "quote": "As inscrições estão abertas para empresas de todo o País.",
+          "start": 10132
+        }
+      ],
+      "representative": "segment-0003",
+      "representative_prediction": {
+        "discovery": "confirmed_opportunity",
+        "end": 10879,
+        "modality": "fomento",
+        "segment_id": "segment-0003",
+        "start": 8603,
+        "temporal": "undetermined"
+      },
+      "representative_quote": "Chamada para projetos de transformação mineral recebe propostas até 30 de novembro\nSeleção conta com orçamento de mais de R$ 200 milhões e contempla cinco linhas temáticas de pesquisa, desenvolvimento tecnológico e inovação\nCompartilhe:\nCompartilhe por Facebook\nCompartilhe por Twitter\nCompartilhe por LinkedIn\nCompartilhe por WhatsApp\nlink para Copiar para área de transferência\nPublicado em\n24/09/2026 16h35\nFoto: Gil Leonardi/Agência Minas\nA Financiadora de Estudos e Projetos (Finep) prorrogou até 30 de novembro o prazo para que empresas apresentem propostas à chamada pública\nFinep Mais Inovação Brasil, Rodada 2, Transformação Mineral\n. A seleção conta com orçamento de R$ 215 milhões em recursos de subvenção econômica destinado a\nprojetos de pesquisa, desenvolvimento tecnológico e inovação\nA chamada apoia projetos com riscos tecnológicos e potencial de impacto para o desenvolvimento da indústria mineral brasileira, distribuídos em cinco linhas: minerais e materiais críticos; mineração urbana, ímãs de terras raras; tecnologias sustentáveis para mineração; e\ndescarbonização\nda transformação mineral.\nAs propostas devem ser executadas por empresas, em parceria com Instituições Científicas, Tecnológicas e de Inovação (\nICTs\n). A Finep é uma empresa pública vinculada ao Ministério da Ciência, Tecnologia e Inovação (MCTI).\nComo participar\nInteressados devem enviar as propostas pela plataforma da Finep. A página da chamada reúne o regulamento e materiais de orientação para cadastro e preenchimento do formulário. As inscrições estão abertas para empresas de todo o País.\nAs sugestões serão avaliadas em duas etapas. A primeira fase verificará se cada projeto atende aos requisitos e às regras da chamada. A segunda fase analisará o mérito, que considera\naspectos\ncomo consistência técnica, grau de inovação e relevância estratégica.\nDúvidas sobre a seleção podem ser encaminhadas para o endereço eletrônico\ncp_transformacao_mineral@finep.gov.br.\nLeia também o edital completo\naqui.\nServiço\nChamada:\nFinep Mais Inovação Brasil, Rodada 2, Transformação Mineral\nPrazo:\n30 de novembro de 2026, às 18h, horário de Brasília\nPúblico-alvo:\nEmpresas em parceria com ICTs\nEdital:\nhttps://www.finep.gov.br/en/e/chamada-publica/222684/754473\nCategoria\nCiência e Tecnologia",
+      "start": 9185,
+      "status": "overlap",
+      "uncertainty_notes": [
+        "News source, not the complete binding regulation; no automatic eligibility recommendation."
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 8577,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0000",
+      "start": 8573,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 8586,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0001",
+      "start": 8578,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 8602,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0002",
+      "start": 8587,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "call-heading-local-v1",
+        "access_heuristic_not_review_authority"
+      ],
+      "discovery": "confirmed_opportunity",
+      "end": 10879,
+      "field_count": 4,
+      "modality": "fomento",
+      "physical_page": null,
+      "reference_records": [
+        "M30-F05-R1"
+      ],
+      "segment_id": "segment-0003",
+      "start": 8603,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 17744,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0004",
+      "start": 17736,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 17755,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0005",
+      "start": 17745,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 17771,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0006",
+      "start": 17756,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    }
+  ],
+  "semantic_reviews": [
+    {
+      "case_id": "M30-F05:segment-0003:discovery:classification",
+      "certainty": "supported_observation",
+      "claim_kind": "discovery",
+      "context_evidence": [
+        {
+          "end": 9244,
+          "page": null,
+          "quote": "Finep Mais Inovação Brasil, Rodada 2, Transformação Mineral",
+          "start": 9185
+        },
+        {
+          "end": 9341,
+          "page": null,
+          "quote": "A seleção conta com orçamento de R$ 215 milhões em recursos de subvenção econômica destinado a",
+          "start": 9247
+        },
+        {
+          "end": 10736,
+          "page": null,
+          "quote": "30 de novembro de 2026, às 18h, horário de Brasília",
+          "start": 10685
+        },
+        {
+          "end": 10780,
+          "page": null,
+          "quote": "Empresas em parceria com ICTs",
+          "start": 10751
+        },
+        {
+          "end": 10189,
+          "page": null,
+          "quote": "As inscrições estão abertas para empresas de todo o País.",
+          "start": 10132
+        }
+      ],
+      "document_id": "M30-F05",
+      "end": 10879,
+      "error_codes": [],
+      "expected_behavior": "Exigir contexto do instrumento e preservar incerteza de acesso/condições.",
+      "expected_claim": "confirmed_opportunity",
+      "field_index": null,
+      "field_name": null,
+      "judgment": "supported",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "quote": "Chamada para projetos de transformação mineral recebe propostas até 30 de novembro\nSeleção conta com orçamento de mais de R$ 200 milhões e contempla cinco linhas temáticas de pesquisa, desenvolvimento tecnológico e inovação\nCompartilhe:\nCompartilhe por Facebook\nCompartilhe por Twitter\nCompartilhe por LinkedIn\nCompartilhe por WhatsApp\nlink para Copiar para área de transferência\nPublicado em\n24/09/2026 16h35\nFoto: Gil Leonardi/Agência Minas\nA Financiadora de Estudos e Projetos (Finep) prorrogou até 30 de novembro o prazo para que empresas apresentem propostas à chamada pública\nFinep Mais Inovação Brasil, Rodada 2, Transformação Mineral\n. A seleção conta com orçamento de R$ 215 milhões em recursos de subvenção econômica destinado a\nprojetos de pesquisa, desenvolvimento tecnológico e inovação\nA chamada apoia projetos com riscos tecnológicos e potencial de impacto para o desenvolvimento da indústria mineral brasileira, distribuídos em cinco linhas: minerais e materiais críticos; mineração urbana, ímãs de terras raras; tecnologias sustentáveis para mineração; e\ndescarbonização\nda transformação mineral.\nAs propostas devem ser executadas por empresas, em parceria com Instituições Científicas, Tecnológicas e de Inovação (\nICTs\n). A Finep é uma empresa pública vinculada ao Ministério da Ciência, Tecnologia e Inovação (MCTI).\nComo participar\nInteressados devem enviar as propostas pela plataforma da Finep. A página da chamada reúne o regulamento e materiais de orientação para cadastro e preenchimento do formulário. As inscrições estão abertas para empresas de todo o País.\nAs sugestões serão avaliadas em duas etapas. A primeira fase verificará se cada projeto atende aos requisitos e às regras da chamada. A segunda fase analisará o mérito, que considera\naspectos\ncomo consistência técnica, grau de inovação e relevância estratégica.\nDúvidas sobre a seleção podem ser encaminhadas para o endereço eletrônico\ncp_transformacao_mineral@finep.gov.br.\nLeia também o edital completo\naqui.\nServiço\nChamada:\nFinep Mais Inovação Brasil, Rodada 2, Transformação Mineral\nPrazo:\n30 de novembro de 2026, às 18h, horário de Brasília\nPúblico-alvo:\nEmpresas em parceria com ICTs\nEdital:\nhttps://www.finep.gov.br/en/e/chamada-publica/222684/754473\nCategoria\nCiência e Tecnologia",
+      "rationale": "O trecho identifica suporte/financiamento e rota ou intervalo de submissão. Confirmação de instrumento não é garantia de aprovação, elegibilidade completa ou janela aberta.",
+      "root_cause": "classify usa conjunções locais de instrumento/acesso; hierarquia entre páginas não existe.",
+      "root_cause_confidence": "high",
+      "segment_id": "segment-0003",
+      "severity": "info",
+      "start": 8603
+    }
+  ],
+  "status": "processed"
+}

@@ -1,0 +1,300 @@
+{
+  "schema_version": "m32-diagnostic-probes-v1",
+  "trust_status": "PROVISIONAL / EXPLORATORY",
+  "frozen_prediction_sha256": "c4c32df2850ac101b4389ae1d91c643f87d1bc129a45e7b96f8586c3fc9ee388",
+  "experiments": [
+    {
+      "experiment_id": "M30-C07-R1:context_factor",
+      "document_id": "M30-C07",
+      "reference_span": [
+        1963,
+        2746
+      ],
+      "frozen_representative": "segment-0001",
+      "conditions": [
+        {
+          "name": "frozen_representative_context",
+          "input_sha256": "88c47902536a0e28b264fa3c980c1fc73ed8341cbeeb257b38e0ce5db6e264d6",
+          "characters": 564,
+          "classification": [
+            "opportunity_signal",
+            "credito",
+            [
+              "application_access_not_established"
+            ]
+          ]
+        },
+        {
+          "name": "reference_bounded_diagnostic_context",
+          "input_sha256": "50a7ff445525f2f9134139f9989116a547a76d4ff359bc528064aa7004c93464",
+          "characters": 783,
+          "classification": [
+            "unrelated_or_non_actionable",
+            "credito",
+            [
+              "completed_event_not_new_access"
+            ]
+          ]
+        },
+        {
+          "name": "whitespace_flattened_diagnostic_context",
+          "input_sha256": "0a11ce7faebf5cc84bfbf2a90640c70b5e2b54ed18acd3f550a82e78a94f1d59",
+          "characters": 783,
+          "classification": [
+            "unrelated_or_non_actionable",
+            "credito",
+            [
+              "completed_event_not_new_access"
+            ]
+          ]
+        }
+      ],
+      "limitation": "Reference-selected oracle context diagnostic only; not predictions, tuning or measured quality gain. Local classifier unchanged."
+    },
+    {
+      "experiment_id": "M30-I02-R1:context_factor",
+      "document_id": "M30-I02",
+      "reference_span": [
+        56,
+        940
+      ],
+      "frozen_representative": "segment-0004",
+      "conditions": [
+        {
+          "name": "frozen_representative_context",
+          "input_sha256": "517101ed551bf413592ae8a845d1a8590f7e6d4cb5aa810ad33bc210ad8cdd54",
+          "characters": 434,
+          "classification": [
+            "abstain",
+            "undetermined",
+            [
+              "mixed_or_missing_financial_modality",
+              "insufficient_context"
+            ]
+          ]
+        },
+        {
+          "name": "reference_bounded_diagnostic_context",
+          "input_sha256": "50e833238110bf0b15241a772142f56fa68046210ad417943265c5da66ef2b8d",
+          "characters": 884,
+          "classification": [
+            "abstain",
+            "undetermined",
+            [
+              "mixed_or_missing_financial_modality",
+              "insufficient_context"
+            ]
+          ]
+        },
+        {
+          "name": "whitespace_flattened_diagnostic_context",
+          "input_sha256": "dca1b0f7323985aa30d378f4c2619ff0a8a80815f8108e27c0b03f8809a32797",
+          "characters": 884,
+          "classification": [
+            "confirmed_opportunity",
+            "investimentos",
+            [
+              "access_heuristic_not_review_authority"
+            ]
+          ]
+        }
+      ],
+      "limitation": "Reference-selected oracle context diagnostic only; not predictions, tuning or measured quality gain. Local classifier unchanged."
+    },
+    {
+      "experiment_id": "M30-I04-R1:context_factor",
+      "document_id": "M30-I04",
+      "reference_span": [
+        30,
+        305
+      ],
+      "frozen_representative": "segment-0003",
+      "conditions": [
+        {
+          "name": "frozen_representative_context",
+          "input_sha256": "c0314893c4be56a0c0055a3ad75329039464c9e0dedff90abd024e8679b342db",
+          "characters": 227,
+          "classification": [
+            "abstain",
+            "undetermined",
+            [
+              "mixed_or_missing_financial_modality",
+              "insufficient_context"
+            ]
+          ]
+        },
+        {
+          "name": "reference_bounded_diagnostic_context",
+          "input_sha256": "d20b9593bd6a0cd1e05e12f7f439d6848483518199a1e74fb769e1ca64ed5615",
+          "characters": 275,
+          "classification": [
+            "abstain",
+            "undetermined",
+            [
+              "mixed_or_missing_financial_modality",
+              "insufficient_context"
+            ]
+          ]
+        },
+        {
+          "name": "whitespace_flattened_diagnostic_context",
+          "input_sha256": "217f463232709481fe964e732c7c6e7cc1e9dd9f3341b4fd68b6878597a56ec3",
+          "characters": 275,
+          "classification": [
+            "abstain",
+            "undetermined",
+            [
+              "mixed_or_missing_financial_modality",
+              "insufficient_context"
+            ]
+          ]
+        }
+      ],
+      "limitation": "Reference-selected oracle context diagnostic only; not predictions, tuning or measured quality gain. Local classifier unchanged."
+    },
+    {
+      "experiment_id": "M30-I06-R1:context_factor",
+      "document_id": "M30-I06",
+      "reference_span": [
+        0,
+        3490
+      ],
+      "frozen_representative": "segment-0024",
+      "conditions": [
+        {
+          "name": "frozen_representative_context",
+          "input_sha256": "d31ad9c3c497d55298759c6664af30892fcf546dd4c8ac4016216af1a2f21f00",
+          "characters": 442,
+          "classification": [
+            "opportunity_signal",
+            "investimentos",
+            [
+              "application_access_not_established"
+            ]
+          ]
+        },
+        {
+          "name": "reference_bounded_diagnostic_context",
+          "input_sha256": "f9b5e415dbab207e45f084d2abd667dfe490541ad55c26f35ddbe8546f921b6a",
+          "characters": 3490,
+          "classification": [
+            "opportunity_signal",
+            "investimentos",
+            [
+              "manager_stage_not_startup_access"
+            ]
+          ]
+        },
+        {
+          "name": "whitespace_flattened_diagnostic_context",
+          "input_sha256": "5944d180e7993b41c9d31ff6b50616ad54efeb9176d7dbe170dbede863f6ff00",
+          "characters": 3490,
+          "classification": [
+            "opportunity_signal",
+            "investimentos",
+            [
+              "manager_stage_not_startup_access"
+            ]
+          ]
+        }
+      ],
+      "limitation": "Reference-selected oracle context diagnostic only; not predictions, tuning or measured quality gain. Local classifier unchanged."
+    },
+    {
+      "experiment_id": "M30-I07-R1:context_factor",
+      "document_id": "M30-I07",
+      "reference_span": [
+        11450,
+        12376
+      ],
+      "frozen_representative": "segment-0074",
+      "conditions": [
+        {
+          "name": "frozen_representative_context",
+          "input_sha256": "2bd4af9e17fcdbae8851a5516f6c7e8d3821620c9de5f7ecd582696e30ce0c06",
+          "characters": 503,
+          "classification": [
+            "abstain",
+            "undetermined",
+            [
+              "mixed_or_missing_financial_modality",
+              "insufficient_context"
+            ]
+          ]
+        },
+        {
+          "name": "reference_bounded_diagnostic_context",
+          "input_sha256": "589c6b9b0c00942db4eefa04254f92519d4cf833f44756f2f82eeb6200fe0c7f",
+          "characters": 926,
+          "classification": [
+            "opportunity_signal",
+            "investimentos",
+            [
+              "application_access_not_established"
+            ]
+          ]
+        },
+        {
+          "name": "whitespace_flattened_diagnostic_context",
+          "input_sha256": "adbfc001f320423fa41f1bb728e5cf96d24b377226e894de9cf196d106474457",
+          "characters": 922,
+          "classification": [
+            "opportunity_signal",
+            "investimentos",
+            [
+              "application_access_not_established"
+            ]
+          ]
+        }
+      ],
+      "limitation": "Reference-selected oracle context diagnostic only; not predictions, tuning or measured quality gain. Local classifier unchanged."
+    },
+    {
+      "experiment_id": "M30-N04:monetary_context_role",
+      "segment_id": "segment-0010",
+      "original": "R$ 150 milhões",
+      "window": "lor total da chamada, a região Norte recebeu R$ 50 milhões; a região Centro-Oeste, R$ 100 milhões; e a região Nordeste, R$ 150 milhões. Os limites de subvenção para cada proposta partiam de R$ 2 milhões a R$ 5 milhões, sendo que o valor médio dos projeto",
+      "proposal_role_trigger": true,
+      "source_witness": {
+        "document_id": "M30-N04",
+        "end": 5411,
+        "page": null,
+        "quote": "Todos os projetos estão enquadrados dentro de uma ou mais missões da Nova Indústria Brasil (NIB). Do valor total da chamada, a região Norte recebeu R$ 50 milhões; a região Centro-Oeste, R$ 100 milhões; e a região Nordeste, R$ 150 milhões. Os limites de subvenção para cada proposta partiam de R$ 2 milhões a R$ 5 milhões, sendo que o valor médio dos projetos aprovados foi de R$ 3,8 milhões.",
+        "raw_sha256": "98318fd47d92b74fcdc3a251e5fc79fe6625d92e18c04d43dfc287448a476dce",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0010",
+        "start": 5020,
+        "text_sha256": "2258b3625a2c1dac226c633f0a3aba28eb638bb59505baf7a632ede9901f4ed3"
+      },
+      "observation": "The later phrase cada proposta enters the +/-120 window of regional R$150m. No replacement prediction generated."
+    },
+    {
+      "experiment_id": "M30-F03:excluded_reference_context",
+      "document_id": "M30-F03",
+      "reference_span": [
+        5732,
+        5917
+      ],
+      "quote": "Chamada Pública CNPq/CAPES Nº 30/2026 – Programa de Mestrado e Doutorado Acadêmico para Inovação – MAI/DAI\n— última modificação 13/10/2026 12h34\nchamadapublica30_2026_MAIDAI_2766773.pdf",
+      "blocks": [
+        {
+          "start": 5732,
+          "end": 5838,
+          "excluded": true
+        },
+        {
+          "start": 5839,
+          "end": 5876,
+          "excluded": true
+        },
+        {
+          "start": 5877,
+          "end": 5917,
+          "excluded": true
+        }
+      ],
+      "observation": "Inspect whether the missing reference is in explicitly excluded structural blocks, not absence of source evidence."
+    }
+  ]
+}

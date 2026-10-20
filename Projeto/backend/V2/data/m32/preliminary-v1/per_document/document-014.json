@@ -1,0 +1,855 @@
+{
+  "diagnostics": [
+    "passive_not_rendered_DOM",
+    "unfrozen_attachments_unavailable"
+  ],
+  "document_id": "M30-F08",
+  "error_cases": [
+    {
+      "case_id": "M30-F08-R1:segmentation",
+      "certainty": "supported_observation",
+      "dimension": "structural",
+      "document_id": "M30-F08",
+      "error_codes": [
+        "SEGMENTATION_OVER"
+      ],
+      "expected_behavior": "A meaningful record should retain its own associated context; whitespace-only boundary differences are not semantic defects.",
+      "next_action": "Inspect semantic usefulness of boundaries before changing segmentation.",
+      "observed": {
+        "coverage": {
+          "denominator": 6642,
+          "numerator": 955,
+          "value": 0.1437819933754893
+        },
+        "fragmentation": 2
+      },
+      "record_id": "M30-F08-R1",
+      "reference": {
+        "discovery_label": "confirmed_opportunity",
+        "modality": "fomento",
+        "opportunity_label": "genuine_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "open"
+      },
+      "review_status": "provisional",
+      "root_cause": "Structure-derived units differ from provisional annotated record spans.",
+      "root_cause_confidence": "high",
+      "segment_id": "segment-0001",
+      "severity": "medium",
+      "supporting_evidence": {
+        "edges": [
+          {
+            "end": 5690,
+            "exact": false,
+            "intersection": 4,
+            "intersection_end": 5690,
+            "intersection_start": 5686,
+            "iou": 0.0006022282445046673,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.0006022282445046673,
+            "segment_id": "segment-0000",
+            "start": 5686
+          },
+          {
+            "end": 6667,
+            "exact": false,
+            "intersection": 951,
+            "intersection_end": 6642,
+            "intersection_start": 5691,
+            "iou": 0.14264286785660718,
+            "predicted_purity": 0.9743852459016393,
+            "reference_fraction": 0.14317976513098465,
+            "segment_id": "segment-0001",
+            "start": 5691
+          }
+        ],
+        "reference_span": [
+          0,
+          6642
+        ]
+      }
+    }
+  ],
+  "extracted_claims": [
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F08",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "title",
+      "original": "Chamada Pública CNPq/CAPES Nº 30/2026 – Programa de Mestrado e Doutorado Acadêmico para Inovação – MAI/DAI",
+      "reference_records": [
+        "M30-F08-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0001",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F08",
+        "end": 5797,
+        "page": null,
+        "quote": "Chamada Pública CNPq/CAPES Nº 30/2026 – Programa de Mestrado e Doutorado Acadêmico para Inovação – MAI/DAI",
+        "raw_sha256": "61e669e6f8921550e71acc18df4729ae798dc339da082c0c8b9da9e7442650f3",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0001",
+        "start": 5691,
+        "text_sha256": "0cab7fe0e08eb26ae4511fb1b40a0017ba2b4ef3d7fb5a7b7cf5dbab3d246aa6"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F08",
+      "field_index": 1,
+      "method_version": "m31-deterministic-v2",
+      "name": "unknown_temporal_expression",
+      "original": "19/08/2026",
+      "reference_records": [
+        "M30-F08-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0001",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F08",
+        "end": 5983,
+        "page": null,
+        "quote": "19/08/2026 08h53",
+        "raw_sha256": "61e669e6f8921550e71acc18df4729ae798dc339da082c0c8b9da9e7442650f3",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0001",
+        "start": 5967,
+        "text_sha256": "0cab7fe0e08eb26ae4511fb1b40a0017ba2b4ef3d7fb5a7b7cf5dbab3d246aa6"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F08",
+      "field_index": 2,
+      "method_version": "m31-deterministic-v2",
+      "name": "unknown_temporal_expression",
+      "original": "13/10/2026",
+      "reference_records": [
+        "M30-F08-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0001",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F08",
+        "end": 6014,
+        "page": null,
+        "quote": "13/10/2026 12h34",
+        "raw_sha256": "61e669e6f8921550e71acc18df4729ae798dc339da082c0c8b9da9e7442650f3",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0001",
+        "start": 5998,
+        "text_sha256": "0cab7fe0e08eb26ae4511fb1b40a0017ba2b4ef3d7fb5a7b7cf5dbab3d246aa6"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F08",
+      "field_index": 3,
+      "method_version": "m31-deterministic-v2",
+      "name": "funding_organization_expression",
+      "original": "A edição de 2026 do Programa de Mestrado e Doutorado para Inovação (MAI/DAI), que estimula a realização de pesquisas de mestrado e doutorado em universidades em parceria com empresas, recebe propostas até o dia 11 de dezembro. A chamada é realizada pelo Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq) e conta com a parceria da Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES).",
+      "reference_records": [
+        "M30-F08-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0001",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F08",
+        "end": 6432,
+        "page": null,
+        "quote": "A edição de 2026 do Programa de Mestrado e Doutorado para Inovação (MAI/DAI), que estimula a realização de pesquisas de mestrado e doutorado em universidades em parceria com empresas, recebe propostas até o dia 11 de dezembro. A chamada é realizada pelo Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq) e conta com a parceria da Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES).",
+        "raw_sha256": "61e669e6f8921550e71acc18df4729ae798dc339da082c0c8b9da9e7442650f3",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0001",
+        "start": 6015,
+        "text_sha256": "0cab7fe0e08eb26ae4511fb1b40a0017ba2b4ef3d7fb5a7b7cf5dbab3d246aa6"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F08",
+      "field_index": 4,
+      "method_version": "m31-deterministic-v2",
+      "name": "attachment_unavailable",
+      "original": "Anexo II: Plano de Trabalho Programa MAI/DAI",
+      "reference_records": [
+        "M30-F08-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0001",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F08",
+        "end": 6485,
+        "page": null,
+        "quote": "Anexo II: Plano de Trabalho Programa MAI/DAI",
+        "raw_sha256": "61e669e6f8921550e71acc18df4729ae798dc339da082c0c8b9da9e7442650f3",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0001",
+        "start": 6441,
+        "text_sha256": "0cab7fe0e08eb26ae4511fb1b40a0017ba2b4ef3d7fb5a7b7cf5dbab3d246aa6"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F08",
+      "field_index": 5,
+      "method_version": "m31-deterministic-v2",
+      "name": "attachment_unavailable",
+      "original": "Anexo III: Declaração Institucional do Representante MAI/DAI",
+      "reference_records": [
+        "M30-F08-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0001",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F08",
+        "end": 6546,
+        "page": null,
+        "quote": "Anexo III: Declaração Institucional do Representante MAI/DAI",
+        "raw_sha256": "61e669e6f8921550e71acc18df4729ae798dc339da082c0c8b9da9e7442650f3",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0001",
+        "start": 6486,
+        "text_sha256": "0cab7fe0e08eb26ae4511fb1b40a0017ba2b4ef3d7fb5a7b7cf5dbab3d246aa6"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F08",
+      "field_index": 6,
+      "method_version": "m31-deterministic-v2",
+      "name": "attachment_unavailable",
+      "original": "Anexo IV: Carta de Concordância da Instituição Parceira",
+      "reference_records": [
+        "M30-F08-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0001",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F08",
+        "end": 6602,
+        "page": null,
+        "quote": "Anexo IV: Carta de Concordância da Instituição Parceira",
+        "raw_sha256": "61e669e6f8921550e71acc18df4729ae798dc339da082c0c8b9da9e7442650f3",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0001",
+        "start": 6547,
+        "text_sha256": "0cab7fe0e08eb26ae4511fb1b40a0017ba2b4ef3d7fb5a7b7cf5dbab3d246aa6"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F08",
+      "field_index": 7,
+      "method_version": "m31-deterministic-v2",
+      "name": "opening_date",
+      "original": "19/08/2026",
+      "reference_records": [
+        "M30-F08-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0001",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F08",
+        "end": 6642,
+        "page": null,
+        "quote": "19/08/2026 a 11/12/2026",
+        "raw_sha256": "61e669e6f8921550e71acc18df4729ae798dc339da082c0c8b9da9e7442650f3",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0001",
+        "start": 6619,
+        "text_sha256": "0cab7fe0e08eb26ae4511fb1b40a0017ba2b4ef3d7fb5a7b7cf5dbab3d246aa6"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F08",
+      "field_index": 8,
+      "method_version": "m31-deterministic-v2",
+      "name": "submission_deadline",
+      "original": "11/12/2026",
+      "reference_records": [
+        "M30-F08-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0001",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F08",
+        "end": 6642,
+        "page": null,
+        "quote": "19/08/2026 a 11/12/2026",
+        "raw_sha256": "61e669e6f8921550e71acc18df4729ae798dc339da082c0c8b9da9e7442650f3",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0001",
+        "start": 6619,
+        "text_sha256": "0cab7fe0e08eb26ae4511fb1b40a0017ba2b4ef3d7fb5a7b7cf5dbab3d246aa6"
+      }
+    }
+  ],
+  "provenance": {
+    "byte_length": 132809,
+    "category_evidence": "Chamada Pública CNPq/CAPES Nº 30/2026 – Programa de Mestrado e Doutorado Acadêmico para Inovação – MAI/DAI",
+    "content_type": "text/html",
+    "derivation_method": "stdlib-HTMLParser-data-whitespace-v1; excludes script/style/noscript/template; not rendered DOM",
+    "document_category": "application_call",
+    "document_id": "M30-F08",
+    "document_version": null,
+    "final_url": "https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-30-2026/chamada-publica-cnpq-N-30-2026",
+    "original_filename": "chamada-publica-cnpq-N-30-2026",
+    "original_url": "https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-30-2026/chamada-publica-cnpq-N-30-2026",
+    "publication_date": "2026-08-19",
+    "raw_path": "raw/M30-F08.html",
+    "restrictions": "Research pilot local frozen copy only; no redistribution license inferred. No scripts executed, no forms submitted, no applicant records intentionally collected. Public navigation/staff attribution may remain in original bytes.",
+    "retrieval_status": "acquired",
+    "retrieved_at": "2026-10-19T04:38:34.916022+00:00",
+    "sha256": "61e669e6f8921550e71acc18df4729ae798dc339da082c0c8b9da9e7442650f3",
+    "source_authority_notes": "Public HTTPS page hosted by the named institution; authorship asserted by host/content, not cryptographically authenticated. Not source-readiness approval.",
+    "source_organization": "CNPq",
+    "text_path": "text/M30-F08.txt",
+    "text_sha256": "0cab7fe0e08eb26ae4511fb1b40a0017ba2b4ef3d7fb5a7b7cf5dbab3d246aa6"
+  },
+  "records": [
+    {
+      "all_overlap_predictions": [
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0000",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "confirmed_opportunity",
+          "modality": "fomento",
+          "segment_id": "segment-0001",
+          "temporal": "open"
+        }
+      ],
+      "any_exact_boundary": false,
+      "coverage": {
+        "denominator": 6642,
+        "numerator": 955,
+        "value": 0.1437819933754893
+      },
+      "covered_characters": 955,
+      "disagreements": [],
+      "discovery_histogram": {
+        "abstain": 1,
+        "confirmed_opportunity": 1
+      },
+      "document_id": "M30-F08",
+      "edges": [
+        {
+          "end": 5690,
+          "exact": false,
+          "intersection": 4,
+          "intersection_end": 5690,
+          "intersection_start": 5686,
+          "iou": 0.0006022282445046673,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.0006022282445046673,
+          "segment_id": "segment-0000",
+          "start": 5686
+        },
+        {
+          "end": 6667,
+          "exact": false,
+          "intersection": 951,
+          "intersection_end": 6642,
+          "intersection_start": 5691,
+          "iou": 0.14264286785660718,
+          "predicted_purity": 0.9743852459016393,
+          "reference_fraction": 0.14317976513098465,
+          "segment_id": "segment-0001",
+          "start": 5691
+        }
+      ],
+      "end": 6642,
+      "fields": [
+        {
+          "candidates": [
+            {
+              "diagnostic_status": "traceable_not_semantically_certified",
+              "field_index": 0,
+              "method_version": "m31-deterministic-v2",
+              "name": "title",
+              "original": "Chamada Pública CNPq/CAPES Nº 30/2026 – Programa de Mestrado e Doutorado Acadêmico para Inovação – MAI/DAI",
+              "schema_version": "m31-extraction-v1",
+              "segment_id": "segment-0001",
+              "uncertainty": "heuristic role assignment; not authenticated or normalized",
+              "witness": {
+                "document_id": "M30-F08",
+                "end": 5797,
+                "page": null,
+                "quote": "Chamada Pública CNPq/CAPES Nº 30/2026 – Programa de Mestrado e Doutorado Acadêmico para Inovação – MAI/DAI",
+                "raw_sha256": "61e669e6f8921550e71acc18df4729ae798dc339da082c0c8b9da9e7442650f3",
+                "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+                "schema_version": "m31-extraction-v1",
+                "segment_id": "segment-0001",
+                "start": 5691,
+                "text_sha256": "0cab7fe0e08eb26ae4511fb1b40a0017ba2b4ef3d7fb5a7b7cf5dbab3d246aa6"
+              }
+            }
+          ],
+          "name": "title",
+          "reason": "same literal and role in record; entailment remains unreviewed",
+          "reference_evidence": [
+            {
+              "end": 106,
+              "evidence_id": "M30-F08-R1-E1",
+              "page": null,
+              "quote": "Chamada Pública CNPq/CAPES Nº 30/2026 – Programa de Mestrado e Doutorado Acadêmico para Inovação – MAI/DAI",
+              "start": 0
+            }
+          ],
+          "reference_value": "Chamada Pública CNPq/CAPES Nº 30/2026 – Programa de Mestrado e Doutorado Acadêmico para Inovação – MAI/DAI",
+          "scope_supported": true,
+          "semantic_adjudication": "not_certified",
+          "status": "MATCH",
+          "strict_role_value": true
+        },
+        {
+          "candidates": [
+            {
+              "diagnostic_status": "traceable_not_semantically_certified",
+              "field_index": 3,
+              "method_version": "m31-deterministic-v2",
+              "name": "funding_organization_expression",
+              "original": "A edição de 2026 do Programa de Mestrado e Doutorado para Inovação (MAI/DAI), que estimula a realização de pesquisas de mestrado e doutorado em universidades em parceria com empresas, recebe propostas até o dia 11 de dezembro. A chamada é realizada pelo Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq) e conta com a parceria da Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES).",
+              "schema_version": "m31-extraction-v1",
+              "segment_id": "segment-0001",
+              "uncertainty": "heuristic role assignment; not authenticated or normalized",
+              "witness": {
+                "document_id": "M30-F08",
+                "end": 6432,
+                "page": null,
+                "quote": "A edição de 2026 do Programa de Mestrado e Doutorado para Inovação (MAI/DAI), que estimula a realização de pesquisas de mestrado e doutorado em universidades em parceria com empresas, recebe propostas até o dia 11 de dezembro. A chamada é realizada pelo Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq) e conta com a parceria da Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES).",
+                "raw_sha256": "61e669e6f8921550e71acc18df4729ae798dc339da082c0c8b9da9e7442650f3",
+                "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+                "schema_version": "m31-extraction-v1",
+                "segment_id": "segment-0001",
+                "start": 6015,
+                "text_sha256": "0cab7fe0e08eb26ae4511fb1b40a0017ba2b4ef3d7fb5a7b7cf5dbab3d246aa6"
+              }
+            }
+          ],
+          "name": "objective",
+          "reason": "requested target role outside implemented M31 field scope",
+          "reference_evidence": [
+            {
+              "end": 6432,
+              "evidence_id": "M30-F08-R1-E2",
+              "page": null,
+              "quote": "A edição de 2026 do Programa de Mestrado e Doutorado para Inovação (MAI/DAI), que estimula a realização de pesquisas de mestrado e doutorado em universidades em parceria com empresas, recebe propostas até o dia 11 de dezembro. A chamada é realizada pelo Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq) e conta com a parceria da Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES).",
+              "start": 6015
+            }
+          ],
+          "reference_value": "A edição de 2026 do Programa de Mestrado e Doutorado para Inovação (MAI/DAI), que estimula a realização de pesquisas de mestrado e doutorado em universidades em parceria com empresas, recebe propostas até o dia 11 de dezembro. A chamada é realizada pelo Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq) e conta com a parceria da Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES).",
+          "scope_supported": false,
+          "semantic_adjudication": "not_certified",
+          "status": "UNRESOLVED",
+          "strict_role_value": false
+        },
+        {
+          "candidates": [
+            {
+              "diagnostic_status": "traceable_not_semantically_certified",
+              "field_index": 8,
+              "method_version": "m31-deterministic-v2",
+              "name": "submission_deadline",
+              "original": "11/12/2026",
+              "schema_version": "m31-extraction-v1",
+              "segment_id": "segment-0001",
+              "uncertainty": "heuristic role assignment; not authenticated or normalized",
+              "witness": {
+                "document_id": "M30-F08",
+                "end": 6642,
+                "page": null,
+                "quote": "19/08/2026 a 11/12/2026",
+                "raw_sha256": "61e669e6f8921550e71acc18df4729ae798dc339da082c0c8b9da9e7442650f3",
+                "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+                "schema_version": "m31-extraction-v1",
+                "segment_id": "segment-0001",
+                "start": 6619,
+                "text_sha256": "0cab7fe0e08eb26ae4511fb1b40a0017ba2b4ef3d7fb5a7b7cf5dbab3d246aa6"
+              }
+            }
+          ],
+          "name": "submission_deadline",
+          "reason": "same literal and role in record; entailment remains unreviewed",
+          "reference_evidence": [
+            {
+              "end": 6642,
+              "evidence_id": "M30-F08-R1-E3",
+              "page": null,
+              "quote": "Inscrições:\n19/08/2026 a 11/12/2026",
+              "start": 6607
+            }
+          ],
+          "reference_value": "11/12/2026",
+          "scope_supported": true,
+          "semantic_adjudication": "not_certified",
+          "status": "MATCH",
+          "strict_role_value": true
+        },
+        {
+          "candidates": [],
+          "name": "official_identifier",
+          "reason": "requested target role outside implemented M31 field scope",
+          "reference_evidence": [
+            {
+              "end": 106,
+              "evidence_id": "M30-F08-R1-E1",
+              "page": null,
+              "quote": "Chamada Pública CNPq/CAPES Nº 30/2026 – Programa de Mestrado e Doutorado Acadêmico para Inovação – MAI/DAI",
+              "start": 0
+            }
+          ],
+          "reference_value": "30/2026",
+          "scope_supported": false,
+          "semantic_adjudication": "not_certified",
+          "status": "UNRESOLVED",
+          "strict_role_value": false
+        },
+        {
+          "candidates": [
+            {
+              "diagnostic_status": "traceable_not_semantically_certified",
+              "field_index": 1,
+              "method_version": "m31-deterministic-v2",
+              "name": "unknown_temporal_expression",
+              "original": "19/08/2026",
+              "schema_version": "m31-extraction-v1",
+              "segment_id": "segment-0001",
+              "uncertainty": "heuristic role assignment; not authenticated or normalized",
+              "witness": {
+                "document_id": "M30-F08",
+                "end": 5983,
+                "page": null,
+                "quote": "19/08/2026 08h53",
+                "raw_sha256": "61e669e6f8921550e71acc18df4729ae798dc339da082c0c8b9da9e7442650f3",
+                "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+                "schema_version": "m31-extraction-v1",
+                "segment_id": "segment-0001",
+                "start": 5967,
+                "text_sha256": "0cab7fe0e08eb26ae4511fb1b40a0017ba2b4ef3d7fb5a7b7cf5dbab3d246aa6"
+              }
+            },
+            {
+              "diagnostic_status": "traceable_not_semantically_certified",
+              "field_index": 7,
+              "method_version": "m31-deterministic-v2",
+              "name": "opening_date",
+              "original": "19/08/2026",
+              "schema_version": "m31-extraction-v1",
+              "segment_id": "segment-0001",
+              "uncertainty": "heuristic role assignment; not authenticated or normalized",
+              "witness": {
+                "document_id": "M30-F08",
+                "end": 6642,
+                "page": null,
+                "quote": "19/08/2026 a 11/12/2026",
+                "raw_sha256": "61e669e6f8921550e71acc18df4729ae798dc339da082c0c8b9da9e7442650f3",
+                "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+                "schema_version": "m31-extraction-v1",
+                "segment_id": "segment-0001",
+                "start": 6619,
+                "text_sha256": "0cab7fe0e08eb26ae4511fb1b40a0017ba2b4ef3d7fb5a7b7cf5dbab3d246aa6"
+              }
+            }
+          ],
+          "name": "opening_date",
+          "reason": "same literal and role in record; entailment remains unreviewed",
+          "reference_evidence": [
+            {
+              "end": 6642,
+              "evidence_id": "M30-F08-R1-E3",
+              "page": null,
+              "quote": "Inscrições:\n19/08/2026 a 11/12/2026",
+              "start": 6607
+            }
+          ],
+          "reference_value": "19/08/2026",
+          "scope_supported": true,
+          "semantic_adjudication": "not_certified",
+          "status": "MATCH",
+          "strict_role_value": true
+        },
+        {
+          "candidates": [],
+          "name": "publishing_organization",
+          "reason": "no corresponding field; absence is not explicit field abstention",
+          "reference_evidence": [
+            {
+              "end": 6432,
+              "evidence_id": "M30-F08-R1-E2",
+              "page": null,
+              "quote": "A edição de 2026 do Programa de Mestrado e Doutorado para Inovação (MAI/DAI), que estimula a realização de pesquisas de mestrado e doutorado em universidades em parceria com empresas, recebe propostas até o dia 11 de dezembro. A chamada é realizada pelo Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq) e conta com a parceria da Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES).",
+              "start": 6015
+            }
+          ],
+          "reference_value": "Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq)",
+          "scope_supported": true,
+          "semantic_adjudication": "not_certified",
+          "status": "MISSING",
+          "strict_role_value": false
+        }
+      ],
+      "fragmentation": 2,
+      "location_convention": "html_unicode_codepoints",
+      "physical_reference_evidence_pages": [],
+      "rationale": "Provisional AI source reading: Named academic research innovation support with explicit application interval enclosing reference date.",
+      "record_id": "M30-F08-R1",
+      "reference": {
+        "discovery_label": "confirmed_opportunity",
+        "modality": "fomento",
+        "opportunity_label": "genuine_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "open"
+      },
+      "reference_characters": 6642,
+      "reference_evidence": [
+        {
+          "end": 106,
+          "evidence_id": "M30-F08-R1-E1",
+          "page": null,
+          "quote": "Chamada Pública CNPq/CAPES Nº 30/2026 – Programa de Mestrado e Doutorado Acadêmico para Inovação – MAI/DAI",
+          "start": 0
+        },
+        {
+          "end": 6432,
+          "evidence_id": "M30-F08-R1-E2",
+          "page": null,
+          "quote": "A edição de 2026 do Programa de Mestrado e Doutorado para Inovação (MAI/DAI), que estimula a realização de pesquisas de mestrado e doutorado em universidades em parceria com empresas, recebe propostas até o dia 11 de dezembro. A chamada é realizada pelo Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq) e conta com a parceria da Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES).",
+          "start": 6015
+        },
+        {
+          "end": 6642,
+          "evidence_id": "M30-F08-R1-E3",
+          "page": null,
+          "quote": "Inscrições:\n19/08/2026 a 11/12/2026",
+          "start": 6607
+        }
+      ],
+      "representative": "segment-0001",
+      "representative_prediction": {
+        "discovery": "confirmed_opportunity",
+        "end": 6667,
+        "modality": "fomento",
+        "segment_id": "segment-0001",
+        "start": 5691,
+        "temporal": "open"
+      },
+      "representative_quote": "Chamada Pública CNPq/CAPES Nº 30/2026 – Programa de Mestrado e Doutorado Acadêmico para Inovação – MAI/DAI\nCompartilhe:\nCompartilhe por Facebook\nCompartilhe por Twitter\nCompartilhe por LinkedIn\nCompartilhe por WhatsApp\nlink para Copiar para área de transferência\nPublicado em\n19/08/2026 08h53\nAtualizado em\n13/10/2026 12h34\nA edição de 2026 do Programa de Mestrado e Doutorado para Inovação (MAI/DAI), que estimula a realização de pesquisas de mestrado e doutorado em universidades em parceria com empresas, recebe propostas até o dia 11 de dezembro. A chamada é realizada pelo Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq) e conta com a parceria da Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES).\nChamada\nAnexo II: Plano de Trabalho Programa MAI/DAI\nAnexo III: Declaração Institucional do Representante MAI/DAI\nAnexo IV: Carta de Concordância da Instituição Parceira\nFAQ\nInscrições:\n19/08/2026 a 11/12/2026\nTags:\n#chamadas\n#abertas",
+      "start": 0,
+      "status": "overlap",
+      "uncertainty_notes": [
+        "Apparent same MAI/DAI call relationship (unverified, no merge) with F01-R1; F03 is its contextual folder."
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 5690,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-F08-R1"
+      ],
+      "segment_id": "segment-0000",
+      "start": 5686,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "call-heading-local-v1",
+        "access_heuristic_not_review_authority",
+        "application_stage_and_cutoff_timezone_unverified"
+      ],
+      "discovery": "confirmed_opportunity",
+      "end": 6667,
+      "field_count": 9,
+      "modality": "fomento",
+      "physical_page": null,
+      "reference_records": [
+        "M30-F08-R1"
+      ],
+      "segment_id": "segment-0001",
+      "start": 5691,
+      "temporal": "open",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 10553,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0002",
+      "start": 10545,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 10564,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0003",
+      "start": 10554,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 10580,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0004",
+      "start": 10565,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    }
+  ],
+  "semantic_reviews": [
+    {
+      "case_id": "M30-F08:segment-0001:discovery:classification",
+      "certainty": "supported_observation",
+      "claim_kind": "discovery",
+      "context_evidence": [
+        {
+          "end": 106,
+          "page": null,
+          "quote": "Chamada Pública CNPq/CAPES Nº 30/2026 – Programa de Mestrado e Doutorado Acadêmico para Inovação – MAI/DAI",
+          "start": 0
+        },
+        {
+          "end": 6432,
+          "page": null,
+          "quote": "A edição de 2026 do Programa de Mestrado e Doutorado para Inovação (MAI/DAI), que estimula a realização de pesquisas de mestrado e doutorado em universidades em parceria com empresas, recebe propostas até o dia 11 de dezembro. A chamada é realizada pelo Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq) e conta com a parceria da Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES).",
+          "start": 6015
+        },
+        {
+          "end": 6642,
+          "page": null,
+          "quote": "Inscrições:\n19/08/2026 a 11/12/2026",
+          "start": 6607
+        }
+      ],
+      "document_id": "M30-F08",
+      "end": 6667,
+      "error_codes": [],
+      "expected_behavior": "Exigir contexto do instrumento e preservar incerteza de acesso/condições.",
+      "expected_claim": "confirmed_opportunity",
+      "field_index": null,
+      "field_name": null,
+      "judgment": "supported",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "quote": "Chamada Pública CNPq/CAPES Nº 30/2026 – Programa de Mestrado e Doutorado Acadêmico para Inovação – MAI/DAI\nCompartilhe:\nCompartilhe por Facebook\nCompartilhe por Twitter\nCompartilhe por LinkedIn\nCompartilhe por WhatsApp\nlink para Copiar para área de transferência\nPublicado em\n19/08/2026 08h53\nAtualizado em\n13/10/2026 12h34\nA edição de 2026 do Programa de Mestrado e Doutorado para Inovação (MAI/DAI), que estimula a realização de pesquisas de mestrado e doutorado em universidades em parceria com empresas, recebe propostas até o dia 11 de dezembro. A chamada é realizada pelo Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq) e conta com a parceria da Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES).\nChamada\nAnexo II: Plano de Trabalho Programa MAI/DAI\nAnexo III: Declaração Institucional do Representante MAI/DAI\nAnexo IV: Carta de Concordância da Instituição Parceira\nFAQ\nInscrições:\n19/08/2026 a 11/12/2026\nTags:\n#chamadas\n#abertas",
+      "rationale": "O trecho identifica suporte/financiamento e rota ou intervalo de submissão. Confirmação de instrumento não é garantia de aprovação, elegibilidade completa ou janela aberta.",
+      "root_cause": "classify usa conjunções locais de instrumento/acesso; hierarquia entre páginas não existe.",
+      "root_cause_confidence": "high",
+      "segment_id": "segment-0001",
+      "severity": "info",
+      "start": 5691
+    },
+    {
+      "case_id": "M30-F08:segment-0001:temporal:classification",
+      "certainty": "supported_observation",
+      "claim_kind": "temporal",
+      "context_evidence": [
+        {
+          "end": 106,
+          "page": null,
+          "quote": "Chamada Pública CNPq/CAPES Nº 30/2026 – Programa de Mestrado e Doutorado Acadêmico para Inovação – MAI/DAI",
+          "start": 0
+        },
+        {
+          "end": 6432,
+          "page": null,
+          "quote": "A edição de 2026 do Programa de Mestrado e Doutorado para Inovação (MAI/DAI), que estimula a realização de pesquisas de mestrado e doutorado em universidades em parceria com empresas, recebe propostas até o dia 11 de dezembro. A chamada é realizada pelo Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq) e conta com a parceria da Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES).",
+          "start": 6015
+        },
+        {
+          "end": 6642,
+          "page": null,
+          "quote": "Inscrições:\n19/08/2026 a 11/12/2026",
+          "start": 6607
+        }
+      ],
+      "document_id": "M30-F08",
+      "end": 6667,
+      "error_codes": [],
+      "expected_behavior": "Comparar apenas a janela de inscrições deste registro com a data civil fixa.",
+      "expected_claim": "open",
+      "field_index": null,
+      "field_name": null,
+      "judgment": "supported",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "quote": "Chamada Pública CNPq/CAPES Nº 30/2026 – Programa de Mestrado e Doutorado Acadêmico para Inovação – MAI/DAI\nCompartilhe:\nCompartilhe por Facebook\nCompartilhe por Twitter\nCompartilhe por LinkedIn\nCompartilhe por WhatsApp\nlink para Copiar para área de transferência\nPublicado em\n19/08/2026 08h53\nAtualizado em\n13/10/2026 12h34\nA edição de 2026 do Programa de Mestrado e Doutorado para Inovação (MAI/DAI), que estimula a realização de pesquisas de mestrado e doutorado em universidades em parceria com empresas, recebe propostas até o dia 11 de dezembro. A chamada é realizada pelo Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq) e conta com a parceria da Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES).\nChamada\nAnexo II: Plano de Trabalho Programa MAI/DAI\nAnexo III: Declaração Institucional do Representante MAI/DAI\nAnexo IV: Carta de Concordância da Instituição Parceira\nFAQ\nInscrições:\n19/08/2026 a 11/12/2026\nTags:\n#chamadas\n#abertas",
+      "rationale": "Intervalo numérico de inscrição contém 2026-10-19. Nenhuma hora/cutoff/timezone foi inferida; anexos não congelados permanecem indisponíveis.",
+      "root_cause": "predict reconhece intervalo Inscrições no contêiner local.",
+      "root_cause_confidence": "high",
+      "segment_id": "segment-0001",
+      "severity": "info",
+      "start": 5691
+    }
+  ],
+  "status": "processed"
+}

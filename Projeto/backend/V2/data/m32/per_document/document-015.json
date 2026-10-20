@@ -1,0 +1,2136 @@
+{
+  "diagnostics": [
+    "passive_not_rendered_DOM",
+    "unfrozen_attachments_unavailable"
+  ],
+  "document_id": "M30-I01",
+  "error_cases": [
+    {
+      "case_id": "M30-I01-R1:discovery_label",
+      "certainty": "unresolved_disagreement",
+      "dimension": "discovery_label",
+      "document_id": "M30-I01",
+      "error_codes": [
+        "OPPORTUNITY_EXISTENCE_CONFUSION",
+        "REFERENCE_AMBIGUITY"
+      ],
+      "expected_behavior": "Resolve this dimension from same-record evidence; provisional label is comparison, not authority.",
+      "next_action": "Compare full frozen context and request authorized adjudication; do not rewrite labels.",
+      "observed": {
+        "discovery": "abstain",
+        "end": 1331,
+        "modality": "undetermined",
+        "segment_id": "segment-0017",
+        "start": 1066,
+        "temporal": "undetermined"
+      },
+      "record_id": "M30-I01-R1",
+      "reference": {
+        "discovery_label": "opportunity_signal",
+        "modality": "investimentos",
+        "opportunity_label": "uncertain",
+        "review_status": "provisional",
+        "temporal_status": "undetermined"
+      },
+      "review_status": "provisional",
+      "root_cause": "Context fragmentation or semantic rule/reference ambiguity; see all-overlap graph before adjudication.",
+      "root_cause_confidence": "low",
+      "segment_id": "segment-0017",
+      "severity": "medium",
+      "supporting_evidence": {
+        "end": 1331,
+        "quote": "O Fundo Criatec 4 possui como objetivo proporcionar uma combinação de capital para aceleração e expertise complementar de uma equipe de gestão especializada, proporcionando uma combinação perfeita para o empreendedor que busca ajuda para acelerar o seu crescimento.",
+        "start": 1066
+      }
+    },
+    {
+      "case_id": "M30-I01-R1:modality",
+      "certainty": "unresolved_disagreement",
+      "dimension": "modality",
+      "document_id": "M30-I01",
+      "error_codes": [
+        "MODALITY_CONFUSION",
+        "REFERENCE_AMBIGUITY"
+      ],
+      "expected_behavior": "Resolve this dimension from same-record evidence; provisional label is comparison, not authority.",
+      "next_action": "Compare full frozen context and request authorized adjudication; do not rewrite labels.",
+      "observed": {
+        "discovery": "abstain",
+        "end": 1331,
+        "modality": "undetermined",
+        "segment_id": "segment-0017",
+        "start": 1066,
+        "temporal": "undetermined"
+      },
+      "record_id": "M30-I01-R1",
+      "reference": {
+        "discovery_label": "opportunity_signal",
+        "modality": "investimentos",
+        "opportunity_label": "uncertain",
+        "review_status": "provisional",
+        "temporal_status": "undetermined"
+      },
+      "review_status": "provisional",
+      "root_cause": "Context fragmentation or semantic rule/reference ambiguity; see all-overlap graph before adjudication.",
+      "root_cause_confidence": "low",
+      "segment_id": "segment-0017",
+      "severity": "medium",
+      "supporting_evidence": {
+        "end": 1331,
+        "quote": "O Fundo Criatec 4 possui como objetivo proporcionar uma combinação de capital para aceleração e expertise complementar de uma equipe de gestão especializada, proporcionando uma combinação perfeita para o empreendedor que busca ajuda para acelerar o seu crescimento.",
+        "start": 1066
+      }
+    },
+    {
+      "case_id": "M30-I01-R1:segmentation",
+      "certainty": "supported_observation",
+      "dimension": "structural",
+      "document_id": "M30-I01",
+      "error_codes": [
+        "SEGMENTATION_OVER"
+      ],
+      "expected_behavior": "A meaningful record should retain its own associated context; whitespace-only boundary differences are not semantic defects.",
+      "next_action": "Inspect semantic usefulness of boundaries before changing segmentation.",
+      "observed": {
+        "coverage": {
+          "denominator": 2142,
+          "numerator": 2117,
+          "value": 0.9883286647992531
+        },
+        "fragmentation": 26
+      },
+      "record_id": "M30-I01-R1",
+      "reference": {
+        "discovery_label": "opportunity_signal",
+        "modality": "investimentos",
+        "opportunity_label": "uncertain",
+        "review_status": "provisional",
+        "temporal_status": "undetermined"
+      },
+      "review_status": "provisional",
+      "root_cause": "Structure-derived units differ from provisional annotated record spans.",
+      "root_cause_confidence": "high",
+      "segment_id": "segment-0017",
+      "severity": "medium",
+      "supporting_evidence": {
+        "edges": [
+          {
+            "end": 220,
+            "exact": false,
+            "intersection": 9,
+            "intersection_end": 220,
+            "intersection_start": 211,
+            "iou": 0.004182156133828996,
+            "predicted_purity": 0.47368421052631576,
+            "reference_fraction": 0.004201680672268907,
+            "segment_id": "segment-0004",
+            "start": 201
+          },
+          {
+            "end": 244,
+            "exact": false,
+            "intersection": 23,
+            "intersection_end": 244,
+            "intersection_start": 221,
+            "iou": 0.010737628384687208,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.010737628384687208,
+            "segment_id": "segment-0005",
+            "start": 221
+          },
+          {
+            "end": 257,
+            "exact": false,
+            "intersection": 12,
+            "intersection_end": 257,
+            "intersection_start": 245,
+            "iou": 0.0056022408963585435,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.0056022408963585435,
+            "segment_id": "segment-0006",
+            "start": 245
+          },
+          {
+            "end": 407,
+            "exact": false,
+            "intersection": 149,
+            "intersection_end": 407,
+            "intersection_start": 258,
+            "iou": 0.06956115779645192,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.06956115779645192,
+            "segment_id": "segment-0007",
+            "start": 258
+          },
+          {
+            "end": 427,
+            "exact": false,
+            "intersection": 19,
+            "intersection_end": 427,
+            "intersection_start": 408,
+            "iou": 0.008870214752567693,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.008870214752567693,
+            "segment_id": "segment-0008",
+            "start": 408
+          },
+          {
+            "end": 433,
+            "exact": false,
+            "intersection": 5,
+            "intersection_end": 433,
+            "intersection_start": 428,
+            "iou": 0.002334267040149393,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.002334267040149393,
+            "segment_id": "segment-0009",
+            "start": 428
+          },
+          {
+            "end": 631,
+            "exact": false,
+            "intersection": 197,
+            "intersection_end": 631,
+            "intersection_start": 434,
+            "iou": 0.0919701213818861,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.0919701213818861,
+            "segment_id": "segment-0010",
+            "start": 434
+          },
+          {
+            "end": 827,
+            "exact": false,
+            "intersection": 195,
+            "intersection_end": 827,
+            "intersection_start": 632,
+            "iou": 0.09103641456582633,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.09103641456582633,
+            "segment_id": "segment-0011",
+            "start": 632
+          },
+          {
+            "end": 841,
+            "exact": false,
+            "intersection": 13,
+            "intersection_end": 841,
+            "intersection_start": 828,
+            "iou": 0.006069094304388422,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.006069094304388422,
+            "segment_id": "segment-0012",
+            "start": 828
+          },
+          {
+            "end": 1031,
+            "exact": false,
+            "intersection": 189,
+            "intersection_end": 1031,
+            "intersection_start": 842,
+            "iou": 0.08823529411764706,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.08823529411764706,
+            "segment_id": "segment-0013",
+            "start": 842
+          },
+          {
+            "end": 1045,
+            "exact": false,
+            "intersection": 13,
+            "intersection_end": 1045,
+            "intersection_start": 1032,
+            "iou": 0.006069094304388422,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.006069094304388422,
+            "segment_id": "segment-0014",
+            "start": 1032
+          },
+          {
+            "end": 1055,
+            "exact": false,
+            "intersection": 9,
+            "intersection_end": 1055,
+            "intersection_start": 1046,
+            "iou": 0.004201680672268907,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.004201680672268907,
+            "segment_id": "segment-0015",
+            "start": 1046
+          },
+          {
+            "end": 1065,
+            "exact": false,
+            "intersection": 9,
+            "intersection_end": 1065,
+            "intersection_start": 1056,
+            "iou": 0.004201680672268907,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.004201680672268907,
+            "segment_id": "segment-0016",
+            "start": 1056
+          },
+          {
+            "end": 1331,
+            "exact": false,
+            "intersection": 265,
+            "intersection_end": 1331,
+            "intersection_start": 1066,
+            "iou": 0.12371615312791784,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.12371615312791784,
+            "segment_id": "segment-0017",
+            "start": 1066
+          },
+          {
+            "end": 1538,
+            "exact": false,
+            "intersection": 206,
+            "intersection_end": 1538,
+            "intersection_start": 1332,
+            "iou": 0.096171802054155,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.096171802054155,
+            "segment_id": "segment-0018",
+            "start": 1332
+          },
+          {
+            "end": 1565,
+            "exact": false,
+            "intersection": 26,
+            "intersection_end": 1565,
+            "intersection_start": 1539,
+            "iou": 0.012138188608776844,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.012138188608776844,
+            "segment_id": "segment-0019",
+            "start": 1539
+          },
+          {
+            "end": 1590,
+            "exact": false,
+            "intersection": 24,
+            "intersection_end": 1590,
+            "intersection_start": 1566,
+            "iou": 0.011204481792717087,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.011204481792717087,
+            "segment_id": "segment-0020",
+            "start": 1566
+          },
+          {
+            "end": 1673,
+            "exact": false,
+            "intersection": 82,
+            "intersection_end": 1673,
+            "intersection_start": 1591,
+            "iou": 0.03828197945845005,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.03828197945845005,
+            "segment_id": "segment-0021",
+            "start": 1591
+          },
+          {
+            "end": 1682,
+            "exact": false,
+            "intersection": 8,
+            "intersection_end": 1682,
+            "intersection_start": 1674,
+            "iou": 0.003734827264239029,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.003734827264239029,
+            "segment_id": "segment-0022",
+            "start": 1674
+          },
+          {
+            "end": 1804,
+            "exact": false,
+            "intersection": 121,
+            "intersection_end": 1804,
+            "intersection_start": 1683,
+            "iou": 0.05648926237161531,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.05648926237161531,
+            "segment_id": "segment-0023",
+            "start": 1683
+          },
+          {
+            "end": 1811,
+            "exact": false,
+            "intersection": 6,
+            "intersection_end": 1811,
+            "intersection_start": 1805,
+            "iou": 0.0028011204481792717,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.0028011204481792717,
+            "segment_id": "segment-0024",
+            "start": 1805
+          },
+          {
+            "end": 1965,
+            "exact": false,
+            "intersection": 153,
+            "intersection_end": 1965,
+            "intersection_start": 1812,
+            "iou": 0.07142857142857142,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.07142857142857142,
+            "segment_id": "segment-0025",
+            "start": 1812
+          },
+          {
+            "end": 1982,
+            "exact": false,
+            "intersection": 16,
+            "intersection_end": 1982,
+            "intersection_start": 1966,
+            "iou": 0.007469654528478058,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.007469654528478058,
+            "segment_id": "segment-0026",
+            "start": 1966
+          },
+          {
+            "end": 2171,
+            "exact": false,
+            "intersection": 188,
+            "intersection_end": 2171,
+            "intersection_start": 1983,
+            "iou": 0.08776844070961717,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.08776844070961717,
+            "segment_id": "segment-0027",
+            "start": 1983
+          },
+          {
+            "end": 2184,
+            "exact": false,
+            "intersection": 12,
+            "intersection_end": 2184,
+            "intersection_start": 2172,
+            "iou": 0.0056022408963585435,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.0056022408963585435,
+            "segment_id": "segment-0028",
+            "start": 2172
+          },
+          {
+            "end": 2353,
+            "exact": false,
+            "intersection": 168,
+            "intersection_end": 2353,
+            "intersection_start": 2185,
+            "iou": 0.0784313725490196,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.0784313725490196,
+            "segment_id": "segment-0029",
+            "start": 2185
+          }
+        ],
+        "reference_span": [
+          211,
+          2353
+        ]
+      }
+    }
+  ],
+  "extracted_claims": [
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-I01",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "title",
+      "original": "Fundo",
+      "reference_records": [
+        "M30-I01-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0009",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-I01",
+        "end": 433,
+        "page": null,
+        "quote": "Fundo",
+        "raw_sha256": "e571b116815b3dd72c40d39c336ef8cd0d07e3977dc4b7ce7658e958f2ff01a5",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0009",
+        "start": 428,
+        "text_sha256": "588822c0865386958445a541eec0e0df703bcd83794a7ad58cee52f1049f09a2"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-I01",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "fund_capital_estimate",
+      "original": "R$6 bilhões",
+      "reference_records": [
+        "M30-I01-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0010",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-I01",
+        "end": 631,
+        "page": null,
+        "quote": "A gestão do fundo Criatec 4 é feita pela Crescera Capital e Triaxis Capital, duas gestoras com mais de R$6 bilhões de ativos sob gestão e larga experiência no investimento de empresas de tecnologia",
+        "raw_sha256": "e571b116815b3dd72c40d39c336ef8cd0d07e3977dc4b7ce7658e958f2ff01a5",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0010",
+        "start": 434,
+        "text_sha256": "588822c0865386958445a541eec0e0df703bcd83794a7ad58cee52f1049f09a2"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-I01",
+      "field_index": 1,
+      "method_version": "m31-deterministic-v2",
+      "name": "managing_organization_expression",
+      "original": "A gestão do fundo Criatec 4 é feita pela Crescera Capital e Triaxis Capital, duas gestoras com mais de R$6 bilhões de ativos sob gestão e larga experiência no investimento de empresas de tecnologia",
+      "reference_records": [
+        "M30-I01-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0010",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-I01",
+        "end": 631,
+        "page": null,
+        "quote": "A gestão do fundo Criatec 4 é feita pela Crescera Capital e Triaxis Capital, duas gestoras com mais de R$6 bilhões de ativos sob gestão e larga experiência no investimento de empresas de tecnologia",
+        "raw_sha256": "e571b116815b3dd72c40d39c336ef8cd0d07e3977dc4b7ce7658e958f2ff01a5",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0010",
+        "start": 434,
+        "text_sha256": "588822c0865386958445a541eec0e0df703bcd83794a7ad58cee52f1049f09a2"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-I01",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "monetary_expression_unresolved",
+      "original": "R$6 bilhões",
+      "reference_records": [
+        "M30-I01-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0011",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-I01",
+        "end": 827,
+        "page": null,
+        "quote": "Crescera Capital é uma tradicional gestora independente de ativos alternativos com mais de R$6 bilhões sob gestão em Private Equity e Venture Capital, em setores como Tecnologia, Educação e Saúde",
+        "raw_sha256": "e571b116815b3dd72c40d39c336ef8cd0d07e3977dc4b7ce7658e958f2ff01a5",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0011",
+        "start": 632,
+        "text_sha256": "588822c0865386958445a541eec0e0df703bcd83794a7ad58cee52f1049f09a2"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-I01",
+      "field_index": 1,
+      "method_version": "m31-deterministic-v2",
+      "name": "investment_terms_unresolved",
+      "original": "Crescera Capital é uma tradicional gestora independente de ativos alternativos com mais de R$6 bilhões sob gestão em Private Equity e Venture Capital, em setores como Tecnologia, Educação e Saúde",
+      "reference_records": [
+        "M30-I01-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0011",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-I01",
+        "end": 827,
+        "page": null,
+        "quote": "Crescera Capital é uma tradicional gestora independente de ativos alternativos com mais de R$6 bilhões sob gestão em Private Equity e Venture Capital, em setores como Tecnologia, Educação e Saúde",
+        "raw_sha256": "e571b116815b3dd72c40d39c336ef8cd0d07e3977dc4b7ce7658e958f2ff01a5",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0011",
+        "start": 632,
+        "text_sha256": "588822c0865386958445a541eec0e0df703bcd83794a7ad58cee52f1049f09a2"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-I01",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "investment_terms_unresolved",
+      "original": "A Triaxis Capital é uma gestora de recursos com sólida experiência em transações de Venture Capital & Private Equity, em especial com empresas de base tecnológica e forte potencial inovador",
+      "reference_records": [
+        "M30-I01-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0013",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-I01",
+        "end": 1031,
+        "page": null,
+        "quote": "A Triaxis Capital é uma gestora de recursos com sólida experiência em transações de Venture Capital & Private Equity, em especial com empresas de base tecnológica e forte potencial inovador",
+        "raw_sha256": "e571b116815b3dd72c40d39c336ef8cd0d07e3977dc4b7ce7658e958f2ff01a5",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0013",
+        "start": 842,
+        "text_sha256": "588822c0865386958445a541eec0e0df703bcd83794a7ad58cee52f1049f09a2"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-I01",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "funding_organization_expression",
+      "original": "Os recursos do Fundo ajudam a empresa a acelerar os seus objetivos de crescimento.",
+      "reference_records": [
+        "M30-I01-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0021",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-I01",
+        "end": 1673,
+        "page": null,
+        "quote": "Os recursos do Fundo ajudam a empresa a acelerar os seus objetivos de crescimento.",
+        "raw_sha256": "e571b116815b3dd72c40d39c336ef8cd0d07e3977dc4b7ce7658e958f2ff01a5",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0021",
+        "start": 1591,
+        "text_sha256": "588822c0865386958445a541eec0e0df703bcd83794a7ad58cee52f1049f09a2"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-I01",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "managing_organization_expression",
+      "original": "Equipe de Gestão do Fundo",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0035",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-I01",
+        "end": 2452,
+        "page": null,
+        "quote": "Equipe de Gestão do Fundo",
+        "raw_sha256": "e571b116815b3dd72c40d39c336ef8cd0d07e3977dc4b7ce7658e958f2ff01a5",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0035",
+        "start": 2427,
+        "text_sha256": "588822c0865386958445a541eec0e0df703bcd83794a7ad58cee52f1049f09a2"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-I01",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "managing_organization_expression",
+      "original": "Equipe de Gestão do Fundo",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0041",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-I01",
+        "end": 2551,
+        "page": null,
+        "quote": "Equipe de Gestão do Fundo",
+        "raw_sha256": "e571b116815b3dd72c40d39c336ef8cd0d07e3977dc4b7ce7658e958f2ff01a5",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0041",
+        "start": 2526,
+        "text_sha256": "588822c0865386958445a541eec0e0df703bcd83794a7ad58cee52f1049f09a2"
+      }
+    }
+  ],
+  "provenance": {
+    "byte_length": 109384,
+    "category_evidence": "O Fundo Criatec 4 possui como objetivo proporcionar uma combinação de capital para aceleração e expertise complementar de uma equipe de gestão especializada, proporcionando uma combinação perfeita para o empreendedor que busca ajuda para acelerar o seu crescimento.",
+    "content_type": "text/html",
+    "derivation_method": "stdlib-HTMLParser-data-whitespace-v1; excludes script/style/noscript/template; not rendered DOM",
+    "document_category": "investment_program",
+    "document_id": "M30-I01",
+    "document_version": null,
+    "final_url": "https://criatec4.com/",
+    "original_filename": "index.html",
+    "original_url": "https://criatec4.com/",
+    "publication_date": null,
+    "raw_path": "raw/M30-I01.html",
+    "restrictions": "Research pilot local frozen copy only; no redistribution license inferred. No scripts executed, no forms submitted, no applicant records intentionally collected. Public navigation/staff attribution may remain in original bytes.",
+    "retrieval_status": "acquired",
+    "retrieved_at": "2026-10-19T04:37:38.233146+00:00",
+    "sha256": "e571b116815b3dd72c40d39c336ef8cd0d07e3977dc4b7ce7658e958f2ff01a5",
+    "source_authority_notes": "Public HTTPS page hosted by the named institution; authorship asserted by host/content, not cryptographically authenticated. Not source-readiness approval.",
+    "source_organization": "Criatec 4",
+    "text_path": "text/M30-I01.txt",
+    "text_sha256": "588822c0865386958445a541eec0e0df703bcd83794a7ad58cee52f1049f09a2"
+  },
+  "records": [
+    {
+      "all_overlap_predictions": [
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0004",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "unrelated_or_non_actionable",
+          "modality": "undetermined",
+          "segment_id": "segment-0005",
+          "temporal": "not_applicable"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0006",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0007",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0008",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0009",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "opportunity_signal",
+          "modality": "investimentos",
+          "segment_id": "segment-0010",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "opportunity_signal",
+          "modality": "investimentos",
+          "segment_id": "segment-0011",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0012",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "opportunity_signal",
+          "modality": "investimentos",
+          "segment_id": "segment-0013",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0014",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0015",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0016",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0017",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0018",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0019",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0020",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0021",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0022",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0023",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0024",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0025",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0026",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0027",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0028",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0029",
+          "temporal": "undetermined"
+        }
+      ],
+      "any_exact_boundary": false,
+      "coverage": {
+        "denominator": 2142,
+        "numerator": 2117,
+        "value": 0.9883286647992531
+      },
+      "covered_characters": 2117,
+      "disagreements": [
+        "discovery_label",
+        "modality"
+      ],
+      "discovery_histogram": {
+        "abstain": 22,
+        "opportunity_signal": 3,
+        "unrelated_or_non_actionable": 1
+      },
+      "document_id": "M30-I01",
+      "edges": [
+        {
+          "end": 220,
+          "exact": false,
+          "intersection": 9,
+          "intersection_end": 220,
+          "intersection_start": 211,
+          "iou": 0.004182156133828996,
+          "predicted_purity": 0.47368421052631576,
+          "reference_fraction": 0.004201680672268907,
+          "segment_id": "segment-0004",
+          "start": 201
+        },
+        {
+          "end": 244,
+          "exact": false,
+          "intersection": 23,
+          "intersection_end": 244,
+          "intersection_start": 221,
+          "iou": 0.010737628384687208,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.010737628384687208,
+          "segment_id": "segment-0005",
+          "start": 221
+        },
+        {
+          "end": 257,
+          "exact": false,
+          "intersection": 12,
+          "intersection_end": 257,
+          "intersection_start": 245,
+          "iou": 0.0056022408963585435,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.0056022408963585435,
+          "segment_id": "segment-0006",
+          "start": 245
+        },
+        {
+          "end": 407,
+          "exact": false,
+          "intersection": 149,
+          "intersection_end": 407,
+          "intersection_start": 258,
+          "iou": 0.06956115779645192,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.06956115779645192,
+          "segment_id": "segment-0007",
+          "start": 258
+        },
+        {
+          "end": 427,
+          "exact": false,
+          "intersection": 19,
+          "intersection_end": 427,
+          "intersection_start": 408,
+          "iou": 0.008870214752567693,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.008870214752567693,
+          "segment_id": "segment-0008",
+          "start": 408
+        },
+        {
+          "end": 433,
+          "exact": false,
+          "intersection": 5,
+          "intersection_end": 433,
+          "intersection_start": 428,
+          "iou": 0.002334267040149393,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.002334267040149393,
+          "segment_id": "segment-0009",
+          "start": 428
+        },
+        {
+          "end": 631,
+          "exact": false,
+          "intersection": 197,
+          "intersection_end": 631,
+          "intersection_start": 434,
+          "iou": 0.0919701213818861,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.0919701213818861,
+          "segment_id": "segment-0010",
+          "start": 434
+        },
+        {
+          "end": 827,
+          "exact": false,
+          "intersection": 195,
+          "intersection_end": 827,
+          "intersection_start": 632,
+          "iou": 0.09103641456582633,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.09103641456582633,
+          "segment_id": "segment-0011",
+          "start": 632
+        },
+        {
+          "end": 841,
+          "exact": false,
+          "intersection": 13,
+          "intersection_end": 841,
+          "intersection_start": 828,
+          "iou": 0.006069094304388422,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.006069094304388422,
+          "segment_id": "segment-0012",
+          "start": 828
+        },
+        {
+          "end": 1031,
+          "exact": false,
+          "intersection": 189,
+          "intersection_end": 1031,
+          "intersection_start": 842,
+          "iou": 0.08823529411764706,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.08823529411764706,
+          "segment_id": "segment-0013",
+          "start": 842
+        },
+        {
+          "end": 1045,
+          "exact": false,
+          "intersection": 13,
+          "intersection_end": 1045,
+          "intersection_start": 1032,
+          "iou": 0.006069094304388422,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.006069094304388422,
+          "segment_id": "segment-0014",
+          "start": 1032
+        },
+        {
+          "end": 1055,
+          "exact": false,
+          "intersection": 9,
+          "intersection_end": 1055,
+          "intersection_start": 1046,
+          "iou": 0.004201680672268907,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.004201680672268907,
+          "segment_id": "segment-0015",
+          "start": 1046
+        },
+        {
+          "end": 1065,
+          "exact": false,
+          "intersection": 9,
+          "intersection_end": 1065,
+          "intersection_start": 1056,
+          "iou": 0.004201680672268907,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.004201680672268907,
+          "segment_id": "segment-0016",
+          "start": 1056
+        },
+        {
+          "end": 1331,
+          "exact": false,
+          "intersection": 265,
+          "intersection_end": 1331,
+          "intersection_start": 1066,
+          "iou": 0.12371615312791784,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.12371615312791784,
+          "segment_id": "segment-0017",
+          "start": 1066
+        },
+        {
+          "end": 1538,
+          "exact": false,
+          "intersection": 206,
+          "intersection_end": 1538,
+          "intersection_start": 1332,
+          "iou": 0.096171802054155,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.096171802054155,
+          "segment_id": "segment-0018",
+          "start": 1332
+        },
+        {
+          "end": 1565,
+          "exact": false,
+          "intersection": 26,
+          "intersection_end": 1565,
+          "intersection_start": 1539,
+          "iou": 0.012138188608776844,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.012138188608776844,
+          "segment_id": "segment-0019",
+          "start": 1539
+        },
+        {
+          "end": 1590,
+          "exact": false,
+          "intersection": 24,
+          "intersection_end": 1590,
+          "intersection_start": 1566,
+          "iou": 0.011204481792717087,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.011204481792717087,
+          "segment_id": "segment-0020",
+          "start": 1566
+        },
+        {
+          "end": 1673,
+          "exact": false,
+          "intersection": 82,
+          "intersection_end": 1673,
+          "intersection_start": 1591,
+          "iou": 0.03828197945845005,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.03828197945845005,
+          "segment_id": "segment-0021",
+          "start": 1591
+        },
+        {
+          "end": 1682,
+          "exact": false,
+          "intersection": 8,
+          "intersection_end": 1682,
+          "intersection_start": 1674,
+          "iou": 0.003734827264239029,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.003734827264239029,
+          "segment_id": "segment-0022",
+          "start": 1674
+        },
+        {
+          "end": 1804,
+          "exact": false,
+          "intersection": 121,
+          "intersection_end": 1804,
+          "intersection_start": 1683,
+          "iou": 0.05648926237161531,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.05648926237161531,
+          "segment_id": "segment-0023",
+          "start": 1683
+        },
+        {
+          "end": 1811,
+          "exact": false,
+          "intersection": 6,
+          "intersection_end": 1811,
+          "intersection_start": 1805,
+          "iou": 0.0028011204481792717,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.0028011204481792717,
+          "segment_id": "segment-0024",
+          "start": 1805
+        },
+        {
+          "end": 1965,
+          "exact": false,
+          "intersection": 153,
+          "intersection_end": 1965,
+          "intersection_start": 1812,
+          "iou": 0.07142857142857142,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.07142857142857142,
+          "segment_id": "segment-0025",
+          "start": 1812
+        },
+        {
+          "end": 1982,
+          "exact": false,
+          "intersection": 16,
+          "intersection_end": 1982,
+          "intersection_start": 1966,
+          "iou": 0.007469654528478058,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.007469654528478058,
+          "segment_id": "segment-0026",
+          "start": 1966
+        },
+        {
+          "end": 2171,
+          "exact": false,
+          "intersection": 188,
+          "intersection_end": 2171,
+          "intersection_start": 1983,
+          "iou": 0.08776844070961717,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.08776844070961717,
+          "segment_id": "segment-0027",
+          "start": 1983
+        },
+        {
+          "end": 2184,
+          "exact": false,
+          "intersection": 12,
+          "intersection_end": 2184,
+          "intersection_start": 2172,
+          "iou": 0.0056022408963585435,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.0056022408963585435,
+          "segment_id": "segment-0028",
+          "start": 2172
+        },
+        {
+          "end": 2353,
+          "exact": false,
+          "intersection": 168,
+          "intersection_end": 2353,
+          "intersection_start": 2185,
+          "iou": 0.0784313725490196,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.0784313725490196,
+          "segment_id": "segment-0029",
+          "start": 2185
+        }
+      ],
+      "end": 2353,
+      "fields": [
+        {
+          "candidates": [
+            {
+              "diagnostic_status": "traceable_not_semantically_certified",
+              "field_index": 0,
+              "method_version": "m31-deterministic-v2",
+              "name": "title",
+              "original": "Fundo",
+              "schema_version": "m31-extraction-v1",
+              "segment_id": "segment-0009",
+              "uncertainty": "heuristic role assignment; not authenticated or normalized",
+              "witness": {
+                "document_id": "M30-I01",
+                "end": 433,
+                "page": null,
+                "quote": "Fundo",
+                "raw_sha256": "e571b116815b3dd72c40d39c336ef8cd0d07e3977dc4b7ce7658e958f2ff01a5",
+                "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+                "schema_version": "m31-extraction-v1",
+                "segment_id": "segment-0009",
+                "start": 428,
+                "text_sha256": "588822c0865386958445a541eec0e0df703bcd83794a7ad58cee52f1049f09a2"
+              }
+            }
+          ],
+          "name": "title",
+          "reason": "same role has different literals; do not assume reference exhaustive or prediction wrong",
+          "reference_evidence": [
+            {
+              "end": 220,
+              "evidence_id": "M30-I01-R1-E1",
+              "page": null,
+              "quote": "Criatec 4",
+              "start": 211
+            }
+          ],
+          "reference_value": "Criatec 4",
+          "scope_supported": true,
+          "semantic_adjudication": "not_certified",
+          "status": "UNRESOLVED",
+          "strict_role_value": false
+        },
+        {
+          "candidates": [],
+          "name": "applicant_requirements",
+          "reason": "no corresponding field; absence is not explicit field abstention",
+          "reference_evidence": [
+            {
+              "end": 1804,
+              "evidence_id": "M30-I01-R1-E3",
+              "page": null,
+              "quote": "O Fundo busca empresas com soluções e produtos inovadores, que resolvem problemas reais em mercados endereçáveis grandes.",
+              "start": 1683
+            }
+          ],
+          "reference_value": "O Fundo busca empresas com soluções e produtos inovadores, que resolvem problemas reais em mercados endereçáveis grandes.",
+          "scope_supported": true,
+          "semantic_adjudication": "not_certified",
+          "status": "MISSING",
+          "strict_role_value": false
+        },
+        {
+          "candidates": [],
+          "name": "geographic_scope",
+          "reason": "requested target role outside implemented M31 field scope",
+          "reference_evidence": [
+            {
+              "end": 2353,
+              "evidence_id": "M30-I01-R1-E4",
+              "page": null,
+              "quote": "O Fundo tem em seu objetivo investir em empresas baseadas em qualquer cidade do país, fomentando a diversidade e capilaridade de inovação em todas as regiões do Brasil.",
+              "start": 2185
+            }
+          ],
+          "reference_value": "O Fundo tem em seu objetivo investir em empresas baseadas em qualquer cidade do país, fomentando a diversidade e capilaridade de inovação em todas as regiões do Brasil.",
+          "scope_supported": false,
+          "semantic_adjudication": "not_certified",
+          "status": "UNRESOLVED",
+          "strict_role_value": false
+        }
+      ],
+      "fragmentation": 26,
+      "location_convention": "html_unicode_codepoints",
+      "physical_reference_evidence_pages": [],
+      "rationale": "Institutional page states fund thesis, target companies and geographic intent, a relevant equity-investment discovery signal. This scoped overview does not itself establish a submission route or sufficient access conditions. Missing dates only justify undetermined temporal availability; missing dates alone are not the reason for uncertain opportunity confirmation.",
+      "record_id": "M30-I01-R1",
+      "reference": {
+        "discovery_label": "opportunity_signal",
+        "modality": "investimentos",
+        "opportunity_label": "uncertain",
+        "review_status": "provisional",
+        "temporal_status": "undetermined"
+      },
+      "reference_characters": 2142,
+      "reference_evidence": [
+        {
+          "end": 220,
+          "evidence_id": "M30-I01-R1-E1",
+          "page": null,
+          "quote": "Criatec 4",
+          "start": 211
+        },
+        {
+          "end": 1331,
+          "evidence_id": "M30-I01-R1-E2",
+          "page": null,
+          "quote": "O Fundo Criatec 4 possui como objetivo proporcionar uma combinação de capital para aceleração e expertise complementar de uma equipe de gestão especializada, proporcionando uma combinação perfeita para o empreendedor que busca ajuda para acelerar o seu crescimento.",
+          "start": 1066
+        },
+        {
+          "end": 1804,
+          "evidence_id": "M30-I01-R1-E3",
+          "page": null,
+          "quote": "O Fundo busca empresas com soluções e produtos inovadores, que resolvem problemas reais em mercados endereçáveis grandes.",
+          "start": 1683
+        },
+        {
+          "end": 2353,
+          "evidence_id": "M30-I01-R1-E4",
+          "page": null,
+          "quote": "O Fundo tem em seu objetivo investir em empresas baseadas em qualquer cidade do país, fomentando a diversidade e capilaridade de inovação em todas as regiões do Brasil.",
+          "start": 2185
+        }
+      ],
+      "representative": "segment-0017",
+      "representative_prediction": {
+        "discovery": "abstain",
+        "end": 1331,
+        "modality": "undetermined",
+        "segment_id": "segment-0017",
+        "start": 1066,
+        "temporal": "undetermined"
+      },
+      "representative_quote": "O Fundo Criatec 4 possui como objetivo proporcionar uma combinação de capital para aceleração e expertise complementar de uma equipe de gestão especializada, proporcionando uma combinação perfeita para o empreendedor que busca ajuda para acelerar o seu crescimento.",
+      "start": 211,
+      "status": "overlap",
+      "uncertainty_notes": [
+        "Página sem data de publicação verificável; ausência de prazo não demonstra fluxo contínuo.",
+        "Mesma família de oportunidade de I02 e I04; documentos não são oportunidades independentes."
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 33,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0000",
+      "start": 8,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 83,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0001",
+      "start": 34,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 85,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0002",
+      "start": 84,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 200,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0003",
+      "start": 86,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 220,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I01-R1"
+      ],
+      "segment_id": "segment-0004",
+      "start": 201,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "completed_event_not_new_access"
+      ],
+      "discovery": "unrelated_or_non_actionable",
+      "end": 244,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I01-R1"
+      ],
+      "segment_id": "segment-0005",
+      "start": 221,
+      "temporal": "not_applicable",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 257,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I01-R1"
+      ],
+      "segment_id": "segment-0006",
+      "start": 245,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 407,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I01-R1"
+      ],
+      "segment_id": "segment-0007",
+      "start": 258,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 427,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I01-R1"
+      ],
+      "segment_id": "segment-0008",
+      "start": 408,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 433,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I01-R1"
+      ],
+      "segment_id": "segment-0009",
+      "start": 428,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 631,
+      "field_count": 2,
+      "modality": "investimentos",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I01-R1"
+      ],
+      "segment_id": "segment-0010",
+      "start": 434,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 827,
+      "field_count": 2,
+      "modality": "investimentos",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I01-R1"
+      ],
+      "segment_id": "segment-0011",
+      "start": 632,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 841,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I01-R1"
+      ],
+      "segment_id": "segment-0012",
+      "start": 828,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 1031,
+      "field_count": 1,
+      "modality": "investimentos",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I01-R1"
+      ],
+      "segment_id": "segment-0013",
+      "start": 842,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 1045,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I01-R1"
+      ],
+      "segment_id": "segment-0014",
+      "start": 1032,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 1055,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I01-R1"
+      ],
+      "segment_id": "segment-0015",
+      "start": 1046,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 1065,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I01-R1"
+      ],
+      "segment_id": "segment-0016",
+      "start": 1056,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 1331,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I01-R1"
+      ],
+      "segment_id": "segment-0017",
+      "start": 1066,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 1538,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I01-R1"
+      ],
+      "segment_id": "segment-0018",
+      "start": 1332,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 1565,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I01-R1"
+      ],
+      "segment_id": "segment-0019",
+      "start": 1539,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 1590,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I01-R1"
+      ],
+      "segment_id": "segment-0020",
+      "start": 1566,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 1673,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I01-R1"
+      ],
+      "segment_id": "segment-0021",
+      "start": 1591,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 1682,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I01-R1"
+      ],
+      "segment_id": "segment-0022",
+      "start": 1674,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 1804,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I01-R1"
+      ],
+      "segment_id": "segment-0023",
+      "start": 1683,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 1811,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I01-R1"
+      ],
+      "segment_id": "segment-0024",
+      "start": 1805,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 1965,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I01-R1"
+      ],
+      "segment_id": "segment-0025",
+      "start": 1812,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 1982,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I01-R1"
+      ],
+      "segment_id": "segment-0026",
+      "start": 1966,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 2171,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I01-R1"
+      ],
+      "segment_id": "segment-0027",
+      "start": 1983,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 2184,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I01-R1"
+      ],
+      "segment_id": "segment-0028",
+      "start": 2172,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 2353,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I01-R1"
+      ],
+      "segment_id": "segment-0029",
+      "start": 2185,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "completed_event_not_new_access"
+      ],
+      "discovery": "unrelated_or_non_actionable",
+      "end": 2363,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0030",
+      "start": 2354,
+      "temporal": "not_applicable",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 2389,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0031",
+      "start": 2364,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 2399,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0032",
+      "start": 2390,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 2419,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0033",
+      "start": 2400,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 2426,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0034",
+      "start": 2420,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 2452,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0035",
+      "start": 2427,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 2456,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0036",
+      "start": 2453,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 2480,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0037",
+      "start": 2457,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 2495,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0038",
+      "start": 2481,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 2505,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0039",
+      "start": 2496,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 2525,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0040",
+      "start": 2506,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 2551,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0041",
+      "start": 2526,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "completed_event_not_new_access"
+      ],
+      "discovery": "unrelated_or_non_actionable",
+      "end": 2561,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0042",
+      "start": 2552,
+      "temporal": "not_applicable",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 2587,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0043",
+      "start": 2562,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    }
+  ],
+  "semantic_reviews": [],
+  "status": "processed"
+}

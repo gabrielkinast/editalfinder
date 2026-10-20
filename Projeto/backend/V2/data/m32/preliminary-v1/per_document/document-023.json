@@ -1,0 +1,1506 @@
+{
+  "diagnostics": [
+    "passive_not_rendered_DOM",
+    "unfrozen_attachments_unavailable"
+  ],
+  "document_id": "M30-N01",
+  "error_cases": [
+    {
+      "case_id": "M30-N01-R1:discovery_label",
+      "certainty": "unresolved_disagreement",
+      "dimension": "discovery_label",
+      "document_id": "M30-N01",
+      "error_codes": [
+        "OPPORTUNITY_EXISTENCE_CONFUSION",
+        "REFERENCE_AMBIGUITY"
+      ],
+      "expected_behavior": "Resolve this dimension from same-record evidence; provisional label is comparison, not authority.",
+      "next_action": "Compare full frozen context and request authorized adjudication; do not rewrite labels.",
+      "observed": {
+        "discovery": "opportunity_signal",
+        "end": 2652,
+        "modality": "credito",
+        "segment_id": "segment-0019",
+        "start": 2016,
+        "temporal": "undetermined"
+      },
+      "record_id": "M30-N01-R1",
+      "reference": {
+        "discovery_label": "unrelated_or_non_actionable",
+        "modality": "credito",
+        "opportunity_label": "not_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "not_applicable"
+      },
+      "review_status": "provisional",
+      "root_cause": "Context fragmentation or semantic rule/reference ambiguity; see all-overlap graph before adjudication.",
+      "root_cause_confidence": "low",
+      "segment_id": "segment-0019",
+      "severity": "medium",
+      "supporting_evidence": {
+        "end": 2652,
+        "quote": "A aprovação do financiamento ocorreu no âmbito do Produto BNDES FINEM – Programa BNDES Mais Inovação, iniciativa voltada à digitalização, pesquisa e desenvolvimento tecnológico, com recursos do FAT (Fundo de Amparo ao Trabalhador). “O desenvolvimento de novas tecnologias para veículos híbridos flex contribui para deixar o país bem-posicionado no processo de transição energética pelo qual passa o setor automotivo. A descarbonização e a industrialização verde são pilares estratégicos para construir um futuro mais sustentável e garantir qualidade de vida para as próximas gerações”, afirmou o presidente do BNDES, Aloizio Mercadante.",
+        "start": 2016
+      }
+    },
+    {
+      "case_id": "M30-N01-R1:temporal_status",
+      "certainty": "unresolved_disagreement",
+      "dimension": "temporal_status",
+      "document_id": "M30-N01",
+      "error_codes": [
+        "TEMPORAL_AVAILABILITY_INFERENCE",
+        "REFERENCE_AMBIGUITY"
+      ],
+      "expected_behavior": "Resolve this dimension from same-record evidence; provisional label is comparison, not authority.",
+      "next_action": "Compare full frozen context and request authorized adjudication; do not rewrite labels.",
+      "observed": {
+        "discovery": "opportunity_signal",
+        "end": 2652,
+        "modality": "credito",
+        "segment_id": "segment-0019",
+        "start": 2016,
+        "temporal": "undetermined"
+      },
+      "record_id": "M30-N01-R1",
+      "reference": {
+        "discovery_label": "unrelated_or_non_actionable",
+        "modality": "credito",
+        "opportunity_label": "not_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "not_applicable"
+      },
+      "review_status": "provisional",
+      "root_cause": "Context fragmentation or semantic rule/reference ambiguity; see all-overlap graph before adjudication.",
+      "root_cause_confidence": "low",
+      "segment_id": "segment-0019",
+      "severity": "medium",
+      "supporting_evidence": {
+        "end": 2652,
+        "quote": "A aprovação do financiamento ocorreu no âmbito do Produto BNDES FINEM – Programa BNDES Mais Inovação, iniciativa voltada à digitalização, pesquisa e desenvolvimento tecnológico, com recursos do FAT (Fundo de Amparo ao Trabalhador). “O desenvolvimento de novas tecnologias para veículos híbridos flex contribui para deixar o país bem-posicionado no processo de transição energética pelo qual passa o setor automotivo. A descarbonização e a industrialização verde são pilares estratégicos para construir um futuro mais sustentável e garantir qualidade de vida para as próximas gerações”, afirmou o presidente do BNDES, Aloizio Mercadante.",
+        "start": 2016
+      }
+    },
+    {
+      "case_id": "M30-N01-R1:segmentation",
+      "certainty": "supported_observation",
+      "dimension": "structural",
+      "document_id": "M30-N01",
+      "error_codes": [
+        "SEGMENTATION_OVER"
+      ],
+      "expected_behavior": "A meaningful record should retain its own associated context; whitespace-only boundary differences are not semantic defects.",
+      "next_action": "Inspect semantic usefulness of boundaries before changing segmentation.",
+      "observed": {
+        "coverage": {
+          "denominator": 2279,
+          "numerator": 2270,
+          "value": 0.9960508995173322
+        },
+        "fragmentation": 10
+      },
+      "record_id": "M30-N01-R1",
+      "reference": {
+        "discovery_label": "unrelated_or_non_actionable",
+        "modality": "credito",
+        "opportunity_label": "not_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "not_applicable"
+      },
+      "review_status": "provisional",
+      "root_cause": "Structure-derived units differ from provisional annotated record spans.",
+      "root_cause_confidence": "high",
+      "segment_id": "segment-0019",
+      "severity": "medium",
+      "supporting_evidence": {
+        "edges": [
+          {
+            "end": 871,
+            "exact": false,
+            "intersection": 92,
+            "intersection_end": 871,
+            "intersection_start": 779,
+            "iou": 0.040368582711715666,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.040368582711715666,
+            "segment_id": "segment-0011",
+            "start": 779
+          },
+          {
+            "end": 901,
+            "exact": false,
+            "intersection": 29,
+            "intersection_end": 901,
+            "intersection_start": 872,
+            "iou": 0.012724879333040808,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.012724879333040808,
+            "segment_id": "segment-0012",
+            "start": 872
+          },
+          {
+            "end": 934,
+            "exact": false,
+            "intersection": 32,
+            "intersection_end": 934,
+            "intersection_start": 902,
+            "iou": 0.014041246160596753,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.014041246160596753,
+            "segment_id": "segment-0013",
+            "start": 902
+          },
+          {
+            "end": 968,
+            "exact": false,
+            "intersection": 33,
+            "intersection_end": 968,
+            "intersection_start": 935,
+            "iou": 0.014480035103115402,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.014480035103115402,
+            "segment_id": "segment-0014",
+            "start": 935
+          },
+          {
+            "end": 985,
+            "exact": false,
+            "intersection": 16,
+            "intersection_end": 985,
+            "intersection_start": 969,
+            "iou": 0.007020623080298377,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.007020623080298377,
+            "segment_id": "segment-0015",
+            "start": 969
+          },
+          {
+            "end": 1134,
+            "exact": false,
+            "intersection": 148,
+            "intersection_end": 1134,
+            "intersection_start": 986,
+            "iou": 0.06494076349275998,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.06494076349275998,
+            "segment_id": "segment-0016",
+            "start": 986
+          },
+          {
+            "end": 1578,
+            "exact": false,
+            "intersection": 443,
+            "intersection_end": 1578,
+            "intersection_start": 1135,
+            "iou": 0.1943835015357613,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.1943835015357613,
+            "segment_id": "segment-0017",
+            "start": 1135
+          },
+          {
+            "end": 2015,
+            "exact": false,
+            "intersection": 436,
+            "intersection_end": 2015,
+            "intersection_start": 1579,
+            "iou": 0.19131197893813076,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.19131197893813076,
+            "segment_id": "segment-0018",
+            "start": 1579
+          },
+          {
+            "end": 2652,
+            "exact": false,
+            "intersection": 636,
+            "intersection_end": 2652,
+            "intersection_start": 2016,
+            "iou": 0.27906976744186046,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.27906976744186046,
+            "segment_id": "segment-0019",
+            "start": 2016
+          },
+          {
+            "end": 3058,
+            "exact": false,
+            "intersection": 405,
+            "intersection_end": 3058,
+            "intersection_start": 2653,
+            "iou": 0.17770952172005267,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.17770952172005267,
+            "segment_id": "segment-0020",
+            "start": 2653
+          }
+        ],
+        "reference_span": [
+          779,
+          3058
+        ]
+      }
+    },
+    {
+      "case_id": "M30-N01:segment-0019:discovery:classification",
+      "certainty": "confirmed_defect",
+      "claim_kind": "discovery",
+      "context_evidence": [
+        {
+          "end": 3058,
+          "page": null,
+          "quote": "BNDES aprova R$ 181,8 milhões para o desenvolvimento de veículo híbrido da Renault no Brasil\nPor Agência BNDES de Notícias\nPublicado em 14/10/2026 às 10:00\nAtualizado em 14/10/2026 às 10:04\n2 min de leitura\nOperação no âmbito do Programa BNDES Mais Inovação prevê o desenvolvimento de inovadora tecnologia de eletrificação para veículo produzido no Brasil\nO Banco Nacional de Desenvolvimento Econômico e Social (BNDES) aprovou financiamento de R$ 181,8 milhões para a Renault Geely do Brasil desenvolver uma inovadora tecnologia de propulsão híbrida. O projeto, que está sendo conduzido nas instalações da empresa em São José dos Pinhais (PR), integra a estratégia da montadora de renovação de seu portfólio nos próximos anos, com veículos tecnologicamente mais avançados, eficientes e sustentáveis.\nA nova tecnologia será aplicada em uma futura versão eletrificada de um veículo produzido pela Renault no Brasil, com lançamento em 2027. O projeto faz parte do ciclo de investimentos da marca para o país de R$ 5,8 bilhões, de 2025 a 2027. A confirmação do desenvolvimento e implementação da nova tecnologia aconteceu no mês de setembro, em evento realizado pela Renault Geely do Brasil no Complexo Ayrton Senna (PR), sede da montadora.\nA aprovação do financiamento ocorreu no âmbito do Produto BNDES FINEM – Programa BNDES Mais Inovação, iniciativa voltada à digitalização, pesquisa e desenvolvimento tecnológico, com recursos do FAT (Fundo de Amparo ao Trabalhador). “O desenvolvimento de novas tecnologias para veículos híbridos flex contribui para deixar o país bem-posicionado no processo de transição energética pelo qual passa o setor automotivo. A descarbonização e a industrialização verde são pilares estratégicos para construir um futuro mais sustentável e garantir qualidade de vida para as próximas gerações”, afirmou o presidente do BNDES, Aloizio Mercadante.\nDe acordo com Milton Trein, diretor financeiro da Renault Geely do Brasil, o projeto contribui para elevar a competitividade da marca. “A operação reforça a atratividade do Brasil para investimentos em inovação, ao viabilizar o desenvolvimento local de tecnologias estratégicas. O financiamento do BNDES contribui para acelerar a mobilização de recursos e competências de engenharia no país”, acrescentou.",
+          "start": 779
+        }
+      ],
+      "document_id": "M30-N01",
+      "end": 2652,
+      "error_codes": [
+        "OPPORTUNITY_EXISTENCE_CONFUSION",
+        "EVIDENCE_SEMANTIC_MISMATCH"
+      ],
+      "expected_behavior": "Interpretar apenas acesso/estágio e público deste registro com o contexto completo; não confundir anúncio, gestor e candidatura startup.",
+      "expected_claim": "opportunity_signal",
+      "field_index": null,
+      "field_name": null,
+      "judgment": "unsupported",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "observed": "opportunity_signal",
+      "quote": "A aprovação do financiamento ocorreu no âmbito do Produto BNDES FINEM – Programa BNDES Mais Inovação, iniciativa voltada à digitalização, pesquisa e desenvolvimento tecnológico, com recursos do FAT (Fundo de Amparo ao Trabalhador). “O desenvolvimento de novas tecnologias para veículos híbridos flex contribui para deixar o país bem-posicionado no processo de transição energética pelo qual passa o setor automotivo. A descarbonização e a industrialização verde são pilares estratégicos para construir um futuro mais sustentável e garantir qualidade de vida para as próximas gerações”, afirmou o presidente do BNDES, Aloizio Mercadante.",
+      "rationale": "Financiamento já aprovado para Renault e lançamento de veículo em 2027 não são futura chamada pública. O sinal de acesso para outro leitor não se sustenta neste registro.",
+      "review_status": "provisional",
+      "root_cause": "Regex de completed espera para a empresa/ao instituto e não cobre para a Renault; menção ao programa dispara signal.",
+      "root_cause_confidence": "high",
+      "segment_id": "segment-0019",
+      "severity": "high",
+      "start": 2016,
+      "supporting_evidence": {
+        "end": 2652,
+        "quote": "A aprovação do financiamento ocorreu no âmbito do Produto BNDES FINEM – Programa BNDES Mais Inovação, iniciativa voltada à digitalização, pesquisa e desenvolvimento tecnológico, com recursos do FAT (Fundo de Amparo ao Trabalhador). “O desenvolvimento de novas tecnologias para veículos híbridos flex contribui para deixar o país bem-posicionado no processo de transição energética pelo qual passa o setor automotivo. A descarbonização e a industrialização verde são pilares estratégicos para construir um futuro mais sustentável e garantir qualidade de vida para as próximas gerações”, afirmou o presidente do BNDES, Aloizio Mercadante.",
+        "start": 2016
+      }
+    }
+  ],
+  "extracted_claims": [
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-N01",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "financing_amount_expression",
+      "original": "R$ 181,8 milhões",
+      "reference_records": [
+        "M30-N01-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0011",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-N01",
+        "end": 871,
+        "page": null,
+        "quote": "BNDES aprova R$ 181,8 milhões para o desenvolvimento de veículo híbrido da Renault no Brasil",
+        "raw_sha256": "713f774c15b96f39d3c9fe39e76aa591c50ebc62842bb10fb89c83892fc267b5",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0011",
+        "start": 779,
+        "text_sha256": "591a959b2b83a6e62d8b0094fd9e9d42cd57364750407957c80d474cbd148687"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-N01",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "publication_date_expression",
+      "original": "14/10/2026",
+      "reference_records": [
+        "M30-N01-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0013",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-N01",
+        "end": 934,
+        "page": null,
+        "quote": "Publicado em 14/10/2026 às 10:00",
+        "raw_sha256": "713f774c15b96f39d3c9fe39e76aa591c50ebc62842bb10fb89c83892fc267b5",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0013",
+        "start": 902,
+        "text_sha256": "591a959b2b83a6e62d8b0094fd9e9d42cd57364750407957c80d474cbd148687"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-N01",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "unknown_temporal_expression",
+      "original": "14/10/2026",
+      "reference_records": [
+        "M30-N01-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0014",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-N01",
+        "end": 968,
+        "page": null,
+        "quote": "Atualizado em 14/10/2026 às 10:04",
+        "raw_sha256": "713f774c15b96f39d3c9fe39e76aa591c50ebc62842bb10fb89c83892fc267b5",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0014",
+        "start": 935,
+        "text_sha256": "591a959b2b83a6e62d8b0094fd9e9d42cd57364750407957c80d474cbd148687"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-N01",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "financing_amount_expression",
+      "original": "R$ 181,8 milhões",
+      "reference_records": [
+        "M30-N01-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0017",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-N01",
+        "end": 1578,
+        "page": null,
+        "quote": "O Banco Nacional de Desenvolvimento Econômico e Social (BNDES) aprovou financiamento de R$ 181,8 milhões para a Renault Geely do Brasil desenvolver uma inovadora tecnologia de propulsão híbrida. O projeto, que está sendo conduzido nas instalações da empresa em São José dos Pinhais (PR), integra a estratégia da montadora de renovação de seu portfólio nos próximos anos, com veículos tecnologicamente mais avançados, eficientes e sustentáveis.",
+        "raw_sha256": "713f774c15b96f39d3c9fe39e76aa591c50ebc62842bb10fb89c83892fc267b5",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0017",
+        "start": 1135,
+        "text_sha256": "591a959b2b83a6e62d8b0094fd9e9d42cd57364750407957c80d474cbd148687"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-N01",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "monetary_expression_unresolved",
+      "original": "R$ 5,8 bilhões",
+      "reference_records": [
+        "M30-N01-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0018",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-N01",
+        "end": 2015,
+        "page": null,
+        "quote": "A nova tecnologia será aplicada em uma futura versão eletrificada de um veículo produzido pela Renault no Brasil, com lançamento em 2027. O projeto faz parte do ciclo de investimentos da marca para o país de R$ 5,8 bilhões, de 2025 a 2027. A confirmação do desenvolvimento e implementação da nova tecnologia aconteceu no mês de setembro, em evento realizado pela Renault Geely do Brasil no Complexo Ayrton Senna (PR), sede da montadora.",
+        "raw_sha256": "713f774c15b96f39d3c9fe39e76aa591c50ebc62842bb10fb89c83892fc267b5",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0018",
+        "start": 1579,
+        "text_sha256": "591a959b2b83a6e62d8b0094fd9e9d42cd57364750407957c80d474cbd148687"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-N01",
+      "field_index": 1,
+      "method_version": "m31-deterministic-v2",
+      "name": "future_event_expression",
+      "original": "A nova tecnologia será aplicada em uma futura versão eletrificada de um veículo produzido pela Renault no Brasil, com lançamento em 2027. O projeto faz parte do ciclo de investimentos da marca para o país de R$ 5,8 bilhões, de 2025 a 2027. A confirmação do desenvolvimento e implementação da nova tecnologia aconteceu no mês de setembro, em evento realizado pela Renault Geely do Brasil no Complexo Ayrton Senna (PR), sede da montadora.",
+      "reference_records": [
+        "M30-N01-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0018",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-N01",
+        "end": 2015,
+        "page": null,
+        "quote": "A nova tecnologia será aplicada em uma futura versão eletrificada de um veículo produzido pela Renault no Brasil, com lançamento em 2027. O projeto faz parte do ciclo de investimentos da marca para o país de R$ 5,8 bilhões, de 2025 a 2027. A confirmação do desenvolvimento e implementação da nova tecnologia aconteceu no mês de setembro, em evento realizado pela Renault Geely do Brasil no Complexo Ayrton Senna (PR), sede da montadora.",
+        "raw_sha256": "713f774c15b96f39d3c9fe39e76aa591c50ebc62842bb10fb89c83892fc267b5",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0018",
+        "start": 1579,
+        "text_sha256": "591a959b2b83a6e62d8b0094fd9e9d42cd57364750407957c80d474cbd148687"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-N01",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "funding_organization_expression",
+      "original": "A aprovação do financiamento ocorreu no âmbito do Produto BNDES FINEM – Programa BNDES Mais Inovação, iniciativa voltada à digitalização, pesquisa e desenvolvimento tecnológico, com recursos do FAT (Fundo de Amparo ao Trabalhador). “O desenvolvimento de novas tecnologias para veículos híbridos flex contribui para deixar o país bem-posicionado no processo de transição energética pelo qual passa o setor automotivo. A descarbonização e a industrialização verde são pilares estratégicos para construir um futuro mais sustentável e garantir qualidade de vida para as próximas gerações”, afirmou o presidente do BNDES, Aloizio Mercadante.",
+      "reference_records": [
+        "M30-N01-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0019",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-N01",
+        "end": 2652,
+        "page": null,
+        "quote": "A aprovação do financiamento ocorreu no âmbito do Produto BNDES FINEM – Programa BNDES Mais Inovação, iniciativa voltada à digitalização, pesquisa e desenvolvimento tecnológico, com recursos do FAT (Fundo de Amparo ao Trabalhador). “O desenvolvimento de novas tecnologias para veículos híbridos flex contribui para deixar o país bem-posicionado no processo de transição energética pelo qual passa o setor automotivo. A descarbonização e a industrialização verde são pilares estratégicos para construir um futuro mais sustentável e garantir qualidade de vida para as próximas gerações”, afirmou o presidente do BNDES, Aloizio Mercadante.",
+        "raw_sha256": "713f774c15b96f39d3c9fe39e76aa591c50ebc62842bb10fb89c83892fc267b5",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0019",
+        "start": 2016,
+        "text_sha256": "591a959b2b83a6e62d8b0094fd9e9d42cd57364750407957c80d474cbd148687"
+      }
+    }
+  ],
+  "provenance": {
+    "byte_length": 38171,
+    "category_evidence": "BNDES aprova R$ 181,8 milhões para o desenvolvimento de veículo híbrido da Renault no Brasil\nPor Agência BNDES de Notícias\nPublicado em 14/10/2026 às 10:00\nAtualizado em 14/10/2026 às 10:04\n2 min de leitura\nOperação no âmbito do Programa BNDES Mais Inovação prevê o desenvolvimento de inovadora tecnologia de eletrificação para veículo produzido no Brasil\nO Banco Nacional de Desenvolvimento Econômico e Social (BNDES) aprovou financiamento de R$ 181,8 milhões para a Renault Geely do Brasil desenvolver uma inovadora tecnologia de propulsão híbrida. O projeto, que está sendo conduzido nas instalações da empresa em São José dos Pinhais (PR), integra a estratégia da montadora de renovação de seu portfólio nos próximos anos, com veículos tecnologicamente mais avançados, eficientes e sustentáveis.\nA nova tecnologia será aplicada em uma futura versão eletrificada de um veículo produzido pela Renault no Brasil, com lançamento em 2027. O projeto faz parte do ciclo de investimentos da marca para o país de R$ 5,8 bilhões, de 2025 a 2027. A confirmação do desenvolvimento e implementação da nova tecnologia aconteceu no mês de setembro, em evento realizado pela Renault Geely do Brasil no Complexo Ayrton Senna (PR), sede da montadora.\nA aprovação do financiamento ocorreu no âmbito do Produto BNDES FINEM – Programa BNDES Mais Inovação, iniciativa voltada à digitalização, pesquisa e desenvolvimento tecnológico, com recursos do FAT (Fundo de Amparo ao Trabalhador). “O desenvolvimento de novas tecnologias para veículos híbridos flex contribui para deixar o país bem-posicionado no processo de transição energética pelo qual passa o setor automotivo. A descarbonização e a industrialização verde são pilares estratégicos para construir um futuro mais sustentável e garantir qualidade de vida para as próximas gerações”, afirmou o presidente do BNDES, Aloizio Mercadante.\nDe acordo com Milton Trein, diretor financeiro da Renault Geely do Brasil, o projeto contribui para elevar a competitividade da marca. “A operação reforça a atratividade do Brasil para investimentos em inovação, ao viabilizar o desenvolvimento local de tecnologias estratégicas. O financiamento do BNDES contribui para acelerar a mobilização de recursos e competências de engenharia no país”, acrescentou.",
+    "content_type": "text/html",
+    "derivation_method": "stdlib-HTMLParser-data-whitespace-v1; excludes script/style/noscript/template; not rendered DOM",
+    "document_category": "institutional_news",
+    "document_id": "M30-N01",
+    "document_version": null,
+    "final_url": "https://agenciadenoticias.bndes.gov.br/noticia/BNDES-aprova-R$-1818-milhoes-para-o-desenvolvimento-de-veiculo-hibrido-da-Renault-no-Brasil/",
+    "original_filename": "index.html",
+    "original_url": "https://agenciadenoticias.bndes.gov.br/noticia/BNDES-aprova-R$-1818-milhoes-para-o-desenvolvimento-de-veiculo-hibrido-da-Renault-no-Brasil/",
+    "publication_date": "2026-10-14",
+    "raw_path": "raw/M30-N01.html",
+    "restrictions": "Research pilot local frozen copy only; no redistribution license inferred. No scripts executed, no forms submitted, no applicant records intentionally collected. Public navigation/staff attribution may remain in original bytes.",
+    "retrieval_status": "acquired",
+    "retrieved_at": "2026-10-19T04:38:14.668044+00:00",
+    "sha256": "713f774c15b96f39d3c9fe39e76aa591c50ebc62842bb10fb89c83892fc267b5",
+    "source_authority_notes": "Public HTTPS page hosted by the named institution; authorship asserted by host/content, not cryptographically authenticated. Not source-readiness approval.",
+    "source_organization": "BNDES",
+    "text_path": "text/M30-N01.txt",
+    "text_sha256": "591a959b2b83a6e62d8b0094fd9e9d42cd57364750407957c80d474cbd148687"
+  },
+  "records": [
+    {
+      "all_overlap_predictions": [
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0011",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0012",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0013",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0014",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0015",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "opportunity_signal",
+          "modality": "undetermined",
+          "segment_id": "segment-0016",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "unrelated_or_non_actionable",
+          "modality": "credito",
+          "segment_id": "segment-0017",
+          "temporal": "not_applicable"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0018",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "opportunity_signal",
+          "modality": "credito",
+          "segment_id": "segment-0019",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "opportunity_signal",
+          "modality": "credito",
+          "segment_id": "segment-0020",
+          "temporal": "undetermined"
+        }
+      ],
+      "any_exact_boundary": false,
+      "coverage": {
+        "denominator": 2279,
+        "numerator": 2270,
+        "value": 0.9960508995173322
+      },
+      "covered_characters": 2270,
+      "disagreements": [
+        "discovery_label",
+        "temporal_status"
+      ],
+      "discovery_histogram": {
+        "abstain": 6,
+        "opportunity_signal": 3,
+        "unrelated_or_non_actionable": 1
+      },
+      "document_id": "M30-N01",
+      "edges": [
+        {
+          "end": 871,
+          "exact": false,
+          "intersection": 92,
+          "intersection_end": 871,
+          "intersection_start": 779,
+          "iou": 0.040368582711715666,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.040368582711715666,
+          "segment_id": "segment-0011",
+          "start": 779
+        },
+        {
+          "end": 901,
+          "exact": false,
+          "intersection": 29,
+          "intersection_end": 901,
+          "intersection_start": 872,
+          "iou": 0.012724879333040808,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.012724879333040808,
+          "segment_id": "segment-0012",
+          "start": 872
+        },
+        {
+          "end": 934,
+          "exact": false,
+          "intersection": 32,
+          "intersection_end": 934,
+          "intersection_start": 902,
+          "iou": 0.014041246160596753,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.014041246160596753,
+          "segment_id": "segment-0013",
+          "start": 902
+        },
+        {
+          "end": 968,
+          "exact": false,
+          "intersection": 33,
+          "intersection_end": 968,
+          "intersection_start": 935,
+          "iou": 0.014480035103115402,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.014480035103115402,
+          "segment_id": "segment-0014",
+          "start": 935
+        },
+        {
+          "end": 985,
+          "exact": false,
+          "intersection": 16,
+          "intersection_end": 985,
+          "intersection_start": 969,
+          "iou": 0.007020623080298377,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.007020623080298377,
+          "segment_id": "segment-0015",
+          "start": 969
+        },
+        {
+          "end": 1134,
+          "exact": false,
+          "intersection": 148,
+          "intersection_end": 1134,
+          "intersection_start": 986,
+          "iou": 0.06494076349275998,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.06494076349275998,
+          "segment_id": "segment-0016",
+          "start": 986
+        },
+        {
+          "end": 1578,
+          "exact": false,
+          "intersection": 443,
+          "intersection_end": 1578,
+          "intersection_start": 1135,
+          "iou": 0.1943835015357613,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.1943835015357613,
+          "segment_id": "segment-0017",
+          "start": 1135
+        },
+        {
+          "end": 2015,
+          "exact": false,
+          "intersection": 436,
+          "intersection_end": 2015,
+          "intersection_start": 1579,
+          "iou": 0.19131197893813076,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.19131197893813076,
+          "segment_id": "segment-0018",
+          "start": 1579
+        },
+        {
+          "end": 2652,
+          "exact": false,
+          "intersection": 636,
+          "intersection_end": 2652,
+          "intersection_start": 2016,
+          "iou": 0.27906976744186046,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.27906976744186046,
+          "segment_id": "segment-0019",
+          "start": 2016
+        },
+        {
+          "end": 3058,
+          "exact": false,
+          "intersection": 405,
+          "intersection_end": 3058,
+          "intersection_start": 2653,
+          "iou": 0.17770952172005267,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.17770952172005267,
+          "segment_id": "segment-0020",
+          "start": 2653
+        }
+      ],
+      "end": 3058,
+      "fields": [
+        {
+          "candidates": [],
+          "name": "title",
+          "reason": "no corresponding field; absence is not explicit field abstention",
+          "reference_evidence": [
+            {
+              "end": 3058,
+              "evidence_id": "M30-N01-R1-E1",
+              "page": null,
+              "quote": "BNDES aprova R$ 181,8 milhões para o desenvolvimento de veículo híbrido da Renault no Brasil\nPor Agência BNDES de Notícias\nPublicado em 14/10/2026 às 10:00\nAtualizado em 14/10/2026 às 10:04\n2 min de leitura\nOperação no âmbito do Programa BNDES Mais Inovação prevê o desenvolvimento de inovadora tecnologia de eletrificação para veículo produzido no Brasil\nO Banco Nacional de Desenvolvimento Econômico e Social (BNDES) aprovou financiamento de R$ 181,8 milhões para a Renault Geely do Brasil desenvolver uma inovadora tecnologia de propulsão híbrida. O projeto, que está sendo conduzido nas instalações da empresa em São José dos Pinhais (PR), integra a estratégia da montadora de renovação de seu portfólio nos próximos anos, com veículos tecnologicamente mais avançados, eficientes e sustentáveis.\nA nova tecnologia será aplicada em uma futura versão eletrificada de um veículo produzido pela Renault no Brasil, com lançamento em 2027. O projeto faz parte do ciclo de investimentos da marca para o país de R$ 5,8 bilhões, de 2025 a 2027. A confirmação do desenvolvimento e implementação da nova tecnologia aconteceu no mês de setembro, em evento realizado pela Renault Geely do Brasil no Complexo Ayrton Senna (PR), sede da montadora.\nA aprovação do financiamento ocorreu no âmbito do Produto BNDES FINEM – Programa BNDES Mais Inovação, iniciativa voltada à digitalização, pesquisa e desenvolvimento tecnológico, com recursos do FAT (Fundo de Amparo ao Trabalhador). “O desenvolvimento de novas tecnologias para veículos híbridos flex contribui para deixar o país bem-posicionado no processo de transição energética pelo qual passa o setor automotivo. A descarbonização e a industrialização verde são pilares estratégicos para construir um futuro mais sustentável e garantir qualidade de vida para as próximas gerações”, afirmou o presidente do BNDES, Aloizio Mercadante.\nDe acordo com Milton Trein, diretor financeiro da Renault Geely do Brasil, o projeto contribui para elevar a competitividade da marca. “A operação reforça a atratividade do Brasil para investimentos em inovação, ao viabilizar o desenvolvimento local de tecnologias estratégicas. O financiamento do BNDES contribui para acelerar a mobilização de recursos e competências de engenharia no país”, acrescentou.",
+              "start": 779
+            }
+          ],
+          "reference_value": "BNDES aprova R$ 181,8 milhões para o desenvolvimento de veículo híbrido da Renault no Brasil",
+          "scope_supported": true,
+          "semantic_adjudication": "not_certified",
+          "status": "MISSING",
+          "strict_role_value": false
+        },
+        {
+          "candidates": [
+            {
+              "diagnostic_status": "traceable_not_semantically_certified",
+              "field_index": 0,
+              "method_version": "m31-deterministic-v2",
+              "name": "financing_amount_expression",
+              "original": "R$ 181,8 milhões",
+              "schema_version": "m31-extraction-v1",
+              "segment_id": "segment-0011",
+              "uncertainty": "heuristic role assignment; not authenticated or normalized",
+              "witness": {
+                "document_id": "M30-N01",
+                "end": 871,
+                "page": null,
+                "quote": "BNDES aprova R$ 181,8 milhões para o desenvolvimento de veículo híbrido da Renault no Brasil",
+                "raw_sha256": "713f774c15b96f39d3c9fe39e76aa591c50ebc62842bb10fb89c83892fc267b5",
+                "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+                "schema_version": "m31-extraction-v1",
+                "segment_id": "segment-0011",
+                "start": 779,
+                "text_sha256": "591a959b2b83a6e62d8b0094fd9e9d42cd57364750407957c80d474cbd148687"
+              }
+            },
+            {
+              "diagnostic_status": "traceable_not_semantically_certified",
+              "field_index": 0,
+              "method_version": "m31-deterministic-v2",
+              "name": "financing_amount_expression",
+              "original": "R$ 181,8 milhões",
+              "schema_version": "m31-extraction-v1",
+              "segment_id": "segment-0017",
+              "uncertainty": "heuristic role assignment; not authenticated or normalized",
+              "witness": {
+                "document_id": "M30-N01",
+                "end": 1578,
+                "page": null,
+                "quote": "O Banco Nacional de Desenvolvimento Econômico e Social (BNDES) aprovou financiamento de R$ 181,8 milhões para a Renault Geely do Brasil desenvolver uma inovadora tecnologia de propulsão híbrida. O projeto, que está sendo conduzido nas instalações da empresa em São José dos Pinhais (PR), integra a estratégia da montadora de renovação de seu portfólio nos próximos anos, com veículos tecnologicamente mais avançados, eficientes e sustentáveis.",
+                "raw_sha256": "713f774c15b96f39d3c9fe39e76aa591c50ebc62842bb10fb89c83892fc267b5",
+                "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+                "schema_version": "m31-extraction-v1",
+                "segment_id": "segment-0017",
+                "start": 1135,
+                "text_sha256": "591a959b2b83a6e62d8b0094fd9e9d42cd57364750407957c80d474cbd148687"
+              }
+            }
+          ],
+          "name": "completed_financing_amount",
+          "reason": "requested target role outside implemented M31 field scope",
+          "reference_evidence": [
+            {
+              "end": 3058,
+              "evidence_id": "M30-N01-R1-E1",
+              "page": null,
+              "quote": "BNDES aprova R$ 181,8 milhões para o desenvolvimento de veículo híbrido da Renault no Brasil\nPor Agência BNDES de Notícias\nPublicado em 14/10/2026 às 10:00\nAtualizado em 14/10/2026 às 10:04\n2 min de leitura\nOperação no âmbito do Programa BNDES Mais Inovação prevê o desenvolvimento de inovadora tecnologia de eletrificação para veículo produzido no Brasil\nO Banco Nacional de Desenvolvimento Econômico e Social (BNDES) aprovou financiamento de R$ 181,8 milhões para a Renault Geely do Brasil desenvolver uma inovadora tecnologia de propulsão híbrida. O projeto, que está sendo conduzido nas instalações da empresa em São José dos Pinhais (PR), integra a estratégia da montadora de renovação de seu portfólio nos próximos anos, com veículos tecnologicamente mais avançados, eficientes e sustentáveis.\nA nova tecnologia será aplicada em uma futura versão eletrificada de um veículo produzido pela Renault no Brasil, com lançamento em 2027. O projeto faz parte do ciclo de investimentos da marca para o país de R$ 5,8 bilhões, de 2025 a 2027. A confirmação do desenvolvimento e implementação da nova tecnologia aconteceu no mês de setembro, em evento realizado pela Renault Geely do Brasil no Complexo Ayrton Senna (PR), sede da montadora.\nA aprovação do financiamento ocorreu no âmbito do Produto BNDES FINEM – Programa BNDES Mais Inovação, iniciativa voltada à digitalização, pesquisa e desenvolvimento tecnológico, com recursos do FAT (Fundo de Amparo ao Trabalhador). “O desenvolvimento de novas tecnologias para veículos híbridos flex contribui para deixar o país bem-posicionado no processo de transição energética pelo qual passa o setor automotivo. A descarbonização e a industrialização verde são pilares estratégicos para construir um futuro mais sustentável e garantir qualidade de vida para as próximas gerações”, afirmou o presidente do BNDES, Aloizio Mercadante.\nDe acordo com Milton Trein, diretor financeiro da Renault Geely do Brasil, o projeto contribui para elevar a competitividade da marca. “A operação reforça a atratividade do Brasil para investimentos em inovação, ao viabilizar o desenvolvimento local de tecnologias estratégicas. O financiamento do BNDES contribui para acelerar a mobilização de recursos e competências de engenharia no país”, acrescentou.",
+              "start": 779
+            }
+          ],
+          "reference_value": "R$ 181,8 milhões",
+          "scope_supported": false,
+          "semantic_adjudication": "not_certified",
+          "status": "UNRESOLVED",
+          "strict_role_value": false
+        }
+      ],
+      "fragmentation": 10,
+      "location_convention": "html_unicode_codepoints",
+      "physical_reference_evidence_pages": [],
+      "rationale": "Named-recipient financing approval, with future vehicle launch in 2027. Product-development future tense is NOT an upcoming public credit application. The supporting program mention is contextual, not a distinct new offer in this scoped report.",
+      "record_id": "M30-N01-R1",
+      "reference": {
+        "discovery_label": "unrelated_or_non_actionable",
+        "modality": "credito",
+        "opportunity_label": "not_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "not_applicable"
+      },
+      "reference_characters": 2279,
+      "reference_evidence": [
+        {
+          "end": 3058,
+          "evidence_id": "M30-N01-R1-E1",
+          "page": null,
+          "quote": "BNDES aprova R$ 181,8 milhões para o desenvolvimento de veículo híbrido da Renault no Brasil\nPor Agência BNDES de Notícias\nPublicado em 14/10/2026 às 10:00\nAtualizado em 14/10/2026 às 10:04\n2 min de leitura\nOperação no âmbito do Programa BNDES Mais Inovação prevê o desenvolvimento de inovadora tecnologia de eletrificação para veículo produzido no Brasil\nO Banco Nacional de Desenvolvimento Econômico e Social (BNDES) aprovou financiamento de R$ 181,8 milhões para a Renault Geely do Brasil desenvolver uma inovadora tecnologia de propulsão híbrida. O projeto, que está sendo conduzido nas instalações da empresa em São José dos Pinhais (PR), integra a estratégia da montadora de renovação de seu portfólio nos próximos anos, com veículos tecnologicamente mais avançados, eficientes e sustentáveis.\nA nova tecnologia será aplicada em uma futura versão eletrificada de um veículo produzido pela Renault no Brasil, com lançamento em 2027. O projeto faz parte do ciclo de investimentos da marca para o país de R$ 5,8 bilhões, de 2025 a 2027. A confirmação do desenvolvimento e implementação da nova tecnologia aconteceu no mês de setembro, em evento realizado pela Renault Geely do Brasil no Complexo Ayrton Senna (PR), sede da montadora.\nA aprovação do financiamento ocorreu no âmbito do Produto BNDES FINEM – Programa BNDES Mais Inovação, iniciativa voltada à digitalização, pesquisa e desenvolvimento tecnológico, com recursos do FAT (Fundo de Amparo ao Trabalhador). “O desenvolvimento de novas tecnologias para veículos híbridos flex contribui para deixar o país bem-posicionado no processo de transição energética pelo qual passa o setor automotivo. A descarbonização e a industrialização verde são pilares estratégicos para construir um futuro mais sustentável e garantir qualidade de vida para as próximas gerações”, afirmou o presidente do BNDES, Aloizio Mercadante.\nDe acordo com Milton Trein, diretor financeiro da Renault Geely do Brasil, o projeto contribui para elevar a competitividade da marca. “A operação reforça a atratividade do Brasil para investimentos em inovação, ao viabilizar o desenvolvimento local de tecnologias estratégicas. O financiamento do BNDES contribui para acelerar a mobilização de recursos e competências de engenharia no país”, acrescentou.",
+          "start": 779
+        }
+      ],
+      "representative": "segment-0019",
+      "representative_prediction": {
+        "discovery": "opportunity_signal",
+        "end": 2652,
+        "modality": "credito",
+        "segment_id": "segment-0019",
+        "start": 2016,
+        "temporal": "undetermined"
+      },
+      "representative_quote": "A aprovação do financiamento ocorreu no âmbito do Produto BNDES FINEM – Programa BNDES Mais Inovação, iniciativa voltada à digitalização, pesquisa e desenvolvimento tecnológico, com recursos do FAT (Fundo de Amparo ao Trabalhador). “O desenvolvimento de novas tecnologias para veículos híbridos flex contribui para deixar o país bem-posicionado no processo de transição energética pelo qual passa o setor automotivo. A descarbonização e a industrialização verde são pilares estratégicos para construir um futuro mais sustentável e garantir qualidade de vida para as próximas gerações”, afirmou o presidente do BNDES, Aloizio Mercadante.",
+      "start": 779,
+      "status": "overlap",
+      "uncertainty_notes": [
+        "Negative applies to this record as a distinct new/current/future opportunity; it does not erase the existence of the underlying program. No new application is supported by these paragraphs."
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 167,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0000",
+      "start": 136,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 190,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0001",
+      "start": 168,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 213,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0002",
+      "start": 191,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 337,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0003",
+      "start": 214,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 346,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0004",
+      "start": 338,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 356,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0005",
+      "start": 347,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 391,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0006",
+      "start": 357,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 424,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0007",
+      "start": 392,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 439,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0008",
+      "start": 425,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 442,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0009",
+      "start": 440,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 445,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0010",
+      "start": 443,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 871,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-N01-R1"
+      ],
+      "segment_id": "segment-0011",
+      "start": 779,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 901,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-N01-R1"
+      ],
+      "segment_id": "segment-0012",
+      "start": 872,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 934,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-N01-R1"
+      ],
+      "segment_id": "segment-0013",
+      "start": 902,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 968,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-N01-R1"
+      ],
+      "segment_id": "segment-0014",
+      "start": 935,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 985,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-N01-R1"
+      ],
+      "segment_id": "segment-0015",
+      "start": 969,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 1134,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-N01-R1"
+      ],
+      "segment_id": "segment-0016",
+      "start": 986,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "completed_event_not_new_access"
+      ],
+      "discovery": "unrelated_or_non_actionable",
+      "end": 1578,
+      "field_count": 1,
+      "modality": "credito",
+      "physical_page": null,
+      "reference_records": [
+        "M30-N01-R1"
+      ],
+      "segment_id": "segment-0017",
+      "start": 1135,
+      "temporal": "not_applicable",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 2015,
+      "field_count": 2,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-N01-R1"
+      ],
+      "segment_id": "segment-0018",
+      "start": 1579,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 2652,
+      "field_count": 1,
+      "modality": "credito",
+      "physical_page": null,
+      "reference_records": [
+        "M30-N01-R1"
+      ],
+      "segment_id": "segment-0019",
+      "start": 2016,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 3058,
+      "field_count": 0,
+      "modality": "credito",
+      "physical_page": null,
+      "reference_records": [
+        "M30-N01-R1"
+      ],
+      "segment_id": "segment-0020",
+      "start": 2653,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 3072,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0021",
+      "start": 3059,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 3143,
+      "field_count": 0,
+      "modality": "credito",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0022",
+      "start": 3073,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 3149,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0023",
+      "start": 3144,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 3168,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0024",
+      "start": 3150,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 3178,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0025",
+      "start": 3169,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 3185,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0026",
+      "start": 3179,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 3189,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0027",
+      "start": 3186,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 3201,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0028",
+      "start": 3190,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 3221,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0029",
+      "start": 3202,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 3248,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0030",
+      "start": 3222,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 3273,
+      "field_count": 0,
+      "modality": "credito",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0031",
+      "start": 3249,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 4251,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0032",
+      "start": 4163,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 4291,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0033",
+      "start": 4252,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 4293,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0034",
+      "start": 4292,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 4352,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0035",
+      "start": 4294,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 4360,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0036",
+      "start": 4353,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    }
+  ],
+  "semantic_reviews": [
+    {
+      "case_id": "M30-N01:segment-0019:discovery:classification",
+      "certainty": "confirmed_defect",
+      "claim_kind": "discovery",
+      "context_evidence": [
+        {
+          "end": 3058,
+          "page": null,
+          "quote": "BNDES aprova R$ 181,8 milhões para o desenvolvimento de veículo híbrido da Renault no Brasil\nPor Agência BNDES de Notícias\nPublicado em 14/10/2026 às 10:00\nAtualizado em 14/10/2026 às 10:04\n2 min de leitura\nOperação no âmbito do Programa BNDES Mais Inovação prevê o desenvolvimento de inovadora tecnologia de eletrificação para veículo produzido no Brasil\nO Banco Nacional de Desenvolvimento Econômico e Social (BNDES) aprovou financiamento de R$ 181,8 milhões para a Renault Geely do Brasil desenvolver uma inovadora tecnologia de propulsão híbrida. O projeto, que está sendo conduzido nas instalações da empresa em São José dos Pinhais (PR), integra a estratégia da montadora de renovação de seu portfólio nos próximos anos, com veículos tecnologicamente mais avançados, eficientes e sustentáveis.\nA nova tecnologia será aplicada em uma futura versão eletrificada de um veículo produzido pela Renault no Brasil, com lançamento em 2027. O projeto faz parte do ciclo de investimentos da marca para o país de R$ 5,8 bilhões, de 2025 a 2027. A confirmação do desenvolvimento e implementação da nova tecnologia aconteceu no mês de setembro, em evento realizado pela Renault Geely do Brasil no Complexo Ayrton Senna (PR), sede da montadora.\nA aprovação do financiamento ocorreu no âmbito do Produto BNDES FINEM – Programa BNDES Mais Inovação, iniciativa voltada à digitalização, pesquisa e desenvolvimento tecnológico, com recursos do FAT (Fundo de Amparo ao Trabalhador). “O desenvolvimento de novas tecnologias para veículos híbridos flex contribui para deixar o país bem-posicionado no processo de transição energética pelo qual passa o setor automotivo. A descarbonização e a industrialização verde são pilares estratégicos para construir um futuro mais sustentável e garantir qualidade de vida para as próximas gerações”, afirmou o presidente do BNDES, Aloizio Mercadante.\nDe acordo com Milton Trein, diretor financeiro da Renault Geely do Brasil, o projeto contribui para elevar a competitividade da marca. “A operação reforça a atratividade do Brasil para investimentos em inovação, ao viabilizar o desenvolvimento local de tecnologias estratégicas. O financiamento do BNDES contribui para acelerar a mobilização de recursos e competências de engenharia no país”, acrescentou.",
+          "start": 779
+        }
+      ],
+      "document_id": "M30-N01",
+      "end": 2652,
+      "error_codes": [
+        "OPPORTUNITY_EXISTENCE_CONFUSION",
+        "EVIDENCE_SEMANTIC_MISMATCH"
+      ],
+      "expected_behavior": "Interpretar apenas acesso/estágio e público deste registro com o contexto completo; não confundir anúncio, gestor e candidatura startup.",
+      "expected_claim": "opportunity_signal",
+      "field_index": null,
+      "field_name": null,
+      "judgment": "unsupported",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "quote": "A aprovação do financiamento ocorreu no âmbito do Produto BNDES FINEM – Programa BNDES Mais Inovação, iniciativa voltada à digitalização, pesquisa e desenvolvimento tecnológico, com recursos do FAT (Fundo de Amparo ao Trabalhador). “O desenvolvimento de novas tecnologias para veículos híbridos flex contribui para deixar o país bem-posicionado no processo de transição energética pelo qual passa o setor automotivo. A descarbonização e a industrialização verde são pilares estratégicos para construir um futuro mais sustentável e garantir qualidade de vida para as próximas gerações”, afirmou o presidente do BNDES, Aloizio Mercadante.",
+      "rationale": "Financiamento já aprovado para Renault e lançamento de veículo em 2027 não são futura chamada pública. O sinal de acesso para outro leitor não se sustenta neste registro.",
+      "root_cause": "Regex de completed espera para a empresa/ao instituto e não cobre para a Renault; menção ao programa dispara signal.",
+      "root_cause_confidence": "high",
+      "segment_id": "segment-0019",
+      "severity": "high",
+      "start": 2016
+    }
+  ],
+  "status": "processed"
+}

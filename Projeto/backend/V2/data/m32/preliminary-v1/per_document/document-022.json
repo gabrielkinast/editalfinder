@@ -1,0 +1,3760 @@
+{
+  "diagnostics": [
+    "passive_not_rendered_DOM",
+    "unfrozen_attachments_unavailable"
+  ],
+  "document_id": "M30-I08",
+  "error_cases": [
+    {
+      "case_id": "M30-I08-R1:discovery_label",
+      "certainty": "unresolved_disagreement",
+      "dimension": "discovery_label",
+      "document_id": "M30-I08",
+      "error_codes": [
+        "OPPORTUNITY_EXISTENCE_CONFUSION",
+        "REFERENCE_AMBIGUITY"
+      ],
+      "expected_behavior": "Resolve this dimension from same-record evidence; provisional label is comparison, not authority.",
+      "next_action": "Compare full frozen context and request authorized adjudication; do not rewrite labels.",
+      "observed": {
+        "discovery": "abstain",
+        "end": 2344,
+        "modality": "undetermined",
+        "segment_id": "segment-0026",
+        "start": 1862,
+        "temporal": "undetermined"
+      },
+      "record_id": "M30-I08-R1",
+      "reference": {
+        "discovery_label": "opportunity_signal",
+        "modality": "investimentos",
+        "opportunity_label": "uncertain",
+        "review_status": "provisional",
+        "temporal_status": "undetermined"
+      },
+      "review_status": "provisional",
+      "root_cause": "Context fragmentation or semantic rule/reference ambiguity; see all-overlap graph before adjudication.",
+      "root_cause_confidence": "low",
+      "segment_id": "segment-0026",
+      "severity": "medium",
+      "supporting_evidence": {
+        "end": 2344,
+        "quote": "Após o processo de seleção, a proposta vencedora é submetida aos trâmites de enquadramento de operações do Sistema BNDES. Uma vez enquadrada, a proposta passa para a fase de análise, na qual são discutidos aspectos jurídicos e gerenciais, bem como regulamento do fundo. É verificada a exequibilidade da proposta apresentada, cabendo ao gestor vencedor o ônus de comprová-la. Posteriormente, a proposta vencedora tem a sua contratação submetida à apreciação da Diretoria da BNDESPAR.",
+        "start": 1862
+      }
+    },
+    {
+      "case_id": "M30-I08-R1:modality",
+      "certainty": "unresolved_disagreement",
+      "dimension": "modality",
+      "document_id": "M30-I08",
+      "error_codes": [
+        "MODALITY_CONFUSION",
+        "REFERENCE_AMBIGUITY"
+      ],
+      "expected_behavior": "Resolve this dimension from same-record evidence; provisional label is comparison, not authority.",
+      "next_action": "Compare full frozen context and request authorized adjudication; do not rewrite labels.",
+      "observed": {
+        "discovery": "abstain",
+        "end": 2344,
+        "modality": "undetermined",
+        "segment_id": "segment-0026",
+        "start": 1862,
+        "temporal": "undetermined"
+      },
+      "record_id": "M30-I08-R1",
+      "reference": {
+        "discovery_label": "opportunity_signal",
+        "modality": "investimentos",
+        "opportunity_label": "uncertain",
+        "review_status": "provisional",
+        "temporal_status": "undetermined"
+      },
+      "review_status": "provisional",
+      "root_cause": "Context fragmentation or semantic rule/reference ambiguity; see all-overlap graph before adjudication.",
+      "root_cause_confidence": "low",
+      "segment_id": "segment-0026",
+      "severity": "medium",
+      "supporting_evidence": {
+        "end": 2344,
+        "quote": "Após o processo de seleção, a proposta vencedora é submetida aos trâmites de enquadramento de operações do Sistema BNDES. Uma vez enquadrada, a proposta passa para a fase de análise, na qual são discutidos aspectos jurídicos e gerenciais, bem como regulamento do fundo. É verificada a exequibilidade da proposta apresentada, cabendo ao gestor vencedor o ônus de comprová-la. Posteriormente, a proposta vencedora tem a sua contratação submetida à apreciação da Diretoria da BNDESPAR.",
+        "start": 1862
+      }
+    },
+    {
+      "case_id": "M30-I08-R1:segmentation",
+      "certainty": "supported_observation",
+      "dimension": "structural",
+      "document_id": "M30-I08",
+      "error_codes": [
+        "SEGMENTATION_OVER"
+      ],
+      "expected_behavior": "A meaningful record should retain its own associated context; whitespace-only boundary differences are not semantic defects.",
+      "next_action": "Inspect semantic usefulness of boundaries before changing segmentation.",
+      "observed": {
+        "coverage": {
+          "denominator": 5156,
+          "numerator": 4825,
+          "value": 0.9358029480217223
+        },
+        "fragmentation": 63
+      },
+      "record_id": "M30-I08-R1",
+      "reference": {
+        "discovery_label": "opportunity_signal",
+        "modality": "investimentos",
+        "opportunity_label": "uncertain",
+        "review_status": "provisional",
+        "temporal_status": "undetermined"
+      },
+      "review_status": "provisional",
+      "root_cause": "Structure-derived units differ from provisional annotated record spans.",
+      "root_cause_confidence": "high",
+      "segment_id": "segment-0026",
+      "severity": "medium",
+      "supporting_evidence": {
+        "edges": [
+          {
+            "end": 80,
+            "exact": false,
+            "intersection": 18,
+            "intersection_end": 80,
+            "intersection_start": 62,
+            "iou": 0.0034910783553141972,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.0034910783553141972,
+            "segment_id": "segment-0000",
+            "start": 62
+          },
+          {
+            "end": 114,
+            "exact": false,
+            "intersection": 4,
+            "intersection_end": 114,
+            "intersection_start": 110,
+            "iou": 0.0007757951900698216,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.0007757951900698216,
+            "segment_id": "segment-0001",
+            "start": 110
+          },
+          {
+            "end": 122,
+            "exact": false,
+            "intersection": 7,
+            "intersection_end": 122,
+            "intersection_start": 115,
+            "iou": 0.0013576415826221878,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.0013576415826221878,
+            "segment_id": "segment-0002",
+            "start": 115
+          },
+          {
+            "end": 137,
+            "exact": false,
+            "intersection": 14,
+            "intersection_end": 137,
+            "intersection_start": 123,
+            "iou": 0.0027152831652443757,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.0027152831652443757,
+            "segment_id": "segment-0003",
+            "start": 123
+          },
+          {
+            "end": 140,
+            "exact": false,
+            "intersection": 2,
+            "intersection_end": 140,
+            "intersection_start": 138,
+            "iou": 0.0003878975950349108,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.0003878975950349108,
+            "segment_id": "segment-0004",
+            "start": 138
+          },
+          {
+            "end": 143,
+            "exact": false,
+            "intersection": 2,
+            "intersection_end": 143,
+            "intersection_start": 141,
+            "iou": 0.0003878975950349108,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.0003878975950349108,
+            "segment_id": "segment-0005",
+            "start": 141
+          },
+          {
+            "end": 145,
+            "exact": false,
+            "intersection": 1,
+            "intersection_end": 145,
+            "intersection_start": 144,
+            "iou": 0.0001939487975174554,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.0001939487975174554,
+            "segment_id": "segment-0006",
+            "start": 144
+          },
+          {
+            "end": 155,
+            "exact": false,
+            "intersection": 9,
+            "intersection_end": 155,
+            "intersection_start": 146,
+            "iou": 0.0017455391776570986,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.0017455391776570986,
+            "segment_id": "segment-0007",
+            "start": 146
+          },
+          {
+            "end": 172,
+            "exact": false,
+            "intersection": 16,
+            "intersection_end": 172,
+            "intersection_start": 156,
+            "iou": 0.0031031807602792862,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.0031031807602792862,
+            "segment_id": "segment-0008",
+            "start": 156
+          },
+          {
+            "end": 277,
+            "exact": false,
+            "intersection": 2,
+            "intersection_end": 277,
+            "intersection_start": 275,
+            "iou": 0.0003878975950349108,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.0003878975950349108,
+            "segment_id": "segment-0009",
+            "start": 275
+          },
+          {
+            "end": 307,
+            "exact": false,
+            "intersection": 29,
+            "intersection_end": 307,
+            "intersection_start": 278,
+            "iou": 0.005624515128006206,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.005624515128006206,
+            "segment_id": "segment-0010",
+            "start": 278
+          },
+          {
+            "end": 375,
+            "exact": false,
+            "intersection": 29,
+            "intersection_end": 375,
+            "intersection_start": 346,
+            "iou": 0.005624515128006206,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.005624515128006206,
+            "segment_id": "segment-0011",
+            "start": 346
+          },
+          {
+            "end": 428,
+            "exact": false,
+            "intersection": 14,
+            "intersection_end": 428,
+            "intersection_start": 414,
+            "iou": 0.0027152831652443757,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.0027152831652443757,
+            "segment_id": "segment-0012",
+            "start": 414
+          },
+          {
+            "end": 446,
+            "exact": false,
+            "intersection": 17,
+            "intersection_end": 446,
+            "intersection_start": 429,
+            "iou": 0.0032971295577967417,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.0032971295577967417,
+            "segment_id": "segment-0013",
+            "start": 429
+          },
+          {
+            "end": 453,
+            "exact": false,
+            "intersection": 6,
+            "intersection_end": 453,
+            "intersection_start": 447,
+            "iou": 0.0011636927851047323,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.0011636927851047323,
+            "segment_id": "segment-0014",
+            "start": 447
+          },
+          {
+            "end": 466,
+            "exact": false,
+            "intersection": 12,
+            "intersection_end": 466,
+            "intersection_start": 454,
+            "iou": 0.0023273855702094647,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.0023273855702094647,
+            "segment_id": "segment-0015",
+            "start": 454
+          },
+          {
+            "end": 474,
+            "exact": false,
+            "intersection": 7,
+            "intersection_end": 474,
+            "intersection_start": 467,
+            "iou": 0.0013576415826221878,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.0013576415826221878,
+            "segment_id": "segment-0016",
+            "start": 467
+          },
+          {
+            "end": 476,
+            "exact": false,
+            "intersection": 1,
+            "intersection_end": 476,
+            "intersection_start": 475,
+            "iou": 0.0001939487975174554,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.0001939487975174554,
+            "segment_id": "segment-0017",
+            "start": 475
+          },
+          {
+            "end": 478,
+            "exact": false,
+            "intersection": 1,
+            "intersection_end": 478,
+            "intersection_start": 477,
+            "iou": 0.0001939487975174554,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.0001939487975174554,
+            "segment_id": "segment-0018",
+            "start": 477
+          },
+          {
+            "end": 480,
+            "exact": false,
+            "intersection": 1,
+            "intersection_end": 480,
+            "intersection_start": 479,
+            "iou": 0.0001939487975174554,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.0001939487975174554,
+            "segment_id": "segment-0019",
+            "start": 479
+          },
+          {
+            "end": 542,
+            "exact": false,
+            "intersection": 61,
+            "intersection_end": 542,
+            "intersection_start": 481,
+            "iou": 0.011830876648564779,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.011830876648564779,
+            "segment_id": "segment-0020",
+            "start": 481
+          },
+          {
+            "end": 708,
+            "exact": false,
+            "intersection": 165,
+            "intersection_end": 708,
+            "intersection_start": 543,
+            "iou": 0.03200155159038014,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.03200155159038014,
+            "segment_id": "segment-0021",
+            "start": 543
+          },
+          {
+            "end": 742,
+            "exact": false,
+            "intersection": 33,
+            "intersection_end": 742,
+            "intersection_start": 709,
+            "iou": 0.0064003103180760275,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.0064003103180760275,
+            "segment_id": "segment-0022",
+            "start": 709
+          },
+          {
+            "end": 1190,
+            "exact": false,
+            "intersection": 447,
+            "intersection_end": 1190,
+            "intersection_start": 743,
+            "iou": 0.08669511249030255,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.08669511249030255,
+            "segment_id": "segment-0023",
+            "start": 743
+          },
+          {
+            "end": 1553,
+            "exact": false,
+            "intersection": 362,
+            "intersection_end": 1553,
+            "intersection_start": 1191,
+            "iou": 0.07020946470131885,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.07020946470131885,
+            "segment_id": "segment-0024",
+            "start": 1191
+          },
+          {
+            "end": 1861,
+            "exact": false,
+            "intersection": 307,
+            "intersection_end": 1861,
+            "intersection_start": 1554,
+            "iou": 0.059542280837858806,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.059542280837858806,
+            "segment_id": "segment-0025",
+            "start": 1554
+          },
+          {
+            "end": 2344,
+            "exact": false,
+            "intersection": 482,
+            "intersection_end": 2344,
+            "intersection_start": 1862,
+            "iou": 0.0934833204034135,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.0934833204034135,
+            "segment_id": "segment-0026",
+            "start": 1862
+          },
+          {
+            "end": 2366,
+            "exact": false,
+            "intersection": 21,
+            "intersection_end": 2366,
+            "intersection_start": 2345,
+            "iou": 0.004072924747866563,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.004072924747866563,
+            "segment_id": "segment-0027",
+            "start": 2345
+          },
+          {
+            "end": 2468,
+            "exact": false,
+            "intersection": 101,
+            "intersection_end": 2468,
+            "intersection_start": 2367,
+            "iou": 0.019588828549262995,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.019588828549262995,
+            "segment_id": "segment-0028",
+            "start": 2367
+          },
+          {
+            "end": 2590,
+            "exact": false,
+            "intersection": 121,
+            "intersection_end": 2590,
+            "intersection_start": 2469,
+            "iou": 0.023467804499612104,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.023467804499612104,
+            "segment_id": "segment-0029",
+            "start": 2469
+          },
+          {
+            "end": 2610,
+            "exact": false,
+            "intersection": 19,
+            "intersection_end": 2610,
+            "intersection_start": 2591,
+            "iou": 0.0036850271528316523,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.0036850271528316523,
+            "segment_id": "segment-0030",
+            "start": 2591
+          },
+          {
+            "end": 2712,
+            "exact": false,
+            "intersection": 101,
+            "intersection_end": 2712,
+            "intersection_start": 2611,
+            "iou": 0.019588828549262995,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.019588828549262995,
+            "segment_id": "segment-0031",
+            "start": 2611
+          },
+          {
+            "end": 2802,
+            "exact": false,
+            "intersection": 89,
+            "intersection_end": 2802,
+            "intersection_start": 2713,
+            "iou": 0.01726144297905353,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.01726144297905353,
+            "segment_id": "segment-0032",
+            "start": 2713
+          },
+          {
+            "end": 2901,
+            "exact": false,
+            "intersection": 98,
+            "intersection_end": 2901,
+            "intersection_start": 2803,
+            "iou": 0.01900698215671063,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.01900698215671063,
+            "segment_id": "segment-0033",
+            "start": 2803
+          },
+          {
+            "end": 3045,
+            "exact": false,
+            "intersection": 143,
+            "intersection_end": 3045,
+            "intersection_start": 2902,
+            "iou": 0.02773467804499612,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.02773467804499612,
+            "segment_id": "segment-0034",
+            "start": 2902
+          },
+          {
+            "end": 3145,
+            "exact": false,
+            "intersection": 99,
+            "intersection_end": 3145,
+            "intersection_start": 3046,
+            "iou": 0.019200930954228083,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.019200930954228083,
+            "segment_id": "segment-0035",
+            "start": 3046
+          },
+          {
+            "end": 3260,
+            "exact": false,
+            "intersection": 114,
+            "intersection_end": 3260,
+            "intersection_start": 3146,
+            "iou": 0.022110162916989914,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.022110162916989914,
+            "segment_id": "segment-0036",
+            "start": 3146
+          },
+          {
+            "end": 3326,
+            "exact": false,
+            "intersection": 65,
+            "intersection_end": 3326,
+            "intersection_start": 3261,
+            "iou": 0.0126066718386346,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.0126066718386346,
+            "segment_id": "segment-0037",
+            "start": 3261
+          },
+          {
+            "end": 3383,
+            "exact": false,
+            "intersection": 56,
+            "intersection_end": 3383,
+            "intersection_start": 3327,
+            "iou": 0.010861132660977503,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.010861132660977503,
+            "segment_id": "segment-0038",
+            "start": 3327
+          },
+          {
+            "end": 3458,
+            "exact": false,
+            "intersection": 74,
+            "intersection_end": 3458,
+            "intersection_start": 3384,
+            "iou": 0.014352211016291699,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.014352211016291699,
+            "segment_id": "segment-0039",
+            "start": 3384
+          },
+          {
+            "end": 3529,
+            "exact": false,
+            "intersection": 70,
+            "intersection_end": 3529,
+            "intersection_start": 3459,
+            "iou": 0.013576415826221877,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.013576415826221877,
+            "segment_id": "segment-0040",
+            "start": 3459
+          },
+          {
+            "end": 3638,
+            "exact": false,
+            "intersection": 108,
+            "intersection_end": 3638,
+            "intersection_start": 3530,
+            "iou": 0.02094647013188518,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.02094647013188518,
+            "segment_id": "segment-0041",
+            "start": 3530
+          },
+          {
+            "end": 3706,
+            "exact": false,
+            "intersection": 67,
+            "intersection_end": 3706,
+            "intersection_start": 3639,
+            "iou": 0.012994569433669511,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.012994569433669511,
+            "segment_id": "segment-0042",
+            "start": 3639
+          },
+          {
+            "end": 3826,
+            "exact": false,
+            "intersection": 119,
+            "intersection_end": 3826,
+            "intersection_start": 3707,
+            "iou": 0.02307990690457719,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.02307990690457719,
+            "segment_id": "segment-0043",
+            "start": 3707
+          },
+          {
+            "end": 3881,
+            "exact": false,
+            "intersection": 54,
+            "intersection_end": 3881,
+            "intersection_start": 3827,
+            "iou": 0.01047323506594259,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.01047323506594259,
+            "segment_id": "segment-0044",
+            "start": 3827
+          },
+          {
+            "end": 3931,
+            "exact": false,
+            "intersection": 49,
+            "intersection_end": 3931,
+            "intersection_start": 3882,
+            "iou": 0.009503491078355315,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.009503491078355315,
+            "segment_id": "segment-0045",
+            "start": 3882
+          },
+          {
+            "end": 4004,
+            "exact": false,
+            "intersection": 72,
+            "intersection_end": 4004,
+            "intersection_start": 3932,
+            "iou": 0.013964313421256789,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.013964313421256789,
+            "segment_id": "segment-0046",
+            "start": 3932
+          },
+          {
+            "end": 4076,
+            "exact": false,
+            "intersection": 71,
+            "intersection_end": 4076,
+            "intersection_start": 4005,
+            "iou": 0.013770364623739333,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.013770364623739333,
+            "segment_id": "segment-0047",
+            "start": 4005
+          },
+          {
+            "end": 4148,
+            "exact": false,
+            "intersection": 71,
+            "intersection_end": 4148,
+            "intersection_start": 4077,
+            "iou": 0.013770364623739333,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.013770364623739333,
+            "segment_id": "segment-0048",
+            "start": 4077
+          },
+          {
+            "end": 4196,
+            "exact": false,
+            "intersection": 47,
+            "intersection_end": 4196,
+            "intersection_start": 4149,
+            "iou": 0.009115593483320403,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.009115593483320403,
+            "segment_id": "segment-0049",
+            "start": 4149
+          },
+          {
+            "end": 4269,
+            "exact": false,
+            "intersection": 72,
+            "intersection_end": 4269,
+            "intersection_start": 4197,
+            "iou": 0.013964313421256789,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.013964313421256789,
+            "segment_id": "segment-0050",
+            "start": 4197
+          },
+          {
+            "end": 4350,
+            "exact": false,
+            "intersection": 80,
+            "intersection_end": 4350,
+            "intersection_start": 4270,
+            "iou": 0.015515903801396431,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.015515903801396431,
+            "segment_id": "segment-0051",
+            "start": 4270
+          },
+          {
+            "end": 4386,
+            "exact": false,
+            "intersection": 35,
+            "intersection_end": 4386,
+            "intersection_start": 4351,
+            "iou": 0.0067882079131109385,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.0067882079131109385,
+            "segment_id": "segment-0052",
+            "start": 4351
+          },
+          {
+            "end": 4410,
+            "exact": false,
+            "intersection": 23,
+            "intersection_end": 4410,
+            "intersection_start": 4387,
+            "iou": 0.004460822342901474,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.004460822342901474,
+            "segment_id": "segment-0053",
+            "start": 4387
+          },
+          {
+            "end": 4483,
+            "exact": false,
+            "intersection": 72,
+            "intersection_end": 4483,
+            "intersection_start": 4411,
+            "iou": 0.013964313421256789,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.013964313421256789,
+            "segment_id": "segment-0054",
+            "start": 4411
+          },
+          {
+            "end": 4532,
+            "exact": false,
+            "intersection": 48,
+            "intersection_end": 4532,
+            "intersection_start": 4484,
+            "iou": 0.009309542280837859,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.009309542280837859,
+            "segment_id": "segment-0055",
+            "start": 4484
+          },
+          {
+            "end": 4573,
+            "exact": false,
+            "intersection": 40,
+            "intersection_end": 4573,
+            "intersection_start": 4533,
+            "iou": 0.007757951900698216,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.007757951900698216,
+            "segment_id": "segment-0056",
+            "start": 4533
+          },
+          {
+            "end": 4619,
+            "exact": false,
+            "intersection": 45,
+            "intersection_end": 4619,
+            "intersection_start": 4574,
+            "iou": 0.008727695888285493,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.008727695888285493,
+            "segment_id": "segment-0057",
+            "start": 4574
+          },
+          {
+            "end": 4653,
+            "exact": false,
+            "intersection": 33,
+            "intersection_end": 4653,
+            "intersection_start": 4620,
+            "iou": 0.0064003103180760275,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.0064003103180760275,
+            "segment_id": "segment-0058",
+            "start": 4620
+          },
+          {
+            "end": 4801,
+            "exact": false,
+            "intersection": 147,
+            "intersection_end": 4801,
+            "intersection_start": 4654,
+            "iou": 0.028510473235065944,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.028510473235065944,
+            "segment_id": "segment-0059",
+            "start": 4654
+          },
+          {
+            "end": 4834,
+            "exact": false,
+            "intersection": 32,
+            "intersection_end": 4834,
+            "intersection_start": 4802,
+            "iou": 0.0062063615205585725,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.0062063615205585725,
+            "segment_id": "segment-0060",
+            "start": 4802
+          },
+          {
+            "end": 5001,
+            "exact": false,
+            "intersection": 166,
+            "intersection_end": 5001,
+            "intersection_start": 4835,
+            "iou": 0.0321955003878976,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.0321955003878976,
+            "segment_id": "segment-0061",
+            "start": 4835
+          },
+          {
+            "end": 5156,
+            "exact": false,
+            "intersection": 154,
+            "intersection_end": 5156,
+            "intersection_start": 5002,
+            "iou": 0.02986811481768813,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.02986811481768813,
+            "segment_id": "segment-0062",
+            "start": 5002
+          }
+        ],
+        "reference_span": [
+          0,
+          5156
+        ]
+      }
+    }
+  ],
+  "extracted_claims": [
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-I08",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "title",
+      "original": "Modalidades e Critérios de Seleção de Fundos de Investimentos",
+      "reference_records": [
+        "M30-I08-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0020",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-I08",
+        "end": 542,
+        "page": null,
+        "quote": "Modalidades e Critérios de Seleção de Fundos de Investimentos",
+        "raw_sha256": "bca4998d48083fc30807eeb27078dc767d58feba5fdd2f45b2f8f2cd20e98bc0",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0020",
+        "start": 481,
+        "text_sha256": "61bf27fbb26bb9c6916debd161eb82df478ecf6b013d0ada8183a2ddb211cc07"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-I08",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "funding_organization_expression",
+      "original": "A seleção de Fundos será realizada por meio de Chamada Pública realizada pelo Sistema BNDES ou por meio de Consulta Prévia, desde que observados os critérios abaixo.",
+      "reference_records": [
+        "M30-I08-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0021",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-I08",
+        "end": 708,
+        "page": null,
+        "quote": "A seleção de Fundos será realizada por meio de Chamada Pública realizada pelo Sistema BNDES ou por meio de Consulta Prévia, desde que observados os critérios abaixo.",
+        "raw_sha256": "bca4998d48083fc30807eeb27078dc767d58feba5fdd2f45b2f8f2cd20e98bc0",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0021",
+        "start": 543,
+        "text_sha256": "61bf27fbb26bb9c6916debd161eb82df478ecf6b013d0ada8183a2ddb211cc07"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-I08",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "title",
+      "original": "Apoio por meio de chamada pública",
+      "reference_records": [
+        "M30-I08-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0022",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-I08",
+        "end": 742,
+        "page": null,
+        "quote": "Apoio por meio de chamada pública",
+        "raw_sha256": "bca4998d48083fc30807eeb27078dc767d58feba5fdd2f45b2f8f2cd20e98bc0",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0022",
+        "start": 709,
+        "text_sha256": "61bf27fbb26bb9c6916debd161eb82df478ecf6b013d0ada8183a2ddb211cc07"
+      }
+    }
+  ],
+  "provenance": {
+    "byte_length": 86282,
+    "category_evidence": "A seleção de Fundos será realizada por meio de Chamada Pública realizada pelo Sistema BNDES ou por meio de Consulta Prévia, desde que observados os critérios abaixo.",
+    "content_type": "text/html",
+    "derivation_method": "stdlib-HTMLParser-data-whitespace-v1; excludes script/style/noscript/template; not rendered DOM",
+    "document_category": "program_information",
+    "document_id": "M30-I08",
+    "document_version": null,
+    "final_url": "https://www.bndes.gov.br/wps/portal/site/home/mercado-de-capitais/fundos-de-investimentos/chamadas-publicas-para-selecao-de-fundos",
+    "original_filename": "chamadas-publicas-para-selecao-de-fundos",
+    "original_url": "https://www.bndes.gov.br/wps/portal/site/home/mercado-de-capitais/fundos-de-investimentos/chamadas-publicas-para-selecao-de-fundos",
+    "publication_date": null,
+    "raw_path": "raw/M30-I08.html",
+    "restrictions": "Research pilot local frozen copy only; no redistribution license inferred. No scripts executed, no forms submitted, no applicant records intentionally collected. Public navigation/staff attribution may remain in original bytes.",
+    "retrieval_status": "acquired",
+    "retrieved_at": "2026-10-19T04:38:42.371809+00:00",
+    "sha256": "bca4998d48083fc30807eeb27078dc767d58feba5fdd2f45b2f8f2cd20e98bc0",
+    "source_authority_notes": "Public HTTPS page hosted by the named institution; authorship asserted by host/content, not cryptographically authenticated. Not source-readiness approval.",
+    "source_organization": "BNDES",
+    "text_path": "text/M30-I08.txt",
+    "text_sha256": "61bf27fbb26bb9c6916debd161eb82df478ecf6b013d0ada8183a2ddb211cc07"
+  },
+  "records": [
+    {
+      "all_overlap_predictions": [
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0000",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0001",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0002",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0003",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0004",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0005",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0006",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0007",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0008",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0009",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0010",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0011",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0012",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0013",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0014",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0015",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0016",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0017",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0018",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0019",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "opportunity_signal",
+          "modality": "investimentos",
+          "segment_id": "segment-0020",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "opportunity_signal",
+          "modality": "undetermined",
+          "segment_id": "segment-0021",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "opportunity_signal",
+          "modality": "undetermined",
+          "segment_id": "segment-0022",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "opportunity_signal",
+          "modality": "investimentos",
+          "segment_id": "segment-0023",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "opportunity_signal",
+          "modality": "undetermined",
+          "segment_id": "segment-0024",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "opportunity_signal",
+          "modality": "undetermined",
+          "segment_id": "segment-0025",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0026",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "opportunity_signal",
+          "modality": "undetermined",
+          "segment_id": "segment-0027",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "opportunity_signal",
+          "modality": "investimentos",
+          "segment_id": "segment-0028",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "opportunity_signal",
+          "modality": "investimentos",
+          "segment_id": "segment-0029",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "opportunity_signal",
+          "modality": "undetermined",
+          "segment_id": "segment-0030",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "opportunity_signal",
+          "modality": "investimentos",
+          "segment_id": "segment-0031",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "opportunity_signal",
+          "modality": "undetermined",
+          "segment_id": "segment-0032",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "opportunity_signal",
+          "modality": "investimentos",
+          "segment_id": "segment-0033",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "opportunity_signal",
+          "modality": "investimentos",
+          "segment_id": "segment-0034",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "opportunity_signal",
+          "modality": "investimentos",
+          "segment_id": "segment-0035",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "opportunity_signal",
+          "modality": "investimentos",
+          "segment_id": "segment-0036",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "opportunity_signal",
+          "modality": "investimentos",
+          "segment_id": "segment-0037",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "opportunity_signal",
+          "modality": "undetermined",
+          "segment_id": "segment-0038",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "opportunity_signal",
+          "modality": "investimentos",
+          "segment_id": "segment-0039",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "opportunity_signal",
+          "modality": "investimentos",
+          "segment_id": "segment-0040",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "opportunity_signal",
+          "modality": "investimentos",
+          "segment_id": "segment-0041",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "opportunity_signal",
+          "modality": "credito",
+          "segment_id": "segment-0042",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0043",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0044",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0045",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "opportunity_signal",
+          "modality": "investimentos",
+          "segment_id": "segment-0046",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "opportunity_signal",
+          "modality": "credito",
+          "segment_id": "segment-0047",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "opportunity_signal",
+          "modality": "investimentos",
+          "segment_id": "segment-0048",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0049",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "opportunity_signal",
+          "modality": "investimentos",
+          "segment_id": "segment-0050",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0051",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0052",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0053",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "opportunity_signal",
+          "modality": "investimentos",
+          "segment_id": "segment-0054",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0055",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0056",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "opportunity_signal",
+          "modality": "undetermined",
+          "segment_id": "segment-0057",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0058",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "opportunity_signal",
+          "modality": "investimentos",
+          "segment_id": "segment-0059",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0060",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0061",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0062",
+          "temporal": "undetermined"
+        }
+      ],
+      "any_exact_boundary": false,
+      "coverage": {
+        "denominator": 5156,
+        "numerator": 4825,
+        "value": 0.9358029480217223
+      },
+      "covered_characters": 4825,
+      "disagreements": [
+        "discovery_label",
+        "modality"
+      ],
+      "discovery_histogram": {
+        "abstain": 34,
+        "opportunity_signal": 29
+      },
+      "document_id": "M30-I08",
+      "edges": [
+        {
+          "end": 80,
+          "exact": false,
+          "intersection": 18,
+          "intersection_end": 80,
+          "intersection_start": 62,
+          "iou": 0.0034910783553141972,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.0034910783553141972,
+          "segment_id": "segment-0000",
+          "start": 62
+        },
+        {
+          "end": 114,
+          "exact": false,
+          "intersection": 4,
+          "intersection_end": 114,
+          "intersection_start": 110,
+          "iou": 0.0007757951900698216,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.0007757951900698216,
+          "segment_id": "segment-0001",
+          "start": 110
+        },
+        {
+          "end": 122,
+          "exact": false,
+          "intersection": 7,
+          "intersection_end": 122,
+          "intersection_start": 115,
+          "iou": 0.0013576415826221878,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.0013576415826221878,
+          "segment_id": "segment-0002",
+          "start": 115
+        },
+        {
+          "end": 137,
+          "exact": false,
+          "intersection": 14,
+          "intersection_end": 137,
+          "intersection_start": 123,
+          "iou": 0.0027152831652443757,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.0027152831652443757,
+          "segment_id": "segment-0003",
+          "start": 123
+        },
+        {
+          "end": 140,
+          "exact": false,
+          "intersection": 2,
+          "intersection_end": 140,
+          "intersection_start": 138,
+          "iou": 0.0003878975950349108,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.0003878975950349108,
+          "segment_id": "segment-0004",
+          "start": 138
+        },
+        {
+          "end": 143,
+          "exact": false,
+          "intersection": 2,
+          "intersection_end": 143,
+          "intersection_start": 141,
+          "iou": 0.0003878975950349108,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.0003878975950349108,
+          "segment_id": "segment-0005",
+          "start": 141
+        },
+        {
+          "end": 145,
+          "exact": false,
+          "intersection": 1,
+          "intersection_end": 145,
+          "intersection_start": 144,
+          "iou": 0.0001939487975174554,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.0001939487975174554,
+          "segment_id": "segment-0006",
+          "start": 144
+        },
+        {
+          "end": 155,
+          "exact": false,
+          "intersection": 9,
+          "intersection_end": 155,
+          "intersection_start": 146,
+          "iou": 0.0017455391776570986,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.0017455391776570986,
+          "segment_id": "segment-0007",
+          "start": 146
+        },
+        {
+          "end": 172,
+          "exact": false,
+          "intersection": 16,
+          "intersection_end": 172,
+          "intersection_start": 156,
+          "iou": 0.0031031807602792862,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.0031031807602792862,
+          "segment_id": "segment-0008",
+          "start": 156
+        },
+        {
+          "end": 277,
+          "exact": false,
+          "intersection": 2,
+          "intersection_end": 277,
+          "intersection_start": 275,
+          "iou": 0.0003878975950349108,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.0003878975950349108,
+          "segment_id": "segment-0009",
+          "start": 275
+        },
+        {
+          "end": 307,
+          "exact": false,
+          "intersection": 29,
+          "intersection_end": 307,
+          "intersection_start": 278,
+          "iou": 0.005624515128006206,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.005624515128006206,
+          "segment_id": "segment-0010",
+          "start": 278
+        },
+        {
+          "end": 375,
+          "exact": false,
+          "intersection": 29,
+          "intersection_end": 375,
+          "intersection_start": 346,
+          "iou": 0.005624515128006206,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.005624515128006206,
+          "segment_id": "segment-0011",
+          "start": 346
+        },
+        {
+          "end": 428,
+          "exact": false,
+          "intersection": 14,
+          "intersection_end": 428,
+          "intersection_start": 414,
+          "iou": 0.0027152831652443757,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.0027152831652443757,
+          "segment_id": "segment-0012",
+          "start": 414
+        },
+        {
+          "end": 446,
+          "exact": false,
+          "intersection": 17,
+          "intersection_end": 446,
+          "intersection_start": 429,
+          "iou": 0.0032971295577967417,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.0032971295577967417,
+          "segment_id": "segment-0013",
+          "start": 429
+        },
+        {
+          "end": 453,
+          "exact": false,
+          "intersection": 6,
+          "intersection_end": 453,
+          "intersection_start": 447,
+          "iou": 0.0011636927851047323,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.0011636927851047323,
+          "segment_id": "segment-0014",
+          "start": 447
+        },
+        {
+          "end": 466,
+          "exact": false,
+          "intersection": 12,
+          "intersection_end": 466,
+          "intersection_start": 454,
+          "iou": 0.0023273855702094647,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.0023273855702094647,
+          "segment_id": "segment-0015",
+          "start": 454
+        },
+        {
+          "end": 474,
+          "exact": false,
+          "intersection": 7,
+          "intersection_end": 474,
+          "intersection_start": 467,
+          "iou": 0.0013576415826221878,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.0013576415826221878,
+          "segment_id": "segment-0016",
+          "start": 467
+        },
+        {
+          "end": 476,
+          "exact": false,
+          "intersection": 1,
+          "intersection_end": 476,
+          "intersection_start": 475,
+          "iou": 0.0001939487975174554,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.0001939487975174554,
+          "segment_id": "segment-0017",
+          "start": 475
+        },
+        {
+          "end": 478,
+          "exact": false,
+          "intersection": 1,
+          "intersection_end": 478,
+          "intersection_start": 477,
+          "iou": 0.0001939487975174554,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.0001939487975174554,
+          "segment_id": "segment-0018",
+          "start": 477
+        },
+        {
+          "end": 480,
+          "exact": false,
+          "intersection": 1,
+          "intersection_end": 480,
+          "intersection_start": 479,
+          "iou": 0.0001939487975174554,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.0001939487975174554,
+          "segment_id": "segment-0019",
+          "start": 479
+        },
+        {
+          "end": 542,
+          "exact": false,
+          "intersection": 61,
+          "intersection_end": 542,
+          "intersection_start": 481,
+          "iou": 0.011830876648564779,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.011830876648564779,
+          "segment_id": "segment-0020",
+          "start": 481
+        },
+        {
+          "end": 708,
+          "exact": false,
+          "intersection": 165,
+          "intersection_end": 708,
+          "intersection_start": 543,
+          "iou": 0.03200155159038014,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.03200155159038014,
+          "segment_id": "segment-0021",
+          "start": 543
+        },
+        {
+          "end": 742,
+          "exact": false,
+          "intersection": 33,
+          "intersection_end": 742,
+          "intersection_start": 709,
+          "iou": 0.0064003103180760275,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.0064003103180760275,
+          "segment_id": "segment-0022",
+          "start": 709
+        },
+        {
+          "end": 1190,
+          "exact": false,
+          "intersection": 447,
+          "intersection_end": 1190,
+          "intersection_start": 743,
+          "iou": 0.08669511249030255,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.08669511249030255,
+          "segment_id": "segment-0023",
+          "start": 743
+        },
+        {
+          "end": 1553,
+          "exact": false,
+          "intersection": 362,
+          "intersection_end": 1553,
+          "intersection_start": 1191,
+          "iou": 0.07020946470131885,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.07020946470131885,
+          "segment_id": "segment-0024",
+          "start": 1191
+        },
+        {
+          "end": 1861,
+          "exact": false,
+          "intersection": 307,
+          "intersection_end": 1861,
+          "intersection_start": 1554,
+          "iou": 0.059542280837858806,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.059542280837858806,
+          "segment_id": "segment-0025",
+          "start": 1554
+        },
+        {
+          "end": 2344,
+          "exact": false,
+          "intersection": 482,
+          "intersection_end": 2344,
+          "intersection_start": 1862,
+          "iou": 0.0934833204034135,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.0934833204034135,
+          "segment_id": "segment-0026",
+          "start": 1862
+        },
+        {
+          "end": 2366,
+          "exact": false,
+          "intersection": 21,
+          "intersection_end": 2366,
+          "intersection_start": 2345,
+          "iou": 0.004072924747866563,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.004072924747866563,
+          "segment_id": "segment-0027",
+          "start": 2345
+        },
+        {
+          "end": 2468,
+          "exact": false,
+          "intersection": 101,
+          "intersection_end": 2468,
+          "intersection_start": 2367,
+          "iou": 0.019588828549262995,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.019588828549262995,
+          "segment_id": "segment-0028",
+          "start": 2367
+        },
+        {
+          "end": 2590,
+          "exact": false,
+          "intersection": 121,
+          "intersection_end": 2590,
+          "intersection_start": 2469,
+          "iou": 0.023467804499612104,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.023467804499612104,
+          "segment_id": "segment-0029",
+          "start": 2469
+        },
+        {
+          "end": 2610,
+          "exact": false,
+          "intersection": 19,
+          "intersection_end": 2610,
+          "intersection_start": 2591,
+          "iou": 0.0036850271528316523,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.0036850271528316523,
+          "segment_id": "segment-0030",
+          "start": 2591
+        },
+        {
+          "end": 2712,
+          "exact": false,
+          "intersection": 101,
+          "intersection_end": 2712,
+          "intersection_start": 2611,
+          "iou": 0.019588828549262995,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.019588828549262995,
+          "segment_id": "segment-0031",
+          "start": 2611
+        },
+        {
+          "end": 2802,
+          "exact": false,
+          "intersection": 89,
+          "intersection_end": 2802,
+          "intersection_start": 2713,
+          "iou": 0.01726144297905353,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.01726144297905353,
+          "segment_id": "segment-0032",
+          "start": 2713
+        },
+        {
+          "end": 2901,
+          "exact": false,
+          "intersection": 98,
+          "intersection_end": 2901,
+          "intersection_start": 2803,
+          "iou": 0.01900698215671063,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.01900698215671063,
+          "segment_id": "segment-0033",
+          "start": 2803
+        },
+        {
+          "end": 3045,
+          "exact": false,
+          "intersection": 143,
+          "intersection_end": 3045,
+          "intersection_start": 2902,
+          "iou": 0.02773467804499612,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.02773467804499612,
+          "segment_id": "segment-0034",
+          "start": 2902
+        },
+        {
+          "end": 3145,
+          "exact": false,
+          "intersection": 99,
+          "intersection_end": 3145,
+          "intersection_start": 3046,
+          "iou": 0.019200930954228083,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.019200930954228083,
+          "segment_id": "segment-0035",
+          "start": 3046
+        },
+        {
+          "end": 3260,
+          "exact": false,
+          "intersection": 114,
+          "intersection_end": 3260,
+          "intersection_start": 3146,
+          "iou": 0.022110162916989914,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.022110162916989914,
+          "segment_id": "segment-0036",
+          "start": 3146
+        },
+        {
+          "end": 3326,
+          "exact": false,
+          "intersection": 65,
+          "intersection_end": 3326,
+          "intersection_start": 3261,
+          "iou": 0.0126066718386346,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.0126066718386346,
+          "segment_id": "segment-0037",
+          "start": 3261
+        },
+        {
+          "end": 3383,
+          "exact": false,
+          "intersection": 56,
+          "intersection_end": 3383,
+          "intersection_start": 3327,
+          "iou": 0.010861132660977503,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.010861132660977503,
+          "segment_id": "segment-0038",
+          "start": 3327
+        },
+        {
+          "end": 3458,
+          "exact": false,
+          "intersection": 74,
+          "intersection_end": 3458,
+          "intersection_start": 3384,
+          "iou": 0.014352211016291699,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.014352211016291699,
+          "segment_id": "segment-0039",
+          "start": 3384
+        },
+        {
+          "end": 3529,
+          "exact": false,
+          "intersection": 70,
+          "intersection_end": 3529,
+          "intersection_start": 3459,
+          "iou": 0.013576415826221877,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.013576415826221877,
+          "segment_id": "segment-0040",
+          "start": 3459
+        },
+        {
+          "end": 3638,
+          "exact": false,
+          "intersection": 108,
+          "intersection_end": 3638,
+          "intersection_start": 3530,
+          "iou": 0.02094647013188518,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.02094647013188518,
+          "segment_id": "segment-0041",
+          "start": 3530
+        },
+        {
+          "end": 3706,
+          "exact": false,
+          "intersection": 67,
+          "intersection_end": 3706,
+          "intersection_start": 3639,
+          "iou": 0.012994569433669511,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.012994569433669511,
+          "segment_id": "segment-0042",
+          "start": 3639
+        },
+        {
+          "end": 3826,
+          "exact": false,
+          "intersection": 119,
+          "intersection_end": 3826,
+          "intersection_start": 3707,
+          "iou": 0.02307990690457719,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.02307990690457719,
+          "segment_id": "segment-0043",
+          "start": 3707
+        },
+        {
+          "end": 3881,
+          "exact": false,
+          "intersection": 54,
+          "intersection_end": 3881,
+          "intersection_start": 3827,
+          "iou": 0.01047323506594259,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.01047323506594259,
+          "segment_id": "segment-0044",
+          "start": 3827
+        },
+        {
+          "end": 3931,
+          "exact": false,
+          "intersection": 49,
+          "intersection_end": 3931,
+          "intersection_start": 3882,
+          "iou": 0.009503491078355315,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.009503491078355315,
+          "segment_id": "segment-0045",
+          "start": 3882
+        },
+        {
+          "end": 4004,
+          "exact": false,
+          "intersection": 72,
+          "intersection_end": 4004,
+          "intersection_start": 3932,
+          "iou": 0.013964313421256789,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.013964313421256789,
+          "segment_id": "segment-0046",
+          "start": 3932
+        },
+        {
+          "end": 4076,
+          "exact": false,
+          "intersection": 71,
+          "intersection_end": 4076,
+          "intersection_start": 4005,
+          "iou": 0.013770364623739333,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.013770364623739333,
+          "segment_id": "segment-0047",
+          "start": 4005
+        },
+        {
+          "end": 4148,
+          "exact": false,
+          "intersection": 71,
+          "intersection_end": 4148,
+          "intersection_start": 4077,
+          "iou": 0.013770364623739333,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.013770364623739333,
+          "segment_id": "segment-0048",
+          "start": 4077
+        },
+        {
+          "end": 4196,
+          "exact": false,
+          "intersection": 47,
+          "intersection_end": 4196,
+          "intersection_start": 4149,
+          "iou": 0.009115593483320403,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.009115593483320403,
+          "segment_id": "segment-0049",
+          "start": 4149
+        },
+        {
+          "end": 4269,
+          "exact": false,
+          "intersection": 72,
+          "intersection_end": 4269,
+          "intersection_start": 4197,
+          "iou": 0.013964313421256789,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.013964313421256789,
+          "segment_id": "segment-0050",
+          "start": 4197
+        },
+        {
+          "end": 4350,
+          "exact": false,
+          "intersection": 80,
+          "intersection_end": 4350,
+          "intersection_start": 4270,
+          "iou": 0.015515903801396431,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.015515903801396431,
+          "segment_id": "segment-0051",
+          "start": 4270
+        },
+        {
+          "end": 4386,
+          "exact": false,
+          "intersection": 35,
+          "intersection_end": 4386,
+          "intersection_start": 4351,
+          "iou": 0.0067882079131109385,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.0067882079131109385,
+          "segment_id": "segment-0052",
+          "start": 4351
+        },
+        {
+          "end": 4410,
+          "exact": false,
+          "intersection": 23,
+          "intersection_end": 4410,
+          "intersection_start": 4387,
+          "iou": 0.004460822342901474,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.004460822342901474,
+          "segment_id": "segment-0053",
+          "start": 4387
+        },
+        {
+          "end": 4483,
+          "exact": false,
+          "intersection": 72,
+          "intersection_end": 4483,
+          "intersection_start": 4411,
+          "iou": 0.013964313421256789,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.013964313421256789,
+          "segment_id": "segment-0054",
+          "start": 4411
+        },
+        {
+          "end": 4532,
+          "exact": false,
+          "intersection": 48,
+          "intersection_end": 4532,
+          "intersection_start": 4484,
+          "iou": 0.009309542280837859,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.009309542280837859,
+          "segment_id": "segment-0055",
+          "start": 4484
+        },
+        {
+          "end": 4573,
+          "exact": false,
+          "intersection": 40,
+          "intersection_end": 4573,
+          "intersection_start": 4533,
+          "iou": 0.007757951900698216,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.007757951900698216,
+          "segment_id": "segment-0056",
+          "start": 4533
+        },
+        {
+          "end": 4619,
+          "exact": false,
+          "intersection": 45,
+          "intersection_end": 4619,
+          "intersection_start": 4574,
+          "iou": 0.008727695888285493,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.008727695888285493,
+          "segment_id": "segment-0057",
+          "start": 4574
+        },
+        {
+          "end": 4653,
+          "exact": false,
+          "intersection": 33,
+          "intersection_end": 4653,
+          "intersection_start": 4620,
+          "iou": 0.0064003103180760275,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.0064003103180760275,
+          "segment_id": "segment-0058",
+          "start": 4620
+        },
+        {
+          "end": 4801,
+          "exact": false,
+          "intersection": 147,
+          "intersection_end": 4801,
+          "intersection_start": 4654,
+          "iou": 0.028510473235065944,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.028510473235065944,
+          "segment_id": "segment-0059",
+          "start": 4654
+        },
+        {
+          "end": 4834,
+          "exact": false,
+          "intersection": 32,
+          "intersection_end": 4834,
+          "intersection_start": 4802,
+          "iou": 0.0062063615205585725,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.0062063615205585725,
+          "segment_id": "segment-0060",
+          "start": 4802
+        },
+        {
+          "end": 5001,
+          "exact": false,
+          "intersection": 166,
+          "intersection_end": 5001,
+          "intersection_start": 4835,
+          "iou": 0.0321955003878976,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.0321955003878976,
+          "segment_id": "segment-0061",
+          "start": 4835
+        },
+        {
+          "end": 5156,
+          "exact": false,
+          "intersection": 154,
+          "intersection_end": 5156,
+          "intersection_start": 5002,
+          "iou": 0.02986811481768813,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.02986811481768813,
+          "segment_id": "segment-0062",
+          "start": 5002
+        }
+      ],
+      "end": 5156,
+      "fields": [
+        {
+          "candidates": [
+            {
+              "diagnostic_status": "traceable_not_semantically_certified",
+              "field_index": 0,
+              "method_version": "m31-deterministic-v2",
+              "name": "title",
+              "original": "Modalidades e Critérios de Seleção de Fundos de Investimentos",
+              "schema_version": "m31-extraction-v1",
+              "segment_id": "segment-0020",
+              "uncertainty": "heuristic role assignment; not authenticated or normalized",
+              "witness": {
+                "document_id": "M30-I08",
+                "end": 542,
+                "page": null,
+                "quote": "Modalidades e Critérios de Seleção de Fundos de Investimentos",
+                "raw_sha256": "bca4998d48083fc30807eeb27078dc767d58feba5fdd2f45b2f8f2cd20e98bc0",
+                "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+                "schema_version": "m31-extraction-v1",
+                "segment_id": "segment-0020",
+                "start": 481,
+                "text_sha256": "61bf27fbb26bb9c6916debd161eb82df478ecf6b013d0ada8183a2ddb211cc07"
+              }
+            },
+            {
+              "diagnostic_status": "traceable_not_semantically_certified",
+              "field_index": 0,
+              "method_version": "m31-deterministic-v2",
+              "name": "title",
+              "original": "Apoio por meio de chamada pública",
+              "schema_version": "m31-extraction-v1",
+              "segment_id": "segment-0022",
+              "uncertainty": "heuristic role assignment; not authenticated or normalized",
+              "witness": {
+                "document_id": "M30-I08",
+                "end": 742,
+                "page": null,
+                "quote": "Apoio por meio de chamada pública",
+                "raw_sha256": "bca4998d48083fc30807eeb27078dc767d58feba5fdd2f45b2f8f2cd20e98bc0",
+                "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+                "schema_version": "m31-extraction-v1",
+                "segment_id": "segment-0022",
+                "start": 709,
+                "text_sha256": "61bf27fbb26bb9c6916debd161eb82df478ecf6b013d0ada8183a2ddb211cc07"
+              }
+            }
+          ],
+          "name": "title",
+          "reason": "same literal and role in record; entailment remains unreviewed",
+          "reference_evidence": [
+            {
+              "end": 61,
+              "evidence_id": "M30-I08-R1-E1",
+              "page": null,
+              "quote": "Modalidades e Critérios de Seleção de Fundos de Investimentos",
+              "start": 0
+            }
+          ],
+          "reference_value": "Modalidades e Critérios de Seleção de Fundos de Investimentos",
+          "scope_supported": true,
+          "semantic_adjudication": "not_certified",
+          "status": "MATCH",
+          "strict_role_value": true
+        },
+        {
+          "candidates": [],
+          "name": "applicant_requirements",
+          "reason": "no corresponding field; absence is not explicit field abstention",
+          "reference_evidence": [
+            {
+              "end": 5001,
+              "evidence_id": "M30-I08-R1-E3",
+              "page": null,
+              "quote": "O Sistema BNDES poderá contratar, por meio de Consulta Prévia, fundos cuja tese de investimento seja compatível com as prioridades estabelecidas no\nplanejamento estratégico vigente\n, que já estejam em estágio avançado de captação e que contem com compromisso firme de ao menos uma Instituição Financeira de Desenvolvimento ou de um Fundo Soberano.",
+              "start": 4654
+            }
+          ],
+          "reference_value": "O Sistema BNDES poderá contratar, por meio de Consulta Prévia, fundos cuja tese de investimento seja compatível com as prioridades estabelecidas no\nplanejamento estratégico vigente\n, que já estejam em estágio avançado de captação e que contem com compromisso firme de ao menos uma Instituição Financeira de Desenvolvimento ou de um Fundo Soberano.",
+          "scope_supported": true,
+          "semantic_adjudication": "not_certified",
+          "status": "MISSING",
+          "strict_role_value": false
+        },
+        {
+          "candidates": [],
+          "name": "additional_requirements",
+          "reason": "requested target role outside implemented M31 field scope",
+          "reference_evidence": [
+            {
+              "end": 5156,
+              "evidence_id": "M30-I08-R1-E4",
+              "page": null,
+              "quote": "A contratação de fundos por Consulta Prévia depende do atendimento de alguns requisitos, detalhados na página específica de cada um dos Produtos vigentes:",
+              "start": 5002
+            }
+          ],
+          "reference_value": "A contratação de fundos por Consulta Prévia depende do atendimento de alguns requisitos, detalhados na página específica de cada um dos Produtos vigentes:",
+          "scope_supported": false,
+          "semantic_adjudication": "not_certified",
+          "status": "UNRESOLVED",
+          "strict_role_value": false
+        }
+      ],
+      "fragmentation": 63,
+      "location_convention": "html_unicode_codepoints",
+      "physical_reference_evidence_pages": [],
+      "rationale": "Política atual de seleção e Consulta Prévia admite contratação de fundos com tese alinhada, captação avançada e compromisso institucional. É rota para fundos/gestores, não candidatura direta de startup; não promove chamadas históricas listadas em navegação a oportunidades.",
+      "record_id": "M30-I08-R1",
+      "reference": {
+        "discovery_label": "opportunity_signal",
+        "modality": "investimentos",
+        "opportunity_label": "uncertain",
+        "review_status": "provisional",
+        "temporal_status": "undetermined"
+      },
+      "reference_characters": 5156,
+      "reference_evidence": [
+        {
+          "end": 61,
+          "evidence_id": "M30-I08-R1-E1",
+          "page": null,
+          "quote": "Modalidades e Critérios de Seleção de Fundos de Investimentos",
+          "start": 0
+        },
+        {
+          "end": 708,
+          "evidence_id": "M30-I08-R1-E2",
+          "page": null,
+          "quote": "A seleção de Fundos será realizada por meio de Chamada Pública realizada pelo Sistema BNDES ou por meio de Consulta Prévia, desde que observados os critérios abaixo.",
+          "start": 543
+        },
+        {
+          "end": 5001,
+          "evidence_id": "M30-I08-R1-E3",
+          "page": null,
+          "quote": "O Sistema BNDES poderá contratar, por meio de Consulta Prévia, fundos cuja tese de investimento seja compatível com as prioridades estabelecidas no\nplanejamento estratégico vigente\n, que já estejam em estágio avançado de captação e que contem com compromisso firme de ao menos uma Instituição Financeira de Desenvolvimento ou de um Fundo Soberano.",
+          "start": 4654
+        },
+        {
+          "end": 5156,
+          "evidence_id": "M30-I08-R1-E4",
+          "page": null,
+          "quote": "A contratação de fundos por Consulta Prévia depende do atendimento de alguns requisitos, detalhados na página específica de cada um dos Produtos vigentes:",
+          "start": 5002
+        }
+      ],
+      "representative": "segment-0026",
+      "representative_prediction": {
+        "discovery": "abstain",
+        "end": 2344,
+        "modality": "undetermined",
+        "segment_id": "segment-0026",
+        "start": 1862,
+        "temporal": "undetermined"
+      },
+      "representative_quote": "Após o processo de seleção, a proposta vencedora é submetida aos trâmites de enquadramento de operações do Sistema BNDES. Uma vez enquadrada, a proposta passa para a fase de análise, na qual são discutidos aspectos jurídicos e gerenciais, bem como regulamento do fundo. É verificada a exequibilidade da proposta apresentada, cabendo ao gestor vencedor o ônus de comprová-la. Posteriormente, a proposta vencedora tem a sua contratação submetida à apreciação da Diretoria da BNDESPAR.",
+      "start": 0,
+      "status": "overlap",
+      "uncertainty_notes": [
+        "Critérios gerais remetem a produtos e avaliação; condições completas e janela não verificadas.",
+        "Texto Renderizado em é data de renderização, não publicação.",
+        "Chamadas em andamento pode significar avaliação pós-inscrição, não janela aberta."
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 80,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I08-R1"
+      ],
+      "segment_id": "segment-0000",
+      "start": 62,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 114,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I08-R1"
+      ],
+      "segment_id": "segment-0001",
+      "start": 110,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 122,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I08-R1"
+      ],
+      "segment_id": "segment-0002",
+      "start": 115,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 137,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I08-R1"
+      ],
+      "segment_id": "segment-0003",
+      "start": 123,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 140,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I08-R1"
+      ],
+      "segment_id": "segment-0004",
+      "start": 138,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 143,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I08-R1"
+      ],
+      "segment_id": "segment-0005",
+      "start": 141,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 145,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I08-R1"
+      ],
+      "segment_id": "segment-0006",
+      "start": 144,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 155,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I08-R1"
+      ],
+      "segment_id": "segment-0007",
+      "start": 146,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 172,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I08-R1"
+      ],
+      "segment_id": "segment-0008",
+      "start": 156,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 277,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I08-R1"
+      ],
+      "segment_id": "segment-0009",
+      "start": 275,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 307,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I08-R1"
+      ],
+      "segment_id": "segment-0010",
+      "start": 278,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 375,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I08-R1"
+      ],
+      "segment_id": "segment-0011",
+      "start": 346,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 428,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I08-R1"
+      ],
+      "segment_id": "segment-0012",
+      "start": 414,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 446,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I08-R1"
+      ],
+      "segment_id": "segment-0013",
+      "start": 429,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 453,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I08-R1"
+      ],
+      "segment_id": "segment-0014",
+      "start": 447,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 466,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I08-R1"
+      ],
+      "segment_id": "segment-0015",
+      "start": 454,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 474,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I08-R1"
+      ],
+      "segment_id": "segment-0016",
+      "start": 467,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 476,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I08-R1"
+      ],
+      "segment_id": "segment-0017",
+      "start": 475,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 478,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I08-R1"
+      ],
+      "segment_id": "segment-0018",
+      "start": 477,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 480,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I08-R1"
+      ],
+      "segment_id": "segment-0019",
+      "start": 479,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 542,
+      "field_count": 1,
+      "modality": "investimentos",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I08-R1"
+      ],
+      "segment_id": "segment-0020",
+      "start": 481,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 708,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I08-R1"
+      ],
+      "segment_id": "segment-0021",
+      "start": 543,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 742,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I08-R1"
+      ],
+      "segment_id": "segment-0022",
+      "start": 709,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "manager_stage_not_startup_access"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 1190,
+      "field_count": 0,
+      "modality": "investimentos",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I08-R1"
+      ],
+      "segment_id": "segment-0023",
+      "start": 743,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "manager_stage_not_startup_access"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 1553,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I08-R1"
+      ],
+      "segment_id": "segment-0024",
+      "start": 1191,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "manager_stage_not_startup_access"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 1861,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I08-R1"
+      ],
+      "segment_id": "segment-0025",
+      "start": 1554,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 2344,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I08-R1"
+      ],
+      "segment_id": "segment-0026",
+      "start": 1862,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 2366,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I08-R1"
+      ],
+      "segment_id": "segment-0027",
+      "start": 2345,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 2468,
+      "field_count": 0,
+      "modality": "investimentos",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I08-R1"
+      ],
+      "segment_id": "segment-0028",
+      "start": 2367,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 2590,
+      "field_count": 0,
+      "modality": "investimentos",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I08-R1"
+      ],
+      "segment_id": "segment-0029",
+      "start": 2469,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 2610,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I08-R1"
+      ],
+      "segment_id": "segment-0030",
+      "start": 2591,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 2712,
+      "field_count": 0,
+      "modality": "investimentos",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I08-R1"
+      ],
+      "segment_id": "segment-0031",
+      "start": 2611,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 2802,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I08-R1"
+      ],
+      "segment_id": "segment-0032",
+      "start": 2713,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 2901,
+      "field_count": 0,
+      "modality": "investimentos",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I08-R1"
+      ],
+      "segment_id": "segment-0033",
+      "start": 2803,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "manager_stage_not_startup_access"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 3045,
+      "field_count": 0,
+      "modality": "investimentos",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I08-R1"
+      ],
+      "segment_id": "segment-0034",
+      "start": 2902,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 3145,
+      "field_count": 0,
+      "modality": "investimentos",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I08-R1"
+      ],
+      "segment_id": "segment-0035",
+      "start": 3046,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 3260,
+      "field_count": 0,
+      "modality": "investimentos",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I08-R1"
+      ],
+      "segment_id": "segment-0036",
+      "start": 3146,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 3326,
+      "field_count": 0,
+      "modality": "investimentos",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I08-R1"
+      ],
+      "segment_id": "segment-0037",
+      "start": 3261,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "manager_stage_not_startup_access"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 3383,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I08-R1"
+      ],
+      "segment_id": "segment-0038",
+      "start": 3327,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 3458,
+      "field_count": 0,
+      "modality": "investimentos",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I08-R1"
+      ],
+      "segment_id": "segment-0039",
+      "start": 3384,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 3529,
+      "field_count": 0,
+      "modality": "investimentos",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I08-R1"
+      ],
+      "segment_id": "segment-0040",
+      "start": 3459,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 3638,
+      "field_count": 0,
+      "modality": "investimentos",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I08-R1"
+      ],
+      "segment_id": "segment-0041",
+      "start": 3530,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 3706,
+      "field_count": 0,
+      "modality": "credito",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I08-R1"
+      ],
+      "segment_id": "segment-0042",
+      "start": 3639,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 3826,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I08-R1"
+      ],
+      "segment_id": "segment-0043",
+      "start": 3707,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 3881,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I08-R1"
+      ],
+      "segment_id": "segment-0044",
+      "start": 3827,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 3931,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I08-R1"
+      ],
+      "segment_id": "segment-0045",
+      "start": 3882,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 4004,
+      "field_count": 0,
+      "modality": "investimentos",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I08-R1"
+      ],
+      "segment_id": "segment-0046",
+      "start": 3932,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 4076,
+      "field_count": 0,
+      "modality": "credito",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I08-R1"
+      ],
+      "segment_id": "segment-0047",
+      "start": 4005,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 4148,
+      "field_count": 0,
+      "modality": "investimentos",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I08-R1"
+      ],
+      "segment_id": "segment-0048",
+      "start": 4077,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 4196,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I08-R1"
+      ],
+      "segment_id": "segment-0049",
+      "start": 4149,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 4269,
+      "field_count": 0,
+      "modality": "investimentos",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I08-R1"
+      ],
+      "segment_id": "segment-0050",
+      "start": 4197,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 4350,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I08-R1"
+      ],
+      "segment_id": "segment-0051",
+      "start": 4270,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 4386,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I08-R1"
+      ],
+      "segment_id": "segment-0052",
+      "start": 4351,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 4410,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I08-R1"
+      ],
+      "segment_id": "segment-0053",
+      "start": 4387,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 4483,
+      "field_count": 0,
+      "modality": "investimentos",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I08-R1"
+      ],
+      "segment_id": "segment-0054",
+      "start": 4411,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 4532,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I08-R1"
+      ],
+      "segment_id": "segment-0055",
+      "start": 4484,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 4573,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I08-R1"
+      ],
+      "segment_id": "segment-0056",
+      "start": 4533,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 4619,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I08-R1"
+      ],
+      "segment_id": "segment-0057",
+      "start": 4574,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 4653,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I08-R1"
+      ],
+      "segment_id": "segment-0058",
+      "start": 4620,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 4801,
+      "field_count": 0,
+      "modality": "investimentos",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I08-R1"
+      ],
+      "segment_id": "segment-0059",
+      "start": 4654,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 4834,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I08-R1"
+      ],
+      "segment_id": "segment-0060",
+      "start": 4802,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 5001,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I08-R1"
+      ],
+      "segment_id": "segment-0061",
+      "start": 4835,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 5156,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I08-R1"
+      ],
+      "segment_id": "segment-0062",
+      "start": 5002,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 5202,
+      "field_count": 0,
+      "modality": "investimentos",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0063",
+      "start": 5157,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 5220,
+      "field_count": 0,
+      "modality": "credito",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0064",
+      "start": 5203,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 5250,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0065",
+      "start": 5221,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 5303,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0066",
+      "start": 5289,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 5364,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0067",
+      "start": 5304,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 5373,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0068",
+      "start": 5365,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 5375,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0069",
+      "start": 5374,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 6141,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0070",
+      "start": 5915,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 6230,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0071",
+      "start": 6142,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 6270,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0072",
+      "start": 6231,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 6331,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0073",
+      "start": 6271,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 6339,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0074",
+      "start": 6332,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 6362,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0075",
+      "start": 6340,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 6379,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0076",
+      "start": 6363,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 6408,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0077",
+      "start": 6398,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 6425,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0078",
+      "start": 6409,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    }
+  ],
+  "semantic_reviews": [],
+  "status": "processed"
+}

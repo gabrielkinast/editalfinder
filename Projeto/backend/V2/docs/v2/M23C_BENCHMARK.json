@@ -1,0 +1,295 @@
+{
+  "methodology": "3 fresh sequential processes per case; input construction excluded; tracemalloc covers integrate/dump/received DTO validation; no timing acceptance threshold",
+  "caveats": "Admission budget is not RSS. Over case validates OperationalError, not a report. Synthetic offline data cannot establish extraction precision/recall or production SLA.",
+  "environment": {
+    "python": "3.11.16 (main, Aug 25 2026, 14:00:53) [Clang 22.1.3 ]",
+    "pydantic": "2.14.1",
+    "platform": "Linux-7.0.0-38-generic-x86_64-with-glibc2.43",
+    "cpu_count": 12,
+    "processor": ""
+  },
+  "results": [
+    {
+      "case_id": "M23C-A-001",
+      "samples": [
+        {
+          "case_id": "M23C-A-001",
+          "result": "IntegrationReport",
+          "error_code": null,
+          "charge_bytes": 7020928,
+          "unique_snapshot_bytes": 1189,
+          "serialized_bytes": 166688,
+          "integration_seconds": 0.06040130699693691,
+          "serialization_seconds": 0.0024116799904732034,
+          "validation_seconds": 0.08081674500135705,
+          "tracemalloc_peak_bytes": 2341552
+        },
+        {
+          "case_id": "M23C-A-001",
+          "result": "IntegrationReport",
+          "error_code": null,
+          "charge_bytes": 7020928,
+          "unique_snapshot_bytes": 1189,
+          "serialized_bytes": 166688,
+          "integration_seconds": 0.05938699400576297,
+          "serialization_seconds": 0.0022045989899197593,
+          "validation_seconds": 0.08018545500817709,
+          "tracemalloc_peak_bytes": 2340869
+        },
+        {
+          "case_id": "M23C-A-001",
+          "result": "IntegrationReport",
+          "error_code": null,
+          "charge_bytes": 7020928,
+          "unique_snapshot_bytes": 1189,
+          "serialized_bytes": 166688,
+          "integration_seconds": 0.06016433199692983,
+          "serialization_seconds": 0.002205226002843119,
+          "validation_seconds": 0.07985545900010038,
+          "tracemalloc_peak_bytes": 2340972
+        }
+      ],
+      "median": {
+        "integration_seconds": 0.06016433199692983,
+        "serialization_seconds": 0.002205226002843119,
+        "validation_seconds": 0.08018545500817709,
+        "tracemalloc_peak_bytes": 2340972
+      }
+    },
+    {
+      "case_id": "M23C-B-001",
+      "samples": [
+        {
+          "case_id": "M23C-B-001",
+          "result": "IntegrationReport",
+          "error_code": null,
+          "charge_bytes": 4567344,
+          "unique_snapshot_bytes": 864,
+          "serialized_bytes": 116689,
+          "integration_seconds": 0.041621331009082496,
+          "serialization_seconds": 0.001600520990905352,
+          "validation_seconds": 0.05455369901028462,
+          "tracemalloc_peak_bytes": 1649473
+        },
+        {
+          "case_id": "M23C-B-001",
+          "result": "IntegrationReport",
+          "error_code": null,
+          "charge_bytes": 4567344,
+          "unique_snapshot_bytes": 864,
+          "serialized_bytes": 116689,
+          "integration_seconds": 0.042023984002298675,
+          "serialization_seconds": 0.0016817709984024987,
+          "validation_seconds": 0.05642485099087935,
+          "tracemalloc_peak_bytes": 1648753
+        },
+        {
+          "case_id": "M23C-B-001",
+          "result": "IntegrationReport",
+          "error_code": null,
+          "charge_bytes": 4567344,
+          "unique_snapshot_bytes": 864,
+          "serialized_bytes": 116689,
+          "integration_seconds": 0.04166122600145172,
+          "serialization_seconds": 0.0016050539998104796,
+          "validation_seconds": 0.05429003499739338,
+          "tracemalloc_peak_bytes": 1649239
+        }
+      ],
+      "median": {
+        "integration_seconds": 0.04166122600145172,
+        "serialization_seconds": 0.0016050539998104796,
+        "validation_seconds": 0.05455369901028462,
+        "tracemalloc_peak_bytes": 1649239
+      }
+    },
+    {
+      "case_id": "M23C-C-001",
+      "samples": [
+        {
+          "case_id": "M23C-C-001",
+          "result": "IntegrationReport",
+          "error_code": null,
+          "charge_bytes": 4520240,
+          "unique_snapshot_bytes": 829,
+          "serialized_bytes": 115936,
+          "integration_seconds": 0.03978013200685382,
+          "serialization_seconds": 0.0016018469905247912,
+          "validation_seconds": 0.053598168000462465,
+          "tracemalloc_peak_bytes": 1644076
+        },
+        {
+          "case_id": "M23C-C-001",
+          "result": "IntegrationReport",
+          "error_code": null,
+          "charge_bytes": 4520240,
+          "unique_snapshot_bytes": 829,
+          "serialized_bytes": 115936,
+          "integration_seconds": 0.05989232499268837,
+          "serialization_seconds": 0.0017511500045657158,
+          "validation_seconds": 0.05967525600863155,
+          "tracemalloc_peak_bytes": 1643836
+        },
+        {
+          "case_id": "M23C-C-001",
+          "result": "IntegrationReport",
+          "error_code": null,
+          "charge_bytes": 4520240,
+          "unique_snapshot_bytes": 829,
+          "serialized_bytes": 115936,
+          "integration_seconds": 0.03997833898756653,
+          "serialization_seconds": 0.0016186190041480586,
+          "validation_seconds": 0.05344963900279254,
+          "tracemalloc_peak_bytes": 1642712
+        }
+      ],
+      "median": {
+        "integration_seconds": 0.03997833898756653,
+        "serialization_seconds": 0.0016186190041480586,
+        "validation_seconds": 0.053598168000462465,
+        "tracemalloc_peak_bytes": 1643836
+      }
+    },
+    {
+      "case_id": "M23C-E-001",
+      "samples": [
+        {
+          "case_id": "M23C-E-001",
+          "result": "IntegrationReport",
+          "error_code": null,
+          "charge_bytes": 21705888,
+          "unique_snapshot_bytes": 3576,
+          "serialized_bytes": 654467,
+          "integration_seconds": 0.1943385230115382,
+          "serialization_seconds": 0.007476186990970746,
+          "validation_seconds": 0.2809579900058452,
+          "tracemalloc_peak_bytes": 7437960
+        },
+        {
+          "case_id": "M23C-E-001",
+          "result": "IntegrationReport",
+          "error_code": null,
+          "charge_bytes": 21705888,
+          "unique_snapshot_bytes": 3576,
+          "serialized_bytes": 654467,
+          "integration_seconds": 0.19412276599905454,
+          "serialization_seconds": 0.008002746995771304,
+          "validation_seconds": 0.2829190379998181,
+          "tracemalloc_peak_bytes": 7434465
+        },
+        {
+          "case_id": "M23C-E-001",
+          "result": "IntegrationReport",
+          "error_code": null,
+          "charge_bytes": 21705888,
+          "unique_snapshot_bytes": 3576,
+          "serialized_bytes": 654467,
+          "integration_seconds": 0.19781243200122844,
+          "serialization_seconds": 0.007645349993254058,
+          "validation_seconds": 0.28284475300461054,
+          "tracemalloc_peak_bytes": 7438717
+        }
+      ],
+      "median": {
+        "integration_seconds": 0.1943385230115382,
+        "serialization_seconds": 0.007645349993254058,
+        "validation_seconds": 0.28284475300461054,
+        "tracemalloc_peak_bytes": 7437960
+      }
+    },
+    {
+      "case_id": "near",
+      "samples": [
+        {
+          "case_id": "near",
+          "result": "IntegrationReport",
+          "error_code": null,
+          "charge_bytes": 67108864,
+          "unique_snapshot_bytes": 304749,
+          "serialized_bytes": 9969994,
+          "integration_seconds": 0.7652040749962907,
+          "serialization_seconds": 0.01342955899599474,
+          "validation_seconds": 0.5493997880112147,
+          "tracemalloc_peak_bytes": 71341648
+        },
+        {
+          "case_id": "near",
+          "result": "IntegrationReport",
+          "error_code": null,
+          "charge_bytes": 67108864,
+          "unique_snapshot_bytes": 304749,
+          "serialized_bytes": 9969994,
+          "integration_seconds": 0.7773340870044194,
+          "serialization_seconds": 0.020263793994672596,
+          "validation_seconds": 0.570761634997325,
+          "tracemalloc_peak_bytes": 71343134
+        },
+        {
+          "case_id": "near",
+          "result": "IntegrationReport",
+          "error_code": null,
+          "charge_bytes": 67108864,
+          "unique_snapshot_bytes": 304749,
+          "serialized_bytes": 9969994,
+          "integration_seconds": 0.774042687000474,
+          "serialization_seconds": 0.013323974999366328,
+          "validation_seconds": 0.5626817760057747,
+          "tracemalloc_peak_bytes": 71342429
+        }
+      ],
+      "median": {
+        "integration_seconds": 0.774042687000474,
+        "serialization_seconds": 0.01342955899599474,
+        "validation_seconds": 0.5626817760057747,
+        "tracemalloc_peak_bytes": 71342429
+      }
+    },
+    {
+      "case_id": "over",
+      "samples": [
+        {
+          "case_id": "over",
+          "result": "OperationalError",
+          "error_code": "integration_output_budget_exceeded",
+          "charge_bytes": 67108865,
+          "unique_snapshot_bytes": 304753,
+          "serialized_bytes": 163,
+          "integration_seconds": 0.004735146998427808,
+          "serialization_seconds": 1.886799873318523e-05,
+          "validation_seconds": 1.9471000996418297e-05,
+          "tracemalloc_peak_bytes": 305904
+        },
+        {
+          "case_id": "over",
+          "result": "OperationalError",
+          "error_code": "integration_output_budget_exceeded",
+          "charge_bytes": 67108865,
+          "unique_snapshot_bytes": 304753,
+          "serialized_bytes": 163,
+          "integration_seconds": 0.0047333340044133365,
+          "serialization_seconds": 1.9464991055428982e-05,
+          "validation_seconds": 1.9508006516844034e-05,
+          "tracemalloc_peak_bytes": 305904
+        },
+        {
+          "case_id": "over",
+          "result": "OperationalError",
+          "error_code": "integration_output_budget_exceeded",
+          "charge_bytes": 67108865,
+          "unique_snapshot_bytes": 304753,
+          "serialized_bytes": 163,
+          "integration_seconds": 0.00479736398847308,
+          "serialization_seconds": 1.7067999579012394e-05,
+          "validation_seconds": 2.0695006242021918e-05,
+          "tracemalloc_peak_bytes": 305904
+        }
+      ],
+      "median": {
+        "integration_seconds": 0.004735146998427808,
+        "serialization_seconds": 1.886799873318523e-05,
+        "validation_seconds": 1.9508006516844034e-05,
+        "tracemalloc_peak_bytes": 305904
+      }
+    }
+  ]
+}

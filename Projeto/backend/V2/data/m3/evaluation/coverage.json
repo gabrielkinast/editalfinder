@@ -1,0 +1,108 @@
+{
+  "dataset_version": "m3.0-pilot-v1",
+  "protocol_version": "m3.0-annotation-v1",
+  "reference_date": "2026-10-19",
+  "documents": 28,
+  "records": 33,
+  "document_types": {
+    "text/html": 26,
+    "application/pdf": 2
+  },
+  "source_organizations": {
+    "BNDES": 11,
+    "BRDE": 4,
+    "CNPq": 5,
+    "MCTI": 2,
+    "Criatec 4": 4,
+    "Finep": 2
+  },
+  "document_categories": {
+    "financing_program": 5,
+    "program_information": 6,
+    "institutional_news": 9,
+    "application_call": 6,
+    "investment_program": 1,
+    "selection_result": 1
+  },
+  "discovery_labels": {
+    "confirmed_opportunity": 18,
+    "opportunity_signal": 8,
+    "unrelated_or_non_actionable": 6,
+    "announced_future_opportunity": 1
+  },
+  "opportunity_labels": {
+    "genuine_opportunity": 18,
+    "uncertain": 9,
+    "not_opportunity": 6
+  },
+  "temporal_statuses": {
+    "undetermined": 18,
+    "not_applicable": 6,
+    "open": 9
+  },
+  "record_modalities": {
+    "credito": 13,
+    "fomento": 12,
+    "investimentos": 8
+  },
+  "documents_per_modality_nonexclusive": {
+    "credito": 11,
+    "fomento": 9,
+    "investimentos": 8
+  },
+  "review_statuses": {
+    "provisional": 33
+  },
+  "annotated_fields": {
+    "title": 33,
+    "credit_limit": 4,
+    "applicant_requirements": 10,
+    "geographic_eligibility": 3,
+    "application_stage": 2,
+    "funding_organization": 3,
+    "credit_minimum": 2,
+    "resource_type": 5,
+    "program_extension": 1,
+    "application_period": 4,
+    "objective": 7,
+    "submission_deadline": 9,
+    "official_identifier": 8,
+    "opening_date": 6,
+    "publishing_organization": 5,
+    "target_audience": 2,
+    "program_budget": 2,
+    "eligibility_excerpt": 1,
+    "application_channel": 1,
+    "geographic_scope": 1,
+    "application_instructions": 2,
+    "completed_investment_expression": 1,
+    "fund_capital_estimate": 2,
+    "target_profile": 2,
+    "publication_date_expression": 2,
+    "investment_organization": 1,
+    "fund_stage_expression": 1,
+    "investment_focus": 1,
+    "additional_requirements": 1,
+    "completed_financing_amount": 2,
+    "completed_program_budget": 1,
+    "supplement_for_existing_proposals": 1,
+    "referenced_financing_instrument": 1
+  },
+  "evidence_items": 95,
+  "raw_total_bytes": 6466530,
+  "max_raw_bytes": 2831952,
+  "verified_document_publication_dates": 14,
+  "multi_record_document_ids": [
+    "M30-C05",
+    "M30-C07",
+    "M30-F01"
+  ],
+  "missing_discovery_classes": [],
+  "missing_temporal_classes": [
+    "closed",
+    "continuous",
+    "future"
+  ],
+  "metrics": null,
+  "limitation": "Counts only. All labels provisional; no predictions compared, no statistical representativeness or human ground truth claim."
+}

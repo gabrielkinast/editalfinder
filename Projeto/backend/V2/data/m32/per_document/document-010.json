@@ -1,0 +1,434 @@
+{
+  "diagnostics": [
+    "passive_not_rendered_DOM",
+    "unfrozen_attachments_unavailable"
+  ],
+  "document_id": "M30-F03",
+  "error_cases": [
+    {
+      "case_id": "M30-F03-R1:discovery_label",
+      "certainty": "unresolved_disagreement",
+      "dimension": "discovery_label",
+      "document_id": "M30-F03",
+      "error_codes": [
+        "OPPORTUNITY_EXISTENCE_CONFUSION",
+        "REFERENCE_AMBIGUITY"
+      ],
+      "expected_behavior": "Resolve this dimension from same-record evidence; provisional label is comparison, not authority.",
+      "next_action": "Compare full frozen context and request authorized adjudication; do not rewrite labels.",
+      "observed": null,
+      "record_id": "M30-F03-R1",
+      "reference": {
+        "discovery_label": "opportunity_signal",
+        "modality": "fomento",
+        "opportunity_label": "uncertain",
+        "review_status": "provisional",
+        "temporal_status": "undetermined"
+      },
+      "review_status": "provisional",
+      "root_cause": "Context fragmentation or semantic rule/reference ambiguity; see all-overlap graph before adjudication.",
+      "root_cause_confidence": "low",
+      "segment_id": null,
+      "severity": "medium",
+      "supporting_evidence": {
+        "end": 5838,
+        "quote": "Chamada Pública CNPq/CAPES Nº 30/2026 – Programa de Mestrado e Doutorado Acadêmico para Inovação – MAI/DAI",
+        "start": 5732
+      }
+    },
+    {
+      "case_id": "M30-F03-R1:modality",
+      "certainty": "unresolved_disagreement",
+      "dimension": "modality",
+      "document_id": "M30-F03",
+      "error_codes": [
+        "MODALITY_CONFUSION",
+        "REFERENCE_AMBIGUITY"
+      ],
+      "expected_behavior": "Resolve this dimension from same-record evidence; provisional label is comparison, not authority.",
+      "next_action": "Compare full frozen context and request authorized adjudication; do not rewrite labels.",
+      "observed": null,
+      "record_id": "M30-F03-R1",
+      "reference": {
+        "discovery_label": "opportunity_signal",
+        "modality": "fomento",
+        "opportunity_label": "uncertain",
+        "review_status": "provisional",
+        "temporal_status": "undetermined"
+      },
+      "review_status": "provisional",
+      "root_cause": "Context fragmentation or semantic rule/reference ambiguity; see all-overlap graph before adjudication.",
+      "root_cause_confidence": "low",
+      "segment_id": null,
+      "severity": "medium",
+      "supporting_evidence": {
+        "end": 5838,
+        "quote": "Chamada Pública CNPq/CAPES Nº 30/2026 – Programa de Mestrado e Doutorado Acadêmico para Inovação – MAI/DAI",
+        "start": 5732
+      }
+    },
+    {
+      "case_id": "M30-F03-R1:temporal_status",
+      "certainty": "unresolved_disagreement",
+      "dimension": "temporal_status",
+      "document_id": "M30-F03",
+      "error_codes": [
+        "TEMPORAL_AVAILABILITY_INFERENCE",
+        "REFERENCE_AMBIGUITY"
+      ],
+      "expected_behavior": "Resolve this dimension from same-record evidence; provisional label is comparison, not authority.",
+      "next_action": "Compare full frozen context and request authorized adjudication; do not rewrite labels.",
+      "observed": null,
+      "record_id": "M30-F03-R1",
+      "reference": {
+        "discovery_label": "opportunity_signal",
+        "modality": "fomento",
+        "opportunity_label": "uncertain",
+        "review_status": "provisional",
+        "temporal_status": "undetermined"
+      },
+      "review_status": "provisional",
+      "root_cause": "Context fragmentation or semantic rule/reference ambiguity; see all-overlap graph before adjudication.",
+      "root_cause_confidence": "low",
+      "segment_id": null,
+      "severity": "medium",
+      "supporting_evidence": {
+        "end": 5838,
+        "quote": "Chamada Pública CNPq/CAPES Nº 30/2026 – Programa de Mestrado e Doutorado Acadêmico para Inovação – MAI/DAI",
+        "start": 5732
+      }
+    },
+    {
+      "case_id": "M30-F03-R1:segmentation",
+      "certainty": "supported_observation",
+      "dimension": "structural",
+      "document_id": "M30-F03",
+      "error_codes": [
+        "EXTRACTION_OMISSION"
+      ],
+      "expected_behavior": "A meaningful record should retain its own associated context; whitespace-only boundary differences are not semantic defects.",
+      "next_action": "Inspect semantic usefulness of boundaries before changing segmentation.",
+      "observed": {
+        "coverage": {
+          "denominator": 185,
+          "numerator": 0,
+          "value": 0.0
+        },
+        "fragmentation": 0
+      },
+      "record_id": "M30-F03-R1",
+      "reference": {
+        "discovery_label": "opportunity_signal",
+        "modality": "fomento",
+        "opportunity_label": "uncertain",
+        "review_status": "provisional",
+        "temporal_status": "undetermined"
+      },
+      "review_status": "provisional",
+      "root_cause": "Structure-derived units differ from provisional annotated record spans.",
+      "root_cause_confidence": "high",
+      "segment_id": null,
+      "severity": "medium",
+      "supporting_evidence": {
+        "edges": [],
+        "reference_span": [
+          5732,
+          5917
+        ]
+      }
+    }
+  ],
+  "extracted_claims": [
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F03",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "title",
+      "original": "Chamada Nº 30/2026",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0001",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F03",
+        "end": 5514,
+        "page": null,
+        "quote": "Chamada Nº 30/2026",
+        "raw_sha256": "9d1ff57437c72dc427ed7143aaecbd4c9873f0275ca056adad9ba4bd8939bca3",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0001",
+        "start": 5496,
+        "text_sha256": "78bf8f9bed1539e843a1d71cf59cd22ac84b0b54c6ebc42ff8b1ab0dad05ae13"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F03",
+      "field_index": 1,
+      "method_version": "m31-deterministic-v2",
+      "name": "unknown_temporal_expression",
+      "original": "19/08/2026",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0001",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F03",
+        "end": 5700,
+        "page": null,
+        "quote": "19/08/2026 08h52",
+        "raw_sha256": "9d1ff57437c72dc427ed7143aaecbd4c9873f0275ca056adad9ba4bd8939bca3",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0001",
+        "start": 5684,
+        "text_sha256": "78bf8f9bed1539e843a1d71cf59cd22ac84b0b54c6ebc42ff8b1ab0dad05ae13"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F03",
+      "field_index": 2,
+      "method_version": "m31-deterministic-v2",
+      "name": "unknown_temporal_expression",
+      "original": "13/10/2026",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0001",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F03",
+        "end": 5731,
+        "page": null,
+        "quote": "13/10/2026 12h34",
+        "raw_sha256": "9d1ff57437c72dc427ed7143aaecbd4c9873f0275ca056adad9ba4bd8939bca3",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0001",
+        "start": 5715,
+        "text_sha256": "78bf8f9bed1539e843a1d71cf59cd22ac84b0b54c6ebc42ff8b1ab0dad05ae13"
+      }
+    }
+  ],
+  "provenance": {
+    "byte_length": 134654,
+    "category_evidence": "Chamada Pública CNPq/CAPES Nº 30/2026 – Programa de Mestrado e Doutorado Acadêmico para Inovação – MAI/DAI",
+    "content_type": "text/html",
+    "derivation_method": "stdlib-HTMLParser-data-whitespace-v1; excludes script/style/noscript/template; not rendered DOM",
+    "document_category": "program_information",
+    "document_id": "M30-F03",
+    "document_version": null,
+    "final_url": "https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-30-2026",
+    "original_filename": "chamada-no-30-2026",
+    "original_url": "https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-30-2026",
+    "publication_date": "2026-08-19",
+    "raw_path": "raw/M30-F03.html",
+    "restrictions": "Research pilot local frozen copy only; no redistribution license inferred. No scripts executed, no forms submitted, no applicant records intentionally collected. Public navigation/staff attribution may remain in original bytes.",
+    "retrieval_status": "acquired",
+    "retrieved_at": "2026-10-19T04:37:44.701064+00:00",
+    "sha256": "9d1ff57437c72dc427ed7143aaecbd4c9873f0275ca056adad9ba4bd8939bca3",
+    "source_authority_notes": "Public HTTPS page hosted by the named institution; authorship asserted by host/content, not cryptographically authenticated. Not source-readiness approval.",
+    "source_organization": "CNPq",
+    "text_path": "text/M30-F03.txt",
+    "text_sha256": "78bf8f9bed1539e843a1d71cf59cd22ac84b0b54c6ebc42ff8b1ab0dad05ae13"
+  },
+  "records": [
+    {
+      "all_overlap_predictions": [],
+      "any_exact_boundary": false,
+      "coverage": {
+        "denominator": 185,
+        "numerator": 0,
+        "value": 0.0
+      },
+      "covered_characters": 0,
+      "disagreements": [
+        "discovery_label",
+        "modality",
+        "temporal_status"
+      ],
+      "discovery_histogram": {},
+      "document_id": "M30-F03",
+      "edges": [],
+      "end": 5917,
+      "fields": [
+        {
+          "candidates": [],
+          "name": "title",
+          "reason": "no corresponding field; absence is not explicit field abstention",
+          "reference_evidence": [
+            {
+              "end": 5838,
+              "evidence_id": "M30-F03-R1-E1",
+              "page": null,
+              "quote": "Chamada Pública CNPq/CAPES Nº 30/2026 – Programa de Mestrado e Doutorado Acadêmico para Inovação – MAI/DAI",
+              "start": 5732
+            }
+          ],
+          "reference_value": "Chamada Pública CNPq/CAPES Nº 30/2026 – Programa de Mestrado e Doutorado Acadêmico para Inovação – MAI/DAI",
+          "scope_supported": true,
+          "semantic_adjudication": "not_certified",
+          "status": "MISSING",
+          "strict_role_value": false
+        },
+        {
+          "candidates": [],
+          "name": "official_identifier",
+          "reason": "requested target role outside implemented M31 field scope",
+          "reference_evidence": [
+            {
+              "end": 5838,
+              "evidence_id": "M30-F03-R1-E1",
+              "page": null,
+              "quote": "Chamada Pública CNPq/CAPES Nº 30/2026 – Programa de Mestrado e Doutorado Acadêmico para Inovação – MAI/DAI",
+              "start": 5732
+            }
+          ],
+          "reference_value": "30/2026",
+          "scope_supported": false,
+          "semantic_adjudication": "not_certified",
+          "status": "UNRESOLVED",
+          "strict_role_value": false
+        }
+      ],
+      "fragmentation": 0,
+      "location_convention": "html_unicode_codepoints",
+      "physical_reference_evidence_pages": [],
+      "rationale": "Provisional AI source reading: Current call folder lists MAI/DAI call and attachments but carries no application interval in this document; do not import the interval from other documents.",
+      "record_id": "M30-F03-R1",
+      "reference": {
+        "discovery_label": "opportunity_signal",
+        "modality": "fomento",
+        "opportunity_label": "uncertain",
+        "review_status": "provisional",
+        "temporal_status": "undetermined"
+      },
+      "reference_characters": 185,
+      "reference_evidence": [
+        {
+          "end": 5838,
+          "evidence_id": "M30-F03-R1-E1",
+          "page": null,
+          "quote": "Chamada Pública CNPq/CAPES Nº 30/2026 – Programa de Mestrado e Doutorado Acadêmico para Inovação – MAI/DAI",
+          "start": 5732
+        },
+        {
+          "end": 5917,
+          "evidence_id": "M30-F03-R1-E2",
+          "page": null,
+          "quote": "chamadapublica30_2026_MAIDAI_2766773.pdf",
+          "start": 5877
+        },
+        {
+          "end": 5876,
+          "evidence_id": "M30-F03-R1-E3",
+          "page": null,
+          "quote": "— última modificação 13/10/2026 12h34",
+          "start": 5839
+        }
+      ],
+      "representative": null,
+      "representative_prediction": null,
+      "representative_quote": null,
+      "start": 5732,
+      "status": "no_overlap",
+      "uncertainty_notes": [
+        "Contextual folder for live MAI/DAI call evidenced separately in F01 and F08; no deadline asserted from this folder."
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 5495,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0000",
+      "start": 5491,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "call-heading-local-v1",
+        "mixed_or_missing_financial_modality",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 5731,
+      "field_count": 3,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0001",
+      "start": 5496,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 10025,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0002",
+      "start": 10017,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 10036,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0003",
+      "start": 10026,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 10052,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0004",
+      "start": 10037,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    }
+  ],
+  "semantic_reviews": [],
+  "status": "processed"
+}

@@ -1,0 +1,27 @@
+{
+  "method_version": "m31-deterministic-v2",
+  "reference_date": "2026-10-19",
+  "input_keys": [
+    "document_id",
+    "original_url",
+    "content_type",
+    "raw_path",
+    "text_path",
+    "sha256",
+    "text_sha256",
+    "byte_length",
+    "derivation_method"
+  ],
+  "max_raw_bytes": 5242880,
+  "max_text_bytes": 1048576,
+  "max_html_data_nodes": 30000,
+  "max_html_depth": 256,
+  "max_documents": 64,
+  "max_segment_chars": 20000,
+  "max_segments_per_document": 3000,
+  "manifest_byte_limit": 1048576,
+  "prediction_transport_limit": 33554432,
+  "inference_label_access": false,
+  "network": false,
+  "bridge": "not_implemented_context_authorization_missing"
+}

@@ -1,0 +1,241 @@
+{
+  "method": "3 fresh sequential child processes per case",
+  "python": "3.11.16 (main, Aug 25 2026, 14:00:53) [Clang 22.1.3 ]",
+  "results": [
+    {
+      "case": "grant",
+      "samples": [
+        {
+          "case": "grant",
+          "result": "IntegrationReport",
+          "error_code": null,
+          "diagnostics": 1,
+          "charge_bytes": 6277808,
+          "output_bytes": 149056,
+          "integrate_seconds": 0.07973728398792446,
+          "dump_seconds": 0.003591107000829652,
+          "replay_seconds": 0.10091774300963152,
+          "tracemalloc_peak_bytes": 2104075
+        },
+        {
+          "case": "grant",
+          "result": "IntegrationReport",
+          "error_code": null,
+          "diagnostics": 1,
+          "charge_bytes": 6277808,
+          "output_bytes": 149056,
+          "integrate_seconds": 0.08013639999262523,
+          "dump_seconds": 0.003700073008076288,
+          "replay_seconds": 0.10234626400051638,
+          "tracemalloc_peak_bytes": 2104196
+        },
+        {
+          "case": "grant",
+          "result": "IntegrationReport",
+          "error_code": null,
+          "diagnostics": 1,
+          "charge_bytes": 6277808,
+          "output_bytes": 149056,
+          "integrate_seconds": 0.0919340190012008,
+          "dump_seconds": 0.007537658995715901,
+          "replay_seconds": 0.2091253010003129,
+          "tracemalloc_peak_bytes": 2103958
+        }
+      ],
+      "median": {
+        "integrate_seconds": 0.08013639999262523,
+        "dump_seconds": 0.003700073008076288,
+        "replay_seconds": 0.10234626400051638,
+        "tracemalloc_peak_bytes": 2104075
+      }
+    },
+    {
+      "case": "ambiguous",
+      "samples": [
+        {
+          "case": "ambiguous",
+          "result": "IntegrationReport",
+          "error_code": null,
+          "diagnostics": 5,
+          "charge_bytes": 9057072,
+          "output_bytes": 161311,
+          "integrate_seconds": 0.08604536300117616,
+          "dump_seconds": 0.0038555549981538206,
+          "replay_seconds": 0.10831718699773774,
+          "tracemalloc_peak_bytes": 2262339
+        },
+        {
+          "case": "ambiguous",
+          "result": "IntegrationReport",
+          "error_code": null,
+          "diagnostics": 5,
+          "charge_bytes": 9057072,
+          "output_bytes": 161311,
+          "integrate_seconds": 0.08309563100920059,
+          "dump_seconds": 0.0039706819952698424,
+          "replay_seconds": 0.10446045000571758,
+          "tracemalloc_peak_bytes": 2263284
+        },
+        {
+          "case": "ambiguous",
+          "result": "IntegrationReport",
+          "error_code": null,
+          "diagnostics": 5,
+          "charge_bytes": 9057072,
+          "output_bytes": 161311,
+          "integrate_seconds": 0.08363533300871495,
+          "dump_seconds": 0.003865270991809666,
+          "replay_seconds": 0.10558843000035267,
+          "tracemalloc_peak_bytes": 2262905
+        }
+      ],
+      "median": {
+        "integrate_seconds": 0.08363533300871495,
+        "dump_seconds": 0.003865270991809666,
+        "replay_seconds": 0.10558843000035267,
+        "tracemalloc_peak_bytes": 2262905
+      }
+    },
+    {
+      "case": "investment",
+      "samples": [
+        {
+          "case": "investment",
+          "result": "IntegrationReport",
+          "error_code": null,
+          "diagnostics": 1,
+          "charge_bytes": 4183744,
+          "output_bytes": 107080,
+          "integrate_seconds": 0.05495910900935996,
+          "dump_seconds": 0.002096723997965455,
+          "replay_seconds": 0.083529843002907,
+          "tracemalloc_peak_bytes": 1529851
+        },
+        {
+          "case": "investment",
+          "result": "IntegrationReport",
+          "error_code": null,
+          "diagnostics": 1,
+          "charge_bytes": 4183744,
+          "output_bytes": 107080,
+          "integrate_seconds": 0.053890284994849935,
+          "dump_seconds": 0.0020390830031828955,
+          "replay_seconds": 0.07017767100478522,
+          "tracemalloc_peak_bytes": 1530026
+        },
+        {
+          "case": "investment",
+          "result": "IntegrationReport",
+          "error_code": null,
+          "diagnostics": 1,
+          "charge_bytes": 4183744,
+          "output_bytes": 107080,
+          "integrate_seconds": 0.05383761299890466,
+          "dump_seconds": 0.0020612030057236552,
+          "replay_seconds": 0.06953969900496304,
+          "tracemalloc_peak_bytes": 1531748
+        }
+      ],
+      "median": {
+        "integrate_seconds": 0.053890284994849935,
+        "dump_seconds": 0.0020612030057236552,
+        "replay_seconds": 0.07017767100478522,
+        "tracemalloc_peak_bytes": 1530026
+      }
+    },
+    {
+      "case": "diagnostic_24",
+      "samples": [
+        {
+          "case": "diagnostic_24",
+          "result": "IntegrationReport",
+          "error_code": null,
+          "diagnostics": 24,
+          "charge_bytes": 63629232,
+          "output_bytes": 572061,
+          "integrate_seconds": 0.1861549259920139,
+          "dump_seconds": 0.010084822002681904,
+          "replay_seconds": 0.3310346850048518,
+          "tracemalloc_peak_bytes": 8032886
+        },
+        {
+          "case": "diagnostic_24",
+          "result": "IntegrationReport",
+          "error_code": null,
+          "diagnostics": 24,
+          "charge_bytes": 63629232,
+          "output_bytes": 572061,
+          "integrate_seconds": 0.18679303799581248,
+          "dump_seconds": 0.012080233005690388,
+          "replay_seconds": 0.33195330199669115,
+          "tracemalloc_peak_bytes": 8035233
+        },
+        {
+          "case": "diagnostic_24",
+          "result": "IntegrationReport",
+          "error_code": null,
+          "diagnostics": 24,
+          "charge_bytes": 63629232,
+          "output_bytes": 572061,
+          "integrate_seconds": 0.18684546899748966,
+          "dump_seconds": 0.009844900996540673,
+          "replay_seconds": 0.33629333700810093,
+          "tracemalloc_peak_bytes": 8034709
+        }
+      ],
+      "median": {
+        "integrate_seconds": 0.18679303799581248,
+        "dump_seconds": 0.010084822002681904,
+        "replay_seconds": 0.33195330199669115,
+        "tracemalloc_peak_bytes": 8034709
+      }
+    },
+    {
+      "case": "refused_32",
+      "samples": [
+        {
+          "case": "refused_32",
+          "result": "OperationalError",
+          "error_code": "integration_output_budget_exceeded",
+          "diagnostics": 0,
+          "charge_bytes": 67108865,
+          "output_bytes": 163,
+          "integrate_seconds": 0.051461694994941354,
+          "dump_seconds": 2.805600524879992e-05,
+          "replay_seconds": 2.9615999665111303e-05,
+          "tracemalloc_peak_bytes": 118602
+        },
+        {
+          "case": "refused_32",
+          "result": "OperationalError",
+          "error_code": "integration_output_budget_exceeded",
+          "diagnostics": 0,
+          "charge_bytes": 67108865,
+          "output_bytes": 163,
+          "integrate_seconds": 0.07957574400643352,
+          "dump_seconds": 4.560098750516772e-05,
+          "replay_seconds": 5.8264005929231644e-05,
+          "tracemalloc_peak_bytes": 118602
+        },
+        {
+          "case": "refused_32",
+          "result": "OperationalError",
+          "error_code": "integration_output_budget_exceeded",
+          "diagnostics": 0,
+          "charge_bytes": 67108865,
+          "output_bytes": 163,
+          "integrate_seconds": 0.03823419500258751,
+          "dump_seconds": 2.5878995074890554e-05,
+          "replay_seconds": 3.125600051134825e-05,
+          "tracemalloc_peak_bytes": 118602
+        }
+      ],
+      "median": {
+        "integrate_seconds": 0.051461694994941354,
+        "dump_seconds": 2.805600524879992e-05,
+        "replay_seconds": 3.125600051134825e-05,
+        "tracemalloc_peak_bytes": 118602
+      }
+    }
+  ]
+}

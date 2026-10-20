@@ -1,0 +1,3296 @@
+{
+  "diagnostics": [
+    "frozen_pdf_text_no_OCR_or_layout_recovery",
+    "physical_pages_include_empty_pages",
+    "unfrozen_attachments_unavailable"
+  ],
+  "document_id": "M30-I07",
+  "error_cases": [
+    {
+      "case_id": "M30-I07-R1:discovery_label",
+      "certainty": "unresolved_disagreement",
+      "dimension": "discovery_label",
+      "document_id": "M30-I07",
+      "error_codes": [
+        "OPPORTUNITY_EXISTENCE_CONFUSION",
+        "REFERENCE_AMBIGUITY"
+      ],
+      "expected_behavior": "Resolve this dimension from same-record evidence; provisional label is comparison, not authority.",
+      "next_action": "Compare full frozen context and request authorized adjudication; do not rewrite labels.",
+      "observed": {
+        "discovery": "abstain",
+        "end": 12376,
+        "modality": "undetermined",
+        "segment_id": "segment-0074",
+        "start": 11873,
+        "temporal": "undetermined"
+      },
+      "record_id": "M30-I07-R1",
+      "reference": {
+        "discovery_label": "opportunity_signal",
+        "modality": "investimentos",
+        "opportunity_label": "uncertain",
+        "review_status": "provisional",
+        "temporal_status": "undetermined"
+      },
+      "review_status": "provisional",
+      "root_cause": "Context fragmentation or semantic rule/reference ambiguity; see all-overlap graph before adjudication.",
+      "root_cause_confidence": "low",
+      "segment_id": "segment-0074",
+      "severity": "medium",
+      "supporting_evidence": {
+        "end": 12376,
+        "quote": "O Fundo Sul Ventures nasceu com o propósito\nde impulsionar e desenvolver o ecossistema de\ninovação da região Sul do Brasil, por meio de uma\nestratégia estruturada de investimentos em Venture\nCapital, operando de forma transversal e hands-on,\nacompanhando de perto cada investimento para\nmaximizar seu potencial de crescimento. O Fundo é\nfocado os ecossistemas dos três estados do Sul do Brasil,\ncom setores estratégicos definidos, incluindo Adtech &\nRetail Tech, Healthtech, Fintech, Smart Infra e SaaS.",
+        "start": 11873
+      }
+    },
+    {
+      "case_id": "M30-I07-R1:modality",
+      "certainty": "unresolved_disagreement",
+      "dimension": "modality",
+      "document_id": "M30-I07",
+      "error_codes": [
+        "MODALITY_CONFUSION",
+        "REFERENCE_AMBIGUITY"
+      ],
+      "expected_behavior": "Resolve this dimension from same-record evidence; provisional label is comparison, not authority.",
+      "next_action": "Compare full frozen context and request authorized adjudication; do not rewrite labels.",
+      "observed": {
+        "discovery": "abstain",
+        "end": 12376,
+        "modality": "undetermined",
+        "segment_id": "segment-0074",
+        "start": 11873,
+        "temporal": "undetermined"
+      },
+      "record_id": "M30-I07-R1",
+      "reference": {
+        "discovery_label": "opportunity_signal",
+        "modality": "investimentos",
+        "opportunity_label": "uncertain",
+        "review_status": "provisional",
+        "temporal_status": "undetermined"
+      },
+      "review_status": "provisional",
+      "root_cause": "Context fragmentation or semantic rule/reference ambiguity; see all-overlap graph before adjudication.",
+      "root_cause_confidence": "low",
+      "segment_id": "segment-0074",
+      "severity": "medium",
+      "supporting_evidence": {
+        "end": 12376,
+        "quote": "O Fundo Sul Ventures nasceu com o propósito\nde impulsionar e desenvolver o ecossistema de\ninovação da região Sul do Brasil, por meio de uma\nestratégia estruturada de investimentos em Venture\nCapital, operando de forma transversal e hands-on,\nacompanhando de perto cada investimento para\nmaximizar seu potencial de crescimento. O Fundo é\nfocado os ecossistemas dos três estados do Sul do Brasil,\ncom setores estratégicos definidos, incluindo Adtech &\nRetail Tech, Healthtech, Fintech, Smart Infra e SaaS.",
+        "start": 11873
+      }
+    },
+    {
+      "case_id": "M30-I07-R1:segmentation",
+      "certainty": "supported_observation",
+      "dimension": "structural",
+      "document_id": "M30-I07",
+      "error_codes": [
+        "SEGMENTATION_OVER"
+      ],
+      "expected_behavior": "A meaningful record should retain its own associated context; whitespace-only boundary differences are not semantic defects.",
+      "next_action": "Inspect semantic usefulness of boundaries before changing segmentation.",
+      "observed": {
+        "coverage": {
+          "denominator": 926,
+          "numerator": 918,
+          "value": 0.9913606911447084
+        },
+        "fragmentation": 5
+      },
+      "record_id": "M30-I07-R1",
+      "reference": {
+        "discovery_label": "opportunity_signal",
+        "modality": "investimentos",
+        "opportunity_label": "uncertain",
+        "review_status": "provisional",
+        "temporal_status": "undetermined"
+      },
+      "review_status": "provisional",
+      "root_cause": "Structure-derived units differ from provisional annotated record spans.",
+      "root_cause_confidence": "high",
+      "segment_id": "segment-0074",
+      "severity": "medium",
+      "supporting_evidence": {
+        "edges": [
+          {
+            "end": 11777,
+            "exact": false,
+            "intersection": 327,
+            "intersection_end": 11777,
+            "intersection_start": 11450,
+            "iou": 0.3531317494600432,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.3531317494600432,
+            "segment_id": "segment-0070",
+            "start": 11450
+          },
+          {
+            "end": 11838,
+            "exact": false,
+            "intersection": 59,
+            "intersection_end": 11838,
+            "intersection_start": 11779,
+            "iou": 0.06371490280777538,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.06371490280777538,
+            "segment_id": "segment-0071",
+            "start": 11779
+          },
+          {
+            "end": 11852,
+            "exact": false,
+            "intersection": 12,
+            "intersection_end": 11852,
+            "intersection_start": 11840,
+            "iou": 0.012958963282937365,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.012958963282937365,
+            "segment_id": "segment-0072",
+            "start": 11840
+          },
+          {
+            "end": 11871,
+            "exact": false,
+            "intersection": 17,
+            "intersection_end": 11871,
+            "intersection_start": 11854,
+            "iou": 0.0183585313174946,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.0183585313174946,
+            "segment_id": "segment-0073",
+            "start": 11854
+          },
+          {
+            "end": 12376,
+            "exact": false,
+            "intersection": 503,
+            "intersection_end": 12376,
+            "intersection_start": 11873,
+            "iou": 0.5431965442764579,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.5431965442764579,
+            "segment_id": "segment-0074",
+            "start": 11873
+          }
+        ],
+        "reference_span": [
+          11450,
+          12376
+        ]
+      }
+    },
+    {
+      "case_id": "M30-I07:segment-0074:discovery:classification",
+      "certainty": "strong_hypothesis",
+      "claim_kind": "discovery",
+      "context_evidence": [
+        {
+          "end": 11472,
+          "page": 12,
+          "quote": "FUNDOS DE PARTICIPAÇÃO",
+          "start": 11450
+        },
+        {
+          "end": 11838,
+          "page": 12,
+          "quote": "Atualmente, os seguintes FIPs estão em estágio de captação:",
+          "start": 11779
+        },
+        {
+          "end": 11852,
+          "page": 12,
+          "quote": "SUL VENTURES",
+          "start": 11840
+        },
+        {
+          "end": 12376,
+          "page": 12,
+          "quote": "O Fundo Sul Ventures nasceu com o propósito\nde impulsionar e desenvolver o ecossistema de\ninovação da região Sul do Brasil, por meio de uma\nestratégia estruturada de investimentos em Venture\nCapital, operando de forma transversal e hands-on,\nacompanhando de perto cada investimento para\nmaximizar seu potencial de crescimento. O Fundo é\nfocado os ecossistemas dos três estados do Sul do Brasil,\ncom setores estratégicos definidos, incluindo Adtech &\nRetail Tech, Healthtech, Fintech, Smart Infra e SaaS.",
+          "start": 11873
+        }
+      ],
+      "document_id": "M30-I07",
+      "end": 12376,
+      "error_codes": [
+        "SEGMENTATION_OVER",
+        "EXCESSIVE_ABSTENTION"
+      ],
+      "expected_behavior": "Interpretar apenas acesso/estágio e público deste registro com o contexto completo; não confundir anúncio, gestor e candidatura startup.",
+      "expected_claim": "abstain",
+      "field_index": null,
+      "field_name": null,
+      "judgment": "partial",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "observed": "abstain",
+      "quote": "O Fundo Sul Ventures nasceu com o propósito\nde impulsionar e desenvolver o ecossistema de\ninovação da região Sul do Brasil, por meio de uma\nestratégia estruturada de investimentos em Venture\nCapital, operando de forma transversal e hands-on,\nacompanhando de perto cada investimento para\nmaximizar seu potencial de crescimento. O Fundo é\nfocado os ecossistemas dos três estados do Sul do Brasil,\ncom setores estratégicos definidos, incluindo Adtech &\nRetail Tech, Healthtech, Fintech, Smart Infra e SaaS.",
+      "rationale": "Há fundo Sul Ventures e estágio de captação na página física 12. O maior fragmento abstém apesar de irmãos emitirem sinal; captação de veículo não é oferta de ticket para startup.",
+      "review_status": "provisional",
+      "root_cause": "Venture e Capital quebrados entre linhas e nós PDF fragmentam o contexto de modalidade e estágio.",
+      "root_cause_confidence": "medium",
+      "segment_id": "segment-0074",
+      "severity": "medium",
+      "start": 11873,
+      "supporting_evidence": {
+        "end": 12376,
+        "quote": "O Fundo Sul Ventures nasceu com o propósito\nde impulsionar e desenvolver o ecossistema de\ninovação da região Sul do Brasil, por meio de uma\nestratégia estruturada de investimentos em Venture\nCapital, operando de forma transversal e hands-on,\nacompanhando de perto cada investimento para\nmaximizar seu potencial de crescimento. O Fundo é\nfocado os ecossistemas dos três estados do Sul do Brasil,\ncom setores estratégicos definidos, incluindo Adtech &\nRetail Tech, Healthtech, Fintech, Smart Infra e SaaS.",
+        "start": 11873
+      }
+    }
+  ],
+  "extracted_claims": [
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-I07",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "borrower_revenue_requirement",
+      "original": "R$ 300 milhões",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0003",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-I07",
+        "end": 1033,
+        "page": 3,
+        "quote": "Quem pode ser financiado\nEmpresas com faturamento anual até R$ 300 milhões, instaladas na Região Sul e em MS.",
+        "raw_sha256": "974d6f4bc6e3b5872b2e3cbcf5fd861c9cbbe671cdd3d2f0d914b8bc8e6ca3b3",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0003",
+        "start": 924,
+        "text_sha256": "f5fc847f69f336ab6e0bb59db12d5df0ab417590e50fd64c7dcbed4d64f9752c"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-I07",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "monetary_expression_unresolved",
+      "original": "R$ 16 milhões",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0005",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-I07",
+        "end": 1293,
+        "page": 3,
+        "quote": "Taxa de Juros\n* TR + 6,068% para empresas com receita bruta anual até R$ 16 milhões.\n* TR + 6,605% a.a. para empresas com receita bruta anual entre R$ 16 milhões e R$ 300 milhões.",
+        "raw_sha256": "974d6f4bc6e3b5872b2e3cbcf5fd861c9cbbe671cdd3d2f0d914b8bc8e6ca3b3",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0005",
+        "start": 1114,
+        "text_sha256": "f5fc847f69f336ab6e0bb59db12d5df0ab417590e50fd64c7dcbed4d64f9752c"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-I07",
+      "field_index": 1,
+      "method_version": "m31-deterministic-v2",
+      "name": "monetary_expression_unresolved",
+      "original": "R$ 16 milhões",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0005",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-I07",
+        "end": 1293,
+        "page": 3,
+        "quote": "Taxa de Juros\n* TR + 6,068% para empresas com receita bruta anual até R$ 16 milhões.\n* TR + 6,605% a.a. para empresas com receita bruta anual entre R$ 16 milhões e R$ 300 milhões.",
+        "raw_sha256": "974d6f4bc6e3b5872b2e3cbcf5fd861c9cbbe671cdd3d2f0d914b8bc8e6ca3b3",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0005",
+        "start": 1114,
+        "text_sha256": "f5fc847f69f336ab6e0bb59db12d5df0ab417590e50fd64c7dcbed4d64f9752c"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-I07",
+      "field_index": 2,
+      "method_version": "m31-deterministic-v2",
+      "name": "monetary_expression_unresolved",
+      "original": "R$ 300 milhões",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0005",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-I07",
+        "end": 1293,
+        "page": 3,
+        "quote": "Taxa de Juros\n* TR + 6,068% para empresas com receita bruta anual até R$ 16 milhões.\n* TR + 6,605% a.a. para empresas com receita bruta anual entre R$ 16 milhões e R$ 300 milhões.",
+        "raw_sha256": "974d6f4bc6e3b5872b2e3cbcf5fd861c9cbbe671cdd3d2f0d914b8bc8e6ca3b3",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0005",
+        "start": 1114,
+        "text_sha256": "f5fc847f69f336ab6e0bb59db12d5df0ab417590e50fd64c7dcbed4d64f9752c"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-I07",
+      "field_index": 3,
+      "method_version": "m31-deterministic-v2",
+      "name": "interest_expression",
+      "original": "Taxa de Juros\n* TR + 6,068% para empresas com receita bruta anual até R$ 16 milhões.\n* TR + 6,605% a.a. para empresas com receita bruta anual entre R$ 16 milhões e R$ 300 milhões.",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0005",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-I07",
+        "end": 1293,
+        "page": 3,
+        "quote": "Taxa de Juros\n* TR + 6,068% para empresas com receita bruta anual até R$ 16 milhões.\n* TR + 6,605% a.a. para empresas com receita bruta anual entre R$ 16 milhões e R$ 300 milhões.",
+        "raw_sha256": "974d6f4bc6e3b5872b2e3cbcf5fd861c9cbbe671cdd3d2f0d914b8bc8e6ca3b3",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0005",
+        "start": 1114,
+        "text_sha256": "f5fc847f69f336ab6e0bb59db12d5df0ab417590e50fd64c7dcbed4d64f9752c"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-I07",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "repayment_expression",
+      "original": "Prazo máximo\nAté 8 anos, incluídos até 24 meses de carência.",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0006",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-I07",
+        "end": 1355,
+        "page": 3,
+        "quote": "Prazo máximo\nAté 8 anos, incluídos até 24 meses de carência.",
+        "raw_sha256": "974d6f4bc6e3b5872b2e3cbcf5fd861c9cbbe671cdd3d2f0d914b8bc8e6ca3b3",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0006",
+        "start": 1295,
+        "text_sha256": "f5fc847f69f336ab6e0bb59db12d5df0ab417590e50fd64c7dcbed4d64f9752c"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-I07",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "monetary_expression_unresolved",
+      "original": "R$ 15 milhões",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0007",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-I07",
+        "end": 1400,
+        "page": 3,
+        "quote": "Valor máximo\nR$ 15 milhões a cada 12 meses.",
+        "raw_sha256": "974d6f4bc6e3b5872b2e3cbcf5fd861c9cbbe671cdd3d2f0d914b8bc8e6ca3b3",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0007",
+        "start": 1357,
+        "text_sha256": "f5fc847f69f336ab6e0bb59db12d5df0ab417590e50fd64c7dcbed4d64f9752c"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-I07",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "repayment_expression",
+      "original": "Periodicidade do pagamento:\nCarência: Mensal. Amortização: Mensal",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0008",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-I07",
+        "end": 1467,
+        "page": 3,
+        "quote": "Periodicidade do pagamento:\nCarência: Mensal. Amortização: Mensal",
+        "raw_sha256": "974d6f4bc6e3b5872b2e3cbcf5fd861c9cbbe671cdd3d2f0d914b8bc8e6ca3b3",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0008",
+        "start": 1402,
+        "text_sha256": "f5fc847f69f336ab6e0bb59db12d5df0ab417590e50fd64c7dcbed4d64f9752c"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-I07",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "borrower_revenue_requirement",
+      "original": "R$ 300 milhões",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0011",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-I07",
+        "end": 2179,
+        "page": 4,
+        "quote": "Quem pode ser financiado\nEmpresas com faturamento anual até R$ 300 milhões, instaladas na Região Sul e em MS.",
+        "raw_sha256": "974d6f4bc6e3b5872b2e3cbcf5fd861c9cbbe671cdd3d2f0d914b8bc8e6ca3b3",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0011",
+        "start": 2070,
+        "text_sha256": "f5fc847f69f336ab6e0bb59db12d5df0ab417590e50fd64c7dcbed4d64f9752c"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-I07",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "monetary_expression_unresolved",
+      "original": "R$ 16 milhões",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0013",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-I07",
+        "end": 2444,
+        "page": 4,
+        "quote": "Taxa de Juros\n* TR + 6,068% a.a. para empresas com receita bruta anual até R$ 16 milhões.\n* TR + 6,605% a.a. para empresas com receita bruta anual entre R$ 16 milhões e R$ 300 milhões.",
+        "raw_sha256": "974d6f4bc6e3b5872b2e3cbcf5fd861c9cbbe671cdd3d2f0d914b8bc8e6ca3b3",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0013",
+        "start": 2260,
+        "text_sha256": "f5fc847f69f336ab6e0bb59db12d5df0ab417590e50fd64c7dcbed4d64f9752c"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-I07",
+      "field_index": 1,
+      "method_version": "m31-deterministic-v2",
+      "name": "monetary_expression_unresolved",
+      "original": "R$ 16 milhões",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0013",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-I07",
+        "end": 2444,
+        "page": 4,
+        "quote": "Taxa de Juros\n* TR + 6,068% a.a. para empresas com receita bruta anual até R$ 16 milhões.\n* TR + 6,605% a.a. para empresas com receita bruta anual entre R$ 16 milhões e R$ 300 milhões.",
+        "raw_sha256": "974d6f4bc6e3b5872b2e3cbcf5fd861c9cbbe671cdd3d2f0d914b8bc8e6ca3b3",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0013",
+        "start": 2260,
+        "text_sha256": "f5fc847f69f336ab6e0bb59db12d5df0ab417590e50fd64c7dcbed4d64f9752c"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-I07",
+      "field_index": 2,
+      "method_version": "m31-deterministic-v2",
+      "name": "monetary_expression_unresolved",
+      "original": "R$ 300 milhões",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0013",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-I07",
+        "end": 2444,
+        "page": 4,
+        "quote": "Taxa de Juros\n* TR + 6,068% a.a. para empresas com receita bruta anual até R$ 16 milhões.\n* TR + 6,605% a.a. para empresas com receita bruta anual entre R$ 16 milhões e R$ 300 milhões.",
+        "raw_sha256": "974d6f4bc6e3b5872b2e3cbcf5fd861c9cbbe671cdd3d2f0d914b8bc8e6ca3b3",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0013",
+        "start": 2260,
+        "text_sha256": "f5fc847f69f336ab6e0bb59db12d5df0ab417590e50fd64c7dcbed4d64f9752c"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-I07",
+      "field_index": 3,
+      "method_version": "m31-deterministic-v2",
+      "name": "interest_expression",
+      "original": "Taxa de Juros\n* TR + 6,068% a.a. para empresas com receita bruta anual até R$ 16 milhões.\n* TR + 6,605% a.a. para empresas com receita bruta anual entre R$ 16 milhões e R$ 300 milhões.",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0013",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-I07",
+        "end": 2444,
+        "page": 4,
+        "quote": "Taxa de Juros\n* TR + 6,068% a.a. para empresas com receita bruta anual até R$ 16 milhões.\n* TR + 6,605% a.a. para empresas com receita bruta anual entre R$ 16 milhões e R$ 300 milhões.",
+        "raw_sha256": "974d6f4bc6e3b5872b2e3cbcf5fd861c9cbbe671cdd3d2f0d914b8bc8e6ca3b3",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0013",
+        "start": 2260,
+        "text_sha256": "f5fc847f69f336ab6e0bb59db12d5df0ab417590e50fd64c7dcbed4d64f9752c"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-I07",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "repayment_expression",
+      "original": "Prazo máximo\nAté 8 anos, incluídos até 24 meses de carência.",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0014",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-I07",
+        "end": 2506,
+        "page": 4,
+        "quote": "Prazo máximo\nAté 8 anos, incluídos até 24 meses de carência.",
+        "raw_sha256": "974d6f4bc6e3b5872b2e3cbcf5fd861c9cbbe671cdd3d2f0d914b8bc8e6ca3b3",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0014",
+        "start": 2446,
+        "text_sha256": "f5fc847f69f336ab6e0bb59db12d5df0ab417590e50fd64c7dcbed4d64f9752c"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-I07",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "monetary_expression_unresolved",
+      "original": "R$ 15 milhões",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0015",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-I07",
+        "end": 2551,
+        "page": 4,
+        "quote": "Valor máximo\nR$ 15 milhões a cada 12 meses.",
+        "raw_sha256": "974d6f4bc6e3b5872b2e3cbcf5fd861c9cbbe671cdd3d2f0d914b8bc8e6ca3b3",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0015",
+        "start": 2508,
+        "text_sha256": "f5fc847f69f336ab6e0bb59db12d5df0ab417590e50fd64c7dcbed4d64f9752c"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-I07",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "repayment_expression",
+      "original": "Periodicidade do pagamento:\nCarência: Mensal. Amortização: Mensal",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0017",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-I07",
+        "end": 2679,
+        "page": 4,
+        "quote": "Periodicidade do pagamento:\nCarência: Mensal. Amortização: Mensal",
+        "raw_sha256": "974d6f4bc6e3b5872b2e3cbcf5fd861c9cbbe671cdd3d2f0d914b8bc8e6ca3b3",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0017",
+        "start": 2614,
+        "text_sha256": "f5fc847f69f336ab6e0bb59db12d5df0ab417590e50fd64c7dcbed4d64f9752c"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-I07",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "monetary_expression_unresolved",
+      "original": "R$ 1 milhão",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0022",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-I07",
+        "end": 3781,
+        "page": 5,
+        "quote": "Taxa fixa anual de juros (já com bônus adimplência de 15%):\n* Projetos até R$ 1 milhão: de 9,51% a 10,19%.\n* Projetos acima de R$ 1 milhão: de 11,97% a 13,19%.\n* A taxa depende da localização do município do projeto a ser financiado.",
+        "raw_sha256": "974d6f4bc6e3b5872b2e3cbcf5fd861c9cbbe671cdd3d2f0d914b8bc8e6ca3b3",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0022",
+        "start": 3548,
+        "text_sha256": "f5fc847f69f336ab6e0bb59db12d5df0ab417590e50fd64c7dcbed4d64f9752c"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-I07",
+      "field_index": 1,
+      "method_version": "m31-deterministic-v2",
+      "name": "monetary_expression_unresolved",
+      "original": "R$ 1 milhão",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0022",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-I07",
+        "end": 3781,
+        "page": 5,
+        "quote": "Taxa fixa anual de juros (já com bônus adimplência de 15%):\n* Projetos até R$ 1 milhão: de 9,51% a 10,19%.\n* Projetos acima de R$ 1 milhão: de 11,97% a 13,19%.\n* A taxa depende da localização do município do projeto a ser financiado.",
+        "raw_sha256": "974d6f4bc6e3b5872b2e3cbcf5fd861c9cbbe671cdd3d2f0d914b8bc8e6ca3b3",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0022",
+        "start": 3548,
+        "text_sha256": "f5fc847f69f336ab6e0bb59db12d5df0ab417590e50fd64c7dcbed4d64f9752c"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-I07",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "repayment_expression",
+      "original": "Prazo máximo\n15 anos, incluídos até 60 meses de carência.",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0023",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-I07",
+        "end": 3840,
+        "page": 5,
+        "quote": "Prazo máximo\n15 anos, incluídos até 60 meses de carência.",
+        "raw_sha256": "974d6f4bc6e3b5872b2e3cbcf5fd861c9cbbe671cdd3d2f0d914b8bc8e6ca3b3",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0023",
+        "start": 3783,
+        "text_sha256": "f5fc847f69f336ab6e0bb59db12d5df0ab417590e50fd64c7dcbed4d64f9752c"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-I07",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "proposal_amount_expression",
+      "original": "R$ 20 milhões",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0024",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-I07",
+        "end": 3881,
+        "page": 5,
+        "quote": "Valor máximo\nR$ 20 milhões por projeto.",
+        "raw_sha256": "974d6f4bc6e3b5872b2e3cbcf5fd861c9cbbe671cdd3d2f0d914b8bc8e6ca3b3",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0024",
+        "start": 3842,
+        "text_sha256": "f5fc847f69f336ab6e0bb59db12d5df0ab417590e50fd64c7dcbed4d64f9752c"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-I07",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "repayment_expression",
+      "original": "Periodicidade do pagamento:\nCarência: Trimestral Amortização: Mensal\nPara maiores informações, entre em contato com nossa equipe de atendimento da sua região.",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0025",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-I07",
+        "end": 4041,
+        "page": 5,
+        "quote": "Periodicidade do pagamento:\nCarência: Trimestral Amortização: Mensal\nPara maiores informações, entre em contato com nossa equipe de atendimento da sua região.",
+        "raw_sha256": "974d6f4bc6e3b5872b2e3cbcf5fd861c9cbbe671cdd3d2f0d914b8bc8e6ca3b3",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0025",
+        "start": 3883,
+        "text_sha256": "f5fc847f69f336ab6e0bb59db12d5df0ab417590e50fd64c7dcbed4d64f9752c"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-I07",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "borrower_revenue_requirement",
+      "original": "R$ 300 milhões",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0027",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-I07",
+        "end": 4441,
+        "page": 6,
+        "quote": "Quem pode ser financiado\nEmpresas com faturamento anual até R$ 300 milhões, instaladas na Região Sul\ne em MS.",
+        "raw_sha256": "974d6f4bc6e3b5872b2e3cbcf5fd861c9cbbe671cdd3d2f0d914b8bc8e6ca3b3",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0027",
+        "start": 4332,
+        "text_sha256": "f5fc847f69f336ab6e0bb59db12d5df0ab417590e50fd64c7dcbed4d64f9752c"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-I07",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "interest_expression",
+      "original": "Taxa de Juros\n* TR + 5,560%, independentemente do porte da empresa.",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0029",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-I07",
+        "end": 4589,
+        "page": 6,
+        "quote": "Taxa de Juros\n* TR + 5,560%, independentemente do porte da empresa.",
+        "raw_sha256": "974d6f4bc6e3b5872b2e3cbcf5fd861c9cbbe671cdd3d2f0d914b8bc8e6ca3b3",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0029",
+        "start": 4522,
+        "text_sha256": "f5fc847f69f336ab6e0bb59db12d5df0ab417590e50fd64c7dcbed4d64f9752c"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-I07",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "repayment_expression",
+      "original": "Prazo máximo\nAté 8 anos, incluídos até 24 meses de carência.",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0030",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-I07",
+        "end": 4651,
+        "page": 6,
+        "quote": "Prazo máximo\nAté 8 anos, incluídos até 24 meses de carência.",
+        "raw_sha256": "974d6f4bc6e3b5872b2e3cbcf5fd861c9cbbe671cdd3d2f0d914b8bc8e6ca3b3",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0030",
+        "start": 4591,
+        "text_sha256": "f5fc847f69f336ab6e0bb59db12d5df0ab417590e50fd64c7dcbed4d64f9752c"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-I07",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "monetary_expression_unresolved",
+      "original": "R$ 15 milhões",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0031",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-I07",
+        "end": 4696,
+        "page": 6,
+        "quote": "Valor máximo\nR$ 15 milhões a cada 12 meses.",
+        "raw_sha256": "974d6f4bc6e3b5872b2e3cbcf5fd861c9cbbe671cdd3d2f0d914b8bc8e6ca3b3",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0031",
+        "start": 4653,
+        "text_sha256": "f5fc847f69f336ab6e0bb59db12d5df0ab417590e50fd64c7dcbed4d64f9752c"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-I07",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "repayment_expression",
+      "original": "Periodicidade do pagamento:\nCarência: Mensal. Amortização: Mensal",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0032",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-I07",
+        "end": 4763,
+        "page": 6,
+        "quote": "Periodicidade do pagamento:\nCarência: Mensal. Amortização: Mensal",
+        "raw_sha256": "974d6f4bc6e3b5872b2e3cbcf5fd861c9cbbe671cdd3d2f0d914b8bc8e6ca3b3",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0032",
+        "start": 4698,
+        "text_sha256": "f5fc847f69f336ab6e0bb59db12d5df0ab417590e50fd64c7dcbed4d64f9752c"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-I07",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "interest_expression",
+      "original": "Taxa de Juros\nAté * TR + 7,0%",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0037",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-I07",
+        "end": 5489,
+        "page": 7,
+        "quote": "Taxa de Juros\nAté * TR + 7,0%",
+        "raw_sha256": "974d6f4bc6e3b5872b2e3cbcf5fd861c9cbbe671cdd3d2f0d914b8bc8e6ca3b3",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0037",
+        "start": 5460,
+        "text_sha256": "f5fc847f69f336ab6e0bb59db12d5df0ab417590e50fd64c7dcbed4d64f9752c"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-I07",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "repayment_expression",
+      "original": "Prazo máximo\nAté 10 anos, incluídos até 24 meses de carência.",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0038",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-I07",
+        "end": 5552,
+        "page": 7,
+        "quote": "Prazo máximo\nAté 10 anos, incluídos até 24 meses de carência.",
+        "raw_sha256": "974d6f4bc6e3b5872b2e3cbcf5fd861c9cbbe671cdd3d2f0d914b8bc8e6ca3b3",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0038",
+        "start": 5491,
+        "text_sha256": "f5fc847f69f336ab6e0bb59db12d5df0ab417590e50fd64c7dcbed4d64f9752c"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-I07",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "monetary_expression_unresolved",
+      "original": "R$ 15 milhões",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0039",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-I07",
+        "end": 5585,
+        "page": 7,
+        "quote": "Valor máximo\nAté R$ 15 milhões.",
+        "raw_sha256": "974d6f4bc6e3b5872b2e3cbcf5fd861c9cbbe671cdd3d2f0d914b8bc8e6ca3b3",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0039",
+        "start": 5554,
+        "text_sha256": "f5fc847f69f336ab6e0bb59db12d5df0ab417590e50fd64c7dcbed4d64f9752c"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-I07",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "repayment_expression",
+      "original": "Periodicidade do pagamento:\nCarência: Mensal. Amortização: Mensal",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0040",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-I07",
+        "end": 5652,
+        "page": 7,
+        "quote": "Periodicidade do pagamento:\nCarência: Mensal. Amortização: Mensal",
+        "raw_sha256": "974d6f4bc6e3b5872b2e3cbcf5fd861c9cbbe671cdd3d2f0d914b8bc8e6ca3b3",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0040",
+        "start": 5587,
+        "text_sha256": "f5fc847f69f336ab6e0bb59db12d5df0ab417590e50fd64c7dcbed4d64f9752c"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-I07",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "borrower_revenue_requirement",
+      "original": "R$ 90 milhões",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0045",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-I07",
+        "end": 6645,
+        "page": 8,
+        "quote": "Taxa Anual de Juros\n* TFC-TR + 6,47% para empresas com faturamento anual de até R$ 90 milhões.\n* TFC-TR + 6,89% para demais portes de empresas.\n* TFC-TR + 7,63% - Financiamento de máquinas e equipamentos rodoviários.",
+        "raw_sha256": "974d6f4bc6e3b5872b2e3cbcf5fd861c9cbbe671cdd3d2f0d914b8bc8e6ca3b3",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0045",
+        "start": 6429,
+        "text_sha256": "f5fc847f69f336ab6e0bb59db12d5df0ab417590e50fd64c7dcbed4d64f9752c"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-I07",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "repayment_expression",
+      "original": "Prazo máximo\nAté 10 anos, incluídos até 12 meses de carência.",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0046",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-I07",
+        "end": 6708,
+        "page": 8,
+        "quote": "Prazo máximo\nAté 10 anos, incluídos até 12 meses de carência.",
+        "raw_sha256": "974d6f4bc6e3b5872b2e3cbcf5fd861c9cbbe671cdd3d2f0d914b8bc8e6ca3b3",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0046",
+        "start": 6647,
+        "text_sha256": "f5fc847f69f336ab6e0bb59db12d5df0ab417590e50fd64c7dcbed4d64f9752c"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-I07",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "repayment_expression",
+      "original": "Periodicidade do pagamento\nCarência: trimestral, semestral ou anual / Amortização: mensal, semestral ou anual.",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0047",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-I07",
+        "end": 6820,
+        "page": 8,
+        "quote": "Periodicidade do pagamento\nCarência: trimestral, semestral ou anual / Amortização: mensal, semestral ou anual.",
+        "raw_sha256": "974d6f4bc6e3b5872b2e3cbcf5fd861c9cbbe671cdd3d2f0d914b8bc8e6ca3b3",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0047",
+        "start": 6710,
+        "text_sha256": "f5fc847f69f336ab6e0bb59db12d5df0ab417590e50fd64c7dcbed4d64f9752c"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-I07",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "monetary_expression_unresolved",
+      "original": "R$ 50 milhões",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0048",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-I07",
+        "end": 6907,
+        "page": 8,
+        "quote": "Valor máximo\nR$ 50 milhões (+ R$ 5 milhões em serviços tecnológicos)\na cada 12 meses.",
+        "raw_sha256": "974d6f4bc6e3b5872b2e3cbcf5fd861c9cbbe671cdd3d2f0d914b8bc8e6ca3b3",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0048",
+        "start": 6822,
+        "text_sha256": "f5fc847f69f336ab6e0bb59db12d5df0ab417590e50fd64c7dcbed4d64f9752c"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-I07",
+      "field_index": 1,
+      "method_version": "m31-deterministic-v2",
+      "name": "monetary_expression_unresolved",
+      "original": "R$ 5 milhões",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0048",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-I07",
+        "end": 6907,
+        "page": 8,
+        "quote": "Valor máximo\nR$ 50 milhões (+ R$ 5 milhões em serviços tecnológicos)\na cada 12 meses.",
+        "raw_sha256": "974d6f4bc6e3b5872b2e3cbcf5fd861c9cbbe671cdd3d2f0d914b8bc8e6ca3b3",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0048",
+        "start": 6822,
+        "text_sha256": "f5fc847f69f336ab6e0bb59db12d5df0ab417590e50fd64c7dcbed4d64f9752c"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-I07",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "repayment_expression",
+      "original": "Prazo máximo\nAté 10 anos, incluídos até 24 meses de carência. Nas operações com TFBTR a\ncarência não poderá ser superior a 12 meses.",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0055",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-I07",
+        "end": 7816,
+        "page": 9,
+        "quote": "Prazo máximo\nAté 10 anos, incluídos até 24 meses de carência. Nas operações com TFBTR a\ncarência não poderá ser superior a 12 meses.",
+        "raw_sha256": "974d6f4bc6e3b5872b2e3cbcf5fd861c9cbbe671cdd3d2f0d914b8bc8e6ca3b3",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0055",
+        "start": 7684,
+        "text_sha256": "f5fc847f69f336ab6e0bb59db12d5df0ab417590e50fd64c7dcbed4d64f9752c"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-I07",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "repayment_expression",
+      "original": "Periodicidade do pagamento\nCarência: Trimestral, semestral ou anual.\nAmortização: Mensal, semestral ou anual.",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0056",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-I07",
+        "end": 7927,
+        "page": 9,
+        "quote": "Periodicidade do pagamento\nCarência: Trimestral, semestral ou anual.\nAmortização: Mensal, semestral ou anual.",
+        "raw_sha256": "974d6f4bc6e3b5872b2e3cbcf5fd861c9cbbe671cdd3d2f0d914b8bc8e6ca3b3",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0056",
+        "start": 7818,
+        "text_sha256": "f5fc847f69f336ab6e0bb59db12d5df0ab417590e50fd64c7dcbed4d64f9752c"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-I07",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "monetary_expression_unresolved",
+      "original": "R$ 50 milhões",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0057",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-I07",
+        "end": 7972,
+        "page": 9,
+        "quote": "Valor máximo\nR$ 50 milhões a cada 12 meses.",
+        "raw_sha256": "974d6f4bc6e3b5872b2e3cbcf5fd861c9cbbe671cdd3d2f0d914b8bc8e6ca3b3",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0057",
+        "start": 7929,
+        "text_sha256": "f5fc847f69f336ab6e0bb59db12d5df0ab417590e50fd64c7dcbed4d64f9752c"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-I07",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "repayment_expression",
+      "original": "Prazo máximo\nAté 10 anos, incluídos até 24 meses de carência. Nas operações com TFBTR a\ncarência não poderá ser superior a 12 meses.",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0063",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-I07",
+        "end": 9231,
+        "page": 10,
+        "quote": "Prazo máximo\nAté 10 anos, incluídos até 24 meses de carência. Nas operações com TFBTR a\ncarência não poderá ser superior a 12 meses.",
+        "raw_sha256": "974d6f4bc6e3b5872b2e3cbcf5fd861c9cbbe671cdd3d2f0d914b8bc8e6ca3b3",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0063",
+        "start": 9099,
+        "text_sha256": "f5fc847f69f336ab6e0bb59db12d5df0ab417590e50fd64c7dcbed4d64f9752c"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-I07",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "repayment_expression",
+      "original": "Periodicidade do pagamento\nCarência: Trimestral, semestral ou anual.\nAmortização: Mensal, semestral ou anual.",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0064",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-I07",
+        "end": 9342,
+        "page": 10,
+        "quote": "Periodicidade do pagamento\nCarência: Trimestral, semestral ou anual.\nAmortização: Mensal, semestral ou anual.",
+        "raw_sha256": "974d6f4bc6e3b5872b2e3cbcf5fd861c9cbbe671cdd3d2f0d914b8bc8e6ca3b3",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0064",
+        "start": 9233,
+        "text_sha256": "f5fc847f69f336ab6e0bb59db12d5df0ab417590e50fd64c7dcbed4d64f9752c"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-I07",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "monetary_expression_unresolved",
+      "original": "R$ 50 milhões",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0065",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-I07",
+        "end": 9598,
+        "page": 10,
+        "quote": "Valor máximo\nR$ 50 milhões a cada 12 meses.\n• Centros de PD&I são instalações que compreendem laboratórios, plantas piloto,\nplantas de demonstração e outras instalações de uso exclusivo para atividades de\npesquisa, desenvolvimento tecnológico e inovação.",
+        "raw_sha256": "974d6f4bc6e3b5872b2e3cbcf5fd861c9cbbe671cdd3d2f0d914b8bc8e6ca3b3",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0065",
+        "start": 9344,
+        "text_sha256": "f5fc847f69f336ab6e0bb59db12d5df0ab417590e50fd64c7dcbed4d64f9752c"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-I07",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "applicant_requirements",
+      "original": "BRDE LABS\nO BRDE promove anualmente o Programa BRDE LABS, ampliando\na sua atuação para além do crédito e contribuindo para que\nempresas incorporem soluções desenvolvidas por startups, acelerem\ntransformações internas e construam novos caminhos para o futuro da\neconomia.\nAo longo de seis edições, o programa consolidou-se como uma jornada\nestruturada e contínua, promovida pelo BRDE em parceria com a\nHOTMILK — Ecossistema de Inovação da PUCPR. Essa jornada combina\ncapacitações práticas, conexão com startups e criação de um ambiente\nfavorável a novas oportunidades. Ao levar inovação para as empresas,\no programa estimula a mudança de mindset. Com a revisão dos seus\ndesafios internos, as empresas identificam problemas críticos e, por\nmeio da inovação aberta, encontram soluções para solucionar tais\nproblemas. Esse movimento torna a inovação parte do cotidiano e abre\nespaço para resultados consistentes e permanentes.\nNo BRDE LABS Paraná podem participar por ano até 10 empresas\nparanaenses, as quais disponibilizam suas respectivas equipes para\nidentificarem desafios internos a serem resolvidos por soluções\ntecnológicas desenvolvidas por startups. O Programa concluiu\nrecentemente a sua 6ª edição, cada uma delas com duração de\n6 a 8 meses e trazendo sempre uma temática norteadora:",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0067",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-I07",
+        "end": 11197,
+        "page": 11,
+        "quote": "BRDE LABS\nO BRDE promove anualmente o Programa BRDE LABS, ampliando\na sua atuação para além do crédito e contribuindo para que\nempresas incorporem soluções desenvolvidas por startups, acelerem\ntransformações internas e construam novos caminhos para o futuro da\neconomia.\nAo longo de seis edições, o programa consolidou-se como uma jornada\nestruturada e contínua, promovida pelo BRDE em parceria com a\nHOTMILK — Ecossistema de Inovação da PUCPR. Essa jornada combina\ncapacitações práticas, conexão com startups e criação de um ambiente\nfavorável a novas oportunidades. Ao levar inovação para as empresas,\no programa estimula a mudança de mindset. Com a revisão dos seus\ndesafios internos, as empresas identificam problemas críticos e, por\nmeio da inovação aberta, encontram soluções para solucionar tais\nproblemas. Esse movimento torna a inovação parte do cotidiano e abre\nespaço para resultados consistentes e permanentes.\nNo BRDE LABS Paraná podem participar por ano até 10 empresas\nparanaenses, as quais disponibilizam suas respectivas equipes para\nidentificarem desafios internos a serem resolvidos por soluções\ntecnológicas desenvolvidas por startups. O Programa concluiu\nrecentemente a sua 6ª edição, cada uma delas com duração de\n6 a 8 meses e trazendo sempre uma temática norteadora:",
+        "raw_sha256": "974d6f4bc6e3b5872b2e3cbcf5fd861c9cbbe671cdd3d2f0d914b8bc8e6ca3b3",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0067",
+        "start": 9907,
+        "text_sha256": "f5fc847f69f336ab6e0bb59db12d5df0ab417590e50fd64c7dcbed4d64f9752c"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-I07",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "fund_stage_expression",
+      "original": "Atualmente, os seguintes FIPs estão em estágio de captação:",
+      "reference_records": [
+        "M30-I07-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0071",
+      "semantic_case_id": "M30-I07:segment-0071:field:0",
+      "semantic_support": "supported",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-I07",
+        "end": 11838,
+        "page": 12,
+        "quote": "Atualmente, os seguintes FIPs estão em estágio de captação:",
+        "raw_sha256": "974d6f4bc6e3b5872b2e3cbcf5fd861c9cbbe671cdd3d2f0d914b8bc8e6ca3b3",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0071",
+        "start": 11779,
+        "text_sha256": "f5fc847f69f336ab6e0bb59db12d5df0ab417590e50fd64c7dcbed4d64f9752c"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-I07",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "monetary_expression_unresolved",
+      "original": "R$ 12 milhões",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0076",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-I07",
+        "end": 12619,
+        "page": 12,
+        "quote": "Empresas que tenham elevado potencial\nde crescimento e que precisem de capital\ne apoio para concretizar uma visão ousada\nde negócio com receita operacional de,\nno máximo, R$ 12 milhões no exercício\nanterior.",
+        "raw_sha256": "974d6f4bc6e3b5872b2e3cbcf5fd861c9cbbe671cdd3d2f0d914b8bc8e6ca3b3",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0076",
+        "start": 12412,
+        "text_sha256": "f5fc847f69f336ab6e0bb59db12d5df0ab417590e50fd64c7dcbed4d64f9752c"
+      }
+    }
+  ],
+  "provenance": {
+    "byte_length": 2831952,
+    "category_evidence": "Atualmente, os seguintes FIPs estão em estágio de captação:",
+    "content_type": "application/pdf",
+    "derivation_method": "poppler-pdftotext-utf8-pages-v1; formfeed page separator",
+    "document_category": "program_information",
+    "document_id": "M30-I07",
+    "document_version": null,
+    "final_url": "https://brde.com.br/wp-content/uploads/2026/01/Folder-2026-Mais-Inovacao-AGCUR.pdf",
+    "original_filename": "Folder-2026-Mais-Inovacao-AGCUR.pdf",
+    "original_url": "https://brde.com.br/wp-content/uploads/2026/01/Folder-2026-Mais-Inovacao-AGCUR.pdf",
+    "publication_date": null,
+    "raw_path": "raw/M30-I07.pdf",
+    "restrictions": "Research pilot local frozen copy only; no redistribution license inferred. No scripts executed, no forms submitted, no applicant records intentionally collected. Public navigation/staff attribution may remain in original bytes.",
+    "retrieval_status": "acquired",
+    "retrieved_at": "2026-10-19T04:38:40.815655+00:00",
+    "sha256": "974d6f4bc6e3b5872b2e3cbcf5fd861c9cbbe671cdd3d2f0d914b8bc8e6ca3b3",
+    "source_authority_notes": "Public HTTPS page hosted by the named institution; authorship asserted by host/content, not cryptographically authenticated. Not source-readiness approval.",
+    "source_organization": "BRDE",
+    "text_path": "text/M30-I07.txt",
+    "text_sha256": "f5fc847f69f336ab6e0bb59db12d5df0ab417590e50fd64c7dcbed4d64f9752c"
+  },
+  "records": [
+    {
+      "all_overlap_predictions": [
+        {
+          "discovery": "opportunity_signal",
+          "modality": "investimentos",
+          "segment_id": "segment-0070",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0071",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0072",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0073",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0074",
+          "temporal": "undetermined"
+        }
+      ],
+      "any_exact_boundary": false,
+      "coverage": {
+        "denominator": 926,
+        "numerator": 918,
+        "value": 0.9913606911447084
+      },
+      "covered_characters": 918,
+      "disagreements": [
+        "discovery_label",
+        "modality"
+      ],
+      "discovery_histogram": {
+        "abstain": 4,
+        "opportunity_signal": 1
+      },
+      "document_id": "M30-I07",
+      "edges": [
+        {
+          "end": 11777,
+          "exact": false,
+          "intersection": 327,
+          "intersection_end": 11777,
+          "intersection_start": 11450,
+          "iou": 0.3531317494600432,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.3531317494600432,
+          "segment_id": "segment-0070",
+          "start": 11450
+        },
+        {
+          "end": 11838,
+          "exact": false,
+          "intersection": 59,
+          "intersection_end": 11838,
+          "intersection_start": 11779,
+          "iou": 0.06371490280777538,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.06371490280777538,
+          "segment_id": "segment-0071",
+          "start": 11779
+        },
+        {
+          "end": 11852,
+          "exact": false,
+          "intersection": 12,
+          "intersection_end": 11852,
+          "intersection_start": 11840,
+          "iou": 0.012958963282937365,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.012958963282937365,
+          "segment_id": "segment-0072",
+          "start": 11840
+        },
+        {
+          "end": 11871,
+          "exact": false,
+          "intersection": 17,
+          "intersection_end": 11871,
+          "intersection_start": 11854,
+          "iou": 0.0183585313174946,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.0183585313174946,
+          "segment_id": "segment-0073",
+          "start": 11854
+        },
+        {
+          "end": 12376,
+          "exact": false,
+          "intersection": 503,
+          "intersection_end": 12376,
+          "intersection_start": 11873,
+          "iou": 0.5431965442764579,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.5431965442764579,
+          "segment_id": "segment-0074",
+          "start": 11873
+        }
+      ],
+      "end": 12376,
+      "fields": [
+        {
+          "candidates": [],
+          "name": "title",
+          "reason": "no corresponding field; absence is not explicit field abstention",
+          "reference_evidence": [
+            {
+              "end": 11852,
+              "evidence_id": "M30-I07-R1-E3",
+              "page": 12,
+              "quote": "SUL VENTURES",
+              "start": 11840
+            }
+          ],
+          "reference_value": "SUL VENTURES",
+          "scope_supported": true,
+          "semantic_adjudication": "not_certified",
+          "status": "MISSING",
+          "strict_role_value": false
+        },
+        {
+          "candidates": [
+            {
+              "diagnostic_status": "traceable_not_semantically_certified",
+              "field_index": 0,
+              "method_version": "m31-deterministic-v2",
+              "name": "fund_stage_expression",
+              "original": "Atualmente, os seguintes FIPs estão em estágio de captação:",
+              "schema_version": "m31-extraction-v1",
+              "segment_id": "segment-0071",
+              "uncertainty": "heuristic role assignment; not authenticated or normalized",
+              "witness": {
+                "document_id": "M30-I07",
+                "end": 11838,
+                "page": 12,
+                "quote": "Atualmente, os seguintes FIPs estão em estágio de captação:",
+                "raw_sha256": "974d6f4bc6e3b5872b2e3cbcf5fd861c9cbbe671cdd3d2f0d914b8bc8e6ca3b3",
+                "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+                "schema_version": "m31-extraction-v1",
+                "segment_id": "segment-0071",
+                "start": 11779,
+                "text_sha256": "f5fc847f69f336ab6e0bb59db12d5df0ab417590e50fd64c7dcbed4d64f9752c"
+              }
+            }
+          ],
+          "name": "fund_stage_expression",
+          "reason": "same literal and role in record; entailment remains unreviewed",
+          "reference_evidence": [
+            {
+              "end": 11838,
+              "evidence_id": "M30-I07-R1-E2",
+              "page": 12,
+              "quote": "Atualmente, os seguintes FIPs estão em estágio de captação:",
+              "start": 11779
+            }
+          ],
+          "reference_value": "Atualmente, os seguintes FIPs estão em estágio de captação:",
+          "scope_supported": true,
+          "semantic_adjudication": "not_certified",
+          "status": "MATCH",
+          "strict_role_value": true
+        },
+        {
+          "candidates": [],
+          "name": "investment_focus",
+          "reason": "requested target role outside implemented M31 field scope",
+          "reference_evidence": [
+            {
+              "end": 12376,
+              "evidence_id": "M30-I07-R1-E4",
+              "page": 12,
+              "quote": "O Fundo Sul Ventures nasceu com o propósito\nde impulsionar e desenvolver o ecossistema de\ninovação da região Sul do Brasil, por meio de uma\nestratégia estruturada de investimentos em Venture\nCapital, operando de forma transversal e hands-on,\nacompanhando de perto cada investimento para\nmaximizar seu potencial de crescimento. O Fundo é\nfocado os ecossistemas dos três estados do Sul do Brasil,\ncom setores estratégicos definidos, incluindo Adtech &\nRetail Tech, Healthtech, Fintech, Smart Infra e SaaS.",
+              "start": 11873
+            }
+          ],
+          "reference_value": "O Fundo Sul Ventures nasceu com o propósito\nde impulsionar e desenvolver o ecossistema de\ninovação da região Sul do Brasil, por meio de uma\nestratégia estruturada de investimentos em Venture\nCapital, operando de forma transversal e hands-on,\nacompanhando de perto cada investimento para\nmaximizar seu potencial de crescimento. O Fundo é\nfocado os ecossistemas dos três estados do Sul do Brasil,\ncom setores estratégicos definidos, incluindo Adtech &\nRetail Tech, Healthtech, Fintech, Smart Infra e SaaS.",
+          "scope_supported": false,
+          "semantic_adjudication": "not_certified",
+          "status": "UNRESOLVED",
+          "strict_role_value": false
+        }
+      ],
+      "fragmentation": 5,
+      "location_convention": "frozen_pdf_text_unicode_not_visual_geometry",
+      "physical_reference_evidence_pages": [
+        12
+      ],
+      "rationale": "Unidade da página de fundos do folder institucional descreve Sul Ventures e estágio de captação dos FIPs. Captação de capital do fundo não equivale a recebimento de candidaturas de startups; sinal de investimento sem janela verificada. Demais páginas de crédito não pertencem à unidade anotada.",
+      "record_id": "M30-I07-R1",
+      "reference": {
+        "discovery_label": "opportunity_signal",
+        "modality": "investimentos",
+        "opportunity_label": "uncertain",
+        "review_status": "provisional",
+        "temporal_status": "undetermined"
+      },
+      "reference_characters": 926,
+      "reference_evidence": [
+        {
+          "end": 11472,
+          "evidence_id": "M30-I07-R1-E1",
+          "page": 12,
+          "quote": "FUNDOS DE PARTICIPAÇÃO",
+          "start": 11450
+        },
+        {
+          "end": 11838,
+          "evidence_id": "M30-I07-R1-E2",
+          "page": 12,
+          "quote": "Atualmente, os seguintes FIPs estão em estágio de captação:",
+          "start": 11779
+        },
+        {
+          "end": 11852,
+          "evidence_id": "M30-I07-R1-E3",
+          "page": 12,
+          "quote": "SUL VENTURES",
+          "start": 11840
+        },
+        {
+          "end": 12376,
+          "evidence_id": "M30-I07-R1-E4",
+          "page": 12,
+          "quote": "O Fundo Sul Ventures nasceu com o propósito\nde impulsionar e desenvolver o ecossistema de\ninovação da região Sul do Brasil, por meio de uma\nestratégia estruturada de investimentos em Venture\nCapital, operando de forma transversal e hands-on,\nacompanhando de perto cada investimento para\nmaximizar seu potencial de crescimento. O Fundo é\nfocado os ecossistemas dos três estados do Sul do Brasil,\ncom setores estratégicos definidos, incluindo Adtech &\nRetail Tech, Healthtech, Fintech, Smart Infra e SaaS.",
+          "start": 11873
+        }
+      ],
+      "representative": "segment-0074",
+      "representative_prediction": {
+        "discovery": "abstain",
+        "end": 12376,
+        "modality": "undetermined",
+        "segment_id": "segment-0074",
+        "start": 11873,
+        "temporal": "undetermined"
+      },
+      "representative_quote": "O Fundo Sul Ventures nasceu com o propósito\nde impulsionar e desenvolver o ecossistema de\ninovação da região Sul do Brasil, por meio de uma\nestratégia estruturada de investimentos em Venture\nCapital, operando de forma transversal e hands-on,\nacompanhando de perto cada investimento para\nmaximizar seu potencial de crescimento. O Fundo é\nfocado os ecossistemas dos três estados do Sul do Brasil,\ncom setores estratégicos definidos, incluindo Adtech &\nRetail Tech, Healthtech, Fintech, Smart Infra e SaaS.",
+      "start": 11450,
+      "status": "overlap",
+      "uncertainty_notes": [
+        "Data de criação do PDF e diretório /2026/01/ não comprovam publicação; publication_date permanece null.",
+        "Página 12 calculada pelos separadores reais de pdftotext; página inicial sem texto também conta.",
+        "Não deduzir captação ativa em outubro a partir de material sem prazo."
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 294,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 2,
+      "reference_records": [],
+      "segment_id": "segment-0000",
+      "start": 1,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 565,
+      "field_count": 0,
+      "modality": "credito",
+      "physical_page": 2,
+      "reference_records": [],
+      "segment_id": "segment-0001",
+      "start": 296,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 922,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 3,
+      "reference_records": [],
+      "segment_id": "segment-0002",
+      "start": 568,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 1033,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": 3,
+      "reference_records": [],
+      "segment_id": "segment-0003",
+      "start": 924,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 1112,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 3,
+      "reference_records": [],
+      "segment_id": "segment-0004",
+      "start": 1035,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 1293,
+      "field_count": 4,
+      "modality": "undetermined",
+      "physical_page": 3,
+      "reference_records": [],
+      "segment_id": "segment-0005",
+      "start": 1114,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 1355,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": 3,
+      "reference_records": [],
+      "segment_id": "segment-0006",
+      "start": 1295,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 1400,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": 3,
+      "reference_records": [],
+      "segment_id": "segment-0007",
+      "start": 1357,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 1467,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": 3,
+      "reference_records": [],
+      "segment_id": "segment-0008",
+      "start": 1402,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 1621,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 3,
+      "reference_records": [],
+      "segment_id": "segment-0009",
+      "start": 1469,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 2068,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 4,
+      "reference_records": [],
+      "segment_id": "segment-0010",
+      "start": 1624,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 2179,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": 4,
+      "reference_records": [],
+      "segment_id": "segment-0011",
+      "start": 2070,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 2258,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 4,
+      "reference_records": [],
+      "segment_id": "segment-0012",
+      "start": 2181,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 2444,
+      "field_count": 4,
+      "modality": "undetermined",
+      "physical_page": 4,
+      "reference_records": [],
+      "segment_id": "segment-0013",
+      "start": 2260,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 2506,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": 4,
+      "reference_records": [],
+      "segment_id": "segment-0014",
+      "start": 2446,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 2551,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": 4,
+      "reference_records": [],
+      "segment_id": "segment-0015",
+      "start": 2508,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 2612,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 4,
+      "reference_records": [],
+      "segment_id": "segment-0016",
+      "start": 2553,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 2679,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": 4,
+      "reference_records": [],
+      "segment_id": "segment-0017",
+      "start": 2614,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 2833,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 4,
+      "reference_records": [],
+      "segment_id": "segment-0018",
+      "start": 2681,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 3272,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 5,
+      "reference_records": [],
+      "segment_id": "segment-0019",
+      "start": 2836,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 3389,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 5,
+      "reference_records": [],
+      "segment_id": "segment-0020",
+      "start": 3274,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 3546,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 5,
+      "reference_records": [],
+      "segment_id": "segment-0021",
+      "start": 3391,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 3781,
+      "field_count": 2,
+      "modality": "undetermined",
+      "physical_page": 5,
+      "reference_records": [],
+      "segment_id": "segment-0022",
+      "start": 3548,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 3840,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": 5,
+      "reference_records": [],
+      "segment_id": "segment-0023",
+      "start": 3783,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 3881,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": 5,
+      "reference_records": [],
+      "segment_id": "segment-0024",
+      "start": 3842,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 4041,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": 5,
+      "reference_records": [],
+      "segment_id": "segment-0025",
+      "start": 3883,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 4330,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 6,
+      "reference_records": [],
+      "segment_id": "segment-0026",
+      "start": 4044,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 4441,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": 6,
+      "reference_records": [],
+      "segment_id": "segment-0027",
+      "start": 4332,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 4520,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 6,
+      "reference_records": [],
+      "segment_id": "segment-0028",
+      "start": 4443,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 4589,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": 6,
+      "reference_records": [],
+      "segment_id": "segment-0029",
+      "start": 4522,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 4651,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": 6,
+      "reference_records": [],
+      "segment_id": "segment-0030",
+      "start": 4591,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 4696,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": 6,
+      "reference_records": [],
+      "segment_id": "segment-0031",
+      "start": 4653,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 4763,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": 6,
+      "reference_records": [],
+      "segment_id": "segment-0032",
+      "start": 4698,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 4917,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 6,
+      "reference_records": [],
+      "segment_id": "segment-0033",
+      "start": 4765,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 5254,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 7,
+      "reference_records": [],
+      "segment_id": "segment-0034",
+      "start": 4920,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 5418,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 7,
+      "reference_records": [],
+      "segment_id": "segment-0035",
+      "start": 5256,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 5458,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 7,
+      "reference_records": [],
+      "segment_id": "segment-0036",
+      "start": 5420,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 5489,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": 7,
+      "reference_records": [],
+      "segment_id": "segment-0037",
+      "start": 5460,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 5552,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": 7,
+      "reference_records": [],
+      "segment_id": "segment-0038",
+      "start": 5491,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 5585,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": 7,
+      "reference_records": [],
+      "segment_id": "segment-0039",
+      "start": 5554,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 5652,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": 7,
+      "reference_records": [],
+      "segment_id": "segment-0040",
+      "start": 5587,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 5806,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 7,
+      "reference_records": [],
+      "segment_id": "segment-0041",
+      "start": 5654,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 6221,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 8,
+      "reference_records": [],
+      "segment_id": "segment-0042",
+      "start": 5809,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 6385,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 8,
+      "reference_records": [],
+      "segment_id": "segment-0043",
+      "start": 6223,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 6427,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 8,
+      "reference_records": [],
+      "segment_id": "segment-0044",
+      "start": 6387,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 6645,
+      "field_count": 1,
+      "modality": "credito",
+      "physical_page": 8,
+      "reference_records": [],
+      "segment_id": "segment-0045",
+      "start": 6429,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 6708,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": 8,
+      "reference_records": [],
+      "segment_id": "segment-0046",
+      "start": 6647,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 6820,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": 8,
+      "reference_records": [],
+      "segment_id": "segment-0047",
+      "start": 6710,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 6907,
+      "field_count": 2,
+      "modality": "undetermined",
+      "physical_page": 8,
+      "reference_records": [],
+      "segment_id": "segment-0048",
+      "start": 6822,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 7109,
+      "field_count": 0,
+      "modality": "credito",
+      "physical_page": 8,
+      "reference_records": [],
+      "segment_id": "segment-0049",
+      "start": 6909,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 7446,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 9,
+      "reference_records": [],
+      "segment_id": "segment-0050",
+      "start": 7112,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 7597,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 9,
+      "reference_records": [],
+      "segment_id": "segment-0051",
+      "start": 7448,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 7639,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 9,
+      "reference_records": [],
+      "segment_id": "segment-0052",
+      "start": 7599,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 7660,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 9,
+      "reference_records": [],
+      "segment_id": "segment-0053",
+      "start": 7641,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 7682,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 9,
+      "reference_records": [],
+      "segment_id": "segment-0054",
+      "start": 7662,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 7816,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": 9,
+      "reference_records": [],
+      "segment_id": "segment-0055",
+      "start": 7684,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 7927,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": 9,
+      "reference_records": [],
+      "segment_id": "segment-0056",
+      "start": 7818,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 7972,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": 9,
+      "reference_records": [],
+      "segment_id": "segment-0057",
+      "start": 7929,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 8278,
+      "field_count": 0,
+      "modality": "credito",
+      "physical_page": 9,
+      "reference_records": [],
+      "segment_id": "segment-0058",
+      "start": 7974,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 8859,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 10,
+      "reference_records": [],
+      "segment_id": "segment-0059",
+      "start": 8281,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 9010,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 10,
+      "reference_records": [],
+      "segment_id": "segment-0060",
+      "start": 8861,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 9052,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 10,
+      "reference_records": [],
+      "segment_id": "segment-0061",
+      "start": 9012,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 9097,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 10,
+      "reference_records": [],
+      "segment_id": "segment-0062",
+      "start": 9054,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 9231,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": 10,
+      "reference_records": [],
+      "segment_id": "segment-0063",
+      "start": 9099,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 9342,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": 10,
+      "reference_records": [],
+      "segment_id": "segment-0064",
+      "start": 9233,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 9598,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": 10,
+      "reference_records": [],
+      "segment_id": "segment-0065",
+      "start": 9344,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 9904,
+      "field_count": 0,
+      "modality": "credito",
+      "physical_page": 10,
+      "reference_records": [],
+      "segment_id": "segment-0066",
+      "start": 9600,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 11197,
+      "field_count": 1,
+      "modality": "credito",
+      "physical_page": 11,
+      "reference_records": [],
+      "segment_id": "segment-0067",
+      "start": 9907,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 11353,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 11,
+      "reference_records": [],
+      "segment_id": "segment-0068",
+      "start": 11199,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 11447,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 11,
+      "reference_records": [],
+      "segment_id": "segment-0069",
+      "start": 11355,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 11777,
+      "field_count": 0,
+      "modality": "investimentos",
+      "physical_page": 12,
+      "reference_records": [
+        "M30-I07-R1"
+      ],
+      "segment_id": "segment-0070",
+      "start": 11450,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 11838,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": 12,
+      "reference_records": [
+        "M30-I07-R1"
+      ],
+      "segment_id": "segment-0071",
+      "start": 11779,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 11852,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 12,
+      "reference_records": [
+        "M30-I07-R1"
+      ],
+      "segment_id": "segment-0072",
+      "start": 11840,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 11871,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 12,
+      "reference_records": [
+        "M30-I07-R1"
+      ],
+      "segment_id": "segment-0073",
+      "start": 11854,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 12376,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 12,
+      "reference_records": [
+        "M30-I07-R1"
+      ],
+      "segment_id": "segment-0074",
+      "start": 11873,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 12410,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 12,
+      "reference_records": [],
+      "segment_id": "segment-0075",
+      "start": 12378,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 12619,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": 12,
+      "reference_records": [],
+      "segment_id": "segment-0076",
+      "start": 12412,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 12683,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 12,
+      "reference_records": [],
+      "segment_id": "segment-0077",
+      "start": 12621,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 12694,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 12,
+      "reference_records": [],
+      "segment_id": "segment-0078",
+      "start": 12685,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 12704,
+      "field_count": 0,
+      "modality": "investimentos",
+      "physical_page": 12,
+      "reference_records": [],
+      "segment_id": "segment-0079",
+      "start": 12696,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 12721,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 12,
+      "reference_records": [],
+      "segment_id": "segment-0080",
+      "start": 12706,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 12811,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 13,
+      "reference_records": [],
+      "segment_id": "segment-0081",
+      "start": 12724,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 12895,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 13,
+      "reference_records": [],
+      "segment_id": "segment-0082",
+      "start": 12813,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 12921,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 13,
+      "reference_records": [],
+      "segment_id": "segment-0083",
+      "start": 12897,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 13042,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 13,
+      "reference_records": [],
+      "segment_id": "segment-0084",
+      "start": 12923,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 13142,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 13,
+      "reference_records": [],
+      "segment_id": "segment-0085",
+      "start": 13044,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 13238,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 13,
+      "reference_records": [],
+      "segment_id": "segment-0086",
+      "start": 13144,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 13256,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 14,
+      "reference_records": [],
+      "segment_id": "segment-0087",
+      "start": 13241,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 13369,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 14,
+      "reference_records": [],
+      "segment_id": "segment-0088",
+      "start": 13258,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 13459,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 14,
+      "reference_records": [],
+      "segment_id": "segment-0089",
+      "start": 13371,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 13576,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 14,
+      "reference_records": [],
+      "segment_id": "segment-0090",
+      "start": 13461,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 13710,
+      "field_count": 0,
+      "modality": "credito",
+      "physical_page": 14,
+      "reference_records": [],
+      "segment_id": "segment-0091",
+      "start": 13578,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    }
+  ],
+  "semantic_reviews": [
+    {
+      "case_id": "M30-I07:segment-0074:discovery:classification",
+      "certainty": "strong_hypothesis",
+      "claim_kind": "discovery",
+      "context_evidence": [
+        {
+          "end": 11472,
+          "page": 12,
+          "quote": "FUNDOS DE PARTICIPAÇÃO",
+          "start": 11450
+        },
+        {
+          "end": 11838,
+          "page": 12,
+          "quote": "Atualmente, os seguintes FIPs estão em estágio de captação:",
+          "start": 11779
+        },
+        {
+          "end": 11852,
+          "page": 12,
+          "quote": "SUL VENTURES",
+          "start": 11840
+        },
+        {
+          "end": 12376,
+          "page": 12,
+          "quote": "O Fundo Sul Ventures nasceu com o propósito\nde impulsionar e desenvolver o ecossistema de\ninovação da região Sul do Brasil, por meio de uma\nestratégia estruturada de investimentos em Venture\nCapital, operando de forma transversal e hands-on,\nacompanhando de perto cada investimento para\nmaximizar seu potencial de crescimento. O Fundo é\nfocado os ecossistemas dos três estados do Sul do Brasil,\ncom setores estratégicos definidos, incluindo Adtech &\nRetail Tech, Healthtech, Fintech, Smart Infra e SaaS.",
+          "start": 11873
+        }
+      ],
+      "document_id": "M30-I07",
+      "end": 12376,
+      "error_codes": [
+        "SEGMENTATION_OVER",
+        "EXCESSIVE_ABSTENTION"
+      ],
+      "expected_behavior": "Interpretar apenas acesso/estágio e público deste registro com o contexto completo; não confundir anúncio, gestor e candidatura startup.",
+      "expected_claim": "abstain",
+      "field_index": null,
+      "field_name": null,
+      "judgment": "partial",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "quote": "O Fundo Sul Ventures nasceu com o propósito\nde impulsionar e desenvolver o ecossistema de\ninovação da região Sul do Brasil, por meio de uma\nestratégia estruturada de investimentos em Venture\nCapital, operando de forma transversal e hands-on,\nacompanhando de perto cada investimento para\nmaximizar seu potencial de crescimento. O Fundo é\nfocado os ecossistemas dos três estados do Sul do Brasil,\ncom setores estratégicos definidos, incluindo Adtech &\nRetail Tech, Healthtech, Fintech, Smart Infra e SaaS.",
+      "rationale": "Há fundo Sul Ventures e estágio de captação na página física 12. O maior fragmento abstém apesar de irmãos emitirem sinal; captação de veículo não é oferta de ticket para startup.",
+      "root_cause": "Venture e Capital quebrados entre linhas e nós PDF fragmentam o contexto de modalidade e estágio.",
+      "root_cause_confidence": "medium",
+      "segment_id": "segment-0074",
+      "severity": "medium",
+      "start": 11873
+    },
+    {
+      "case_id": "M30-I07:segment-0071:field:0",
+      "certainty": "supported_observation",
+      "claim_kind": "field",
+      "context_evidence": [
+        {
+          "end": 11472,
+          "page": 12,
+          "quote": "FUNDOS DE PARTICIPAÇÃO",
+          "start": 11450
+        },
+        {
+          "end": 11838,
+          "page": 12,
+          "quote": "Atualmente, os seguintes FIPs estão em estágio de captação:",
+          "start": 11779
+        },
+        {
+          "end": 11852,
+          "page": 12,
+          "quote": "SUL VENTURES",
+          "start": 11840
+        },
+        {
+          "end": 12376,
+          "page": 12,
+          "quote": "O Fundo Sul Ventures nasceu com o propósito\nde impulsionar e desenvolver o ecossistema de\ninovação da região Sul do Brasil, por meio de uma\nestratégia estruturada de investimentos em Venture\nCapital, operando de forma transversal e hands-on,\nacompanhando de perto cada investimento para\nmaximizar seu potencial de crescimento. O Fundo é\nfocado os ecossistemas dos três estados do Sul do Brasil,\ncom setores estratégicos definidos, incluindo Adtech &\nRetail Tech, Healthtech, Fintech, Smart Infra e SaaS.",
+          "start": 11873
+        }
+      ],
+      "document_id": "M30-I07",
+      "end": 11838,
+      "error_codes": [],
+      "expected_behavior": "Preservar estágio da captação pelo veículo, não transferir a público investido.",
+      "expected_claim": "Atualmente, os seguintes FIPs estão em estágio de captação:",
+      "field_index": 0,
+      "field_name": "fund_stage_expression",
+      "judgment": "supported",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "quote": "Atualmente, os seguintes FIPs estão em estágio de captação:",
+      "rationale": "A frase estabelece FIPs em captação. Não declara abertura de candidaturas para startups; quote e página física 12 resolvem.",
+      "root_cause": "Regex fund_stage_expression corresponde exatamente ao estágio de captação.",
+      "root_cause_confidence": "high",
+      "segment_id": "segment-0071",
+      "severity": "info",
+      "start": 11779
+    }
+  ],
+  "status": "processed"
+}

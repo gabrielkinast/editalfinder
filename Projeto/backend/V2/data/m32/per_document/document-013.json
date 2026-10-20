@@ -1,0 +1,2795 @@
+{
+  "diagnostics": [
+    "frozen_pdf_text_no_OCR_or_layout_recovery",
+    "physical_pages_include_empty_pages",
+    "unfrozen_attachments_unavailable"
+  ],
+  "document_id": "M30-F07",
+  "error_cases": [
+    {
+      "case_id": "M30-F07-R1:discovery_label",
+      "certainty": "unresolved_disagreement",
+      "dimension": "discovery_label",
+      "document_id": "M30-F07",
+      "error_codes": [
+        "OPPORTUNITY_EXISTENCE_CONFUSION",
+        "REFERENCE_AMBIGUITY"
+      ],
+      "expected_behavior": "Resolve this dimension from same-record evidence; provisional label is comparison, not authority.",
+      "next_action": "Compare full frozen context and request authorized adjudication; do not rewrite labels.",
+      "observed": {
+        "discovery": "opportunity_signal",
+        "end": 7632,
+        "modality": "fomento",
+        "segment_id": "segment-0013",
+        "start": 4532,
+        "temporal": "undetermined"
+      },
+      "record_id": "M30-F07-R1",
+      "reference": {
+        "discovery_label": "confirmed_opportunity",
+        "modality": "fomento",
+        "opportunity_label": "genuine_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "open"
+      },
+      "review_status": "provisional",
+      "root_cause": "Context fragmentation or semantic rule/reference ambiguity; see all-overlap graph before adjudication.",
+      "root_cause_confidence": "low",
+      "segment_id": "segment-0013",
+      "severity": "medium",
+      "supporting_evidence": {
+        "end": 5732,
+        "quote": "a) ter sido bolsista de Produtividade em Pesquisa (PQ) ou de Desenvolvimento Tecnológico e\nExtensão Inovadora (DT) por pelo menos 20 (vinte) anos, consecutivos ou não;\nb) continuar ativo no desenvolvimento de pesquisas científicas e/ou tecnológicas e na formação\nde pesquisadores em diversos níveis.\n3.2.3.1 – Os critérios específicos de cada Comitê de Assessoramento, quando houver, disponíveis no\nAnexo I e parte integrante desta Chamada, serão observados quanto aos requisitos mínimos para\nclassificação dos pesquisadores como Bolsistas PQ-Sr.\n3.2.4 - O pesquisador, se aposentado, deve manter atividades acadêmico-científicas oficialmente\nvinculadas a instituições de ensino e pesquisa.\n3.2.5 - No momento de submissão da proposta, o proponente não deverá possuir qualquer\ninadimplência com o CNPq e com a Administração Pública Federal, direta ou indireta, sob pena de\nindeferimento.\n3.2.5.1 - Caso constatada, a qualquer tempo, a falsidade da declaração, o CNPq adotará as\nprovidências cabíveis diante dos indícios de crime de falsidade ideológica.\n3.3 - Quanto à Instituição de Execução do Projeto:\n3.3.1 - A instituição de execução do projeto deverá estar cadastrada no Diretório de Instituiçõ",
+        "start": 4532
+      }
+    },
+    {
+      "case_id": "M30-F07-R1:temporal_status",
+      "certainty": "unresolved_disagreement",
+      "dimension": "temporal_status",
+      "document_id": "M30-F07",
+      "error_codes": [
+        "TEMPORAL_AVAILABILITY_INFERENCE",
+        "REFERENCE_AMBIGUITY"
+      ],
+      "expected_behavior": "Resolve this dimension from same-record evidence; provisional label is comparison, not authority.",
+      "next_action": "Compare full frozen context and request authorized adjudication; do not rewrite labels.",
+      "observed": {
+        "discovery": "opportunity_signal",
+        "end": 7632,
+        "modality": "fomento",
+        "segment_id": "segment-0013",
+        "start": 4532,
+        "temporal": "undetermined"
+      },
+      "record_id": "M30-F07-R1",
+      "reference": {
+        "discovery_label": "confirmed_opportunity",
+        "modality": "fomento",
+        "opportunity_label": "genuine_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "open"
+      },
+      "review_status": "provisional",
+      "root_cause": "Context fragmentation or semantic rule/reference ambiguity; see all-overlap graph before adjudication.",
+      "root_cause_confidence": "low",
+      "segment_id": "segment-0013",
+      "severity": "medium",
+      "supporting_evidence": {
+        "end": 5732,
+        "quote": "a) ter sido bolsista de Produtividade em Pesquisa (PQ) ou de Desenvolvimento Tecnológico e\nExtensão Inovadora (DT) por pelo menos 20 (vinte) anos, consecutivos ou não;\nb) continuar ativo no desenvolvimento de pesquisas científicas e/ou tecnológicas e na formação\nde pesquisadores em diversos níveis.\n3.2.3.1 – Os critérios específicos de cada Comitê de Assessoramento, quando houver, disponíveis no\nAnexo I e parte integrante desta Chamada, serão observados quanto aos requisitos mínimos para\nclassificação dos pesquisadores como Bolsistas PQ-Sr.\n3.2.4 - O pesquisador, se aposentado, deve manter atividades acadêmico-científicas oficialmente\nvinculadas a instituições de ensino e pesquisa.\n3.2.5 - No momento de submissão da proposta, o proponente não deverá possuir qualquer\ninadimplência com o CNPq e com a Administração Pública Federal, direta ou indireta, sob pena de\nindeferimento.\n3.2.5.1 - Caso constatada, a qualquer tempo, a falsidade da declaração, o CNPq adotará as\nprovidências cabíveis diante dos indícios de crime de falsidade ideológica.\n3.3 - Quanto à Instituição de Execução do Projeto:\n3.3.1 - A instituição de execução do projeto deverá estar cadastrada no Diretório de Instituiçõ",
+        "start": 4532
+      }
+    },
+    {
+      "case_id": "M30-F07-R1:segmentation",
+      "certainty": "supported_observation",
+      "dimension": "structural",
+      "document_id": "M30-F07",
+      "error_codes": [
+        "SEGMENTATION_OVER"
+      ],
+      "expected_behavior": "A meaningful record should retain its own associated context; whitespace-only boundary differences are not semantic defects.",
+      "next_action": "Inspect semantic usefulness of boundaries before changing segmentation.",
+      "observed": {
+        "coverage": {
+          "denominator": 8889,
+          "numerator": 8858,
+          "value": 0.9965125435932051
+        },
+        "fragmentation": 15
+      },
+      "record_id": "M30-F07-R1",
+      "reference": {
+        "discovery_label": "confirmed_opportunity",
+        "modality": "fomento",
+        "opportunity_label": "genuine_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "open"
+      },
+      "review_status": "provisional",
+      "root_cause": "Structure-derived units differ from provisional annotated record spans.",
+      "root_cause_confidence": "high",
+      "segment_id": "segment-0013",
+      "severity": "medium",
+      "supporting_evidence": {
+        "edges": [
+          {
+            "end": 1910,
+            "exact": false,
+            "intersection": 1910,
+            "intersection_end": 1910,
+            "intersection_start": 0,
+            "iou": 0.2148723140960738,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.2148723140960738,
+            "segment_id": "segment-0000",
+            "start": 0
+          },
+          {
+            "end": 1916,
+            "exact": false,
+            "intersection": 4,
+            "intersection_end": 1916,
+            "intersection_start": 1912,
+            "iou": 0.0004499943750703116,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.0004499943750703116,
+            "segment_id": "segment-0001",
+            "start": 1912
+          },
+          {
+            "end": 1986,
+            "exact": false,
+            "intersection": 68,
+            "intersection_end": 1986,
+            "intersection_start": 1918,
+            "iou": 0.007649904376195298,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.007649904376195298,
+            "segment_id": "segment-0002",
+            "start": 1918
+          },
+          {
+            "end": 1998,
+            "exact": false,
+            "intersection": 10,
+            "intersection_end": 1998,
+            "intersection_start": 1988,
+            "iou": 0.001124985937675779,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.001124985937675779,
+            "segment_id": "segment-0003",
+            "start": 1988
+          },
+          {
+            "end": 2033,
+            "exact": false,
+            "intersection": 32,
+            "intersection_end": 2033,
+            "intersection_start": 2001,
+            "iou": 0.003599955000562493,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.003599955000562493,
+            "segment_id": "segment-0004",
+            "start": 2001
+          },
+          {
+            "end": 2045,
+            "exact": false,
+            "intersection": 10,
+            "intersection_end": 2045,
+            "intersection_start": 2035,
+            "iou": 0.001124985937675779,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.001124985937675779,
+            "segment_id": "segment-0005",
+            "start": 2035
+          },
+          {
+            "end": 2087,
+            "exact": false,
+            "intersection": 40,
+            "intersection_end": 2087,
+            "intersection_start": 2047,
+            "iou": 0.004499943750703116,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.004499943750703116,
+            "segment_id": "segment-0006",
+            "start": 2047
+          },
+          {
+            "end": 2099,
+            "exact": false,
+            "intersection": 10,
+            "intersection_end": 2099,
+            "intersection_start": 2089,
+            "iou": 0.001124985937675779,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.001124985937675779,
+            "segment_id": "segment-0007",
+            "start": 2089
+          },
+          {
+            "end": 2122,
+            "exact": false,
+            "intersection": 21,
+            "intersection_end": 2122,
+            "intersection_start": 2101,
+            "iou": 0.002362470469119136,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.002362470469119136,
+            "segment_id": "segment-0008",
+            "start": 2101
+          },
+          {
+            "end": 2147,
+            "exact": false,
+            "intersection": 23,
+            "intersection_end": 2147,
+            "intersection_start": 2124,
+            "iou": 0.0025874676566542917,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.0025874676566542917,
+            "segment_id": "segment-0009",
+            "start": 2124
+          },
+          {
+            "end": 2421,
+            "exact": false,
+            "intersection": 272,
+            "intersection_end": 2421,
+            "intersection_start": 2149,
+            "iou": 0.03059961750478119,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.03059961750478119,
+            "segment_id": "segment-0010",
+            "start": 2149
+          },
+          {
+            "end": 2455,
+            "exact": false,
+            "intersection": 32,
+            "intersection_end": 2455,
+            "intersection_start": 2423,
+            "iou": 0.003599955000562493,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.003599955000562493,
+            "segment_id": "segment-0011",
+            "start": 2423
+          },
+          {
+            "end": 4529,
+            "exact": false,
+            "intersection": 2072,
+            "intersection_end": 4529,
+            "intersection_start": 2457,
+            "iou": 0.23309708628642142,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.23309708628642142,
+            "segment_id": "segment-0012",
+            "start": 2457
+          },
+          {
+            "end": 7632,
+            "exact": false,
+            "intersection": 3100,
+            "intersection_end": 7632,
+            "intersection_start": 4532,
+            "iou": 0.3487456406794915,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.3487456406794915,
+            "segment_id": "segment-0013",
+            "start": 4532
+          },
+          {
+            "end": 9980,
+            "exact": false,
+            "intersection": 1254,
+            "intersection_end": 8889,
+            "intersection_start": 7635,
+            "iou": 0.12565130260521043,
+            "predicted_purity": 0.5347547974413646,
+            "reference_fraction": 0.14107323658454268,
+            "segment_id": "segment-0014",
+            "start": 7635
+          }
+        ],
+        "reference_span": [
+          0,
+          8889
+        ]
+      }
+    },
+    {
+      "case_id": "M30-F07:segment-0016:discovery:classification",
+      "certainty": "strong_hypothesis",
+      "claim_kind": "discovery",
+      "context_evidence": [],
+      "document_id": "M30-F07",
+      "end": 14130,
+      "error_codes": [
+        "EVIDENCE_SEMANTIC_MISMATCH"
+      ],
+      "expected_behavior": "Exigir contexto do instrumento e preservar incerteza de acesso/condições.",
+      "expected_claim": "confirmed_opportunity",
+      "field_index": null,
+      "field_name": null,
+      "judgment": "partial",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "observed": "confirmed_opportunity",
+      "quote": "6.6.4 - Caso seja necessário utilizar figuras, gráficos, fotos e/ou outros, para esclarecer a\nargumentação da proposta, estes não devem comprometer a capacidade do arquivo, pois as\npropostas que excederem o tamanho estipulado não serão recebidas pelo guichê eletrônico do\nCNPq.\n6.7 - Após o envio, será gerado um recibo eletrônico de protocolo da proposta submetida, o qual\nservirá como comprovante da transmissão.\n6.8 - Será aceita uma única proposta por proponente, vinculada a apenas uma das Linhas indicadas\nno item 1.2, sendo vedado o remanejamento de propostas entre as Linhas.\n6.9 - Na hipótese de envio de mais de uma proposta pelo mesmo proponente, respeitando-se o\nprazo limite estipulado para submissão das propostas, será considerada para análise somente a\núltima proposta recebida.\n6.10 - Constatado o envio de propostas idênticas, apresentadas por diferentes proponentes, todas\nas propostas nesta condição serão indeferidas.\n6.11 - O proponente deve se assegurar de que seu Currículo Lattes possui informações completas,\ncorretas e atualizadas, evitando especialmente a duplicação de itens ou sua classificação de maneira\nequivocada.\n6.11.1 - A classificação incorreta da produção científica poderá prejudicar a análise de mérito do\npedido.\n7 - Julgamento\n7.1 - Critérios do Julgamento\n7.1.1 - Os critérios para classificação das propostas quanto ao mérito técnico-científico e sua\nadequação orçamentária são:\nCritérios para Julgamento para Bolsas PQ e PQ-Sr",
+      "rationale": "A página contém condições de submissão de uma chamada real, mas isoladamente é trecho procedimental sem identidade completa. A confirmação é defensável no documento, menos sustentada só nesta unidade.",
+      "review_status": "provisional",
+      "root_cause": "classify usa conjunções locais de instrumento/acesso; hierarquia entre páginas não existe.",
+      "root_cause_confidence": "high",
+      "segment_id": "segment-0016",
+      "severity": "medium",
+      "start": 12658,
+      "supporting_evidence": {
+        "end": 14130,
+        "quote": "6.6.4 - Caso seja necessário utilizar figuras, gráficos, fotos e/ou outros, para esclarecer a\nargumentação da proposta, estes não devem comprometer a capacidade do arquivo, pois as\npropostas que excederem o tamanho estipulado não serão recebidas pelo guichê eletrônico do\nCNPq.\n6.7 - Após o envio, será gerado um recibo eletrônico de protocolo da proposta submetida, o qual\nservirá como comprovante da transmissão.\n6.8 - Será aceita uma única proposta por proponente, vinculada a apenas uma das Linhas indicadas\nno item 1.2, sendo vedado o remanejamento de propostas entre as Linhas.\n6.9 - Na hipótese de envio de mais de uma proposta pelo mesmo proponente, respeitando-se o\nprazo limite estipulado para submissão das propostas, será considerada para análise somente a\núltima proposta recebida.\n6.10 - Constatado o envio de propostas idênticas, apresentadas por diferentes proponentes, todas\nas propostas nesta condição serão indeferidas.\n6.11 - O proponente deve se assegurar de que seu Currículo Lattes possui informações completas,\ncorretas e atualizadas, evitando especialmente a duplicação de itens ou sua classificação de maneira\nequivocada.\n6.11.1 - A classificação incorreta da produção científica poderá prejudicar a análise de mérito do\npedido.\n7 - Julgamento\n7.1 - Critérios do Julgamento\n7.1.1 - Os critérios para classificação das propostas quanto ao mérito técnico-científico e sua\nadequação orçamentária são:\nCritérios para Julgamento para Bolsas PQ e PQ-Sr",
+        "start": 12658
+      }
+    }
+  ],
+  "extracted_claims": [
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F07",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "applicant_requirements",
+      "original": "Chamada CNPq Nº 33/2026\nBolsas de Produtividade do CNPq\nO Conselho Nacional de Desenvolvimento Científico e Tecnológico - CNPq torna pública a presente\nChamada e convida os interessados a apresentarem propostas nos termos aqui estabelecidos.\n1. Objeto\nConceder bolsas nas seguintes modalidades: Produtividade em Desenvolvimento Tecnológico e\nExtensão Inovadora (DT), Produtividade em Pesquisa (PQ) e Produtividade em Pesquisa Sênior (PQSr).\n1.1 São objetivos desta chamada:\na) valorizar pesquisadores que possuam produção científica, tecnológica e de inovação de\ndestaque em suas respectivas áreas do conhecimento;\nb) incentivar o aumento da produção científica, tecnológica e de inovação de qualidade;\nc) selecionar projetos de pesquisa que sejam propostos considerando o rigor e o método\ncientífico, bem como outros conceitos fundamentais para a produção do conhecimento\ncientífico.\n1.2 - Os projetos deverão ser inseridos em uma das seguintes Linhas de pesquisa:\n1.2.1 - Linha 1 - Bolsas de Produtividade em Desenvolvimento Tecnológico e Extensão Inovadora\n- DT\nDestinada aos pesquisadores que se destaquem entre seus pares, valorizando sua produção\ntecnológica e atividades de extensão inovadora segundo critérios normativos, estabelecidos pelo\nCNPq, e específicos, pelo Comitê de Assessoramento.\n1.2.2 - Linha 2 - Bolsas de Produtividade em Pesquisa - PQ\nDestinada aos pesquisadores que se destaquem entre seus pares, valorizando sua produção\ncientífica segundo critérios normativos, estabelecidos pelo CNPq, e específicos, pelos Comitês de\nAssessoramento.\n1.2.3 - Linha 3 - Bolsas de Produtividade em Pesquisa Sênior – PQ-Sr\nDestinada ao pesquisador que se destaque entre seus pares como líder e paradigma na sua área de\natuação, valorizando sua produção científica e/ou tecnológica, segundo requisitos e critérios\nnormativos estabelecidos pelo CNPq e pelos Comitês de Assessoramento.\n2 – Cronograma\nFase",
+      "reference_records": [
+        "M30-F07-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0000",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F07",
+        "end": 1910,
+        "page": 1,
+        "quote": "Chamada CNPq Nº 33/2026\nBolsas de Produtividade do CNPq\nO Conselho Nacional de Desenvolvimento Científico e Tecnológico - CNPq torna pública a presente\nChamada e convida os interessados a apresentarem propostas nos termos aqui estabelecidos.\n1. Objeto\nConceder bolsas nas seguintes modalidades: Produtividade em Desenvolvimento Tecnológico e\nExtensão Inovadora (DT), Produtividade em Pesquisa (PQ) e Produtividade em Pesquisa Sênior (PQSr).\n1.1 São objetivos desta chamada:\na) valorizar pesquisadores que possuam produção científica, tecnológica e de inovação de\ndestaque em suas respectivas áreas do conhecimento;\nb) incentivar o aumento da produção científica, tecnológica e de inovação de qualidade;\nc) selecionar projetos de pesquisa que sejam propostos considerando o rigor e o método\ncientífico, bem como outros conceitos fundamentais para a produção do conhecimento\ncientífico.\n1.2 - Os projetos deverão ser inseridos em uma das seguintes Linhas de pesquisa:\n1.2.1 - Linha 1 - Bolsas de Produtividade em Desenvolvimento Tecnológico e Extensão Inovadora\n- DT\nDestinada aos pesquisadores que se destaquem entre seus pares, valorizando sua produção\ntecnológica e atividades de extensão inovadora segundo critérios normativos, estabelecidos pelo\nCNPq, e específicos, pelo Comitê de Assessoramento.\n1.2.2 - Linha 2 - Bolsas de Produtividade em Pesquisa - PQ\nDestinada aos pesquisadores que se destaquem entre seus pares, valorizando sua produção\ncientífica segundo critérios normativos, estabelecidos pelo CNPq, e específicos, pelos Comitês de\nAssessoramento.\n1.2.3 - Linha 3 - Bolsas de Produtividade em Pesquisa Sênior – PQ-Sr\nDestinada ao pesquisador que se destaque entre seus pares como líder e paradigma na sua área de\natuação, valorizando sua produção científica e/ou tecnológica, segundo requisitos e critérios\nnormativos estabelecidos pelo CNPq e pelos Comitês de Assessoramento.\n2 – Cronograma\nFase",
+        "raw_sha256": "c00738c73f1bbef10cbea3a680d9948f04cc39985db2b2d64109664281ab5c92",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0000",
+        "start": 0,
+        "text_sha256": "21f8045f1e41d5f4ee032ba52e03f449c31f0910f3cfc651e5e2b611c41a0efc"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F07",
+      "field_index": 1,
+      "method_version": "m31-deterministic-v2",
+      "name": "publishing_organization_expression",
+      "original": "Chamada CNPq Nº 33/2026\nBolsas de Produtividade do CNPq\nO Conselho Nacional de Desenvolvimento Científico e Tecnológico - CNPq torna pública a presente\nChamada e convida os interessados a apresentarem propostas nos termos aqui estabelecidos.\n1. Objeto\nConceder bolsas nas seguintes modalidades: Produtividade em Desenvolvimento Tecnológico e\nExtensão Inovadora (DT), Produtividade em Pesquisa (PQ) e Produtividade em Pesquisa Sênior (PQSr).\n1.1 São objetivos desta chamada:\na) valorizar pesquisadores que possuam produção científica, tecnológica e de inovação de\ndestaque em suas respectivas áreas do conhecimento;\nb) incentivar o aumento da produção científica, tecnológica e de inovação de qualidade;\nc) selecionar projetos de pesquisa que sejam propostos considerando o rigor e o método\ncientífico, bem como outros conceitos fundamentais para a produção do conhecimento\ncientífico.\n1.2 - Os projetos deverão ser inseridos em uma das seguintes Linhas de pesquisa:\n1.2.1 - Linha 1 - Bolsas de Produtividade em Desenvolvimento Tecnológico e Extensão Inovadora\n- DT\nDestinada aos pesquisadores que se destaquem entre seus pares, valorizando sua produção\ntecnológica e atividades de extensão inovadora segundo critérios normativos, estabelecidos pelo\nCNPq, e específicos, pelo Comitê de Assessoramento.\n1.2.2 - Linha 2 - Bolsas de Produtividade em Pesquisa - PQ\nDestinada aos pesquisadores que se destaquem entre seus pares, valorizando sua produção\ncientífica segundo critérios normativos, estabelecidos pelo CNPq, e específicos, pelos Comitês de\nAssessoramento.\n1.2.3 - Linha 3 - Bolsas de Produtividade em Pesquisa Sênior – PQ-Sr\nDestinada ao pesquisador que se destaque entre seus pares como líder e paradigma na sua área de\natuação, valorizando sua produção científica e/ou tecnológica, segundo requisitos e critérios\nnormativos estabelecidos pelo CNPq e pelos Comitês de Assessoramento.\n2 – Cronograma\nFase",
+      "reference_records": [
+        "M30-F07-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0000",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F07",
+        "end": 1910,
+        "page": 1,
+        "quote": "Chamada CNPq Nº 33/2026\nBolsas de Produtividade do CNPq\nO Conselho Nacional de Desenvolvimento Científico e Tecnológico - CNPq torna pública a presente\nChamada e convida os interessados a apresentarem propostas nos termos aqui estabelecidos.\n1. Objeto\nConceder bolsas nas seguintes modalidades: Produtividade em Desenvolvimento Tecnológico e\nExtensão Inovadora (DT), Produtividade em Pesquisa (PQ) e Produtividade em Pesquisa Sênior (PQSr).\n1.1 São objetivos desta chamada:\na) valorizar pesquisadores que possuam produção científica, tecnológica e de inovação de\ndestaque em suas respectivas áreas do conhecimento;\nb) incentivar o aumento da produção científica, tecnológica e de inovação de qualidade;\nc) selecionar projetos de pesquisa que sejam propostos considerando o rigor e o método\ncientífico, bem como outros conceitos fundamentais para a produção do conhecimento\ncientífico.\n1.2 - Os projetos deverão ser inseridos em uma das seguintes Linhas de pesquisa:\n1.2.1 - Linha 1 - Bolsas de Produtividade em Desenvolvimento Tecnológico e Extensão Inovadora\n- DT\nDestinada aos pesquisadores que se destaquem entre seus pares, valorizando sua produção\ntecnológica e atividades de extensão inovadora segundo critérios normativos, estabelecidos pelo\nCNPq, e específicos, pelo Comitê de Assessoramento.\n1.2.2 - Linha 2 - Bolsas de Produtividade em Pesquisa - PQ\nDestinada aos pesquisadores que se destaquem entre seus pares, valorizando sua produção\ncientífica segundo critérios normativos, estabelecidos pelo CNPq, e específicos, pelos Comitês de\nAssessoramento.\n1.2.3 - Linha 3 - Bolsas de Produtividade em Pesquisa Sênior – PQ-Sr\nDestinada ao pesquisador que se destaque entre seus pares como líder e paradigma na sua área de\natuação, valorizando sua produção científica e/ou tecnológica, segundo requisitos e critérios\nnormativos estabelecidos pelo CNPq e pelos Comitês de Assessoramento.\n2 – Cronograma\nFase",
+        "raw_sha256": "c00738c73f1bbef10cbea3a680d9948f04cc39985db2b2d64109664281ab5c92",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0000",
+        "start": 0,
+        "text_sha256": "21f8045f1e41d5f4ee032ba52e03f449c31f0910f3cfc651e5e2b611c41a0efc"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F07",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "unknown_temporal_expression",
+      "original": "07/10/2026",
+      "reference_records": [
+        "M30-F07-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0003",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F07",
+        "end": 1998,
+        "page": 1,
+        "quote": "07/10/2026",
+        "raw_sha256": "c00738c73f1bbef10cbea3a680d9948f04cc39985db2b2d64109664281ab5c92",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0003",
+        "start": 1988,
+        "text_sha256": "21f8045f1e41d5f4ee032ba52e03f449c31f0910f3cfc651e5e2b611c41a0efc"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F07",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "unknown_temporal_expression",
+      "original": "19/10/2026",
+      "reference_records": [
+        "M30-F07-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0005",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F07",
+        "end": 2045,
+        "page": 2,
+        "quote": "19/10/2026",
+        "raw_sha256": "c00738c73f1bbef10cbea3a680d9948f04cc39985db2b2d64109664281ab5c92",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0005",
+        "start": 2035,
+        "text_sha256": "21f8045f1e41d5f4ee032ba52e03f449c31f0910f3cfc651e5e2b611c41a0efc"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F07",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "unknown_temporal_expression",
+      "original": "07/01/2027",
+      "reference_records": [
+        "M30-F07-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0007",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F07",
+        "end": 2099,
+        "page": 2,
+        "quote": "07/01/2027",
+        "raw_sha256": "c00738c73f1bbef10cbea3a680d9948f04cc39985db2b2d64109664281ab5c92",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0007",
+        "start": 2089,
+        "text_sha256": "21f8045f1e41d5f4ee032ba52e03f449c31f0910f3cfc651e5e2b611c41a0efc"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F07",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "unknown_temporal_expression",
+      "original": "01/03/2027",
+      "reference_records": [
+        "M30-F07-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0009",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F07",
+        "end": 2147,
+        "page": 2,
+        "quote": "01/03/2027 a 02/04/2027",
+        "raw_sha256": "c00738c73f1bbef10cbea3a680d9948f04cc39985db2b2d64109664281ab5c92",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0009",
+        "start": 2124,
+        "text_sha256": "21f8045f1e41d5f4ee032ba52e03f449c31f0910f3cfc651e5e2b611c41a0efc"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F07",
+      "field_index": 1,
+      "method_version": "m31-deterministic-v2",
+      "name": "unknown_temporal_expression",
+      "original": "02/04/2027",
+      "reference_records": [
+        "M30-F07-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0009",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F07",
+        "end": 2147,
+        "page": 2,
+        "quote": "01/03/2027 a 02/04/2027",
+        "raw_sha256": "c00738c73f1bbef10cbea3a680d9948f04cc39985db2b2d64109664281ab5c92",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0009",
+        "start": 2124,
+        "text_sha256": "21f8045f1e41d5f4ee032ba52e03f449c31f0910f3cfc651e5e2b611c41a0efc"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F07",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "unknown_temporal_expression",
+      "original": "05/05/2027",
+      "reference_records": [
+        "M30-F07-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0011",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F07",
+        "end": 2455,
+        "page": 2,
+        "quote": "05/05/2027\n17/05/2027\n30/06/2027",
+        "raw_sha256": "c00738c73f1bbef10cbea3a680d9948f04cc39985db2b2d64109664281ab5c92",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0011",
+        "start": 2423,
+        "text_sha256": "21f8045f1e41d5f4ee032ba52e03f449c31f0910f3cfc651e5e2b611c41a0efc"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F07",
+      "field_index": 1,
+      "method_version": "m31-deterministic-v2",
+      "name": "unknown_temporal_expression",
+      "original": "17/05/2027",
+      "reference_records": [
+        "M30-F07-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0011",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F07",
+        "end": 2455,
+        "page": 2,
+        "quote": "05/05/2027\n17/05/2027\n30/06/2027",
+        "raw_sha256": "c00738c73f1bbef10cbea3a680d9948f04cc39985db2b2d64109664281ab5c92",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0011",
+        "start": 2423,
+        "text_sha256": "21f8045f1e41d5f4ee032ba52e03f449c31f0910f3cfc651e5e2b611c41a0efc"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F07",
+      "field_index": 2,
+      "method_version": "m31-deterministic-v2",
+      "name": "unknown_temporal_expression",
+      "original": "30/06/2027",
+      "reference_records": [
+        "M30-F07-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0011",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F07",
+        "end": 2455,
+        "page": 2,
+        "quote": "05/05/2027\n17/05/2027\n30/06/2027",
+        "raw_sha256": "c00738c73f1bbef10cbea3a680d9948f04cc39985db2b2d64109664281ab5c92",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0011",
+        "start": 2423,
+        "text_sha256": "21f8045f1e41d5f4ee032ba52e03f449c31f0910f3cfc651e5e2b611c41a0efc"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F07",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "applicant_requirements",
+      "original": "3 - Critérios de Elegibilidade\n3.1 - Os critérios de elegibilidade indicados abaixo são obrigatórios e a ausência de qualquer um\ndeles resultará no indeferimento da proposta.\n3.2 - Quanto ao Proponente e beneficiário da bolsa:\n3.2.1 - O responsável pela apresentação da proposta deverá:\na) ter seu currículo cadastrado na Plataforma Lattes, atualizado até a data limite para submissão\ndas propostas;\nb) possuir o título de Doutor;\nc) ter vínculo formal com a instituição de execução do projeto.\n3.2.1.1 - Vínculo formal é entendido como toda e qualquer forma de vinculação existente entre o\nproponente, pessoa física, e a instituição de execução do projeto.\n3.2.1.2 - Na inexistência de vínculo empregatício ou funcional, o vínculo deverá estar caracterizado\npor meio de documento oficial que comprove haver concordância entre o proponente e a instituição\nde execução do projeto para o desenvolvimento da atividade de pesquisa e/ou ensino, documento\nque deverá ficar em poder do proponente, não sendo necessária a remessa ao CNPq.\n3.2.1.3 - O vínculo formal deve estar claramente informado no Currículo Lattes do Proponente.\n3.2.2 - No caso dos pesquisadores que concorrerão na Linha 1 – DT e na Linha 2 - PQ, além dos\ncritérios elencados no item 3.2.1, deve ser observado o seguinte:\na) para estar apto a receber Bolsa de Produtividade DT ou PQ nível C, ter obtido título de doutor\naté o ano de 2024;\nb) não possuir bolsa da modalidade Produtividade em Pesquisa (PQ) ou Produtividade em\nPesquisa Sênior (PQ-Sr) ou na modalidade Bolsa de Produtividade em Desenvolvimento\nTecnológico e Extensão Inovadora (DT) em curso com vigência que ultrapasse o ano de 2027;\n3.2.2.1 - Os critérios específicos de cada Comitê de Assessoramento, quando houver, disponíveis no\nAnexo I e parte integrante desta Chamada, serão observados quanto aos requisitos mínimos para\nclassificação nos diferentes níveis de bolsa de Produtividade em Pesquisa.\n3.2.3 - No caso dos pesquisadores que concorrerão à Linha 3 – PQ-Sr, além dos critérios elencados\nno item 3.2.1, deve ser observado o seguinte:",
+      "reference_records": [
+        "M30-F07-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0012",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F07",
+        "end": 4529,
+        "page": 2,
+        "quote": "3 - Critérios de Elegibilidade\n3.1 - Os critérios de elegibilidade indicados abaixo são obrigatórios e a ausência de qualquer um\ndeles resultará no indeferimento da proposta.\n3.2 - Quanto ao Proponente e beneficiário da bolsa:\n3.2.1 - O responsável pela apresentação da proposta deverá:\na) ter seu currículo cadastrado na Plataforma Lattes, atualizado até a data limite para submissão\ndas propostas;\nb) possuir o título de Doutor;\nc) ter vínculo formal com a instituição de execução do projeto.\n3.2.1.1 - Vínculo formal é entendido como toda e qualquer forma de vinculação existente entre o\nproponente, pessoa física, e a instituição de execução do projeto.\n3.2.1.2 - Na inexistência de vínculo empregatício ou funcional, o vínculo deverá estar caracterizado\npor meio de documento oficial que comprove haver concordância entre o proponente e a instituição\nde execução do projeto para o desenvolvimento da atividade de pesquisa e/ou ensino, documento\nque deverá ficar em poder do proponente, não sendo necessária a remessa ao CNPq.\n3.2.1.3 - O vínculo formal deve estar claramente informado no Currículo Lattes do Proponente.\n3.2.2 - No caso dos pesquisadores que concorrerão na Linha 1 – DT e na Linha 2 - PQ, além dos\ncritérios elencados no item 3.2.1, deve ser observado o seguinte:\na) para estar apto a receber Bolsa de Produtividade DT ou PQ nível C, ter obtido título de doutor\naté o ano de 2024;\nb) não possuir bolsa da modalidade Produtividade em Pesquisa (PQ) ou Produtividade em\nPesquisa Sênior (PQ-Sr) ou na modalidade Bolsa de Produtividade em Desenvolvimento\nTecnológico e Extensão Inovadora (DT) em curso com vigência que ultrapasse o ano de 2027;\n3.2.2.1 - Os critérios específicos de cada Comitê de Assessoramento, quando houver, disponíveis no\nAnexo I e parte integrante desta Chamada, serão observados quanto aos requisitos mínimos para\nclassificação nos diferentes níveis de bolsa de Produtividade em Pesquisa.\n3.2.3 - No caso dos pesquisadores que concorrerão à Linha 3 – PQ-Sr, além dos critérios elencados\nno item 3.2.1, deve ser observado o seguinte:",
+        "raw_sha256": "c00738c73f1bbef10cbea3a680d9948f04cc39985db2b2d64109664281ab5c92",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0012",
+        "start": 2457,
+        "text_sha256": "21f8045f1e41d5f4ee032ba52e03f449c31f0910f3cfc651e5e2b611c41a0efc"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F07",
+      "field_index": 1,
+      "method_version": "m31-deterministic-v2",
+      "name": "attachment_unavailable",
+      "original": "3 - Critérios de Elegibilidade\n3.1 - Os critérios de elegibilidade indicados abaixo são obrigatórios e a ausência de qualquer um\ndeles resultará no indeferimento da proposta.\n3.2 - Quanto ao Proponente e beneficiário da bolsa:\n3.2.1 - O responsável pela apresentação da proposta deverá:\na) ter seu currículo cadastrado na Plataforma Lattes, atualizado até a data limite para submissão\ndas propostas;\nb) possuir o título de Doutor;\nc) ter vínculo formal com a instituição de execução do projeto.\n3.2.1.1 - Vínculo formal é entendido como toda e qualquer forma de vinculação existente entre o\nproponente, pessoa física, e a instituição de execução do projeto.\n3.2.1.2 - Na inexistência de vínculo empregatício ou funcional, o vínculo deverá estar caracterizado\npor meio de documento oficial que comprove haver concordância entre o proponente e a instituição\nde execução do projeto para o desenvolvimento da atividade de pesquisa e/ou ensino, documento\nque deverá ficar em poder do proponente, não sendo necessária a remessa ao CNPq.\n3.2.1.3 - O vínculo formal deve estar claramente informado no Currículo Lattes do Proponente.\n3.2.2 - No caso dos pesquisadores que concorrerão na Linha 1 – DT e na Linha 2 - PQ, além dos\ncritérios elencados no item 3.2.1, deve ser observado o seguinte:\na) para estar apto a receber Bolsa de Produtividade DT ou PQ nível C, ter obtido título de doutor\naté o ano de 2024;\nb) não possuir bolsa da modalidade Produtividade em Pesquisa (PQ) ou Produtividade em\nPesquisa Sênior (PQ-Sr) ou na modalidade Bolsa de Produtividade em Desenvolvimento\nTecnológico e Extensão Inovadora (DT) em curso com vigência que ultrapasse o ano de 2027;\n3.2.2.1 - Os critérios específicos de cada Comitê de Assessoramento, quando houver, disponíveis no\nAnexo I e parte integrante desta Chamada, serão observados quanto aos requisitos mínimos para\nclassificação nos diferentes níveis de bolsa de Produtividade em Pesquisa.\n3.2.3 - No caso dos pesquisadores que concorrerão à Linha 3 – PQ-Sr, além dos critérios elencados\nno item 3.2.1, deve ser observado o seguinte:",
+      "reference_records": [
+        "M30-F07-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0012",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F07",
+        "end": 4529,
+        "page": 2,
+        "quote": "3 - Critérios de Elegibilidade\n3.1 - Os critérios de elegibilidade indicados abaixo são obrigatórios e a ausência de qualquer um\ndeles resultará no indeferimento da proposta.\n3.2 - Quanto ao Proponente e beneficiário da bolsa:\n3.2.1 - O responsável pela apresentação da proposta deverá:\na) ter seu currículo cadastrado na Plataforma Lattes, atualizado até a data limite para submissão\ndas propostas;\nb) possuir o título de Doutor;\nc) ter vínculo formal com a instituição de execução do projeto.\n3.2.1.1 - Vínculo formal é entendido como toda e qualquer forma de vinculação existente entre o\nproponente, pessoa física, e a instituição de execução do projeto.\n3.2.1.2 - Na inexistência de vínculo empregatício ou funcional, o vínculo deverá estar caracterizado\npor meio de documento oficial que comprove haver concordância entre o proponente e a instituição\nde execução do projeto para o desenvolvimento da atividade de pesquisa e/ou ensino, documento\nque deverá ficar em poder do proponente, não sendo necessária a remessa ao CNPq.\n3.2.1.3 - O vínculo formal deve estar claramente informado no Currículo Lattes do Proponente.\n3.2.2 - No caso dos pesquisadores que concorrerão na Linha 1 – DT e na Linha 2 - PQ, além dos\ncritérios elencados no item 3.2.1, deve ser observado o seguinte:\na) para estar apto a receber Bolsa de Produtividade DT ou PQ nível C, ter obtido título de doutor\naté o ano de 2024;\nb) não possuir bolsa da modalidade Produtividade em Pesquisa (PQ) ou Produtividade em\nPesquisa Sênior (PQ-Sr) ou na modalidade Bolsa de Produtividade em Desenvolvimento\nTecnológico e Extensão Inovadora (DT) em curso com vigência que ultrapasse o ano de 2027;\n3.2.2.1 - Os critérios específicos de cada Comitê de Assessoramento, quando houver, disponíveis no\nAnexo I e parte integrante desta Chamada, serão observados quanto aos requisitos mínimos para\nclassificação nos diferentes níveis de bolsa de Produtividade em Pesquisa.\n3.2.3 - No caso dos pesquisadores que concorrerão à Linha 3 – PQ-Sr, além dos critérios elencados\nno item 3.2.1, deve ser observado o seguinte:",
+        "raw_sha256": "c00738c73f1bbef10cbea3a680d9948f04cc39985db2b2d64109664281ab5c92",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0012",
+        "start": 2457,
+        "text_sha256": "21f8045f1e41d5f4ee032ba52e03f449c31f0910f3cfc651e5e2b611c41a0efc"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F07",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "program_budget",
+      "original": "R$23.525.040,00",
+      "reference_records": [
+        "M30-F07-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0013",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F07",
+        "end": 7632,
+        "page": 3,
+        "quote": "a) ter sido bolsista de Produtividade em Pesquisa (PQ) ou de Desenvolvimento Tecnológico e\nExtensão Inovadora (DT) por pelo menos 20 (vinte) anos, consecutivos ou não;\nb) continuar ativo no desenvolvimento de pesquisas científicas e/ou tecnológicas e na formação\nde pesquisadores em diversos níveis.\n3.2.3.1 – Os critérios específicos de cada Comitê de Assessoramento, quando houver, disponíveis no\nAnexo I e parte integrante desta Chamada, serão observados quanto aos requisitos mínimos para\nclassificação dos pesquisadores como Bolsistas PQ-Sr.\n3.2.4 - O pesquisador, se aposentado, deve manter atividades acadêmico-científicas oficialmente\nvinculadas a instituições de ensino e pesquisa.\n3.2.5 - No momento de submissão da proposta, o proponente não deverá possuir qualquer\ninadimplência com o CNPq e com a Administração Pública Federal, direta ou indireta, sob pena de\nindeferimento.\n3.2.5.1 - Caso constatada, a qualquer tempo, a falsidade da declaração, o CNPq adotará as\nprovidências cabíveis diante dos indícios de crime de falsidade ideológica.\n3.3 - Quanto à Instituição de Execução do Projeto:\n3.3.1 - A instituição de execução do projeto deverá estar cadastrada no Diretório de Instituições do\nCNPq, devendo ser uma Instituição Científica, Tecnológica e de Inovação (ICT), e/ou empresa privada\nconstituída sob as leis brasileiras, com sede e foro no Brasil, empresa pública, ou organização da\nsociedade civil sem fins lucrativos.\n3.3.1.1 - Entende-se por Instituição Científica, Tecnológica e de Inovação (ICT): órgão ou entidade\nda administração pública direta ou indireta ou pessoa jurídica de direito privado sem fins lucrativos\nlegalmente constituída sob as leis brasileiras, com sede e foro no País, que inclua em sua missão\ninstitucional ou em seu objetivo social ou estatutário a pesquisa básica ou aplicada de caráter\ncientífico ou tecnológico ou o desenvolvimento de novos produtos, serviços ou processos.\n3.3.2 - A instituição de execução do projeto é aquela com a qual o proponente deve apresentar\nvínculo.\n4 - Recursos Financeiros\n4.1 - As propostas aprovadas na Linha 1 (Bolsas DT) serão financiadas com recursos no valor global\nestimado de R$23.525.040,00 (vinte e três milhões, quinhentos e vinte e cinco mil e quarenta reais),\noriundos do orçamento do CNPq, a serem liberados de acordo com a disponibilidade orçamentária\ne financeira do CNPq. As propostas aprovadas nas Linhas 2 e 3 (Bolsas PQ e PQ-Sr) serão financiadas\ncom recursos no valor global estimado de R$425.438.160,00 (quatrocentos e vinte e cinco milhões,\nquatrocentos e trinta e oito mil, cento e sessenta reais), oriundos do orçamento do CNPq, a serem\nliberados de acordo com a disponibilidade orçamentária e financeira do CNPq.\n4.1.1 - Quando o desembolso ocorrer em mais de um exercício financeiro, o repasse de cada ano\nficará condicionado à disponibilidade orçamentária e financeira do CNPq e dos demais parceiros.\n4.2 - Identificada a conveniência e a oportunidade e havendo disponibilidade de recursos adicionais\npara esta Chamada, em qualquer fase, o CNPq e eventuais parceiros poderão contratar novos",
+        "raw_sha256": "c00738c73f1bbef10cbea3a680d9948f04cc39985db2b2d64109664281ab5c92",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0013",
+        "start": 4532,
+        "text_sha256": "21f8045f1e41d5f4ee032ba52e03f449c31f0910f3cfc651e5e2b611c41a0efc"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F07",
+      "field_index": 1,
+      "method_version": "m31-deterministic-v2",
+      "name": "program_budget",
+      "original": "R$425.438.160,00",
+      "reference_records": [
+        "M30-F07-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0013",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F07",
+        "end": 7632,
+        "page": 3,
+        "quote": "a) ter sido bolsista de Produtividade em Pesquisa (PQ) ou de Desenvolvimento Tecnológico e\nExtensão Inovadora (DT) por pelo menos 20 (vinte) anos, consecutivos ou não;\nb) continuar ativo no desenvolvimento de pesquisas científicas e/ou tecnológicas e na formação\nde pesquisadores em diversos níveis.\n3.2.3.1 – Os critérios específicos de cada Comitê de Assessoramento, quando houver, disponíveis no\nAnexo I e parte integrante desta Chamada, serão observados quanto aos requisitos mínimos para\nclassificação dos pesquisadores como Bolsistas PQ-Sr.\n3.2.4 - O pesquisador, se aposentado, deve manter atividades acadêmico-científicas oficialmente\nvinculadas a instituições de ensino e pesquisa.\n3.2.5 - No momento de submissão da proposta, o proponente não deverá possuir qualquer\ninadimplência com o CNPq e com a Administração Pública Federal, direta ou indireta, sob pena de\nindeferimento.\n3.2.5.1 - Caso constatada, a qualquer tempo, a falsidade da declaração, o CNPq adotará as\nprovidências cabíveis diante dos indícios de crime de falsidade ideológica.\n3.3 - Quanto à Instituição de Execução do Projeto:\n3.3.1 - A instituição de execução do projeto deverá estar cadastrada no Diretório de Instituições do\nCNPq, devendo ser uma Instituição Científica, Tecnológica e de Inovação (ICT), e/ou empresa privada\nconstituída sob as leis brasileiras, com sede e foro no Brasil, empresa pública, ou organização da\nsociedade civil sem fins lucrativos.\n3.3.1.1 - Entende-se por Instituição Científica, Tecnológica e de Inovação (ICT): órgão ou entidade\nda administração pública direta ou indireta ou pessoa jurídica de direito privado sem fins lucrativos\nlegalmente constituída sob as leis brasileiras, com sede e foro no País, que inclua em sua missão\ninstitucional ou em seu objetivo social ou estatutário a pesquisa básica ou aplicada de caráter\ncientífico ou tecnológico ou o desenvolvimento de novos produtos, serviços ou processos.\n3.3.2 - A instituição de execução do projeto é aquela com a qual o proponente deve apresentar\nvínculo.\n4 - Recursos Financeiros\n4.1 - As propostas aprovadas na Linha 1 (Bolsas DT) serão financiadas com recursos no valor global\nestimado de R$23.525.040,00 (vinte e três milhões, quinhentos e vinte e cinco mil e quarenta reais),\noriundos do orçamento do CNPq, a serem liberados de acordo com a disponibilidade orçamentária\ne financeira do CNPq. As propostas aprovadas nas Linhas 2 e 3 (Bolsas PQ e PQ-Sr) serão financiadas\ncom recursos no valor global estimado de R$425.438.160,00 (quatrocentos e vinte e cinco milhões,\nquatrocentos e trinta e oito mil, cento e sessenta reais), oriundos do orçamento do CNPq, a serem\nliberados de acordo com a disponibilidade orçamentária e financeira do CNPq.\n4.1.1 - Quando o desembolso ocorrer em mais de um exercício financeiro, o repasse de cada ano\nficará condicionado à disponibilidade orçamentária e financeira do CNPq e dos demais parceiros.\n4.2 - Identificada a conveniência e a oportunidade e havendo disponibilidade de recursos adicionais\npara esta Chamada, em qualquer fase, o CNPq e eventuais parceiros poderão contratar novos",
+        "raw_sha256": "c00738c73f1bbef10cbea3a680d9948f04cc39985db2b2d64109664281ab5c92",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0013",
+        "start": 4532,
+        "text_sha256": "21f8045f1e41d5f4ee032ba52e03f449c31f0910f3cfc651e5e2b611c41a0efc"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F07",
+      "field_index": 2,
+      "method_version": "m31-deterministic-v2",
+      "name": "attachment_unavailable",
+      "original": "a) ter sido bolsista de Produtividade em Pesquisa (PQ) ou de Desenvolvimento Tecnológico e\nExtensão Inovadora (DT) por pelo menos 20 (vinte) anos, consecutivos ou não;\nb) continuar ativo no desenvolvimento de pesquisas científicas e/ou tecnológicas e na formação\nde pesquisadores em diversos níveis.\n3.2.3.1 – Os critérios específicos de cada Comitê de Assessoramento, quando houver, disponíveis no\nAnexo I e parte integrante desta Chamada, serão observados quanto aos requisitos mínimos para\nclassificação dos pesquisadores como Bolsistas PQ-Sr.\n3.2.4 - O pesquisador, se aposentado, deve manter atividades acadêmico-científicas oficialmente\nvinculadas a instituições de ensino e pesquisa.\n3.2.5 - No momento de submissão da proposta, o proponente não deverá possuir qualquer\ninadimplência com o CNPq e com a Administração Pública Federal, direta ou indireta, sob pena de\nindeferimento.\n3.2.5.1 - Caso constatada, a qualquer tempo, a falsidade da declaração, o CNPq adotará as\nprovidências cabíveis diante dos indícios de crime de falsidade ideológica.\n3.3 - Quanto à Instituição de Execução do Projeto:\n3.3.1 - A instituição de execução do projeto deverá estar cadastrada no Diretório de Instituições do\nCNPq, devendo ser uma Instituição Científica, Tecnológica e de Inovação (ICT), e/ou empresa privada\nconstituída sob as leis brasileiras, com sede e foro no Brasil, empresa pública, ou organização da\nsociedade civil sem fins lucrativos.\n3.3.1.1 - Entende-se por Instituição Científica, Tecnológica e de Inovação (ICT): órgão ou entidade\nda administração pública direta ou indireta ou pessoa jurídica de direito privado sem fins lucrativos\nlegalmente constituída sob as leis brasileiras, com sede e foro no País, que inclua em sua missão\ninstitucional ou em seu objetivo social ou estatutário a pesquisa básica ou aplicada de caráter\ncientífico ou tecnológico ou o desenvolvimento de novos produtos, serviços ou processos.\n3.3.2 - A instituição de execução do projeto é aquela com a qual o proponente deve apresentar\nvínculo.\n4 - Recursos Financeiros\n4.1 - As propostas aprovadas na Linha 1 (Bolsas DT) serão financiadas com recursos no valor global\nestimado de R$23.525.040,00 (vinte e três milhões, quinhentos e vinte e cinco mil e quarenta reais),\noriundos do orçamento do CNPq, a serem liberados de acordo com a disponibilidade orçamentária\ne financeira do CNPq. As propostas aprovadas nas Linhas 2 e 3 (Bolsas PQ e PQ-Sr) serão financiadas\ncom recursos no valor global estimado de R$425.438.160,00 (quatrocentos e vinte e cinco milhões,\nquatrocentos e trinta e oito mil, cento e sessenta reais), oriundos do orçamento do CNPq, a serem\nliberados de acordo com a disponibilidade orçamentária e financeira do CNPq.\n4.1.1 - Quando o desembolso ocorrer em mais de um exercício financeiro, o repasse de cada ano\nficará condicionado à disponibilidade orçamentária e financeira do CNPq e dos demais parceiros.\n4.2 - Identificada a conveniência e a oportunidade e havendo disponibilidade de recursos adicionais\npara esta Chamada, em qualquer fase, o CNPq e eventuais parceiros poderão contratar novos",
+      "reference_records": [
+        "M30-F07-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0013",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F07",
+        "end": 7632,
+        "page": 3,
+        "quote": "a) ter sido bolsista de Produtividade em Pesquisa (PQ) ou de Desenvolvimento Tecnológico e\nExtensão Inovadora (DT) por pelo menos 20 (vinte) anos, consecutivos ou não;\nb) continuar ativo no desenvolvimento de pesquisas científicas e/ou tecnológicas e na formação\nde pesquisadores em diversos níveis.\n3.2.3.1 – Os critérios específicos de cada Comitê de Assessoramento, quando houver, disponíveis no\nAnexo I e parte integrante desta Chamada, serão observados quanto aos requisitos mínimos para\nclassificação dos pesquisadores como Bolsistas PQ-Sr.\n3.2.4 - O pesquisador, se aposentado, deve manter atividades acadêmico-científicas oficialmente\nvinculadas a instituições de ensino e pesquisa.\n3.2.5 - No momento de submissão da proposta, o proponente não deverá possuir qualquer\ninadimplência com o CNPq e com a Administração Pública Federal, direta ou indireta, sob pena de\nindeferimento.\n3.2.5.1 - Caso constatada, a qualquer tempo, a falsidade da declaração, o CNPq adotará as\nprovidências cabíveis diante dos indícios de crime de falsidade ideológica.\n3.3 - Quanto à Instituição de Execução do Projeto:\n3.3.1 - A instituição de execução do projeto deverá estar cadastrada no Diretório de Instituições do\nCNPq, devendo ser uma Instituição Científica, Tecnológica e de Inovação (ICT), e/ou empresa privada\nconstituída sob as leis brasileiras, com sede e foro no Brasil, empresa pública, ou organização da\nsociedade civil sem fins lucrativos.\n3.3.1.1 - Entende-se por Instituição Científica, Tecnológica e de Inovação (ICT): órgão ou entidade\nda administração pública direta ou indireta ou pessoa jurídica de direito privado sem fins lucrativos\nlegalmente constituída sob as leis brasileiras, com sede e foro no País, que inclua em sua missão\ninstitucional ou em seu objetivo social ou estatutário a pesquisa básica ou aplicada de caráter\ncientífico ou tecnológico ou o desenvolvimento de novos produtos, serviços ou processos.\n3.3.2 - A instituição de execução do projeto é aquela com a qual o proponente deve apresentar\nvínculo.\n4 - Recursos Financeiros\n4.1 - As propostas aprovadas na Linha 1 (Bolsas DT) serão financiadas com recursos no valor global\nestimado de R$23.525.040,00 (vinte e três milhões, quinhentos e vinte e cinco mil e quarenta reais),\noriundos do orçamento do CNPq, a serem liberados de acordo com a disponibilidade orçamentária\ne financeira do CNPq. As propostas aprovadas nas Linhas 2 e 3 (Bolsas PQ e PQ-Sr) serão financiadas\ncom recursos no valor global estimado de R$425.438.160,00 (quatrocentos e vinte e cinco milhões,\nquatrocentos e trinta e oito mil, cento e sessenta reais), oriundos do orçamento do CNPq, a serem\nliberados de acordo com a disponibilidade orçamentária e financeira do CNPq.\n4.1.1 - Quando o desembolso ocorrer em mais de um exercício financeiro, o repasse de cada ano\nficará condicionado à disponibilidade orçamentária e financeira do CNPq e dos demais parceiros.\n4.2 - Identificada a conveniência e a oportunidade e havendo disponibilidade de recursos adicionais\npara esta Chamada, em qualquer fase, o CNPq e eventuais parceiros poderão contratar novos",
+        "raw_sha256": "c00738c73f1bbef10cbea3a680d9948f04cc39985db2b2d64109664281ab5c92",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0013",
+        "start": 4532,
+        "text_sha256": "21f8045f1e41d5f4ee032ba52e03f449c31f0910f3cfc651e5e2b611c41a0efc"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F07",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "funding_organization_expression",
+      "original": "projetos dentre os aprovados quanto ao mérito.\n4.2.1 - No caso descrito no subitem 4.2, excepcionalmente, a seleção dos projetos a serem\ncontratados seguirá a prioridade determinada pela DEX, por meio de decisão devidamente\nfundamentada, ou pelos parceiros, mediante justificativa e aprovação da DEX.\n5 - Itens Financiáveis\n5.1 - Os recursos da presente chamada serão destinados ao financiamento de bolsas de\nProdutividade, incluindo mensalidade e Adicional de Bancada quando previsto na norma da\nmodalidade.\n5.2 - Os recursos do Adicional de Bancada deverão ser aplicados, exclusivamente, em despesas\nrelacionadas ao projeto de pesquisa ou dele decorrentes.\n5.3 - É vedada a utilização dos recursos do Adicional de Bancada, previsto na norma de Bolsas de\nProdutividade, para:\na) pagamento de despesas anteriores ao início de vigência da bolsa ou posteriores ao seu\ncancelamento ou término de vigência;\nb) pagamento a pessoa física, exceto para serviços eventuais; ou\nc) despesas com alimentação e bebidas (que devem estar compreendidas nas diárias).\n6 - Submissão da Proposta\n6.1 - As propostas deverão ser encaminhadas ao CNPq exclusivamente via Internet, utilizando-se o\nFormulário de Propostas online disponível na Plataforma Integrada Carlos Chagas.\n6.2 - O horário limite para submissão das propostas ao CNPq será até às 23h59 (vinte e três horas e\ncinquenta e nove minutos), horário de Brasília, da data descrita no CRONOGRAMA.\n6.2.1 - Recomenda-se o envio das propostas com antecedência, uma vez que o CNPq não se\nresponsabilizará por aquelas não recebidas em decorrência de eventuais problemas técnicos e de\ncongestionamentos.\n6.2.2 - Caso a proposta seja enviada fora do prazo de submissão, ela não será recebida pelo sistema\neletrônico do CNPq.\n6.3 - Esclarecimentos e informações adicionais acerca desta Chamada poderão ser obtidos pelo\nendereço eletrônico atendimento@cnpq.br ou pelo telefone (61) 3211-4000.\n6.3.1 - O atendimento telefônico encerra-se impreterivelmente às 18h30 (horário de Brasília), em\ndias úteis.\n6.3.2 - É de responsabilidade do proponente entrar em contato com o CNPq em tempo hábil para\nobter informações ou esclarecimentos.\n6.3.3 - Eventual impossibilidade de contato ou ausência de resposta do CNPq não será admitida\ncomo justificativa para a inobservância do prazo previsto no cronograma para submissão da",
+      "reference_records": [
+        "M30-F07-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0014",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F07",
+        "end": 9980,
+        "page": 4,
+        "quote": "projetos dentre os aprovados quanto ao mérito.\n4.2.1 - No caso descrito no subitem 4.2, excepcionalmente, a seleção dos projetos a serem\ncontratados seguirá a prioridade determinada pela DEX, por meio de decisão devidamente\nfundamentada, ou pelos parceiros, mediante justificativa e aprovação da DEX.\n5 - Itens Financiáveis\n5.1 - Os recursos da presente chamada serão destinados ao financiamento de bolsas de\nProdutividade, incluindo mensalidade e Adicional de Bancada quando previsto na norma da\nmodalidade.\n5.2 - Os recursos do Adicional de Bancada deverão ser aplicados, exclusivamente, em despesas\nrelacionadas ao projeto de pesquisa ou dele decorrentes.\n5.3 - É vedada a utilização dos recursos do Adicional de Bancada, previsto na norma de Bolsas de\nProdutividade, para:\na) pagamento de despesas anteriores ao início de vigência da bolsa ou posteriores ao seu\ncancelamento ou término de vigência;\nb) pagamento a pessoa física, exceto para serviços eventuais; ou\nc) despesas com alimentação e bebidas (que devem estar compreendidas nas diárias).\n6 - Submissão da Proposta\n6.1 - As propostas deverão ser encaminhadas ao CNPq exclusivamente via Internet, utilizando-se o\nFormulário de Propostas online disponível na Plataforma Integrada Carlos Chagas.\n6.2 - O horário limite para submissão das propostas ao CNPq será até às 23h59 (vinte e três horas e\ncinquenta e nove minutos), horário de Brasília, da data descrita no CRONOGRAMA.\n6.2.1 - Recomenda-se o envio das propostas com antecedência, uma vez que o CNPq não se\nresponsabilizará por aquelas não recebidas em decorrência de eventuais problemas técnicos e de\ncongestionamentos.\n6.2.2 - Caso a proposta seja enviada fora do prazo de submissão, ela não será recebida pelo sistema\neletrônico do CNPq.\n6.3 - Esclarecimentos e informações adicionais acerca desta Chamada poderão ser obtidos pelo\nendereço eletrônico atendimento@cnpq.br ou pelo telefone (61) 3211-4000.\n6.3.1 - O atendimento telefônico encerra-se impreterivelmente às 18h30 (horário de Brasília), em\ndias úteis.\n6.3.2 - É de responsabilidade do proponente entrar em contato com o CNPq em tempo hábil para\nobter informações ou esclarecimentos.\n6.3.3 - Eventual impossibilidade de contato ou ausência de resposta do CNPq não será admitida\ncomo justificativa para a inobservância do prazo previsto no cronograma para submissão da",
+        "raw_sha256": "c00738c73f1bbef10cbea3a680d9948f04cc39985db2b2d64109664281ab5c92",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0014",
+        "start": 7635,
+        "text_sha256": "21f8045f1e41d5f4ee032ba52e03f449c31f0910f3cfc651e5e2b611c41a0efc"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F07",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "attachment_unavailable",
+      "original": "proposta.\n6.4 - Todas as instituições de pesquisa envolvidas com o projeto, sejam nacionais ou internacionais,\ndeverão estar cadastradas previamente no Diretório de Instituições do CNPq.\n6.4.1 - O sistema informatizado do CNPq não receberá propostas cujas instituições de pesquisa não\nestiverem devidamente cadastradas no Diretório de Instituições.\n6.5 - O formulário deverá ser preenchido com as seguintes informações:\na) Identificação da proposta;\nb) Dados do proponente;\nc) Instituição onde será desenvolvido o projeto;\nd) Área do conhecimento predominante e áreas do conhecimento correlatas;\ne) Título do projeto e palavras-chave;\nf) Resumo do projeto de pesquisa;\ng) Apresentação do projeto de pesquisa nos campos indicados no formulário estruturado.\nObs: Com exceção dos Comitês Assessores que solicitam informações específicas no Anexo I\nda Chamada, a inclusão de um arquivo em Anexo ao formulário não é obrigatória;\nh) Súmula Curricular: o proponente deverá destacar e justificar até 5 (cinco) realizações em CT&I\nde maior impacto e relevância em toda sua trajetória; principais destaques no histórico\nprofissional (compreendendo serviços, distinções acadêmicas e prêmios); lista de\nfinanciamentos à pesquisa, com a instituição financiadora e principais impactos; principais\ncontribuições para a formação e capacitação de recursos humanos e para a consolidação da\nárea de conhecimento; e outras informações consideradas relevantes pelo Comitê Assessor\nque avaliará o projeto, nos termos do Anexo I da Chamada Pública.\n6.5.1 – A ausência de uma ou mais informações elencadas no subitem 6.5 poderá prejudicar a\nanálise de mérito do pedido.\n6.6 - A proposta deverá incluir, nos campos do formulário de submissão, o projeto de pesquisa\ncientífica, tecnológica ou de inovação.\n6.6.1 – É desejável que os candidatos à bolsa de Produtividade em Desenvolvimento Tecnológico e\nExtensão Inovadora (DT), cujos projetos envolvam a melhoria de produtos, processos ou serviços,\nencaminhem como arquivo Anexo à proposta uma declaração da instituição/empresa parceira\nconfirmando sua participação, em consonância com o projeto de pesquisa apresentado. Este\ndocumento será utilizado na avaliação do critério E, constante do item 7.1.1 da Chamada.\n6.6.2 - Os candidatos à bolsa de Produtividade em Pesquisa (PQ) e Produtividade em Pesquisa Sênior\n(PQ-Sr) poderão encaminhar como arquivo Anexo fotografias, gráficos, figuras, lista de referências\nbibliográficas e outros elementos que ajudem na compreensão do projeto proposto.\n6.6.3 - O arquivo anexo, quando necesário, deve ser gerado em formato pdf e anexado ao\nFormulário de Propostas online, limitando-se a 2MB (dois megabytes).",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0015",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F07",
+        "end": 12655,
+        "page": 5,
+        "quote": "proposta.\n6.4 - Todas as instituições de pesquisa envolvidas com o projeto, sejam nacionais ou internacionais,\ndeverão estar cadastradas previamente no Diretório de Instituições do CNPq.\n6.4.1 - O sistema informatizado do CNPq não receberá propostas cujas instituições de pesquisa não\nestiverem devidamente cadastradas no Diretório de Instituições.\n6.5 - O formulário deverá ser preenchido com as seguintes informações:\na) Identificação da proposta;\nb) Dados do proponente;\nc) Instituição onde será desenvolvido o projeto;\nd) Área do conhecimento predominante e áreas do conhecimento correlatas;\ne) Título do projeto e palavras-chave;\nf) Resumo do projeto de pesquisa;\ng) Apresentação do projeto de pesquisa nos campos indicados no formulário estruturado.\nObs: Com exceção dos Comitês Assessores que solicitam informações específicas no Anexo I\nda Chamada, a inclusão de um arquivo em Anexo ao formulário não é obrigatória;\nh) Súmula Curricular: o proponente deverá destacar e justificar até 5 (cinco) realizações em CT&I\nde maior impacto e relevância em toda sua trajetória; principais destaques no histórico\nprofissional (compreendendo serviços, distinções acadêmicas e prêmios); lista de\nfinanciamentos à pesquisa, com a instituição financiadora e principais impactos; principais\ncontribuições para a formação e capacitação de recursos humanos e para a consolidação da\nárea de conhecimento; e outras informações consideradas relevantes pelo Comitê Assessor\nque avaliará o projeto, nos termos do Anexo I da Chamada Pública.\n6.5.1 – A ausência de uma ou mais informações elencadas no subitem 6.5 poderá prejudicar a\nanálise de mérito do pedido.\n6.6 - A proposta deverá incluir, nos campos do formulário de submissão, o projeto de pesquisa\ncientífica, tecnológica ou de inovação.\n6.6.1 – É desejável que os candidatos à bolsa de Produtividade em Desenvolvimento Tecnológico e\nExtensão Inovadora (DT), cujos projetos envolvam a melhoria de produtos, processos ou serviços,\nencaminhem como arquivo Anexo à proposta uma declaração da instituição/empresa parceira\nconfirmando sua participação, em consonância com o projeto de pesquisa apresentado. Este\ndocumento será utilizado na avaliação do critério E, constante do item 7.1.1 da Chamada.\n6.6.2 - Os candidatos à bolsa de Produtividade em Pesquisa (PQ) e Produtividade em Pesquisa Sênior\n(PQ-Sr) poderão encaminhar como arquivo Anexo fotografias, gráficos, figuras, lista de referências\nbibliográficas e outros elementos que ajudem na compreensão do projeto proposto.\n6.6.3 - O arquivo anexo, quando necesário, deve ser gerado em formato pdf e anexado ao\nFormulário de Propostas online, limitando-se a 2MB (dois megabytes).",
+        "raw_sha256": "c00738c73f1bbef10cbea3a680d9948f04cc39985db2b2d64109664281ab5c92",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0015",
+        "start": 9983,
+        "text_sha256": "21f8045f1e41d5f4ee032ba52e03f449c31f0910f3cfc651e5e2b611c41a0efc"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F07",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "attachment_unavailable",
+      "original": "7.1.1.1 – Todos os itens relacionados à produção científica, tecnológica ou de inovação, formação\nde recursos humanos, participação em projetos deverão obrigatoriamente estar incluídos no\nCurrículo Lattes do proponente.\n7.1.1.2 - Para estipulação das notas poderão ser utilizadas até duas casas decimais.\n7.1.1.3 - A nota final de cada proposta será aferida pela média ponderada das notas atribuídas para\ncada item.\n7.1.1.4 - O Comitê Julgador considerará, em caso de empate, a maior nota obtida no critério de\njulgamento “A” e, em permanecendo o empate, a maior nota obtida no critério de julgamento “B”.\n7.1.2 - Os critérios e pesos específicos estabelecidos pelos Comitês de Assessoramento – CA para as\nrespectivas áreas de conhecimento, quando houver, estarão disponíveis no Anexo I desta Chamada\ne são considerados preponderantes aos critérios fixados no item 7.1.1.\n7.2 - Etapas do Julgamento\n7.2.1 - Etapa I – Classificação pelos Comitês Assessores\n7.2.1.1 - A composição, as atribuições e as vedações dos Comitês Assessores seguirão as disposições\ncontidas na Portaria CNPq 2.192/2025.\n7.2.1.2 - As propostas serão classificadas pelos Comitês Assessores seguindo os critérios de\njulgamento dispostos no subitem 7.1.1, ou dispostos no Anexo 1 quando houver.\n7.2.1.3 - Todas as propostas avaliadas serão objeto de parecer de mérito consubstanciado,\ncontendo a fundamentação que justifica a pontuação atribuída.\n7.2.1.3.1 - O Comitê Julgador poderá se valer de pareceres de Consultores ad hoc para o\nembasamento de suas decisões, quando disponíveis.",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0058",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F07",
+        "end": 17049,
+        "page": 7,
+        "quote": "7.1.1.1 – Todos os itens relacionados à produção científica, tecnológica ou de inovação, formação\nde recursos humanos, participação em projetos deverão obrigatoriamente estar incluídos no\nCurrículo Lattes do proponente.\n7.1.1.2 - Para estipulação das notas poderão ser utilizadas até duas casas decimais.\n7.1.1.3 - A nota final de cada proposta será aferida pela média ponderada das notas atribuídas para\ncada item.\n7.1.1.4 - O Comitê Julgador considerará, em caso de empate, a maior nota obtida no critério de\njulgamento “A” e, em permanecendo o empate, a maior nota obtida no critério de julgamento “B”.\n7.1.2 - Os critérios e pesos específicos estabelecidos pelos Comitês de Assessoramento – CA para as\nrespectivas áreas de conhecimento, quando houver, estarão disponíveis no Anexo I desta Chamada\ne são considerados preponderantes aos critérios fixados no item 7.1.1.\n7.2 - Etapas do Julgamento\n7.2.1 - Etapa I – Classificação pelos Comitês Assessores\n7.2.1.1 - A composição, as atribuições e as vedações dos Comitês Assessores seguirão as disposições\ncontidas na Portaria CNPq 2.192/2025.\n7.2.1.2 - As propostas serão classificadas pelos Comitês Assessores seguindo os critérios de\njulgamento dispostos no subitem 7.1.1, ou dispostos no Anexo 1 quando houver.\n7.2.1.3 - Todas as propostas avaliadas serão objeto de parecer de mérito consubstanciado,\ncontendo a fundamentação que justifica a pontuação atribuída.\n7.2.1.3.1 - O Comitê Julgador poderá se valer de pareceres de Consultores ad hoc para o\nembasamento de suas decisões, quando disponíveis.",
+        "raw_sha256": "c00738c73f1bbef10cbea3a680d9948f04cc39985db2b2d64109664281ab5c92",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0058",
+        "start": 15495,
+        "text_sha256": "21f8045f1e41d5f4ee032ba52e03f449c31f0910f3cfc651e5e2b611c41a0efc"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F07",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "attachment_unavailable",
+      "original": "7.2.1.4 - Concluída a análise o Comitê recomendará a aprovação ou a não aprovação das propostas\nquanto ao mérito.\n7.2.1.4.1 - No caso da Linha 1 – DT e Linha 2 - PQ, para cada proposta recomendada para aprovação,\no Comitê Assessor deverá sugerir o nível da Bolsa de Produtividade a ser concedida pelo CNPq.\n7.2.1.4.2 - No caso da Linha 3 – PQ-Sr, a recomendação deverá ser para aprovação ou não pelo CNPq\nda proposta na modalidade Produtividade em Pesquisa Sênior.\n7.2.1.5 - O parecer final do Comitê Assessor será registrado em Planilha de Julgamento, contendo a\nrelação de todas as propostas com as respectivas notas finais, assim como outras informações e\nrecomendações julgadas pertinentes.\n7.2.1.5.1 - A Planilha de Julgamento será assinada pelo Coordenador do Comitê Assessor ou membro\ndo Comitê que estiver desempenhando essa função na reunião.\n7.2.1.6 - Durante a classificação das propostas pelos Comitês Assessores, o Gestor da Chamada e a\nárea técnico-científica responsável acompanharão as atividades e poderão recomendar ajustes e\ncorreções necessários, com vistas à adequação dos pareceres às disposições desta Chamada.\n7.2.2 - Etapa II – Análise pela Área Técnico-Científica do CNPq\n7.2.2.1 - Esta etapa consiste:\na) na análise do cumprimento dos critérios de elegibilidade e das demais disposições desta\nChamada, cuja inobservância ensejará o indeferimento das propostas; e\nb) na revisão da classificação pelo Comitê Assessor, caso necessário.\n7.2.2.2 - A área técnico-científica analisará os pareceres elaborados pelo Comitê Assessor e a\nPlanilha de Julgamento e apresentará subsídios, por meio de Nota Técnica, para a decisão do\nPresidente do CNPq.\n7.2.2.3 - A área técnico-científica, mediante nota técnica, poderá apontar informações equivocadas\nou inverídicas, inconsistências técnicas, equívocos de julgamento, elementos a serem inseridos,\nmodificados ou excluídos, que poderão, ou não, inviabilizar a aprovação da proposta.\n7.2.2.3.1 - Na hipótese do subitem 7.2.2.3, a área técnico-científica adotará as providências\nnecessárias para saneamento, podendo recomendar, inclusive, a elaboração de novo parecer, a\ncomplementação do parecer anterior e/ou a retificação da Planilha de Julgamento.\n7.2.3 - Etapa III – Decisão Preliminar\n7.2.3.1 - O Presidente do CNPq emitirá decisão com fundamento na Nota Técnica elaborada pela\nárea técnico-científica responsável, acompanhada dos documentos que compõem o processo de\njulgamento.\n7.2.3.1.1 - Na decisão constarão as propostas aprovadas e as não aprovadas quanto ao mérito, e as\nindeferidas.\n7.2.3.1.2 - Dentre as propostas aprovadas serão destacadas as que serão contratadas considerando\no limite orçamentário desta Chamada, com a indicação dos respectivos níveis das bolsas concedidas.",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0059",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F07",
+        "end": 19806,
+        "page": 8,
+        "quote": "7.2.1.4 - Concluída a análise o Comitê recomendará a aprovação ou a não aprovação das propostas\nquanto ao mérito.\n7.2.1.4.1 - No caso da Linha 1 – DT e Linha 2 - PQ, para cada proposta recomendada para aprovação,\no Comitê Assessor deverá sugerir o nível da Bolsa de Produtividade a ser concedida pelo CNPq.\n7.2.1.4.2 - No caso da Linha 3 – PQ-Sr, a recomendação deverá ser para aprovação ou não pelo CNPq\nda proposta na modalidade Produtividade em Pesquisa Sênior.\n7.2.1.5 - O parecer final do Comitê Assessor será registrado em Planilha de Julgamento, contendo a\nrelação de todas as propostas com as respectivas notas finais, assim como outras informações e\nrecomendações julgadas pertinentes.\n7.2.1.5.1 - A Planilha de Julgamento será assinada pelo Coordenador do Comitê Assessor ou membro\ndo Comitê que estiver desempenhando essa função na reunião.\n7.2.1.6 - Durante a classificação das propostas pelos Comitês Assessores, o Gestor da Chamada e a\nárea técnico-científica responsável acompanharão as atividades e poderão recomendar ajustes e\ncorreções necessários, com vistas à adequação dos pareceres às disposições desta Chamada.\n7.2.2 - Etapa II – Análise pela Área Técnico-Científica do CNPq\n7.2.2.1 - Esta etapa consiste:\na) na análise do cumprimento dos critérios de elegibilidade e das demais disposições desta\nChamada, cuja inobservância ensejará o indeferimento das propostas; e\nb) na revisão da classificação pelo Comitê Assessor, caso necessário.\n7.2.2.2 - A área técnico-científica analisará os pareceres elaborados pelo Comitê Assessor e a\nPlanilha de Julgamento e apresentará subsídios, por meio de Nota Técnica, para a decisão do\nPresidente do CNPq.\n7.2.2.3 - A área técnico-científica, mediante nota técnica, poderá apontar informações equivocadas\nou inverídicas, inconsistências técnicas, equívocos de julgamento, elementos a serem inseridos,\nmodificados ou excluídos, que poderão, ou não, inviabilizar a aprovação da proposta.\n7.2.2.3.1 - Na hipótese do subitem 7.2.2.3, a área técnico-científica adotará as providências\nnecessárias para saneamento, podendo recomendar, inclusive, a elaboração de novo parecer, a\ncomplementação do parecer anterior e/ou a retificação da Planilha de Julgamento.\n7.2.3 - Etapa III – Decisão Preliminar\n7.2.3.1 - O Presidente do CNPq emitirá decisão com fundamento na Nota Técnica elaborada pela\nárea técnico-científica responsável, acompanhada dos documentos que compõem o processo de\njulgamento.\n7.2.3.1.1 - Na decisão constarão as propostas aprovadas e as não aprovadas quanto ao mérito, e as\nindeferidas.\n7.2.3.1.2 - Dentre as propostas aprovadas serão destacadas as que serão contratadas considerando\no limite orçamentário desta Chamada, com a indicação dos respectivos níveis das bolsas concedidas.",
+        "raw_sha256": "c00738c73f1bbef10cbea3a680d9948f04cc39985db2b2d64109664281ab5c92",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0059",
+        "start": 17052,
+        "text_sha256": "21f8045f1e41d5f4ee032ba52e03f449c31f0910f3cfc651e5e2b611c41a0efc"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F07",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "unknown_temporal_expression",
+      "original": "01/08/2027",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0061",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F07",
+        "end": 25814,
+        "page": 10,
+        "quote": "contratadas dado o limite de recursos desta Chamada, observada a ordem de classificação.\n10.2.3 - Excepcionalmente, o prazo estabelecido no subitem 10.2 poderá ser prorrogado pela\nDiretoria Executiva do CNPq, mediante pedido justificado apresentado pelo gestor da Chamada em\naté 15 (quinze) dias anteriores ao término do prazo, hipótese em que a prorrogação do prazo\nbeneficiará todos os proponentes cujas propostas tenham sido aprovadas.\n10.3 - A vigência das bolsas concedidas nesta Chamada se inicia a partir de 01/08/2027.\n10.3.1 - A data de implementação da bolsa será a de assinatura do TERMO DE OUTORGA.\n10.3.2 - As bolsas implementadas após 15/08/2027 não farão jus a pagamento retroativo,\nresguardados os casos em que o atraso se der por questões operacionais do CNPq.\n10.3.3 - A duração das bolsas de Produtividade PQ e DT do nível A e da modalidade PQ-Sr é de até\n60 (sessenta) meses; das bolsas dos níveis B, de até 48 (quarenta e oito) meses; e do nível C, de até\n36 (trinta e seis) meses.\n10.3.4 - A vigência das bolsas concedidas nesta Chamada se encerra em 31/07/2030 para as bolsas\nde nível C; 31/07/2031 para as bolsas de nível B; e 31/07/2032 para as bolsas do nível A e PQ-Sr. A\ndata de encerramento independe da data de assinatura do TERMO DE OUTORGA.\n10.4 - O proponente deverá manter, durante a execução do projeto, todas as condições,\napresentadas na submissão da proposta, de qualificação, habilitação e idoneidade necessárias ao\nperfeito cumprimento do seu objeto e preservar atualizados os seus dados cadastrais nos registros\ncompetentes.\n10.5 - A existência de registro de inadimplência, por parte do proponente, com o CNPq, com a\nReceita Federal do Brasil e no Sistema Integrado de Administração Financeira do Governo Federal –\nSIAFI constituirá fator impeditivo para a contratação do projeto.\n10.5.1 - A inadimplência constatada após a contratação será fator impeditivo para os desembolsos\nfinanceiros no decorrer do projeto.\n10.6 - As informações geradas com a implementação das propostas selecionadas e disponibilizadas\nna base de dados do CNPq serão consideradas de acesso público, observadas as disposições abaixo.\n10.6.1 - Os projetos submetidos a esta Chamada, bem como quaisquer relatórios técnicos\napresentados pelos pesquisadores e/ou bolsistas para o CNPq, que contenham informações sobre\nos projetos em andamento, terão acesso restrito até o ato decisório referente à aprovação final pelo\nCNPq (art. 7º, §3º, da Lei nº 12.527/2011 e art. 20 do Decreto nº 7.724/2012).\n10.6.2 - Os proponentes cujos projetos tenham sido submetidos ao CNPq, bem como aqueles que\napresentarem ao CNPq relatórios técnicos que possam gerar, no todo ou em parte, resultado\npotencialmente objeto de patente de invenção, modelo de utilidade, desenho industrial, programa\nde computador ou qualquer outra forma de registro de propriedade intelectual e semelhantes\ndeverão manifestar explicitamente o interesse na restrição de acesso na ocasião da submissão do\nprojeto e/ou do envio do relatório técnico.\n10.6.2.1 - As obrigações de sigilo e restrição de acesso público previstas no subitem 10.6.2\nsubsistirão pelo prazo de 5 (cinco) anos a partir da solicitação da restrição.\n10.6.2.2 - Em que pese a possibilidade de restrição de acesso, esta não reduz, contudo, a",
+        "raw_sha256": "c00738c73f1bbef10cbea3a680d9948f04cc39985db2b2d64109664281ab5c92",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0061",
+        "start": 22535,
+        "text_sha256": "21f8045f1e41d5f4ee032ba52e03f449c31f0910f3cfc651e5e2b611c41a0efc"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F07",
+      "field_index": 1,
+      "method_version": "m31-deterministic-v2",
+      "name": "unknown_temporal_expression",
+      "original": "15/08/2027",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0061",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F07",
+        "end": 25814,
+        "page": 10,
+        "quote": "contratadas dado o limite de recursos desta Chamada, observada a ordem de classificação.\n10.2.3 - Excepcionalmente, o prazo estabelecido no subitem 10.2 poderá ser prorrogado pela\nDiretoria Executiva do CNPq, mediante pedido justificado apresentado pelo gestor da Chamada em\naté 15 (quinze) dias anteriores ao término do prazo, hipótese em que a prorrogação do prazo\nbeneficiará todos os proponentes cujas propostas tenham sido aprovadas.\n10.3 - A vigência das bolsas concedidas nesta Chamada se inicia a partir de 01/08/2027.\n10.3.1 - A data de implementação da bolsa será a de assinatura do TERMO DE OUTORGA.\n10.3.2 - As bolsas implementadas após 15/08/2027 não farão jus a pagamento retroativo,\nresguardados os casos em que o atraso se der por questões operacionais do CNPq.\n10.3.3 - A duração das bolsas de Produtividade PQ e DT do nível A e da modalidade PQ-Sr é de até\n60 (sessenta) meses; das bolsas dos níveis B, de até 48 (quarenta e oito) meses; e do nível C, de até\n36 (trinta e seis) meses.\n10.3.4 - A vigência das bolsas concedidas nesta Chamada se encerra em 31/07/2030 para as bolsas\nde nível C; 31/07/2031 para as bolsas de nível B; e 31/07/2032 para as bolsas do nível A e PQ-Sr. A\ndata de encerramento independe da data de assinatura do TERMO DE OUTORGA.\n10.4 - O proponente deverá manter, durante a execução do projeto, todas as condições,\napresentadas na submissão da proposta, de qualificação, habilitação e idoneidade necessárias ao\nperfeito cumprimento do seu objeto e preservar atualizados os seus dados cadastrais nos registros\ncompetentes.\n10.5 - A existência de registro de inadimplência, por parte do proponente, com o CNPq, com a\nReceita Federal do Brasil e no Sistema Integrado de Administração Financeira do Governo Federal –\nSIAFI constituirá fator impeditivo para a contratação do projeto.\n10.5.1 - A inadimplência constatada após a contratação será fator impeditivo para os desembolsos\nfinanceiros no decorrer do projeto.\n10.6 - As informações geradas com a implementação das propostas selecionadas e disponibilizadas\nna base de dados do CNPq serão consideradas de acesso público, observadas as disposições abaixo.\n10.6.1 - Os projetos submetidos a esta Chamada, bem como quaisquer relatórios técnicos\napresentados pelos pesquisadores e/ou bolsistas para o CNPq, que contenham informações sobre\nos projetos em andamento, terão acesso restrito até o ato decisório referente à aprovação final pelo\nCNPq (art. 7º, §3º, da Lei nº 12.527/2011 e art. 20 do Decreto nº 7.724/2012).\n10.6.2 - Os proponentes cujos projetos tenham sido submetidos ao CNPq, bem como aqueles que\napresentarem ao CNPq relatórios técnicos que possam gerar, no todo ou em parte, resultado\npotencialmente objeto de patente de invenção, modelo de utilidade, desenho industrial, programa\nde computador ou qualquer outra forma de registro de propriedade intelectual e semelhantes\ndeverão manifestar explicitamente o interesse na restrição de acesso na ocasião da submissão do\nprojeto e/ou do envio do relatório técnico.\n10.6.2.1 - As obrigações de sigilo e restrição de acesso público previstas no subitem 10.6.2\nsubsistirão pelo prazo de 5 (cinco) anos a partir da solicitação da restrição.\n10.6.2.2 - Em que pese a possibilidade de restrição de acesso, esta não reduz, contudo, a",
+        "raw_sha256": "c00738c73f1bbef10cbea3a680d9948f04cc39985db2b2d64109664281ab5c92",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0061",
+        "start": 22535,
+        "text_sha256": "21f8045f1e41d5f4ee032ba52e03f449c31f0910f3cfc651e5e2b611c41a0efc"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F07",
+      "field_index": 2,
+      "method_version": "m31-deterministic-v2",
+      "name": "unknown_temporal_expression",
+      "original": "31/07/2030",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0061",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F07",
+        "end": 25814,
+        "page": 10,
+        "quote": "contratadas dado o limite de recursos desta Chamada, observada a ordem de classificação.\n10.2.3 - Excepcionalmente, o prazo estabelecido no subitem 10.2 poderá ser prorrogado pela\nDiretoria Executiva do CNPq, mediante pedido justificado apresentado pelo gestor da Chamada em\naté 15 (quinze) dias anteriores ao término do prazo, hipótese em que a prorrogação do prazo\nbeneficiará todos os proponentes cujas propostas tenham sido aprovadas.\n10.3 - A vigência das bolsas concedidas nesta Chamada se inicia a partir de 01/08/2027.\n10.3.1 - A data de implementação da bolsa será a de assinatura do TERMO DE OUTORGA.\n10.3.2 - As bolsas implementadas após 15/08/2027 não farão jus a pagamento retroativo,\nresguardados os casos em que o atraso se der por questões operacionais do CNPq.\n10.3.3 - A duração das bolsas de Produtividade PQ e DT do nível A e da modalidade PQ-Sr é de até\n60 (sessenta) meses; das bolsas dos níveis B, de até 48 (quarenta e oito) meses; e do nível C, de até\n36 (trinta e seis) meses.\n10.3.4 - A vigência das bolsas concedidas nesta Chamada se encerra em 31/07/2030 para as bolsas\nde nível C; 31/07/2031 para as bolsas de nível B; e 31/07/2032 para as bolsas do nível A e PQ-Sr. A\ndata de encerramento independe da data de assinatura do TERMO DE OUTORGA.\n10.4 - O proponente deverá manter, durante a execução do projeto, todas as condições,\napresentadas na submissão da proposta, de qualificação, habilitação e idoneidade necessárias ao\nperfeito cumprimento do seu objeto e preservar atualizados os seus dados cadastrais nos registros\ncompetentes.\n10.5 - A existência de registro de inadimplência, por parte do proponente, com o CNPq, com a\nReceita Federal do Brasil e no Sistema Integrado de Administração Financeira do Governo Federal –\nSIAFI constituirá fator impeditivo para a contratação do projeto.\n10.5.1 - A inadimplência constatada após a contratação será fator impeditivo para os desembolsos\nfinanceiros no decorrer do projeto.\n10.6 - As informações geradas com a implementação das propostas selecionadas e disponibilizadas\nna base de dados do CNPq serão consideradas de acesso público, observadas as disposições abaixo.\n10.6.1 - Os projetos submetidos a esta Chamada, bem como quaisquer relatórios técnicos\napresentados pelos pesquisadores e/ou bolsistas para o CNPq, que contenham informações sobre\nos projetos em andamento, terão acesso restrito até o ato decisório referente à aprovação final pelo\nCNPq (art. 7º, §3º, da Lei nº 12.527/2011 e art. 20 do Decreto nº 7.724/2012).\n10.6.2 - Os proponentes cujos projetos tenham sido submetidos ao CNPq, bem como aqueles que\napresentarem ao CNPq relatórios técnicos que possam gerar, no todo ou em parte, resultado\npotencialmente objeto de patente de invenção, modelo de utilidade, desenho industrial, programa\nde computador ou qualquer outra forma de registro de propriedade intelectual e semelhantes\ndeverão manifestar explicitamente o interesse na restrição de acesso na ocasião da submissão do\nprojeto e/ou do envio do relatório técnico.\n10.6.2.1 - As obrigações de sigilo e restrição de acesso público previstas no subitem 10.6.2\nsubsistirão pelo prazo de 5 (cinco) anos a partir da solicitação da restrição.\n10.6.2.2 - Em que pese a possibilidade de restrição de acesso, esta não reduz, contudo, a",
+        "raw_sha256": "c00738c73f1bbef10cbea3a680d9948f04cc39985db2b2d64109664281ab5c92",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0061",
+        "start": 22535,
+        "text_sha256": "21f8045f1e41d5f4ee032ba52e03f449c31f0910f3cfc651e5e2b611c41a0efc"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F07",
+      "field_index": 3,
+      "method_version": "m31-deterministic-v2",
+      "name": "unknown_temporal_expression",
+      "original": "31/07/2031",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0061",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F07",
+        "end": 25814,
+        "page": 10,
+        "quote": "contratadas dado o limite de recursos desta Chamada, observada a ordem de classificação.\n10.2.3 - Excepcionalmente, o prazo estabelecido no subitem 10.2 poderá ser prorrogado pela\nDiretoria Executiva do CNPq, mediante pedido justificado apresentado pelo gestor da Chamada em\naté 15 (quinze) dias anteriores ao término do prazo, hipótese em que a prorrogação do prazo\nbeneficiará todos os proponentes cujas propostas tenham sido aprovadas.\n10.3 - A vigência das bolsas concedidas nesta Chamada se inicia a partir de 01/08/2027.\n10.3.1 - A data de implementação da bolsa será a de assinatura do TERMO DE OUTORGA.\n10.3.2 - As bolsas implementadas após 15/08/2027 não farão jus a pagamento retroativo,\nresguardados os casos em que o atraso se der por questões operacionais do CNPq.\n10.3.3 - A duração das bolsas de Produtividade PQ e DT do nível A e da modalidade PQ-Sr é de até\n60 (sessenta) meses; das bolsas dos níveis B, de até 48 (quarenta e oito) meses; e do nível C, de até\n36 (trinta e seis) meses.\n10.3.4 - A vigência das bolsas concedidas nesta Chamada se encerra em 31/07/2030 para as bolsas\nde nível C; 31/07/2031 para as bolsas de nível B; e 31/07/2032 para as bolsas do nível A e PQ-Sr. A\ndata de encerramento independe da data de assinatura do TERMO DE OUTORGA.\n10.4 - O proponente deverá manter, durante a execução do projeto, todas as condições,\napresentadas na submissão da proposta, de qualificação, habilitação e idoneidade necessárias ao\nperfeito cumprimento do seu objeto e preservar atualizados os seus dados cadastrais nos registros\ncompetentes.\n10.5 - A existência de registro de inadimplência, por parte do proponente, com o CNPq, com a\nReceita Federal do Brasil e no Sistema Integrado de Administração Financeira do Governo Federal –\nSIAFI constituirá fator impeditivo para a contratação do projeto.\n10.5.1 - A inadimplência constatada após a contratação será fator impeditivo para os desembolsos\nfinanceiros no decorrer do projeto.\n10.6 - As informações geradas com a implementação das propostas selecionadas e disponibilizadas\nna base de dados do CNPq serão consideradas de acesso público, observadas as disposições abaixo.\n10.6.1 - Os projetos submetidos a esta Chamada, bem como quaisquer relatórios técnicos\napresentados pelos pesquisadores e/ou bolsistas para o CNPq, que contenham informações sobre\nos projetos em andamento, terão acesso restrito até o ato decisório referente à aprovação final pelo\nCNPq (art. 7º, §3º, da Lei nº 12.527/2011 e art. 20 do Decreto nº 7.724/2012).\n10.6.2 - Os proponentes cujos projetos tenham sido submetidos ao CNPq, bem como aqueles que\napresentarem ao CNPq relatórios técnicos que possam gerar, no todo ou em parte, resultado\npotencialmente objeto de patente de invenção, modelo de utilidade, desenho industrial, programa\nde computador ou qualquer outra forma de registro de propriedade intelectual e semelhantes\ndeverão manifestar explicitamente o interesse na restrição de acesso na ocasião da submissão do\nprojeto e/ou do envio do relatório técnico.\n10.6.2.1 - As obrigações de sigilo e restrição de acesso público previstas no subitem 10.6.2\nsubsistirão pelo prazo de 5 (cinco) anos a partir da solicitação da restrição.\n10.6.2.2 - Em que pese a possibilidade de restrição de acesso, esta não reduz, contudo, a",
+        "raw_sha256": "c00738c73f1bbef10cbea3a680d9948f04cc39985db2b2d64109664281ab5c92",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0061",
+        "start": 22535,
+        "text_sha256": "21f8045f1e41d5f4ee032ba52e03f449c31f0910f3cfc651e5e2b611c41a0efc"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F07",
+      "field_index": 4,
+      "method_version": "m31-deterministic-v2",
+      "name": "unknown_temporal_expression",
+      "original": "31/07/2032",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0061",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F07",
+        "end": 25814,
+        "page": 10,
+        "quote": "contratadas dado o limite de recursos desta Chamada, observada a ordem de classificação.\n10.2.3 - Excepcionalmente, o prazo estabelecido no subitem 10.2 poderá ser prorrogado pela\nDiretoria Executiva do CNPq, mediante pedido justificado apresentado pelo gestor da Chamada em\naté 15 (quinze) dias anteriores ao término do prazo, hipótese em que a prorrogação do prazo\nbeneficiará todos os proponentes cujas propostas tenham sido aprovadas.\n10.3 - A vigência das bolsas concedidas nesta Chamada se inicia a partir de 01/08/2027.\n10.3.1 - A data de implementação da bolsa será a de assinatura do TERMO DE OUTORGA.\n10.3.2 - As bolsas implementadas após 15/08/2027 não farão jus a pagamento retroativo,\nresguardados os casos em que o atraso se der por questões operacionais do CNPq.\n10.3.3 - A duração das bolsas de Produtividade PQ e DT do nível A e da modalidade PQ-Sr é de até\n60 (sessenta) meses; das bolsas dos níveis B, de até 48 (quarenta e oito) meses; e do nível C, de até\n36 (trinta e seis) meses.\n10.3.4 - A vigência das bolsas concedidas nesta Chamada se encerra em 31/07/2030 para as bolsas\nde nível C; 31/07/2031 para as bolsas de nível B; e 31/07/2032 para as bolsas do nível A e PQ-Sr. A\ndata de encerramento independe da data de assinatura do TERMO DE OUTORGA.\n10.4 - O proponente deverá manter, durante a execução do projeto, todas as condições,\napresentadas na submissão da proposta, de qualificação, habilitação e idoneidade necessárias ao\nperfeito cumprimento do seu objeto e preservar atualizados os seus dados cadastrais nos registros\ncompetentes.\n10.5 - A existência de registro de inadimplência, por parte do proponente, com o CNPq, com a\nReceita Federal do Brasil e no Sistema Integrado de Administração Financeira do Governo Federal –\nSIAFI constituirá fator impeditivo para a contratação do projeto.\n10.5.1 - A inadimplência constatada após a contratação será fator impeditivo para os desembolsos\nfinanceiros no decorrer do projeto.\n10.6 - As informações geradas com a implementação das propostas selecionadas e disponibilizadas\nna base de dados do CNPq serão consideradas de acesso público, observadas as disposições abaixo.\n10.6.1 - Os projetos submetidos a esta Chamada, bem como quaisquer relatórios técnicos\napresentados pelos pesquisadores e/ou bolsistas para o CNPq, que contenham informações sobre\nos projetos em andamento, terão acesso restrito até o ato decisório referente à aprovação final pelo\nCNPq (art. 7º, §3º, da Lei nº 12.527/2011 e art. 20 do Decreto nº 7.724/2012).\n10.6.2 - Os proponentes cujos projetos tenham sido submetidos ao CNPq, bem como aqueles que\napresentarem ao CNPq relatórios técnicos que possam gerar, no todo ou em parte, resultado\npotencialmente objeto de patente de invenção, modelo de utilidade, desenho industrial, programa\nde computador ou qualquer outra forma de registro de propriedade intelectual e semelhantes\ndeverão manifestar explicitamente o interesse na restrição de acesso na ocasião da submissão do\nprojeto e/ou do envio do relatório técnico.\n10.6.2.1 - As obrigações de sigilo e restrição de acesso público previstas no subitem 10.6.2\nsubsistirão pelo prazo de 5 (cinco) anos a partir da solicitação da restrição.\n10.6.2.2 - Em que pese a possibilidade de restrição de acesso, esta não reduz, contudo, a",
+        "raw_sha256": "c00738c73f1bbef10cbea3a680d9948f04cc39985db2b2d64109664281ab5c92",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0061",
+        "start": 22535,
+        "text_sha256": "21f8045f1e41d5f4ee032ba52e03f449c31f0910f3cfc651e5e2b611c41a0efc"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F07",
+      "field_index": 5,
+      "method_version": "m31-deterministic-v2",
+      "name": "beneficiary_expression",
+      "original": "contratadas dado o limite de recursos desta Chamada, observada a ordem de classificação.\n10.2.3 - Excepcionalmente, o prazo estabelecido no subitem 10.2 poderá ser prorrogado pela\nDiretoria Executiva do CNPq, mediante pedido justificado apresentado pelo gestor da Chamada em\naté 15 (quinze) dias anteriores ao término do prazo, hipótese em que a prorrogação do prazo\nbeneficiará todos os proponentes cujas propostas tenham sido aprovadas.\n10.3 - A vigência das bolsas concedidas nesta Chamada se inicia a partir de 01/08/2027.\n10.3.1 - A data de implementação da bolsa será a de assinatura do TERMO DE OUTORGA.\n10.3.2 - As bolsas implementadas após 15/08/2027 não farão jus a pagamento retroativo,\nresguardados os casos em que o atraso se der por questões operacionais do CNPq.\n10.3.3 - A duração das bolsas de Produtividade PQ e DT do nível A e da modalidade PQ-Sr é de até\n60 (sessenta) meses; das bolsas dos níveis B, de até 48 (quarenta e oito) meses; e do nível C, de até\n36 (trinta e seis) meses.\n10.3.4 - A vigência das bolsas concedidas nesta Chamada se encerra em 31/07/2030 para as bolsas\nde nível C; 31/07/2031 para as bolsas de nível B; e 31/07/2032 para as bolsas do nível A e PQ-Sr. A\ndata de encerramento independe da data de assinatura do TERMO DE OUTORGA.\n10.4 - O proponente deverá manter, durante a execução do projeto, todas as condições,\napresentadas na submissão da proposta, de qualificação, habilitação e idoneidade necessárias ao\nperfeito cumprimento do seu objeto e preservar atualizados os seus dados cadastrais nos registros\ncompetentes.\n10.5 - A existência de registro de inadimplência, por parte do proponente, com o CNPq, com a\nReceita Federal do Brasil e no Sistema Integrado de Administração Financeira do Governo Federal –\nSIAFI constituirá fator impeditivo para a contratação do projeto.\n10.5.1 - A inadimplência constatada após a contratação será fator impeditivo para os desembolsos\nfinanceiros no decorrer do projeto.\n10.6 - As informações geradas com a implementação das propostas selecionadas e disponibilizadas\nna base de dados do CNPq serão consideradas de acesso público, observadas as disposições abaixo.\n10.6.1 - Os projetos submetidos a esta Chamada, bem como quaisquer relatórios técnicos\napresentados pelos pesquisadores e/ou bolsistas para o CNPq, que contenham informações sobre\nos projetos em andamento, terão acesso restrito até o ato decisório referente à aprovação final pelo\nCNPq (art. 7º, §3º, da Lei nº 12.527/2011 e art. 20 do Decreto nº 7.724/2012).\n10.6.2 - Os proponentes cujos projetos tenham sido submetidos ao CNPq, bem como aqueles que\napresentarem ao CNPq relatórios técnicos que possam gerar, no todo ou em parte, resultado\npotencialmente objeto de patente de invenção, modelo de utilidade, desenho industrial, programa\nde computador ou qualquer outra forma de registro de propriedade intelectual e semelhantes\ndeverão manifestar explicitamente o interesse na restrição de acesso na ocasião da submissão do\nprojeto e/ou do envio do relatório técnico.\n10.6.2.1 - As obrigações de sigilo e restrição de acesso público previstas no subitem 10.6.2\nsubsistirão pelo prazo de 5 (cinco) anos a partir da solicitação da restrição.\n10.6.2.2 - Em que pese a possibilidade de restrição de acesso, esta não reduz, contudo, a",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0061",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F07",
+        "end": 25814,
+        "page": 10,
+        "quote": "contratadas dado o limite de recursos desta Chamada, observada a ordem de classificação.\n10.2.3 - Excepcionalmente, o prazo estabelecido no subitem 10.2 poderá ser prorrogado pela\nDiretoria Executiva do CNPq, mediante pedido justificado apresentado pelo gestor da Chamada em\naté 15 (quinze) dias anteriores ao término do prazo, hipótese em que a prorrogação do prazo\nbeneficiará todos os proponentes cujas propostas tenham sido aprovadas.\n10.3 - A vigência das bolsas concedidas nesta Chamada se inicia a partir de 01/08/2027.\n10.3.1 - A data de implementação da bolsa será a de assinatura do TERMO DE OUTORGA.\n10.3.2 - As bolsas implementadas após 15/08/2027 não farão jus a pagamento retroativo,\nresguardados os casos em que o atraso se der por questões operacionais do CNPq.\n10.3.3 - A duração das bolsas de Produtividade PQ e DT do nível A e da modalidade PQ-Sr é de até\n60 (sessenta) meses; das bolsas dos níveis B, de até 48 (quarenta e oito) meses; e do nível C, de até\n36 (trinta e seis) meses.\n10.3.4 - A vigência das bolsas concedidas nesta Chamada se encerra em 31/07/2030 para as bolsas\nde nível C; 31/07/2031 para as bolsas de nível B; e 31/07/2032 para as bolsas do nível A e PQ-Sr. A\ndata de encerramento independe da data de assinatura do TERMO DE OUTORGA.\n10.4 - O proponente deverá manter, durante a execução do projeto, todas as condições,\napresentadas na submissão da proposta, de qualificação, habilitação e idoneidade necessárias ao\nperfeito cumprimento do seu objeto e preservar atualizados os seus dados cadastrais nos registros\ncompetentes.\n10.5 - A existência de registro de inadimplência, por parte do proponente, com o CNPq, com a\nReceita Federal do Brasil e no Sistema Integrado de Administração Financeira do Governo Federal –\nSIAFI constituirá fator impeditivo para a contratação do projeto.\n10.5.1 - A inadimplência constatada após a contratação será fator impeditivo para os desembolsos\nfinanceiros no decorrer do projeto.\n10.6 - As informações geradas com a implementação das propostas selecionadas e disponibilizadas\nna base de dados do CNPq serão consideradas de acesso público, observadas as disposições abaixo.\n10.6.1 - Os projetos submetidos a esta Chamada, bem como quaisquer relatórios técnicos\napresentados pelos pesquisadores e/ou bolsistas para o CNPq, que contenham informações sobre\nos projetos em andamento, terão acesso restrito até o ato decisório referente à aprovação final pelo\nCNPq (art. 7º, §3º, da Lei nº 12.527/2011 e art. 20 do Decreto nº 7.724/2012).\n10.6.2 - Os proponentes cujos projetos tenham sido submetidos ao CNPq, bem como aqueles que\napresentarem ao CNPq relatórios técnicos que possam gerar, no todo ou em parte, resultado\npotencialmente objeto de patente de invenção, modelo de utilidade, desenho industrial, programa\nde computador ou qualquer outra forma de registro de propriedade intelectual e semelhantes\ndeverão manifestar explicitamente o interesse na restrição de acesso na ocasião da submissão do\nprojeto e/ou do envio do relatório técnico.\n10.6.2.1 - As obrigações de sigilo e restrição de acesso público previstas no subitem 10.6.2\nsubsistirão pelo prazo de 5 (cinco) anos a partir da solicitação da restrição.\n10.6.2.2 - Em que pese a possibilidade de restrição de acesso, esta não reduz, contudo, a",
+        "raw_sha256": "c00738c73f1bbef10cbea3a680d9948f04cc39985db2b2d64109664281ab5c92",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0061",
+        "start": 22535,
+        "text_sha256": "21f8045f1e41d5f4ee032ba52e03f449c31f0910f3cfc651e5e2b611c41a0efc"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F07",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "attachment_unavailable",
+      "original": "responsabilidade que os pesquisadores, suas equipes e instituições têm, como membros da\ncomunidade de pesquisa, de manter, sempre que possível, os resultados da pesquisa, dados e\ncoleções à disposição de outros pesquisadores para fins acadêmicos.\n10.6.3 - As instituições envolvidas deverão assegurar que seus empregados, funcionários, agentes\npúblicos e subcontratadas, que tenham acesso às informações de acesso restrito, tenham\nconcordado em cumprir as obrigações de restrição de acesso à informação.\n10.6.4 - O CNPq disponibilizará, a seu critério, as informações primárias de todos os projetos, tais\ncomo: título, resumo, objeto, proponentes, instituições executoras e recursos aplicados pelo órgão.\n10.7 - A concessão do apoio financeiro poderá ser cancelada pela Diretoria Executiva do CNPq\nmediante decisão devidamente fundamentada, por ocorrência, durante sua implementação, de fato\ncuja gravidade justifique o cancelamento, sem prejuízo de outras providências cabíveis.\n10.8 - É de exclusiva responsabilidade de cada proponente adotar todas as providências que\nenvolvam permissões e autorizações especiais, de caráter ético ou legal, necessárias à execução do\nprojeto.\n10.9 – As bolsas de produtividade se destinam a pesquisadores que atuam presencialmente no\nBrasil, sendo vedada sua concessão ou manutenção para residentes permanentes no exterior. Nos\ncasos de afastamentos do país, devem ser observados os dispositivos presentes no item 7 dos\nAnexos III, IV e XII da RN-028/2015.\n11 - Do Monitoramento e da Avaliação\n11.1 - As ações de monitoramento e avaliação terão caráter preventivo e saneador, objetivando a\ngestão adequada e regular dos projetos.\n11.2 - Durante a execução o projeto será acompanhado e avaliado, em todas as suas fases,\nconsiderando o que dispõe o TERMO DE OUTORGA.\n11.3 - É reservado ao CNPq o direito de acompanhar, avaliar a execução do projeto/plano de\ntrabalho e fiscalizar in loco a utilização dos recursos durante a vigência do processo.\n11.3.1 - Durante a execução do projeto o CNPq poderá, a qualquer tempo, promover visitas técnicas\nou solicitar informações adicionais visando ao monitoramento e à avaliação do projeto.\n11.4 - O proponente deverá informar ao CNPq toda e qualquer alteração relativa à execução do\nprojeto e, nos casos em que necessária, solicitar anuência prévia do CNPq por meio de pedido\ndevidamente justificado, observado o disposto no Decreto nº 9.283/2018 e na RN nº 006/2019.\n11.4.1 - Durante a fase de execução do projeto, toda e qualquer comunicação com o CNPq deverá\nser promovida por meio da Central de Atendimento: atendimento@cnpq.br.\n11.5 – Para fins de monitoramento e avaliação o proponente deverá apresentar ao CNPq formulário\nparcial de execução do projeto/plano de trabalho anualmente, considerando a data de início da\nvigência do processo do CNPq, via plataforma eletrônica, conforme determinado no TERMO DE\nOUTORGA.\n11.5.1 – Os resultados parciais obtidos pelo projeto de pesquisa serão acompanhados pelo CNPq\nque também considerará, dentre outros, os objetivos, o cronograma, as metas e os indicadores",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0062",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F07",
+        "end": 28900,
+        "page": 11,
+        "quote": "responsabilidade que os pesquisadores, suas equipes e instituições têm, como membros da\ncomunidade de pesquisa, de manter, sempre que possível, os resultados da pesquisa, dados e\ncoleções à disposição de outros pesquisadores para fins acadêmicos.\n10.6.3 - As instituições envolvidas deverão assegurar que seus empregados, funcionários, agentes\npúblicos e subcontratadas, que tenham acesso às informações de acesso restrito, tenham\nconcordado em cumprir as obrigações de restrição de acesso à informação.\n10.6.4 - O CNPq disponibilizará, a seu critério, as informações primárias de todos os projetos, tais\ncomo: título, resumo, objeto, proponentes, instituições executoras e recursos aplicados pelo órgão.\n10.7 - A concessão do apoio financeiro poderá ser cancelada pela Diretoria Executiva do CNPq\nmediante decisão devidamente fundamentada, por ocorrência, durante sua implementação, de fato\ncuja gravidade justifique o cancelamento, sem prejuízo de outras providências cabíveis.\n10.8 - É de exclusiva responsabilidade de cada proponente adotar todas as providências que\nenvolvam permissões e autorizações especiais, de caráter ético ou legal, necessárias à execução do\nprojeto.\n10.9 – As bolsas de produtividade se destinam a pesquisadores que atuam presencialmente no\nBrasil, sendo vedada sua concessão ou manutenção para residentes permanentes no exterior. Nos\ncasos de afastamentos do país, devem ser observados os dispositivos presentes no item 7 dos\nAnexos III, IV e XII da RN-028/2015.\n11 - Do Monitoramento e da Avaliação\n11.1 - As ações de monitoramento e avaliação terão caráter preventivo e saneador, objetivando a\ngestão adequada e regular dos projetos.\n11.2 - Durante a execução o projeto será acompanhado e avaliado, em todas as suas fases,\nconsiderando o que dispõe o TERMO DE OUTORGA.\n11.3 - É reservado ao CNPq o direito de acompanhar, avaliar a execução do projeto/plano de\ntrabalho e fiscalizar in loco a utilização dos recursos durante a vigência do processo.\n11.3.1 - Durante a execução do projeto o CNPq poderá, a qualquer tempo, promover visitas técnicas\nou solicitar informações adicionais visando ao monitoramento e à avaliação do projeto.\n11.4 - O proponente deverá informar ao CNPq toda e qualquer alteração relativa à execução do\nprojeto e, nos casos em que necessária, solicitar anuência prévia do CNPq por meio de pedido\ndevidamente justificado, observado o disposto no Decreto nº 9.283/2018 e na RN nº 006/2019.\n11.4.1 - Durante a fase de execução do projeto, toda e qualquer comunicação com o CNPq deverá\nser promovida por meio da Central de Atendimento: atendimento@cnpq.br.\n11.5 – Para fins de monitoramento e avaliação o proponente deverá apresentar ao CNPq formulário\nparcial de execução do projeto/plano de trabalho anualmente, considerando a data de início da\nvigência do processo do CNPq, via plataforma eletrônica, conforme determinado no TERMO DE\nOUTORGA.\n11.5.1 – Os resultados parciais obtidos pelo projeto de pesquisa serão acompanhados pelo CNPq\nque também considerará, dentre outros, os objetivos, o cronograma, as metas e os indicadores",
+        "raw_sha256": "c00738c73f1bbef10cbea3a680d9948f04cc39985db2b2d64109664281ab5c92",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0062",
+        "start": 25817,
+        "text_sha256": "21f8045f1e41d5f4ee032ba52e03f449c31f0910f3cfc651e5e2b611c41a0efc"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F07",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "funding_organization_expression",
+      "original": "estabelecidos no projeto/plano de trabalho aprovado.\n11.6 – Constatado que o projeto não está sendo executado conforme o previsto, o CNPq\ndeterminará as diligências necessárias considerando o caso concreto e, caso não atendidas,\npromoverá o cancelamento da concessão, sem prejuízo da adoção das demais providências cabíveis\nconforme o caso.\n12 - Prestação de Contas/Avaliação Final\n12.1 - O proponente do projeto deverá encaminhar ao CNPq, por meio do formulário online\nespecífico, o Relatório de Execução do Objeto - REO no prazo de até 60 (sessenta) dias contados do\ntérmino da vigência do respectivo processo do CNPq, em conformidade com o TERMO DE OUTORGA\ne Portaria 2.702/2026, sob pena de ressarcimento dos valores despendidos pelo CNPq e demais\npenalidades previstas na legislação de Tomada de Contas Especial.\n12.1.1 - Todos os campos do REO deverão ser adequadamente preenchidos.\n12.1.2 - O REO deverá conter, obrigatoriamente:\na) a descrição das atividades desenvolvidas para o cumprimento dos objetivos e metas do projeto;\nb) a demonstração e o comparativo específico das metas com os resultados alcançados;\nc) o comparativo das metas cumpridas e das metas previstas devidamente justificadas em caso de\ndiscrepância, referentes ao período a que se refere o REO;\nd) informações sobre a execução das atividades de divulgação científica por meio de textos, links\nde acesso, endereços eletrônicos, fotografias, vídeos ou áudios, dentre outros produtos que\npoderão ser disponibilizados em repositórios públicos e utilizados pelo CNPq em suas atividades\nde comunicação institucional;\n12.1.3 - O proponente deverá anexar ao REO um arquivo contendo:\na) declaração de que utilizou os recursos do Adicional de Bancada exclusivamente para a execução\ndo projeto, acompanhada de comprovante da devolução dos recursos não utilizados, se for o caso;\nb) avaliação de resultados.\n12.2 - Caso o REO não seja aprovado ou apresente indícios de irregularidade o CNPq solicitará ao\nbeneficiário que apresente o Relatório de Execução Financeira, acompanhado dos comprovantes\ndigitalizados das despesas financeiras e demais documentos indicados na RN nº 914/2022.\n12.2.1 - A critério do CNPq o Relatório de Execução Financeira poderá ser exigido do beneficiário\nindependente da avaliação do REO.\n12.2.2 - Os comprovantes originais deverão ser mantidos pelo Coordenador do projeto pelo prazo\nde cinco anos contados da data de aprovação da prestação de contas final.\n13 - Impugnação da Chamada\n13.1 - Decairá do direito de impugnar os termos desta Chamada o cidadão que não o fizer até o\nprazo disposto no CRONOGRAMA.\n13.1.1 - Caso não tenha impugnado tempestivamente a Chamada, o proponente se vincula a todos",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0063",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F07",
+        "end": 31598,
+        "page": 12,
+        "quote": "estabelecidos no projeto/plano de trabalho aprovado.\n11.6 – Constatado que o projeto não está sendo executado conforme o previsto, o CNPq\ndeterminará as diligências necessárias considerando o caso concreto e, caso não atendidas,\npromoverá o cancelamento da concessão, sem prejuízo da adoção das demais providências cabíveis\nconforme o caso.\n12 - Prestação de Contas/Avaliação Final\n12.1 - O proponente do projeto deverá encaminhar ao CNPq, por meio do formulário online\nespecífico, o Relatório de Execução do Objeto - REO no prazo de até 60 (sessenta) dias contados do\ntérmino da vigência do respectivo processo do CNPq, em conformidade com o TERMO DE OUTORGA\ne Portaria 2.702/2026, sob pena de ressarcimento dos valores despendidos pelo CNPq e demais\npenalidades previstas na legislação de Tomada de Contas Especial.\n12.1.1 - Todos os campos do REO deverão ser adequadamente preenchidos.\n12.1.2 - O REO deverá conter, obrigatoriamente:\na) a descrição das atividades desenvolvidas para o cumprimento dos objetivos e metas do projeto;\nb) a demonstração e o comparativo específico das metas com os resultados alcançados;\nc) o comparativo das metas cumpridas e das metas previstas devidamente justificadas em caso de\ndiscrepância, referentes ao período a que se refere o REO;\nd) informações sobre a execução das atividades de divulgação científica por meio de textos, links\nde acesso, endereços eletrônicos, fotografias, vídeos ou áudios, dentre outros produtos que\npoderão ser disponibilizados em repositórios públicos e utilizados pelo CNPq em suas atividades\nde comunicação institucional;\n12.1.3 - O proponente deverá anexar ao REO um arquivo contendo:\na) declaração de que utilizou os recursos do Adicional de Bancada exclusivamente para a execução\ndo projeto, acompanhada de comprovante da devolução dos recursos não utilizados, se for o caso;\nb) avaliação de resultados.\n12.2 - Caso o REO não seja aprovado ou apresente indícios de irregularidade o CNPq solicitará ao\nbeneficiário que apresente o Relatório de Execução Financeira, acompanhado dos comprovantes\ndigitalizados das despesas financeiras e demais documentos indicados na RN nº 914/2022.\n12.2.1 - A critério do CNPq o Relatório de Execução Financeira poderá ser exigido do beneficiário\nindependente da avaliação do REO.\n12.2.2 - Os comprovantes originais deverão ser mantidos pelo Coordenador do projeto pelo prazo\nde cinco anos contados da data de aprovação da prestação de contas final.\n13 - Impugnação da Chamada\n13.1 - Decairá do direito de impugnar os termos desta Chamada o cidadão que não o fizer até o\nprazo disposto no CRONOGRAMA.\n13.1.1 - Caso não tenha impugnado tempestivamente a Chamada, o proponente se vincula a todos",
+        "raw_sha256": "c00738c73f1bbef10cbea3a680d9948f04cc39985db2b2d64109664281ab5c92",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0063",
+        "start": 28903,
+        "text_sha256": "21f8045f1e41d5f4ee032ba52e03f449c31f0910f3cfc651e5e2b611c41a0efc"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F07",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "attachment_unavailable",
+      "original": "ANEXO I\nCritérios para a avaliação e classificação das propostas",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0066",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F07",
+        "end": 34324,
+        "page": 14,
+        "quote": "ANEXO I\nCritérios para a avaliação e classificação das propostas",
+        "raw_sha256": "c00738c73f1bbef10cbea3a680d9948f04cc39985db2b2d64109664281ab5c92",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0066",
+        "start": 34260,
+        "text_sha256": "21f8045f1e41d5f4ee032ba52e03f449c31f0910f3cfc651e5e2b611c41a0efc"
+      }
+    }
+  ],
+  "provenance": {
+    "byte_length": 799428,
+    "category_evidence": "Chamada CNPq Nº 33/2026",
+    "content_type": "application/pdf",
+    "derivation_method": "poppler-pdftotext-utf8-pages-v1; formfeed page separator",
+    "document_category": "application_call",
+    "document_id": "M30-F07",
+    "document_version": null,
+    "final_url": "https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-33-2026/Chamada_Produtividade_33_2026.pdf",
+    "original_filename": "Chamada_Produtividade_33_2026.pdf",
+    "original_url": "https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-33-2026/Chamada_Produtividade_33_2026.pdf",
+    "publication_date": null,
+    "raw_path": "raw/M30-F07.pdf",
+    "restrictions": "Research pilot local frozen copy only; no redistribution license inferred. No scripts executed, no forms submitted, no applicant records intentionally collected. Public navigation/staff attribution may remain in original bytes.",
+    "retrieval_status": "acquired",
+    "retrieved_at": "2026-10-19T04:38:31.543818+00:00",
+    "sha256": "c00738c73f1bbef10cbea3a680d9948f04cc39985db2b2d64109664281ab5c92",
+    "source_authority_notes": "Public HTTPS page hosted by the named institution; authorship asserted by host/content, not cryptographically authenticated. Not source-readiness approval.",
+    "source_organization": "CNPq",
+    "text_path": "text/M30-F07.txt",
+    "text_sha256": "21f8045f1e41d5f4ee032ba52e03f449c31f0910f3cfc651e5e2b611c41a0efc"
+  },
+  "records": [
+    {
+      "all_overlap_predictions": [
+        {
+          "discovery": "opportunity_signal",
+          "modality": "fomento",
+          "segment_id": "segment-0000",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0001",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "opportunity_signal",
+          "modality": "undetermined",
+          "segment_id": "segment-0002",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0003",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "opportunity_signal",
+          "modality": "undetermined",
+          "segment_id": "segment-0004",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0005",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0006",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0007",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0008",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0009",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0010",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0011",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "opportunity_signal",
+          "modality": "fomento",
+          "segment_id": "segment-0012",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "opportunity_signal",
+          "modality": "fomento",
+          "segment_id": "segment-0013",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "opportunity_signal",
+          "modality": "undetermined",
+          "segment_id": "segment-0014",
+          "temporal": "undetermined"
+        }
+      ],
+      "any_exact_boundary": false,
+      "coverage": {
+        "denominator": 8889,
+        "numerator": 8858,
+        "value": 0.9965125435932051
+      },
+      "covered_characters": 8858,
+      "disagreements": [
+        "discovery_label",
+        "temporal_status"
+      ],
+      "discovery_histogram": {
+        "abstain": 9,
+        "opportunity_signal": 6
+      },
+      "document_id": "M30-F07",
+      "edges": [
+        {
+          "end": 1910,
+          "exact": false,
+          "intersection": 1910,
+          "intersection_end": 1910,
+          "intersection_start": 0,
+          "iou": 0.2148723140960738,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.2148723140960738,
+          "segment_id": "segment-0000",
+          "start": 0
+        },
+        {
+          "end": 1916,
+          "exact": false,
+          "intersection": 4,
+          "intersection_end": 1916,
+          "intersection_start": 1912,
+          "iou": 0.0004499943750703116,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.0004499943750703116,
+          "segment_id": "segment-0001",
+          "start": 1912
+        },
+        {
+          "end": 1986,
+          "exact": false,
+          "intersection": 68,
+          "intersection_end": 1986,
+          "intersection_start": 1918,
+          "iou": 0.007649904376195298,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.007649904376195298,
+          "segment_id": "segment-0002",
+          "start": 1918
+        },
+        {
+          "end": 1998,
+          "exact": false,
+          "intersection": 10,
+          "intersection_end": 1998,
+          "intersection_start": 1988,
+          "iou": 0.001124985937675779,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.001124985937675779,
+          "segment_id": "segment-0003",
+          "start": 1988
+        },
+        {
+          "end": 2033,
+          "exact": false,
+          "intersection": 32,
+          "intersection_end": 2033,
+          "intersection_start": 2001,
+          "iou": 0.003599955000562493,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.003599955000562493,
+          "segment_id": "segment-0004",
+          "start": 2001
+        },
+        {
+          "end": 2045,
+          "exact": false,
+          "intersection": 10,
+          "intersection_end": 2045,
+          "intersection_start": 2035,
+          "iou": 0.001124985937675779,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.001124985937675779,
+          "segment_id": "segment-0005",
+          "start": 2035
+        },
+        {
+          "end": 2087,
+          "exact": false,
+          "intersection": 40,
+          "intersection_end": 2087,
+          "intersection_start": 2047,
+          "iou": 0.004499943750703116,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.004499943750703116,
+          "segment_id": "segment-0006",
+          "start": 2047
+        },
+        {
+          "end": 2099,
+          "exact": false,
+          "intersection": 10,
+          "intersection_end": 2099,
+          "intersection_start": 2089,
+          "iou": 0.001124985937675779,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.001124985937675779,
+          "segment_id": "segment-0007",
+          "start": 2089
+        },
+        {
+          "end": 2122,
+          "exact": false,
+          "intersection": 21,
+          "intersection_end": 2122,
+          "intersection_start": 2101,
+          "iou": 0.002362470469119136,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.002362470469119136,
+          "segment_id": "segment-0008",
+          "start": 2101
+        },
+        {
+          "end": 2147,
+          "exact": false,
+          "intersection": 23,
+          "intersection_end": 2147,
+          "intersection_start": 2124,
+          "iou": 0.0025874676566542917,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.0025874676566542917,
+          "segment_id": "segment-0009",
+          "start": 2124
+        },
+        {
+          "end": 2421,
+          "exact": false,
+          "intersection": 272,
+          "intersection_end": 2421,
+          "intersection_start": 2149,
+          "iou": 0.03059961750478119,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.03059961750478119,
+          "segment_id": "segment-0010",
+          "start": 2149
+        },
+        {
+          "end": 2455,
+          "exact": false,
+          "intersection": 32,
+          "intersection_end": 2455,
+          "intersection_start": 2423,
+          "iou": 0.003599955000562493,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.003599955000562493,
+          "segment_id": "segment-0011",
+          "start": 2423
+        },
+        {
+          "end": 4529,
+          "exact": false,
+          "intersection": 2072,
+          "intersection_end": 4529,
+          "intersection_start": 2457,
+          "iou": 0.23309708628642142,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.23309708628642142,
+          "segment_id": "segment-0012",
+          "start": 2457
+        },
+        {
+          "end": 7632,
+          "exact": false,
+          "intersection": 3100,
+          "intersection_end": 7632,
+          "intersection_start": 4532,
+          "iou": 0.3487456406794915,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.3487456406794915,
+          "segment_id": "segment-0013",
+          "start": 4532
+        },
+        {
+          "end": 9980,
+          "exact": false,
+          "intersection": 1254,
+          "intersection_end": 8889,
+          "intersection_start": 7635,
+          "iou": 0.12565130260521043,
+          "predicted_purity": 0.5347547974413646,
+          "reference_fraction": 0.14107323658454268,
+          "segment_id": "segment-0014",
+          "start": 7635
+        }
+      ],
+      "end": 8889,
+      "fields": [
+        {
+          "candidates": [],
+          "name": "title",
+          "reason": "no corresponding field; absence is not explicit field abstention",
+          "reference_evidence": [
+            {
+              "end": 55,
+              "evidence_id": "M30-F07-R1-E1",
+              "page": 1,
+              "quote": "Chamada CNPq Nº 33/2026\nBolsas de Produtividade do CNPq",
+              "start": 0
+            }
+          ],
+          "reference_value": "Chamada CNPq Nº 33/2026\nBolsas de Produtividade do CNPq",
+          "scope_supported": true,
+          "semantic_adjudication": "not_certified",
+          "status": "MISSING",
+          "strict_role_value": false
+        },
+        {
+          "candidates": [],
+          "name": "objective",
+          "reason": "requested target role outside implemented M31 field scope",
+          "reference_evidence": [
+            {
+              "end": 440,
+              "evidence_id": "M30-F07-R1-E2",
+              "page": 1,
+              "quote": "Conceder bolsas nas seguintes modalidades: Produtividade em Desenvolvimento Tecnológico e\nExtensão Inovadora (DT), Produtividade em Pesquisa (PQ) e Produtividade em Pesquisa Sênior (PQSr).",
+              "start": 252
+            }
+          ],
+          "reference_value": "Conceder bolsas nas seguintes modalidades: Produtividade em Desenvolvimento Tecnológico e\nExtensão Inovadora (DT), Produtividade em Pesquisa (PQ) e Produtividade em Pesquisa Sênior (PQSr).",
+          "scope_supported": false,
+          "semantic_adjudication": "not_certified",
+          "status": "UNRESOLVED",
+          "strict_role_value": false
+        },
+        {
+          "candidates": [],
+          "name": "eligibility_excerpt",
+          "reason": "requested target role outside implemented M31 field scope",
+          "reference_evidence": [
+            {
+              "end": 2951,
+              "evidence_id": "M30-F07-R1-E5",
+              "page": 2,
+              "quote": "b) possuir o título de Doutor;\nc) ter vínculo formal com a instituição de execução do projeto.",
+              "start": 2857
+            }
+          ],
+          "reference_value": "b) possuir o título de Doutor;\nc) ter vínculo formal com a instituição de execução do projeto.",
+          "scope_supported": false,
+          "semantic_adjudication": "not_certified",
+          "status": "UNRESOLVED",
+          "strict_role_value": false
+        },
+        {
+          "candidates": [],
+          "name": "application_channel",
+          "reason": "requested target role outside implemented M31 field scope",
+          "reference_evidence": [
+            {
+              "end": 8889,
+              "evidence_id": "M30-F07-R1-E6",
+              "page": 4,
+              "quote": "Formulário de Propostas online disponível na Plataforma Integrada Carlos Chagas.",
+              "start": 8809
+            }
+          ],
+          "reference_value": "Formulário de Propostas online disponível na Plataforma Integrada Carlos Chagas.",
+          "scope_supported": false,
+          "semantic_adjudication": "not_certified",
+          "status": "UNRESOLVED",
+          "strict_role_value": false
+        },
+        {
+          "candidates": [
+            {
+              "diagnostic_status": "traceable_not_semantically_certified",
+              "field_index": 0,
+              "method_version": "m31-deterministic-v2",
+              "name": "unknown_temporal_expression",
+              "original": "07/01/2027",
+              "schema_version": "m31-extraction-v1",
+              "segment_id": "segment-0007",
+              "uncertainty": "heuristic role assignment; not authenticated or normalized",
+              "witness": {
+                "document_id": "M30-F07",
+                "end": 2099,
+                "page": 2,
+                "quote": "07/01/2027",
+                "raw_sha256": "c00738c73f1bbef10cbea3a680d9948f04cc39985db2b2d64109664281ab5c92",
+                "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+                "schema_version": "m31-extraction-v1",
+                "segment_id": "segment-0007",
+                "start": 2089,
+                "text_sha256": "21f8045f1e41d5f4ee032ba52e03f449c31f0910f3cfc651e5e2b611c41a0efc"
+              }
+            }
+          ],
+          "name": "submission_deadline",
+          "reason": "no corresponding field; absence is not explicit field abstention",
+          "reference_evidence": [
+            {
+              "end": 2099,
+              "evidence_id": "M30-F07-R1-E4",
+              "page": 2,
+              "quote": "Data limite para submissão das propostas\n\n07/01/2027",
+              "start": 2047
+            }
+          ],
+          "reference_value": "07/01/2027",
+          "scope_supported": true,
+          "semantic_adjudication": "not_certified",
+          "status": "MISSING",
+          "strict_role_value": false
+        },
+        {
+          "candidates": [],
+          "name": "official_identifier",
+          "reason": "requested target role outside implemented M31 field scope",
+          "reference_evidence": [
+            {
+              "end": 55,
+              "evidence_id": "M30-F07-R1-E1",
+              "page": 1,
+              "quote": "Chamada CNPq Nº 33/2026\nBolsas de Produtividade do CNPq",
+              "start": 0
+            }
+          ],
+          "reference_value": "33/2026",
+          "scope_supported": false,
+          "semantic_adjudication": "not_certified",
+          "status": "UNRESOLVED",
+          "strict_role_value": false
+        }
+      ],
+      "fragmentation": 15,
+      "location_convention": "frozen_pdf_text_unicode_not_visual_geometry",
+      "physical_reference_evidence_pages": [
+        1,
+        2,
+        4
+      ],
+      "rationale": "Provisional AI source reading: Original 14-page call PDF supplies launch and closing dates enclosing reference day and scholarship object. Poppler text page boundaries support exact evidence pages. PDF signature and pdfinfo checked (unencrypted, no JavaScript).",
+      "record_id": "M30-F07-R1",
+      "reference": {
+        "discovery_label": "confirmed_opportunity",
+        "modality": "fomento",
+        "opportunity_label": "genuine_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "open"
+      },
+      "reference_characters": 8889,
+      "reference_evidence": [
+        {
+          "end": 55,
+          "evidence_id": "M30-F07-R1-E1",
+          "page": 1,
+          "quote": "Chamada CNPq Nº 33/2026\nBolsas de Produtividade do CNPq",
+          "start": 0
+        },
+        {
+          "end": 440,
+          "evidence_id": "M30-F07-R1-E2",
+          "page": 1,
+          "quote": "Conceder bolsas nas seguintes modalidades: Produtividade em Desenvolvimento Tecnológico e\nExtensão Inovadora (DT), Produtividade em Pesquisa (PQ) e Produtividade em Pesquisa Sênior (PQSr).",
+          "start": 252
+        },
+        {
+          "end": 1998,
+          "evidence_id": "M30-F07-R1-E3",
+          "page": 1,
+          "quote": "Lançamento da Chamada no Diário Oficial da União e na\npágina do CNPq\n\n07/10/2026",
+          "start": 1918
+        },
+        {
+          "end": 2099,
+          "evidence_id": "M30-F07-R1-E4",
+          "page": 2,
+          "quote": "Data limite para submissão das propostas\n\n07/01/2027",
+          "start": 2047
+        },
+        {
+          "end": 2951,
+          "evidence_id": "M30-F07-R1-E5",
+          "page": 2,
+          "quote": "b) possuir o título de Doutor;\nc) ter vínculo formal com a instituição de execução do projeto.",
+          "start": 2857
+        },
+        {
+          "end": 8889,
+          "evidence_id": "M30-F07-R1-E6",
+          "page": 4,
+          "quote": "Formulário de Propostas online disponível na Plataforma Integrada Carlos Chagas.",
+          "start": 8809
+        }
+      ],
+      "representative": "segment-0013",
+      "representative_prediction": {
+        "discovery": "opportunity_signal",
+        "end": 7632,
+        "modality": "fomento",
+        "segment_id": "segment-0013",
+        "start": 4532,
+        "temporal": "undetermined"
+      },
+      "representative_quote": "a) ter sido bolsista de Produtividade em Pesquisa (PQ) ou de Desenvolvimento Tecnológico e\nExtensão Inovadora (DT) por pelo menos 20 (vinte) anos, consecutivos ou não;\nb) continuar ativo no desenvolvimento de pesquisas científicas e/ou tecnológicas e na formação\nde pesquisadores em diversos níveis.\n3.2.3.1 – Os critérios específicos de cada Comitê de Assessoramento, quando houver, disponíveis no\nAnexo I e parte integrante desta Chamada, serão observados quanto aos requisitos mínimos para\nclassificação dos pesquisadores como Bolsistas PQ-Sr.\n3.2.4 - O pesquisador, se aposentado, deve manter atividades acadêmico-científicas oficialmente\nvinculadas a instituições de ensino e pesquisa.\n3.2.5 - No momento de submissão da proposta, o proponente não deverá possuir qualquer\ninadimplência com o CNPq e com a Administração Pública Federal, direta ou indireta, sob pena de\nindeferimento.\n3.2.5.1 - Caso constatada, a qualquer tempo, a falsidade da declaração, o CNPq adotará as\nprovidências cabíveis diante dos indícios de crime de falsidade ideológica.\n3.3 - Quanto à Instituição de Execução do Projeto:\n3.3.1 - A instituição de execução do projeto deverá estar cadastrada no Diretório de Instituições do\nCNPq, devendo ser uma Instituição Científica, Tecnológica e de Inovação (ICT), e/ou empresa privada\nconstituída sob as leis brasileiras, com sede e foro no Brasil, empresa pública, ou organização da\nsociedade civil sem fins lucrativos.\n3.3.1.1 - Entende-se por Instituição Científica, Tecnológica e de Inovação (ICT): órgão ou entidade\nda administração pública direta ou indireta ou pessoa jurídica de direito privado sem fins lucrativos\nlegalmente constituída sob as leis brasileiras, com sede e foro no País, que inclua em sua missão\ninstitucional ou em seu objetivo social ou estatutário a pesquisa básica ou aplicada de caráter\ncientífico ou tecnológico ou o desenvolvimento de novos produtos, serviços ou processos.\n3.3.2 - A instituição de execução do projeto é aquela com a qual o proponente deve apresentar\nvínculo.\n4 - Recursos Financeiros\n4.1 - As propostas aprovadas na Linha 1 (Bolsas DT) serão financiadas com recursos no valor global\nestimado de R$23.525.040,00 (vinte e três milhões, quinhentos e vinte e cinco mil e quarenta reais),\noriundos do orçamento do CNPq, a serem liberados de acordo com a disponibilidade orçamentária\ne financeira do CNPq. As propostas aprovadas nas Linhas 2 e 3 (Bolsas PQ e PQ-Sr) serão financiadas\ncom recursos no valor global estimado de R$425.438.160,00 (quatrocentos e vinte e cinco milhões,\nquatrocentos e trinta e oito mil, cento e sessenta reais), oriundos do orçamento do CNPq, a serem\nliberados de acordo com a disponibilidade orçamentária e financeira do CNPq.\n4.1.1 - Quando o desembolso ocorrer em mais de um exercício financeiro, o repasse de cada ano\nficará condicionado à disponibilidade orçamentária e financeira do CNPq e dos demais parceiros.\n4.2 - Identificada a conveniência e a oportunidade e havendo disponibilidade de recursos adicionais\npara esta Chamada, em qualquer fase, o CNPq e eventuais parceiros poderão contratar novos",
+      "start": 0,
+      "status": "overlap",
+      "uncertainty_notes": [
+        "Apparent same-call relationship (unverified, no merge) with F01-R4/F02-R1.",
+        "Launch schedule is not independently verified actual publication date, so publication_date remains null.",
+        "Original PDF metadata title says Minuta; official call page links this PDF. Applicable Annex I correction is noted on F02, not frozen here."
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 1910,
+      "field_count": 2,
+      "modality": "fomento",
+      "physical_page": 1,
+      "reference_records": [
+        "M30-F07-R1"
+      ],
+      "segment_id": "segment-0000",
+      "start": 0,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 1916,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 1,
+      "reference_records": [
+        "M30-F07-R1"
+      ],
+      "segment_id": "segment-0001",
+      "start": 1912,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 1986,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 1,
+      "reference_records": [
+        "M30-F07-R1"
+      ],
+      "segment_id": "segment-0002",
+      "start": 1918,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 1998,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": 1,
+      "reference_records": [
+        "M30-F07-R1"
+      ],
+      "segment_id": "segment-0003",
+      "start": 1988,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 2033,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 2,
+      "reference_records": [
+        "M30-F07-R1"
+      ],
+      "segment_id": "segment-0004",
+      "start": 2001,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 2045,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": 2,
+      "reference_records": [
+        "M30-F07-R1"
+      ],
+      "segment_id": "segment-0005",
+      "start": 2035,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 2087,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 2,
+      "reference_records": [
+        "M30-F07-R1"
+      ],
+      "segment_id": "segment-0006",
+      "start": 2047,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 2099,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": 2,
+      "reference_records": [
+        "M30-F07-R1"
+      ],
+      "segment_id": "segment-0007",
+      "start": 2089,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 2122,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 2,
+      "reference_records": [
+        "M30-F07-R1"
+      ],
+      "segment_id": "segment-0008",
+      "start": 2101,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 2147,
+      "field_count": 2,
+      "modality": "undetermined",
+      "physical_page": 2,
+      "reference_records": [
+        "M30-F07-R1"
+      ],
+      "segment_id": "segment-0009",
+      "start": 2124,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 2421,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 2,
+      "reference_records": [
+        "M30-F07-R1"
+      ],
+      "segment_id": "segment-0010",
+      "start": 2149,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 2455,
+      "field_count": 3,
+      "modality": "undetermined",
+      "physical_page": 2,
+      "reference_records": [
+        "M30-F07-R1"
+      ],
+      "segment_id": "segment-0011",
+      "start": 2423,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 4529,
+      "field_count": 2,
+      "modality": "fomento",
+      "physical_page": 2,
+      "reference_records": [
+        "M30-F07-R1"
+      ],
+      "segment_id": "segment-0012",
+      "start": 2457,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 7632,
+      "field_count": 3,
+      "modality": "fomento",
+      "physical_page": 3,
+      "reference_records": [
+        "M30-F07-R1"
+      ],
+      "segment_id": "segment-0013",
+      "start": 4532,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 9980,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": 4,
+      "reference_records": [
+        "M30-F07-R1"
+      ],
+      "segment_id": "segment-0014",
+      "start": 7635,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 12655,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": 5,
+      "reference_records": [],
+      "segment_id": "segment-0015",
+      "start": 9983,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "access_heuristic_not_review_authority"
+      ],
+      "discovery": "confirmed_opportunity",
+      "end": 14130,
+      "field_count": 0,
+      "modality": "fomento",
+      "physical_page": 6,
+      "reference_records": [],
+      "segment_id": "segment-0016",
+      "start": 12658,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 14136,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 6,
+      "reference_records": [],
+      "segment_id": "segment-0017",
+      "start": 14132,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 14142,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 6,
+      "reference_records": [],
+      "segment_id": "segment-0018",
+      "start": 14138,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 14145,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 6,
+      "reference_records": [],
+      "segment_id": "segment-0019",
+      "start": 14144,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 14325,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 6,
+      "reference_records": [],
+      "segment_id": "segment-0020",
+      "start": 14147,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 14328,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 6,
+      "reference_records": [],
+      "segment_id": "segment-0021",
+      "start": 14327,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 14336,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 6,
+      "reference_records": [],
+      "segment_id": "segment-0022",
+      "start": 14330,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 14339,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 6,
+      "reference_records": [],
+      "segment_id": "segment-0023",
+      "start": 14338,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 14551,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 6,
+      "reference_records": [],
+      "segment_id": "segment-0024",
+      "start": 14341,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 14554,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 6,
+      "reference_records": [],
+      "segment_id": "segment-0025",
+      "start": 14553,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 14562,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 6,
+      "reference_records": [],
+      "segment_id": "segment-0026",
+      "start": 14556,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 14565,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 6,
+      "reference_records": [],
+      "segment_id": "segment-0027",
+      "start": 14564,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 14700,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 6,
+      "reference_records": [],
+      "segment_id": "segment-0028",
+      "start": 14567,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 14703,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 6,
+      "reference_records": [],
+      "segment_id": "segment-0029",
+      "start": 14702,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 14711,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 6,
+      "reference_records": [],
+      "segment_id": "segment-0030",
+      "start": 14705,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 14714,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 6,
+      "reference_records": [],
+      "segment_id": "segment-0031",
+      "start": 14713,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 14852,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 6,
+      "reference_records": [],
+      "segment_id": "segment-0032",
+      "start": 14716,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 14855,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 6,
+      "reference_records": [],
+      "segment_id": "segment-0033",
+      "start": 14854,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 14863,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 6,
+      "reference_records": [],
+      "segment_id": "segment-0034",
+      "start": 14857,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 14867,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 7,
+      "reference_records": [],
+      "segment_id": "segment-0035",
+      "start": 14866,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 15061,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 7,
+      "reference_records": [],
+      "segment_id": "segment-0036",
+      "start": 14869,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 15064,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 7,
+      "reference_records": [],
+      "segment_id": "segment-0037",
+      "start": 15063,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 15072,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 7,
+      "reference_records": [],
+      "segment_id": "segment-0038",
+      "start": 15066,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 15078,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 7,
+      "reference_records": [],
+      "segment_id": "segment-0039",
+      "start": 15074,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 15084,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 7,
+      "reference_records": [],
+      "segment_id": "segment-0040",
+      "start": 15080,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 15123,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 7,
+      "reference_records": [],
+      "segment_id": "segment-0041",
+      "start": 15086,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 15126,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 7,
+      "reference_records": [],
+      "segment_id": "segment-0042",
+      "start": 15125,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 15134,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 7,
+      "reference_records": [],
+      "segment_id": "segment-0043",
+      "start": 15128,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 15185,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 7,
+      "reference_records": [],
+      "segment_id": "segment-0044",
+      "start": 15136,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 15188,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 7,
+      "reference_records": [],
+      "segment_id": "segment-0045",
+      "start": 15187,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 15196,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 7,
+      "reference_records": [],
+      "segment_id": "segment-0046",
+      "start": 15190,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 15199,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 7,
+      "reference_records": [],
+      "segment_id": "segment-0047",
+      "start": 15198,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 15207,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 7,
+      "reference_records": [],
+      "segment_id": "segment-0048",
+      "start": 15201,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 15210,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 7,
+      "reference_records": [],
+      "segment_id": "segment-0049",
+      "start": 15209,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 15218,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 7,
+      "reference_records": [],
+      "segment_id": "segment-0050",
+      "start": 15212,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 15221,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 7,
+      "reference_records": [],
+      "segment_id": "segment-0051",
+      "start": 15220,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 15229,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 7,
+      "reference_records": [],
+      "segment_id": "segment-0052",
+      "start": 15223,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 15271,
+      "field_count": 0,
+      "modality": "fomento",
+      "physical_page": 7,
+      "reference_records": [],
+      "segment_id": "segment-0053",
+      "start": 15231,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 15274,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 7,
+      "reference_records": [],
+      "segment_id": "segment-0054",
+      "start": 15273,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 15349,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 7,
+      "reference_records": [],
+      "segment_id": "segment-0055",
+      "start": 15276,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 15408,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 7,
+      "reference_records": [],
+      "segment_id": "segment-0056",
+      "start": 15351,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 15493,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 7,
+      "reference_records": [],
+      "segment_id": "segment-0057",
+      "start": 15410,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 17049,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": 7,
+      "reference_records": [],
+      "segment_id": "segment-0058",
+      "start": 15495,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "manager_stage_not_startup_access"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 19806,
+      "field_count": 1,
+      "modality": "fomento",
+      "physical_page": 8,
+      "reference_records": [],
+      "segment_id": "segment-0059",
+      "start": 17052,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 22532,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 9,
+      "reference_records": [],
+      "segment_id": "segment-0060",
+      "start": 19809,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "manager_stage_not_startup_access"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 25814,
+      "field_count": 6,
+      "modality": "fomento",
+      "physical_page": 10,
+      "reference_records": [],
+      "segment_id": "segment-0061",
+      "start": 22535,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 28900,
+      "field_count": 1,
+      "modality": "fomento",
+      "physical_page": 11,
+      "reference_records": [],
+      "segment_id": "segment-0062",
+      "start": 25817,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 31598,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": 12,
+      "reference_records": [],
+      "segment_id": "segment-0063",
+      "start": 28903,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 34223,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 13,
+      "reference_records": [],
+      "segment_id": "segment-0064",
+      "start": 31601,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 34257,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": 13,
+      "reference_records": [],
+      "segment_id": "segment-0065",
+      "start": 34225,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 34324,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": 14,
+      "reference_records": [],
+      "segment_id": "segment-0066",
+      "start": 34260,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    }
+  ],
+  "semantic_reviews": [
+    {
+      "case_id": "M30-F07:segment-0016:discovery:classification",
+      "certainty": "strong_hypothesis",
+      "claim_kind": "discovery",
+      "context_evidence": [],
+      "document_id": "M30-F07",
+      "end": 14130,
+      "error_codes": [
+        "EVIDENCE_SEMANTIC_MISMATCH"
+      ],
+      "expected_behavior": "Exigir contexto do instrumento e preservar incerteza de acesso/condições.",
+      "expected_claim": "confirmed_opportunity",
+      "field_index": null,
+      "field_name": null,
+      "judgment": "partial",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "quote": "6.6.4 - Caso seja necessário utilizar figuras, gráficos, fotos e/ou outros, para esclarecer a\nargumentação da proposta, estes não devem comprometer a capacidade do arquivo, pois as\npropostas que excederem o tamanho estipulado não serão recebidas pelo guichê eletrônico do\nCNPq.\n6.7 - Após o envio, será gerado um recibo eletrônico de protocolo da proposta submetida, o qual\nservirá como comprovante da transmissão.\n6.8 - Será aceita uma única proposta por proponente, vinculada a apenas uma das Linhas indicadas\nno item 1.2, sendo vedado o remanejamento de propostas entre as Linhas.\n6.9 - Na hipótese de envio de mais de uma proposta pelo mesmo proponente, respeitando-se o\nprazo limite estipulado para submissão das propostas, será considerada para análise somente a\núltima proposta recebida.\n6.10 - Constatado o envio de propostas idênticas, apresentadas por diferentes proponentes, todas\nas propostas nesta condição serão indeferidas.\n6.11 - O proponente deve se assegurar de que seu Currículo Lattes possui informações completas,\ncorretas e atualizadas, evitando especialmente a duplicação de itens ou sua classificação de maneira\nequivocada.\n6.11.1 - A classificação incorreta da produção científica poderá prejudicar a análise de mérito do\npedido.\n7 - Julgamento\n7.1 - Critérios do Julgamento\n7.1.1 - Os critérios para classificação das propostas quanto ao mérito técnico-científico e sua\nadequação orçamentária são:\nCritérios para Julgamento para Bolsas PQ e PQ-Sr",
+      "rationale": "A página contém condições de submissão de uma chamada real, mas isoladamente é trecho procedimental sem identidade completa. A confirmação é defensável no documento, menos sustentada só nesta unidade.",
+      "root_cause": "classify usa conjunções locais de instrumento/acesso; hierarquia entre páginas não existe.",
+      "root_cause_confidence": "high",
+      "segment_id": "segment-0016",
+      "severity": "medium",
+      "start": 12658
+    }
+  ],
+  "status": "processed"
+}

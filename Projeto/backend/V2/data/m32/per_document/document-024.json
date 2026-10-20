@@ -1,0 +1,1673 @@
+{
+  "diagnostics": [
+    "passive_not_rendered_DOM",
+    "unfrozen_attachments_unavailable"
+  ],
+  "document_id": "M30-N02",
+  "error_cases": [
+    {
+      "case_id": "M30-N02-R1:discovery_label",
+      "certainty": "unresolved_disagreement",
+      "dimension": "discovery_label",
+      "document_id": "M30-N02",
+      "error_codes": [
+        "OPPORTUNITY_EXISTENCE_CONFUSION",
+        "REFERENCE_AMBIGUITY"
+      ],
+      "expected_behavior": "Resolve this dimension from same-record evidence; provisional label is comparison, not authority.",
+      "next_action": "Compare full frozen context and request authorized adjudication; do not rewrite labels.",
+      "observed": {
+        "discovery": "abstain",
+        "end": 3515,
+        "modality": "undetermined",
+        "segment_id": "segment-0023",
+        "start": 3031,
+        "temporal": "undetermined"
+      },
+      "record_id": "M30-N02-R1",
+      "reference": {
+        "discovery_label": "unrelated_or_non_actionable",
+        "modality": "credito",
+        "opportunity_label": "not_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "not_applicable"
+      },
+      "review_status": "provisional",
+      "root_cause": "Context fragmentation or semantic rule/reference ambiguity; see all-overlap graph before adjudication.",
+      "root_cause_confidence": "low",
+      "segment_id": "segment-0023",
+      "severity": "medium",
+      "supporting_evidence": {
+        "end": 3515,
+        "quote": "O Centro vai integrar de forma inédita e em larga escala tecnologias de ponta que representam avanço significativo no processamento final de imunobiológicos, como as linhas de envase com isoladores, que permitirão a produção de mais de 600 milhões de doses por ano na forma líquida, num modelo ainda sem similar no país. Além disso, a implementação de tecnologia moderna para envase, oferecendo maior segurança, precisão na dosagem e conveniência para campanhas de vacinação em massa.",
+        "start": 3031
+      }
+    },
+    {
+      "case_id": "M30-N02-R1:modality",
+      "certainty": "unresolved_disagreement",
+      "dimension": "modality",
+      "document_id": "M30-N02",
+      "error_codes": [
+        "MODALITY_CONFUSION",
+        "REFERENCE_AMBIGUITY"
+      ],
+      "expected_behavior": "Resolve this dimension from same-record evidence; provisional label is comparison, not authority.",
+      "next_action": "Compare full frozen context and request authorized adjudication; do not rewrite labels.",
+      "observed": {
+        "discovery": "abstain",
+        "end": 3515,
+        "modality": "undetermined",
+        "segment_id": "segment-0023",
+        "start": 3031,
+        "temporal": "undetermined"
+      },
+      "record_id": "M30-N02-R1",
+      "reference": {
+        "discovery_label": "unrelated_or_non_actionable",
+        "modality": "credito",
+        "opportunity_label": "not_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "not_applicable"
+      },
+      "review_status": "provisional",
+      "root_cause": "Context fragmentation or semantic rule/reference ambiguity; see all-overlap graph before adjudication.",
+      "root_cause_confidence": "low",
+      "segment_id": "segment-0023",
+      "severity": "medium",
+      "supporting_evidence": {
+        "end": 3515,
+        "quote": "O Centro vai integrar de forma inédita e em larga escala tecnologias de ponta que representam avanço significativo no processamento final de imunobiológicos, como as linhas de envase com isoladores, que permitirão a produção de mais de 600 milhões de doses por ano na forma líquida, num modelo ainda sem similar no país. Além disso, a implementação de tecnologia moderna para envase, oferecendo maior segurança, precisão na dosagem e conveniência para campanhas de vacinação em massa.",
+        "start": 3031
+      }
+    },
+    {
+      "case_id": "M30-N02-R1:temporal_status",
+      "certainty": "unresolved_disagreement",
+      "dimension": "temporal_status",
+      "document_id": "M30-N02",
+      "error_codes": [
+        "TEMPORAL_AVAILABILITY_INFERENCE",
+        "REFERENCE_AMBIGUITY"
+      ],
+      "expected_behavior": "Resolve this dimension from same-record evidence; provisional label is comparison, not authority.",
+      "next_action": "Compare full frozen context and request authorized adjudication; do not rewrite labels.",
+      "observed": {
+        "discovery": "abstain",
+        "end": 3515,
+        "modality": "undetermined",
+        "segment_id": "segment-0023",
+        "start": 3031,
+        "temporal": "undetermined"
+      },
+      "record_id": "M30-N02-R1",
+      "reference": {
+        "discovery_label": "unrelated_or_non_actionable",
+        "modality": "credito",
+        "opportunity_label": "not_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "not_applicable"
+      },
+      "review_status": "provisional",
+      "root_cause": "Context fragmentation or semantic rule/reference ambiguity; see all-overlap graph before adjudication.",
+      "root_cause_confidence": "low",
+      "segment_id": "segment-0023",
+      "severity": "medium",
+      "supporting_evidence": {
+        "end": 3515,
+        "quote": "O Centro vai integrar de forma inédita e em larga escala tecnologias de ponta que representam avanço significativo no processamento final de imunobiológicos, como as linhas de envase com isoladores, que permitirão a produção de mais de 600 milhões de doses por ano na forma líquida, num modelo ainda sem similar no país. Além disso, a implementação de tecnologia moderna para envase, oferecendo maior segurança, precisão na dosagem e conveniência para campanhas de vacinação em massa.",
+        "start": 3031
+      }
+    },
+    {
+      "case_id": "M30-N02-R1:segmentation",
+      "certainty": "supported_observation",
+      "dimension": "structural",
+      "document_id": "M30-N02",
+      "error_codes": [
+        "SEGMENTATION_OVER"
+      ],
+      "expected_behavior": "A meaningful record should retain its own associated context; whitespace-only boundary differences are not semantic defects.",
+      "next_action": "Inspect semantic usefulness of boundaries before changing segmentation.",
+      "observed": {
+        "coverage": {
+          "denominator": 3160,
+          "numerator": 3147,
+          "value": 0.9958860759493671
+        },
+        "fragmentation": 14
+      },
+      "record_id": "M30-N02-R1",
+      "reference": {
+        "discovery_label": "unrelated_or_non_actionable",
+        "modality": "credito",
+        "opportunity_label": "not_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "not_applicable"
+      },
+      "review_status": "provisional",
+      "root_cause": "Structure-derived units differ from provisional annotated record spans.",
+      "root_cause_confidence": "high",
+      "segment_id": "segment-0023",
+      "severity": "medium",
+      "supporting_evidence": {
+        "edges": [
+          {
+            "end": 851,
+            "exact": false,
+            "intersection": 82,
+            "intersection_end": 851,
+            "intersection_start": 769,
+            "iou": 0.025949367088607594,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.025949367088607594,
+            "segment_id": "segment-0011",
+            "start": 769
+          },
+          {
+            "end": 881,
+            "exact": false,
+            "intersection": 29,
+            "intersection_end": 881,
+            "intersection_start": 852,
+            "iou": 0.009177215189873418,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.009177215189873418,
+            "segment_id": "segment-0012",
+            "start": 852
+          },
+          {
+            "end": 914,
+            "exact": false,
+            "intersection": 32,
+            "intersection_end": 914,
+            "intersection_start": 882,
+            "iou": 0.010126582278481013,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.010126582278481013,
+            "segment_id": "segment-0013",
+            "start": 882
+          },
+          {
+            "end": 948,
+            "exact": false,
+            "intersection": 33,
+            "intersection_end": 948,
+            "intersection_start": 915,
+            "iou": 0.010443037974683544,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.010443037974683544,
+            "segment_id": "segment-0014",
+            "start": 915
+          },
+          {
+            "end": 965,
+            "exact": false,
+            "intersection": 16,
+            "intersection_end": 965,
+            "intersection_start": 949,
+            "iou": 0.005063291139240506,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.005063291139240506,
+            "segment_id": "segment-0015",
+            "start": 949
+          },
+          {
+            "end": 1118,
+            "exact": false,
+            "intersection": 152,
+            "intersection_end": 1118,
+            "intersection_start": 966,
+            "iou": 0.04810126582278481,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.04810126582278481,
+            "segment_id": "segment-0016",
+            "start": 966
+          },
+          {
+            "end": 1595,
+            "exact": false,
+            "intersection": 476,
+            "intersection_end": 1595,
+            "intersection_start": 1119,
+            "iou": 0.15063291139240506,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.15063291139240506,
+            "segment_id": "segment-0017",
+            "start": 1119
+          },
+          {
+            "end": 2003,
+            "exact": false,
+            "intersection": 407,
+            "intersection_end": 2003,
+            "intersection_start": 1596,
+            "iou": 0.12879746835443037,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.12879746835443037,
+            "segment_id": "segment-0018",
+            "start": 1596
+          },
+          {
+            "end": 2367,
+            "exact": false,
+            "intersection": 363,
+            "intersection_end": 2367,
+            "intersection_start": 2004,
+            "iou": 0.11487341772151899,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.11487341772151899,
+            "segment_id": "segment-0019",
+            "start": 2004
+          },
+          {
+            "end": 2702,
+            "exact": false,
+            "intersection": 334,
+            "intersection_end": 2702,
+            "intersection_start": 2368,
+            "iou": 0.10569620253164556,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.10569620253164556,
+            "segment_id": "segment-0020",
+            "start": 2368
+          },
+          {
+            "end": 3021,
+            "exact": false,
+            "intersection": 318,
+            "intersection_end": 3021,
+            "intersection_start": 2703,
+            "iou": 0.10063291139240506,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.10063291139240506,
+            "segment_id": "segment-0021",
+            "start": 2703
+          },
+          {
+            "end": 3030,
+            "exact": false,
+            "intersection": 8,
+            "intersection_end": 3030,
+            "intersection_start": 3022,
+            "iou": 0.002531645569620253,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.002531645569620253,
+            "segment_id": "segment-0022",
+            "start": 3022
+          },
+          {
+            "end": 3515,
+            "exact": false,
+            "intersection": 484,
+            "intersection_end": 3515,
+            "intersection_start": 3031,
+            "iou": 0.15316455696202533,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.15316455696202533,
+            "segment_id": "segment-0023",
+            "start": 3031
+          },
+          {
+            "end": 3929,
+            "exact": false,
+            "intersection": 413,
+            "intersection_end": 3929,
+            "intersection_start": 3516,
+            "iou": 0.13069620253164557,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.13069620253164557,
+            "segment_id": "segment-0024",
+            "start": 3516
+          }
+        ],
+        "reference_span": [
+          769,
+          3929
+        ]
+      }
+    }
+  ],
+  "extracted_claims": [
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-N02",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "financing_amount_expression",
+      "original": "R$ 600 mi",
+      "reference_records": [
+        "M30-N02-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0011",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-N02",
+        "end": 851,
+        "page": null,
+        "quote": "BNDES aprova R$ 600 mi para Instituto Butantan implantar Centro de Imunobiológicos",
+        "raw_sha256": "3dfb9b527dc131c9dc1ebe6fa5807119305caa9b41dc53a6402f9b8a68589a01",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0011",
+        "start": 769,
+        "text_sha256": "f65ec64c578ea2de1b15a52a13cfee7a4c15f383e7f03ea16645b0842cc0dfa1"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-N02",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "publication_date_expression",
+      "original": "16/10/2026",
+      "reference_records": [
+        "M30-N02-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0013",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-N02",
+        "end": 914,
+        "page": null,
+        "quote": "Publicado em 16/10/2026 às 09:31",
+        "raw_sha256": "3dfb9b527dc131c9dc1ebe6fa5807119305caa9b41dc53a6402f9b8a68589a01",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0013",
+        "start": 882,
+        "text_sha256": "f65ec64c578ea2de1b15a52a13cfee7a4c15f383e7f03ea16645b0842cc0dfa1"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-N02",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "unknown_temporal_expression",
+      "original": "16/10/2026",
+      "reference_records": [
+        "M30-N02-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0014",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-N02",
+        "end": 948,
+        "page": null,
+        "quote": "Atualizado em 16/10/2026 às 09:43",
+        "raw_sha256": "3dfb9b527dc131c9dc1ebe6fa5807119305caa9b41dc53a6402f9b8a68589a01",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0014",
+        "start": 915,
+        "text_sha256": "f65ec64c578ea2de1b15a52a13cfee7a4c15f383e7f03ea16645b0842cc0dfa1"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-N02",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "financing_amount_expression",
+      "original": "R$ 600 milhões",
+      "reference_records": [
+        "M30-N02-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0017",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-N02",
+        "end": 1595,
+        "page": null,
+        "quote": "O Banco Nacional de Desenvolvimento Econômico e Social (BNDES) aprovou R$ 600 milhões para o Instituto Butantan, por meio da Fundação Butantan, implantar o Centro de Processamento Final de Imunobiológicos (CPFI 4), em São Paulo (SP). Na nova unidade fabril, os recursos do Programa BNDES Mais inovação permitirão a realização de processos de formulação, envase, inspeção automática e rotulagem de vacinas e medicamentos de fabricação exclusiva do Instituto Butantan no Brasil.",
+        "raw_sha256": "3dfb9b527dc131c9dc1ebe6fa5807119305caa9b41dc53a6402f9b8a68589a01",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0017",
+        "start": 1119,
+        "text_sha256": "f65ec64c578ea2de1b15a52a13cfee7a4c15f383e7f03ea16645b0842cc0dfa1"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-N02",
+      "field_index": 1,
+      "method_version": "m31-deterministic-v2",
+      "name": "funding_organization_expression",
+      "original": "O Banco Nacional de Desenvolvimento Econômico e Social (BNDES) aprovou R$ 600 milhões para o Instituto Butantan, por meio da Fundação Butantan, implantar o Centro de Processamento Final de Imunobiológicos (CPFI 4), em São Paulo (SP). Na nova unidade fabril, os recursos do Programa BNDES Mais inovação permitirão a realização de processos de formulação, envase, inspeção automática e rotulagem de vacinas e medicamentos de fabricação exclusiva do Instituto Butantan no Brasil.",
+      "reference_records": [
+        "M30-N02-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0017",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-N02",
+        "end": 1595,
+        "page": null,
+        "quote": "O Banco Nacional de Desenvolvimento Econômico e Social (BNDES) aprovou R$ 600 milhões para o Instituto Butantan, por meio da Fundação Butantan, implantar o Centro de Processamento Final de Imunobiológicos (CPFI 4), em São Paulo (SP). Na nova unidade fabril, os recursos do Programa BNDES Mais inovação permitirão a realização de processos de formulação, envase, inspeção automática e rotulagem de vacinas e medicamentos de fabricação exclusiva do Instituto Butantan no Brasil.",
+        "raw_sha256": "3dfb9b527dc131c9dc1ebe6fa5807119305caa9b41dc53a6402f9b8a68589a01",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0017",
+        "start": 1119,
+        "text_sha256": "f65ec64c578ea2de1b15a52a13cfee7a4c15f383e7f03ea16645b0842cc0dfa1"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-N02",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "monetary_expression_unresolved",
+      "original": "R$ 1,06 bilhão",
+      "reference_records": [
+        "M30-N02-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0019",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-N02",
+        "end": 2367,
+        "page": null,
+        "quote": "O CPFI 4 será equipado com tecnologias avançadas, ainda pouco utilizadas no Brasil, incluindo sistemas de envase com uso de isoladores, além de liofilização e envase em seringas. A unidade vai ocupar uma área total construída de 15.000 m², distribuídos em dois pavimentos produtivos, além de áreas de acesso e manutenção. O investimento total é de R$ 1,06 bilhão.",
+        "raw_sha256": "3dfb9b527dc131c9dc1ebe6fa5807119305caa9b41dc53a6402f9b8a68589a01",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0019",
+        "start": 2004,
+        "text_sha256": "f65ec64c578ea2de1b15a52a13cfee7a4c15f383e7f03ea16645b0842cc0dfa1"
+      }
+    }
+  ],
+  "provenance": {
+    "byte_length": 39719,
+    "category_evidence": "BNDES aprova R$ 600 mi para Instituto Butantan implantar Centro de Imunobiológicos\nPor Agência BNDES de Notícias\nPublicado em 16/10/2026 às 09:31\nAtualizado em 16/10/2026 às 09:43\n3 min de leitura\nUnidade vai produzir vacinas para prevenção de diversas doenças e anticorpos monoclonais para tratamento câncer, doenças autoimunes e esclerose múltipla\nO Banco Nacional de Desenvolvimento Econômico e Social (BNDES) aprovou R$ 600 milhões para o Instituto Butantan, por meio da Fundação Butantan, implantar o Centro de Processamento Final de Imunobiológicos (CPFI 4), em São Paulo (SP). Na nova unidade fabril, os recursos do Programa BNDES Mais inovação permitirão a realização de processos de formulação, envase, inspeção automática e rotulagem de vacinas e medicamentos de fabricação exclusiva do Instituto Butantan no Brasil.\nA unidade será capaz de processar um conjunto de imunobiológicos que inclui vacinas para prevenção de doenças diversas (Influenza, Covid, HPV e Hepatite A, entre outras) e anticorpos monoclonais utilizados em terapias avançadas e de elevado valor para o Sistema Único de Saúde (SUS), como o adalimumabe (indicado para doenças autoimunes), o pembrolizumabe (oncológico) e o natalizumabe (esclerose múltipla).\nO CPFI 4 será equipado com tecnologias avançadas, ainda pouco utilizadas no Brasil, incluindo sistemas de envase com uso de isoladores, além de liofilização e envase em seringas. A unidade vai ocupar uma área total construída de 15.000 m², distribuídos em dois pavimentos produtivos, além de áreas de acesso e manutenção. O investimento total é de R$ 1,06 bilhão.\n“O apoio do BNDES para a construção do centro permitirá a produção de vacinas e medicamentos biológicos que ainda não são produzidos no Brasil, com segurança, ampliando a oferta de tratamentos e outros produtos terapêuticos para a população por meio do Sistema Único de Saúde (SUS)”, explica o presidente do BNDES, Aloizio Mercadante.\n“É muito importante esse financiamento para que possamos avançar cada vez mais em busca de autonomia na produção de imunobiológicos. É estratégico para o país aumentar nossa capacidade de dar respostas às demandas da saúde pública, combatendo e prevenindo doenças”, afirma Rui Curi, vice-diretor do Instituto Butantan.\nCPFI 4 –\nO Centro vai integrar de forma inédita e em larga escala tecnologias de ponta que representam avanço significativo no processamento final de imunobiológicos, como as linhas de envase com isoladores, que permitirão a produção de mais de 600 milhões de doses por ano na forma líquida, num modelo ainda sem similar no país. Além disso, a implementação de tecnologia moderna para envase, oferecendo maior segurança, precisão na dosagem e conveniência para campanhas de vacinação em massa.\nA unidade também vai possibilitar a incorporação da capacidade de processamento final de vacinas liofilizadas (processo utilizado para remover água ou solventes, preservando sua estabilidade e eficácia). Essa tecnologia estende a vida útil dos imunizantes e facilita a distribuição global, especialmente em regiões com infraestrutura limitada para armazenamento e transporte, superando limitações de refrigeração.",
+    "content_type": "text/html",
+    "derivation_method": "stdlib-HTMLParser-data-whitespace-v1; excludes script/style/noscript/template; not rendered DOM",
+    "document_category": "institutional_news",
+    "document_id": "M30-N02",
+    "document_version": null,
+    "final_url": "https://agenciadenoticias.bndes.gov.br/noticia/BNDES-aprova-R$-600-mi-para-Instituto-Butantan-implantar-Centro-de-Imunobiologicos/",
+    "original_filename": "index.html",
+    "original_url": "https://agenciadenoticias.bndes.gov.br/noticia/BNDES-aprova-R$-600-mi-para-Instituto-Butantan-implantar-Centro-de-Imunobiologicos/",
+    "publication_date": "2026-10-16",
+    "raw_path": "raw/M30-N02.html",
+    "restrictions": "Research pilot local frozen copy only; no redistribution license inferred. No scripts executed, no forms submitted, no applicant records intentionally collected. Public navigation/staff attribution may remain in original bytes.",
+    "retrieval_status": "acquired",
+    "retrieved_at": "2026-10-19T04:38:16.858126+00:00",
+    "sha256": "3dfb9b527dc131c9dc1ebe6fa5807119305caa9b41dc53a6402f9b8a68589a01",
+    "source_authority_notes": "Public HTTPS page hosted by the named institution; authorship asserted by host/content, not cryptographically authenticated. Not source-readiness approval.",
+    "source_organization": "BNDES",
+    "text_path": "text/M30-N02.txt",
+    "text_sha256": "f65ec64c578ea2de1b15a52a13cfee7a4c15f383e7f03ea16645b0842cc0dfa1"
+  },
+  "records": [
+    {
+      "all_overlap_predictions": [
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0011",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0012",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0013",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0014",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0015",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0016",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "opportunity_signal",
+          "modality": "undetermined",
+          "segment_id": "segment-0017",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0018",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0019",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0020",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "opportunity_signal",
+          "modality": "credito",
+          "segment_id": "segment-0021",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0022",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0023",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0024",
+          "temporal": "undetermined"
+        }
+      ],
+      "any_exact_boundary": false,
+      "coverage": {
+        "denominator": 3160,
+        "numerator": 3147,
+        "value": 0.9958860759493671
+      },
+      "covered_characters": 3147,
+      "disagreements": [
+        "discovery_label",
+        "modality",
+        "temporal_status"
+      ],
+      "discovery_histogram": {
+        "abstain": 12,
+        "opportunity_signal": 2
+      },
+      "document_id": "M30-N02",
+      "edges": [
+        {
+          "end": 851,
+          "exact": false,
+          "intersection": 82,
+          "intersection_end": 851,
+          "intersection_start": 769,
+          "iou": 0.025949367088607594,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.025949367088607594,
+          "segment_id": "segment-0011",
+          "start": 769
+        },
+        {
+          "end": 881,
+          "exact": false,
+          "intersection": 29,
+          "intersection_end": 881,
+          "intersection_start": 852,
+          "iou": 0.009177215189873418,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.009177215189873418,
+          "segment_id": "segment-0012",
+          "start": 852
+        },
+        {
+          "end": 914,
+          "exact": false,
+          "intersection": 32,
+          "intersection_end": 914,
+          "intersection_start": 882,
+          "iou": 0.010126582278481013,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.010126582278481013,
+          "segment_id": "segment-0013",
+          "start": 882
+        },
+        {
+          "end": 948,
+          "exact": false,
+          "intersection": 33,
+          "intersection_end": 948,
+          "intersection_start": 915,
+          "iou": 0.010443037974683544,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.010443037974683544,
+          "segment_id": "segment-0014",
+          "start": 915
+        },
+        {
+          "end": 965,
+          "exact": false,
+          "intersection": 16,
+          "intersection_end": 965,
+          "intersection_start": 949,
+          "iou": 0.005063291139240506,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.005063291139240506,
+          "segment_id": "segment-0015",
+          "start": 949
+        },
+        {
+          "end": 1118,
+          "exact": false,
+          "intersection": 152,
+          "intersection_end": 1118,
+          "intersection_start": 966,
+          "iou": 0.04810126582278481,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.04810126582278481,
+          "segment_id": "segment-0016",
+          "start": 966
+        },
+        {
+          "end": 1595,
+          "exact": false,
+          "intersection": 476,
+          "intersection_end": 1595,
+          "intersection_start": 1119,
+          "iou": 0.15063291139240506,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.15063291139240506,
+          "segment_id": "segment-0017",
+          "start": 1119
+        },
+        {
+          "end": 2003,
+          "exact": false,
+          "intersection": 407,
+          "intersection_end": 2003,
+          "intersection_start": 1596,
+          "iou": 0.12879746835443037,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.12879746835443037,
+          "segment_id": "segment-0018",
+          "start": 1596
+        },
+        {
+          "end": 2367,
+          "exact": false,
+          "intersection": 363,
+          "intersection_end": 2367,
+          "intersection_start": 2004,
+          "iou": 0.11487341772151899,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.11487341772151899,
+          "segment_id": "segment-0019",
+          "start": 2004
+        },
+        {
+          "end": 2702,
+          "exact": false,
+          "intersection": 334,
+          "intersection_end": 2702,
+          "intersection_start": 2368,
+          "iou": 0.10569620253164556,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.10569620253164556,
+          "segment_id": "segment-0020",
+          "start": 2368
+        },
+        {
+          "end": 3021,
+          "exact": false,
+          "intersection": 318,
+          "intersection_end": 3021,
+          "intersection_start": 2703,
+          "iou": 0.10063291139240506,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.10063291139240506,
+          "segment_id": "segment-0021",
+          "start": 2703
+        },
+        {
+          "end": 3030,
+          "exact": false,
+          "intersection": 8,
+          "intersection_end": 3030,
+          "intersection_start": 3022,
+          "iou": 0.002531645569620253,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.002531645569620253,
+          "segment_id": "segment-0022",
+          "start": 3022
+        },
+        {
+          "end": 3515,
+          "exact": false,
+          "intersection": 484,
+          "intersection_end": 3515,
+          "intersection_start": 3031,
+          "iou": 0.15316455696202533,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.15316455696202533,
+          "segment_id": "segment-0023",
+          "start": 3031
+        },
+        {
+          "end": 3929,
+          "exact": false,
+          "intersection": 413,
+          "intersection_end": 3929,
+          "intersection_start": 3516,
+          "iou": 0.13069620253164557,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.13069620253164557,
+          "segment_id": "segment-0024",
+          "start": 3516
+        }
+      ],
+      "end": 3929,
+      "fields": [
+        {
+          "candidates": [],
+          "name": "title",
+          "reason": "no corresponding field; absence is not explicit field abstention",
+          "reference_evidence": [
+            {
+              "end": 3929,
+              "evidence_id": "M30-N02-R1-E1",
+              "page": null,
+              "quote": "BNDES aprova R$ 600 mi para Instituto Butantan implantar Centro de Imunobiológicos\nPor Agência BNDES de Notícias\nPublicado em 16/10/2026 às 09:31\nAtualizado em 16/10/2026 às 09:43\n3 min de leitura\nUnidade vai produzir vacinas para prevenção de diversas doenças e anticorpos monoclonais para tratamento câncer, doenças autoimunes e esclerose múltipla\nO Banco Nacional de Desenvolvimento Econômico e Social (BNDES) aprovou R$ 600 milhões para o Instituto Butantan, por meio da Fundação Butantan, implantar o Centro de Processamento Final de Imunobiológicos (CPFI 4), em São Paulo (SP). Na nova unidade fabril, os recursos do Programa BNDES Mais inovação permitirão a realização de processos de formulação, envase, inspeção automática e rotulagem de vacinas e medicamentos de fabricação exclusiva do Instituto Butantan no Brasil.\nA unidade será capaz de processar um conjunto de imunobiológicos que inclui vacinas para prevenção de doenças diversas (Influenza, Covid, HPV e Hepatite A, entre outras) e anticorpos monoclonais utilizados em terapias avançadas e de elevado valor para o Sistema Único de Saúde (SUS), como o adalimumabe (indicado para doenças autoimunes), o pembrolizumabe (oncológico) e o natalizumabe (esclerose múltipla).\nO CPFI 4 será equipado com tecnologias avançadas, ainda pouco utilizadas no Brasil, incluindo sistemas de envase com uso de isoladores, além de liofilização e envase em seringas. A unidade vai ocupar uma área total construída de 15.000 m², distribuídos em dois pavimentos produtivos, além de áreas de acesso e manutenção. O investimento total é de R$ 1,06 bilhão.\n“O apoio do BNDES para a construção do centro permitirá a produção de vacinas e medicamentos biológicos que ainda não são produzidos no Brasil, com segurança, ampliando a oferta de tratamentos e outros produtos terapêuticos para a população por meio do Sistema Único de Saúde (SUS)”, explica o presidente do BNDES, Aloizio Mercadante.\n“É muito importante esse financiamento para que possamos avançar cada vez mais em busca de autonomia na produção de imunobiológicos. É estratégico para o país aumentar nossa capacidade de dar respostas às demandas da saúde pública, combatendo e prevenindo doenças”, afirma Rui Curi, vice-diretor do Instituto Butantan.\nCPFI 4 –\nO Centro vai integrar de forma inédita e em larga escala tecnologias de ponta que representam avanço significativo no processamento final de imunobiológicos, como as linhas de envase com isoladores, que permitirão a produção de mais de 600 milhões de doses por ano na forma líquida, num modelo ainda sem similar no país. Além disso, a implementação de tecnologia moderna para envase, oferecendo maior segurança, precisão na dosagem e conveniência para campanhas de vacinação em massa.\nA unidade também vai possibilitar a incorporação da capacidade de processamento final de vacinas liofilizadas (processo utilizado para remover água ou solventes, preservando sua estabilidade e eficácia). Essa tecnologia estende a vida útil dos imunizantes e facilita a distribuição global, especialmente em regiões com infraestrutura limitada para armazenamento e transporte, superando limitações de refrigeração.",
+              "start": 769
+            }
+          ],
+          "reference_value": "BNDES aprova R$ 600 mi para Instituto Butantan implantar Centro de Imunobiológicos",
+          "scope_supported": true,
+          "semantic_adjudication": "not_certified",
+          "status": "MISSING",
+          "strict_role_value": false
+        },
+        {
+          "candidates": [
+            {
+              "diagnostic_status": "traceable_not_semantically_certified",
+              "field_index": 0,
+              "method_version": "m31-deterministic-v2",
+              "name": "financing_amount_expression",
+              "original": "R$ 600 milhões",
+              "schema_version": "m31-extraction-v1",
+              "segment_id": "segment-0017",
+              "uncertainty": "heuristic role assignment; not authenticated or normalized",
+              "witness": {
+                "document_id": "M30-N02",
+                "end": 1595,
+                "page": null,
+                "quote": "O Banco Nacional de Desenvolvimento Econômico e Social (BNDES) aprovou R$ 600 milhões para o Instituto Butantan, por meio da Fundação Butantan, implantar o Centro de Processamento Final de Imunobiológicos (CPFI 4), em São Paulo (SP). Na nova unidade fabril, os recursos do Programa BNDES Mais inovação permitirão a realização de processos de formulação, envase, inspeção automática e rotulagem de vacinas e medicamentos de fabricação exclusiva do Instituto Butantan no Brasil.",
+                "raw_sha256": "3dfb9b527dc131c9dc1ebe6fa5807119305caa9b41dc53a6402f9b8a68589a01",
+                "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+                "schema_version": "m31-extraction-v1",
+                "segment_id": "segment-0017",
+                "start": 1119,
+                "text_sha256": "f65ec64c578ea2de1b15a52a13cfee7a4c15f383e7f03ea16645b0842cc0dfa1"
+              }
+            }
+          ],
+          "name": "completed_financing_amount",
+          "reason": "requested target role outside implemented M31 field scope",
+          "reference_evidence": [
+            {
+              "end": 3929,
+              "evidence_id": "M30-N02-R1-E1",
+              "page": null,
+              "quote": "BNDES aprova R$ 600 mi para Instituto Butantan implantar Centro de Imunobiológicos\nPor Agência BNDES de Notícias\nPublicado em 16/10/2026 às 09:31\nAtualizado em 16/10/2026 às 09:43\n3 min de leitura\nUnidade vai produzir vacinas para prevenção de diversas doenças e anticorpos monoclonais para tratamento câncer, doenças autoimunes e esclerose múltipla\nO Banco Nacional de Desenvolvimento Econômico e Social (BNDES) aprovou R$ 600 milhões para o Instituto Butantan, por meio da Fundação Butantan, implantar o Centro de Processamento Final de Imunobiológicos (CPFI 4), em São Paulo (SP). Na nova unidade fabril, os recursos do Programa BNDES Mais inovação permitirão a realização de processos de formulação, envase, inspeção automática e rotulagem de vacinas e medicamentos de fabricação exclusiva do Instituto Butantan no Brasil.\nA unidade será capaz de processar um conjunto de imunobiológicos que inclui vacinas para prevenção de doenças diversas (Influenza, Covid, HPV e Hepatite A, entre outras) e anticorpos monoclonais utilizados em terapias avançadas e de elevado valor para o Sistema Único de Saúde (SUS), como o adalimumabe (indicado para doenças autoimunes), o pembrolizumabe (oncológico) e o natalizumabe (esclerose múltipla).\nO CPFI 4 será equipado com tecnologias avançadas, ainda pouco utilizadas no Brasil, incluindo sistemas de envase com uso de isoladores, além de liofilização e envase em seringas. A unidade vai ocupar uma área total construída de 15.000 m², distribuídos em dois pavimentos produtivos, além de áreas de acesso e manutenção. O investimento total é de R$ 1,06 bilhão.\n“O apoio do BNDES para a construção do centro permitirá a produção de vacinas e medicamentos biológicos que ainda não são produzidos no Brasil, com segurança, ampliando a oferta de tratamentos e outros produtos terapêuticos para a população por meio do Sistema Único de Saúde (SUS)”, explica o presidente do BNDES, Aloizio Mercadante.\n“É muito importante esse financiamento para que possamos avançar cada vez mais em busca de autonomia na produção de imunobiológicos. É estratégico para o país aumentar nossa capacidade de dar respostas às demandas da saúde pública, combatendo e prevenindo doenças”, afirma Rui Curi, vice-diretor do Instituto Butantan.\nCPFI 4 –\nO Centro vai integrar de forma inédita e em larga escala tecnologias de ponta que representam avanço significativo no processamento final de imunobiológicos, como as linhas de envase com isoladores, que permitirão a produção de mais de 600 milhões de doses por ano na forma líquida, num modelo ainda sem similar no país. Além disso, a implementação de tecnologia moderna para envase, oferecendo maior segurança, precisão na dosagem e conveniência para campanhas de vacinação em massa.\nA unidade também vai possibilitar a incorporação da capacidade de processamento final de vacinas liofilizadas (processo utilizado para remover água ou solventes, preservando sua estabilidade e eficácia). Essa tecnologia estende a vida útil dos imunizantes e facilita a distribuição global, especialmente em regiões com infraestrutura limitada para armazenamento e transporte, superando limitações de refrigeração.",
+              "start": 769
+            }
+          ],
+          "reference_value": "R$ 600 milhões",
+          "scope_supported": false,
+          "semantic_adjudication": "not_certified",
+          "status": "UNRESOLVED",
+          "strict_role_value": false
+        }
+      ],
+      "fragmentation": 14,
+      "location_convention": "html_unicode_codepoints",
+      "physical_reference_evidence_pages": [],
+      "rationale": "The bank reports an approved financing for the Butantan institution. Future vaccine production and large budget do not establish a new application for the reader. An existing innovation program is mentioned as context only.",
+      "record_id": "M30-N02-R1",
+      "reference": {
+        "discovery_label": "unrelated_or_non_actionable",
+        "modality": "credito",
+        "opportunity_label": "not_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "not_applicable"
+      },
+      "reference_characters": 3160,
+      "reference_evidence": [
+        {
+          "end": 3929,
+          "evidence_id": "M30-N02-R1-E1",
+          "page": null,
+          "quote": "BNDES aprova R$ 600 mi para Instituto Butantan implantar Centro de Imunobiológicos\nPor Agência BNDES de Notícias\nPublicado em 16/10/2026 às 09:31\nAtualizado em 16/10/2026 às 09:43\n3 min de leitura\nUnidade vai produzir vacinas para prevenção de diversas doenças e anticorpos monoclonais para tratamento câncer, doenças autoimunes e esclerose múltipla\nO Banco Nacional de Desenvolvimento Econômico e Social (BNDES) aprovou R$ 600 milhões para o Instituto Butantan, por meio da Fundação Butantan, implantar o Centro de Processamento Final de Imunobiológicos (CPFI 4), em São Paulo (SP). Na nova unidade fabril, os recursos do Programa BNDES Mais inovação permitirão a realização de processos de formulação, envase, inspeção automática e rotulagem de vacinas e medicamentos de fabricação exclusiva do Instituto Butantan no Brasil.\nA unidade será capaz de processar um conjunto de imunobiológicos que inclui vacinas para prevenção de doenças diversas (Influenza, Covid, HPV e Hepatite A, entre outras) e anticorpos monoclonais utilizados em terapias avançadas e de elevado valor para o Sistema Único de Saúde (SUS), como o adalimumabe (indicado para doenças autoimunes), o pembrolizumabe (oncológico) e o natalizumabe (esclerose múltipla).\nO CPFI 4 será equipado com tecnologias avançadas, ainda pouco utilizadas no Brasil, incluindo sistemas de envase com uso de isoladores, além de liofilização e envase em seringas. A unidade vai ocupar uma área total construída de 15.000 m², distribuídos em dois pavimentos produtivos, além de áreas de acesso e manutenção. O investimento total é de R$ 1,06 bilhão.\n“O apoio do BNDES para a construção do centro permitirá a produção de vacinas e medicamentos biológicos que ainda não são produzidos no Brasil, com segurança, ampliando a oferta de tratamentos e outros produtos terapêuticos para a população por meio do Sistema Único de Saúde (SUS)”, explica o presidente do BNDES, Aloizio Mercadante.\n“É muito importante esse financiamento para que possamos avançar cada vez mais em busca de autonomia na produção de imunobiológicos. É estratégico para o país aumentar nossa capacidade de dar respostas às demandas da saúde pública, combatendo e prevenindo doenças”, afirma Rui Curi, vice-diretor do Instituto Butantan.\nCPFI 4 –\nO Centro vai integrar de forma inédita e em larga escala tecnologias de ponta que representam avanço significativo no processamento final de imunobiológicos, como as linhas de envase com isoladores, que permitirão a produção de mais de 600 milhões de doses por ano na forma líquida, num modelo ainda sem similar no país. Além disso, a implementação de tecnologia moderna para envase, oferecendo maior segurança, precisão na dosagem e conveniência para campanhas de vacinação em massa.\nA unidade também vai possibilitar a incorporação da capacidade de processamento final de vacinas liofilizadas (processo utilizado para remover água ou solventes, preservando sua estabilidade e eficácia). Essa tecnologia estende a vida útil dos imunizantes e facilita a distribuição global, especialmente em regiões com infraestrutura limitada para armazenamento e transporte, superando limitações de refrigeração.",
+          "start": 769
+        }
+      ],
+      "representative": "segment-0023",
+      "representative_prediction": {
+        "discovery": "abstain",
+        "end": 3515,
+        "modality": "undetermined",
+        "segment_id": "segment-0023",
+        "start": 3031,
+        "temporal": "undetermined"
+      },
+      "representative_quote": "O Centro vai integrar de forma inédita e em larga escala tecnologias de ponta que representam avanço significativo no processamento final de imunobiológicos, como as linhas de envase com isoladores, que permitirão a produção de mais de 600 milhões de doses por ano na forma líquida, num modelo ainda sem similar no país. Além disso, a implementação de tecnologia moderna para envase, oferecendo maior segurança, precisão na dosagem e conveniência para campanhas de vacinação em massa.",
+      "start": 769,
+      "status": "overlap",
+      "uncertainty_notes": [
+        "Negative applies to this record as a distinct new/current/future opportunity; it does not erase the existence of the underlying program. No new application is supported by these paragraphs."
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 157,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0000",
+      "start": 126,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 180,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0001",
+      "start": 158,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 203,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0002",
+      "start": 181,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 327,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0003",
+      "start": 204,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 336,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0004",
+      "start": 328,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 346,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0005",
+      "start": 337,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 381,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0006",
+      "start": 347,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 414,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0007",
+      "start": 382,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 429,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0008",
+      "start": 415,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 432,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0009",
+      "start": 430,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 435,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0010",
+      "start": 433,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 851,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-N02-R1"
+      ],
+      "segment_id": "segment-0011",
+      "start": 769,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 881,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-N02-R1"
+      ],
+      "segment_id": "segment-0012",
+      "start": 852,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 914,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-N02-R1"
+      ],
+      "segment_id": "segment-0013",
+      "start": 882,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 948,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-N02-R1"
+      ],
+      "segment_id": "segment-0014",
+      "start": 915,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 965,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-N02-R1"
+      ],
+      "segment_id": "segment-0015",
+      "start": 949,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 1118,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-N02-R1"
+      ],
+      "segment_id": "segment-0016",
+      "start": 966,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 1595,
+      "field_count": 2,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-N02-R1"
+      ],
+      "segment_id": "segment-0017",
+      "start": 1119,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 2003,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-N02-R1"
+      ],
+      "segment_id": "segment-0018",
+      "start": 1596,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 2367,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-N02-R1"
+      ],
+      "segment_id": "segment-0019",
+      "start": 2004,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 2702,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-N02-R1"
+      ],
+      "segment_id": "segment-0020",
+      "start": 2368,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 3021,
+      "field_count": 0,
+      "modality": "credito",
+      "physical_page": null,
+      "reference_records": [
+        "M30-N02-R1"
+      ],
+      "segment_id": "segment-0021",
+      "start": 2703,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 3030,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-N02-R1"
+      ],
+      "segment_id": "segment-0022",
+      "start": 3022,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 3515,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-N02-R1"
+      ],
+      "segment_id": "segment-0023",
+      "start": 3031,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 3929,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-N02-R1"
+      ],
+      "segment_id": "segment-0024",
+      "start": 3516,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 3943,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0025",
+      "start": 3930,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 3949,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0026",
+      "start": 3944,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 3965,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0027",
+      "start": 3950,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 3975,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0028",
+      "start": 3966,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 3985,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0029",
+      "start": 3976,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 3993,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0030",
+      "start": 3986,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 4013,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0031",
+      "start": 3994,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 4040,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0032",
+      "start": 4014,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 4060,
+      "field_count": 0,
+      "modality": "credito",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0033",
+      "start": 4041,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 4083,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0034",
+      "start": 4061,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 4092,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0035",
+      "start": 4084,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 4105,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0036",
+      "start": 4093,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 4110,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0037",
+      "start": 4106,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 4116,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0038",
+      "start": 4111,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 5119,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0039",
+      "start": 5031,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 5159,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0040",
+      "start": 5120,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 5161,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0041",
+      "start": 5160,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 5220,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0042",
+      "start": 5162,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 5228,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0043",
+      "start": 5221,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    }
+  ],
+  "semantic_reviews": [],
+  "status": "processed"
+}

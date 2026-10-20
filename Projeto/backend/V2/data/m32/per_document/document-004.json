@@ -1,0 +1,1721 @@
+{
+  "diagnostics": [
+    "passive_not_rendered_DOM",
+    "unfrozen_attachments_unavailable"
+  ],
+  "document_id": "M30-C05",
+  "error_cases": [
+    {
+      "case_id": "M30-C05-R1:discovery_label",
+      "certainty": "unresolved_disagreement",
+      "dimension": "discovery_label",
+      "document_id": "M30-C05",
+      "error_codes": [
+        "OPPORTUNITY_EXISTENCE_CONFUSION",
+        "REFERENCE_AMBIGUITY"
+      ],
+      "expected_behavior": "Resolve this dimension from same-record evidence; provisional label is comparison, not authority.",
+      "next_action": "Compare full frozen context and request authorized adjudication; do not rewrite labels.",
+      "observed": {
+        "discovery": "abstain",
+        "end": 836,
+        "modality": "undetermined",
+        "segment_id": "segment-0019",
+        "start": 682,
+        "temporal": "undetermined"
+      },
+      "record_id": "M30-C05-R1",
+      "reference": {
+        "discovery_label": "opportunity_signal",
+        "modality": "credito",
+        "opportunity_label": "uncertain",
+        "review_status": "provisional",
+        "temporal_status": "undetermined"
+      },
+      "review_status": "provisional",
+      "root_cause": "Context fragmentation or semantic rule/reference ambiguity; see all-overlap graph before adjudication.",
+      "root_cause_confidence": "low",
+      "segment_id": "segment-0019",
+      "severity": "medium",
+      "supporting_evidence": {
+        "end": 836,
+        "quote": "Acompanhe o desempenho das linhas do BNDES Finame, com números de operações e valores aprovados por região, ranking dos agentes financeiros e outros dados",
+        "start": 682
+      }
+    },
+    {
+      "case_id": "M30-C05-R1:modality",
+      "certainty": "unresolved_disagreement",
+      "dimension": "modality",
+      "document_id": "M30-C05",
+      "error_codes": [
+        "MODALITY_CONFUSION",
+        "REFERENCE_AMBIGUITY"
+      ],
+      "expected_behavior": "Resolve this dimension from same-record evidence; provisional label is comparison, not authority.",
+      "next_action": "Compare full frozen context and request authorized adjudication; do not rewrite labels.",
+      "observed": {
+        "discovery": "abstain",
+        "end": 836,
+        "modality": "undetermined",
+        "segment_id": "segment-0019",
+        "start": 682,
+        "temporal": "undetermined"
+      },
+      "record_id": "M30-C05-R1",
+      "reference": {
+        "discovery_label": "opportunity_signal",
+        "modality": "credito",
+        "opportunity_label": "uncertain",
+        "review_status": "provisional",
+        "temporal_status": "undetermined"
+      },
+      "review_status": "provisional",
+      "root_cause": "Context fragmentation or semantic rule/reference ambiguity; see all-overlap graph before adjudication.",
+      "root_cause_confidence": "low",
+      "segment_id": "segment-0019",
+      "severity": "medium",
+      "supporting_evidence": {
+        "end": 836,
+        "quote": "Acompanhe o desempenho das linhas do BNDES Finame, com números de operações e valores aprovados por região, ranking dos agentes financeiros e outros dados",
+        "start": 682
+      }
+    },
+    {
+      "case_id": "M30-C05-R1:segmentation",
+      "certainty": "supported_observation",
+      "dimension": "structural",
+      "document_id": "M30-C05",
+      "error_codes": [
+        "SEGMENTATION_OVER"
+      ],
+      "expected_behavior": "A meaningful record should retain its own associated context; whitespace-only boundary differences are not semantic defects.",
+      "next_action": "Inspect semantic usefulness of boundaries before changing segmentation.",
+      "observed": {
+        "coverage": {
+          "denominator": 531,
+          "numerator": 523,
+          "value": 0.9849340866290018
+        },
+        "fragmentation": 9
+      },
+      "record_id": "M30-C05-R1",
+      "reference": {
+        "discovery_label": "opportunity_signal",
+        "modality": "credito",
+        "opportunity_label": "uncertain",
+        "review_status": "provisional",
+        "temporal_status": "undetermined"
+      },
+      "review_status": "provisional",
+      "root_cause": "Structure-derived units differ from provisional annotated record spans.",
+      "root_cause_confidence": "high",
+      "segment_id": "segment-0019",
+      "severity": "medium",
+      "supporting_evidence": {
+        "edges": [
+          {
+            "end": 317,
+            "exact": false,
+            "intersection": 12,
+            "intersection_end": 317,
+            "intersection_start": 305,
+            "iou": 0.022598870056497175,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.022598870056497175,
+            "segment_id": "segment-0011",
+            "start": 305
+          },
+          {
+            "end": 359,
+            "exact": false,
+            "intersection": 41,
+            "intersection_end": 359,
+            "intersection_start": 318,
+            "iou": 0.07721280602636535,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.07721280602636535,
+            "segment_id": "segment-0012",
+            "start": 318
+          },
+          {
+            "end": 460,
+            "exact": false,
+            "intersection": 100,
+            "intersection_end": 460,
+            "intersection_start": 360,
+            "iou": 0.18832391713747645,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.18832391713747645,
+            "segment_id": "segment-0013",
+            "start": 360
+          },
+          {
+            "end": 484,
+            "exact": false,
+            "intersection": 23,
+            "intersection_end": 484,
+            "intersection_start": 461,
+            "iou": 0.04331450094161959,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.04331450094161959,
+            "segment_id": "segment-0014",
+            "start": 461
+          },
+          {
+            "end": 526,
+            "exact": false,
+            "intersection": 41,
+            "intersection_end": 526,
+            "intersection_start": 485,
+            "iou": 0.07721280602636535,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.07721280602636535,
+            "segment_id": "segment-0015",
+            "start": 485
+          },
+          {
+            "end": 551,
+            "exact": false,
+            "intersection": 24,
+            "intersection_end": 551,
+            "intersection_start": 527,
+            "iou": 0.04519774011299435,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.04519774011299435,
+            "segment_id": "segment-0016",
+            "start": 527
+          },
+          {
+            "end": 643,
+            "exact": false,
+            "intersection": 91,
+            "intersection_end": 643,
+            "intersection_start": 552,
+            "iou": 0.1713747645951036,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.1713747645951036,
+            "segment_id": "segment-0017",
+            "start": 552
+          },
+          {
+            "end": 681,
+            "exact": false,
+            "intersection": 37,
+            "intersection_end": 681,
+            "intersection_start": 644,
+            "iou": 0.0696798493408663,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.0696798493408663,
+            "segment_id": "segment-0018",
+            "start": 644
+          },
+          {
+            "end": 836,
+            "exact": false,
+            "intersection": 154,
+            "intersection_end": 836,
+            "intersection_start": 682,
+            "iou": 0.2900188323917137,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.2900188323917137,
+            "segment_id": "segment-0019",
+            "start": 682
+          }
+        ],
+        "reference_span": [
+          305,
+          836
+        ]
+      }
+    },
+    {
+      "case_id": "M30-C05-R2:segmentation",
+      "certainty": "supported_observation",
+      "dimension": "structural",
+      "document_id": "M30-C05",
+      "error_codes": [
+        "SEGMENTATION_OVER"
+      ],
+      "expected_behavior": "A meaningful record should retain its own associated context; whitespace-only boundary differences are not semantic defects.",
+      "next_action": "Inspect semantic usefulness of boundaries before changing segmentation.",
+      "observed": {
+        "coverage": {
+          "denominator": 157,
+          "numerator": 156,
+          "value": 0.9936305732484076
+        },
+        "fragmentation": 2
+      },
+      "record_id": "M30-C05-R2",
+      "reference": {
+        "discovery_label": "confirmed_opportunity",
+        "modality": "credito",
+        "opportunity_label": "genuine_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "undetermined"
+      },
+      "review_status": "provisional",
+      "root_cause": "Structure-derived units differ from provisional annotated record spans.",
+      "root_cause_confidence": "high",
+      "segment_id": "segment-0021",
+      "severity": "medium",
+      "supporting_evidence": {
+        "edges": [
+          {
+            "end": 850,
+            "exact": false,
+            "intersection": 13,
+            "intersection_end": 850,
+            "intersection_start": 837,
+            "iou": 0.08280254777070063,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.08280254777070063,
+            "segment_id": "segment-0020",
+            "start": 837
+          },
+          {
+            "end": 994,
+            "exact": false,
+            "intersection": 143,
+            "intersection_end": 994,
+            "intersection_start": 851,
+            "iou": 0.910828025477707,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.910828025477707,
+            "segment_id": "segment-0021",
+            "start": 851
+          }
+        ],
+        "reference_span": [
+          837,
+          994
+        ]
+      }
+    }
+  ],
+  "extracted_claims": [
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-C05",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "title",
+      "original": "BNDES Finame",
+      "reference_records": [
+        "M30-C05-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0011",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-C05",
+        "end": 317,
+        "page": null,
+        "quote": "BNDES Finame",
+        "raw_sha256": "c0e0a40383fa1af0c4a6ffb82b23908c61a349952cc5ac9ae7985bddd91833d9",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0011",
+        "start": 305,
+        "text_sha256": "fe14ed41c970329144230b15000fa3d0cd3f8ba5b5d78fabaad8b89e4708a359"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-C05",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "title",
+      "original": "Como obter um financiamento BNDES Finame?",
+      "reference_records": [
+        "M30-C05-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0012",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-C05",
+        "end": 359,
+        "page": null,
+        "quote": "Como obter um financiamento BNDES Finame?",
+        "raw_sha256": "c0e0a40383fa1af0c4a6ffb82b23908c61a349952cc5ac9ae7985bddd91833d9",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0012",
+        "start": 318,
+        "text_sha256": "fe14ed41c970329144230b15000fa3d0cd3f8ba5b5d78fabaad8b89e4708a359"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-C05",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "title",
+      "original": "Desempenho operacional - BNDES Finame",
+      "reference_records": [
+        "M30-C05-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0018",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-C05",
+        "end": 681,
+        "page": null,
+        "quote": "Desempenho operacional - BNDES Finame",
+        "raw_sha256": "c0e0a40383fa1af0c4a6ffb82b23908c61a349952cc5ac9ae7985bddd91833d9",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0018",
+        "start": 644,
+        "text_sha256": "fe14ed41c970329144230b15000fa3d0cd3f8ba5b5d78fabaad8b89e4708a359"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-C05",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "title",
+      "original": "Finame Direto",
+      "reference_records": [
+        "M30-C05-R2"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0020",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-C05",
+        "end": 850,
+        "page": null,
+        "quote": "Finame Direto",
+        "raw_sha256": "c0e0a40383fa1af0c4a6ffb82b23908c61a349952cc5ac9ae7985bddd91833d9",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0020",
+        "start": 837,
+        "text_sha256": "fe14ed41c970329144230b15000fa3d0cd3f8ba5b5d78fabaad8b89e4708a359"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-C05",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "borrower_revenue_requirement",
+      "original": "R$ 80 milhões",
+      "reference_records": [
+        "M30-C05-R2"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0021",
+      "semantic_case_id": "M30-C05:segment-0021:field:0",
+      "semantic_support": "supported",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-C05",
+        "end": 994,
+        "page": null,
+        "quote": "Empresas com faturamento anual acima de R$ 80 milhões agora podem solicitar online limite de crédito para aquisição de máquinas e equipamentos.",
+        "raw_sha256": "c0e0a40383fa1af0c4a6ffb82b23908c61a349952cc5ac9ae7985bddd91833d9",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0021",
+        "start": 851,
+        "text_sha256": "fe14ed41c970329144230b15000fa3d0cd3f8ba5b5d78fabaad8b89e4708a359"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-C05",
+      "field_index": 1,
+      "method_version": "m31-deterministic-v2",
+      "name": "applicant_requirements",
+      "original": "Empresas com faturamento anual acima de R$ 80 milhões agora podem solicitar online limite de crédito para aquisição de máquinas e equipamentos.",
+      "reference_records": [
+        "M30-C05-R2"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0021",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-C05",
+        "end": 994,
+        "page": null,
+        "quote": "Empresas com faturamento anual acima de R$ 80 milhões agora podem solicitar online limite de crédito para aquisição de máquinas e equipamentos.",
+        "raw_sha256": "c0e0a40383fa1af0c4a6ffb82b23908c61a349952cc5ac9ae7985bddd91833d9",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0021",
+        "start": 851,
+        "text_sha256": "fe14ed41c970329144230b15000fa3d0cd3f8ba5b5d78fabaad8b89e4708a359"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-C05",
+      "field_index": 2,
+      "method_version": "m31-deterministic-v2",
+      "name": "application_instructions",
+      "original": "Empresas com faturamento anual acima de R$ 80 milhões agora podem solicitar online limite de crédito para aquisição de máquinas e equipamentos.",
+      "reference_records": [
+        "M30-C05-R2"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0021",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-C05",
+        "end": 994,
+        "page": null,
+        "quote": "Empresas com faturamento anual acima de R$ 80 milhões agora podem solicitar online limite de crédito para aquisição de máquinas e equipamentos.",
+        "raw_sha256": "c0e0a40383fa1af0c4a6ffb82b23908c61a349952cc5ac9ae7985bddd91833d9",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0021",
+        "start": 851,
+        "text_sha256": "fe14ed41c970329144230b15000fa3d0cd3f8ba5b5d78fabaad8b89e4708a359"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-C05",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "title",
+      "original": "BNDES Finame - máquinas e equipamentos",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0024",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-C05",
+        "end": 1139,
+        "page": null,
+        "quote": "BNDES Finame - máquinas e equipamentos",
+        "raw_sha256": "c0e0a40383fa1af0c4a6ffb82b23908c61a349952cc5ac9ae7985bddd91833d9",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0024",
+        "start": 1101,
+        "text_sha256": "fe14ed41c970329144230b15000fa3d0cd3f8ba5b5d78fabaad8b89e4708a359"
+      }
+    }
+  ],
+  "provenance": {
+    "byte_length": 59634,
+    "category_evidence": "BNDES Finame\nComo obter um financiamento BNDES Finame?\nEntenda o BNDES Finame, as linhas de financiamento disponíveis e o processo de solicitação de apoio.\nMáquinas e equipamentos\nConheça os itens credenciados pelo BNDES.\nInstituições financeiras\nSaiba quais são os agentes financeiros credenciados a conceder financiamentos BNDES Finame.\nDesempenho operacional - BNDES Finame\nAcompanhe o desempenho das linhas do BNDES Finame, com números de operações e valores aprovados por região, ranking dos agentes financeiros e outros dados",
+    "content_type": "text/html",
+    "derivation_method": "stdlib-HTMLParser-data-whitespace-v1; excludes script/style/noscript/template; not rendered DOM",
+    "document_category": "program_information",
+    "document_id": "M30-C05",
+    "document_version": null,
+    "final_url": "https://www.bndes.gov.br/wps/portal/site/home/financiamento/finame",
+    "original_filename": "finame",
+    "original_url": "https://www.bndes.gov.br/wps/portal/site/home/financiamento/finame",
+    "publication_date": null,
+    "raw_path": "raw/M30-C05.html",
+    "restrictions": "Research pilot local frozen copy only; no redistribution license inferred. No scripts executed, no forms submitted, no applicant records intentionally collected. Public navigation/staff attribution may remain in original bytes.",
+    "retrieval_status": "acquired",
+    "retrieved_at": "2026-10-19T04:38:08.152562+00:00",
+    "sha256": "c0e0a40383fa1af0c4a6ffb82b23908c61a349952cc5ac9ae7985bddd91833d9",
+    "source_authority_notes": "Public HTTPS page hosted by the named institution; authorship asserted by host/content, not cryptographically authenticated. Not source-readiness approval.",
+    "source_organization": "BNDES",
+    "text_path": "text/M30-C05.txt",
+    "text_sha256": "fe14ed41c970329144230b15000fa3d0cd3f8ba5b5d78fabaad8b89e4708a359"
+  },
+  "records": [
+    {
+      "all_overlap_predictions": [
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0011",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "opportunity_signal",
+          "modality": "credito",
+          "segment_id": "segment-0012",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "opportunity_signal",
+          "modality": "credito",
+          "segment_id": "segment-0013",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0014",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0015",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0016",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "opportunity_signal",
+          "modality": "credito",
+          "segment_id": "segment-0017",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0018",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0019",
+          "temporal": "undetermined"
+        }
+      ],
+      "any_exact_boundary": false,
+      "coverage": {
+        "denominator": 531,
+        "numerator": 523,
+        "value": 0.9849340866290018
+      },
+      "covered_characters": 523,
+      "disagreements": [
+        "discovery_label",
+        "modality"
+      ],
+      "discovery_histogram": {
+        "abstain": 6,
+        "opportunity_signal": 3
+      },
+      "document_id": "M30-C05",
+      "edges": [
+        {
+          "end": 317,
+          "exact": false,
+          "intersection": 12,
+          "intersection_end": 317,
+          "intersection_start": 305,
+          "iou": 0.022598870056497175,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.022598870056497175,
+          "segment_id": "segment-0011",
+          "start": 305
+        },
+        {
+          "end": 359,
+          "exact": false,
+          "intersection": 41,
+          "intersection_end": 359,
+          "intersection_start": 318,
+          "iou": 0.07721280602636535,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.07721280602636535,
+          "segment_id": "segment-0012",
+          "start": 318
+        },
+        {
+          "end": 460,
+          "exact": false,
+          "intersection": 100,
+          "intersection_end": 460,
+          "intersection_start": 360,
+          "iou": 0.18832391713747645,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.18832391713747645,
+          "segment_id": "segment-0013",
+          "start": 360
+        },
+        {
+          "end": 484,
+          "exact": false,
+          "intersection": 23,
+          "intersection_end": 484,
+          "intersection_start": 461,
+          "iou": 0.04331450094161959,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.04331450094161959,
+          "segment_id": "segment-0014",
+          "start": 461
+        },
+        {
+          "end": 526,
+          "exact": false,
+          "intersection": 41,
+          "intersection_end": 526,
+          "intersection_start": 485,
+          "iou": 0.07721280602636535,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.07721280602636535,
+          "segment_id": "segment-0015",
+          "start": 485
+        },
+        {
+          "end": 551,
+          "exact": false,
+          "intersection": 24,
+          "intersection_end": 551,
+          "intersection_start": 527,
+          "iou": 0.04519774011299435,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.04519774011299435,
+          "segment_id": "segment-0016",
+          "start": 527
+        },
+        {
+          "end": 643,
+          "exact": false,
+          "intersection": 91,
+          "intersection_end": 643,
+          "intersection_start": 552,
+          "iou": 0.1713747645951036,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.1713747645951036,
+          "segment_id": "segment-0017",
+          "start": 552
+        },
+        {
+          "end": 681,
+          "exact": false,
+          "intersection": 37,
+          "intersection_end": 681,
+          "intersection_start": 644,
+          "iou": 0.0696798493408663,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.0696798493408663,
+          "segment_id": "segment-0018",
+          "start": 644
+        },
+        {
+          "end": 836,
+          "exact": false,
+          "intersection": 154,
+          "intersection_end": 836,
+          "intersection_start": 682,
+          "iou": 0.2900188323917137,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.2900188323917137,
+          "segment_id": "segment-0019",
+          "start": 682
+        }
+      ],
+      "end": 836,
+      "fields": [
+        {
+          "candidates": [
+            {
+              "diagnostic_status": "traceable_not_semantically_certified",
+              "field_index": 0,
+              "method_version": "m31-deterministic-v2",
+              "name": "title",
+              "original": "BNDES Finame",
+              "schema_version": "m31-extraction-v1",
+              "segment_id": "segment-0011",
+              "uncertainty": "heuristic role assignment; not authenticated or normalized",
+              "witness": {
+                "document_id": "M30-C05",
+                "end": 317,
+                "page": null,
+                "quote": "BNDES Finame",
+                "raw_sha256": "c0e0a40383fa1af0c4a6ffb82b23908c61a349952cc5ac9ae7985bddd91833d9",
+                "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+                "schema_version": "m31-extraction-v1",
+                "segment_id": "segment-0011",
+                "start": 305,
+                "text_sha256": "fe14ed41c970329144230b15000fa3d0cd3f8ba5b5d78fabaad8b89e4708a359"
+              }
+            },
+            {
+              "diagnostic_status": "traceable_not_semantically_certified",
+              "field_index": 0,
+              "method_version": "m31-deterministic-v2",
+              "name": "title",
+              "original": "Como obter um financiamento BNDES Finame?",
+              "schema_version": "m31-extraction-v1",
+              "segment_id": "segment-0012",
+              "uncertainty": "heuristic role assignment; not authenticated or normalized",
+              "witness": {
+                "document_id": "M30-C05",
+                "end": 359,
+                "page": null,
+                "quote": "Como obter um financiamento BNDES Finame?",
+                "raw_sha256": "c0e0a40383fa1af0c4a6ffb82b23908c61a349952cc5ac9ae7985bddd91833d9",
+                "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+                "schema_version": "m31-extraction-v1",
+                "segment_id": "segment-0012",
+                "start": 318,
+                "text_sha256": "fe14ed41c970329144230b15000fa3d0cd3f8ba5b5d78fabaad8b89e4708a359"
+              }
+            },
+            {
+              "diagnostic_status": "traceable_not_semantically_certified",
+              "field_index": 0,
+              "method_version": "m31-deterministic-v2",
+              "name": "title",
+              "original": "Desempenho operacional - BNDES Finame",
+              "schema_version": "m31-extraction-v1",
+              "segment_id": "segment-0018",
+              "uncertainty": "heuristic role assignment; not authenticated or normalized",
+              "witness": {
+                "document_id": "M30-C05",
+                "end": 681,
+                "page": null,
+                "quote": "Desempenho operacional - BNDES Finame",
+                "raw_sha256": "c0e0a40383fa1af0c4a6ffb82b23908c61a349952cc5ac9ae7985bddd91833d9",
+                "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+                "schema_version": "m31-extraction-v1",
+                "segment_id": "segment-0018",
+                "start": 644,
+                "text_sha256": "fe14ed41c970329144230b15000fa3d0cd3f8ba5b5d78fabaad8b89e4708a359"
+              }
+            }
+          ],
+          "name": "title",
+          "reason": "same literal and role in record; entailment remains unreviewed",
+          "reference_evidence": [
+            {
+              "end": 836,
+              "evidence_id": "M30-C05-R1-E1",
+              "page": null,
+              "quote": "BNDES Finame\nComo obter um financiamento BNDES Finame?\nEntenda o BNDES Finame, as linhas de financiamento disponíveis e o processo de solicitação de apoio.\nMáquinas e equipamentos\nConheça os itens credenciados pelo BNDES.\nInstituições financeiras\nSaiba quais são os agentes financeiros credenciados a conceder financiamentos BNDES Finame.\nDesempenho operacional - BNDES Finame\nAcompanhe o desempenho das linhas do BNDES Finame, com números de operações e valores aprovados por região, ranking dos agentes financeiros e outros dados",
+              "start": 305
+            }
+          ],
+          "reference_value": "BNDES Finame",
+          "scope_supported": true,
+          "semantic_adjudication": "not_certified",
+          "status": "MATCH",
+          "strict_role_value": true
+        }
+      ],
+      "fragmentation": 9,
+      "location_convention": "html_unicode_codepoints",
+      "physical_reference_evidence_pages": [],
+      "rationale": "Overview/navigation points to credit lines and financing agents but this scoped overview does not establish a particular complete instrument with beneficiary access conditions. Relevant discovery signal, not a confirmed application opportunity.",
+      "record_id": "M30-C05-R1",
+      "reference": {
+        "discovery_label": "opportunity_signal",
+        "modality": "credito",
+        "opportunity_label": "uncertain",
+        "review_status": "provisional",
+        "temporal_status": "undetermined"
+      },
+      "reference_characters": 531,
+      "reference_evidence": [
+        {
+          "end": 836,
+          "evidence_id": "M30-C05-R1-E1",
+          "page": null,
+          "quote": "BNDES Finame\nComo obter um financiamento BNDES Finame?\nEntenda o BNDES Finame, as linhas de financiamento disponíveis e o processo de solicitação de apoio.\nMáquinas e equipamentos\nConheça os itens credenciados pelo BNDES.\nInstituições financeiras\nSaiba quais são os agentes financeiros credenciados a conceder financiamentos BNDES Finame.\nDesempenho operacional - BNDES Finame\nAcompanhe o desempenho das linhas do BNDES Finame, com números de operações e valores aprovados por região, ranking dos agentes financeiros e outros dados",
+          "start": 305
+        }
+      ],
+      "representative": "segment-0019",
+      "representative_prediction": {
+        "discovery": "abstain",
+        "end": 836,
+        "modality": "undetermined",
+        "segment_id": "segment-0019",
+        "start": 682,
+        "temporal": "undetermined"
+      },
+      "representative_quote": "Acompanhe o desempenho das linhas do BNDES Finame, com números de operações e valores aprovados por região, ranking dos agentes financeiros e outros dados",
+      "start": 305,
+      "status": "overlap",
+      "uncertainty_notes": [
+        "Overview and navigation are not a canonical opportunity; details are on unacquired linked pages. Finame Direto is annotated as a separate record."
+      ]
+    },
+    {
+      "all_overlap_predictions": [
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0020",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "confirmed_opportunity",
+          "modality": "credito",
+          "segment_id": "segment-0021",
+          "temporal": "undetermined"
+        }
+      ],
+      "any_exact_boundary": false,
+      "coverage": {
+        "denominator": 157,
+        "numerator": 156,
+        "value": 0.9936305732484076
+      },
+      "covered_characters": 156,
+      "disagreements": [],
+      "discovery_histogram": {
+        "abstain": 1,
+        "confirmed_opportunity": 1
+      },
+      "document_id": "M30-C05",
+      "edges": [
+        {
+          "end": 850,
+          "exact": false,
+          "intersection": 13,
+          "intersection_end": 850,
+          "intersection_start": 837,
+          "iou": 0.08280254777070063,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.08280254777070063,
+          "segment_id": "segment-0020",
+          "start": 837
+        },
+        {
+          "end": 994,
+          "exact": false,
+          "intersection": 143,
+          "intersection_end": 994,
+          "intersection_start": 851,
+          "iou": 0.910828025477707,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.910828025477707,
+          "segment_id": "segment-0021",
+          "start": 851
+        }
+      ],
+      "end": 994,
+      "fields": [
+        {
+          "candidates": [
+            {
+              "diagnostic_status": "traceable_not_semantically_certified",
+              "field_index": 0,
+              "method_version": "m31-deterministic-v2",
+              "name": "title",
+              "original": "Finame Direto",
+              "schema_version": "m31-extraction-v1",
+              "segment_id": "segment-0020",
+              "uncertainty": "heuristic role assignment; not authenticated or normalized",
+              "witness": {
+                "document_id": "M30-C05",
+                "end": 850,
+                "page": null,
+                "quote": "Finame Direto",
+                "raw_sha256": "c0e0a40383fa1af0c4a6ffb82b23908c61a349952cc5ac9ae7985bddd91833d9",
+                "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+                "schema_version": "m31-extraction-v1",
+                "segment_id": "segment-0020",
+                "start": 837,
+                "text_sha256": "fe14ed41c970329144230b15000fa3d0cd3f8ba5b5d78fabaad8b89e4708a359"
+              }
+            }
+          ],
+          "name": "title",
+          "reason": "same literal and role in record; entailment remains unreviewed",
+          "reference_evidence": [
+            {
+              "end": 994,
+              "evidence_id": "M30-C05-R2-E1",
+              "page": null,
+              "quote": "Finame Direto\nEmpresas com faturamento anual acima de R$ 80 milhões agora podem solicitar online limite de crédito para aquisição de máquinas e equipamentos.",
+              "start": 837
+            }
+          ],
+          "reference_value": "Finame Direto",
+          "scope_supported": true,
+          "semantic_adjudication": "not_certified",
+          "status": "MATCH",
+          "strict_role_value": true
+        },
+        {
+          "candidates": [
+            {
+              "diagnostic_status": "traceable_not_semantically_certified",
+              "field_index": 1,
+              "method_version": "m31-deterministic-v2",
+              "name": "applicant_requirements",
+              "original": "Empresas com faturamento anual acima de R$ 80 milhões agora podem solicitar online limite de crédito para aquisição de máquinas e equipamentos.",
+              "schema_version": "m31-extraction-v1",
+              "segment_id": "segment-0021",
+              "uncertainty": "heuristic role assignment; not authenticated or normalized",
+              "witness": {
+                "document_id": "M30-C05",
+                "end": 994,
+                "page": null,
+                "quote": "Empresas com faturamento anual acima de R$ 80 milhões agora podem solicitar online limite de crédito para aquisição de máquinas e equipamentos.",
+                "raw_sha256": "c0e0a40383fa1af0c4a6ffb82b23908c61a349952cc5ac9ae7985bddd91833d9",
+                "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+                "schema_version": "m31-extraction-v1",
+                "segment_id": "segment-0021",
+                "start": 851,
+                "text_sha256": "fe14ed41c970329144230b15000fa3d0cd3f8ba5b5d78fabaad8b89e4708a359"
+              }
+            }
+          ],
+          "name": "applicant_requirements",
+          "reason": "same/aliased role with related literal; qualifiers may be missing or extra",
+          "reference_evidence": [
+            {
+              "end": 994,
+              "evidence_id": "M30-C05-R2-E1",
+              "page": null,
+              "quote": "Finame Direto\nEmpresas com faturamento anual acima de R$ 80 milhões agora podem solicitar online limite de crédito para aquisição de máquinas e equipamentos.",
+              "start": 837
+            }
+          ],
+          "reference_value": "Empresas com faturamento anual acima de R$ 80 milhões",
+          "scope_supported": true,
+          "semantic_adjudication": "not_certified",
+          "status": "PARTIAL",
+          "strict_role_value": false
+        },
+        {
+          "candidates": [],
+          "name": "resource_type",
+          "reason": "requested target role outside implemented M31 field scope",
+          "reference_evidence": [
+            {
+              "end": 994,
+              "evidence_id": "M30-C05-R2-E1",
+              "page": null,
+              "quote": "Finame Direto\nEmpresas com faturamento anual acima de R$ 80 milhões agora podem solicitar online limite de crédito para aquisição de máquinas e equipamentos.",
+              "start": 837
+            }
+          ],
+          "reference_value": "limite de crédito",
+          "scope_supported": false,
+          "semantic_adjudication": "not_certified",
+          "status": "UNRESOLVED",
+          "strict_role_value": false
+        }
+      ],
+      "fragmentation": 2,
+      "location_convention": "html_unicode_codepoints",
+      "physical_reference_evidence_pages": [],
+      "rationale": "The separate Finame Direto record identifies a credit instrument, its equipment purpose, the annual-revenue threshold and the ability to request a credit limit online. This supports existence, not automatic approval or an explicit deadline.",
+      "record_id": "M30-C05-R2",
+      "reference": {
+        "discovery_label": "confirmed_opportunity",
+        "modality": "credito",
+        "opportunity_label": "genuine_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "undetermined"
+      },
+      "reference_characters": 157,
+      "reference_evidence": [
+        {
+          "end": 994,
+          "evidence_id": "M30-C05-R2-E1",
+          "page": null,
+          "quote": "Finame Direto\nEmpresas com faturamento anual acima de R$ 80 milhões agora podem solicitar online limite de crédito para aquisição de máquinas e equipamentos.",
+          "start": 837
+        }
+      ],
+      "representative": "segment-0021",
+      "representative_prediction": {
+        "discovery": "confirmed_opportunity",
+        "end": 994,
+        "modality": "credito",
+        "segment_id": "segment-0021",
+        "start": 851,
+        "temporal": "undetermined"
+      },
+      "representative_quote": "Empresas com faturamento anual acima de R$ 80 milhões agora podem solicitar online limite de crédito para aquisição de máquinas e equipamentos.",
+      "start": 837,
+      "status": "overlap",
+      "uncertainty_notes": [
+        "No verified application cutoff or continuous-availability guarantee in this record. Snapshot existence is not proof of current openness."
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 39,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0000",
+      "start": 21,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 73,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0001",
+      "start": 69,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 81,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0002",
+      "start": 74,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 96,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0003",
+      "start": 82,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 99,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0004",
+      "start": 97,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 102,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0005",
+      "start": 100,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 104,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0006",
+      "start": 103,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 114,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0007",
+      "start": 105,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 131,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0008",
+      "start": 115,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 236,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0009",
+      "start": 234,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 266,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0010",
+      "start": 237,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 317,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-C05-R1"
+      ],
+      "segment_id": "segment-0011",
+      "start": 305,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 359,
+      "field_count": 1,
+      "modality": "credito",
+      "physical_page": null,
+      "reference_records": [
+        "M30-C05-R1"
+      ],
+      "segment_id": "segment-0012",
+      "start": 318,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 460,
+      "field_count": 0,
+      "modality": "credito",
+      "physical_page": null,
+      "reference_records": [
+        "M30-C05-R1"
+      ],
+      "segment_id": "segment-0013",
+      "start": 360,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 484,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-C05-R1"
+      ],
+      "segment_id": "segment-0014",
+      "start": 461,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 526,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-C05-R1"
+      ],
+      "segment_id": "segment-0015",
+      "start": 485,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 551,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-C05-R1"
+      ],
+      "segment_id": "segment-0016",
+      "start": 527,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 643,
+      "field_count": 0,
+      "modality": "credito",
+      "physical_page": null,
+      "reference_records": [
+        "M30-C05-R1"
+      ],
+      "segment_id": "segment-0017",
+      "start": 552,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 681,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-C05-R1"
+      ],
+      "segment_id": "segment-0018",
+      "start": 644,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 836,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-C05-R1"
+      ],
+      "segment_id": "segment-0019",
+      "start": 682,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 850,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-C05-R2"
+      ],
+      "segment_id": "segment-0020",
+      "start": 837,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "access_heuristic_not_review_authority"
+      ],
+      "discovery": "confirmed_opportunity",
+      "end": 994,
+      "field_count": 3,
+      "modality": "credito",
+      "physical_page": null,
+      "reference_records": [
+        "M30-C05-R2"
+      ],
+      "segment_id": "segment-0021",
+      "start": 851,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 1024,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0022",
+      "start": 995,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 1100,
+      "field_count": 0,
+      "modality": "credito",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0023",
+      "start": 1063,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 1139,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0024",
+      "start": 1101,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 1177,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0025",
+      "start": 1140,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 1943,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0026",
+      "start": 1717,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 2032,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0027",
+      "start": 1944,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 2072,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0028",
+      "start": 2033,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 2133,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0029",
+      "start": 2073,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 2141,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0030",
+      "start": 2134,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 2164,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0031",
+      "start": 2142,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 2181,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0032",
+      "start": 2165,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 2210,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0033",
+      "start": 2200,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 2227,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0034",
+      "start": 2211,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    }
+  ],
+  "semantic_reviews": [
+    {
+      "case_id": "M30-C05:segment-0021:discovery:classification",
+      "certainty": "supported_observation",
+      "claim_kind": "discovery",
+      "context_evidence": [
+        {
+          "end": 994,
+          "page": null,
+          "quote": "Finame Direto\nEmpresas com faturamento anual acima de R$ 80 milhões agora podem solicitar online limite de crédito para aquisição de máquinas e equipamentos.",
+          "start": 837
+        }
+      ],
+      "document_id": "M30-C05",
+      "end": 994,
+      "error_codes": [],
+      "expected_behavior": "Exigir contexto do instrumento e preservar incerteza de acesso/condições.",
+      "expected_claim": "confirmed_opportunity",
+      "field_index": null,
+      "field_name": null,
+      "judgment": "supported",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "quote": "Empresas com faturamento anual acima de R$ 80 milhões agora podem solicitar online limite de crédito para aquisição de máquinas e equipamentos.",
+      "rationale": "O trecho identifica suporte/financiamento e rota ou intervalo de submissão. Confirmação de instrumento não é garantia de aprovação, elegibilidade completa ou janela aberta.",
+      "root_cause": "classify usa conjunções locais de instrumento/acesso; hierarquia entre páginas não existe.",
+      "root_cause_confidence": "high",
+      "segment_id": "segment-0021",
+      "severity": "info",
+      "start": 851
+    },
+    {
+      "case_id": "M30-C05:segment-0021:field:0",
+      "certainty": "supported_observation",
+      "claim_kind": "field",
+      "context_evidence": [
+        {
+          "end": 994,
+          "page": null,
+          "quote": "Finame Direto\nEmpresas com faturamento anual acima de R$ 80 milhões agora podem solicitar online limite de crédito para aquisição de máquinas e equipamentos.",
+          "start": 837
+        }
+      ],
+      "document_id": "M30-C05",
+      "end": 994,
+      "error_codes": [],
+      "expected_behavior": "Manter requisito de receita separado de principal de crédito.",
+      "expected_claim": "R$ 80 milhões",
+      "field_index": 0,
+      "field_name": "borrower_revenue_requirement",
+      "judgment": "supported",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "quote": "Empresas com faturamento anual acima de R$ 80 milhões agora podem solicitar online limite de crédito para aquisição de máquinas e equipamentos.",
+      "rationale": "R$ 80 milhões é faturamento anual mínimo do tomador; não é capital do programa nem limite financiado.",
+      "root_cause": "Conjunção explícita Empresas com faturamento anual acima de no próprio parágrafo.",
+      "root_cause_confidence": "high",
+      "segment_id": "segment-0021",
+      "severity": "info",
+      "start": 851
+    }
+  ],
+  "status": "processed"
+}

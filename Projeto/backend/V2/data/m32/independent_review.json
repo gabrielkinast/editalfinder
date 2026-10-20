@@ -1,0 +1,68 @@
+{
+  "schema_version": "m32-independent-technical-review-v1",
+  "delegation_id": "deleg_12c4ba53",
+  "subagent_id": "sa-0-1a0b7a43",
+  "review_type": "AI read-only technical review; not authenticated human ground truth",
+  "passed": true,
+  "security_concerns": [],
+  "logic_errors": [],
+  "scope": "Frozen evaluator code and outputs, methodology, denominators, reference uncertainty, source evidence and focused semantic cases. Final M32 report was not available to the reviewer and was not reviewed.",
+  "suggestions": [
+    {
+      "severity": "medium",
+      "location": "semantic_reviews.json: C07 segment-0001 and N01 segment-0019",
+      "status": "interpretation_boundary",
+      "finding": "Completed-deal judgments are defensible under annotation_protocol.md 106–109 for new access opportunities, not proof the articles lack useful discovery information. Predictions are opportunity_signal, not confirmed or announced_future.",
+      "parent_response": "Final report explicitly qualifies confirmed_defect as rubric-relative and preserves the broader informational relevance question for adjudication. No extractor or frozen evaluation change."
+    },
+    {
+      "severity": "low",
+      "location": "engine.py broad_relevance summary",
+      "status": "measurement_presentation",
+      "finding": "Predicted null combines abstention, no overlap and operational failure, while full matrices/records retain each state and all denominators.",
+      "parent_response": "Final report documents null composition and directs interpretation to the disaggregated discovery matrix. No frozen result modification."
+    },
+    {
+      "severity": "low",
+      "location": "semantic_reviews.json qualifier-loss observations",
+      "status": "interpretation_boundary",
+      "finding": "Missing até is literal incompleteness; witness retains it and credit_limit already indicates a ceiling. Not necessarily wrong numerical value or unsupported financial claim.",
+      "parent_response": "Partial judgments retained; final report separates qualifier preservation from the four unsupported financial-role claims."
+    },
+    {
+      "severity": "low",
+      "location": "README.md report link",
+      "status": "completion_note",
+      "finding": "M32 report absent at review time; report contents not reviewed.",
+      "parent_response": "Report created by parent during review and finalized afterward; no independent approval of its prose claimed."
+    }
+  ],
+  "reviewer_reported_checks": {
+    "exact_core_reproduction": true,
+    "error_ledger_cases": 93,
+    "review_queue_items": 60,
+    "freeze_entries_matched": 38,
+    "selected_preexisting_entries_matched": 230,
+    "alignment_union_and_permutation_cases": 1000,
+    "pytest_independently_executed": false,
+    "repository_files_created_or_modified": false,
+    "network_install_database_or_write_producing_tests": false
+  },
+  "reviewer_reported_commands": [
+    "read_file/search_files: evaluator modules, tests, M32 docs/artifacts, M30 rubric, M31 financial rules and historical reviews",
+    "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=backend/V2/src backend/V2/.venv/bin/python -B -c <read-only evaluation/hash probe>",
+    "PYTHONDONTWRITEBYTECODE=1 backend/V2/.venv/bin/python -B -c <frozen source and monetary-window inspection>",
+    "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=backend/V2/src backend/V2/.venv/bin/python -B -c <seeded in-memory alignment probe>",
+    "PYTHONDONTWRITEBYTECODE=1 backend/V2/.venv/bin/python -B -c <protected inventory verification>"
+  ],
+  "reviewed_hashes": {
+    "evaluation_results.json": "36625ca2e5d160c40a40eedfa4f1e6cfac78979984068209e9878f4721bd7cf9",
+    "m31/run-v2/predictions.json": "c4c32df2850ac101b4389ae1d91c643f87d1bc129a45e7b96f8586c3fc9ee388",
+    "semantic_reviews.json": "1a822c6bf5e1040e526cdc7c211645b0e9188c6bc004b1f6b0fe0583e571a509",
+    "input_binding.json": "101313039b2909a33a7e4843c993974f3ddf7c8e7c13b98bc702df51722206e8",
+    "freeze.json": "9dfe7fde0f2693273fb8476d200065093c4aab2b5292afddb10badc41daaee1a",
+    "docs/v2/M31_INDEPENDENT_REVIEW.md": "d1c8c3527f0574ba2fad07390f8245ce569ad0a210ae5d67247f56bf8ec02df3",
+    "EDITALFINDER_V2_M31_REVISAO_INDEPENDENTE_CHATGPT.md": "0ddeb0bfbd61a133c708432f54380276f45aed560bde649e66a3f906a3749775"
+  },
+  "limitations": "Reviewer checks are self-reported; the parent verifies the supplied input hashes and full initial inventory separately. The reviewer inspected existing 2165/2134 test logs, not a separate pytest run. PASS concerns measurement methodology, not extractor quality, label truth, production or generalization."
+}

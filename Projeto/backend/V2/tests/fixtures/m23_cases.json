@@ -1,0 +1,58 @@
+{
+  "grant": {"records": [{
+    "title": "Programa sintético de pesquisa aplicada 2026",
+    "official_url": "https://example.org/grant/2026",
+    "official_identifier": "GRANT-01", "publication_cycle": "2026",
+    "content_kind": "instrument", "actionable": true,
+    "temporal_events": [
+      {"role": "publication_date", "value": "2026-01-01", "format": "iso"},
+      {"role": "submission_deadline", "value": "2026-06-30T18:00:00-03:00", "format": "iso"}
+    ],
+    "geographic_scope": "brasil",
+    "geographic_locations": [{"role": "elegibilidade", "state_code": "RS"}],
+    "financial_claims": [
+      {"role": "program_budget", "value": "R$ 10.000.000,00", "format": "brazilian", "unit": "amount"},
+      {"role": "proposal_maximum", "value": "R$ 250.000,00", "format": "brazilian", "unit": "amount"}
+    ],
+    "organization_claims": [{"role": "publishing", "name": "Universidade Sintética"}, {"role": "funding", "name": "Fundação Sintética de Pesquisa"}],
+    "taxonomy_claims": [{"role": "resource_type", "value": "financiamento_nao_reembolsavel"}, {"role": "opportunity_type", "value": "chamada_publica"}, {"role": "area", "value": "tecnologia_e_inovacao"}]
+  }]},
+  "credit": {"records": [{
+    "title": "Linha sintética de financiamento de máquinas",
+    "official_url": "https://example.org/credit/apply", "content_kind": "instrument", "actionable": true,
+    "official_identifier": "CREDIT-01", "publication_cycle": "2026",
+    "credit_purpose": "Aquisição de máquinas produtivas",
+    "credit_principal": "BRL 500000.00", "application_information": "Solicitação pelo formulário oficial",
+    "no_deadline_reason": "fluxo_continuo",
+    "geographic_locations": [{"role": "elegibilidade", "country_code": "BR"}],
+    "organization_claims": [{"role": "funding", "name": "Banco Sintético de Desenvolvimento"}],
+    "taxonomy_claims": [{"role": "resource_type", "value": "credito"}]
+  }]},
+  "investment": {"records": [{
+    "title": "Programa sintético de coinvestimento para startups",
+    "official_url": "https://example.org/invest/apply", "content_kind": "instrument", "actionable": true,
+    "official_identifier": "INVEST-01", "publication_cycle": "2026",
+    "investment_instrument": "Participação societária explicitamente declarada",
+    "investment_ticket": "BRL 500000.00 to 2000000.00",
+    "eligible_applicants": "Startups de base tecnológica",
+    "application_information": "Enviar apresentação pelo formulário indicado",
+    "geographic_locations": [{"role": "elegibilidade", "country_code": "BR", "state_code": "SP"}],
+    "organization_claims": [{"role": "funding", "name": "Fundo Sintético de Investimento"}],
+    "taxonomy_claims": [{"role": "resource_type", "value": "investimento"}]
+  }]},
+  "mixed": {"records": [
+    {"title": "Chamada sintética de fomento", "official_url": "https://example.org/mixed/grant", "official_identifier": "MIX-G", "publication_cycle": "2026", "content_kind": "instrument", "actionable": true, "temporal_events": [{"role": "submission_deadline", "value": "2026-06-30", "format": "iso"}], "financial_claims": [{"role": "program_budget", "value": "BRL 10000", "format": "decimal"}], "geographic_locations": [{"role": "elegibilidade", "state_code": "RS"}], "taxonomy_claims": [{"role": "resource_type", "value": "financiamento_nao_reembolsavel"}]},
+    {"title": "Anúncio sintético de crédito", "official_url": "https://example.org/mixed/credit", "official_identifier": "MIX-C", "publication_cycle": "2026", "content_kind": "instrument", "credit_principal": "BRL 200000", "taxonomy_claims": [{"role": "resource_type", "value": "credito"}]},
+    {"title": "Notícia institucional menciona edital e investimento", "official_url": "https://example.org/mixed/news", "official_identifier": "MIX-N", "publication_cycle": "2026", "content_kind": "news", "taxonomy_claims": [{"role": "resource_type", "value": "bolsa"}]},
+    {"title": "Resultado da seleção de bolsas", "official_url": "https://example.org/mixed/result", "official_identifier": "MIX-R", "publication_cycle": "2026", "content_kind": "result", "taxonomy_claims": [{"role": "resource_type", "value": "bolsa"}]}
+  ]},
+  "ambiguous": {"records": [{
+    "title": "Programa sintético de condições inconclusivas", "official_url": "https://example.org/ambiguous", "content_kind": "instrument",
+    "official_identifier": "AMB-01", "publication_cycle": "2026",
+    "temporal_events": [{"role": "submission_deadline", "value": "2026-05-10", "format": "iso"}, {"role": "submission_deadline", "value": "2026-07-10", "format": "iso"}, {"role": "rectification_date", "value": "2026-04-20", "format": "iso"}],
+    "financial_claims": [{"role": "program_budget", "value": "1.234", "format": "unspecified"}],
+    "organization_claims": [{"role": "publishing", "name": "Entidade Alfa"}, {"role": "funding", "name": "Entidade Beta"}, {"role": "funding", "name": "Entidade Gama"}],
+    "geographic_locations": [{"role": "nao_especificado", "country_code": "BR"}, {"role": "execucao", "state_code": "SP"}],
+    "taxonomy_claims": [{"role": "unspecified", "value": "bolsa"}, {"role": "resource_type", "value": "apoio_hibrido_desconhecido"}]
+  }]}
+}

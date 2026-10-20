@@ -1,0 +1,73 @@
+{
+  "python": "3.11.16",
+  "pydantic": "2.14.1",
+  "platform": "Linux-7.0.0-38-generic-x86_64-with-glibc2.43",
+  "rows": [
+    {
+      "scenario": "duplicates",
+      "identifiers_per_subject": 100,
+      "repeats": 5,
+      "median_seconds": 0.0060648889998446975,
+      "min_seconds": 0.005873309999969933,
+      "max_seconds": 0.0065003099998648395,
+      "supporting_evidence": 4,
+      "serialized_report_bytes": 340411
+    },
+    {
+      "scenario": "duplicates",
+      "identifiers_per_subject": 1000,
+      "repeats": 5,
+      "median_seconds": 0.06044703999987178,
+      "min_seconds": 0.06025864600042041,
+      "max_seconds": 0.08087002199999915,
+      "supporting_evidence": 4,
+      "serialized_report_bytes": 3301411
+    },
+    {
+      "scenario": "duplicates",
+      "identifiers_per_subject": 10000,
+      "repeats": 5,
+      "median_seconds": 0.9934592070003418,
+      "min_seconds": 0.8273369329999696,
+      "max_seconds": 1.016877143000329,
+      "supporting_evidence": 4,
+      "serialized_report_bytes": 32911411
+    },
+    {
+      "scenario": "distinct_namespaces",
+      "identifiers_per_subject": 100,
+      "repeats": 5,
+      "median_seconds": 0.007112065999990591,
+      "min_seconds": 0.006827388000147039,
+      "max_seconds": 0.019414976999996725,
+      "supporting_evidence": 202,
+      "serialized_report_bytes": 558619
+    },
+    {
+      "scenario": "distinct_namespaces",
+      "identifiers_per_subject": 1000,
+      "repeats": 5,
+      "median_seconds": 0.07241527500036682,
+      "min_seconds": 0.07143660200017621,
+      "max_seconds": 0.09599864099982369,
+      "supporting_evidence": 2002,
+      "serialized_report_bytes": 5506819
+    },
+    {
+      "scenario": "distinct_namespaces",
+      "identifiers_per_subject": 10000,
+      "repeats": 5,
+      "median_seconds": 1.130269166999824,
+      "min_seconds": 1.0820775070001218,
+      "max_seconds": 1.381501692999791,
+      "supporting_evidence": 20002,
+      "serialized_report_bytes": 55024819
+    }
+  ],
+  "hardware": {
+    "cpu": "Intel Core i7-1355U",
+    "logical_cpus": 12,
+    "architecture": "x86_64",
+    "notes": "Shared local machine; frequency scaling; no CPU affinity, isolated load, or memory profiling."
+  }
+}

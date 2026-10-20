@@ -1,0 +1,3213 @@
+{
+  "diagnostics": [
+    "passive_not_rendered_DOM",
+    "unfrozen_attachments_unavailable"
+  ],
+  "document_id": "M30-F01",
+  "error_cases": [
+    {
+      "case_id": "M30-F01-R1:segmentation",
+      "certainty": "supported_observation",
+      "dimension": "structural",
+      "document_id": "M30-F01",
+      "error_codes": [
+        "SEGMENTATION_BOUNDARY"
+      ],
+      "expected_behavior": "A meaningful record should retain its own associated context; whitespace-only boundary differences are not semantic defects.",
+      "next_action": "Inspect semantic usefulness of boundaries before changing segmentation.",
+      "observed": {
+        "coverage": {
+          "denominator": 952,
+          "numerator": 951,
+          "value": 0.9989495798319328
+        },
+        "fragmentation": 1
+      },
+      "record_id": "M30-F01-R1",
+      "reference": {
+        "discovery_label": "confirmed_opportunity",
+        "modality": "fomento",
+        "opportunity_label": "genuine_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "open"
+      },
+      "review_status": "provisional",
+      "root_cause": "Structure-derived units differ from provisional annotated record spans.",
+      "root_cause_confidence": "high",
+      "segment_id": "segment-0008",
+      "severity": "medium",
+      "supporting_evidence": {
+        "edges": [
+          {
+            "end": 6735,
+            "exact": false,
+            "intersection": 951,
+            "intersection_end": 6735,
+            "intersection_start": 5784,
+            "iou": 0.9989495798319328,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.9989495798319328,
+            "segment_id": "segment-0008",
+            "start": 5784
+          }
+        ],
+        "reference_span": [
+          5784,
+          6736
+        ]
+      }
+    },
+    {
+      "case_id": "M30-F01-R2:segmentation",
+      "certainty": "supported_observation",
+      "dimension": "structural",
+      "document_id": "M30-F01",
+      "error_codes": [
+        "SEGMENTATION_BOUNDARY"
+      ],
+      "expected_behavior": "A meaningful record should retain its own associated context; whitespace-only boundary differences are not semantic defects.",
+      "next_action": "Inspect semantic usefulness of boundaries before changing segmentation.",
+      "observed": {
+        "coverage": {
+          "denominator": 755,
+          "numerator": 754,
+          "value": 0.9986754966887417
+        },
+        "fragmentation": 1
+      },
+      "record_id": "M30-F01-R2",
+      "reference": {
+        "discovery_label": "confirmed_opportunity",
+        "modality": "fomento",
+        "opportunity_label": "genuine_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "open"
+      },
+      "review_status": "provisional",
+      "root_cause": "Structure-derived units differ from provisional annotated record spans.",
+      "root_cause_confidence": "high",
+      "segment_id": "segment-0009",
+      "severity": "medium",
+      "supporting_evidence": {
+        "edges": [
+          {
+            "end": 7490,
+            "exact": false,
+            "intersection": 754,
+            "intersection_end": 7490,
+            "intersection_start": 6736,
+            "iou": 0.9986754966887417,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.9986754966887417,
+            "segment_id": "segment-0009",
+            "start": 6736
+          }
+        ],
+        "reference_span": [
+          6736,
+          7491
+        ]
+      }
+    },
+    {
+      "case_id": "M30-F01-R3:segmentation",
+      "certainty": "supported_observation",
+      "dimension": "structural",
+      "document_id": "M30-F01",
+      "error_codes": [
+        "SEGMENTATION_BOUNDARY"
+      ],
+      "expected_behavior": "A meaningful record should retain its own associated context; whitespace-only boundary differences are not semantic defects.",
+      "next_action": "Inspect semantic usefulness of boundaries before changing segmentation.",
+      "observed": {
+        "coverage": {
+          "denominator": 722,
+          "numerator": 721,
+          "value": 0.9986149584487535
+        },
+        "fragmentation": 1
+      },
+      "record_id": "M30-F01-R3",
+      "reference": {
+        "discovery_label": "confirmed_opportunity",
+        "modality": "fomento",
+        "opportunity_label": "genuine_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "open"
+      },
+      "review_status": "provisional",
+      "root_cause": "Structure-derived units differ from provisional annotated record spans.",
+      "root_cause_confidence": "high",
+      "segment_id": "segment-0010",
+      "severity": "medium",
+      "supporting_evidence": {
+        "edges": [
+          {
+            "end": 8212,
+            "exact": false,
+            "intersection": 721,
+            "intersection_end": 8212,
+            "intersection_start": 7491,
+            "iou": 0.9986149584487535,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.9986149584487535,
+            "segment_id": "segment-0010",
+            "start": 7491
+          }
+        ],
+        "reference_span": [
+          7491,
+          8213
+        ]
+      }
+    },
+    {
+      "case_id": "M30-F01-R4:segmentation",
+      "certainty": "supported_observation",
+      "dimension": "structural",
+      "document_id": "M30-F01",
+      "error_codes": [
+        "SEGMENTATION_BOUNDARY"
+      ],
+      "expected_behavior": "A meaningful record should retain its own associated context; whitespace-only boundary differences are not semantic defects.",
+      "next_action": "Inspect semantic usefulness of boundaries before changing segmentation.",
+      "observed": {
+        "coverage": {
+          "denominator": 1365,
+          "numerator": 1364,
+          "value": 0.9992673992673993
+        },
+        "fragmentation": 1
+      },
+      "record_id": "M30-F01-R4",
+      "reference": {
+        "discovery_label": "confirmed_opportunity",
+        "modality": "fomento",
+        "opportunity_label": "genuine_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "open"
+      },
+      "review_status": "provisional",
+      "root_cause": "Structure-derived units differ from provisional annotated record spans.",
+      "root_cause_confidence": "high",
+      "segment_id": "segment-0011",
+      "severity": "medium",
+      "supporting_evidence": {
+        "edges": [
+          {
+            "end": 9577,
+            "exact": false,
+            "intersection": 1364,
+            "intersection_end": 9577,
+            "intersection_start": 8213,
+            "iou": 0.9992673992673993,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.9992673992673993,
+            "segment_id": "segment-0011",
+            "start": 8213
+          }
+        ],
+        "reference_span": [
+          8213,
+          9578
+        ]
+      }
+    },
+    {
+      "case_id": "M30-F01:segment-0008:field:3",
+      "certainty": "strong_hypothesis",
+      "claim_kind": "field",
+      "context_evidence": [
+        {
+          "end": 5890,
+          "page": null,
+          "quote": "Chamada Pública CNPq/CAPES Nº 30/2026 – Programa de Mestrado e Doutorado Acadêmico para Inovação – MAI/DAI",
+          "start": 5784
+        },
+        {
+          "end": 6525,
+          "page": null,
+          "quote": "A edição de 2026 do Programa de Mestrado e Doutorado para Inovação (MAI/DAI), que estimula a realização de pesquisas de mestrado e doutorado em universidades em parceria com empresas, recebe propostas até o dia 11 de dezembro. A chamada é realizada pelo Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq) e conta com a parceria da Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES).",
+          "start": 6108
+        },
+        {
+          "end": 6735,
+          "page": null,
+          "quote": "Inscrições:\n19/08/2026 a 11/12/2026",
+          "start": 6700
+        }
+      ],
+      "document_id": "M30-F01",
+      "end": 6525,
+      "error_codes": [
+        "ORGANIZATION_ROLE_CONFUSION",
+        "EVIDENCE_SEMANTIC_MISMATCH"
+      ],
+      "expected_behavior": "Preservar descrição de realização/parceria sem promover automaticamente a papel financeiro autenticado.",
+      "expected_claim": "A edição de 2026 do Programa de Mestrado e Doutorado para Inovação (MAI/DAI), que estimula a realização de pesquisas de mestrado e doutorado em universidades em parceria com empresas, recebe propostas até o dia 11 de dezembro. A chamada é realizada pelo Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq) e conta com a parceria da Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES).",
+      "field_index": 3,
+      "field_name": "funding_organization_expression",
+      "judgment": "unresolved",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "observed": "A edição de 2026 do Programa de Mestrado e Doutorado para Inovação (MAI/DAI), que estimula a realização de pesquisas de mestrado e doutorado em universidades em parceria com empresas, recebe propostas até o dia 11 de dezembro. A chamada é realizada pelo Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq) e conta com a parceria da Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES).",
+      "quote": "A edição de 2026 do Programa de Mestrado e Doutorado para Inovação (MAI/DAI), que estimula a realização de pesquisas de mestrado e doutorado em universidades em parceria com empresas, recebe propostas até o dia 11 de dezembro. A chamada é realizada pelo Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq) e conta com a parceria da Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES).",
+      "rationale": "realizada pelo CNPq e parceria CAPES comprovam organização/realização. Isoladamente não discriminam emissor e financiador de cada componente. Não certificar instituição financiadora só por esse gatilho.",
+      "review_status": "provisional",
+      "root_cause": "role_patterns associa realizada pelo a funding_organization_expression.",
+      "root_cause_confidence": "high",
+      "segment_id": "segment-0008",
+      "severity": "medium",
+      "start": 6108,
+      "supporting_evidence": {
+        "end": 6525,
+        "quote": "A edição de 2026 do Programa de Mestrado e Doutorado para Inovação (MAI/DAI), que estimula a realização de pesquisas de mestrado e doutorado em universidades em parceria com empresas, recebe propostas até o dia 11 de dezembro. A chamada é realizada pelo Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq) e conta com a parceria da Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES).",
+        "start": 6108
+      }
+    }
+  ],
+  "extracted_claims": [
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F01",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "unknown_temporal_expression",
+      "original": "02/12/2024",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0004",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F01",
+        "end": 5698,
+        "page": null,
+        "quote": "02/12/2024 11h56",
+        "raw_sha256": "042687cd2d281eee9ca961cdf7734495dbce975aaee2b021b5974fcc96426eb9",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0004",
+        "start": 5682,
+        "text_sha256": "a9a0eefdd71c4ae2260fcc4a9b89f2956f3fb55909bfc08c8748abf0606fe167"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F01",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "unknown_temporal_expression",
+      "original": "23/02/2026",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0006",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F01",
+        "end": 5729,
+        "page": null,
+        "quote": "23/02/2026 14h51",
+        "raw_sha256": "042687cd2d281eee9ca961cdf7734495dbce975aaee2b021b5974fcc96426eb9",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0006",
+        "start": 5713,
+        "text_sha256": "a9a0eefdd71c4ae2260fcc4a9b89f2956f3fb55909bfc08c8748abf0606fe167"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F01",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "title",
+      "original": "Chamada Pública CNPq/CAPES Nº 30/2026 – Programa de Mestrado e Doutorado Acadêmico para Inovação – MAI/DAI",
+      "reference_records": [
+        "M30-F01-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0008",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F01",
+        "end": 5890,
+        "page": null,
+        "quote": "Chamada Pública CNPq/CAPES Nº 30/2026 – Programa de Mestrado e Doutorado Acadêmico para Inovação – MAI/DAI",
+        "raw_sha256": "042687cd2d281eee9ca961cdf7734495dbce975aaee2b021b5974fcc96426eb9",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0008",
+        "start": 5784,
+        "text_sha256": "a9a0eefdd71c4ae2260fcc4a9b89f2956f3fb55909bfc08c8748abf0606fe167"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F01",
+      "field_index": 1,
+      "method_version": "m31-deterministic-v2",
+      "name": "unknown_temporal_expression",
+      "original": "19/08/2026",
+      "reference_records": [
+        "M30-F01-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0008",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F01",
+        "end": 6076,
+        "page": null,
+        "quote": "19/08/2026 08h53",
+        "raw_sha256": "042687cd2d281eee9ca961cdf7734495dbce975aaee2b021b5974fcc96426eb9",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0008",
+        "start": 6060,
+        "text_sha256": "a9a0eefdd71c4ae2260fcc4a9b89f2956f3fb55909bfc08c8748abf0606fe167"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F01",
+      "field_index": 2,
+      "method_version": "m31-deterministic-v2",
+      "name": "unknown_temporal_expression",
+      "original": "13/10/2026",
+      "reference_records": [
+        "M30-F01-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0008",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F01",
+        "end": 6107,
+        "page": null,
+        "quote": "13/10/2026 12h34",
+        "raw_sha256": "042687cd2d281eee9ca961cdf7734495dbce975aaee2b021b5974fcc96426eb9",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0008",
+        "start": 6091,
+        "text_sha256": "a9a0eefdd71c4ae2260fcc4a9b89f2956f3fb55909bfc08c8748abf0606fe167"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F01",
+      "field_index": 3,
+      "method_version": "m31-deterministic-v2",
+      "name": "funding_organization_expression",
+      "original": "A edição de 2026 do Programa de Mestrado e Doutorado para Inovação (MAI/DAI), que estimula a realização de pesquisas de mestrado e doutorado em universidades em parceria com empresas, recebe propostas até o dia 11 de dezembro. A chamada é realizada pelo Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq) e conta com a parceria da Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES).",
+      "reference_records": [
+        "M30-F01-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0008",
+      "semantic_case_id": "M30-F01:segment-0008:field:3",
+      "semantic_support": "unresolved",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F01",
+        "end": 6525,
+        "page": null,
+        "quote": "A edição de 2026 do Programa de Mestrado e Doutorado para Inovação (MAI/DAI), que estimula a realização de pesquisas de mestrado e doutorado em universidades em parceria com empresas, recebe propostas até o dia 11 de dezembro. A chamada é realizada pelo Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq) e conta com a parceria da Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES).",
+        "raw_sha256": "042687cd2d281eee9ca961cdf7734495dbce975aaee2b021b5974fcc96426eb9",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0008",
+        "start": 6108,
+        "text_sha256": "a9a0eefdd71c4ae2260fcc4a9b89f2956f3fb55909bfc08c8748abf0606fe167"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F01",
+      "field_index": 4,
+      "method_version": "m31-deterministic-v2",
+      "name": "attachment_unavailable",
+      "original": "Anexo II: Plano de Trabalho Programa MAI/DAI",
+      "reference_records": [
+        "M30-F01-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0008",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F01",
+        "end": 6578,
+        "page": null,
+        "quote": "Anexo II: Plano de Trabalho Programa MAI/DAI",
+        "raw_sha256": "042687cd2d281eee9ca961cdf7734495dbce975aaee2b021b5974fcc96426eb9",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0008",
+        "start": 6534,
+        "text_sha256": "a9a0eefdd71c4ae2260fcc4a9b89f2956f3fb55909bfc08c8748abf0606fe167"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F01",
+      "field_index": 5,
+      "method_version": "m31-deterministic-v2",
+      "name": "attachment_unavailable",
+      "original": "Anexo III: Declaração Institucional do Representante MAI/DAI",
+      "reference_records": [
+        "M30-F01-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0008",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F01",
+        "end": 6639,
+        "page": null,
+        "quote": "Anexo III: Declaração Institucional do Representante MAI/DAI",
+        "raw_sha256": "042687cd2d281eee9ca961cdf7734495dbce975aaee2b021b5974fcc96426eb9",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0008",
+        "start": 6579,
+        "text_sha256": "a9a0eefdd71c4ae2260fcc4a9b89f2956f3fb55909bfc08c8748abf0606fe167"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F01",
+      "field_index": 6,
+      "method_version": "m31-deterministic-v2",
+      "name": "attachment_unavailable",
+      "original": "Anexo IV: Carta de Concordância da Instituição Parceira",
+      "reference_records": [
+        "M30-F01-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0008",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F01",
+        "end": 6695,
+        "page": null,
+        "quote": "Anexo IV: Carta de Concordância da Instituição Parceira",
+        "raw_sha256": "042687cd2d281eee9ca961cdf7734495dbce975aaee2b021b5974fcc96426eb9",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0008",
+        "start": 6640,
+        "text_sha256": "a9a0eefdd71c4ae2260fcc4a9b89f2956f3fb55909bfc08c8748abf0606fe167"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F01",
+      "field_index": 7,
+      "method_version": "m31-deterministic-v2",
+      "name": "opening_date",
+      "original": "19/08/2026",
+      "reference_records": [
+        "M30-F01-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0008",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F01",
+        "end": 6735,
+        "page": null,
+        "quote": "19/08/2026 a 11/12/2026",
+        "raw_sha256": "042687cd2d281eee9ca961cdf7734495dbce975aaee2b021b5974fcc96426eb9",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0008",
+        "start": 6712,
+        "text_sha256": "a9a0eefdd71c4ae2260fcc4a9b89f2956f3fb55909bfc08c8748abf0606fe167"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F01",
+      "field_index": 8,
+      "method_version": "m31-deterministic-v2",
+      "name": "submission_deadline",
+      "original": "11/12/2026",
+      "reference_records": [
+        "M30-F01-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0008",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F01",
+        "end": 6735,
+        "page": null,
+        "quote": "19/08/2026 a 11/12/2026",
+        "raw_sha256": "042687cd2d281eee9ca961cdf7734495dbce975aaee2b021b5974fcc96426eb9",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0008",
+        "start": 6712,
+        "text_sha256": "a9a0eefdd71c4ae2260fcc4a9b89f2956f3fb55909bfc08c8748abf0606fe167"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F01",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "title",
+      "original": "Chamada CNPq Nº 34/2026 - Auxílio à Promoção de Eventos Científicos, Tecnológicos e/ou de Inovação - ARC",
+      "reference_records": [
+        "M30-F01-R2"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0009",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F01",
+        "end": 6840,
+        "page": null,
+        "quote": "Chamada CNPq Nº 34/2026 - Auxílio à Promoção de Eventos Científicos, Tecnológicos e/ou de Inovação - ARC",
+        "raw_sha256": "042687cd2d281eee9ca961cdf7734495dbce975aaee2b021b5974fcc96426eb9",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0009",
+        "start": 6736,
+        "text_sha256": "a9a0eefdd71c4ae2260fcc4a9b89f2956f3fb55909bfc08c8748abf0606fe167"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F01",
+      "field_index": 1,
+      "method_version": "m31-deterministic-v2",
+      "name": "unknown_temporal_expression",
+      "original": "14/10/2026",
+      "reference_records": [
+        "M30-F01-R2"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0009",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F01",
+        "end": 7026,
+        "page": null,
+        "quote": "14/10/2026 07h50",
+        "raw_sha256": "042687cd2d281eee9ca961cdf7734495dbce975aaee2b021b5974fcc96426eb9",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0009",
+        "start": 7010,
+        "text_sha256": "a9a0eefdd71c4ae2260fcc4a9b89f2956f3fb55909bfc08c8748abf0606fe167"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F01",
+      "field_index": 2,
+      "method_version": "m31-deterministic-v2",
+      "name": "unknown_temporal_expression",
+      "original": "14/10/2026",
+      "reference_records": [
+        "M30-F01-R2"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0009",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F01",
+        "end": 7057,
+        "page": null,
+        "quote": "14/10/2026 10h48",
+        "raw_sha256": "042687cd2d281eee9ca961cdf7734495dbce975aaee2b021b5974fcc96426eb9",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0009",
+        "start": 7041,
+        "text_sha256": "a9a0eefdd71c4ae2260fcc4a9b89f2956f3fb55909bfc08c8748abf0606fe167"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F01",
+      "field_index": 3,
+      "method_version": "m31-deterministic-v2",
+      "name": "publishing_organization_expression",
+      "original": "O CNPq torna pública a Chamada CNPq nº 34/2026, que tem por objeto a",
+      "reference_records": [
+        "M30-F01-R2"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0009",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F01",
+        "end": 7126,
+        "page": null,
+        "quote": "O CNPq torna pública a Chamada CNPq nº 34/2026, que tem por objeto a",
+        "raw_sha256": "042687cd2d281eee9ca961cdf7734495dbce975aaee2b021b5974fcc96426eb9",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0009",
+        "start": 7058,
+        "text_sha256": "a9a0eefdd71c4ae2260fcc4a9b89f2956f3fb55909bfc08c8748abf0606fe167"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F01",
+      "field_index": 4,
+      "method_version": "m31-deterministic-v2",
+      "name": "execution_location_expression",
+      "original": "poiar a realização no Brasil de eventos de grande porte, de abrangência mundial, internacional ou nacional, relacionados a ciência, tecnologia e inovação, tais como encontros, congressos e outros similares que visem contribuir significativamente para o desenvolvimento científico e tecnológico e a inovação do País.",
+      "reference_records": [
+        "M30-F01-R2"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0009",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F01",
+        "end": 7442,
+        "page": null,
+        "quote": "poiar a realização no Brasil de eventos de grande porte, de abrangência mundial, internacional ou nacional, relacionados a ciência, tecnologia e inovação, tais como encontros, congressos e outros similares que visem contribuir significativamente para o desenvolvimento científico e tecnológico e a inovação do País.",
+        "raw_sha256": "042687cd2d281eee9ca961cdf7734495dbce975aaee2b021b5974fcc96426eb9",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0009",
+        "start": 7127,
+        "text_sha256": "a9a0eefdd71c4ae2260fcc4a9b89f2956f3fb55909bfc08c8748abf0606fe167"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F01",
+      "field_index": 5,
+      "method_version": "m31-deterministic-v2",
+      "name": "opening_date",
+      "original": "14/10/2026",
+      "reference_records": [
+        "M30-F01-R2"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0009",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F01",
+        "end": 7486,
+        "page": null,
+        "quote": "14/10/2026 a 04/12/2026",
+        "raw_sha256": "042687cd2d281eee9ca961cdf7734495dbce975aaee2b021b5974fcc96426eb9",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0009",
+        "start": 7463,
+        "text_sha256": "a9a0eefdd71c4ae2260fcc4a9b89f2956f3fb55909bfc08c8748abf0606fe167"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F01",
+      "field_index": 6,
+      "method_version": "m31-deterministic-v2",
+      "name": "submission_deadline",
+      "original": "04/12/2026",
+      "reference_records": [
+        "M30-F01-R2"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0009",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F01",
+        "end": 7486,
+        "page": null,
+        "quote": "14/10/2026 a 04/12/2026",
+        "raw_sha256": "042687cd2d281eee9ca961cdf7734495dbce975aaee2b021b5974fcc96426eb9",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0009",
+        "start": 7463,
+        "text_sha256": "a9a0eefdd71c4ae2260fcc4a9b89f2956f3fb55909bfc08c8748abf0606fe167"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F01",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "title",
+      "original": "Chamada Pública MCTI/CNPq/ANR N° 32/2026",
+      "reference_records": [
+        "M30-F01-R3"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0010",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F01",
+        "end": 7531,
+        "page": null,
+        "quote": "Chamada Pública MCTI/CNPq/ANR N° 32/2026",
+        "raw_sha256": "042687cd2d281eee9ca961cdf7734495dbce975aaee2b021b5974fcc96426eb9",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0010",
+        "start": 7491,
+        "text_sha256": "a9a0eefdd71c4ae2260fcc4a9b89f2956f3fb55909bfc08c8748abf0606fe167"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F01",
+      "field_index": 1,
+      "method_version": "m31-deterministic-v2",
+      "name": "unknown_temporal_expression",
+      "original": "03/09/2026",
+      "reference_records": [
+        "M30-F01-R3"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0010",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F01",
+        "end": 7717,
+        "page": null,
+        "quote": "03/09/2026 08h00",
+        "raw_sha256": "042687cd2d281eee9ca961cdf7734495dbce975aaee2b021b5974fcc96426eb9",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0010",
+        "start": 7701,
+        "text_sha256": "a9a0eefdd71c4ae2260fcc4a9b89f2956f3fb55909bfc08c8748abf0606fe167"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F01",
+      "field_index": 2,
+      "method_version": "m31-deterministic-v2",
+      "name": "unknown_temporal_expression",
+      "original": "04/09/2026",
+      "reference_records": [
+        "M30-F01-R3"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0010",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F01",
+        "end": 7748,
+        "page": null,
+        "quote": "04/09/2026 11h26",
+        "raw_sha256": "042687cd2d281eee9ca961cdf7734495dbce975aaee2b021b5974fcc96426eb9",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0010",
+        "start": 7732,
+        "text_sha256": "a9a0eefdd71c4ae2260fcc4a9b89f2956f3fb55909bfc08c8748abf0606fe167"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F01",
+      "field_index": 3,
+      "method_version": "m31-deterministic-v2",
+      "name": "opening_date",
+      "original": "03/09/2026",
+      "reference_records": [
+        "M30-F01-R3"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0010",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F01",
+        "end": 8114,
+        "page": null,
+        "quote": "03/09/2026 a 31/03/2027",
+        "raw_sha256": "042687cd2d281eee9ca961cdf7734495dbce975aaee2b021b5974fcc96426eb9",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0010",
+        "start": 8091,
+        "text_sha256": "a9a0eefdd71c4ae2260fcc4a9b89f2956f3fb55909bfc08c8748abf0606fe167"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F01",
+      "field_index": 4,
+      "method_version": "m31-deterministic-v2",
+      "name": "submission_deadline",
+      "original": "31/03/2027",
+      "reference_records": [
+        "M30-F01-R3"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0010",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F01",
+        "end": 8114,
+        "page": null,
+        "quote": "03/09/2026 a 31/03/2027",
+        "raw_sha256": "042687cd2d281eee9ca961cdf7734495dbce975aaee2b021b5974fcc96426eb9",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0010",
+        "start": 8091,
+        "text_sha256": "a9a0eefdd71c4ae2260fcc4a9b89f2956f3fb55909bfc08c8748abf0606fe167"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F01",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "title",
+      "original": "Chamada CNPq nº 33/2026 - Bolsas de Produtividade do CNPq",
+      "reference_records": [
+        "M30-F01-R4"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0011",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F01",
+        "end": 8270,
+        "page": null,
+        "quote": "Chamada CNPq nº 33/2026 - Bolsas de Produtividade do CNPq",
+        "raw_sha256": "042687cd2d281eee9ca961cdf7734495dbce975aaee2b021b5974fcc96426eb9",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0011",
+        "start": 8213,
+        "text_sha256": "a9a0eefdd71c4ae2260fcc4a9b89f2956f3fb55909bfc08c8748abf0606fe167"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F01",
+      "field_index": 1,
+      "method_version": "m31-deterministic-v2",
+      "name": "unknown_temporal_expression",
+      "original": "07/10/2026",
+      "reference_records": [
+        "M30-F01-R4"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0011",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F01",
+        "end": 8456,
+        "page": null,
+        "quote": "07/10/2026 10h29",
+        "raw_sha256": "042687cd2d281eee9ca961cdf7734495dbce975aaee2b021b5974fcc96426eb9",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0011",
+        "start": 8440,
+        "text_sha256": "a9a0eefdd71c4ae2260fcc4a9b89f2956f3fb55909bfc08c8748abf0606fe167"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F01",
+      "field_index": 2,
+      "method_version": "m31-deterministic-v2",
+      "name": "unknown_temporal_expression",
+      "original": "13/10/2026",
+      "reference_records": [
+        "M30-F01-R4"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0011",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F01",
+        "end": 8487,
+        "page": null,
+        "quote": "13/10/2026 17h16",
+        "raw_sha256": "042687cd2d281eee9ca961cdf7734495dbce975aaee2b021b5974fcc96426eb9",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0011",
+        "start": 8471,
+        "text_sha256": "a9a0eefdd71c4ae2260fcc4a9b89f2956f3fb55909bfc08c8748abf0606fe167"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F01",
+      "field_index": 3,
+      "method_version": "m31-deterministic-v2",
+      "name": "publishing_organization_expression",
+      "original": "O CNPq torna pública a Chamada CNPq nº 33/2026, que tem por objeto conceder bolsas nas seguintes modalidades: Produtividade em Desenvolvimento Tecnológico e Extensão Inovadora (DT), Produtividade em Pesquisa (PQ) e Produtividade em Pesquisa Sênior (PQSr).",
+      "reference_records": [
+        "M30-F01-R4"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0011",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F01",
+        "end": 8743,
+        "page": null,
+        "quote": "O CNPq torna pública a Chamada CNPq nº 33/2026, que tem por objeto conceder bolsas nas seguintes modalidades: Produtividade em Desenvolvimento Tecnológico e Extensão Inovadora (DT), Produtividade em Pesquisa (PQ) e Produtividade em Pesquisa Sênior (PQSr).",
+        "raw_sha256": "042687cd2d281eee9ca961cdf7734495dbce975aaee2b021b5974fcc96426eb9",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0011",
+        "start": 8488,
+        "text_sha256": "a9a0eefdd71c4ae2260fcc4a9b89f2956f3fb55909bfc08c8748abf0606fe167"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F01",
+      "field_index": 4,
+      "method_version": "m31-deterministic-v2",
+      "name": "attachment_unavailable",
+      "original": "Anexo I - Critérios para avaliação de Bolsas de Produtividade",
+      "reference_records": [
+        "M30-F01-R4"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0011",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F01",
+        "end": 9253,
+        "page": null,
+        "quote": "Anexo I - Critérios para avaliação de Bolsas de Produtividade",
+        "raw_sha256": "042687cd2d281eee9ca961cdf7734495dbce975aaee2b021b5974fcc96426eb9",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0011",
+        "start": 9192,
+        "text_sha256": "a9a0eefdd71c4ae2260fcc4a9b89f2956f3fb55909bfc08c8748abf0606fe167"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F01",
+      "field_index": 5,
+      "method_version": "m31-deterministic-v2",
+      "name": "rectification_date_expression",
+      "original": "13/10/2026",
+      "reference_records": [
+        "M30-F01-R4"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0011",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F01",
+        "end": 9349,
+        "page": null,
+        "quote": "Anexo I - Critérios para avaliação de Bolsas de Produtividade - versão atualizada em 13/10/2026",
+        "raw_sha256": "042687cd2d281eee9ca961cdf7734495dbce975aaee2b021b5974fcc96426eb9",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0011",
+        "start": 9254,
+        "text_sha256": "a9a0eefdd71c4ae2260fcc4a9b89f2956f3fb55909bfc08c8748abf0606fe167"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F01",
+      "field_index": 6,
+      "method_version": "m31-deterministic-v2",
+      "name": "attachment_unavailable",
+      "original": "Anexo I - Critérios para avaliação de Bolsas de Produtividade - versão atualizada em 13/10/2026",
+      "reference_records": [
+        "M30-F01-R4"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0011",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F01",
+        "end": 9349,
+        "page": null,
+        "quote": "Anexo I - Critérios para avaliação de Bolsas de Produtividade - versão atualizada em 13/10/2026",
+        "raw_sha256": "042687cd2d281eee9ca961cdf7734495dbce975aaee2b021b5974fcc96426eb9",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0011",
+        "start": 9254,
+        "text_sha256": "a9a0eefdd71c4ae2260fcc4a9b89f2956f3fb55909bfc08c8748abf0606fe167"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F01",
+      "field_index": 7,
+      "method_version": "m31-deterministic-v2",
+      "name": "rectification_date_expression",
+      "original": "13/10/2026",
+      "reference_records": [
+        "M30-F01-R4"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0011",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F01",
+        "end": 9378,
+        "page": null,
+        "quote": "Errata nº 1 - 13/10/2026",
+        "raw_sha256": "042687cd2d281eee9ca961cdf7734495dbce975aaee2b021b5974fcc96426eb9",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0011",
+        "start": 9354,
+        "text_sha256": "a9a0eefdd71c4ae2260fcc4a9b89f2956f3fb55909bfc08c8748abf0606fe167"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F01",
+      "field_index": 8,
+      "method_version": "m31-deterministic-v2",
+      "name": "attachment_unavailable",
+      "original": "O CNPq informa alteração no critério de julgamento do CA-DT, constante do Anexo I da Chamada. A versão atualizada consta com a modificação assinalada em vermelho.",
+      "reference_records": [
+        "M30-F01-R4"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0011",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F01",
+        "end": 9541,
+        "page": null,
+        "quote": "O CNPq informa alteração no critério de julgamento do CA-DT, constante do Anexo I da Chamada. A versão atualizada consta com a modificação assinalada em vermelho.",
+        "raw_sha256": "042687cd2d281eee9ca961cdf7734495dbce975aaee2b021b5974fcc96426eb9",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0011",
+        "start": 9379,
+        "text_sha256": "a9a0eefdd71c4ae2260fcc4a9b89f2956f3fb55909bfc08c8748abf0606fe167"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F01",
+      "field_index": 9,
+      "method_version": "m31-deterministic-v2",
+      "name": "opening_date",
+      "original": "07/10/2026",
+      "reference_records": [
+        "M30-F01-R4"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0011",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F01",
+        "end": 9577,
+        "page": null,
+        "quote": "07/10/2026 a 07/01/2027",
+        "raw_sha256": "042687cd2d281eee9ca961cdf7734495dbce975aaee2b021b5974fcc96426eb9",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0011",
+        "start": 9554,
+        "text_sha256": "a9a0eefdd71c4ae2260fcc4a9b89f2956f3fb55909bfc08c8748abf0606fe167"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F01",
+      "field_index": 10,
+      "method_version": "m31-deterministic-v2",
+      "name": "submission_deadline",
+      "original": "07/01/2027",
+      "reference_records": [
+        "M30-F01-R4"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0011",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F01",
+        "end": 9577,
+        "page": null,
+        "quote": "07/10/2026 a 07/01/2027",
+        "raw_sha256": "042687cd2d281eee9ca961cdf7734495dbce975aaee2b021b5974fcc96426eb9",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0011",
+        "start": 9554,
+        "text_sha256": "a9a0eefdd71c4ae2260fcc4a9b89f2956f3fb55909bfc08c8748abf0606fe167"
+      }
+    }
+  ],
+  "provenance": {
+    "byte_length": 146715,
+    "category_evidence": "Neste espaço, estão reunidas todas as chamadas atualmente abertas à submissão de propostas.",
+    "content_type": "text/html",
+    "derivation_method": "stdlib-HTMLParser-data-whitespace-v1; excludes script/style/noscript/template; not rendered DOM",
+    "document_category": "application_call",
+    "document_id": "M30-F01",
+    "document_version": null,
+    "final_url": "https://www.gov.br/cnpq/pt-br/chamadas/abertas-para-submissao",
+    "original_filename": "abertas-para-submissao",
+    "original_url": "https://www.gov.br/cnpq/pt-br/chamadas/abertas-para-submissao",
+    "publication_date": "2024-12-02",
+    "raw_path": "raw/M30-F01.html",
+    "restrictions": "Research pilot local frozen copy only; no redistribution license inferred. No scripts executed, no forms submitted, no applicant records intentionally collected. Public navigation/staff attribution may remain in original bytes.",
+    "retrieval_status": "acquired",
+    "retrieved_at": "2026-10-19T04:37:41.284959+00:00",
+    "sha256": "042687cd2d281eee9ca961cdf7734495dbce975aaee2b021b5974fcc96426eb9",
+    "source_authority_notes": "Public HTTPS page hosted by the named institution; authorship asserted by host/content, not cryptographically authenticated. Not source-readiness approval.",
+    "source_organization": "CNPq",
+    "text_path": "text/M30-F01.txt",
+    "text_sha256": "a9a0eefdd71c4ae2260fcc4a9b89f2956f3fb55909bfc08c8748abf0606fe167"
+  },
+  "records": [
+    {
+      "all_overlap_predictions": [
+        {
+          "discovery": "confirmed_opportunity",
+          "modality": "fomento",
+          "segment_id": "segment-0008",
+          "temporal": "open"
+        }
+      ],
+      "any_exact_boundary": false,
+      "coverage": {
+        "denominator": 952,
+        "numerator": 951,
+        "value": 0.9989495798319328
+      },
+      "covered_characters": 951,
+      "disagreements": [],
+      "discovery_histogram": {
+        "confirmed_opportunity": 1
+      },
+      "document_id": "M30-F01",
+      "edges": [
+        {
+          "end": 6735,
+          "exact": false,
+          "intersection": 951,
+          "intersection_end": 6735,
+          "intersection_start": 5784,
+          "iou": 0.9989495798319328,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.9989495798319328,
+          "segment_id": "segment-0008",
+          "start": 5784
+        }
+      ],
+      "end": 6736,
+      "fields": [
+        {
+          "candidates": [
+            {
+              "diagnostic_status": "traceable_not_semantically_certified",
+              "field_index": 0,
+              "method_version": "m31-deterministic-v2",
+              "name": "title",
+              "original": "Chamada Pública CNPq/CAPES Nº 30/2026 – Programa de Mestrado e Doutorado Acadêmico para Inovação – MAI/DAI",
+              "schema_version": "m31-extraction-v1",
+              "segment_id": "segment-0008",
+              "uncertainty": "heuristic role assignment; not authenticated or normalized",
+              "witness": {
+                "document_id": "M30-F01",
+                "end": 5890,
+                "page": null,
+                "quote": "Chamada Pública CNPq/CAPES Nº 30/2026 – Programa de Mestrado e Doutorado Acadêmico para Inovação – MAI/DAI",
+                "raw_sha256": "042687cd2d281eee9ca961cdf7734495dbce975aaee2b021b5974fcc96426eb9",
+                "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+                "schema_version": "m31-extraction-v1",
+                "segment_id": "segment-0008",
+                "start": 5784,
+                "text_sha256": "a9a0eefdd71c4ae2260fcc4a9b89f2956f3fb55909bfc08c8748abf0606fe167"
+              }
+            }
+          ],
+          "name": "title",
+          "reason": "same literal and role in record; entailment remains unreviewed",
+          "reference_evidence": [
+            {
+              "end": 5890,
+              "evidence_id": "M30-F01-R1-E1",
+              "page": null,
+              "quote": "Chamada Pública CNPq/CAPES Nº 30/2026 – Programa de Mestrado e Doutorado Acadêmico para Inovação – MAI/DAI",
+              "start": 5784
+            }
+          ],
+          "reference_value": "Chamada Pública CNPq/CAPES Nº 30/2026 – Programa de Mestrado e Doutorado Acadêmico para Inovação – MAI/DAI",
+          "scope_supported": true,
+          "semantic_adjudication": "not_certified",
+          "status": "MATCH",
+          "strict_role_value": true
+        },
+        {
+          "candidates": [],
+          "name": "application_period",
+          "reason": "requested target role outside implemented M31 field scope",
+          "reference_evidence": [
+            {
+              "end": 6735,
+              "evidence_id": "M30-F01-R1-E3",
+              "page": null,
+              "quote": "Inscrições:\n19/08/2026 a 11/12/2026",
+              "start": 6700
+            }
+          ],
+          "reference_value": "19/08/2026 a 11/12/2026",
+          "scope_supported": false,
+          "semantic_adjudication": "not_certified",
+          "status": "UNRESOLVED",
+          "strict_role_value": false
+        },
+        {
+          "candidates": [
+            {
+              "diagnostic_status": "traceable_not_semantically_certified",
+              "field_index": 3,
+              "method_version": "m31-deterministic-v2",
+              "name": "funding_organization_expression",
+              "original": "A edição de 2026 do Programa de Mestrado e Doutorado para Inovação (MAI/DAI), que estimula a realização de pesquisas de mestrado e doutorado em universidades em parceria com empresas, recebe propostas até o dia 11 de dezembro. A chamada é realizada pelo Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq) e conta com a parceria da Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES).",
+              "schema_version": "m31-extraction-v1",
+              "segment_id": "segment-0008",
+              "uncertainty": "heuristic role assignment; not authenticated or normalized",
+              "witness": {
+                "document_id": "M30-F01",
+                "end": 6525,
+                "page": null,
+                "quote": "A edição de 2026 do Programa de Mestrado e Doutorado para Inovação (MAI/DAI), que estimula a realização de pesquisas de mestrado e doutorado em universidades em parceria com empresas, recebe propostas até o dia 11 de dezembro. A chamada é realizada pelo Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq) e conta com a parceria da Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES).",
+                "raw_sha256": "042687cd2d281eee9ca961cdf7734495dbce975aaee2b021b5974fcc96426eb9",
+                "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+                "schema_version": "m31-extraction-v1",
+                "segment_id": "segment-0008",
+                "start": 6108,
+                "text_sha256": "a9a0eefdd71c4ae2260fcc4a9b89f2956f3fb55909bfc08c8748abf0606fe167"
+              }
+            }
+          ],
+          "name": "objective",
+          "reason": "requested target role outside implemented M31 field scope",
+          "reference_evidence": [
+            {
+              "end": 6525,
+              "evidence_id": "M30-F01-R1-E2",
+              "page": null,
+              "quote": "A edição de 2026 do Programa de Mestrado e Doutorado para Inovação (MAI/DAI), que estimula a realização de pesquisas de mestrado e doutorado em universidades em parceria com empresas, recebe propostas até o dia 11 de dezembro. A chamada é realizada pelo Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq) e conta com a parceria da Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES).",
+              "start": 6108
+            }
+          ],
+          "reference_value": "A edição de 2026 do Programa de Mestrado e Doutorado para Inovação (MAI/DAI), que estimula a realização de pesquisas de mestrado e doutorado em universidades em parceria com empresas, recebe propostas até o dia 11 de dezembro. A chamada é realizada pelo Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq) e conta com a parceria da Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES).",
+          "scope_supported": false,
+          "semantic_adjudication": "not_certified",
+          "status": "UNRESOLVED",
+          "strict_role_value": false
+        },
+        {
+          "candidates": [
+            {
+              "diagnostic_status": "traceable_not_semantically_certified",
+              "field_index": 8,
+              "method_version": "m31-deterministic-v2",
+              "name": "submission_deadline",
+              "original": "11/12/2026",
+              "schema_version": "m31-extraction-v1",
+              "segment_id": "segment-0008",
+              "uncertainty": "heuristic role assignment; not authenticated or normalized",
+              "witness": {
+                "document_id": "M30-F01",
+                "end": 6735,
+                "page": null,
+                "quote": "19/08/2026 a 11/12/2026",
+                "raw_sha256": "042687cd2d281eee9ca961cdf7734495dbce975aaee2b021b5974fcc96426eb9",
+                "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+                "schema_version": "m31-extraction-v1",
+                "segment_id": "segment-0008",
+                "start": 6712,
+                "text_sha256": "a9a0eefdd71c4ae2260fcc4a9b89f2956f3fb55909bfc08c8748abf0606fe167"
+              }
+            }
+          ],
+          "name": "submission_deadline",
+          "reason": "same literal and role in record; entailment remains unreviewed",
+          "reference_evidence": [
+            {
+              "end": 6735,
+              "evidence_id": "M30-F01-R1-E3",
+              "page": null,
+              "quote": "Inscrições:\n19/08/2026 a 11/12/2026",
+              "start": 6700
+            }
+          ],
+          "reference_value": "11/12/2026",
+          "scope_supported": true,
+          "semantic_adjudication": "not_certified",
+          "status": "MATCH",
+          "strict_role_value": true
+        },
+        {
+          "candidates": [],
+          "name": "official_identifier",
+          "reason": "requested target role outside implemented M31 field scope",
+          "reference_evidence": [
+            {
+              "end": 5890,
+              "evidence_id": "M30-F01-R1-E1",
+              "page": null,
+              "quote": "Chamada Pública CNPq/CAPES Nº 30/2026 – Programa de Mestrado e Doutorado Acadêmico para Inovação – MAI/DAI",
+              "start": 5784
+            }
+          ],
+          "reference_value": "30/2026",
+          "scope_supported": false,
+          "semantic_adjudication": "not_certified",
+          "status": "UNRESOLVED",
+          "strict_role_value": false
+        },
+        {
+          "candidates": [
+            {
+              "diagnostic_status": "traceable_not_semantically_certified",
+              "field_index": 1,
+              "method_version": "m31-deterministic-v2",
+              "name": "unknown_temporal_expression",
+              "original": "19/08/2026",
+              "schema_version": "m31-extraction-v1",
+              "segment_id": "segment-0008",
+              "uncertainty": "heuristic role assignment; not authenticated or normalized",
+              "witness": {
+                "document_id": "M30-F01",
+                "end": 6076,
+                "page": null,
+                "quote": "19/08/2026 08h53",
+                "raw_sha256": "042687cd2d281eee9ca961cdf7734495dbce975aaee2b021b5974fcc96426eb9",
+                "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+                "schema_version": "m31-extraction-v1",
+                "segment_id": "segment-0008",
+                "start": 6060,
+                "text_sha256": "a9a0eefdd71c4ae2260fcc4a9b89f2956f3fb55909bfc08c8748abf0606fe167"
+              }
+            },
+            {
+              "diagnostic_status": "traceable_not_semantically_certified",
+              "field_index": 7,
+              "method_version": "m31-deterministic-v2",
+              "name": "opening_date",
+              "original": "19/08/2026",
+              "schema_version": "m31-extraction-v1",
+              "segment_id": "segment-0008",
+              "uncertainty": "heuristic role assignment; not authenticated or normalized",
+              "witness": {
+                "document_id": "M30-F01",
+                "end": 6735,
+                "page": null,
+                "quote": "19/08/2026 a 11/12/2026",
+                "raw_sha256": "042687cd2d281eee9ca961cdf7734495dbce975aaee2b021b5974fcc96426eb9",
+                "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+                "schema_version": "m31-extraction-v1",
+                "segment_id": "segment-0008",
+                "start": 6712,
+                "text_sha256": "a9a0eefdd71c4ae2260fcc4a9b89f2956f3fb55909bfc08c8748abf0606fe167"
+              }
+            }
+          ],
+          "name": "opening_date",
+          "reason": "same literal and role in record; entailment remains unreviewed",
+          "reference_evidence": [
+            {
+              "end": 6735,
+              "evidence_id": "M30-F01-R1-E3",
+              "page": null,
+              "quote": "Inscrições:\n19/08/2026 a 11/12/2026",
+              "start": 6700
+            }
+          ],
+          "reference_value": "19/08/2026",
+          "scope_supported": true,
+          "semantic_adjudication": "not_certified",
+          "status": "MATCH",
+          "strict_role_value": true
+        },
+        {
+          "candidates": [],
+          "name": "publishing_organization",
+          "reason": "no corresponding field; absence is not explicit field abstention",
+          "reference_evidence": [
+            {
+              "end": 6525,
+              "evidence_id": "M30-F01-R1-E2",
+              "page": null,
+              "quote": "A edição de 2026 do Programa de Mestrado e Doutorado para Inovação (MAI/DAI), que estimula a realização de pesquisas de mestrado e doutorado em universidades em parceria com empresas, recebe propostas até o dia 11 de dezembro. A chamada é realizada pelo Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq) e conta com a parceria da Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES).",
+              "start": 6108
+            }
+          ],
+          "reference_value": "Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq)",
+          "scope_supported": true,
+          "semantic_adjudication": "not_certified",
+          "status": "MISSING",
+          "strict_role_value": false
+        }
+      ],
+      "fragmentation": 1,
+      "location_convention": "html_unicode_codepoints",
+      "physical_reference_evidence_pages": [],
+      "rationale": "Provisional AI source reading: Named research/bursary/event support call with explicit registration interval containing 2026-10-19; sibling calls have separate non-overlapping scopes.",
+      "record_id": "M30-F01-R1",
+      "reference": {
+        "discovery_label": "confirmed_opportunity",
+        "modality": "fomento",
+        "opportunity_label": "genuine_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "open"
+      },
+      "reference_characters": 952,
+      "reference_evidence": [
+        {
+          "end": 5890,
+          "evidence_id": "M30-F01-R1-E1",
+          "page": null,
+          "quote": "Chamada Pública CNPq/CAPES Nº 30/2026 – Programa de Mestrado e Doutorado Acadêmico para Inovação – MAI/DAI",
+          "start": 5784
+        },
+        {
+          "end": 6525,
+          "evidence_id": "M30-F01-R1-E2",
+          "page": null,
+          "quote": "A edição de 2026 do Programa de Mestrado e Doutorado para Inovação (MAI/DAI), que estimula a realização de pesquisas de mestrado e doutorado em universidades em parceria com empresas, recebe propostas até o dia 11 de dezembro. A chamada é realizada pelo Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq) e conta com a parceria da Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES).",
+          "start": 6108
+        },
+        {
+          "end": 6735,
+          "evidence_id": "M30-F01-R1-E3",
+          "page": null,
+          "quote": "Inscrições:\n19/08/2026 a 11/12/2026",
+          "start": 6700
+        }
+      ],
+      "representative": "segment-0008",
+      "representative_prediction": {
+        "discovery": "confirmed_opportunity",
+        "end": 6735,
+        "modality": "fomento",
+        "segment_id": "segment-0008",
+        "start": 5784,
+        "temporal": "open"
+      },
+      "representative_quote": "Chamada Pública CNPq/CAPES Nº 30/2026 – Programa de Mestrado e Doutorado Acadêmico para Inovação – MAI/DAI\nCompartilhe:\nCompartilhe por Facebook\nCompartilhe por Twitter\nCompartilhe por LinkedIn\nCompartilhe por WhatsApp\nlink para Copiar para área de transferência\nPublicado em\n19/08/2026 08h53\nAtualizado em\n13/10/2026 12h34\nA edição de 2026 do Programa de Mestrado e Doutorado para Inovação (MAI/DAI), que estimula a realização de pesquisas de mestrado e doutorado em universidades em parceria com empresas, recebe propostas até o dia 11 de dezembro. A chamada é realizada pelo Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq) e conta com a parceria da Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES).\nChamada\nAnexo II: Plano de Trabalho Programa MAI/DAI\nAnexo III: Declaração Institucional do Representante MAI/DAI\nAnexo IV: Carta de Concordância da Instituição Parceira\nFAQ\nInscrições:\n19/08/2026 a 11/12/2026",
+      "start": 5784,
+      "status": "overlap",
+      "uncertainty_notes": [
+        "Only the four records in this frozen page are covered; pagination not followed."
+      ]
+    },
+    {
+      "all_overlap_predictions": [
+        {
+          "discovery": "confirmed_opportunity",
+          "modality": "fomento",
+          "segment_id": "segment-0009",
+          "temporal": "open"
+        }
+      ],
+      "any_exact_boundary": false,
+      "coverage": {
+        "denominator": 755,
+        "numerator": 754,
+        "value": 0.9986754966887417
+      },
+      "covered_characters": 754,
+      "disagreements": [],
+      "discovery_histogram": {
+        "confirmed_opportunity": 1
+      },
+      "document_id": "M30-F01",
+      "edges": [
+        {
+          "end": 7490,
+          "exact": false,
+          "intersection": 754,
+          "intersection_end": 7490,
+          "intersection_start": 6736,
+          "iou": 0.9986754966887417,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.9986754966887417,
+          "segment_id": "segment-0009",
+          "start": 6736
+        }
+      ],
+      "end": 7491,
+      "fields": [
+        {
+          "candidates": [
+            {
+              "diagnostic_status": "traceable_not_semantically_certified",
+              "field_index": 0,
+              "method_version": "m31-deterministic-v2",
+              "name": "title",
+              "original": "Chamada CNPq Nº 34/2026 - Auxílio à Promoção de Eventos Científicos, Tecnológicos e/ou de Inovação - ARC",
+              "schema_version": "m31-extraction-v1",
+              "segment_id": "segment-0009",
+              "uncertainty": "heuristic role assignment; not authenticated or normalized",
+              "witness": {
+                "document_id": "M30-F01",
+                "end": 6840,
+                "page": null,
+                "quote": "Chamada CNPq Nº 34/2026 - Auxílio à Promoção de Eventos Científicos, Tecnológicos e/ou de Inovação - ARC",
+                "raw_sha256": "042687cd2d281eee9ca961cdf7734495dbce975aaee2b021b5974fcc96426eb9",
+                "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+                "schema_version": "m31-extraction-v1",
+                "segment_id": "segment-0009",
+                "start": 6736,
+                "text_sha256": "a9a0eefdd71c4ae2260fcc4a9b89f2956f3fb55909bfc08c8748abf0606fe167"
+              }
+            }
+          ],
+          "name": "title",
+          "reason": "same literal and role in record; entailment remains unreviewed",
+          "reference_evidence": [
+            {
+              "end": 6840,
+              "evidence_id": "M30-F01-R2-E1",
+              "page": null,
+              "quote": "Chamada CNPq Nº 34/2026 - Auxílio à Promoção de Eventos Científicos, Tecnológicos e/ou de Inovação - ARC",
+              "start": 6736
+            }
+          ],
+          "reference_value": "Chamada CNPq Nº 34/2026 - Auxílio à Promoção de Eventos Científicos, Tecnológicos e/ou de Inovação - ARC",
+          "scope_supported": true,
+          "semantic_adjudication": "not_certified",
+          "status": "MATCH",
+          "strict_role_value": true
+        },
+        {
+          "candidates": [],
+          "name": "application_period",
+          "reason": "requested target role outside implemented M31 field scope",
+          "reference_evidence": [
+            {
+              "end": 7486,
+              "evidence_id": "M30-F01-R2-E3",
+              "page": null,
+              "quote": "Inscrições:\n14/10/2026 a 04/12/2026",
+              "start": 7451
+            }
+          ],
+          "reference_value": "14/10/2026 a 04/12/2026",
+          "scope_supported": false,
+          "semantic_adjudication": "not_certified",
+          "status": "UNRESOLVED",
+          "strict_role_value": false
+        },
+        {
+          "candidates": [],
+          "name": "objective",
+          "reason": "requested target role outside implemented M31 field scope",
+          "reference_evidence": [
+            {
+              "end": 7442,
+              "evidence_id": "M30-F01-R2-E2",
+              "page": null,
+              "quote": "O CNPq torna pública a Chamada CNPq nº 34/2026, que tem por objeto a\npoiar a realização no Brasil de eventos de grande porte, de abrangência mundial, internacional ou nacional, relacionados a ciência, tecnologia e inovação, tais como encontros, congressos e outros similares que visem contribuir significativamente para o desenvolvimento científico e tecnológico e a inovação do País.",
+              "start": 7058
+            }
+          ],
+          "reference_value": "O CNPq torna pública a Chamada CNPq nº 34/2026, que tem por objeto a\npoiar a realização no Brasil de eventos de grande porte, de abrangência mundial, internacional ou nacional, relacionados a ciência, tecnologia e inovação, tais como encontros, congressos e outros similares que visem contribuir significativamente para o desenvolvimento científico e tecnológico e a inovação do País.",
+          "scope_supported": false,
+          "semantic_adjudication": "not_certified",
+          "status": "UNRESOLVED",
+          "strict_role_value": false
+        },
+        {
+          "candidates": [
+            {
+              "diagnostic_status": "traceable_not_semantically_certified",
+              "field_index": 6,
+              "method_version": "m31-deterministic-v2",
+              "name": "submission_deadline",
+              "original": "04/12/2026",
+              "schema_version": "m31-extraction-v1",
+              "segment_id": "segment-0009",
+              "uncertainty": "heuristic role assignment; not authenticated or normalized",
+              "witness": {
+                "document_id": "M30-F01",
+                "end": 7486,
+                "page": null,
+                "quote": "14/10/2026 a 04/12/2026",
+                "raw_sha256": "042687cd2d281eee9ca961cdf7734495dbce975aaee2b021b5974fcc96426eb9",
+                "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+                "schema_version": "m31-extraction-v1",
+                "segment_id": "segment-0009",
+                "start": 7463,
+                "text_sha256": "a9a0eefdd71c4ae2260fcc4a9b89f2956f3fb55909bfc08c8748abf0606fe167"
+              }
+            }
+          ],
+          "name": "submission_deadline",
+          "reason": "same literal and role in record; entailment remains unreviewed",
+          "reference_evidence": [
+            {
+              "end": 7486,
+              "evidence_id": "M30-F01-R2-E3",
+              "page": null,
+              "quote": "Inscrições:\n14/10/2026 a 04/12/2026",
+              "start": 7451
+            }
+          ],
+          "reference_value": "04/12/2026",
+          "scope_supported": true,
+          "semantic_adjudication": "not_certified",
+          "status": "MATCH",
+          "strict_role_value": true
+        },
+        {
+          "candidates": [],
+          "name": "official_identifier",
+          "reason": "requested target role outside implemented M31 field scope",
+          "reference_evidence": [
+            {
+              "end": 6840,
+              "evidence_id": "M30-F01-R2-E1",
+              "page": null,
+              "quote": "Chamada CNPq Nº 34/2026 - Auxílio à Promoção de Eventos Científicos, Tecnológicos e/ou de Inovação - ARC",
+              "start": 6736
+            }
+          ],
+          "reference_value": "34/2026",
+          "scope_supported": false,
+          "semantic_adjudication": "not_certified",
+          "status": "UNRESOLVED",
+          "strict_role_value": false
+        },
+        {
+          "candidates": [
+            {
+              "diagnostic_status": "traceable_not_semantically_certified",
+              "field_index": 1,
+              "method_version": "m31-deterministic-v2",
+              "name": "unknown_temporal_expression",
+              "original": "14/10/2026",
+              "schema_version": "m31-extraction-v1",
+              "segment_id": "segment-0009",
+              "uncertainty": "heuristic role assignment; not authenticated or normalized",
+              "witness": {
+                "document_id": "M30-F01",
+                "end": 7026,
+                "page": null,
+                "quote": "14/10/2026 07h50",
+                "raw_sha256": "042687cd2d281eee9ca961cdf7734495dbce975aaee2b021b5974fcc96426eb9",
+                "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+                "schema_version": "m31-extraction-v1",
+                "segment_id": "segment-0009",
+                "start": 7010,
+                "text_sha256": "a9a0eefdd71c4ae2260fcc4a9b89f2956f3fb55909bfc08c8748abf0606fe167"
+              }
+            },
+            {
+              "diagnostic_status": "traceable_not_semantically_certified",
+              "field_index": 2,
+              "method_version": "m31-deterministic-v2",
+              "name": "unknown_temporal_expression",
+              "original": "14/10/2026",
+              "schema_version": "m31-extraction-v1",
+              "segment_id": "segment-0009",
+              "uncertainty": "heuristic role assignment; not authenticated or normalized",
+              "witness": {
+                "document_id": "M30-F01",
+                "end": 7057,
+                "page": null,
+                "quote": "14/10/2026 10h48",
+                "raw_sha256": "042687cd2d281eee9ca961cdf7734495dbce975aaee2b021b5974fcc96426eb9",
+                "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+                "schema_version": "m31-extraction-v1",
+                "segment_id": "segment-0009",
+                "start": 7041,
+                "text_sha256": "a9a0eefdd71c4ae2260fcc4a9b89f2956f3fb55909bfc08c8748abf0606fe167"
+              }
+            },
+            {
+              "diagnostic_status": "traceable_not_semantically_certified",
+              "field_index": 5,
+              "method_version": "m31-deterministic-v2",
+              "name": "opening_date",
+              "original": "14/10/2026",
+              "schema_version": "m31-extraction-v1",
+              "segment_id": "segment-0009",
+              "uncertainty": "heuristic role assignment; not authenticated or normalized",
+              "witness": {
+                "document_id": "M30-F01",
+                "end": 7486,
+                "page": null,
+                "quote": "14/10/2026 a 04/12/2026",
+                "raw_sha256": "042687cd2d281eee9ca961cdf7734495dbce975aaee2b021b5974fcc96426eb9",
+                "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+                "schema_version": "m31-extraction-v1",
+                "segment_id": "segment-0009",
+                "start": 7463,
+                "text_sha256": "a9a0eefdd71c4ae2260fcc4a9b89f2956f3fb55909bfc08c8748abf0606fe167"
+              }
+            }
+          ],
+          "name": "opening_date",
+          "reason": "same literal and role in record; entailment remains unreviewed",
+          "reference_evidence": [
+            {
+              "end": 7486,
+              "evidence_id": "M30-F01-R2-E3",
+              "page": null,
+              "quote": "Inscrições:\n14/10/2026 a 04/12/2026",
+              "start": 7451
+            }
+          ],
+          "reference_value": "14/10/2026",
+          "scope_supported": true,
+          "semantic_adjudication": "not_certified",
+          "status": "MATCH",
+          "strict_role_value": true
+        },
+        {
+          "candidates": [
+            {
+              "diagnostic_status": "traceable_not_semantically_certified",
+              "field_index": 3,
+              "method_version": "m31-deterministic-v2",
+              "name": "publishing_organization_expression",
+              "original": "O CNPq torna pública a Chamada CNPq nº 34/2026, que tem por objeto a",
+              "schema_version": "m31-extraction-v1",
+              "segment_id": "segment-0009",
+              "uncertainty": "heuristic role assignment; not authenticated or normalized",
+              "witness": {
+                "document_id": "M30-F01",
+                "end": 7126,
+                "page": null,
+                "quote": "O CNPq torna pública a Chamada CNPq nº 34/2026, que tem por objeto a",
+                "raw_sha256": "042687cd2d281eee9ca961cdf7734495dbce975aaee2b021b5974fcc96426eb9",
+                "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+                "schema_version": "m31-extraction-v1",
+                "segment_id": "segment-0009",
+                "start": 7058,
+                "text_sha256": "a9a0eefdd71c4ae2260fcc4a9b89f2956f3fb55909bfc08c8748abf0606fe167"
+              }
+            }
+          ],
+          "name": "publishing_organization",
+          "reason": "same/aliased role with related literal; qualifiers may be missing or extra",
+          "reference_evidence": [
+            {
+              "end": 7442,
+              "evidence_id": "M30-F01-R2-E2",
+              "page": null,
+              "quote": "O CNPq torna pública a Chamada CNPq nº 34/2026, que tem por objeto a\npoiar a realização no Brasil de eventos de grande porte, de abrangência mundial, internacional ou nacional, relacionados a ciência, tecnologia e inovação, tais como encontros, congressos e outros similares que visem contribuir significativamente para o desenvolvimento científico e tecnológico e a inovação do País.",
+              "start": 7058
+            }
+          ],
+          "reference_value": "CNPq",
+          "scope_supported": true,
+          "semantic_adjudication": "not_certified",
+          "status": "PARTIAL",
+          "strict_role_value": false
+        }
+      ],
+      "fragmentation": 1,
+      "location_convention": "html_unicode_codepoints",
+      "physical_reference_evidence_pages": [],
+      "rationale": "Provisional AI source reading: Named research/bursary/event support call with explicit registration interval containing 2026-10-19; sibling calls have separate non-overlapping scopes.",
+      "record_id": "M30-F01-R2",
+      "reference": {
+        "discovery_label": "confirmed_opportunity",
+        "modality": "fomento",
+        "opportunity_label": "genuine_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "open"
+      },
+      "reference_characters": 755,
+      "reference_evidence": [
+        {
+          "end": 6840,
+          "evidence_id": "M30-F01-R2-E1",
+          "page": null,
+          "quote": "Chamada CNPq Nº 34/2026 - Auxílio à Promoção de Eventos Científicos, Tecnológicos e/ou de Inovação - ARC",
+          "start": 6736
+        },
+        {
+          "end": 7442,
+          "evidence_id": "M30-F01-R2-E2",
+          "page": null,
+          "quote": "O CNPq torna pública a Chamada CNPq nº 34/2026, que tem por objeto a\npoiar a realização no Brasil de eventos de grande porte, de abrangência mundial, internacional ou nacional, relacionados a ciência, tecnologia e inovação, tais como encontros, congressos e outros similares que visem contribuir significativamente para o desenvolvimento científico e tecnológico e a inovação do País.",
+          "start": 7058
+        },
+        {
+          "end": 7486,
+          "evidence_id": "M30-F01-R2-E3",
+          "page": null,
+          "quote": "Inscrições:\n14/10/2026 a 04/12/2026",
+          "start": 7451
+        }
+      ],
+      "representative": "segment-0009",
+      "representative_prediction": {
+        "discovery": "confirmed_opportunity",
+        "end": 7490,
+        "modality": "fomento",
+        "segment_id": "segment-0009",
+        "start": 6736,
+        "temporal": "open"
+      },
+      "representative_quote": "Chamada CNPq Nº 34/2026 - Auxílio à Promoção de Eventos Científicos, Tecnológicos e/ou de Inovação - ARC\nCompartilhe:\nCompartilhe por Facebook\nCompartilhe por Twitter\nCompartilhe por LinkedIn\nCompartilhe por WhatsApp\nlink para Copiar para área de transferência\nPublicado em\n14/10/2026 07h50\nAtualizado em\n14/10/2026 10h48\nO CNPq torna pública a Chamada CNPq nº 34/2026, que tem por objeto a\npoiar a realização no Brasil de eventos de grande porte, de abrangência mundial, internacional ou nacional, relacionados a ciência, tecnologia e inovação, tais como encontros, congressos e outros similares que visem contribuir significativamente para o desenvolvimento científico e tecnológico e a inovação do País.\nChamada\nInscrições:\n14/10/2026 a 04/12/2026\nFAQ",
+      "start": 6736,
+      "status": "overlap",
+      "uncertainty_notes": [
+        "Only the four records in this frozen page are covered; pagination not followed."
+      ]
+    },
+    {
+      "all_overlap_predictions": [
+        {
+          "discovery": "confirmed_opportunity",
+          "modality": "fomento",
+          "segment_id": "segment-0010",
+          "temporal": "open"
+        }
+      ],
+      "any_exact_boundary": false,
+      "coverage": {
+        "denominator": 722,
+        "numerator": 721,
+        "value": 0.9986149584487535
+      },
+      "covered_characters": 721,
+      "disagreements": [],
+      "discovery_histogram": {
+        "confirmed_opportunity": 1
+      },
+      "document_id": "M30-F01",
+      "edges": [
+        {
+          "end": 8212,
+          "exact": false,
+          "intersection": 721,
+          "intersection_end": 8212,
+          "intersection_start": 7491,
+          "iou": 0.9986149584487535,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.9986149584487535,
+          "segment_id": "segment-0010",
+          "start": 7491
+        }
+      ],
+      "end": 8213,
+      "fields": [
+        {
+          "candidates": [
+            {
+              "diagnostic_status": "traceable_not_semantically_certified",
+              "field_index": 0,
+              "method_version": "m31-deterministic-v2",
+              "name": "title",
+              "original": "Chamada Pública MCTI/CNPq/ANR N° 32/2026",
+              "schema_version": "m31-extraction-v1",
+              "segment_id": "segment-0010",
+              "uncertainty": "heuristic role assignment; not authenticated or normalized",
+              "witness": {
+                "document_id": "M30-F01",
+                "end": 7531,
+                "page": null,
+                "quote": "Chamada Pública MCTI/CNPq/ANR N° 32/2026",
+                "raw_sha256": "042687cd2d281eee9ca961cdf7734495dbce975aaee2b021b5974fcc96426eb9",
+                "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+                "schema_version": "m31-extraction-v1",
+                "segment_id": "segment-0010",
+                "start": 7491,
+                "text_sha256": "a9a0eefdd71c4ae2260fcc4a9b89f2956f3fb55909bfc08c8748abf0606fe167"
+              }
+            }
+          ],
+          "name": "title",
+          "reason": "same literal and role in record; entailment remains unreviewed",
+          "reference_evidence": [
+            {
+              "end": 7531,
+              "evidence_id": "M30-F01-R3-E1",
+              "page": null,
+              "quote": "Chamada Pública MCTI/CNPq/ANR N° 32/2026",
+              "start": 7491
+            }
+          ],
+          "reference_value": "Chamada Pública MCTI/CNPq/ANR N° 32/2026",
+          "scope_supported": true,
+          "semantic_adjudication": "not_certified",
+          "status": "MATCH",
+          "strict_role_value": true
+        },
+        {
+          "candidates": [],
+          "name": "application_period",
+          "reason": "requested target role outside implemented M31 field scope",
+          "reference_evidence": [
+            {
+              "end": 8114,
+              "evidence_id": "M30-F01-R3-E3",
+              "page": null,
+              "quote": "Inscrições:\n03/09/2026 a 31/03/2027",
+              "start": 8079
+            }
+          ],
+          "reference_value": "03/09/2026 a 31/03/2027",
+          "scope_supported": false,
+          "semantic_adjudication": "not_certified",
+          "status": "UNRESOLVED",
+          "strict_role_value": false
+        },
+        {
+          "candidates": [],
+          "name": "objective",
+          "reason": "requested target role outside implemented M31 field scope",
+          "reference_evidence": [
+            {
+              "end": 8070,
+              "evidence_id": "M30-F01-R3-E2",
+              "page": null,
+              "quote": "Chamada Pública entre o Conselho Nacional de Desenvolvimento Científico e Tecnológico - CNPq e a Agência Nacional de Pesquisa - ANR, tendo por objetivo selecionar projetos de pesquisa conjuntos entre grupos brasileiros e franceses, que visem contribuir para o desenvolvimento científico, tecnológico e a inovação do país.",
+              "start": 7749
+            }
+          ],
+          "reference_value": "Chamada Pública entre o Conselho Nacional de Desenvolvimento Científico e Tecnológico - CNPq e a Agência Nacional de Pesquisa - ANR, tendo por objetivo selecionar projetos de pesquisa conjuntos entre grupos brasileiros e franceses, que visem contribuir para o desenvolvimento científico, tecnológico e a inovação do país.",
+          "scope_supported": false,
+          "semantic_adjudication": "not_certified",
+          "status": "UNRESOLVED",
+          "strict_role_value": false
+        },
+        {
+          "candidates": [
+            {
+              "diagnostic_status": "traceable_not_semantically_certified",
+              "field_index": 4,
+              "method_version": "m31-deterministic-v2",
+              "name": "submission_deadline",
+              "original": "31/03/2027",
+              "schema_version": "m31-extraction-v1",
+              "segment_id": "segment-0010",
+              "uncertainty": "heuristic role assignment; not authenticated or normalized",
+              "witness": {
+                "document_id": "M30-F01",
+                "end": 8114,
+                "page": null,
+                "quote": "03/09/2026 a 31/03/2027",
+                "raw_sha256": "042687cd2d281eee9ca961cdf7734495dbce975aaee2b021b5974fcc96426eb9",
+                "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+                "schema_version": "m31-extraction-v1",
+                "segment_id": "segment-0010",
+                "start": 8091,
+                "text_sha256": "a9a0eefdd71c4ae2260fcc4a9b89f2956f3fb55909bfc08c8748abf0606fe167"
+              }
+            }
+          ],
+          "name": "submission_deadline",
+          "reason": "same literal and role in record; entailment remains unreviewed",
+          "reference_evidence": [
+            {
+              "end": 8114,
+              "evidence_id": "M30-F01-R3-E3",
+              "page": null,
+              "quote": "Inscrições:\n03/09/2026 a 31/03/2027",
+              "start": 8079
+            }
+          ],
+          "reference_value": "31/03/2027",
+          "scope_supported": true,
+          "semantic_adjudication": "not_certified",
+          "status": "MATCH",
+          "strict_role_value": true
+        },
+        {
+          "candidates": [],
+          "name": "official_identifier",
+          "reason": "requested target role outside implemented M31 field scope",
+          "reference_evidence": [
+            {
+              "end": 7531,
+              "evidence_id": "M30-F01-R3-E1",
+              "page": null,
+              "quote": "Chamada Pública MCTI/CNPq/ANR N° 32/2026",
+              "start": 7491
+            }
+          ],
+          "reference_value": "32/2026",
+          "scope_supported": false,
+          "semantic_adjudication": "not_certified",
+          "status": "UNRESOLVED",
+          "strict_role_value": false
+        },
+        {
+          "candidates": [
+            {
+              "diagnostic_status": "traceable_not_semantically_certified",
+              "field_index": 1,
+              "method_version": "m31-deterministic-v2",
+              "name": "unknown_temporal_expression",
+              "original": "03/09/2026",
+              "schema_version": "m31-extraction-v1",
+              "segment_id": "segment-0010",
+              "uncertainty": "heuristic role assignment; not authenticated or normalized",
+              "witness": {
+                "document_id": "M30-F01",
+                "end": 7717,
+                "page": null,
+                "quote": "03/09/2026 08h00",
+                "raw_sha256": "042687cd2d281eee9ca961cdf7734495dbce975aaee2b021b5974fcc96426eb9",
+                "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+                "schema_version": "m31-extraction-v1",
+                "segment_id": "segment-0010",
+                "start": 7701,
+                "text_sha256": "a9a0eefdd71c4ae2260fcc4a9b89f2956f3fb55909bfc08c8748abf0606fe167"
+              }
+            },
+            {
+              "diagnostic_status": "traceable_not_semantically_certified",
+              "field_index": 3,
+              "method_version": "m31-deterministic-v2",
+              "name": "opening_date",
+              "original": "03/09/2026",
+              "schema_version": "m31-extraction-v1",
+              "segment_id": "segment-0010",
+              "uncertainty": "heuristic role assignment; not authenticated or normalized",
+              "witness": {
+                "document_id": "M30-F01",
+                "end": 8114,
+                "page": null,
+                "quote": "03/09/2026 a 31/03/2027",
+                "raw_sha256": "042687cd2d281eee9ca961cdf7734495dbce975aaee2b021b5974fcc96426eb9",
+                "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+                "schema_version": "m31-extraction-v1",
+                "segment_id": "segment-0010",
+                "start": 8091,
+                "text_sha256": "a9a0eefdd71c4ae2260fcc4a9b89f2956f3fb55909bfc08c8748abf0606fe167"
+              }
+            }
+          ],
+          "name": "opening_date",
+          "reason": "same literal and role in record; entailment remains unreviewed",
+          "reference_evidence": [
+            {
+              "end": 8114,
+              "evidence_id": "M30-F01-R3-E3",
+              "page": null,
+              "quote": "Inscrições:\n03/09/2026 a 31/03/2027",
+              "start": 8079
+            }
+          ],
+          "reference_value": "03/09/2026",
+          "scope_supported": true,
+          "semantic_adjudication": "not_certified",
+          "status": "MATCH",
+          "strict_role_value": true
+        },
+        {
+          "candidates": [],
+          "name": "geographic_eligibility",
+          "reason": "no corresponding field; absence is not explicit field abstention",
+          "reference_evidence": [
+            {
+              "end": 8070,
+              "evidence_id": "M30-F01-R3-E2",
+              "page": null,
+              "quote": "Chamada Pública entre o Conselho Nacional de Desenvolvimento Científico e Tecnológico - CNPq e a Agência Nacional de Pesquisa - ANR, tendo por objetivo selecionar projetos de pesquisa conjuntos entre grupos brasileiros e franceses, que visem contribuir para o desenvolvimento científico, tecnológico e a inovação do país.",
+              "start": 7749
+            }
+          ],
+          "reference_value": "grupos brasileiros e franceses",
+          "scope_supported": true,
+          "semantic_adjudication": "not_certified",
+          "status": "MISSING",
+          "strict_role_value": false
+        }
+      ],
+      "fragmentation": 1,
+      "location_convention": "html_unicode_codepoints",
+      "physical_reference_evidence_pages": [],
+      "rationale": "Provisional AI source reading: Named research/bursary/event support call with explicit registration interval containing 2026-10-19; sibling calls have separate non-overlapping scopes.",
+      "record_id": "M30-F01-R3",
+      "reference": {
+        "discovery_label": "confirmed_opportunity",
+        "modality": "fomento",
+        "opportunity_label": "genuine_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "open"
+      },
+      "reference_characters": 722,
+      "reference_evidence": [
+        {
+          "end": 7531,
+          "evidence_id": "M30-F01-R3-E1",
+          "page": null,
+          "quote": "Chamada Pública MCTI/CNPq/ANR N° 32/2026",
+          "start": 7491
+        },
+        {
+          "end": 8070,
+          "evidence_id": "M30-F01-R3-E2",
+          "page": null,
+          "quote": "Chamada Pública entre o Conselho Nacional de Desenvolvimento Científico e Tecnológico - CNPq e a Agência Nacional de Pesquisa - ANR, tendo por objetivo selecionar projetos de pesquisa conjuntos entre grupos brasileiros e franceses, que visem contribuir para o desenvolvimento científico, tecnológico e a inovação do país.",
+          "start": 7749
+        },
+        {
+          "end": 8114,
+          "evidence_id": "M30-F01-R3-E3",
+          "page": null,
+          "quote": "Inscrições:\n03/09/2026 a 31/03/2027",
+          "start": 8079
+        }
+      ],
+      "representative": "segment-0010",
+      "representative_prediction": {
+        "discovery": "confirmed_opportunity",
+        "end": 8212,
+        "modality": "fomento",
+        "segment_id": "segment-0010",
+        "start": 7491,
+        "temporal": "open"
+      },
+      "representative_quote": "Chamada Pública MCTI/CNPq/ANR N° 32/2026\nCompartilhe:\nCompartilhe por Facebook\nCompartilhe por Twitter\nCompartilhe por LinkedIn\nCompartilhe por WhatsApp\nlink para Copiar para área de transferência\nPublicado em\n03/09/2026 08h00\nAtualizado em\n04/09/2026 11h26\nChamada Pública entre o Conselho Nacional de Desenvolvimento Científico e Tecnológico - CNPq e a Agência Nacional de Pesquisa - ANR, tendo por objetivo selecionar projetos de pesquisa conjuntos entre grupos brasileiros e franceses, que visem contribuir para o desenvolvimento científico, tecnológico e a inovação do país.\nChamada\nInscrições:\n03/09/2026 a 31/03/2027\n* Para mais informações em francês, consulte\nhttps://anr.fr/en\n/ ou\nescreva para\naapg.adfi@anr.fr",
+      "start": 7491,
+      "status": "overlap",
+      "uncertainty_notes": [
+        "Only the four records in this frozen page are covered; pagination not followed."
+      ]
+    },
+    {
+      "all_overlap_predictions": [
+        {
+          "discovery": "confirmed_opportunity",
+          "modality": "fomento",
+          "segment_id": "segment-0011",
+          "temporal": "open"
+        }
+      ],
+      "any_exact_boundary": false,
+      "coverage": {
+        "denominator": 1365,
+        "numerator": 1364,
+        "value": 0.9992673992673993
+      },
+      "covered_characters": 1364,
+      "disagreements": [],
+      "discovery_histogram": {
+        "confirmed_opportunity": 1
+      },
+      "document_id": "M30-F01",
+      "edges": [
+        {
+          "end": 9577,
+          "exact": false,
+          "intersection": 1364,
+          "intersection_end": 9577,
+          "intersection_start": 8213,
+          "iou": 0.9992673992673993,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.9992673992673993,
+          "segment_id": "segment-0011",
+          "start": 8213
+        }
+      ],
+      "end": 9578,
+      "fields": [
+        {
+          "candidates": [
+            {
+              "diagnostic_status": "traceable_not_semantically_certified",
+              "field_index": 0,
+              "method_version": "m31-deterministic-v2",
+              "name": "title",
+              "original": "Chamada CNPq nº 33/2026 - Bolsas de Produtividade do CNPq",
+              "schema_version": "m31-extraction-v1",
+              "segment_id": "segment-0011",
+              "uncertainty": "heuristic role assignment; not authenticated or normalized",
+              "witness": {
+                "document_id": "M30-F01",
+                "end": 8270,
+                "page": null,
+                "quote": "Chamada CNPq nº 33/2026 - Bolsas de Produtividade do CNPq",
+                "raw_sha256": "042687cd2d281eee9ca961cdf7734495dbce975aaee2b021b5974fcc96426eb9",
+                "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+                "schema_version": "m31-extraction-v1",
+                "segment_id": "segment-0011",
+                "start": 8213,
+                "text_sha256": "a9a0eefdd71c4ae2260fcc4a9b89f2956f3fb55909bfc08c8748abf0606fe167"
+              }
+            }
+          ],
+          "name": "title",
+          "reason": "same literal and role in record; entailment remains unreviewed",
+          "reference_evidence": [
+            {
+              "end": 8270,
+              "evidence_id": "M30-F01-R4-E1",
+              "page": null,
+              "quote": "Chamada CNPq nº 33/2026 - Bolsas de Produtividade do CNPq",
+              "start": 8213
+            }
+          ],
+          "reference_value": "Chamada CNPq nº 33/2026 - Bolsas de Produtividade do CNPq",
+          "scope_supported": true,
+          "semantic_adjudication": "not_certified",
+          "status": "MATCH",
+          "strict_role_value": true
+        },
+        {
+          "candidates": [],
+          "name": "application_period",
+          "reason": "requested target role outside implemented M31 field scope",
+          "reference_evidence": [
+            {
+              "end": 9577,
+              "evidence_id": "M30-F01-R4-E3",
+              "page": null,
+              "quote": "Inscrições:\n07/10/2026 a 07/01/2027",
+              "start": 9542
+            }
+          ],
+          "reference_value": "07/10/2026 a 07/01/2027",
+          "scope_supported": false,
+          "semantic_adjudication": "not_certified",
+          "status": "UNRESOLVED",
+          "strict_role_value": false
+        },
+        {
+          "candidates": [],
+          "name": "objective",
+          "reason": "requested target role outside implemented M31 field scope",
+          "reference_evidence": [
+            {
+              "end": 9183,
+              "evidence_id": "M30-F01-R4-E2",
+              "page": null,
+              "quote": "O CNPq torna pública a Chamada CNPq nº 33/2026, que tem por objeto conceder bolsas nas seguintes modalidades: Produtividade em Desenvolvimento Tecnológico e Extensão Inovadora (DT), Produtividade em Pesquisa (PQ) e Produtividade em Pesquisa Sênior (PQSr).\nSão objetivos desta chamada:\na) valorizar pesquisadores que possuam produção científica, tecnológica e de inovação de destaque em suas respectivas áreas do conhecimento;\nb) incentivar o aumento da produção científica, tecnológica e de inovação de qualidade;\nc) selecionar projetos de pesquisa que sejam propostos considerando o rigor e o método científico, bem como outros conceitos fundamentais para a produção do conhecimento científico.",
+              "start": 8488
+            }
+          ],
+          "reference_value": "O CNPq torna pública a Chamada CNPq nº 33/2026, que tem por objeto conceder bolsas nas seguintes modalidades: Produtividade em Desenvolvimento Tecnológico e Extensão Inovadora (DT), Produtividade em Pesquisa (PQ) e Produtividade em Pesquisa Sênior (PQSr).\nSão objetivos desta chamada:\na) valorizar pesquisadores que possuam produção científica, tecnológica e de inovação de destaque em suas respectivas áreas do conhecimento;\nb) incentivar o aumento da produção científica, tecnológica e de inovação de qualidade;\nc) selecionar projetos de pesquisa que sejam propostos considerando o rigor e o método científico, bem como outros conceitos fundamentais para a produção do conhecimento científico.",
+          "scope_supported": false,
+          "semantic_adjudication": "not_certified",
+          "status": "UNRESOLVED",
+          "strict_role_value": false
+        },
+        {
+          "candidates": [
+            {
+              "diagnostic_status": "traceable_not_semantically_certified",
+              "field_index": 10,
+              "method_version": "m31-deterministic-v2",
+              "name": "submission_deadline",
+              "original": "07/01/2027",
+              "schema_version": "m31-extraction-v1",
+              "segment_id": "segment-0011",
+              "uncertainty": "heuristic role assignment; not authenticated or normalized",
+              "witness": {
+                "document_id": "M30-F01",
+                "end": 9577,
+                "page": null,
+                "quote": "07/10/2026 a 07/01/2027",
+                "raw_sha256": "042687cd2d281eee9ca961cdf7734495dbce975aaee2b021b5974fcc96426eb9",
+                "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+                "schema_version": "m31-extraction-v1",
+                "segment_id": "segment-0011",
+                "start": 9554,
+                "text_sha256": "a9a0eefdd71c4ae2260fcc4a9b89f2956f3fb55909bfc08c8748abf0606fe167"
+              }
+            }
+          ],
+          "name": "submission_deadline",
+          "reason": "same literal and role in record; entailment remains unreviewed",
+          "reference_evidence": [
+            {
+              "end": 9577,
+              "evidence_id": "M30-F01-R4-E3",
+              "page": null,
+              "quote": "Inscrições:\n07/10/2026 a 07/01/2027",
+              "start": 9542
+            }
+          ],
+          "reference_value": "07/01/2027",
+          "scope_supported": true,
+          "semantic_adjudication": "not_certified",
+          "status": "MATCH",
+          "strict_role_value": true
+        },
+        {
+          "candidates": [],
+          "name": "official_identifier",
+          "reason": "requested target role outside implemented M31 field scope",
+          "reference_evidence": [
+            {
+              "end": 8270,
+              "evidence_id": "M30-F01-R4-E1",
+              "page": null,
+              "quote": "Chamada CNPq nº 33/2026 - Bolsas de Produtividade do CNPq",
+              "start": 8213
+            }
+          ],
+          "reference_value": "33/2026",
+          "scope_supported": false,
+          "semantic_adjudication": "not_certified",
+          "status": "UNRESOLVED",
+          "strict_role_value": false
+        },
+        {
+          "candidates": [
+            {
+              "diagnostic_status": "traceable_not_semantically_certified",
+              "field_index": 1,
+              "method_version": "m31-deterministic-v2",
+              "name": "unknown_temporal_expression",
+              "original": "07/10/2026",
+              "schema_version": "m31-extraction-v1",
+              "segment_id": "segment-0011",
+              "uncertainty": "heuristic role assignment; not authenticated or normalized",
+              "witness": {
+                "document_id": "M30-F01",
+                "end": 8456,
+                "page": null,
+                "quote": "07/10/2026 10h29",
+                "raw_sha256": "042687cd2d281eee9ca961cdf7734495dbce975aaee2b021b5974fcc96426eb9",
+                "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+                "schema_version": "m31-extraction-v1",
+                "segment_id": "segment-0011",
+                "start": 8440,
+                "text_sha256": "a9a0eefdd71c4ae2260fcc4a9b89f2956f3fb55909bfc08c8748abf0606fe167"
+              }
+            },
+            {
+              "diagnostic_status": "traceable_not_semantically_certified",
+              "field_index": 9,
+              "method_version": "m31-deterministic-v2",
+              "name": "opening_date",
+              "original": "07/10/2026",
+              "schema_version": "m31-extraction-v1",
+              "segment_id": "segment-0011",
+              "uncertainty": "heuristic role assignment; not authenticated or normalized",
+              "witness": {
+                "document_id": "M30-F01",
+                "end": 9577,
+                "page": null,
+                "quote": "07/10/2026 a 07/01/2027",
+                "raw_sha256": "042687cd2d281eee9ca961cdf7734495dbce975aaee2b021b5974fcc96426eb9",
+                "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+                "schema_version": "m31-extraction-v1",
+                "segment_id": "segment-0011",
+                "start": 9554,
+                "text_sha256": "a9a0eefdd71c4ae2260fcc4a9b89f2956f3fb55909bfc08c8748abf0606fe167"
+              }
+            }
+          ],
+          "name": "opening_date",
+          "reason": "same literal and role in record; entailment remains unreviewed",
+          "reference_evidence": [
+            {
+              "end": 9577,
+              "evidence_id": "M30-F01-R4-E3",
+              "page": null,
+              "quote": "Inscrições:\n07/10/2026 a 07/01/2027",
+              "start": 9542
+            }
+          ],
+          "reference_value": "07/10/2026",
+          "scope_supported": true,
+          "semantic_adjudication": "not_certified",
+          "status": "MATCH",
+          "strict_role_value": true
+        },
+        {
+          "candidates": [
+            {
+              "diagnostic_status": "traceable_not_semantically_certified",
+              "field_index": 3,
+              "method_version": "m31-deterministic-v2",
+              "name": "publishing_organization_expression",
+              "original": "O CNPq torna pública a Chamada CNPq nº 33/2026, que tem por objeto conceder bolsas nas seguintes modalidades: Produtividade em Desenvolvimento Tecnológico e Extensão Inovadora (DT), Produtividade em Pesquisa (PQ) e Produtividade em Pesquisa Sênior (PQSr).",
+              "schema_version": "m31-extraction-v1",
+              "segment_id": "segment-0011",
+              "uncertainty": "heuristic role assignment; not authenticated or normalized",
+              "witness": {
+                "document_id": "M30-F01",
+                "end": 8743,
+                "page": null,
+                "quote": "O CNPq torna pública a Chamada CNPq nº 33/2026, que tem por objeto conceder bolsas nas seguintes modalidades: Produtividade em Desenvolvimento Tecnológico e Extensão Inovadora (DT), Produtividade em Pesquisa (PQ) e Produtividade em Pesquisa Sênior (PQSr).",
+                "raw_sha256": "042687cd2d281eee9ca961cdf7734495dbce975aaee2b021b5974fcc96426eb9",
+                "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+                "schema_version": "m31-extraction-v1",
+                "segment_id": "segment-0011",
+                "start": 8488,
+                "text_sha256": "a9a0eefdd71c4ae2260fcc4a9b89f2956f3fb55909bfc08c8748abf0606fe167"
+              }
+            }
+          ],
+          "name": "publishing_organization",
+          "reason": "same/aliased role with related literal; qualifiers may be missing or extra",
+          "reference_evidence": [
+            {
+              "end": 9183,
+              "evidence_id": "M30-F01-R4-E2",
+              "page": null,
+              "quote": "O CNPq torna pública a Chamada CNPq nº 33/2026, que tem por objeto conceder bolsas nas seguintes modalidades: Produtividade em Desenvolvimento Tecnológico e Extensão Inovadora (DT), Produtividade em Pesquisa (PQ) e Produtividade em Pesquisa Sênior (PQSr).\nSão objetivos desta chamada:\na) valorizar pesquisadores que possuam produção científica, tecnológica e de inovação de destaque em suas respectivas áreas do conhecimento;\nb) incentivar o aumento da produção científica, tecnológica e de inovação de qualidade;\nc) selecionar projetos de pesquisa que sejam propostos considerando o rigor e o método científico, bem como outros conceitos fundamentais para a produção do conhecimento científico.",
+              "start": 8488
+            }
+          ],
+          "reference_value": "CNPq",
+          "scope_supported": true,
+          "semantic_adjudication": "not_certified",
+          "status": "PARTIAL",
+          "strict_role_value": false
+        }
+      ],
+      "fragmentation": 1,
+      "location_convention": "html_unicode_codepoints",
+      "physical_reference_evidence_pages": [],
+      "rationale": "Provisional AI source reading: Named research/bursary/event support call with explicit registration interval containing 2026-10-19; sibling calls have separate non-overlapping scopes.",
+      "record_id": "M30-F01-R4",
+      "reference": {
+        "discovery_label": "confirmed_opportunity",
+        "modality": "fomento",
+        "opportunity_label": "genuine_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "open"
+      },
+      "reference_characters": 1365,
+      "reference_evidence": [
+        {
+          "end": 8270,
+          "evidence_id": "M30-F01-R4-E1",
+          "page": null,
+          "quote": "Chamada CNPq nº 33/2026 - Bolsas de Produtividade do CNPq",
+          "start": 8213
+        },
+        {
+          "end": 9183,
+          "evidence_id": "M30-F01-R4-E2",
+          "page": null,
+          "quote": "O CNPq torna pública a Chamada CNPq nº 33/2026, que tem por objeto conceder bolsas nas seguintes modalidades: Produtividade em Desenvolvimento Tecnológico e Extensão Inovadora (DT), Produtividade em Pesquisa (PQ) e Produtividade em Pesquisa Sênior (PQSr).\nSão objetivos desta chamada:\na) valorizar pesquisadores que possuam produção científica, tecnológica e de inovação de destaque em suas respectivas áreas do conhecimento;\nb) incentivar o aumento da produção científica, tecnológica e de inovação de qualidade;\nc) selecionar projetos de pesquisa que sejam propostos considerando o rigor e o método científico, bem como outros conceitos fundamentais para a produção do conhecimento científico.",
+          "start": 8488
+        },
+        {
+          "end": 9577,
+          "evidence_id": "M30-F01-R4-E3",
+          "page": null,
+          "quote": "Inscrições:\n07/10/2026 a 07/01/2027",
+          "start": 9542
+        }
+      ],
+      "representative": "segment-0011",
+      "representative_prediction": {
+        "discovery": "confirmed_opportunity",
+        "end": 9577,
+        "modality": "fomento",
+        "segment_id": "segment-0011",
+        "start": 8213,
+        "temporal": "open"
+      },
+      "representative_quote": "Chamada CNPq nº 33/2026 - Bolsas de Produtividade do CNPq\nCompartilhe:\nCompartilhe por Facebook\nCompartilhe por Twitter\nCompartilhe por LinkedIn\nCompartilhe por WhatsApp\nlink para Copiar para área de transferência\nPublicado em\n07/10/2026 10h29\nAtualizado em\n13/10/2026 17h16\nO CNPq torna pública a Chamada CNPq nº 33/2026, que tem por objeto conceder bolsas nas seguintes modalidades: Produtividade em Desenvolvimento Tecnológico e Extensão Inovadora (DT), Produtividade em Pesquisa (PQ) e Produtividade em Pesquisa Sênior (PQSr).\nSão objetivos desta chamada:\na) valorizar pesquisadores que possuam produção científica, tecnológica e de inovação de destaque em suas respectivas áreas do conhecimento;\nb) incentivar o aumento da produção científica, tecnológica e de inovação de qualidade;\nc) selecionar projetos de pesquisa que sejam propostos considerando o rigor e o método científico, bem como outros conceitos fundamentais para a produção do conhecimento científico.\nChamada\nAnexo I - Critérios para avaliação de Bolsas de Produtividade\nAnexo I - Critérios para avaliação de Bolsas de Produtividade - versão atualizada em 13/10/2026\nFAQ\nErrata nº 1 - 13/10/2026\nO CNPq informa alteração no critério de julgamento do CA-DT, constante do Anexo I da Chamada. A versão atualizada consta com a modificação assinalada em vermelho.\nInscrições:\n07/10/2026 a 07/01/2027",
+      "start": 8213,
+      "status": "overlap",
+      "uncertainty_notes": [
+        "Only the four records in this frozen page are covered; pagination not followed."
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 5471,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0000",
+      "start": 5467,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 5494,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0001",
+      "start": 5472,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 5668,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0002",
+      "start": 5495,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 5681,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0003",
+      "start": 5669,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 5698,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0004",
+      "start": 5682,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 5712,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0005",
+      "start": 5699,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 5729,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0006",
+      "start": 5713,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 5783,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0007",
+      "start": 5730,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "call-heading-local-v1",
+        "access_heuristic_not_review_authority",
+        "application_stage_and_cutoff_timezone_unverified"
+      ],
+      "discovery": "confirmed_opportunity",
+      "end": 6735,
+      "field_count": 9,
+      "modality": "fomento",
+      "physical_page": null,
+      "reference_records": [
+        "M30-F01-R1"
+      ],
+      "segment_id": "segment-0008",
+      "start": 5784,
+      "temporal": "open",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "call-heading-local-v1",
+        "access_heuristic_not_review_authority",
+        "application_stage_and_cutoff_timezone_unverified"
+      ],
+      "discovery": "confirmed_opportunity",
+      "end": 7490,
+      "field_count": 7,
+      "modality": "fomento",
+      "physical_page": null,
+      "reference_records": [
+        "M30-F01-R2"
+      ],
+      "segment_id": "segment-0009",
+      "start": 6736,
+      "temporal": "open",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "call-heading-local-v1",
+        "access_heuristic_not_review_authority",
+        "application_stage_and_cutoff_timezone_unverified"
+      ],
+      "discovery": "confirmed_opportunity",
+      "end": 8212,
+      "field_count": 5,
+      "modality": "fomento",
+      "physical_page": null,
+      "reference_records": [
+        "M30-F01-R3"
+      ],
+      "segment_id": "segment-0010",
+      "start": 7491,
+      "temporal": "open",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "call-heading-local-v1",
+        "access_heuristic_not_review_authority",
+        "application_stage_and_cutoff_timezone_unverified"
+      ],
+      "discovery": "confirmed_opportunity",
+      "end": 9577,
+      "field_count": 11,
+      "modality": "fomento",
+      "physical_page": null,
+      "reference_records": [
+        "M30-F01-R4"
+      ],
+      "segment_id": "segment-0011",
+      "start": 8213,
+      "temporal": "open",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 9587,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0012",
+      "start": 9578,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 13317,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0013",
+      "start": 13309,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 13328,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0014",
+      "start": 13318,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 13344,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0015",
+      "start": 13329,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    }
+  ],
+  "semantic_reviews": [
+    {
+      "case_id": "M30-F01:segment-0008:discovery:classification",
+      "certainty": "supported_observation",
+      "claim_kind": "discovery",
+      "context_evidence": [
+        {
+          "end": 5890,
+          "page": null,
+          "quote": "Chamada Pública CNPq/CAPES Nº 30/2026 – Programa de Mestrado e Doutorado Acadêmico para Inovação – MAI/DAI",
+          "start": 5784
+        },
+        {
+          "end": 6525,
+          "page": null,
+          "quote": "A edição de 2026 do Programa de Mestrado e Doutorado para Inovação (MAI/DAI), que estimula a realização de pesquisas de mestrado e doutorado em universidades em parceria com empresas, recebe propostas até o dia 11 de dezembro. A chamada é realizada pelo Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq) e conta com a parceria da Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES).",
+          "start": 6108
+        },
+        {
+          "end": 6735,
+          "page": null,
+          "quote": "Inscrições:\n19/08/2026 a 11/12/2026",
+          "start": 6700
+        }
+      ],
+      "document_id": "M30-F01",
+      "end": 6735,
+      "error_codes": [],
+      "expected_behavior": "Exigir contexto do instrumento e preservar incerteza de acesso/condições.",
+      "expected_claim": "confirmed_opportunity",
+      "field_index": null,
+      "field_name": null,
+      "judgment": "supported",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "quote": "Chamada Pública CNPq/CAPES Nº 30/2026 – Programa de Mestrado e Doutorado Acadêmico para Inovação – MAI/DAI\nCompartilhe:\nCompartilhe por Facebook\nCompartilhe por Twitter\nCompartilhe por LinkedIn\nCompartilhe por WhatsApp\nlink para Copiar para área de transferência\nPublicado em\n19/08/2026 08h53\nAtualizado em\n13/10/2026 12h34\nA edição de 2026 do Programa de Mestrado e Doutorado para Inovação (MAI/DAI), que estimula a realização de pesquisas de mestrado e doutorado em universidades em parceria com empresas, recebe propostas até o dia 11 de dezembro. A chamada é realizada pelo Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq) e conta com a parceria da Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES).\nChamada\nAnexo II: Plano de Trabalho Programa MAI/DAI\nAnexo III: Declaração Institucional do Representante MAI/DAI\nAnexo IV: Carta de Concordância da Instituição Parceira\nFAQ\nInscrições:\n19/08/2026 a 11/12/2026",
+      "rationale": "O trecho identifica suporte/financiamento e rota ou intervalo de submissão. Confirmação de instrumento não é garantia de aprovação, elegibilidade completa ou janela aberta.",
+      "root_cause": "classify usa conjunções locais de instrumento/acesso; hierarquia entre páginas não existe.",
+      "root_cause_confidence": "high",
+      "segment_id": "segment-0008",
+      "severity": "info",
+      "start": 5784
+    },
+    {
+      "case_id": "M30-F01:segment-0008:temporal:classification",
+      "certainty": "supported_observation",
+      "claim_kind": "temporal",
+      "context_evidence": [
+        {
+          "end": 5890,
+          "page": null,
+          "quote": "Chamada Pública CNPq/CAPES Nº 30/2026 – Programa de Mestrado e Doutorado Acadêmico para Inovação – MAI/DAI",
+          "start": 5784
+        },
+        {
+          "end": 6525,
+          "page": null,
+          "quote": "A edição de 2026 do Programa de Mestrado e Doutorado para Inovação (MAI/DAI), que estimula a realização de pesquisas de mestrado e doutorado em universidades em parceria com empresas, recebe propostas até o dia 11 de dezembro. A chamada é realizada pelo Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq) e conta com a parceria da Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES).",
+          "start": 6108
+        },
+        {
+          "end": 6735,
+          "page": null,
+          "quote": "Inscrições:\n19/08/2026 a 11/12/2026",
+          "start": 6700
+        }
+      ],
+      "document_id": "M30-F01",
+      "end": 6735,
+      "error_codes": [],
+      "expected_behavior": "Comparar apenas a janela de inscrições deste registro com a data civil fixa.",
+      "expected_claim": "open",
+      "field_index": null,
+      "field_name": null,
+      "judgment": "supported",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "quote": "Chamada Pública CNPq/CAPES Nº 30/2026 – Programa de Mestrado e Doutorado Acadêmico para Inovação – MAI/DAI\nCompartilhe:\nCompartilhe por Facebook\nCompartilhe por Twitter\nCompartilhe por LinkedIn\nCompartilhe por WhatsApp\nlink para Copiar para área de transferência\nPublicado em\n19/08/2026 08h53\nAtualizado em\n13/10/2026 12h34\nA edição de 2026 do Programa de Mestrado e Doutorado para Inovação (MAI/DAI), que estimula a realização de pesquisas de mestrado e doutorado em universidades em parceria com empresas, recebe propostas até o dia 11 de dezembro. A chamada é realizada pelo Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq) e conta com a parceria da Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES).\nChamada\nAnexo II: Plano de Trabalho Programa MAI/DAI\nAnexo III: Declaração Institucional do Representante MAI/DAI\nAnexo IV: Carta de Concordância da Instituição Parceira\nFAQ\nInscrições:\n19/08/2026 a 11/12/2026",
+      "rationale": "Intervalo numérico de inscrição contém 2026-10-19. Nenhuma hora/cutoff/timezone foi inferida; anexos não congelados permanecem indisponíveis.",
+      "root_cause": "predict reconhece intervalo Inscrições no contêiner local.",
+      "root_cause_confidence": "high",
+      "segment_id": "segment-0008",
+      "severity": "info",
+      "start": 5784
+    },
+    {
+      "case_id": "M30-F01:segment-0009:discovery:classification",
+      "certainty": "supported_observation",
+      "claim_kind": "discovery",
+      "context_evidence": [
+        {
+          "end": 6840,
+          "page": null,
+          "quote": "Chamada CNPq Nº 34/2026 - Auxílio à Promoção de Eventos Científicos, Tecnológicos e/ou de Inovação - ARC",
+          "start": 6736
+        },
+        {
+          "end": 7442,
+          "page": null,
+          "quote": "O CNPq torna pública a Chamada CNPq nº 34/2026, que tem por objeto a\npoiar a realização no Brasil de eventos de grande porte, de abrangência mundial, internacional ou nacional, relacionados a ciência, tecnologia e inovação, tais como encontros, congressos e outros similares que visem contribuir significativamente para o desenvolvimento científico e tecnológico e a inovação do País.",
+          "start": 7058
+        },
+        {
+          "end": 7486,
+          "page": null,
+          "quote": "Inscrições:\n14/10/2026 a 04/12/2026",
+          "start": 7451
+        }
+      ],
+      "document_id": "M30-F01",
+      "end": 7490,
+      "error_codes": [],
+      "expected_behavior": "Exigir contexto do instrumento e preservar incerteza de acesso/condições.",
+      "expected_claim": "confirmed_opportunity",
+      "field_index": null,
+      "field_name": null,
+      "judgment": "supported",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "quote": "Chamada CNPq Nº 34/2026 - Auxílio à Promoção de Eventos Científicos, Tecnológicos e/ou de Inovação - ARC\nCompartilhe:\nCompartilhe por Facebook\nCompartilhe por Twitter\nCompartilhe por LinkedIn\nCompartilhe por WhatsApp\nlink para Copiar para área de transferência\nPublicado em\n14/10/2026 07h50\nAtualizado em\n14/10/2026 10h48\nO CNPq torna pública a Chamada CNPq nº 34/2026, que tem por objeto a\npoiar a realização no Brasil de eventos de grande porte, de abrangência mundial, internacional ou nacional, relacionados a ciência, tecnologia e inovação, tais como encontros, congressos e outros similares que visem contribuir significativamente para o desenvolvimento científico e tecnológico e a inovação do País.\nChamada\nInscrições:\n14/10/2026 a 04/12/2026\nFAQ",
+      "rationale": "O trecho identifica suporte/financiamento e rota ou intervalo de submissão. Confirmação de instrumento não é garantia de aprovação, elegibilidade completa ou janela aberta.",
+      "root_cause": "classify usa conjunções locais de instrumento/acesso; hierarquia entre páginas não existe.",
+      "root_cause_confidence": "high",
+      "segment_id": "segment-0009",
+      "severity": "info",
+      "start": 6736
+    },
+    {
+      "case_id": "M30-F01:segment-0009:temporal:classification",
+      "certainty": "supported_observation",
+      "claim_kind": "temporal",
+      "context_evidence": [
+        {
+          "end": 6840,
+          "page": null,
+          "quote": "Chamada CNPq Nº 34/2026 - Auxílio à Promoção de Eventos Científicos, Tecnológicos e/ou de Inovação - ARC",
+          "start": 6736
+        },
+        {
+          "end": 7442,
+          "page": null,
+          "quote": "O CNPq torna pública a Chamada CNPq nº 34/2026, que tem por objeto a\npoiar a realização no Brasil de eventos de grande porte, de abrangência mundial, internacional ou nacional, relacionados a ciência, tecnologia e inovação, tais como encontros, congressos e outros similares que visem contribuir significativamente para o desenvolvimento científico e tecnológico e a inovação do País.",
+          "start": 7058
+        },
+        {
+          "end": 7486,
+          "page": null,
+          "quote": "Inscrições:\n14/10/2026 a 04/12/2026",
+          "start": 7451
+        }
+      ],
+      "document_id": "M30-F01",
+      "end": 7490,
+      "error_codes": [],
+      "expected_behavior": "Comparar apenas a janela de inscrições deste registro com a data civil fixa.",
+      "expected_claim": "open",
+      "field_index": null,
+      "field_name": null,
+      "judgment": "supported",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "quote": "Chamada CNPq Nº 34/2026 - Auxílio à Promoção de Eventos Científicos, Tecnológicos e/ou de Inovação - ARC\nCompartilhe:\nCompartilhe por Facebook\nCompartilhe por Twitter\nCompartilhe por LinkedIn\nCompartilhe por WhatsApp\nlink para Copiar para área de transferência\nPublicado em\n14/10/2026 07h50\nAtualizado em\n14/10/2026 10h48\nO CNPq torna pública a Chamada CNPq nº 34/2026, que tem por objeto a\npoiar a realização no Brasil de eventos de grande porte, de abrangência mundial, internacional ou nacional, relacionados a ciência, tecnologia e inovação, tais como encontros, congressos e outros similares que visem contribuir significativamente para o desenvolvimento científico e tecnológico e a inovação do País.\nChamada\nInscrições:\n14/10/2026 a 04/12/2026\nFAQ",
+      "rationale": "Intervalo numérico de inscrição contém 2026-10-19. Nenhuma hora/cutoff/timezone foi inferida; anexos não congelados permanecem indisponíveis.",
+      "root_cause": "predict reconhece intervalo Inscrições no contêiner local.",
+      "root_cause_confidence": "high",
+      "segment_id": "segment-0009",
+      "severity": "info",
+      "start": 6736
+    },
+    {
+      "case_id": "M30-F01:segment-0010:discovery:classification",
+      "certainty": "supported_observation",
+      "claim_kind": "discovery",
+      "context_evidence": [
+        {
+          "end": 7531,
+          "page": null,
+          "quote": "Chamada Pública MCTI/CNPq/ANR N° 32/2026",
+          "start": 7491
+        },
+        {
+          "end": 8070,
+          "page": null,
+          "quote": "Chamada Pública entre o Conselho Nacional de Desenvolvimento Científico e Tecnológico - CNPq e a Agência Nacional de Pesquisa - ANR, tendo por objetivo selecionar projetos de pesquisa conjuntos entre grupos brasileiros e franceses, que visem contribuir para o desenvolvimento científico, tecnológico e a inovação do país.",
+          "start": 7749
+        },
+        {
+          "end": 8114,
+          "page": null,
+          "quote": "Inscrições:\n03/09/2026 a 31/03/2027",
+          "start": 8079
+        }
+      ],
+      "document_id": "M30-F01",
+      "end": 8212,
+      "error_codes": [],
+      "expected_behavior": "Exigir contexto do instrumento e preservar incerteza de acesso/condições.",
+      "expected_claim": "confirmed_opportunity",
+      "field_index": null,
+      "field_name": null,
+      "judgment": "supported",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "quote": "Chamada Pública MCTI/CNPq/ANR N° 32/2026\nCompartilhe:\nCompartilhe por Facebook\nCompartilhe por Twitter\nCompartilhe por LinkedIn\nCompartilhe por WhatsApp\nlink para Copiar para área de transferência\nPublicado em\n03/09/2026 08h00\nAtualizado em\n04/09/2026 11h26\nChamada Pública entre o Conselho Nacional de Desenvolvimento Científico e Tecnológico - CNPq e a Agência Nacional de Pesquisa - ANR, tendo por objetivo selecionar projetos de pesquisa conjuntos entre grupos brasileiros e franceses, que visem contribuir para o desenvolvimento científico, tecnológico e a inovação do país.\nChamada\nInscrições:\n03/09/2026 a 31/03/2027\n* Para mais informações em francês, consulte\nhttps://anr.fr/en\n/ ou\nescreva para\naapg.adfi@anr.fr",
+      "rationale": "O trecho identifica suporte/financiamento e rota ou intervalo de submissão. Confirmação de instrumento não é garantia de aprovação, elegibilidade completa ou janela aberta.",
+      "root_cause": "classify usa conjunções locais de instrumento/acesso; hierarquia entre páginas não existe.",
+      "root_cause_confidence": "high",
+      "segment_id": "segment-0010",
+      "severity": "info",
+      "start": 7491
+    },
+    {
+      "case_id": "M30-F01:segment-0010:temporal:classification",
+      "certainty": "supported_observation",
+      "claim_kind": "temporal",
+      "context_evidence": [
+        {
+          "end": 7531,
+          "page": null,
+          "quote": "Chamada Pública MCTI/CNPq/ANR N° 32/2026",
+          "start": 7491
+        },
+        {
+          "end": 8070,
+          "page": null,
+          "quote": "Chamada Pública entre o Conselho Nacional de Desenvolvimento Científico e Tecnológico - CNPq e a Agência Nacional de Pesquisa - ANR, tendo por objetivo selecionar projetos de pesquisa conjuntos entre grupos brasileiros e franceses, que visem contribuir para o desenvolvimento científico, tecnológico e a inovação do país.",
+          "start": 7749
+        },
+        {
+          "end": 8114,
+          "page": null,
+          "quote": "Inscrições:\n03/09/2026 a 31/03/2027",
+          "start": 8079
+        }
+      ],
+      "document_id": "M30-F01",
+      "end": 8212,
+      "error_codes": [],
+      "expected_behavior": "Comparar apenas a janela de inscrições deste registro com a data civil fixa.",
+      "expected_claim": "open",
+      "field_index": null,
+      "field_name": null,
+      "judgment": "supported",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "quote": "Chamada Pública MCTI/CNPq/ANR N° 32/2026\nCompartilhe:\nCompartilhe por Facebook\nCompartilhe por Twitter\nCompartilhe por LinkedIn\nCompartilhe por WhatsApp\nlink para Copiar para área de transferência\nPublicado em\n03/09/2026 08h00\nAtualizado em\n04/09/2026 11h26\nChamada Pública entre o Conselho Nacional de Desenvolvimento Científico e Tecnológico - CNPq e a Agência Nacional de Pesquisa - ANR, tendo por objetivo selecionar projetos de pesquisa conjuntos entre grupos brasileiros e franceses, que visem contribuir para o desenvolvimento científico, tecnológico e a inovação do país.\nChamada\nInscrições:\n03/09/2026 a 31/03/2027\n* Para mais informações em francês, consulte\nhttps://anr.fr/en\n/ ou\nescreva para\naapg.adfi@anr.fr",
+      "rationale": "Intervalo numérico de inscrição contém 2026-10-19. Nenhuma hora/cutoff/timezone foi inferida; anexos não congelados permanecem indisponíveis.",
+      "root_cause": "predict reconhece intervalo Inscrições no contêiner local.",
+      "root_cause_confidence": "high",
+      "segment_id": "segment-0010",
+      "severity": "info",
+      "start": 7491
+    },
+    {
+      "case_id": "M30-F01:segment-0011:discovery:classification",
+      "certainty": "supported_observation",
+      "claim_kind": "discovery",
+      "context_evidence": [
+        {
+          "end": 8270,
+          "page": null,
+          "quote": "Chamada CNPq nº 33/2026 - Bolsas de Produtividade do CNPq",
+          "start": 8213
+        },
+        {
+          "end": 9183,
+          "page": null,
+          "quote": "O CNPq torna pública a Chamada CNPq nº 33/2026, que tem por objeto conceder bolsas nas seguintes modalidades: Produtividade em Desenvolvimento Tecnológico e Extensão Inovadora (DT), Produtividade em Pesquisa (PQ) e Produtividade em Pesquisa Sênior (PQSr).\nSão objetivos desta chamada:\na) valorizar pesquisadores que possuam produção científica, tecnológica e de inovação de destaque em suas respectivas áreas do conhecimento;\nb) incentivar o aumento da produção científica, tecnológica e de inovação de qualidade;\nc) selecionar projetos de pesquisa que sejam propostos considerando o rigor e o método científico, bem como outros conceitos fundamentais para a produção do conhecimento científico.",
+          "start": 8488
+        },
+        {
+          "end": 9577,
+          "page": null,
+          "quote": "Inscrições:\n07/10/2026 a 07/01/2027",
+          "start": 9542
+        }
+      ],
+      "document_id": "M30-F01",
+      "end": 9577,
+      "error_codes": [],
+      "expected_behavior": "Exigir contexto do instrumento e preservar incerteza de acesso/condições.",
+      "expected_claim": "confirmed_opportunity",
+      "field_index": null,
+      "field_name": null,
+      "judgment": "supported",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "quote": "Chamada CNPq nº 33/2026 - Bolsas de Produtividade do CNPq\nCompartilhe:\nCompartilhe por Facebook\nCompartilhe por Twitter\nCompartilhe por LinkedIn\nCompartilhe por WhatsApp\nlink para Copiar para área de transferência\nPublicado em\n07/10/2026 10h29\nAtualizado em\n13/10/2026 17h16\nO CNPq torna pública a Chamada CNPq nº 33/2026, que tem por objeto conceder bolsas nas seguintes modalidades: Produtividade em Desenvolvimento Tecnológico e Extensão Inovadora (DT), Produtividade em Pesquisa (PQ) e Produtividade em Pesquisa Sênior (PQSr).\nSão objetivos desta chamada:\na) valorizar pesquisadores que possuam produção científica, tecnológica e de inovação de destaque em suas respectivas áreas do conhecimento;\nb) incentivar o aumento da produção científica, tecnológica e de inovação de qualidade;\nc) selecionar projetos de pesquisa que sejam propostos considerando o rigor e o método científico, bem como outros conceitos fundamentais para a produção do conhecimento científico.\nChamada\nAnexo I - Critérios para avaliação de Bolsas de Produtividade\nAnexo I - Critérios para avaliação de Bolsas de Produtividade - versão atualizada em 13/10/2026\nFAQ\nErrata nº 1 - 13/10/2026\nO CNPq informa alteração no critério de julgamento do CA-DT, constante do Anexo I da Chamada. A versão atualizada consta com a modificação assinalada em vermelho.\nInscrições:\n07/10/2026 a 07/01/2027",
+      "rationale": "O trecho identifica suporte/financiamento e rota ou intervalo de submissão. Confirmação de instrumento não é garantia de aprovação, elegibilidade completa ou janela aberta.",
+      "root_cause": "classify usa conjunções locais de instrumento/acesso; hierarquia entre páginas não existe.",
+      "root_cause_confidence": "high",
+      "segment_id": "segment-0011",
+      "severity": "info",
+      "start": 8213
+    },
+    {
+      "case_id": "M30-F01:segment-0011:temporal:classification",
+      "certainty": "supported_observation",
+      "claim_kind": "temporal",
+      "context_evidence": [
+        {
+          "end": 8270,
+          "page": null,
+          "quote": "Chamada CNPq nº 33/2026 - Bolsas de Produtividade do CNPq",
+          "start": 8213
+        },
+        {
+          "end": 9183,
+          "page": null,
+          "quote": "O CNPq torna pública a Chamada CNPq nº 33/2026, que tem por objeto conceder bolsas nas seguintes modalidades: Produtividade em Desenvolvimento Tecnológico e Extensão Inovadora (DT), Produtividade em Pesquisa (PQ) e Produtividade em Pesquisa Sênior (PQSr).\nSão objetivos desta chamada:\na) valorizar pesquisadores que possuam produção científica, tecnológica e de inovação de destaque em suas respectivas áreas do conhecimento;\nb) incentivar o aumento da produção científica, tecnológica e de inovação de qualidade;\nc) selecionar projetos de pesquisa que sejam propostos considerando o rigor e o método científico, bem como outros conceitos fundamentais para a produção do conhecimento científico.",
+          "start": 8488
+        },
+        {
+          "end": 9577,
+          "page": null,
+          "quote": "Inscrições:\n07/10/2026 a 07/01/2027",
+          "start": 9542
+        }
+      ],
+      "document_id": "M30-F01",
+      "end": 9577,
+      "error_codes": [],
+      "expected_behavior": "Comparar apenas a janela de inscrições deste registro com a data civil fixa.",
+      "expected_claim": "open",
+      "field_index": null,
+      "field_name": null,
+      "judgment": "supported",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "quote": "Chamada CNPq nº 33/2026 - Bolsas de Produtividade do CNPq\nCompartilhe:\nCompartilhe por Facebook\nCompartilhe por Twitter\nCompartilhe por LinkedIn\nCompartilhe por WhatsApp\nlink para Copiar para área de transferência\nPublicado em\n07/10/2026 10h29\nAtualizado em\n13/10/2026 17h16\nO CNPq torna pública a Chamada CNPq nº 33/2026, que tem por objeto conceder bolsas nas seguintes modalidades: Produtividade em Desenvolvimento Tecnológico e Extensão Inovadora (DT), Produtividade em Pesquisa (PQ) e Produtividade em Pesquisa Sênior (PQSr).\nSão objetivos desta chamada:\na) valorizar pesquisadores que possuam produção científica, tecnológica e de inovação de destaque em suas respectivas áreas do conhecimento;\nb) incentivar o aumento da produção científica, tecnológica e de inovação de qualidade;\nc) selecionar projetos de pesquisa que sejam propostos considerando o rigor e o método científico, bem como outros conceitos fundamentais para a produção do conhecimento científico.\nChamada\nAnexo I - Critérios para avaliação de Bolsas de Produtividade\nAnexo I - Critérios para avaliação de Bolsas de Produtividade - versão atualizada em 13/10/2026\nFAQ\nErrata nº 1 - 13/10/2026\nO CNPq informa alteração no critério de julgamento do CA-DT, constante do Anexo I da Chamada. A versão atualizada consta com a modificação assinalada em vermelho.\nInscrições:\n07/10/2026 a 07/01/2027",
+      "rationale": "Intervalo numérico de inscrição contém 2026-10-19. Nenhuma hora/cutoff/timezone foi inferida; anexos não congelados permanecem indisponíveis.",
+      "root_cause": "predict reconhece intervalo Inscrições no contêiner local.",
+      "root_cause_confidence": "high",
+      "segment_id": "segment-0011",
+      "severity": "info",
+      "start": 8213
+    },
+    {
+      "case_id": "M30-F01:segment-0008:field:3",
+      "certainty": "strong_hypothesis",
+      "claim_kind": "field",
+      "context_evidence": [
+        {
+          "end": 5890,
+          "page": null,
+          "quote": "Chamada Pública CNPq/CAPES Nº 30/2026 – Programa de Mestrado e Doutorado Acadêmico para Inovação – MAI/DAI",
+          "start": 5784
+        },
+        {
+          "end": 6525,
+          "page": null,
+          "quote": "A edição de 2026 do Programa de Mestrado e Doutorado para Inovação (MAI/DAI), que estimula a realização de pesquisas de mestrado e doutorado em universidades em parceria com empresas, recebe propostas até o dia 11 de dezembro. A chamada é realizada pelo Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq) e conta com a parceria da Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES).",
+          "start": 6108
+        },
+        {
+          "end": 6735,
+          "page": null,
+          "quote": "Inscrições:\n19/08/2026 a 11/12/2026",
+          "start": 6700
+        }
+      ],
+      "document_id": "M30-F01",
+      "end": 6525,
+      "error_codes": [
+        "ORGANIZATION_ROLE_CONFUSION",
+        "EVIDENCE_SEMANTIC_MISMATCH"
+      ],
+      "expected_behavior": "Preservar descrição de realização/parceria sem promover automaticamente a papel financeiro autenticado.",
+      "expected_claim": "A edição de 2026 do Programa de Mestrado e Doutorado para Inovação (MAI/DAI), que estimula a realização de pesquisas de mestrado e doutorado em universidades em parceria com empresas, recebe propostas até o dia 11 de dezembro. A chamada é realizada pelo Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq) e conta com a parceria da Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES).",
+      "field_index": 3,
+      "field_name": "funding_organization_expression",
+      "judgment": "unresolved",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "quote": "A edição de 2026 do Programa de Mestrado e Doutorado para Inovação (MAI/DAI), que estimula a realização de pesquisas de mestrado e doutorado em universidades em parceria com empresas, recebe propostas até o dia 11 de dezembro. A chamada é realizada pelo Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq) e conta com a parceria da Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES).",
+      "rationale": "realizada pelo CNPq e parceria CAPES comprovam organização/realização. Isoladamente não discriminam emissor e financiador de cada componente. Não certificar instituição financiadora só por esse gatilho.",
+      "root_cause": "role_patterns associa realizada pelo a funding_organization_expression.",
+      "root_cause_confidence": "high",
+      "segment_id": "segment-0008",
+      "severity": "medium",
+      "start": 6108
+    }
+  ],
+  "status": "processed"
+}

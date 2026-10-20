@@ -1,0 +1,2979 @@
+{
+  "dataset_version": "m3.0-pilot-v1",
+  "protocol_version": "m3.0-annotation-v1",
+  "records": [
+    {
+      "annotation_id": "M30-C01-A1",
+      "record_id": "M30-C01-R1",
+      "document_id": "M30-C01",
+      "unit_locator": {
+        "start": 327,
+        "end": 2455
+      },
+      "discovery_label": "confirmed_opportunity",
+      "opportunity_label": "genuine_opportunity",
+      "temporal_status": "undetermined",
+      "reference_date": "2026-10-19",
+      "modality": "credito",
+      "review_status": "provisional",
+      "annotation_method": "AI-assisted source reading; no model predictions",
+      "protocol_version": "m3.0-annotation-v1",
+      "rationale": "The product identifies financing, eligible borrowers and how to request support. It is credit, not equity despite investment in the title. Access is subject to the accredited agent; no deadline means temporal availability remains undetermined.",
+      "uncertainty_notes": [
+        "No verified application cutoff or continuous-availability guarantee in this record. Snapshot existence is not proof of current openness."
+      ],
+      "evidence": [
+        {
+          "evidence_id": "M30-C01-R1-E1",
+          "start": 327,
+          "end": 468,
+          "quote": "BNDES Automático - Projeto de Investimento\nFinanciamento de até R$ 150 milhões para projetos de investimento de empresas de todos os setores.",
+          "page": null
+        },
+        {
+          "evidence_id": "M30-C01-R1-E2",
+          "start": 530,
+          "end": 1023,
+          "quote": "empresas sediadas no País;\nprodutores rurais (pessoa física);\nempresários individuais com CNPJ regularmente inscrito;\nentidades e órgãos públicos;\nfundações, associações e cooperativas;\nconsórcios e condomínios que exerçam atividade produtiva.\nPessoas jurídicas de Direito Público interno, à exceção da União.\nNão poderão ser apoiados clientes que não venham a operar efetivamente o objeto do financiamento, exceto nos casos em que a natureza da atividade financiada justifique o investimento.",
+          "page": null
+        },
+        {
+          "evidence_id": "M30-C01-R1-E3",
+          "start": 1762,
+          "end": 2455,
+          "quote": "Se você é um micro pequeno ou médio empresário, pode enviar sua solicitação pelo BNDES Impulso\nDirija-se à\ninstituição financeira credenciada\nde sua preferência, que informará a documentação necessária, analisará a possibilidade de concessão do crédito e negociará as garantias. Após aprovada, a operação será encaminhada para homologação e posterior liberação dos recursos pelo BNDES.\nIMPORTANTE:\ncada instituição financeira credenciada pode aderir ou não às linhas de financiamento do BNDES, de acordo com suas políticas próprias para concessão do crédito. A decisão final sobre a aceitação ou recusa das propostas protocoladas é de exclusiva responsabilidade do agente financeiro envolvido.",
+          "page": null
+        }
+      ],
+      "label_evidence": {
+        "discovery_label": [
+          "M30-C01-R1-E1",
+          "M30-C01-R1-E2",
+          "M30-C01-R1-E3"
+        ],
+        "opportunity_label": [
+          "M30-C01-R1-E1",
+          "M30-C01-R1-E2",
+          "M30-C01-R1-E3"
+        ],
+        "temporal_status": [
+          "M30-C01-R1-E1",
+          "M30-C01-R1-E2",
+          "M30-C01-R1-E3"
+        ],
+        "modality": [
+          "M30-C01-R1-E1",
+          "M30-C01-R1-E2",
+          "M30-C01-R1-E3"
+        ]
+      },
+      "fields": {
+        "title": {
+          "value": "BNDES Automático - Projeto de Investimento",
+          "evidence_ids": [
+            "M30-C01-R1-E1"
+          ]
+        },
+        "credit_limit": {
+          "value": "até R$ 150 milhões",
+          "evidence_ids": [
+            "M30-C01-R1-E1"
+          ]
+        },
+        "applicant_requirements": {
+          "value": "empresas sediadas no País;",
+          "evidence_ids": [
+            "M30-C01-R1-E2"
+          ]
+        },
+        "geographic_eligibility": {
+          "value": "empresas sediadas no País;",
+          "evidence_ids": [
+            "M30-C01-R1-E2"
+          ]
+        },
+        "application_stage": {
+          "value": "pode enviar sua solicitação pelo BNDES Impulso",
+          "evidence_ids": [
+            "M30-C01-R1-E3"
+          ]
+        },
+        "funding_organization": {
+          "value": "BNDES",
+          "evidence_ids": [
+            "M30-C01-R1-E3"
+          ]
+        }
+      }
+    },
+    {
+      "annotation_id": "M30-C02-A1",
+      "record_id": "M30-C02-R1",
+      "document_id": "M30-C02",
+      "unit_locator": {
+        "start": 331,
+        "end": 3552
+      },
+      "discovery_label": "confirmed_opportunity",
+      "opportunity_label": "genuine_opportunity",
+      "temporal_status": "undetermined",
+      "reference_date": "2026-10-19",
+      "modality": "credito",
+      "review_status": "provisional",
+      "annotation_method": "AI-assisted source reading; no model predictions",
+      "protocol_version": "m3.0-annotation-v1",
+      "rationale": "A financing product for innovation with stated access conditions and direct/indirect application path. The word investimento describes use of loan proceeds, not venture capital. No verified application window is claimed.",
+      "uncertainty_notes": [
+        "No verified application cutoff or continuous-availability guarantee in this record. Snapshot existence is not proof of current openness."
+      ],
+      "evidence": [
+        {
+          "evidence_id": "M30-C02-R1-E1",
+          "start": 331,
+          "end": 675,
+          "quote": "BNDES Mais Inovação - Investimento em inovação\nApoio a planos de investimento voltados para inovação e/ou digitalização. Financiamento direto com o BNDES, a partir de R$ 10 milhões, nas regiões Norte e Nordeste e a partir de R$ 20 milhões para demais regiões do país. No financiamento indireto não automático, o valor mínimo é de R$ 20 milhões.",
+          "page": null
+        },
+        {
+          "evidence_id": "M30-C02-R1-E2",
+          "start": 737,
+          "end": 851,
+          "quote": "Pessoas jurídicas de direito privado, sediadas no país e pessoas jurídicas de direito público, à exceção da União.",
+          "page": null
+        },
+        {
+          "evidence_id": "M30-C02-R1-E3",
+          "start": 2879,
+          "end": 3552,
+          "quote": "Antes do envio da solicitação de apoio direto, é necessário que o cliente possua habilitação junto ao BNDES. Para isso, é necessário acessar o\nPortal do Cliente\n. Cabe destacar que o sistema realiza diversas análises automáticas e que o seu pleito poderá ser redirecionado para outros canais.\nVeja mais detalhes.\nApós a conclusão dessa etapa, você poderá acessar o mesmo Portal do Cliente e protocolar o seu pedido de financiamento, na parte de\nSolicitações de Financiamento\n. Em caso de dúvidas,\nclique aqui\n.\nCaso prefira, entre em contato com uma\ninstituição financeira credenciada\n(agente financeiro) de sua preferência e envie a sua solicitação na modalidade indireta.",
+          "page": null
+        }
+      ],
+      "label_evidence": {
+        "discovery_label": [
+          "M30-C02-R1-E1",
+          "M30-C02-R1-E2",
+          "M30-C02-R1-E3"
+        ],
+        "opportunity_label": [
+          "M30-C02-R1-E1",
+          "M30-C02-R1-E2",
+          "M30-C02-R1-E3"
+        ],
+        "temporal_status": [
+          "M30-C02-R1-E1",
+          "M30-C02-R1-E2",
+          "M30-C02-R1-E3"
+        ],
+        "modality": [
+          "M30-C02-R1-E1",
+          "M30-C02-R1-E2",
+          "M30-C02-R1-E3"
+        ]
+      },
+      "fields": {
+        "title": {
+          "value": "BNDES Mais Inovação - Investimento em inovação",
+          "evidence_ids": [
+            "M30-C02-R1-E1"
+          ]
+        },
+        "applicant_requirements": {
+          "value": "Pessoas jurídicas de direito privado, sediadas no país e pessoas jurídicas de direito público, à exceção da União.",
+          "evidence_ids": [
+            "M30-C02-R1-E2"
+          ]
+        },
+        "credit_minimum": {
+          "value": "a partir de R$ 10 milhões, nas regiões Norte e Nordeste e a partir de R$ 20 milhões para demais regiões do país",
+          "evidence_ids": [
+            "M30-C02-R1-E1"
+          ]
+        },
+        "resource_type": {
+          "value": "Financiamento direto",
+          "evidence_ids": [
+            "M30-C02-R1-E1"
+          ]
+        },
+        "funding_organization": {
+          "value": "BNDES",
+          "evidence_ids": [
+            "M30-C02-R1-E1"
+          ]
+        }
+      }
+    },
+    {
+      "annotation_id": "M30-C03-A1",
+      "record_id": "M30-C03-R1",
+      "document_id": "M30-C03",
+      "unit_locator": {
+        "start": 325,
+        "end": 1602
+      },
+      "discovery_label": "confirmed_opportunity",
+      "opportunity_label": "genuine_opportunity",
+      "temporal_status": "undetermined",
+      "reference_date": "2026-10-19",
+      "modality": "credito",
+      "review_status": "provisional",
+      "annotation_method": "AI-assisted source reading; no model predictions",
+      "protocol_version": "m3.0-annotation-v1",
+      "rationale": "A distinct loan instrument provides borrower classes, purpose, annual ceiling and request path. The agent may refuse or not offer the line, so the program is genuine without a guaranteed current application window.",
+      "uncertainty_notes": [
+        "No verified application cutoff or continuous-availability guarantee in this record. Snapshot existence is not proof of current openness."
+      ],
+      "evidence": [
+        {
+          "evidence_id": "M30-C03-R1-E1",
+          "start": 325,
+          "end": 447,
+          "quote": "BNDES Crédito Pequenas e Médias Empresas\nEmpréstimo para micro, pequenas e médias empresas e para empresários individuais.",
+          "page": null
+        },
+        {
+          "evidence_id": "M30-C03-R1-E2",
+          "start": 509,
+          "end": 760,
+          "quote": "Micro e pequenas empresas e empresários individuais\nMédias empresas com faturamento até R$ 300 milhões*\n* Quando a empresa (beneficiária final) integrar um grupo econômico, a classificação do porte deverá considerar o faturamento consolidado do grupo.",
+          "page": null
+        },
+        {
+          "evidence_id": "M30-C03-R1-E3",
+          "start": 812,
+          "end": 1602,
+          "quote": "Empréstimo visando à manutenção e/ou à geração de empregos, no limite de R$ 20 milhões por ano.\nSe você é um micro pequeno ou médio empresário, pode enviar sua solicitação pelo BNDES Impulso.\nDirija-se à\ninstituição financeira credenciada\nde sua preferência, que informará a documentação necessária, analisará a possibilidade de concessão do crédito e negociará as garantias. Após aprovada, a operação será encaminhada para homologação e posterior liberação dos recursos pelo BNDES.\nIMPORTANTE:\ncada instituição financeira credenciada pode aderir ou não às linhas de financiamento do BNDES, de acordo com suas políticas próprias para concessão do crédito. A decisão final sobre a aceitação ou recusa das propostas protocoladas é de exclusiva responsabilidade do agente financeiro envolvido.",
+          "page": null
+        }
+      ],
+      "label_evidence": {
+        "discovery_label": [
+          "M30-C03-R1-E1",
+          "M30-C03-R1-E2",
+          "M30-C03-R1-E3"
+        ],
+        "opportunity_label": [
+          "M30-C03-R1-E1",
+          "M30-C03-R1-E2",
+          "M30-C03-R1-E3"
+        ],
+        "temporal_status": [
+          "M30-C03-R1-E1",
+          "M30-C03-R1-E2",
+          "M30-C03-R1-E3"
+        ],
+        "modality": [
+          "M30-C03-R1-E1",
+          "M30-C03-R1-E2",
+          "M30-C03-R1-E3"
+        ]
+      },
+      "fields": {
+        "title": {
+          "value": "BNDES Crédito Pequenas e Médias Empresas",
+          "evidence_ids": [
+            "M30-C03-R1-E1"
+          ]
+        },
+        "credit_limit": {
+          "value": "R$ 20 milhões por ano",
+          "evidence_ids": [
+            "M30-C03-R1-E3"
+          ]
+        },
+        "applicant_requirements": {
+          "value": "Médias empresas com faturamento até R$ 300 milhões*",
+          "evidence_ids": [
+            "M30-C03-R1-E2"
+          ]
+        },
+        "resource_type": {
+          "value": "Empréstimo",
+          "evidence_ids": [
+            "M30-C03-R1-E1"
+          ]
+        },
+        "funding_organization": {
+          "value": "BNDES",
+          "evidence_ids": [
+            "M30-C03-R1-E3"
+          ]
+        }
+      }
+    },
+    {
+      "annotation_id": "M30-C04-A1",
+      "record_id": "M30-C04-R1",
+      "document_id": "M30-C04",
+      "unit_locator": {
+        "start": 336,
+        "end": 4576
+      },
+      "discovery_label": "confirmed_opportunity",
+      "opportunity_label": "genuine_opportunity",
+      "temporal_status": "undetermined",
+      "reference_date": "2026-10-19",
+      "modality": "credito",
+      "review_status": "provisional",
+      "annotation_method": "AI-assisted source reading; no model predictions",
+      "protocol_version": "m3.0-annotation-v1",
+      "rationale": "The institutional product describes the supported activities, eligible public/private entities and financing application path. Loan limits are credit limits, not a grant ceiling. Guarantee and funding depend on operation analysis.",
+      "uncertainty_notes": [
+        "No verified application cutoff or continuous-availability guarantee in this record. Snapshot existence is not proof of current openness."
+      ],
+      "evidence": [
+        {
+          "evidence_id": "M30-C04-R1-E1",
+          "start": 336,
+          "end": 825,
+          "quote": "Fundo Clima - Florestas Nativas e Recursos Hídricos\nApoiar a conservação, recuperação e gestão responsável de florestas e promover a mitigação climática, a sustentabilidade ambiental, a disponibilidade de água, a proteção e uso sustentável da biodiversidade e a resiliência às mudanças climáticas.\nQuem pode solicitar\nO que pode ser financiado\nComo solicitar\nPessoas Jurídicas de Direito Público, à exceção da União; e\nPessoas Jurídicas de Direito Privado com sede e administração no País.",
+          "page": null
+        },
+        {
+          "evidence_id": "M30-C04-R1-E2",
+          "start": 2902,
+          "end": 3412,
+          "quote": "Antes do envio da solicitação de apoio direto, é necessário que o cliente possua habilitação junto ao BNDES. Para isso, é necessário acessar o\nPortal do Cliente\n. Cabe destacar que o sistema realiza diversas análises automáticas e que o seu pleito poderá ser redirecionado para outros canais.\nVeja mais detalhes.\nApós a conclusão dessa etapa, você poderá acessar o mesmo Portal do Cliente e protocolar o seu pedido de financiamento, na parte de\nSolicitações de Financiamento\n. Em caso de dúvidas,\nclique aqui\n.",
+          "page": null
+        },
+        {
+          "evidence_id": "M30-C04-R1-E3",
+          "start": 4057,
+          "end": 4390,
+          "quote": "Valor mínimo de financiamento\nO valor mínimo de financiamento é de R$ 10 milhões.\nValor máximo de financiamento\nR$ 250 milhões\npor grupo econômico a cada 12 meses, contados a partir da aprovação da operação.\nR$ 50 milhões\npara clientes Pessoas Jurídicas de Direito Público a cada 12 meses, contados a partir da aprovação da operação.",
+          "page": null
+        },
+        {
+          "evidence_id": "M30-C04-R1-E4",
+          "start": 4516,
+          "end": 4576,
+          "quote": "Garantias\nAs garantias são definidas na análise da operação.",
+          "page": null
+        }
+      ],
+      "label_evidence": {
+        "discovery_label": [
+          "M30-C04-R1-E1",
+          "M30-C04-R1-E2",
+          "M30-C04-R1-E3",
+          "M30-C04-R1-E4"
+        ],
+        "opportunity_label": [
+          "M30-C04-R1-E1",
+          "M30-C04-R1-E2",
+          "M30-C04-R1-E3",
+          "M30-C04-R1-E4"
+        ],
+        "temporal_status": [
+          "M30-C04-R1-E1",
+          "M30-C04-R1-E2",
+          "M30-C04-R1-E3",
+          "M30-C04-R1-E4"
+        ],
+        "modality": [
+          "M30-C04-R1-E1",
+          "M30-C04-R1-E2",
+          "M30-C04-R1-E3",
+          "M30-C04-R1-E4"
+        ]
+      },
+      "fields": {
+        "title": {
+          "value": "Fundo Clima - Florestas Nativas e Recursos Hídricos",
+          "evidence_ids": [
+            "M30-C04-R1-E1"
+          ]
+        },
+        "credit_limit": {
+          "value": "R$ 250 milhões\npor grupo econômico a cada 12 meses, contados a partir da aprovação da operação.",
+          "evidence_ids": [
+            "M30-C04-R1-E3"
+          ]
+        },
+        "credit_minimum": {
+          "value": "R$ 10 milhões",
+          "evidence_ids": [
+            "M30-C04-R1-E3"
+          ]
+        },
+        "applicant_requirements": {
+          "value": "Pessoas Jurídicas de Direito Privado com sede e administração no País.",
+          "evidence_ids": [
+            "M30-C04-R1-E1"
+          ]
+        }
+      }
+    },
+    {
+      "annotation_id": "M30-C05-A1",
+      "record_id": "M30-C05-R1",
+      "document_id": "M30-C05",
+      "unit_locator": {
+        "start": 305,
+        "end": 836
+      },
+      "discovery_label": "opportunity_signal",
+      "opportunity_label": "uncertain",
+      "temporal_status": "undetermined",
+      "reference_date": "2026-10-19",
+      "modality": "credito",
+      "review_status": "provisional",
+      "annotation_method": "AI-assisted source reading; no model predictions",
+      "protocol_version": "m3.0-annotation-v1",
+      "rationale": "Overview/navigation points to credit lines and financing agents but this scoped overview does not establish a particular complete instrument with beneficiary access conditions. Relevant discovery signal, not a confirmed application opportunity.",
+      "uncertainty_notes": [
+        "Overview and navigation are not a canonical opportunity; details are on unacquired linked pages. Finame Direto is annotated as a separate record."
+      ],
+      "evidence": [
+        {
+          "evidence_id": "M30-C05-R1-E1",
+          "start": 305,
+          "end": 836,
+          "quote": "BNDES Finame\nComo obter um financiamento BNDES Finame?\nEntenda o BNDES Finame, as linhas de financiamento disponíveis e o processo de solicitação de apoio.\nMáquinas e equipamentos\nConheça os itens credenciados pelo BNDES.\nInstituições financeiras\nSaiba quais são os agentes financeiros credenciados a conceder financiamentos BNDES Finame.\nDesempenho operacional - BNDES Finame\nAcompanhe o desempenho das linhas do BNDES Finame, com números de operações e valores aprovados por região, ranking dos agentes financeiros e outros dados",
+          "page": null
+        }
+      ],
+      "label_evidence": {
+        "discovery_label": [
+          "M30-C05-R1-E1"
+        ],
+        "opportunity_label": [
+          "M30-C05-R1-E1"
+        ],
+        "temporal_status": [
+          "M30-C05-R1-E1"
+        ],
+        "modality": [
+          "M30-C05-R1-E1"
+        ]
+      },
+      "fields": {
+        "title": {
+          "value": "BNDES Finame",
+          "evidence_ids": [
+            "M30-C05-R1-E1"
+          ]
+        }
+      }
+    },
+    {
+      "annotation_id": "M30-C05-A2",
+      "record_id": "M30-C05-R2",
+      "document_id": "M30-C05",
+      "unit_locator": {
+        "start": 837,
+        "end": 994
+      },
+      "discovery_label": "confirmed_opportunity",
+      "opportunity_label": "genuine_opportunity",
+      "temporal_status": "undetermined",
+      "reference_date": "2026-10-19",
+      "modality": "credito",
+      "review_status": "provisional",
+      "annotation_method": "AI-assisted source reading; no model predictions",
+      "protocol_version": "m3.0-annotation-v1",
+      "rationale": "The separate Finame Direto record identifies a credit instrument, its equipment purpose, the annual-revenue threshold and the ability to request a credit limit online. This supports existence, not automatic approval or an explicit deadline.",
+      "uncertainty_notes": [
+        "No verified application cutoff or continuous-availability guarantee in this record. Snapshot existence is not proof of current openness."
+      ],
+      "evidence": [
+        {
+          "evidence_id": "M30-C05-R2-E1",
+          "start": 837,
+          "end": 994,
+          "quote": "Finame Direto\nEmpresas com faturamento anual acima de R$ 80 milhões agora podem solicitar online limite de crédito para aquisição de máquinas e equipamentos.",
+          "page": null
+        }
+      ],
+      "label_evidence": {
+        "discovery_label": [
+          "M30-C05-R2-E1"
+        ],
+        "opportunity_label": [
+          "M30-C05-R2-E1"
+        ],
+        "temporal_status": [
+          "M30-C05-R2-E1"
+        ],
+        "modality": [
+          "M30-C05-R2-E1"
+        ]
+      },
+      "fields": {
+        "title": {
+          "value": "Finame Direto",
+          "evidence_ids": [
+            "M30-C05-R2-E1"
+          ]
+        },
+        "applicant_requirements": {
+          "value": "Empresas com faturamento anual acima de R$ 80 milhões",
+          "evidence_ids": [
+            "M30-C05-R2-E1"
+          ]
+        },
+        "resource_type": {
+          "value": "limite de crédito",
+          "evidence_ids": [
+            "M30-C05-R2-E1"
+          ]
+        }
+      }
+    },
+    {
+      "annotation_id": "M30-C06-A1",
+      "record_id": "M30-C06-R1",
+      "document_id": "M30-C06",
+      "unit_locator": {
+        "start": 1928,
+        "end": 3058
+      },
+      "discovery_label": "confirmed_opportunity",
+      "opportunity_label": "genuine_opportunity",
+      "temporal_status": "undetermined",
+      "reference_date": "2026-10-19",
+      "modality": "credito",
+      "review_status": "provisional",
+      "annotation_method": "AI-assisted source reading; no model predictions",
+      "protocol_version": "m3.0-annotation-v1",
+      "rationale": "The official BRDE product page presents a financing extension with eligible companies, financed expenditures and credit-risk analysis. The fetched title is preserved rather than rewritten to match the mais-inovacao URL. No current-window or continuous claim is inferred.",
+      "uncertainty_notes": [
+        "The URL says mais-inovacao while the displayed heading says Inova Mais RS; relationship is not silently normalized. Conditions depend on credit-risk analysis; current availability undetermined."
+      ],
+      "evidence": [
+        {
+          "evidence_id": "M30-C06-R1-E1",
+          "start": 1928,
+          "end": 2275,
+          "quote": "Inova Mais RS\nJuntos pelo desenvolvimento científico, tecnológico e educacional.\nApoio aos projetos de inovação apresentados por empresas arrojadas; fortalecimento das parcerias e atuação de forma articulada e conjunta com entes públicos e privados responsáveis pela promoção do desenvolvimento científico, tecnológico e educacional da região sul.",
+          "page": null
+        },
+        {
+          "evidence_id": "M30-C06-R1-E2",
+          "start": 2276,
+          "end": 3058,
+          "quote": "Extensões deste programa:\n• BRDE Inovação e Modernização\nBeneficiários:\nEmpresas com faturamento até R$ 300 milhões com projetos com foco em inovação de produtos e processos.\nItens Financiáveis:\n– Desenvolvimento de novos produtos, processos ou serviços, bem como o aprimoramento dos já existentes;\n– Investimentos fixos na modernização das instalações de empresa inovadora;\n– Aquisição, no mercado interno, de softwares e serviços correlatos desenvolvidos no Brasil;\n– Gastos com matéria-prima e materiais de consumo, gastos com equipe e treinamentos, serviços de consultoria entre outros.\nExigências Específicas:\n– Comprovar capacitação profissional na atividade do empreendimento.\nCondições Financeiras*\n*Conforme análise de risco de crédito, ou consulte diretamente no\nSimulador",
+          "page": null
+        }
+      ],
+      "label_evidence": {
+        "discovery_label": [
+          "M30-C06-R1-E1",
+          "M30-C06-R1-E2"
+        ],
+        "opportunity_label": [
+          "M30-C06-R1-E1",
+          "M30-C06-R1-E2"
+        ],
+        "temporal_status": [
+          "M30-C06-R1-E1",
+          "M30-C06-R1-E2"
+        ],
+        "modality": [
+          "M30-C06-R1-E1",
+          "M30-C06-R1-E2"
+        ]
+      },
+      "fields": {
+        "title": {
+          "value": "Inova Mais RS",
+          "evidence_ids": [
+            "M30-C06-R1-E1"
+          ]
+        },
+        "applicant_requirements": {
+          "value": "Empresas com faturamento até R$ 300 milhões com projetos com foco em inovação de produtos e processos.",
+          "evidence_ids": [
+            "M30-C06-R1-E2"
+          ]
+        },
+        "program_extension": {
+          "value": "BRDE Inovação e Modernização",
+          "evidence_ids": [
+            "M30-C06-R1-E2"
+          ]
+        }
+      }
+    },
+    {
+      "annotation_id": "M30-C07-A1",
+      "record_id": "M30-C07-R1",
+      "document_id": "M30-C07",
+      "unit_locator": {
+        "start": 1963,
+        "end": 2746
+      },
+      "discovery_label": "unrelated_or_non_actionable",
+      "opportunity_label": "not_opportunity",
+      "temporal_status": "not_applicable",
+      "reference_date": "2026-10-19",
+      "modality": "credito",
+      "review_status": "provisional",
+      "annotation_method": "AI-assisted source reading; no model predictions",
+      "protocol_version": "m3.0-annotation-v1",
+      "rationale": "This first scoped record reports an already celebrated R$2m financing for one named business. It does not create a new financing opportunity for another applicant. The following general-program paragraphs are a different record, not discarded as news.",
+      "uncertainty_notes": [
+        "Negative for new opportunity existence in this transaction record, not a claim the CrediTur program does not exist."
+      ],
+      "evidence": [
+        {
+          "evidence_id": "M30-C07-R1-E1",
+          "start": 1963,
+          "end": 2746,
+          "quote": "CrediTur RS amplia acesso ao crédito para fortalecer turismo na área metropolitana de Porto Alegre\n07/10/2026 | Aldemir Lauri Kerschner\nBRDE e Sicredi Origens celebram financiamento com a Quinta da Estância, de Viamão.\nReferência nacional em turismo rural pedagógico e educação ambiental, a Quinta da Estância, localizada em Viamão, está entre as novas empresas contempladas através do programa CrediTur RS, voltado ao fortalecimento do setor turístico em diferentes regiões do estado. Nesta terça-feira (dia 6/10), a partir da parceria entre o Banco Regional de Desenvolvimento do Extremo Sul (BRDE) e a Sicredi Origens RS, ocorreu a celebração do financiamento de R$ 2 milhões, recursos que serão destinados ao capital de giro e à ampliação da capacidade de atendimento da empresa.",
+          "page": null
+        }
+      ],
+      "label_evidence": {
+        "discovery_label": [
+          "M30-C07-R1-E1"
+        ],
+        "opportunity_label": [
+          "M30-C07-R1-E1"
+        ],
+        "temporal_status": [
+          "M30-C07-R1-E1"
+        ],
+        "modality": [
+          "M30-C07-R1-E1"
+        ]
+      },
+      "fields": {
+        "title": {
+          "value": "CrediTur RS amplia acesso ao crédito para fortalecer turismo na área metropolitana de Porto Alegre",
+          "evidence_ids": [
+            "M30-C07-R1-E1"
+          ]
+        }
+      }
+    },
+    {
+      "annotation_id": "M30-C07-A2",
+      "record_id": "M30-C07-R2",
+      "document_id": "M30-C07",
+      "unit_locator": {
+        "start": 2747,
+        "end": 4270
+      },
+      "discovery_label": "confirmed_opportunity",
+      "opportunity_label": "genuine_opportunity",
+      "temporal_status": "undetermined",
+      "reference_date": "2026-10-19",
+      "modality": "credito",
+      "review_status": "provisional",
+      "annotation_method": "AI-assisted source reading; no model predictions",
+      "protocol_version": "m3.0-annotation-v1",
+      "rationale": "Unlike the completed-transaction record above, these paragraphs describe a distinct credit program for tourism businesses with Cadastur and a per-company limit. Primary bank communication confirms conditions; no submission date or guaranteed funding is inferred.",
+      "uncertainty_notes": [
+        "No application URL is asserted from this news paragraph. Stated loan interest and maturity are not submission deadlines and are not normalized."
+      ],
+      "evidence": [
+        {
+          "evidence_id": "M30-C07-R2-E1",
+          "start": 2747,
+          "end": 4270,
+          "quote": "Conforme o secretário estadual de Turismo, Raphael Ayub, o CrediTur RS foi estruturado justamente para ampliar o acesso ao crédito e incentivar novos investimentos no setor. “Queremos dar condições para que os nossos empreendedores possam crescer, qualificar seus negócios e ampliar a capacidade de atendimento. A Quinta da Estância é um exemplo muito importante, porque une turismo, educação e preservação ambiental. É esse tipo de investimento que fortalece os destinos, gera oportunidades e faz o turismo contribuir cada vez mais para o desenvolvimento econômico do nosso estado”, afirmou Auyb.\nO programa é destinado a empresas de todos os portes, desde que possuam o Cadastro de Prestadores de Serviços Turísticos (Cadastur), do Ministério do Turismo. O limite de financiamento é de R$ 4 milhões por empresa, com juros ao redor de 10% ao ano (IPCA mais 6%) e prazo de cinco anos para amortização (com 12 meses de carência incluída).\nSetor estratégico\nNa avaliação do gerente de Operações do BRDE, Paulo Raffin, o programa é um importante instrumento para fortalecer novos destinos turísticos no estado. “É uma linha de crédito em condições muito favoráveis para que as empresas do setor possam manter e ampliar seus empreendimentos. O turismo tem se mostrado um setor estratégico na geração de novas oportunidades e empregos”, frisou Raffin. Ele ressaltou, também, a relevância de ter a parceria das cooperativas de crédito, como a Sicredi Origens, para que o CrediTur RS contemple o maior número possível de empresas.",
+          "page": null
+        }
+      ],
+      "label_evidence": {
+        "discovery_label": [
+          "M30-C07-R2-E1"
+        ],
+        "opportunity_label": [
+          "M30-C07-R2-E1"
+        ],
+        "temporal_status": [
+          "M30-C07-R2-E1"
+        ],
+        "modality": [
+          "M30-C07-R2-E1"
+        ]
+      },
+      "fields": {
+        "title": {
+          "value": "CrediTur RS",
+          "evidence_ids": [
+            "M30-C07-R2-E1"
+          ]
+        },
+        "credit_limit": {
+          "value": "R$ 4 milhões por empresa",
+          "evidence_ids": [
+            "M30-C07-R2-E1"
+          ]
+        },
+        "applicant_requirements": {
+          "value": "empresas de todos os portes, desde que possuam o Cadastro de Prestadores de Serviços Turísticos (Cadastur), do Ministério do Turismo",
+          "evidence_ids": [
+            "M30-C07-R2-E1"
+          ]
+        }
+      }
+    },
+    {
+      "annotation_id": "M30-C08-A1",
+      "record_id": "M30-C08-R1",
+      "document_id": "M30-C08",
+      "unit_locator": {
+        "start": 1851,
+        "end": 2150
+      },
+      "discovery_label": "opportunity_signal",
+      "opportunity_label": "uncertain",
+      "temporal_status": "undetermined",
+      "reference_date": "2026-10-19",
+      "modality": "credito",
+      "review_status": "provisional",
+      "annotation_method": "AI-assisted source reading; no model predictions",
+      "protocol_version": "m3.0-annotation-v1",
+      "rationale": "Generic program listing invites discovery of BRDE financing but the frozen main content supplies no distinct eligible instrument or access terms. A relevant but ambiguous source signal, not a negative merely because it is a list.",
+      "uncertainty_notes": [
+        "No complete list details appear in the passive HTML text. No JavaScript was executed or linked programs fetched recursively."
+      ],
+      "evidence": [
+        {
+          "evidence_id": "M30-C08-R1-E1",
+          "start": 1851,
+          "end": 2150,
+          "quote": "PROGRAMAS\nUm programa\npara cada tipo de\nnegócio\nO BRDE faz parte da vida de quem acredita no\ndesenvolvimento\ne faz da\ninovação\numa ferramenta indispensável para gerar oportunidade, renda e emprego.\nConheça abaixo as linhas de financiamento BRDE e suas extensões. Qual mais combina com o seu negócio?",
+          "page": null
+        }
+      ],
+      "label_evidence": {
+        "discovery_label": [
+          "M30-C08-R1-E1"
+        ],
+        "opportunity_label": [
+          "M30-C08-R1-E1"
+        ],
+        "temporal_status": [
+          "M30-C08-R1-E1"
+        ],
+        "modality": [
+          "M30-C08-R1-E1"
+        ]
+      },
+      "fields": {
+        "title": {
+          "value": "PROGRAMAS",
+          "evidence_ids": [
+            "M30-C08-R1-E1"
+          ]
+        }
+      }
+    },
+    {
+      "annotation_id": "M30-F01-A1",
+      "record_id": "M30-F01-R1",
+      "document_id": "M30-F01",
+      "unit_locator": {
+        "start": 5784,
+        "end": 6736
+      },
+      "discovery_label": "confirmed_opportunity",
+      "opportunity_label": "genuine_opportunity",
+      "temporal_status": "open",
+      "reference_date": "2026-10-19",
+      "modality": "fomento",
+      "review_status": "provisional",
+      "annotation_method": "AI-assisted source reading; no model predictions",
+      "protocol_version": "m3.0-annotation-v1",
+      "rationale": "Provisional AI source reading: Named research/bursary/event support call with explicit registration interval containing 2026-10-19; sibling calls have separate non-overlapping scopes.",
+      "uncertainty_notes": [
+        "Only the four records in this frozen page are covered; pagination not followed."
+      ],
+      "evidence": [
+        {
+          "evidence_id": "M30-F01-R1-E1",
+          "start": 5784,
+          "end": 5890,
+          "quote": "Chamada Pública CNPq/CAPES Nº 30/2026 – Programa de Mestrado e Doutorado Acadêmico para Inovação – MAI/DAI",
+          "page": null
+        },
+        {
+          "evidence_id": "M30-F01-R1-E2",
+          "start": 6108,
+          "end": 6525,
+          "quote": "A edição de 2026 do Programa de Mestrado e Doutorado para Inovação (MAI/DAI), que estimula a realização de pesquisas de mestrado e doutorado em universidades em parceria com empresas, recebe propostas até o dia 11 de dezembro. A chamada é realizada pelo Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq) e conta com a parceria da Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES).",
+          "page": null
+        },
+        {
+          "evidence_id": "M30-F01-R1-E3",
+          "start": 6700,
+          "end": 6735,
+          "quote": "Inscrições:\n19/08/2026 a 11/12/2026",
+          "page": null
+        }
+      ],
+      "label_evidence": {
+        "discovery_label": [
+          "M30-F01-R1-E1",
+          "M30-F01-R1-E2",
+          "M30-F01-R1-E3"
+        ],
+        "opportunity_label": [
+          "M30-F01-R1-E1",
+          "M30-F01-R1-E2",
+          "M30-F01-R1-E3"
+        ],
+        "temporal_status": [
+          "M30-F01-R1-E1",
+          "M30-F01-R1-E2",
+          "M30-F01-R1-E3"
+        ],
+        "modality": [
+          "M30-F01-R1-E1",
+          "M30-F01-R1-E2",
+          "M30-F01-R1-E3"
+        ]
+      },
+      "fields": {
+        "title": {
+          "value": "Chamada Pública CNPq/CAPES Nº 30/2026 – Programa de Mestrado e Doutorado Acadêmico para Inovação – MAI/DAI",
+          "evidence_ids": [
+            "M30-F01-R1-E1"
+          ]
+        },
+        "application_period": {
+          "value": "19/08/2026 a 11/12/2026",
+          "evidence_ids": [
+            "M30-F01-R1-E3"
+          ]
+        },
+        "objective": {
+          "value": "A edição de 2026 do Programa de Mestrado e Doutorado para Inovação (MAI/DAI), que estimula a realização de pesquisas de mestrado e doutorado em universidades em parceria com empresas, recebe propostas até o dia 11 de dezembro. A chamada é realizada pelo Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq) e conta com a parceria da Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES).",
+          "evidence_ids": [
+            "M30-F01-R1-E2"
+          ]
+        },
+        "submission_deadline": {
+          "value": "11/12/2026",
+          "evidence_ids": [
+            "M30-F01-R1-E3"
+          ]
+        },
+        "official_identifier": {
+          "value": "30/2026",
+          "evidence_ids": [
+            "M30-F01-R1-E1"
+          ]
+        },
+        "opening_date": {
+          "value": "19/08/2026",
+          "evidence_ids": [
+            "M30-F01-R1-E3"
+          ]
+        },
+        "publishing_organization": {
+          "value": "Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq)",
+          "evidence_ids": [
+            "M30-F01-R1-E2"
+          ]
+        }
+      }
+    },
+    {
+      "annotation_id": "M30-F01-A2",
+      "record_id": "M30-F01-R2",
+      "document_id": "M30-F01",
+      "unit_locator": {
+        "start": 6736,
+        "end": 7491
+      },
+      "discovery_label": "confirmed_opportunity",
+      "opportunity_label": "genuine_opportunity",
+      "temporal_status": "open",
+      "reference_date": "2026-10-19",
+      "modality": "fomento",
+      "review_status": "provisional",
+      "annotation_method": "AI-assisted source reading; no model predictions",
+      "protocol_version": "m3.0-annotation-v1",
+      "rationale": "Provisional AI source reading: Named research/bursary/event support call with explicit registration interval containing 2026-10-19; sibling calls have separate non-overlapping scopes.",
+      "uncertainty_notes": [
+        "Only the four records in this frozen page are covered; pagination not followed."
+      ],
+      "evidence": [
+        {
+          "evidence_id": "M30-F01-R2-E1",
+          "start": 6736,
+          "end": 6840,
+          "quote": "Chamada CNPq Nº 34/2026 - Auxílio à Promoção de Eventos Científicos, Tecnológicos e/ou de Inovação - ARC",
+          "page": null
+        },
+        {
+          "evidence_id": "M30-F01-R2-E2",
+          "start": 7058,
+          "end": 7442,
+          "quote": "O CNPq torna pública a Chamada CNPq nº 34/2026, que tem por objeto a\npoiar a realização no Brasil de eventos de grande porte, de abrangência mundial, internacional ou nacional, relacionados a ciência, tecnologia e inovação, tais como encontros, congressos e outros similares que visem contribuir significativamente para o desenvolvimento científico e tecnológico e a inovação do País.",
+          "page": null
+        },
+        {
+          "evidence_id": "M30-F01-R2-E3",
+          "start": 7451,
+          "end": 7486,
+          "quote": "Inscrições:\n14/10/2026 a 04/12/2026",
+          "page": null
+        }
+      ],
+      "label_evidence": {
+        "discovery_label": [
+          "M30-F01-R2-E1",
+          "M30-F01-R2-E2",
+          "M30-F01-R2-E3"
+        ],
+        "opportunity_label": [
+          "M30-F01-R2-E1",
+          "M30-F01-R2-E2",
+          "M30-F01-R2-E3"
+        ],
+        "temporal_status": [
+          "M30-F01-R2-E1",
+          "M30-F01-R2-E2",
+          "M30-F01-R2-E3"
+        ],
+        "modality": [
+          "M30-F01-R2-E1",
+          "M30-F01-R2-E2",
+          "M30-F01-R2-E3"
+        ]
+      },
+      "fields": {
+        "title": {
+          "value": "Chamada CNPq Nº 34/2026 - Auxílio à Promoção de Eventos Científicos, Tecnológicos e/ou de Inovação - ARC",
+          "evidence_ids": [
+            "M30-F01-R2-E1"
+          ]
+        },
+        "application_period": {
+          "value": "14/10/2026 a 04/12/2026",
+          "evidence_ids": [
+            "M30-F01-R2-E3"
+          ]
+        },
+        "objective": {
+          "value": "O CNPq torna pública a Chamada CNPq nº 34/2026, que tem por objeto a\npoiar a realização no Brasil de eventos de grande porte, de abrangência mundial, internacional ou nacional, relacionados a ciência, tecnologia e inovação, tais como encontros, congressos e outros similares que visem contribuir significativamente para o desenvolvimento científico e tecnológico e a inovação do País.",
+          "evidence_ids": [
+            "M30-F01-R2-E2"
+          ]
+        },
+        "submission_deadline": {
+          "value": "04/12/2026",
+          "evidence_ids": [
+            "M30-F01-R2-E3"
+          ]
+        },
+        "official_identifier": {
+          "value": "34/2026",
+          "evidence_ids": [
+            "M30-F01-R2-E1"
+          ]
+        },
+        "opening_date": {
+          "value": "14/10/2026",
+          "evidence_ids": [
+            "M30-F01-R2-E3"
+          ]
+        },
+        "publishing_organization": {
+          "value": "CNPq",
+          "evidence_ids": [
+            "M30-F01-R2-E2"
+          ]
+        }
+      }
+    },
+    {
+      "annotation_id": "M30-F01-A3",
+      "record_id": "M30-F01-R3",
+      "document_id": "M30-F01",
+      "unit_locator": {
+        "start": 7491,
+        "end": 8213
+      },
+      "discovery_label": "confirmed_opportunity",
+      "opportunity_label": "genuine_opportunity",
+      "temporal_status": "open",
+      "reference_date": "2026-10-19",
+      "modality": "fomento",
+      "review_status": "provisional",
+      "annotation_method": "AI-assisted source reading; no model predictions",
+      "protocol_version": "m3.0-annotation-v1",
+      "rationale": "Provisional AI source reading: Named research/bursary/event support call with explicit registration interval containing 2026-10-19; sibling calls have separate non-overlapping scopes.",
+      "uncertainty_notes": [
+        "Only the four records in this frozen page are covered; pagination not followed."
+      ],
+      "evidence": [
+        {
+          "evidence_id": "M30-F01-R3-E1",
+          "start": 7491,
+          "end": 7531,
+          "quote": "Chamada Pública MCTI/CNPq/ANR N° 32/2026",
+          "page": null
+        },
+        {
+          "evidence_id": "M30-F01-R3-E2",
+          "start": 7749,
+          "end": 8070,
+          "quote": "Chamada Pública entre o Conselho Nacional de Desenvolvimento Científico e Tecnológico - CNPq e a Agência Nacional de Pesquisa - ANR, tendo por objetivo selecionar projetos de pesquisa conjuntos entre grupos brasileiros e franceses, que visem contribuir para o desenvolvimento científico, tecnológico e a inovação do país.",
+          "page": null
+        },
+        {
+          "evidence_id": "M30-F01-R3-E3",
+          "start": 8079,
+          "end": 8114,
+          "quote": "Inscrições:\n03/09/2026 a 31/03/2027",
+          "page": null
+        }
+      ],
+      "label_evidence": {
+        "discovery_label": [
+          "M30-F01-R3-E1",
+          "M30-F01-R3-E2",
+          "M30-F01-R3-E3"
+        ],
+        "opportunity_label": [
+          "M30-F01-R3-E1",
+          "M30-F01-R3-E2",
+          "M30-F01-R3-E3"
+        ],
+        "temporal_status": [
+          "M30-F01-R3-E1",
+          "M30-F01-R3-E2",
+          "M30-F01-R3-E3"
+        ],
+        "modality": [
+          "M30-F01-R3-E1",
+          "M30-F01-R3-E2",
+          "M30-F01-R3-E3"
+        ]
+      },
+      "fields": {
+        "title": {
+          "value": "Chamada Pública MCTI/CNPq/ANR N° 32/2026",
+          "evidence_ids": [
+            "M30-F01-R3-E1"
+          ]
+        },
+        "application_period": {
+          "value": "03/09/2026 a 31/03/2027",
+          "evidence_ids": [
+            "M30-F01-R3-E3"
+          ]
+        },
+        "objective": {
+          "value": "Chamada Pública entre o Conselho Nacional de Desenvolvimento Científico e Tecnológico - CNPq e a Agência Nacional de Pesquisa - ANR, tendo por objetivo selecionar projetos de pesquisa conjuntos entre grupos brasileiros e franceses, que visem contribuir para o desenvolvimento científico, tecnológico e a inovação do país.",
+          "evidence_ids": [
+            "M30-F01-R3-E2"
+          ]
+        },
+        "submission_deadline": {
+          "value": "31/03/2027",
+          "evidence_ids": [
+            "M30-F01-R3-E3"
+          ]
+        },
+        "official_identifier": {
+          "value": "32/2026",
+          "evidence_ids": [
+            "M30-F01-R3-E1"
+          ]
+        },
+        "opening_date": {
+          "value": "03/09/2026",
+          "evidence_ids": [
+            "M30-F01-R3-E3"
+          ]
+        },
+        "geographic_eligibility": {
+          "value": "grupos brasileiros e franceses",
+          "evidence_ids": [
+            "M30-F01-R3-E2"
+          ]
+        }
+      }
+    },
+    {
+      "annotation_id": "M30-F01-A4",
+      "record_id": "M30-F01-R4",
+      "document_id": "M30-F01",
+      "unit_locator": {
+        "start": 8213,
+        "end": 9578
+      },
+      "discovery_label": "confirmed_opportunity",
+      "opportunity_label": "genuine_opportunity",
+      "temporal_status": "open",
+      "reference_date": "2026-10-19",
+      "modality": "fomento",
+      "review_status": "provisional",
+      "annotation_method": "AI-assisted source reading; no model predictions",
+      "protocol_version": "m3.0-annotation-v1",
+      "rationale": "Provisional AI source reading: Named research/bursary/event support call with explicit registration interval containing 2026-10-19; sibling calls have separate non-overlapping scopes.",
+      "uncertainty_notes": [
+        "Only the four records in this frozen page are covered; pagination not followed."
+      ],
+      "evidence": [
+        {
+          "evidence_id": "M30-F01-R4-E1",
+          "start": 8213,
+          "end": 8270,
+          "quote": "Chamada CNPq nº 33/2026 - Bolsas de Produtividade do CNPq",
+          "page": null
+        },
+        {
+          "evidence_id": "M30-F01-R4-E2",
+          "start": 8488,
+          "end": 9183,
+          "quote": "O CNPq torna pública a Chamada CNPq nº 33/2026, que tem por objeto conceder bolsas nas seguintes modalidades: Produtividade em Desenvolvimento Tecnológico e Extensão Inovadora (DT), Produtividade em Pesquisa (PQ) e Produtividade em Pesquisa Sênior (PQSr).\nSão objetivos desta chamada:\na) valorizar pesquisadores que possuam produção científica, tecnológica e de inovação de destaque em suas respectivas áreas do conhecimento;\nb) incentivar o aumento da produção científica, tecnológica e de inovação de qualidade;\nc) selecionar projetos de pesquisa que sejam propostos considerando o rigor e o método científico, bem como outros conceitos fundamentais para a produção do conhecimento científico.",
+          "page": null
+        },
+        {
+          "evidence_id": "M30-F01-R4-E3",
+          "start": 9542,
+          "end": 9577,
+          "quote": "Inscrições:\n07/10/2026 a 07/01/2027",
+          "page": null
+        }
+      ],
+      "label_evidence": {
+        "discovery_label": [
+          "M30-F01-R4-E1",
+          "M30-F01-R4-E2",
+          "M30-F01-R4-E3"
+        ],
+        "opportunity_label": [
+          "M30-F01-R4-E1",
+          "M30-F01-R4-E2",
+          "M30-F01-R4-E3"
+        ],
+        "temporal_status": [
+          "M30-F01-R4-E1",
+          "M30-F01-R4-E2",
+          "M30-F01-R4-E3"
+        ],
+        "modality": [
+          "M30-F01-R4-E1",
+          "M30-F01-R4-E2",
+          "M30-F01-R4-E3"
+        ]
+      },
+      "fields": {
+        "title": {
+          "value": "Chamada CNPq nº 33/2026 - Bolsas de Produtividade do CNPq",
+          "evidence_ids": [
+            "M30-F01-R4-E1"
+          ]
+        },
+        "application_period": {
+          "value": "07/10/2026 a 07/01/2027",
+          "evidence_ids": [
+            "M30-F01-R4-E3"
+          ]
+        },
+        "objective": {
+          "value": "O CNPq torna pública a Chamada CNPq nº 33/2026, que tem por objeto conceder bolsas nas seguintes modalidades: Produtividade em Desenvolvimento Tecnológico e Extensão Inovadora (DT), Produtividade em Pesquisa (PQ) e Produtividade em Pesquisa Sênior (PQSr).\nSão objetivos desta chamada:\na) valorizar pesquisadores que possuam produção científica, tecnológica e de inovação de destaque em suas respectivas áreas do conhecimento;\nb) incentivar o aumento da produção científica, tecnológica e de inovação de qualidade;\nc) selecionar projetos de pesquisa que sejam propostos considerando o rigor e o método científico, bem como outros conceitos fundamentais para a produção do conhecimento científico.",
+          "evidence_ids": [
+            "M30-F01-R4-E2"
+          ]
+        },
+        "submission_deadline": {
+          "value": "07/01/2027",
+          "evidence_ids": [
+            "M30-F01-R4-E3"
+          ]
+        },
+        "official_identifier": {
+          "value": "33/2026",
+          "evidence_ids": [
+            "M30-F01-R4-E1"
+          ]
+        },
+        "opening_date": {
+          "value": "07/10/2026",
+          "evidence_ids": [
+            "M30-F01-R4-E3"
+          ]
+        },
+        "publishing_organization": {
+          "value": "CNPq",
+          "evidence_ids": [
+            "M30-F01-R4-E2"
+          ]
+        }
+      }
+    },
+    {
+      "annotation_id": "M30-F02-A1",
+      "record_id": "M30-F02-R1",
+      "document_id": "M30-F02",
+      "unit_locator": {
+        "start": 0,
+        "end": 6957
+      },
+      "discovery_label": "confirmed_opportunity",
+      "opportunity_label": "genuine_opportunity",
+      "temporal_status": "open",
+      "reference_date": "2026-10-19",
+      "modality": "fomento",
+      "review_status": "provisional",
+      "annotation_method": "AI-assisted source reading; no model predictions",
+      "protocol_version": "m3.0-annotation-v1",
+      "rationale": "Provisional AI source reading: Call offers named productivity scholarships and explicit live application interval, not merely an existing page.",
+      "uncertainty_notes": [
+        "Apparent same-call relationship (unverified, no merge) with M30-F01-R4 and M30-F07-R1; documents are not unique opportunities.",
+        "Page notes a 13/10/2026 Annex I correction; annex not independently frozen."
+      ],
+      "evidence": [
+        {
+          "evidence_id": "M30-F02-R1-E1",
+          "start": 0,
+          "end": 57,
+          "quote": "Chamada CNPq nº 33/2026 - Bolsas de Produtividade do CNPq",
+          "page": null
+        },
+        {
+          "evidence_id": "M30-F02-R1-E2",
+          "start": 5868,
+          "end": 6123,
+          "quote": "O CNPq torna pública a Chamada CNPq nº 33/2026, que tem por objeto conceder bolsas nas seguintes modalidades: Produtividade em Desenvolvimento Tecnológico e Extensão Inovadora (DT), Produtividade em Pesquisa (PQ) e Produtividade em Pesquisa Sênior (PQSr).",
+          "page": null
+        },
+        {
+          "evidence_id": "M30-F02-R1-E3",
+          "start": 6922,
+          "end": 6957,
+          "quote": "Inscrições:\n07/10/2026 a 07/01/2027",
+          "page": null
+        }
+      ],
+      "label_evidence": {
+        "discovery_label": [
+          "M30-F02-R1-E1",
+          "M30-F02-R1-E2",
+          "M30-F02-R1-E3"
+        ],
+        "opportunity_label": [
+          "M30-F02-R1-E1",
+          "M30-F02-R1-E2",
+          "M30-F02-R1-E3"
+        ],
+        "temporal_status": [
+          "M30-F02-R1-E1",
+          "M30-F02-R1-E2",
+          "M30-F02-R1-E3"
+        ],
+        "modality": [
+          "M30-F02-R1-E1",
+          "M30-F02-R1-E2",
+          "M30-F02-R1-E3"
+        ]
+      },
+      "fields": {
+        "title": {
+          "value": "Chamada CNPq nº 33/2026 - Bolsas de Produtividade do CNPq",
+          "evidence_ids": [
+            "M30-F02-R1-E1"
+          ]
+        },
+        "objective": {
+          "value": "O CNPq torna pública a Chamada CNPq nº 33/2026, que tem por objeto conceder bolsas nas seguintes modalidades: Produtividade em Desenvolvimento Tecnológico e Extensão Inovadora (DT), Produtividade em Pesquisa (PQ) e Produtividade em Pesquisa Sênior (PQSr).",
+          "evidence_ids": [
+            "M30-F02-R1-E2"
+          ]
+        },
+        "submission_deadline": {
+          "value": "07/01/2027",
+          "evidence_ids": [
+            "M30-F02-R1-E3"
+          ]
+        },
+        "official_identifier": {
+          "value": "33/2026",
+          "evidence_ids": [
+            "M30-F02-R1-E1"
+          ]
+        },
+        "opening_date": {
+          "value": "07/10/2026",
+          "evidence_ids": [
+            "M30-F02-R1-E3"
+          ]
+        },
+        "publishing_organization": {
+          "value": "CNPq",
+          "evidence_ids": [
+            "M30-F02-R1-E2"
+          ]
+        }
+      }
+    },
+    {
+      "annotation_id": "M30-F03-A1",
+      "record_id": "M30-F03-R1",
+      "document_id": "M30-F03",
+      "unit_locator": {
+        "start": 5732,
+        "end": 5917
+      },
+      "discovery_label": "opportunity_signal",
+      "opportunity_label": "uncertain",
+      "temporal_status": "undetermined",
+      "reference_date": "2026-10-19",
+      "modality": "fomento",
+      "review_status": "provisional",
+      "annotation_method": "AI-assisted source reading; no model predictions",
+      "protocol_version": "m3.0-annotation-v1",
+      "rationale": "Provisional AI source reading: Current call folder lists MAI/DAI call and attachments but carries no application interval in this document; do not import the interval from other documents.",
+      "uncertainty_notes": [
+        "Contextual folder for live MAI/DAI call evidenced separately in F01 and F08; no deadline asserted from this folder."
+      ],
+      "evidence": [
+        {
+          "evidence_id": "M30-F03-R1-E1",
+          "start": 5732,
+          "end": 5838,
+          "quote": "Chamada Pública CNPq/CAPES Nº 30/2026 – Programa de Mestrado e Doutorado Acadêmico para Inovação – MAI/DAI",
+          "page": null
+        },
+        {
+          "evidence_id": "M30-F03-R1-E2",
+          "start": 5877,
+          "end": 5917,
+          "quote": "chamadapublica30_2026_MAIDAI_2766773.pdf",
+          "page": null
+        },
+        {
+          "evidence_id": "M30-F03-R1-E3",
+          "start": 5839,
+          "end": 5876,
+          "quote": "— última modificação 13/10/2026 12h34",
+          "page": null
+        }
+      ],
+      "label_evidence": {
+        "discovery_label": [
+          "M30-F03-R1-E1",
+          "M30-F03-R1-E2",
+          "M30-F03-R1-E3"
+        ],
+        "opportunity_label": [
+          "M30-F03-R1-E1",
+          "M30-F03-R1-E2",
+          "M30-F03-R1-E3"
+        ],
+        "temporal_status": [
+          "M30-F03-R1-E1",
+          "M30-F03-R1-E2",
+          "M30-F03-R1-E3"
+        ],
+        "modality": [
+          "M30-F03-R1-E1",
+          "M30-F03-R1-E2",
+          "M30-F03-R1-E3"
+        ]
+      },
+      "fields": {
+        "title": {
+          "value": "Chamada Pública CNPq/CAPES Nº 30/2026 – Programa de Mestrado e Doutorado Acadêmico para Inovação – MAI/DAI",
+          "evidence_ids": [
+            "M30-F03-R1-E1"
+          ]
+        },
+        "official_identifier": {
+          "value": "30/2026",
+          "evidence_ids": [
+            "M30-F03-R1-E1"
+          ]
+        }
+      }
+    },
+    {
+      "annotation_id": "M30-F05-A1",
+      "record_id": "M30-F05-R1",
+      "document_id": "M30-F05",
+      "unit_locator": {
+        "start": 9185,
+        "end": 10780
+      },
+      "discovery_label": "confirmed_opportunity",
+      "opportunity_label": "genuine_opportunity",
+      "temporal_status": "open",
+      "reference_date": "2026-10-19",
+      "modality": "fomento",
+      "review_status": "provisional",
+      "annotation_method": "AI-assisted source reading; no model predictions",
+      "protocol_version": "m3.0-annotation-v1",
+      "rationale": "Provisional AI source reading: Primary ministry news explicitly reports open applications, named subvention selection, eligible applicants and future closing date. News evidence is specific enough to confirm, without relying on page existence.",
+      "uncertainty_notes": [
+        "News source, not the complete binding regulation; no automatic eligibility recommendation."
+      ],
+      "evidence": [
+        {
+          "evidence_id": "M30-F05-R1-E1",
+          "start": 9185,
+          "end": 9244,
+          "quote": "Finep Mais Inovação Brasil, Rodada 2, Transformação Mineral",
+          "page": null
+        },
+        {
+          "evidence_id": "M30-F05-R1-E2",
+          "start": 9247,
+          "end": 9341,
+          "quote": "A seleção conta com orçamento de R$ 215 milhões em recursos de subvenção econômica destinado a",
+          "page": null
+        },
+        {
+          "evidence_id": "M30-F05-R1-E3",
+          "start": 10685,
+          "end": 10736,
+          "quote": "30 de novembro de 2026, às 18h, horário de Brasília",
+          "page": null
+        },
+        {
+          "evidence_id": "M30-F05-R1-E4",
+          "start": 10751,
+          "end": 10780,
+          "quote": "Empresas em parceria com ICTs",
+          "page": null
+        },
+        {
+          "evidence_id": "M30-F05-R1-E5",
+          "start": 10132,
+          "end": 10189,
+          "quote": "As inscrições estão abertas para empresas de todo o País.",
+          "page": null
+        }
+      ],
+      "label_evidence": {
+        "discovery_label": [
+          "M30-F05-R1-E1",
+          "M30-F05-R1-E2",
+          "M30-F05-R1-E3",
+          "M30-F05-R1-E4",
+          "M30-F05-R1-E5"
+        ],
+        "opportunity_label": [
+          "M30-F05-R1-E1",
+          "M30-F05-R1-E2",
+          "M30-F05-R1-E3",
+          "M30-F05-R1-E4",
+          "M30-F05-R1-E5"
+        ],
+        "temporal_status": [
+          "M30-F05-R1-E1",
+          "M30-F05-R1-E2",
+          "M30-F05-R1-E3",
+          "M30-F05-R1-E4",
+          "M30-F05-R1-E5"
+        ],
+        "modality": [
+          "M30-F05-R1-E1",
+          "M30-F05-R1-E2",
+          "M30-F05-R1-E3",
+          "M30-F05-R1-E4",
+          "M30-F05-R1-E5"
+        ]
+      },
+      "fields": {
+        "title": {
+          "value": "Finep Mais Inovação Brasil, Rodada 2, Transformação Mineral",
+          "evidence_ids": [
+            "M30-F05-R1-E1"
+          ]
+        },
+        "target_audience": {
+          "value": "Empresas em parceria com ICTs",
+          "evidence_ids": [
+            "M30-F05-R1-E4"
+          ]
+        },
+        "submission_deadline": {
+          "value": "30 de novembro de 2026, às 18h, horário de Brasília",
+          "evidence_ids": [
+            "M30-F05-R1-E3"
+          ]
+        },
+        "program_budget": {
+          "value": "R$ 215 milhões",
+          "evidence_ids": [
+            "M30-F05-R1-E2"
+          ]
+        },
+        "geographic_eligibility": {
+          "value": "empresas de todo o País",
+          "evidence_ids": [
+            "M30-F05-R1-E5"
+          ]
+        },
+        "resource_type": {
+          "value": "subvenção econômica",
+          "evidence_ids": [
+            "M30-F05-R1-E2"
+          ]
+        }
+      }
+    },
+    {
+      "annotation_id": "M30-F06-A1",
+      "record_id": "M30-F06-R1",
+      "document_id": "M30-F06",
+      "unit_locator": {
+        "start": 8967,
+        "end": 12178
+      },
+      "discovery_label": "confirmed_opportunity",
+      "opportunity_label": "genuine_opportunity",
+      "temporal_status": "open",
+      "reference_date": "2026-10-19",
+      "modality": "fomento",
+      "review_status": "provisional",
+      "annotation_method": "AI-assisted source reading; no model predictions",
+      "protocol_version": "m3.0-annotation-v1",
+      "rationale": "Provisional AI source reading: Dated October 2026 ministry news describes a live national-stage subvention call closing 6 November. Eligibility is restricted to previously approved international consortia, not an unrestricted new international call.",
+      "uncertainty_notes": [
+        "Deadline year comes from dated 2026 article context; original deadline expression preserved.",
+        "Separate international eligibility prerequisite remains mandatory."
+      ],
+      "evidence": [
+        {
+          "evidence_id": "M30-F06-R1-E1",
+          "start": 9171,
+          "end": 9222,
+          "quote": "Programa de Cooperação para Inovação da Rede Eureka",
+          "page": null
+        },
+        {
+          "evidence_id": "M30-F06-R1-E2",
+          "start": 9530,
+          "end": 9642,
+          "quote": "A chamada prevê até R$ 7 milhões em recursos de subvenção econômica para a participação brasileira nos projetos.",
+          "page": null
+        },
+        {
+          "evidence_id": "M30-F06-R1-E3",
+          "start": 10958,
+          "end": 11118,
+          "quote": "Na fase nacional, apenas empresas brasileiras que participam de consórcios aprovados na fase internacional e que possuem Selo Eureka podem apresentar propostas.",
+          "page": null
+        },
+        {
+          "evidence_id": "M30-F06-R1-E4",
+          "start": 12089,
+          "end": 12178,
+          "quote": "O prazo final para o envio das propostas é 6 de novembro, às 17h, no horário de Brasília.",
+          "page": null
+        },
+        {
+          "evidence_id": "M30-F06-R1-E5",
+          "start": 8967,
+          "end": 8996,
+          "quote": "Publicado em\n15/10/2026 17h18",
+          "page": null
+        }
+      ],
+      "label_evidence": {
+        "discovery_label": [
+          "M30-F06-R1-E1",
+          "M30-F06-R1-E2",
+          "M30-F06-R1-E3",
+          "M30-F06-R1-E4",
+          "M30-F06-R1-E5"
+        ],
+        "opportunity_label": [
+          "M30-F06-R1-E1",
+          "M30-F06-R1-E2",
+          "M30-F06-R1-E3",
+          "M30-F06-R1-E4",
+          "M30-F06-R1-E5"
+        ],
+        "temporal_status": [
+          "M30-F06-R1-E1",
+          "M30-F06-R1-E2",
+          "M30-F06-R1-E3",
+          "M30-F06-R1-E4",
+          "M30-F06-R1-E5"
+        ],
+        "modality": [
+          "M30-F06-R1-E1",
+          "M30-F06-R1-E2",
+          "M30-F06-R1-E3",
+          "M30-F06-R1-E4",
+          "M30-F06-R1-E5"
+        ]
+      },
+      "fields": {
+        "title": {
+          "value": "Programa de Cooperação para Inovação da Rede Eureka",
+          "evidence_ids": [
+            "M30-F06-R1-E1"
+          ]
+        },
+        "target_audience": {
+          "value": "Na fase nacional, apenas empresas brasileiras que participam de consórcios aprovados na fase internacional e que possuem Selo Eureka podem apresentar propostas.",
+          "evidence_ids": [
+            "M30-F06-R1-E3"
+          ]
+        },
+        "submission_deadline": {
+          "value": "6 de novembro, às 17h, no horário de Brasília",
+          "evidence_ids": [
+            "M30-F06-R1-E4"
+          ]
+        },
+        "program_budget": {
+          "value": "até R$ 7 milhões",
+          "evidence_ids": [
+            "M30-F06-R1-E2"
+          ]
+        },
+        "resource_type": {
+          "value": "subvenção econômica",
+          "evidence_ids": [
+            "M30-F06-R1-E2"
+          ]
+        }
+      }
+    },
+    {
+      "annotation_id": "M30-F07-A1",
+      "record_id": "M30-F07-R1",
+      "document_id": "M30-F07",
+      "unit_locator": {
+        "start": 0,
+        "end": 8889
+      },
+      "discovery_label": "confirmed_opportunity",
+      "opportunity_label": "genuine_opportunity",
+      "temporal_status": "open",
+      "reference_date": "2026-10-19",
+      "modality": "fomento",
+      "review_status": "provisional",
+      "annotation_method": "AI-assisted source reading; no model predictions",
+      "protocol_version": "m3.0-annotation-v1",
+      "rationale": "Provisional AI source reading: Original 14-page call PDF supplies launch and closing dates enclosing reference day and scholarship object. Poppler text page boundaries support exact evidence pages. PDF signature and pdfinfo checked (unencrypted, no JavaScript).",
+      "uncertainty_notes": [
+        "Apparent same-call relationship (unverified, no merge) with F01-R4/F02-R1.",
+        "Launch schedule is not independently verified actual publication date, so publication_date remains null.",
+        "Original PDF metadata title says Minuta; official call page links this PDF. Applicable Annex I correction is noted on F02, not frozen here."
+      ],
+      "evidence": [
+        {
+          "evidence_id": "M30-F07-R1-E1",
+          "start": 0,
+          "end": 55,
+          "quote": "Chamada CNPq Nº 33/2026\nBolsas de Produtividade do CNPq",
+          "page": 1
+        },
+        {
+          "evidence_id": "M30-F07-R1-E2",
+          "start": 252,
+          "end": 440,
+          "quote": "Conceder bolsas nas seguintes modalidades: Produtividade em Desenvolvimento Tecnológico e\nExtensão Inovadora (DT), Produtividade em Pesquisa (PQ) e Produtividade em Pesquisa Sênior (PQSr).",
+          "page": 1
+        },
+        {
+          "evidence_id": "M30-F07-R1-E3",
+          "start": 1918,
+          "end": 1998,
+          "quote": "Lançamento da Chamada no Diário Oficial da União e na\npágina do CNPq\n\n07/10/2026",
+          "page": 1
+        },
+        {
+          "evidence_id": "M30-F07-R1-E4",
+          "start": 2047,
+          "end": 2099,
+          "quote": "Data limite para submissão das propostas\n\n07/01/2027",
+          "page": 2
+        },
+        {
+          "evidence_id": "M30-F07-R1-E5",
+          "start": 2857,
+          "end": 2951,
+          "quote": "b) possuir o título de Doutor;\nc) ter vínculo formal com a instituição de execução do projeto.",
+          "page": 2
+        },
+        {
+          "evidence_id": "M30-F07-R1-E6",
+          "start": 8809,
+          "end": 8889,
+          "quote": "Formulário de Propostas online disponível na Plataforma Integrada Carlos Chagas.",
+          "page": 4
+        }
+      ],
+      "label_evidence": {
+        "discovery_label": [
+          "M30-F07-R1-E1",
+          "M30-F07-R1-E2",
+          "M30-F07-R1-E3",
+          "M30-F07-R1-E4",
+          "M30-F07-R1-E5",
+          "M30-F07-R1-E6"
+        ],
+        "opportunity_label": [
+          "M30-F07-R1-E1",
+          "M30-F07-R1-E2",
+          "M30-F07-R1-E3",
+          "M30-F07-R1-E4",
+          "M30-F07-R1-E5",
+          "M30-F07-R1-E6"
+        ],
+        "temporal_status": [
+          "M30-F07-R1-E1",
+          "M30-F07-R1-E2",
+          "M30-F07-R1-E3",
+          "M30-F07-R1-E4",
+          "M30-F07-R1-E5",
+          "M30-F07-R1-E6"
+        ],
+        "modality": [
+          "M30-F07-R1-E1",
+          "M30-F07-R1-E2",
+          "M30-F07-R1-E3",
+          "M30-F07-R1-E4",
+          "M30-F07-R1-E5",
+          "M30-F07-R1-E6"
+        ]
+      },
+      "fields": {
+        "title": {
+          "value": "Chamada CNPq Nº 33/2026\nBolsas de Produtividade do CNPq",
+          "evidence_ids": [
+            "M30-F07-R1-E1"
+          ]
+        },
+        "objective": {
+          "value": "Conceder bolsas nas seguintes modalidades: Produtividade em Desenvolvimento Tecnológico e\nExtensão Inovadora (DT), Produtividade em Pesquisa (PQ) e Produtividade em Pesquisa Sênior (PQSr).",
+          "evidence_ids": [
+            "M30-F07-R1-E2"
+          ]
+        },
+        "eligibility_excerpt": {
+          "value": "b) possuir o título de Doutor;\nc) ter vínculo formal com a instituição de execução do projeto.",
+          "evidence_ids": [
+            "M30-F07-R1-E5"
+          ]
+        },
+        "application_channel": {
+          "value": "Formulário de Propostas online disponível na Plataforma Integrada Carlos Chagas.",
+          "evidence_ids": [
+            "M30-F07-R1-E6"
+          ]
+        },
+        "submission_deadline": {
+          "value": "07/01/2027",
+          "evidence_ids": [
+            "M30-F07-R1-E4"
+          ]
+        },
+        "official_identifier": {
+          "value": "33/2026",
+          "evidence_ids": [
+            "M30-F07-R1-E1"
+          ]
+        }
+      }
+    },
+    {
+      "annotation_id": "M30-F08-A1",
+      "record_id": "M30-F08-R1",
+      "document_id": "M30-F08",
+      "unit_locator": {
+        "start": 0,
+        "end": 6642
+      },
+      "discovery_label": "confirmed_opportunity",
+      "opportunity_label": "genuine_opportunity",
+      "temporal_status": "open",
+      "reference_date": "2026-10-19",
+      "modality": "fomento",
+      "review_status": "provisional",
+      "annotation_method": "AI-assisted source reading; no model predictions",
+      "protocol_version": "m3.0-annotation-v1",
+      "rationale": "Provisional AI source reading: Named academic research innovation support with explicit application interval enclosing reference date.",
+      "uncertainty_notes": [
+        "Apparent same MAI/DAI call relationship (unverified, no merge) with F01-R1; F03 is its contextual folder."
+      ],
+      "evidence": [
+        {
+          "evidence_id": "M30-F08-R1-E1",
+          "start": 0,
+          "end": 106,
+          "quote": "Chamada Pública CNPq/CAPES Nº 30/2026 – Programa de Mestrado e Doutorado Acadêmico para Inovação – MAI/DAI",
+          "page": null
+        },
+        {
+          "evidence_id": "M30-F08-R1-E2",
+          "start": 6015,
+          "end": 6432,
+          "quote": "A edição de 2026 do Programa de Mestrado e Doutorado para Inovação (MAI/DAI), que estimula a realização de pesquisas de mestrado e doutorado em universidades em parceria com empresas, recebe propostas até o dia 11 de dezembro. A chamada é realizada pelo Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq) e conta com a parceria da Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES).",
+          "page": null
+        },
+        {
+          "evidence_id": "M30-F08-R1-E3",
+          "start": 6607,
+          "end": 6642,
+          "quote": "Inscrições:\n19/08/2026 a 11/12/2026",
+          "page": null
+        }
+      ],
+      "label_evidence": {
+        "discovery_label": [
+          "M30-F08-R1-E1",
+          "M30-F08-R1-E2",
+          "M30-F08-R1-E3"
+        ],
+        "opportunity_label": [
+          "M30-F08-R1-E1",
+          "M30-F08-R1-E2",
+          "M30-F08-R1-E3"
+        ],
+        "temporal_status": [
+          "M30-F08-R1-E1",
+          "M30-F08-R1-E2",
+          "M30-F08-R1-E3"
+        ],
+        "modality": [
+          "M30-F08-R1-E1",
+          "M30-F08-R1-E2",
+          "M30-F08-R1-E3"
+        ]
+      },
+      "fields": {
+        "title": {
+          "value": "Chamada Pública CNPq/CAPES Nº 30/2026 – Programa de Mestrado e Doutorado Acadêmico para Inovação – MAI/DAI",
+          "evidence_ids": [
+            "M30-F08-R1-E1"
+          ]
+        },
+        "objective": {
+          "value": "A edição de 2026 do Programa de Mestrado e Doutorado para Inovação (MAI/DAI), que estimula a realização de pesquisas de mestrado e doutorado em universidades em parceria com empresas, recebe propostas até o dia 11 de dezembro. A chamada é realizada pelo Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq) e conta com a parceria da Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES).",
+          "evidence_ids": [
+            "M30-F08-R1-E2"
+          ]
+        },
+        "submission_deadline": {
+          "value": "11/12/2026",
+          "evidence_ids": [
+            "M30-F08-R1-E3"
+          ]
+        },
+        "official_identifier": {
+          "value": "30/2026",
+          "evidence_ids": [
+            "M30-F08-R1-E1"
+          ]
+        },
+        "opening_date": {
+          "value": "19/08/2026",
+          "evidence_ids": [
+            "M30-F08-R1-E3"
+          ]
+        },
+        "publishing_organization": {
+          "value": "Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq)",
+          "evidence_ids": [
+            "M30-F08-R1-E2"
+          ]
+        }
+      }
+    },
+    {
+      "annotation_id": "M30-I01-A1",
+      "record_id": "M30-I01-R1",
+      "document_id": "M30-I01",
+      "unit_locator": {
+        "start": 211,
+        "end": 2353
+      },
+      "discovery_label": "opportunity_signal",
+      "opportunity_label": "uncertain",
+      "temporal_status": "undetermined",
+      "reference_date": "2026-10-19",
+      "modality": "investimentos",
+      "review_status": "provisional",
+      "annotation_method": "AI-assisted source reading; no model predictions",
+      "protocol_version": "m3.0-annotation-v1",
+      "rationale": "Institutional page states fund thesis, target companies and geographic intent, a relevant equity-investment discovery signal. This scoped overview does not itself establish a submission route or sufficient access conditions. Missing dates only justify undetermined temporal availability; missing dates alone are not the reason for uncertain opportunity confirmation.",
+      "uncertainty_notes": [
+        "Página sem data de publicação verificável; ausência de prazo não demonstra fluxo contínuo.",
+        "Mesma família de oportunidade de I02 e I04; documentos não são oportunidades independentes."
+      ],
+      "evidence": [
+        {
+          "evidence_id": "M30-I01-R1-E1",
+          "start": 211,
+          "end": 220,
+          "quote": "Criatec 4",
+          "page": null
+        },
+        {
+          "evidence_id": "M30-I01-R1-E2",
+          "start": 1066,
+          "end": 1331,
+          "quote": "O Fundo Criatec 4 possui como objetivo proporcionar uma combinação de capital para aceleração e expertise complementar de uma equipe de gestão especializada, proporcionando uma combinação perfeita para o empreendedor que busca ajuda para acelerar o seu crescimento.",
+          "page": null
+        },
+        {
+          "evidence_id": "M30-I01-R1-E3",
+          "start": 1683,
+          "end": 1804,
+          "quote": "O Fundo busca empresas com soluções e produtos inovadores, que resolvem problemas reais em mercados endereçáveis grandes.",
+          "page": null
+        },
+        {
+          "evidence_id": "M30-I01-R1-E4",
+          "start": 2185,
+          "end": 2353,
+          "quote": "O Fundo tem em seu objetivo investir em empresas baseadas em qualquer cidade do país, fomentando a diversidade e capilaridade de inovação em todas as regiões do Brasil.",
+          "page": null
+        }
+      ],
+      "label_evidence": {
+        "discovery_label": [
+          "M30-I01-R1-E1",
+          "M30-I01-R1-E2",
+          "M30-I01-R1-E3",
+          "M30-I01-R1-E4"
+        ],
+        "opportunity_label": [
+          "M30-I01-R1-E1",
+          "M30-I01-R1-E2",
+          "M30-I01-R1-E3",
+          "M30-I01-R1-E4"
+        ],
+        "temporal_status": [
+          "M30-I01-R1-E1",
+          "M30-I01-R1-E2",
+          "M30-I01-R1-E3",
+          "M30-I01-R1-E4"
+        ],
+        "modality": [
+          "M30-I01-R1-E1",
+          "M30-I01-R1-E2",
+          "M30-I01-R1-E3",
+          "M30-I01-R1-E4"
+        ]
+      },
+      "fields": {
+        "title": {
+          "value": "Criatec 4",
+          "evidence_ids": [
+            "M30-I01-R1-E1"
+          ]
+        },
+        "applicant_requirements": {
+          "value": "O Fundo busca empresas com soluções e produtos inovadores, que resolvem problemas reais em mercados endereçáveis grandes.",
+          "evidence_ids": [
+            "M30-I01-R1-E3"
+          ]
+        },
+        "geographic_scope": {
+          "value": "O Fundo tem em seu objetivo investir em empresas baseadas em qualquer cidade do país, fomentando a diversidade e capilaridade de inovação em todas as regiões do Brasil.",
+          "evidence_ids": [
+            "M30-I01-R1-E4"
+          ]
+        }
+      }
+    },
+    {
+      "annotation_id": "M30-I02-A1",
+      "record_id": "M30-I02-R1",
+      "document_id": "M30-I02",
+      "unit_locator": {
+        "start": 56,
+        "end": 940
+      },
+      "discovery_label": "confirmed_opportunity",
+      "opportunity_label": "genuine_opportunity",
+      "temporal_status": "undetermined",
+      "reference_date": "2026-10-19",
+      "modality": "investimentos",
+      "review_status": "provisional",
+      "annotation_method": "AI-assisted source reading; no model predictions",
+      "protocol_version": "m3.0-annotation-v1",
+      "rationale": "Convite explícito a projeto ou empresa inovadora para submeter projeto e ter o Criatec 4 como sócio confirma mecanismo de candidatura a capital de participação. Não se inferem prazo aberto ou fluxo contínuo da falta de datas.",
+      "uncertainty_notes": [
+        "Data e duração da janela não informadas.",
+        "Formulário não aberto, executado ou submetido; confirmação documental, não teste operacional."
+      ],
+      "evidence": [
+        {
+          "evidence_id": "M30-I02-R1-E1",
+          "start": 56,
+          "end": 75,
+          "quote": "Novos\nInvestimentos",
+          "page": null
+        },
+        {
+          "evidence_id": "M30-I02-R1-E2",
+          "start": 76,
+          "end": 231,
+          "quote": "O fundo Criatec 4 tem como um dos seus principais objetivos o fomento de inciativas inovadoras ligadas ao empreendedorismo em diferentes regiões do Brasil.",
+          "page": null
+        },
+        {
+          "evidence_id": "M30-I02-R1-E3",
+          "start": 667,
+          "end": 940,
+          "quote": "Se você tem um projeto ou empresa com produtos e soluções inovadoras e deseja ter o Criatec 4 como sócio, clique na região onde a sua empresa está localizada, preencha o formulário de submissão do seu projeto e em breve você receberá o contato de um representante do fundo.",
+          "page": null
+        }
+      ],
+      "label_evidence": {
+        "discovery_label": [
+          "M30-I02-R1-E1",
+          "M30-I02-R1-E2",
+          "M30-I02-R1-E3"
+        ],
+        "opportunity_label": [
+          "M30-I02-R1-E1",
+          "M30-I02-R1-E2",
+          "M30-I02-R1-E3"
+        ],
+        "temporal_status": [
+          "M30-I02-R1-E1",
+          "M30-I02-R1-E2",
+          "M30-I02-R1-E3"
+        ],
+        "modality": [
+          "M30-I02-R1-E1",
+          "M30-I02-R1-E2",
+          "M30-I02-R1-E3"
+        ]
+      },
+      "fields": {
+        "title": {
+          "value": "Novos\nInvestimentos",
+          "evidence_ids": [
+            "M30-I02-R1-E1"
+          ]
+        },
+        "applicant_requirements": {
+          "value": "projeto ou empresa com produtos e soluções inovadoras",
+          "evidence_ids": [
+            "M30-I02-R1-E3"
+          ]
+        },
+        "application_instructions": {
+          "value": "Se você tem um projeto ou empresa com produtos e soluções inovadoras e deseja ter o Criatec 4 como sócio, clique na região onde a sua empresa está localizada, preencha o formulário de submissão do seu projeto e em breve você receberá o contato de um representante do fundo.",
+          "evidence_ids": [
+            "M30-I02-R1-E3"
+          ]
+        }
+      }
+    },
+    {
+      "annotation_id": "M30-I03-A1",
+      "record_id": "M30-I03-R1",
+      "document_id": "M30-I03",
+      "unit_locator": {
+        "start": 46,
+        "end": 172
+      },
+      "discovery_label": "unrelated_or_non_actionable",
+      "opportunity_label": "not_opportunity",
+      "temporal_status": "not_applicable",
+      "reference_date": "2026-10-19",
+      "modality": "investimentos",
+      "review_status": "provisional",
+      "annotation_method": "AI-assisted source reading; no model predictions",
+      "protocol_version": "m3.0-annotation-v1",
+      "rationale": "Hard negative: o conteúdo central é portfólio de investimentos feitos pelo time, não oferta de nova rodada nem chamada. O menu Aplicar para investimento não transforma cases passados em oportunidade atual.",
+      "uncertainty_notes": [
+        "Portfólio do time não comprova que todos os aportes tenham sido feitos pelo Criatec 4.",
+        "Não usar placeholders Ano de investimento: 00/00/00 como data real; empresas são pessoas jurídicas, não lista de candidatos individuais."
+      ],
+      "evidence": [
+        {
+          "evidence_id": "M30-I03-R1-E1",
+          "start": 46,
+          "end": 69,
+          "quote": "Conheça nosso\nPortfólio",
+          "page": null
+        },
+        {
+          "evidence_id": "M30-I03-R1-E2",
+          "start": 70,
+          "end": 172,
+          "quote": "Estes são alguns dos principais investimentos feitos pelo time do Fundo e que viraram cases de sucesso",
+          "page": null
+        }
+      ],
+      "label_evidence": {
+        "discovery_label": [
+          "M30-I03-R1-E1",
+          "M30-I03-R1-E2"
+        ],
+        "opportunity_label": [
+          "M30-I03-R1-E1",
+          "M30-I03-R1-E2"
+        ],
+        "temporal_status": [
+          "M30-I03-R1-E1",
+          "M30-I03-R1-E2"
+        ],
+        "modality": [
+          "M30-I03-R1-E1",
+          "M30-I03-R1-E2"
+        ]
+      },
+      "fields": {
+        "title": {
+          "value": "Conheça nosso\nPortfólio",
+          "evidence_ids": [
+            "M30-I03-R1-E1"
+          ]
+        },
+        "completed_investment_expression": {
+          "value": "Estes são alguns dos principais investimentos feitos pelo time do Fundo e que viraram cases de sucesso",
+          "evidence_ids": [
+            "M30-I03-R1-E2"
+          ]
+        }
+      }
+    },
+    {
+      "annotation_id": "M30-I04-A1",
+      "record_id": "M30-I04-R1",
+      "document_id": "M30-I04",
+      "unit_locator": {
+        "start": 30,
+        "end": 305
+      },
+      "discovery_label": "confirmed_opportunity",
+      "opportunity_label": "genuine_opportunity",
+      "temporal_status": "undetermined",
+      "reference_date": "2026-10-19",
+      "modality": "investimentos",
+      "review_status": "provisional",
+      "annotation_method": "AI-assisted source reading; no model predictions",
+      "protocol_version": "m3.0-annotation-v1",
+      "rationale": "Instruções explícitas para enviar plano de negócios à análise da equipe confirmam acesso à avaliação de investimento. Investimento é condicionado à tese e não é garantia de aporte. Não há prazo verificável.",
+      "uncertainty_notes": [
+        "Nenhum formulário foi aberto ou submetido.",
+        "Sem data, não concluir status open ou continuous; sobreposição de programa com I01 e I02."
+      ],
+      "evidence": [
+        {
+          "evidence_id": "M30-I04-R1-E1",
+          "start": 56,
+          "end": 77,
+          "quote": "Aplique a\nsua Startup",
+          "page": null
+        },
+        {
+          "evidence_id": "M30-I04-R1-E2",
+          "start": 78,
+          "end": 305,
+          "quote": "Escolha a região onde a sede da sua empresa está localizada e preencha os campos abaixo com o seu plano de negócios. Nossa equipe de análise fará a avaliação da oportunidade e, caso se encaixe na tese do fundo, faremos contato.",
+          "page": null
+        },
+        {
+          "evidence_id": "M30-I04-R1-E3",
+          "start": 30,
+          "end": 55,
+          "quote": "Aplicar para investimento",
+          "page": null
+        }
+      ],
+      "label_evidence": {
+        "discovery_label": [
+          "M30-I04-R1-E1",
+          "M30-I04-R1-E2",
+          "M30-I04-R1-E3"
+        ],
+        "opportunity_label": [
+          "M30-I04-R1-E1",
+          "M30-I04-R1-E2",
+          "M30-I04-R1-E3"
+        ],
+        "temporal_status": [
+          "M30-I04-R1-E1",
+          "M30-I04-R1-E2",
+          "M30-I04-R1-E3"
+        ],
+        "modality": [
+          "M30-I04-R1-E1",
+          "M30-I04-R1-E2",
+          "M30-I04-R1-E3"
+        ]
+      },
+      "fields": {
+        "title": {
+          "value": "Aplique a\nsua Startup",
+          "evidence_ids": [
+            "M30-I04-R1-E1"
+          ]
+        },
+        "application_instructions": {
+          "value": "Escolha a região onde a sede da sua empresa está localizada e preencha os campos abaixo com o seu plano de negócios. Nossa equipe de análise fará a avaliação da oportunidade e, caso se encaixe na tese do fundo, faremos contato.",
+          "evidence_ids": [
+            "M30-I04-R1-E2"
+          ]
+        }
+      }
+    },
+    {
+      "annotation_id": "M30-I05-A1",
+      "record_id": "M30-I05-R1",
+      "document_id": "M30-I05",
+      "unit_locator": {
+        "start": 0,
+        "end": 2234
+      },
+      "discovery_label": "opportunity_signal",
+      "opportunity_label": "uncertain",
+      "temporal_status": "undetermined",
+      "reference_date": "2026-10-19",
+      "modality": "investimentos",
+      "review_status": "provisional",
+      "annotation_method": "AI-assisted source reading; no model predictions",
+      "protocol_version": "m3.0-annotation-v1",
+      "rationale": "Notícia de estruturação de futuro FIP sinaliza investimento em startups. O prazo encerrado em agosto refere-se exclusivamente à seleção do gestor; classificação prevista até novembro não é prazo de startups. Não contar a chamada vencida como oportunidade vigente.",
+      "uncertainty_notes": [
+        "Sem canal ou janela de candidatura para startups na notícia.",
+        "Capital estimado do fundo não é valor de aporte por startup."
+      ],
+      "evidence": [
+        {
+          "evidence_id": "M30-I05-R1-E1",
+          "start": 0,
+          "end": 61,
+          "quote": "BNDES e FINEP recebem 19 propostas para FIP Conexões Startups",
+          "page": null
+        },
+        {
+          "evidence_id": "M30-I05-R1-E2",
+          "start": 1057,
+          "end": 1419,
+          "quote": "O Banco Nacional de Desenvolvimento Econômico e Social (BNDES) e a Financiadora de Estudos e Projetos (Finep) receberam 19 propostas na chamada pública para seleção do gestor do FIP Conexões Startups. O prazo para apresentação das propostas foi encerrado em 12 de agosto. A divulgação da classificação final está prevista para ocorrer até 23 de novembro de 2026.",
+          "page": null
+        },
+        {
+          "evidence_id": "M30-I05-R1-E3",
+          "start": 1420,
+          "end": 1838,
+          "quote": "A iniciativa busca estruturar um fundo de investimento em participações voltado a startups em estágio inicial, especialmente aquelas que tenham recebido apoio de programas de fomento à inovação, subvenção ou aceleração realizados no país. O objetivo é ampliar a conversão dessas empresas em oportunidades aptas a receber investimentos de fundos de capital semente, venture capital e outros investidores institucionais.",
+          "page": null
+        },
+        {
+          "evidence_id": "M30-I05-R1-E4",
+          "start": 1839,
+          "end": 2234,
+          "quote": "O FIP tem estimativa de mobilizar até R$ 250 milhões para investir em startups em fase inicial. A BNDESPAR, subsidiária integral do BNDES, comprometerá até R$ 100 milhões. Já a Finep, com recursos do Fundo Nacional de Desenvolvimento Científico e Tecnológico (FNDCT), irá comprometer R$ 50 milhões. Caberá ao gestor selecionado mobilizar outros investidores para complementar o capital do fundo.",
+          "page": null
+        },
+        {
+          "evidence_id": "M30-I05-R1-E5",
+          "start": 836,
+          "end": 868,
+          "quote": "Publicado em 17/08/2026 às 12:36",
+          "page": null
+        }
+      ],
+      "label_evidence": {
+        "discovery_label": [
+          "M30-I05-R1-E1",
+          "M30-I05-R1-E2",
+          "M30-I05-R1-E3",
+          "M30-I05-R1-E4",
+          "M30-I05-R1-E5"
+        ],
+        "opportunity_label": [
+          "M30-I05-R1-E1",
+          "M30-I05-R1-E2",
+          "M30-I05-R1-E3",
+          "M30-I05-R1-E4",
+          "M30-I05-R1-E5"
+        ],
+        "temporal_status": [
+          "M30-I05-R1-E1",
+          "M30-I05-R1-E2",
+          "M30-I05-R1-E3",
+          "M30-I05-R1-E4",
+          "M30-I05-R1-E5"
+        ],
+        "modality": [
+          "M30-I05-R1-E1",
+          "M30-I05-R1-E2",
+          "M30-I05-R1-E3",
+          "M30-I05-R1-E4",
+          "M30-I05-R1-E5"
+        ]
+      },
+      "fields": {
+        "title": {
+          "value": "BNDES e FINEP recebem 19 propostas para FIP Conexões Startups",
+          "evidence_ids": [
+            "M30-I05-R1-E1"
+          ]
+        },
+        "fund_capital_estimate": {
+          "value": "até R$ 250 milhões",
+          "evidence_ids": [
+            "M30-I05-R1-E4"
+          ]
+        },
+        "target_profile": {
+          "value": "startups em estágio inicial",
+          "evidence_ids": [
+            "M30-I05-R1-E3"
+          ]
+        },
+        "publication_date_expression": {
+          "value": "Publicado em 17/08/2026 às 12:36",
+          "evidence_ids": [
+            "M30-I05-R1-E5"
+          ]
+        },
+        "investment_organization": {
+          "value": "BNDESPAR",
+          "evidence_ids": [
+            "M30-I05-R1-E4"
+          ]
+        }
+      }
+    },
+    {
+      "annotation_id": "M30-I06-A1",
+      "record_id": "M30-I06-R1",
+      "document_id": "M30-I06",
+      "unit_locator": {
+        "start": 0,
+        "end": 3490
+      },
+      "discovery_label": "announced_future_opportunity",
+      "opportunity_label": "uncertain",
+      "temporal_status": "undetermined",
+      "reference_date": "2026-10-19",
+      "modality": "investimentos",
+      "review_status": "provisional",
+      "annotation_method": "AI-assisted source reading; no model predictions",
+      "protocol_version": "m3.0-annotation-v1",
+      "rationale": "Authoritative announcement identifies a forthcoming IA investment fund, selected manager, intended startup audience and analysis/diligence/structuring still to occur. This supports announced_future_opportunity for discovery, not a presently accessible confirmed instrument. No startup application opening or date is stated, so temporal availability remains undetermined, rather than future merely because fund operations are planned.",
+      "uncertainty_notes": [
+        "Não há data de início nem prazo de candidatura para startups.",
+        "Estruturação ainda condicionada a análise e diligência; existência permanece uncertain.",
+        "Não usar capital global estimado como ticket individual.",
+        "Parent AI consistency check corrected an initial future temporal proposal: future investment intent is not a verified future application stage. No human adjudication or approval is claimed."
+      ],
+      "evidence": [
+        {
+          "evidence_id": "M30-I06-R1-E1",
+          "start": 0,
+          "end": 76,
+          "quote": "BNDES e Finep selecionam a Monashees para gestão de fundo de IA de R$ 500 mi",
+          "page": null
+        },
+        {
+          "evidence_id": "M30-I06-R1-E2",
+          "start": 1173,
+          "end": 1556,
+          "quote": "O Banco Nacional do Desenvolvimento Econômico e Social (BNDES) e a Financiadora de Estudos e Projetos (Finep) selecionaram a Monashees Gestão de Investimentos como gestora do Fundo de Investimento em Participações de Inteligência Artificial. A chamada pública recebeu 17 propostas. A partir de agora, a proposta selecionada seguirá para a etapa de análise, diligência e estruturação.",
+          "page": null
+        },
+        {
+          "evidence_id": "M30-I06-R1-E3",
+          "start": 1557,
+          "end": 1935,
+          "quote": "O novo fundo, que tem estimativa de mobilizar até R$ 500 milhões, é voltado ao apoio a startups intensivas no uso de inteligência artificial, tendo como desafio central ampliar o número, o faturamento e a presença global de startups brasileiras que tenham IA como elemento central do modelo de negócios e geração de valor, e não apenas como ferramenta acessória ou complementar.",
+          "page": null
+        },
+        {
+          "evidence_id": "M30-I06-R1-E4",
+          "start": 3048,
+          "end": 3490,
+          "quote": "Serão alvos do investimento startups que tenham como diferencial competitivo a incorporação estruturante da inteligência artificial à sua proposta de valor, e cujo desenvolvimento, adaptação e operação das soluções de inteligência artificial demandem investimentos em dados, modelos, infraestrutura computacional e profissionais especializados, indo além do simples consumo pontual ou acessório de soluções de inteligência artificial prontas.",
+          "page": null
+        },
+        {
+          "evidence_id": "M30-I06-R1-E5",
+          "start": 866,
+          "end": 898,
+          "quote": "Publicado em 14/09/2026 às 10:35",
+          "page": null
+        }
+      ],
+      "label_evidence": {
+        "discovery_label": [
+          "M30-I06-R1-E1",
+          "M30-I06-R1-E2",
+          "M30-I06-R1-E3",
+          "M30-I06-R1-E4",
+          "M30-I06-R1-E5"
+        ],
+        "opportunity_label": [
+          "M30-I06-R1-E1",
+          "M30-I06-R1-E2",
+          "M30-I06-R1-E3",
+          "M30-I06-R1-E4",
+          "M30-I06-R1-E5"
+        ],
+        "temporal_status": [
+          "M30-I06-R1-E1",
+          "M30-I06-R1-E2",
+          "M30-I06-R1-E3",
+          "M30-I06-R1-E4",
+          "M30-I06-R1-E5"
+        ],
+        "modality": [
+          "M30-I06-R1-E1",
+          "M30-I06-R1-E2",
+          "M30-I06-R1-E3",
+          "M30-I06-R1-E4",
+          "M30-I06-R1-E5"
+        ]
+      },
+      "fields": {
+        "title": {
+          "value": "BNDES e Finep selecionam a Monashees para gestão de fundo de IA de R$ 500 mi",
+          "evidence_ids": [
+            "M30-I06-R1-E1"
+          ]
+        },
+        "fund_capital_estimate": {
+          "value": "até R$ 500 milhões",
+          "evidence_ids": [
+            "M30-I06-R1-E3"
+          ]
+        },
+        "target_profile": {
+          "value": "Serão alvos do investimento startups que tenham como diferencial competitivo a incorporação estruturante da inteligência artificial à sua proposta de valor, e cujo desenvolvimento, adaptação e operação das soluções de inteligência artificial demandem investimentos em dados, modelos, infraestrutura computacional e profissionais especializados, indo além do simples consumo pontual ou acessório de soluções de inteligência artificial prontas.",
+          "evidence_ids": [
+            "M30-I06-R1-E4"
+          ]
+        },
+        "publication_date_expression": {
+          "value": "Publicado em 14/09/2026 às 10:35",
+          "evidence_ids": [
+            "M30-I06-R1-E5"
+          ]
+        }
+      }
+    },
+    {
+      "annotation_id": "M30-I07-A1",
+      "record_id": "M30-I07-R1",
+      "document_id": "M30-I07",
+      "unit_locator": {
+        "start": 11450,
+        "end": 12376
+      },
+      "discovery_label": "opportunity_signal",
+      "opportunity_label": "uncertain",
+      "temporal_status": "undetermined",
+      "reference_date": "2026-10-19",
+      "modality": "investimentos",
+      "review_status": "provisional",
+      "annotation_method": "AI-assisted source reading; no model predictions",
+      "protocol_version": "m3.0-annotation-v1",
+      "rationale": "Unidade da página de fundos do folder institucional descreve Sul Ventures e estágio de captação dos FIPs. Captação de capital do fundo não equivale a recebimento de candidaturas de startups; sinal de investimento sem janela verificada. Demais páginas de crédito não pertencem à unidade anotada.",
+      "uncertainty_notes": [
+        "Data de criação do PDF e diretório /2026/01/ não comprovam publicação; publication_date permanece null.",
+        "Página 12 calculada pelos separadores reais de pdftotext; página inicial sem texto também conta.",
+        "Não deduzir captação ativa em outubro a partir de material sem prazo."
+      ],
+      "evidence": [
+        {
+          "evidence_id": "M30-I07-R1-E1",
+          "start": 11450,
+          "end": 11472,
+          "quote": "FUNDOS DE PARTICIPAÇÃO",
+          "page": 12
+        },
+        {
+          "evidence_id": "M30-I07-R1-E2",
+          "start": 11779,
+          "end": 11838,
+          "quote": "Atualmente, os seguintes FIPs estão em estágio de captação:",
+          "page": 12
+        },
+        {
+          "evidence_id": "M30-I07-R1-E3",
+          "start": 11840,
+          "end": 11852,
+          "quote": "SUL VENTURES",
+          "page": 12
+        },
+        {
+          "evidence_id": "M30-I07-R1-E4",
+          "start": 11873,
+          "end": 12376,
+          "quote": "O Fundo Sul Ventures nasceu com o propósito\nde impulsionar e desenvolver o ecossistema de\ninovação da região Sul do Brasil, por meio de uma\nestratégia estruturada de investimentos em Venture\nCapital, operando de forma transversal e hands-on,\nacompanhando de perto cada investimento para\nmaximizar seu potencial de crescimento. O Fundo é\nfocado os ecossistemas dos três estados do Sul do Brasil,\ncom setores estratégicos definidos, incluindo Adtech &\nRetail Tech, Healthtech, Fintech, Smart Infra e SaaS.",
+          "page": 12
+        }
+      ],
+      "label_evidence": {
+        "discovery_label": [
+          "M30-I07-R1-E1",
+          "M30-I07-R1-E2",
+          "M30-I07-R1-E3",
+          "M30-I07-R1-E4"
+        ],
+        "opportunity_label": [
+          "M30-I07-R1-E1",
+          "M30-I07-R1-E2",
+          "M30-I07-R1-E3",
+          "M30-I07-R1-E4"
+        ],
+        "temporal_status": [
+          "M30-I07-R1-E1",
+          "M30-I07-R1-E2",
+          "M30-I07-R1-E3",
+          "M30-I07-R1-E4"
+        ],
+        "modality": [
+          "M30-I07-R1-E1",
+          "M30-I07-R1-E2",
+          "M30-I07-R1-E3",
+          "M30-I07-R1-E4"
+        ]
+      },
+      "fields": {
+        "title": {
+          "value": "SUL VENTURES",
+          "evidence_ids": [
+            "M30-I07-R1-E3"
+          ]
+        },
+        "fund_stage_expression": {
+          "value": "Atualmente, os seguintes FIPs estão em estágio de captação:",
+          "evidence_ids": [
+            "M30-I07-R1-E2"
+          ]
+        },
+        "investment_focus": {
+          "value": "O Fundo Sul Ventures nasceu com o propósito\nde impulsionar e desenvolver o ecossistema de\ninovação da região Sul do Brasil, por meio de uma\nestratégia estruturada de investimentos em Venture\nCapital, operando de forma transversal e hands-on,\nacompanhando de perto cada investimento para\nmaximizar seu potencial de crescimento. O Fundo é\nfocado os ecossistemas dos três estados do Sul do Brasil,\ncom setores estratégicos definidos, incluindo Adtech &\nRetail Tech, Healthtech, Fintech, Smart Infra e SaaS.",
+          "evidence_ids": [
+            "M30-I07-R1-E4"
+          ]
+        }
+      }
+    },
+    {
+      "annotation_id": "M30-I08-A1",
+      "record_id": "M30-I08-R1",
+      "document_id": "M30-I08",
+      "unit_locator": {
+        "start": 0,
+        "end": 5156
+      },
+      "discovery_label": "opportunity_signal",
+      "opportunity_label": "uncertain",
+      "temporal_status": "undetermined",
+      "reference_date": "2026-10-19",
+      "modality": "investimentos",
+      "review_status": "provisional",
+      "annotation_method": "AI-assisted source reading; no model predictions",
+      "protocol_version": "m3.0-annotation-v1",
+      "rationale": "Política atual de seleção e Consulta Prévia admite contratação de fundos com tese alinhada, captação avançada e compromisso institucional. É rota para fundos/gestores, não candidatura direta de startup; não promove chamadas históricas listadas em navegação a oportunidades.",
+      "uncertainty_notes": [
+        "Critérios gerais remetem a produtos e avaliação; condições completas e janela não verificadas.",
+        "Texto Renderizado em é data de renderização, não publicação.",
+        "Chamadas em andamento pode significar avaliação pós-inscrição, não janela aberta."
+      ],
+      "evidence": [
+        {
+          "evidence_id": "M30-I08-R1-E1",
+          "start": 0,
+          "end": 61,
+          "quote": "Modalidades e Critérios de Seleção de Fundos de Investimentos",
+          "page": null
+        },
+        {
+          "evidence_id": "M30-I08-R1-E2",
+          "start": 543,
+          "end": 708,
+          "quote": "A seleção de Fundos será realizada por meio de Chamada Pública realizada pelo Sistema BNDES ou por meio de Consulta Prévia, desde que observados os critérios abaixo.",
+          "page": null
+        },
+        {
+          "evidence_id": "M30-I08-R1-E3",
+          "start": 4654,
+          "end": 5001,
+          "quote": "O Sistema BNDES poderá contratar, por meio de Consulta Prévia, fundos cuja tese de investimento seja compatível com as prioridades estabelecidas no\nplanejamento estratégico vigente\n, que já estejam em estágio avançado de captação e que contem com compromisso firme de ao menos uma Instituição Financeira de Desenvolvimento ou de um Fundo Soberano.",
+          "page": null
+        },
+        {
+          "evidence_id": "M30-I08-R1-E4",
+          "start": 5002,
+          "end": 5156,
+          "quote": "A contratação de fundos por Consulta Prévia depende do atendimento de alguns requisitos, detalhados na página específica de cada um dos Produtos vigentes:",
+          "page": null
+        }
+      ],
+      "label_evidence": {
+        "discovery_label": [
+          "M30-I08-R1-E1",
+          "M30-I08-R1-E2",
+          "M30-I08-R1-E3",
+          "M30-I08-R1-E4"
+        ],
+        "opportunity_label": [
+          "M30-I08-R1-E1",
+          "M30-I08-R1-E2",
+          "M30-I08-R1-E3",
+          "M30-I08-R1-E4"
+        ],
+        "temporal_status": [
+          "M30-I08-R1-E1",
+          "M30-I08-R1-E2",
+          "M30-I08-R1-E3",
+          "M30-I08-R1-E4"
+        ],
+        "modality": [
+          "M30-I08-R1-E1",
+          "M30-I08-R1-E2",
+          "M30-I08-R1-E3",
+          "M30-I08-R1-E4"
+        ]
+      },
+      "fields": {
+        "title": {
+          "value": "Modalidades e Critérios de Seleção de Fundos de Investimentos",
+          "evidence_ids": [
+            "M30-I08-R1-E1"
+          ]
+        },
+        "applicant_requirements": {
+          "value": "O Sistema BNDES poderá contratar, por meio de Consulta Prévia, fundos cuja tese de investimento seja compatível com as prioridades estabelecidas no\nplanejamento estratégico vigente\n, que já estejam em estágio avançado de captação e que contem com compromisso firme de ao menos uma Instituição Financeira de Desenvolvimento ou de um Fundo Soberano.",
+          "evidence_ids": [
+            "M30-I08-R1-E3"
+          ]
+        },
+        "additional_requirements": {
+          "value": "A contratação de fundos por Consulta Prévia depende do atendimento de alguns requisitos, detalhados na página específica de cada um dos Produtos vigentes:",
+          "evidence_ids": [
+            "M30-I08-R1-E4"
+          ]
+        }
+      }
+    },
+    {
+      "annotation_id": "M30-N01-A1",
+      "record_id": "M30-N01-R1",
+      "document_id": "M30-N01",
+      "unit_locator": {
+        "start": 779,
+        "end": 3058
+      },
+      "discovery_label": "unrelated_or_non_actionable",
+      "opportunity_label": "not_opportunity",
+      "temporal_status": "not_applicable",
+      "reference_date": "2026-10-19",
+      "modality": "credito",
+      "review_status": "provisional",
+      "annotation_method": "AI-assisted source reading; no model predictions",
+      "protocol_version": "m3.0-annotation-v1",
+      "rationale": "Named-recipient financing approval, with future vehicle launch in 2027. Product-development future tense is NOT an upcoming public credit application. The supporting program mention is contextual, not a distinct new offer in this scoped report.",
+      "uncertainty_notes": [
+        "Negative applies to this record as a distinct new/current/future opportunity; it does not erase the existence of the underlying program. No new application is supported by these paragraphs."
+      ],
+      "evidence": [
+        {
+          "evidence_id": "M30-N01-R1-E1",
+          "start": 779,
+          "end": 3058,
+          "quote": "BNDES aprova R$ 181,8 milhões para o desenvolvimento de veículo híbrido da Renault no Brasil\nPor Agência BNDES de Notícias\nPublicado em 14/10/2026 às 10:00\nAtualizado em 14/10/2026 às 10:04\n2 min de leitura\nOperação no âmbito do Programa BNDES Mais Inovação prevê o desenvolvimento de inovadora tecnologia de eletrificação para veículo produzido no Brasil\nO Banco Nacional de Desenvolvimento Econômico e Social (BNDES) aprovou financiamento de R$ 181,8 milhões para a Renault Geely do Brasil desenvolver uma inovadora tecnologia de propulsão híbrida. O projeto, que está sendo conduzido nas instalações da empresa em São José dos Pinhais (PR), integra a estratégia da montadora de renovação de seu portfólio nos próximos anos, com veículos tecnologicamente mais avançados, eficientes e sustentáveis.\nA nova tecnologia será aplicada em uma futura versão eletrificada de um veículo produzido pela Renault no Brasil, com lançamento em 2027. O projeto faz parte do ciclo de investimentos da marca para o país de R$ 5,8 bilhões, de 2025 a 2027. A confirmação do desenvolvimento e implementação da nova tecnologia aconteceu no mês de setembro, em evento realizado pela Renault Geely do Brasil no Complexo Ayrton Senna (PR), sede da montadora.\nA aprovação do financiamento ocorreu no âmbito do Produto BNDES FINEM – Programa BNDES Mais Inovação, iniciativa voltada à digitalização, pesquisa e desenvolvimento tecnológico, com recursos do FAT (Fundo de Amparo ao Trabalhador). “O desenvolvimento de novas tecnologias para veículos híbridos flex contribui para deixar o país bem-posicionado no processo de transição energética pelo qual passa o setor automotivo. A descarbonização e a industrialização verde são pilares estratégicos para construir um futuro mais sustentável e garantir qualidade de vida para as próximas gerações”, afirmou o presidente do BNDES, Aloizio Mercadante.\nDe acordo com Milton Trein, diretor financeiro da Renault Geely do Brasil, o projeto contribui para elevar a competitividade da marca. “A operação reforça a atratividade do Brasil para investimentos em inovação, ao viabilizar o desenvolvimento local de tecnologias estratégicas. O financiamento do BNDES contribui para acelerar a mobilização de recursos e competências de engenharia no país”, acrescentou.",
+          "page": null
+        }
+      ],
+      "label_evidence": {
+        "discovery_label": [
+          "M30-N01-R1-E1"
+        ],
+        "opportunity_label": [
+          "M30-N01-R1-E1"
+        ],
+        "temporal_status": [
+          "M30-N01-R1-E1"
+        ],
+        "modality": [
+          "M30-N01-R1-E1"
+        ]
+      },
+      "fields": {
+        "title": {
+          "value": "BNDES aprova R$ 181,8 milhões para o desenvolvimento de veículo híbrido da Renault no Brasil",
+          "evidence_ids": [
+            "M30-N01-R1-E1"
+          ]
+        },
+        "completed_financing_amount": {
+          "value": "R$ 181,8 milhões",
+          "evidence_ids": [
+            "M30-N01-R1-E1"
+          ]
+        }
+      }
+    },
+    {
+      "annotation_id": "M30-N02-A1",
+      "record_id": "M30-N02-R1",
+      "document_id": "M30-N02",
+      "unit_locator": {
+        "start": 769,
+        "end": 3929
+      },
+      "discovery_label": "unrelated_or_non_actionable",
+      "opportunity_label": "not_opportunity",
+      "temporal_status": "not_applicable",
+      "reference_date": "2026-10-19",
+      "modality": "credito",
+      "review_status": "provisional",
+      "annotation_method": "AI-assisted source reading; no model predictions",
+      "protocol_version": "m3.0-annotation-v1",
+      "rationale": "The bank reports an approved financing for the Butantan institution. Future vaccine production and large budget do not establish a new application for the reader. An existing innovation program is mentioned as context only.",
+      "uncertainty_notes": [
+        "Negative applies to this record as a distinct new/current/future opportunity; it does not erase the existence of the underlying program. No new application is supported by these paragraphs."
+      ],
+      "evidence": [
+        {
+          "evidence_id": "M30-N02-R1-E1",
+          "start": 769,
+          "end": 3929,
+          "quote": "BNDES aprova R$ 600 mi para Instituto Butantan implantar Centro de Imunobiológicos\nPor Agência BNDES de Notícias\nPublicado em 16/10/2026 às 09:31\nAtualizado em 16/10/2026 às 09:43\n3 min de leitura\nUnidade vai produzir vacinas para prevenção de diversas doenças e anticorpos monoclonais para tratamento câncer, doenças autoimunes e esclerose múltipla\nO Banco Nacional de Desenvolvimento Econômico e Social (BNDES) aprovou R$ 600 milhões para o Instituto Butantan, por meio da Fundação Butantan, implantar o Centro de Processamento Final de Imunobiológicos (CPFI 4), em São Paulo (SP). Na nova unidade fabril, os recursos do Programa BNDES Mais inovação permitirão a realização de processos de formulação, envase, inspeção automática e rotulagem de vacinas e medicamentos de fabricação exclusiva do Instituto Butantan no Brasil.\nA unidade será capaz de processar um conjunto de imunobiológicos que inclui vacinas para prevenção de doenças diversas (Influenza, Covid, HPV e Hepatite A, entre outras) e anticorpos monoclonais utilizados em terapias avançadas e de elevado valor para o Sistema Único de Saúde (SUS), como o adalimumabe (indicado para doenças autoimunes), o pembrolizumabe (oncológico) e o natalizumabe (esclerose múltipla).\nO CPFI 4 será equipado com tecnologias avançadas, ainda pouco utilizadas no Brasil, incluindo sistemas de envase com uso de isoladores, além de liofilização e envase em seringas. A unidade vai ocupar uma área total construída de 15.000 m², distribuídos em dois pavimentos produtivos, além de áreas de acesso e manutenção. O investimento total é de R$ 1,06 bilhão.\n“O apoio do BNDES para a construção do centro permitirá a produção de vacinas e medicamentos biológicos que ainda não são produzidos no Brasil, com segurança, ampliando a oferta de tratamentos e outros produtos terapêuticos para a população por meio do Sistema Único de Saúde (SUS)”, explica o presidente do BNDES, Aloizio Mercadante.\n“É muito importante esse financiamento para que possamos avançar cada vez mais em busca de autonomia na produção de imunobiológicos. É estratégico para o país aumentar nossa capacidade de dar respostas às demandas da saúde pública, combatendo e prevenindo doenças”, afirma Rui Curi, vice-diretor do Instituto Butantan.\nCPFI 4 –\nO Centro vai integrar de forma inédita e em larga escala tecnologias de ponta que representam avanço significativo no processamento final de imunobiológicos, como as linhas de envase com isoladores, que permitirão a produção de mais de 600 milhões de doses por ano na forma líquida, num modelo ainda sem similar no país. Além disso, a implementação de tecnologia moderna para envase, oferecendo maior segurança, precisão na dosagem e conveniência para campanhas de vacinação em massa.\nA unidade também vai possibilitar a incorporação da capacidade de processamento final de vacinas liofilizadas (processo utilizado para remover água ou solventes, preservando sua estabilidade e eficácia). Essa tecnologia estende a vida útil dos imunizantes e facilita a distribuição global, especialmente em regiões com infraestrutura limitada para armazenamento e transporte, superando limitações de refrigeração.",
+          "page": null
+        }
+      ],
+      "label_evidence": {
+        "discovery_label": [
+          "M30-N02-R1-E1"
+        ],
+        "opportunity_label": [
+          "M30-N02-R1-E1"
+        ],
+        "temporal_status": [
+          "M30-N02-R1-E1"
+        ],
+        "modality": [
+          "M30-N02-R1-E1"
+        ]
+      },
+      "fields": {
+        "title": {
+          "value": "BNDES aprova R$ 600 mi para Instituto Butantan implantar Centro de Imunobiológicos",
+          "evidence_ids": [
+            "M30-N02-R1-E1"
+          ]
+        },
+        "completed_financing_amount": {
+          "value": "R$ 600 milhões",
+          "evidence_ids": [
+            "M30-N02-R1-E1"
+          ]
+        }
+      }
+    },
+    {
+      "annotation_id": "M30-N03-A1",
+      "record_id": "M30-N03-R1",
+      "document_id": "M30-N03",
+      "unit_locator": {
+        "start": 2726,
+        "end": 5909
+      },
+      "discovery_label": "unrelated_or_non_actionable",
+      "opportunity_label": "not_opportunity",
+      "temporal_status": "not_applicable",
+      "reference_date": "2026-10-19",
+      "modality": "fomento",
+      "review_status": "provisional",
+      "annotation_method": "AI-assisted source reading; no model predictions",
+      "protocol_version": "m3.0-annotation-v1",
+      "rationale": "This scoped result announcement concerns already selected prize winners and award amounts. A future award ceremony or payment does not reopen the competition. No applicant-level results table was acquired.",
+      "uncertainty_notes": [
+        "Negative applies to this record as a distinct new/current/future opportunity; it does not erase the existence of the underlying program. No new application is supported by these paragraphs."
+      ],
+      "evidence": [
+        {
+          "evidence_id": "M30-N03-R1-E1",
+          "start": 2726,
+          "end": 5909,
+          "quote": "Finep divulga o resultado do Prêmio Mulheres Inovadoras\nSétima edição do edital recebeu 638 propostas e prevê R$ 3,6 milhões em investimentos para premiar 50 startups lideradas por mulheres, com duas vencedoras em cada região do Brasil\nPostado em:\n14/10/26 02:15\nTemas:\nTags:\nCompartilhar:\nCerimônia de entrega do Prêmio Mulheres Inovadoras 2025\nCerimônia de entrega do Prêmio Mulheres Inovadoras 2025 - créditos: Lucas Landau\nA Finep anuncia hoje (14/10) as vencedoras da 7ª edição do Prêmio Mulheres Inovadoras. Das 638 propostas apresentadas, 50 foram selecionadas para a fase de aceleração, sendo dez no total - duas de cada região do Brasil. A iniciativa busca fortalecer o empreendedorismo feminino inovador no país, apoiando negócios em diferentes estágios de desenvolvimento. Ao todo, a Finep investirá R$ 3,6 milhões nessas empresas.\n“Cada edição do Mulheres Inovadoras revela empreendedoras com negócios inovadores e de impacto para a sociedade. Apoiar essas lideranças é investir em um ecossistema com mais diversidade, competitivo e preparado para os desafios do futuro”, frisa Mauricio Syrio, gerente substituto do Departamento de Ambientes de Inovação e Empreendedorismo da Finep.\nAs duas startups vencedoras de cada região do país receberão da Finep R$ 120 mil cada, e as demais selecionadas receberão R$ 60 mil cada. A distinção considera o estágio de maturidade dos negócios, desde aqueles que ainda validam suas soluções até os que já possuem produtos ou serviços desenvolvidos e buscam ampliar sua presença no mercado.\nEntre os temas dos dez vencedores regionais estão saúde, bioeconomia e agro, além de iniciativas de monitoramento, prevenção e recuperação de desastres naturais e ambientais.\nMobilização nacional e participação regional\nA divulgação do edital mobilizou equipes da Finep em diferentes partes do país. Foram realizados mais de 20 eventos presenciais e on-line em instituições públicas e privadas, como parques tecnológicos, secretarias, hubs e aceleradoras, alcançando mais de 15 estados. A equipe do Departamento de Ambientes de Inovação e Empreendedorismo (DAIE) atuou em conjunto com os Escritórios Regionais da Finep na articulação institucional, na mobilização de parceiros e na promoção das atividades de divulgação. A iniciativa também contou com a parceria da APEX, da Rede Mulher Empreendedora (RME) e do MCTI.\nO alcance nacional também se reflete na distribuição das 638 inscrições recebidas. Nordeste, Norte e Centro-Oeste responderam por 43% das inscrições com, respectivamente, 20%, 11% e 12% das inscrições, demonstrando a capilaridade da iniciativa e a participação de empreendedoras de diferentes territórios brasileiros. O Sudeste teve 34% das propostas, seguido pelo Sul, com 23%.\nDurante oito semanas e meia, as representantes das startups selecionadas participaram de uma jornada de aceleração com mentorias individuais, palestras e atividades de capacitação e conexão com o ecossistema de empreendedorismo inovador. Ao todo, o programa contou com 50 mentoras e mais de 300 sessões de mentoria. As bancas regionais foram compostas por avaliadoras com atuação relevante nos ecossistemas de inovação de cada região. Confira neste",
+          "page": null
+        }
+      ],
+      "label_evidence": {
+        "discovery_label": [
+          "M30-N03-R1-E1"
+        ],
+        "opportunity_label": [
+          "M30-N03-R1-E1"
+        ],
+        "temporal_status": [
+          "M30-N03-R1-E1"
+        ],
+        "modality": [
+          "M30-N03-R1-E1"
+        ]
+      },
+      "fields": {
+        "title": {
+          "value": "Finep divulga o resultado do Prêmio Mulheres Inovadoras",
+          "evidence_ids": [
+            "M30-N03-R1-E1"
+          ]
+        },
+        "completed_program_budget": {
+          "value": "R$ 3,6 milhões",
+          "evidence_ids": [
+            "M30-N03-R1-E1"
+          ]
+        }
+      }
+    },
+    {
+      "annotation_id": "M30-N04-A1",
+      "record_id": "M30-N04-R1",
+      "document_id": "M30-N04",
+      "unit_locator": {
+        "start": 2778,
+        "end": 5993
+      },
+      "discovery_label": "unrelated_or_non_actionable",
+      "opportunity_label": "not_opportunity",
+      "temporal_status": "not_applicable",
+      "reference_date": "2026-10-19",
+      "modality": "fomento",
+      "review_status": "provisional",
+      "annotation_method": "AI-assisted source reading; no model predictions",
+      "protocol_version": "m3.0-annotation-v1",
+      "rationale": "The additional R$150m is explicitly for 36 proposals ALREADY analyzed and recommended for contracting. Supplementing the budget for existing proposals does not announce a new application window. This is a deliberately difficult monetary-press-release negative.",
+      "uncertainty_notes": [
+        "Negative applies to this record as a distinct new/current/future opportunity; it does not erase the existence of the underlying program. No new application is supported by these paragraphs."
+      ],
+      "evidence": [
+        {
+          "evidence_id": "M30-N04-R1-E1",
+          "start": 2778,
+          "end": 5993,
+          "quote": "MCTI e Finep anunciam aporte de R$ 450 milhões para 114 empresas das regiões Norte, Nordeste e Centro-Oeste\nPostado em:\n16/10/26 08:18\nTemas:\nTags:\nCompartilhar:\nEdital, com volume inicial de R$ 300 milhões, receberá suplementação de 50% para incluir mais projetos das regiões\nA ministra Luciana Santos, do Ministério da Ciência, Tecnologia e Inovação (MCTI) anunciou hoje (16), no auditório da Sudene, no Recife (PE), os resultados da segunda rodada da chamada Mais Inovação Brasil Subvenção Econômica, edital da Finep (Financiadora de Estudos e Projetos, agência de inovação vinculada ao MCTI) que direcionava, inicialmente, R$ 300 milhões em recursos não reembolsáveis para empresas de todos os portes que atuam nas regiões Norte, Nordeste e Centro-Oeste. O financiamento irá fomentar 78 projetos inovadores e de risco tecnológico com impacto no desenvolvimento regional e relevância social. A ministra também anunciou a complementação de R$ 150 milhões para a chamada, que deve beneficiar mais 36 projetos já analisados e com recomendação de contratação, mas que ficaram fora do orçamento original. Com os novos recursos, serão 114 propostas beneficiadas e 50% de aumento no volume total de recursos.\nLançada em fevereiro de 2026, a chamada recebeu 587 propostas de empresas das regiões. Destes, 400 projetos foram habilitados para avaliação dos técnicos da Finep em parceria inédita com analistas do Sebrae e das três Superintendências Regionais, Sudeco (Superintendência de Desenvolvimento do Centro-Oeste), Sudene (Superintendência de Desenvolvimento do Nordeste) e Sudam (Superintendência de Desenvolvimento da Amazônia).\nEntre os projetos aprovados inicialmente, 75% são de microempresas (faturamento abaixo de R$ 1 milhão) e empresas de pequeno porte (faturamento de R$ 1 milhão até R$ 4,8 milhões). A chamada também vai beneficiar 44 empresas que, pela primeira vez, receberão subvenção da agência, representando 56% das propostas aprovadas.\nEmpresas sediadas em 35 cidades das regiões serão beneficiadas pelo edital, sendo que sete cidades serão atendidas pela primeira vez em uma chamada da Finep (Inhumas/GO, Santa Bárbara do Pará/PA, Salgueiro/PE, Campo Novo do Parecis/MT, Luís Eduardo Magalhães/BA,Goiana/PE e Agrestina/PE).\nTodos os projetos estão enquadrados dentro de uma ou mais missões da Nova Indústria Brasil (NIB). Do valor total da chamada, a região Norte recebeu R$ 50 milhões; a região Centro-Oeste, R$ 100 milhões; e a região Nordeste, R$ 150 milhões. Os limites de subvenção para cada proposta partiam de R$ 2 milhões a R$ 5 milhões, sendo que o valor médio dos projetos aprovados foi de R$ 3,8 milhões.\n“O foco primordial desta chamada é o amadurecimento das vocações produtivas dessas regiões, promovendo um crescimento econômico que seja sustentável e inclusivo. Com este resultado, a Finep revoluciona a capilaridade e o alcance da Subvenção Econômica direta nas três regiões que serão atendidas e intensifica parceria das empresas selecionadas com Instituições de Ciência e Tecnologia de diversos pontos do país. São 36 instituições participando, em uma expectativa de 15% do valor da chamada serem comprometidos nestas parcerias”, afirmou Luiz Antônio Elias, presidente da Finep.",
+          "page": null
+        }
+      ],
+      "label_evidence": {
+        "discovery_label": [
+          "M30-N04-R1-E1"
+        ],
+        "opportunity_label": [
+          "M30-N04-R1-E1"
+        ],
+        "temporal_status": [
+          "M30-N04-R1-E1"
+        ],
+        "modality": [
+          "M30-N04-R1-E1"
+        ]
+      },
+      "fields": {
+        "title": {
+          "value": "MCTI e Finep anunciam aporte de R$ 450 milhões para 114 empresas das regiões Norte, Nordeste e Centro-Oeste",
+          "evidence_ids": [
+            "M30-N04-R1-E1"
+          ]
+        },
+        "supplement_for_existing_proposals": {
+          "value": "R$ 150 milhões",
+          "evidence_ids": [
+            "M30-N04-R1-E1"
+          ]
+        }
+      }
+    },
+    {
+      "annotation_id": "M30-S01-A1",
+      "record_id": "M30-S01-R1",
+      "document_id": "M30-S01",
+      "unit_locator": {
+        "start": 0,
+        "end": 6164
+      },
+      "discovery_label": "opportunity_signal",
+      "opportunity_label": "uncertain",
+      "temporal_status": "undetermined",
+      "reference_date": "2026-10-19",
+      "modality": "credito",
+      "review_status": "provisional",
+      "annotation_method": "AI-assisted source reading; no model predictions",
+      "protocol_version": "m3.0-annotation-v1",
+      "rationale": "The new ProFloresta+2 competitive process is a meaningful forward-looking restoration-financing signal. Winning projects may seek a long-term BNDES loan, but this record does not establish a new loan application window or the complete access conditions for developers. Carbon-credit purchases are not equity and the cooperation agreement itself transfers no funds. This source is not classified negative just because it is a news article.",
+      "uncertainty_notes": [
+        "The procurement of carbon credits is not normalized as a grant, credit limit or VC ticket. The reported R$6bn elsewhere in the page is a potential purchase volume, not a loan budget.",
+        "Forward process language does not confirm that funding applications are open now or provide a verified future opening date. The cooperation agreement term is not a submission deadline.",
+        "Possible relationship to M30-C04 is a contextual mention only, not an identity match, approved association or automatic merge."
+      ],
+      "evidence": [
+        {
+          "evidence_id": "M30-S01-R1-E1",
+          "start": 0,
+          "end": 98,
+          "quote": "BNDES e Instituto Clima e Sociedade firmam parceria com foco na restauração dos biomas brasileiros",
+          "page": null
+        },
+        {
+          "evidence_id": "M30-S01-R1-E2",
+          "start": 3192,
+          "end": 3705,
+          "quote": "O BNDES permanece responsável pela estruturação do ProFloresta+ 2 e pela organização do processo competitivo que conectará empresas compradoras de créditos de carbono a desenvolvedores de projetos de restauração. Os projetos vencedores poderão ainda buscar financiamento de longo prazo junto ao Banco, especialmente por meio do Fundo Clima – Florestas Nativas. A estrutura do programa combina, assim, demanda por créditos de carbono, seleção competitiva de projetos e possibilidade de financiamento à restauração.",
+          "page": null
+        },
+        {
+          "evidence_id": "M30-S01-R1-E3",
+          "start": 5100,
+          "end": 5291,
+          "quote": "O Acordo de Cooperação entre BNDES e iCS terá vigência de três anos, podendo ser prorrogado por mais dois. O instrumento não prevê transferência de recursos financeiros entre as instituições.",
+          "page": null
+        },
+        {
+          "evidence_id": "M30-S01-R1-E4",
+          "start": 5644,
+          "end": 6164,
+          "quote": "O modelo busca enfrentar um dos principais desafios dos projetos de restauração: assegurar demanda previsível pelos créditos de carbono gerados ao longo do tempo. Empresas interessadas manifestam sua demanda e, posteriormente, desenvolvedores de projetos apresentam propostas para atendê-la, observando critérios técnicos, ambientais e de integridade. Os vencedores firmam contratos de compra de créditos de carbono com os compradores e podem buscar financiamento de longo prazo junto ao BNDES para executar os projetos.",
+          "page": null
+        }
+      ],
+      "label_evidence": {
+        "discovery_label": [
+          "M30-S01-R1-E2",
+          "M30-S01-R1-E4"
+        ],
+        "opportunity_label": [
+          "M30-S01-R1-E2",
+          "M30-S01-R1-E3",
+          "M30-S01-R1-E4"
+        ],
+        "temporal_status": [
+          "M30-S01-R1-E2",
+          "M30-S01-R1-E4"
+        ],
+        "modality": [
+          "M30-S01-R1-E2",
+          "M30-S01-R1-E4"
+        ]
+      },
+      "fields": {
+        "title": {
+          "value": "BNDES e Instituto Clima e Sociedade firmam parceria com foco na restauração dos biomas brasileiros",
+          "evidence_ids": [
+            "M30-S01-R1-E1"
+          ]
+        },
+        "referenced_financing_instrument": {
+          "value": "Fundo Clima – Florestas Nativas",
+          "evidence_ids": [
+            "M30-S01-R1-E2"
+          ]
+        },
+        "application_stage": {
+          "value": "posteriormente, desenvolvedores de projetos apresentam propostas para atendê-la",
+          "evidence_ids": [
+            "M30-S01-R1-E4"
+          ]
+        }
+      }
+    }
+  ]
+}

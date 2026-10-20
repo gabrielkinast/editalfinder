@@ -1,0 +1,1630 @@
+{
+  "diagnostics": [
+    "passive_not_rendered_DOM",
+    "unfrozen_attachments_unavailable"
+  ],
+  "document_id": "M30-C07",
+  "error_cases": [
+    {
+      "case_id": "M30-C07-R1:discovery_label",
+      "certainty": "unresolved_disagreement",
+      "dimension": "discovery_label",
+      "document_id": "M30-C07",
+      "error_codes": [
+        "OPPORTUNITY_EXISTENCE_CONFUSION",
+        "REFERENCE_AMBIGUITY"
+      ],
+      "expected_behavior": "Resolve this dimension from same-record evidence; provisional label is comparison, not authority.",
+      "next_action": "Compare full frozen context and request authorized adjudication; do not rewrite labels.",
+      "observed": {
+        "discovery": "opportunity_signal",
+        "end": 2746,
+        "modality": "credito",
+        "segment_id": "segment-0001",
+        "start": 2182,
+        "temporal": "undetermined"
+      },
+      "record_id": "M30-C07-R1",
+      "reference": {
+        "discovery_label": "unrelated_or_non_actionable",
+        "modality": "credito",
+        "opportunity_label": "not_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "not_applicable"
+      },
+      "review_status": "provisional",
+      "root_cause": "Context fragmentation or semantic rule/reference ambiguity; see all-overlap graph before adjudication.",
+      "root_cause_confidence": "low",
+      "segment_id": "segment-0001",
+      "severity": "medium",
+      "supporting_evidence": {
+        "end": 2746,
+        "quote": "Referência nacional em turismo rural pedagógico e educação ambiental, a Quinta da Estância, localizada em Viamão, está entre as novas empresas contempladas através do programa CrediTur RS, voltado ao fortalecimento do setor turístico em diferentes regiões do estado. Nesta terça-feira (dia 6/10), a partir da parceria entre o Banco Regional de Desenvolvimento do Extremo Sul (BRDE) e a Sicredi Origens RS, ocorreu a celebração do financiamento de R$ 2 milhões, recursos que serão destinados ao capital de giro e à ampliação da capacidade de atendimento da empresa.",
+        "start": 2182
+      }
+    },
+    {
+      "case_id": "M30-C07-R1:temporal_status",
+      "certainty": "unresolved_disagreement",
+      "dimension": "temporal_status",
+      "document_id": "M30-C07",
+      "error_codes": [
+        "TEMPORAL_AVAILABILITY_INFERENCE",
+        "REFERENCE_AMBIGUITY"
+      ],
+      "expected_behavior": "Resolve this dimension from same-record evidence; provisional label is comparison, not authority.",
+      "next_action": "Compare full frozen context and request authorized adjudication; do not rewrite labels.",
+      "observed": {
+        "discovery": "opportunity_signal",
+        "end": 2746,
+        "modality": "credito",
+        "segment_id": "segment-0001",
+        "start": 2182,
+        "temporal": "undetermined"
+      },
+      "record_id": "M30-C07-R1",
+      "reference": {
+        "discovery_label": "unrelated_or_non_actionable",
+        "modality": "credito",
+        "opportunity_label": "not_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "not_applicable"
+      },
+      "review_status": "provisional",
+      "root_cause": "Context fragmentation or semantic rule/reference ambiguity; see all-overlap graph before adjudication.",
+      "root_cause_confidence": "low",
+      "segment_id": "segment-0001",
+      "severity": "medium",
+      "supporting_evidence": {
+        "end": 2746,
+        "quote": "Referência nacional em turismo rural pedagógico e educação ambiental, a Quinta da Estância, localizada em Viamão, está entre as novas empresas contempladas através do programa CrediTur RS, voltado ao fortalecimento do setor turístico em diferentes regiões do estado. Nesta terça-feira (dia 6/10), a partir da parceria entre o Banco Regional de Desenvolvimento do Extremo Sul (BRDE) e a Sicredi Origens RS, ocorreu a celebração do financiamento de R$ 2 milhões, recursos que serão destinados ao capital de giro e à ampliação da capacidade de atendimento da empresa.",
+        "start": 2182
+      }
+    },
+    {
+      "case_id": "M30-C07-R1:segmentation",
+      "certainty": "supported_observation",
+      "dimension": "structural",
+      "document_id": "M30-C07",
+      "error_codes": [
+        "SEGMENTATION_OVER"
+      ],
+      "expected_behavior": "A meaningful record should retain its own associated context; whitespace-only boundary differences are not semantic defects.",
+      "next_action": "Inspect semantic usefulness of boundaries before changing segmentation.",
+      "observed": {
+        "coverage": {
+          "denominator": 783,
+          "numerator": 646,
+          "value": 0.8250319284802043
+        },
+        "fragmentation": 2
+      },
+      "record_id": "M30-C07-R1",
+      "reference": {
+        "discovery_label": "unrelated_or_non_actionable",
+        "modality": "credito",
+        "opportunity_label": "not_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "not_applicable"
+      },
+      "review_status": "provisional",
+      "root_cause": "Structure-derived units differ from provisional annotated record spans.",
+      "root_cause_confidence": "high",
+      "segment_id": "segment-0001",
+      "severity": "medium",
+      "supporting_evidence": {
+        "edges": [
+          {
+            "end": 2181,
+            "exact": false,
+            "intersection": 82,
+            "intersection_end": 2181,
+            "intersection_start": 2099,
+            "iou": 0.10472541507024266,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.10472541507024266,
+            "segment_id": "segment-0000",
+            "start": 2099
+          },
+          {
+            "end": 2746,
+            "exact": false,
+            "intersection": 564,
+            "intersection_end": 2746,
+            "intersection_start": 2182,
+            "iou": 0.7203065134099617,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.7203065134099617,
+            "segment_id": "segment-0001",
+            "start": 2182
+          }
+        ],
+        "reference_span": [
+          1963,
+          2746
+        ]
+      }
+    },
+    {
+      "case_id": "M30-C07-R2:discovery_label",
+      "certainty": "unresolved_disagreement",
+      "dimension": "discovery_label",
+      "document_id": "M30-C07",
+      "error_codes": [
+        "OPPORTUNITY_EXISTENCE_CONFUSION",
+        "REFERENCE_AMBIGUITY"
+      ],
+      "expected_behavior": "Resolve this dimension from same-record evidence; provisional label is comparison, not authority.",
+      "next_action": "Compare full frozen context and request authorized adjudication; do not rewrite labels.",
+      "observed": {
+        "discovery": "opportunity_signal",
+        "end": 3344,
+        "modality": "credito",
+        "segment_id": "segment-0002",
+        "start": 2747,
+        "temporal": "undetermined"
+      },
+      "record_id": "M30-C07-R2",
+      "reference": {
+        "discovery_label": "confirmed_opportunity",
+        "modality": "credito",
+        "opportunity_label": "genuine_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "undetermined"
+      },
+      "review_status": "provisional",
+      "root_cause": "Context fragmentation or semantic rule/reference ambiguity; see all-overlap graph before adjudication.",
+      "root_cause_confidence": "low",
+      "segment_id": "segment-0002",
+      "severity": "medium",
+      "supporting_evidence": {
+        "end": 3344,
+        "quote": "Conforme o secretário estadual de Turismo, Raphael Ayub, o CrediTur RS foi estruturado justamente para ampliar o acesso ao crédito e incentivar novos investimentos no setor. “Queremos dar condições para que os nossos empreendedores possam crescer, qualificar seus negócios e ampliar a capacidade de atendimento. A Quinta da Estância é um exemplo muito importante, porque une turismo, educação e preservação ambiental. É esse tipo de investimento que fortalece os destinos, gera oportunidades e faz o turismo contribuir cada vez mais para o desenvolvimento econômico do nosso estado”, afirmou Auyb.",
+        "start": 2747
+      }
+    },
+    {
+      "case_id": "M30-C07-R2:segmentation",
+      "certainty": "supported_observation",
+      "dimension": "structural",
+      "document_id": "M30-C07",
+      "error_codes": [
+        "SEGMENTATION_OVER"
+      ],
+      "expected_behavior": "A meaningful record should retain its own associated context; whitespace-only boundary differences are not semantic defects.",
+      "next_action": "Inspect semantic usefulness of boundaries before changing segmentation.",
+      "observed": {
+        "coverage": {
+          "denominator": 1523,
+          "numerator": 1520,
+          "value": 0.9980302035456337
+        },
+        "fragmentation": 4
+      },
+      "record_id": "M30-C07-R2",
+      "reference": {
+        "discovery_label": "confirmed_opportunity",
+        "modality": "credito",
+        "opportunity_label": "genuine_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "undetermined"
+      },
+      "review_status": "provisional",
+      "root_cause": "Structure-derived units differ from provisional annotated record spans.",
+      "root_cause_confidence": "high",
+      "segment_id": "segment-0002",
+      "severity": "medium",
+      "supporting_evidence": {
+        "edges": [
+          {
+            "end": 3344,
+            "exact": false,
+            "intersection": 597,
+            "intersection_end": 3344,
+            "intersection_start": 2747,
+            "iou": 0.39198949441891007,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.39198949441891007,
+            "segment_id": "segment-0002",
+            "start": 2747
+          },
+          {
+            "end": 3684,
+            "exact": false,
+            "intersection": 339,
+            "intersection_end": 3684,
+            "intersection_start": 3345,
+            "iou": 0.22258699934340118,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.22258699934340118,
+            "segment_id": "segment-0003",
+            "start": 3345
+          },
+          {
+            "end": 3702,
+            "exact": false,
+            "intersection": 17,
+            "intersection_end": 3702,
+            "intersection_start": 3685,
+            "iou": 0.011162179908076166,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.011162179908076166,
+            "segment_id": "segment-0004",
+            "start": 3685
+          },
+          {
+            "end": 4270,
+            "exact": false,
+            "intersection": 567,
+            "intersection_end": 4270,
+            "intersection_start": 3703,
+            "iou": 0.3722915298752462,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.3722915298752462,
+            "segment_id": "segment-0005",
+            "start": 3703
+          }
+        ],
+        "reference_span": [
+          2747,
+          4270
+        ]
+      }
+    },
+    {
+      "case_id": "M30-C07:segment-0001:discovery:classification",
+      "certainty": "confirmed_defect",
+      "claim_kind": "discovery",
+      "context_evidence": [
+        {
+          "end": 2746,
+          "page": null,
+          "quote": "CrediTur RS amplia acesso ao crédito para fortalecer turismo na área metropolitana de Porto Alegre\n07/10/2026 | Aldemir Lauri Kerschner\nBRDE e Sicredi Origens celebram financiamento com a Quinta da Estância, de Viamão.\nReferência nacional em turismo rural pedagógico e educação ambiental, a Quinta da Estância, localizada em Viamão, está entre as novas empresas contempladas através do programa CrediTur RS, voltado ao fortalecimento do setor turístico em diferentes regiões do estado. Nesta terça-feira (dia 6/10), a partir da parceria entre o Banco Regional de Desenvolvimento do Extremo Sul (BRDE) e a Sicredi Origens RS, ocorreu a celebração do financiamento de R$ 2 milhões, recursos que serão destinados ao capital de giro e à ampliação da capacidade de atendimento da empresa.",
+          "start": 1963
+        }
+      ],
+      "document_id": "M30-C07",
+      "end": 2746,
+      "error_codes": [
+        "OPPORTUNITY_EXISTENCE_CONFUSION",
+        "EVIDENCE_SEMANTIC_MISMATCH"
+      ],
+      "expected_behavior": "Interpretar apenas acesso/estágio e público deste registro com o contexto completo; não confundir anúncio, gestor e candidatura startup.",
+      "expected_claim": "opportunity_signal",
+      "field_index": null,
+      "field_name": null,
+      "judgment": "unsupported",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "observed": "opportunity_signal",
+      "quote": "Referência nacional em turismo rural pedagógico e educação ambiental, a Quinta da Estância, localizada em Viamão, está entre as novas empresas contempladas através do programa CrediTur RS, voltado ao fortalecimento do setor turístico em diferentes regiões do estado. Nesta terça-feira (dia 6/10), a partir da parceria entre o Banco Regional de Desenvolvimento do Extremo Sul (BRDE) e a Sicredi Origens RS, ocorreu a celebração do financiamento de R$ 2 milhões, recursos que serão destinados ao capital de giro e à ampliação da capacidade de atendimento da empresa.",
+      "rationale": "A unidade é financiamento já celebrado a Quinta da Estância; sinal como nova oportunidade é excessivo. A manchete anterior contém celebram financiamento, enquanto o maior parágrafo isolado perde esse gatilho.",
+      "review_status": "provisional",
+      "root_cause": "classify completed depende de padrões locais; segmentação por nós separa a frase de conclusão.",
+      "root_cause_confidence": "high",
+      "segment_id": "segment-0001",
+      "severity": "high",
+      "start": 2182,
+      "supporting_evidence": {
+        "end": 2746,
+        "quote": "Referência nacional em turismo rural pedagógico e educação ambiental, a Quinta da Estância, localizada em Viamão, está entre as novas empresas contempladas através do programa CrediTur RS, voltado ao fortalecimento do setor turístico em diferentes regiões do estado. Nesta terça-feira (dia 6/10), a partir da parceria entre o Banco Regional de Desenvolvimento do Extremo Sul (BRDE) e a Sicredi Origens RS, ocorreu a celebração do financiamento de R$ 2 milhões, recursos que serão destinados ao capital de giro e à ampliação da capacidade de atendimento da empresa.",
+        "start": 2182
+      }
+    },
+    {
+      "case_id": "M30-C07:segment-0002:discovery:classification",
+      "certainty": "strong_hypothesis",
+      "claim_kind": "discovery",
+      "context_evidence": [
+        {
+          "end": 4270,
+          "page": null,
+          "quote": "Conforme o secretário estadual de Turismo, Raphael Ayub, o CrediTur RS foi estruturado justamente para ampliar o acesso ao crédito e incentivar novos investimentos no setor. “Queremos dar condições para que os nossos empreendedores possam crescer, qualificar seus negócios e ampliar a capacidade de atendimento. A Quinta da Estância é um exemplo muito importante, porque une turismo, educação e preservação ambiental. É esse tipo de investimento que fortalece os destinos, gera oportunidades e faz o turismo contribuir cada vez mais para o desenvolvimento econômico do nosso estado”, afirmou Auyb.\nO programa é destinado a empresas de todos os portes, desde que possuam o Cadastro de Prestadores de Serviços Turísticos (Cadastur), do Ministério do Turismo. O limite de financiamento é de R$ 4 milhões por empresa, com juros ao redor de 10% ao ano (IPCA mais 6%) e prazo de cinco anos para amortização (com 12 meses de carência incluída).\nSetor estratégico\nNa avaliação do gerente de Operações do BRDE, Paulo Raffin, o programa é um importante instrumento para fortalecer novos destinos turísticos no estado. “É uma linha de crédito em condições muito favoráveis para que as empresas do setor possam manter e ampliar seus empreendimentos. O turismo tem se mostrado um setor estratégico na geração de novas oportunidades e empregos”, frisou Raffin. Ele ressaltou, também, a relevância de ter a parceria das cooperativas de crédito, como a Sicredi Origens, para que o CrediTur RS contemple o maior número possível de empresas.",
+          "start": 2747
+        }
+      ],
+      "document_id": "M30-C07",
+      "end": 3344,
+      "error_codes": [
+        "EXTRACTION_OMISSION"
+      ],
+      "expected_behavior": "Interpretar apenas acesso/estágio e público deste registro com o contexto completo; não confundir anúncio, gestor e candidatura startup.",
+      "expected_claim": "opportunity_signal",
+      "field_index": null,
+      "field_name": null,
+      "judgment": "partial",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "observed": "opportunity_signal",
+      "quote": "Conforme o secretário estadual de Turismo, Raphael Ayub, o CrediTur RS foi estruturado justamente para ampliar o acesso ao crédito e incentivar novos investimentos no setor. “Queremos dar condições para que os nossos empreendedores possam crescer, qualificar seus negócios e ampliar a capacidade de atendimento. A Quinta da Estância é um exemplo muito importante, porque une turismo, educação e preservação ambiental. É esse tipo de investimento que fortalece os destinos, gera oportunidades e faz o turismo contribuir cada vez mais para o desenvolvimento econômico do nosso estado”, afirmou Auyb.",
+      "rationale": "O programa tem Cadastur, teto por empresa e condições na mesma unidade anotada; apenas sinal é conservador, possivelmente incompleto, sem inventar janela.",
+      "review_status": "provisional",
+      "root_cause": "Rota/condições são distribuídas em blocos; confirmed depende de gatilhos de acesso estreitos.",
+      "root_cause_confidence": "medium",
+      "segment_id": "segment-0002",
+      "severity": "medium",
+      "start": 2747,
+      "supporting_evidence": {
+        "end": 3344,
+        "quote": "Conforme o secretário estadual de Turismo, Raphael Ayub, o CrediTur RS foi estruturado justamente para ampliar o acesso ao crédito e incentivar novos investimentos no setor. “Queremos dar condições para que os nossos empreendedores possam crescer, qualificar seus negócios e ampliar a capacidade de atendimento. A Quinta da Estância é um exemplo muito importante, porque une turismo, educação e preservação ambiental. É esse tipo de investimento que fortalece os destinos, gera oportunidades e faz o turismo contribuir cada vez mais para o desenvolvimento econômico do nosso estado”, afirmou Auyb.",
+        "start": 2747
+      }
+    }
+  ],
+  "extracted_claims": [
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-C07",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "financing_amount_expression",
+      "original": "R$ 2 milhões",
+      "reference_records": [
+        "M30-C07-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0001",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-C07",
+        "end": 2746,
+        "page": null,
+        "quote": "Referência nacional em turismo rural pedagógico e educação ambiental, a Quinta da Estância, localizada em Viamão, está entre as novas empresas contempladas através do programa CrediTur RS, voltado ao fortalecimento do setor turístico em diferentes regiões do estado. Nesta terça-feira (dia 6/10), a partir da parceria entre o Banco Regional de Desenvolvimento do Extremo Sul (BRDE) e a Sicredi Origens RS, ocorreu a celebração do financiamento de R$ 2 milhões, recursos que serão destinados ao capital de giro e à ampliação da capacidade de atendimento da empresa.",
+        "raw_sha256": "41e772a70b3273f3ecd6ca791b0e182c824a0ac7c7bbf95394f56c2c85eb8a5c",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0001",
+        "start": 2182,
+        "text_sha256": "763bd4272c86a8110be6132d5851b7675e79e2c694cc945bbd930cb5cafdc696"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-C07",
+      "field_index": 1,
+      "method_version": "m31-deterministic-v2",
+      "name": "beneficiary_expression",
+      "original": "Referência nacional em turismo rural pedagógico e educação ambiental, a Quinta da Estância, localizada em Viamão, está entre as novas empresas contempladas através do programa CrediTur RS, voltado ao fortalecimento do setor turístico em diferentes regiões do estado. Nesta terça-feira (dia 6/10), a partir da parceria entre o Banco Regional de Desenvolvimento do Extremo Sul (BRDE) e a Sicredi Origens RS, ocorreu a celebração do financiamento de R$ 2 milhões, recursos que serão destinados ao capital de giro e à ampliação da capacidade de atendimento da empresa.",
+      "reference_records": [
+        "M30-C07-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0001",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-C07",
+        "end": 2746,
+        "page": null,
+        "quote": "Referência nacional em turismo rural pedagógico e educação ambiental, a Quinta da Estância, localizada em Viamão, está entre as novas empresas contempladas através do programa CrediTur RS, voltado ao fortalecimento do setor turístico em diferentes regiões do estado. Nesta terça-feira (dia 6/10), a partir da parceria entre o Banco Regional de Desenvolvimento do Extremo Sul (BRDE) e a Sicredi Origens RS, ocorreu a celebração do financiamento de R$ 2 milhões, recursos que serão destinados ao capital de giro e à ampliação da capacidade de atendimento da empresa.",
+        "raw_sha256": "41e772a70b3273f3ecd6ca791b0e182c824a0ac7c7bbf95394f56c2c85eb8a5c",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0001",
+        "start": 2182,
+        "text_sha256": "763bd4272c86a8110be6132d5851b7675e79e2c694cc945bbd930cb5cafdc696"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-C07",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "financing_amount_expression",
+      "original": "R$ 4 milhões",
+      "reference_records": [
+        "M30-C07-R2"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0003",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-C07",
+        "end": 3684,
+        "page": null,
+        "quote": "O programa é destinado a empresas de todos os portes, desde que possuam o Cadastro de Prestadores de Serviços Turísticos (Cadastur), do Ministério do Turismo. O limite de financiamento é de R$ 4 milhões por empresa, com juros ao redor de 10% ao ano (IPCA mais 6%) e prazo de cinco anos para amortização (com 12 meses de carência incluída).",
+        "raw_sha256": "41e772a70b3273f3ecd6ca791b0e182c824a0ac7c7bbf95394f56c2c85eb8a5c",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0003",
+        "start": 3345,
+        "text_sha256": "763bd4272c86a8110be6132d5851b7675e79e2c694cc945bbd930cb5cafdc696"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-C07",
+      "field_index": 1,
+      "method_version": "m31-deterministic-v2",
+      "name": "applicant_requirements",
+      "original": "O programa é destinado a empresas de todos os portes, desde que possuam o Cadastro de Prestadores de Serviços Turísticos (Cadastur), do Ministério do Turismo. O limite de financiamento é de R$ 4 milhões por empresa, com juros ao redor de 10% ao ano (IPCA mais 6%) e prazo de cinco anos para amortização (com 12 meses de carência incluída).",
+      "reference_records": [
+        "M30-C07-R2"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0003",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-C07",
+        "end": 3684,
+        "page": null,
+        "quote": "O programa é destinado a empresas de todos os portes, desde que possuam o Cadastro de Prestadores de Serviços Turísticos (Cadastur), do Ministério do Turismo. O limite de financiamento é de R$ 4 milhões por empresa, com juros ao redor de 10% ao ano (IPCA mais 6%) e prazo de cinco anos para amortização (com 12 meses de carência incluída).",
+        "raw_sha256": "41e772a70b3273f3ecd6ca791b0e182c824a0ac7c7bbf95394f56c2c85eb8a5c",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0003",
+        "start": 3345,
+        "text_sha256": "763bd4272c86a8110be6132d5851b7675e79e2c694cc945bbd930cb5cafdc696"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-C07",
+      "field_index": 2,
+      "method_version": "m31-deterministic-v2",
+      "name": "repayment_expression",
+      "original": "O programa é destinado a empresas de todos os portes, desde que possuam o Cadastro de Prestadores de Serviços Turísticos (Cadastur), do Ministério do Turismo. O limite de financiamento é de R$ 4 milhões por empresa, com juros ao redor de 10% ao ano (IPCA mais 6%) e prazo de cinco anos para amortização (com 12 meses de carência incluída).",
+      "reference_records": [
+        "M30-C07-R2"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0003",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-C07",
+        "end": 3684,
+        "page": null,
+        "quote": "O programa é destinado a empresas de todos os portes, desde que possuam o Cadastro de Prestadores de Serviços Turísticos (Cadastur), do Ministério do Turismo. O limite de financiamento é de R$ 4 milhões por empresa, com juros ao redor de 10% ao ano (IPCA mais 6%) e prazo de cinco anos para amortização (com 12 meses de carência incluída).",
+        "raw_sha256": "41e772a70b3273f3ecd6ca791b0e182c824a0ac7c7bbf95394f56c2c85eb8a5c",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0003",
+        "start": 3345,
+        "text_sha256": "763bd4272c86a8110be6132d5851b7675e79e2c694cc945bbd930cb5cafdc696"
+      }
+    }
+  ],
+  "provenance": {
+    "byte_length": 110616,
+    "category_evidence": "CrediTur RS amplia acesso ao crédito para fortalecer turismo na área metropolitana de Porto Alegre\n07/10/2026 | Aldemir Lauri Kerschner\nBRDE e Sicredi Origens celebram financiamento com a Quinta da Estância, de Viamão.\nReferência nacional em turismo rural pedagógico e educação ambiental, a Quinta da Estância, localizada em Viamão, está entre as novas empresas contempladas através do programa CrediTur RS, voltado ao fortalecimento do setor turístico em diferentes regiões do estado. Nesta terça-feira (dia 6/10), a partir da parceria entre o Banco Regional de Desenvolvimento do Extremo Sul (BRDE) e a Sicredi Origens RS, ocorreu a celebração do financiamento de R$ 2 milhões, recursos que serão destinados ao capital de giro e à ampliação da capacidade de atendimento da empresa.",
+    "content_type": "text/html",
+    "derivation_method": "stdlib-HTMLParser-data-whitespace-v1; excludes script/style/noscript/template; not rendered DOM",
+    "document_category": "institutional_news",
+    "document_id": "M30-C07",
+    "document_version": null,
+    "final_url": "https://www.brde.com.br/noticia/creditur-rs-amplia-acesso-ao-credito-para-fortalecer-turismo-na-area-metropolitana-de-porto-alegre/",
+    "original_filename": "index.html",
+    "original_url": "https://www.brde.com.br/noticia/creditur-rs-amplia-acesso-ao-credito-para-fortalecer-turismo-na-area-metropolitana-de-porto-alegre/",
+    "publication_date": "2026-10-07",
+    "raw_path": "raw/M30-C07.html",
+    "restrictions": "Research pilot local frozen copy only; no redistribution license inferred. No scripts executed, no forms submitted, no applicant records intentionally collected. Public navigation/staff attribution may remain in original bytes.",
+    "retrieval_status": "acquired",
+    "retrieved_at": "2026-10-19T04:38:11.393783+00:00",
+    "sha256": "41e772a70b3273f3ecd6ca791b0e182c824a0ac7c7bbf95394f56c2c85eb8a5c",
+    "source_authority_notes": "Public HTTPS page hosted by the named institution; authorship asserted by host/content, not cryptographically authenticated. Not source-readiness approval.",
+    "source_organization": "BRDE",
+    "text_path": "text/M30-C07.txt",
+    "text_sha256": "763bd4272c86a8110be6132d5851b7675e79e2c694cc945bbd930cb5cafdc696"
+  },
+  "records": [
+    {
+      "all_overlap_predictions": [
+        {
+          "discovery": "unrelated_or_non_actionable",
+          "modality": "credito",
+          "segment_id": "segment-0000",
+          "temporal": "not_applicable"
+        },
+        {
+          "discovery": "opportunity_signal",
+          "modality": "credito",
+          "segment_id": "segment-0001",
+          "temporal": "undetermined"
+        }
+      ],
+      "any_exact_boundary": false,
+      "coverage": {
+        "denominator": 783,
+        "numerator": 646,
+        "value": 0.8250319284802043
+      },
+      "covered_characters": 646,
+      "disagreements": [
+        "discovery_label",
+        "temporal_status"
+      ],
+      "discovery_histogram": {
+        "opportunity_signal": 1,
+        "unrelated_or_non_actionable": 1
+      },
+      "document_id": "M30-C07",
+      "edges": [
+        {
+          "end": 2181,
+          "exact": false,
+          "intersection": 82,
+          "intersection_end": 2181,
+          "intersection_start": 2099,
+          "iou": 0.10472541507024266,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.10472541507024266,
+          "segment_id": "segment-0000",
+          "start": 2099
+        },
+        {
+          "end": 2746,
+          "exact": false,
+          "intersection": 564,
+          "intersection_end": 2746,
+          "intersection_start": 2182,
+          "iou": 0.7203065134099617,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.7203065134099617,
+          "segment_id": "segment-0001",
+          "start": 2182
+        }
+      ],
+      "end": 2746,
+      "fields": [
+        {
+          "candidates": [],
+          "name": "title",
+          "reason": "no corresponding field; absence is not explicit field abstention",
+          "reference_evidence": [
+            {
+              "end": 2746,
+              "evidence_id": "M30-C07-R1-E1",
+              "page": null,
+              "quote": "CrediTur RS amplia acesso ao crédito para fortalecer turismo na área metropolitana de Porto Alegre\n07/10/2026 | Aldemir Lauri Kerschner\nBRDE e Sicredi Origens celebram financiamento com a Quinta da Estância, de Viamão.\nReferência nacional em turismo rural pedagógico e educação ambiental, a Quinta da Estância, localizada em Viamão, está entre as novas empresas contempladas através do programa CrediTur RS, voltado ao fortalecimento do setor turístico em diferentes regiões do estado. Nesta terça-feira (dia 6/10), a partir da parceria entre o Banco Regional de Desenvolvimento do Extremo Sul (BRDE) e a Sicredi Origens RS, ocorreu a celebração do financiamento de R$ 2 milhões, recursos que serão destinados ao capital de giro e à ampliação da capacidade de atendimento da empresa.",
+              "start": 1963
+            }
+          ],
+          "reference_value": "CrediTur RS amplia acesso ao crédito para fortalecer turismo na área metropolitana de Porto Alegre",
+          "scope_supported": true,
+          "semantic_adjudication": "not_certified",
+          "status": "MISSING",
+          "strict_role_value": false
+        }
+      ],
+      "fragmentation": 2,
+      "location_convention": "html_unicode_codepoints",
+      "physical_reference_evidence_pages": [],
+      "rationale": "This first scoped record reports an already celebrated R$2m financing for one named business. It does not create a new financing opportunity for another applicant. The following general-program paragraphs are a different record, not discarded as news.",
+      "record_id": "M30-C07-R1",
+      "reference": {
+        "discovery_label": "unrelated_or_non_actionable",
+        "modality": "credito",
+        "opportunity_label": "not_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "not_applicable"
+      },
+      "reference_characters": 783,
+      "reference_evidence": [
+        {
+          "end": 2746,
+          "evidence_id": "M30-C07-R1-E1",
+          "page": null,
+          "quote": "CrediTur RS amplia acesso ao crédito para fortalecer turismo na área metropolitana de Porto Alegre\n07/10/2026 | Aldemir Lauri Kerschner\nBRDE e Sicredi Origens celebram financiamento com a Quinta da Estância, de Viamão.\nReferência nacional em turismo rural pedagógico e educação ambiental, a Quinta da Estância, localizada em Viamão, está entre as novas empresas contempladas através do programa CrediTur RS, voltado ao fortalecimento do setor turístico em diferentes regiões do estado. Nesta terça-feira (dia 6/10), a partir da parceria entre o Banco Regional de Desenvolvimento do Extremo Sul (BRDE) e a Sicredi Origens RS, ocorreu a celebração do financiamento de R$ 2 milhões, recursos que serão destinados ao capital de giro e à ampliação da capacidade de atendimento da empresa.",
+          "start": 1963
+        }
+      ],
+      "representative": "segment-0001",
+      "representative_prediction": {
+        "discovery": "opportunity_signal",
+        "end": 2746,
+        "modality": "credito",
+        "segment_id": "segment-0001",
+        "start": 2182,
+        "temporal": "undetermined"
+      },
+      "representative_quote": "Referência nacional em turismo rural pedagógico e educação ambiental, a Quinta da Estância, localizada em Viamão, está entre as novas empresas contempladas através do programa CrediTur RS, voltado ao fortalecimento do setor turístico em diferentes regiões do estado. Nesta terça-feira (dia 6/10), a partir da parceria entre o Banco Regional de Desenvolvimento do Extremo Sul (BRDE) e a Sicredi Origens RS, ocorreu a celebração do financiamento de R$ 2 milhões, recursos que serão destinados ao capital de giro e à ampliação da capacidade de atendimento da empresa.",
+      "start": 1963,
+      "status": "overlap",
+      "uncertainty_notes": [
+        "Negative for new opportunity existence in this transaction record, not a claim the CrediTur program does not exist."
+      ]
+    },
+    {
+      "all_overlap_predictions": [
+        {
+          "discovery": "opportunity_signal",
+          "modality": "credito",
+          "segment_id": "segment-0002",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "opportunity_signal",
+          "modality": "credito",
+          "segment_id": "segment-0003",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0004",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "opportunity_signal",
+          "modality": "credito",
+          "segment_id": "segment-0005",
+          "temporal": "undetermined"
+        }
+      ],
+      "any_exact_boundary": false,
+      "coverage": {
+        "denominator": 1523,
+        "numerator": 1520,
+        "value": 0.9980302035456337
+      },
+      "covered_characters": 1520,
+      "disagreements": [
+        "discovery_label"
+      ],
+      "discovery_histogram": {
+        "abstain": 1,
+        "opportunity_signal": 3
+      },
+      "document_id": "M30-C07",
+      "edges": [
+        {
+          "end": 3344,
+          "exact": false,
+          "intersection": 597,
+          "intersection_end": 3344,
+          "intersection_start": 2747,
+          "iou": 0.39198949441891007,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.39198949441891007,
+          "segment_id": "segment-0002",
+          "start": 2747
+        },
+        {
+          "end": 3684,
+          "exact": false,
+          "intersection": 339,
+          "intersection_end": 3684,
+          "intersection_start": 3345,
+          "iou": 0.22258699934340118,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.22258699934340118,
+          "segment_id": "segment-0003",
+          "start": 3345
+        },
+        {
+          "end": 3702,
+          "exact": false,
+          "intersection": 17,
+          "intersection_end": 3702,
+          "intersection_start": 3685,
+          "iou": 0.011162179908076166,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.011162179908076166,
+          "segment_id": "segment-0004",
+          "start": 3685
+        },
+        {
+          "end": 4270,
+          "exact": false,
+          "intersection": 567,
+          "intersection_end": 4270,
+          "intersection_start": 3703,
+          "iou": 0.3722915298752462,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.3722915298752462,
+          "segment_id": "segment-0005",
+          "start": 3703
+        }
+      ],
+      "end": 4270,
+      "fields": [
+        {
+          "candidates": [],
+          "name": "title",
+          "reason": "no corresponding field; absence is not explicit field abstention",
+          "reference_evidence": [
+            {
+              "end": 4270,
+              "evidence_id": "M30-C07-R2-E1",
+              "page": null,
+              "quote": "Conforme o secretário estadual de Turismo, Raphael Ayub, o CrediTur RS foi estruturado justamente para ampliar o acesso ao crédito e incentivar novos investimentos no setor. “Queremos dar condições para que os nossos empreendedores possam crescer, qualificar seus negócios e ampliar a capacidade de atendimento. A Quinta da Estância é um exemplo muito importante, porque une turismo, educação e preservação ambiental. É esse tipo de investimento que fortalece os destinos, gera oportunidades e faz o turismo contribuir cada vez mais para o desenvolvimento econômico do nosso estado”, afirmou Auyb.\nO programa é destinado a empresas de todos os portes, desde que possuam o Cadastro de Prestadores de Serviços Turísticos (Cadastur), do Ministério do Turismo. O limite de financiamento é de R$ 4 milhões por empresa, com juros ao redor de 10% ao ano (IPCA mais 6%) e prazo de cinco anos para amortização (com 12 meses de carência incluída).\nSetor estratégico\nNa avaliação do gerente de Operações do BRDE, Paulo Raffin, o programa é um importante instrumento para fortalecer novos destinos turísticos no estado. “É uma linha de crédito em condições muito favoráveis para que as empresas do setor possam manter e ampliar seus empreendimentos. O turismo tem se mostrado um setor estratégico na geração de novas oportunidades e empregos”, frisou Raffin. Ele ressaltou, também, a relevância de ter a parceria das cooperativas de crédito, como a Sicredi Origens, para que o CrediTur RS contemple o maior número possível de empresas.",
+              "start": 2747
+            }
+          ],
+          "reference_value": "CrediTur RS",
+          "scope_supported": true,
+          "semantic_adjudication": "not_certified",
+          "status": "MISSING",
+          "strict_role_value": false
+        },
+        {
+          "candidates": [],
+          "name": "credit_limit",
+          "reason": "literal amount retained without requested financial role/qualifiers",
+          "reference_evidence": [
+            {
+              "end": 4270,
+              "evidence_id": "M30-C07-R2-E1",
+              "page": null,
+              "quote": "Conforme o secretário estadual de Turismo, Raphael Ayub, o CrediTur RS foi estruturado justamente para ampliar o acesso ao crédito e incentivar novos investimentos no setor. “Queremos dar condições para que os nossos empreendedores possam crescer, qualificar seus negócios e ampliar a capacidade de atendimento. A Quinta da Estância é um exemplo muito importante, porque une turismo, educação e preservação ambiental. É esse tipo de investimento que fortalece os destinos, gera oportunidades e faz o turismo contribuir cada vez mais para o desenvolvimento econômico do nosso estado”, afirmou Auyb.\nO programa é destinado a empresas de todos os portes, desde que possuam o Cadastro de Prestadores de Serviços Turísticos (Cadastur), do Ministério do Turismo. O limite de financiamento é de R$ 4 milhões por empresa, com juros ao redor de 10% ao ano (IPCA mais 6%) e prazo de cinco anos para amortização (com 12 meses de carência incluída).\nSetor estratégico\nNa avaliação do gerente de Operações do BRDE, Paulo Raffin, o programa é um importante instrumento para fortalecer novos destinos turísticos no estado. “É uma linha de crédito em condições muito favoráveis para que as empresas do setor possam manter e ampliar seus empreendimentos. O turismo tem se mostrado um setor estratégico na geração de novas oportunidades e empregos”, frisou Raffin. Ele ressaltou, também, a relevância de ter a parceria das cooperativas de crédito, como a Sicredi Origens, para que o CrediTur RS contemple o maior número possível de empresas.",
+              "start": 2747
+            }
+          ],
+          "reference_value": "R$ 4 milhões por empresa",
+          "scope_supported": true,
+          "semantic_adjudication": "not_certified",
+          "status": "PARTIAL",
+          "strict_role_value": false
+        },
+        {
+          "candidates": [
+            {
+              "diagnostic_status": "traceable_not_semantically_certified",
+              "field_index": 1,
+              "method_version": "m31-deterministic-v2",
+              "name": "applicant_requirements",
+              "original": "O programa é destinado a empresas de todos os portes, desde que possuam o Cadastro de Prestadores de Serviços Turísticos (Cadastur), do Ministério do Turismo. O limite de financiamento é de R$ 4 milhões por empresa, com juros ao redor de 10% ao ano (IPCA mais 6%) e prazo de cinco anos para amortização (com 12 meses de carência incluída).",
+              "schema_version": "m31-extraction-v1",
+              "segment_id": "segment-0003",
+              "uncertainty": "heuristic role assignment; not authenticated or normalized",
+              "witness": {
+                "document_id": "M30-C07",
+                "end": 3684,
+                "page": null,
+                "quote": "O programa é destinado a empresas de todos os portes, desde que possuam o Cadastro de Prestadores de Serviços Turísticos (Cadastur), do Ministério do Turismo. O limite de financiamento é de R$ 4 milhões por empresa, com juros ao redor de 10% ao ano (IPCA mais 6%) e prazo de cinco anos para amortização (com 12 meses de carência incluída).",
+                "raw_sha256": "41e772a70b3273f3ecd6ca791b0e182c824a0ac7c7bbf95394f56c2c85eb8a5c",
+                "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+                "schema_version": "m31-extraction-v1",
+                "segment_id": "segment-0003",
+                "start": 3345,
+                "text_sha256": "763bd4272c86a8110be6132d5851b7675e79e2c694cc945bbd930cb5cafdc696"
+              }
+            }
+          ],
+          "name": "applicant_requirements",
+          "reason": "same/aliased role with related literal; qualifiers may be missing or extra",
+          "reference_evidence": [
+            {
+              "end": 4270,
+              "evidence_id": "M30-C07-R2-E1",
+              "page": null,
+              "quote": "Conforme o secretário estadual de Turismo, Raphael Ayub, o CrediTur RS foi estruturado justamente para ampliar o acesso ao crédito e incentivar novos investimentos no setor. “Queremos dar condições para que os nossos empreendedores possam crescer, qualificar seus negócios e ampliar a capacidade de atendimento. A Quinta da Estância é um exemplo muito importante, porque une turismo, educação e preservação ambiental. É esse tipo de investimento que fortalece os destinos, gera oportunidades e faz o turismo contribuir cada vez mais para o desenvolvimento econômico do nosso estado”, afirmou Auyb.\nO programa é destinado a empresas de todos os portes, desde que possuam o Cadastro de Prestadores de Serviços Turísticos (Cadastur), do Ministério do Turismo. O limite de financiamento é de R$ 4 milhões por empresa, com juros ao redor de 10% ao ano (IPCA mais 6%) e prazo de cinco anos para amortização (com 12 meses de carência incluída).\nSetor estratégico\nNa avaliação do gerente de Operações do BRDE, Paulo Raffin, o programa é um importante instrumento para fortalecer novos destinos turísticos no estado. “É uma linha de crédito em condições muito favoráveis para que as empresas do setor possam manter e ampliar seus empreendimentos. O turismo tem se mostrado um setor estratégico na geração de novas oportunidades e empregos”, frisou Raffin. Ele ressaltou, também, a relevância de ter a parceria das cooperativas de crédito, como a Sicredi Origens, para que o CrediTur RS contemple o maior número possível de empresas.",
+              "start": 2747
+            }
+          ],
+          "reference_value": "empresas de todos os portes, desde que possuam o Cadastro de Prestadores de Serviços Turísticos (Cadastur), do Ministério do Turismo",
+          "scope_supported": true,
+          "semantic_adjudication": "not_certified",
+          "status": "PARTIAL",
+          "strict_role_value": false
+        }
+      ],
+      "fragmentation": 4,
+      "location_convention": "html_unicode_codepoints",
+      "physical_reference_evidence_pages": [],
+      "rationale": "Unlike the completed-transaction record above, these paragraphs describe a distinct credit program for tourism businesses with Cadastur and a per-company limit. Primary bank communication confirms conditions; no submission date or guaranteed funding is inferred.",
+      "record_id": "M30-C07-R2",
+      "reference": {
+        "discovery_label": "confirmed_opportunity",
+        "modality": "credito",
+        "opportunity_label": "genuine_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "undetermined"
+      },
+      "reference_characters": 1523,
+      "reference_evidence": [
+        {
+          "end": 4270,
+          "evidence_id": "M30-C07-R2-E1",
+          "page": null,
+          "quote": "Conforme o secretário estadual de Turismo, Raphael Ayub, o CrediTur RS foi estruturado justamente para ampliar o acesso ao crédito e incentivar novos investimentos no setor. “Queremos dar condições para que os nossos empreendedores possam crescer, qualificar seus negócios e ampliar a capacidade de atendimento. A Quinta da Estância é um exemplo muito importante, porque une turismo, educação e preservação ambiental. É esse tipo de investimento que fortalece os destinos, gera oportunidades e faz o turismo contribuir cada vez mais para o desenvolvimento econômico do nosso estado”, afirmou Auyb.\nO programa é destinado a empresas de todos os portes, desde que possuam o Cadastro de Prestadores de Serviços Turísticos (Cadastur), do Ministério do Turismo. O limite de financiamento é de R$ 4 milhões por empresa, com juros ao redor de 10% ao ano (IPCA mais 6%) e prazo de cinco anos para amortização (com 12 meses de carência incluída).\nSetor estratégico\nNa avaliação do gerente de Operações do BRDE, Paulo Raffin, o programa é um importante instrumento para fortalecer novos destinos turísticos no estado. “É uma linha de crédito em condições muito favoráveis para que as empresas do setor possam manter e ampliar seus empreendimentos. O turismo tem se mostrado um setor estratégico na geração de novas oportunidades e empregos”, frisou Raffin. Ele ressaltou, também, a relevância de ter a parceria das cooperativas de crédito, como a Sicredi Origens, para que o CrediTur RS contemple o maior número possível de empresas.",
+          "start": 2747
+        }
+      ],
+      "representative": "segment-0002",
+      "representative_prediction": {
+        "discovery": "opportunity_signal",
+        "end": 3344,
+        "modality": "credito",
+        "segment_id": "segment-0002",
+        "start": 2747,
+        "temporal": "undetermined"
+      },
+      "representative_quote": "Conforme o secretário estadual de Turismo, Raphael Ayub, o CrediTur RS foi estruturado justamente para ampliar o acesso ao crédito e incentivar novos investimentos no setor. “Queremos dar condições para que os nossos empreendedores possam crescer, qualificar seus negócios e ampliar a capacidade de atendimento. A Quinta da Estância é um exemplo muito importante, porque une turismo, educação e preservação ambiental. É esse tipo de investimento que fortalece os destinos, gera oportunidades e faz o turismo contribuir cada vez mais para o desenvolvimento econômico do nosso estado”, afirmou Auyb.",
+      "start": 2747,
+      "status": "overlap",
+      "uncertainty_notes": [
+        "No application URL is asserted from this news paragraph. Stated loan interest and maturity are not submission deadlines and are not normalized."
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "completed_event_not_new_access"
+      ],
+      "discovery": "unrelated_or_non_actionable",
+      "end": 2181,
+      "field_count": 0,
+      "modality": "credito",
+      "physical_page": null,
+      "reference_records": [
+        "M30-C07-R1"
+      ],
+      "segment_id": "segment-0000",
+      "start": 2099,
+      "temporal": "not_applicable",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 2746,
+      "field_count": 2,
+      "modality": "credito",
+      "physical_page": null,
+      "reference_records": [
+        "M30-C07-R1"
+      ],
+      "segment_id": "segment-0001",
+      "start": 2182,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 3344,
+      "field_count": 0,
+      "modality": "credito",
+      "physical_page": null,
+      "reference_records": [
+        "M30-C07-R2"
+      ],
+      "segment_id": "segment-0002",
+      "start": 2747,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 3684,
+      "field_count": 3,
+      "modality": "credito",
+      "physical_page": null,
+      "reference_records": [
+        "M30-C07-R2"
+      ],
+      "segment_id": "segment-0003",
+      "start": 3345,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 3702,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-C07-R2"
+      ],
+      "segment_id": "segment-0004",
+      "start": 3685,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 4270,
+      "field_count": 0,
+      "modality": "credito",
+      "physical_page": null,
+      "reference_records": [
+        "M30-C07-R2"
+      ],
+      "segment_id": "segment-0005",
+      "start": 3703,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 4793,
+      "field_count": 0,
+      "modality": "credito",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0006",
+      "start": 4271,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "completed_event_not_new_access"
+      ],
+      "discovery": "unrelated_or_non_actionable",
+      "end": 5317,
+      "field_count": 0,
+      "modality": "credito",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0007",
+      "start": 4794,
+      "temporal": "not_applicable",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 5342,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0008",
+      "start": 5318,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 5349,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0009",
+      "start": 5343,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 5380,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0010",
+      "start": 5369,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 5388,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0011",
+      "start": 5381,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 5397,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0012",
+      "start": 5389,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 5476,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0013",
+      "start": 5465,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 5484,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0014",
+      "start": 5477,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 5493,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0015",
+      "start": 5485,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 5628,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0016",
+      "start": 5617,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 5636,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0017",
+      "start": 5629,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 5645,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0018",
+      "start": 5637,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 5754,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0019",
+      "start": 5737,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 6633,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0020",
+      "start": 6598,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 6660,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0021",
+      "start": 6634,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 6772,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0022",
+      "start": 6762,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 6795,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0023",
+      "start": 6773,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 6816,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0024",
+      "start": 6796,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 6843,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0025",
+      "start": 6817,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 7161,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0026",
+      "start": 6844,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 7194,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0027",
+      "start": 7162,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 7327,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0028",
+      "start": 7195,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 7338,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0029",
+      "start": 7328,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 7351,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0030",
+      "start": 7339,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 7372,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0031",
+      "start": 7352,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 7505,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0032",
+      "start": 7373,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 7565,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0033",
+      "start": 7506,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 7576,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0034",
+      "start": 7566,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 7589,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0035",
+      "start": 7577,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 7609,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0036",
+      "start": 7590,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 7638,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0037",
+      "start": 7610,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 7658,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0038",
+      "start": 7639,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 7674,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0039",
+      "start": 7659,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 7688,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0040",
+      "start": 7675,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 7706,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0041",
+      "start": 7689,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    }
+  ],
+  "semantic_reviews": [
+    {
+      "case_id": "M30-C07:segment-0001:discovery:classification",
+      "certainty": "confirmed_defect",
+      "claim_kind": "discovery",
+      "context_evidence": [
+        {
+          "end": 2746,
+          "page": null,
+          "quote": "CrediTur RS amplia acesso ao crédito para fortalecer turismo na área metropolitana de Porto Alegre\n07/10/2026 | Aldemir Lauri Kerschner\nBRDE e Sicredi Origens celebram financiamento com a Quinta da Estância, de Viamão.\nReferência nacional em turismo rural pedagógico e educação ambiental, a Quinta da Estância, localizada em Viamão, está entre as novas empresas contempladas através do programa CrediTur RS, voltado ao fortalecimento do setor turístico em diferentes regiões do estado. Nesta terça-feira (dia 6/10), a partir da parceria entre o Banco Regional de Desenvolvimento do Extremo Sul (BRDE) e a Sicredi Origens RS, ocorreu a celebração do financiamento de R$ 2 milhões, recursos que serão destinados ao capital de giro e à ampliação da capacidade de atendimento da empresa.",
+          "start": 1963
+        }
+      ],
+      "document_id": "M30-C07",
+      "end": 2746,
+      "error_codes": [
+        "OPPORTUNITY_EXISTENCE_CONFUSION",
+        "EVIDENCE_SEMANTIC_MISMATCH"
+      ],
+      "expected_behavior": "Interpretar apenas acesso/estágio e público deste registro com o contexto completo; não confundir anúncio, gestor e candidatura startup.",
+      "expected_claim": "opportunity_signal",
+      "field_index": null,
+      "field_name": null,
+      "judgment": "unsupported",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "quote": "Referência nacional em turismo rural pedagógico e educação ambiental, a Quinta da Estância, localizada em Viamão, está entre as novas empresas contempladas através do programa CrediTur RS, voltado ao fortalecimento do setor turístico em diferentes regiões do estado. Nesta terça-feira (dia 6/10), a partir da parceria entre o Banco Regional de Desenvolvimento do Extremo Sul (BRDE) e a Sicredi Origens RS, ocorreu a celebração do financiamento de R$ 2 milhões, recursos que serão destinados ao capital de giro e à ampliação da capacidade de atendimento da empresa.",
+      "rationale": "A unidade é financiamento já celebrado a Quinta da Estância; sinal como nova oportunidade é excessivo. A manchete anterior contém celebram financiamento, enquanto o maior parágrafo isolado perde esse gatilho.",
+      "root_cause": "classify completed depende de padrões locais; segmentação por nós separa a frase de conclusão.",
+      "root_cause_confidence": "high",
+      "segment_id": "segment-0001",
+      "severity": "high",
+      "start": 2182
+    },
+    {
+      "case_id": "M30-C07:segment-0002:discovery:classification",
+      "certainty": "strong_hypothesis",
+      "claim_kind": "discovery",
+      "context_evidence": [
+        {
+          "end": 4270,
+          "page": null,
+          "quote": "Conforme o secretário estadual de Turismo, Raphael Ayub, o CrediTur RS foi estruturado justamente para ampliar o acesso ao crédito e incentivar novos investimentos no setor. “Queremos dar condições para que os nossos empreendedores possam crescer, qualificar seus negócios e ampliar a capacidade de atendimento. A Quinta da Estância é um exemplo muito importante, porque une turismo, educação e preservação ambiental. É esse tipo de investimento que fortalece os destinos, gera oportunidades e faz o turismo contribuir cada vez mais para o desenvolvimento econômico do nosso estado”, afirmou Auyb.\nO programa é destinado a empresas de todos os portes, desde que possuam o Cadastro de Prestadores de Serviços Turísticos (Cadastur), do Ministério do Turismo. O limite de financiamento é de R$ 4 milhões por empresa, com juros ao redor de 10% ao ano (IPCA mais 6%) e prazo de cinco anos para amortização (com 12 meses de carência incluída).\nSetor estratégico\nNa avaliação do gerente de Operações do BRDE, Paulo Raffin, o programa é um importante instrumento para fortalecer novos destinos turísticos no estado. “É uma linha de crédito em condições muito favoráveis para que as empresas do setor possam manter e ampliar seus empreendimentos. O turismo tem se mostrado um setor estratégico na geração de novas oportunidades e empregos”, frisou Raffin. Ele ressaltou, também, a relevância de ter a parceria das cooperativas de crédito, como a Sicredi Origens, para que o CrediTur RS contemple o maior número possível de empresas.",
+          "start": 2747
+        }
+      ],
+      "document_id": "M30-C07",
+      "end": 3344,
+      "error_codes": [
+        "EXTRACTION_OMISSION"
+      ],
+      "expected_behavior": "Interpretar apenas acesso/estágio e público deste registro com o contexto completo; não confundir anúncio, gestor e candidatura startup.",
+      "expected_claim": "opportunity_signal",
+      "field_index": null,
+      "field_name": null,
+      "judgment": "partial",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "quote": "Conforme o secretário estadual de Turismo, Raphael Ayub, o CrediTur RS foi estruturado justamente para ampliar o acesso ao crédito e incentivar novos investimentos no setor. “Queremos dar condições para que os nossos empreendedores possam crescer, qualificar seus negócios e ampliar a capacidade de atendimento. A Quinta da Estância é um exemplo muito importante, porque une turismo, educação e preservação ambiental. É esse tipo de investimento que fortalece os destinos, gera oportunidades e faz o turismo contribuir cada vez mais para o desenvolvimento econômico do nosso estado”, afirmou Auyb.",
+      "rationale": "O programa tem Cadastur, teto por empresa e condições na mesma unidade anotada; apenas sinal é conservador, possivelmente incompleto, sem inventar janela.",
+      "root_cause": "Rota/condições são distribuídas em blocos; confirmed depende de gatilhos de acesso estreitos.",
+      "root_cause_confidence": "medium",
+      "segment_id": "segment-0002",
+      "severity": "medium",
+      "start": 2747
+    }
+  ],
+  "status": "processed"
+}
