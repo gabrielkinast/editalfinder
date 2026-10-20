@@ -1,0 +1,343 @@
+{
+  "$defs": {
+    "ExtractedField": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "m31-extraction-v1",
+          "default": "m31-extraction-v1",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "original": {
+          "minLength": 1,
+          "title": "Original",
+          "type": "string"
+        },
+        "witness": {
+          "$ref": "#/$defs/Witness"
+        },
+        "method_version": {
+          "const": "m31-deterministic-v2",
+          "default": "m31-deterministic-v2",
+          "title": "Method Version",
+          "type": "string"
+        },
+        "uncertainty": {
+          "default": "heuristic role assignment; not authenticated or normalized",
+          "title": "Uncertainty",
+          "type": "string"
+        },
+        "diagnostic_status": {
+          "const": "traceable_not_semantically_certified",
+          "default": "traceable_not_semantically_certified",
+          "title": "Diagnostic Status",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "original",
+        "witness"
+      ],
+      "title": "ExtractedField",
+      "type": "object"
+    },
+    "Provenance": {
+      "additionalProperties": false,
+      "properties": {
+        "document_id": {
+          "title": "Document Id",
+          "type": "string"
+        },
+        "source_url": {
+          "title": "Source Url",
+          "type": "string"
+        },
+        "content_type": {
+          "title": "Content Type",
+          "type": "string"
+        },
+        "raw_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Raw Sha256",
+          "type": "string"
+        },
+        "text_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Text Sha256",
+          "type": "string"
+        },
+        "derivation_method": {
+          "title": "Derivation Method",
+          "type": "string"
+        }
+      },
+      "required": [
+        "document_id",
+        "source_url",
+        "content_type",
+        "raw_sha256",
+        "text_sha256",
+        "derivation_method"
+      ],
+      "title": "Provenance",
+      "type": "object"
+    },
+    "Segment": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "m31-extraction-v1",
+          "default": "m31-extraction-v1",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "segment_id": {
+          "title": "Segment Id",
+          "type": "string"
+        },
+        "start": {
+          "minimum": 0,
+          "title": "Start",
+          "type": "integer"
+        },
+        "end": {
+          "exclusiveMinimum": 0,
+          "title": "End",
+          "type": "integer"
+        },
+        "discovery": {
+          "enum": [
+            "confirmed_opportunity",
+            "announced_future_opportunity",
+            "opportunity_signal",
+            "unrelated_or_non_actionable",
+            "abstain"
+          ],
+          "title": "Discovery",
+          "type": "string"
+        },
+        "modality": {
+          "enum": [
+            "fomento",
+            "credito",
+            "investimentos",
+            "undetermined"
+          ],
+          "title": "Modality",
+          "type": "string"
+        },
+        "temporal": {
+          "enum": [
+            "open",
+            "closed",
+            "future",
+            "continuous",
+            "undetermined",
+            "not_applicable"
+          ],
+          "title": "Temporal",
+          "type": "string"
+        },
+        "fields": {
+          "items": {
+            "$ref": "#/$defs/ExtractedField"
+          },
+          "title": "Fields",
+          "type": "array"
+        },
+        "witnesses": {
+          "items": {
+            "$ref": "#/$defs/Witness"
+          },
+          "title": "Witnesses",
+          "type": "array"
+        },
+        "diagnostics": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Diagnostics",
+          "type": "array"
+        },
+        "method_version": {
+          "const": "m31-deterministic-v2",
+          "default": "m31-deterministic-v2",
+          "title": "Method Version",
+          "type": "string"
+        }
+      },
+      "required": [
+        "segment_id",
+        "start",
+        "end",
+        "discovery",
+        "modality",
+        "temporal",
+        "fields",
+        "witnesses",
+        "diagnostics"
+      ],
+      "title": "Segment",
+      "type": "object"
+    },
+    "Witness": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "m31-extraction-v1",
+          "default": "m31-extraction-v1",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "run_id": {
+          "title": "Run Id",
+          "type": "string"
+        },
+        "document_id": {
+          "title": "Document Id",
+          "type": "string"
+        },
+        "raw_sha256": {
+          "title": "Raw Sha256",
+          "type": "string"
+        },
+        "text_sha256": {
+          "title": "Text Sha256",
+          "type": "string"
+        },
+        "segment_id": {
+          "title": "Segment Id",
+          "type": "string"
+        },
+        "start": {
+          "minimum": 0,
+          "title": "Start",
+          "type": "integer"
+        },
+        "end": {
+          "exclusiveMinimum": 0,
+          "title": "End",
+          "type": "integer"
+        },
+        "page": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Page"
+        },
+        "quote": {
+          "maxLength": 20000,
+          "minLength": 1,
+          "title": "Quote",
+          "type": "string"
+        }
+      },
+      "required": [
+        "run_id",
+        "document_id",
+        "raw_sha256",
+        "text_sha256",
+        "segment_id",
+        "start",
+        "end",
+        "page",
+        "quote"
+      ],
+      "title": "Witness",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "m31-extraction-v1",
+      "default": "m31-extraction-v1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "run_id": {
+      "title": "Run Id",
+      "type": "string"
+    },
+    "document_id": {
+      "title": "Document Id",
+      "type": "string"
+    },
+    "provenance": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Provenance"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "status": {
+      "enum": [
+        "processed",
+        "operational_failure"
+      ],
+      "title": "Status",
+      "type": "string"
+    },
+    "segments": {
+      "items": {
+        "$ref": "#/$defs/Segment"
+      },
+      "title": "Segments",
+      "type": "array"
+    },
+    "diagnostics": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Diagnostics",
+      "type": "array"
+    },
+    "reference_date": {
+      "title": "Reference Date",
+      "type": "string"
+    },
+    "method_version": {
+      "const": "m31-deterministic-v2",
+      "default": "m31-deterministic-v2",
+      "title": "Method Version",
+      "type": "string"
+    },
+    "bridge_status": {
+      "const": "not_implemented_context_authorization_missing",
+      "default": "not_implemented_context_authorization_missing",
+      "title": "Bridge Status",
+      "type": "string"
+    },
+    "promotable": {
+      "const": false,
+      "default": false,
+      "title": "Promotable",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "run_id",
+    "document_id",
+    "provenance",
+    "status",
+    "segments",
+    "diagnostics",
+    "reference_date"
+  ],
+  "title": "DocumentOutcome",
+  "type": "object"
+}

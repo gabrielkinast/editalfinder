@@ -1,0 +1,951 @@
+{
+  "diagnostics": [
+    "passive_not_rendered_DOM",
+    "unfrozen_attachments_unavailable"
+  ],
+  "document_id": "M30-I04",
+  "error_cases": [
+    {
+      "case_id": "M30-I04-R1:discovery_label",
+      "certainty": "unresolved_disagreement",
+      "dimension": "discovery_label",
+      "document_id": "M30-I04",
+      "error_codes": [
+        "OPPORTUNITY_EXISTENCE_CONFUSION",
+        "REFERENCE_AMBIGUITY"
+      ],
+      "expected_behavior": "Resolve this dimension from same-record evidence; provisional label is comparison, not authority.",
+      "next_action": "Compare full frozen context and request authorized adjudication; do not rewrite labels.",
+      "observed": {
+        "discovery": "abstain",
+        "end": 305,
+        "modality": "undetermined",
+        "segment_id": "segment-0003",
+        "start": 78,
+        "temporal": "undetermined"
+      },
+      "record_id": "M30-I04-R1",
+      "reference": {
+        "discovery_label": "confirmed_opportunity",
+        "modality": "investimentos",
+        "opportunity_label": "genuine_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "undetermined"
+      },
+      "review_status": "provisional",
+      "root_cause": "Context fragmentation or semantic rule/reference ambiguity; see all-overlap graph before adjudication.",
+      "root_cause_confidence": "low",
+      "segment_id": "segment-0003",
+      "severity": "medium",
+      "supporting_evidence": {
+        "end": 305,
+        "quote": "Escolha a região onde a sede da sua empresa está localizada e preencha os campos abaixo com o seu plano de negócios. Nossa equipe de análise fará a avaliação da oportunidade e, caso se encaixe na tese do fundo, faremos contato.",
+        "start": 78
+      }
+    },
+    {
+      "case_id": "M30-I04-R1:modality",
+      "certainty": "unresolved_disagreement",
+      "dimension": "modality",
+      "document_id": "M30-I04",
+      "error_codes": [
+        "MODALITY_CONFUSION",
+        "REFERENCE_AMBIGUITY"
+      ],
+      "expected_behavior": "Resolve this dimension from same-record evidence; provisional label is comparison, not authority.",
+      "next_action": "Compare full frozen context and request authorized adjudication; do not rewrite labels.",
+      "observed": {
+        "discovery": "abstain",
+        "end": 305,
+        "modality": "undetermined",
+        "segment_id": "segment-0003",
+        "start": 78,
+        "temporal": "undetermined"
+      },
+      "record_id": "M30-I04-R1",
+      "reference": {
+        "discovery_label": "confirmed_opportunity",
+        "modality": "investimentos",
+        "opportunity_label": "genuine_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "undetermined"
+      },
+      "review_status": "provisional",
+      "root_cause": "Context fragmentation or semantic rule/reference ambiguity; see all-overlap graph before adjudication.",
+      "root_cause_confidence": "low",
+      "segment_id": "segment-0003",
+      "severity": "medium",
+      "supporting_evidence": {
+        "end": 305,
+        "quote": "Escolha a região onde a sede da sua empresa está localizada e preencha os campos abaixo com o seu plano de negócios. Nossa equipe de análise fará a avaliação da oportunidade e, caso se encaixe na tese do fundo, faremos contato.",
+        "start": 78
+      }
+    },
+    {
+      "case_id": "M30-I04-R1:segmentation",
+      "certainty": "supported_observation",
+      "dimension": "structural",
+      "document_id": "M30-I04",
+      "error_codes": [
+        "SEGMENTATION_OVER"
+      ],
+      "expected_behavior": "A meaningful record should retain its own associated context; whitespace-only boundary differences are not semantic defects.",
+      "next_action": "Inspect semantic usefulness of boundaries before changing segmentation.",
+      "observed": {
+        "coverage": {
+          "denominator": 275,
+          "numerator": 272,
+          "value": 0.9890909090909091
+        },
+        "fragmentation": 4
+      },
+      "record_id": "M30-I04-R1",
+      "reference": {
+        "discovery_label": "confirmed_opportunity",
+        "modality": "investimentos",
+        "opportunity_label": "genuine_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "undetermined"
+      },
+      "review_status": "provisional",
+      "root_cause": "Structure-derived units differ from provisional annotated record spans.",
+      "root_cause_confidence": "high",
+      "segment_id": "segment-0003",
+      "severity": "medium",
+      "supporting_evidence": {
+        "edges": [
+          {
+            "end": 55,
+            "exact": false,
+            "intersection": 25,
+            "intersection_end": 55,
+            "intersection_start": 30,
+            "iou": 0.09090909090909091,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.09090909090909091,
+            "segment_id": "segment-0000",
+            "start": 30
+          },
+          {
+            "end": 65,
+            "exact": false,
+            "intersection": 9,
+            "intersection_end": 65,
+            "intersection_start": 56,
+            "iou": 0.03272727272727273,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.03272727272727273,
+            "segment_id": "segment-0001",
+            "start": 56
+          },
+          {
+            "end": 77,
+            "exact": false,
+            "intersection": 11,
+            "intersection_end": 77,
+            "intersection_start": 66,
+            "iou": 0.04,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.04,
+            "segment_id": "segment-0002",
+            "start": 66
+          },
+          {
+            "end": 305,
+            "exact": false,
+            "intersection": 227,
+            "intersection_end": 305,
+            "intersection_start": 78,
+            "iou": 0.8254545454545454,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.8254545454545454,
+            "segment_id": "segment-0003",
+            "start": 78
+          }
+        ],
+        "reference_span": [
+          30,
+          305
+        ]
+      }
+    },
+    {
+      "case_id": "M30-I04:segment-0003:discovery:classification",
+      "certainty": "strong_hypothesis",
+      "claim_kind": "discovery",
+      "context_evidence": [
+        {
+          "end": 77,
+          "page": null,
+          "quote": "Aplique a\nsua Startup",
+          "start": 56
+        },
+        {
+          "end": 305,
+          "page": null,
+          "quote": "Escolha a região onde a sede da sua empresa está localizada e preencha os campos abaixo com o seu plano de negócios. Nossa equipe de análise fará a avaliação da oportunidade e, caso se encaixe na tese do fundo, faremos contato.",
+          "start": 78
+        },
+        {
+          "end": 55,
+          "page": null,
+          "quote": "Aplicar para investimento",
+          "start": 30
+        }
+      ],
+      "document_id": "M30-I04",
+      "end": 305,
+      "error_codes": [
+        "SEGMENTATION_OVER",
+        "EXTRACTION_OMISSION"
+      ],
+      "expected_behavior": "Interpretar apenas acesso/estágio e público deste registro com o contexto completo; não confundir anúncio, gestor e candidatura startup.",
+      "expected_claim": "abstain",
+      "field_index": null,
+      "field_name": null,
+      "judgment": "partial",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "observed": "abstain",
+      "quote": "Escolha a região onde a sede da sua empresa está localizada e preencha os campos abaixo com o seu plano de negócios. Nossa equipe de análise fará a avaliação da oportunidade e, caso se encaixe na tese do fundo, faremos contato.",
+      "rationale": "Fonte solicita plano de negócios para avaliação pela tese do fundo. Confirmação é de acesso à avaliação, não promessa de investimento ou janela contínua. Maior bloco abstém.",
+      "review_status": "provisional",
+      "root_cause": "Nós isolados não contêm simultaneamente vocabulário financeiro e rota de candidatura.",
+      "root_cause_confidence": "medium",
+      "segment_id": "segment-0003",
+      "severity": "medium",
+      "start": 78,
+      "supporting_evidence": {
+        "end": 305,
+        "quote": "Escolha a região onde a sede da sua empresa está localizada e preencha os campos abaixo com o seu plano de negócios. Nossa equipe de análise fará a avaliação da oportunidade e, caso se encaixe na tese do fundo, faremos contato.",
+        "start": 78
+      }
+    }
+  ],
+  "extracted_claims": [
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-I04",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "managing_organization_expression",
+      "original": "Equipe de Gestão do Fundo",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0015",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-I04",
+        "end": 515,
+        "page": null,
+        "quote": "Equipe de Gestão do Fundo",
+        "raw_sha256": "6ba793bf4dfd7e78987723ef9640c50527a137be86ab6a2ba329bf53ecc47f68",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0015",
+        "start": 490,
+        "text_sha256": "d678f86d497a776a57b65a7112e2e7d24753ccf5078fe63a0a3c51fab5c22c0f"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-I04",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "managing_organization_expression",
+      "original": "Equipe de Gestão do Fundo",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0021",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-I04",
+        "end": 614,
+        "page": null,
+        "quote": "Equipe de Gestão do Fundo",
+        "raw_sha256": "6ba793bf4dfd7e78987723ef9640c50527a137be86ab6a2ba329bf53ecc47f68",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0021",
+        "start": 589,
+        "text_sha256": "d678f86d497a776a57b65a7112e2e7d24753ccf5078fe63a0a3c51fab5c22c0f"
+      }
+    }
+  ],
+  "provenance": {
+    "byte_length": 77072,
+    "category_evidence": "Escolha a região onde a sede da sua empresa está localizada e preencha os campos abaixo com o seu plano de negócios. Nossa equipe de análise fará a avaliação da oportunidade e, caso se encaixe na tese do fundo, faremos contato.",
+    "content_type": "text/html",
+    "derivation_method": "stdlib-HTMLParser-data-whitespace-v1; excludes script/style/noscript/template; not rendered DOM",
+    "document_category": "application_call",
+    "document_id": "M30-I04",
+    "document_version": null,
+    "final_url": "https://criatec4.com/aplique-sua-startup/",
+    "original_filename": "index.html",
+    "original_url": "https://criatec4.com/aplique-sua-startup/",
+    "publication_date": null,
+    "raw_path": "raw/M30-I04.html",
+    "restrictions": "Research pilot local frozen copy only; no redistribution license inferred. No scripts executed, no forms submitted, no applicant records intentionally collected. Public navigation/staff attribution may remain in original bytes.",
+    "retrieval_status": "acquired",
+    "retrieved_at": "2026-10-19T04:37:56.995234+00:00",
+    "sha256": "6ba793bf4dfd7e78987723ef9640c50527a137be86ab6a2ba329bf53ecc47f68",
+    "source_authority_notes": "Public HTTPS page hosted by the named institution; authorship asserted by host/content, not cryptographically authenticated. Not source-readiness approval.",
+    "source_organization": "Criatec 4",
+    "text_path": "text/M30-I04.txt",
+    "text_sha256": "d678f86d497a776a57b65a7112e2e7d24753ccf5078fe63a0a3c51fab5c22c0f"
+  },
+  "records": [
+    {
+      "all_overlap_predictions": [
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0000",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0001",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0002",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0003",
+          "temporal": "undetermined"
+        }
+      ],
+      "any_exact_boundary": false,
+      "coverage": {
+        "denominator": 275,
+        "numerator": 272,
+        "value": 0.9890909090909091
+      },
+      "covered_characters": 272,
+      "disagreements": [
+        "discovery_label",
+        "modality"
+      ],
+      "discovery_histogram": {
+        "abstain": 4
+      },
+      "document_id": "M30-I04",
+      "edges": [
+        {
+          "end": 55,
+          "exact": false,
+          "intersection": 25,
+          "intersection_end": 55,
+          "intersection_start": 30,
+          "iou": 0.09090909090909091,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.09090909090909091,
+          "segment_id": "segment-0000",
+          "start": 30
+        },
+        {
+          "end": 65,
+          "exact": false,
+          "intersection": 9,
+          "intersection_end": 65,
+          "intersection_start": 56,
+          "iou": 0.03272727272727273,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.03272727272727273,
+          "segment_id": "segment-0001",
+          "start": 56
+        },
+        {
+          "end": 77,
+          "exact": false,
+          "intersection": 11,
+          "intersection_end": 77,
+          "intersection_start": 66,
+          "iou": 0.04,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.04,
+          "segment_id": "segment-0002",
+          "start": 66
+        },
+        {
+          "end": 305,
+          "exact": false,
+          "intersection": 227,
+          "intersection_end": 305,
+          "intersection_start": 78,
+          "iou": 0.8254545454545454,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.8254545454545454,
+          "segment_id": "segment-0003",
+          "start": 78
+        }
+      ],
+      "end": 305,
+      "fields": [
+        {
+          "candidates": [],
+          "name": "title",
+          "reason": "no corresponding field; absence is not explicit field abstention",
+          "reference_evidence": [
+            {
+              "end": 77,
+              "evidence_id": "M30-I04-R1-E1",
+              "page": null,
+              "quote": "Aplique a\nsua Startup",
+              "start": 56
+            }
+          ],
+          "reference_value": "Aplique a\nsua Startup",
+          "scope_supported": true,
+          "semantic_adjudication": "not_certified",
+          "status": "MISSING",
+          "strict_role_value": false
+        },
+        {
+          "candidates": [],
+          "name": "application_instructions",
+          "reason": "no corresponding field; absence is not explicit field abstention",
+          "reference_evidence": [
+            {
+              "end": 305,
+              "evidence_id": "M30-I04-R1-E2",
+              "page": null,
+              "quote": "Escolha a região onde a sede da sua empresa está localizada e preencha os campos abaixo com o seu plano de negócios. Nossa equipe de análise fará a avaliação da oportunidade e, caso se encaixe na tese do fundo, faremos contato.",
+              "start": 78
+            }
+          ],
+          "reference_value": "Escolha a região onde a sede da sua empresa está localizada e preencha os campos abaixo com o seu plano de negócios. Nossa equipe de análise fará a avaliação da oportunidade e, caso se encaixe na tese do fundo, faremos contato.",
+          "scope_supported": true,
+          "semantic_adjudication": "not_certified",
+          "status": "MISSING",
+          "strict_role_value": false
+        }
+      ],
+      "fragmentation": 4,
+      "location_convention": "html_unicode_codepoints",
+      "physical_reference_evidence_pages": [],
+      "rationale": "Instruções explícitas para enviar plano de negócios à análise da equipe confirmam acesso à avaliação de investimento. Investimento é condicionado à tese e não é garantia de aporte. Não há prazo verificável.",
+      "record_id": "M30-I04-R1",
+      "reference": {
+        "discovery_label": "confirmed_opportunity",
+        "modality": "investimentos",
+        "opportunity_label": "genuine_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "undetermined"
+      },
+      "reference_characters": 275,
+      "reference_evidence": [
+        {
+          "end": 77,
+          "evidence_id": "M30-I04-R1-E1",
+          "page": null,
+          "quote": "Aplique a\nsua Startup",
+          "start": 56
+        },
+        {
+          "end": 305,
+          "evidence_id": "M30-I04-R1-E2",
+          "page": null,
+          "quote": "Escolha a região onde a sede da sua empresa está localizada e preencha os campos abaixo com o seu plano de negócios. Nossa equipe de análise fará a avaliação da oportunidade e, caso se encaixe na tese do fundo, faremos contato.",
+          "start": 78
+        },
+        {
+          "end": 55,
+          "evidence_id": "M30-I04-R1-E3",
+          "page": null,
+          "quote": "Aplicar para investimento",
+          "start": 30
+        }
+      ],
+      "representative": "segment-0003",
+      "representative_prediction": {
+        "discovery": "abstain",
+        "end": 305,
+        "modality": "undetermined",
+        "segment_id": "segment-0003",
+        "start": 78,
+        "temporal": "undetermined"
+      },
+      "representative_quote": "Escolha a região onde a sede da sua empresa está localizada e preencha os campos abaixo com o seu plano de negócios. Nossa equipe de análise fará a avaliação da oportunidade e, caso se encaixe na tese do fundo, faremos contato.",
+      "start": 30,
+      "status": "overlap",
+      "uncertainty_notes": [
+        "Nenhum formulário foi aberto ou submetido.",
+        "Sem data, não concluir status open ou continuous; sobreposição de programa com I01 e I02."
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 55,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I04-R1"
+      ],
+      "segment_id": "segment-0000",
+      "start": 30,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 65,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I04-R1"
+      ],
+      "segment_id": "segment-0001",
+      "start": 56,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 77,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I04-R1"
+      ],
+      "segment_id": "segment-0002",
+      "start": 66,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 305,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I04-R1"
+      ],
+      "segment_id": "segment-0003",
+      "start": 78,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 325,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0004",
+      "start": 306,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 336,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0005",
+      "start": 326,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 368,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0006",
+      "start": 337,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 393,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0007",
+      "start": 369,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 403,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0008",
+      "start": 394,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 416,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0009",
+      "start": 404,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "completed_event_not_new_access"
+      ],
+      "discovery": "unrelated_or_non_actionable",
+      "end": 426,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0010",
+      "start": 417,
+      "temporal": "not_applicable",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 452,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0011",
+      "start": 427,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 462,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0012",
+      "start": 453,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 482,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0013",
+      "start": 463,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 489,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0014",
+      "start": 483,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 515,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0015",
+      "start": 490,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 519,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0016",
+      "start": 516,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 543,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0017",
+      "start": 520,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 558,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0018",
+      "start": 544,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 568,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0019",
+      "start": 559,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 588,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0020",
+      "start": 569,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 614,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0021",
+      "start": 589,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "completed_event_not_new_access"
+      ],
+      "discovery": "unrelated_or_non_actionable",
+      "end": 624,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0022",
+      "start": 615,
+      "temporal": "not_applicable",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 650,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0023",
+      "start": 625,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    }
+  ],
+  "semantic_reviews": [
+    {
+      "case_id": "M30-I04:segment-0003:discovery:classification",
+      "certainty": "strong_hypothesis",
+      "claim_kind": "discovery",
+      "context_evidence": [
+        {
+          "end": 77,
+          "page": null,
+          "quote": "Aplique a\nsua Startup",
+          "start": 56
+        },
+        {
+          "end": 305,
+          "page": null,
+          "quote": "Escolha a região onde a sede da sua empresa está localizada e preencha os campos abaixo com o seu plano de negócios. Nossa equipe de análise fará a avaliação da oportunidade e, caso se encaixe na tese do fundo, faremos contato.",
+          "start": 78
+        },
+        {
+          "end": 55,
+          "page": null,
+          "quote": "Aplicar para investimento",
+          "start": 30
+        }
+      ],
+      "document_id": "M30-I04",
+      "end": 305,
+      "error_codes": [
+        "SEGMENTATION_OVER",
+        "EXTRACTION_OMISSION"
+      ],
+      "expected_behavior": "Interpretar apenas acesso/estágio e público deste registro com o contexto completo; não confundir anúncio, gestor e candidatura startup.",
+      "expected_claim": "abstain",
+      "field_index": null,
+      "field_name": null,
+      "judgment": "partial",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "quote": "Escolha a região onde a sede da sua empresa está localizada e preencha os campos abaixo com o seu plano de negócios. Nossa equipe de análise fará a avaliação da oportunidade e, caso se encaixe na tese do fundo, faremos contato.",
+      "rationale": "Fonte solicita plano de negócios para avaliação pela tese do fundo. Confirmação é de acesso à avaliação, não promessa de investimento ou janela contínua. Maior bloco abstém.",
+      "root_cause": "Nós isolados não contêm simultaneamente vocabulário financeiro e rota de candidatura.",
+      "root_cause_confidence": "medium",
+      "segment_id": "segment-0003",
+      "severity": "medium",
+      "start": 78
+    }
+  ],
+  "status": "processed"
+}

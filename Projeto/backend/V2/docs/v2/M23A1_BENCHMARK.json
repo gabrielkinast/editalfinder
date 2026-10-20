@@ -1,0 +1,802 @@
+{
+  "milestone": "M2.3a.1",
+  "method": "3 sequential fresh-process runs per case, medians, tracemalloc enabled; fixture construction excluded; no GiB workloads",
+  "benchmarks": {
+    "before": {
+      "python": "3.11.16",
+      "pydantic": "2.14.1",
+      "platform": "Linux-7.0.0-38-generic-x86_64-with-glibc2.43",
+      "source": "/home/lorenzozm/.hermes/cache/scratch/m23a1-baseline/src/editalfinder_v2/domain/integration.py",
+      "repeats": 3,
+      "tracemalloc": true,
+      "note": "stage peaks include live objects from preceding stages; RSS is process lifetime Linux KiB",
+      "results": [
+        {
+          "median": {
+            "mode": "integration",
+            "candidates": 1,
+            "padding_per_record": 0,
+            "result": "IntegrationReport",
+            "snapshot_bytes": 1087,
+            "payload_occurrences": 8,
+            "wire_bytes": 147692,
+            "integrate_s": 0.05268081199028529,
+            "dump_s": 0.0029585659940494224,
+            "restore_s": 0.0406183540035272,
+            "integrate_peak_bytes": 719168,
+            "dump_peak_bytes": 662291,
+            "restore_peak_bytes": 2003772,
+            "rss_peak_kib": 42500
+          },
+          "samples": [
+            {
+              "mode": "integration",
+              "candidates": 1,
+              "padding_per_record": 0,
+              "result": "IntegrationReport",
+              "snapshot_bytes": 1087,
+              "payload_occurrences": 8,
+              "wire_bytes": 147692,
+              "integrate_s": 0.04939757299143821,
+              "dump_s": 0.002725490994635038,
+              "restore_s": 0.03847055000369437,
+              "integrate_peak_bytes": 720168,
+              "dump_peak_bytes": 663231,
+              "restore_peak_bytes": 2004377,
+              "rss_peak_kib": 42476
+            },
+            {
+              "mode": "integration",
+              "candidates": 1,
+              "padding_per_record": 0,
+              "result": "IntegrationReport",
+              "snapshot_bytes": 1087,
+              "payload_occurrences": 8,
+              "wire_bytes": 147692,
+              "integrate_s": 0.11086301600153092,
+              "dump_s": 0.006296271996689029,
+              "restore_s": 0.04442510900844354,
+              "integrate_peak_bytes": 719168,
+              "dump_peak_bytes": 662291,
+              "restore_peak_bytes": 2003772,
+              "rss_peak_kib": 42692
+            },
+            {
+              "mode": "integration",
+              "candidates": 1,
+              "padding_per_record": 0,
+              "result": "IntegrationReport",
+              "snapshot_bytes": 1087,
+              "payload_occurrences": 8,
+              "wire_bytes": 147692,
+              "integrate_s": 0.05268081199028529,
+              "dump_s": 0.0029585659940494224,
+              "restore_s": 0.0406183540035272,
+              "integrate_peak_bytes": 718621,
+              "dump_peak_bytes": 661689,
+              "restore_peak_bytes": 2003046,
+              "rss_peak_kib": 42500
+            }
+          ]
+        },
+        {
+          "median": {
+            "mode": "integration",
+            "candidates": 4,
+            "padding_per_record": 0,
+            "result": "IntegrationReport",
+            "snapshot_bytes": 4309,
+            "payload_occurrences": 32,
+            "wire_bytes": 705887,
+            "integrate_s": 0.21184289899247233,
+            "dump_s": 0.01214320000144653,
+            "restore_s": 0.19025610099197365,
+            "integrate_peak_bytes": 2801211,
+            "dump_peak_bytes": 2566096,
+            "restore_peak_bytes": 8116598,
+            "rss_peak_kib": 56320
+          },
+          "samples": [
+            {
+              "mode": "integration",
+              "candidates": 4,
+              "padding_per_record": 0,
+              "result": "IntegrationReport",
+              "snapshot_bytes": 4309,
+              "payload_occurrences": 32,
+              "wire_bytes": 705887,
+              "integrate_s": 0.21186139799829107,
+              "dump_s": 0.01214320000144653,
+              "restore_s": 0.1907965980062727,
+              "integrate_peak_bytes": 2801211,
+              "dump_peak_bytes": 2566096,
+              "restore_peak_bytes": 8116598,
+              "rss_peak_kib": 56156
+            },
+            {
+              "mode": "integration",
+              "candidates": 4,
+              "padding_per_record": 0,
+              "result": "IntegrationReport",
+              "snapshot_bytes": 4309,
+              "payload_occurrences": 32,
+              "wire_bytes": 705887,
+              "integrate_s": 0.21099604001210537,
+              "dump_s": 0.01198689200100489,
+              "restore_s": 0.18853248900268227,
+              "integrate_peak_bytes": 2802630,
+              "dump_peak_bytes": 2567400,
+              "restore_peak_bytes": 8117215,
+              "rss_peak_kib": 56392
+            },
+            {
+              "mode": "integration",
+              "candidates": 4,
+              "padding_per_record": 0,
+              "result": "IntegrationReport",
+              "snapshot_bytes": 4309,
+              "payload_occurrences": 32,
+              "wire_bytes": 705887,
+              "integrate_s": 0.21184289899247233,
+              "dump_s": 0.01368683300097473,
+              "restore_s": 0.19025610099197365,
+              "integrate_peak_bytes": 2800309,
+              "dump_peak_bytes": 2565312,
+              "restore_peak_bytes": 8116144,
+              "rss_peak_kib": 56320
+            }
+          ]
+        },
+        {
+          "median": {
+            "mode": "integration",
+            "candidates": 16,
+            "padding_per_record": 0,
+            "result": "IntegrationReport",
+            "snapshot_bytes": 17197,
+            "payload_occurrences": 128,
+            "wire_bytes": 4689467,
+            "integrate_s": 1.8640612860035617,
+            "dump_s": 0.05990662598924246,
+            "restore_s": 1.4639341619913466,
+            "integrate_peak_bytes": 16335478,
+            "dump_peak_bytes": 15288196,
+            "restore_peak_bytes": 44541027,
+            "rss_peak_kib": 126328
+          },
+          "samples": [
+            {
+              "mode": "integration",
+              "candidates": 16,
+              "padding_per_record": 0,
+              "result": "IntegrationReport",
+              "snapshot_bytes": 17197,
+              "payload_occurrences": 128,
+              "wire_bytes": 4689467,
+              "integrate_s": 1.8530208419979317,
+              "dump_s": 0.05990662598924246,
+              "restore_s": 1.4824444179976126,
+              "integrate_peak_bytes": 16337129,
+              "dump_peak_bytes": 15289962,
+              "restore_peak_bytes": 44541027,
+              "rss_peak_kib": 126436
+            },
+            {
+              "mode": "integration",
+              "candidates": 16,
+              "padding_per_record": 0,
+              "result": "IntegrationReport",
+              "snapshot_bytes": 17197,
+              "payload_occurrences": 128,
+              "wire_bytes": 4689467,
+              "integrate_s": 1.8640612860035617,
+              "dump_s": 0.05893892201129347,
+              "restore_s": 1.4639341619913466,
+              "integrate_peak_bytes": 16335478,
+              "dump_peak_bytes": 15288196,
+              "restore_peak_bytes": 44542033,
+              "rss_peak_kib": 126328
+            },
+            {
+              "mode": "integration",
+              "candidates": 16,
+              "padding_per_record": 0,
+              "result": "IntegrationReport",
+              "snapshot_bytes": 17197,
+              "payload_occurrences": 128,
+              "wire_bytes": 4689467,
+              "integrate_s": 1.888102526005241,
+              "dump_s": 0.06019538400869351,
+              "restore_s": 1.4424027299974114,
+              "integrate_peak_bytes": 16334798,
+              "dump_peak_bytes": 15287558,
+              "restore_peak_bytes": 44540853,
+              "rss_peak_kib": 126304
+            }
+          ]
+        },
+        {
+          "median": {
+            "mode": "integration",
+            "candidates": 32,
+            "padding_per_record": 0,
+            "result": "IntegrationReport",
+            "snapshot_bytes": 34381,
+            "payload_occurrences": 256,
+            "wire_bytes": 14355403,
+            "integrate_s": 6.70537334799883,
+            "dump_s": 0.11409189499681816,
+            "restore_s": 4.828691534989048,
+            "integrate_peak_bytes": 47390688,
+            "dump_peak_bytes": 45470521,
+            "restore_peak_bytes": 122513636,
+            "rss_peak_kib": 252380
+          },
+          "samples": [
+            {
+              "mode": "integration",
+              "candidates": 32,
+              "padding_per_record": 0,
+              "result": "IntegrationReport",
+              "snapshot_bytes": 34381,
+              "payload_occurrences": 256,
+              "wire_bytes": 14355403,
+              "integrate_s": 6.70537334799883,
+              "dump_s": 0.12913954400573857,
+              "restore_s": 4.82831769400218,
+              "integrate_peak_bytes": 47390198,
+              "dump_peak_bytes": 45469978,
+              "restore_peak_bytes": 122513636,
+              "rss_peak_kib": 252200
+            },
+            {
+              "mode": "integration",
+              "candidates": 32,
+              "padding_per_record": 0,
+              "result": "IntegrationReport",
+              "snapshot_bytes": 34381,
+              "payload_occurrences": 256,
+              "wire_bytes": 14355403,
+              "integrate_s": 6.7071981249901,
+              "dump_s": 0.11276556499069557,
+              "restore_s": 4.8691157449939055,
+              "integrate_peak_bytes": 47390971,
+              "dump_peak_bytes": 45470751,
+              "restore_peak_bytes": 122513022,
+              "rss_peak_kib": 252380
+            },
+            {
+              "mode": "integration",
+              "candidates": 32,
+              "padding_per_record": 0,
+              "result": "IntegrationReport",
+              "snapshot_bytes": 34381,
+              "payload_occurrences": 256,
+              "wire_bytes": 14355403,
+              "integrate_s": 6.68561223600409,
+              "dump_s": 0.11409189499681816,
+              "restore_s": 4.828691534989048,
+              "integrate_peak_bytes": 47390688,
+              "dump_peak_bytes": 45470521,
+              "restore_peak_bytes": 122514317,
+              "rss_peak_kib": 252512
+            }
+          ]
+        },
+        {
+          "median": {
+            "mode": "integration",
+            "candidates": 32,
+            "padding_per_record": 1024,
+            "result": "IntegrationReport",
+            "snapshot_bytes": 68141,
+            "payload_occurrences": 256,
+            "wire_bytes": 23047115,
+            "integrate_s": 7.7335586289991625,
+            "dump_s": 0.13013995099754538,
+            "restore_s": 5.507637489994522,
+            "integrate_peak_bytes": 73465689,
+            "dump_peak_bytes": 71545280,
+            "restore_peak_bytes": 183256301,
+            "rss_peak_kib": 320376
+          },
+          "samples": [
+            {
+              "mode": "integration",
+              "candidates": 32,
+              "padding_per_record": 1024,
+              "result": "IntegrationReport",
+              "snapshot_bytes": 68141,
+              "payload_occurrences": 256,
+              "wire_bytes": 23047115,
+              "integrate_s": 7.755017036004574,
+              "dump_s": 0.12895430799107999,
+              "restore_s": 5.518172480005887,
+              "integrate_peak_bytes": 73464635,
+              "dump_peak_bytes": 71544228,
+              "restore_peak_bytes": 183255727,
+              "rss_peak_kib": 320376
+            },
+            {
+              "mode": "integration",
+              "candidates": 32,
+              "padding_per_record": 1024,
+              "result": "IntegrationReport",
+              "snapshot_bytes": 68141,
+              "payload_occurrences": 256,
+              "wire_bytes": 23047115,
+              "integrate_s": 7.7335586289991625,
+              "dump_s": 0.13013995099754538,
+              "restore_s": 5.507637489994522,
+              "integrate_peak_bytes": 73466676,
+              "dump_peak_bytes": 71546377,
+              "restore_peak_bytes": 183256301,
+              "rss_peak_kib": 320400
+            },
+            {
+              "mode": "integration",
+              "candidates": 32,
+              "padding_per_record": 1024,
+              "result": "IntegrationReport",
+              "snapshot_bytes": 68141,
+              "payload_occurrences": 256,
+              "wire_bytes": 23047115,
+              "integrate_s": 7.6769464740063995,
+              "dump_s": 0.13236873199639376,
+              "restore_s": 5.498124502992141,
+              "integrate_peak_bytes": 73465689,
+              "dump_peak_bytes": 71545280,
+              "restore_peak_bytes": 183256395,
+              "rss_peak_kib": 320132
+            }
+          ]
+        }
+      ]
+    },
+    "after": {
+      "python": "3.11.16",
+      "pydantic": "2.14.1",
+      "platform": "Linux-7.0.0-38-generic-x86_64-with-glibc2.43",
+      "source": "/home/lorenzozm/PROJETOS/editalfinder/Projeto/backend/V2/src/editalfinder_v2/domain/integration.py",
+      "repeats": 3,
+      "tracemalloc": true,
+      "note": "stage peaks include live objects from preceding stages; RSS is process lifetime Linux KiB",
+      "results": [
+        {
+          "median": {
+            "mode": "integration",
+            "candidates": 1,
+            "padding_per_record": 0,
+            "result": "IntegrationReport",
+            "snapshot_bytes": 1087,
+            "payload_occurrences": 8,
+            "wire_bytes": 147743,
+            "integrate_s": 0.07988331899105106,
+            "dump_s": 0.003008766012499109,
+            "restore_s": 0.1039537929900689,
+            "integrate_peak_bytes": 730348,
+            "dump_peak_bytes": 673804,
+            "restore_peak_bytes": 2102308,
+            "rss_peak_kib": 42656
+          },
+          "samples": [
+            {
+              "mode": "integration",
+              "candidates": 1,
+              "padding_per_record": 0,
+              "result": "IntegrationReport",
+              "snapshot_bytes": 1087,
+              "payload_occurrences": 8,
+              "wire_bytes": 147743,
+              "integrate_s": 0.07988331899105106,
+              "dump_s": 0.003008766012499109,
+              "restore_s": 0.1036630130111007,
+              "integrate_peak_bytes": 730367,
+              "dump_peak_bytes": 673804,
+              "restore_peak_bytes": 2102308,
+              "rss_peak_kib": 42656
+            },
+            {
+              "mode": "integration",
+              "candidates": 1,
+              "padding_per_record": 0,
+              "result": "IntegrationReport",
+              "snapshot_bytes": 1087,
+              "payload_occurrences": 8,
+              "wire_bytes": 147743,
+              "integrate_s": 0.08263523901405279,
+              "dump_s": 0.003025465994141996,
+              "restore_s": 0.11019328801194206,
+              "integrate_peak_bytes": 730348,
+              "dump_peak_bytes": 673840,
+              "restore_peak_bytes": 2102685,
+              "rss_peak_kib": 42736
+            },
+            {
+              "mode": "integration",
+              "candidates": 1,
+              "padding_per_record": 0,
+              "result": "IntegrationReport",
+              "snapshot_bytes": 1087,
+              "payload_occurrences": 8,
+              "wire_bytes": 147743,
+              "integrate_s": 0.07966084600775503,
+              "dump_s": 0.003001817996846512,
+              "restore_s": 0.1039537929900689,
+              "integrate_peak_bytes": 729747,
+              "dump_peak_bytes": 673113,
+              "restore_peak_bytes": 2101450,
+              "rss_peak_kib": 42532
+            }
+          ]
+        },
+        {
+          "median": {
+            "mode": "integration",
+            "candidates": 4,
+            "padding_per_record": 0,
+            "result": "IntegrationReport",
+            "snapshot_bytes": 4309,
+            "payload_occurrences": 32,
+            "wire_bytes": 705938,
+            "integrate_s": 0.3124710789998062,
+            "dump_s": 0.012001633003819734,
+            "restore_s": 0.4418803450098494,
+            "integrate_peak_bytes": 2811025,
+            "dump_peak_bytes": 2576160,
+            "restore_peak_bytes": 8181877,
+            "rss_peak_kib": 58896
+          },
+          "samples": [
+            {
+              "mode": "integration",
+              "candidates": 4,
+              "padding_per_record": 0,
+              "result": "IntegrationReport",
+              "snapshot_bytes": 4309,
+              "payload_occurrences": 32,
+              "wire_bytes": 705938,
+              "integrate_s": 0.30920760199660435,
+              "dump_s": 0.012055726008838974,
+              "restore_s": 0.4418803450098494,
+              "integrate_peak_bytes": 2810742,
+              "dump_peak_bytes": 2575937,
+              "restore_peak_bytes": 8181755,
+              "rss_peak_kib": 58980
+            },
+            {
+              "mode": "integration",
+              "candidates": 4,
+              "padding_per_record": 0,
+              "result": "IntegrationReport",
+              "snapshot_bytes": 4309,
+              "payload_occurrences": 32,
+              "wire_bytes": 705938,
+              "integrate_s": 0.3124710789998062,
+              "dump_s": 0.012001633003819734,
+              "restore_s": 0.4352572220086586,
+              "integrate_peak_bytes": 2811517,
+              "dump_peak_bytes": 2576710,
+              "restore_peak_bytes": 8182310,
+              "rss_peak_kib": 58896
+            },
+            {
+              "mode": "integration",
+              "candidates": 4,
+              "padding_per_record": 0,
+              "result": "IntegrationReport",
+              "snapshot_bytes": 4309,
+              "payload_occurrences": 32,
+              "wire_bytes": 705938,
+              "integrate_s": 0.3182942990097217,
+              "dump_s": 0.011824702989542857,
+              "restore_s": 0.46557830000529066,
+              "integrate_peak_bytes": 2811025,
+              "dump_peak_bytes": 2576160,
+              "restore_peak_bytes": 8181877,
+              "rss_peak_kib": 58884
+            }
+          ]
+        },
+        {
+          "median": {
+            "mode": "integration",
+            "candidates": 16,
+            "padding_per_record": 0,
+            "result": "OperationalError",
+            "snapshot_bytes": 17197,
+            "payload_occurrences": 0,
+            "wire_bytes": 163,
+            "integrate_s": 0.04341072299575899,
+            "dump_s": 2.5859000743366778e-05,
+            "restore_s": 3.580399788916111e-05,
+            "integrate_peak_bytes": 139130,
+            "dump_peak_bytes": 134034,
+            "restore_peak_bytes": 135162,
+            "rss_peak_kib": 38308
+          },
+          "samples": [
+            {
+              "mode": "integration",
+              "candidates": 16,
+              "padding_per_record": 0,
+              "result": "OperationalError",
+              "snapshot_bytes": 17197,
+              "payload_occurrences": 0,
+              "wire_bytes": 163,
+              "integrate_s": 0.044381811007042415,
+              "dump_s": 2.685499202925712e-05,
+              "restore_s": 3.743199340533465e-05,
+              "integrate_peak_bytes": 139130,
+              "dump_peak_bytes": 134034,
+              "restore_peak_bytes": 135162,
+              "rss_peak_kib": 38456
+            },
+            {
+              "mode": "integration",
+              "candidates": 16,
+              "padding_per_record": 0,
+              "result": "OperationalError",
+              "snapshot_bytes": 17197,
+              "payload_occurrences": 0,
+              "wire_bytes": 163,
+              "integrate_s": 0.04328538599656895,
+              "dump_s": 2.5859000743366778e-05,
+              "restore_s": 3.580399788916111e-05,
+              "integrate_peak_bytes": 139072,
+              "dump_peak_bytes": 133976,
+              "restore_peak_bytes": 135160,
+              "rss_peak_kib": 38308
+            },
+            {
+              "mode": "integration",
+              "candidates": 16,
+              "padding_per_record": 0,
+              "result": "OperationalError",
+              "snapshot_bytes": 17197,
+              "payload_occurrences": 0,
+              "wire_bytes": 163,
+              "integrate_s": 0.04341072299575899,
+              "dump_s": 2.5473011191934347e-05,
+              "restore_s": 3.543900675140321e-05,
+              "integrate_peak_bytes": 139130,
+              "dump_peak_bytes": 134034,
+              "restore_peak_bytes": 135162,
+              "rss_peak_kib": 38188
+            }
+          ]
+        },
+        {
+          "median": {
+            "mode": "integration",
+            "candidates": 32,
+            "padding_per_record": 0,
+            "result": "OperationalError",
+            "snapshot_bytes": 34381,
+            "payload_occurrences": 0,
+            "wire_bytes": 163,
+            "integrate_s": 0.039401122005074285,
+            "dump_s": 3.0462004360742867e-05,
+            "restore_s": 3.787699097301811e-05,
+            "integrate_peak_bytes": 126842,
+            "dump_peak_bytes": 121514,
+            "restore_peak_bytes": 122641,
+            "rss_peak_kib": 39316
+          },
+          "samples": [
+            {
+              "mode": "integration",
+              "candidates": 32,
+              "padding_per_record": 0,
+              "result": "OperationalError",
+              "snapshot_bytes": 34381,
+              "payload_occurrences": 0,
+              "wire_bytes": 163,
+              "integrate_s": 0.039061517993104644,
+              "dump_s": 3.420800203457475e-05,
+              "restore_s": 3.787699097301811e-05,
+              "integrate_peak_bytes": 126721,
+              "dump_peak_bytes": 121393,
+              "restore_peak_bytes": 122577,
+              "rss_peak_kib": 39464
+            },
+            {
+              "mode": "integration",
+              "candidates": 32,
+              "padding_per_record": 0,
+              "result": "OperationalError",
+              "snapshot_bytes": 34381,
+              "payload_occurrences": 0,
+              "wire_bytes": 163,
+              "integrate_s": 0.0396811910031829,
+              "dump_s": 3.0462004360742867e-05,
+              "restore_s": 3.826200554613024e-05,
+              "integrate_peak_bytes": 126842,
+              "dump_peak_bytes": 121514,
+              "restore_peak_bytes": 122698,
+              "rss_peak_kib": 39316
+            },
+            {
+              "mode": "integration",
+              "candidates": 32,
+              "padding_per_record": 0,
+              "result": "OperationalError",
+              "snapshot_bytes": 34381,
+              "payload_occurrences": 0,
+              "wire_bytes": 163,
+              "integrate_s": 0.039401122005074285,
+              "dump_s": 2.748199040070176e-05,
+              "restore_s": 3.3281001378782094e-05,
+              "integrate_peak_bytes": 126842,
+              "dump_peak_bytes": 121514,
+              "restore_peak_bytes": 122641,
+              "rss_peak_kib": 39140
+            }
+          ]
+        },
+        {
+          "median": {
+            "mode": "integration",
+            "candidates": 32,
+            "padding_per_record": 1024,
+            "result": "OperationalError",
+            "snapshot_bytes": 68141,
+            "payload_occurrences": 0,
+            "wire_bytes": 163,
+            "integrate_s": 0.035260967997601256,
+            "dump_s": 3.116400330327451e-05,
+            "restore_s": 3.5361998016014695e-05,
+            "integrate_peak_bytes": 114426,
+            "dump_peak_bytes": 109162,
+            "restore_peak_bytes": 110346,
+            "rss_peak_kib": 39400
+          },
+          "samples": [
+            {
+              "mode": "integration",
+              "candidates": 32,
+              "padding_per_record": 1024,
+              "result": "OperationalError",
+              "snapshot_bytes": 68141,
+              "payload_occurrences": 0,
+              "wire_bytes": 163,
+              "integrate_s": 0.03658641199581325,
+              "dump_s": 3.0750001315027475e-05,
+              "restore_s": 3.672399907372892e-05,
+              "integrate_peak_bytes": 114426,
+              "dump_peak_bytes": 109162,
+              "restore_peak_bytes": 110346,
+              "rss_peak_kib": 39280
+            },
+            {
+              "mode": "integration",
+              "candidates": 32,
+              "padding_per_record": 1024,
+              "result": "OperationalError",
+              "snapshot_bytes": 68141,
+              "payload_occurrences": 0,
+              "wire_bytes": 163,
+              "integrate_s": 0.035042140996665694,
+              "dump_s": 3.116400330327451e-05,
+              "restore_s": 3.4374999813735485e-05,
+              "integrate_peak_bytes": 114426,
+              "dump_peak_bytes": 109104,
+              "restore_peak_bytes": 110288,
+              "rss_peak_kib": 39400
+            },
+            {
+              "mode": "integration",
+              "candidates": 32,
+              "padding_per_record": 1024,
+              "result": "OperationalError",
+              "snapshot_bytes": 68141,
+              "payload_occurrences": 0,
+              "wire_bytes": 163,
+              "integrate_s": 0.035260967997601256,
+              "dump_s": 3.258600190747529e-05,
+              "restore_s": 3.5361998016014695e-05,
+              "integrate_peak_bytes": 114426,
+              "dump_peak_bytes": 109162,
+              "restore_peak_bytes": 110346,
+              "rss_peak_kib": 39456
+            }
+          ]
+        }
+      ]
+    },
+    "before-replay": {
+      "python": "3.11.16",
+      "pydantic": "2.14.1",
+      "platform": "Linux-7.0.0-38-generic-x86_64-with-glibc2.43",
+      "source": "/home/lorenzozm/.hermes/cache/scratch/m23a1-baseline/src/editalfinder_v2/domain/integration.py",
+      "repeats": 3,
+      "tracemalloc": true,
+      "note": "stage peaks include live objects from preceding stages; RSS is process lifetime Linux KiB",
+      "results": [
+        {
+          "median": {
+            "mode": "legacy_replay",
+            "result": "accepted",
+            "restore_s": 4.929828088002978,
+            "restore_peak_bytes": 106131729,
+            "wire_bytes": 14355403,
+            "rss_peak_kib": 246916
+          },
+          "samples": [
+            {
+              "mode": "legacy_replay",
+              "result": "accepted",
+              "restore_s": 4.92486668699712,
+              "restore_peak_bytes": 106130638,
+              "wire_bytes": 14355403,
+              "rss_peak_kib": 246960
+            },
+            {
+              "mode": "legacy_replay",
+              "result": "accepted",
+              "restore_s": 4.929828088002978,
+              "restore_peak_bytes": 106132464,
+              "wire_bytes": 14355403,
+              "rss_peak_kib": 246652
+            },
+            {
+              "mode": "legacy_replay",
+              "result": "accepted",
+              "restore_s": 4.966691860012361,
+              "restore_peak_bytes": 106131729,
+              "wire_bytes": 14355403,
+              "rss_peak_kib": 246916
+            }
+          ]
+        }
+      ]
+    },
+    "after-replay": {
+      "python": "3.11.16",
+      "pydantic": "2.14.1",
+      "platform": "Linux-7.0.0-38-generic-x86_64-with-glibc2.43",
+      "source": "/home/lorenzozm/PROJETOS/editalfinder/Projeto/backend/V2/src/editalfinder_v2/domain/integration.py",
+      "repeats": 3,
+      "tracemalloc": true,
+      "note": "stage peaks include live objects from preceding stages; RSS is process lifetime Linux KiB",
+      "results": [
+        {
+          "median": {
+            "mode": "legacy_replay",
+            "result": "budget_refused",
+            "restore_s": 0.48630957400018815,
+            "restore_peak_bytes": 77739717,
+            "wire_bytes": 14355403,
+            "rss_peak_kib": 231564
+          },
+          "samples": [
+            {
+              "mode": "legacy_replay",
+              "result": "budget_refused",
+              "restore_s": 0.48216326101101004,
+              "restore_peak_bytes": 77739717,
+              "wire_bytes": 14355403,
+              "rss_peak_kib": 231680
+            },
+            {
+              "mode": "legacy_replay",
+              "result": "budget_refused",
+              "restore_s": 0.49441261499305256,
+              "restore_peak_bytes": 77739717,
+              "wire_bytes": 14355403,
+              "rss_peak_kib": 231564
+            },
+            {
+              "mode": "legacy_replay",
+              "result": "budget_refused",
+              "restore_s": 0.48630957400018815,
+              "restore_peak_bytes": 77739717,
+              "wire_bytes": 14355403,
+              "rss_peak_kib": 231560
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

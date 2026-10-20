@@ -1,6 +1,7 @@
 """Immutable transport contracts; no acquisition, inference or persistence."""
 
 import hashlib
+from collections.abc import Mapping
 from datetime import UTC, date, datetime
 from decimal import Decimal
 from enum import StrEnum
@@ -28,6 +29,25 @@ class Contract(BaseModel):
     model_config = ConfigDict(frozen=True, extra="forbid", allow_inf_nan=False)
     schema_version: Literal[2] = 2
 
+    @model_validator(mode="before")
+    @classmethod
+    def explicit_received_audit_versions(cls, value: object) -> object:
+        # Some policies live on the audited body, not in the audit envelope.
+        # An absent/None audit remains new local evaluation, never historical repair.
+        if (
+            "audit" in cls.model_fields
+            and isinstance(value, Mapping)
+            and value.get("audit") is not None
+        ):
+            missing = tuple(
+                name for name in cls.model_fields if name.endswith("_version") and name not in value
+            )
+            if missing:
+                raise ValueError(
+                    "Received audit requires explicit body versions: " + ", ".join(missing)
+                )
+        return value
+
     @field_validator("*", mode="before")
     @classmethod
     def utf8_strings(cls, value: object) -> object:
@@ -43,12 +63,13 @@ Digest = Annotated[str, Field(pattern=r"^[0-9a-f]{64}$")]
 
 
 class SnapshotAudit(Contract):
+    schema_version: Literal[2] = Field(...)
     snapshot_id: UUID
     payload_digest: Digest
-    algorithm: Literal["sha256"] = "sha256"
-    hash_version: Literal["sha256-utf8-v1"] = "sha256-utf8-v1"
-    representation: Literal["sanitized-json-text-utf8"] = "sanitized-json-text-utf8"
-    contract_version: Literal["2"] = "2"
+    algorithm: Literal["sha256"]
+    hash_version: Literal["sha256-utf8-v1"]
+    representation: Literal["sanitized-json-text-utf8"]
+    contract_version: Literal["2"]
 
 
 class RawSnapshot(Contract):
@@ -65,7 +86,15 @@ class RawSnapshot(Contract):
     @model_validator(mode="after")
     def bind_audit(self) -> Self:
         try:
-            expected = SnapshotAudit(snapshot_id=self.id, payload_digest=self.hash_payload)
+            expected = SnapshotAudit(
+                schema_version=2,
+                algorithm="sha256",
+                hash_version="sha256-utf8-v1",
+                representation="sanitized-json-text-utf8",
+                contract_version="2",
+                snapshot_id=self.id,
+                payload_digest=self.hash_payload,
+            )
         except UnicodeEncodeError as exc:
             raise ValueError("Snapshot must be valid UTF-8") from exc
         if self.audit is not None and self.audit != expected:
@@ -76,7 +105,10 @@ class RawSnapshot(Contract):
     @field_validator("collected_at")
     @classmethod
     def utc_timestamp(cls, value: datetime) -> datetime:
-        return value.astimezone(UTC)
+        try:
+            return value.astimezone(UTC)
+        except OverflowError as exc:
+            raise ValueError("UTC timestamp is outside the representable datetime range") from exc
 
     @property
     def hash_payload(self) -> str:
@@ -260,24 +292,28 @@ class ReviewAttestation(Contract):
     @field_validator("reviewed_at")
     @classmethod
     def utc_review(cls, value: datetime) -> datetime:
-        return value.astimezone(UTC)
+        try:
+            return value.astimezone(UTC)
+        except OverflowError as exc:
+            raise ValueError("UTC timestamp is outside the representable datetime range") from exc
 
 
 class ValidationAudit(Contract):
-    audit_version: Literal["m1.1a-full-report-1"] = "m1.1a-full-report-1"
-    validation_limits_version: Literal["m1.1a-limits-1"] = "m1.1a-limits-1"
+    schema_version: Literal[2] = Field(...)
+    audit_version: Literal["m1.1a-full-report-1"]
+    validation_limits_version: Literal["m1.1a-limits-1"]
     report_digest: Digest
-    report_hash_version: Literal["pydantic-report-json-utf8-v1"] = "pydantic-report-json-utf8-v1"
-    contract_version: Literal["2"] = "2"
+    report_hash_version: Literal["pydantic-report-json-utf8-v1"]
+    contract_version: Literal["2"]
     candidate_id: UUID
     candidate_digest: Digest
     evidence_digests: tuple[Digest, ...]
     snapshots: tuple[SnapshotAudit, ...]
     catalog_version: Text
-    ruleset_version: Literal["m1.1-hardening-1"] = "m1.1-hardening-1"
+    ruleset_version: Literal["m1.1-hardening-1"]
     rule_versions: tuple[tuple[str, str], ...]
-    algorithm: Literal["sha256"] = "sha256"
-    hash_version: Literal["pydantic-json-utf8-v2"] = "pydantic-json-utf8-v2"
+    algorithm: Literal["sha256"]
+    hash_version: Literal["pydantic-json-utf8-v2"]
 
 
 class ValidationReport(Contract):
@@ -294,6 +330,13 @@ class ValidationReport(Contract):
     @model_validator(mode="after")
     def bind_validation_audit(self) -> Self:
         expected = ValidationAudit(
+            schema_version=2,
+            audit_version="m1.1a-full-report-1",
+            report_hash_version="pydantic-report-json-utf8-v1",
+            contract_version="2",
+            ruleset_version="m1.1-hardening-1",
+            algorithm="sha256",
+            hash_version="pydantic-json-utf8-v2",
             validation_limits_version=VALIDATION_LIMITS_VERSION,
             report_digest=hashlib.sha256(
                 self.model_dump_json(exclude={"audit"}).encode("utf-8")

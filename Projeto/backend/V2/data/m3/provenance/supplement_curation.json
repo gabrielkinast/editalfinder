@@ -1,0 +1,120 @@
+{
+  "documents": [
+    {
+      "document_id": "M30-S01",
+      "original_url": "https://agenciadenoticias.bndes.gov.br/noticia/BNDES-e-Instituto-Clima-e-Sociedade-firmam-parceria-com-foco-na-restauracao-dos-biomas-brasileiros",
+      "final_url": "https://agenciadenoticias.bndes.gov.br/noticia/BNDES-e-Instituto-Clima-e-Sociedade-firmam-parceria-com-foco-na-restauracao-dos-biomas-brasileiros",
+      "source_organization": "BNDES",
+      "retrieved_at": "2026-10-19T04:43:35.657879+00:00",
+      "original_filename": "BNDES-e-Instituto-Clima-e-Sociedade-firmam-parceria-com-foco-na-restauracao-dos-biomas-brasileiros",
+      "content_type": "text/html",
+      "byte_length": 42518,
+      "sha256": "3ed1066f5eb48546f6b955d7af88b21e98804c6ede1c1c96f9c1f55f60c84bdd",
+      "raw_path": "raw/M30-S01.html",
+      "text_path": "text/M30-S01.txt",
+      "text_sha256": "58b0fd786ddef7aead24465a66725c94bb95666a92de6e2a0bac84039af77a11",
+      "publication_date": "2026-10-08",
+      "document_version": null,
+      "source_authority_notes": "Public HTTPS page hosted by the named institution; authorship asserted by host/content, not cryptographically authenticated. Not source-readiness approval.",
+      "retrieval_status": "acquired",
+      "restrictions": "Research pilot local frozen copy only; no redistribution license inferred. No scripts executed, no forms submitted, no applicant records intentionally collected. Public navigation/staff attribution may remain in original bytes.",
+      "document_category": "institutional_news",
+      "category_evidence": "BNDES e Instituto Clima e Sociedade firmam parceria com foco na restauração dos biomas brasileiros",
+      "derivation_method": "stdlib-HTMLParser-data-whitespace-v1; excludes script/style/noscript/template; not rendered DOM"
+    }
+  ],
+  "records": [
+    {
+      "annotation_id": "M30-S01-A1",
+      "record_id": "M30-S01-R1",
+      "document_id": "M30-S01",
+      "unit_locator": {
+        "start": 0,
+        "end": 6164
+      },
+      "discovery_label": "opportunity_signal",
+      "opportunity_label": "uncertain",
+      "temporal_status": "undetermined",
+      "reference_date": "2026-10-19",
+      "modality": "credito",
+      "review_status": "provisional",
+      "annotation_method": "AI-assisted source reading; no model predictions",
+      "protocol_version": "m3.0-annotation-v1",
+      "rationale": "The new ProFloresta+2 competitive process is a meaningful forward-looking restoration-financing signal. Winning projects may seek a long-term BNDES loan, but this record does not establish a new loan application window or the complete access conditions for developers. Carbon-credit purchases are not equity and the cooperation agreement itself transfers no funds. This source is not classified negative just because it is a news article.",
+      "uncertainty_notes": [
+        "The procurement of carbon credits is not normalized as a grant, credit limit or VC ticket. The reported R$6bn elsewhere in the page is a potential purchase volume, not a loan budget.",
+        "Forward process language does not confirm that funding applications are open now or provide a verified future opening date. The cooperation agreement term is not a submission deadline.",
+        "Possible relationship to M30-C04 is a contextual mention only, not an identity match, approved association or automatic merge."
+      ],
+      "evidence": [
+        {
+          "evidence_id": "M30-S01-R1-E1",
+          "start": 0,
+          "end": 98,
+          "quote": "BNDES e Instituto Clima e Sociedade firmam parceria com foco na restauração dos biomas brasileiros",
+          "page": null
+        },
+        {
+          "evidence_id": "M30-S01-R1-E2",
+          "start": 3192,
+          "end": 3705,
+          "quote": "O BNDES permanece responsável pela estruturação do ProFloresta+ 2 e pela organização do processo competitivo que conectará empresas compradoras de créditos de carbono a desenvolvedores de projetos de restauração. Os projetos vencedores poderão ainda buscar financiamento de longo prazo junto ao Banco, especialmente por meio do Fundo Clima – Florestas Nativas. A estrutura do programa combina, assim, demanda por créditos de carbono, seleção competitiva de projetos e possibilidade de financiamento à restauração.",
+          "page": null
+        },
+        {
+          "evidence_id": "M30-S01-R1-E3",
+          "start": 5100,
+          "end": 5291,
+          "quote": "O Acordo de Cooperação entre BNDES e iCS terá vigência de três anos, podendo ser prorrogado por mais dois. O instrumento não prevê transferência de recursos financeiros entre as instituições.",
+          "page": null
+        },
+        {
+          "evidence_id": "M30-S01-R1-E4",
+          "start": 5644,
+          "end": 6164,
+          "quote": "O modelo busca enfrentar um dos principais desafios dos projetos de restauração: assegurar demanda previsível pelos créditos de carbono gerados ao longo do tempo. Empresas interessadas manifestam sua demanda e, posteriormente, desenvolvedores de projetos apresentam propostas para atendê-la, observando critérios técnicos, ambientais e de integridade. Os vencedores firmam contratos de compra de créditos de carbono com os compradores e podem buscar financiamento de longo prazo junto ao BNDES para executar os projetos.",
+          "page": null
+        }
+      ],
+      "label_evidence": {
+        "discovery_label": [
+          "M30-S01-R1-E2",
+          "M30-S01-R1-E4"
+        ],
+        "opportunity_label": [
+          "M30-S01-R1-E2",
+          "M30-S01-R1-E3",
+          "M30-S01-R1-E4"
+        ],
+        "temporal_status": [
+          "M30-S01-R1-E2",
+          "M30-S01-R1-E4"
+        ],
+        "modality": [
+          "M30-S01-R1-E2",
+          "M30-S01-R1-E4"
+        ]
+      },
+      "fields": {
+        "title": {
+          "value": "BNDES e Instituto Clima e Sociedade firmam parceria com foco na restauração dos biomas brasileiros",
+          "evidence_ids": [
+            "M30-S01-R1-E1"
+          ]
+        },
+        "referenced_financing_instrument": {
+          "value": "Fundo Clima – Florestas Nativas",
+          "evidence_ids": [
+            "M30-S01-R1-E2"
+          ]
+        },
+        "application_stage": {
+          "value": "posteriormente, desenvolvedores de projetos apresentam propostas para atendê-la",
+          "evidence_ids": [
+            "M30-S01-R1-E4"
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,2302 @@
+{
+  "diagnostics": [
+    "passive_not_rendered_DOM",
+    "unfrozen_attachments_unavailable"
+  ],
+  "document_id": "M30-I06",
+  "error_cases": [
+    {
+      "case_id": "M30-I06-R1:discovery_label",
+      "certainty": "unresolved_disagreement",
+      "dimension": "discovery_label",
+      "document_id": "M30-I06",
+      "error_codes": [
+        "OPPORTUNITY_EXISTENCE_CONFUSION",
+        "REFERENCE_AMBIGUITY"
+      ],
+      "expected_behavior": "Resolve this dimension from same-record evidence; provisional label is comparison, not authority.",
+      "next_action": "Compare full frozen context and request authorized adjudication; do not rewrite labels.",
+      "observed": {
+        "discovery": "opportunity_signal",
+        "end": 3490,
+        "modality": "investimentos",
+        "segment_id": "segment-0024",
+        "start": 3048,
+        "temporal": "undetermined"
+      },
+      "record_id": "M30-I06-R1",
+      "reference": {
+        "discovery_label": "announced_future_opportunity",
+        "modality": "investimentos",
+        "opportunity_label": "uncertain",
+        "review_status": "provisional",
+        "temporal_status": "undetermined"
+      },
+      "review_status": "provisional",
+      "root_cause": "Context fragmentation or semantic rule/reference ambiguity; see all-overlap graph before adjudication.",
+      "root_cause_confidence": "low",
+      "segment_id": "segment-0024",
+      "severity": "medium",
+      "supporting_evidence": {
+        "end": 3490,
+        "quote": "Serão alvos do investimento startups que tenham como diferencial competitivo a incorporação estruturante da inteligência artificial à sua proposta de valor, e cujo desenvolvimento, adaptação e operação das soluções de inteligência artificial demandem investimentos em dados, modelos, infraestrutura computacional e profissionais especializados, indo além do simples consumo pontual ou acessório de soluções de inteligência artificial prontas.",
+        "start": 3048
+      }
+    },
+    {
+      "case_id": "M30-I06-R1:segmentation",
+      "certainty": "supported_observation",
+      "dimension": "structural",
+      "document_id": "M30-I06",
+      "error_codes": [
+        "SEGMENTATION_OVER"
+      ],
+      "expected_behavior": "A meaningful record should retain its own associated context; whitespace-only boundary differences are not semantic defects.",
+      "next_action": "Inspect semantic usefulness of boundaries before changing segmentation.",
+      "observed": {
+        "coverage": {
+          "denominator": 3490,
+          "numerator": 3017,
+          "value": 0.8644699140401146
+        },
+        "fragmentation": 25
+      },
+      "record_id": "M30-I06-R1",
+      "reference": {
+        "discovery_label": "announced_future_opportunity",
+        "modality": "investimentos",
+        "opportunity_label": "uncertain",
+        "review_status": "provisional",
+        "temporal_status": "undetermined"
+      },
+      "review_status": "provisional",
+      "root_cause": "Structure-derived units differ from provisional annotated record spans.",
+      "root_cause_confidence": "high",
+      "segment_id": "segment-0024",
+      "severity": "medium",
+      "supporting_evidence": {
+        "edges": [
+          {
+            "end": 151,
+            "exact": false,
+            "intersection": 31,
+            "intersection_end": 151,
+            "intersection_start": 120,
+            "iou": 0.008882521489971347,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.008882521489971347,
+            "segment_id": "segment-0000",
+            "start": 120
+          },
+          {
+            "end": 174,
+            "exact": false,
+            "intersection": 22,
+            "intersection_end": 174,
+            "intersection_start": 152,
+            "iou": 0.006303724928366762,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.006303724928366762,
+            "segment_id": "segment-0001",
+            "start": 152
+          },
+          {
+            "end": 197,
+            "exact": false,
+            "intersection": 22,
+            "intersection_end": 197,
+            "intersection_start": 175,
+            "iou": 0.006303724928366762,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.006303724928366762,
+            "segment_id": "segment-0002",
+            "start": 175
+          },
+          {
+            "end": 321,
+            "exact": false,
+            "intersection": 123,
+            "intersection_end": 321,
+            "intersection_start": 198,
+            "iou": 0.03524355300859599,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.03524355300859599,
+            "segment_id": "segment-0003",
+            "start": 198
+          },
+          {
+            "end": 330,
+            "exact": false,
+            "intersection": 8,
+            "intersection_end": 330,
+            "intersection_start": 322,
+            "iou": 0.002292263610315186,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.002292263610315186,
+            "segment_id": "segment-0004",
+            "start": 322
+          },
+          {
+            "end": 340,
+            "exact": false,
+            "intersection": 9,
+            "intersection_end": 340,
+            "intersection_start": 331,
+            "iou": 0.0025787965616045844,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.0025787965616045844,
+            "segment_id": "segment-0005",
+            "start": 331
+          },
+          {
+            "end": 375,
+            "exact": false,
+            "intersection": 34,
+            "intersection_end": 375,
+            "intersection_start": 341,
+            "iou": 0.009742120343839542,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.009742120343839542,
+            "segment_id": "segment-0006",
+            "start": 341
+          },
+          {
+            "end": 408,
+            "exact": false,
+            "intersection": 32,
+            "intersection_end": 408,
+            "intersection_start": 376,
+            "iou": 0.009169054441260744,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.009169054441260744,
+            "segment_id": "segment-0007",
+            "start": 376
+          },
+          {
+            "end": 423,
+            "exact": false,
+            "intersection": 14,
+            "intersection_end": 423,
+            "intersection_start": 409,
+            "iou": 0.0040114613180515755,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.0040114613180515755,
+            "segment_id": "segment-0008",
+            "start": 409
+          },
+          {
+            "end": 426,
+            "exact": false,
+            "intersection": 2,
+            "intersection_end": 426,
+            "intersection_start": 424,
+            "iou": 0.0005730659025787965,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.0005730659025787965,
+            "segment_id": "segment-0009",
+            "start": 424
+          },
+          {
+            "end": 429,
+            "exact": false,
+            "intersection": 2,
+            "intersection_end": 429,
+            "intersection_start": 427,
+            "iou": 0.0005730659025787965,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.0005730659025787965,
+            "segment_id": "segment-0010",
+            "start": 427
+          },
+          {
+            "end": 835,
+            "exact": false,
+            "intersection": 76,
+            "intersection_end": 835,
+            "intersection_start": 759,
+            "iou": 0.02177650429799427,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.02177650429799427,
+            "segment_id": "segment-0011",
+            "start": 759
+          },
+          {
+            "end": 865,
+            "exact": false,
+            "intersection": 29,
+            "intersection_end": 865,
+            "intersection_start": 836,
+            "iou": 0.00830945558739255,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.00830945558739255,
+            "segment_id": "segment-0012",
+            "start": 836
+          },
+          {
+            "end": 898,
+            "exact": false,
+            "intersection": 32,
+            "intersection_end": 898,
+            "intersection_start": 866,
+            "iou": 0.009169054441260744,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.009169054441260744,
+            "segment_id": "segment-0013",
+            "start": 866
+          },
+          {
+            "end": 932,
+            "exact": false,
+            "intersection": 33,
+            "intersection_end": 932,
+            "intersection_start": 899,
+            "iou": 0.009455587392550143,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.009455587392550143,
+            "segment_id": "segment-0014",
+            "start": 899
+          },
+          {
+            "end": 949,
+            "exact": false,
+            "intersection": 16,
+            "intersection_end": 949,
+            "intersection_start": 933,
+            "iou": 0.004584527220630372,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.004584527220630372,
+            "segment_id": "segment-0015",
+            "start": 933
+          },
+          {
+            "end": 1172,
+            "exact": false,
+            "intersection": 222,
+            "intersection_end": 1172,
+            "intersection_start": 950,
+            "iou": 0.06361031518624642,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.06361031518624642,
+            "segment_id": "segment-0016",
+            "start": 950
+          },
+          {
+            "end": 1556,
+            "exact": false,
+            "intersection": 383,
+            "intersection_end": 1556,
+            "intersection_start": 1173,
+            "iou": 0.10974212034383954,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.10974212034383954,
+            "segment_id": "segment-0017",
+            "start": 1173
+          },
+          {
+            "end": 1935,
+            "exact": false,
+            "intersection": 378,
+            "intersection_end": 1935,
+            "intersection_start": 1557,
+            "iou": 0.10830945558739255,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.10830945558739255,
+            "segment_id": "segment-0018",
+            "start": 1557
+          },
+          {
+            "end": 2202,
+            "exact": false,
+            "intersection": 266,
+            "intersection_end": 2202,
+            "intersection_start": 1936,
+            "iou": 0.07621776504297995,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.07621776504297995,
+            "segment_id": "segment-0019",
+            "start": 1936
+          },
+          {
+            "end": 2461,
+            "exact": false,
+            "intersection": 258,
+            "intersection_end": 2461,
+            "intersection_start": 2203,
+            "iou": 0.07392550143266476,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.07392550143266476,
+            "segment_id": "segment-0020",
+            "start": 2203
+          },
+          {
+            "end": 2707,
+            "exact": false,
+            "intersection": 245,
+            "intersection_end": 2707,
+            "intersection_start": 2462,
+            "iou": 0.07020057306590258,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.07020057306590258,
+            "segment_id": "segment-0021",
+            "start": 2462
+          },
+          {
+            "end": 3023,
+            "exact": false,
+            "intersection": 315,
+            "intersection_end": 3023,
+            "intersection_start": 2708,
+            "iou": 0.09025787965616046,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.09025787965616046,
+            "segment_id": "segment-0022",
+            "start": 2708
+          },
+          {
+            "end": 3047,
+            "exact": false,
+            "intersection": 23,
+            "intersection_end": 3047,
+            "intersection_start": 3024,
+            "iou": 0.006590257879656161,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.006590257879656161,
+            "segment_id": "segment-0023",
+            "start": 3024
+          },
+          {
+            "end": 3490,
+            "exact": false,
+            "intersection": 442,
+            "intersection_end": 3490,
+            "intersection_start": 3048,
+            "iou": 0.12664756446991404,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.12664756446991404,
+            "segment_id": "segment-0024",
+            "start": 3048
+          }
+        ],
+        "reference_span": [
+          0,
+          3490
+        ]
+      }
+    },
+    {
+      "case_id": "M30-I06:segment-0018:field:0",
+      "certainty": "confirmed_defect",
+      "claim_kind": "field",
+      "context_evidence": [
+        {
+          "end": 76,
+          "page": null,
+          "quote": "BNDES e Finep selecionam a Monashees para gestão de fundo de IA de R$ 500 mi",
+          "start": 0
+        },
+        {
+          "end": 1556,
+          "page": null,
+          "quote": "O Banco Nacional do Desenvolvimento Econômico e Social (BNDES) e a Financiadora de Estudos e Projetos (Finep) selecionaram a Monashees Gestão de Investimentos como gestora do Fundo de Investimento em Participações de Inteligência Artificial. A chamada pública recebeu 17 propostas. A partir de agora, a proposta selecionada seguirá para a etapa de análise, diligência e estruturação.",
+          "start": 1173
+        },
+        {
+          "end": 1935,
+          "page": null,
+          "quote": "O novo fundo, que tem estimativa de mobilizar até R$ 500 milhões, é voltado ao apoio a startups intensivas no uso de inteligência artificial, tendo como desafio central ampliar o número, o faturamento e a presença global de startups brasileiras que tenham IA como elemento central do modelo de negócios e geração de valor, e não apenas como ferramenta acessória ou complementar.",
+          "start": 1557
+        },
+        {
+          "end": 3490,
+          "page": null,
+          "quote": "Serão alvos do investimento startups que tenham como diferencial competitivo a incorporação estruturante da inteligência artificial à sua proposta de valor, e cujo desenvolvimento, adaptação e operação das soluções de inteligência artificial demandem investimentos em dados, modelos, infraestrutura computacional e profissionais especializados, indo além do simples consumo pontual ou acessório de soluções de inteligência artificial prontas.",
+          "start": 3048
+        },
+        {
+          "end": 898,
+          "page": null,
+          "quote": "Publicado em 14/09/2026 às 10:35",
+          "start": 866
+        }
+      ],
+      "document_id": "M30-I06",
+      "end": 1935,
+      "error_codes": [
+        "EXTRACTION_OMISSION"
+      ],
+      "expected_behavior": "Preservar o qualificador até junto à expressão financeira.",
+      "expected_claim": "R$ 500 milhões",
+      "field_index": 0,
+      "field_name": "fund_capital_estimate",
+      "judgment": "partial",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "observed": "R$ 500 milhões",
+      "quote": "O novo fundo, que tem estimativa de mobilizar até R$ 500 milhões, é voltado ao apoio a startups intensivas no uso de inteligência artificial, tendo como desafio central ampliar o número, o faturamento e a presença global de startups brasileiras que tenham IA como elemento central do modelo de negócios e geração de valor, e não apenas como ferramenta acessória ou complementar.",
+      "rationale": "O numeral e o papel são relacionados ao campo correto, mas o literal perde até, que qualifica o valor como teto/estimativa. Não equiparar o numeral isolado ao valor com qualificador.",
+      "review_status": "provisional",
+      "root_cause": "MONEY inicia em R$ e não inclui qualificadores precedentes.",
+      "root_cause_confidence": "high",
+      "segment_id": "segment-0018",
+      "severity": "medium",
+      "start": 1557,
+      "supporting_evidence": {
+        "end": 1935,
+        "quote": "O novo fundo, que tem estimativa de mobilizar até R$ 500 milhões, é voltado ao apoio a startups intensivas no uso de inteligência artificial, tendo como desafio central ampliar o número, o faturamento e a presença global de startups brasileiras que tenham IA como elemento central do modelo de negócios e geração de valor, e não apenas como ferramenta acessória ou complementar.",
+        "start": 1557
+      }
+    },
+    {
+      "case_id": "M30-I06:segment-0024:discovery:classification",
+      "certainty": "unresolved_disagreement",
+      "claim_kind": "discovery",
+      "context_evidence": [
+        {
+          "end": 76,
+          "page": null,
+          "quote": "BNDES e Finep selecionam a Monashees para gestão de fundo de IA de R$ 500 mi",
+          "start": 0
+        },
+        {
+          "end": 1556,
+          "page": null,
+          "quote": "O Banco Nacional do Desenvolvimento Econômico e Social (BNDES) e a Financiadora de Estudos e Projetos (Finep) selecionaram a Monashees Gestão de Investimentos como gestora do Fundo de Investimento em Participações de Inteligência Artificial. A chamada pública recebeu 17 propostas. A partir de agora, a proposta selecionada seguirá para a etapa de análise, diligência e estruturação.",
+          "start": 1173
+        },
+        {
+          "end": 1935,
+          "page": null,
+          "quote": "O novo fundo, que tem estimativa de mobilizar até R$ 500 milhões, é voltado ao apoio a startups intensivas no uso de inteligência artificial, tendo como desafio central ampliar o número, o faturamento e a presença global de startups brasileiras que tenham IA como elemento central do modelo de negócios e geração de valor, e não apenas como ferramenta acessória ou complementar.",
+          "start": 1557
+        },
+        {
+          "end": 3490,
+          "page": null,
+          "quote": "Serão alvos do investimento startups que tenham como diferencial competitivo a incorporação estruturante da inteligência artificial à sua proposta de valor, e cujo desenvolvimento, adaptação e operação das soluções de inteligência artificial demandem investimentos em dados, modelos, infraestrutura computacional e profissionais especializados, indo além do simples consumo pontual ou acessório de soluções de inteligência artificial prontas.",
+          "start": 3048
+        },
+        {
+          "end": 898,
+          "page": null,
+          "quote": "Publicado em 14/09/2026 às 10:35",
+          "start": 866
+        }
+      ],
+      "document_id": "M30-I06",
+      "end": 3490,
+      "error_codes": [
+        "FUTURE_SIGNAL_CONFUSION",
+        "REFERENCE_POSSIBLE_ERROR"
+      ],
+      "expected_behavior": "Interpretar apenas acesso/estágio e público deste registro com o contexto completo; não confundir anúncio, gestor e candidatura startup.",
+      "expected_claim": "opportunity_signal",
+      "field_index": null,
+      "field_name": null,
+      "judgment": "unresolved",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "observed": "opportunity_signal",
+      "quote": "Serão alvos do investimento startups que tenham como diferencial competitivo a incorporação estruturante da inteligência artificial à sua proposta de valor, e cujo desenvolvimento, adaptação e operação das soluções de inteligência artificial demandem investimentos em dados, modelos, infraestrutura computacional e profissionais especializados, indo além do simples consumo pontual ou acessório de soluções de inteligência artificial prontas.",
+      "rationale": "Fundo futuro de IA está em análise/diligência/estruturação. Sinal é defensável e anúncio futuro também pode ser: o protocolo exige compromisso de acesso futuro. Nada estabelece candidaturas abertas de startups. A divergência é de nível de confirmação, não de janela future.",
+      "review_status": "provisional",
+      "root_cause": "Ramo manager sempre devolve signal e future_access só reconhece abertura de inscrições; rubric de anúncio de instrumento é mais ampla.",
+      "root_cause_confidence": "medium",
+      "segment_id": "segment-0024",
+      "severity": "medium",
+      "start": 3048,
+      "supporting_evidence": {
+        "end": 3490,
+        "quote": "Serão alvos do investimento startups que tenham como diferencial competitivo a incorporação estruturante da inteligência artificial à sua proposta de valor, e cujo desenvolvimento, adaptação e operação das soluções de inteligência artificial demandem investimentos em dados, modelos, infraestrutura computacional e profissionais especializados, indo além do simples consumo pontual ou acessório de soluções de inteligência artificial prontas.",
+        "start": 3048
+      }
+    }
+  ],
+  "extracted_claims": [
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-I06",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "title",
+      "original": "BNDES e Finep selecionam a Monashees para gestão de fundo de IA de R$ 500 mi",
+      "reference_records": [
+        "M30-I06-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0011",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-I06",
+        "end": 835,
+        "page": null,
+        "quote": "BNDES e Finep selecionam a Monashees para gestão de fundo de IA de R$ 500 mi",
+        "raw_sha256": "5f633c52d2262ab5256b02f695f7c978cbcc7b6a1432f7a3b936ba307cb6d751",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0011",
+        "start": 759,
+        "text_sha256": "400eabec7ff0762ba07be36655d0acd27deb0a987ab9da461a71b9ac5d98aa3e"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-I06",
+      "field_index": 1,
+      "method_version": "m31-deterministic-v2",
+      "name": "monetary_expression_unresolved",
+      "original": "R$ 500 mi",
+      "reference_records": [
+        "M30-I06-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0011",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-I06",
+        "end": 835,
+        "page": null,
+        "quote": "BNDES e Finep selecionam a Monashees para gestão de fundo de IA de R$ 500 mi",
+        "raw_sha256": "5f633c52d2262ab5256b02f695f7c978cbcc7b6a1432f7a3b936ba307cb6d751",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0011",
+        "start": 759,
+        "text_sha256": "400eabec7ff0762ba07be36655d0acd27deb0a987ab9da461a71b9ac5d98aa3e"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-I06",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "publication_date_expression",
+      "original": "14/09/2026",
+      "reference_records": [
+        "M30-I06-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0013",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-I06",
+        "end": 898,
+        "page": null,
+        "quote": "Publicado em 14/09/2026 às 10:35",
+        "raw_sha256": "5f633c52d2262ab5256b02f695f7c978cbcc7b6a1432f7a3b936ba307cb6d751",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0013",
+        "start": 866,
+        "text_sha256": "400eabec7ff0762ba07be36655d0acd27deb0a987ab9da461a71b9ac5d98aa3e"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-I06",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "unknown_temporal_expression",
+      "original": "14/09/2026",
+      "reference_records": [
+        "M30-I06-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0014",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-I06",
+        "end": 932,
+        "page": null,
+        "quote": "Atualizado em 14/09/2026 às 10:41",
+        "raw_sha256": "5f633c52d2262ab5256b02f695f7c978cbcc7b6a1432f7a3b936ba307cb6d751",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0014",
+        "start": 899,
+        "text_sha256": "400eabec7ff0762ba07be36655d0acd27deb0a987ab9da461a71b9ac5d98aa3e"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-I06",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "managing_organization_expression",
+      "original": "O Banco Nacional do Desenvolvimento Econômico e Social (BNDES) e a Financiadora de Estudos e Projetos (Finep) selecionaram a Monashees Gestão de Investimentos como gestora do Fundo de Investimento em Participações de Inteligência Artificial. A chamada pública recebeu 17 propostas. A partir de agora, a proposta selecionada seguirá para a etapa de análise, diligência e estruturação.",
+      "reference_records": [
+        "M30-I06-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0017",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-I06",
+        "end": 1556,
+        "page": null,
+        "quote": "O Banco Nacional do Desenvolvimento Econômico e Social (BNDES) e a Financiadora de Estudos e Projetos (Finep) selecionaram a Monashees Gestão de Investimentos como gestora do Fundo de Investimento em Participações de Inteligência Artificial. A chamada pública recebeu 17 propostas. A partir de agora, a proposta selecionada seguirá para a etapa de análise, diligência e estruturação.",
+        "raw_sha256": "5f633c52d2262ab5256b02f695f7c978cbcc7b6a1432f7a3b936ba307cb6d751",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0017",
+        "start": 1173,
+        "text_sha256": "400eabec7ff0762ba07be36655d0acd27deb0a987ab9da461a71b9ac5d98aa3e"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-I06",
+      "field_index": 1,
+      "method_version": "m31-deterministic-v2",
+      "name": "fund_stage_expression",
+      "original": "O Banco Nacional do Desenvolvimento Econômico e Social (BNDES) e a Financiadora de Estudos e Projetos (Finep) selecionaram a Monashees Gestão de Investimentos como gestora do Fundo de Investimento em Participações de Inteligência Artificial. A chamada pública recebeu 17 propostas. A partir de agora, a proposta selecionada seguirá para a etapa de análise, diligência e estruturação.",
+      "reference_records": [
+        "M30-I06-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0017",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-I06",
+        "end": 1556,
+        "page": null,
+        "quote": "O Banco Nacional do Desenvolvimento Econômico e Social (BNDES) e a Financiadora de Estudos e Projetos (Finep) selecionaram a Monashees Gestão de Investimentos como gestora do Fundo de Investimento em Participações de Inteligência Artificial. A chamada pública recebeu 17 propostas. A partir de agora, a proposta selecionada seguirá para a etapa de análise, diligência e estruturação.",
+        "raw_sha256": "5f633c52d2262ab5256b02f695f7c978cbcc7b6a1432f7a3b936ba307cb6d751",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0017",
+        "start": 1173,
+        "text_sha256": "400eabec7ff0762ba07be36655d0acd27deb0a987ab9da461a71b9ac5d98aa3e"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-I06",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "fund_capital_estimate",
+      "original": "R$ 500 milhões",
+      "reference_records": [
+        "M30-I06-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0018",
+      "semantic_case_id": "M30-I06:segment-0018:field:0",
+      "semantic_support": "partial",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-I06",
+        "end": 1935,
+        "page": null,
+        "quote": "O novo fundo, que tem estimativa de mobilizar até R$ 500 milhões, é voltado ao apoio a startups intensivas no uso de inteligência artificial, tendo como desafio central ampliar o número, o faturamento e a presença global de startups brasileiras que tenham IA como elemento central do modelo de negócios e geração de valor, e não apenas como ferramenta acessória ou complementar.",
+        "raw_sha256": "5f633c52d2262ab5256b02f695f7c978cbcc7b6a1432f7a3b936ba307cb6d751",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0018",
+        "start": 1557,
+        "text_sha256": "400eabec7ff0762ba07be36655d0acd27deb0a987ab9da461a71b9ac5d98aa3e"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-I06",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "monetary_expression_unresolved",
+      "original": "R$ 125 milhões",
+      "reference_records": [
+        "M30-I06-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0019",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-I06",
+        "end": 2202,
+        "page": null,
+        "quote": "A BNDESPAR poderá comprometer até R$ 125 milhões, enquanto o FNDCT/Finep poderá aportar até R$ 80 milhões. O valor a ser comprometido por cotista-âncora estará limitado a 25% de participação no Fundo, exercendo, assim, papel catalítico, atraindo outros investidores.",
+        "raw_sha256": "5f633c52d2262ab5256b02f695f7c978cbcc7b6a1432f7a3b936ba307cb6d751",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0019",
+        "start": 1936,
+        "text_sha256": "400eabec7ff0762ba07be36655d0acd27deb0a987ab9da461a71b9ac5d98aa3e"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-I06",
+      "field_index": 1,
+      "method_version": "m31-deterministic-v2",
+      "name": "monetary_expression_unresolved",
+      "original": "R$ 80 milhões",
+      "reference_records": [
+        "M30-I06-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0019",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-I06",
+        "end": 2202,
+        "page": null,
+        "quote": "A BNDESPAR poderá comprometer até R$ 125 milhões, enquanto o FNDCT/Finep poderá aportar até R$ 80 milhões. O valor a ser comprometido por cotista-âncora estará limitado a 25% de participação no Fundo, exercendo, assim, papel catalítico, atraindo outros investidores.",
+        "raw_sha256": "5f633c52d2262ab5256b02f695f7c978cbcc7b6a1432f7a3b936ba307cb6d751",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0019",
+        "start": 1936,
+        "text_sha256": "400eabec7ff0762ba07be36655d0acd27deb0a987ab9da461a71b9ac5d98aa3e"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-I06",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "monetary_expression_unresolved",
+      "original": "R$ 500 mi",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0026",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-I06",
+        "end": 3581,
+        "page": null,
+        "quote": "BNDES e Finep selecionam a Monashees para gestão de fundo de IA de R$ 500 mi",
+        "raw_sha256": "5f633c52d2262ab5256b02f695f7c978cbcc7b6a1432f7a3b936ba307cb6d751",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0026",
+        "start": 3505,
+        "text_sha256": "400eabec7ff0762ba07be36655d0acd27deb0a987ab9da461a71b9ac5d98aa3e"
+      }
+    }
+  ],
+  "provenance": {
+    "byte_length": 38522,
+    "category_evidence": "O Banco Nacional do Desenvolvimento Econômico e Social (BNDES) e a Financiadora de Estudos e Projetos (Finep) selecionaram a Monashees Gestão de Investimentos como gestora do Fundo de Investimento em Participações de Inteligência Artificial. A chamada pública recebeu 17 propostas. A partir de agora, a proposta selecionada seguirá para a etapa de análise, diligência e estruturação.",
+    "content_type": "text/html",
+    "derivation_method": "stdlib-HTMLParser-data-whitespace-v1; excludes script/style/noscript/template; not rendered DOM",
+    "document_category": "institutional_news",
+    "document_id": "M30-I06",
+    "document_version": null,
+    "final_url": "https://agenciadenoticias.bndes.gov.br/noticia/BNDES-e-Finep-selecionam-a-Monashees-para-gestao-de-fundo-de-IA-de-R$-500-mi",
+    "original_filename": "BNDES-e-Finep-selecionam-a-Monashees-para-gestao-de-fundo-de-IA-de-R$-500-mi",
+    "original_url": "https://agenciadenoticias.bndes.gov.br/noticia/BNDES-e-Finep-selecionam-a-Monashees-para-gestao-de-fundo-de-IA-de-R$-500-mi",
+    "publication_date": "2026-09-14",
+    "raw_path": "raw/M30-I06.html",
+    "restrictions": "Research pilot local frozen copy only; no redistribution license inferred. No scripts executed, no forms submitted, no applicant records intentionally collected. Public navigation/staff attribution may remain in original bytes.",
+    "retrieval_status": "acquired",
+    "retrieved_at": "2026-10-19T04:38:16.037839+00:00",
+    "sha256": "5f633c52d2262ab5256b02f695f7c978cbcc7b6a1432f7a3b936ba307cb6d751",
+    "source_authority_notes": "Public HTTPS page hosted by the named institution; authorship asserted by host/content, not cryptographically authenticated. Not source-readiness approval.",
+    "source_organization": "BNDES",
+    "text_path": "text/M30-I06.txt",
+    "text_sha256": "400eabec7ff0762ba07be36655d0acd27deb0a987ab9da461a71b9ac5d98aa3e"
+  },
+  "records": [
+    {
+      "all_overlap_predictions": [
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0000",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0001",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0002",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0003",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0004",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0005",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0006",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0007",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0008",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0009",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0010",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "opportunity_signal",
+          "modality": "undetermined",
+          "segment_id": "segment-0011",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0012",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0013",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0014",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0015",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0016",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "opportunity_signal",
+          "modality": "investimentos",
+          "segment_id": "segment-0017",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0018",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0019",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0020",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0021",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0022",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0023",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "opportunity_signal",
+          "modality": "investimentos",
+          "segment_id": "segment-0024",
+          "temporal": "undetermined"
+        }
+      ],
+      "any_exact_boundary": false,
+      "coverage": {
+        "denominator": 3490,
+        "numerator": 3017,
+        "value": 0.8644699140401146
+      },
+      "covered_characters": 3017,
+      "disagreements": [
+        "discovery_label"
+      ],
+      "discovery_histogram": {
+        "abstain": 22,
+        "opportunity_signal": 3
+      },
+      "document_id": "M30-I06",
+      "edges": [
+        {
+          "end": 151,
+          "exact": false,
+          "intersection": 31,
+          "intersection_end": 151,
+          "intersection_start": 120,
+          "iou": 0.008882521489971347,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.008882521489971347,
+          "segment_id": "segment-0000",
+          "start": 120
+        },
+        {
+          "end": 174,
+          "exact": false,
+          "intersection": 22,
+          "intersection_end": 174,
+          "intersection_start": 152,
+          "iou": 0.006303724928366762,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.006303724928366762,
+          "segment_id": "segment-0001",
+          "start": 152
+        },
+        {
+          "end": 197,
+          "exact": false,
+          "intersection": 22,
+          "intersection_end": 197,
+          "intersection_start": 175,
+          "iou": 0.006303724928366762,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.006303724928366762,
+          "segment_id": "segment-0002",
+          "start": 175
+        },
+        {
+          "end": 321,
+          "exact": false,
+          "intersection": 123,
+          "intersection_end": 321,
+          "intersection_start": 198,
+          "iou": 0.03524355300859599,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.03524355300859599,
+          "segment_id": "segment-0003",
+          "start": 198
+        },
+        {
+          "end": 330,
+          "exact": false,
+          "intersection": 8,
+          "intersection_end": 330,
+          "intersection_start": 322,
+          "iou": 0.002292263610315186,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.002292263610315186,
+          "segment_id": "segment-0004",
+          "start": 322
+        },
+        {
+          "end": 340,
+          "exact": false,
+          "intersection": 9,
+          "intersection_end": 340,
+          "intersection_start": 331,
+          "iou": 0.0025787965616045844,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.0025787965616045844,
+          "segment_id": "segment-0005",
+          "start": 331
+        },
+        {
+          "end": 375,
+          "exact": false,
+          "intersection": 34,
+          "intersection_end": 375,
+          "intersection_start": 341,
+          "iou": 0.009742120343839542,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.009742120343839542,
+          "segment_id": "segment-0006",
+          "start": 341
+        },
+        {
+          "end": 408,
+          "exact": false,
+          "intersection": 32,
+          "intersection_end": 408,
+          "intersection_start": 376,
+          "iou": 0.009169054441260744,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.009169054441260744,
+          "segment_id": "segment-0007",
+          "start": 376
+        },
+        {
+          "end": 423,
+          "exact": false,
+          "intersection": 14,
+          "intersection_end": 423,
+          "intersection_start": 409,
+          "iou": 0.0040114613180515755,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.0040114613180515755,
+          "segment_id": "segment-0008",
+          "start": 409
+        },
+        {
+          "end": 426,
+          "exact": false,
+          "intersection": 2,
+          "intersection_end": 426,
+          "intersection_start": 424,
+          "iou": 0.0005730659025787965,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.0005730659025787965,
+          "segment_id": "segment-0009",
+          "start": 424
+        },
+        {
+          "end": 429,
+          "exact": false,
+          "intersection": 2,
+          "intersection_end": 429,
+          "intersection_start": 427,
+          "iou": 0.0005730659025787965,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.0005730659025787965,
+          "segment_id": "segment-0010",
+          "start": 427
+        },
+        {
+          "end": 835,
+          "exact": false,
+          "intersection": 76,
+          "intersection_end": 835,
+          "intersection_start": 759,
+          "iou": 0.02177650429799427,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.02177650429799427,
+          "segment_id": "segment-0011",
+          "start": 759
+        },
+        {
+          "end": 865,
+          "exact": false,
+          "intersection": 29,
+          "intersection_end": 865,
+          "intersection_start": 836,
+          "iou": 0.00830945558739255,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.00830945558739255,
+          "segment_id": "segment-0012",
+          "start": 836
+        },
+        {
+          "end": 898,
+          "exact": false,
+          "intersection": 32,
+          "intersection_end": 898,
+          "intersection_start": 866,
+          "iou": 0.009169054441260744,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.009169054441260744,
+          "segment_id": "segment-0013",
+          "start": 866
+        },
+        {
+          "end": 932,
+          "exact": false,
+          "intersection": 33,
+          "intersection_end": 932,
+          "intersection_start": 899,
+          "iou": 0.009455587392550143,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.009455587392550143,
+          "segment_id": "segment-0014",
+          "start": 899
+        },
+        {
+          "end": 949,
+          "exact": false,
+          "intersection": 16,
+          "intersection_end": 949,
+          "intersection_start": 933,
+          "iou": 0.004584527220630372,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.004584527220630372,
+          "segment_id": "segment-0015",
+          "start": 933
+        },
+        {
+          "end": 1172,
+          "exact": false,
+          "intersection": 222,
+          "intersection_end": 1172,
+          "intersection_start": 950,
+          "iou": 0.06361031518624642,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.06361031518624642,
+          "segment_id": "segment-0016",
+          "start": 950
+        },
+        {
+          "end": 1556,
+          "exact": false,
+          "intersection": 383,
+          "intersection_end": 1556,
+          "intersection_start": 1173,
+          "iou": 0.10974212034383954,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.10974212034383954,
+          "segment_id": "segment-0017",
+          "start": 1173
+        },
+        {
+          "end": 1935,
+          "exact": false,
+          "intersection": 378,
+          "intersection_end": 1935,
+          "intersection_start": 1557,
+          "iou": 0.10830945558739255,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.10830945558739255,
+          "segment_id": "segment-0018",
+          "start": 1557
+        },
+        {
+          "end": 2202,
+          "exact": false,
+          "intersection": 266,
+          "intersection_end": 2202,
+          "intersection_start": 1936,
+          "iou": 0.07621776504297995,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.07621776504297995,
+          "segment_id": "segment-0019",
+          "start": 1936
+        },
+        {
+          "end": 2461,
+          "exact": false,
+          "intersection": 258,
+          "intersection_end": 2461,
+          "intersection_start": 2203,
+          "iou": 0.07392550143266476,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.07392550143266476,
+          "segment_id": "segment-0020",
+          "start": 2203
+        },
+        {
+          "end": 2707,
+          "exact": false,
+          "intersection": 245,
+          "intersection_end": 2707,
+          "intersection_start": 2462,
+          "iou": 0.07020057306590258,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.07020057306590258,
+          "segment_id": "segment-0021",
+          "start": 2462
+        },
+        {
+          "end": 3023,
+          "exact": false,
+          "intersection": 315,
+          "intersection_end": 3023,
+          "intersection_start": 2708,
+          "iou": 0.09025787965616046,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.09025787965616046,
+          "segment_id": "segment-0022",
+          "start": 2708
+        },
+        {
+          "end": 3047,
+          "exact": false,
+          "intersection": 23,
+          "intersection_end": 3047,
+          "intersection_start": 3024,
+          "iou": 0.006590257879656161,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.006590257879656161,
+          "segment_id": "segment-0023",
+          "start": 3024
+        },
+        {
+          "end": 3490,
+          "exact": false,
+          "intersection": 442,
+          "intersection_end": 3490,
+          "intersection_start": 3048,
+          "iou": 0.12664756446991404,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.12664756446991404,
+          "segment_id": "segment-0024",
+          "start": 3048
+        }
+      ],
+      "end": 3490,
+      "fields": [
+        {
+          "candidates": [
+            {
+              "diagnostic_status": "traceable_not_semantically_certified",
+              "field_index": 0,
+              "method_version": "m31-deterministic-v2",
+              "name": "title",
+              "original": "BNDES e Finep selecionam a Monashees para gestão de fundo de IA de R$ 500 mi",
+              "schema_version": "m31-extraction-v1",
+              "segment_id": "segment-0011",
+              "uncertainty": "heuristic role assignment; not authenticated or normalized",
+              "witness": {
+                "document_id": "M30-I06",
+                "end": 835,
+                "page": null,
+                "quote": "BNDES e Finep selecionam a Monashees para gestão de fundo de IA de R$ 500 mi",
+                "raw_sha256": "5f633c52d2262ab5256b02f695f7c978cbcc7b6a1432f7a3b936ba307cb6d751",
+                "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+                "schema_version": "m31-extraction-v1",
+                "segment_id": "segment-0011",
+                "start": 759,
+                "text_sha256": "400eabec7ff0762ba07be36655d0acd27deb0a987ab9da461a71b9ac5d98aa3e"
+              }
+            }
+          ],
+          "name": "title",
+          "reason": "same literal and role in record; entailment remains unreviewed",
+          "reference_evidence": [
+            {
+              "end": 76,
+              "evidence_id": "M30-I06-R1-E1",
+              "page": null,
+              "quote": "BNDES e Finep selecionam a Monashees para gestão de fundo de IA de R$ 500 mi",
+              "start": 0
+            }
+          ],
+          "reference_value": "BNDES e Finep selecionam a Monashees para gestão de fundo de IA de R$ 500 mi",
+          "scope_supported": true,
+          "semantic_adjudication": "not_certified",
+          "status": "MATCH",
+          "strict_role_value": true
+        },
+        {
+          "candidates": [
+            {
+              "diagnostic_status": "traceable_not_semantically_certified",
+              "field_index": 0,
+              "method_version": "m31-deterministic-v2",
+              "name": "fund_capital_estimate",
+              "original": "R$ 500 milhões",
+              "schema_version": "m31-extraction-v1",
+              "segment_id": "segment-0018",
+              "uncertainty": "heuristic role assignment; not authenticated or normalized",
+              "witness": {
+                "document_id": "M30-I06",
+                "end": 1935,
+                "page": null,
+                "quote": "O novo fundo, que tem estimativa de mobilizar até R$ 500 milhões, é voltado ao apoio a startups intensivas no uso de inteligência artificial, tendo como desafio central ampliar o número, o faturamento e a presença global de startups brasileiras que tenham IA como elemento central do modelo de negócios e geração de valor, e não apenas como ferramenta acessória ou complementar.",
+                "raw_sha256": "5f633c52d2262ab5256b02f695f7c978cbcc7b6a1432f7a3b936ba307cb6d751",
+                "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+                "schema_version": "m31-extraction-v1",
+                "segment_id": "segment-0018",
+                "start": 1557,
+                "text_sha256": "400eabec7ff0762ba07be36655d0acd27deb0a987ab9da461a71b9ac5d98aa3e"
+              }
+            }
+          ],
+          "name": "fund_capital_estimate",
+          "reason": "same/aliased role with related literal; qualifiers may be missing or extra",
+          "reference_evidence": [
+            {
+              "end": 1935,
+              "evidence_id": "M30-I06-R1-E3",
+              "page": null,
+              "quote": "O novo fundo, que tem estimativa de mobilizar até R$ 500 milhões, é voltado ao apoio a startups intensivas no uso de inteligência artificial, tendo como desafio central ampliar o número, o faturamento e a presença global de startups brasileiras que tenham IA como elemento central do modelo de negócios e geração de valor, e não apenas como ferramenta acessória ou complementar.",
+              "start": 1557
+            }
+          ],
+          "reference_value": "até R$ 500 milhões",
+          "scope_supported": true,
+          "semantic_adjudication": "not_certified",
+          "status": "PARTIAL",
+          "strict_role_value": false
+        },
+        {
+          "candidates": [],
+          "name": "target_profile",
+          "reason": "requested target role outside implemented M31 field scope",
+          "reference_evidence": [
+            {
+              "end": 3490,
+              "evidence_id": "M30-I06-R1-E4",
+              "page": null,
+              "quote": "Serão alvos do investimento startups que tenham como diferencial competitivo a incorporação estruturante da inteligência artificial à sua proposta de valor, e cujo desenvolvimento, adaptação e operação das soluções de inteligência artificial demandem investimentos em dados, modelos, infraestrutura computacional e profissionais especializados, indo além do simples consumo pontual ou acessório de soluções de inteligência artificial prontas.",
+              "start": 3048
+            }
+          ],
+          "reference_value": "Serão alvos do investimento startups que tenham como diferencial competitivo a incorporação estruturante da inteligência artificial à sua proposta de valor, e cujo desenvolvimento, adaptação e operação das soluções de inteligência artificial demandem investimentos em dados, modelos, infraestrutura computacional e profissionais especializados, indo além do simples consumo pontual ou acessório de soluções de inteligência artificial prontas.",
+          "scope_supported": false,
+          "semantic_adjudication": "not_certified",
+          "status": "UNRESOLVED",
+          "strict_role_value": false
+        },
+        {
+          "candidates": [
+            {
+              "diagnostic_status": "traceable_not_semantically_certified",
+              "field_index": 0,
+              "method_version": "m31-deterministic-v2",
+              "name": "publication_date_expression",
+              "original": "14/09/2026",
+              "schema_version": "m31-extraction-v1",
+              "segment_id": "segment-0013",
+              "uncertainty": "heuristic role assignment; not authenticated or normalized",
+              "witness": {
+                "document_id": "M30-I06",
+                "end": 898,
+                "page": null,
+                "quote": "Publicado em 14/09/2026 às 10:35",
+                "raw_sha256": "5f633c52d2262ab5256b02f695f7c978cbcc7b6a1432f7a3b936ba307cb6d751",
+                "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+                "schema_version": "m31-extraction-v1",
+                "segment_id": "segment-0013",
+                "start": 866,
+                "text_sha256": "400eabec7ff0762ba07be36655d0acd27deb0a987ab9da461a71b9ac5d98aa3e"
+              }
+            }
+          ],
+          "name": "publication_date_expression",
+          "reason": "same/aliased role with related literal; qualifiers may be missing or extra",
+          "reference_evidence": [
+            {
+              "end": 898,
+              "evidence_id": "M30-I06-R1-E5",
+              "page": null,
+              "quote": "Publicado em 14/09/2026 às 10:35",
+              "start": 866
+            }
+          ],
+          "reference_value": "Publicado em 14/09/2026 às 10:35",
+          "scope_supported": true,
+          "semantic_adjudication": "not_certified",
+          "status": "PARTIAL",
+          "strict_role_value": false
+        }
+      ],
+      "fragmentation": 25,
+      "location_convention": "html_unicode_codepoints",
+      "physical_reference_evidence_pages": [],
+      "rationale": "Authoritative announcement identifies a forthcoming IA investment fund, selected manager, intended startup audience and analysis/diligence/structuring still to occur. This supports announced_future_opportunity for discovery, not a presently accessible confirmed instrument. No startup application opening or date is stated, so temporal availability remains undetermined, rather than future merely because fund operations are planned.",
+      "record_id": "M30-I06-R1",
+      "reference": {
+        "discovery_label": "announced_future_opportunity",
+        "modality": "investimentos",
+        "opportunity_label": "uncertain",
+        "review_status": "provisional",
+        "temporal_status": "undetermined"
+      },
+      "reference_characters": 3490,
+      "reference_evidence": [
+        {
+          "end": 76,
+          "evidence_id": "M30-I06-R1-E1",
+          "page": null,
+          "quote": "BNDES e Finep selecionam a Monashees para gestão de fundo de IA de R$ 500 mi",
+          "start": 0
+        },
+        {
+          "end": 1556,
+          "evidence_id": "M30-I06-R1-E2",
+          "page": null,
+          "quote": "O Banco Nacional do Desenvolvimento Econômico e Social (BNDES) e a Financiadora de Estudos e Projetos (Finep) selecionaram a Monashees Gestão de Investimentos como gestora do Fundo de Investimento em Participações de Inteligência Artificial. A chamada pública recebeu 17 propostas. A partir de agora, a proposta selecionada seguirá para a etapa de análise, diligência e estruturação.",
+          "start": 1173
+        },
+        {
+          "end": 1935,
+          "evidence_id": "M30-I06-R1-E3",
+          "page": null,
+          "quote": "O novo fundo, que tem estimativa de mobilizar até R$ 500 milhões, é voltado ao apoio a startups intensivas no uso de inteligência artificial, tendo como desafio central ampliar o número, o faturamento e a presença global de startups brasileiras que tenham IA como elemento central do modelo de negócios e geração de valor, e não apenas como ferramenta acessória ou complementar.",
+          "start": 1557
+        },
+        {
+          "end": 3490,
+          "evidence_id": "M30-I06-R1-E4",
+          "page": null,
+          "quote": "Serão alvos do investimento startups que tenham como diferencial competitivo a incorporação estruturante da inteligência artificial à sua proposta de valor, e cujo desenvolvimento, adaptação e operação das soluções de inteligência artificial demandem investimentos em dados, modelos, infraestrutura computacional e profissionais especializados, indo além do simples consumo pontual ou acessório de soluções de inteligência artificial prontas.",
+          "start": 3048
+        },
+        {
+          "end": 898,
+          "evidence_id": "M30-I06-R1-E5",
+          "page": null,
+          "quote": "Publicado em 14/09/2026 às 10:35",
+          "start": 866
+        }
+      ],
+      "representative": "segment-0024",
+      "representative_prediction": {
+        "discovery": "opportunity_signal",
+        "end": 3490,
+        "modality": "investimentos",
+        "segment_id": "segment-0024",
+        "start": 3048,
+        "temporal": "undetermined"
+      },
+      "representative_quote": "Serão alvos do investimento startups que tenham como diferencial competitivo a incorporação estruturante da inteligência artificial à sua proposta de valor, e cujo desenvolvimento, adaptação e operação das soluções de inteligência artificial demandem investimentos em dados, modelos, infraestrutura computacional e profissionais especializados, indo além do simples consumo pontual ou acessório de soluções de inteligência artificial prontas.",
+      "start": 0,
+      "status": "overlap",
+      "uncertainty_notes": [
+        "Não há data de início nem prazo de candidatura para startups.",
+        "Estruturação ainda condicionada a análise e diligência; existência permanece uncertain.",
+        "Não usar capital global estimado como ticket individual.",
+        "Parent AI consistency check corrected an initial future temporal proposal: future investment intent is not a verified future application stage. No human adjudication or approval is claimed."
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 151,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I06-R1"
+      ],
+      "segment_id": "segment-0000",
+      "start": 120,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 174,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I06-R1"
+      ],
+      "segment_id": "segment-0001",
+      "start": 152,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 197,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I06-R1"
+      ],
+      "segment_id": "segment-0002",
+      "start": 175,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 321,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I06-R1"
+      ],
+      "segment_id": "segment-0003",
+      "start": 198,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 330,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I06-R1"
+      ],
+      "segment_id": "segment-0004",
+      "start": 322,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 340,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I06-R1"
+      ],
+      "segment_id": "segment-0005",
+      "start": 331,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 375,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I06-R1"
+      ],
+      "segment_id": "segment-0006",
+      "start": 341,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 408,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I06-R1"
+      ],
+      "segment_id": "segment-0007",
+      "start": 376,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 423,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I06-R1"
+      ],
+      "segment_id": "segment-0008",
+      "start": 409,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 426,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I06-R1"
+      ],
+      "segment_id": "segment-0009",
+      "start": 424,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 429,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I06-R1"
+      ],
+      "segment_id": "segment-0010",
+      "start": 427,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "manager_stage_not_startup_access"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 835,
+      "field_count": 2,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I06-R1"
+      ],
+      "segment_id": "segment-0011",
+      "start": 759,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 865,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I06-R1"
+      ],
+      "segment_id": "segment-0012",
+      "start": 836,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 898,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I06-R1"
+      ],
+      "segment_id": "segment-0013",
+      "start": 866,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 932,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I06-R1"
+      ],
+      "segment_id": "segment-0014",
+      "start": 899,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 949,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I06-R1"
+      ],
+      "segment_id": "segment-0015",
+      "start": 933,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 1172,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I06-R1"
+      ],
+      "segment_id": "segment-0016",
+      "start": 950,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "manager_stage_not_startup_access"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 1556,
+      "field_count": 2,
+      "modality": "investimentos",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I06-R1"
+      ],
+      "segment_id": "segment-0017",
+      "start": 1173,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 1935,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I06-R1"
+      ],
+      "segment_id": "segment-0018",
+      "start": 1557,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 2202,
+      "field_count": 2,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I06-R1"
+      ],
+      "segment_id": "segment-0019",
+      "start": 1936,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 2461,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I06-R1"
+      ],
+      "segment_id": "segment-0020",
+      "start": 2203,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 2707,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I06-R1"
+      ],
+      "segment_id": "segment-0021",
+      "start": 2462,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 3023,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I06-R1"
+      ],
+      "segment_id": "segment-0022",
+      "start": 2708,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 3047,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I06-R1"
+      ],
+      "segment_id": "segment-0023",
+      "start": 3024,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 3490,
+      "field_count": 0,
+      "modality": "investimentos",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I06-R1"
+      ],
+      "segment_id": "segment-0024",
+      "start": 3048,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 3504,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0025",
+      "start": 3491,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "manager_stage_not_startup_access"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 3581,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0026",
+      "start": 3505,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 3587,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0027",
+      "start": 3582,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 3600,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0028",
+      "start": 3588,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 3606,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0029",
+      "start": 3601,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 3626,
+      "field_count": 0,
+      "modality": "credito",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0030",
+      "start": 3607,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 3649,
+      "field_count": 0,
+      "modality": "investimentos",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0031",
+      "start": 3627,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 3672,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0032",
+      "start": 3650,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 4748,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0033",
+      "start": 4660,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 4788,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0034",
+      "start": 4749,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 4790,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0035",
+      "start": 4789,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 4849,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0036",
+      "start": 4791,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 4857,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0037",
+      "start": 4850,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    }
+  ],
+  "semantic_reviews": [
+    {
+      "case_id": "M30-I06:segment-0018:field:0",
+      "certainty": "confirmed_defect",
+      "claim_kind": "field",
+      "context_evidence": [
+        {
+          "end": 76,
+          "page": null,
+          "quote": "BNDES e Finep selecionam a Monashees para gestão de fundo de IA de R$ 500 mi",
+          "start": 0
+        },
+        {
+          "end": 1556,
+          "page": null,
+          "quote": "O Banco Nacional do Desenvolvimento Econômico e Social (BNDES) e a Financiadora de Estudos e Projetos (Finep) selecionaram a Monashees Gestão de Investimentos como gestora do Fundo de Investimento em Participações de Inteligência Artificial. A chamada pública recebeu 17 propostas. A partir de agora, a proposta selecionada seguirá para a etapa de análise, diligência e estruturação.",
+          "start": 1173
+        },
+        {
+          "end": 1935,
+          "page": null,
+          "quote": "O novo fundo, que tem estimativa de mobilizar até R$ 500 milhões, é voltado ao apoio a startups intensivas no uso de inteligência artificial, tendo como desafio central ampliar o número, o faturamento e a presença global de startups brasileiras que tenham IA como elemento central do modelo de negócios e geração de valor, e não apenas como ferramenta acessória ou complementar.",
+          "start": 1557
+        },
+        {
+          "end": 3490,
+          "page": null,
+          "quote": "Serão alvos do investimento startups que tenham como diferencial competitivo a incorporação estruturante da inteligência artificial à sua proposta de valor, e cujo desenvolvimento, adaptação e operação das soluções de inteligência artificial demandem investimentos em dados, modelos, infraestrutura computacional e profissionais especializados, indo além do simples consumo pontual ou acessório de soluções de inteligência artificial prontas.",
+          "start": 3048
+        },
+        {
+          "end": 898,
+          "page": null,
+          "quote": "Publicado em 14/09/2026 às 10:35",
+          "start": 866
+        }
+      ],
+      "document_id": "M30-I06",
+      "end": 1935,
+      "error_codes": [
+        "EXTRACTION_OMISSION"
+      ],
+      "expected_behavior": "Preservar o qualificador até junto à expressão financeira.",
+      "expected_claim": "R$ 500 milhões",
+      "field_index": 0,
+      "field_name": "fund_capital_estimate",
+      "judgment": "partial",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "quote": "O novo fundo, que tem estimativa de mobilizar até R$ 500 milhões, é voltado ao apoio a startups intensivas no uso de inteligência artificial, tendo como desafio central ampliar o número, o faturamento e a presença global de startups brasileiras que tenham IA como elemento central do modelo de negócios e geração de valor, e não apenas como ferramenta acessória ou complementar.",
+      "rationale": "O numeral e o papel são relacionados ao campo correto, mas o literal perde até, que qualifica o valor como teto/estimativa. Não equiparar o numeral isolado ao valor com qualificador.",
+      "root_cause": "MONEY inicia em R$ e não inclui qualificadores precedentes.",
+      "root_cause_confidence": "high",
+      "segment_id": "segment-0018",
+      "severity": "medium",
+      "start": 1557
+    },
+    {
+      "case_id": "M30-I06:segment-0024:discovery:classification",
+      "certainty": "unresolved_disagreement",
+      "claim_kind": "discovery",
+      "context_evidence": [
+        {
+          "end": 76,
+          "page": null,
+          "quote": "BNDES e Finep selecionam a Monashees para gestão de fundo de IA de R$ 500 mi",
+          "start": 0
+        },
+        {
+          "end": 1556,
+          "page": null,
+          "quote": "O Banco Nacional do Desenvolvimento Econômico e Social (BNDES) e a Financiadora de Estudos e Projetos (Finep) selecionaram a Monashees Gestão de Investimentos como gestora do Fundo de Investimento em Participações de Inteligência Artificial. A chamada pública recebeu 17 propostas. A partir de agora, a proposta selecionada seguirá para a etapa de análise, diligência e estruturação.",
+          "start": 1173
+        },
+        {
+          "end": 1935,
+          "page": null,
+          "quote": "O novo fundo, que tem estimativa de mobilizar até R$ 500 milhões, é voltado ao apoio a startups intensivas no uso de inteligência artificial, tendo como desafio central ampliar o número, o faturamento e a presença global de startups brasileiras que tenham IA como elemento central do modelo de negócios e geração de valor, e não apenas como ferramenta acessória ou complementar.",
+          "start": 1557
+        },
+        {
+          "end": 3490,
+          "page": null,
+          "quote": "Serão alvos do investimento startups que tenham como diferencial competitivo a incorporação estruturante da inteligência artificial à sua proposta de valor, e cujo desenvolvimento, adaptação e operação das soluções de inteligência artificial demandem investimentos em dados, modelos, infraestrutura computacional e profissionais especializados, indo além do simples consumo pontual ou acessório de soluções de inteligência artificial prontas.",
+          "start": 3048
+        },
+        {
+          "end": 898,
+          "page": null,
+          "quote": "Publicado em 14/09/2026 às 10:35",
+          "start": 866
+        }
+      ],
+      "document_id": "M30-I06",
+      "end": 3490,
+      "error_codes": [
+        "FUTURE_SIGNAL_CONFUSION",
+        "REFERENCE_POSSIBLE_ERROR"
+      ],
+      "expected_behavior": "Interpretar apenas acesso/estágio e público deste registro com o contexto completo; não confundir anúncio, gestor e candidatura startup.",
+      "expected_claim": "opportunity_signal",
+      "field_index": null,
+      "field_name": null,
+      "judgment": "unresolved",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "quote": "Serão alvos do investimento startups que tenham como diferencial competitivo a incorporação estruturante da inteligência artificial à sua proposta de valor, e cujo desenvolvimento, adaptação e operação das soluções de inteligência artificial demandem investimentos em dados, modelos, infraestrutura computacional e profissionais especializados, indo além do simples consumo pontual ou acessório de soluções de inteligência artificial prontas.",
+      "rationale": "Fundo futuro de IA está em análise/diligência/estruturação. Sinal é defensável e anúncio futuro também pode ser: o protocolo exige compromisso de acesso futuro. Nada estabelece candidaturas abertas de startups. A divergência é de nível de confirmação, não de janela future.",
+      "root_cause": "Ramo manager sempre devolve signal e future_access só reconhece abertura de inscrições; rubric de anúncio de instrumento é mais ampla.",
+      "root_cause_confidence": "medium",
+      "segment_id": "segment-0024",
+      "severity": "medium",
+      "start": 3048
+    }
+  ],
+  "status": "processed"
+}

@@ -1,4 +1,20 @@
-# Backend V2 — Milestone 1.1a
+# Backend V2 — Milestone 2.2b
+
+M2.2b acrescenta normalizadores financeiros, organizacionais e taxonômicos
+independentes, conservadores e offline. Contrato e fronteira de evidências:
+`docs/v2/SEMANTIC_NORMALIZATION_M22B.md`. Resultados e limites efetivamente
+verificados: `EDITALFINDER_V2_M22B_RESULTADOS.md`.
+
+M2.2a adiciona normalização semântica temporal e geográfica pura, offline,
+versionada e auditável. Contratos, recorte estrutural suportado, invariantes e
+limitações: `docs/v2/SEMANTIC_NORMALIZATION_M22A.md`.
+
+M2.1 mantém contratos de identidade, canonicalização conservadora de URLs e
+comparação determinística offline. Consulte `docs/v2/IDENTITY_M21.md` para APIs,
+políticas, códigos de decisão e incompatibilidades pendentes de persistência.
+Os núcleos M1.1a e M2.1 são preservados. Normalizadores não habilitam ACCEPTED,
+merge, persistência ou promoção. Não há mapper automático entre os subsistemas;
+a descrição abaixo do motor M1 continua válida para aquele motor. M3 não foi iniciado.
 
 Fundação offline: domínio puro, sem crawler, persistência, LLM, autenticação,
 rede, banco ou imports Legacy. Não é um backend pronto para produção.
@@ -187,8 +203,8 @@ preservados. Migrations e Legacy não são alterados.
 Prazo ausente exige motivo explícito; não inferir fluxo contínuo. Prazo histórico
 verificável pode indicar encerrada mesmo enquanto intenção aguarda revisão; nunca
 indica aberta por prazo futuro. Isto não modifica a view SQL nem resolve sua política
-de timezone/corte. Campos detalhados de normalização, crawlers e persistência são M2
-ou posteriores e não foram iniciados.
+de timezone/corte. O subsistema M2.2a normaliza datas e geografia separadamente,
+sem integração automática com esse motor. Crawlers e persistência não foram iniciados.
 
 Há conflito explícito entre preservar as antigas expectativas de ACCEPTED/promotable
 por manual_review e remover essa autoridade. Os cenários antigos são mantidos, com

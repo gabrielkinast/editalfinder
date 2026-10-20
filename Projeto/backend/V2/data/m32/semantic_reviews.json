@@ -1,0 +1,1572 @@
+{
+  "schema_version": "m32-semantic-reviews-v1",
+  "prediction_sha256": "c4c32df2850ac101b4389ae1d91c643f87d1bc129a45e7b96f8586c3fc9ee388",
+  "review_status": "provisional",
+  "reviewer_type": "AI_qualitative_not_human",
+  "items": [
+    {
+      "case_id": "M30-C03:segment-0092:discovery:classification",
+      "document_id": "M30-C03",
+      "segment_id": "segment-0092",
+      "claim_kind": "discovery",
+      "field_index": null,
+      "field_name": null,
+      "expected_claim": "confirmed_opportunity",
+      "start": 6002,
+      "end": 6298,
+      "quote": "A linha BNDES Crédito Pequenas Empresas é aderente às necessidades do dia-a-dia das micro, pequenas e médias empresas. Podem solicitar financiamento clientes que faturem até R$ 300 milhões, com prazo de até 5 (cinco) anos, com até 2 (dois) anos de carência, até o limite de R$ 20 milhões por ano.",
+      "judgment": "supported",
+      "certainty": "supported_observation",
+      "error_codes": [],
+      "severity": "info",
+      "rationale": "O trecho identifica suporte/financiamento e rota ou intervalo de submissão. Confirmação de instrumento não é garantia de aprovação, elegibilidade completa ou janela aberta.",
+      "expected_behavior": "Exigir contexto do instrumento e preservar incerteza de acesso/condições.",
+      "root_cause": "classify usa conjunções locais de instrumento/acesso; hierarquia entre páginas não existe.",
+      "root_cause_confidence": "high",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "context_evidence": []
+    },
+    {
+      "case_id": "M30-C05:segment-0021:discovery:classification",
+      "document_id": "M30-C05",
+      "segment_id": "segment-0021",
+      "claim_kind": "discovery",
+      "field_index": null,
+      "field_name": null,
+      "expected_claim": "confirmed_opportunity",
+      "start": 851,
+      "end": 994,
+      "quote": "Empresas com faturamento anual acima de R$ 80 milhões agora podem solicitar online limite de crédito para aquisição de máquinas e equipamentos.",
+      "judgment": "supported",
+      "certainty": "supported_observation",
+      "error_codes": [],
+      "severity": "info",
+      "rationale": "O trecho identifica suporte/financiamento e rota ou intervalo de submissão. Confirmação de instrumento não é garantia de aprovação, elegibilidade completa ou janela aberta.",
+      "expected_behavior": "Exigir contexto do instrumento e preservar incerteza de acesso/condições.",
+      "root_cause": "classify usa conjunções locais de instrumento/acesso; hierarquia entre páginas não existe.",
+      "root_cause_confidence": "high",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "context_evidence": [
+        {
+          "start": 837,
+          "end": 994,
+          "quote": "Finame Direto\nEmpresas com faturamento anual acima de R$ 80 milhões agora podem solicitar online limite de crédito para aquisição de máquinas e equipamentos.",
+          "page": null
+        }
+      ]
+    },
+    {
+      "case_id": "M30-F01:segment-0008:discovery:classification",
+      "document_id": "M30-F01",
+      "segment_id": "segment-0008",
+      "claim_kind": "discovery",
+      "field_index": null,
+      "field_name": null,
+      "expected_claim": "confirmed_opportunity",
+      "start": 5784,
+      "end": 6735,
+      "quote": "Chamada Pública CNPq/CAPES Nº 30/2026 – Programa de Mestrado e Doutorado Acadêmico para Inovação – MAI/DAI\nCompartilhe:\nCompartilhe por Facebook\nCompartilhe por Twitter\nCompartilhe por LinkedIn\nCompartilhe por WhatsApp\nlink para Copiar para área de transferência\nPublicado em\n19/08/2026 08h53\nAtualizado em\n13/10/2026 12h34\nA edição de 2026 do Programa de Mestrado e Doutorado para Inovação (MAI/DAI), que estimula a realização de pesquisas de mestrado e doutorado em universidades em parceria com empresas, recebe propostas até o dia 11 de dezembro. A chamada é realizada pelo Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq) e conta com a parceria da Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES).\nChamada\nAnexo II: Plano de Trabalho Programa MAI/DAI\nAnexo III: Declaração Institucional do Representante MAI/DAI\nAnexo IV: Carta de Concordância da Instituição Parceira\nFAQ\nInscrições:\n19/08/2026 a 11/12/2026",
+      "judgment": "supported",
+      "certainty": "supported_observation",
+      "error_codes": [],
+      "severity": "info",
+      "rationale": "O trecho identifica suporte/financiamento e rota ou intervalo de submissão. Confirmação de instrumento não é garantia de aprovação, elegibilidade completa ou janela aberta.",
+      "expected_behavior": "Exigir contexto do instrumento e preservar incerteza de acesso/condições.",
+      "root_cause": "classify usa conjunções locais de instrumento/acesso; hierarquia entre páginas não existe.",
+      "root_cause_confidence": "high",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "context_evidence": [
+        {
+          "start": 5784,
+          "end": 5890,
+          "quote": "Chamada Pública CNPq/CAPES Nº 30/2026 – Programa de Mestrado e Doutorado Acadêmico para Inovação – MAI/DAI",
+          "page": null
+        },
+        {
+          "start": 6108,
+          "end": 6525,
+          "quote": "A edição de 2026 do Programa de Mestrado e Doutorado para Inovação (MAI/DAI), que estimula a realização de pesquisas de mestrado e doutorado em universidades em parceria com empresas, recebe propostas até o dia 11 de dezembro. A chamada é realizada pelo Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq) e conta com a parceria da Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES).",
+          "page": null
+        },
+        {
+          "start": 6700,
+          "end": 6735,
+          "quote": "Inscrições:\n19/08/2026 a 11/12/2026",
+          "page": null
+        }
+      ]
+    },
+    {
+      "case_id": "M30-F01:segment-0008:temporal:classification",
+      "document_id": "M30-F01",
+      "segment_id": "segment-0008",
+      "claim_kind": "temporal",
+      "field_index": null,
+      "field_name": null,
+      "expected_claim": "open",
+      "start": 5784,
+      "end": 6735,
+      "quote": "Chamada Pública CNPq/CAPES Nº 30/2026 – Programa de Mestrado e Doutorado Acadêmico para Inovação – MAI/DAI\nCompartilhe:\nCompartilhe por Facebook\nCompartilhe por Twitter\nCompartilhe por LinkedIn\nCompartilhe por WhatsApp\nlink para Copiar para área de transferência\nPublicado em\n19/08/2026 08h53\nAtualizado em\n13/10/2026 12h34\nA edição de 2026 do Programa de Mestrado e Doutorado para Inovação (MAI/DAI), que estimula a realização de pesquisas de mestrado e doutorado em universidades em parceria com empresas, recebe propostas até o dia 11 de dezembro. A chamada é realizada pelo Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq) e conta com a parceria da Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES).\nChamada\nAnexo II: Plano de Trabalho Programa MAI/DAI\nAnexo III: Declaração Institucional do Representante MAI/DAI\nAnexo IV: Carta de Concordância da Instituição Parceira\nFAQ\nInscrições:\n19/08/2026 a 11/12/2026",
+      "judgment": "supported",
+      "certainty": "supported_observation",
+      "error_codes": [],
+      "severity": "info",
+      "rationale": "Intervalo numérico de inscrição contém 2026-10-19. Nenhuma hora/cutoff/timezone foi inferida; anexos não congelados permanecem indisponíveis.",
+      "expected_behavior": "Comparar apenas a janela de inscrições deste registro com a data civil fixa.",
+      "root_cause": "predict reconhece intervalo Inscrições no contêiner local.",
+      "root_cause_confidence": "high",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "context_evidence": [
+        {
+          "start": 5784,
+          "end": 5890,
+          "quote": "Chamada Pública CNPq/CAPES Nº 30/2026 – Programa de Mestrado e Doutorado Acadêmico para Inovação – MAI/DAI",
+          "page": null
+        },
+        {
+          "start": 6108,
+          "end": 6525,
+          "quote": "A edição de 2026 do Programa de Mestrado e Doutorado para Inovação (MAI/DAI), que estimula a realização de pesquisas de mestrado e doutorado em universidades em parceria com empresas, recebe propostas até o dia 11 de dezembro. A chamada é realizada pelo Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq) e conta com a parceria da Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES).",
+          "page": null
+        },
+        {
+          "start": 6700,
+          "end": 6735,
+          "quote": "Inscrições:\n19/08/2026 a 11/12/2026",
+          "page": null
+        }
+      ]
+    },
+    {
+      "case_id": "M30-F01:segment-0009:discovery:classification",
+      "document_id": "M30-F01",
+      "segment_id": "segment-0009",
+      "claim_kind": "discovery",
+      "field_index": null,
+      "field_name": null,
+      "expected_claim": "confirmed_opportunity",
+      "start": 6736,
+      "end": 7490,
+      "quote": "Chamada CNPq Nº 34/2026 - Auxílio à Promoção de Eventos Científicos, Tecnológicos e/ou de Inovação - ARC\nCompartilhe:\nCompartilhe por Facebook\nCompartilhe por Twitter\nCompartilhe por LinkedIn\nCompartilhe por WhatsApp\nlink para Copiar para área de transferência\nPublicado em\n14/10/2026 07h50\nAtualizado em\n14/10/2026 10h48\nO CNPq torna pública a Chamada CNPq nº 34/2026, que tem por objeto a\npoiar a realização no Brasil de eventos de grande porte, de abrangência mundial, internacional ou nacional, relacionados a ciência, tecnologia e inovação, tais como encontros, congressos e outros similares que visem contribuir significativamente para o desenvolvimento científico e tecnológico e a inovação do País.\nChamada\nInscrições:\n14/10/2026 a 04/12/2026\nFAQ",
+      "judgment": "supported",
+      "certainty": "supported_observation",
+      "error_codes": [],
+      "severity": "info",
+      "rationale": "O trecho identifica suporte/financiamento e rota ou intervalo de submissão. Confirmação de instrumento não é garantia de aprovação, elegibilidade completa ou janela aberta.",
+      "expected_behavior": "Exigir contexto do instrumento e preservar incerteza de acesso/condições.",
+      "root_cause": "classify usa conjunções locais de instrumento/acesso; hierarquia entre páginas não existe.",
+      "root_cause_confidence": "high",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "context_evidence": [
+        {
+          "start": 6736,
+          "end": 6840,
+          "quote": "Chamada CNPq Nº 34/2026 - Auxílio à Promoção de Eventos Científicos, Tecnológicos e/ou de Inovação - ARC",
+          "page": null
+        },
+        {
+          "start": 7058,
+          "end": 7442,
+          "quote": "O CNPq torna pública a Chamada CNPq nº 34/2026, que tem por objeto a\npoiar a realização no Brasil de eventos de grande porte, de abrangência mundial, internacional ou nacional, relacionados a ciência, tecnologia e inovação, tais como encontros, congressos e outros similares que visem contribuir significativamente para o desenvolvimento científico e tecnológico e a inovação do País.",
+          "page": null
+        },
+        {
+          "start": 7451,
+          "end": 7486,
+          "quote": "Inscrições:\n14/10/2026 a 04/12/2026",
+          "page": null
+        }
+      ]
+    },
+    {
+      "case_id": "M30-F01:segment-0009:temporal:classification",
+      "document_id": "M30-F01",
+      "segment_id": "segment-0009",
+      "claim_kind": "temporal",
+      "field_index": null,
+      "field_name": null,
+      "expected_claim": "open",
+      "start": 6736,
+      "end": 7490,
+      "quote": "Chamada CNPq Nº 34/2026 - Auxílio à Promoção de Eventos Científicos, Tecnológicos e/ou de Inovação - ARC\nCompartilhe:\nCompartilhe por Facebook\nCompartilhe por Twitter\nCompartilhe por LinkedIn\nCompartilhe por WhatsApp\nlink para Copiar para área de transferência\nPublicado em\n14/10/2026 07h50\nAtualizado em\n14/10/2026 10h48\nO CNPq torna pública a Chamada CNPq nº 34/2026, que tem por objeto a\npoiar a realização no Brasil de eventos de grande porte, de abrangência mundial, internacional ou nacional, relacionados a ciência, tecnologia e inovação, tais como encontros, congressos e outros similares que visem contribuir significativamente para o desenvolvimento científico e tecnológico e a inovação do País.\nChamada\nInscrições:\n14/10/2026 a 04/12/2026\nFAQ",
+      "judgment": "supported",
+      "certainty": "supported_observation",
+      "error_codes": [],
+      "severity": "info",
+      "rationale": "Intervalo numérico de inscrição contém 2026-10-19. Nenhuma hora/cutoff/timezone foi inferida; anexos não congelados permanecem indisponíveis.",
+      "expected_behavior": "Comparar apenas a janela de inscrições deste registro com a data civil fixa.",
+      "root_cause": "predict reconhece intervalo Inscrições no contêiner local.",
+      "root_cause_confidence": "high",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "context_evidence": [
+        {
+          "start": 6736,
+          "end": 6840,
+          "quote": "Chamada CNPq Nº 34/2026 - Auxílio à Promoção de Eventos Científicos, Tecnológicos e/ou de Inovação - ARC",
+          "page": null
+        },
+        {
+          "start": 7058,
+          "end": 7442,
+          "quote": "O CNPq torna pública a Chamada CNPq nº 34/2026, que tem por objeto a\npoiar a realização no Brasil de eventos de grande porte, de abrangência mundial, internacional ou nacional, relacionados a ciência, tecnologia e inovação, tais como encontros, congressos e outros similares que visem contribuir significativamente para o desenvolvimento científico e tecnológico e a inovação do País.",
+          "page": null
+        },
+        {
+          "start": 7451,
+          "end": 7486,
+          "quote": "Inscrições:\n14/10/2026 a 04/12/2026",
+          "page": null
+        }
+      ]
+    },
+    {
+      "case_id": "M30-F01:segment-0010:discovery:classification",
+      "document_id": "M30-F01",
+      "segment_id": "segment-0010",
+      "claim_kind": "discovery",
+      "field_index": null,
+      "field_name": null,
+      "expected_claim": "confirmed_opportunity",
+      "start": 7491,
+      "end": 8212,
+      "quote": "Chamada Pública MCTI/CNPq/ANR N° 32/2026\nCompartilhe:\nCompartilhe por Facebook\nCompartilhe por Twitter\nCompartilhe por LinkedIn\nCompartilhe por WhatsApp\nlink para Copiar para área de transferência\nPublicado em\n03/09/2026 08h00\nAtualizado em\n04/09/2026 11h26\nChamada Pública entre o Conselho Nacional de Desenvolvimento Científico e Tecnológico - CNPq e a Agência Nacional de Pesquisa - ANR, tendo por objetivo selecionar projetos de pesquisa conjuntos entre grupos brasileiros e franceses, que visem contribuir para o desenvolvimento científico, tecnológico e a inovação do país.\nChamada\nInscrições:\n03/09/2026 a 31/03/2027\n* Para mais informações em francês, consulte\nhttps://anr.fr/en\n/ ou\nescreva para\naapg.adfi@anr.fr",
+      "judgment": "supported",
+      "certainty": "supported_observation",
+      "error_codes": [],
+      "severity": "info",
+      "rationale": "O trecho identifica suporte/financiamento e rota ou intervalo de submissão. Confirmação de instrumento não é garantia de aprovação, elegibilidade completa ou janela aberta.",
+      "expected_behavior": "Exigir contexto do instrumento e preservar incerteza de acesso/condições.",
+      "root_cause": "classify usa conjunções locais de instrumento/acesso; hierarquia entre páginas não existe.",
+      "root_cause_confidence": "high",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "context_evidence": [
+        {
+          "start": 7491,
+          "end": 7531,
+          "quote": "Chamada Pública MCTI/CNPq/ANR N° 32/2026",
+          "page": null
+        },
+        {
+          "start": 7749,
+          "end": 8070,
+          "quote": "Chamada Pública entre o Conselho Nacional de Desenvolvimento Científico e Tecnológico - CNPq e a Agência Nacional de Pesquisa - ANR, tendo por objetivo selecionar projetos de pesquisa conjuntos entre grupos brasileiros e franceses, que visem contribuir para o desenvolvimento científico, tecnológico e a inovação do país.",
+          "page": null
+        },
+        {
+          "start": 8079,
+          "end": 8114,
+          "quote": "Inscrições:\n03/09/2026 a 31/03/2027",
+          "page": null
+        }
+      ]
+    },
+    {
+      "case_id": "M30-F01:segment-0010:temporal:classification",
+      "document_id": "M30-F01",
+      "segment_id": "segment-0010",
+      "claim_kind": "temporal",
+      "field_index": null,
+      "field_name": null,
+      "expected_claim": "open",
+      "start": 7491,
+      "end": 8212,
+      "quote": "Chamada Pública MCTI/CNPq/ANR N° 32/2026\nCompartilhe:\nCompartilhe por Facebook\nCompartilhe por Twitter\nCompartilhe por LinkedIn\nCompartilhe por WhatsApp\nlink para Copiar para área de transferência\nPublicado em\n03/09/2026 08h00\nAtualizado em\n04/09/2026 11h26\nChamada Pública entre o Conselho Nacional de Desenvolvimento Científico e Tecnológico - CNPq e a Agência Nacional de Pesquisa - ANR, tendo por objetivo selecionar projetos de pesquisa conjuntos entre grupos brasileiros e franceses, que visem contribuir para o desenvolvimento científico, tecnológico e a inovação do país.\nChamada\nInscrições:\n03/09/2026 a 31/03/2027\n* Para mais informações em francês, consulte\nhttps://anr.fr/en\n/ ou\nescreva para\naapg.adfi@anr.fr",
+      "judgment": "supported",
+      "certainty": "supported_observation",
+      "error_codes": [],
+      "severity": "info",
+      "rationale": "Intervalo numérico de inscrição contém 2026-10-19. Nenhuma hora/cutoff/timezone foi inferida; anexos não congelados permanecem indisponíveis.",
+      "expected_behavior": "Comparar apenas a janela de inscrições deste registro com a data civil fixa.",
+      "root_cause": "predict reconhece intervalo Inscrições no contêiner local.",
+      "root_cause_confidence": "high",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "context_evidence": [
+        {
+          "start": 7491,
+          "end": 7531,
+          "quote": "Chamada Pública MCTI/CNPq/ANR N° 32/2026",
+          "page": null
+        },
+        {
+          "start": 7749,
+          "end": 8070,
+          "quote": "Chamada Pública entre o Conselho Nacional de Desenvolvimento Científico e Tecnológico - CNPq e a Agência Nacional de Pesquisa - ANR, tendo por objetivo selecionar projetos de pesquisa conjuntos entre grupos brasileiros e franceses, que visem contribuir para o desenvolvimento científico, tecnológico e a inovação do país.",
+          "page": null
+        },
+        {
+          "start": 8079,
+          "end": 8114,
+          "quote": "Inscrições:\n03/09/2026 a 31/03/2027",
+          "page": null
+        }
+      ]
+    },
+    {
+      "case_id": "M30-F01:segment-0011:discovery:classification",
+      "document_id": "M30-F01",
+      "segment_id": "segment-0011",
+      "claim_kind": "discovery",
+      "field_index": null,
+      "field_name": null,
+      "expected_claim": "confirmed_opportunity",
+      "start": 8213,
+      "end": 9577,
+      "quote": "Chamada CNPq nº 33/2026 - Bolsas de Produtividade do CNPq\nCompartilhe:\nCompartilhe por Facebook\nCompartilhe por Twitter\nCompartilhe por LinkedIn\nCompartilhe por WhatsApp\nlink para Copiar para área de transferência\nPublicado em\n07/10/2026 10h29\nAtualizado em\n13/10/2026 17h16\nO CNPq torna pública a Chamada CNPq nº 33/2026, que tem por objeto conceder bolsas nas seguintes modalidades: Produtividade em Desenvolvimento Tecnológico e Extensão Inovadora (DT), Produtividade em Pesquisa (PQ) e Produtividade em Pesquisa Sênior (PQSr).\nSão objetivos desta chamada:\na) valorizar pesquisadores que possuam produção científica, tecnológica e de inovação de destaque em suas respectivas áreas do conhecimento;\nb) incentivar o aumento da produção científica, tecnológica e de inovação de qualidade;\nc) selecionar projetos de pesquisa que sejam propostos considerando o rigor e o método científico, bem como outros conceitos fundamentais para a produção do conhecimento científico.\nChamada\nAnexo I - Critérios para avaliação de Bolsas de Produtividade\nAnexo I - Critérios para avaliação de Bolsas de Produtividade - versão atualizada em 13/10/2026\nFAQ\nErrata nº 1 - 13/10/2026\nO CNPq informa alteração no critério de julgamento do CA-DT, constante do Anexo I da Chamada. A versão atualizada consta com a modificação assinalada em vermelho.\nInscrições:\n07/10/2026 a 07/01/2027",
+      "judgment": "supported",
+      "certainty": "supported_observation",
+      "error_codes": [],
+      "severity": "info",
+      "rationale": "O trecho identifica suporte/financiamento e rota ou intervalo de submissão. Confirmação de instrumento não é garantia de aprovação, elegibilidade completa ou janela aberta.",
+      "expected_behavior": "Exigir contexto do instrumento e preservar incerteza de acesso/condições.",
+      "root_cause": "classify usa conjunções locais de instrumento/acesso; hierarquia entre páginas não existe.",
+      "root_cause_confidence": "high",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "context_evidence": [
+        {
+          "start": 8213,
+          "end": 8270,
+          "quote": "Chamada CNPq nº 33/2026 - Bolsas de Produtividade do CNPq",
+          "page": null
+        },
+        {
+          "start": 8488,
+          "end": 9183,
+          "quote": "O CNPq torna pública a Chamada CNPq nº 33/2026, que tem por objeto conceder bolsas nas seguintes modalidades: Produtividade em Desenvolvimento Tecnológico e Extensão Inovadora (DT), Produtividade em Pesquisa (PQ) e Produtividade em Pesquisa Sênior (PQSr).\nSão objetivos desta chamada:\na) valorizar pesquisadores que possuam produção científica, tecnológica e de inovação de destaque em suas respectivas áreas do conhecimento;\nb) incentivar o aumento da produção científica, tecnológica e de inovação de qualidade;\nc) selecionar projetos de pesquisa que sejam propostos considerando o rigor e o método científico, bem como outros conceitos fundamentais para a produção do conhecimento científico.",
+          "page": null
+        },
+        {
+          "start": 9542,
+          "end": 9577,
+          "quote": "Inscrições:\n07/10/2026 a 07/01/2027",
+          "page": null
+        }
+      ]
+    },
+    {
+      "case_id": "M30-F01:segment-0011:temporal:classification",
+      "document_id": "M30-F01",
+      "segment_id": "segment-0011",
+      "claim_kind": "temporal",
+      "field_index": null,
+      "field_name": null,
+      "expected_claim": "open",
+      "start": 8213,
+      "end": 9577,
+      "quote": "Chamada CNPq nº 33/2026 - Bolsas de Produtividade do CNPq\nCompartilhe:\nCompartilhe por Facebook\nCompartilhe por Twitter\nCompartilhe por LinkedIn\nCompartilhe por WhatsApp\nlink para Copiar para área de transferência\nPublicado em\n07/10/2026 10h29\nAtualizado em\n13/10/2026 17h16\nO CNPq torna pública a Chamada CNPq nº 33/2026, que tem por objeto conceder bolsas nas seguintes modalidades: Produtividade em Desenvolvimento Tecnológico e Extensão Inovadora (DT), Produtividade em Pesquisa (PQ) e Produtividade em Pesquisa Sênior (PQSr).\nSão objetivos desta chamada:\na) valorizar pesquisadores que possuam produção científica, tecnológica e de inovação de destaque em suas respectivas áreas do conhecimento;\nb) incentivar o aumento da produção científica, tecnológica e de inovação de qualidade;\nc) selecionar projetos de pesquisa que sejam propostos considerando o rigor e o método científico, bem como outros conceitos fundamentais para a produção do conhecimento científico.\nChamada\nAnexo I - Critérios para avaliação de Bolsas de Produtividade\nAnexo I - Critérios para avaliação de Bolsas de Produtividade - versão atualizada em 13/10/2026\nFAQ\nErrata nº 1 - 13/10/2026\nO CNPq informa alteração no critério de julgamento do CA-DT, constante do Anexo I da Chamada. A versão atualizada consta com a modificação assinalada em vermelho.\nInscrições:\n07/10/2026 a 07/01/2027",
+      "judgment": "supported",
+      "certainty": "supported_observation",
+      "error_codes": [],
+      "severity": "info",
+      "rationale": "Intervalo numérico de inscrição contém 2026-10-19. Nenhuma hora/cutoff/timezone foi inferida; anexos não congelados permanecem indisponíveis.",
+      "expected_behavior": "Comparar apenas a janela de inscrições deste registro com a data civil fixa.",
+      "root_cause": "predict reconhece intervalo Inscrições no contêiner local.",
+      "root_cause_confidence": "high",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "context_evidence": [
+        {
+          "start": 8213,
+          "end": 8270,
+          "quote": "Chamada CNPq nº 33/2026 - Bolsas de Produtividade do CNPq",
+          "page": null
+        },
+        {
+          "start": 8488,
+          "end": 9183,
+          "quote": "O CNPq torna pública a Chamada CNPq nº 33/2026, que tem por objeto conceder bolsas nas seguintes modalidades: Produtividade em Desenvolvimento Tecnológico e Extensão Inovadora (DT), Produtividade em Pesquisa (PQ) e Produtividade em Pesquisa Sênior (PQSr).\nSão objetivos desta chamada:\na) valorizar pesquisadores que possuam produção científica, tecnológica e de inovação de destaque em suas respectivas áreas do conhecimento;\nb) incentivar o aumento da produção científica, tecnológica e de inovação de qualidade;\nc) selecionar projetos de pesquisa que sejam propostos considerando o rigor e o método científico, bem como outros conceitos fundamentais para a produção do conhecimento científico.",
+          "page": null
+        },
+        {
+          "start": 9542,
+          "end": 9577,
+          "quote": "Inscrições:\n07/10/2026 a 07/01/2027",
+          "page": null
+        }
+      ]
+    },
+    {
+      "case_id": "M30-F02:segment-0001:discovery:classification",
+      "document_id": "M30-F02",
+      "segment_id": "segment-0001",
+      "claim_kind": "discovery",
+      "field_index": null,
+      "field_name": null,
+      "expected_claim": "confirmed_opportunity",
+      "start": 5593,
+      "end": 6982,
+      "quote": "Chamada CNPq nº 33/2026 - Bolsas de Produtividade do CNPq\nCompartilhe:\nCompartilhe por Facebook\nCompartilhe por Twitter\nCompartilhe por LinkedIn\nCompartilhe por WhatsApp\nlink para Copiar para área de transferência\nPublicado em\n07/10/2026 10h29\nAtualizado em\n13/10/2026 17h16\nO CNPq torna pública a Chamada CNPq nº 33/2026, que tem por objeto conceder bolsas nas seguintes modalidades: Produtividade em Desenvolvimento Tecnológico e Extensão Inovadora (DT), Produtividade em Pesquisa (PQ) e Produtividade em Pesquisa Sênior (PQSr).\nSão objetivos desta chamada:\na) valorizar pesquisadores que possuam produção científica, tecnológica e de inovação de destaque em suas respectivas áreas do conhecimento;\nb) incentivar o aumento da produção científica, tecnológica e de inovação de qualidade;\nc) selecionar projetos de pesquisa que sejam propostos considerando o rigor e o método científico, bem como outros conceitos fundamentais para a produção do conhecimento científico.\nChamada\nAnexo I - Critérios para avaliação de Bolsas de Produtividade\nAnexo I - Critérios para avaliação de Bolsas de Produtividade - versão atualizada em 13/10/2026\nFAQ\nErrata nº 1 - 13/10/2026\nO CNPq informa alteração no critério de julgamento do CA-DT, constante do Anexo I da Chamada. A versão atualizada consta com a modificação assinalada em vermelho.\nInscrições:\n07/10/2026 a 07/01/2027\nTags:\n#chamadas\n#abertas",
+      "judgment": "supported",
+      "certainty": "supported_observation",
+      "error_codes": [],
+      "severity": "info",
+      "rationale": "O trecho identifica suporte/financiamento e rota ou intervalo de submissão. Confirmação de instrumento não é garantia de aprovação, elegibilidade completa ou janela aberta.",
+      "expected_behavior": "Exigir contexto do instrumento e preservar incerteza de acesso/condições.",
+      "root_cause": "classify usa conjunções locais de instrumento/acesso; hierarquia entre páginas não existe.",
+      "root_cause_confidence": "high",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "context_evidence": [
+        {
+          "start": 0,
+          "end": 57,
+          "quote": "Chamada CNPq nº 33/2026 - Bolsas de Produtividade do CNPq",
+          "page": null
+        },
+        {
+          "start": 5868,
+          "end": 6123,
+          "quote": "O CNPq torna pública a Chamada CNPq nº 33/2026, que tem por objeto conceder bolsas nas seguintes modalidades: Produtividade em Desenvolvimento Tecnológico e Extensão Inovadora (DT), Produtividade em Pesquisa (PQ) e Produtividade em Pesquisa Sênior (PQSr).",
+          "page": null
+        },
+        {
+          "start": 6922,
+          "end": 6957,
+          "quote": "Inscrições:\n07/10/2026 a 07/01/2027",
+          "page": null
+        }
+      ]
+    },
+    {
+      "case_id": "M30-F02:segment-0001:temporal:classification",
+      "document_id": "M30-F02",
+      "segment_id": "segment-0001",
+      "claim_kind": "temporal",
+      "field_index": null,
+      "field_name": null,
+      "expected_claim": "open",
+      "start": 5593,
+      "end": 6982,
+      "quote": "Chamada CNPq nº 33/2026 - Bolsas de Produtividade do CNPq\nCompartilhe:\nCompartilhe por Facebook\nCompartilhe por Twitter\nCompartilhe por LinkedIn\nCompartilhe por WhatsApp\nlink para Copiar para área de transferência\nPublicado em\n07/10/2026 10h29\nAtualizado em\n13/10/2026 17h16\nO CNPq torna pública a Chamada CNPq nº 33/2026, que tem por objeto conceder bolsas nas seguintes modalidades: Produtividade em Desenvolvimento Tecnológico e Extensão Inovadora (DT), Produtividade em Pesquisa (PQ) e Produtividade em Pesquisa Sênior (PQSr).\nSão objetivos desta chamada:\na) valorizar pesquisadores que possuam produção científica, tecnológica e de inovação de destaque em suas respectivas áreas do conhecimento;\nb) incentivar o aumento da produção científica, tecnológica e de inovação de qualidade;\nc) selecionar projetos de pesquisa que sejam propostos considerando o rigor e o método científico, bem como outros conceitos fundamentais para a produção do conhecimento científico.\nChamada\nAnexo I - Critérios para avaliação de Bolsas de Produtividade\nAnexo I - Critérios para avaliação de Bolsas de Produtividade - versão atualizada em 13/10/2026\nFAQ\nErrata nº 1 - 13/10/2026\nO CNPq informa alteração no critério de julgamento do CA-DT, constante do Anexo I da Chamada. A versão atualizada consta com a modificação assinalada em vermelho.\nInscrições:\n07/10/2026 a 07/01/2027\nTags:\n#chamadas\n#abertas",
+      "judgment": "supported",
+      "certainty": "supported_observation",
+      "error_codes": [],
+      "severity": "info",
+      "rationale": "Intervalo numérico de inscrição contém 2026-10-19. Nenhuma hora/cutoff/timezone foi inferida; anexos não congelados permanecem indisponíveis.",
+      "expected_behavior": "Comparar apenas a janela de inscrições deste registro com a data civil fixa.",
+      "root_cause": "predict reconhece intervalo Inscrições no contêiner local.",
+      "root_cause_confidence": "high",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "context_evidence": [
+        {
+          "start": 0,
+          "end": 57,
+          "quote": "Chamada CNPq nº 33/2026 - Bolsas de Produtividade do CNPq",
+          "page": null
+        },
+        {
+          "start": 5868,
+          "end": 6123,
+          "quote": "O CNPq torna pública a Chamada CNPq nº 33/2026, que tem por objeto conceder bolsas nas seguintes modalidades: Produtividade em Desenvolvimento Tecnológico e Extensão Inovadora (DT), Produtividade em Pesquisa (PQ) e Produtividade em Pesquisa Sênior (PQSr).",
+          "page": null
+        },
+        {
+          "start": 6922,
+          "end": 6957,
+          "quote": "Inscrições:\n07/10/2026 a 07/01/2027",
+          "page": null
+        }
+      ]
+    },
+    {
+      "case_id": "M30-F05:segment-0003:discovery:classification",
+      "document_id": "M30-F05",
+      "segment_id": "segment-0003",
+      "claim_kind": "discovery",
+      "field_index": null,
+      "field_name": null,
+      "expected_claim": "confirmed_opportunity",
+      "start": 8603,
+      "end": 10879,
+      "quote": "Chamada para projetos de transformação mineral recebe propostas até 30 de novembro\nSeleção conta com orçamento de mais de R$ 200 milhões e contempla cinco linhas temáticas de pesquisa, desenvolvimento tecnológico e inovação\nCompartilhe:\nCompartilhe por Facebook\nCompartilhe por Twitter\nCompartilhe por LinkedIn\nCompartilhe por WhatsApp\nlink para Copiar para área de transferência\nPublicado em\n24/09/2026 16h35\nFoto: Gil Leonardi/Agência Minas\nA Financiadora de Estudos e Projetos (Finep) prorrogou até 30 de novembro o prazo para que empresas apresentem propostas à chamada pública\nFinep Mais Inovação Brasil, Rodada 2, Transformação Mineral\n. A seleção conta com orçamento de R$ 215 milhões em recursos de subvenção econômica destinado a\nprojetos de pesquisa, desenvolvimento tecnológico e inovação\nA chamada apoia projetos com riscos tecnológicos e potencial de impacto para o desenvolvimento da indústria mineral brasileira, distribuídos em cinco linhas: minerais e materiais críticos; mineração urbana, ímãs de terras raras; tecnologias sustentáveis para mineração; e\ndescarbonização\nda transformação mineral.\nAs propostas devem ser executadas por empresas, em parceria com Instituições Científicas, Tecnológicas e de Inovação (\nICTs\n). A Finep é uma empresa pública vinculada ao Ministério da Ciência, Tecnologia e Inovação (MCTI).\nComo participar\nInteressados devem enviar as propostas pela plataforma da Finep. A página da chamada reúne o regulamento e materiais de orientação para cadastro e preenchimento do formulário. As inscrições estão abertas para empresas de todo o País.\nAs sugestões serão avaliadas em duas etapas. A primeira fase verificará se cada projeto atende aos requisitos e às regras da chamada. A segunda fase analisará o mérito, que considera\naspectos\ncomo consistência técnica, grau de inovação e relevância estratégica.\nDúvidas sobre a seleção podem ser encaminhadas para o endereço eletrônico\ncp_transformacao_mineral@finep.gov.br.\nLeia também o edital completo\naqui.\nServiço\nChamada:\nFinep Mais Inovação Brasil, Rodada 2, Transformação Mineral\nPrazo:\n30 de novembro de 2026, às 18h, horário de Brasília\nPúblico-alvo:\nEmpresas em parceria com ICTs\nEdital:\nhttps://www.finep.gov.br/en/e/chamada-publica/222684/754473\nCategoria\nCiência e Tecnologia",
+      "judgment": "supported",
+      "certainty": "supported_observation",
+      "error_codes": [],
+      "severity": "info",
+      "rationale": "O trecho identifica suporte/financiamento e rota ou intervalo de submissão. Confirmação de instrumento não é garantia de aprovação, elegibilidade completa ou janela aberta.",
+      "expected_behavior": "Exigir contexto do instrumento e preservar incerteza de acesso/condições.",
+      "root_cause": "classify usa conjunções locais de instrumento/acesso; hierarquia entre páginas não existe.",
+      "root_cause_confidence": "high",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "context_evidence": [
+        {
+          "start": 9185,
+          "end": 9244,
+          "quote": "Finep Mais Inovação Brasil, Rodada 2, Transformação Mineral",
+          "page": null
+        },
+        {
+          "start": 9247,
+          "end": 9341,
+          "quote": "A seleção conta com orçamento de R$ 215 milhões em recursos de subvenção econômica destinado a",
+          "page": null
+        },
+        {
+          "start": 10685,
+          "end": 10736,
+          "quote": "30 de novembro de 2026, às 18h, horário de Brasília",
+          "page": null
+        },
+        {
+          "start": 10751,
+          "end": 10780,
+          "quote": "Empresas em parceria com ICTs",
+          "page": null
+        },
+        {
+          "start": 10132,
+          "end": 10189,
+          "quote": "As inscrições estão abertas para empresas de todo o País.",
+          "page": null
+        }
+      ]
+    },
+    {
+      "case_id": "M30-F06:segment-0003:discovery:classification",
+      "document_id": "M30-F06",
+      "segment_id": "segment-0003",
+      "claim_kind": "discovery",
+      "field_index": null,
+      "field_name": null,
+      "expected_claim": "confirmed_opportunity",
+      "start": 8611,
+      "end": 12437,
+      "quote": "Chamada Eureka recebe propostas para projetos de resiliência e resposta a desastres\nEmpresas brasileiras com projetos aprovados na etapa internacional podem enviar propostas à Finep até 6 de novembro\nCompartilhe:\nCompartilhe por Facebook\nCompartilhe por Twitter\nCompartilhe por LinkedIn\nCompartilhe por WhatsApp\nlink para Copiar para área de transferência\nPublicado em\n15/10/2026 17h18\nO Ministério da Ciência, Tecnologia e Inovação (MCTI) e a Financiadora de Estudos e Projetos (Finep) recebem, até 6 de novembro, propostas para a fase nacional da chamada do\nPrograma de Cooperação para Inovação da Rede Eureka\nvoltada à resiliência, resposta e recuperação de desastres. A seleção conta com recursos não reembolsáveis do Fundo Nacional de Desenvolvimento Científico e Tecnológico (FNDCT) e é destinada a empresas brasileiras participantes de projetos aprovados na etapa internacional e contemplados com o Selo Eureka.\nA chamada prevê até R$ 7 milhões em recursos de subvenção econômica para a participação brasileira nos projetos. O valor solicitado à Finep em cada proposta deve girar em torno de R$ 1 milhão e R$ 5 milhões, de acordo com o porte da empresa e as regras estabelecidas no edital.\nPodem\nser apoiadas soluções tecnológicas relacionadas à prevenção, preparação, resposta e recuperação diante de desastres. Entre os temas previstos estão infraestrutura resiliente, inteligência artificial, sensoriamento remoto, sistemas de comunicação de emergência, tecnologias de busca e salvamento, dispositivos médicos, novos materiais, manufatura avançada, sustentabilidade e gestão de resíduos pós-desastre.\nExemplos de soluções para prevenção, preparação, respostas e recuperação diante de desastres - Ascom/MCTI\nA seleção integra uma ação internacional da\nRede Eureka\n, que reúne instituições de financiamento e inovação de diferentes países. Participaram da etapa internacional organizações da Áustria, Bélgica (Flandres), Brasil, Chile, Espanha, Lituânia, Turquia e Ucrânia.\nOs projetos devem envolver cooperação internacional entre participantes de pelo menos dois países e ter como objetivo o desenvolvimento de produto, processo ou serviço inovador com perspectiva de comercialização. As atividades apoiadas devem estar compreendidas entre os níveis de maturidade tecnológica TRL 4 e TRL 8, e o prazo de execução pode chegar a 36 meses.\nNa fase nacional, apenas empresas brasileiras que participam de consórcios aprovados na fase internacional e que possuem Selo Eureka podem apresentar propostas. As empresas devem detalhar sua participação, em português, na plataforma de apoio e financiamento da Finep e anexar a proposta internacional completa, em inglês, aprovada na primeira etapa.\nAs Instituições Científicas, Tecnológicas e de Inovação (\nICTs\n) podem participar dos projetos como prestadoras de serviços de pesquisa e extensão, incluindo atividades de desenvolvimento, validação, prototipagem e transferência de tecnologia, conforme as condições previstas no edital.\nSegundo o edital, a chamada exige contrapartida financeira das empresas beneficiárias. O percentual mínimo varia conforme o porte da empresa e vai de 10% a 50% do valor total da proposta.\nAlém das condições financeiras, a proposta deve manter correspondência com o projeto aprovado na etapa internacional, incluindo os parceiros participantes, o objeto e os objetivos do projeto. A proposta também precisa incluir cronograma, orçamento e estratégia para desenvolver e comercializar a solução.\nO prazo final para o envio das propostas é 6 de novembro, às 17h, no horário de Brasília. O resultado preliminar da etapa de habilitação está previsto para 17 de novembro, e o resultado da avaliação conclusiva, para 18 de dezembro.\nDúvidas sobre a seleção podem ser encaminhadas para\ncp_projetos_eureka@finep.gov.br\n.\nCategoria\nCiência e Tecnologia",
+      "judgment": "supported",
+      "certainty": "supported_observation",
+      "error_codes": [],
+      "severity": "info",
+      "rationale": "O trecho identifica suporte/financiamento e rota ou intervalo de submissão. Confirmação de instrumento não é garantia de aprovação, elegibilidade completa ou janela aberta.",
+      "expected_behavior": "Exigir contexto do instrumento e preservar incerteza de acesso/condições.",
+      "root_cause": "classify usa conjunções locais de instrumento/acesso; hierarquia entre páginas não existe.",
+      "root_cause_confidence": "high",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "context_evidence": [
+        {
+          "start": 9171,
+          "end": 9222,
+          "quote": "Programa de Cooperação para Inovação da Rede Eureka",
+          "page": null
+        },
+        {
+          "start": 9530,
+          "end": 9642,
+          "quote": "A chamada prevê até R$ 7 milhões em recursos de subvenção econômica para a participação brasileira nos projetos.",
+          "page": null
+        },
+        {
+          "start": 10958,
+          "end": 11118,
+          "quote": "Na fase nacional, apenas empresas brasileiras que participam de consórcios aprovados na fase internacional e que possuem Selo Eureka podem apresentar propostas.",
+          "page": null
+        },
+        {
+          "start": 12089,
+          "end": 12178,
+          "quote": "O prazo final para o envio das propostas é 6 de novembro, às 17h, no horário de Brasília.",
+          "page": null
+        },
+        {
+          "start": 8967,
+          "end": 8996,
+          "quote": "Publicado em\n15/10/2026 17h18",
+          "page": null
+        }
+      ]
+    },
+    {
+      "case_id": "M30-F07:segment-0016:discovery:classification",
+      "document_id": "M30-F07",
+      "segment_id": "segment-0016",
+      "claim_kind": "discovery",
+      "field_index": null,
+      "field_name": null,
+      "expected_claim": "confirmed_opportunity",
+      "start": 12658,
+      "end": 14130,
+      "quote": "6.6.4 - Caso seja necessário utilizar figuras, gráficos, fotos e/ou outros, para esclarecer a\nargumentação da proposta, estes não devem comprometer a capacidade do arquivo, pois as\npropostas que excederem o tamanho estipulado não serão recebidas pelo guichê eletrônico do\nCNPq.\n6.7 - Após o envio, será gerado um recibo eletrônico de protocolo da proposta submetida, o qual\nservirá como comprovante da transmissão.\n6.8 - Será aceita uma única proposta por proponente, vinculada a apenas uma das Linhas indicadas\nno item 1.2, sendo vedado o remanejamento de propostas entre as Linhas.\n6.9 - Na hipótese de envio de mais de uma proposta pelo mesmo proponente, respeitando-se o\nprazo limite estipulado para submissão das propostas, será considerada para análise somente a\núltima proposta recebida.\n6.10 - Constatado o envio de propostas idênticas, apresentadas por diferentes proponentes, todas\nas propostas nesta condição serão indeferidas.\n6.11 - O proponente deve se assegurar de que seu Currículo Lattes possui informações completas,\ncorretas e atualizadas, evitando especialmente a duplicação de itens ou sua classificação de maneira\nequivocada.\n6.11.1 - A classificação incorreta da produção científica poderá prejudicar a análise de mérito do\npedido.\n7 - Julgamento\n7.1 - Critérios do Julgamento\n7.1.1 - Os critérios para classificação das propostas quanto ao mérito técnico-científico e sua\nadequação orçamentária são:\nCritérios para Julgamento para Bolsas PQ e PQ-Sr",
+      "judgment": "partial",
+      "certainty": "strong_hypothesis",
+      "error_codes": [
+        "EVIDENCE_SEMANTIC_MISMATCH"
+      ],
+      "severity": "medium",
+      "rationale": "A página contém condições de submissão de uma chamada real, mas isoladamente é trecho procedimental sem identidade completa. A confirmação é defensável no documento, menos sustentada só nesta unidade.",
+      "expected_behavior": "Exigir contexto do instrumento e preservar incerteza de acesso/condições.",
+      "root_cause": "classify usa conjunções locais de instrumento/acesso; hierarquia entre páginas não existe.",
+      "root_cause_confidence": "high",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "context_evidence": []
+    },
+    {
+      "case_id": "M30-F08:segment-0001:discovery:classification",
+      "document_id": "M30-F08",
+      "segment_id": "segment-0001",
+      "claim_kind": "discovery",
+      "field_index": null,
+      "field_name": null,
+      "expected_claim": "confirmed_opportunity",
+      "start": 5691,
+      "end": 6667,
+      "quote": "Chamada Pública CNPq/CAPES Nº 30/2026 – Programa de Mestrado e Doutorado Acadêmico para Inovação – MAI/DAI\nCompartilhe:\nCompartilhe por Facebook\nCompartilhe por Twitter\nCompartilhe por LinkedIn\nCompartilhe por WhatsApp\nlink para Copiar para área de transferência\nPublicado em\n19/08/2026 08h53\nAtualizado em\n13/10/2026 12h34\nA edição de 2026 do Programa de Mestrado e Doutorado para Inovação (MAI/DAI), que estimula a realização de pesquisas de mestrado e doutorado em universidades em parceria com empresas, recebe propostas até o dia 11 de dezembro. A chamada é realizada pelo Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq) e conta com a parceria da Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES).\nChamada\nAnexo II: Plano de Trabalho Programa MAI/DAI\nAnexo III: Declaração Institucional do Representante MAI/DAI\nAnexo IV: Carta de Concordância da Instituição Parceira\nFAQ\nInscrições:\n19/08/2026 a 11/12/2026\nTags:\n#chamadas\n#abertas",
+      "judgment": "supported",
+      "certainty": "supported_observation",
+      "error_codes": [],
+      "severity": "info",
+      "rationale": "O trecho identifica suporte/financiamento e rota ou intervalo de submissão. Confirmação de instrumento não é garantia de aprovação, elegibilidade completa ou janela aberta.",
+      "expected_behavior": "Exigir contexto do instrumento e preservar incerteza de acesso/condições.",
+      "root_cause": "classify usa conjunções locais de instrumento/acesso; hierarquia entre páginas não existe.",
+      "root_cause_confidence": "high",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "context_evidence": [
+        {
+          "start": 0,
+          "end": 106,
+          "quote": "Chamada Pública CNPq/CAPES Nº 30/2026 – Programa de Mestrado e Doutorado Acadêmico para Inovação – MAI/DAI",
+          "page": null
+        },
+        {
+          "start": 6015,
+          "end": 6432,
+          "quote": "A edição de 2026 do Programa de Mestrado e Doutorado para Inovação (MAI/DAI), que estimula a realização de pesquisas de mestrado e doutorado em universidades em parceria com empresas, recebe propostas até o dia 11 de dezembro. A chamada é realizada pelo Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq) e conta com a parceria da Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES).",
+          "page": null
+        },
+        {
+          "start": 6607,
+          "end": 6642,
+          "quote": "Inscrições:\n19/08/2026 a 11/12/2026",
+          "page": null
+        }
+      ]
+    },
+    {
+      "case_id": "M30-F08:segment-0001:temporal:classification",
+      "document_id": "M30-F08",
+      "segment_id": "segment-0001",
+      "claim_kind": "temporal",
+      "field_index": null,
+      "field_name": null,
+      "expected_claim": "open",
+      "start": 5691,
+      "end": 6667,
+      "quote": "Chamada Pública CNPq/CAPES Nº 30/2026 – Programa de Mestrado e Doutorado Acadêmico para Inovação – MAI/DAI\nCompartilhe:\nCompartilhe por Facebook\nCompartilhe por Twitter\nCompartilhe por LinkedIn\nCompartilhe por WhatsApp\nlink para Copiar para área de transferência\nPublicado em\n19/08/2026 08h53\nAtualizado em\n13/10/2026 12h34\nA edição de 2026 do Programa de Mestrado e Doutorado para Inovação (MAI/DAI), que estimula a realização de pesquisas de mestrado e doutorado em universidades em parceria com empresas, recebe propostas até o dia 11 de dezembro. A chamada é realizada pelo Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq) e conta com a parceria da Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES).\nChamada\nAnexo II: Plano de Trabalho Programa MAI/DAI\nAnexo III: Declaração Institucional do Representante MAI/DAI\nAnexo IV: Carta de Concordância da Instituição Parceira\nFAQ\nInscrições:\n19/08/2026 a 11/12/2026\nTags:\n#chamadas\n#abertas",
+      "judgment": "supported",
+      "certainty": "supported_observation",
+      "error_codes": [],
+      "severity": "info",
+      "rationale": "Intervalo numérico de inscrição contém 2026-10-19. Nenhuma hora/cutoff/timezone foi inferida; anexos não congelados permanecem indisponíveis.",
+      "expected_behavior": "Comparar apenas a janela de inscrições deste registro com a data civil fixa.",
+      "root_cause": "predict reconhece intervalo Inscrições no contêiner local.",
+      "root_cause_confidence": "high",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "context_evidence": [
+        {
+          "start": 0,
+          "end": 106,
+          "quote": "Chamada Pública CNPq/CAPES Nº 30/2026 – Programa de Mestrado e Doutorado Acadêmico para Inovação – MAI/DAI",
+          "page": null
+        },
+        {
+          "start": 6015,
+          "end": 6432,
+          "quote": "A edição de 2026 do Programa de Mestrado e Doutorado para Inovação (MAI/DAI), que estimula a realização de pesquisas de mestrado e doutorado em universidades em parceria com empresas, recebe propostas até o dia 11 de dezembro. A chamada é realizada pelo Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq) e conta com a parceria da Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES).",
+          "page": null
+        },
+        {
+          "start": 6607,
+          "end": 6642,
+          "quote": "Inscrições:\n19/08/2026 a 11/12/2026",
+          "page": null
+        }
+      ]
+    },
+    {
+      "case_id": "M30-N04:segment-0010:field:0",
+      "document_id": "M30-N04",
+      "segment_id": "segment-0010",
+      "claim_kind": "field",
+      "field_index": 0,
+      "field_name": "proposal_amount_expression",
+      "expected_claim": "R$ 50 milhões",
+      "start": 5020,
+      "end": 5411,
+      "quote": "Todos os projetos estão enquadrados dentro de uma ou mais missões da Nova Indústria Brasil (NIB). Do valor total da chamada, a região Norte recebeu R$ 50 milhões; a região Centro-Oeste, R$ 100 milhões; e a região Nordeste, R$ 150 milhões. Os limites de subvenção para cada proposta partiam de R$ 2 milhões a R$ 5 milhões, sendo que o valor médio dos projetos aprovados foi de R$ 3,8 milhões.",
+      "judgment": "unsupported",
+      "certainty": "confirmed_defect",
+      "error_codes": [
+        "FINANCIAL_ROLE_CONFUSION",
+        "EVIDENCE_SEMANTIC_MISMATCH"
+      ],
+      "severity": "high",
+      "rationale": "R$ 50/100/150 milhões são alocações regionais do total da chamada. O mesmo parágrafo menciona limites POR PROPOSTA de R$ 2 a 5 milhões. Os três primeiros não são valores por proposta.",
+      "expected_behavior": "Separar alocação regional, faixa por proposta e média de projetos; preservar qualificadores.",
+      "root_cause": "rules.py:133-153 usa janela +/-120 caracteres e detecta cada proposta posterior à alocação regional.",
+      "root_cause_confidence": "high",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "context_evidence": [
+        {
+          "start": 2778,
+          "end": 5993,
+          "quote": "MCTI e Finep anunciam aporte de R$ 450 milhões para 114 empresas das regiões Norte, Nordeste e Centro-Oeste\nPostado em:\n16/10/26 08:18\nTemas:\nTags:\nCompartilhar:\nEdital, com volume inicial de R$ 300 milhões, receberá suplementação de 50% para incluir mais projetos das regiões\nA ministra Luciana Santos, do Ministério da Ciência, Tecnologia e Inovação (MCTI) anunciou hoje (16), no auditório da Sudene, no Recife (PE), os resultados da segunda rodada da chamada Mais Inovação Brasil Subvenção Econômica, edital da Finep (Financiadora de Estudos e Projetos, agência de inovação vinculada ao MCTI) que direcionava, inicialmente, R$ 300 milhões em recursos não reembolsáveis para empresas de todos os portes que atuam nas regiões Norte, Nordeste e Centro-Oeste. O financiamento irá fomentar 78 projetos inovadores e de risco tecnológico com impacto no desenvolvimento regional e relevância social. A ministra também anunciou a complementação de R$ 150 milhões para a chamada, que deve beneficiar mais 36 projetos já analisados e com recomendação de contratação, mas que ficaram fora do orçamento original. Com os novos recursos, serão 114 propostas beneficiadas e 50% de aumento no volume total de recursos.\nLançada em fevereiro de 2026, a chamada recebeu 587 propostas de empresas das regiões. Destes, 400 projetos foram habilitados para avaliação dos técnicos da Finep em parceria inédita com analistas do Sebrae e das três Superintendências Regionais, Sudeco (Superintendência de Desenvolvimento do Centro-Oeste), Sudene (Superintendência de Desenvolvimento do Nordeste) e Sudam (Superintendência de Desenvolvimento da Amazônia).\nEntre os projetos aprovados inicialmente, 75% são de microempresas (faturamento abaixo de R$ 1 milhão) e empresas de pequeno porte (faturamento de R$ 1 milhão até R$ 4,8 milhões). A chamada também vai beneficiar 44 empresas que, pela primeira vez, receberão subvenção da agência, representando 56% das propostas aprovadas.\nEmpresas sediadas em 35 cidades das regiões serão beneficiadas pelo edital, sendo que sete cidades serão atendidas pela primeira vez em uma chamada da Finep (Inhumas/GO, Santa Bárbara do Pará/PA, Salgueiro/PE, Campo Novo do Parecis/MT, Luís Eduardo Magalhães/BA,Goiana/PE e Agrestina/PE).\nTodos os projetos estão enquadrados dentro de uma ou mais missões da Nova Indústria Brasil (NIB). Do valor total da chamada, a região Norte recebeu R$ 50 milhões; a região Centro-Oeste, R$ 100 milhões; e a região Nordeste, R$ 150 milhões. Os limites de subvenção para cada proposta partiam de R$ 2 milhões a R$ 5 milhões, sendo que o valor médio dos projetos aprovados foi de R$ 3,8 milhões.\n“O foco primordial desta chamada é o amadurecimento das vocações produtivas dessas regiões, promovendo um crescimento econômico que seja sustentável e inclusivo. Com este resultado, a Finep revoluciona a capilaridade e o alcance da Subvenção Econômica direta nas três regiões que serão atendidas e intensifica parceria das empresas selecionadas com Instituições de Ciência e Tecnologia de diversos pontos do país. São 36 instituições participando, em uma expectativa de 15% do valor da chamada serem comprometidos nestas parcerias”, afirmou Luiz Antônio Elias, presidente da Finep.",
+          "page": null
+        }
+      ]
+    },
+    {
+      "case_id": "M30-N04:segment-0010:field:1",
+      "document_id": "M30-N04",
+      "segment_id": "segment-0010",
+      "claim_kind": "field",
+      "field_index": 1,
+      "field_name": "proposal_amount_expression",
+      "expected_claim": "R$ 100 milhões",
+      "start": 5020,
+      "end": 5411,
+      "quote": "Todos os projetos estão enquadrados dentro de uma ou mais missões da Nova Indústria Brasil (NIB). Do valor total da chamada, a região Norte recebeu R$ 50 milhões; a região Centro-Oeste, R$ 100 milhões; e a região Nordeste, R$ 150 milhões. Os limites de subvenção para cada proposta partiam de R$ 2 milhões a R$ 5 milhões, sendo que o valor médio dos projetos aprovados foi de R$ 3,8 milhões.",
+      "judgment": "unsupported",
+      "certainty": "confirmed_defect",
+      "error_codes": [
+        "FINANCIAL_ROLE_CONFUSION",
+        "EVIDENCE_SEMANTIC_MISMATCH"
+      ],
+      "severity": "high",
+      "rationale": "R$ 50/100/150 milhões são alocações regionais do total da chamada. O mesmo parágrafo menciona limites POR PROPOSTA de R$ 2 a 5 milhões. Os três primeiros não são valores por proposta.",
+      "expected_behavior": "Separar alocação regional, faixa por proposta e média de projetos; preservar qualificadores.",
+      "root_cause": "rules.py:133-153 usa janela +/-120 caracteres e detecta cada proposta posterior à alocação regional.",
+      "root_cause_confidence": "high",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "context_evidence": [
+        {
+          "start": 2778,
+          "end": 5993,
+          "quote": "MCTI e Finep anunciam aporte de R$ 450 milhões para 114 empresas das regiões Norte, Nordeste e Centro-Oeste\nPostado em:\n16/10/26 08:18\nTemas:\nTags:\nCompartilhar:\nEdital, com volume inicial de R$ 300 milhões, receberá suplementação de 50% para incluir mais projetos das regiões\nA ministra Luciana Santos, do Ministério da Ciência, Tecnologia e Inovação (MCTI) anunciou hoje (16), no auditório da Sudene, no Recife (PE), os resultados da segunda rodada da chamada Mais Inovação Brasil Subvenção Econômica, edital da Finep (Financiadora de Estudos e Projetos, agência de inovação vinculada ao MCTI) que direcionava, inicialmente, R$ 300 milhões em recursos não reembolsáveis para empresas de todos os portes que atuam nas regiões Norte, Nordeste e Centro-Oeste. O financiamento irá fomentar 78 projetos inovadores e de risco tecnológico com impacto no desenvolvimento regional e relevância social. A ministra também anunciou a complementação de R$ 150 milhões para a chamada, que deve beneficiar mais 36 projetos já analisados e com recomendação de contratação, mas que ficaram fora do orçamento original. Com os novos recursos, serão 114 propostas beneficiadas e 50% de aumento no volume total de recursos.\nLançada em fevereiro de 2026, a chamada recebeu 587 propostas de empresas das regiões. Destes, 400 projetos foram habilitados para avaliação dos técnicos da Finep em parceria inédita com analistas do Sebrae e das três Superintendências Regionais, Sudeco (Superintendência de Desenvolvimento do Centro-Oeste), Sudene (Superintendência de Desenvolvimento do Nordeste) e Sudam (Superintendência de Desenvolvimento da Amazônia).\nEntre os projetos aprovados inicialmente, 75% são de microempresas (faturamento abaixo de R$ 1 milhão) e empresas de pequeno porte (faturamento de R$ 1 milhão até R$ 4,8 milhões). A chamada também vai beneficiar 44 empresas que, pela primeira vez, receberão subvenção da agência, representando 56% das propostas aprovadas.\nEmpresas sediadas em 35 cidades das regiões serão beneficiadas pelo edital, sendo que sete cidades serão atendidas pela primeira vez em uma chamada da Finep (Inhumas/GO, Santa Bárbara do Pará/PA, Salgueiro/PE, Campo Novo do Parecis/MT, Luís Eduardo Magalhães/BA,Goiana/PE e Agrestina/PE).\nTodos os projetos estão enquadrados dentro de uma ou mais missões da Nova Indústria Brasil (NIB). Do valor total da chamada, a região Norte recebeu R$ 50 milhões; a região Centro-Oeste, R$ 100 milhões; e a região Nordeste, R$ 150 milhões. Os limites de subvenção para cada proposta partiam de R$ 2 milhões a R$ 5 milhões, sendo que o valor médio dos projetos aprovados foi de R$ 3,8 milhões.\n“O foco primordial desta chamada é o amadurecimento das vocações produtivas dessas regiões, promovendo um crescimento econômico que seja sustentável e inclusivo. Com este resultado, a Finep revoluciona a capilaridade e o alcance da Subvenção Econômica direta nas três regiões que serão atendidas e intensifica parceria das empresas selecionadas com Instituições de Ciência e Tecnologia de diversos pontos do país. São 36 instituições participando, em uma expectativa de 15% do valor da chamada serem comprometidos nestas parcerias”, afirmou Luiz Antônio Elias, presidente da Finep.",
+          "page": null
+        }
+      ]
+    },
+    {
+      "case_id": "M30-N04:segment-0010:field:2",
+      "document_id": "M30-N04",
+      "segment_id": "segment-0010",
+      "claim_kind": "field",
+      "field_index": 2,
+      "field_name": "proposal_amount_expression",
+      "expected_claim": "R$ 150 milhões",
+      "start": 5020,
+      "end": 5411,
+      "quote": "Todos os projetos estão enquadrados dentro de uma ou mais missões da Nova Indústria Brasil (NIB). Do valor total da chamada, a região Norte recebeu R$ 50 milhões; a região Centro-Oeste, R$ 100 milhões; e a região Nordeste, R$ 150 milhões. Os limites de subvenção para cada proposta partiam de R$ 2 milhões a R$ 5 milhões, sendo que o valor médio dos projetos aprovados foi de R$ 3,8 milhões.",
+      "judgment": "unsupported",
+      "certainty": "confirmed_defect",
+      "error_codes": [
+        "FINANCIAL_ROLE_CONFUSION",
+        "EVIDENCE_SEMANTIC_MISMATCH"
+      ],
+      "severity": "high",
+      "rationale": "R$ 50/100/150 milhões são alocações regionais do total da chamada. O mesmo parágrafo menciona limites POR PROPOSTA de R$ 2 a 5 milhões. Os três primeiros não são valores por proposta.",
+      "expected_behavior": "Separar alocação regional, faixa por proposta e média de projetos; preservar qualificadores.",
+      "root_cause": "rules.py:133-153 usa janela +/-120 caracteres e detecta cada proposta posterior à alocação regional.",
+      "root_cause_confidence": "high",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "context_evidence": [
+        {
+          "start": 2778,
+          "end": 5993,
+          "quote": "MCTI e Finep anunciam aporte de R$ 450 milhões para 114 empresas das regiões Norte, Nordeste e Centro-Oeste\nPostado em:\n16/10/26 08:18\nTemas:\nTags:\nCompartilhar:\nEdital, com volume inicial de R$ 300 milhões, receberá suplementação de 50% para incluir mais projetos das regiões\nA ministra Luciana Santos, do Ministério da Ciência, Tecnologia e Inovação (MCTI) anunciou hoje (16), no auditório da Sudene, no Recife (PE), os resultados da segunda rodada da chamada Mais Inovação Brasil Subvenção Econômica, edital da Finep (Financiadora de Estudos e Projetos, agência de inovação vinculada ao MCTI) que direcionava, inicialmente, R$ 300 milhões em recursos não reembolsáveis para empresas de todos os portes que atuam nas regiões Norte, Nordeste e Centro-Oeste. O financiamento irá fomentar 78 projetos inovadores e de risco tecnológico com impacto no desenvolvimento regional e relevância social. A ministra também anunciou a complementação de R$ 150 milhões para a chamada, que deve beneficiar mais 36 projetos já analisados e com recomendação de contratação, mas que ficaram fora do orçamento original. Com os novos recursos, serão 114 propostas beneficiadas e 50% de aumento no volume total de recursos.\nLançada em fevereiro de 2026, a chamada recebeu 587 propostas de empresas das regiões. Destes, 400 projetos foram habilitados para avaliação dos técnicos da Finep em parceria inédita com analistas do Sebrae e das três Superintendências Regionais, Sudeco (Superintendência de Desenvolvimento do Centro-Oeste), Sudene (Superintendência de Desenvolvimento do Nordeste) e Sudam (Superintendência de Desenvolvimento da Amazônia).\nEntre os projetos aprovados inicialmente, 75% são de microempresas (faturamento abaixo de R$ 1 milhão) e empresas de pequeno porte (faturamento de R$ 1 milhão até R$ 4,8 milhões). A chamada também vai beneficiar 44 empresas que, pela primeira vez, receberão subvenção da agência, representando 56% das propostas aprovadas.\nEmpresas sediadas em 35 cidades das regiões serão beneficiadas pelo edital, sendo que sete cidades serão atendidas pela primeira vez em uma chamada da Finep (Inhumas/GO, Santa Bárbara do Pará/PA, Salgueiro/PE, Campo Novo do Parecis/MT, Luís Eduardo Magalhães/BA,Goiana/PE e Agrestina/PE).\nTodos os projetos estão enquadrados dentro de uma ou mais missões da Nova Indústria Brasil (NIB). Do valor total da chamada, a região Norte recebeu R$ 50 milhões; a região Centro-Oeste, R$ 100 milhões; e a região Nordeste, R$ 150 milhões. Os limites de subvenção para cada proposta partiam de R$ 2 milhões a R$ 5 milhões, sendo que o valor médio dos projetos aprovados foi de R$ 3,8 milhões.\n“O foco primordial desta chamada é o amadurecimento das vocações produtivas dessas regiões, promovendo um crescimento econômico que seja sustentável e inclusivo. Com este resultado, a Finep revoluciona a capilaridade e o alcance da Subvenção Econômica direta nas três regiões que serão atendidas e intensifica parceria das empresas selecionadas com Instituições de Ciência e Tecnologia de diversos pontos do país. São 36 instituições participando, em uma expectativa de 15% do valor da chamada serem comprometidos nestas parcerias”, afirmou Luiz Antônio Elias, presidente da Finep.",
+          "page": null
+        }
+      ]
+    },
+    {
+      "case_id": "M30-N04:segment-0010:field:3",
+      "document_id": "M30-N04",
+      "segment_id": "segment-0010",
+      "claim_kind": "field",
+      "field_index": 3,
+      "field_name": "proposal_amount_expression",
+      "expected_claim": "R$ 2 milhões",
+      "start": 5020,
+      "end": 5411,
+      "quote": "Todos os projetos estão enquadrados dentro de uma ou mais missões da Nova Indústria Brasil (NIB). Do valor total da chamada, a região Norte recebeu R$ 50 milhões; a região Centro-Oeste, R$ 100 milhões; e a região Nordeste, R$ 150 milhões. Os limites de subvenção para cada proposta partiam de R$ 2 milhões a R$ 5 milhões, sendo que o valor médio dos projetos aprovados foi de R$ 3,8 milhões.",
+      "judgment": "supported",
+      "certainty": "supported_observation",
+      "error_codes": [],
+      "severity": "info",
+      "rationale": "R$ 2/5 milhões são extremos do limite por proposta, e R$ 3,8 milhões é média dos projetos aprovados. O papel genérico proposal_amount_expression é suportado; não implica que qualquer deles seja ticket garantido.",
+      "expected_behavior": "Separar alocação regional, faixa por proposta e média de projetos; preservar qualificadores.",
+      "root_cause": "rules.py:133-153 usa janela +/-120 caracteres e detecta cada proposta posterior à alocação regional.",
+      "root_cause_confidence": "high",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "context_evidence": [
+        {
+          "start": 2778,
+          "end": 5993,
+          "quote": "MCTI e Finep anunciam aporte de R$ 450 milhões para 114 empresas das regiões Norte, Nordeste e Centro-Oeste\nPostado em:\n16/10/26 08:18\nTemas:\nTags:\nCompartilhar:\nEdital, com volume inicial de R$ 300 milhões, receberá suplementação de 50% para incluir mais projetos das regiões\nA ministra Luciana Santos, do Ministério da Ciência, Tecnologia e Inovação (MCTI) anunciou hoje (16), no auditório da Sudene, no Recife (PE), os resultados da segunda rodada da chamada Mais Inovação Brasil Subvenção Econômica, edital da Finep (Financiadora de Estudos e Projetos, agência de inovação vinculada ao MCTI) que direcionava, inicialmente, R$ 300 milhões em recursos não reembolsáveis para empresas de todos os portes que atuam nas regiões Norte, Nordeste e Centro-Oeste. O financiamento irá fomentar 78 projetos inovadores e de risco tecnológico com impacto no desenvolvimento regional e relevância social. A ministra também anunciou a complementação de R$ 150 milhões para a chamada, que deve beneficiar mais 36 projetos já analisados e com recomendação de contratação, mas que ficaram fora do orçamento original. Com os novos recursos, serão 114 propostas beneficiadas e 50% de aumento no volume total de recursos.\nLançada em fevereiro de 2026, a chamada recebeu 587 propostas de empresas das regiões. Destes, 400 projetos foram habilitados para avaliação dos técnicos da Finep em parceria inédita com analistas do Sebrae e das três Superintendências Regionais, Sudeco (Superintendência de Desenvolvimento do Centro-Oeste), Sudene (Superintendência de Desenvolvimento do Nordeste) e Sudam (Superintendência de Desenvolvimento da Amazônia).\nEntre os projetos aprovados inicialmente, 75% são de microempresas (faturamento abaixo de R$ 1 milhão) e empresas de pequeno porte (faturamento de R$ 1 milhão até R$ 4,8 milhões). A chamada também vai beneficiar 44 empresas que, pela primeira vez, receberão subvenção da agência, representando 56% das propostas aprovadas.\nEmpresas sediadas em 35 cidades das regiões serão beneficiadas pelo edital, sendo que sete cidades serão atendidas pela primeira vez em uma chamada da Finep (Inhumas/GO, Santa Bárbara do Pará/PA, Salgueiro/PE, Campo Novo do Parecis/MT, Luís Eduardo Magalhães/BA,Goiana/PE e Agrestina/PE).\nTodos os projetos estão enquadrados dentro de uma ou mais missões da Nova Indústria Brasil (NIB). Do valor total da chamada, a região Norte recebeu R$ 50 milhões; a região Centro-Oeste, R$ 100 milhões; e a região Nordeste, R$ 150 milhões. Os limites de subvenção para cada proposta partiam de R$ 2 milhões a R$ 5 milhões, sendo que o valor médio dos projetos aprovados foi de R$ 3,8 milhões.\n“O foco primordial desta chamada é o amadurecimento das vocações produtivas dessas regiões, promovendo um crescimento econômico que seja sustentável e inclusivo. Com este resultado, a Finep revoluciona a capilaridade e o alcance da Subvenção Econômica direta nas três regiões que serão atendidas e intensifica parceria das empresas selecionadas com Instituições de Ciência e Tecnologia de diversos pontos do país. São 36 instituições participando, em uma expectativa de 15% do valor da chamada serem comprometidos nestas parcerias”, afirmou Luiz Antônio Elias, presidente da Finep.",
+          "page": null
+        }
+      ]
+    },
+    {
+      "case_id": "M30-N04:segment-0010:field:4",
+      "document_id": "M30-N04",
+      "segment_id": "segment-0010",
+      "claim_kind": "field",
+      "field_index": 4,
+      "field_name": "proposal_amount_expression",
+      "expected_claim": "R$ 5 milhões",
+      "start": 5020,
+      "end": 5411,
+      "quote": "Todos os projetos estão enquadrados dentro de uma ou mais missões da Nova Indústria Brasil (NIB). Do valor total da chamada, a região Norte recebeu R$ 50 milhões; a região Centro-Oeste, R$ 100 milhões; e a região Nordeste, R$ 150 milhões. Os limites de subvenção para cada proposta partiam de R$ 2 milhões a R$ 5 milhões, sendo que o valor médio dos projetos aprovados foi de R$ 3,8 milhões.",
+      "judgment": "supported",
+      "certainty": "supported_observation",
+      "error_codes": [],
+      "severity": "info",
+      "rationale": "R$ 2/5 milhões são extremos do limite por proposta, e R$ 3,8 milhões é média dos projetos aprovados. O papel genérico proposal_amount_expression é suportado; não implica que qualquer deles seja ticket garantido.",
+      "expected_behavior": "Separar alocação regional, faixa por proposta e média de projetos; preservar qualificadores.",
+      "root_cause": "rules.py:133-153 usa janela +/-120 caracteres e detecta cada proposta posterior à alocação regional.",
+      "root_cause_confidence": "high",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "context_evidence": [
+        {
+          "start": 2778,
+          "end": 5993,
+          "quote": "MCTI e Finep anunciam aporte de R$ 450 milhões para 114 empresas das regiões Norte, Nordeste e Centro-Oeste\nPostado em:\n16/10/26 08:18\nTemas:\nTags:\nCompartilhar:\nEdital, com volume inicial de R$ 300 milhões, receberá suplementação de 50% para incluir mais projetos das regiões\nA ministra Luciana Santos, do Ministério da Ciência, Tecnologia e Inovação (MCTI) anunciou hoje (16), no auditório da Sudene, no Recife (PE), os resultados da segunda rodada da chamada Mais Inovação Brasil Subvenção Econômica, edital da Finep (Financiadora de Estudos e Projetos, agência de inovação vinculada ao MCTI) que direcionava, inicialmente, R$ 300 milhões em recursos não reembolsáveis para empresas de todos os portes que atuam nas regiões Norte, Nordeste e Centro-Oeste. O financiamento irá fomentar 78 projetos inovadores e de risco tecnológico com impacto no desenvolvimento regional e relevância social. A ministra também anunciou a complementação de R$ 150 milhões para a chamada, que deve beneficiar mais 36 projetos já analisados e com recomendação de contratação, mas que ficaram fora do orçamento original. Com os novos recursos, serão 114 propostas beneficiadas e 50% de aumento no volume total de recursos.\nLançada em fevereiro de 2026, a chamada recebeu 587 propostas de empresas das regiões. Destes, 400 projetos foram habilitados para avaliação dos técnicos da Finep em parceria inédita com analistas do Sebrae e das três Superintendências Regionais, Sudeco (Superintendência de Desenvolvimento do Centro-Oeste), Sudene (Superintendência de Desenvolvimento do Nordeste) e Sudam (Superintendência de Desenvolvimento da Amazônia).\nEntre os projetos aprovados inicialmente, 75% são de microempresas (faturamento abaixo de R$ 1 milhão) e empresas de pequeno porte (faturamento de R$ 1 milhão até R$ 4,8 milhões). A chamada também vai beneficiar 44 empresas que, pela primeira vez, receberão subvenção da agência, representando 56% das propostas aprovadas.\nEmpresas sediadas em 35 cidades das regiões serão beneficiadas pelo edital, sendo que sete cidades serão atendidas pela primeira vez em uma chamada da Finep (Inhumas/GO, Santa Bárbara do Pará/PA, Salgueiro/PE, Campo Novo do Parecis/MT, Luís Eduardo Magalhães/BA,Goiana/PE e Agrestina/PE).\nTodos os projetos estão enquadrados dentro de uma ou mais missões da Nova Indústria Brasil (NIB). Do valor total da chamada, a região Norte recebeu R$ 50 milhões; a região Centro-Oeste, R$ 100 milhões; e a região Nordeste, R$ 150 milhões. Os limites de subvenção para cada proposta partiam de R$ 2 milhões a R$ 5 milhões, sendo que o valor médio dos projetos aprovados foi de R$ 3,8 milhões.\n“O foco primordial desta chamada é o amadurecimento das vocações produtivas dessas regiões, promovendo um crescimento econômico que seja sustentável e inclusivo. Com este resultado, a Finep revoluciona a capilaridade e o alcance da Subvenção Econômica direta nas três regiões que serão atendidas e intensifica parceria das empresas selecionadas com Instituições de Ciência e Tecnologia de diversos pontos do país. São 36 instituições participando, em uma expectativa de 15% do valor da chamada serem comprometidos nestas parcerias”, afirmou Luiz Antônio Elias, presidente da Finep.",
+          "page": null
+        }
+      ]
+    },
+    {
+      "case_id": "M30-N04:segment-0010:field:5",
+      "document_id": "M30-N04",
+      "segment_id": "segment-0010",
+      "claim_kind": "field",
+      "field_index": 5,
+      "field_name": "proposal_amount_expression",
+      "expected_claim": "R$ 3,8 milhões",
+      "start": 5020,
+      "end": 5411,
+      "quote": "Todos os projetos estão enquadrados dentro de uma ou mais missões da Nova Indústria Brasil (NIB). Do valor total da chamada, a região Norte recebeu R$ 50 milhões; a região Centro-Oeste, R$ 100 milhões; e a região Nordeste, R$ 150 milhões. Os limites de subvenção para cada proposta partiam de R$ 2 milhões a R$ 5 milhões, sendo que o valor médio dos projetos aprovados foi de R$ 3,8 milhões.",
+      "judgment": "supported",
+      "certainty": "supported_observation",
+      "error_codes": [],
+      "severity": "info",
+      "rationale": "R$ 2/5 milhões são extremos do limite por proposta, e R$ 3,8 milhões é média dos projetos aprovados. O papel genérico proposal_amount_expression é suportado; não implica que qualquer deles seja ticket garantido.",
+      "expected_behavior": "Separar alocação regional, faixa por proposta e média de projetos; preservar qualificadores.",
+      "root_cause": "rules.py:133-153 usa janela +/-120 caracteres e detecta cada proposta posterior à alocação regional.",
+      "root_cause_confidence": "high",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "context_evidence": [
+        {
+          "start": 2778,
+          "end": 5993,
+          "quote": "MCTI e Finep anunciam aporte de R$ 450 milhões para 114 empresas das regiões Norte, Nordeste e Centro-Oeste\nPostado em:\n16/10/26 08:18\nTemas:\nTags:\nCompartilhar:\nEdital, com volume inicial de R$ 300 milhões, receberá suplementação de 50% para incluir mais projetos das regiões\nA ministra Luciana Santos, do Ministério da Ciência, Tecnologia e Inovação (MCTI) anunciou hoje (16), no auditório da Sudene, no Recife (PE), os resultados da segunda rodada da chamada Mais Inovação Brasil Subvenção Econômica, edital da Finep (Financiadora de Estudos e Projetos, agência de inovação vinculada ao MCTI) que direcionava, inicialmente, R$ 300 milhões em recursos não reembolsáveis para empresas de todos os portes que atuam nas regiões Norte, Nordeste e Centro-Oeste. O financiamento irá fomentar 78 projetos inovadores e de risco tecnológico com impacto no desenvolvimento regional e relevância social. A ministra também anunciou a complementação de R$ 150 milhões para a chamada, que deve beneficiar mais 36 projetos já analisados e com recomendação de contratação, mas que ficaram fora do orçamento original. Com os novos recursos, serão 114 propostas beneficiadas e 50% de aumento no volume total de recursos.\nLançada em fevereiro de 2026, a chamada recebeu 587 propostas de empresas das regiões. Destes, 400 projetos foram habilitados para avaliação dos técnicos da Finep em parceria inédita com analistas do Sebrae e das três Superintendências Regionais, Sudeco (Superintendência de Desenvolvimento do Centro-Oeste), Sudene (Superintendência de Desenvolvimento do Nordeste) e Sudam (Superintendência de Desenvolvimento da Amazônia).\nEntre os projetos aprovados inicialmente, 75% são de microempresas (faturamento abaixo de R$ 1 milhão) e empresas de pequeno porte (faturamento de R$ 1 milhão até R$ 4,8 milhões). A chamada também vai beneficiar 44 empresas que, pela primeira vez, receberão subvenção da agência, representando 56% das propostas aprovadas.\nEmpresas sediadas em 35 cidades das regiões serão beneficiadas pelo edital, sendo que sete cidades serão atendidas pela primeira vez em uma chamada da Finep (Inhumas/GO, Santa Bárbara do Pará/PA, Salgueiro/PE, Campo Novo do Parecis/MT, Luís Eduardo Magalhães/BA,Goiana/PE e Agrestina/PE).\nTodos os projetos estão enquadrados dentro de uma ou mais missões da Nova Indústria Brasil (NIB). Do valor total da chamada, a região Norte recebeu R$ 50 milhões; a região Centro-Oeste, R$ 100 milhões; e a região Nordeste, R$ 150 milhões. Os limites de subvenção para cada proposta partiam de R$ 2 milhões a R$ 5 milhões, sendo que o valor médio dos projetos aprovados foi de R$ 3,8 milhões.\n“O foco primordial desta chamada é o amadurecimento das vocações produtivas dessas regiões, promovendo um crescimento econômico que seja sustentável e inclusivo. Com este resultado, a Finep revoluciona a capilaridade e o alcance da Subvenção Econômica direta nas três regiões que serão atendidas e intensifica parceria das empresas selecionadas com Instituições de Ciência e Tecnologia de diversos pontos do país. São 36 instituições participando, em uma expectativa de 15% do valor da chamada serem comprometidos nestas parcerias”, afirmou Luiz Antônio Elias, presidente da Finep.",
+          "page": null
+        }
+      ]
+    },
+    {
+      "case_id": "M30-I05:segment-0019:field:2",
+      "document_id": "M30-I05",
+      "segment_id": "segment-0019",
+      "claim_kind": "field",
+      "field_index": 2,
+      "field_name": "fund_capital_estimate",
+      "expected_claim": "R$ 50 milhões",
+      "start": 1839,
+      "end": 2234,
+      "quote": "O FIP tem estimativa de mobilizar até R$ 250 milhões para investir em startups em fase inicial. A BNDESPAR, subsidiária integral do BNDES, comprometerá até R$ 100 milhões. Já a Finep, com recursos do Fundo Nacional de Desenvolvimento Científico e Tecnológico (FNDCT), irá comprometer R$ 50 milhões. Caberá ao gestor selecionado mobilizar outros investidores para complementar o capital do fundo.",
+      "judgment": "unsupported",
+      "certainty": "confirmed_defect",
+      "error_codes": [
+        "FINANCIAL_ROLE_CONFUSION",
+        "EVIDENCE_SEMANTIC_MISMATCH"
+      ],
+      "severity": "high",
+      "rationale": "R$ 50 milhões é compromisso da Finep/FNDCT como investidor; a meta de capital do fundo é até R$ 250 milhões. O label fund_capital_estimate aplicado aos 50 milhões troca o papel.",
+      "expected_behavior": "Separar meta de captação de compromisso de um cotista.",
+      "root_cause": "Janela monetária encontra FIP/mobilizar/capital de outras orações e toma precedência sobre o vínculo com comprometer.",
+      "root_cause_confidence": "high",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "context_evidence": [
+        {
+          "start": 0,
+          "end": 61,
+          "quote": "BNDES e FINEP recebem 19 propostas para FIP Conexões Startups",
+          "page": null
+        },
+        {
+          "start": 1057,
+          "end": 1419,
+          "quote": "O Banco Nacional de Desenvolvimento Econômico e Social (BNDES) e a Financiadora de Estudos e Projetos (Finep) receberam 19 propostas na chamada pública para seleção do gestor do FIP Conexões Startups. O prazo para apresentação das propostas foi encerrado em 12 de agosto. A divulgação da classificação final está prevista para ocorrer até 23 de novembro de 2026.",
+          "page": null
+        },
+        {
+          "start": 1420,
+          "end": 1838,
+          "quote": "A iniciativa busca estruturar um fundo de investimento em participações voltado a startups em estágio inicial, especialmente aquelas que tenham recebido apoio de programas de fomento à inovação, subvenção ou aceleração realizados no país. O objetivo é ampliar a conversão dessas empresas em oportunidades aptas a receber investimentos de fundos de capital semente, venture capital e outros investidores institucionais.",
+          "page": null
+        },
+        {
+          "start": 1839,
+          "end": 2234,
+          "quote": "O FIP tem estimativa de mobilizar até R$ 250 milhões para investir em startups em fase inicial. A BNDESPAR, subsidiária integral do BNDES, comprometerá até R$ 100 milhões. Já a Finep, com recursos do Fundo Nacional de Desenvolvimento Científico e Tecnológico (FNDCT), irá comprometer R$ 50 milhões. Caberá ao gestor selecionado mobilizar outros investidores para complementar o capital do fundo.",
+          "page": null
+        },
+        {
+          "start": 836,
+          "end": 868,
+          "quote": "Publicado em 17/08/2026 às 12:36",
+          "page": null
+        }
+      ]
+    },
+    {
+      "case_id": "M30-I05:segment-0019:field:0",
+      "document_id": "M30-I05",
+      "segment_id": "segment-0019",
+      "claim_kind": "field",
+      "field_index": 0,
+      "field_name": "fund_capital_estimate",
+      "expected_claim": "R$ 250 milhões",
+      "start": 1839,
+      "end": 2234,
+      "quote": "O FIP tem estimativa de mobilizar até R$ 250 milhões para investir em startups em fase inicial. A BNDESPAR, subsidiária integral do BNDES, comprometerá até R$ 100 milhões. Já a Finep, com recursos do Fundo Nacional de Desenvolvimento Científico e Tecnológico (FNDCT), irá comprometer R$ 50 milhões. Caberá ao gestor selecionado mobilizar outros investidores para complementar o capital do fundo.",
+      "judgment": "partial",
+      "certainty": "confirmed_defect",
+      "error_codes": [
+        "EXTRACTION_OMISSION"
+      ],
+      "severity": "medium",
+      "rationale": "O numeral e o papel são relacionados ao campo correto, mas o literal perde até, que qualifica o valor como teto/estimativa. Não equiparar o numeral isolado ao valor com qualificador.",
+      "expected_behavior": "Preservar o qualificador até junto à expressão financeira.",
+      "root_cause": "MONEY inicia em R$ e não inclui qualificadores precedentes.",
+      "root_cause_confidence": "high",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "context_evidence": [
+        {
+          "start": 0,
+          "end": 61,
+          "quote": "BNDES e FINEP recebem 19 propostas para FIP Conexões Startups",
+          "page": null
+        },
+        {
+          "start": 1057,
+          "end": 1419,
+          "quote": "O Banco Nacional de Desenvolvimento Econômico e Social (BNDES) e a Financiadora de Estudos e Projetos (Finep) receberam 19 propostas na chamada pública para seleção do gestor do FIP Conexões Startups. O prazo para apresentação das propostas foi encerrado em 12 de agosto. A divulgação da classificação final está prevista para ocorrer até 23 de novembro de 2026.",
+          "page": null
+        },
+        {
+          "start": 1420,
+          "end": 1838,
+          "quote": "A iniciativa busca estruturar um fundo de investimento em participações voltado a startups em estágio inicial, especialmente aquelas que tenham recebido apoio de programas de fomento à inovação, subvenção ou aceleração realizados no país. O objetivo é ampliar a conversão dessas empresas em oportunidades aptas a receber investimentos de fundos de capital semente, venture capital e outros investidores institucionais.",
+          "page": null
+        },
+        {
+          "start": 1839,
+          "end": 2234,
+          "quote": "O FIP tem estimativa de mobilizar até R$ 250 milhões para investir em startups em fase inicial. A BNDESPAR, subsidiária integral do BNDES, comprometerá até R$ 100 milhões. Já a Finep, com recursos do Fundo Nacional de Desenvolvimento Científico e Tecnológico (FNDCT), irá comprometer R$ 50 milhões. Caberá ao gestor selecionado mobilizar outros investidores para complementar o capital do fundo.",
+          "page": null
+        },
+        {
+          "start": 836,
+          "end": 868,
+          "quote": "Publicado em 17/08/2026 às 12:36",
+          "page": null
+        }
+      ]
+    },
+    {
+      "case_id": "M30-I06:segment-0018:field:0",
+      "document_id": "M30-I06",
+      "segment_id": "segment-0018",
+      "claim_kind": "field",
+      "field_index": 0,
+      "field_name": "fund_capital_estimate",
+      "expected_claim": "R$ 500 milhões",
+      "start": 1557,
+      "end": 1935,
+      "quote": "O novo fundo, que tem estimativa de mobilizar até R$ 500 milhões, é voltado ao apoio a startups intensivas no uso de inteligência artificial, tendo como desafio central ampliar o número, o faturamento e a presença global de startups brasileiras que tenham IA como elemento central do modelo de negócios e geração de valor, e não apenas como ferramenta acessória ou complementar.",
+      "judgment": "partial",
+      "certainty": "confirmed_defect",
+      "error_codes": [
+        "EXTRACTION_OMISSION"
+      ],
+      "severity": "medium",
+      "rationale": "O numeral e o papel são relacionados ao campo correto, mas o literal perde até, que qualifica o valor como teto/estimativa. Não equiparar o numeral isolado ao valor com qualificador.",
+      "expected_behavior": "Preservar o qualificador até junto à expressão financeira.",
+      "root_cause": "MONEY inicia em R$ e não inclui qualificadores precedentes.",
+      "root_cause_confidence": "high",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "context_evidence": [
+        {
+          "start": 0,
+          "end": 76,
+          "quote": "BNDES e Finep selecionam a Monashees para gestão de fundo de IA de R$ 500 mi",
+          "page": null
+        },
+        {
+          "start": 1173,
+          "end": 1556,
+          "quote": "O Banco Nacional do Desenvolvimento Econômico e Social (BNDES) e a Financiadora de Estudos e Projetos (Finep) selecionaram a Monashees Gestão de Investimentos como gestora do Fundo de Investimento em Participações de Inteligência Artificial. A chamada pública recebeu 17 propostas. A partir de agora, a proposta selecionada seguirá para a etapa de análise, diligência e estruturação.",
+          "page": null
+        },
+        {
+          "start": 1557,
+          "end": 1935,
+          "quote": "O novo fundo, que tem estimativa de mobilizar até R$ 500 milhões, é voltado ao apoio a startups intensivas no uso de inteligência artificial, tendo como desafio central ampliar o número, o faturamento e a presença global de startups brasileiras que tenham IA como elemento central do modelo de negócios e geração de valor, e não apenas como ferramenta acessória ou complementar.",
+          "page": null
+        },
+        {
+          "start": 3048,
+          "end": 3490,
+          "quote": "Serão alvos do investimento startups que tenham como diferencial competitivo a incorporação estruturante da inteligência artificial à sua proposta de valor, e cujo desenvolvimento, adaptação e operação das soluções de inteligência artificial demandem investimentos em dados, modelos, infraestrutura computacional e profissionais especializados, indo além do simples consumo pontual ou acessório de soluções de inteligência artificial prontas.",
+          "page": null
+        },
+        {
+          "start": 866,
+          "end": 898,
+          "quote": "Publicado em 14/09/2026 às 10:35",
+          "page": null
+        }
+      ]
+    },
+    {
+      "case_id": "M30-C01:segment-0012:field:0",
+      "document_id": "M30-C01",
+      "segment_id": "segment-0012",
+      "claim_kind": "field",
+      "field_index": 0,
+      "field_name": "credit_limit",
+      "expected_claim": "R$ 150 milhões",
+      "start": 370,
+      "end": 468,
+      "quote": "Financiamento de até R$ 150 milhões para projetos de investimento de empresas de todos os setores.",
+      "judgment": "partial",
+      "certainty": "confirmed_defect",
+      "error_codes": [
+        "EXTRACTION_OMISSION"
+      ],
+      "severity": "medium",
+      "rationale": "O numeral e o papel são relacionados ao campo correto, mas o literal perde até, que qualifica o valor como teto/estimativa. Não equiparar o numeral isolado ao valor com qualificador.",
+      "expected_behavior": "Preservar o qualificador até junto à expressão financeira.",
+      "root_cause": "MONEY inicia em R$ e não inclui qualificadores precedentes.",
+      "root_cause_confidence": "high",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "context_evidence": [
+        {
+          "start": 327,
+          "end": 468,
+          "quote": "BNDES Automático - Projeto de Investimento\nFinanciamento de até R$ 150 milhões para projetos de investimento de empresas de todos os setores.",
+          "page": null
+        },
+        {
+          "start": 530,
+          "end": 1023,
+          "quote": "empresas sediadas no País;\nprodutores rurais (pessoa física);\nempresários individuais com CNPJ regularmente inscrito;\nentidades e órgãos públicos;\nfundações, associações e cooperativas;\nconsórcios e condomínios que exerçam atividade produtiva.\nPessoas jurídicas de Direito Público interno, à exceção da União.\nNão poderão ser apoiados clientes que não venham a operar efetivamente o objeto do financiamento, exceto nos casos em que a natureza da atividade financiada justifique o investimento.",
+          "page": null
+        },
+        {
+          "start": 1762,
+          "end": 2455,
+          "quote": "Se você é um micro pequeno ou médio empresário, pode enviar sua solicitação pelo BNDES Impulso\nDirija-se à\ninstituição financeira credenciada\nde sua preferência, que informará a documentação necessária, analisará a possibilidade de concessão do crédito e negociará as garantias. Após aprovada, a operação será encaminhada para homologação e posterior liberação dos recursos pelo BNDES.\nIMPORTANTE:\ncada instituição financeira credenciada pode aderir ou não às linhas de financiamento do BNDES, de acordo com suas políticas próprias para concessão do crédito. A decisão final sobre a aceitação ou recusa das propostas protocoladas é de exclusiva responsabilidade do agente financeiro envolvido.",
+          "page": null
+        }
+      ]
+    },
+    {
+      "case_id": "M30-C05:segment-0021:field:0",
+      "document_id": "M30-C05",
+      "segment_id": "segment-0021",
+      "claim_kind": "field",
+      "field_index": 0,
+      "field_name": "borrower_revenue_requirement",
+      "expected_claim": "R$ 80 milhões",
+      "start": 851,
+      "end": 994,
+      "quote": "Empresas com faturamento anual acima de R$ 80 milhões agora podem solicitar online limite de crédito para aquisição de máquinas e equipamentos.",
+      "judgment": "supported",
+      "certainty": "supported_observation",
+      "error_codes": [],
+      "severity": "info",
+      "rationale": "R$ 80 milhões é faturamento anual mínimo do tomador; não é capital do programa nem limite financiado.",
+      "expected_behavior": "Manter requisito de receita separado de principal de crédito.",
+      "root_cause": "Conjunção explícita Empresas com faturamento anual acima de no próprio parágrafo.",
+      "root_cause_confidence": "high",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "context_evidence": [
+        {
+          "start": 837,
+          "end": 994,
+          "quote": "Finame Direto\nEmpresas com faturamento anual acima de R$ 80 milhões agora podem solicitar online limite de crédito para aquisição de máquinas e equipamentos.",
+          "page": null
+        }
+      ]
+    },
+    {
+      "case_id": "M30-F01:segment-0008:field:3",
+      "document_id": "M30-F01",
+      "segment_id": "segment-0008",
+      "claim_kind": "field",
+      "field_index": 3,
+      "field_name": "funding_organization_expression",
+      "expected_claim": "A edição de 2026 do Programa de Mestrado e Doutorado para Inovação (MAI/DAI), que estimula a realização de pesquisas de mestrado e doutorado em universidades em parceria com empresas, recebe propostas até o dia 11 de dezembro. A chamada é realizada pelo Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq) e conta com a parceria da Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES).",
+      "start": 6108,
+      "end": 6525,
+      "quote": "A edição de 2026 do Programa de Mestrado e Doutorado para Inovação (MAI/DAI), que estimula a realização de pesquisas de mestrado e doutorado em universidades em parceria com empresas, recebe propostas até o dia 11 de dezembro. A chamada é realizada pelo Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq) e conta com a parceria da Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES).",
+      "judgment": "unresolved",
+      "certainty": "strong_hypothesis",
+      "error_codes": [
+        "ORGANIZATION_ROLE_CONFUSION",
+        "EVIDENCE_SEMANTIC_MISMATCH"
+      ],
+      "severity": "medium",
+      "rationale": "realizada pelo CNPq e parceria CAPES comprovam organização/realização. Isoladamente não discriminam emissor e financiador de cada componente. Não certificar instituição financiadora só por esse gatilho.",
+      "expected_behavior": "Preservar descrição de realização/parceria sem promover automaticamente a papel financeiro autenticado.",
+      "root_cause": "role_patterns associa realizada pelo a funding_organization_expression.",
+      "root_cause_confidence": "high",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "context_evidence": [
+        {
+          "start": 5784,
+          "end": 5890,
+          "quote": "Chamada Pública CNPq/CAPES Nº 30/2026 – Programa de Mestrado e Doutorado Acadêmico para Inovação – MAI/DAI",
+          "page": null
+        },
+        {
+          "start": 6108,
+          "end": 6525,
+          "quote": "A edição de 2026 do Programa de Mestrado e Doutorado para Inovação (MAI/DAI), que estimula a realização de pesquisas de mestrado e doutorado em universidades em parceria com empresas, recebe propostas até o dia 11 de dezembro. A chamada é realizada pelo Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq) e conta com a parceria da Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES).",
+          "page": null
+        },
+        {
+          "start": 6700,
+          "end": 6735,
+          "quote": "Inscrições:\n19/08/2026 a 11/12/2026",
+          "page": null
+        }
+      ]
+    },
+    {
+      "case_id": "M30-C07:segment-0001:discovery:classification",
+      "document_id": "M30-C07",
+      "segment_id": "segment-0001",
+      "claim_kind": "discovery",
+      "field_index": null,
+      "field_name": null,
+      "expected_claim": "opportunity_signal",
+      "start": 2182,
+      "end": 2746,
+      "quote": "Referência nacional em turismo rural pedagógico e educação ambiental, a Quinta da Estância, localizada em Viamão, está entre as novas empresas contempladas através do programa CrediTur RS, voltado ao fortalecimento do setor turístico em diferentes regiões do estado. Nesta terça-feira (dia 6/10), a partir da parceria entre o Banco Regional de Desenvolvimento do Extremo Sul (BRDE) e a Sicredi Origens RS, ocorreu a celebração do financiamento de R$ 2 milhões, recursos que serão destinados ao capital de giro e à ampliação da capacidade de atendimento da empresa.",
+      "judgment": "unsupported",
+      "certainty": "confirmed_defect",
+      "error_codes": [
+        "OPPORTUNITY_EXISTENCE_CONFUSION",
+        "EVIDENCE_SEMANTIC_MISMATCH"
+      ],
+      "severity": "high",
+      "rationale": "A unidade é financiamento já celebrado a Quinta da Estância; sinal como nova oportunidade é excessivo. A manchete anterior contém celebram financiamento, enquanto o maior parágrafo isolado perde esse gatilho.",
+      "expected_behavior": "Interpretar apenas acesso/estágio e público deste registro com o contexto completo; não confundir anúncio, gestor e candidatura startup.",
+      "root_cause": "classify completed depende de padrões locais; segmentação por nós separa a frase de conclusão.",
+      "root_cause_confidence": "high",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "context_evidence": [
+        {
+          "start": 1963,
+          "end": 2746,
+          "quote": "CrediTur RS amplia acesso ao crédito para fortalecer turismo na área metropolitana de Porto Alegre\n07/10/2026 | Aldemir Lauri Kerschner\nBRDE e Sicredi Origens celebram financiamento com a Quinta da Estância, de Viamão.\nReferência nacional em turismo rural pedagógico e educação ambiental, a Quinta da Estância, localizada em Viamão, está entre as novas empresas contempladas através do programa CrediTur RS, voltado ao fortalecimento do setor turístico em diferentes regiões do estado. Nesta terça-feira (dia 6/10), a partir da parceria entre o Banco Regional de Desenvolvimento do Extremo Sul (BRDE) e a Sicredi Origens RS, ocorreu a celebração do financiamento de R$ 2 milhões, recursos que serão destinados ao capital de giro e à ampliação da capacidade de atendimento da empresa.",
+          "page": null
+        }
+      ]
+    },
+    {
+      "case_id": "M30-C07:segment-0002:discovery:classification",
+      "document_id": "M30-C07",
+      "segment_id": "segment-0002",
+      "claim_kind": "discovery",
+      "field_index": null,
+      "field_name": null,
+      "expected_claim": "opportunity_signal",
+      "start": 2747,
+      "end": 3344,
+      "quote": "Conforme o secretário estadual de Turismo, Raphael Ayub, o CrediTur RS foi estruturado justamente para ampliar o acesso ao crédito e incentivar novos investimentos no setor. “Queremos dar condições para que os nossos empreendedores possam crescer, qualificar seus negócios e ampliar a capacidade de atendimento. A Quinta da Estância é um exemplo muito importante, porque une turismo, educação e preservação ambiental. É esse tipo de investimento que fortalece os destinos, gera oportunidades e faz o turismo contribuir cada vez mais para o desenvolvimento econômico do nosso estado”, afirmou Auyb.",
+      "judgment": "partial",
+      "certainty": "strong_hypothesis",
+      "error_codes": [
+        "EXTRACTION_OMISSION"
+      ],
+      "severity": "medium",
+      "rationale": "O programa tem Cadastur, teto por empresa e condições na mesma unidade anotada; apenas sinal é conservador, possivelmente incompleto, sem inventar janela.",
+      "expected_behavior": "Interpretar apenas acesso/estágio e público deste registro com o contexto completo; não confundir anúncio, gestor e candidatura startup.",
+      "root_cause": "Rota/condições são distribuídas em blocos; confirmed depende de gatilhos de acesso estreitos.",
+      "root_cause_confidence": "medium",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "context_evidence": [
+        {
+          "start": 2747,
+          "end": 4270,
+          "quote": "Conforme o secretário estadual de Turismo, Raphael Ayub, o CrediTur RS foi estruturado justamente para ampliar o acesso ao crédito e incentivar novos investimentos no setor. “Queremos dar condições para que os nossos empreendedores possam crescer, qualificar seus negócios e ampliar a capacidade de atendimento. A Quinta da Estância é um exemplo muito importante, porque une turismo, educação e preservação ambiental. É esse tipo de investimento que fortalece os destinos, gera oportunidades e faz o turismo contribuir cada vez mais para o desenvolvimento econômico do nosso estado”, afirmou Auyb.\nO programa é destinado a empresas de todos os portes, desde que possuam o Cadastro de Prestadores de Serviços Turísticos (Cadastur), do Ministério do Turismo. O limite de financiamento é de R$ 4 milhões por empresa, com juros ao redor de 10% ao ano (IPCA mais 6%) e prazo de cinco anos para amortização (com 12 meses de carência incluída).\nSetor estratégico\nNa avaliação do gerente de Operações do BRDE, Paulo Raffin, o programa é um importante instrumento para fortalecer novos destinos turísticos no estado. “É uma linha de crédito em condições muito favoráveis para que as empresas do setor possam manter e ampliar seus empreendimentos. O turismo tem se mostrado um setor estratégico na geração de novas oportunidades e empregos”, frisou Raffin. Ele ressaltou, também, a relevância de ter a parceria das cooperativas de crédito, como a Sicredi Origens, para que o CrediTur RS contemple o maior número possível de empresas.",
+          "page": null
+        }
+      ]
+    },
+    {
+      "case_id": "M30-I03:segment-0003:discovery:classification",
+      "document_id": "M30-I03",
+      "segment_id": "segment-0003",
+      "claim_kind": "discovery",
+      "field_index": null,
+      "field_name": null,
+      "expected_claim": "abstain",
+      "start": 70,
+      "end": 172,
+      "quote": "Estes são alguns dos principais investimentos feitos pelo time do Fundo e que viraram cases de sucesso",
+      "judgment": "unresolved",
+      "certainty": "unresolved_disagreement",
+      "error_codes": [
+        "REFERENCE_AMBIGUITY"
+      ],
+      "severity": "medium",
+      "rationale": "Portfólio concluído não é nova oferta. Abstenção do maior trecho não é falsa confirmação; outros trechos classificam portfólio corretamente.",
+      "expected_behavior": "Interpretar apenas acesso/estágio e público deste registro com o contexto completo; não confundir anúncio, gestor e candidatura startup.",
+      "root_cause": "O título é dividido em nós e o maior trecho não transporta todo o contexto.",
+      "root_cause_confidence": "medium",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "context_evidence": [
+        {
+          "start": 46,
+          "end": 69,
+          "quote": "Conheça nosso\nPortfólio",
+          "page": null
+        },
+        {
+          "start": 70,
+          "end": 172,
+          "quote": "Estes são alguns dos principais investimentos feitos pelo time do Fundo e que viraram cases de sucesso",
+          "page": null
+        }
+      ]
+    },
+    {
+      "case_id": "M30-I05:segment-0018:discovery:classification",
+      "document_id": "M30-I05",
+      "segment_id": "segment-0018",
+      "claim_kind": "discovery",
+      "field_index": null,
+      "field_name": null,
+      "expected_claim": "opportunity_signal",
+      "start": 1420,
+      "end": 1838,
+      "quote": "A iniciativa busca estruturar um fundo de investimento em participações voltado a startups em estágio inicial, especialmente aquelas que tenham recebido apoio de programas de fomento à inovação, subvenção ou aceleração realizados no país. O objetivo é ampliar a conversão dessas empresas em oportunidades aptas a receber investimentos de fundos de capital semente, venture capital e outros investidores institucionais.",
+      "judgment": "supported",
+      "certainty": "supported_observation",
+      "error_codes": [],
+      "severity": "medium",
+      "rationale": "Selecionar gestor e receber 19 propostas de gestores não prova elegibilidade startup. Sinal de estruturação de fundo é sustentado.",
+      "expected_behavior": "Interpretar apenas acesso/estágio e público deste registro com o contexto completo; não confundir anúncio, gestor e candidatura startup.",
+      "root_cause": "Ramo manager precede confirmação no classify; público precisa continuar explícito.",
+      "root_cause_confidence": "medium",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "context_evidence": [
+        {
+          "start": 0,
+          "end": 61,
+          "quote": "BNDES e FINEP recebem 19 propostas para FIP Conexões Startups",
+          "page": null
+        },
+        {
+          "start": 1057,
+          "end": 1419,
+          "quote": "O Banco Nacional de Desenvolvimento Econômico e Social (BNDES) e a Financiadora de Estudos e Projetos (Finep) receberam 19 propostas na chamada pública para seleção do gestor do FIP Conexões Startups. O prazo para apresentação das propostas foi encerrado em 12 de agosto. A divulgação da classificação final está prevista para ocorrer até 23 de novembro de 2026.",
+          "page": null
+        },
+        {
+          "start": 1420,
+          "end": 1838,
+          "quote": "A iniciativa busca estruturar um fundo de investimento em participações voltado a startups em estágio inicial, especialmente aquelas que tenham recebido apoio de programas de fomento à inovação, subvenção ou aceleração realizados no país. O objetivo é ampliar a conversão dessas empresas em oportunidades aptas a receber investimentos de fundos de capital semente, venture capital e outros investidores institucionais.",
+          "page": null
+        },
+        {
+          "start": 1839,
+          "end": 2234,
+          "quote": "O FIP tem estimativa de mobilizar até R$ 250 milhões para investir em startups em fase inicial. A BNDESPAR, subsidiária integral do BNDES, comprometerá até R$ 100 milhões. Já a Finep, com recursos do Fundo Nacional de Desenvolvimento Científico e Tecnológico (FNDCT), irá comprometer R$ 50 milhões. Caberá ao gestor selecionado mobilizar outros investidores para complementar o capital do fundo.",
+          "page": null
+        },
+        {
+          "start": 836,
+          "end": 868,
+          "quote": "Publicado em 17/08/2026 às 12:36",
+          "page": null
+        }
+      ]
+    },
+    {
+      "case_id": "M30-I06:segment-0024:discovery:classification",
+      "document_id": "M30-I06",
+      "segment_id": "segment-0024",
+      "claim_kind": "discovery",
+      "field_index": null,
+      "field_name": null,
+      "expected_claim": "opportunity_signal",
+      "start": 3048,
+      "end": 3490,
+      "quote": "Serão alvos do investimento startups que tenham como diferencial competitivo a incorporação estruturante da inteligência artificial à sua proposta de valor, e cujo desenvolvimento, adaptação e operação das soluções de inteligência artificial demandem investimentos em dados, modelos, infraestrutura computacional e profissionais especializados, indo além do simples consumo pontual ou acessório de soluções de inteligência artificial prontas.",
+      "judgment": "unresolved",
+      "certainty": "unresolved_disagreement",
+      "error_codes": [
+        "FUTURE_SIGNAL_CONFUSION",
+        "REFERENCE_POSSIBLE_ERROR"
+      ],
+      "severity": "medium",
+      "rationale": "Fundo futuro de IA está em análise/diligência/estruturação. Sinal é defensável e anúncio futuro também pode ser: o protocolo exige compromisso de acesso futuro. Nada estabelece candidaturas abertas de startups. A divergência é de nível de confirmação, não de janela future.",
+      "expected_behavior": "Interpretar apenas acesso/estágio e público deste registro com o contexto completo; não confundir anúncio, gestor e candidatura startup.",
+      "root_cause": "Ramo manager sempre devolve signal e future_access só reconhece abertura de inscrições; rubric de anúncio de instrumento é mais ampla.",
+      "root_cause_confidence": "medium",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "context_evidence": [
+        {
+          "start": 0,
+          "end": 76,
+          "quote": "BNDES e Finep selecionam a Monashees para gestão de fundo de IA de R$ 500 mi",
+          "page": null
+        },
+        {
+          "start": 1173,
+          "end": 1556,
+          "quote": "O Banco Nacional do Desenvolvimento Econômico e Social (BNDES) e a Financiadora de Estudos e Projetos (Finep) selecionaram a Monashees Gestão de Investimentos como gestora do Fundo de Investimento em Participações de Inteligência Artificial. A chamada pública recebeu 17 propostas. A partir de agora, a proposta selecionada seguirá para a etapa de análise, diligência e estruturação.",
+          "page": null
+        },
+        {
+          "start": 1557,
+          "end": 1935,
+          "quote": "O novo fundo, que tem estimativa de mobilizar até R$ 500 milhões, é voltado ao apoio a startups intensivas no uso de inteligência artificial, tendo como desafio central ampliar o número, o faturamento e a presença global de startups brasileiras que tenham IA como elemento central do modelo de negócios e geração de valor, e não apenas como ferramenta acessória ou complementar.",
+          "page": null
+        },
+        {
+          "start": 3048,
+          "end": 3490,
+          "quote": "Serão alvos do investimento startups que tenham como diferencial competitivo a incorporação estruturante da inteligência artificial à sua proposta de valor, e cujo desenvolvimento, adaptação e operação das soluções de inteligência artificial demandem investimentos em dados, modelos, infraestrutura computacional e profissionais especializados, indo além do simples consumo pontual ou acessório de soluções de inteligência artificial prontas.",
+          "page": null
+        },
+        {
+          "start": 866,
+          "end": 898,
+          "quote": "Publicado em 14/09/2026 às 10:35",
+          "page": null
+        }
+      ]
+    },
+    {
+      "case_id": "M30-I07:segment-0074:discovery:classification",
+      "document_id": "M30-I07",
+      "segment_id": "segment-0074",
+      "claim_kind": "discovery",
+      "field_index": null,
+      "field_name": null,
+      "expected_claim": "abstain",
+      "start": 11873,
+      "end": 12376,
+      "quote": "O Fundo Sul Ventures nasceu com o propósito\nde impulsionar e desenvolver o ecossistema de\ninovação da região Sul do Brasil, por meio de uma\nestratégia estruturada de investimentos em Venture\nCapital, operando de forma transversal e hands-on,\nacompanhando de perto cada investimento para\nmaximizar seu potencial de crescimento. O Fundo é\nfocado os ecossistemas dos três estados do Sul do Brasil,\ncom setores estratégicos definidos, incluindo Adtech &\nRetail Tech, Healthtech, Fintech, Smart Infra e SaaS.",
+      "judgment": "partial",
+      "certainty": "strong_hypothesis",
+      "error_codes": [
+        "SEGMENTATION_OVER",
+        "EXCESSIVE_ABSTENTION"
+      ],
+      "severity": "medium",
+      "rationale": "Há fundo Sul Ventures e estágio de captação na página física 12. O maior fragmento abstém apesar de irmãos emitirem sinal; captação de veículo não é oferta de ticket para startup.",
+      "expected_behavior": "Interpretar apenas acesso/estágio e público deste registro com o contexto completo; não confundir anúncio, gestor e candidatura startup.",
+      "root_cause": "Venture e Capital quebrados entre linhas e nós PDF fragmentam o contexto de modalidade e estágio.",
+      "root_cause_confidence": "medium",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "context_evidence": [
+        {
+          "start": 11450,
+          "end": 11472,
+          "quote": "FUNDOS DE PARTICIPAÇÃO",
+          "page": 12
+        },
+        {
+          "start": 11779,
+          "end": 11838,
+          "quote": "Atualmente, os seguintes FIPs estão em estágio de captação:",
+          "page": 12
+        },
+        {
+          "start": 11840,
+          "end": 11852,
+          "quote": "SUL VENTURES",
+          "page": 12
+        },
+        {
+          "start": 11873,
+          "end": 12376,
+          "quote": "O Fundo Sul Ventures nasceu com o propósito\nde impulsionar e desenvolver o ecossistema de\ninovação da região Sul do Brasil, por meio de uma\nestratégia estruturada de investimentos em Venture\nCapital, operando de forma transversal e hands-on,\nacompanhando de perto cada investimento para\nmaximizar seu potencial de crescimento. O Fundo é\nfocado os ecossistemas dos três estados do Sul do Brasil,\ncom setores estratégicos definidos, incluindo Adtech &\nRetail Tech, Healthtech, Fintech, Smart Infra e SaaS.",
+          "page": 12
+        }
+      ]
+    },
+    {
+      "case_id": "M30-I02:segment-0004:discovery:classification",
+      "document_id": "M30-I02",
+      "segment_id": "segment-0004",
+      "claim_kind": "discovery",
+      "field_index": null,
+      "field_name": null,
+      "expected_claim": "abstain",
+      "start": 232,
+      "end": 666,
+      "quote": "Em cada uma das regiões do Brasil, o Criatec 4 tem um representante responsável pela prospecção, análise, investimento e suporte ao desenvolvimento de negócios em empresas e projetos inovadores. A equipe do Criatec 4 é composta por profissionais com grande capacidade de gestão e desenvolvimento de negócios, o que proporciona ao empreendedor um grande suporte nas tomadas de decisões necessárias para o sucesso do seu empreendimento.",
+      "judgment": "partial",
+      "certainty": "strong_hypothesis",
+      "error_codes": [
+        "SEGMENTATION_OVER",
+        "EXTRACTION_OMISSION"
+      ],
+      "severity": "medium",
+      "rationale": "Fonte convida projeto/empresa inovadora a ter Criatec 4 como sócio e preencher formulário. Ausência de confirmação no representative é uma omissão de contexto; não prova ausência do instrumento.",
+      "expected_behavior": "Interpretar apenas acesso/estágio e público deste registro com o contexto completo; não confundir anúncio, gestor e candidatura startup.",
+      "root_cause": "Convite e identidade do fundo espalhados entre nós; padrões locais não mantêm título/formulário/descrição juntos.",
+      "root_cause_confidence": "medium",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "context_evidence": [
+        {
+          "start": 56,
+          "end": 75,
+          "quote": "Novos\nInvestimentos",
+          "page": null
+        },
+        {
+          "start": 76,
+          "end": 231,
+          "quote": "O fundo Criatec 4 tem como um dos seus principais objetivos o fomento de inciativas inovadoras ligadas ao empreendedorismo em diferentes regiões do Brasil.",
+          "page": null
+        },
+        {
+          "start": 667,
+          "end": 940,
+          "quote": "Se você tem um projeto ou empresa com produtos e soluções inovadoras e deseja ter o Criatec 4 como sócio, clique na região onde a sua empresa está localizada, preencha o formulário de submissão do seu projeto e em breve você receberá o contato de um representante do fundo.",
+          "page": null
+        }
+      ]
+    },
+    {
+      "case_id": "M30-I04:segment-0003:discovery:classification",
+      "document_id": "M30-I04",
+      "segment_id": "segment-0003",
+      "claim_kind": "discovery",
+      "field_index": null,
+      "field_name": null,
+      "expected_claim": "abstain",
+      "start": 78,
+      "end": 305,
+      "quote": "Escolha a região onde a sede da sua empresa está localizada e preencha os campos abaixo com o seu plano de negócios. Nossa equipe de análise fará a avaliação da oportunidade e, caso se encaixe na tese do fundo, faremos contato.",
+      "judgment": "partial",
+      "certainty": "strong_hypothesis",
+      "error_codes": [
+        "SEGMENTATION_OVER",
+        "EXTRACTION_OMISSION"
+      ],
+      "severity": "medium",
+      "rationale": "Fonte solicita plano de negócios para avaliação pela tese do fundo. Confirmação é de acesso à avaliação, não promessa de investimento ou janela contínua. Maior bloco abstém.",
+      "expected_behavior": "Interpretar apenas acesso/estágio e público deste registro com o contexto completo; não confundir anúncio, gestor e candidatura startup.",
+      "root_cause": "Nós isolados não contêm simultaneamente vocabulário financeiro e rota de candidatura.",
+      "root_cause_confidence": "medium",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "context_evidence": [
+        {
+          "start": 56,
+          "end": 77,
+          "quote": "Aplique a\nsua Startup",
+          "page": null
+        },
+        {
+          "start": 78,
+          "end": 305,
+          "quote": "Escolha a região onde a sede da sua empresa está localizada e preencha os campos abaixo com o seu plano de negócios. Nossa equipe de análise fará a avaliação da oportunidade e, caso se encaixe na tese do fundo, faremos contato.",
+          "page": null
+        },
+        {
+          "start": 30,
+          "end": 55,
+          "quote": "Aplicar para investimento",
+          "page": null
+        }
+      ]
+    },
+    {
+      "case_id": "M30-N01:segment-0019:discovery:classification",
+      "document_id": "M30-N01",
+      "segment_id": "segment-0019",
+      "claim_kind": "discovery",
+      "field_index": null,
+      "field_name": null,
+      "expected_claim": "opportunity_signal",
+      "start": 2016,
+      "end": 2652,
+      "quote": "A aprovação do financiamento ocorreu no âmbito do Produto BNDES FINEM – Programa BNDES Mais Inovação, iniciativa voltada à digitalização, pesquisa e desenvolvimento tecnológico, com recursos do FAT (Fundo de Amparo ao Trabalhador). “O desenvolvimento de novas tecnologias para veículos híbridos flex contribui para deixar o país bem-posicionado no processo de transição energética pelo qual passa o setor automotivo. A descarbonização e a industrialização verde são pilares estratégicos para construir um futuro mais sustentável e garantir qualidade de vida para as próximas gerações”, afirmou o presidente do BNDES, Aloizio Mercadante.",
+      "judgment": "unsupported",
+      "certainty": "confirmed_defect",
+      "error_codes": [
+        "OPPORTUNITY_EXISTENCE_CONFUSION",
+        "EVIDENCE_SEMANTIC_MISMATCH"
+      ],
+      "severity": "high",
+      "rationale": "Financiamento já aprovado para Renault e lançamento de veículo em 2027 não são futura chamada pública. O sinal de acesso para outro leitor não se sustenta neste registro.",
+      "expected_behavior": "Interpretar apenas acesso/estágio e público deste registro com o contexto completo; não confundir anúncio, gestor e candidatura startup.",
+      "root_cause": "Regex de completed espera para a empresa/ao instituto e não cobre para a Renault; menção ao programa dispara signal.",
+      "root_cause_confidence": "high",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "context_evidence": [
+        {
+          "start": 779,
+          "end": 3058,
+          "quote": "BNDES aprova R$ 181,8 milhões para o desenvolvimento de veículo híbrido da Renault no Brasil\nPor Agência BNDES de Notícias\nPublicado em 14/10/2026 às 10:00\nAtualizado em 14/10/2026 às 10:04\n2 min de leitura\nOperação no âmbito do Programa BNDES Mais Inovação prevê o desenvolvimento de inovadora tecnologia de eletrificação para veículo produzido no Brasil\nO Banco Nacional de Desenvolvimento Econômico e Social (BNDES) aprovou financiamento de R$ 181,8 milhões para a Renault Geely do Brasil desenvolver uma inovadora tecnologia de propulsão híbrida. O projeto, que está sendo conduzido nas instalações da empresa em São José dos Pinhais (PR), integra a estratégia da montadora de renovação de seu portfólio nos próximos anos, com veículos tecnologicamente mais avançados, eficientes e sustentáveis.\nA nova tecnologia será aplicada em uma futura versão eletrificada de um veículo produzido pela Renault no Brasil, com lançamento em 2027. O projeto faz parte do ciclo de investimentos da marca para o país de R$ 5,8 bilhões, de 2025 a 2027. A confirmação do desenvolvimento e implementação da nova tecnologia aconteceu no mês de setembro, em evento realizado pela Renault Geely do Brasil no Complexo Ayrton Senna (PR), sede da montadora.\nA aprovação do financiamento ocorreu no âmbito do Produto BNDES FINEM – Programa BNDES Mais Inovação, iniciativa voltada à digitalização, pesquisa e desenvolvimento tecnológico, com recursos do FAT (Fundo de Amparo ao Trabalhador). “O desenvolvimento de novas tecnologias para veículos híbridos flex contribui para deixar o país bem-posicionado no processo de transição energética pelo qual passa o setor automotivo. A descarbonização e a industrialização verde são pilares estratégicos para construir um futuro mais sustentável e garantir qualidade de vida para as próximas gerações”, afirmou o presidente do BNDES, Aloizio Mercadante.\nDe acordo com Milton Trein, diretor financeiro da Renault Geely do Brasil, o projeto contribui para elevar a competitividade da marca. “A operação reforça a atratividade do Brasil para investimentos em inovação, ao viabilizar o desenvolvimento local de tecnologias estratégicas. O financiamento do BNDES contribui para acelerar a mobilização de recursos e competências de engenharia no país”, acrescentou.",
+          "page": null
+        }
+      ]
+    },
+    {
+      "case_id": "M30-I07:segment-0071:field:0",
+      "document_id": "M30-I07",
+      "segment_id": "segment-0071",
+      "claim_kind": "field",
+      "field_index": 0,
+      "field_name": "fund_stage_expression",
+      "expected_claim": "Atualmente, os seguintes FIPs estão em estágio de captação:",
+      "start": 11779,
+      "end": 11838,
+      "quote": "Atualmente, os seguintes FIPs estão em estágio de captação:",
+      "judgment": "supported",
+      "certainty": "supported_observation",
+      "error_codes": [],
+      "severity": "info",
+      "rationale": "A frase estabelece FIPs em captação. Não declara abertura de candidaturas para startups; quote e página física 12 resolvem.",
+      "expected_behavior": "Preservar estágio da captação pelo veículo, não transferir a público investido.",
+      "root_cause": "Regex fund_stage_expression corresponde exatamente ao estágio de captação.",
+      "root_cause_confidence": "high",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "context_evidence": [
+        {
+          "start": 11450,
+          "end": 11472,
+          "quote": "FUNDOS DE PARTICIPAÇÃO",
+          "page": 12
+        },
+        {
+          "start": 11779,
+          "end": 11838,
+          "quote": "Atualmente, os seguintes FIPs estão em estágio de captação:",
+          "page": 12
+        },
+        {
+          "start": 11840,
+          "end": 11852,
+          "quote": "SUL VENTURES",
+          "page": 12
+        },
+        {
+          "start": 11873,
+          "end": 12376,
+          "quote": "O Fundo Sul Ventures nasceu com o propósito\nde impulsionar e desenvolver o ecossistema de\ninovação da região Sul do Brasil, por meio de uma\nestratégia estruturada de investimentos em Venture\nCapital, operando de forma transversal e hands-on,\nacompanhando de perto cada investimento para\nmaximizar seu potencial de crescimento. O Fundo é\nfocado os ecossistemas dos três estados do Sul do Brasil,\ncom setores estratégicos definidos, incluindo Adtech &\nRetail Tech, Healthtech, Fintech, Smart Infra e SaaS.",
+          "page": 12
+        }
+      ]
+    }
+  ]
+}

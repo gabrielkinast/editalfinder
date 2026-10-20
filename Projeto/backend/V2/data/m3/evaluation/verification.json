@@ -1,0 +1,178 @@
+{
+  "executions": [
+    {
+      "command": [
+        ".venv/bin/python",
+        "-B",
+        "-m",
+        "pytest",
+        "-p",
+        "no:cacheprovider",
+        "-q"
+      ],
+      "started_at": "2026-10-19T04:51:25.044752+00:00",
+      "exit_code": 0,
+      "duration_seconds": 18.89,
+      "output": "........................................................................ [  3%]\n........................................................................ [  6%]\n........................................................................ [ 10%]\n........................................................................ [ 13%]\n........................................................................ [ 17%]\n........................................................................ [ 20%]\n........................................................................ [ 24%]\n........................................................................ [ 27%]\n........................................................................ [ 30%]\n........................................................................ [ 34%]\n........................................................................ [ 37%]\n........................................................................ [ 41%]\n........................................................................ [ 44%]\n........................................................................ [ 48%]\n........................................................................ [ 51%]\n........................................................................ [ 54%]\n........................................................................ [ 58%]\n........................................................................ [ 61%]\n........................................................................ [ 65%]\n........................................................................ [ 68%]\n........................................................................ [ 72%]\n........................................................................ [ 75%]\n........................................................................ [ 79%]\n........................................................................ [ 82%]\n........................................................................ [ 85%]\n........................................................................ [ 89%]\n........................................................................ [ 92%]\n........................................................................ [ 96%]\n........................................................................ [ 99%]\n.......                                                                  [100%]\n2095 passed in 18.61s\n"
+    },
+    {
+      "command": [
+        ".venv/bin/ruff",
+        "check",
+        "--no-cache",
+        "src",
+        "tests"
+      ],
+      "started_at": "2026-10-19T04:51:43.935175+00:00",
+      "exit_code": 0,
+      "duration_seconds": 0.014,
+      "output": "All checks passed!\n"
+    },
+    {
+      "command": [
+        ".venv/bin/ruff",
+        "format",
+        "--check",
+        "--no-cache",
+        "src",
+        "tests"
+      ],
+      "started_at": "2026-10-19T04:51:43.949309+00:00",
+      "exit_code": 0,
+      "duration_seconds": 0.015,
+      "output": "89 files already formatted\n"
+    },
+    {
+      "command": [
+        ".venv/bin/mypy",
+        "--no-incremental",
+        "--cache-dir=/dev/null",
+        "src"
+      ],
+      "started_at": "2026-10-19T04:51:43.965192+00:00",
+      "exit_code": 0,
+      "duration_seconds": 0.778,
+      "output": "Success: no issues found in 29 source files\n"
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "started_at": "2026-10-19T04:51:44.743847+00:00",
+      "exit_code": 0,
+      "duration_seconds": 0.005,
+      "output": ""
+    },
+    {
+      "command": [
+        ".venv/bin/ruff",
+        "check",
+        "--no-cache",
+        "data/m3/provenance"
+      ],
+      "started_at": "2026-10-19T04:51:44.749255+00:00",
+      "exit_code": 0,
+      "duration_seconds": 0.009,
+      "output": "All checks passed!\n"
+    },
+    {
+      "command": [
+        ".venv/bin/ruff",
+        "format",
+        "--check",
+        "--no-cache",
+        "data/m3/provenance"
+      ],
+      "started_at": "2026-10-19T04:51:44.765707+00:00",
+      "exit_code": 0,
+      "duration_seconds": 0.011,
+      "output": "4 files already formatted\n"
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "-B",
+        "data/m3/provenance/verify_derivation.py"
+      ],
+      "started_at": "2026-10-19T04:51:44.777295+00:00",
+      "exit_code": 0,
+      "duration_seconds": 0.176,
+      "output": "{\"status\": \"PASS\", \"documents\": 28, \"checked_ids\": [\"M30-C01\", \"M30-C02\", \"M30-C03\", \"M30-C04\", \"M30-C05\", \"M30-C06\", \"M30-C07\", \"M30-C08\", \"M30-F01\", \"M30-F02\", \"M30-F03\", \"M30-F05\", \"M30-F06\", \"M30-F07\", \"M30-F08\", \"M30-I01\", \"M30-I02\", \"M30-I03\", \"M30-I04\", \"M30-I05\", \"M30-I06\", \"M30-I07\", \"M30-I08\", \"M30-N01\", \"M30-N02\", \"M30-N03\", \"M30-N04\", \"M30-S01\"]}\n"
+    },
+    {
+      "command": [
+        "env",
+        "PYTHONPATH=src",
+        ".venv/bin/python",
+        "-B",
+        "-m",
+        "editalfinder_v2.dataset_m30",
+        "data/m3"
+      ],
+      "started_at": "2026-10-19T04:51:44.953451+00:00",
+      "exit_code": 0,
+      "duration_seconds": 0.089,
+      "output": "Validated 28 documents and 33 records (m3.0-pilot-v1; m3.0-annotation-v1)\n"
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "--version"
+      ],
+      "started_at": "2026-10-19T04:51:45.042896+00:00",
+      "exit_code": 0,
+      "duration_seconds": 0.003,
+      "output": "Python 3.11.16\n"
+    },
+    {
+      "command": [
+        ".venv/bin/ruff",
+        "--version"
+      ],
+      "started_at": "2026-10-19T04:51:45.046270+00:00",
+      "exit_code": 0,
+      "duration_seconds": 0.002,
+      "output": "ruff 0.17.1\n"
+    },
+    {
+      "command": [
+        ".venv/bin/mypy",
+        "--version"
+      ],
+      "started_at": "2026-10-19T04:51:45.048895+00:00",
+      "exit_code": 0,
+      "duration_seconds": 0.067,
+      "output": "mypy 2.4.0 (compiled: yes)\n"
+    },
+    {
+      "command": [
+        "pdftotext",
+        "-v"
+      ],
+      "started_at": "2026-10-19T04:51:45.116677+00:00",
+      "exit_code": 0,
+      "duration_seconds": 0.008,
+      "output": "pdftotext version 26.01.0\nCopyright 2005-2026 The Poppler Developers - http://poppler.freedesktop.org\nCopyright 1996-2011, 2022 Glyph & Cog, LLC\n"
+    },
+    {
+      "command": [
+        "git",
+        "--version"
+      ],
+      "started_at": "2026-10-19T04:51:45.124920+00:00",
+      "exit_code": 0,
+      "duration_seconds": 0.001,
+      "output": "git version 2.53.0\n"
+    }
+  ],
+  "preexisting_files_checked": 154,
+  "preexisting_files_changed": [],
+  "git_index_unchanged_empty": true,
+  "preexisting_sql_deletion_preserved": true,
+  "authored_untracked_whitespace_issues": [],
+  "raw_text_whitespace_policy": "Original response bytes and derived evidence views excluded from whitespace rewrites; integrity checked via hashes and derivation replay.",
+  "tool_packages": "3.11.16 (main, Aug 25 2026, 14:00:53) [Clang 22.1.3 ]\npytest 9.1.1\npydantic 2.14.1\npydantic-core 2.50.1\n",
+  "all_gates_passed": true
+}

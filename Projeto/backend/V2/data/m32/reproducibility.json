@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "command_stdout": "{\"status\": \"evaluated\", \"documents\": 28, \"references\": 33, \"field_slots\": 127, \"result_sha256\": \"36625ca2e5d160c40a40eedfa4f1e6cfac78979984068209e9878f4721bd7cf9\"}\n",
+  "exit_code": 0,
+  "byte_identical": {
+    "evaluation_results.json": true,
+    "error_cases.json": true,
+    "review_queue.json": true,
+    "all_per_document": true
+  },
+  "per_document_count": 28,
+  "core_sha256": "36625ca2e5d160c40a40eedfa4f1e6cfac78979984068209e9878f4721bd7cf9",
+  "performance_excluded_from_deterministic_comparison": true
+}

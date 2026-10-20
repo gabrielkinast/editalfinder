@@ -1,0 +1,76 @@
+{
+  "versions": {
+    "mypy_extensions": "1.1.0",
+    "ruff": "0.17.1",
+    "pluggy": "1.7.0",
+    "typing-inspection": "0.4.4",
+    "typing_extensions": "4.16.0",
+    "pydantic": "2.14.1",
+    "packaging": "26.3",
+    "pydantic_core": "2.50.1",
+    "Pygments": "2.21.0",
+    "pytest": "9.1.1",
+    "librt": "0.16.0",
+    "pathspec": "1.1.1",
+    "ast_serialize": "0.13.0",
+    "mypy": "2.4.0",
+    "annotated-types": "0.8.0",
+    "iniconfig": "2.3.1"
+  },
+  "python": "3.11.16 (main, Aug 25 2026, 14:00:53) [Clang 22.1.3 ]",
+  "commands": [
+    {
+      "command": [
+        "git",
+        "status",
+        "--porcelain=v1"
+      ],
+      "exit_code": 0,
+      "stdout": " D \"BANCO DE DADOS/bancode Dados.sql\"\n M Projeto/backend/V2/README.md\n M Projeto/backend/V2/src/editalfinder_v2/domain/models.py\n?? Projeto/backend/V2/EDITALFINDER_V2_M21_RESULTADOS.md\n?? Projeto/backend/V2/EDITALFINDER_V2_M22A1_RESULTADOS.md\n?? Projeto/backend/V2/EDITALFINDER_V2_M22A1_REVISAO_FINAL_CHATGPT.md\n?? Projeto/backend/V2/EDITALFINDER_V2_M22A_RESULTADOS.md\n?? Projeto/backend/V2/EDITALFINDER_V2_M22A_REVISAO_INDEPENDENTE.md\n?? Projeto/backend/V2/EDITALFINDER_V2_M22B_RESULTADOS.md\n?? Projeto/backend/V2/EDITALFINDER_V2_M22B_REVISAO_CHATGPT.md\n?? Projeto/backend/V2/EDITALFINDER_V2_M23A1_AUDIT_METADATA_RESULTADOS.md\n?? Projeto/backend/V2/EDITALFINDER_V2_M23A1_RESULTADOS.md\n?? Projeto/backend/V2/EDITALFINDER_V2_M23A1_REVISAO_INDEPENDENTE_CHATGPT.md\n?? Projeto/backend/V2/EDITALFINDER_V2_M23A2_REVISAO_INDEPENDENTE_CHATGPT.md\n?? Projeto/backend/V2/EDITALFINDER_V2_M23A_REVISAO_CHATGPT.md\n?? Projeto/backend/V2/EDITALFINDER_V2_M23B_RESULTADOS.md\n?? Projeto/backend/V2/EDITALFINDER_V2_M23B_REVISAO_INDEPENDENTE_CHATGPT.md\n?? Projeto/backend/V2/EDITALFINDER_V2_M23C_RESULTADOS.md\n?? Projeto/backend/V2/EDITALFINDER_V2_M23C_REVISAO_CHATGPT.md\n?? Projeto/backend/V2/EDITALFINDER_V2_M23C_REVISAO_INDEPENDENTE.md\n?? Projeto/backend/V2/EDITALFINDER_V2_M23D1_RESULTADOS.md\n?? Projeto/backend/V2/EDITALFINDER_V2_M23D1_REVISAO_INDEPENDENTE_CHATGPT.md\n?? Projeto/backend/V2/EDITALFINDER_V2_M23D_RESULTADOS.md\n?? Projeto/backend/V2/EDITALFINDER_V2_M23D_REVISAO_CHATGPT.md\n?? Projeto/backend/V2/EDITALFINDER_V2_M30_RESULTADOS.md\n?? Projeto/backend/V2/EDITALFINDER_V2_M30_REVISAO_FINAL_CHATGPT.md\n?? Projeto/backend/V2/EDITALFINDER_V2_M30_REVISAO_PRELIMINAR_CHATGPT.md\n?? Projeto/backend/V2/EDITALFINDER_V2_M31_RESULTADOS.md\n?? Projeto/backend/V2/EDITALFINDER_V2_M31_REVISAO_INDEPENDENTE_CHATGPT.md\n?? Projeto/backend/V2/data/\n?? Projeto/backend/V2/docs/v2/IDENTITY_M21.md\n?? Projeto/backend/V2/docs/v2/INTEGRATION_AUDIT_REPROCESSING.md\n?? Projeto/backend/V2/docs/v2/INTEGRATION_CONSISTENCY_M23B.md\n?? Projeto/backend/V2/docs/v2/M21_BENCHMARK.json\n?? Projeto/backend/V2/docs/v2/M23A1_BENCHMARK.json\n?? Projeto/backend/V2/docs/v2/M23B_BENCHMARK.json\n?? Projeto/backend/V2/docs/v2/M23C_BENCHMARK.json\n?? Projeto/backend/V2/docs/v2/M23C_FROZEN_ORACLE.md\n?? Projeto/backend/V2/docs/v2/M23C_QUALITY_GATES.json\n?? Projeto/backend/V2/docs/v2/M23D1_HARDENING_EVIDENCE.json\n?? Projeto/backend/V2/docs/v2/M23D_AUDIT_EVIDENCE.json\n?? Projeto/backend/V2/docs/v2/M31_ARCHITECTURE.md\n?? Projeto/backend/V2/docs/v2/M31_INDEPENDENT_REVIEW.md\n?? Projeto/backend/V2/docs/v2/SEMANTIC_NORMALIZATION_M22A.md\n?? Projeto/backend/V2/docs/v2/SEMANTIC_NORMALIZATION_M22B.md\n?? Projeto/backend/V2/src/editalfinder_v2/dataset_m30.py\n?? Projeto/backend/V2/src/editalfinder_v2/domain/financial_models.py\n?? Projeto/backend/V2/src/editalfinder_v2/domain/financial_normalization.py\n?? Projeto/backend/V2/src/editalfinder_v2/domain/financial_parsing.py\n?? Projeto/backend/V2/src/editalfinder_v2/domain/geography_catalog.py\n?? Projeto/backend/V2/src/editalfinder_v2/domain/geography_models.py\n?? Projeto/backend/V2/src/editalfinder_v2/domain/geography_normalization.py\n?? Projeto/backend/V2/src/editalfinder_v2/domain/identity_models.py\n?? Projeto/backend/V2/src/editalfinder_v2/domain/identity_normalization.py\n?? Projeto/backend/V2/src/editalfinder_v2/domain/identity_resolution.py\n?? Projeto/backend/V2/src/editalfinder_v2/domain/integration.py\n?? Projeto/backend/V2/src/editalfinder_v2/domain/integration_budget.py\n?? Projeto/backend/V2/src/editalfinder_v2/domain/integration_consistency.py\n?? Projeto/backend/V2/src/editalfinder_v2/domain/integration_models.py\n?? Projeto/backend/V2/src/editalfinder_v2/domain/m22b_common.py\n?? Projeto/backend/V2/src/editalfinder_v2/domain/organization_models.py\n?? Projeto/backend/V2/src/editalfinder_v2/domain/organization_normalization.py\n?? Projeto/backend/V2/src/editalfinder_v2/domain/semantic_common.py\n?? Projeto/backend/V2/src/editalfinder_v2/domain/taxonomy_models.py\n?? Projeto/backend/V2/src/editalfinder_v2/domain/taxonomy_normalization.py\n?? Projeto/backend/V2/src/editalfinder_v2/domain/temporal_models.py\n?? Projeto/backend/V2/src/editalfinder_v2/domain/temporal_normalization.py\n?? Projeto/backend/V2/src/editalfinder_v2/domain/url_identity.py\n?? Projeto/backend/V2/src/editalfinder_v2/extraction_m31/\n?? Projeto/backend/V2/tests/benchmark_identity.py\n?? Projeto/backend/V2/tests/benchmark_integration_budget.py\n?? Projeto/backend/V2/tests/benchmark_m23b_consistency.py\n?? Projeto/backend/V2/tests/benchmark_m23c_pipeline.py\n?? Projeto/backend/V2/tests/fixtures/\n?? Projeto/backend/V2/tests/m22b_fixtures.py\n?? Projeto/backend/V2/tests/m23_fixtures.py\n?? Projeto/backend/V2/tests/m23c_fixtures.py\n?? Projeto/backend/V2/tests/semantic_fixtures.py\n?? Projeto/backend/V2/tests/test_financial_adversarial.py\n?? Projeto/backend/V2/tests/test_financial_edges.py\n?? Projeto/backend/V2/tests/test_financial_normalization.py\n?? Projeto/backend/V2/tests/test_financial_parsing.py\n?? Projeto/backend/V2/tests/test_geography_metamorphic.py\n?? Projeto/backend/V2/tests/test_geography_normalization.py\n?? Projeto/backend/V2/tests/test_identity.py\n?? Projeto/backend/V2/tests/test_identity_edges.py\n?? Projeto/backend/V2/tests/test_identity_properties.py\n?? Projeto/backend/V2/tests/test_identity_review_regressions.py\n?? Projeto/backend/V2/tests/test_m22a1_geography_contract.py\n?? Projeto/backend/V2/tests/test_m22a1_temporal_contract.py\n?? Projeto/backend/V2/tests/test_m22b_boundary_adversarial.py\n?? Projeto/backend/V2/tests/test_m22b_common.py\n?? Projeto/backend/V2/tests/test_m23_audit_metadata.py\n?? Projeto/backend/V2/tests/test_m23_core.py\n?? Projeto/backend/V2/tests/test_m23_output_budget.py\n?? Projeto/backend/V2/tests/test_m23b_boundaries.py\n?? Projeto/backend/V2/tests/test_m23b_consistency.py\n?? Projeto/backend/V2/tests/test_m23c_adversarial.py\n?? Projeto/backend/V2/tests/test_m23c_metamorphic.py\n?? Projeto/backend/V2/tests/test_m23c_pipeline.py\n?? Projeto/backend/V2/tests/test_m23c_product_contracts.py\n?? Projeto/backend/V2/tests/test_m23c_resources.py\n?? Projeto/backend/V2/tests/test_m23d1_audit_metadata.py\n?? Projeto/backend/V2/tests/test_m23d1_utc_boundaries.py\n?? Projeto/backend/V2/tests/test_m30_corpus.py\n?? Projeto/backend/V2/tests/test_m30_dataset.py\n?? Projeto/backend/V2/tests/test_m31_extraction.py\n?? Projeto/backend/V2/tests/test_normalization_contracts.py\n?? Projeto/backend/V2/tests/test_organization_adversarial.py\n?? Projeto/backend/V2/tests/test_organization_identifiers.py\n?? Projeto/backend/V2/tests/test_organization_normalization.py\n?? Projeto/backend/V2/tests/test_semantic_common.py\n?? Projeto/backend/V2/tests/test_taxonomy_adversarial.py\n?? Projeto/backend/V2/tests/test_taxonomy_evidence.py\n?? Projeto/backend/V2/tests/test_taxonomy_integrity.py\n?? Projeto/backend/V2/tests/test_taxonomy_models.py\n?? Projeto/backend/V2/tests/test_taxonomy_normalization.py\n?? Projeto/backend/V2/tests/test_temporal_metamorphic.py\n?? Projeto/backend/V2/tests/test_temporal_normalization.py\n?? Projeto/backend/V2/tests/test_temporal_review_regressions.py\n?? Projeto/backend/V2/tests/test_url_identity.py\n?? Projeto/backend/V2/tests/test_url_identity_integrity.py\n",
+      "stderr": "",
+      "seconds": 0.008278035999865097
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "-B",
+        "-m",
+        "pytest",
+        "-p",
+        "no:cacheprovider",
+        "-q"
+      ],
+      "exit_code": 0,
+      "stdout": "........................................................................ [  3%]\n........................................................................ [  6%]\n........................................................................ [ 10%]\n........................................................................ [ 13%]\n........................................................................ [ 16%]\n........................................................................ [ 20%]\n........................................................................ [ 23%]\n........................................................................ [ 26%]\n........................................................................ [ 30%]\n........................................................................ [ 33%]\n........................................................................ [ 37%]\n........................................................................ [ 40%]\n........................................................................ [ 43%]\n........................................................................ [ 47%]\n........................................................................ [ 50%]\n........................................................................ [ 53%]\n........................................................................ [ 57%]\n........................................................................ [ 60%]\n........................................................................ [ 64%]\n........................................................................ [ 67%]\n........................................................................ [ 70%]\n........................................................................ [ 74%]\n........................................................................ [ 77%]\n........................................................................ [ 80%]\n........................................................................ [ 84%]\n........................................................................ [ 87%]\n........................................................................ [ 91%]\n........................................................................ [ 94%]\n........................................................................ [ 97%]\n..............................................                           [100%]\n2134 passed in 23.06s\n",
+      "stderr": "",
+      "seconds": 23.464503007999156
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "-B",
+        "-m",
+        "editalfinder_v2.dataset_m30",
+        "data/m3"
+      ],
+      "exit_code": 0,
+      "stdout": "Validated 28 documents and 33 records (m3.0-pilot-v1; m3.0-annotation-v1)\n",
+      "stderr": "",
+      "seconds": 0.10210549700059346
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "-B",
+        "data/m3/provenance/verify_derivation.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"status\": \"PASS\", \"documents\": 28, \"checked_ids\": [\"M30-C01\", \"M30-C02\", \"M30-C03\", \"M30-C04\", \"M30-C05\", \"M30-C06\", \"M30-C07\", \"M30-C08\", \"M30-F01\", \"M30-F02\", \"M30-F03\", \"M30-F05\", \"M30-F06\", \"M30-F07\", \"M30-F08\", \"M30-I01\", \"M30-I02\", \"M30-I03\", \"M30-I04\", \"M30-I05\", \"M30-I06\", \"M30-I07\", \"M30-I08\", \"M30-N01\", \"M30-N02\", \"M30-N03\", \"M30-N04\", \"M30-S01\"]}\n",
+      "stderr": "",
+      "seconds": 0.22542692400020314
+    }
+  ],
+  "original_hashes": 28,
+  "text_hashes": 28,
+  "prediction_hash": "c4c32df2850ac101b4389ae1d91c643f87d1bc129a45e7b96f8586c3fc9ee388"
+}

@@ -1,0 +1,2454 @@
+{
+  "milestone": "M2.3d",
+  "scope": "Offline structured-input audit only; Phase B reviewed artifacts unchanged",
+  "frozen_manifest": {
+    "python": "3.11.16 (main, Aug 25 2026, 14:00:53) [Clang 22.1.3 ]",
+    "platform": "Linux-7.0.0-38-generic-x86_64-with-glibc2.43",
+    "cpu_count": 12,
+    "packages": [
+      {
+        "name": "annotated-types",
+        "version": "0.8.0"
+      },
+      {
+        "name": "ast_serialize",
+        "version": "0.13.0"
+      },
+      {
+        "name": "iniconfig",
+        "version": "2.3.1"
+      },
+      {
+        "name": "librt",
+        "version": "0.16.0"
+      },
+      {
+        "name": "mypy",
+        "version": "2.4.0"
+      },
+      {
+        "name": "mypy_extensions",
+        "version": "1.1.0"
+      },
+      {
+        "name": "packaging",
+        "version": "26.3"
+      },
+      {
+        "name": "pathspec",
+        "version": "1.1.1"
+      },
+      {
+        "name": "pluggy",
+        "version": "1.7.0"
+      },
+      {
+        "name": "pydantic",
+        "version": "2.14.1"
+      },
+      {
+        "name": "pydantic_core",
+        "version": "2.50.1"
+      },
+      {
+        "name": "Pygments",
+        "version": "2.21.0"
+      },
+      {
+        "name": "pytest",
+        "version": "9.1.1"
+      },
+      {
+        "name": "ruff",
+        "version": "0.17.1"
+      },
+      {
+        "name": "typing-inspection",
+        "version": "0.4.4"
+      },
+      {
+        "name": "typing_extensions",
+        "version": "4.16.0"
+      }
+    ],
+    "files": {
+      ".gitignore": "36dfe6b9b92821d430cc18881974cb124ffc18309fb465559292365821912bf6",
+      "EDITALFINDER_V2_M11A_RESULTADOS.md": "86731b08ca76c8dfcc0c64979f0c78ce41d0aeb5536f9a61374fa650ec7d54cc",
+      "EDITALFINDER_V2_M11_PARECER_INDEPENDENTE.md": "ceb987444395d3aed8814485b83d1a0c409a2bf98cd09e23f91f9bee0c2e07cf",
+      "EDITALFINDER_V2_M21_RESULTADOS.md": "6e38cbbd7ef967f502e747023de95e670ce68bf21828be9a7980c1dad38cad2a",
+      "EDITALFINDER_V2_M22A1_RESULTADOS.md": "90a606abcf68a72286e0ac4672c0d66f925d8e43dffb562b9e50ca4128347426",
+      "EDITALFINDER_V2_M22A1_REVISAO_FINAL_CHATGPT.md": "9d14f6f5bb49a83e43e7fb34a932d92ebfb476b6b96dbed42295f12833608f6c",
+      "EDITALFINDER_V2_M22A_RESULTADOS.md": "9cfc8cb1c189b44a4ac9ab868a07f57889cd4fe6629a050a43f1212ff8de8793",
+      "EDITALFINDER_V2_M22A_REVISAO_INDEPENDENTE.md": "0fa500972d9bc0210197b2f47569398bce322c50445deb85c75de6e3f4ab308d",
+      "EDITALFINDER_V2_M22B_RESULTADOS.md": "cb163e54cc639532be4a398829f65d016ac18476752af51d942951cb350395ef",
+      "EDITALFINDER_V2_M22B_REVISAO_CHATGPT.md": "31c2ae20940642bc2d0630fe5c43253045fb7b0155e7c8913a9b53b49826c958",
+      "EDITALFINDER_V2_M23A1_AUDIT_METADATA_RESULTADOS.md": "5bce95cb1c792000ba4625b8075972841c7121253af750ce68cc7618ad3d0ce8",
+      "EDITALFINDER_V2_M23A1_RESULTADOS.md": "4eda77db8adceb81d56e37f00cf9791252b7d5d4f2a2446e7c49c1ac291756e5",
+      "EDITALFINDER_V2_M23A1_REVISAO_INDEPENDENTE_CHATGPT.md": "3f582ef717dc04b1adeaaf717d7f9e86d76866a8b0d961eb7148bdb73e73fac5",
+      "EDITALFINDER_V2_M23A2_REVISAO_INDEPENDENTE_CHATGPT.md": "f0e09d30b5b0bcf501b1e8fc500e5a1f668661fa34061312a892c98b07f7b49f",
+      "EDITALFINDER_V2_M23A_REVISAO_CHATGPT.md": "d5a5ffdbebcbe7e0de2f1a57f6f8f8a7948da463a03d5907b68a19c89d851d28",
+      "EDITALFINDER_V2_M23B_RESULTADOS.md": "3b33474c9521d30fc479a7e88497f521bfa926c9c57fca7dad2f6bfacd211fa8",
+      "EDITALFINDER_V2_M23B_REVISAO_INDEPENDENTE_CHATGPT.md": "d699bb10a51f5c8b535f4d6da0934bceb5ee71841a97a18ccfd81500a7534e06",
+      "EDITALFINDER_V2_M23C_RESULTADOS.md": "9949883e2de7e0c91ec30943f0c8f9123e210a05ec7484b9478ab927d86a2977",
+      "EDITALFINDER_V2_M23C_REVISAO_CHATGPT.md": "e10692c0d4b663dc65999b6fab68a22e5374160c6fdf6c046e6e3cc0955e40c1",
+      "EDITALFINDER_V2_M23C_REVISAO_INDEPENDENTE.md": "b513efa46bde8fe62bad9f4389e803923c4a9153d3490ac673f2ca4e2459d84f",
+      "FIELD_MAPPING_AUDIT.md": "ad35ba3d774b29df6ef645eafe341a42a940206bf8327c93e9fb83f3f5513ba9",
+      "README.md": "59a880f67d3060483179c0889e806ea0632df230131f35f670a96c77f95ec444",
+      "RECOVERY_README.md": "17ec52187c3a13cfba327d4e5f5ec47f7717cf53904725aad1f5ad5ed9b67231",
+      "SHA256SUMS.txt": "3a39c1a5f3fbf26fa60b206783ac119abcba0b5023892c05fdf017e098406340",
+      "V2_RESTORE_INSTRUCTIONS.md": "f802382d0371374076a2e1aa08f2226e52ca7de032e4ae14d2c56b71136b90d1",
+      "docs/v2/DATA_CONTRACT.md": "cd1ca455de586fc0c1d27fc4b60b4961e29335a2b7746d6a6e9121f0f92042c8",
+      "docs/v2/DECISIONS_V1.md": "1c9c6a903eb503ba0d8bacd524edbf3e02dbcb008d65da99c8405e4a42b383fd",
+      "docs/v2/GEOGRAPHY_CONTRACT.md": "4dc71ed98f6bbaaa6f51b2cda3fe6626a9525fb027536d423656876f558ad534",
+      "docs/v2/IDENTITY_M21.md": "464180e2ddc01a46d5d5368e166378f6501d81fa9d3423e1d6f34eb0165b01be",
+      "docs/v2/INTEGRATION_AUDIT_REPROCESSING.md": "80682a0c3b19fd15ecd788465b98dfff6f5b14ec156584aa63b3e0360c70f7f2",
+      "docs/v2/INTEGRATION_CONSISTENCY_M23B.md": "1e3508d63a2547ed60d37dc929c1a6bdbad432b8d29779c131fadefc59587fa3",
+      "docs/v2/M21_BENCHMARK.json": "db348336666ff0f65d9d6503841f1bdaefeb04d0bf52767404da119a810117ae",
+      "docs/v2/M23A1_BENCHMARK.json": "876236179cc3c34a892e24df4a320f73d620982566e585e2516899e9710269ab",
+      "docs/v2/M23B_BENCHMARK.json": "c9de6b9a51bacd7bb6a8dce5dcd76eec77da11009ac11bc836e5c35f368e6e6c",
+      "docs/v2/M23C_BENCHMARK.json": "a1a49ce755a1ab7020a7890699002bd799338b114fb83529fa2e681c25556c7b",
+      "docs/v2/M23C_FROZEN_ORACLE.md": "a3899c89f787abe83870b08990a9d234615f7ee844832445df082162e7b95f31",
+      "docs/v2/M23C_QUALITY_GATES.json": "688cc612f893999e1faacb9c532e2d11db5a940239da027e21e8a48bfac3de02",
+      "docs/v2/MIGRATION_000001_VALIDATION.md": "682488195d56ca20a12197023ca34b18303b14dd560f9f607e5d64e2dc231e12",
+      "docs/v2/MIGRATION_000002_VALIDATION.md": "4547d1e0a103b8de6890ec442f3a5069f9174d1fe77335b2848a94e630dc2372",
+      "docs/v2/MIGRATION_PLAN.md": "74a583ef457e54f9940b3cb35234c1a896ce3c7f7636b5e73d1247a9d93f54bf",
+      "docs/v2/OPEN_DECISIONS.md": "d0dbdeea66359327f71f0be17291c45c5286490e04674546d4fb08d159ae0530",
+      "docs/v2/SCHEMA_DESIGN_V1.md": "d1a0b861946aae026615b87dbd6c44ed62c01d4e65a2bf39f8afb909fad1a163",
+      "docs/v2/SEMANTIC_NORMALIZATION_M22A.md": "07d00751a1e32c255e51b3b743823567d455b12731bd3cf46cb478f3effb7053",
+      "docs/v2/SEMANTIC_NORMALIZATION_M22B.md": "1447f4999c6e61278059d0d01aef42074fa7384bd73f57b4e4f281a124981c40",
+      "docs/v2/SOURCE_SCOPE.md": "7d2f93a563cc5b93fd9971ec7bbdc293909772df2745019b44331424c4016355",
+      "pyproject.toml": "b2ee5f6d0b534e50c96733a85b6e2cff7a826f94902f666b40e6689f25beea31",
+      "src/editalfinder_v2/__init__.py": "1e6beebe1856319dcff4619a8db4f7e88e25828551807b425baac7c1dcfb0b03",
+      "src/editalfinder_v2/domain/__init__.py": "b97387b504f464fefa01081220a8f05a0ba38ab600ed540b83732113b34706bc",
+      "src/editalfinder_v2/domain/financial_models.py": "dc3f98e2dff5aba87e681a8f7e72b2d28333aeefd4c71522613aa59e81e478c4",
+      "src/editalfinder_v2/domain/financial_normalization.py": "9ed426c51818906fe5ecb72db9250d802e6db9b2767ad48aa72b616c3e1dee7a",
+      "src/editalfinder_v2/domain/financial_parsing.py": "4be69d8182e004b0d14d6ae34eed2278eae3a2d8f6a2963b9dd3acc98a4eb1e1",
+      "src/editalfinder_v2/domain/geography_catalog.py": "7894065145156e8df75759ced30145702175c0e1acb81fc7ad962c114b994b09",
+      "src/editalfinder_v2/domain/geography_models.py": "51ae8237c189b7ff1b4618cd32a514f8a11a87c485978ba27ddcb4588fc382f9",
+      "src/editalfinder_v2/domain/geography_normalization.py": "0a91f1a3b8680a0f55be1a10b6d0db2f50250b1436062977dc40955625ba62cc",
+      "src/editalfinder_v2/domain/identity_models.py": "2af868a37cc3d47adbd06e071bf080a0b47ff4c96fc13bd90a2cb403806a9224",
+      "src/editalfinder_v2/domain/identity_normalization.py": "91515beac3bd79a64ebbb15908ac393e46dbf02dba59c20cbc9dc5eec5fd9d0a",
+      "src/editalfinder_v2/domain/identity_resolution.py": "ed52366fffb964c2744e98d6acef11c16d9da5403d9438b40b8df98552f3171d",
+      "src/editalfinder_v2/domain/integration.py": "c2d265c360626251599f6dc653a9399c1f5cf204a11d3618b84ded8e0d3ea5b3",
+      "src/editalfinder_v2/domain/integration_budget.py": "84eff4184fb3e388b876108e24879a7130d091b4bd7500547a833184c45c26da",
+      "src/editalfinder_v2/domain/integration_consistency.py": "625420cc04110baeaac3bc755d1846d98918207bf3df2d0765089bdbafbb731f",
+      "src/editalfinder_v2/domain/integration_models.py": "357752b5ee9979b342d89d0f3a23ab9d9ac072b4b270d485229ff2bcccec3172",
+      "src/editalfinder_v2/domain/m22b_common.py": "203c46990eb692de0795b5c7b6ce1b852f5c7ca249147d17606e2ad588fc630c",
+      "src/editalfinder_v2/domain/models.py": "2fbe4051b3bca34f32b8eb52040495535e4f58caa0369a7be715a9496e91fcb4",
+      "src/editalfinder_v2/domain/organization_models.py": "72a9a22c059f5bd10f76a45855b4faf10732ad1cc038d9311026608c99df2dc9",
+      "src/editalfinder_v2/domain/organization_normalization.py": "e96bdd50166ccd9f2364dc09e43861d20e136f0f2465190e87d2c16d93bd4e40",
+      "src/editalfinder_v2/domain/policies.py": "69d4d95811aca19128b4fca59774c9b8317edc277a1861b582fa6df0727704e1",
+      "src/editalfinder_v2/domain/safety.py": "e056d8185e27fc3ada07c01e905f4fbb084cdb35aed0ac5bde416986a8289f39",
+      "src/editalfinder_v2/domain/semantic_common.py": "a2b980318160fa5b4f04b00c117ac62a1da9e8956745f0d8d72717988b699de2",
+      "src/editalfinder_v2/domain/taxonomy_models.py": "c74bc80cac3048c73514669bfa495498808e7b2f76cfd8dcf61e3b7e29160594",
+      "src/editalfinder_v2/domain/taxonomy_normalization.py": "b87dc7f9a33a8a551abc389f8f83900ad7c9e748504c1fd340a931f8d0cab201",
+      "src/editalfinder_v2/domain/temporal_models.py": "41fb00803fff1dab6fbd082d03cfeda21804343b78203087b4880ff51025bef1",
+      "src/editalfinder_v2/domain/temporal_normalization.py": "a37ba55d98ba2d89c519610f42c6732ae79d244949c01f7e577685451065f688",
+      "src/editalfinder_v2/domain/url_identity.py": "f2a97aeef4a117ebc12ad5e3119f9f437b9d7039e91b16f5ba95e6056a972635",
+      "src/editalfinder_v2/domain/validation.py": "a3b82cac879d4724aeb4f31c437bddadd4fd51cda58b7642334f5284d80ea3bd",
+      "supabase/migrations/20260717_000001_editalfinder_v2_initial_schema.sql": "a3c0b080143df8faaf13ce177709636fba1b3e523394fe03691edfaf26e5107d",
+      "supabase/migrations/20260718_000002_editalfinder_v2_initial_seeds.sql": "d65e6f8f7a3d5ddd0665cf0aca1f32b7bb5c8d4246808354a758c485f7e63ed3",
+      "tests/benchmark_identity.py": "e73c55654fcc990d7ce8865d9600f4398a2fcadaba686700384c029bd6428476",
+      "tests/benchmark_integration_budget.py": "84b13066e813cf11e22542f0730bcf3ccec03f389d1b9c6f44363cbe8740edd3",
+      "tests/benchmark_m23b_consistency.py": "04fcb49b117940f4095051bd48c7c14204e33152070aa6934c4d1afae5fc7462",
+      "tests/benchmark_m23c_pipeline.py": "dab11adf28db6219400d4fc1f269d6b8b428b8d146cd98bbba32277551f49273",
+      "tests/benchmark_validation.py": "f85d8a4356ee8676663c36f97cd49a8b05685e53548e41e5bed5a2fab2f717b1",
+      "tests/fixtures/m23_cases.json": "c049ceefa46cea9336d5f6de3d55bafed438ef23757018cce583b092e3c2abd8",
+      "tests/fixtures/m23c_operational_v1.json": "6afcb6bebb688c296d824527d781ab217c354e5a471b08733e66d2a61e75a320",
+      "tests/fixtures/m23c_v1.json": "654b5a285297ee40cbe4f9f7c3b28438fec15e1b75ab576c1ce35d310f20a54e",
+      "tests/fixtures.py": "327cd7d70d6f400de7088b5824e62ba2ffe16172dc0b43afabe2bbf4c5eaccee",
+      "tests/m22b_fixtures.py": "cbe3fd217ab3eb66833a516652d9a8a3a902e076bf7454b5c5896a8a75688098",
+      "tests/m23_fixtures.py": "a1966567ddcf1de8bc903707a43120de973bed9194286e0e1c629ef05f0f3d89",
+      "tests/m23c_fixtures.py": "f1cf149991012647df11f5a485ceabc948ceb4319e9fbcc2ebd866f695d0275d",
+      "tests/semantic_fixtures.py": "8b07a853439412e667ea46deb6f6ea277b03f2a008109e7cc6cf9139121dddac",
+      "tests/test_engine_safety.py": "36787bea1954662af67f5b2d8a8f2bb3a588b71c7cf70df668a95ba57dbcfb1e",
+      "tests/test_financial_adversarial.py": "a5cae6721ceaea80e4b7451cfd1af5099ca907ecef091219066a9cc7f171d74d",
+      "tests/test_financial_edges.py": "439b84aed800456ef4b887a2ecdb4f8f7e24627f6157724d8419eb89c1732896",
+      "tests/test_financial_normalization.py": "8ff5d50401ec773a943d458c25b0a442f04e0168622ed8d25cddf479cd4a7a0e",
+      "tests/test_financial_parsing.py": "9678cdf5eb47db215bdc3ee3e4492e744b7a13a3dc4b14d01ff060a61ecd716f",
+      "tests/test_geography_metamorphic.py": "4a86517c5bb58e05353ec82a63c85899efee57897eec562b8592b24766b1288e",
+      "tests/test_geography_normalization.py": "8ae9ab600ef0aac1fe5b85e37e56ed9300b7675b91983ee9692f4ae522c5ac79",
+      "tests/test_identity.py": "868464a715a0a23774358831426abbfc23eb19d3424a3bb99ae3f80c7b5403be",
+      "tests/test_identity_edges.py": "28ed46af1dbde3be335c13254789dc65374e74ec422ccfc224ac2e8fc2dbeb2a",
+      "tests/test_identity_properties.py": "a49ef9b83a2cbce2bf3b1bfe22d38ef26f112ad2f39138366bb7352820193cfd",
+      "tests/test_identity_review_regressions.py": "89db0480c689492dcd528aafb0de60f00f89cdb663eb8173ba5df2d3d4fcc35e",
+      "tests/test_integrity.py": "226c7f5e10b0417b81459718a199dcb661c5f6797e44db80da7e54108638205b",
+      "tests/test_m22a1_geography_contract.py": "bbd39a21f1334990fc275ea64619d62ad9759e0050a13d70edccb640bb73e9f3",
+      "tests/test_m22a1_temporal_contract.py": "316e48193111776ba75b22d8c5ad5a12f1059c67eb3cc9182a36d5870bd34ada",
+      "tests/test_m22b_boundary_adversarial.py": "3be7d32db1fd68bbd483ddc1566210b65ce5e4dc9a074ee2ee3b29f91d95ef3f",
+      "tests/test_m22b_common.py": "181b6254ebf768863d45e32f3349eaac8eb93c49a3c98c5246b4b00743f6cdfd",
+      "tests/test_m23_audit_metadata.py": "b294590b551daec4760f9d6531e1b4b611fdd16ede383bd0ff4c9a2bc15dbcb9",
+      "tests/test_m23_core.py": "d3732b3a804df3cde385ada6f03c4f2cab2b4a3228bbb4867606554b8603e233",
+      "tests/test_m23_output_budget.py": "322e6068cc0d6075fdbb97371472d68c6859491b42835e61edc4c95799fdb4f9",
+      "tests/test_m23b_boundaries.py": "be438a50b6048e69a4fee724bb82554a42bc6a94bd541e831851482d4292d969",
+      "tests/test_m23b_consistency.py": "59e6b8cf83041035f7bffcaf49809e7f954263987c943b28c14f50052c4e2b3e",
+      "tests/test_m23c_adversarial.py": "206aa7fe86f705400fe3d83eeb33d7613b0b04cb077762785add3b3fafb9cb63",
+      "tests/test_m23c_metamorphic.py": "6318bf1a3d55bf394b8a48ffa0ecf3e3c6d735e6e8c509a3e5961dbe22a56fbe",
+      "tests/test_m23c_pipeline.py": "d782ab457982f103d86e49f0e03405bb3f8ed74d5dd43a403f0825b5d306a739",
+      "tests/test_m23c_product_contracts.py": "d380ae794c5e4d6a54d760c4e14caa519e3ddd5b7a6a174c3f191f85646662ff",
+      "tests/test_m23c_resources.py": "26049e90f932758eab0397f4c310c3cc78afb13e8adcae31c60ecc51ab3bf942",
+      "tests/test_models.py": "948447308f55025e2ce06a0a9e99667f505dcdbba3380b67dfe20542b42ebf65",
+      "tests/test_normalization_contracts.py": "e6071c5f4837daa4a4ed4e0b7b9ddfeef4684922968f310bff87a73b4f1dc37d",
+      "tests/test_organization_adversarial.py": "d0fa93648924c679aafdbbe33e307b46f767a52c698f5df1eff36242e20afaa5",
+      "tests/test_organization_identifiers.py": "8ca926dda65c4079512ae9b94dfaba2a67df1b4bd81245a312ee362013a28c1f",
+      "tests/test_organization_normalization.py": "86e626f824aabf7638a6128ac62b3886f5243e72ce8a04457e13d287de942830",
+      "tests/test_report_audit.py": "b602cc4a5999999422d36900baa19c78cc332392d43873bff99b4e4f9e4abfb8",
+      "tests/test_safety.py": "5ae5e00969423e183d12c24fba95f662a566f31395e15b5428063a06ef39ea90",
+      "tests/test_semantic_common.py": "6dc8f0021bc1a94daf2e52ef8dfac4abf525f214c0ecf16b782215dfecec9ed3",
+      "tests/test_taxonomy_adversarial.py": "fc6602e049198690c85b08c44eb7ce0c206d609701414979ac66a467c93c9089",
+      "tests/test_taxonomy_evidence.py": "d1db881b2abd037791415e6c27cd6ee7484268619fda3a1c7dbf0071ac54674f",
+      "tests/test_taxonomy_integrity.py": "848787ffd10f295dcec9075e6b5bd1570fd36cae967cb66d8495d7d4e5d8fb75",
+      "tests/test_taxonomy_models.py": "31d07028c642d3814e8aeed25ad319f5a35fc45e1efd07f7386b412b7a83caef",
+      "tests/test_taxonomy_normalization.py": "98fe6227435fae63a9704c7780c8d1bec080bef8bfd5560c9bb3ddf68cff3e44",
+      "tests/test_temporal_metamorphic.py": "3b815998cff52eeab4d454d1f7928895f7bbc5469514adffc075e21cb1452812",
+      "tests/test_temporal_normalization.py": "76e583859c50b357e46bbe23dad426137c034264860eaaedb1796772c5836d05",
+      "tests/test_temporal_review_regressions.py": "48d5bc1648fb5d277422761d69400049a605372383d745bbdbd2bd42ec01c96e",
+      "tests/test_url_identity.py": "34803992a5ad07c6c2f3176ac8e2a7cf91a2f7d5e4bf0959a167cdcaec233237",
+      "tests/test_url_identity_integrity.py": "ba15ca1b797fadbf9044250c5ec9a0276366a46d08170f0e5dc5926240de756b",
+      "tests/test_validation.py": "f05f245a0c6f7d69a0b87cff84094c9cfb19efd85eb59f4c73ae8947f5032fbe",
+      "tests/test_validation_scaling.py": "7d574576168f55fa506ff42aef61f4289a5c5d243706ebba56d79f19c238a302",
+      "uv.lock": "371efa9bf8ae3bfaaeb15445d10653cca9de46e8aaa3aa8d7a551a15cd6d75eb"
+    }
+  },
+  "frozen_manifest_sha256": "f8f0514ea6234d6443094438625e1d48dd43233b6cce0a2b46f97ce64745a4ec",
+  "initial_hashes": {
+    "src/editalfinder_v2/__init__.py": "1e6beebe1856319dcff4619a8db4f7e88e25828551807b425baac7c1dcfb0b03",
+    "src/editalfinder_v2/domain/validation.py": "a3b82cac879d4724aeb4f31c437bddadd4fd51cda58b7642334f5284d80ea3bd",
+    "src/editalfinder_v2/domain/m22b_common.py": "203c46990eb692de0795b5c7b6ce1b852f5c7ca249147d17606e2ad588fc630c",
+    "src/editalfinder_v2/domain/geography_models.py": "51ae8237c189b7ff1b4618cd32a514f8a11a87c485978ba27ddcb4588fc382f9",
+    "src/editalfinder_v2/domain/integration_models.py": "357752b5ee9979b342d89d0f3a23ab9d9ac072b4b270d485229ff2bcccec3172",
+    "src/editalfinder_v2/domain/__init__.py": "b97387b504f464fefa01081220a8f05a0ba38ab600ed540b83732113b34706bc",
+    "src/editalfinder_v2/domain/taxonomy_normalization.py": "b87dc7f9a33a8a551abc389f8f83900ad7c9e748504c1fd340a931f8d0cab201",
+    "src/editalfinder_v2/domain/integration.py": "c2d265c360626251599f6dc653a9399c1f5cf204a11d3618b84ded8e0d3ea5b3",
+    "src/editalfinder_v2/domain/financial_parsing.py": "4be69d8182e004b0d14d6ae34eed2278eae3a2d8f6a2963b9dd3acc98a4eb1e1",
+    "src/editalfinder_v2/domain/safety.py": "e056d8185e27fc3ada07c01e905f4fbb084cdb35aed0ac5bde416986a8289f39",
+    "src/editalfinder_v2/domain/temporal_normalization.py": "a37ba55d98ba2d89c519610f42c6732ae79d244949c01f7e577685451065f688",
+    "src/editalfinder_v2/domain/geography_catalog.py": "7894065145156e8df75759ced30145702175c0e1acb81fc7ad962c114b994b09",
+    "src/editalfinder_v2/domain/policies.py": "69d4d95811aca19128b4fca59774c9b8317edc277a1861b582fa6df0727704e1",
+    "src/editalfinder_v2/domain/semantic_common.py": "a2b980318160fa5b4f04b00c117ac62a1da9e8956745f0d8d72717988b699de2",
+    "src/editalfinder_v2/domain/integration_consistency.py": "625420cc04110baeaac3bc755d1846d98918207bf3df2d0765089bdbafbb731f",
+    "src/editalfinder_v2/domain/financial_normalization.py": "9ed426c51818906fe5ecb72db9250d802e6db9b2767ad48aa72b616c3e1dee7a",
+    "src/editalfinder_v2/domain/organization_models.py": "72a9a22c059f5bd10f76a45855b4faf10732ad1cc038d9311026608c99df2dc9",
+    "src/editalfinder_v2/domain/identity_resolution.py": "ed52366fffb964c2744e98d6acef11c16d9da5403d9438b40b8df98552f3171d",
+    "src/editalfinder_v2/domain/geography_normalization.py": "0a91f1a3b8680a0f55be1a10b6d0db2f50250b1436062977dc40955625ba62cc",
+    "src/editalfinder_v2/domain/organization_normalization.py": "e96bdd50166ccd9f2364dc09e43861d20e136f0f2465190e87d2c16d93bd4e40",
+    "src/editalfinder_v2/domain/identity_normalization.py": "91515beac3bd79a64ebbb15908ac393e46dbf02dba59c20cbc9dc5eec5fd9d0a",
+    "src/editalfinder_v2/domain/financial_models.py": "dc3f98e2dff5aba87e681a8f7e72b2d28333aeefd4c71522613aa59e81e478c4",
+    "src/editalfinder_v2/domain/temporal_models.py": "41fb00803fff1dab6fbd082d03cfeda21804343b78203087b4880ff51025bef1",
+    "src/editalfinder_v2/domain/taxonomy_models.py": "c74bc80cac3048c73514669bfa495498808e7b2f76cfd8dcf61e3b7e29160594",
+    "src/editalfinder_v2/domain/url_identity.py": "f2a97aeef4a117ebc12ad5e3119f9f437b9d7039e91b16f5ba95e6056a972635",
+    "src/editalfinder_v2/domain/integration_budget.py": "84eff4184fb3e388b876108e24879a7130d091b4bd7500547a833184c45c26da",
+    "src/editalfinder_v2/domain/models.py": "2fbe4051b3bca34f32b8eb52040495535e4f58caa0369a7be715a9496e91fcb4",
+    "src/editalfinder_v2/domain/identity_models.py": "2af868a37cc3d47adbd06e071bf080a0b47ff4c96fc13bd90a2cb403806a9224",
+    "tests/test_taxonomy_adversarial.py": "fc6602e049198690c85b08c44eb7ce0c206d609701414979ac66a467c93c9089",
+    "tests/benchmark_m23b_consistency.py": "04fcb49b117940f4095051bd48c7c14204e33152070aa6934c4d1afae5fc7462",
+    "tests/m23c_fixtures.py": "f1cf149991012647df11f5a485ceabc948ceb4319e9fbcc2ebd866f695d0275d",
+    "tests/test_m23b_consistency.py": "59e6b8cf83041035f7bffcaf49809e7f954263987c943b28c14f50052c4e2b3e",
+    "tests/test_m22a1_geography_contract.py": "bbd39a21f1334990fc275ea64619d62ad9759e0050a13d70edccb640bb73e9f3",
+    "tests/test_taxonomy_integrity.py": "848787ffd10f295dcec9075e6b5bd1570fd36cae967cb66d8495d7d4e5d8fb75",
+    "tests/test_m23c_product_contracts.py": "d380ae794c5e4d6a54d760c4e14caa519e3ddd5b7a6a174c3f191f85646662ff",
+    "tests/test_geography_normalization.py": "8ae9ab600ef0aac1fe5b85e37e56ed9300b7675b91983ee9692f4ae522c5ac79",
+    "tests/test_validation_scaling.py": "7d574576168f55fa506ff42aef61f4289a5c5d243706ebba56d79f19c238a302",
+    "tests/test_m23_core.py": "d3732b3a804df3cde385ada6f03c4f2cab2b4a3228bbb4867606554b8603e233",
+    "tests/test_m23c_resources.py": "26049e90f932758eab0397f4c310c3cc78afb13e8adcae31c60ecc51ab3bf942",
+    "tests/benchmark_validation.py": "f85d8a4356ee8676663c36f97cd49a8b05685e53548e41e5bed5a2fab2f717b1",
+    "tests/test_m22b_boundary_adversarial.py": "3be7d32db1fd68bbd483ddc1566210b65ce5e4dc9a074ee2ee3b29f91d95ef3f",
+    "tests/test_temporal_review_regressions.py": "48d5bc1648fb5d277422761d69400049a605372383d745bbdbd2bd42ec01c96e",
+    "tests/test_financial_edges.py": "439b84aed800456ef4b887a2ecdb4f8f7e24627f6157724d8419eb89c1732896",
+    "tests/m23_fixtures.py": "c5f61b5c5594d5922ba99bc901694b0afe45887bab334b84fb1c93214042c571",
+    "tests/test_integrity.py": "226c7f5e10b0417b81459718a199dcb661c5f6797e44db80da7e54108638205b",
+    "tests/test_m23c_metamorphic.py": "6318bf1a3d55bf394b8a48ffa0ecf3e3c6d735e6e8c509a3e5961dbe22a56fbe",
+    "tests/test_identity_review_regressions.py": "89db0480c689492dcd528aafb0de60f00f89cdb663eb8173ba5df2d3d4fcc35e",
+    "tests/test_validation.py": "f05f245a0c6f7d69a0b87cff84094c9cfb19efd85eb59f4c73ae8947f5032fbe",
+    "tests/test_m23c_adversarial.py": "206aa7fe86f705400fe3d83eeb33d7613b0b04cb077762785add3b3fafb9cb63",
+    "tests/test_taxonomy_evidence.py": "d1db881b2abd037791415e6c27cd6ee7484268619fda3a1c7dbf0071ac54674f",
+    "tests/test_organization_adversarial.py": "d0fa93648924c679aafdbbe33e307b46f767a52c698f5df1eff36242e20afaa5",
+    "tests/test_identity.py": "868464a715a0a23774358831426abbfc23eb19d3424a3bb99ae3f80c7b5403be",
+    "tests/benchmark_m23c_pipeline.py": "dab11adf28db6219400d4fc1f269d6b8b428b8d146cd98bbba32277551f49273",
+    "tests/test_temporal_metamorphic.py": "3b815998cff52eeab4d454d1f7928895f7bbc5469514adffc075e21cb1452812",
+    "tests/test_identity_properties.py": "a49ef9b83a2cbce2bf3b1bfe22d38ef26f112ad2f39138366bb7352820193cfd",
+    "tests/test_m22b_common.py": "181b6254ebf768863d45e32f3349eaac8eb93c49a3c98c5246b4b00743f6cdfd",
+    "tests/test_m23c_pipeline.py": "d782ab457982f103d86e49f0e03405bb3f8ed74d5dd43a403f0825b5d306a739",
+    "tests/test_engine_safety.py": "36787bea1954662af67f5b2d8a8f2bb3a588b71c7cf70df668a95ba57dbcfb1e",
+    "tests/test_m22a1_temporal_contract.py": "316e48193111776ba75b22d8c5ad5a12f1059c67eb3cc9182a36d5870bd34ada",
+    "tests/test_identity_edges.py": "28ed46af1dbde3be335c13254789dc65374e74ec422ccfc224ac2e8fc2dbeb2a",
+    "tests/test_geography_metamorphic.py": "4a86517c5bb58e05353ec82a63c85899efee57897eec562b8592b24766b1288e",
+    "tests/test_financial_adversarial.py": "a5cae6721ceaea80e4b7451cfd1af5099ca907ecef091219066a9cc7f171d74d",
+    "tests/test_financial_parsing.py": "9678cdf5eb47db215bdc3ee3e4492e744b7a13a3dc4b14d01ff060a61ecd716f",
+    "tests/m22b_fixtures.py": "cbe3fd217ab3eb66833a516652d9a8a3a902e076bf7454b5c5896a8a75688098",
+    "tests/test_m23_audit_metadata.py": "b294590b551daec4760f9d6531e1b4b611fdd16ede383bd0ff4c9a2bc15dbcb9",
+    "tests/test_report_audit.py": "b602cc4a5999999422d36900baa19c78cc332392d43873bff99b4e4f9e4abfb8",
+    "tests/test_m23b_boundaries.py": "be438a50b6048e69a4fee724bb82554a42bc6a94bd541e831851482d4292d969",
+    "tests/benchmark_integration_budget.py": "84b13066e813cf11e22542f0730bcf3ccec03f389d1b9c6f44363cbe8740edd3",
+    "tests/fixtures.py": "327cd7d70d6f400de7088b5824e62ba2ffe16172dc0b43afabe2bbf4c5eaccee",
+    "tests/test_taxonomy_normalization.py": "98fe6227435fae63a9704c7780c8d1bec080bef8bfd5560c9bb3ddf68cff3e44",
+    "tests/benchmark_identity.py": "e73c55654fcc990d7ce8865d9600f4398a2fcadaba686700384c029bd6428476",
+    "tests/test_models.py": "948447308f55025e2ce06a0a9e99667f505dcdbba3380b67dfe20542b42ebf65",
+    "tests/test_url_identity_integrity.py": "ba15ca1b797fadbf9044250c5ec9a0276366a46d08170f0e5dc5926240de756b",
+    "tests/semantic_fixtures.py": "8b07a853439412e667ea46deb6f6ea277b03f2a008109e7cc6cf9139121dddac",
+    "tests/test_url_identity.py": "34803992a5ad07c6c2f3176ac8e2a7cf91a2f7d5e4bf0959a167cdcaec233237",
+    "tests/test_semantic_common.py": "6dc8f0021bc1a94daf2e52ef8dfac4abf525f214c0ecf16b782215dfecec9ed3",
+    "tests/test_temporal_normalization.py": "76e583859c50b357e46bbe23dad426137c034264860eaaedb1796772c5836d05",
+    "tests/test_financial_normalization.py": "8ff5d50401ec773a943d458c25b0a442f04e0168622ed8d25cddf479cd4a7a0e",
+    "tests/test_taxonomy_models.py": "31d07028c642d3814e8aeed25ad319f5a35fc45e1efd07f7386b412b7a83caef",
+    "tests/test_m23_output_budget.py": "322e6068cc0d6075fdbb97371472d68c6859491b42835e61edc4c95799fdb4f9",
+    "tests/test_organization_normalization.py": "86e626f824aabf7638a6128ac62b3886f5243e72ce8a04457e13d287de942830",
+    "tests/test_organization_identifiers.py": "8ca926dda65c4079512ae9b94dfaba2a67df1b4bd81245a312ee362013a28c1f",
+    "tests/test_normalization_contracts.py": "e6071c5f4837daa4a4ed4e0b7b9ddfeef4684922968f310bff87a73b4f1dc37d",
+    "tests/test_safety.py": "5ae5e00969423e183d12c24fba95f662a566f31395e15b5428063a06ef39ea90",
+    "tests/fixtures/m23c_operational_v1.json": "6afcb6bebb688c296d824527d781ab217c354e5a471b08733e66d2a61e75a320",
+    "tests/fixtures/m23c_v1.json": "654b5a285297ee40cbe4f9f7c3b28438fec15e1b75ab576c1ce35d310f20a54e",
+    "tests/fixtures/m23_cases.json": "c049ceefa46cea9336d5f6de3d55bafed438ef23757018cce583b092e3c2abd8",
+    "docs/v2/GEOGRAPHY_CONTRACT.md": "4dc71ed98f6bbaaa6f51b2cda3fe6626a9525fb027536d423656876f558ad534",
+    "docs/v2/INTEGRATION_CONSISTENCY_M23B.md": "1e3508d63a2547ed60d37dc929c1a6bdbad432b8d29779c131fadefc59587fa3",
+    "docs/v2/M21_BENCHMARK.json": "db348336666ff0f65d9d6503841f1bdaefeb04d0bf52767404da119a810117ae",
+    "docs/v2/MIGRATION_000001_VALIDATION.md": "682488195d56ca20a12197023ca34b18303b14dd560f9f607e5d64e2dc231e12",
+    "docs/v2/M23A1_BENCHMARK.json": "876236179cc3c34a892e24df4a320f73d620982566e585e2516899e9710269ab",
+    "docs/v2/SEMANTIC_NORMALIZATION_M22A.md": "07d00751a1e32c255e51b3b743823567d455b12731bd3cf46cb478f3effb7053",
+    "docs/v2/MIGRATION_PLAN.md": "74a583ef457e54f9940b3cb35234c1a896ce3c7f7636b5e73d1247a9d93f54bf",
+    "docs/v2/MIGRATION_000002_VALIDATION.md": "4547d1e0a103b8de6890ec442f3a5069f9174d1fe77335b2848a94e630dc2372",
+    "docs/v2/DECISIONS_V1.md": "1c9c6a903eb503ba0d8bacd524edbf3e02dbcb008d65da99c8405e4a42b383fd",
+    "docs/v2/IDENTITY_M21.md": "464180e2ddc01a46d5d5368e166378f6501d81fa9d3423e1d6f34eb0165b01be",
+    "docs/v2/M23C_FROZEN_ORACLE.md": "a3899c89f787abe83870b08990a9d234615f7ee844832445df082162e7b95f31",
+    "docs/v2/OPEN_DECISIONS.md": "d0dbdeea66359327f71f0be17291c45c5286490e04674546d4fb08d159ae0530",
+    "docs/v2/SEMANTIC_NORMALIZATION_M22B.md": "1447f4999c6e61278059d0d01aef42074fa7384bd73f57b4e4f281a124981c40",
+    "docs/v2/DATA_CONTRACT.md": "cd1ca455de586fc0c1d27fc4b60b4961e29335a2b7746d6a6e9121f0f92042c8",
+    "docs/v2/M23C_QUALITY_GATES.json": "688cc612f893999e1faacb9c532e2d11db5a940239da027e21e8a48bfac3de02",
+    "docs/v2/INTEGRATION_AUDIT_REPROCESSING.md": "80682a0c3b19fd15ecd788465b98dfff6f5b14ec156584aa63b3e0360c70f7f2",
+    "docs/v2/M23C_BENCHMARK.json": "a1a49ce755a1ab7020a7890699002bd799338b114fb83529fa2e681c25556c7b",
+    "docs/v2/SCHEMA_DESIGN_V1.md": "d1a0b861946aae026615b87dbd6c44ed62c01d4e65a2bf39f8afb909fad1a163",
+    "docs/v2/M23B_BENCHMARK.json": "c9de6b9a51bacd7bb6a8dce5dcd76eec77da11009ac11bc836e5c35f368e6e6c",
+    "docs/v2/SOURCE_SCOPE.md": "7d2f93a563cc5b93fd9971ec7bbdc293909772df2745019b44331424c4016355",
+    "supabase/migrations/20260718_000002_editalfinder_v2_initial_seeds.sql": "d65e6f8f7a3d5ddd0665cf0aca1f32b7bb5c8d4246808354a758c485f7e63ed3",
+    "supabase/migrations/20260717_000001_editalfinder_v2_initial_schema.sql": "a3c0b080143df8faaf13ce177709636fba1b3e523394fe03691edfaf26e5107d",
+    "EDITALFINDER_V2_M22B_RESULTADOS.md": "cb163e54cc639532be4a398829f65d016ac18476752af51d942951cb350395ef",
+    "EDITALFINDER_V2_M22B_REVISAO_CHATGPT.md": "31c2ae20940642bc2d0630fe5c43253045fb7b0155e7c8913a9b53b49826c958",
+    "uv.lock": "371efa9bf8ae3bfaaeb15445d10653cca9de46e8aaa3aa8d7a551a15cd6d75eb",
+    "EDITALFINDER_V2_M22A_RESULTADOS.md": "9cfc8cb1c189b44a4ac9ab868a07f57889cd4fe6629a050a43f1212ff8de8793",
+    "EDITALFINDER_V2_M11A_RESULTADOS.md": "86731b08ca76c8dfcc0c64979f0c78ce41d0aeb5536f9a61374fa650ec7d54cc",
+    "SHA256SUMS.txt": "3a39c1a5f3fbf26fa60b206783ac119abcba0b5023892c05fdf017e098406340",
+    "EDITALFINDER_V2_M22A1_RESULTADOS.md": "90a606abcf68a72286e0ac4672c0d66f925d8e43dffb562b9e50ca4128347426",
+    "RECOVERY_README.md": "17ec52187c3a13cfba327d4e5f5ec47f7717cf53904725aad1f5ad5ed9b67231",
+    "EDITALFINDER_V2_M11_PARECER_INDEPENDENTE.md": "ceb987444395d3aed8814485b83d1a0c409a2bf98cd09e23f91f9bee0c2e07cf",
+    "V2_RESTORE_INSTRUCTIONS.md": "f802382d0371374076a2e1aa08f2226e52ca7de032e4ae14d2c56b71136b90d1",
+    "EDITALFINDER_V2_M23A_REVISAO_CHATGPT.md": "d5a5ffdbebcbe7e0de2f1a57f6f8f8a7948da463a03d5907b68a19c89d851d28",
+    "EDITALFINDER_V2_M23A1_REVISAO_INDEPENDENTE_CHATGPT.md": "3f582ef717dc04b1adeaaf717d7f9e86d76866a8b0d961eb7148bdb73e73fac5",
+    "EDITALFINDER_V2_M21_RESULTADOS.md": "6e38cbbd7ef967f502e747023de95e670ce68bf21828be9a7980c1dad38cad2a",
+    "EDITALFINDER_V2_M23C_RESULTADOS.md": "9949883e2de7e0c91ec30943f0c8f9123e210a05ec7484b9478ab927d86a2977",
+    ".gitignore": "36dfe6b9b92821d430cc18881974cb124ffc18309fb465559292365821912bf6",
+    "FIELD_MAPPING_AUDIT.md": "ad35ba3d774b29df6ef645eafe341a42a940206bf8327c93e9fb83f3f5513ba9",
+    "EDITALFINDER_V2_M23A1_AUDIT_METADATA_RESULTADOS.md": "5bce95cb1c792000ba4625b8075972841c7121253af750ce68cc7618ad3d0ce8",
+    "EDITALFINDER_V2_M22A_REVISAO_INDEPENDENTE.md": "0fa500972d9bc0210197b2f47569398bce322c50445deb85c75de6e3f4ab308d",
+    "EDITALFINDER_V2_M22A1_REVISAO_FINAL_CHATGPT.md": "9d14f6f5bb49a83e43e7fb34a932d92ebfb476b6b96dbed42295f12833608f6c",
+    "EDITALFINDER_V2_M23C_REVISAO_INDEPENDENTE.md": "b513efa46bde8fe62bad9f4389e803923c4a9153d3490ac673f2ca4e2459d84f",
+    "EDITALFINDER_V2_M23A2_REVISAO_INDEPENDENTE_CHATGPT.md": "f0e09d30b5b0bcf501b1e8fc500e5a1f668661fa34061312a892c98b07f7b49f",
+    "README.md": "59a880f67d3060483179c0889e806ea0632df230131f35f670a96c77f95ec444",
+    "pyproject.toml": "b2ee5f6d0b534e50c96733a85b6e2cff7a826f94902f666b40e6689f25beea31",
+    "EDITALFINDER_V2_M23C_REVISAO_CHATGPT.md": "e10692c0d4b663dc65999b6fab68a22e5374160c6fdf6c046e6e3cc0955e40c1",
+    "EDITALFINDER_V2_M23A1_RESULTADOS.md": "4eda77db8adceb81d56e37f00cf9791252b7d5d4f2a2446e7c49c1ac291756e5",
+    "EDITALFINDER_V2_M23B_RESULTADOS.md": "3b33474c9521d30fc479a7e88497f521bfa926c9c57fca7dad2f6bfacd211fa8",
+    "EDITALFINDER_V2_M23B_REVISAO_INDEPENDENTE_CHATGPT.md": "d699bb10a51f5c8b535f4d6da0934bceb5ee71841a97a18ccfd81500a7534e06"
+  },
+  "tree_verification": {
+    "status": {
+      "output": "D \"BANCO DE DADOS/bancode Dados.sql\"\n M Projeto/backend/V2/README.md\n?? Projeto/backend/V2/EDITALFINDER_V2_M21_RESULTADOS.md\n?? Projeto/backend/V2/EDITALFINDER_V2_M22A1_RESULTADOS.md\n?? Projeto/backend/V2/EDITALFINDER_V2_M22A1_REVISAO_FINAL_CHATGPT.md\n?? Projeto/backend/V2/EDITALFINDER_V2_M22A_RESULTADOS.md\n?? Projeto/backend/V2/EDITALFINDER_V2_M22A_REVISAO_INDEPENDENTE.md\n?? Projeto/backend/V2/EDITALFINDER_V2_M22B_RESULTADOS.md\n?? Projeto/backend/V2/EDITALFINDER_V2_M22B_REVISAO_CHATGPT.md\n?? Projeto/backend/V2/EDITALFINDER_V2_M23A1_AUDIT_METADATA_RESULTADOS.md\n?? Projeto/backend/V2/EDITALFINDER_V2_M23A1_RESULTADOS.md\n?? Projeto/backend/V2/EDITALFINDER_V2_M23A1_REVISAO_INDEPENDENTE_CHATGPT.md\n?? Projeto/backend/V2/EDITALFINDER_V2_M23A2_REVISAO_INDEPENDENTE_CHATGPT.md\n?? Projeto/backend/V2/EDITALFINDER_V2_M23A_REVISAO_CHATGPT.md\n?? Projeto/backend/V2/EDITALFINDER_V2_M23B_RESULTADOS.md\n?? Projeto/backend/V2/EDITALFINDER_V2_M23B_REVISAO_INDEPENDENTE_CHATGPT.md\n?? Projeto/backend/V2/EDITALFINDER_V2_M23C_RESULTADOS.md\n?? Projeto/backend/V2/EDITALFINDER_V2_M23C_REVISAO_CHATGPT.md\n?? Projeto/backend/V2/EDITALFINDER_V2_M23C_REVISAO_INDEPENDENTE.md\n?? Projeto/backend/V2/docs/v2/IDENTITY_M21.md\n?? Projeto/backend/V2/docs/v2/INTEGRATION_AUDIT_REPROCESSING.md\n?? Projeto/backend/V2/docs/v2/INTEGRATION_CONSISTENCY_M23B.md\n?? Projeto/backend/V2/docs/v2/M21_BENCHMARK.json\n?? Projeto/backend/V2/docs/v2/M23A1_BENCHMARK.json\n?? Projeto/backend/V2/docs/v2/M23B_BENCHMARK.json\n?? Projeto/backend/V2/docs/v2/M23C_BENCHMARK.json\n?? Projeto/backend/V2/docs/v2/M23C_FROZEN_ORACLE.md\n?? Projeto/backend/V2/docs/v2/M23C_QUALITY_GATES.json\n?? Projeto/backend/V2/docs/v2/SEMANTIC_NORMALIZATION_M22A.md\n?? Projeto/backend/V2/docs/v2/SEMANTIC_NORMALIZATION_M22B.md\n?? Projeto/backend/V2/src/editalfinder_v2/domain/financial_models.py\n?? Projeto/backend/V2/src/editalfinder_v2/domain/financial_normalization.py\n?? Projeto/backend/V2/src/editalfinder_v2/domain/financial_parsing.py\n?? Projeto/backend/V2/src/editalfinder_v2/domain/geography_catalog.py\n?? Projeto/backend/V2/src/editalfinder_v2/domain/geography_models.py\n?? Projeto/backend/V2/src/editalfinder_v2/domain/geography_normalization.py\n?? Projeto/backend/V2/src/editalfinder_v2/domain/identity_models.py\n?? Projeto/backend/V2/src/editalfinder_v2/domain/identity_normalization.py\n?? Projeto/backend/V2/src/editalfinder_v2/domain/identity_resolution.py\n?? Projeto/backend/V2/src/editalfinder_v2/domain/integration.py\n?? Projeto/backend/V2/src/editalfinder_v2/domain/integration_budget.py\n?? Projeto/backend/V2/src/editalfinder_v2/domain/integration_consistency.py\n?? Projeto/backend/V2/src/editalfinder_v2/domain/integration_models.py\n?? Projeto/backend/V2/src/editalfinder_v2/domain/m22b_common.py\n?? Projeto/backend/V2/src/editalfinder_v2/domain/organization_models.py\n?? Projeto/backend/V2/src/editalfinder_v2/domain/organization_normalization.py\n?? Projeto/backend/V2/src/editalfinder_v2/domain/semantic_common.py\n?? Projeto/backend/V2/src/editalfinder_v2/domain/taxonomy_models.py\n?? Projeto/backend/V2/src/editalfinder_v2/domain/taxonomy_normalization.py\n?? Projeto/backend/V2/src/editalfinder_v2/domain/temporal_models.py\n?? Projeto/backend/V2/src/editalfinder_v2/domain/temporal_normalization.py\n?? Projeto/backend/V2/src/editalfinder_v2/domain/url_identity.py\n?? Projeto/backend/V2/tests/benchmark_identity.py\n?? Projeto/backend/V2/tests/benchmark_integration_budget.py\n?? Projeto/backend/V2/tests/benchmark_m23b_consistency.py\n?? Projeto/backend/V2/tests/benchmark_m23c_pipeline.py\n?? Projeto/backend/V2/tests/fixtures/m23_cases.json\n?? Projeto/backend/V2/tests/fixtures/m23c_operational_v1.json\n?? Projeto/backend/V2/tests/fixtures/m23c_v1.json\n?? Projeto/backend/V2/tests/m22b_fixtures.py\n?? Projeto/backend/V2/tests/m23_fixtures.py\n?? Projeto/backend/V2/tests/m23c_fixtures.py\n?? Projeto/backend/V2/tests/semantic_fixtures.py\n?? Projeto/backend/V2/tests/test_financial_adversarial.py\n?? Projeto/backend/V2/tests/test_financial_edges.py\n?? Projeto/backend/V2/tests/test_financial_normalization.py\n?? Projeto/backend/V2/tests/test_financial_parsing.py\n?? Projeto/backend/V2/tests/test_geography_metamorphic.py\n?? Projeto/backend/V2/tests/test_geography_normalization.py\n?? Projeto/backend/V2/tests/test_identity.py\n?? Projeto/backend/V2/tests/test_identity_edges.py\n?? Projeto/backend/V2/tests/test_identity_properties.py\n?? Projeto/backend/V2/tests/test_identity_review_regressions.py\n?? Projeto/backend/V2/tests/test_m22a1_geography_contract.py\n?? Projeto/backend/V2/tests/test_m22a1_temporal_contract.py\n?? Projeto/backend/V2/tests/test_m22b_boundary_adversarial.py\n?? Projeto/backend/V2/tests/test_m22b_common.py\n?? Projeto/backend/V2/tests/test_m23_audit_metadata.py\n?? Projeto/backend/V2/tests/test_m23_core.py\n?? Projeto/backend/V2/tests/test_m23_output_budget.py\n?? Projeto/backend/V2/tests/test_m23b_boundaries.py\n?? Projeto/backend/V2/tests/test_m23b_consistency.py\n?? Projeto/backend/V2/tests/test_m23c_adversarial.py\n?? Projeto/backend/V2/tests/test_m23c_metamorphic.py\n?? Projeto/backend/V2/tests/test_m23c_pipeline.py\n?? Projeto/backend/V2/tests/test_m23c_product_contracts.py\n?? Projeto/backend/V2/tests/test_m23c_resources.py\n?? Projeto/backend/V2/tests/test_normalization_contracts.py\n?? Projeto/backend/V2/tests/test_organization_adversarial.py\n?? Projeto/backend/V2/tests/test_organization_identifiers.py\n?? Projeto/backend/V2/tests/test_organization_normalization.py\n?? Projeto/backend/V2/tests/test_semantic_common.py\n?? Projeto/backend/V2/tests/test_taxonomy_adversarial.py\n?? Projeto/backend/V2/tests/test_taxonomy_evidence.py\n?? Projeto/backend/V2/tests/test_taxonomy_integrity.py\n?? Projeto/backend/V2/tests/test_taxonomy_models.py\n?? Projeto/backend/V2/tests/test_taxonomy_normalization.py\n?? Projeto/backend/V2/tests/test_temporal_metamorphic.py\n?? Projeto/backend/V2/tests/test_temporal_normalization.py\n?? Projeto/backend/V2/tests/test_temporal_review_regressions.py\n?? Projeto/backend/V2/tests/test_url_identity.py\n?? Projeto/backend/V2/tests/test_url_identity_integrity.py",
+      "exit_code": 0,
+      "error": null
+    },
+    "diff_check": {
+      "output": "",
+      "exit_code": 0,
+      "error": null
+    },
+    "index_diff": {
+      "output": "",
+      "exit_code": 0,
+      "error": null
+    },
+    "working_diff": {
+      "output": "BANCO DE DADOS/bancode Dados.sql | 94 ----------------------------------------\n Projeto/backend/V2/README.md     | 22 ++++++++--\n 2 files changed, 19 insertions(+), 97 deletions(-)\n/home/lorenzozm/PROJETOS/editalfinder",
+      "exit_code": 0,
+      "error": null
+    },
+    "initial_tree_changes": [
+      "tests/m23_fixtures.py"
+    ],
+    "frozen_tree_mismatches": [],
+    "original_vs_frozen_mismatches": [],
+    "pre_hygiene_fixture_matches_original": true,
+    "pre_hygiene_ruff_reproduction": {
+      "output": "B023 Function definition does not bind loop variable `unit`\n  --> /home/lorenzozm/.hermes/cache/scratch/m23c-readonly-review/tests/m23_fixtures.py:70:22\n   |\n68 |                 method_version=\"m23-synthetic-v1\",\n69 |                 confidence=\"1\",\n70 |                 unit=unit,\n   |                      ^^^^\n71 |                 semantic_role=role,\n72 |             )\n   |\n\nB023 Function definition does not bind loop variable `assertions`\n  --> /home/lorenzozm/.hermes/cache/scratch/m23c-readonly-review/tests/m23_fixtures.py:73:13\n   |\n71 |                 semantic_role=role,\n72 |             )\n73 |             assertions.append(FieldAssertion(field=role, value=original, evidence=(evidence,)))\n   |             ^^^^^^^^^^\n74 |             return SemanticValue(\n75 |                 original=literal,\n   |\n\nB023 Function definition does not bind loop variable `cid`\n  --> /home/lorenzozm/.hermes/cache/scratch/m23c-readonly-review/tests/m23_fixtures.py:77:34\n   |\n75 |                 original=literal,\n76 |                 provenance=IdentityEvidence(\n77 |                     candidate_id=cid,\n   |                                  ^^^\n78 |                     source_id=source,\n79 |                     execution_id=execution,\n   |\n\nE501 Line too long (102 > 100)\n   --> /home/lorenzozm/.hermes/cache/scratch/m23c-readonly-review/tests/m23_fixtures.py:147:101\n    |\n145 |                     TemporalClaim(role=row[\"role\"], value=components[\"value\"], format=row[\"format\"])\n146 |                     for row, components in zip(\n147 |                         record.get(\"temporal_events\", []), collections[\"temporal_events\"], strict=True\n    |                                                                                                     ^^\n148 |                     )\n149 |                 ),\n    |\n\nE501 Line too long (104 > 100)\n   --> /home/lorenzozm/.hermes/cache/scratch/m23c-readonly-review/tests/m23_fixtures.py:166:101\n    |\n164 |                     )\n165 |                     for row, components in zip(\n166 |                         record.get(\"financial_claims\", []), collections[\"financial_claims\"], strict=True\n    |                                                                                                     ^^^^\n167 |                     )\n168 |                 ),\n    |\n\nE501 Line too long (110 > 100)\n   --> /home/lorenzozm/.hermes/cache/scratch/m23c-readonly-review/tests/m23_fixtures.py:172:101\n    |\n170 |                     OrganizationClaim(role=row[\"role\"], name=components.get(\"name\"))\n171 |                     for row, components in zip(\n172 |                         record.get(\"organization_claims\", []), collections[\"organization_claims\"], strict=True\n    |                                                                                                     ^^^^^^^^^^\n173 |                     )\n174 |                 ),\n    |\n\nE501 Line too long (102 > 100)\n   --> /home/lorenzozm/.hermes/cache/scratch/m23c-readonly-review/tests/m23_fixtures.py:178:101\n    |\n176 |                     TaxonomyClaim(role=row[\"role\"], value=components[\"value\"])\n177 |                     for row, components in zip(\n178 |                         record.get(\"taxonomy_claims\", []), collections[\"taxonomy_claims\"], strict=True\n    |                                                                                                     ^^\n179 |                     )\n180 |                 ),\n    |\n\nFound 7 errors.",
+      "exit_code": 1,
+      "error": null
+    },
+    "pre_hygiene_format_reproduction": {
+      "output": "unformatted: File would be reformatted\n   --> /home/lorenzozm/.hermes/cache/scratch/m23c-readonly-review/tests/m23_fixtures.py:147:59\n    |\n146 |                     for row, components in zip(\n    -                         record.get(\"temporal_events\", []), collections[\"temporal_events\"], strict=True\n147 +                         record.get(\"temporal_events\", []),\n148 +                         collections[\"temporal_events\"],\n149 +                         strict=True,\n150 |                     )\n--------------------------------------------------------------------------------\n162 |                     FinancialClaim(\n    -                         role=row[\"role\"], value=components.get(\"value\"),\n163 +                         role=row[\"role\"],\n164 +                         value=components.get(\"value\"),\n165 |                         format=row.get(\"format\", \"unspecified\"),\n    -                         currency=row.get(\"currency\"), unit=row.get(\"unit\", \"amount\"),\n166 +                         currency=row.get(\"currency\"),\n167 +                         unit=row.get(\"unit\", \"amount\"),\n168 |                     )\n169 |                     for row, components in zip(\n    -                         record.get(\"financial_claims\", []), collections[\"financial_claims\"], strict=True\n170 +                         record.get(\"financial_claims\", []),\n171 +                         collections[\"financial_claims\"],\n172 +                         strict=True,\n173 |                     )\n--------------------------------------------------------------------------------\n177 |                     for row, components in zip(\n    -                         record.get(\"organization_claims\", []), collections[\"organization_claims\"], strict=True\n178 +                         record.get(\"organization_claims\", []),\n179 +                         collections[\"organization_claims\"],\n180 +                         strict=True,\n181 |                     )\n--------------------------------------------------------------------------------\n185 |                     for row, components in zip(\n    -                         record.get(\"taxonomy_claims\", []), collections[\"taxonomy_claims\"], strict=True\n186 +                         record.get(\"taxonomy_claims\", []),\n187 +                         collections[\"taxonomy_claims\"],\n188 +                         strict=True,\n189 |                     )\n    |\n\n1 file would be reformatted",
+      "exit_code": 1,
+      "error": null
+    },
+    "fixture_diff": {
+      "output": "diff --git a/home/lorenzozm/.hermes/cache/scratch/m23c-readonly-review/tests/m23_fixtures.py b/tests/m23_fixtures.py\nindex 56994cf..d23dbd1 100644\n--- a/home/lorenzozm/.hermes/cache/scratch/m23c-readonly-review/tests/m23_fixtures.py\n+++ b/tests/m23_fixtures.py\n@@ -58,7 +58,15 @@ def adapt_records(records: list[dict[str, Any]]) -> IntegrationInput:\n         unit = DocumentUnit(snapshot_id=sid, pointer=f\"/records/{index}\")\n         assertions = []\n \n-        def value(original: str | bool, role: str, pointer: str) -> SemanticValue:\n+        def value(\n+            original: str | bool,\n+            role: str,\n+            pointer: str,\n+            *,\n+            bound_unit: DocumentUnit = unit,\n+            bound_assertions: list[FieldAssertion] = assertions,\n+            bound_cid: UUID = cid,\n+        ) -> SemanticValue:\n             literal = json.dumps(original) if type(original) is bool else original\n             evidence = Evidence(\n                 snapshot_id=sid,\n@@ -67,14 +75,16 @@ def adapt_records(records: list[dict[str, Any]]) -> IntegrationInput:\n                 method=\"structured_field\",\n                 method_version=\"m23-synthetic-v1\",\n                 confidence=\"1\",\n-                unit=unit,\n+                unit=bound_unit,\n                 semantic_role=role,\n             )\n-            assertions.append(FieldAssertion(field=role, value=original, evidence=(evidence,)))\n+            bound_assertions.append(\n+                FieldAssertion(field=role, value=original, evidence=(evidence,))\n+            )\n             return SemanticValue(\n                 original=literal,\n                 provenance=IdentityEvidence(\n-                    candidate_id=cid,\n+                    candidate_id=bound_cid,\n                     source_id=source,\n                     execution_id=execution,\n                     evidence=evidence,\n@@ -144,7 +154,9 @@ def adapt_records(records: list[dict[str, Any]]) -> IntegrationInput:\n                 temporal=tuple(\n                     TemporalClaim(role=row[\"role\"], value=components[\"value\"], format=row[\"format\"])\n                     for row, components in zip(\n-                        record.get(\"temporal_events\", []), collections[\"temporal_events\"], strict=True\n+                        record.get(\"temporal_events\", []),\n+                        collections[\"temporal_events\"],\n+                        strict=True,\n                     )\n                 ),\n                 geography=tuple(\n@@ -158,24 +170,32 @@ def adapt_records(records: list[dict[str, Any]]) -> IntegrationInput:\n                 geographic_scope=direct.get(\"geographic_scope\"),\n                 financial=tuple(\n                     FinancialClaim(\n-                        role=row[\"role\"], value=components.get(\"value\"),\n+                        role=row[\"role\"],\n+                        value=components.get(\"value\"),\n                         format=row.get(\"format\", \"unspecified\"),\n-                        currency=row.get(\"currency\"), unit=row.get(\"unit\", \"amount\"),\n+                        currency=row.get(\"currency\"),\n+                        unit=row.get(\"unit\", \"amount\"),\n                     )\n                     for row, components in zip(\n-                        record.get(\"financial_claims\", []), collections[\"financial_claims\"], strict=True\n+                        record.get(\"financial_claims\", []),\n+                        collections[\"financial_claims\"],\n+                        strict=True,\n                     )\n                 ),\n                 organizations=tuple(\n                     OrganizationClaim(role=row[\"role\"], name=components.get(\"name\"))\n                     for row, components in zip(\n-                        record.get(\"organization_claims\", []), collections[\"organization_claims\"], strict=True\n+                        record.get(\"organization_claims\", []),\n+                        collections[\"organization_claims\"],\n+                        strict=True,\n                     )\n                 ),\n                 taxonomy=tuple(\n                     TaxonomyClaim(role=row[\"role\"], value=components[\"value\"])\n                     for row, components in zip(\n-                        record.get(\"taxonomy_claims\", []), collections[\"taxonomy_claims\"], strict=True\n+                        record.get(\"taxonomy_claims\", []),\n+                        collections[\"taxonomy_claims\"],\n+                        strict=True,\n                     )\n                 ),\n             )",
+      "exit_code": 1,
+      "error": null,
+      "exit_code_meaning": "Non-zero exit (often normal — e.g. 'git diff' returns 1 when files differ)"
+    }
+  },
+  "fixture_capture_receipt": {
+    "operation": "capture",
+    "fixture_cases": 38,
+    "full_input_and_result_equality": false,
+    "before_bytes": 19000311,
+    "before_sha256": "77a8e20705293b2402c0d8d2477a3a04921914f5aab39f927492bf85fc4c1544",
+    "cases": {
+      "m23:grant": {
+        "input_sha256": "03bb078fe2cee1654199293ee90def11efe40d1708cd999a6085fb81ee123fd7",
+        "result_sha256": "2bcf99f91d9588781a183c1aef21a4b0f5e2de7f84fd9942a36a4354c28b6b9b"
+      },
+      "m23:credit": {
+        "input_sha256": "1f8c5d80ba460a3d880d7f55948fccf0217cf366225931137b66ebd201e6bdae",
+        "result_sha256": "b3dc75f7be8952ae8bc7310f944a08ceb683c7b9aa2c756b6b53472281402501"
+      },
+      "m23:investment": {
+        "input_sha256": "b6f1f657c5a382abb4542e9b9246fdae64c035177782e88c1d3dcad02dcdfc37",
+        "result_sha256": "86ca2c77582829abb2312ab91df9ba5181710f69d2b64ad8c14fdf3948c54a39"
+      },
+      "m23:mixed": {
+        "input_sha256": "b1381f2a734d3e8f82cee84ed0da582b96aa1068547bbb1ec8a3aceeb89ce267",
+        "result_sha256": "15e33b6fbefcec4ea09c4093b609f4895dba6808809249f316e3b9cf43eedcde"
+      },
+      "m23:ambiguous": {
+        "input_sha256": "2ae5afcaf228ebca41ad2e0aef0493ca07759bc420bde93ec4cdf0449ef8354e",
+        "result_sha256": "a2ff8e91f4aed21d2aa2bef88ecdc36f10812d6924a186067d4188365ef5f9a1"
+      },
+      "M23C-A-001": {
+        "input_sha256": "9b4f7c2a1ac879e94e8d6fdcdd7263003aa01a970e74c8f1b2406f52853c0934",
+        "result_sha256": "4c60904791dbf954fcdb9fe5c9e5dc9f1f9e5da733290b5723a4ec7857681caa"
+      },
+      "M23C-B-001": {
+        "input_sha256": "54e28eda9c819f40d9c8315b5f385eddbc3a561c1a85574c1d999002d985e752",
+        "result_sha256": "fbc887d580b12138964ba904772dfed54e9924100e1ddf2994a833098d4613d2"
+      },
+      "M23C-C-001": {
+        "input_sha256": "cb870f16d2584b02cbad1ee0fc69f359ed762837e5f02342431d75b2e3b61484",
+        "result_sha256": "777f0b95e75530ce440eeebf0ebf945dfd89bab019cfd1fa0a9c88f5e4a057d3"
+      },
+      "M23C-D-001": {
+        "input_sha256": "db37d6018f6b40f9de18ee54e13a31cd5a27e56f231defbb198ed40c4e949dcc",
+        "result_sha256": "d53a1f135e0cfc449b6f4ab1a4e47fa6f41ad03d17a308260a5bf0fcbcb074ce"
+      },
+      "M23C-D-002": {
+        "input_sha256": "2bb95be150529b228d145ff8db4ef444de1ca741ac6e801e4e2838cc82cd3ad8",
+        "result_sha256": "5fd5c3f115b62af8096637d5657cdac357d214beae7a85afa235687867a03345"
+      },
+      "M23C-D-003": {
+        "input_sha256": "30463942b3956af1ab3f5dd1ce53abaa855809c9864928657b2ec88c7e892373",
+        "result_sha256": "26039717328d153aa696e3373d87fa7ccb3b3b226ddb1e369d16e6702a04bd26"
+      },
+      "M23C-E-001": {
+        "input_sha256": "1034408610ea41af25a5005e110874e041d0bf404858df2fc15ad910f8462cb7",
+        "result_sha256": "621f66ad721b2f76383ee13d28846e7fa1aa4fbe1ee8e8378b1bcdf42702d9a1"
+      },
+      "M23C-F-001": {
+        "input_sha256": "5f54bbf006d4d6d9b4e6c81134a8f17a749b104cf8bdc0e39d11e41c5852bfb6",
+        "result_sha256": "e9cab4551db2368756cb414ddbc939430739c2c7370b3e280381a92a770a54a2"
+      },
+      "M23C-F-002": {
+        "input_sha256": "d48779d75d141f4436087d4db6ffd5cc0d06c2de28c582a26791196cac66346f",
+        "result_sha256": "44bc51f56eee58dc22510942b6a2f9225a94ab280764c4469c7ee304aeab21c8"
+      },
+      "M23C-F-003": {
+        "input_sha256": "57581d5282a3bce649a8b7e9e2a25c098d87031a6774b9a0847157d58184b0c9",
+        "result_sha256": "4a030e7c4d439f92f5c6cfed5b92ae1a1ecd14ef39f9a28c515e60a2f0bafda2"
+      },
+      "M23C-F-005": {
+        "input_sha256": "809b515226f72e1211333ef20fb2e480e6b8c2e54ebb10f21399914f4fa62a8d",
+        "result_sha256": "b3c0655ab67f0de831ca9fd7d07b2be0b75283c285ceff80e03a07b3a11ddd6b"
+      },
+      "M23C-F-006": {
+        "input_sha256": "d7ee5920d31a1588913e8801e540b337b39c2845ed83afdbeda8357b63fa2344",
+        "result_sha256": "41583fa3310fbdc4c216e6d6526f747747c3194d10453a08842ccaf802721561"
+      },
+      "M23C-F-004": {
+        "input_sha256": "1f4c21137adeb07333157dc1b87078858984a44087bc1bb60e39eef2467966b7",
+        "result_sha256": "62d169c75fd72aa372d1748c483336b6fc0d2f31b17e1616a5b0105655def98a"
+      },
+      "M23C-G-001": {
+        "input_sha256": "82ad47b9552e6a1d87a147502a50493950fdaae6e8adb90d4a4f237ec684529a",
+        "result_sha256": "d73a411c180a454b3fb9376854164b98e76d6f610fc7674a3ad61df360073f09"
+      },
+      "M23C-G-002": {
+        "input_sha256": "a22222a85d8232ec374a5d9ccbad76230481f63e3a5e82db900dc6b45ec7d44c",
+        "result_sha256": "4541e6ca0ad27b4f37211216ff3e989907678c2fbcd45d52a3f4d5f53872655e"
+      },
+      "M23C-G-003": {
+        "input_sha256": "cadd4675e16998072748cbf63356573dab2d15e2de972b3c34fd4e7f748e1cb4",
+        "result_sha256": "16e9943ade9ea53fb6d47e06b87ada1c742dea8863ea81e0abd4f0014fc0e75b"
+      },
+      "M23C-G-004": {
+        "input_sha256": "4f6237e42b86b27cf51ddebe769b367364b9b8863d398da63facc7f2d5ac897c",
+        "result_sha256": "ec27276ba50566ba2bf8ce6f038e4f6536aea74042b738aa92e33e100182f84f"
+      },
+      "M23C-H-001": {
+        "input_sha256": "ecf9538fe942555b6b166970574c8367ac55bc2d58566e278b51df7aeb838e02",
+        "result_sha256": "144e20a9e15af0cc6b8ad01915db9656ee6e2910d16f75a64297e1b3e324842c"
+      },
+      "M23C-H-002": {
+        "input_sha256": "e897d8b7ab2bc24b9e4d49b72ed73c6053d0e036cf0ad028f1cb2f12b692b4c2",
+        "result_sha256": "716b258613929d0480dcf9238dd4009822a4c88ba93b857fadf409638320add5"
+      },
+      "M23C-I-001": {
+        "input_sha256": "22a64598506fd6a2993f7fd05cdff337fb9ce563912a8011b7a50259f774d67b",
+        "result_sha256": "44b3b642b17d51959c93b5aa6212893ec4b786c95df638221e6b35612afc5243"
+      },
+      "M23C-I-002": {
+        "input_sha256": "96c15c6c078dacb7a6ba4abb272078eb5eaabea330c85a9c1720f711da9a5352",
+        "result_sha256": "f53838818dd593ac4fb319905fbd1056abd1771dd699ea1a5f36cdd35afb9a85"
+      },
+      "M23C-I-003": {
+        "input_sha256": "77a6c52f25d3304bc5ef922b059f38b2674e8a0ca54cb4eefbb855cebe068651",
+        "result_sha256": "85fdaaa2e0d22fba38fa1b1642a07ec84de2ac5096f0e964f78b64203ce2fc80"
+      },
+      "M23C-I-004": {
+        "input_sha256": "317ebc03c8825fbf90d786cd6829286510c1348d80c739b0d43072b6cb18632b",
+        "result_sha256": "886768349eea44be7c40ef0070761985d4cd8bac9677643a9981d2e861f1d7a2"
+      },
+      "M23C-I-005": {
+        "input_sha256": "2de086aad3e42bb921cc61b0ddb9624c08a12d21d925372b09d985626f77778d",
+        "result_sha256": "0cf34d6db615acab84920c7a24d8c959b48612d5d55503617eb9e8f74eaf8bad"
+      },
+      "M23C-I-006": {
+        "input_sha256": "24bbbe5a92cf706492146f5d5c0985cf0d81a42c166b759d34e6883abe32044b",
+        "result_sha256": "c337f7d203ab39844c4870de44852ca83d1270e4c5273a9c0f1d6d804ff12c47"
+      },
+      "M23C-I-007": {
+        "input_sha256": "4e155c78bfc9cd76a671d5f88da5a96a4f41cc37d5c8ebfc7804e9943cbec657",
+        "result_sha256": "7bff2615f585ba76a07ed8a5c194b2c27f139e712d734b2d21a3b01cf30a6249"
+      },
+      "M23C-OPS-SMALL": {
+        "input_sha256": "9b4f7c2a1ac879e94e8d6fdcdd7263003aa01a970e74c8f1b2406f52853c0934",
+        "result_sha256": "4c60904791dbf954fcdb9fe5c9e5dc9f1f9e5da733290b5723a4ec7857681caa"
+      },
+      "M23C-OPS-SHARED": {
+        "input_sha256": "1034408610ea41af25a5005e110874e041d0bf404858df2fc15ad910f8462cb7",
+        "result_sha256": "621f66ad721b2f76383ee13d28846e7fa1aa4fbe1ee8e8378b1bcdf42702d9a1"
+      },
+      "M23C-OPS-NEAR": {
+        "input_sha256": "0f432495f955ff54eeead3c96ab02fb93515d049c79a94e4bc3f7f990715869c",
+        "result_sha256": "721b9bb3caebcf02ce4f0e6a1844a20289d6cc0add3ec53e8496419aee38eb4f"
+      },
+      "M23C-OPS-OVER": {
+        "input_sha256": "549f8355dfab2370c57fb0f87fe05d85e00e034607785e6c9dc5011e89dad997",
+        "result_sha256": "fddd6ef1aa43938847250e868c28684003653b22e5de1c1cf65d0046133985db"
+      },
+      "M23C-OPS-DUPLICATE": {
+        "input_sha256": "32493651a4f768ad8cb520b8d9e9b032a7bd6277758e1a31928c9d9ca0db37bd",
+        "result_sha256": "4b678ff01ff916bab0dfff25ec25690b04e53fd3d20ea4ef355d2fe6c5bd9d80"
+      },
+      "M23C-OPS-COLLISION": {
+        "input_sha256": "72adb6a6842cbf21e2795cf3f1b136612dfcc378444575a8ce9ae9c37c0fb7f7",
+        "result_sha256": "425f08eb8f45b9e0ae55a8d445cc5c066ed79c7946847edfc01077405a8dfca9"
+      },
+      "M23C-OPS-COMPARISONS": {
+        "input_sha256": "35b5042b077c16acdad81ea9b55bb2c40c973e68bea8f178bb7c664b6b3a7a98",
+        "result_sha256": "d28d7634500396c5411ec19d65eeb5d40d84560fb041cfa522e46dde5544f3aa"
+      }
+    }
+  },
+  "phase_a_gates": [
+    {
+      "name": "fixture_equivalence",
+      "command": "PYTHONPATH=src:tests .venv/bin/python -B /home/lorenzozm/.hermes/cache/scratch/m23d-audit/capture_fixtures.py compare",
+      "output": "{\n  \"operation\": \"compare\",\n  \"fixture_cases\": 38,\n  \"full_input_and_result_equality\": true,\n  \"before_bytes\": 19000311,\n  \"before_sha256\": \"77a8e20705293b2402c0d8d2477a3a04921914f5aab39f927492bf85fc4c1544\",\n  \"cases\": {\n    \"m23:grant\": {\n      \"input_sha256\": \"03bb078fe2cee1654199293ee90def11efe40d1708cd999a6085fb81ee123fd7\",\n      \"result_sha256\": \"2bcf99f91d9588781a183c1aef21a4b0f5e2de7f84fd9942a36a4354c28b6b9b\"\n    },\n    \"m23:credit\": {\n      \"input_sha256\": \"1f8c5d80ba460a3d880d7f55948fccf0217cf366225931137b66ebd201e6bdae\",\n      \"result_sha256\": \"b3dc75f7be8952ae8bc7310f944a08ceb683c7b9aa2c756b6b53472281402501\"\n    },\n    \"m23:investment\": {\n      \"input_sha256\": \"b6f1f657c5a382abb4542e9b9246fdae64c035177782e88c1d3dcad02dcdfc37\",\n      \"result_sha256\": \"86ca2c77582829abb2312ab91df9ba5181710f69d2b64ad8c14fdf3948c54a39\"\n    },\n    \"m23:mixed\": {\n      \"input_sha256\": \"b1381f2a734d3e8f82cee84ed0da582b96aa1068547bbb1ec8a3aceeb89ce267\",\n      \"result_sha256\": \"15e33b6fbefcec4ea09c4093b609f4895dba6808809249f316e3b9cf43eedcde\"\n    },\n    \"m23:ambiguous\": {\n      \"input_sha256\": \"2ae5afcaf228ebca41ad2e0aef0493ca07759bc420bde93ec4cdf0449ef8354e\",\n      \"result_sha256\": \"a2ff8e91f4aed21d2aa2bef88ecdc36f10812d6924a186067d4188365ef5f9a1\"\n    },\n    \"M23C-A-001\": {\n      \"input_sha256\": \"9b4f7c2a1ac879e94e8d6fdcdd7263003aa01a970e74c8f1b2406f52853c0934\",\n      \"result_sha256\": \"4c60904791dbf954fcdb9fe5c9e5dc9f1f9e5da733290b5723a4ec7857681caa\"\n    },\n    \"M23C-B-001\": {\n      \"input_sha256\": \"54e28eda9c819f40d9c8315b5f385eddbc3a561c1a85574c1d999002d985e752\",\n      \"result_sha256\": \"fbc887d580b12138964ba904772dfed54e9924100e1ddf2994a833098d4613d2\"\n    },\n    \"M23C-C-001\": {\n      \"input_sha256\": \"cb870f16d2584b02cbad1ee0fc69f359ed762837e5f02342431d75b2e3b61484\",\n      \"result_sha256\": \"777f0b95e75530ce440eeebf0ebf945dfd89bab019cfd1fa0a9c88f5e4a057d3\"\n    },\n    \"M23C-D-001\": {\n      \"input_sha256\": \"db37d6018f6b40f9de18ee54e13a31cd5a27e56f231defbb198ed40c4e949dcc\",\n      \"result_sha256\": \"d53a1f135e0cfc449b6f4ab1a4e47fa6f41ad03d17a308260a5bf0fcbcb074ce\"\n    },\n    \"M23C-D-002\": {\n      \"input_sha256\": \"2bb95be150529b228d145ff8db4ef444de1ca741ac6e801e4e2838cc82cd3ad8\",\n      \"result_sha256\": \"5fd5c3f115b62af8096637d5657cdac357d214beae7a85afa235687867a03345\"\n    },\n    \"M23C-D-003\": {\n      \"input_sha256\": \"30463942b3956af1ab3f5dd1ce53abaa855809c9864928657b2ec88c7e892373\",\n      \"result_sha256\": \"26039717328d153aa696e3373d87fa7ccb3b3b226ddb1e369d16e6702a04bd26\"\n    },\n    \"M23C-E-001\": {\n      \"input_sha256\": \"1034408610ea41af25a5005e110874e041d0bf404858df2fc15ad910f8462cb7\",\n      \"result_sha256\": \"621f66ad721b2f76383ee13d28846e7fa1aa4fbe1ee8e8378b1bcdf42702d9a1\"\n    },\n    \"M23C-F-001\": {\n      \"input_sha256\": \"5f54bbf006d4d6d9b4e6c81134a8f17a749b104cf8bdc0e39d11e41c5852bfb6\",\n      \"result_sha256\": \"e9cab4551db2368756cb414ddbc939430739c2c7370b3e280381a92a770a54a2\"\n    },\n    \"M23C-F-002\": {\n      \"input_sha256\": \"d48779d75d141f4436087d4db6ffd5cc0d06c2de28c582a26791196cac66346f\",\n      \"result_sha256\": \"44bc51f56eee58dc22510942b6a2f9225a94ab280764c4469c7ee304aeab21c8\"\n    },\n    \"M23C-F-003\": {\n      \"input_sha256\": \"57581d5282a3bce649a8b7e9e2a25c098d87031a6774b9a0847157d58184b0c9\",\n      \"result_sha256\": \"4a030e7c4d439f92f5c6cfed5b92ae1a1ecd14ef39f9a28c515e60a2f0bafda2\"\n    },\n    \"M23C-F-005\": {\n      \"input_sha256\": \"809b515226f72e1211333ef20fb2e480e6b8c2e54ebb10f21399914f4fa62a8d\",\n      \"result_sha256\": \"b3c0655ab67f0de831ca9fd7d07b2be0b75283c285ceff80e03a07b3a11ddd6b\"\n    },\n    \"M23C-F-006\": {\n      \"input_sha256\": \"d7ee5920d31a1588913e8801e540b337b39c2845ed83afdbeda8357b63fa2344\",\n      \"result_sha256\": \"41583fa3310fbdc4c216e6d6526f747747c3194d10453a08842ccaf802721561\"\n    },\n    \"M23C-F-004\": {\n      \"input_sha256\": \"1f4c21137adeb07333157dc1b87078858984a44087bc1bb60e39eef2467966b7\",\n      \"result_sha256\": \"62d169c75fd72aa372d1748c483336b6fc0d2f31b17e1616a5b0105655def98a\"\n    },\n    \"M23C-G-001\": {\n      \"input_sha256\": \"82ad47b9552e6a1d87a147502a50493950fdaae6e8adb90d4a4f237ec684529a\",\n      \"result_sha256\": \"d73a411c180a454b3fb9376854164b98e76d6f610fc7674a3ad61df360073f09\"\n    },\n    \"M23C-G-002\": {\n      \"input_sha256\": \"a22222a85d8232ec374a5d9ccbad76230481f63e3a5e82db900dc6b45ec7d44c\",\n      \"result_sha256\": \"4541e6ca0ad27b4f37211216ff3e989907678c2fbcd45d52a3f4d5f53872655e\"\n    },\n    \"M23C-G-003\": {\n      \"input_sha256\": \"cadd4675e16998072748cbf63356573dab2d15e2de972b3c34fd4e7f748e1cb4\",\n      \"result_sha256\": \"16e9943ade9ea53fb6d47e06b87ada1c742dea8863ea81e0abd4f0014fc0e75b\"\n    },\n    \"M23C-G-004\": {\n      \"input_sha256\": \"4f6237e42b86b27cf51ddebe769b367364b9b8863d398da63facc7f2d5ac897c\",\n      \"result_sha256\": \"ec27276ba50566ba2bf8ce6f038e4f6536aea74042b738aa92e33e100182f84f\"\n    },\n    \"M23C-H-001\": {\n      \"input_sha256\": \"ecf9538fe942555b6b166970574c8367ac55bc2d58566e278b51df7aeb838e02\",\n      \"result_sha256\": \"144e20a9e15af0cc6b8ad01915db9656ee6e2910d16f75a64297e1b3e324842c\"\n    },\n    \"M23C-H-002\": {\n      \"input_sha256\": \"e897d8b7ab2bc24b9e4d49b72ed73c6053d0e036cf0ad028f1cb2f12b692b4c2\",\n      \"result_sha256\": \"716b258613929d0480dcf9238dd4009822a4c88ba93b857fadf409638320add5\"\n    },\n    \"M23C-I-001\": {\n      \"input_sha256\": \"22a64598506fd6a2993f7fd05cdff337fb9ce563912a8011b7a50259f774d67b\",\n      \"result_sha256\": \"44b3b642b17d51959c93b5aa6212893ec4b786c95df638221e6b35612afc5243\"\n    },\n    \"M23C-I-002\": {\n      \"input_sha256\": \"96c15c6c078dacb7a6ba4abb272078eb5eaabea330c85a9c1720f711da9a5352\",\n      \"result_sha256\": \"f53838818dd593ac4fb319905fbd1056abd1771dd699ea1a5f36cdd35afb9a85\"\n    },\n    \"M23C-I-003\": {\n      \"input_sha256\": \"77a6c52f25d3304bc5ef922b059f38b2674e8a0ca54cb4eefbb855cebe068651\",\n      \"result_sha256\": \"85fdaaa2e0d22fba38fa1b1642a07ec84de2ac5096f0e964f78b64203ce2fc80\"\n    },\n    \"M23C-I-004\": {\n      \"input_sha256\": \"317ebc03c8825fbf90d786cd6829286510c1348d80c739b0d43072b6cb18632b\",\n      \"result_sha256\": \"886768349eea44be7c40ef0070761985d4cd8bac9677643a9981d2e861f1d7a2\"\n    },\n    \"M23C-I-005\": {\n      \"input_sha256\": \"2de086aad3e42bb921cc61b0ddb9624c08a12d21d925372b09d985626f77778d\",\n      \"result_sha256\": \"0cf34d6db615acab84920c7a24d8c959b48612d5d55503617eb9e8f74eaf8bad\"\n    },\n    \"M23C-I-006\": {\n      \"input_sha256\": \"24bbbe5a92cf706492146f5d5c0985cf0d81a42c166b759d34e6883abe32044b\",\n      \"result_sha256\": \"c337f7d203ab39844c4870de44852ca83d1270e4c5273a9c0f1d6d804ff12c47\"\n    },\n    \"M23C-I-007\": {\n      \"input_sha256\": \"4e155c78bfc9cd76a671d5f88da5a96a4f41cc37d5c8ebfc7804e9943cbec657\",\n      \"result_sha256\": \"7bff2615f585ba76a07ed8a5c194b2c27f139e712d734b2d21a3b01cf30a6249\"\n    },\n    \"M23C-OPS-SMALL\": {\n      \"input_sha256\": \"9b4f7c2a1ac879e94e8d6fdcdd7263003aa01a970e74c8f1b2406f52853c0934\",\n      \"result_sha256\": \"4c60904791dbf954fcdb9fe5c9e5dc9f1f9e5da733290b5723a4ec7857681caa\"\n    },\n    \"M23C-OPS-SHARED\": {\n      \"input_sha256\": \"1034408610ea41af25a5005e110874e041d0bf404858df2fc15ad910f8462cb7\",\n      \"result_sha256\": \"621f66ad721b2f76383ee13d28846e7fa1aa4fbe1ee8e8378b1bcdf42702d9a1\"\n    },\n    \"M23C-OPS-NEAR\": {\n      \"input_sha256\": \"0f432495f955ff54eeead3c96ab02fb93515d049c79a94e4bc3f7f990715869c\",\n      \"result_sha256\": \"721b9bb3caebcf02ce4f0e6a1844a20289d6cc0add3ec53e8496419aee38eb4f\"\n    },\n    \"M23C-OPS-OVER\": {\n      \"input_sha256\": \"549f8355dfab2370c57fb0f87fe05d85e00e034607785e6c9dc5011e89dad997\",\n      \"result_sha256\": \"fddd6ef1aa43938847250e868c28684003653b22e5de1c1cf65d0046133985db\"\n    },\n    \"M23C-OPS-DUPLICATE\": {\n      \"input_sha256\": \"32493651a4f768ad8cb520b8d9e9b032a7bd6277758e1a31928c9d9ca0db37bd\",\n      \"result_sha256\": \"4b678ff01ff916bab0dfff25ec25690b04e53fd3d20ea4ef355d2fe6c5bd9d80\"\n    },\n    \"M23C-OPS-COLLISION\": {\n      \"input_sha256\": \"72adb6a6842cbf21e2795cf3f1b136612dfcc378444575a8ce9ae9c37c0fb7f7\",\n      \"result_sha256\": \"425f08eb8f45b9e0ae55a8d445cc5c066ed79c7946847edfc01077405a8dfca9\"\n    },\n    \"M23C-OPS-COMPARISONS\": {\n      \"input_sha256\": \"35b5042b077c16acdad81ea9b55bb2c40c973e68bea8f178bb7c664b6b3a7a98\",\n      \"result_sha256\": \"d28d7634500396c5411ec19d65eeb5d40d84560fb041cfa522e46dde5544f3aa\"\n    }\n  }\n}",
+      "exit_code": 0,
+      "error": null
+    },
+    {
+      "name": "pytest",
+      "command": ".venv/bin/python -B -m pytest -p no:cacheprovider -q",
+      "output": "........................................................................ [  3%]\n........................................................................ [  7%]\n........................................................................ [ 11%]\n........................................................................ [ 15%]\n........................................................................ [ 19%]\n........................................................................ [ 23%]\n........................................................................ [ 27%]\n........................................................................ [ 31%]\n........................................................................ [ 35%]\n........................................................................ [ 39%]\n........................................................................ [ 43%]\n........................................................................ [ 47%]\n........................................................................ [ 51%]\n........................................................................ [ 55%]\n........................................................................ [ 59%]\n........................................................................ [ 63%]\n........................................................................ [ 67%]\n........................................................................ [ 71%]\n........................................................................ [ 75%]\n........................................................................ [ 79%]\n........................................................................ [ 83%]\n........................................................................ [ 87%]\n........................................................................ [ 91%]\n........................................................................ [ 95%]\n........................................................................ [ 99%]\n..........                                                               [100%]\n1810 passed in 14.04s",
+      "exit_code": 0,
+      "error": null
+    },
+    {
+      "name": "ruff",
+      "command": ".venv/bin/ruff check --no-cache src tests",
+      "output": "All checks passed!",
+      "exit_code": 0,
+      "error": null
+    },
+    {
+      "name": "format",
+      "command": ".venv/bin/ruff format --check --no-cache src tests",
+      "output": "84 files already formatted",
+      "exit_code": 0,
+      "error": null
+    },
+    {
+      "name": "mypy",
+      "command": ".venv/bin/mypy --no-incremental --cache-dir=/dev/null src",
+      "output": "Success: no issues found in 28 source files",
+      "exit_code": 0,
+      "error": null
+    },
+    {
+      "name": "diff_check",
+      "command": "git diff --check",
+      "output": "",
+      "exit_code": 0,
+      "error": null
+    }
+  ],
+  "phase_b_gates": [
+    {
+      "name": "pytest",
+      "command": ".venv/bin/python -B -m pytest -p no:cacheprovider -q",
+      "output": "........................................................................ [  3%]\n........................................................................ [  7%]\n........................................................................ [ 11%]\n........................................................................ [ 15%]\n........................................................................ [ 19%]\n........................................................................ [ 23%]\n........................................................................ [ 27%]\n........................................................................ [ 31%]\n........................................................................ [ 35%]\n........................................................................ [ 39%]\n........................................................................ [ 43%]\n........................................................................ [ 47%]\n........................................................................ [ 51%]\n........................................................................ [ 55%]\n........................................................................ [ 59%]\n........................................................................ [ 63%]\n........................................................................ [ 67%]\n........................................................................ [ 71%]\n........................................................................ [ 75%]\n........................................................................ [ 79%]\n........................................................................ [ 83%]\n........................................................................ [ 87%]\n........................................................................ [ 91%]\n........................................................................ [ 95%]\n........................................................................ [ 99%]\n..........                                                               [100%]\n1810 passed in 14.20s",
+      "exit_code": 0,
+      "error": null
+    },
+    {
+      "name": "ruff_check",
+      "command": ".venv/bin/ruff check --no-cache src tests",
+      "output": "All checks passed!",
+      "exit_code": 0,
+      "error": null
+    },
+    {
+      "name": "ruff_format",
+      "command": ".venv/bin/ruff format --check --no-cache src tests",
+      "output": "84 files already formatted",
+      "exit_code": 0,
+      "error": null
+    },
+    {
+      "name": "mypy",
+      "command": ".venv/bin/mypy --no-incremental --cache-dir=/dev/null src",
+      "output": "Success: no issues found in 28 source files",
+      "exit_code": 0,
+      "error": null
+    }
+  ],
+  "version_and_limit_inventory": [
+    {
+      "file": "src/editalfinder_v2/domain/financial_models.py",
+      "line": 44,
+      "declaration": "normalization_version: Literal[\"financial-conservative-v1\"] = \"financial-conservative-v1\""
+    },
+    {
+      "file": "src/editalfinder_v2/domain/financial_models.py",
+      "line": 56,
+      "declaration": "normalization_version: Literal[\"financial-conservative-v1\"] = \"financial-conservative-v1\""
+    },
+    {
+      "file": "src/editalfinder_v2/domain/financial_models.py",
+      "line": 128,
+      "declaration": "normalization_version: Literal[\"financial-conservative-v1\"] = \"financial-conservative-v1\""
+    },
+    {
+      "file": "src/editalfinder_v2/domain/financial_parsing.py",
+      "line": 18,
+      "declaration": "MAX_FINANCIAL_DIGITS = 256"
+    },
+    {
+      "file": "src/editalfinder_v2/domain/financial_parsing.py",
+      "line": 19,
+      "declaration": "MAX_FINANCIAL_EXPONENT = 1000"
+    },
+    {
+      "file": "src/editalfinder_v2/domain/geography_models.py",
+      "line": 40,
+      "declaration": "normalization_version: Literal[\"geography-conservative-v1\"] = \"geography-conservative-v1\""
+    },
+    {
+      "file": "src/editalfinder_v2/domain/geography_models.py",
+      "line": 59,
+      "declaration": "normalization_version: Literal[\"geography-conservative-v1\"] = \"geography-conservative-v1\""
+    },
+    {
+      "file": "src/editalfinder_v2/domain/geography_models.py",
+      "line": 90,
+      "declaration": "normalization_version: Literal[\"geography-conservative-v1\"] = \"geography-conservative-v1\""
+    },
+    {
+      "file": "src/editalfinder_v2/domain/geography_models.py",
+      "line": 91,
+      "declaration": "country_catalog_version: Literal[\"iso3166-1-iso-codes-4.20.1\"] = \"iso3166-1-iso-codes-4.20.1\""
+    },
+    {
+      "file": "src/editalfinder_v2/domain/identity_models.py",
+      "line": 12,
+      "declaration": "NormalizationVersion = Literal[\"opaque-exact-v1\", \"opaque-nfc-v1\", \"url-conservative-v1\"]"
+    },
+    {
+      "file": "src/editalfinder_v2/domain/identity_models.py",
+      "line": 35,
+      "declaration": "normalization_version: NormalizationVersion = \"opaque-exact-v1\""
+    },
+    {
+      "file": "src/editalfinder_v2/domain/identity_models.py",
+      "line": 73,
+      "declaration": "normalization_version: Literal[\"cycle-exact-v1\"] = \"cycle-exact-v1\""
+    },
+    {
+      "file": "src/editalfinder_v2/domain/identity_models.py",
+      "line": 98,
+      "declaration": "rule_version: Literal[\"m2.1-identity-v1\"] = \"m2.1-identity-v1\""
+    },
+    {
+      "file": "src/editalfinder_v2/domain/identity_models.py",
+      "line": 108,
+      "declaration": "hash_version: Literal[\"identity-pydantic-json-utf8-v1\"] = \"identity-pydantic-json-utf8-v1\""
+    },
+    {
+      "file": "src/editalfinder_v2/domain/identity_models.py",
+      "line": 109,
+      "declaration": "limits_version: Literal[\"m2.1-identity-limits-v1\"] = \"m2.1-identity-limits-v1\""
+    },
+    {
+      "file": "src/editalfinder_v2/domain/identity_models.py",
+      "line": 121,
+      "declaration": "ruleset_version: Literal[\"m2.1-identity-v1\"] = \"m2.1-identity-v1\""
+    },
+    {
+      "file": "src/editalfinder_v2/domain/identity_normalization.py",
+      "line": 14,
+      "declaration": "MAX_IDENTIFIER_CHARS = 8192"
+    },
+    {
+      "file": "src/editalfinder_v2/domain/identity_resolution.py",
+      "line": 22,
+      "declaration": "MAX_IDENTITY_IDENTIFIERS = 10_000"
+    },
+    {
+      "file": "src/editalfinder_v2/domain/identity_resolution.py",
+      "line": 23,
+      "declaration": "MAX_IDENTITY_SNAPSHOTS = 32"
+    },
+    {
+      "file": "src/editalfinder_v2/domain/identity_resolution.py",
+      "line": 24,
+      "declaration": "MAX_IDENTITY_PAYLOAD_BYTES = 8 * 1024 * 1024"
+    },
+    {
+      "file": "src/editalfinder_v2/domain/identity_resolution.py",
+      "line": 25,
+      "declaration": "MAX_IDENTITY_TEXT_CHARS = 1024 * 1024"
+    },
+    {
+      "file": "src/editalfinder_v2/domain/identity_resolution.py",
+      "line": 26,
+      "declaration": "MAX_IDENTITY_ASSERTION_EVIDENCE = 30_000"
+    },
+    {
+      "file": "src/editalfinder_v2/domain/identity_resolution.py",
+      "line": 339,
+      "declaration": "code = \"official_identifiers_differ\" if comparable else \"normalization_policy_differs\""
+    },
+    {
+      "file": "src/editalfinder_v2/domain/integration_budget.py",
+      "line": 39,
+      "declaration": "OUTPUT_BUDGET_VERSION = \"m2.3a.1-output-budget-v1\""
+    },
+    {
+      "file": "src/editalfinder_v2/domain/integration_budget.py",
+      "line": 40,
+      "declaration": "MAX_OUTPUT_BUDGET = 64 * 1024 * 1024"
+    },
+    {
+      "file": "src/editalfinder_v2/domain/integration_budget.py",
+      "line": 41,
+      "declaration": "MAX_BUDGET_NODES = 100_000"
+    },
+    {
+      "file": "src/editalfinder_v2/domain/integration_budget.py",
+      "line": 42,
+      "declaration": "MAX_BUDGET_DEPTH = 64"
+    },
+    {
+      "file": "src/editalfinder_v2/domain/integration_budget.py",
+      "line": 68,
+      "declaration": "ceiling = MAX_OUTPUT_BUDGET + 1"
+    },
+    {
+      "file": "src/editalfinder_v2/domain/integration_budget.py",
+      "line": 157,
+      "declaration": "ceiling = MAX_OUTPUT_BUDGET + 1"
+    },
+    {
+      "file": "src/editalfinder_v2/domain/integration_consistency.py",
+      "line": 104,
+      "declaration": "versions = {\n        domain: NormalizationVersionReference(\n            domain=domain,\n            version=report.normalization_version,\n            policy_version=report.policy_version,\n            catalog_version=report.input.catalog_version\n            if isinstance(report, TaxonomyReport)\n            else None,\n        )\n        for domain, report in reports\n        if not isinstance(report, OperationalError)\n    }"
+    },
+    {
+      "file": "src/editalfinder_v2/domain/integration_consistency.py",
+      "line": 117,
+      "declaration": "versions[\"validation\"] = NormalizationVersionReference(\n            domain=\"validation\",\n            version=validation_result.ruleset_version,\n            catalog_version=validation_result.audit.catalog_version\n            if validation_result.audit is not None\n            else None,\n        )"
+    },
+    {
+      "file": "src/editalfinder_v2/domain/integration_models.py",
+      "line": 40,
+      "declaration": "catalog_version: str = \"seeds-000002\""
+    },
+    {
+      "file": "src/editalfinder_v2/domain/integration_models.py",
+      "line": 52,
+      "declaration": "integration_version: Literal[\"m2.3-integration-v1\"] = \"m2.3-integration-v1\""
+    },
+    {
+      "file": "src/editalfinder_v2/domain/integration_models.py",
+      "line": 99,
+      "declaration": "version: str"
+    },
+    {
+      "file": "src/editalfinder_v2/domain/integration_models.py",
+      "line": 100,
+      "declaration": "policy_version: str | None = None"
+    },
+    {
+      "file": "src/editalfinder_v2/domain/integration_models.py",
+      "line": 101,
+      "declaration": "catalog_version: str | None = None"
+    },
+    {
+      "file": "src/editalfinder_v2/domain/integration_models.py",
+      "line": 116,
+      "declaration": "normalization_versions: tuple[NormalizationVersionReference, ...]"
+    },
+    {
+      "file": "src/editalfinder_v2/domain/integration_models.py",
+      "line": 132,
+      "declaration": "version: Literal[\"m2.3b-consistency-v1\"]"
+    },
+    {
+      "file": "src/editalfinder_v2/domain/integration_models.py",
+      "line": 145,
+      "declaration": "schema_version: Literal[2] = Field(...)"
+    },
+    {
+      "file": "src/editalfinder_v2/domain/integration_models.py",
+      "line": 146,
+      "declaration": "output_budget_version: Literal[\"m2.3a.1-output-budget-v1\"]"
+    },
+    {
+      "file": "src/editalfinder_v2/domain/integration_models.py",
+      "line": 149,
+      "declaration": "hash_version: Literal[\"integration-pydantic-json-utf8-v1\"]"
+    },
+    {
+      "file": "src/editalfinder_v2/domain/integration_models.py",
+      "line": 150,
+      "declaration": "limits_version: Literal[\"m2.3-integration-limits-v1\"]"
+    },
+    {
+      "file": "src/editalfinder_v2/domain/integration_models.py",
+      "line": 171,
+      "declaration": "integration_version: Literal[\"m2.3-integration-v1\"] = \"m2.3-integration-v1\""
+    },
+    {
+      "file": "src/editalfinder_v2/domain/m22b_common.py",
+      "line": 14,
+      "declaration": "MAX_VALUE_CHARS = 8192"
+    },
+    {
+      "file": "src/editalfinder_v2/domain/m22b_common.py",
+      "line": 108,
+      "declaration": "hash_version: Literal[\"normalization-pydantic-json-utf8-v1\"] = (\n        \"normalization-pydantic-json-utf8-v1\"\n    )"
+    },
+    {
+      "file": "src/editalfinder_v2/domain/m22b_common.py",
+      "line": 111,
+      "declaration": "limits_version: Literal[\"m2.2b-normalization-limits-v1\"] = \"m2.2b-normalization-limits-v1\""
+    },
+    {
+      "file": "src/editalfinder_v2/domain/m22b_common.py",
+      "line": 116,
+      "declaration": "policy_version: Literal[\"m2.2b-semantics-v1\"] = \"m2.2b-semantics-v1\""
+    },
+    {
+      "file": "src/editalfinder_v2/domain/models.py",
+      "line": 29,
+      "declaration": "schema_version: Literal[2] = 2"
+    },
+    {
+      "file": "src/editalfinder_v2/domain/models.py",
+      "line": 49,
+      "declaration": "hash_version: Literal[\"sha256-utf8-v1\"] = \"sha256-utf8-v1\""
+    },
+    {
+      "file": "src/editalfinder_v2/domain/models.py",
+      "line": 51,
+      "declaration": "contract_version: Literal[\"2\"] = \"2\""
+    },
+    {
+      "file": "src/editalfinder_v2/domain/models.py",
+      "line": 60,
+      "declaration": "collector_version: Text"
+    },
+    {
+      "file": "src/editalfinder_v2/domain/models.py",
+      "line": 103,
+      "declaration": "method_version: Text"
+    },
+    {
+      "file": "src/editalfinder_v2/domain/models.py",
+      "line": 219,
+      "declaration": "contract_version: Literal[\"2\"] = \"2\""
+    },
+    {
+      "file": "src/editalfinder_v2/domain/models.py",
+      "line": 236,
+      "declaration": "rule_version: Literal[\"m1.1-1\"] = \"m1.1-1\""
+    },
+    {
+      "file": "src/editalfinder_v2/domain/models.py",
+      "line": 256,
+      "declaration": "policy_version: Text"
+    },
+    {
+      "file": "src/editalfinder_v2/domain/models.py",
+      "line": 267,
+      "declaration": "audit_version: Literal[\"m1.1a-full-report-1\"] = \"m1.1a-full-report-1\""
+    },
+    {
+      "file": "src/editalfinder_v2/domain/models.py",
+      "line": 268,
+      "declaration": "validation_limits_version: Literal[\"m1.1a-limits-1\"] = \"m1.1a-limits-1\""
+    },
+    {
+      "file": "src/editalfinder_v2/domain/models.py",
+      "line": 270,
+      "declaration": "report_hash_version: Literal[\"pydantic-report-json-utf8-v1\"] = \"pydantic-report-json-utf8-v1\""
+    },
+    {
+      "file": "src/editalfinder_v2/domain/models.py",
+      "line": 271,
+      "declaration": "contract_version: Literal[\"2\"] = \"2\""
+    },
+    {
+      "file": "src/editalfinder_v2/domain/models.py",
+      "line": 276,
+      "declaration": "catalog_version: Text"
+    },
+    {
+      "file": "src/editalfinder_v2/domain/models.py",
+      "line": 277,
+      "declaration": "ruleset_version: Literal[\"m1.1-hardening-1\"] = \"m1.1-hardening-1\""
+    },
+    {
+      "file": "src/editalfinder_v2/domain/models.py",
+      "line": 278,
+      "declaration": "rule_versions: tuple[tuple[str, str], ...]"
+    },
+    {
+      "file": "src/editalfinder_v2/domain/models.py",
+      "line": 280,
+      "declaration": "hash_version: Literal[\"pydantic-json-utf8-v2\"] = \"pydantic-json-utf8-v2\""
+    },
+    {
+      "file": "src/editalfinder_v2/domain/models.py",
+      "line": 289,
+      "declaration": "ruleset_version: Literal[\"m1.1-hardening-1\"] = \"m1.1-hardening-1\""
+    },
+    {
+      "file": "src/editalfinder_v2/domain/organization_models.py",
+      "line": 26,
+      "declaration": "normalization_version: Literal[\"opaque-exact-v1\", \"opaque-nfc-v1\"] = \"opaque-exact-v1\""
+    },
+    {
+      "file": "src/editalfinder_v2/domain/organization_models.py",
+      "line": 36,
+      "declaration": "normalization_version: Literal[\"organization-conservative-v1\"] = \"organization-conservative-v1\""
+    },
+    {
+      "file": "src/editalfinder_v2/domain/organization_models.py",
+      "line": 62,
+      "declaration": "normalization_version: Literal[\"organization-conservative-v1\"] = \"organization-conservative-v1\""
+    },
+    {
+      "file": "src/editalfinder_v2/domain/organization_models.py",
+      "line": 90,
+      "declaration": "normalization_version: Literal[\"organization-conservative-v1\"] = \"organization-conservative-v1\""
+    },
+    {
+      "file": "src/editalfinder_v2/domain/policies.py",
+      "line": 10,
+      "declaration": "CATALOG_VERSION = \"seeds-000002\""
+    },
+    {
+      "file": "src/editalfinder_v2/domain/policies.py",
+      "line": 11,
+      "declaration": "VALIDATION_LIMITS_VERSION: Final = \"m1.1a-limits-1\""
+    },
+    {
+      "file": "src/editalfinder_v2/domain/policies.py",
+      "line": 12,
+      "declaration": "MAX_ASSERTIONS = 1200"
+    },
+    {
+      "file": "src/editalfinder_v2/domain/policies.py",
+      "line": 13,
+      "declaration": "MAX_CANDIDATE_EVIDENCE = 2400"
+    },
+    {
+      "file": "src/editalfinder_v2/domain/policies.py",
+      "line": 14,
+      "declaration": "MAX_FIELD_EVIDENCE = 64"
+    },
+    {
+      "file": "src/editalfinder_v2/domain/safety.py",
+      "line": 19,
+      "declaration": "MAX_PAYLOAD_BYTES = 2 * 1024 * 1024"
+    },
+    {
+      "file": "src/editalfinder_v2/domain/safety.py",
+      "line": 20,
+      "declaration": "MAX_DEPTH = 64"
+    },
+    {
+      "file": "src/editalfinder_v2/domain/safety.py",
+      "line": 21,
+      "declaration": "MAX_NODES = 100_000"
+    },
+    {
+      "file": "src/editalfinder_v2/domain/safety.py",
+      "line": 22,
+      "declaration": "MAX_NUMBER_LENGTH = 256"
+    },
+    {
+      "file": "src/editalfinder_v2/domain/safety.py",
+      "line": 23,
+      "declaration": "MAX_POINTER_LENGTH = 4096"
+    },
+    {
+      "file": "src/editalfinder_v2/domain/semantic_common.py",
+      "line": 27,
+      "declaration": "MAX_NORMALIZATION_CLAIMS = 1200"
+    },
+    {
+      "file": "src/editalfinder_v2/domain/semantic_common.py",
+      "line": 28,
+      "declaration": "MAX_NORMALIZATION_SNAPSHOTS = 32"
+    },
+    {
+      "file": "src/editalfinder_v2/domain/semantic_common.py",
+      "line": 29,
+      "declaration": "MAX_NORMALIZATION_PAYLOAD_BYTES = 8 * 1024 * 1024"
+    },
+    {
+      "file": "src/editalfinder_v2/domain/semantic_common.py",
+      "line": 30,
+      "declaration": "MAX_NORMALIZATION_TEXT_CHARS = 1024 * 1024"
+    },
+    {
+      "file": "src/editalfinder_v2/domain/semantic_common.py",
+      "line": 53,
+      "declaration": "hash_version: Literal[\"normalization-pydantic-json-utf8-v1\"] = (\n        \"normalization-pydantic-json-utf8-v1\"\n    )"
+    },
+    {
+      "file": "src/editalfinder_v2/domain/semantic_common.py",
+      "line": 56,
+      "declaration": "limits_version: Literal[\"m2.2a-normalization-limits-v1\"] = \"m2.2a-normalization-limits-v1\""
+    },
+    {
+      "file": "src/editalfinder_v2/domain/semantic_common.py",
+      "line": 61,
+      "declaration": "policy_version: Literal[\"m2.2a-semantics-v1\"] = \"m2.2a-semantics-v1\""
+    },
+    {
+      "file": "src/editalfinder_v2/domain/taxonomy_models.py",
+      "line": 24,
+      "declaration": "catalog_version: str = CATALOG_VERSION"
+    },
+    {
+      "file": "src/editalfinder_v2/domain/taxonomy_models.py",
+      "line": 25,
+      "declaration": "normalization_version: Literal[\"taxonomy-conservative-v1\"] = \"taxonomy-conservative-v1\""
+    },
+    {
+      "file": "src/editalfinder_v2/domain/taxonomy_models.py",
+      "line": 30,
+      "declaration": "catalog_version: str = CATALOG_VERSION"
+    },
+    {
+      "file": "src/editalfinder_v2/domain/taxonomy_models.py",
+      "line": 35,
+      "declaration": "candidate_dimensions: tuple[TaxonomyDimension, ...] = Field(default=(), max_length=3)"
+    },
+    {
+      "file": "src/editalfinder_v2/domain/taxonomy_models.py",
+      "line": 37,
+      "declaration": "normalization_version: Literal[\"taxonomy-conservative-v1\"] = \"taxonomy-conservative-v1\""
+    },
+    {
+      "file": "src/editalfinder_v2/domain/taxonomy_models.py",
+      "line": 93,
+      "declaration": "normalization_version: Literal[\"taxonomy-conservative-v1\"] = \"taxonomy-conservative-v1\""
+    },
+    {
+      "file": "src/editalfinder_v2/domain/taxonomy_models.py",
+      "line": 52,
+      "declaration": "expected_code = \"catalog_version_unsupported\""
+    },
+    {
+      "file": "src/editalfinder_v2/domain/taxonomy_normalization.py",
+      "line": 27,
+      "declaration": "code = \"catalog_version_unsupported\""
+    },
+    {
+      "file": "src/editalfinder_v2/domain/temporal_models.py",
+      "line": 43,
+      "declaration": "normalization_version: Literal[\"temporal-conservative-v1\"] = \"temporal-conservative-v1\""
+    },
+    {
+      "file": "src/editalfinder_v2/domain/temporal_models.py",
+      "line": 56,
+      "declaration": "normalization_version: Literal[\"temporal-conservative-v1\"] = \"temporal-conservative-v1\""
+    },
+    {
+      "file": "src/editalfinder_v2/domain/temporal_models.py",
+      "line": 148,
+      "declaration": "normalization_version: Literal[\"temporal-conservative-v1\"] = \"temporal-conservative-v1\""
+    },
+    {
+      "file": "src/editalfinder_v2/domain/temporal_normalization.py",
+      "line": 106,
+      "declaration": "issue = \"temporal_timezone_conversion_out_of_range\""
+    },
+    {
+      "file": "src/editalfinder_v2/domain/url_identity.py",
+      "line": 31,
+      "declaration": "normalization_version: Literal[\"url-conservative-v1\"] = \"url-conservative-v1\""
+    },
+    {
+      "file": "src/editalfinder_v2/domain/url_identity.py",
+      "line": 32,
+      "declaration": "tracking_policy: TrackingPolicy = \"preserve-v1\""
+    },
+    {
+      "file": "src/editalfinder_v2/domain/url_identity.py",
+      "line": 153,
+      "declaration": "normalized, code, traces = _normalize(value, tracking_policy)"
+    },
+    {
+      "file": "src/editalfinder_v2/domain/url_identity.py",
+      "line": 37,
+      "declaration": "expected = _normalize(self.original, self.tracking_policy)"
+    }
+  ],
+  "parent_probes": {
+    "probes": [
+      {
+        "probe": "deadline_role",
+        "outcome": "semantic_oracle_detected",
+        "report_constructed": true,
+        "first_assertion": "normalized role/content projection"
+      },
+      {
+        "probe": "geographic_eligibility",
+        "outcome": "semantic_oracle_detected",
+        "report_constructed": true,
+        "first_assertion": "normalized role/content projection"
+      },
+      {
+        "probe": "organization_role",
+        "outcome": "semantic_oracle_detected",
+        "report_constructed": true,
+        "first_assertion": "normalized role/content projection"
+      },
+      {
+        "probe": "taxonomy_dimension",
+        "outcome": "semantic_oracle_detected",
+        "report_constructed": true,
+        "first_assertion": "normalized role/content projection"
+      },
+      {
+        "probe": "swapped_financial_amounts",
+        "outcome": "semantic_oracle_detected",
+        "report_constructed": true
+      },
+      {
+        "probe": "changed_cycle",
+        "outcome": "identity_expectation_detected",
+        "actual": [
+          "distinct_cycles",
+          "distinct_cycles"
+        ]
+      },
+      {
+        "probe": "organization_normalized_display_fault",
+        "outcome": "M23C_projection_blind_spot",
+        "impact": "claims/originals and roles still checked; normalized_name is not in the frozen E2E projection; not a runtime defect"
+      },
+      {
+        "probe": "M1_forged_decision_boundary",
+        "standalone_accepted_dto": true,
+        "promotable": false,
+        "retained_envelope_rejected": true,
+        "full_integration_rejected": true
+      },
+      {
+        "probe": "URL_identity_and_tracking",
+        "default": "https://example.org/apply?id=001&utm_source=x#one",
+        "opt_in": "https://example.org/apply?id=001#one",
+        "query_identity_preserved": true,
+        "fragment_preserved": true
+      },
+      {
+        "probe": "URL_rejections",
+        "tested": 4
+      },
+      {
+        "probe": "strict_JSON_and_pointer",
+        "invalid_json_cases": 5,
+        "invalid_pointer_cases": 5,
+        "escaped_pointer": true
+      },
+      {
+        "probe": "nonfinite_and_scalar_roundtrip",
+        "nonfinite_rejected": 3,
+        "date_not_promoted_to_text": true
+      },
+      {
+        "probe": "currency_and_decimal_context",
+        "cross_currency": "not_comparable",
+        "precision_2_exact": true
+      },
+      {
+        "probe": "cross_record_transplant",
+        "foreign_fact_refused": true,
+        "neighbors_unchanged": true,
+        "foreign_diagnostic_witnesses_empty": true
+      },
+      {
+        "probe": "duplicate_candidate",
+        "outcome": "integration_duplicate_candidate_id",
+        "stage": "integration"
+      },
+      {
+        "probe": "comparison_index",
+        "outcome": "integration_identity_index_invalid",
+        "stage": "integration"
+      },
+      {
+        "probe": "65_comparisons",
+        "outcome": "integration_limits_exceeded",
+        "stage": "integration"
+      },
+      {
+        "probe": "assertion_limit",
+        "outcome": "validation_limits_exceeded",
+        "stage": "validation"
+      },
+      {
+        "probe": "field_evidence_limit",
+        "outcome": "validation_limits_exceeded",
+        "stage": "validation"
+      },
+      {
+        "probe": "snapshot_UTC_boundary",
+        "input": "0001-01-01T00:00:00+23:59",
+        "exception": "OverflowError",
+        "message": "date value out of range"
+      },
+      {
+        "probe": "snapshot_UTC_boundary",
+        "input": "9999-12-31T23:59:59-23:59",
+        "exception": "OverflowError",
+        "message": "date value out of range"
+      }
+    ],
+    "executed_probe_groups": 21
+  },
+  "utc_reproducer": {
+    "finding_id": "M23D-F01",
+    "rows": [
+      {
+        "timestamp": "0001-01-01T00:00:00+23:59",
+        "route": "snapshot_python",
+        "result": "OverflowError",
+        "message": "date value out of range",
+        "traceback": "Traceback (most recent call last):\n  File \"/home/lorenzozm/.hermes/cache/scratch/m23d-audit/utc_reproducer.py\", line 18, in <module>\n    result=RawSnapshot.model_validate(raw)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/lorenzozm/.hermes/cache/scratch/m23d-audit/frozen/.venv/lib/python3.11/site-packages/pydantic/main.py\", line 790, in model_validate\n    return cls.__pydantic_validator__.validate_python(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/lorenzozm/.hermes/cache/scratch/m23d-audit/frozen/src/editalfinder_v2/domain/models.py\", line 79, in utc_timestamp\n    return value.astimezone(UTC)\n           ^^^^^^^^^^^^^^^^^^^^^\nOverflowError: date value out of range\n"
+      },
+      {
+        "timestamp": "0001-01-01T00:00:00+23:59",
+        "route": "snapshot_json",
+        "result": "OverflowError",
+        "message": "date value out of range",
+        "traceback": "Traceback (most recent call last):\n  File \"/home/lorenzozm/.hermes/cache/scratch/m23d-audit/utc_reproducer.py\", line 16, in <module>\n    result=RawSnapshot.model_validate_json(json.dumps(raw))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/lorenzozm/.hermes/cache/scratch/m23d-audit/frozen/.venv/lib/python3.11/site-packages/pydantic/main.py\", line 845, in model_validate_json\n    return cls.__pydantic_validator__.validate_json(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/lorenzozm/.hermes/cache/scratch/m23d-audit/frozen/src/editalfinder_v2/domain/models.py\", line 79, in utc_timestamp\n    return value.astimezone(UTC)\n           ^^^^^^^^^^^^^^^^^^^^^\nOverflowError: date value out of range\n"
+      },
+      {
+        "timestamp": "0001-01-01T00:00:00+23:59",
+        "route": "integration_input_json",
+        "result": "OverflowError",
+        "message": "date value out of range",
+        "traceback": "Traceback (most recent call last):\n  File \"/home/lorenzozm/.hermes/cache/scratch/m23d-audit/utc_reproducer.py\", line 22, in <module>\n    result=IntegrationInput.model_validate_json(json.dumps(data))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/lorenzozm/.hermes/cache/scratch/m23d-audit/frozen/.venv/lib/python3.11/site-packages/pydantic/main.py\", line 845, in model_validate_json\n    return cls.__pydantic_validator__.validate_json(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/lorenzozm/.hermes/cache/scratch/m23d-audit/frozen/src/editalfinder_v2/domain/models.py\", line 79, in utc_timestamp\n    return value.astimezone(UTC)\n           ^^^^^^^^^^^^^^^^^^^^^\nOverflowError: date value out of range\n"
+      },
+      {
+        "timestamp": "0001-01-01T00:00:00+23:59",
+        "route": "attestation_json",
+        "result": "OverflowError",
+        "message": "date value out of range",
+        "traceback": "Traceback (most recent call last):\n  File \"/home/lorenzozm/.hermes/cache/scratch/m23d-audit/utc_reproducer.py\", line 25, in <module>\n    result=ReviewAttestation.model_validate_json(json.dumps(raw_attestation))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/lorenzozm/.hermes/cache/scratch/m23d-audit/frozen/.venv/lib/python3.11/site-packages/pydantic/main.py\", line 845, in model_validate_json\n    return cls.__pydantic_validator__.validate_json(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/lorenzozm/.hermes/cache/scratch/m23d-audit/frozen/src/editalfinder_v2/domain/models.py\", line 263, in utc_review\n    return value.astimezone(UTC)\n           ^^^^^^^^^^^^^^^^^^^^^\nOverflowError: date value out of range\n"
+      },
+      {
+        "timestamp": "9999-12-31T23:59:59-23:59",
+        "route": "snapshot_python",
+        "result": "OverflowError",
+        "message": "date value out of range",
+        "traceback": "Traceback (most recent call last):\n  File \"/home/lorenzozm/.hermes/cache/scratch/m23d-audit/utc_reproducer.py\", line 18, in <module>\n    result=RawSnapshot.model_validate(raw)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/lorenzozm/.hermes/cache/scratch/m23d-audit/frozen/.venv/lib/python3.11/site-packages/pydantic/main.py\", line 790, in model_validate\n    return cls.__pydantic_validator__.validate_python(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/lorenzozm/.hermes/cache/scratch/m23d-audit/frozen/src/editalfinder_v2/domain/models.py\", line 79, in utc_timestamp\n    return value.astimezone(UTC)\n           ^^^^^^^^^^^^^^^^^^^^^\nOverflowError: date value out of range\n"
+      },
+      {
+        "timestamp": "9999-12-31T23:59:59-23:59",
+        "route": "snapshot_json",
+        "result": "OverflowError",
+        "message": "date value out of range",
+        "traceback": "Traceback (most recent call last):\n  File \"/home/lorenzozm/.hermes/cache/scratch/m23d-audit/utc_reproducer.py\", line 16, in <module>\n    result=RawSnapshot.model_validate_json(json.dumps(raw))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/lorenzozm/.hermes/cache/scratch/m23d-audit/frozen/.venv/lib/python3.11/site-packages/pydantic/main.py\", line 845, in model_validate_json\n    return cls.__pydantic_validator__.validate_json(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/lorenzozm/.hermes/cache/scratch/m23d-audit/frozen/src/editalfinder_v2/domain/models.py\", line 79, in utc_timestamp\n    return value.astimezone(UTC)\n           ^^^^^^^^^^^^^^^^^^^^^\nOverflowError: date value out of range\n"
+      },
+      {
+        "timestamp": "9999-12-31T23:59:59-23:59",
+        "route": "integration_input_json",
+        "result": "OverflowError",
+        "message": "date value out of range",
+        "traceback": "Traceback (most recent call last):\n  File \"/home/lorenzozm/.hermes/cache/scratch/m23d-audit/utc_reproducer.py\", line 22, in <module>\n    result=IntegrationInput.model_validate_json(json.dumps(data))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/lorenzozm/.hermes/cache/scratch/m23d-audit/frozen/.venv/lib/python3.11/site-packages/pydantic/main.py\", line 845, in model_validate_json\n    return cls.__pydantic_validator__.validate_json(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/lorenzozm/.hermes/cache/scratch/m23d-audit/frozen/src/editalfinder_v2/domain/models.py\", line 79, in utc_timestamp\n    return value.astimezone(UTC)\n           ^^^^^^^^^^^^^^^^^^^^^\nOverflowError: date value out of range\n"
+      },
+      {
+        "timestamp": "9999-12-31T23:59:59-23:59",
+        "route": "attestation_json",
+        "result": "OverflowError",
+        "message": "date value out of range",
+        "traceback": "Traceback (most recent call last):\n  File \"/home/lorenzozm/.hermes/cache/scratch/m23d-audit/utc_reproducer.py\", line 25, in <module>\n    result=ReviewAttestation.model_validate_json(json.dumps(raw_attestation))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/lorenzozm/.hermes/cache/scratch/m23d-audit/frozen/.venv/lib/python3.11/site-packages/pydantic/main.py\", line 845, in model_validate_json\n    return cls.__pydantic_validator__.validate_json(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/lorenzozm/.hermes/cache/scratch/m23d-audit/frozen/src/editalfinder_v2/domain/models.py\", line 263, in utc_review\n    return value.astimezone(UTC)\n           ^^^^^^^^^^^^^^^^^^^^^\nOverflowError: date value out of range\n"
+      },
+      {
+        "timestamp": "0001-01-02T00:00:00+23:59",
+        "route": "snapshot_python",
+        "result": "RawSnapshot"
+      },
+      {
+        "timestamp": "0001-01-02T00:00:00+23:59",
+        "route": "snapshot_json",
+        "result": "RawSnapshot"
+      },
+      {
+        "timestamp": "0001-01-02T00:00:00+23:59",
+        "route": "integration_input_json",
+        "result": "IntegrationInput"
+      },
+      {
+        "timestamp": "0001-01-02T00:00:00+23:59",
+        "route": "attestation_json",
+        "result": "ReviewAttestation"
+      },
+      {
+        "timestamp": "9999-12-30T23:59:59-23:59",
+        "route": "snapshot_python",
+        "result": "RawSnapshot"
+      },
+      {
+        "timestamp": "9999-12-30T23:59:59-23:59",
+        "route": "snapshot_json",
+        "result": "RawSnapshot"
+      },
+      {
+        "timestamp": "9999-12-30T23:59:59-23:59",
+        "route": "integration_input_json",
+        "result": "IntegrationInput"
+      },
+      {
+        "timestamp": "9999-12-30T23:59:59-23:59",
+        "route": "attestation_json",
+        "result": "ReviewAttestation"
+      }
+    ]
+  },
+  "metadata_omission_probe": {
+    "rows": [
+      {
+        "path": "/input/candidates/0/context/snapshots/0/audit/schema_version",
+        "removed": 2,
+        "result": "accepted_and_default_restored_with_retained_top_audit"
+      },
+      {
+        "path": "/input/candidates/0/context/snapshots/0/audit/algorithm",
+        "removed": "sha256",
+        "result": "accepted_and_default_restored_with_retained_top_audit"
+      },
+      {
+        "path": "/input/candidates/0/context/snapshots/0/audit/hash_version",
+        "removed": "sha256-utf8-v1",
+        "result": "accepted_and_default_restored_with_retained_top_audit"
+      },
+      {
+        "path": "/input/candidates/0/context/snapshots/0/audit/contract_version",
+        "removed": "2",
+        "result": "accepted_and_default_restored_with_retained_top_audit"
+      },
+      {
+        "path": "/candidates/0/normalizations/temporal/audit/schema_version",
+        "removed": 2,
+        "result": "accepted_and_default_restored_with_retained_top_audit"
+      },
+      {
+        "path": "/candidates/0/normalizations/temporal/audit/algorithm",
+        "removed": "sha256",
+        "result": "accepted_and_default_restored_with_retained_top_audit"
+      },
+      {
+        "path": "/candidates/0/normalizations/temporal/audit/hash_version",
+        "removed": "normalization-pydantic-json-utf8-v1",
+        "result": "accepted_and_default_restored_with_retained_top_audit"
+      },
+      {
+        "path": "/candidates/0/normalizations/temporal/audit/limits_version",
+        "removed": "m2.2a-normalization-limits-v1",
+        "result": "accepted_and_default_restored_with_retained_top_audit"
+      },
+      {
+        "path": "/candidates/0/normalizations/financial/audit/schema_version",
+        "removed": 2,
+        "result": "accepted_and_default_restored_with_retained_top_audit"
+      },
+      {
+        "path": "/candidates/0/normalizations/financial/audit/algorithm",
+        "removed": "sha256",
+        "result": "accepted_and_default_restored_with_retained_top_audit"
+      },
+      {
+        "path": "/candidates/0/normalizations/financial/audit/hash_version",
+        "removed": "normalization-pydantic-json-utf8-v1",
+        "result": "accepted_and_default_restored_with_retained_top_audit"
+      },
+      {
+        "path": "/candidates/0/normalizations/financial/audit/limits_version",
+        "removed": "m2.2b-normalization-limits-v1",
+        "result": "accepted_and_default_restored_with_retained_top_audit"
+      },
+      {
+        "path": "/candidates/0/validation/audit/schema_version",
+        "removed": 2,
+        "result": "accepted_and_default_restored_with_retained_top_audit"
+      },
+      {
+        "path": "/candidates/0/validation/audit/audit_version",
+        "removed": "m1.1a-full-report-1",
+        "result": "accepted_and_default_restored_with_retained_top_audit"
+      },
+      {
+        "path": "/candidates/0/validation/audit/validation_limits_version",
+        "removed": "m1.1a-limits-1",
+        "result": "accepted_and_default_restored_with_retained_top_audit"
+      },
+      {
+        "path": "/candidates/0/validation/audit/report_hash_version",
+        "removed": "pydantic-report-json-utf8-v1",
+        "result": "accepted_and_default_restored_with_retained_top_audit"
+      },
+      {
+        "path": "/candidates/0/validation/audit/contract_version",
+        "removed": "2",
+        "result": "accepted_and_default_restored_with_retained_top_audit"
+      },
+      {
+        "path": "/candidates/0/validation/audit/catalog_version",
+        "removed": "seeds-000002",
+        "result": "rejected"
+      },
+      {
+        "path": "/candidates/0/validation/audit/ruleset_version",
+        "removed": "m1.1-hardening-1",
+        "result": "accepted_and_default_restored_with_retained_top_audit"
+      },
+      {
+        "path": "/candidates/0/validation/audit/algorithm",
+        "removed": "sha256",
+        "result": "accepted_and_default_restored_with_retained_top_audit"
+      },
+      {
+        "path": "/candidates/0/validation/audit/hash_version",
+        "removed": "pydantic-json-utf8-v2",
+        "result": "accepted_and_default_restored_with_retained_top_audit"
+      },
+      {
+        "path": "/identity_results/0/audit/schema_version",
+        "removed": 2,
+        "result": "accepted_and_default_restored_with_retained_top_audit"
+      },
+      {
+        "path": "/identity_results/0/audit/algorithm",
+        "removed": "sha256",
+        "result": "accepted_and_default_restored_with_retained_top_audit"
+      },
+      {
+        "path": "/identity_results/0/audit/hash_version",
+        "removed": "identity-pydantic-json-utf8-v1",
+        "result": "accepted_and_default_restored_with_retained_top_audit"
+      },
+      {
+        "path": "/identity_results/0/audit/limits_version",
+        "removed": "m2.1-identity-limits-v1",
+        "result": "accepted_and_default_restored_with_retained_top_audit"
+      },
+      {
+        "path": "/audit/schema_version",
+        "removed": 2,
+        "result": "rejected"
+      },
+      {
+        "path": "/audit/output_budget_version",
+        "removed": "m2.3a.1-output-budget-v1",
+        "result": "rejected"
+      },
+      {
+        "path": "/audit/algorithm",
+        "removed": "sha256",
+        "result": "rejected"
+      },
+      {
+        "path": "/audit/hash_version",
+        "removed": "integration-pydantic-json-utf8-v1",
+        "result": "rejected"
+      },
+      {
+        "path": "/audit/limits_version",
+        "removed": "m2.3-integration-limits-v1",
+        "result": "rejected"
+      }
+    ],
+    "accepted": 24,
+    "rejected": 6
+  },
+  "resource_probes": {
+    "operational_probes": [
+      {
+        "name": "candidate_count_33",
+        "result": "OperationalError",
+        "code": "integration_limits_exceeded"
+      },
+      {
+        "name": "comparisons_65",
+        "result": "OperationalError",
+        "code": "integration_limits_exceeded"
+      },
+      {
+        "name": "M1_assertions_1201",
+        "result": "OperationalError",
+        "code": "validation_limits_exceeded"
+      },
+      {
+        "name": "temporal_claims_1201",
+        "result": "OperationalError",
+        "code": "normalization_limits_exceeded"
+      },
+      {
+        "name": "financial_source_digits_257",
+        "result": "OperationalError",
+        "code": "normalization_limits_exceeded"
+      },
+      {
+        "name": "snapshot_depth",
+        "result": "OperationalError",
+        "code": "normalization_invalid_snapshot_json"
+      },
+      {
+        "name": "snapshot_size",
+        "result": "OperationalError",
+        "code": "integration_output_budget_exceeded"
+      }
+    ],
+    "numeric_convention_trust_probe": [
+      {
+        "format": "brazilian",
+        "currency_declaration": "BRL",
+        "amounts": [
+          "1234"
+        ],
+        "codes": []
+      },
+      {
+        "format": "us",
+        "currency_declaration": "BRL",
+        "amounts": [
+          "1.234"
+        ],
+        "codes": []
+      },
+      {
+        "format": "unspecified",
+        "currency_declaration": null,
+        "amounts": [],
+        "codes": [
+          "financial_currency_missing"
+        ]
+      }
+    ],
+    "amplification": [
+      {
+        "case_id": "M23C-A-001",
+        "output_over_unique_snapshot": 140.19175777964676,
+        "output_over_admission": 0.023741590855225977,
+        "python_peak_over_admission": 0.3333479562815628
+      },
+      {
+        "case_id": "M23C-B-001",
+        "output_over_unique_snapshot": 135.05671296296296,
+        "output_over_admission": 0.02554854637618712,
+        "python_peak_over_admission": 0.360640888884218
+      },
+      {
+        "case_id": "M23C-C-001",
+        "output_over_unique_snapshot": 139.85042219541617,
+        "output_over_admission": 0.025648195671026316,
+        "python_peak_over_admission": 0.36338866962816135
+      },
+      {
+        "case_id": "M23C-E-001",
+        "output_over_unique_snapshot": 183.01649888143177,
+        "output_over_admission": 0.03015158836164639,
+        "python_peak_over_admission": 0.34270899214075
+      },
+      {
+        "case_id": "near",
+        "output_over_unique_snapshot": 32.71542810640888,
+        "output_over_admission": 0.14856448769569397,
+        "python_peak_over_admission": 1.0630720257759094
+      },
+      {
+        "case_id": "over",
+        "output_over_unique_snapshot": 0.0005348593779224487,
+        "output_over_admission": 2.428889238403898e-06,
+        "python_peak_over_admission": 0.004556894234465148
+      }
+    ]
+  },
+  "benchmark": {
+    "methodology": "3 fresh sequential processes per case; input construction excluded; tracemalloc covers integrate/dump/received DTO validation; no timing acceptance threshold",
+    "caveats": "Admission budget is not RSS. Over case validates OperationalError, not a report. Synthetic offline data cannot establish extraction precision/recall or production SLA.",
+    "environment": {
+      "python": "3.11.16 (main, Aug 25 2026, 14:00:53) [Clang 22.1.3 ]",
+      "pydantic": "2.14.1",
+      "platform": "Linux-7.0.0-38-generic-x86_64-with-glibc2.43",
+      "cpu_count": 12,
+      "processor": ""
+    },
+    "results": [
+      {
+        "case_id": "M23C-A-001",
+        "samples": [
+          {
+            "case_id": "M23C-A-001",
+            "result": "IntegrationReport",
+            "error_code": null,
+            "charge_bytes": 7020928,
+            "unique_snapshot_bytes": 1189,
+            "serialized_bytes": 166688,
+            "integration_seconds": 0.05956427298951894,
+            "serialization_seconds": 0.002204666001489386,
+            "validation_seconds": 0.08086748000641819,
+            "tracemalloc_peak_bytes": 2340081
+          },
+          {
+            "case_id": "M23C-A-001",
+            "result": "IntegrationReport",
+            "error_code": null,
+            "charge_bytes": 7020928,
+            "unique_snapshot_bytes": 1189,
+            "serialized_bytes": 166688,
+            "integration_seconds": 0.060100536997197196,
+            "serialization_seconds": 0.002231353006209247,
+            "validation_seconds": 0.0798458520002896,
+            "tracemalloc_peak_bytes": 2340825
+          },
+          {
+            "case_id": "M23C-A-001",
+            "result": "IntegrationReport",
+            "error_code": null,
+            "charge_bytes": 7020928,
+            "unique_snapshot_bytes": 1189,
+            "serialized_bytes": 166688,
+            "integration_seconds": 0.05944922698836308,
+            "serialization_seconds": 0.0022643420088570565,
+            "validation_seconds": 0.07963496999582276,
+            "tracemalloc_peak_bytes": 2340412
+          }
+        ],
+        "median": {
+          "integration_seconds": 0.05956427298951894,
+          "serialization_seconds": 0.002231353006209247,
+          "validation_seconds": 0.0798458520002896,
+          "tracemalloc_peak_bytes": 2340412
+        }
+      },
+      {
+        "case_id": "M23C-B-001",
+        "samples": [
+          {
+            "case_id": "M23C-B-001",
+            "result": "IntegrationReport",
+            "error_code": null,
+            "charge_bytes": 4567344,
+            "unique_snapshot_bytes": 864,
+            "serialized_bytes": 116689,
+            "integration_seconds": 0.0416341719974298,
+            "serialization_seconds": 0.0016253509966190904,
+            "validation_seconds": 0.054985890004900284,
+            "tracemalloc_peak_bytes": 1646691
+          },
+          {
+            "case_id": "M23C-B-001",
+            "result": "IntegrationReport",
+            "error_code": null,
+            "charge_bytes": 4567344,
+            "unique_snapshot_bytes": 864,
+            "serialized_bytes": 116689,
+            "integration_seconds": 0.042373588992631994,
+            "serialization_seconds": 0.001630383005249314,
+            "validation_seconds": 0.05620056900079362,
+            "tracemalloc_peak_bytes": 1647171
+          },
+          {
+            "case_id": "M23C-B-001",
+            "result": "IntegrationReport",
+            "error_code": null,
+            "charge_bytes": 4567344,
+            "unique_snapshot_bytes": 864,
+            "serialized_bytes": 116689,
+            "integration_seconds": 0.041361727999174036,
+            "serialization_seconds": 0.0015935389965306967,
+            "validation_seconds": 0.055198244997882284,
+            "tracemalloc_peak_bytes": 1647199
+          }
+        ],
+        "median": {
+          "integration_seconds": 0.0416341719974298,
+          "serialization_seconds": 0.0016253509966190904,
+          "validation_seconds": 0.055198244997882284,
+          "tracemalloc_peak_bytes": 1647171
+        }
+      },
+      {
+        "case_id": "M23C-C-001",
+        "samples": [
+          {
+            "case_id": "M23C-C-001",
+            "result": "IntegrationReport",
+            "error_code": null,
+            "charge_bytes": 4520240,
+            "unique_snapshot_bytes": 829,
+            "serialized_bytes": 115936,
+            "integration_seconds": 0.04057365100015886,
+            "serialization_seconds": 0.0017658900032984093,
+            "validation_seconds": 0.0615385389974108,
+            "tracemalloc_peak_bytes": 1642696
+          },
+          {
+            "case_id": "M23C-C-001",
+            "result": "IntegrationReport",
+            "error_code": null,
+            "charge_bytes": 4520240,
+            "unique_snapshot_bytes": 829,
+            "serialized_bytes": 115936,
+            "integration_seconds": 0.041102482995484024,
+            "serialization_seconds": 0.0016090710123535246,
+            "validation_seconds": 0.054148797993548214,
+            "tracemalloc_peak_bytes": 1642604
+          },
+          {
+            "case_id": "M23C-C-001",
+            "result": "IntegrationReport",
+            "error_code": null,
+            "charge_bytes": 4520240,
+            "unique_snapshot_bytes": 829,
+            "serialized_bytes": 115936,
+            "integration_seconds": 0.04036237800028175,
+            "serialization_seconds": 0.0017431599990231916,
+            "validation_seconds": 0.05349212100554723,
+            "tracemalloc_peak_bytes": 1642128
+          }
+        ],
+        "median": {
+          "integration_seconds": 0.04057365100015886,
+          "serialization_seconds": 0.0017431599990231916,
+          "validation_seconds": 0.054148797993548214,
+          "tracemalloc_peak_bytes": 1642604
+        }
+      },
+      {
+        "case_id": "M23C-E-001",
+        "samples": [
+          {
+            "case_id": "M23C-E-001",
+            "result": "IntegrationReport",
+            "error_code": null,
+            "charge_bytes": 21705888,
+            "unique_snapshot_bytes": 3576,
+            "serialized_bytes": 654467,
+            "integration_seconds": 0.19529907699325122,
+            "serialization_seconds": 0.0077142100053606555,
+            "validation_seconds": 0.2831997869943734,
+            "tracemalloc_peak_bytes": 7436579
+          },
+          {
+            "case_id": "M23C-E-001",
+            "result": "IntegrationReport",
+            "error_code": null,
+            "charge_bytes": 21705888,
+            "unique_snapshot_bytes": 3576,
+            "serialized_bytes": 654467,
+            "integration_seconds": 0.19979485099611338,
+            "serialization_seconds": 0.008048023009905592,
+            "validation_seconds": 0.2840668699936941,
+            "tracemalloc_peak_bytes": 7441122
+          },
+          {
+            "case_id": "M23C-E-001",
+            "result": "IntegrationReport",
+            "error_code": null,
+            "charge_bytes": 21705888,
+            "unique_snapshot_bytes": 3576,
+            "serialized_bytes": 654467,
+            "integration_seconds": 0.19592908000049647,
+            "serialization_seconds": 0.007690452999668196,
+            "validation_seconds": 0.28337677399395034,
+            "tracemalloc_peak_bytes": 7438803
+          }
+        ],
+        "median": {
+          "integration_seconds": 0.19592908000049647,
+          "serialization_seconds": 0.0077142100053606555,
+          "validation_seconds": 0.28337677399395034,
+          "tracemalloc_peak_bytes": 7438803
+        }
+      },
+      {
+        "case_id": "near",
+        "samples": [
+          {
+            "case_id": "near",
+            "result": "IntegrationReport",
+            "error_code": null,
+            "charge_bytes": 67108864,
+            "unique_snapshot_bytes": 304749,
+            "serialized_bytes": 9969994,
+            "integration_seconds": 0.7711680700012948,
+            "serialization_seconds": 0.014036155000212602,
+            "validation_seconds": 0.5578994440002134,
+            "tracemalloc_peak_bytes": 71342649
+          },
+          {
+            "case_id": "near",
+            "result": "IntegrationReport",
+            "error_code": null,
+            "charge_bytes": 67108864,
+            "unique_snapshot_bytes": 304749,
+            "serialized_bytes": 9969994,
+            "integration_seconds": 0.8095272970094811,
+            "serialization_seconds": 0.01569123798981309,
+            "validation_seconds": 0.5787803050043294,
+            "tracemalloc_peak_bytes": 71340488
+          },
+          {
+            "case_id": "near",
+            "result": "IntegrationReport",
+            "error_code": null,
+            "charge_bytes": 67108864,
+            "unique_snapshot_bytes": 304749,
+            "serialized_bytes": 9969994,
+            "integration_seconds": 0.7706761839945102,
+            "serialization_seconds": 0.013397005008300766,
+            "validation_seconds": 0.5597269379941281,
+            "tracemalloc_peak_bytes": 71341556
+          }
+        ],
+        "median": {
+          "integration_seconds": 0.7711680700012948,
+          "serialization_seconds": 0.014036155000212602,
+          "validation_seconds": 0.5597269379941281,
+          "tracemalloc_peak_bytes": 71341556
+        }
+      },
+      {
+        "case_id": "over",
+        "samples": [
+          {
+            "case_id": "over",
+            "result": "OperationalError",
+            "error_code": "integration_output_budget_exceeded",
+            "charge_bytes": 67108865,
+            "unique_snapshot_bytes": 304753,
+            "serialized_bytes": 163,
+            "integration_seconds": 0.004752869994263165,
+            "serialization_seconds": 2.1580999600701034e-05,
+            "validation_seconds": 2.0756007870659232e-05,
+            "tracemalloc_peak_bytes": 305808
+          },
+          {
+            "case_id": "over",
+            "result": "OperationalError",
+            "error_code": "integration_output_budget_exceeded",
+            "charge_bytes": 67108865,
+            "unique_snapshot_bytes": 304753,
+            "serialized_bytes": 163,
+            "integration_seconds": 0.004773617998580448,
+            "serialization_seconds": 1.983299443963915e-05,
+            "validation_seconds": 2.1651008864864707e-05,
+            "tracemalloc_peak_bytes": 305808
+          },
+          {
+            "case_id": "over",
+            "result": "OperationalError",
+            "error_code": "integration_output_budget_exceeded",
+            "charge_bytes": 67108865,
+            "unique_snapshot_bytes": 304753,
+            "serialized_bytes": 163,
+            "integration_seconds": 0.004744378995383158,
+            "serialization_seconds": 1.7472004401497543e-05,
+            "validation_seconds": 1.9561994122341275e-05,
+            "tracemalloc_peak_bytes": 305808
+          }
+        ],
+        "median": {
+          "integration_seconds": 0.004752869994263165,
+          "serialization_seconds": 1.983299443963915e-05,
+          "validation_seconds": 2.0756007870659232e-05,
+          "tracemalloc_peak_bytes": 305808
+        }
+      }
+    ]
+  },
+  "scripts": {
+    "capture_fixtures.py": "\"\"\"Capture exact fixture inputs/results before hygiene; compare afterward in fresh process.\"\"\"\nimport hashlib\nimport json\nimport sys\nfrom pathlib import Path\n\nfrom m23_fixtures import FIXTURE, build_case\nfrom m23c_fixtures import build, dataset\nfrom test_m23c_resources import operational_cases, resource_input\nfrom editalfinder_v2.domain.integration import integrate\n\nout = Path(__file__).parent / \"fixture_before.json\"\ninputs = {\"m23:\" + name: build_case(name) for name in json.loads(FIXTURE.read_text())}\ninputs.update({c[\"case_id\"]: build(c) for c in dataset()[\"cases\"]})\ninputs.update({c[\"case_id\"]: resource_input(c[\"builder\"]) for c in operational_cases()})\nrows = {}\nfor name, data in inputs.items():\n    result = integrate(data)\n    input_wire, result_wire = data.model_dump_json(), result.model_dump_json()\n    rows[name] = {\"input\": input_wire, \"result\": result_wire, \"type\": type(result).__name__}\nif sys.argv[1] == \"capture\":\n    assert not out.exists()\n    out.write_text(json.dumps(rows, ensure_ascii=False), encoding=\"utf-8\")\nelse:\n    before = json.loads(out.read_text(encoding=\"utf-8\"))\n    assert before.keys() == rows.keys()\n    for name, row in rows.items():\n        assert row == before[name], name\n        data = type(inputs[name]).model_validate_json(before[name][\"input\"])\n        assert data == inputs[name], name\n        assert type(integrate(data)).model_validate_json(before[name][\"result\"]) == integrate(data), name\nprint(json.dumps({\"operation\": sys.argv[1], \"fixture_cases\": len(rows), \"full_input_and_result_equality\": sys.argv[1] != \"capture\", \"before_bytes\": out.stat().st_size, \"before_sha256\": hashlib.sha256(out.read_bytes()).hexdigest(), \"cases\": {name: {\"input_sha256\": hashlib.sha256(row[\"input\"].encode()).hexdigest(), \"result_sha256\": hashlib.sha256(row[\"result\"].encode()).hexdigest()} for name, row in rows.items()}}, indent=2))\n",
+    "freeze.py": "\"\"\"Freeze Phase A tree and environment before the read-only audit.\"\"\"\nimport hashlib\nimport importlib.metadata\nimport json\nimport os\nimport platform\nimport shutil\nimport sys\nfrom pathlib import Path\n\nroot = Path.cwd()\nartifacts = Path(__file__).parent\nsnapshot = artifacts / \"frozen\"\nassert not snapshot.exists()\nsnapshot.mkdir()\npaths = [p for b in (\"src\", \"tests\", \"docs\", \"supabase\") for p in (root / b).rglob(\"*\") if p.is_file() and \"__pycache__\" not in p.parts]\npaths += [p for p in root.iterdir() if p.is_file()]\nhashes = {}\nfor p in sorted(set(paths)):\n    relative = p.relative_to(root)\n    dest = snapshot / relative\n    dest.parent.mkdir(parents=True, exist_ok=True)\n    shutil.copy2(p, dest)\n    hashes[str(relative)] = hashlib.sha256(p.read_bytes()).hexdigest()\n(snapshot / \".venv\").symlink_to(root / \".venv\", target_is_directory=True)\nmetadata = {\n    \"python\": sys.version,\n    \"platform\": platform.platform(),\n    \"cpu_count\": os.cpu_count(),\n    \"packages\": sorted([{\"name\": d.metadata[\"Name\"], \"version\": d.version} for d in importlib.metadata.distributions()], key=lambda d: d[\"name\"].lower()),\n    \"files\": hashes,\n}\n(snapshot / \"FROZEN_MANIFEST.json\").write_text(json.dumps(metadata, indent=2) + \"\\n\")\nfor p in snapshot.rglob(\"*\"):\n    if p.is_file() and not p.is_symlink():\n        p.chmod(0o444)\nprint(json.dumps({\"snapshot\": str(snapshot), \"files\": len(hashes), \"source_files\": sum(p.startswith(\"src/\") for p in hashes), \"test_files\": sum(p.startswith(\"tests/\") for p in hashes), \"manifest_sha256\": hashlib.sha256((snapshot / \"FROZEN_MANIFEST.json\").read_bytes()).hexdigest(), \"environment\": {k: v for k,v in metadata.items() if k != \"files\"}}, indent=2))\n",
+    "m23_fixtures_before.py": "\"\"\"Frozen SYNTHETIC cases; this adapter is test-only, not extraction or policy.\"\"\"\n\nimport json\nfrom datetime import UTC, date, datetime\nfrom pathlib import Path\nfrom typing import Any\nfrom uuid import UUID\n\nfrom editalfinder_v2.domain.financial_models import FinancialClaim\nfrom editalfinder_v2.domain.geography_models import GeographyLocationClaim\nfrom editalfinder_v2.domain.identity_models import (\n    ExternalIdentifier,\n    IdentifierNamespace,\n    IdentityEvidence,\n    PublicationCycle,\n)\nfrom editalfinder_v2.domain.integration_models import CandidateIntegrationInput, IntegrationInput\nfrom editalfinder_v2.domain.models import (\n    DocumentUnit,\n    Evidence,\n    FieldAssertion,\n    OpportunityCandidate,\n    RawSnapshot,\n)\nfrom editalfinder_v2.domain.organization_models import OrganizationClaim\nfrom editalfinder_v2.domain.semantic_common import NormalizationContext, SemanticValue\nfrom editalfinder_v2.domain.taxonomy_models import TaxonomyClaim\nfrom editalfinder_v2.domain.temporal_models import TemporalClaim\n\nFIXTURE = Path(__file__).parent / \"fixtures/m23_cases.json\"\n\n\ndef records_for(case: str) -> list[dict[str, Any]]:\n    \"\"\"Return a fresh copy so one mutation cannot contaminate another scenario.\"\"\"\n    return json.loads(FIXTURE.read_text(encoding=\"utf-8\"))[case][\"records\"]\n\n\ndef build_case(case: str) -> IntegrationInput:\n    return adapt_records(records_for(case))\n\n\ndef adapt_records(records: list[dict[str, Any]]) -> IntegrationInput:\n    \"\"\"Explicit fixture declarations; no meaning inferred from title/keywords.\"\"\"\n    sid, source, execution = UUID(int=23001), UUID(int=23002), UUID(int=23003)\n    snapshot = RawSnapshot(\n        id=sid,\n        source_id=source,\n        source_code=\"fapergs\",\n        execution_id=execution,\n        collected_at=datetime(2026, 1, 1, tzinfo=UTC),\n        collector_version=\"m23-synthetic-v1\",\n        url=\"https://example.org/synthetic-only\",\n        payload_json=json.dumps({\"records\": records}, ensure_ascii=False),\n    )\n    inputs = []\n    for index, record in enumerate(records):\n        cid = UUID(int=23100 + index)\n        unit = DocumentUnit(snapshot_id=sid, pointer=f\"/records/{index}\")\n        assertions = []\n\n        def value(original: str | bool, role: str, pointer: str) -> SemanticValue:\n            literal = json.dumps(original) if type(original) is bool else original\n            evidence = Evidence(\n                snapshot_id=sid,\n                pointer=pointer,\n                quote=literal,\n                method=\"structured_field\",\n                method_version=\"m23-synthetic-v1\",\n                confidence=\"1\",\n                unit=unit,\n                semantic_role=role,\n            )\n            assertions.append(FieldAssertion(field=role, value=original, evidence=(evidence,)))\n            return SemanticValue(\n                original=literal,\n                provenance=IdentityEvidence(\n                    candidate_id=cid,\n                    source_id=source,\n                    execution_id=execution,\n                    evidence=evidence,\n                ),\n            )\n\n        direct = {\n            key: value(original, key, unit.pointer + \"/\" + key)\n            for key, original in record.items()\n            if type(original) in {str, bool}\n        }\n        collections = {}\n        for collection in (\n            \"temporal_events\",\n            \"geographic_locations\",\n            \"financial_claims\",\n            \"organization_claims\",\n            \"taxonomy_claims\",\n        ):\n            rows = []\n            for row_index, row in enumerate(record.get(collection, [])):\n                components = {}\n                for key, original in row.items():\n                    if key in {\"role\", \"format\", \"unit\", \"currency\"}:\n                        continue\n                    role = row[\"role\"] if key == \"value\" else row[\"role\"] + \".\" + key\n                    components[key] = value(\n                        original, role, f\"{unit.pointer}/{collection}/{row_index}/{key}\"\n                    )\n                rows.append(components)\n            collections[collection] = rows\n        candidate = OpportunityCandidate(\n            id=cid,\n            source_id=source,\n            source_code=snapshot.source_code,\n            assertions=tuple(assertions),\n            unit=unit,\n        )\n        namespace = IdentifierNamespace(value=\"synthetic-publisher\")\n        identifiers = (\n            (\n                ExternalIdentifier(\n                    identifier_type=\"identificador_oficial\",\n                    original=direct[\"official_identifier\"].original,\n                    namespace=namespace,\n                    source_id=source,\n                    provenance=direct[\"official_identifier\"].provenance,\n                ),\n            )\n            if \"official_identifier\" in direct\n            else ()\n        )\n        cycle = (\n            PublicationCycle(\n                original=direct[\"publication_cycle\"].original,\n                namespace=namespace,\n                provenance=direct[\"publication_cycle\"].provenance,\n            )\n            if \"publication_cycle\" in direct\n            else None\n        )\n        inputs.append(\n            CandidateIntegrationInput(\n                context=NormalizationContext(candidate=candidate, snapshots=(snapshot,)),\n                identifiers=identifiers,\n                cycle=cycle,\n                temporal=tuple(\n                    TemporalClaim(role=row[\"role\"], value=components[\"value\"], format=row[\"format\"])\n                    for row, components in zip(\n                        record.get(\"temporal_events\", []), collections[\"temporal_events\"], strict=True\n                    )\n                ),\n                geography=tuple(\n                    GeographyLocationClaim(role=row[\"role\"], **components)\n                    for row, components in zip(\n                        record.get(\"geographic_locations\", []),\n                        collections[\"geographic_locations\"],\n                        strict=True,\n                    )\n                ),\n                geographic_scope=direct.get(\"geographic_scope\"),\n                financial=tuple(\n                    FinancialClaim(\n                        role=row[\"role\"], value=components.get(\"value\"),\n                        format=row.get(\"format\", \"unspecified\"),\n                        currency=row.get(\"currency\"), unit=row.get(\"unit\", \"amount\"),\n                    )\n                    for row, components in zip(\n                        record.get(\"financial_claims\", []), collections[\"financial_claims\"], strict=True\n                    )\n                ),\n                organizations=tuple(\n                    OrganizationClaim(role=row[\"role\"], name=components.get(\"name\"))\n                    for row, components in zip(\n                        record.get(\"organization_claims\", []), collections[\"organization_claims\"], strict=True\n                    )\n                ),\n                taxonomy=tuple(\n                    TaxonomyClaim(role=row[\"role\"], value=components[\"value\"])\n                    for row, components in zip(\n                        record.get(\"taxonomy_claims\", []), collections[\"taxonomy_claims\"], strict=True\n                    )\n                ),\n            )\n        )\n    return IntegrationInput(candidates=tuple(inputs), reference_date=date(2026, 1, 1))\n",
+    "metadata_omission_probe.py": "\"\"\"Check retained-envelope omission semantics, not new local evaluation.\"\"\"\nimport copy\nimport json\nfrom m23c_fixtures import build,case_by_id\nfrom editalfinder_v2.domain.integration import integrate\nfrom editalfinder_v2.domain.integration_models import IntegrationReport\nfrom pydantic import ValidationError\n\nreport=integrate(build(case_by_id('M23C-I-005')))\nassert isinstance(report,IntegrationReport)\nwire=json.loads(report.model_dump_json())\npaths=[]\nseen=set()\ndef walk(node,path):\n    if isinstance(node,dict):\n        for key,value in node.items():\n            if key=='audit' and isinstance(value,dict):\n                shape=(tuple(sorted(value)),value.get('limits_version'))\n                if shape not in seen:\n                    seen.add(shape)\n                    for name in value:\n                        if name.endswith('version') or name in ('algorithm','schema_version'):\n                            paths.append(path+[key,name])\n            walk(value,path+[key])\n    elif isinstance(node,list):\n        for i,value in enumerate(node):walk(value,path+[i])\nwalk(wire,[])\nrows=[]\nfor path in paths:\n    altered=copy.deepcopy(wire);node=altered\n    for part in path[:-1]:node=node[part]\n    removed=node.pop(path[-1])\n    try:\n        got=IntegrationReport.model_validate_json(json.dumps(altered))\n    except ValidationError:\n        status='rejected'\n    else:\n        assert got==report\n        assert got.audit==report.audit\n        status='accepted_and_default_restored_with_retained_top_audit'\n    rows.append({'path':'/'+ '/'.join(map(str,path)),'removed':removed,'result':status})\nprint(json.dumps({'rows':rows,'accepted':sum(r['result']!='rejected' for r in rows),'rejected':sum(r['result']=='rejected' for r in rows)},indent=2))\n",
+    "parent_probes.py": "\"\"\"M2.3d read-only probes. No source/test/fixture mutations; copied records only.\"\"\"\nimport copy\nimport hashlib\nimport json\nfrom datetime import date\nfrom decimal import Decimal, localcontext\nfrom pathlib import Path\nfrom unittest.mock import patch\n\nfrom pydantic import ValidationError\nfrom m23c_fixtures import build, case_by_id, dataset\nfrom test_m23c_pipeline import check_candidate, projection\nfrom editalfinder_v2.domain.integration import integrate\nfrom editalfinder_v2.domain.integration_models import IntegrationReport, IntegrationInput, IdentityComparison\nfrom editalfinder_v2.domain.models import FieldAssertion, Evidence, ValidationReport, OperationalError, RawSnapshot\nfrom editalfinder_v2.domain.safety import parse_payload, resolve_pointer, valid_url\nfrom editalfinder_v2.domain.url_identity import normalize_url\nfrom editalfinder_v2.domain.validation import validate\nfrom editalfinder_v2.domain.identity_models import ExternalIdentifier\n\nresults=[]\ndef record(name, **details):\n    results.append({\"probe\":name, **details})\n\ndef run(case):\n    report=integrate(build(case))\n    assert isinstance(report,IntegrationReport)\n    return report\n\ndef refuses(fn):\n    try:\n        fn()\n    except (ValidationError,ValueError):\n        return True\n    return False\n\n# Stronger than modifying expected outcomes: evaluate real mutated structured inputs,\n# then feed resulting candidate to the unchanged original frozen manual oracle.\nmutations=[\n    (\"deadline_role\", \"temporal_events\", 2, \"role\", \"selection_result_date\"),\n    (\"geographic_eligibility\", \"geographic_locations\", 0, \"role\", \"origem\"),\n    (\"organization_role\", \"organization_claims\", 0, \"role\", \"managing\"),\n    (\"taxonomy_dimension\", \"taxonomy_claims\", 0, \"role\", \"area\"),\n]\nfor name,collection,index,key,value in mutations:\n    case=case_by_id(\"M23C-A-001\")\n    expected=copy.deepcopy(case[\"expected_candidates\"][0])\n    case[\"records\"][0][collection][index][key]=value\n    actual=run(case).candidates[0]\n    assert projection(actual)!=expected[\"expected_normalized_roles\"]\n    try:\n        check_candidate(actual,expected)\n    except AssertionError:\n        record(name, outcome=\"semantic_oracle_detected\", report_constructed=True, first_assertion=\"normalized role/content projection\")\n    else:\n        raise AssertionError(name)\ncase=case_by_id(\"M23C-A-001\")\nexpected=copy.deepcopy(case[\"expected_candidates\"][0])\nf=case[\"records\"][0][\"financial_claims\"]\nf[0][\"value\"],f[1][\"value\"]=f[1][\"value\"],f[0][\"value\"]\nactual=run(case).candidates[0]\nassert projection(actual)[\"financial\"]==[[\"program_budget\",[\"500000\"],\"BRL\"],[\"proposal_maximum\",[\"10000000\"],\"BRL\"]]\ntry:\n    check_candidate(actual,expected)\nexcept AssertionError:\n    record(\"swapped_financial_amounts\",outcome=\"semantic_oracle_detected\",report_constructed=True)\nelse:\n    raise AssertionError(\"oracle ignored amounts\")\ncase=case_by_id(\"M23C-I-005\")\ncase[\"records\"][1][\"publication_cycle\"]=\"2027\"\nreport=run(case)\nassert all(r.decision==\"distinct_cycles\" for r in report.identity_results)\nrecord(\"changed_cycle\", outcome=\"identity_expectation_detected\",actual=[r.decision for r in report.identity_results])\n\n# Fault-inject production normalization behavior in memory, not a changed oracle.\n# The M23C org projection reads original claim names, so wrong normalized display\n# names can escape that projection even though dedicated organization tests exist.\nimport editalfinder_v2.domain.organization_normalization as org\noriginal_org_values=org._organization_values\ndef wrong_display(claim):\n    name, ids, codes=original_org_values(claim)\n    return (\"CORRUPTED DISPLAY\" if name else name),ids,codes\ncase=case_by_id(\"M23C-A-001\")\nwith patch.object(org,\"_organization_values\",wrong_display):\n    actual=run(case).candidates[0]\n    assert actual.normalizations.organizations.organizations[0].normalized_name==\"CORRUPTED DISPLAY\"\n    check_candidate(actual,case[\"expected_candidates\"][0])\nrecord(\"organization_normalized_display_fault\",outcome=\"M23C_projection_blind_spot\",impact=\"claims/originals and roles still checked; normalized_name is not in the frozen E2E projection; not a runtime defect\")\n\n# M1 DTO integrity is not independent semantic re-evaluation. Full integration is.\nbase=run(case_by_id(\"M23C-A-001\"))\nv=base.candidates[0].validation\npayload=json.loads(v.model_dump_json())\npayload.pop(\"audit\")\npayload[\"decision\"]=\"ACCEPTED\"\npayload[\"issues\"]=[{\"code\":\"instrument_verified\",\"message\":\"forged DTO\",\"rule_id\":\"instrument_verified\",\"evidence\":[payload[\"candidate\"][\"assertions\"][0][\"evidence\"][0]]}]\nforged=ValidationReport.model_validate_json(json.dumps(payload))\nassert forged.decision.value==\"ACCEPTED\" and forged.promotable is False\nouter=json.loads(base.model_dump_json());outer.pop(\"audit\");outer[\"candidates\"][0][\"validation\"]=json.loads(forged.model_dump_json())\nassert refuses(lambda:IntegrationReport.model_validate_json(json.dumps(outer)))\nretained=json.loads(v.model_dump_json());retained[\"decision\"]=\"ACCEPTED\";retained[\"issues\"]=payload[\"issues\"]\nassert refuses(lambda:ValidationReport.model_validate_json(json.dumps(retained)))\nrecord(\"M1_forged_decision_boundary\",standalone_accepted_dto=True,promotable=False,retained_envelope_rejected=True,full_integration_rejected=True)\n\n# Distinct equivalent-looking query values and explicit tracking policy remain distinct.\nu=\"https://EXAMPLE.org:443/apply?id=001&utm_source=x#one\"\na=normalize_url(u);b=normalize_url(u.replace(\"id=001\",\"id=002\"))\nassert a.normalized!=b.normalized\nassert \"utm_source=x\" in a.normalized\nclean=normalize_url(u,tracking_policy=\"drop-known-tracking-v1\")\nassert clean.normalized==\"https://example.org/apply?id=001#one\"\nassert normalize_url(u.replace(\"#one\",\"#two\")).normalized!=a.normalized\nrecord(\"URL_identity_and_tracking\",default=a.normalized,opt_in=clean.normalized,query_identity_preserved=True,fragment_preserved=True)\nfor url in [\"https://user:pw@example.org\",\"https://example.org/%0a\",\"https://example.org:0\",\"https://example.org/\\\\bad\"]:\n    assert not valid_url(url)\nrecord(\"URL_rejections\",tested=4)\nfor pointer in [\"/x/00\",\"/x/-1\",\"/x/+0\",\"/x/\"+\"9\"*1000,\"/x/~2\"]:\n    assert resolve_pointer({\"x\":[\"a\"]},pointer)==(False,None)\nassert resolve_pointer({\"a/b\":{\"~key\":\"ok\"}},\"/a~1b/~0key\")== (True,\"ok\")\nfor raw in ['{\"x\":1,\"x\":2}','{\"x\":NaN}','{\"x\":1e10000}','{\"x\":1e-10000}','['*65+'0'+']'*65]:\n    assert refuses(lambda raw=raw:parse_payload(raw))\nrecord(\"strict_JSON_and_pointer\",invalid_json_cases=5,invalid_pointer_cases=5,escaped_pointer=True)\nfor value in [Decimal(\"NaN\"),Decimal(\"Infinity\"),Decimal(\"-Infinity\")]:\n    assert refuses(lambda value=value:FieldAssertion(field=\"money\",value=value))\na=FieldAssertion(field=\"title\",value=date(2026,1,1))\nassert FieldAssertion.model_validate_json(a.model_dump_json()).value==date(2026,1,1)\nrecord(\"nonfinite_and_scalar_roundtrip\",nonfinite_rejected=3,date_not_promoted_to_text=True)\n\n# Same typed declarations but no cross-currency comparison or arithmetic context rounding.\ncase=case_by_id(\"M23C-D-003\")\ncase[\"records\"][0][\"financial_claims\"][0][\"value\"]=\"USD 999999\"\nactual=run(case).candidates[0]\nassert [d.code for d in actual.diagnostics]==[\"consistency_financial_bounds_not_comparable\"]\nwith localcontext() as ctx:\n    ctx.prec=2\n    actual=run(case_by_id(\"M23C-A-001\")).candidates[0]\n    assert projection(actual)[\"financial\"]==[[\"program_budget\",[\"10000000\"],\"BRL\"],[\"proposal_maximum\",[\"500000\"],\"BRL\"]]\nrecord(\"currency_and_decimal_context\",cross_currency=\"not_comparable\",precision_2_exact=True)\n\n# Record-bound evidence transplants must remain refused without contaminating neighbors.\ncase=case_by_id(\"M23C-E-001\");data=build(case);before=integrate(data)\nleft,right=data.candidates[:2]\nchanged=left.model_copy(update={\"taxonomy\":right.taxonomy})\nafter=integrate(data.model_copy(update={\"candidates\":(changed,)+data.candidates[1:]}))\nassert isinstance(after,IntegrationReport)\nassert after.candidates[1:]==before.candidates[1:]\nassert after.candidates[0].normalizations.taxonomy.classifications[0].canonical_code is None\nrefused=[d for d in after.candidates[0].diagnostics if d.code==\"consistency_claim_evidence_unavailable\"]\nassert refused and all(d.evidence==() for d in refused)\nrecord(\"cross_record_transplant\",foreign_fact_refused=True,neighbors_unchanged=True,foreign_diagnostic_witnesses_empty=True)\n\n# Explicit count limits, never semantic rejection. Small bounded DTOs only.\nfor name, change,expected in [\n    (\"duplicate_candidate\",{\"candidates\":(left,left)},\"integration_duplicate_candidate_id\"),\n    (\"comparison_index\",{\"identity_comparisons\":(IdentityComparison(left_index=0,right_index=99),)},\"integration_identity_index_invalid\"),\n    (\"65_comparisons\",{\"identity_comparisons\":(IdentityComparison(left_index=0,right_index=1),)*65},\"integration_limits_exceeded\")]:\n    error=integrate(data.model_copy(update=change))\n    assert isinstance(error,OperationalError) and error.code==expected and not error.promotable\n    record(name,outcome=error.code,stage=error.stage)\nfor name,candidate in [(\"assertion_limit\",left.context.candidate.model_copy(update={\"assertions\":(FieldAssertion(field=\"x\",value=None),)*1201})),(\"field_evidence_limit\",left.context.candidate.model_copy(update={\"assertions\":(left.context.candidate.assertions[0],)*65}))]:\n    error=validate(candidate,left.context.snapshots,reference_date=date(2026,7,1))\n    assert isinstance(error,OperationalError) and error.code==\"validation_limits_exceeded\"\n    record(name,outcome=error.code,stage=error.stage)\n\n# Probe representable input datetimes whose UTC conversion overflows: record actual\n# exception rather than labeling a low-level boundary issue as an authorization bypass.\nraw=left.context.snapshots[0].model_dump(mode=\"json\");raw.pop(\"audit\")\nfor value in [\"0001-01-01T00:00:00+23:59\",\"9999-12-31T23:59:59-23:59\"]:\n    raw[\"collected_at\"]=value\n    try:\n        RawSnapshot.model_validate_json(json.dumps(raw))\n    except Exception as exc:\n        record(\"snapshot_UTC_boundary\",input=value,exception=type(exc).__name__,message=str(exc))\n    else:\n        record(\"snapshot_UTC_boundary\",input=value,exception=None)\nprint(json.dumps({\"probes\":results,\"executed_probe_groups\":len(results)},indent=2,ensure_ascii=False))\n",
+    "resource_probes.py": "\"\"\"Additional bounded operational/financial probes; no source mutation.\"\"\"\nimport json\nfrom pathlib import Path\nfrom uuid import NAMESPACE_URL,uuid5\nimport copy\nfrom m23c_fixtures import build, case_by_id\nfrom editalfinder_v2.domain.financial_parsing import parse_financial\nfrom editalfinder_v2.domain.integration import integrate\nfrom editalfinder_v2.domain.integration_models import IdentityComparison, IntegrationInput, IntegrationReport\nfrom editalfinder_v2.domain.models import OperationalError, RawSnapshot\nfrom editalfinder_v2.domain.temporal_models import TemporalInput\nfrom editalfinder_v2.domain.temporal_normalization import normalize_temporal\nfrom editalfinder_v2.domain.validation import validate\n\nrows=[]\ndef error(name,result):\n    assert isinstance(result,OperationalError),(name,type(result))\n    rows.append({'name':name,'result':type(result).__name__,'code':result.code})\n\ninp=build(case_by_id('M23C-A-001'));c=inp.candidates[0]\nindependent=[]\nfor i in range(33):\n    cid=uuid5(NAMESPACE_URL,f'm23d-count-{i}')\n    candidate=c.context.candidate.model_copy(update={'id':cid,'assertions':tuple(a.model_copy(update={'candidate_id':cid}) for a in c.context.candidate.assertions)})\n    independent.append(c.model_copy(update={'context':c.context.model_copy(update={'candidate':candidate})}))\nerror('candidate_count_33',integrate(IntegrationInput(reference_date=inp.reference_date,candidates=tuple(independent))))\nassert rows[-1]['code']=='integration_limits_exceeded'\npair=IdentityComparison(left_index=0,right_index=0)\nerror('comparisons_65',integrate(IntegrationInput(reference_date=inp.reference_date,candidates=(c,),identity_comparisons=(pair,)*65)))\nassert rows[-1]['code']=='integration_limits_exceeded'\nbad_candidate=c.context.candidate.model_copy(update={'assertions':(c.context.candidate.assertions[0],)*1201})\nbad_context=c.context.model_copy(update={'candidate':bad_candidate})\nerror('M1_assertions_1201',validate(bad_candidate,bad_context.snapshots,reference_date=inp.reference_date))\nerror('temporal_claims_1201',normalize_temporal(TemporalInput(context=c.context,events=(c.temporal[0],)*1201)))\nrecords=copy.deepcopy(case_by_id('M23C-A-001'));records['records'][0]['financial_claims'][0]['value']='9'*257\nfinancial_result=integrate(build(records))\nassert isinstance(financial_result,IntegrationReport)\nerror('financial_source_digits_257',financial_result.candidates[0].normalizations.financial)\nsnapshot=c.context.snapshots[0]\nfor mode in ['depth','size']:\n    payload={}\n    if mode=='depth':\n        for _ in range(66):payload={'child':payload}\n    else:\n        payload={'padding':'x'*(2*1024*1024)}\n    d=snapshot.model_dump();d['payload_json']=json.dumps(payload);d['audit']=None\n    changed=RawSnapshot.model_validate(d)\n    mutated=c.model_copy(update={'context':c.context.model_copy(update={'snapshots':(changed,)})})\n    result=integrate(IntegrationInput(reference_date=inp.reference_date,candidates=(mutated,)))\n    if isinstance(result,IntegrationReport):\n        assert isinstance(result.candidates[0],OperationalError)\n        error('snapshot_'+mode,result.candidates[0])\n    else:\n        error('snapshot_'+mode,result)\n\nlexical=[]\nfor fmt,currency in [('brazilian','BRL'),('us','BRL'),('unspecified',None)]:\n    parsed=parse_financial('1.234',fmt,'proposal_maximum',currency,'amount')\n    lexical.append({'format':fmt,'currency_declaration':currency,'amounts':[str(a) for a in parsed.amounts],'codes':parsed.codes})\nassert lexical[0]['amounts']==['1234'] and lexical[1]['amounts']==['1.234']\nbench=json.loads(Path('/home/lorenzozm/.hermes/cache/scratch/m23d-audit/benchmark.json').read_text())\namplification=[]\nfor row in bench['results']:\n    s=row['samples'][0];amplification.append({'case_id':row['case_id'],'output_over_unique_snapshot':s['serialized_bytes']/s['unique_snapshot_bytes'],'output_over_admission':s['serialized_bytes']/s['charge_bytes'],'python_peak_over_admission':row['median']['tracemalloc_peak_bytes']/s['charge_bytes']})\nprint(json.dumps({'operational_probes':rows,'numeric_convention_trust_probe':lexical,'amplification':amplification},indent=2))\n",
+    "utc_reproducer.py": "\"\"\"Minimal bounded UTC-conversion reproducer; frozen source is never edited.\"\"\"\nimport json\nimport traceback\nfrom m23c_fixtures import build, case_by_id\nfrom editalfinder_v2.domain.integration_models import IntegrationInput\nfrom editalfinder_v2.domain.models import RawSnapshot, ReviewAttestation\n\nitem=build(case_by_id(\"M23C-A-001\"))\nsnapshot=item.candidates[0].context.snapshots[0]\nrows=[]\nfor timestamp in [\"0001-01-01T00:00:00+23:59\",\"9999-12-31T23:59:59-23:59\",\"0001-01-02T00:00:00+23:59\",\"9999-12-30T23:59:59-23:59\"]:\n    for route in [\"snapshot_python\",\"snapshot_json\",\"integration_input_json\",\"attestation_json\"]:\n        raw=snapshot.model_dump(mode=\"json\");raw.pop(\"audit\");raw[\"collected_at\"]=timestamp\n        try:\n            if route==\"snapshot_json\":\n                result=RawSnapshot.model_validate_json(json.dumps(raw))\n            elif route==\"snapshot_python\":\n                result=RawSnapshot.model_validate(raw)\n            elif route==\"integration_input_json\":\n                data=json.loads(item.model_dump_json())\n                data[\"candidates\"][0][\"context\"][\"snapshots\"][0]=raw\n                result=IntegrationInput.model_validate_json(json.dumps(data))\n            else:\n                raw_attestation={\"id\":str(snapshot.id),\"reviewer_identity\":\"untrusted-test-only\",\"reviewed_at\":timestamp,\"candidate_id\":str(item.candidates[0].context.candidate.id),\"candidate_digest\":\"0\"*64,\"evidence_digests\":[\"0\"*64],\"policy_version\":\"untrusted-test\",\"decision\":\"REVIEW\",\"provenance\":\"synthetic\"}\n                result=ReviewAttestation.model_validate_json(json.dumps(raw_attestation))\n        except Exception as exc:\n            rows.append({\"timestamp\":timestamp,\"route\":route,\"result\":type(exc).__name__,\"message\":str(exc),\"traceback\":traceback.format_exc()})\n        else:\n            rows.append({\"timestamp\":timestamp,\"route\":route,\"result\":type(result).__name__})\nassert len([r for r in rows if r[\"result\"]==\"OverflowError\"])==8\nassert len([r for r in rows if r[\"result\"]!=\"OverflowError\"])==8\nprint(json.dumps({\"finding_id\":\"M23D-F01\",\"rows\":rows},indent=2))\n"
+  },
+  "pre_hygiene_fixture_source": "\"\"\"Frozen SYNTHETIC cases; this adapter is test-only, not extraction or policy.\"\"\"\n\nimport json\nfrom datetime import UTC, date, datetime\nfrom pathlib import Path\nfrom typing import Any\nfrom uuid import UUID\n\nfrom editalfinder_v2.domain.financial_models import FinancialClaim\nfrom editalfinder_v2.domain.geography_models import GeographyLocationClaim\nfrom editalfinder_v2.domain.identity_models import (\n    ExternalIdentifier,\n    IdentifierNamespace,\n    IdentityEvidence,\n    PublicationCycle,\n)\nfrom editalfinder_v2.domain.integration_models import CandidateIntegrationInput, IntegrationInput\nfrom editalfinder_v2.domain.models import (\n    DocumentUnit,\n    Evidence,\n    FieldAssertion,\n    OpportunityCandidate,\n    RawSnapshot,\n)\nfrom editalfinder_v2.domain.organization_models import OrganizationClaim\nfrom editalfinder_v2.domain.semantic_common import NormalizationContext, SemanticValue\nfrom editalfinder_v2.domain.taxonomy_models import TaxonomyClaim\nfrom editalfinder_v2.domain.temporal_models import TemporalClaim\n\nFIXTURE = Path(__file__).parent / \"fixtures/m23_cases.json\"\n\n\ndef records_for(case: str) -> list[dict[str, Any]]:\n    \"\"\"Return a fresh copy so one mutation cannot contaminate another scenario.\"\"\"\n    return json.loads(FIXTURE.read_text(encoding=\"utf-8\"))[case][\"records\"]\n\n\ndef build_case(case: str) -> IntegrationInput:\n    return adapt_records(records_for(case))\n\n\ndef adapt_records(records: list[dict[str, Any]]) -> IntegrationInput:\n    \"\"\"Explicit fixture declarations; no meaning inferred from title/keywords.\"\"\"\n    sid, source, execution = UUID(int=23001), UUID(int=23002), UUID(int=23003)\n    snapshot = RawSnapshot(\n        id=sid,\n        source_id=source,\n        source_code=\"fapergs\",\n        execution_id=execution,\n        collected_at=datetime(2026, 1, 1, tzinfo=UTC),\n        collector_version=\"m23-synthetic-v1\",\n        url=\"https://example.org/synthetic-only\",\n        payload_json=json.dumps({\"records\": records}, ensure_ascii=False),\n    )\n    inputs = []\n    for index, record in enumerate(records):\n        cid = UUID(int=23100 + index)\n        unit = DocumentUnit(snapshot_id=sid, pointer=f\"/records/{index}\")\n        assertions = []\n\n        def value(original: str | bool, role: str, pointer: str) -> SemanticValue:\n            literal = json.dumps(original) if type(original) is bool else original\n            evidence = Evidence(\n                snapshot_id=sid,\n                pointer=pointer,\n                quote=literal,\n                method=\"structured_field\",\n                method_version=\"m23-synthetic-v1\",\n                confidence=\"1\",\n                unit=unit,\n                semantic_role=role,\n            )\n            assertions.append(FieldAssertion(field=role, value=original, evidence=(evidence,)))\n            return SemanticValue(\n                original=literal,\n                provenance=IdentityEvidence(\n                    candidate_id=cid,\n                    source_id=source,\n                    execution_id=execution,\n                    evidence=evidence,\n                ),\n            )\n\n        direct = {\n            key: value(original, key, unit.pointer + \"/\" + key)\n            for key, original in record.items()\n            if type(original) in {str, bool}\n        }\n        collections = {}\n        for collection in (\n            \"temporal_events\",\n            \"geographic_locations\",\n            \"financial_claims\",\n            \"organization_claims\",\n            \"taxonomy_claims\",\n        ):\n            rows = []\n            for row_index, row in enumerate(record.get(collection, [])):\n                components = {}\n                for key, original in row.items():\n                    if key in {\"role\", \"format\", \"unit\", \"currency\"}:\n                        continue\n                    role = row[\"role\"] if key == \"value\" else row[\"role\"] + \".\" + key\n                    components[key] = value(\n                        original, role, f\"{unit.pointer}/{collection}/{row_index}/{key}\"\n                    )\n                rows.append(components)\n            collections[collection] = rows\n        candidate = OpportunityCandidate(\n            id=cid,\n            source_id=source,\n            source_code=snapshot.source_code,\n            assertions=tuple(assertions),\n            unit=unit,\n        )\n        namespace = IdentifierNamespace(value=\"synthetic-publisher\")\n        identifiers = (\n            (\n                ExternalIdentifier(\n                    identifier_type=\"identificador_oficial\",\n                    original=direct[\"official_identifier\"].original,\n                    namespace=namespace,\n                    source_id=source,\n                    provenance=direct[\"official_identifier\"].provenance,\n                ),\n            )\n            if \"official_identifier\" in direct\n            else ()\n        )\n        cycle = (\n            PublicationCycle(\n                original=direct[\"publication_cycle\"].original,\n                namespace=namespace,\n                provenance=direct[\"publication_cycle\"].provenance,\n            )\n            if \"publication_cycle\" in direct\n            else None\n        )\n        inputs.append(\n            CandidateIntegrationInput(\n                context=NormalizationContext(candidate=candidate, snapshots=(snapshot,)),\n                identifiers=identifiers,\n                cycle=cycle,\n                temporal=tuple(\n                    TemporalClaim(role=row[\"role\"], value=components[\"value\"], format=row[\"format\"])\n                    for row, components in zip(\n                        record.get(\"temporal_events\", []), collections[\"temporal_events\"], strict=True\n                    )\n                ),\n                geography=tuple(\n                    GeographyLocationClaim(role=row[\"role\"], **components)\n                    for row, components in zip(\n                        record.get(\"geographic_locations\", []),\n                        collections[\"geographic_locations\"],\n                        strict=True,\n                    )\n                ),\n                geographic_scope=direct.get(\"geographic_scope\"),\n                financial=tuple(\n                    FinancialClaim(\n                        role=row[\"role\"], value=components.get(\"value\"),\n                        format=row.get(\"format\", \"unspecified\"),\n                        currency=row.get(\"currency\"), unit=row.get(\"unit\", \"amount\"),\n                    )\n                    for row, components in zip(\n                        record.get(\"financial_claims\", []), collections[\"financial_claims\"], strict=True\n                    )\n                ),\n                organizations=tuple(\n                    OrganizationClaim(role=row[\"role\"], name=components.get(\"name\"))\n                    for row, components in zip(\n                        record.get(\"organization_claims\", []), collections[\"organization_claims\"], strict=True\n                    )\n                ),\n                taxonomy=tuple(\n                    TaxonomyClaim(role=row[\"role\"], value=components[\"value\"])\n                    for row, components in zip(\n                        record.get(\"taxonomy_claims\", []), collections[\"taxonomy_claims\"], strict=True\n                    )\n                ),\n            )\n        )\n    return IntegrationInput(candidates=tuple(inputs), reference_date=date(2026, 1, 1))\n",
+  "independent_review": {
+    "status": "completed",
+    "verdict": "NOT READY",
+    "scope": "Final offline adversarial sign-off only; no external exploitation, promotion or persistence demonstrated",
+    "model": "gpt-6-astra",
+    "delegation_id": "deleg_fd2189c7",
+    "reported_findings": [
+      {
+        "reviewer_id": "TIMESTAMP-OVERFLOW",
+        "report_id": "M23D-F01",
+        "severity": "medium",
+        "blocking": true,
+        "independently_confirmed": true
+      },
+      {
+        "reviewer_id": "M23C-ORACLE-BLIND-SPOTS",
+        "report_id": "M23D-F02",
+        "severity": "medium",
+        "blocking": false,
+        "normalized_name_and_classification_omissions_confirmed": true
+      },
+      {
+        "reviewer_id": "M1-URL-SYNTAX",
+        "report_id": "M23D-F04",
+        "severity": "low",
+        "blocking": false,
+        "parent_reproduced": true
+      }
+    ],
+    "parent_additional_finding": {
+      "report_id": "M23D-F03",
+      "confirmed_by_parent": true,
+      "independent_confirmation": false,
+      "reason": "Reviewer had finished before this finding was supplied"
+    },
+    "commands_and_results": [
+      {
+        "command": "PYTHONPATH=src:tests .venv/bin/python -B -m pytest -p no:cacheprovider -q",
+        "output": "1810 passed in 14.21s"
+      },
+      {
+        "command": "PYTHONPATH=src:tests .venv/bin/python -B /home/lorenzozm/.hermes/cache/scratch/m23d-review-probes-independent.py",
+        "exit_code": 0
+      },
+      {
+        "command": ".venv/bin/ruff check --no-cache .",
+        "output": "All checks passed"
+      },
+      {
+        "command": ".venv/bin/ruff format --check --no-cache src tests",
+        "output": "84 files already formatted"
+      },
+      {
+        "command": "PYTHONPATH=src:tests .venv/bin/python -B -m mypy --no-incremental --cache-dir=/dev/null src",
+        "output": "Success: no issues found in 28 source files"
+      },
+      {
+        "command": ".venv/bin/ruff format --check --no-cache .",
+        "exit_code": 1,
+        "output": "2 Markdown files would be reformatted; 120 files already formatted",
+        "files": [
+          "EDITALFINDER_V2_M22A_REVISAO_INDEPENDENTE.md",
+          "EDITALFINDER_V2_M23A_REVISAO_CHATGPT.md"
+        ],
+        "required_src_tests_gate": false
+      }
+    ],
+    "integrity": {
+      "manifest_before": {
+        "manifest": "f8f0514ea6234d6443094438625e1d48dd43233b6cce0a2b46f97ce64745a4ec",
+        "files": 136,
+        "mismatches": []
+      },
+      "manifest_after": {
+        "manifest": "f8f0514ea6234d6443094438625e1d48dd43233b6cce0a2b46f97ce64745a4ec",
+        "files": 136,
+        "mismatches": []
+      },
+      "source_test_fixture_config_modifications": []
+    },
+    "parent_probe_reexecution": {
+      "before": {
+        "manifest": "f8f0514ea6234d6443094438625e1d48dd43233b6cce0a2b46f97ce64745a4ec",
+        "files": 136,
+        "mismatches": []
+      },
+      "semantic_output_mutations": [
+        {
+          "case": "M23C-A-001",
+          "detected": "AssertionError"
+        },
+        {
+          "case": "M23C-B-001",
+          "detected": "AssertionError"
+        },
+        {
+          "case": "M23C-C-001",
+          "detected": "AssertionError"
+        },
+        {
+          "case": "M23C-D-001",
+          "detected": "AssertionError"
+        },
+        {
+          "case": "M23C-D-002",
+          "detected": "AssertionError"
+        },
+        {
+          "case": "M23C-D-003",
+          "detected": "AssertionError"
+        },
+        {
+          "case": "M23C-E-001",
+          "detected": "AssertionError"
+        },
+        {
+          "case": "M23C-F-001",
+          "detected": "AssertionError"
+        },
+        {
+          "case": "M23C-F-002",
+          "detected": "AssertionError"
+        },
+        {
+          "case": "M23C-F-003",
+          "detected": "AssertionError"
+        },
+        {
+          "case": "M23C-F-005",
+          "detected": "AssertionError"
+        },
+        {
+          "case": "M23C-F-006",
+          "detected": "AssertionError"
+        },
+        {
+          "case": "M23C-F-004",
+          "detected": "AssertionError"
+        },
+        {
+          "case": "M23C-G-001",
+          "detected": "AssertionError"
+        },
+        {
+          "case": "M23C-G-002",
+          "detected": "AssertionError"
+        },
+        {
+          "case": "M23C-G-003",
+          "detected": "AssertionError"
+        },
+        {
+          "case": "M23C-G-004",
+          "detected": "AssertionError"
+        },
+        {
+          "case": "M23C-H-001",
+          "detected": "AssertionError"
+        },
+        {
+          "case": "M23C-H-002",
+          "detected": "AssertionError"
+        },
+        {
+          "case": "M23C-I-001",
+          "detected": "AssertionError"
+        },
+        {
+          "case": "M23C-I-002",
+          "detected": "AssertionError"
+        },
+        {
+          "case": "M23C-I-003",
+          "detected": "AssertionError"
+        },
+        {
+          "case": "M23C-I-004",
+          "detected": "AssertionError"
+        },
+        {
+          "case": "M23C-I-005",
+          "detected": "AssertionError"
+        },
+        {
+          "case": "M23C-I-006",
+          "detected": "AssertionError"
+        },
+        {
+          "case": "M23C-I-007",
+          "detected": "AssertionError"
+        }
+      ],
+      "operational_output_mutations": [
+        {
+          "case": "M23C-OPS-SMALL",
+          "detected": "AssertionError"
+        },
+        {
+          "case": "M23C-OPS-SHARED",
+          "detected": "AssertionError"
+        },
+        {
+          "case": "M23C-OPS-NEAR",
+          "detected": "AssertionError"
+        },
+        {
+          "case": "M23C-OPS-OVER",
+          "detected": "AssertionError"
+        },
+        {
+          "case": "M23C-OPS-DUPLICATE",
+          "detected": "AssertionError"
+        },
+        {
+          "case": "M23C-OPS-COLLISION",
+          "detected": "AssertionError"
+        },
+        {
+          "case": "M23C-OPS-COMPARISONS",
+          "detected": "AssertionError"
+        }
+      ],
+      "m1_forgery": {
+        "actual": "REVIEW",
+        "standalone": "ACCEPTED",
+        "promotable": false,
+        "enclosing": {
+          "rejected": true,
+          "errors": [
+            "Value error, Integration outputs must match complete ordered input"
+          ]
+        }
+      },
+      "json_checks": [
+        {
+          "input": "NaN",
+          "rejected": true
+        },
+        {
+          "input": "Infinity",
+          "rejected": true
+        },
+        {
+          "input": "1e999",
+          "rejected": true
+        },
+        {
+          "input": "1e-999",
+          "rejected": true
+        },
+        {
+          "input": "{\"a\":1,\"a\":2}",
+          "rejected": true
+        },
+        {
+          "input": "\"\\ud800\"",
+          "rejected": true
+        },
+        {
+          "input": "[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[0]]]]]]]]]]]]]]",
+          "rejected": true
+        }
+      ],
+      "pointers": {
+        "/a~1b/~0x/0": true,
+        "/a~1b/~0x/00": false,
+        "/a~1b/~0x/-": false,
+        "/a~1b/~0x/99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999": false,
+        "/a~2b": false
+      },
+      "urls": [
+        {
+          "url": "http://127.1/",
+          "m1": false,
+          "m21": "url_invalid"
+        },
+        {
+          "url": "http://0x7f000001/",
+          "m1": true,
+          "m21": "url_invalid"
+        },
+        {
+          "url": "https://example.org/%0a",
+          "m1": false,
+          "m21": "url_invalid"
+        },
+        {
+          "url": "https://example.org/\\x",
+          "m1": false,
+          "m21": "url_invalid"
+        },
+        {
+          "url": "https://user@example.org/",
+          "m1": false,
+          "m21": "url_invalid"
+        },
+        {
+          "url": "https://example.org/path<bad>",
+          "m1": true,
+          "m21": "url_invalid"
+        }
+      ],
+      "tracking_identity_preserved": {
+        "first": "https://example.org/x?id=1",
+        "second": "https://example.org/x?id=2",
+        "distinct": true
+      },
+      "financial": {
+        "NaN": {
+          "codes": [
+            "financial_number_invalid"
+          ],
+          "amounts": []
+        },
+        "Infinity": {
+          "codes": [
+            "financial_number_invalid"
+          ],
+          "amounts": []
+        },
+        "1e1001": {
+          "limit_rejected": true
+        },
+        "1e1000": {
+          "codes": [],
+          "amounts": [
+            "1E+1000"
+          ]
+        },
+        "1.234,56": {
+          "codes": [
+            "financial_number_invalid"
+          ],
+          "amounts": []
+        }
+      },
+      "classification_behavior_mutation": {
+        "detected": false,
+        "case": "M23C-A-001"
+      },
+      "integrated_url_checks": [
+        {
+          "url": "https://example.org/path<bad>",
+          "decision": "REVIEW",
+          "invalid_official_url": false,
+          "promotable": false
+        },
+        {
+          "url": "http://0x7f000001/",
+          "decision": "REVIEW",
+          "invalid_official_url": false,
+          "promotable": false
+        }
+      ],
+      "timestamp_boundaries": [
+        {
+          "type": "RawSnapshot",
+          "stamp": "0001-01-01T00:00:00+23:59",
+          "exception": "OverflowError",
+          "message": "date value out of range"
+        },
+        {
+          "type": "ReviewAttestation",
+          "stamp": "0001-01-01T00:00:00+23:59",
+          "exception": "OverflowError",
+          "message": "date value out of range"
+        },
+        {
+          "type": "RawSnapshot",
+          "stamp": "9999-12-31T23:59:59-23:59",
+          "exception": "OverflowError",
+          "message": "date value out of range"
+        },
+        {
+          "type": "ReviewAttestation",
+          "stamp": "9999-12-31T23:59:59-23:59",
+          "exception": "OverflowError",
+          "message": "date value out of range"
+        }
+      ],
+      "organization_behavior_mutation": {
+        "detected": false,
+        "normalized_names": [
+          "CORRUPTED DISPLAY",
+          "CORRUPTED DISPLAY"
+        ]
+      },
+      "after": {
+        "manifest": "f8f0514ea6234d6443094438625e1d48dd43233b6cce0a2b46f97ce64745a4ec",
+        "files": 136,
+        "mismatches": []
+      }
+    },
+    "probe_script": "\"\"\"Read-only frozen audit: bounded probes and behavior/output oracle mutations.\"\"\"\nimport hashlib\nimport json\nfrom pathlib import Path\nfrom unittest.mock import patch\nfrom pydantic import ValidationError\nfrom m23c_fixtures import dataset, build\nimport test_m23c_pipeline as pipeline\nimport test_m23c_resources as resources\nfrom editalfinder_v2.domain.integration import integrate\nfrom editalfinder_v2.domain.integration_models import IntegrationReport\nfrom editalfinder_v2.domain.models import ValidationReport, ValidationIssue, ValidationDecision\nfrom editalfinder_v2.domain.safety import parse_payload, resolve_pointer, valid_url\nfrom editalfinder_v2.domain.url_identity import normalize_url\nfrom editalfinder_v2.domain.financial_parsing import parse_financial, FinancialLimitError\n\nroot = Path.cwd()\nmanifest = json.loads((root/'FROZEN_MANIFEST.json').read_text())\ndef hashes():\n    mismatch = [p for p,h in manifest['files'].items() if hashlib.sha256((root/p).read_bytes()).hexdigest()!=h]\n    return {'manifest':hashlib.sha256((root/'FROZEN_MANIFEST.json').read_bytes()).hexdigest(),'files':len(manifest['files']),'mismatches':mismatch}\nresult={'before':hashes()}\n# Mutate the output delivered by the real orchestrator, not expected fixture data.\n# Deliberate model_copy is solely a test mutation injector, not a trust bypass finding.\nsemantic=[]\nfor case in dataset()['cases']:\n    report=integrate(build(case))\n    candidate=report.candidates[0]\n    diag=candidate.diagnostics[0]\n    altered=candidate.model_copy(update={'diagnostics':(diag.model_copy(update={'code':'audit_control_wrong_code'}),)+candidate.diagnostics[1:]})\n    mutated=report.model_copy(update={'candidates':(altered,)+report.candidates[1:]})\n    with patch.object(pipeline,'integrate',return_value=mutated):\n        try: pipeline.test_frozen_manual_manifest_through_real_orchestrator(case)\n        except AssertionError: semantic.append({'case':case['case_id'],'detected':'AssertionError'})\n        except Exception as e: semantic.append({'case':case['case_id'],'unrelated_error':type(e).__name__})\n        else: semantic.append({'case':case['case_id'],'detected':False})\nresult['semantic_output_mutations']=semantic\nops=[]\nfor case in resources.operational_cases():\n    data=resources.resource_input(case['builder'])\n    report=integrate(data)\n    if isinstance(report,IntegrationReport):\n        if case['builder']=='collision':\n            mutated=report.model_copy(update={'candidates':(report.candidates[0].model_copy(update={'code':'audit_wrong_error'}),)+report.candidates[1:]})\n        else:\n            mutated=report.model_copy(update={'candidates':report.candidates[:-1]})\n    else: mutated=report.model_copy(update={'code':'audit_wrong_error'})\n    with patch.object(resources,'integrate',return_value=mutated):\n        try: resources.test_frozen_operational_manifest(case)\n        except AssertionError: ops.append({'case':case['case_id'],'detected':'AssertionError'})\n        except Exception as e: ops.append({'case':case['case_id'],'unrelated_error':type(e).__name__})\n        else: ops.append({'case':case['case_id'],'detected':False})\nresult['operational_output_mutations']=ops\n# Normal constructor for forged M1, followed by normal enclosing report validation.\nreport=integrate(build(dataset()['cases'][0]))\nv=report.candidates[0].validation\nissue=ValidationIssue(code='instrument_verified',message='caller declaration',rule_id='caller',evidence=(v.candidate.assertions[0].evidence[0],))\nforged=ValidationReport(candidate=v.candidate,snapshots=v.snapshots,reference_date=v.reference_date,decision=ValidationDecision.ACCEPTED,issues=(issue,))\nraw=report.model_dump();raw.pop('audit');raw['candidates'][0]['validation']=forged.model_dump()\ntry: IntegrationReport.model_validate(raw)\nexcept ValidationError as e: enclosing={'rejected':True,'errors':[x['msg'] for x in e.errors(include_input=False)]}\nelse: enclosing={'rejected':False}\nresult['m1_forgery']={'actual':v.decision.value,'standalone':forged.decision.value,'promotable':forged.promotable,'enclosing':enclosing}\n# Bounded parser and locator probes.\njson_checks=[]\nfor text in ['NaN','Infinity','1e999','1e-999','{\"a\":1,\"a\":2}','\"\\\\ud800\"','['*65+'0'+']'*65]:\n    try: parse_payload(text)\n    except ValueError: json_checks.append({'input':text[:80],'rejected':True})\n    else: json_checks.append({'input':text[:80],'rejected':False})\nresult['json_checks']=json_checks\nresult['pointers']={p:resolve_pointer({'a/b':{'~x':[1]}},p)[0] for p in ['/a~1b/~0x/0','/a~1b/~0x/00','/a~1b/~0x/-','/a~1b/~0x/'+'9'*200,'/a~2b']}\nresult['urls']=[{'url':u,'m1':valid_url(u),'m21':normalize_url(u).code} for u in ['http://127.1/','http://0x7f000001/','https://example.org/%0a','https://example.org/\\\\x','https://user@example.org/','https://example.org/path<bad>']]\na=normalize_url('https://example.org/x?id=1&utm_source=a',tracking_policy='drop-known-tracking-v1')\nb=normalize_url('https://example.org/x?id=2&utm_source=b',tracking_policy='drop-known-tracking-v1')\nresult['tracking_identity_preserved']={'first':a.normalized,'second':b.normalized,'distinct':a.normalized!=b.normalized}\nresult['financial']={}\nfor text in ['NaN','Infinity','1e1001','1e1000','1.234,56']:\n    try:\n        p=parse_financial(text,'scientific','proposal_maximum','BRL','amount')\n        result['financial'][text]={'codes':p.codes,'amounts':[str(x) for x in p.amounts]}\n    except FinancialLimitError: result['financial'][text]={'limit_rejected':True}\n# Change consistency evaluation itself, so complete replay sees the same faulty behavior.\n# Existing manual oracle checks codes but not classifications.\nfrom editalfinder_v2.domain.integration_consistency import evaluate_consistency\n\ndef altered_consistency(*args,**kwargs):\n    diagnostics=evaluate_consistency(*args,**kwargs)\n    if not isinstance(diagnostics,tuple): return diagnostics\n    return tuple(type(d).model_validate(dict(d.model_dump(),classification='contradiction' if d.classification!='contradiction' else 'no_conflict_detected')) for d in diagnostics)\nwith patch('editalfinder_v2.domain.integration.evaluate_consistency',side_effect=altered_consistency):\n    try: pipeline.test_frozen_manual_manifest_through_real_orchestrator(dataset()['cases'][0])\n    except Exception as e: result['classification_behavior_mutation']={'detected':True,'exception':type(e).__name__}\n    else: result['classification_behavior_mutation']={'detected':False,'case':dataset()['cases'][0]['case_id']}\nresult['integrated_url_checks']=[]\nfor url in ['https://example.org/path<bad>','http://0x7f000001/']:\n    case=dataset()['cases'][0]\n    case['records'][0]['official_url']=url\n    integrated=integrate(build(case))\n    validation=integrated.candidates[0].validation\n    result['integrated_url_checks'].append({'url':url,'decision':validation.decision.value,'invalid_official_url':'invalid_official_url' in {i.code for i in validation.issues},'promotable':integrated.promotable})\nfrom editalfinder_v2.domain.models import RawSnapshot, ReviewAttestation\nresult['timestamp_boundaries']=[]\nbase=report.input.candidates[0].context.snapshots[0].model_dump(mode='json')\nfor stamp in ['0001-01-01T00:00:00+23:59','9999-12-31T23:59:59-23:59']:\n    raw=dict(base,collected_at=stamp)\n    try: RawSnapshot.model_validate_json(json.dumps(raw))\n    except Exception as e: result['timestamp_boundaries'].append({'type':'RawSnapshot','stamp':stamp,'exception':type(e).__name__,'message':str(e)})\n    review={'id':str(v.candidate.id),'reviewer_identity':'caller','reviewed_at':stamp,'candidate_id':str(v.candidate.id),'candidate_digest':'0'*64,'evidence_digests':['0'*64],'policy_version':'test','decision':'REVIEW','provenance':'test'}\n    try: ReviewAttestation.model_validate_json(json.dumps(review))\n    except Exception as e: result['timestamp_boundaries'].append({'type':'ReviewAttestation','stamp':stamp,'exception':type(e).__name__,'message':str(e)})\nimport editalfinder_v2.domain.organization_normalization as org\noriginal_org=org._organization_values\ndef corrupt_org(claim):\n    name,identifiers,codes=original_org(claim)\n    return 'CORRUPTED DISPLAY',identifiers,codes\nwith patch.object(org,'_organization_values',side_effect=corrupt_org):\n    case=dataset()['cases'][0]\n    corrupted=integrate(build(case))\n    try: pipeline.check_candidate(corrupted.candidates[0],case['expected_candidates'][0])\n    except Exception as e: result['organization_behavior_mutation']={'detected':True,'exception':type(e).__name__}\n    else: result['organization_behavior_mutation']={'detected':False,'normalized_names':[o.normalized_name for o in corrupted.candidates[0].normalizations.organizations.organizations]}\nresult['after']=hashes()\nprint(json.dumps(result,indent=2))\n",
+    "transcript_path": "/home/lorenzozm/.hermes/cache/delegation/live/deleg_fd2189c7/task-0.log",
+    "residual_limits": [
+      "Not exhaustive verification",
+      "Standalone DTO versus full replay trust boundary",
+      "Hashes do not establish source authenticity or trusted review",
+      "Credit/equity terms and real extraction outside scope",
+      "Only Python 3.11.16 actually tested"
+    ]
+  },
+  "final_integrity": {
+    "created_by_m23d": ["EDITALFINDER_V2_M23D_RESULTADOS.md", "docs/v2/M23D_AUDIT_EVIDENCE.json"],
+    "outside_scope_note": "The initial hash set intentionally excludes caches and audit/field-mapping. Their appearance outside that set does not establish creation or modification by this milestone; they were not altered by the auditor.",
+    "frozen_hash_mismatches": [],
+    "original_vs_frozen_mismatches": [],
+    "initial_tree_changes": [
+      "tests/m23_fixtures.py"
+    ],
+    "paths_outside_initial_hash_scope_not_proven_new": [
+      ".mypy_cache/.gitignore",
+      ".mypy_cache/3.11/cache.0.db",
+      ".mypy_cache/3.11/cache.1.db",
+      ".mypy_cache/3.11/cache.10.db",
+      ".mypy_cache/3.11/cache.11.db",
+      ".mypy_cache/3.11/cache.12.db",
+      ".mypy_cache/3.11/cache.13.db",
+      ".mypy_cache/3.11/cache.14.db",
+      ".mypy_cache/3.11/cache.15.db",
+      ".mypy_cache/3.11/cache.2.db",
+      ".mypy_cache/3.11/cache.3.db",
+      ".mypy_cache/3.11/cache.4.db",
+      ".mypy_cache/3.11/cache.5.db",
+      ".mypy_cache/3.11/cache.6.db",
+      ".mypy_cache/3.11/cache.7.db",
+      ".mypy_cache/3.11/cache.8.db",
+      ".mypy_cache/3.11/cache.9.db",
+      ".mypy_cache/CACHEDIR.TAG",
+      ".pytest_cache/.gitignore",
+      ".pytest_cache/CACHEDIR.TAG",
+      ".pytest_cache/README.md",
+      ".pytest_cache/v/cache/lastfailed",
+      ".pytest_cache/v/cache/nodeids",
+      ".ruff_cache/.gitignore",
+      ".ruff_cache/0.17.1/10029537534071661267",
+      ".ruff_cache/0.17.1/10225554747732342220",
+      ".ruff_cache/0.17.1/16709547126627733644",
+      ".ruff_cache/0.17.1/8705735015279280276",
+      ".ruff_cache/0.17.1/9922851990102629128",
+      ".ruff_cache/CACHEDIR.TAG",
+      "EDITALFINDER_V2_M23D_RESULTADOS.md",
+      "audit/field-mapping/FIELD_MAPPING_AUDIT_DRAFT.md",
+      "audit/field-mapping/FILTERS_AND_GEOSCOPE.md",
+      "audit/field-mapping/FRONTEND_ROW_MAPPING.md",
+      "audit/field-mapping/FRONTEND_VIEW_CONTRACT.md",
+      "audit/field-mapping/LOADER_MAPPING.md",
+      "audit/field-mapping/OPEN_QUESTIONS.md",
+      "audit/field-mapping/RAW_AND_TRANSFORMED_SAMPLE.json",
+      "audit/field-mapping/REPOSITORY_EVIDENCE.md",
+      "audit/field-mapping/SCHEMA_EDITAL.md",
+      "audit/field-mapping/TRANSFORMER_MAPPING.md",
+      "docs/v2/M23D_AUDIT_EVIDENCE.json",
+      "src/editalfinder_v2/__pycache__/__init__.cpython-311.pyc",
+      "src/editalfinder_v2/domain/__pycache__/__init__.cpython-311.pyc",
+      "src/editalfinder_v2/domain/__pycache__/geography_catalog.cpython-311.pyc",
+      "src/editalfinder_v2/domain/__pycache__/geography_models.cpython-311.pyc",
+      "src/editalfinder_v2/domain/__pycache__/geography_normalization.cpython-311.pyc",
+      "src/editalfinder_v2/domain/__pycache__/identity_models.cpython-311.pyc",
+      "src/editalfinder_v2/domain/__pycache__/identity_normalization.cpython-311.pyc",
+      "src/editalfinder_v2/domain/__pycache__/identity_resolution.cpython-311.pyc",
+      "src/editalfinder_v2/domain/__pycache__/m22b_common.cpython-311.pyc",
+      "src/editalfinder_v2/domain/__pycache__/models.cpython-311.pyc",
+      "src/editalfinder_v2/domain/__pycache__/organization_models.cpython-311.pyc",
+      "src/editalfinder_v2/domain/__pycache__/organization_normalization.cpython-311.pyc",
+      "src/editalfinder_v2/domain/__pycache__/policies.cpython-311.pyc",
+      "src/editalfinder_v2/domain/__pycache__/safety.cpython-311.pyc",
+      "src/editalfinder_v2/domain/__pycache__/semantic_common.cpython-311.pyc",
+      "src/editalfinder_v2/domain/__pycache__/taxonomy_models.cpython-311.pyc",
+      "src/editalfinder_v2/domain/__pycache__/taxonomy_normalization.cpython-311.pyc",
+      "src/editalfinder_v2/domain/__pycache__/temporal_models.cpython-311.pyc",
+      "src/editalfinder_v2/domain/__pycache__/temporal_normalization.cpython-311.pyc",
+      "src/editalfinder_v2/domain/__pycache__/url_identity.cpython-311.pyc",
+      "src/editalfinder_v2/domain/__pycache__/validation.cpython-311.pyc",
+      "tests/__pycache__/fixtures.cpython-311.pyc",
+      "tests/__pycache__/m22b_fixtures.cpython-311.pyc",
+      "tests/__pycache__/semantic_fixtures.cpython-311.pyc",
+      "tests/__pycache__/test_engine_safety.cpython-311-pytest-9.1.1.pyc",
+      "tests/__pycache__/test_geography_metamorphic.cpython-311-pytest-9.1.1.pyc",
+      "tests/__pycache__/test_geography_normalization.cpython-311-pytest-9.1.1.pyc",
+      "tests/__pycache__/test_identity.cpython-311-pytest-9.1.1.pyc",
+      "tests/__pycache__/test_identity_edges.cpython-311-pytest-9.1.1.pyc",
+      "tests/__pycache__/test_identity_properties.cpython-311-pytest-9.1.1.pyc",
+      "tests/__pycache__/test_identity_review_regressions.cpython-311-pytest-9.1.1.pyc",
+      "tests/__pycache__/test_integrity.cpython-311-pytest-9.1.1.pyc",
+      "tests/__pycache__/test_models.cpython-311-pytest-9.1.1.pyc",
+      "tests/__pycache__/test_normalization_contracts.cpython-311-pytest-9.1.1.pyc",
+      "tests/__pycache__/test_organization_identifiers.cpython-311-pytest-9.1.1.pyc",
+      "tests/__pycache__/test_organization_normalization.cpython-311-pytest-9.1.1.pyc",
+      "tests/__pycache__/test_report_audit.cpython-311-pytest-9.1.1.pyc",
+      "tests/__pycache__/test_safety.cpython-311-pytest-9.1.1.pyc",
+      "tests/__pycache__/test_semantic_common.cpython-311-pytest-9.1.1.pyc",
+      "tests/__pycache__/test_taxonomy_evidence.cpython-311-pytest-9.1.1.pyc",
+      "tests/__pycache__/test_taxonomy_integrity.cpython-311-pytest-9.1.1.pyc",
+      "tests/__pycache__/test_taxonomy_models.cpython-311-pytest-9.1.1.pyc",
+      "tests/__pycache__/test_taxonomy_normalization.cpython-311-pytest-9.1.1.pyc",
+      "tests/__pycache__/test_temporal_metamorphic.cpython-311-pytest-9.1.1.pyc",
+      "tests/__pycache__/test_temporal_normalization.cpython-311-pytest-9.1.1.pyc",
+      "tests/__pycache__/test_temporal_review_regressions.cpython-311-pytest-9.1.1.pyc",
+      "tests/__pycache__/test_url_identity.cpython-311-pytest-9.1.1.pyc",
+      "tests/__pycache__/test_url_identity_integrity.cpython-311-pytest-9.1.1.pyc",
+      "tests/__pycache__/test_validation.cpython-311-pytest-9.1.1.pyc",
+      "tests/__pycache__/test_validation_scaling.cpython-311-pytest-9.1.1.pyc"
+    ],
+    "diff_check": {
+      "output": "",
+      "exit_code": 0,
+      "error": null
+    },
+    "index_diff": {
+      "output": "",
+      "exit_code": 0,
+      "error": null
+    }
+  },
+  "assessment": {
+    "verdict": "NOT READY",
+    "blocking_findings": [
+      "M23D-F01",
+      "M23D-F03"
+    ],
+    "nonblocking_findings": [
+      "M23D-F02",
+      "M23D-F04"
+    ]
+  }
+}

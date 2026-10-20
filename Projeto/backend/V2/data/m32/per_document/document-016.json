@@ -1,0 +1,951 @@
+{
+  "diagnostics": [
+    "passive_not_rendered_DOM",
+    "unfrozen_attachments_unavailable"
+  ],
+  "document_id": "M30-I02",
+  "error_cases": [
+    {
+      "case_id": "M30-I02-R1:discovery_label",
+      "certainty": "unresolved_disagreement",
+      "dimension": "discovery_label",
+      "document_id": "M30-I02",
+      "error_codes": [
+        "OPPORTUNITY_EXISTENCE_CONFUSION",
+        "REFERENCE_AMBIGUITY"
+      ],
+      "expected_behavior": "Resolve this dimension from same-record evidence; provisional label is comparison, not authority.",
+      "next_action": "Compare full frozen context and request authorized adjudication; do not rewrite labels.",
+      "observed": {
+        "discovery": "abstain",
+        "end": 666,
+        "modality": "undetermined",
+        "segment_id": "segment-0004",
+        "start": 232,
+        "temporal": "undetermined"
+      },
+      "record_id": "M30-I02-R1",
+      "reference": {
+        "discovery_label": "confirmed_opportunity",
+        "modality": "investimentos",
+        "opportunity_label": "genuine_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "undetermined"
+      },
+      "review_status": "provisional",
+      "root_cause": "Context fragmentation or semantic rule/reference ambiguity; see all-overlap graph before adjudication.",
+      "root_cause_confidence": "low",
+      "segment_id": "segment-0004",
+      "severity": "medium",
+      "supporting_evidence": {
+        "end": 666,
+        "quote": "Em cada uma das regiões do Brasil, o Criatec 4 tem um representante responsável pela prospecção, análise, investimento e suporte ao desenvolvimento de negócios em empresas e projetos inovadores. A equipe do Criatec 4 é composta por profissionais com grande capacidade de gestão e desenvolvimento de negócios, o que proporciona ao empreendedor um grande suporte nas tomadas de decisões necessárias para o sucesso do seu empreendimento.",
+        "start": 232
+      }
+    },
+    {
+      "case_id": "M30-I02-R1:modality",
+      "certainty": "unresolved_disagreement",
+      "dimension": "modality",
+      "document_id": "M30-I02",
+      "error_codes": [
+        "MODALITY_CONFUSION",
+        "REFERENCE_AMBIGUITY"
+      ],
+      "expected_behavior": "Resolve this dimension from same-record evidence; provisional label is comparison, not authority.",
+      "next_action": "Compare full frozen context and request authorized adjudication; do not rewrite labels.",
+      "observed": {
+        "discovery": "abstain",
+        "end": 666,
+        "modality": "undetermined",
+        "segment_id": "segment-0004",
+        "start": 232,
+        "temporal": "undetermined"
+      },
+      "record_id": "M30-I02-R1",
+      "reference": {
+        "discovery_label": "confirmed_opportunity",
+        "modality": "investimentos",
+        "opportunity_label": "genuine_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "undetermined"
+      },
+      "review_status": "provisional",
+      "root_cause": "Context fragmentation or semantic rule/reference ambiguity; see all-overlap graph before adjudication.",
+      "root_cause_confidence": "low",
+      "segment_id": "segment-0004",
+      "severity": "medium",
+      "supporting_evidence": {
+        "end": 666,
+        "quote": "Em cada uma das regiões do Brasil, o Criatec 4 tem um representante responsável pela prospecção, análise, investimento e suporte ao desenvolvimento de negócios em empresas e projetos inovadores. A equipe do Criatec 4 é composta por profissionais com grande capacidade de gestão e desenvolvimento de negócios, o que proporciona ao empreendedor um grande suporte nas tomadas de decisões necessárias para o sucesso do seu empreendimento.",
+        "start": 232
+      }
+    },
+    {
+      "case_id": "M30-I02-R1:segmentation",
+      "certainty": "supported_observation",
+      "dimension": "structural",
+      "document_id": "M30-I02",
+      "error_codes": [
+        "SEGMENTATION_OVER"
+      ],
+      "expected_behavior": "A meaningful record should retain its own associated context; whitespace-only boundary differences are not semantic defects.",
+      "next_action": "Inspect semantic usefulness of boundaries before changing segmentation.",
+      "observed": {
+        "coverage": {
+          "denominator": 884,
+          "numerator": 880,
+          "value": 0.995475113122172
+        },
+        "fragmentation": 5
+      },
+      "record_id": "M30-I02-R1",
+      "reference": {
+        "discovery_label": "confirmed_opportunity",
+        "modality": "investimentos",
+        "opportunity_label": "genuine_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "undetermined"
+      },
+      "review_status": "provisional",
+      "root_cause": "Structure-derived units differ from provisional annotated record spans.",
+      "root_cause_confidence": "high",
+      "segment_id": "segment-0004",
+      "severity": "medium",
+      "supporting_evidence": {
+        "edges": [
+          {
+            "end": 61,
+            "exact": false,
+            "intersection": 5,
+            "intersection_end": 61,
+            "intersection_start": 56,
+            "iou": 0.005656108597285068,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.005656108597285068,
+            "segment_id": "segment-0001",
+            "start": 56
+          },
+          {
+            "end": 75,
+            "exact": false,
+            "intersection": 13,
+            "intersection_end": 75,
+            "intersection_start": 62,
+            "iou": 0.014705882352941176,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.014705882352941176,
+            "segment_id": "segment-0002",
+            "start": 62
+          },
+          {
+            "end": 231,
+            "exact": false,
+            "intersection": 155,
+            "intersection_end": 231,
+            "intersection_start": 76,
+            "iou": 0.1753393665158371,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.1753393665158371,
+            "segment_id": "segment-0003",
+            "start": 76
+          },
+          {
+            "end": 666,
+            "exact": false,
+            "intersection": 434,
+            "intersection_end": 666,
+            "intersection_start": 232,
+            "iou": 0.49095022624434387,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.49095022624434387,
+            "segment_id": "segment-0004",
+            "start": 232
+          },
+          {
+            "end": 940,
+            "exact": false,
+            "intersection": 273,
+            "intersection_end": 940,
+            "intersection_start": 667,
+            "iou": 0.3088235294117647,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.3088235294117647,
+            "segment_id": "segment-0005",
+            "start": 667
+          }
+        ],
+        "reference_span": [
+          56,
+          940
+        ]
+      }
+    },
+    {
+      "case_id": "M30-I02:segment-0004:discovery:classification",
+      "certainty": "strong_hypothesis",
+      "claim_kind": "discovery",
+      "context_evidence": [
+        {
+          "end": 75,
+          "page": null,
+          "quote": "Novos\nInvestimentos",
+          "start": 56
+        },
+        {
+          "end": 231,
+          "page": null,
+          "quote": "O fundo Criatec 4 tem como um dos seus principais objetivos o fomento de inciativas inovadoras ligadas ao empreendedorismo em diferentes regiões do Brasil.",
+          "start": 76
+        },
+        {
+          "end": 940,
+          "page": null,
+          "quote": "Se você tem um projeto ou empresa com produtos e soluções inovadoras e deseja ter o Criatec 4 como sócio, clique na região onde a sua empresa está localizada, preencha o formulário de submissão do seu projeto e em breve você receberá o contato de um representante do fundo.",
+          "start": 667
+        }
+      ],
+      "document_id": "M30-I02",
+      "end": 666,
+      "error_codes": [
+        "SEGMENTATION_OVER",
+        "EXTRACTION_OMISSION"
+      ],
+      "expected_behavior": "Interpretar apenas acesso/estágio e público deste registro com o contexto completo; não confundir anúncio, gestor e candidatura startup.",
+      "expected_claim": "abstain",
+      "field_index": null,
+      "field_name": null,
+      "judgment": "partial",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "observed": "abstain",
+      "quote": "Em cada uma das regiões do Brasil, o Criatec 4 tem um representante responsável pela prospecção, análise, investimento e suporte ao desenvolvimento de negócios em empresas e projetos inovadores. A equipe do Criatec 4 é composta por profissionais com grande capacidade de gestão e desenvolvimento de negócios, o que proporciona ao empreendedor um grande suporte nas tomadas de decisões necessárias para o sucesso do seu empreendimento.",
+      "rationale": "Fonte convida projeto/empresa inovadora a ter Criatec 4 como sócio e preencher formulário. Ausência de confirmação no representative é uma omissão de contexto; não prova ausência do instrumento.",
+      "review_status": "provisional",
+      "root_cause": "Convite e identidade do fundo espalhados entre nós; padrões locais não mantêm título/formulário/descrição juntos.",
+      "root_cause_confidence": "medium",
+      "segment_id": "segment-0004",
+      "severity": "medium",
+      "start": 232,
+      "supporting_evidence": {
+        "end": 666,
+        "quote": "Em cada uma das regiões do Brasil, o Criatec 4 tem um representante responsável pela prospecção, análise, investimento e suporte ao desenvolvimento de negócios em empresas e projetos inovadores. A equipe do Criatec 4 é composta por profissionais com grande capacidade de gestão e desenvolvimento de negócios, o que proporciona ao empreendedor um grande suporte nas tomadas de decisões necessárias para o sucesso do seu empreendimento.",
+        "start": 232
+      }
+    }
+  ],
+  "extracted_claims": [
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-I02",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "managing_organization_expression",
+      "original": "Equipe de Gestão do Fundo",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0012",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-I02",
+        "end": 1055,
+        "page": null,
+        "quote": "Equipe de Gestão do Fundo",
+        "raw_sha256": "ac1efac88dfffde6cd30cb3e79f158e040958ee920f014103b0a1516e74c4663",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0012",
+        "start": 1030,
+        "text_sha256": "7cb851b19c2b9929d1cbe4be53395226801202bece1d4bc53b68746fb2d438cf"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-I02",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "managing_organization_expression",
+      "original": "Equipe de Gestão do Fundo",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0018",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-I02",
+        "end": 1154,
+        "page": null,
+        "quote": "Equipe de Gestão do Fundo",
+        "raw_sha256": "ac1efac88dfffde6cd30cb3e79f158e040958ee920f014103b0a1516e74c4663",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0018",
+        "start": 1129,
+        "text_sha256": "7cb851b19c2b9929d1cbe4be53395226801202bece1d4bc53b68746fb2d438cf"
+      }
+    }
+  ],
+  "provenance": {
+    "byte_length": 68190,
+    "category_evidence": "O fundo Criatec 4 tem como um dos seus principais objetivos o fomento de inciativas inovadoras ligadas ao empreendedorismo em diferentes regiões do Brasil.",
+    "content_type": "text/html",
+    "derivation_method": "stdlib-HTMLParser-data-whitespace-v1; excludes script/style/noscript/template; not rendered DOM",
+    "document_category": "application_call",
+    "document_id": "M30-I02",
+    "document_version": null,
+    "final_url": "https://criatec4.com/novos-investimentos/",
+    "original_filename": "index.html",
+    "original_url": "https://criatec4.com/novos-investimentos/",
+    "publication_date": null,
+    "raw_path": "raw/M30-I02.html",
+    "restrictions": "Research pilot local frozen copy only; no redistribution license inferred. No scripts executed, no forms submitted, no applicant records intentionally collected. Public navigation/staff attribution may remain in original bytes.",
+    "retrieval_status": "acquired",
+    "retrieved_at": "2026-10-19T04:37:45.478930+00:00",
+    "sha256": "ac1efac88dfffde6cd30cb3e79f158e040958ee920f014103b0a1516e74c4663",
+    "source_authority_notes": "Public HTTPS page hosted by the named institution; authorship asserted by host/content, not cryptographically authenticated. Not source-readiness approval.",
+    "source_organization": "Criatec 4",
+    "text_path": "text/M30-I02.txt",
+    "text_sha256": "7cb851b19c2b9929d1cbe4be53395226801202bece1d4bc53b68746fb2d438cf"
+  },
+  "records": [
+    {
+      "all_overlap_predictions": [
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0001",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0002",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0003",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0004",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0005",
+          "temporal": "undetermined"
+        }
+      ],
+      "any_exact_boundary": false,
+      "coverage": {
+        "denominator": 884,
+        "numerator": 880,
+        "value": 0.995475113122172
+      },
+      "covered_characters": 880,
+      "disagreements": [
+        "discovery_label",
+        "modality"
+      ],
+      "discovery_histogram": {
+        "abstain": 5
+      },
+      "document_id": "M30-I02",
+      "edges": [
+        {
+          "end": 61,
+          "exact": false,
+          "intersection": 5,
+          "intersection_end": 61,
+          "intersection_start": 56,
+          "iou": 0.005656108597285068,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.005656108597285068,
+          "segment_id": "segment-0001",
+          "start": 56
+        },
+        {
+          "end": 75,
+          "exact": false,
+          "intersection": 13,
+          "intersection_end": 75,
+          "intersection_start": 62,
+          "iou": 0.014705882352941176,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.014705882352941176,
+          "segment_id": "segment-0002",
+          "start": 62
+        },
+        {
+          "end": 231,
+          "exact": false,
+          "intersection": 155,
+          "intersection_end": 231,
+          "intersection_start": 76,
+          "iou": 0.1753393665158371,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.1753393665158371,
+          "segment_id": "segment-0003",
+          "start": 76
+        },
+        {
+          "end": 666,
+          "exact": false,
+          "intersection": 434,
+          "intersection_end": 666,
+          "intersection_start": 232,
+          "iou": 0.49095022624434387,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.49095022624434387,
+          "segment_id": "segment-0004",
+          "start": 232
+        },
+        {
+          "end": 940,
+          "exact": false,
+          "intersection": 273,
+          "intersection_end": 940,
+          "intersection_start": 667,
+          "iou": 0.3088235294117647,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.3088235294117647,
+          "segment_id": "segment-0005",
+          "start": 667
+        }
+      ],
+      "end": 940,
+      "fields": [
+        {
+          "candidates": [],
+          "name": "title",
+          "reason": "no corresponding field; absence is not explicit field abstention",
+          "reference_evidence": [
+            {
+              "end": 75,
+              "evidence_id": "M30-I02-R1-E1",
+              "page": null,
+              "quote": "Novos\nInvestimentos",
+              "start": 56
+            }
+          ],
+          "reference_value": "Novos\nInvestimentos",
+          "scope_supported": true,
+          "semantic_adjudication": "not_certified",
+          "status": "MISSING",
+          "strict_role_value": false
+        },
+        {
+          "candidates": [],
+          "name": "applicant_requirements",
+          "reason": "no corresponding field; absence is not explicit field abstention",
+          "reference_evidence": [
+            {
+              "end": 940,
+              "evidence_id": "M30-I02-R1-E3",
+              "page": null,
+              "quote": "Se você tem um projeto ou empresa com produtos e soluções inovadoras e deseja ter o Criatec 4 como sócio, clique na região onde a sua empresa está localizada, preencha o formulário de submissão do seu projeto e em breve você receberá o contato de um representante do fundo.",
+              "start": 667
+            }
+          ],
+          "reference_value": "projeto ou empresa com produtos e soluções inovadoras",
+          "scope_supported": true,
+          "semantic_adjudication": "not_certified",
+          "status": "MISSING",
+          "strict_role_value": false
+        },
+        {
+          "candidates": [],
+          "name": "application_instructions",
+          "reason": "no corresponding field; absence is not explicit field abstention",
+          "reference_evidence": [
+            {
+              "end": 940,
+              "evidence_id": "M30-I02-R1-E3",
+              "page": null,
+              "quote": "Se você tem um projeto ou empresa com produtos e soluções inovadoras e deseja ter o Criatec 4 como sócio, clique na região onde a sua empresa está localizada, preencha o formulário de submissão do seu projeto e em breve você receberá o contato de um representante do fundo.",
+              "start": 667
+            }
+          ],
+          "reference_value": "Se você tem um projeto ou empresa com produtos e soluções inovadoras e deseja ter o Criatec 4 como sócio, clique na região onde a sua empresa está localizada, preencha o formulário de submissão do seu projeto e em breve você receberá o contato de um representante do fundo.",
+          "scope_supported": true,
+          "semantic_adjudication": "not_certified",
+          "status": "MISSING",
+          "strict_role_value": false
+        }
+      ],
+      "fragmentation": 5,
+      "location_convention": "html_unicode_codepoints",
+      "physical_reference_evidence_pages": [],
+      "rationale": "Convite explícito a projeto ou empresa inovadora para submeter projeto e ter o Criatec 4 como sócio confirma mecanismo de candidatura a capital de participação. Não se inferem prazo aberto ou fluxo contínuo da falta de datas.",
+      "record_id": "M30-I02-R1",
+      "reference": {
+        "discovery_label": "confirmed_opportunity",
+        "modality": "investimentos",
+        "opportunity_label": "genuine_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "undetermined"
+      },
+      "reference_characters": 884,
+      "reference_evidence": [
+        {
+          "end": 75,
+          "evidence_id": "M30-I02-R1-E1",
+          "page": null,
+          "quote": "Novos\nInvestimentos",
+          "start": 56
+        },
+        {
+          "end": 231,
+          "evidence_id": "M30-I02-R1-E2",
+          "page": null,
+          "quote": "O fundo Criatec 4 tem como um dos seus principais objetivos o fomento de inciativas inovadoras ligadas ao empreendedorismo em diferentes regiões do Brasil.",
+          "start": 76
+        },
+        {
+          "end": 940,
+          "evidence_id": "M30-I02-R1-E3",
+          "page": null,
+          "quote": "Se você tem um projeto ou empresa com produtos e soluções inovadoras e deseja ter o Criatec 4 como sócio, clique na região onde a sua empresa está localizada, preencha o formulário de submissão do seu projeto e em breve você receberá o contato de um representante do fundo.",
+          "start": 667
+        }
+      ],
+      "representative": "segment-0004",
+      "representative_prediction": {
+        "discovery": "abstain",
+        "end": 666,
+        "modality": "undetermined",
+        "segment_id": "segment-0004",
+        "start": 232,
+        "temporal": "undetermined"
+      },
+      "representative_quote": "Em cada uma das regiões do Brasil, o Criatec 4 tem um representante responsável pela prospecção, análise, investimento e suporte ao desenvolvimento de negócios em empresas e projetos inovadores. A equipe do Criatec 4 é composta por profissionais com grande capacidade de gestão e desenvolvimento de negócios, o que proporciona ao empreendedor um grande suporte nas tomadas de decisões necessárias para o sucesso do seu empreendimento.",
+      "start": 56,
+      "status": "overlap",
+      "uncertainty_notes": [
+        "Data e duração da janela não informadas.",
+        "Formulário não aberto, executado ou submetido; confirmação documental, não teste operacional."
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 55,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0000",
+      "start": 30,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 61,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I02-R1"
+      ],
+      "segment_id": "segment-0001",
+      "start": 56,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 75,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I02-R1"
+      ],
+      "segment_id": "segment-0002",
+      "start": 62,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 231,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I02-R1"
+      ],
+      "segment_id": "segment-0003",
+      "start": 76,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 666,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I02-R1"
+      ],
+      "segment_id": "segment-0004",
+      "start": 232,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 940,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I02-R1"
+      ],
+      "segment_id": "segment-0005",
+      "start": 667,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 956,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0006",
+      "start": 941,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "completed_event_not_new_access"
+      ],
+      "discovery": "unrelated_or_non_actionable",
+      "end": 966,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0007",
+      "start": 957,
+      "temporal": "not_applicable",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 992,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0008",
+      "start": 967,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 1002,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0009",
+      "start": 993,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 1022,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0010",
+      "start": 1003,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 1029,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0011",
+      "start": 1023,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 1055,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0012",
+      "start": 1030,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 1059,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0013",
+      "start": 1056,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 1083,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0014",
+      "start": 1060,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 1098,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0015",
+      "start": 1084,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 1108,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0016",
+      "start": 1099,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 1128,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0017",
+      "start": 1109,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 1154,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0018",
+      "start": 1129,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "completed_event_not_new_access"
+      ],
+      "discovery": "unrelated_or_non_actionable",
+      "end": 1164,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0019",
+      "start": 1155,
+      "temporal": "not_applicable",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 1190,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0020",
+      "start": 1165,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    }
+  ],
+  "semantic_reviews": [
+    {
+      "case_id": "M30-I02:segment-0004:discovery:classification",
+      "certainty": "strong_hypothesis",
+      "claim_kind": "discovery",
+      "context_evidence": [
+        {
+          "end": 75,
+          "page": null,
+          "quote": "Novos\nInvestimentos",
+          "start": 56
+        },
+        {
+          "end": 231,
+          "page": null,
+          "quote": "O fundo Criatec 4 tem como um dos seus principais objetivos o fomento de inciativas inovadoras ligadas ao empreendedorismo em diferentes regiões do Brasil.",
+          "start": 76
+        },
+        {
+          "end": 940,
+          "page": null,
+          "quote": "Se você tem um projeto ou empresa com produtos e soluções inovadoras e deseja ter o Criatec 4 como sócio, clique na região onde a sua empresa está localizada, preencha o formulário de submissão do seu projeto e em breve você receberá o contato de um representante do fundo.",
+          "start": 667
+        }
+      ],
+      "document_id": "M30-I02",
+      "end": 666,
+      "error_codes": [
+        "SEGMENTATION_OVER",
+        "EXTRACTION_OMISSION"
+      ],
+      "expected_behavior": "Interpretar apenas acesso/estágio e público deste registro com o contexto completo; não confundir anúncio, gestor e candidatura startup.",
+      "expected_claim": "abstain",
+      "field_index": null,
+      "field_name": null,
+      "judgment": "partial",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "quote": "Em cada uma das regiões do Brasil, o Criatec 4 tem um representante responsável pela prospecção, análise, investimento e suporte ao desenvolvimento de negócios em empresas e projetos inovadores. A equipe do Criatec 4 é composta por profissionais com grande capacidade de gestão e desenvolvimento de negócios, o que proporciona ao empreendedor um grande suporte nas tomadas de decisões necessárias para o sucesso do seu empreendimento.",
+      "rationale": "Fonte convida projeto/empresa inovadora a ter Criatec 4 como sócio e preencher formulário. Ausência de confirmação no representative é uma omissão de contexto; não prova ausência do instrumento.",
+      "root_cause": "Convite e identidade do fundo espalhados entre nós; padrões locais não mantêm título/formulário/descrição juntos.",
+      "root_cause_confidence": "medium",
+      "segment_id": "segment-0004",
+      "severity": "medium",
+      "start": 232
+    }
+  ],
+  "status": "processed"
+}

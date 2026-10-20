@@ -1,0 +1,2120 @@
+{
+  "diagnostics": [
+    "passive_not_rendered_DOM",
+    "unfrozen_attachments_unavailable"
+  ],
+  "document_id": "M30-I05",
+  "error_cases": [
+    {
+      "case_id": "M30-I05-R1:modality",
+      "certainty": "unresolved_disagreement",
+      "dimension": "modality",
+      "document_id": "M30-I05",
+      "error_codes": [
+        "MODALITY_CONFUSION",
+        "REFERENCE_AMBIGUITY"
+      ],
+      "expected_behavior": "Resolve this dimension from same-record evidence; provisional label is comparison, not authority.",
+      "next_action": "Compare full frozen context and request authorized adjudication; do not rewrite labels.",
+      "observed": {
+        "discovery": "opportunity_signal",
+        "end": 1838,
+        "modality": "undetermined",
+        "segment_id": "segment-0018",
+        "start": 1420,
+        "temporal": "undetermined"
+      },
+      "record_id": "M30-I05-R1",
+      "reference": {
+        "discovery_label": "opportunity_signal",
+        "modality": "investimentos",
+        "opportunity_label": "uncertain",
+        "review_status": "provisional",
+        "temporal_status": "undetermined"
+      },
+      "review_status": "provisional",
+      "root_cause": "Context fragmentation or semantic rule/reference ambiguity; see all-overlap graph before adjudication.",
+      "root_cause_confidence": "low",
+      "segment_id": "segment-0018",
+      "severity": "medium",
+      "supporting_evidence": {
+        "end": 1838,
+        "quote": "A iniciativa busca estruturar um fundo de investimento em participações voltado a startups em estágio inicial, especialmente aquelas que tenham recebido apoio de programas de fomento à inovação, subvenção ou aceleração realizados no país. O objetivo é ampliar a conversão dessas empresas em oportunidades aptas a receber investimentos de fundos de capital semente, venture capital e outros investidores institucionais.",
+        "start": 1420
+      }
+    },
+    {
+      "case_id": "M30-I05-R1:segmentation",
+      "certainty": "supported_observation",
+      "dimension": "structural",
+      "document_id": "M30-I05",
+      "error_codes": [
+        "SEGMENTATION_OVER"
+      ],
+      "expected_behavior": "A meaningful record should retain its own associated context; whitespace-only boundary differences are not semantic defects.",
+      "next_action": "Inspect semantic usefulness of boundaries before changing segmentation.",
+      "observed": {
+        "coverage": {
+          "denominator": 2234,
+          "numerator": 1781,
+          "value": 0.797224709042077
+        },
+        "fragmentation": 20
+      },
+      "record_id": "M30-I05-R1",
+      "reference": {
+        "discovery_label": "opportunity_signal",
+        "modality": "investimentos",
+        "opportunity_label": "uncertain",
+        "review_status": "provisional",
+        "temporal_status": "undetermined"
+      },
+      "review_status": "provisional",
+      "root_cause": "Structure-derived units differ from provisional annotated record spans.",
+      "root_cause_confidence": "high",
+      "segment_id": "segment-0018",
+      "severity": "medium",
+      "supporting_evidence": {
+        "edges": [
+          {
+            "end": 136,
+            "exact": false,
+            "intersection": 31,
+            "intersection_end": 136,
+            "intersection_start": 105,
+            "iou": 0.01387645478961504,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.01387645478961504,
+            "segment_id": "segment-0000",
+            "start": 105
+          },
+          {
+            "end": 159,
+            "exact": false,
+            "intersection": 22,
+            "intersection_end": 159,
+            "intersection_start": 137,
+            "iou": 0.009847806624888093,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.009847806624888093,
+            "segment_id": "segment-0001",
+            "start": 137
+          },
+          {
+            "end": 182,
+            "exact": false,
+            "intersection": 22,
+            "intersection_end": 182,
+            "intersection_start": 160,
+            "iou": 0.009847806624888093,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.009847806624888093,
+            "segment_id": "segment-0002",
+            "start": 160
+          },
+          {
+            "end": 306,
+            "exact": false,
+            "intersection": 123,
+            "intersection_end": 306,
+            "intersection_start": 183,
+            "iou": 0.05505819158460161,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.05505819158460161,
+            "segment_id": "segment-0003",
+            "start": 183
+          },
+          {
+            "end": 315,
+            "exact": false,
+            "intersection": 8,
+            "intersection_end": 315,
+            "intersection_start": 307,
+            "iou": 0.0035810205908683975,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.0035810205908683975,
+            "segment_id": "segment-0004",
+            "start": 307
+          },
+          {
+            "end": 325,
+            "exact": false,
+            "intersection": 9,
+            "intersection_end": 325,
+            "intersection_start": 316,
+            "iou": 0.0040286481647269475,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.0040286481647269475,
+            "segment_id": "segment-0005",
+            "start": 316
+          },
+          {
+            "end": 360,
+            "exact": false,
+            "intersection": 34,
+            "intersection_end": 360,
+            "intersection_start": 326,
+            "iou": 0.01521933751119069,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.01521933751119069,
+            "segment_id": "segment-0006",
+            "start": 326
+          },
+          {
+            "end": 393,
+            "exact": false,
+            "intersection": 32,
+            "intersection_end": 393,
+            "intersection_start": 361,
+            "iou": 0.01432408236347359,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.01432408236347359,
+            "segment_id": "segment-0007",
+            "start": 361
+          },
+          {
+            "end": 408,
+            "exact": false,
+            "intersection": 14,
+            "intersection_end": 408,
+            "intersection_start": 394,
+            "iou": 0.006266786034019696,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.006266786034019696,
+            "segment_id": "segment-0008",
+            "start": 394
+          },
+          {
+            "end": 411,
+            "exact": false,
+            "intersection": 2,
+            "intersection_end": 411,
+            "intersection_start": 409,
+            "iou": 0.0008952551477170994,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.0008952551477170994,
+            "segment_id": "segment-0009",
+            "start": 409
+          },
+          {
+            "end": 414,
+            "exact": false,
+            "intersection": 2,
+            "intersection_end": 414,
+            "intersection_start": 412,
+            "iou": 0.0008952551477170994,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.0008952551477170994,
+            "segment_id": "segment-0010",
+            "start": 412
+          },
+          {
+            "end": 805,
+            "exact": false,
+            "intersection": 61,
+            "intersection_end": 805,
+            "intersection_start": 744,
+            "iou": 0.02730528200537153,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.02730528200537153,
+            "segment_id": "segment-0011",
+            "start": 744
+          },
+          {
+            "end": 835,
+            "exact": false,
+            "intersection": 29,
+            "intersection_end": 835,
+            "intersection_start": 806,
+            "iou": 0.012981199641897942,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.012981199641897942,
+            "segment_id": "segment-0012",
+            "start": 806
+          },
+          {
+            "end": 868,
+            "exact": false,
+            "intersection": 32,
+            "intersection_end": 868,
+            "intersection_start": 836,
+            "iou": 0.01432408236347359,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.01432408236347359,
+            "segment_id": "segment-0013",
+            "start": 836
+          },
+          {
+            "end": 902,
+            "exact": false,
+            "intersection": 33,
+            "intersection_end": 902,
+            "intersection_start": 869,
+            "iou": 0.01477170993733214,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.01477170993733214,
+            "segment_id": "segment-0014",
+            "start": 869
+          },
+          {
+            "end": 919,
+            "exact": false,
+            "intersection": 16,
+            "intersection_end": 919,
+            "intersection_start": 903,
+            "iou": 0.007162041181736795,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.007162041181736795,
+            "segment_id": "segment-0015",
+            "start": 903
+          },
+          {
+            "end": 1056,
+            "exact": false,
+            "intersection": 136,
+            "intersection_end": 1056,
+            "intersection_start": 920,
+            "iou": 0.06087735004476276,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.06087735004476276,
+            "segment_id": "segment-0016",
+            "start": 920
+          },
+          {
+            "end": 1419,
+            "exact": false,
+            "intersection": 362,
+            "intersection_end": 1419,
+            "intersection_start": 1057,
+            "iou": 0.162041181736795,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.162041181736795,
+            "segment_id": "segment-0017",
+            "start": 1057
+          },
+          {
+            "end": 1838,
+            "exact": false,
+            "intersection": 418,
+            "intersection_end": 1838,
+            "intersection_start": 1420,
+            "iou": 0.18710832587287377,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.18710832587287377,
+            "segment_id": "segment-0018",
+            "start": 1420
+          },
+          {
+            "end": 2234,
+            "exact": false,
+            "intersection": 395,
+            "intersection_end": 2234,
+            "intersection_start": 1839,
+            "iou": 0.17681289167412712,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.17681289167412712,
+            "segment_id": "segment-0019",
+            "start": 1839
+          }
+        ],
+        "reference_span": [
+          0,
+          2234
+        ]
+      }
+    },
+    {
+      "case_id": "M30-I05:segment-0019:field:2",
+      "certainty": "confirmed_defect",
+      "claim_kind": "field",
+      "context_evidence": [
+        {
+          "end": 61,
+          "page": null,
+          "quote": "BNDES e FINEP recebem 19 propostas para FIP Conexões Startups",
+          "start": 0
+        },
+        {
+          "end": 1419,
+          "page": null,
+          "quote": "O Banco Nacional de Desenvolvimento Econômico e Social (BNDES) e a Financiadora de Estudos e Projetos (Finep) receberam 19 propostas na chamada pública para seleção do gestor do FIP Conexões Startups. O prazo para apresentação das propostas foi encerrado em 12 de agosto. A divulgação da classificação final está prevista para ocorrer até 23 de novembro de 2026.",
+          "start": 1057
+        },
+        {
+          "end": 1838,
+          "page": null,
+          "quote": "A iniciativa busca estruturar um fundo de investimento em participações voltado a startups em estágio inicial, especialmente aquelas que tenham recebido apoio de programas de fomento à inovação, subvenção ou aceleração realizados no país. O objetivo é ampliar a conversão dessas empresas em oportunidades aptas a receber investimentos de fundos de capital semente, venture capital e outros investidores institucionais.",
+          "start": 1420
+        },
+        {
+          "end": 2234,
+          "page": null,
+          "quote": "O FIP tem estimativa de mobilizar até R$ 250 milhões para investir em startups em fase inicial. A BNDESPAR, subsidiária integral do BNDES, comprometerá até R$ 100 milhões. Já a Finep, com recursos do Fundo Nacional de Desenvolvimento Científico e Tecnológico (FNDCT), irá comprometer R$ 50 milhões. Caberá ao gestor selecionado mobilizar outros investidores para complementar o capital do fundo.",
+          "start": 1839
+        },
+        {
+          "end": 868,
+          "page": null,
+          "quote": "Publicado em 17/08/2026 às 12:36",
+          "start": 836
+        }
+      ],
+      "document_id": "M30-I05",
+      "end": 2234,
+      "error_codes": [
+        "FINANCIAL_ROLE_CONFUSION",
+        "EVIDENCE_SEMANTIC_MISMATCH"
+      ],
+      "expected_behavior": "Separar meta de captação de compromisso de um cotista.",
+      "expected_claim": "R$ 50 milhões",
+      "field_index": 2,
+      "field_name": "fund_capital_estimate",
+      "judgment": "unsupported",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "observed": "R$ 50 milhões",
+      "quote": "O FIP tem estimativa de mobilizar até R$ 250 milhões para investir em startups em fase inicial. A BNDESPAR, subsidiária integral do BNDES, comprometerá até R$ 100 milhões. Já a Finep, com recursos do Fundo Nacional de Desenvolvimento Científico e Tecnológico (FNDCT), irá comprometer R$ 50 milhões. Caberá ao gestor selecionado mobilizar outros investidores para complementar o capital do fundo.",
+      "rationale": "R$ 50 milhões é compromisso da Finep/FNDCT como investidor; a meta de capital do fundo é até R$ 250 milhões. O label fund_capital_estimate aplicado aos 50 milhões troca o papel.",
+      "review_status": "provisional",
+      "root_cause": "Janela monetária encontra FIP/mobilizar/capital de outras orações e toma precedência sobre o vínculo com comprometer.",
+      "root_cause_confidence": "high",
+      "segment_id": "segment-0019",
+      "severity": "high",
+      "start": 1839,
+      "supporting_evidence": {
+        "end": 2234,
+        "quote": "O FIP tem estimativa de mobilizar até R$ 250 milhões para investir em startups em fase inicial. A BNDESPAR, subsidiária integral do BNDES, comprometerá até R$ 100 milhões. Já a Finep, com recursos do Fundo Nacional de Desenvolvimento Científico e Tecnológico (FNDCT), irá comprometer R$ 50 milhões. Caberá ao gestor selecionado mobilizar outros investidores para complementar o capital do fundo.",
+        "start": 1839
+      }
+    },
+    {
+      "case_id": "M30-I05:segment-0019:field:0",
+      "certainty": "confirmed_defect",
+      "claim_kind": "field",
+      "context_evidence": [
+        {
+          "end": 61,
+          "page": null,
+          "quote": "BNDES e FINEP recebem 19 propostas para FIP Conexões Startups",
+          "start": 0
+        },
+        {
+          "end": 1419,
+          "page": null,
+          "quote": "O Banco Nacional de Desenvolvimento Econômico e Social (BNDES) e a Financiadora de Estudos e Projetos (Finep) receberam 19 propostas na chamada pública para seleção do gestor do FIP Conexões Startups. O prazo para apresentação das propostas foi encerrado em 12 de agosto. A divulgação da classificação final está prevista para ocorrer até 23 de novembro de 2026.",
+          "start": 1057
+        },
+        {
+          "end": 1838,
+          "page": null,
+          "quote": "A iniciativa busca estruturar um fundo de investimento em participações voltado a startups em estágio inicial, especialmente aquelas que tenham recebido apoio de programas de fomento à inovação, subvenção ou aceleração realizados no país. O objetivo é ampliar a conversão dessas empresas em oportunidades aptas a receber investimentos de fundos de capital semente, venture capital e outros investidores institucionais.",
+          "start": 1420
+        },
+        {
+          "end": 2234,
+          "page": null,
+          "quote": "O FIP tem estimativa de mobilizar até R$ 250 milhões para investir em startups em fase inicial. A BNDESPAR, subsidiária integral do BNDES, comprometerá até R$ 100 milhões. Já a Finep, com recursos do Fundo Nacional de Desenvolvimento Científico e Tecnológico (FNDCT), irá comprometer R$ 50 milhões. Caberá ao gestor selecionado mobilizar outros investidores para complementar o capital do fundo.",
+          "start": 1839
+        },
+        {
+          "end": 868,
+          "page": null,
+          "quote": "Publicado em 17/08/2026 às 12:36",
+          "start": 836
+        }
+      ],
+      "document_id": "M30-I05",
+      "end": 2234,
+      "error_codes": [
+        "EXTRACTION_OMISSION"
+      ],
+      "expected_behavior": "Preservar o qualificador até junto à expressão financeira.",
+      "expected_claim": "R$ 250 milhões",
+      "field_index": 0,
+      "field_name": "fund_capital_estimate",
+      "judgment": "partial",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "observed": "R$ 250 milhões",
+      "quote": "O FIP tem estimativa de mobilizar até R$ 250 milhões para investir em startups em fase inicial. A BNDESPAR, subsidiária integral do BNDES, comprometerá até R$ 100 milhões. Já a Finep, com recursos do Fundo Nacional de Desenvolvimento Científico e Tecnológico (FNDCT), irá comprometer R$ 50 milhões. Caberá ao gestor selecionado mobilizar outros investidores para complementar o capital do fundo.",
+      "rationale": "O numeral e o papel são relacionados ao campo correto, mas o literal perde até, que qualifica o valor como teto/estimativa. Não equiparar o numeral isolado ao valor com qualificador.",
+      "review_status": "provisional",
+      "root_cause": "MONEY inicia em R$ e não inclui qualificadores precedentes.",
+      "root_cause_confidence": "high",
+      "segment_id": "segment-0019",
+      "severity": "medium",
+      "start": 1839,
+      "supporting_evidence": {
+        "end": 2234,
+        "quote": "O FIP tem estimativa de mobilizar até R$ 250 milhões para investir em startups em fase inicial. A BNDESPAR, subsidiária integral do BNDES, comprometerá até R$ 100 milhões. Já a Finep, com recursos do Fundo Nacional de Desenvolvimento Científico e Tecnológico (FNDCT), irá comprometer R$ 50 milhões. Caberá ao gestor selecionado mobilizar outros investidores para complementar o capital do fundo.",
+        "start": 1839
+      }
+    }
+  ],
+  "extracted_claims": [
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-I05",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "publication_date_expression",
+      "original": "17/08/2026",
+      "reference_records": [
+        "M30-I05-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0013",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-I05",
+        "end": 868,
+        "page": null,
+        "quote": "Publicado em 17/08/2026 às 12:36",
+        "raw_sha256": "8aefb421c842dd07d8779deec4988f1e6bbb8a9a13b2050b614aca2265e920af",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0013",
+        "start": 836,
+        "text_sha256": "14f436eae3452a361a3fd16f92b9f447b8a2ed2ef6a7f843980adf34f7fd9c9b"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-I05",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "unknown_temporal_expression",
+      "original": "17/08/2026",
+      "reference_records": [
+        "M30-I05-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0014",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-I05",
+        "end": 902,
+        "page": null,
+        "quote": "Atualizado em 17/08/2026 às 13:06",
+        "raw_sha256": "8aefb421c842dd07d8779deec4988f1e6bbb8a9a13b2050b614aca2265e920af",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0014",
+        "start": 869,
+        "text_sha256": "14f436eae3452a361a3fd16f92b9f447b8a2ed2ef6a7f843980adf34f7fd9c9b"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-I05",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "fund_capital_estimate",
+      "original": "R$ 250 milhões",
+      "reference_records": [
+        "M30-I05-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0019",
+      "semantic_case_id": "M30-I05:segment-0019:field:0",
+      "semantic_support": "partial",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-I05",
+        "end": 2234,
+        "page": null,
+        "quote": "O FIP tem estimativa de mobilizar até R$ 250 milhões para investir em startups em fase inicial. A BNDESPAR, subsidiária integral do BNDES, comprometerá até R$ 100 milhões. Já a Finep, com recursos do Fundo Nacional de Desenvolvimento Científico e Tecnológico (FNDCT), irá comprometer R$ 50 milhões. Caberá ao gestor selecionado mobilizar outros investidores para complementar o capital do fundo.",
+        "raw_sha256": "8aefb421c842dd07d8779deec4988f1e6bbb8a9a13b2050b614aca2265e920af",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0019",
+        "start": 1839,
+        "text_sha256": "14f436eae3452a361a3fd16f92b9f447b8a2ed2ef6a7f843980adf34f7fd9c9b"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-I05",
+      "field_index": 1,
+      "method_version": "m31-deterministic-v2",
+      "name": "monetary_expression_unresolved",
+      "original": "R$ 100 milhões",
+      "reference_records": [
+        "M30-I05-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0019",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-I05",
+        "end": 2234,
+        "page": null,
+        "quote": "O FIP tem estimativa de mobilizar até R$ 250 milhões para investir em startups em fase inicial. A BNDESPAR, subsidiária integral do BNDES, comprometerá até R$ 100 milhões. Já a Finep, com recursos do Fundo Nacional de Desenvolvimento Científico e Tecnológico (FNDCT), irá comprometer R$ 50 milhões. Caberá ao gestor selecionado mobilizar outros investidores para complementar o capital do fundo.",
+        "raw_sha256": "8aefb421c842dd07d8779deec4988f1e6bbb8a9a13b2050b614aca2265e920af",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0019",
+        "start": 1839,
+        "text_sha256": "14f436eae3452a361a3fd16f92b9f447b8a2ed2ef6a7f843980adf34f7fd9c9b"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-I05",
+      "field_index": 2,
+      "method_version": "m31-deterministic-v2",
+      "name": "fund_capital_estimate",
+      "original": "R$ 50 milhões",
+      "reference_records": [
+        "M30-I05-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0019",
+      "semantic_case_id": "M30-I05:segment-0019:field:2",
+      "semantic_support": "unsupported",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-I05",
+        "end": 2234,
+        "page": null,
+        "quote": "O FIP tem estimativa de mobilizar até R$ 250 milhões para investir em startups em fase inicial. A BNDESPAR, subsidiária integral do BNDES, comprometerá até R$ 100 milhões. Já a Finep, com recursos do Fundo Nacional de Desenvolvimento Científico e Tecnológico (FNDCT), irá comprometer R$ 50 milhões. Caberá ao gestor selecionado mobilizar outros investidores para complementar o capital do fundo.",
+        "raw_sha256": "8aefb421c842dd07d8779deec4988f1e6bbb8a9a13b2050b614aca2265e920af",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0019",
+        "start": 1839,
+        "text_sha256": "14f436eae3452a361a3fd16f92b9f447b8a2ed2ef6a7f843980adf34f7fd9c9b"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-I05",
+      "field_index": 3,
+      "method_version": "m31-deterministic-v2",
+      "name": "funding_organization_expression",
+      "original": "O FIP tem estimativa de mobilizar até R$ 250 milhões para investir em startups em fase inicial. A BNDESPAR, subsidiária integral do BNDES, comprometerá até R$ 100 milhões. Já a Finep, com recursos do Fundo Nacional de Desenvolvimento Científico e Tecnológico (FNDCT), irá comprometer R$ 50 milhões. Caberá ao gestor selecionado mobilizar outros investidores para complementar o capital do fundo.",
+      "reference_records": [
+        "M30-I05-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0019",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-I05",
+        "end": 2234,
+        "page": null,
+        "quote": "O FIP tem estimativa de mobilizar até R$ 250 milhões para investir em startups em fase inicial. A BNDESPAR, subsidiária integral do BNDES, comprometerá até R$ 100 milhões. Já a Finep, com recursos do Fundo Nacional de Desenvolvimento Científico e Tecnológico (FNDCT), irá comprometer R$ 50 milhões. Caberá ao gestor selecionado mobilizar outros investidores para complementar o capital do fundo.",
+        "raw_sha256": "8aefb421c842dd07d8779deec4988f1e6bbb8a9a13b2050b614aca2265e920af",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0019",
+        "start": 1839,
+        "text_sha256": "14f436eae3452a361a3fd16f92b9f447b8a2ed2ef6a7f843980adf34f7fd9c9b"
+      }
+    }
+  ],
+  "provenance": {
+    "byte_length": 39475,
+    "category_evidence": "O Banco Nacional de Desenvolvimento Econômico e Social (BNDES) e a Financiadora de Estudos e Projetos (Finep) receberam 19 propostas na chamada pública para seleção do gestor do FIP Conexões Startups. O prazo para apresentação das propostas foi encerrado em 12 de agosto. A divulgação da classificação final está prevista para ocorrer até 23 de novembro de 2026.",
+    "content_type": "text/html",
+    "derivation_method": "stdlib-HTMLParser-data-whitespace-v1; excludes script/style/noscript/template; not rendered DOM",
+    "document_category": "institutional_news",
+    "document_id": "M30-I05",
+    "document_version": null,
+    "final_url": "https://agenciadenoticias.bndes.gov.br/noticia/BNDES-e-FINEP-recebem-19-propostas-para-FIP-Conexoes-Startups/",
+    "original_filename": "index.html",
+    "original_url": "https://agenciadenoticias.bndes.gov.br/noticia/BNDES-e-FINEP-recebem-19-propostas-para-FIP-Conexoes-Startups/",
+    "publication_date": "2026-08-17",
+    "raw_path": "raw/M30-I05.html",
+    "restrictions": "Research pilot local frozen copy only; no redistribution license inferred. No scripts executed, no forms submitted, no applicant records intentionally collected. Public navigation/staff attribution may remain in original bytes.",
+    "retrieval_status": "acquired",
+    "retrieved_at": "2026-10-19T04:38:14.078082+00:00",
+    "sha256": "8aefb421c842dd07d8779deec4988f1e6bbb8a9a13b2050b614aca2265e920af",
+    "source_authority_notes": "Public HTTPS page hosted by the named institution; authorship asserted by host/content, not cryptographically authenticated. Not source-readiness approval.",
+    "source_organization": "BNDES",
+    "text_path": "text/M30-I05.txt",
+    "text_sha256": "14f436eae3452a361a3fd16f92b9f447b8a2ed2ef6a7f843980adf34f7fd9c9b"
+  },
+  "records": [
+    {
+      "all_overlap_predictions": [
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0000",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0001",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0002",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0003",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0004",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0005",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0006",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0007",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0008",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0009",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0010",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "opportunity_signal",
+          "modality": "investimentos",
+          "segment_id": "segment-0011",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0012",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0013",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0014",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0015",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0016",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "opportunity_signal",
+          "modality": "investimentos",
+          "segment_id": "segment-0017",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "opportunity_signal",
+          "modality": "undetermined",
+          "segment_id": "segment-0018",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "opportunity_signal",
+          "modality": "investimentos",
+          "segment_id": "segment-0019",
+          "temporal": "undetermined"
+        }
+      ],
+      "any_exact_boundary": false,
+      "coverage": {
+        "denominator": 2234,
+        "numerator": 1781,
+        "value": 0.797224709042077
+      },
+      "covered_characters": 1781,
+      "disagreements": [
+        "modality"
+      ],
+      "discovery_histogram": {
+        "abstain": 16,
+        "opportunity_signal": 4
+      },
+      "document_id": "M30-I05",
+      "edges": [
+        {
+          "end": 136,
+          "exact": false,
+          "intersection": 31,
+          "intersection_end": 136,
+          "intersection_start": 105,
+          "iou": 0.01387645478961504,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.01387645478961504,
+          "segment_id": "segment-0000",
+          "start": 105
+        },
+        {
+          "end": 159,
+          "exact": false,
+          "intersection": 22,
+          "intersection_end": 159,
+          "intersection_start": 137,
+          "iou": 0.009847806624888093,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.009847806624888093,
+          "segment_id": "segment-0001",
+          "start": 137
+        },
+        {
+          "end": 182,
+          "exact": false,
+          "intersection": 22,
+          "intersection_end": 182,
+          "intersection_start": 160,
+          "iou": 0.009847806624888093,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.009847806624888093,
+          "segment_id": "segment-0002",
+          "start": 160
+        },
+        {
+          "end": 306,
+          "exact": false,
+          "intersection": 123,
+          "intersection_end": 306,
+          "intersection_start": 183,
+          "iou": 0.05505819158460161,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.05505819158460161,
+          "segment_id": "segment-0003",
+          "start": 183
+        },
+        {
+          "end": 315,
+          "exact": false,
+          "intersection": 8,
+          "intersection_end": 315,
+          "intersection_start": 307,
+          "iou": 0.0035810205908683975,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.0035810205908683975,
+          "segment_id": "segment-0004",
+          "start": 307
+        },
+        {
+          "end": 325,
+          "exact": false,
+          "intersection": 9,
+          "intersection_end": 325,
+          "intersection_start": 316,
+          "iou": 0.0040286481647269475,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.0040286481647269475,
+          "segment_id": "segment-0005",
+          "start": 316
+        },
+        {
+          "end": 360,
+          "exact": false,
+          "intersection": 34,
+          "intersection_end": 360,
+          "intersection_start": 326,
+          "iou": 0.01521933751119069,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.01521933751119069,
+          "segment_id": "segment-0006",
+          "start": 326
+        },
+        {
+          "end": 393,
+          "exact": false,
+          "intersection": 32,
+          "intersection_end": 393,
+          "intersection_start": 361,
+          "iou": 0.01432408236347359,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.01432408236347359,
+          "segment_id": "segment-0007",
+          "start": 361
+        },
+        {
+          "end": 408,
+          "exact": false,
+          "intersection": 14,
+          "intersection_end": 408,
+          "intersection_start": 394,
+          "iou": 0.006266786034019696,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.006266786034019696,
+          "segment_id": "segment-0008",
+          "start": 394
+        },
+        {
+          "end": 411,
+          "exact": false,
+          "intersection": 2,
+          "intersection_end": 411,
+          "intersection_start": 409,
+          "iou": 0.0008952551477170994,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.0008952551477170994,
+          "segment_id": "segment-0009",
+          "start": 409
+        },
+        {
+          "end": 414,
+          "exact": false,
+          "intersection": 2,
+          "intersection_end": 414,
+          "intersection_start": 412,
+          "iou": 0.0008952551477170994,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.0008952551477170994,
+          "segment_id": "segment-0010",
+          "start": 412
+        },
+        {
+          "end": 805,
+          "exact": false,
+          "intersection": 61,
+          "intersection_end": 805,
+          "intersection_start": 744,
+          "iou": 0.02730528200537153,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.02730528200537153,
+          "segment_id": "segment-0011",
+          "start": 744
+        },
+        {
+          "end": 835,
+          "exact": false,
+          "intersection": 29,
+          "intersection_end": 835,
+          "intersection_start": 806,
+          "iou": 0.012981199641897942,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.012981199641897942,
+          "segment_id": "segment-0012",
+          "start": 806
+        },
+        {
+          "end": 868,
+          "exact": false,
+          "intersection": 32,
+          "intersection_end": 868,
+          "intersection_start": 836,
+          "iou": 0.01432408236347359,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.01432408236347359,
+          "segment_id": "segment-0013",
+          "start": 836
+        },
+        {
+          "end": 902,
+          "exact": false,
+          "intersection": 33,
+          "intersection_end": 902,
+          "intersection_start": 869,
+          "iou": 0.01477170993733214,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.01477170993733214,
+          "segment_id": "segment-0014",
+          "start": 869
+        },
+        {
+          "end": 919,
+          "exact": false,
+          "intersection": 16,
+          "intersection_end": 919,
+          "intersection_start": 903,
+          "iou": 0.007162041181736795,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.007162041181736795,
+          "segment_id": "segment-0015",
+          "start": 903
+        },
+        {
+          "end": 1056,
+          "exact": false,
+          "intersection": 136,
+          "intersection_end": 1056,
+          "intersection_start": 920,
+          "iou": 0.06087735004476276,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.06087735004476276,
+          "segment_id": "segment-0016",
+          "start": 920
+        },
+        {
+          "end": 1419,
+          "exact": false,
+          "intersection": 362,
+          "intersection_end": 1419,
+          "intersection_start": 1057,
+          "iou": 0.162041181736795,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.162041181736795,
+          "segment_id": "segment-0017",
+          "start": 1057
+        },
+        {
+          "end": 1838,
+          "exact": false,
+          "intersection": 418,
+          "intersection_end": 1838,
+          "intersection_start": 1420,
+          "iou": 0.18710832587287377,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.18710832587287377,
+          "segment_id": "segment-0018",
+          "start": 1420
+        },
+        {
+          "end": 2234,
+          "exact": false,
+          "intersection": 395,
+          "intersection_end": 2234,
+          "intersection_start": 1839,
+          "iou": 0.17681289167412712,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.17681289167412712,
+          "segment_id": "segment-0019",
+          "start": 1839
+        }
+      ],
+      "end": 2234,
+      "fields": [
+        {
+          "candidates": [],
+          "name": "title",
+          "reason": "no corresponding field; absence is not explicit field abstention",
+          "reference_evidence": [
+            {
+              "end": 61,
+              "evidence_id": "M30-I05-R1-E1",
+              "page": null,
+              "quote": "BNDES e FINEP recebem 19 propostas para FIP Conexões Startups",
+              "start": 0
+            }
+          ],
+          "reference_value": "BNDES e FINEP recebem 19 propostas para FIP Conexões Startups",
+          "scope_supported": true,
+          "semantic_adjudication": "not_certified",
+          "status": "MISSING",
+          "strict_role_value": false
+        },
+        {
+          "candidates": [
+            {
+              "diagnostic_status": "traceable_not_semantically_certified",
+              "field_index": 0,
+              "method_version": "m31-deterministic-v2",
+              "name": "fund_capital_estimate",
+              "original": "R$ 250 milhões",
+              "schema_version": "m31-extraction-v1",
+              "segment_id": "segment-0019",
+              "uncertainty": "heuristic role assignment; not authenticated or normalized",
+              "witness": {
+                "document_id": "M30-I05",
+                "end": 2234,
+                "page": null,
+                "quote": "O FIP tem estimativa de mobilizar até R$ 250 milhões para investir em startups em fase inicial. A BNDESPAR, subsidiária integral do BNDES, comprometerá até R$ 100 milhões. Já a Finep, com recursos do Fundo Nacional de Desenvolvimento Científico e Tecnológico (FNDCT), irá comprometer R$ 50 milhões. Caberá ao gestor selecionado mobilizar outros investidores para complementar o capital do fundo.",
+                "raw_sha256": "8aefb421c842dd07d8779deec4988f1e6bbb8a9a13b2050b614aca2265e920af",
+                "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+                "schema_version": "m31-extraction-v1",
+                "segment_id": "segment-0019",
+                "start": 1839,
+                "text_sha256": "14f436eae3452a361a3fd16f92b9f447b8a2ed2ef6a7f843980adf34f7fd9c9b"
+              }
+            },
+            {
+              "diagnostic_status": "traceable_not_semantically_certified",
+              "field_index": 2,
+              "method_version": "m31-deterministic-v2",
+              "name": "fund_capital_estimate",
+              "original": "R$ 50 milhões",
+              "schema_version": "m31-extraction-v1",
+              "segment_id": "segment-0019",
+              "uncertainty": "heuristic role assignment; not authenticated or normalized",
+              "witness": {
+                "document_id": "M30-I05",
+                "end": 2234,
+                "page": null,
+                "quote": "O FIP tem estimativa de mobilizar até R$ 250 milhões para investir em startups em fase inicial. A BNDESPAR, subsidiária integral do BNDES, comprometerá até R$ 100 milhões. Já a Finep, com recursos do Fundo Nacional de Desenvolvimento Científico e Tecnológico (FNDCT), irá comprometer R$ 50 milhões. Caberá ao gestor selecionado mobilizar outros investidores para complementar o capital do fundo.",
+                "raw_sha256": "8aefb421c842dd07d8779deec4988f1e6bbb8a9a13b2050b614aca2265e920af",
+                "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+                "schema_version": "m31-extraction-v1",
+                "segment_id": "segment-0019",
+                "start": 1839,
+                "text_sha256": "14f436eae3452a361a3fd16f92b9f447b8a2ed2ef6a7f843980adf34f7fd9c9b"
+              }
+            }
+          ],
+          "name": "fund_capital_estimate",
+          "reason": "same/aliased role with related literal; qualifiers may be missing or extra",
+          "reference_evidence": [
+            {
+              "end": 2234,
+              "evidence_id": "M30-I05-R1-E4",
+              "page": null,
+              "quote": "O FIP tem estimativa de mobilizar até R$ 250 milhões para investir em startups em fase inicial. A BNDESPAR, subsidiária integral do BNDES, comprometerá até R$ 100 milhões. Já a Finep, com recursos do Fundo Nacional de Desenvolvimento Científico e Tecnológico (FNDCT), irá comprometer R$ 50 milhões. Caberá ao gestor selecionado mobilizar outros investidores para complementar o capital do fundo.",
+              "start": 1839
+            }
+          ],
+          "reference_value": "até R$ 250 milhões",
+          "scope_supported": true,
+          "semantic_adjudication": "not_certified",
+          "status": "PARTIAL",
+          "strict_role_value": false
+        },
+        {
+          "candidates": [],
+          "name": "target_profile",
+          "reason": "requested target role outside implemented M31 field scope",
+          "reference_evidence": [
+            {
+              "end": 1838,
+              "evidence_id": "M30-I05-R1-E3",
+              "page": null,
+              "quote": "A iniciativa busca estruturar um fundo de investimento em participações voltado a startups em estágio inicial, especialmente aquelas que tenham recebido apoio de programas de fomento à inovação, subvenção ou aceleração realizados no país. O objetivo é ampliar a conversão dessas empresas em oportunidades aptas a receber investimentos de fundos de capital semente, venture capital e outros investidores institucionais.",
+              "start": 1420
+            }
+          ],
+          "reference_value": "startups em estágio inicial",
+          "scope_supported": false,
+          "semantic_adjudication": "not_certified",
+          "status": "UNRESOLVED",
+          "strict_role_value": false
+        },
+        {
+          "candidates": [
+            {
+              "diagnostic_status": "traceable_not_semantically_certified",
+              "field_index": 0,
+              "method_version": "m31-deterministic-v2",
+              "name": "publication_date_expression",
+              "original": "17/08/2026",
+              "schema_version": "m31-extraction-v1",
+              "segment_id": "segment-0013",
+              "uncertainty": "heuristic role assignment; not authenticated or normalized",
+              "witness": {
+                "document_id": "M30-I05",
+                "end": 868,
+                "page": null,
+                "quote": "Publicado em 17/08/2026 às 12:36",
+                "raw_sha256": "8aefb421c842dd07d8779deec4988f1e6bbb8a9a13b2050b614aca2265e920af",
+                "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+                "schema_version": "m31-extraction-v1",
+                "segment_id": "segment-0013",
+                "start": 836,
+                "text_sha256": "14f436eae3452a361a3fd16f92b9f447b8a2ed2ef6a7f843980adf34f7fd9c9b"
+              }
+            }
+          ],
+          "name": "publication_date_expression",
+          "reason": "same/aliased role with related literal; qualifiers may be missing or extra",
+          "reference_evidence": [
+            {
+              "end": 868,
+              "evidence_id": "M30-I05-R1-E5",
+              "page": null,
+              "quote": "Publicado em 17/08/2026 às 12:36",
+              "start": 836
+            }
+          ],
+          "reference_value": "Publicado em 17/08/2026 às 12:36",
+          "scope_supported": true,
+          "semantic_adjudication": "not_certified",
+          "status": "PARTIAL",
+          "strict_role_value": false
+        },
+        {
+          "candidates": [],
+          "name": "investment_organization",
+          "reason": "requested target role outside implemented M31 field scope",
+          "reference_evidence": [
+            {
+              "end": 2234,
+              "evidence_id": "M30-I05-R1-E4",
+              "page": null,
+              "quote": "O FIP tem estimativa de mobilizar até R$ 250 milhões para investir em startups em fase inicial. A BNDESPAR, subsidiária integral do BNDES, comprometerá até R$ 100 milhões. Já a Finep, com recursos do Fundo Nacional de Desenvolvimento Científico e Tecnológico (FNDCT), irá comprometer R$ 50 milhões. Caberá ao gestor selecionado mobilizar outros investidores para complementar o capital do fundo.",
+              "start": 1839
+            }
+          ],
+          "reference_value": "BNDESPAR",
+          "scope_supported": false,
+          "semantic_adjudication": "not_certified",
+          "status": "UNRESOLVED",
+          "strict_role_value": false
+        }
+      ],
+      "fragmentation": 20,
+      "location_convention": "html_unicode_codepoints",
+      "physical_reference_evidence_pages": [],
+      "rationale": "Notícia de estruturação de futuro FIP sinaliza investimento em startups. O prazo encerrado em agosto refere-se exclusivamente à seleção do gestor; classificação prevista até novembro não é prazo de startups. Não contar a chamada vencida como oportunidade vigente.",
+      "record_id": "M30-I05-R1",
+      "reference": {
+        "discovery_label": "opportunity_signal",
+        "modality": "investimentos",
+        "opportunity_label": "uncertain",
+        "review_status": "provisional",
+        "temporal_status": "undetermined"
+      },
+      "reference_characters": 2234,
+      "reference_evidence": [
+        {
+          "end": 61,
+          "evidence_id": "M30-I05-R1-E1",
+          "page": null,
+          "quote": "BNDES e FINEP recebem 19 propostas para FIP Conexões Startups",
+          "start": 0
+        },
+        {
+          "end": 1419,
+          "evidence_id": "M30-I05-R1-E2",
+          "page": null,
+          "quote": "O Banco Nacional de Desenvolvimento Econômico e Social (BNDES) e a Financiadora de Estudos e Projetos (Finep) receberam 19 propostas na chamada pública para seleção do gestor do FIP Conexões Startups. O prazo para apresentação das propostas foi encerrado em 12 de agosto. A divulgação da classificação final está prevista para ocorrer até 23 de novembro de 2026.",
+          "start": 1057
+        },
+        {
+          "end": 1838,
+          "evidence_id": "M30-I05-R1-E3",
+          "page": null,
+          "quote": "A iniciativa busca estruturar um fundo de investimento em participações voltado a startups em estágio inicial, especialmente aquelas que tenham recebido apoio de programas de fomento à inovação, subvenção ou aceleração realizados no país. O objetivo é ampliar a conversão dessas empresas em oportunidades aptas a receber investimentos de fundos de capital semente, venture capital e outros investidores institucionais.",
+          "start": 1420
+        },
+        {
+          "end": 2234,
+          "evidence_id": "M30-I05-R1-E4",
+          "page": null,
+          "quote": "O FIP tem estimativa de mobilizar até R$ 250 milhões para investir em startups em fase inicial. A BNDESPAR, subsidiária integral do BNDES, comprometerá até R$ 100 milhões. Já a Finep, com recursos do Fundo Nacional de Desenvolvimento Científico e Tecnológico (FNDCT), irá comprometer R$ 50 milhões. Caberá ao gestor selecionado mobilizar outros investidores para complementar o capital do fundo.",
+          "start": 1839
+        },
+        {
+          "end": 868,
+          "evidence_id": "M30-I05-R1-E5",
+          "page": null,
+          "quote": "Publicado em 17/08/2026 às 12:36",
+          "start": 836
+        }
+      ],
+      "representative": "segment-0018",
+      "representative_prediction": {
+        "discovery": "opportunity_signal",
+        "end": 1838,
+        "modality": "undetermined",
+        "segment_id": "segment-0018",
+        "start": 1420,
+        "temporal": "undetermined"
+      },
+      "representative_quote": "A iniciativa busca estruturar um fundo de investimento em participações voltado a startups em estágio inicial, especialmente aquelas que tenham recebido apoio de programas de fomento à inovação, subvenção ou aceleração realizados no país. O objetivo é ampliar a conversão dessas empresas em oportunidades aptas a receber investimentos de fundos de capital semente, venture capital e outros investidores institucionais.",
+      "start": 0,
+      "status": "overlap",
+      "uncertainty_notes": [
+        "Sem canal ou janela de candidatura para startups na notícia.",
+        "Capital estimado do fundo não é valor de aporte por startup."
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 136,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I05-R1"
+      ],
+      "segment_id": "segment-0000",
+      "start": 105,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 159,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I05-R1"
+      ],
+      "segment_id": "segment-0001",
+      "start": 137,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 182,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I05-R1"
+      ],
+      "segment_id": "segment-0002",
+      "start": 160,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 306,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I05-R1"
+      ],
+      "segment_id": "segment-0003",
+      "start": 183,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 315,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I05-R1"
+      ],
+      "segment_id": "segment-0004",
+      "start": 307,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 325,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I05-R1"
+      ],
+      "segment_id": "segment-0005",
+      "start": 316,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 360,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I05-R1"
+      ],
+      "segment_id": "segment-0006",
+      "start": 326,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 393,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I05-R1"
+      ],
+      "segment_id": "segment-0007",
+      "start": 361,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 408,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I05-R1"
+      ],
+      "segment_id": "segment-0008",
+      "start": 394,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 411,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I05-R1"
+      ],
+      "segment_id": "segment-0009",
+      "start": 409,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 414,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I05-R1"
+      ],
+      "segment_id": "segment-0010",
+      "start": 412,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 805,
+      "field_count": 0,
+      "modality": "investimentos",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I05-R1"
+      ],
+      "segment_id": "segment-0011",
+      "start": 744,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 835,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I05-R1"
+      ],
+      "segment_id": "segment-0012",
+      "start": 806,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 868,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I05-R1"
+      ],
+      "segment_id": "segment-0013",
+      "start": 836,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 902,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I05-R1"
+      ],
+      "segment_id": "segment-0014",
+      "start": 869,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 919,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I05-R1"
+      ],
+      "segment_id": "segment-0015",
+      "start": 903,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 1056,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I05-R1"
+      ],
+      "segment_id": "segment-0016",
+      "start": 920,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "manager_stage_not_startup_access"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 1419,
+      "field_count": 0,
+      "modality": "investimentos",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I05-R1"
+      ],
+      "segment_id": "segment-0017",
+      "start": 1057,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 1838,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I05-R1"
+      ],
+      "segment_id": "segment-0018",
+      "start": 1420,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "manager_stage_not_startup_access"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 2234,
+      "field_count": 4,
+      "modality": "investimentos",
+      "physical_page": null,
+      "reference_records": [
+        "M30-I05-R1"
+      ],
+      "segment_id": "segment-0019",
+      "start": 1839,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 2875,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0020",
+      "start": 2235,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 3402,
+      "field_count": 0,
+      "modality": "investimentos",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0021",
+      "start": 2876,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 3412,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0022",
+      "start": 3403,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 3789,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0023",
+      "start": 3413,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 4072,
+      "field_count": 0,
+      "modality": "fomento",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0024",
+      "start": 3790,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 4529,
+      "field_count": 0,
+      "modality": "investimentos",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0025",
+      "start": 4073,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "manager_stage_not_startup_access"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 4885,
+      "field_count": 0,
+      "modality": "investimentos",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0026",
+      "start": 4530,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 4899,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0027",
+      "start": 4886,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 4905,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0028",
+      "start": 4900,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 4926,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0029",
+      "start": 4906,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 4932,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0030",
+      "start": 4927,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 4950,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0031",
+      "start": 4933,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 4959,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0032",
+      "start": 4951,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 4968,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0033",
+      "start": 4960,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 5986,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0034",
+      "start": 5898,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 6026,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0035",
+      "start": 5987,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 6028,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0036",
+      "start": 6027,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 6087,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0037",
+      "start": 6029,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 6095,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0038",
+      "start": 6088,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    }
+  ],
+  "semantic_reviews": [
+    {
+      "case_id": "M30-I05:segment-0019:field:2",
+      "certainty": "confirmed_defect",
+      "claim_kind": "field",
+      "context_evidence": [
+        {
+          "end": 61,
+          "page": null,
+          "quote": "BNDES e FINEP recebem 19 propostas para FIP Conexões Startups",
+          "start": 0
+        },
+        {
+          "end": 1419,
+          "page": null,
+          "quote": "O Banco Nacional de Desenvolvimento Econômico e Social (BNDES) e a Financiadora de Estudos e Projetos (Finep) receberam 19 propostas na chamada pública para seleção do gestor do FIP Conexões Startups. O prazo para apresentação das propostas foi encerrado em 12 de agosto. A divulgação da classificação final está prevista para ocorrer até 23 de novembro de 2026.",
+          "start": 1057
+        },
+        {
+          "end": 1838,
+          "page": null,
+          "quote": "A iniciativa busca estruturar um fundo de investimento em participações voltado a startups em estágio inicial, especialmente aquelas que tenham recebido apoio de programas de fomento à inovação, subvenção ou aceleração realizados no país. O objetivo é ampliar a conversão dessas empresas em oportunidades aptas a receber investimentos de fundos de capital semente, venture capital e outros investidores institucionais.",
+          "start": 1420
+        },
+        {
+          "end": 2234,
+          "page": null,
+          "quote": "O FIP tem estimativa de mobilizar até R$ 250 milhões para investir em startups em fase inicial. A BNDESPAR, subsidiária integral do BNDES, comprometerá até R$ 100 milhões. Já a Finep, com recursos do Fundo Nacional de Desenvolvimento Científico e Tecnológico (FNDCT), irá comprometer R$ 50 milhões. Caberá ao gestor selecionado mobilizar outros investidores para complementar o capital do fundo.",
+          "start": 1839
+        },
+        {
+          "end": 868,
+          "page": null,
+          "quote": "Publicado em 17/08/2026 às 12:36",
+          "start": 836
+        }
+      ],
+      "document_id": "M30-I05",
+      "end": 2234,
+      "error_codes": [
+        "FINANCIAL_ROLE_CONFUSION",
+        "EVIDENCE_SEMANTIC_MISMATCH"
+      ],
+      "expected_behavior": "Separar meta de captação de compromisso de um cotista.",
+      "expected_claim": "R$ 50 milhões",
+      "field_index": 2,
+      "field_name": "fund_capital_estimate",
+      "judgment": "unsupported",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "quote": "O FIP tem estimativa de mobilizar até R$ 250 milhões para investir em startups em fase inicial. A BNDESPAR, subsidiária integral do BNDES, comprometerá até R$ 100 milhões. Já a Finep, com recursos do Fundo Nacional de Desenvolvimento Científico e Tecnológico (FNDCT), irá comprometer R$ 50 milhões. Caberá ao gestor selecionado mobilizar outros investidores para complementar o capital do fundo.",
+      "rationale": "R$ 50 milhões é compromisso da Finep/FNDCT como investidor; a meta de capital do fundo é até R$ 250 milhões. O label fund_capital_estimate aplicado aos 50 milhões troca o papel.",
+      "root_cause": "Janela monetária encontra FIP/mobilizar/capital de outras orações e toma precedência sobre o vínculo com comprometer.",
+      "root_cause_confidence": "high",
+      "segment_id": "segment-0019",
+      "severity": "high",
+      "start": 1839
+    },
+    {
+      "case_id": "M30-I05:segment-0019:field:0",
+      "certainty": "confirmed_defect",
+      "claim_kind": "field",
+      "context_evidence": [
+        {
+          "end": 61,
+          "page": null,
+          "quote": "BNDES e FINEP recebem 19 propostas para FIP Conexões Startups",
+          "start": 0
+        },
+        {
+          "end": 1419,
+          "page": null,
+          "quote": "O Banco Nacional de Desenvolvimento Econômico e Social (BNDES) e a Financiadora de Estudos e Projetos (Finep) receberam 19 propostas na chamada pública para seleção do gestor do FIP Conexões Startups. O prazo para apresentação das propostas foi encerrado em 12 de agosto. A divulgação da classificação final está prevista para ocorrer até 23 de novembro de 2026.",
+          "start": 1057
+        },
+        {
+          "end": 1838,
+          "page": null,
+          "quote": "A iniciativa busca estruturar um fundo de investimento em participações voltado a startups em estágio inicial, especialmente aquelas que tenham recebido apoio de programas de fomento à inovação, subvenção ou aceleração realizados no país. O objetivo é ampliar a conversão dessas empresas em oportunidades aptas a receber investimentos de fundos de capital semente, venture capital e outros investidores institucionais.",
+          "start": 1420
+        },
+        {
+          "end": 2234,
+          "page": null,
+          "quote": "O FIP tem estimativa de mobilizar até R$ 250 milhões para investir em startups em fase inicial. A BNDESPAR, subsidiária integral do BNDES, comprometerá até R$ 100 milhões. Já a Finep, com recursos do Fundo Nacional de Desenvolvimento Científico e Tecnológico (FNDCT), irá comprometer R$ 50 milhões. Caberá ao gestor selecionado mobilizar outros investidores para complementar o capital do fundo.",
+          "start": 1839
+        },
+        {
+          "end": 868,
+          "page": null,
+          "quote": "Publicado em 17/08/2026 às 12:36",
+          "start": 836
+        }
+      ],
+      "document_id": "M30-I05",
+      "end": 2234,
+      "error_codes": [
+        "EXTRACTION_OMISSION"
+      ],
+      "expected_behavior": "Preservar o qualificador até junto à expressão financeira.",
+      "expected_claim": "R$ 250 milhões",
+      "field_index": 0,
+      "field_name": "fund_capital_estimate",
+      "judgment": "partial",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "quote": "O FIP tem estimativa de mobilizar até R$ 250 milhões para investir em startups em fase inicial. A BNDESPAR, subsidiária integral do BNDES, comprometerá até R$ 100 milhões. Já a Finep, com recursos do Fundo Nacional de Desenvolvimento Científico e Tecnológico (FNDCT), irá comprometer R$ 50 milhões. Caberá ao gestor selecionado mobilizar outros investidores para complementar o capital do fundo.",
+      "rationale": "O numeral e o papel são relacionados ao campo correto, mas o literal perde até, que qualifica o valor como teto/estimativa. Não equiparar o numeral isolado ao valor com qualificador.",
+      "root_cause": "MONEY inicia em R$ e não inclui qualificadores precedentes.",
+      "root_cause_confidence": "high",
+      "segment_id": "segment-0019",
+      "severity": "medium",
+      "start": 1839
+    },
+    {
+      "case_id": "M30-I05:segment-0018:discovery:classification",
+      "certainty": "supported_observation",
+      "claim_kind": "discovery",
+      "context_evidence": [
+        {
+          "end": 61,
+          "page": null,
+          "quote": "BNDES e FINEP recebem 19 propostas para FIP Conexões Startups",
+          "start": 0
+        },
+        {
+          "end": 1419,
+          "page": null,
+          "quote": "O Banco Nacional de Desenvolvimento Econômico e Social (BNDES) e a Financiadora de Estudos e Projetos (Finep) receberam 19 propostas na chamada pública para seleção do gestor do FIP Conexões Startups. O prazo para apresentação das propostas foi encerrado em 12 de agosto. A divulgação da classificação final está prevista para ocorrer até 23 de novembro de 2026.",
+          "start": 1057
+        },
+        {
+          "end": 1838,
+          "page": null,
+          "quote": "A iniciativa busca estruturar um fundo de investimento em participações voltado a startups em estágio inicial, especialmente aquelas que tenham recebido apoio de programas de fomento à inovação, subvenção ou aceleração realizados no país. O objetivo é ampliar a conversão dessas empresas em oportunidades aptas a receber investimentos de fundos de capital semente, venture capital e outros investidores institucionais.",
+          "start": 1420
+        },
+        {
+          "end": 2234,
+          "page": null,
+          "quote": "O FIP tem estimativa de mobilizar até R$ 250 milhões para investir em startups em fase inicial. A BNDESPAR, subsidiária integral do BNDES, comprometerá até R$ 100 milhões. Já a Finep, com recursos do Fundo Nacional de Desenvolvimento Científico e Tecnológico (FNDCT), irá comprometer R$ 50 milhões. Caberá ao gestor selecionado mobilizar outros investidores para complementar o capital do fundo.",
+          "start": 1839
+        },
+        {
+          "end": 868,
+          "page": null,
+          "quote": "Publicado em 17/08/2026 às 12:36",
+          "start": 836
+        }
+      ],
+      "document_id": "M30-I05",
+      "end": 1838,
+      "error_codes": [],
+      "expected_behavior": "Interpretar apenas acesso/estágio e público deste registro com o contexto completo; não confundir anúncio, gestor e candidatura startup.",
+      "expected_claim": "opportunity_signal",
+      "field_index": null,
+      "field_name": null,
+      "judgment": "supported",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "quote": "A iniciativa busca estruturar um fundo de investimento em participações voltado a startups em estágio inicial, especialmente aquelas que tenham recebido apoio de programas de fomento à inovação, subvenção ou aceleração realizados no país. O objetivo é ampliar a conversão dessas empresas em oportunidades aptas a receber investimentos de fundos de capital semente, venture capital e outros investidores institucionais.",
+      "rationale": "Selecionar gestor e receber 19 propostas de gestores não prova elegibilidade startup. Sinal de estruturação de fundo é sustentado.",
+      "root_cause": "Ramo manager precede confirmação no classify; público precisa continuar explícito.",
+      "root_cause_confidence": "medium",
+      "segment_id": "segment-0018",
+      "severity": "medium",
+      "start": 1420
+    }
+  ],
+  "status": "processed"
+}

@@ -1,0 +1,2500 @@
+{
+  "dataset_version": "m2.3c-synthetic-structured-v1",
+  "reference_date": "2026-07-01",
+  "synthetic_only": true,
+  "oracle": "Manually selected contract outcomes, never captured from integrate. Role/original preservation also checked against declared records.",
+  "contract_support": {
+    "expected_normalized_roles": [
+      "docs/v2/SEMANTIC_NORMALIZATION_M22A.md",
+      "docs/v2/SEMANTIC_NORMALIZATION_M22B.md"
+    ],
+    "expected_diagnostic_codes": [
+      "docs/v2/INTEGRATION_CONSISTENCY_M23B.md rules 1-7"
+    ],
+    "expected_validation_constraints": [
+      "README.md API e mudança de segurança",
+      "src/editalfinder_v2/domain/validation.py:137-162,244-330"
+    ],
+    "expected_identity_behavior": [
+      "docs/v2/IDENTITY_M21.md comparison decision precedence"
+    ],
+    "expected_evidence_scope": [
+      "README.md Identidade estrutural e semântica",
+      "src/editalfinder_v2/domain/semantic_common.py PreparedContext"
+    ],
+    "expected_audit_behavior": [
+      "docs/v2/INTEGRATION_AUDIT_REPROCESSING.md",
+      "src/editalfinder_v2/domain/integration_models.py IntegrationReport.verify_outputs"
+    ],
+    "expected_operational_status": [
+      "src/editalfinder_v2/domain/integration.py module limits contract"
+    ]
+  },
+  "cases": [
+    {
+      "case_id": "M23C-A-001",
+      "scenario_category": "A",
+      "records": [
+        {
+          "title": "Programa sintético de pesquisa tecnológica 2026",
+          "official_url": "https://example.org/programa/2026",
+          "official_identifier": "FUND-2026-01",
+          "publication_cycle": "2026",
+          "content_kind": "instrument",
+          "specific_instrument": true,
+          "actionable": true,
+          "no_deadline_reason": "a_definir",
+          "temporal_events": [
+            {
+              "role": "publication_date",
+              "value": "2026-03-12",
+              "format": "iso"
+            },
+            {
+              "role": "submission_opening_date",
+              "value": "2026-03-15",
+              "format": "iso"
+            },
+            {
+              "role": "submission_deadline",
+              "value": "2026-05-20",
+              "format": "iso"
+            }
+          ],
+          "financial_claims": [
+            {
+              "role": "program_budget",
+              "value": "BRL 10000000",
+              "format": "decimal"
+            },
+            {
+              "role": "proposal_maximum",
+              "value": "BRL 500000",
+              "format": "decimal"
+            }
+          ],
+          "geographic_scope": "brasil",
+          "geographic_locations": [
+            {
+              "role": "elegibilidade",
+              "country_code": "BR"
+            }
+          ],
+          "organization_claims": [
+            {
+              "role": "publishing",
+              "name": "Fundação Sintética de Pesquisa"
+            },
+            {
+              "role": "funding",
+              "name": "Fundação Sintética de Pesquisa"
+            }
+          ],
+          "taxonomy_claims": [
+            {
+              "role": "resource_type",
+              "value": "financiamento_nao_reembolsavel"
+            },
+            {
+              "role": "opportunity_type",
+              "value": "chamada_publica"
+            },
+            {
+              "role": "area",
+              "value": "tecnologia_e_inovacao"
+            }
+          ]
+        }
+      ],
+      "expected_candidates": [
+        {
+          "expected_normalized_roles": {
+            "financial": [
+              [
+                "program_budget",
+                [
+                  "10000000"
+                ],
+                "BRL"
+              ],
+              [
+                "proposal_maximum",
+                [
+                  "500000"
+                ],
+                "BRL"
+              ]
+            ],
+            "temporal": [
+              [
+                "publication_date",
+                "2026-03-12",
+                null,
+                null
+              ],
+              [
+                "submission_opening_date",
+                "2026-03-15",
+                null,
+                null
+              ],
+              [
+                "submission_deadline",
+                "2026-05-20",
+                null,
+                null
+              ]
+            ],
+            "geography": [
+              [
+                "elegibilidade",
+                "BR",
+                null,
+                null
+              ]
+            ],
+            "taxonomy": [
+              [
+                "resource_type",
+                "financiamento_nao_reembolsavel",
+                "mapped"
+              ],
+              [
+                "opportunity_type",
+                "chamada_publica",
+                "mapped"
+              ],
+              [
+                "area",
+                "tecnologia_e_inovacao",
+                "mapped"
+              ]
+            ],
+            "organizations": [
+              [
+                "publishing",
+                "Fundação Sintética de Pesquisa"
+              ],
+              [
+                "funding",
+                "Fundação Sintética de Pesquisa"
+              ]
+            ]
+          },
+          "expected_diagnostic_codes": [
+            "consistency_no_conflict_detected"
+          ],
+          "expected_validation_constraints": {
+            "decision": "REVIEW",
+            "promotable": false,
+            "temporal_status": "nao_determinada",
+            "required_issue_codes": [
+              "trusted_review_required",
+              "intent_rule_not_approved"
+            ]
+          },
+          "expected_evidence_scope": "candidate_record_only",
+          "expected_audit_behavior": "full_replay_and_retained_digest",
+          "expected_operational_status": "integrated"
+        }
+      ],
+      "expected_identity_behavior": []
+    },
+    {
+      "case_id": "M23C-B-001",
+      "scenario_category": "B",
+      "records": [
+        {
+          "title": "Crédito sintético para inovação empresarial",
+          "official_url": "https://example.org/credito/solicitar",
+          "official_identifier": "CRED-01",
+          "publication_cycle": "2026",
+          "content_kind": "instrument",
+          "specific_instrument": true,
+          "actionable": true,
+          "no_deadline_reason": "fluxo_continuo",
+          "credit_purpose": "Financiamento reembolsável de inovação",
+          "credit_principal": "BRL 2000000",
+          "application_information": "Solicitar análise pelo formulário oficial",
+          "guarantees": "Sujeitas à avaliação individual",
+          "organization_claims": [
+            {
+              "role": "funding",
+              "name": "Banco Sintético de Desenvolvimento"
+            },
+            {
+              "role": "publishing",
+              "name": "Banco Sintético de Desenvolvimento"
+            }
+          ],
+          "geographic_locations": [
+            {
+              "role": "elegibilidade",
+              "country_code": "BR"
+            }
+          ],
+          "taxonomy_claims": [
+            {
+              "role": "resource_type",
+              "value": "financiamento_reembolsavel"
+            }
+          ]
+        }
+      ],
+      "expected_candidates": [
+        {
+          "expected_normalized_roles": {
+            "financial": [],
+            "temporal": [],
+            "geography": [
+              [
+                "elegibilidade",
+                "BR",
+                null,
+                null
+              ]
+            ],
+            "taxonomy": [
+              [
+                "resource_type",
+                "financiamento_reembolsavel",
+                "mapped"
+              ]
+            ],
+            "organizations": [
+              [
+                "funding",
+                "Banco Sintético de Desenvolvimento"
+              ],
+              [
+                "publishing",
+                "Banco Sintético de Desenvolvimento"
+              ]
+            ]
+          },
+          "expected_diagnostic_codes": [
+            "consistency_credit_terms_unrepresented"
+          ],
+          "expected_validation_constraints": {
+            "decision": "REVIEW",
+            "promotable": false,
+            "temporal_status": "nao_determinada",
+            "required_issue_codes": [
+              "trusted_review_required",
+              "intent_rule_not_approved"
+            ]
+          },
+          "expected_evidence_scope": "candidate_record_only",
+          "expected_audit_behavior": "full_replay_and_retained_digest",
+          "expected_operational_status": "integrated"
+        }
+      ],
+      "expected_identity_behavior": []
+    },
+    {
+      "case_id": "M23C-C-001",
+      "scenario_category": "C",
+      "records": [
+        {
+          "title": "Programa sintético de capital para startups",
+          "official_url": "https://example.org/capital/inscricao",
+          "official_identifier": "INV-01",
+          "publication_cycle": "2026",
+          "content_kind": "instrument",
+          "specific_instrument": true,
+          "actionable": true,
+          "no_deadline_reason": "a_definir",
+          "investment_instrument": "Participação societária / venture capital",
+          "investment_ticket": "BRL 500000 to 2000000",
+          "eligible_applicants": "Startups tecnológicas com operação no Brasil",
+          "application_information": "Enviar apresentação para análise do fundo",
+          "organization_claims": [
+            {
+              "role": "funding",
+              "name": "Fundo Sintético de Capital"
+            }
+          ],
+          "geographic_locations": [
+            {
+              "role": "elegibilidade",
+              "country_code": "BR",
+              "state_code": "SP"
+            }
+          ],
+          "taxonomy_claims": [
+            {
+              "role": "resource_type",
+              "value": "venture_capital"
+            }
+          ]
+        }
+      ],
+      "expected_candidates": [
+        {
+          "expected_normalized_roles": {
+            "financial": [],
+            "temporal": [],
+            "geography": [
+              [
+                "elegibilidade",
+                "BR",
+                "SP",
+                null
+              ]
+            ],
+            "taxonomy": [
+              [
+                "resource_type",
+                null,
+                "unknown"
+              ]
+            ],
+            "organizations": [
+              [
+                "funding",
+                "Fundo Sintético de Capital"
+              ]
+            ]
+          },
+          "expected_diagnostic_codes": [
+            "consistency_taxonomy_unsupported"
+          ],
+          "expected_validation_constraints": {
+            "decision": "REVIEW",
+            "promotable": false,
+            "temporal_status": "nao_determinada",
+            "required_issue_codes": [
+              "trusted_review_required",
+              "intent_rule_not_approved"
+            ]
+          },
+          "expected_evidence_scope": "candidate_record_only",
+          "expected_audit_behavior": "full_replay_and_retained_digest",
+          "expected_operational_status": "integrated"
+        }
+      ],
+      "expected_identity_behavior": []
+    },
+    {
+      "case_id": "M23C-D-001",
+      "scenario_category": "D",
+      "records": [
+        {
+          "title": "Programa sintético combinado de inovação",
+          "official_url": "https://example.org/programa/2026",
+          "official_identifier": "FUND-2026-01",
+          "publication_cycle": "2026",
+          "content_kind": "instrument",
+          "specific_instrument": true,
+          "actionable": true,
+          "no_deadline_reason": "a_definir",
+          "grant_component": "BRL 500000 não reembolsáveis",
+          "credit_component": "BRL 2000000 reembolsáveis",
+          "financial_claims": [
+            {
+              "role": "proposal_maximum",
+              "value": "BRL 500000",
+              "format": "decimal"
+            }
+          ],
+          "credit_principal": "BRL 2000000",
+          "taxonomy_claims": [
+            {
+              "role": "resource_type",
+              "value": "financiamento_nao_reembolsavel"
+            },
+            {
+              "role": "resource_type",
+              "value": "credito"
+            }
+          ]
+        }
+      ],
+      "expected_candidates": [
+        {
+          "expected_normalized_roles": {
+            "financial": [
+              [
+                "proposal_maximum",
+                [
+                  "500000"
+                ],
+                "BRL"
+              ]
+            ],
+            "temporal": [],
+            "geography": [],
+            "taxonomy": [
+              [
+                "resource_type",
+                "financiamento_nao_reembolsavel",
+                "mapped"
+              ],
+              [
+                "resource_type",
+                "credito",
+                "mapped"
+              ]
+            ],
+            "organizations": []
+          },
+          "expected_diagnostic_codes": [
+            "consistency_hybrid_relationship_unverified",
+            "consistency_credit_terms_unrepresented"
+          ],
+          "expected_validation_constraints": {
+            "decision": "REVIEW",
+            "promotable": false,
+            "temporal_status": "nao_determinada",
+            "required_issue_codes": [
+              "trusted_review_required",
+              "intent_rule_not_approved"
+            ]
+          },
+          "expected_evidence_scope": "candidate_record_only",
+          "expected_audit_behavior": "full_replay_and_retained_digest",
+          "expected_operational_status": "integrated"
+        }
+      ],
+      "expected_identity_behavior": []
+    },
+    {
+      "case_id": "M23C-D-002",
+      "scenario_category": "D",
+      "records": [
+        {
+          "title": "Programa sintético de pesquisa tecnológica 2026",
+          "official_url": "https://example.org/programa/2026",
+          "official_identifier": "FUND-2026-01",
+          "publication_cycle": "2026",
+          "content_kind": "instrument",
+          "specific_instrument": true,
+          "actionable": true,
+          "no_deadline_reason": "a_definir",
+          "financial_claims": [
+            {
+              "role": "proposal_maximum",
+              "value": "BRL 100 to 10",
+              "format": "decimal"
+            }
+          ]
+        }
+      ],
+      "expected_candidates": [
+        {
+          "expected_normalized_roles": {
+            "financial": [
+              [
+                "proposal_maximum",
+                [
+                  "100",
+                  "10"
+                ],
+                "BRL"
+              ]
+            ],
+            "temporal": [],
+            "geography": [],
+            "taxonomy": [],
+            "organizations": []
+          },
+          "expected_diagnostic_codes": [
+            "consistency_financial_range_contradiction"
+          ],
+          "expected_validation_constraints": {
+            "decision": "REVIEW",
+            "promotable": false,
+            "temporal_status": "nao_determinada",
+            "required_issue_codes": [
+              "trusted_review_required",
+              "intent_rule_not_approved"
+            ]
+          },
+          "expected_evidence_scope": "candidate_record_only",
+          "expected_audit_behavior": "full_replay_and_retained_digest",
+          "expected_operational_status": "integrated"
+        }
+      ],
+      "expected_identity_behavior": []
+    },
+    {
+      "case_id": "M23C-D-003",
+      "scenario_category": "D",
+      "records": [
+        {
+          "title": "Programa sintético de pesquisa tecnológica 2026",
+          "official_url": "https://example.org/programa/2026",
+          "official_identifier": "FUND-2026-01",
+          "publication_cycle": "2026",
+          "content_kind": "instrument",
+          "specific_instrument": true,
+          "actionable": true,
+          "no_deadline_reason": "a_definir",
+          "financial_claims": [
+            {
+              "role": "proposal_minimum",
+              "value": "BRL 100",
+              "format": "decimal"
+            },
+            {
+              "role": "proposal_maximum",
+              "value": "BRL 10",
+              "format": "decimal"
+            }
+          ]
+        }
+      ],
+      "expected_candidates": [
+        {
+          "expected_normalized_roles": {
+            "financial": [
+              [
+                "proposal_minimum",
+                [
+                  "100"
+                ],
+                "BRL"
+              ],
+              [
+                "proposal_maximum",
+                [
+                  "10"
+                ],
+                "BRL"
+              ]
+            ],
+            "temporal": [],
+            "geography": [],
+            "taxonomy": [],
+            "organizations": []
+          },
+          "expected_diagnostic_codes": [
+            "consistency_financial_bounds_scope_unverified"
+          ],
+          "expected_validation_constraints": {
+            "decision": "REVIEW",
+            "promotable": false,
+            "temporal_status": "nao_determinada",
+            "required_issue_codes": [
+              "trusted_review_required",
+              "intent_rule_not_approved"
+            ]
+          },
+          "expected_evidence_scope": "candidate_record_only",
+          "expected_audit_behavior": "full_replay_and_retained_digest",
+          "expected_operational_status": "integrated"
+        }
+      ],
+      "expected_identity_behavior": []
+    },
+    {
+      "case_id": "M23C-E-001",
+      "scenario_category": "E",
+      "records": [
+        {
+          "title": "Programa sintético de pesquisa tecnológica 2026",
+          "official_url": "https://example.org/programa/2026",
+          "official_identifier": "FUND-2026-01",
+          "publication_cycle": "2026",
+          "content_kind": "instrument",
+          "specific_instrument": true,
+          "actionable": true,
+          "no_deadline_reason": "a_definir",
+          "temporal_events": [
+            {
+              "role": "publication_date",
+              "value": "2026-03-12",
+              "format": "iso"
+            },
+            {
+              "role": "submission_opening_date",
+              "value": "2026-03-15",
+              "format": "iso"
+            },
+            {
+              "role": "submission_deadline",
+              "value": "2026-05-20",
+              "format": "iso"
+            }
+          ],
+          "financial_claims": [
+            {
+              "role": "program_budget",
+              "value": "BRL 10000000",
+              "format": "decimal"
+            },
+            {
+              "role": "proposal_maximum",
+              "value": "BRL 500000",
+              "format": "decimal"
+            }
+          ],
+          "geographic_scope": "brasil",
+          "geographic_locations": [
+            {
+              "role": "elegibilidade",
+              "country_code": "BR"
+            }
+          ],
+          "organization_claims": [
+            {
+              "role": "publishing",
+              "name": "Fundação Sintética de Pesquisa"
+            },
+            {
+              "role": "funding",
+              "name": "Fundação Sintética de Pesquisa"
+            }
+          ],
+          "taxonomy_claims": [
+            {
+              "role": "resource_type",
+              "value": "financiamento_nao_reembolsavel"
+            },
+            {
+              "role": "opportunity_type",
+              "value": "chamada_publica"
+            },
+            {
+              "role": "area",
+              "value": "tecnologia_e_inovacao"
+            }
+          ]
+        },
+        {
+          "title": "Crédito sintético para inovação empresarial",
+          "official_url": "https://example.org/credito/solicitar",
+          "official_identifier": "CRED-01",
+          "publication_cycle": "2026",
+          "content_kind": "instrument",
+          "specific_instrument": true,
+          "actionable": true,
+          "no_deadline_reason": "fluxo_continuo",
+          "credit_purpose": "Financiamento reembolsável de inovação",
+          "credit_principal": "BRL 2000000",
+          "application_information": "Solicitar análise pelo formulário oficial",
+          "guarantees": "Sujeitas à avaliação individual",
+          "organization_claims": [
+            {
+              "role": "funding",
+              "name": "Banco Sintético de Desenvolvimento"
+            },
+            {
+              "role": "publishing",
+              "name": "Banco Sintético de Desenvolvimento"
+            }
+          ],
+          "geographic_locations": [
+            {
+              "role": "elegibilidade",
+              "country_code": "BR"
+            }
+          ],
+          "taxonomy_claims": [
+            {
+              "role": "resource_type",
+              "value": "financiamento_reembolsavel"
+            }
+          ]
+        },
+        {
+          "title": "Programa sintético de capital para startups",
+          "official_url": "https://example.org/capital/inscricao",
+          "official_identifier": "INV-01",
+          "publication_cycle": "2026",
+          "content_kind": "instrument",
+          "specific_instrument": true,
+          "actionable": true,
+          "no_deadline_reason": "a_definir",
+          "investment_instrument": "Participação societária / venture capital",
+          "investment_ticket": "BRL 500000 to 2000000",
+          "eligible_applicants": "Startups tecnológicas com operação no Brasil",
+          "application_information": "Enviar apresentação para análise do fundo",
+          "organization_claims": [
+            {
+              "role": "funding",
+              "name": "Fundo Sintético de Capital"
+            }
+          ],
+          "geographic_locations": [
+            {
+              "role": "elegibilidade",
+              "country_code": "BR",
+              "state_code": "SP"
+            }
+          ],
+          "taxonomy_claims": [
+            {
+              "role": "resource_type",
+              "value": "venture_capital"
+            }
+          ]
+        },
+        {
+          "title": "Notícia institucional sobre programa concluído",
+          "official_url": "https://example.org/noticias/concluido",
+          "official_identifier": "NEWS-01",
+          "publication_cycle": "2026",
+          "content_kind": "news",
+          "specific_instrument": false,
+          "actionable": false,
+          "no_deadline_reason": "a_definir",
+          "taxonomy_claims": [
+            {
+              "role": "resource_type",
+              "value": "bolsa"
+            }
+          ]
+        },
+        {
+          "title": "Resultado de seleção: candidatos aprovados",
+          "official_url": "https://example.org/noticias/concluido",
+          "official_identifier": "RESULT-01",
+          "publication_cycle": "2026",
+          "content_kind": "result",
+          "specific_instrument": false,
+          "actionable": false,
+          "no_deadline_reason": "a_definir",
+          "taxonomy_claims": [
+            {
+              "role": "resource_type",
+              "value": "bolsa"
+            }
+          ]
+        }
+      ],
+      "expected_candidates": [
+        {
+          "expected_normalized_roles": {
+            "financial": [
+              [
+                "program_budget",
+                [
+                  "10000000"
+                ],
+                "BRL"
+              ],
+              [
+                "proposal_maximum",
+                [
+                  "500000"
+                ],
+                "BRL"
+              ]
+            ],
+            "temporal": [
+              [
+                "publication_date",
+                "2026-03-12",
+                null,
+                null
+              ],
+              [
+                "submission_opening_date",
+                "2026-03-15",
+                null,
+                null
+              ],
+              [
+                "submission_deadline",
+                "2026-05-20",
+                null,
+                null
+              ]
+            ],
+            "geography": [
+              [
+                "elegibilidade",
+                "BR",
+                null,
+                null
+              ]
+            ],
+            "taxonomy": [
+              [
+                "resource_type",
+                "financiamento_nao_reembolsavel",
+                "mapped"
+              ],
+              [
+                "opportunity_type",
+                "chamada_publica",
+                "mapped"
+              ],
+              [
+                "area",
+                "tecnologia_e_inovacao",
+                "mapped"
+              ]
+            ],
+            "organizations": [
+              [
+                "publishing",
+                "Fundação Sintética de Pesquisa"
+              ],
+              [
+                "funding",
+                "Fundação Sintética de Pesquisa"
+              ]
+            ]
+          },
+          "expected_diagnostic_codes": [
+            "consistency_no_conflict_detected"
+          ],
+          "expected_validation_constraints": {
+            "decision": "REVIEW",
+            "promotable": false,
+            "temporal_status": "nao_determinada",
+            "required_issue_codes": [
+              "trusted_review_required",
+              "intent_rule_not_approved"
+            ]
+          },
+          "expected_evidence_scope": "candidate_record_only",
+          "expected_audit_behavior": "full_replay_and_retained_digest",
+          "expected_operational_status": "integrated"
+        },
+        {
+          "expected_normalized_roles": {
+            "financial": [],
+            "temporal": [],
+            "geography": [
+              [
+                "elegibilidade",
+                "BR",
+                null,
+                null
+              ]
+            ],
+            "taxonomy": [
+              [
+                "resource_type",
+                "financiamento_reembolsavel",
+                "mapped"
+              ]
+            ],
+            "organizations": [
+              [
+                "funding",
+                "Banco Sintético de Desenvolvimento"
+              ],
+              [
+                "publishing",
+                "Banco Sintético de Desenvolvimento"
+              ]
+            ]
+          },
+          "expected_diagnostic_codes": [
+            "consistency_credit_terms_unrepresented"
+          ],
+          "expected_validation_constraints": {
+            "decision": "REVIEW",
+            "promotable": false,
+            "temporal_status": "nao_determinada",
+            "required_issue_codes": [
+              "trusted_review_required",
+              "intent_rule_not_approved"
+            ]
+          },
+          "expected_evidence_scope": "candidate_record_only",
+          "expected_audit_behavior": "full_replay_and_retained_digest",
+          "expected_operational_status": "integrated"
+        },
+        {
+          "expected_normalized_roles": {
+            "financial": [],
+            "temporal": [],
+            "geography": [
+              [
+                "elegibilidade",
+                "BR",
+                "SP",
+                null
+              ]
+            ],
+            "taxonomy": [
+              [
+                "resource_type",
+                null,
+                "unknown"
+              ]
+            ],
+            "organizations": [
+              [
+                "funding",
+                "Fundo Sintético de Capital"
+              ]
+            ]
+          },
+          "expected_diagnostic_codes": [
+            "consistency_taxonomy_unsupported"
+          ],
+          "expected_validation_constraints": {
+            "decision": "REVIEW",
+            "promotable": false,
+            "temporal_status": "nao_determinada",
+            "required_issue_codes": [
+              "trusted_review_required",
+              "intent_rule_not_approved"
+            ]
+          },
+          "expected_evidence_scope": "candidate_record_only",
+          "expected_audit_behavior": "full_replay_and_retained_digest",
+          "expected_operational_status": "integrated"
+        },
+        {
+          "expected_normalized_roles": {
+            "financial": [],
+            "temporal": [],
+            "geography": [],
+            "taxonomy": [
+              [
+                "resource_type",
+                "bolsa",
+                "mapped"
+              ]
+            ],
+            "organizations": []
+          },
+          "expected_diagnostic_codes": [
+            "consistency_taxonomy_not_actionability"
+          ],
+          "expected_validation_constraints": {
+            "decision": "REVIEW",
+            "promotable": false,
+            "temporal_status": "nao_determinada",
+            "required_issue_codes": [
+              "trusted_review_required",
+              "intent_rule_not_approved"
+            ]
+          },
+          "expected_evidence_scope": "candidate_record_only",
+          "expected_audit_behavior": "full_replay_and_retained_digest",
+          "expected_operational_status": "integrated"
+        },
+        {
+          "expected_normalized_roles": {
+            "financial": [],
+            "temporal": [],
+            "geography": [],
+            "taxonomy": [
+              [
+                "resource_type",
+                "bolsa",
+                "mapped"
+              ]
+            ],
+            "organizations": []
+          },
+          "expected_diagnostic_codes": [
+            "consistency_taxonomy_not_actionability"
+          ],
+          "expected_validation_constraints": {
+            "decision": "REVIEW",
+            "promotable": false,
+            "temporal_status": "nao_determinada",
+            "required_issue_codes": [
+              "trusted_review_required",
+              "intent_rule_not_approved"
+            ]
+          },
+          "expected_evidence_scope": "candidate_record_only",
+          "expected_audit_behavior": "full_replay_and_retained_digest",
+          "expected_operational_status": "integrated"
+        }
+      ],
+      "expected_identity_behavior": []
+    },
+    {
+      "case_id": "M23C-F-001",
+      "scenario_category": "F",
+      "records": [
+        {
+          "title": "Programa concluído apoiou cinquenta projetos",
+          "official_url": "https://example.org/noticias/concluido",
+          "official_identifier": "NEG-1",
+          "publication_cycle": "2026",
+          "content_kind": "news",
+          "specific_instrument": false,
+          "actionable": false,
+          "no_deadline_reason": "a_definir",
+          "taxonomy_claims": [
+            {
+              "role": "resource_type",
+              "value": "bolsa"
+            }
+          ]
+        }
+      ],
+      "expected_candidates": [
+        {
+          "expected_normalized_roles": {
+            "financial": [],
+            "temporal": [],
+            "geography": [],
+            "taxonomy": [
+              [
+                "resource_type",
+                "bolsa",
+                "mapped"
+              ]
+            ],
+            "organizations": []
+          },
+          "expected_diagnostic_codes": [
+            "consistency_taxonomy_not_actionability"
+          ],
+          "expected_validation_constraints": {
+            "decision": "REVIEW",
+            "promotable": false,
+            "temporal_status": "nao_determinada",
+            "required_issue_codes": [
+              "trusted_review_required",
+              "intent_rule_not_approved"
+            ]
+          },
+          "expected_evidence_scope": "candidate_record_only",
+          "expected_audit_behavior": "full_replay_and_retained_digest",
+          "expected_operational_status": "integrated"
+        }
+      ],
+      "expected_identity_behavior": []
+    },
+    {
+      "case_id": "M23C-F-002",
+      "scenario_category": "F",
+      "records": [
+        {
+          "title": "Lista de candidatos aprovados",
+          "official_url": "https://example.org/noticias/concluido",
+          "official_identifier": "NEG-2",
+          "publication_cycle": "2026",
+          "content_kind": "result",
+          "specific_instrument": false,
+          "actionable": false,
+          "no_deadline_reason": "a_definir",
+          "taxonomy_claims": [
+            {
+              "role": "resource_type",
+              "value": "bolsa"
+            }
+          ]
+        }
+      ],
+      "expected_candidates": [
+        {
+          "expected_normalized_roles": {
+            "financial": [],
+            "temporal": [],
+            "geography": [],
+            "taxonomy": [
+              [
+                "resource_type",
+                "bolsa",
+                "mapped"
+              ]
+            ],
+            "organizations": []
+          },
+          "expected_diagnostic_codes": [
+            "consistency_taxonomy_not_actionability"
+          ],
+          "expected_validation_constraints": {
+            "decision": "REVIEW",
+            "promotable": false,
+            "temporal_status": "nao_determinada",
+            "required_issue_codes": [
+              "trusted_review_required",
+              "intent_rule_not_approved"
+            ]
+          },
+          "expected_evidence_scope": "candidate_record_only",
+          "expected_audit_behavior": "full_replay_and_retained_digest",
+          "expected_operational_status": "integrated"
+        }
+      ],
+      "expected_identity_behavior": []
+    },
+    {
+      "case_id": "M23C-F-003",
+      "scenario_category": "F",
+      "records": [
+        {
+          "title": "Comunicado: fundo investiu BRL 10000000",
+          "official_url": "https://example.org/noticias/concluido",
+          "official_identifier": "NEG-3",
+          "publication_cycle": "2026",
+          "content_kind": "news",
+          "specific_instrument": false,
+          "actionable": false,
+          "no_deadline_reason": "a_definir",
+          "taxonomy_claims": [
+            {
+              "role": "resource_type",
+              "value": "bolsa"
+            }
+          ]
+        }
+      ],
+      "expected_candidates": [
+        {
+          "expected_normalized_roles": {
+            "financial": [],
+            "temporal": [],
+            "geography": [],
+            "taxonomy": [
+              [
+                "resource_type",
+                "bolsa",
+                "mapped"
+              ]
+            ],
+            "organizations": []
+          },
+          "expected_diagnostic_codes": [
+            "consistency_taxonomy_not_actionability"
+          ],
+          "expected_validation_constraints": {
+            "decision": "REVIEW",
+            "promotable": false,
+            "temporal_status": "nao_determinada",
+            "required_issue_codes": [
+              "trusted_review_required",
+              "intent_rule_not_approved"
+            ]
+          },
+          "expected_evidence_scope": "candidate_record_only",
+          "expected_audit_behavior": "full_replay_and_retained_digest",
+          "expected_operational_status": "integrated"
+        }
+      ],
+      "expected_identity_behavior": []
+    },
+    {
+      "case_id": "M23C-F-005",
+      "scenario_category": "F",
+      "records": [
+        {
+          "title": "Produtos financeiros institucionais sem oferta específica",
+          "official_url": "https://example.org/noticias/concluido",
+          "official_identifier": "NEG-5",
+          "publication_cycle": "2026",
+          "content_kind": "institutional",
+          "specific_instrument": false,
+          "actionable": false,
+          "no_deadline_reason": "a_definir",
+          "taxonomy_claims": [
+            {
+              "role": "resource_type",
+              "value": "bolsa"
+            }
+          ]
+        }
+      ],
+      "expected_candidates": [
+        {
+          "expected_normalized_roles": {
+            "financial": [],
+            "temporal": [],
+            "geography": [],
+            "taxonomy": [
+              [
+                "resource_type",
+                "bolsa",
+                "mapped"
+              ]
+            ],
+            "organizations": []
+          },
+          "expected_diagnostic_codes": [
+            "consistency_no_conflict_detected"
+          ],
+          "expected_validation_constraints": {
+            "decision": "REVIEW",
+            "promotable": false,
+            "temporal_status": "nao_determinada",
+            "required_issue_codes": [
+              "trusted_review_required",
+              "intent_rule_not_approved"
+            ]
+          },
+          "expected_evidence_scope": "candidate_record_only",
+          "expected_audit_behavior": "full_replay_and_retained_digest",
+          "expected_operational_status": "integrated"
+        }
+      ],
+      "expected_identity_behavior": []
+    },
+    {
+      "case_id": "M23C-F-006",
+      "scenario_category": "F",
+      "records": [
+        {
+          "title": "Documento auxiliar faz referência a edital anterior",
+          "official_url": "https://example.org/noticias/concluido",
+          "official_identifier": "NEG-6",
+          "publication_cycle": "2026",
+          "content_kind": "auxiliary",
+          "specific_instrument": false,
+          "actionable": false,
+          "no_deadline_reason": "a_definir",
+          "taxonomy_claims": [
+            {
+              "role": "resource_type",
+              "value": "bolsa"
+            }
+          ]
+        }
+      ],
+      "expected_candidates": [
+        {
+          "expected_normalized_roles": {
+            "financial": [],
+            "temporal": [],
+            "geography": [],
+            "taxonomy": [
+              [
+                "resource_type",
+                "bolsa",
+                "mapped"
+              ]
+            ],
+            "organizations": []
+          },
+          "expected_diagnostic_codes": [
+            "consistency_no_conflict_detected"
+          ],
+          "expected_validation_constraints": {
+            "decision": "REVIEW",
+            "promotable": false,
+            "temporal_status": "nao_determinada",
+            "required_issue_codes": [
+              "trusted_review_required",
+              "intent_rule_not_approved"
+            ]
+          },
+          "expected_evidence_scope": "candidate_record_only",
+          "expected_audit_behavior": "full_replay_and_retained_digest",
+          "expected_operational_status": "integrated"
+        }
+      ],
+      "expected_identity_behavior": []
+    },
+    {
+      "case_id": "M23C-F-004",
+      "scenario_category": "F",
+      "records": [
+        {
+          "title": "Chamada histórica encerrada",
+          "official_url": "https://example.org/programa/2026",
+          "official_identifier": "FUND-2026-01",
+          "publication_cycle": "2026",
+          "content_kind": "instrument",
+          "specific_instrument": true,
+          "actionable": true,
+          "submission_deadline": "2025-04-10"
+        }
+      ],
+      "expected_candidates": [
+        {
+          "expected_normalized_roles": {
+            "financial": [],
+            "temporal": [],
+            "geography": [],
+            "taxonomy": [],
+            "organizations": []
+          },
+          "expected_diagnostic_codes": [
+            "consistency_no_conflict_detected"
+          ],
+          "expected_validation_constraints": {
+            "decision": "REVIEW",
+            "promotable": false,
+            "temporal_status": "encerrada",
+            "required_issue_codes": [
+              "trusted_review_required",
+              "intent_rule_not_approved"
+            ]
+          },
+          "expected_evidence_scope": "candidate_record_only",
+          "expected_audit_behavior": "full_replay_and_retained_digest",
+          "expected_operational_status": "integrated"
+        }
+      ],
+      "expected_identity_behavior": [],
+      "typed_date_fields": [
+        "submission_deadline"
+      ]
+    },
+    {
+      "case_id": "M23C-G-001",
+      "scenario_category": "G",
+      "records": [
+        {
+          "title": "Programa sintético de pesquisa tecnológica 2026",
+          "official_url": "https://example.org/programa/2026",
+          "official_identifier": "FUND-2026-01",
+          "publication_cycle": "2026",
+          "content_kind": "instrument",
+          "specific_instrument": true,
+          "actionable": true,
+          "no_deadline_reason": "a_definir",
+          "temporal_events": [
+            {
+              "role": "publication_date",
+              "value": "2026-03-12",
+              "format": "iso"
+            },
+            {
+              "role": "submission_opening_date",
+              "value": "2026-03-15",
+              "format": "iso"
+            },
+            {
+              "role": "preliminary_application_deadline",
+              "value": "2026-04-10",
+              "format": "iso"
+            },
+            {
+              "role": "full_application_deadline",
+              "value": "2026-05-20",
+              "format": "iso"
+            },
+            {
+              "role": "selection_result_date",
+              "value": "2026-06-15",
+              "format": "iso"
+            },
+            {
+              "role": "rectification_date",
+              "value": "2026-04-15",
+              "format": "iso"
+            },
+            {
+              "role": "full_application_deadline",
+              "value": "2026-05-25",
+              "format": "iso"
+            }
+          ]
+        }
+      ],
+      "expected_candidates": [
+        {
+          "expected_normalized_roles": {
+            "financial": [],
+            "temporal": [
+              [
+                "publication_date",
+                "2026-03-12",
+                null,
+                null
+              ],
+              [
+                "submission_opening_date",
+                "2026-03-15",
+                null,
+                null
+              ],
+              [
+                "preliminary_application_deadline",
+                "2026-04-10",
+                null,
+                null
+              ],
+              [
+                "full_application_deadline",
+                "2026-05-20",
+                null,
+                null
+              ],
+              [
+                "selection_result_date",
+                "2026-06-15",
+                null,
+                null
+              ],
+              [
+                "rectification_date",
+                "2026-04-15",
+                null,
+                null
+              ],
+              [
+                "full_application_deadline",
+                "2026-05-25",
+                null,
+                null
+              ]
+            ],
+            "geography": [],
+            "taxonomy": [],
+            "organizations": []
+          },
+          "expected_diagnostic_codes": [
+            "consistency_temporal_stage_unverified",
+            "consistency_rectification_precedence_unverified"
+          ],
+          "expected_validation_constraints": {
+            "decision": "REVIEW",
+            "promotable": false,
+            "temporal_status": "nao_determinada",
+            "required_issue_codes": [
+              "trusted_review_required",
+              "intent_rule_not_approved"
+            ]
+          },
+          "expected_evidence_scope": "candidate_record_only",
+          "expected_audit_behavior": "full_replay_and_retained_digest",
+          "expected_operational_status": "integrated"
+        }
+      ],
+      "expected_identity_behavior": []
+    },
+    {
+      "case_id": "M23C-G-002",
+      "scenario_category": "G",
+      "records": [
+        {
+          "title": "Programa sintético de pesquisa tecnológica 2026",
+          "official_url": "https://example.org/programa/2026",
+          "official_identifier": "FUND-2026-01",
+          "publication_cycle": "2026",
+          "content_kind": "instrument",
+          "specific_instrument": true,
+          "actionable": true,
+          "no_deadline_reason": "a_definir",
+          "temporal_events": [
+            {
+              "role": "submission_deadline",
+              "value": "2026-05-20T18:00:00-03:00",
+              "format": "iso"
+            }
+          ]
+        }
+      ],
+      "expected_candidates": [
+        {
+          "expected_normalized_roles": {
+            "financial": [],
+            "temporal": [
+              [
+                "submission_deadline",
+                null,
+                "-03:00",
+                "2026-05-20T21:00:00+00:00"
+              ]
+            ],
+            "geography": [],
+            "taxonomy": [],
+            "organizations": []
+          },
+          "expected_diagnostic_codes": [
+            "consistency_no_conflict_detected"
+          ],
+          "expected_validation_constraints": {
+            "decision": "REVIEW",
+            "promotable": false,
+            "temporal_status": "nao_determinada",
+            "required_issue_codes": [
+              "trusted_review_required",
+              "intent_rule_not_approved"
+            ]
+          },
+          "expected_evidence_scope": "candidate_record_only",
+          "expected_audit_behavior": "full_replay_and_retained_digest",
+          "expected_operational_status": "integrated"
+        }
+      ],
+      "expected_identity_behavior": []
+    },
+    {
+      "case_id": "M23C-G-003",
+      "scenario_category": "G",
+      "records": [
+        {
+          "title": "Programa sintético de pesquisa tecnológica 2026",
+          "official_url": "https://example.org/programa/2026",
+          "official_identifier": "FUND-2026-01",
+          "publication_cycle": "2026",
+          "content_kind": "instrument",
+          "specific_instrument": true,
+          "actionable": true,
+          "no_deadline_reason": "a_definir",
+          "temporal_events": [
+            {
+              "role": "submission_deadline",
+              "value": "2026-05-20T18:00:00-00:00",
+              "format": "iso"
+            }
+          ]
+        }
+      ],
+      "expected_candidates": [
+        {
+          "expected_normalized_roles": {
+            "financial": [],
+            "temporal": [
+              [
+                "submission_deadline",
+                null,
+                "-00:00",
+                null
+              ]
+            ],
+            "geography": [],
+            "taxonomy": [],
+            "organizations": []
+          },
+          "expected_diagnostic_codes": [
+            "consistency_no_conflict_detected"
+          ],
+          "expected_validation_constraints": {
+            "decision": "REVIEW",
+            "promotable": false,
+            "temporal_status": "nao_determinada",
+            "required_issue_codes": [
+              "trusted_review_required",
+              "intent_rule_not_approved"
+            ]
+          },
+          "expected_evidence_scope": "candidate_record_only",
+          "expected_audit_behavior": "full_replay_and_retained_digest",
+          "expected_operational_status": "integrated"
+        }
+      ],
+      "expected_identity_behavior": []
+    },
+    {
+      "case_id": "M23C-G-004",
+      "scenario_category": "G",
+      "records": [
+        {
+          "title": "Programa sintético de pesquisa tecnológica 2026",
+          "official_url": "https://example.org/programa/2026",
+          "official_identifier": "FUND-2026-01",
+          "publication_cycle": "2026",
+          "content_kind": "instrument",
+          "specific_instrument": true,
+          "actionable": true,
+          "no_deadline_reason": "a_definir",
+          "temporal_events": [
+            {
+              "role": "submission_deadline",
+              "value": "2026-05-20T18:00:00",
+              "format": "iso"
+            }
+          ]
+        }
+      ],
+      "expected_candidates": [
+        {
+          "expected_normalized_roles": {
+            "financial": [],
+            "temporal": [
+              [
+                "submission_deadline",
+                null,
+                null,
+                null
+              ]
+            ],
+            "geography": [],
+            "taxonomy": [],
+            "organizations": []
+          },
+          "expected_diagnostic_codes": [
+            "consistency_no_conflict_detected"
+          ],
+          "expected_validation_constraints": {
+            "decision": "REVIEW",
+            "promotable": false,
+            "temporal_status": "nao_determinada",
+            "required_issue_codes": [
+              "trusted_review_required",
+              "intent_rule_not_approved"
+            ]
+          },
+          "expected_evidence_scope": "candidate_record_only",
+          "expected_audit_behavior": "full_replay_and_retained_digest",
+          "expected_operational_status": "integrated"
+        }
+      ],
+      "expected_identity_behavior": []
+    },
+    {
+      "case_id": "M23C-H-001",
+      "scenario_category": "H",
+      "records": [
+        {
+          "title": "Programa sintético de pesquisa tecnológica 2026",
+          "official_url": "https://example.org/programa/2026",
+          "official_identifier": "FUND-2026-01",
+          "publication_cycle": "2026",
+          "content_kind": "instrument",
+          "specific_instrument": true,
+          "actionable": true,
+          "no_deadline_reason": "a_definir",
+          "geographic_locations": [
+            {
+              "role": "elegibilidade",
+              "country_code": "BR",
+              "state_code": "RS",
+              "municipality": "Município Sintético"
+            },
+            {
+              "role": "elegibilidade",
+              "country_code": "PT"
+            },
+            {
+              "role": "elegibilidade",
+              "country_code": "US"
+            },
+            {
+              "role": "execucao",
+              "country_code": "DE"
+            },
+            {
+              "role": "origem",
+              "country_code": "GB"
+            },
+            {
+              "role": "organizacao_responsavel",
+              "country_code": "FR"
+            }
+          ]
+        }
+      ],
+      "expected_candidates": [
+        {
+          "expected_normalized_roles": {
+            "financial": [],
+            "temporal": [],
+            "geography": [
+              [
+                "elegibilidade",
+                "BR",
+                "RS",
+                "Município Sintético"
+              ],
+              [
+                "elegibilidade",
+                "PT",
+                null,
+                null
+              ],
+              [
+                "elegibilidade",
+                "US",
+                null,
+                null
+              ],
+              [
+                "execucao",
+                "DE",
+                null,
+                null
+              ],
+              [
+                "origem",
+                "GB",
+                null,
+                null
+              ],
+              [
+                "organizacao_responsavel",
+                "FR",
+                null,
+                null
+              ]
+            ],
+            "taxonomy": [],
+            "organizations": []
+          },
+          "expected_diagnostic_codes": [
+            "consistency_no_conflict_detected"
+          ],
+          "expected_validation_constraints": {
+            "decision": "REVIEW",
+            "promotable": false,
+            "temporal_status": "nao_determinada",
+            "required_issue_codes": [
+              "trusted_review_required",
+              "intent_rule_not_approved"
+            ]
+          },
+          "expected_evidence_scope": "candidate_record_only",
+          "expected_audit_behavior": "full_replay_and_retained_digest",
+          "expected_operational_status": "integrated"
+        }
+      ],
+      "expected_identity_behavior": []
+    },
+    {
+      "case_id": "M23C-H-002",
+      "scenario_category": "H",
+      "records": [
+        {
+          "title": "Programa sintético de pesquisa tecnológica 2026",
+          "official_url": "https://example.org/programa/2026",
+          "official_identifier": "FUND-2026-01",
+          "publication_cycle": "2026",
+          "content_kind": "instrument",
+          "specific_instrument": true,
+          "actionable": true,
+          "no_deadline_reason": "a_definir",
+          "geographic_locations": [
+            {
+              "role": "origem",
+              "country_code": "US"
+            }
+          ]
+        }
+      ],
+      "expected_candidates": [
+        {
+          "expected_normalized_roles": {
+            "financial": [],
+            "temporal": [],
+            "geography": [
+              [
+                "origem",
+                "US",
+                null,
+                null
+              ]
+            ],
+            "taxonomy": [],
+            "organizations": []
+          },
+          "expected_diagnostic_codes": [
+            "consistency_no_conflict_detected"
+          ],
+          "expected_validation_constraints": {
+            "decision": "REVIEW",
+            "promotable": false,
+            "temporal_status": "nao_determinada",
+            "required_issue_codes": [
+              "trusted_review_required",
+              "intent_rule_not_approved"
+            ]
+          },
+          "expected_evidence_scope": "candidate_record_only",
+          "expected_audit_behavior": "full_replay_and_retained_digest",
+          "expected_operational_status": "integrated"
+        }
+      ],
+      "expected_identity_behavior": []
+    },
+    {
+      "case_id": "M23C-I-001",
+      "scenario_category": "I",
+      "records": [
+        {
+          "title": "Programa sintético de pesquisa tecnológica 2026",
+          "official_url": "https://example.org/programa/2026",
+          "official_identifier": "FUND-2026-01",
+          "publication_cycle": "2026",
+          "content_kind": "instrument",
+          "specific_instrument": true,
+          "actionable": true,
+          "no_deadline_reason": "a_definir"
+        },
+        {
+          "title": "Programa sintético de pesquisa tecnológica 2026",
+          "official_url": "https://EXAMPLE.org:443/programa/2026",
+          "official_identifier": "FUND-2026-01",
+          "publication_cycle": "2026",
+          "content_kind": "instrument",
+          "specific_instrument": true,
+          "actionable": true,
+          "no_deadline_reason": "a_definir"
+        }
+      ],
+      "expected_candidates": [
+        {
+          "expected_normalized_roles": {
+            "financial": [],
+            "temporal": [],
+            "geography": [],
+            "taxonomy": [],
+            "organizations": []
+          },
+          "expected_diagnostic_codes": [
+            "consistency_no_conflict_detected"
+          ],
+          "expected_validation_constraints": {
+            "decision": "REVIEW",
+            "promotable": false,
+            "temporal_status": "nao_determinada",
+            "required_issue_codes": [
+              "trusted_review_required",
+              "intent_rule_not_approved"
+            ]
+          },
+          "expected_evidence_scope": "candidate_record_only",
+          "expected_audit_behavior": "full_replay_and_retained_digest",
+          "expected_operational_status": "integrated"
+        },
+        {
+          "expected_normalized_roles": {
+            "financial": [],
+            "temporal": [],
+            "geography": [],
+            "taxonomy": [],
+            "organizations": []
+          },
+          "expected_diagnostic_codes": [
+            "consistency_no_conflict_detected"
+          ],
+          "expected_validation_constraints": {
+            "decision": "REVIEW",
+            "promotable": false,
+            "temporal_status": "nao_determinada",
+            "required_issue_codes": [
+              "trusted_review_required",
+              "intent_rule_not_approved"
+            ]
+          },
+          "expected_evidence_scope": "candidate_record_only",
+          "expected_audit_behavior": "full_replay_and_retained_digest",
+          "expected_operational_status": "integrated"
+        }
+      ],
+      "expected_identity_behavior": [
+        {
+          "decision": "exact_match",
+          "codes": [
+            "url_is_not_opportunity_identity",
+            "official_identifier_cycle_match"
+          ]
+        },
+        {
+          "decision": "exact_match",
+          "codes": [
+            "url_is_not_opportunity_identity",
+            "official_identifier_cycle_match"
+          ]
+        }
+      ],
+      "identity_comparisons": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "include_url_identifiers": true
+    },
+    {
+      "case_id": "M23C-I-002",
+      "scenario_category": "I",
+      "records": [
+        {
+          "title": "Programa sintético de pesquisa tecnológica 2026",
+          "official_url": "https://example.org/programa/2026",
+          "official_identifier": "FUND-2026-01",
+          "publication_cycle": "2026",
+          "content_kind": "instrument",
+          "specific_instrument": true,
+          "actionable": true,
+          "no_deadline_reason": "a_definir"
+        },
+        {
+          "title": "Programa sintético de pesquisa tecnológica 2026",
+          "official_url": "https://example.org/other",
+          "official_identifier": "FUND-OTHER",
+          "publication_cycle": "2026",
+          "content_kind": "instrument",
+          "specific_instrument": true,
+          "actionable": true,
+          "no_deadline_reason": "a_definir"
+        }
+      ],
+      "expected_candidates": [
+        {
+          "expected_normalized_roles": {
+            "financial": [],
+            "temporal": [],
+            "geography": [],
+            "taxonomy": [],
+            "organizations": []
+          },
+          "expected_diagnostic_codes": [
+            "consistency_no_conflict_detected"
+          ],
+          "expected_validation_constraints": {
+            "decision": "REVIEW",
+            "promotable": false,
+            "temporal_status": "nao_determinada",
+            "required_issue_codes": [
+              "trusted_review_required",
+              "intent_rule_not_approved"
+            ]
+          },
+          "expected_evidence_scope": "candidate_record_only",
+          "expected_audit_behavior": "full_replay_and_retained_digest",
+          "expected_operational_status": "integrated"
+        },
+        {
+          "expected_normalized_roles": {
+            "financial": [],
+            "temporal": [],
+            "geography": [],
+            "taxonomy": [],
+            "organizations": []
+          },
+          "expected_diagnostic_codes": [
+            "consistency_no_conflict_detected"
+          ],
+          "expected_validation_constraints": {
+            "decision": "REVIEW",
+            "promotable": false,
+            "temporal_status": "nao_determinada",
+            "required_issue_codes": [
+              "trusted_review_required",
+              "intent_rule_not_approved"
+            ]
+          },
+          "expected_evidence_scope": "candidate_record_only",
+          "expected_audit_behavior": "full_replay_and_retained_digest",
+          "expected_operational_status": "integrated"
+        }
+      ],
+      "expected_identity_behavior": [
+        {
+          "decision": "no_supported_match",
+          "codes": [
+            "official_identifiers_differ"
+          ]
+        },
+        {
+          "decision": "no_supported_match",
+          "codes": [
+            "official_identifiers_differ"
+          ]
+        }
+      ],
+      "identity_comparisons": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "case_id": "M23C-I-003",
+      "scenario_category": "I",
+      "records": [
+        {
+          "title": "Programa sintético de pesquisa tecnológica 2026",
+          "official_url": "https://example.org/programa/2026",
+          "official_identifier": "FUND-2026-01",
+          "publication_cycle": "2026",
+          "content_kind": "instrument",
+          "specific_instrument": true,
+          "actionable": true,
+          "no_deadline_reason": "a_definir"
+        },
+        {
+          "title": "Programa sintético de pesquisa tecnológica 2026",
+          "official_url": "https://example.org/programa/2026",
+          "official_identifier": "FUND-2026-01",
+          "publication_cycle": "2026",
+          "content_kind": "instrument",
+          "specific_instrument": true,
+          "actionable": true,
+          "no_deadline_reason": "a_definir"
+        }
+      ],
+      "expected_candidates": [
+        {
+          "expected_normalized_roles": {
+            "financial": [],
+            "temporal": [],
+            "geography": [],
+            "taxonomy": [],
+            "organizations": []
+          },
+          "expected_diagnostic_codes": [
+            "consistency_no_conflict_detected"
+          ],
+          "expected_validation_constraints": {
+            "decision": "REVIEW",
+            "promotable": false,
+            "temporal_status": "nao_determinada",
+            "required_issue_codes": [
+              "trusted_review_required",
+              "intent_rule_not_approved"
+            ]
+          },
+          "expected_evidence_scope": "candidate_record_only",
+          "expected_audit_behavior": "full_replay_and_retained_digest",
+          "expected_operational_status": "integrated"
+        },
+        {
+          "expected_normalized_roles": {
+            "financial": [],
+            "temporal": [],
+            "geography": [],
+            "taxonomy": [],
+            "organizations": []
+          },
+          "expected_diagnostic_codes": [
+            "consistency_no_conflict_detected"
+          ],
+          "expected_validation_constraints": {
+            "decision": "REVIEW",
+            "promotable": false,
+            "temporal_status": "nao_determinada",
+            "required_issue_codes": [
+              "trusted_review_required",
+              "intent_rule_not_approved"
+            ]
+          },
+          "expected_evidence_scope": "candidate_record_only",
+          "expected_audit_behavior": "full_replay_and_retained_digest",
+          "expected_operational_status": "integrated"
+        }
+      ],
+      "expected_identity_behavior": [
+        {
+          "decision": "no_supported_match",
+          "codes": [
+            "namespace_scope_differs"
+          ]
+        },
+        {
+          "decision": "no_supported_match",
+          "codes": [
+            "namespace_scope_differs"
+          ]
+        }
+      ],
+      "identity_comparisons": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "right_identifier_namespace": "different-authority"
+    },
+    {
+      "case_id": "M23C-I-004",
+      "scenario_category": "I",
+      "records": [
+        {
+          "title": "Programa sintético de pesquisa tecnológica 2026",
+          "official_url": "https://example.org/programa/2026",
+          "official_identifier": "FUND-2026-01",
+          "publication_cycle": "2026",
+          "content_kind": "instrument",
+          "specific_instrument": true,
+          "actionable": true,
+          "no_deadline_reason": "a_definir"
+        },
+        {
+          "title": "Programa sintético de pesquisa tecnológica 2026",
+          "official_url": "https://example.org/programa/2026",
+          "official_identifier": "FUND-2026-01",
+          "publication_cycle": "2027",
+          "content_kind": "instrument",
+          "specific_instrument": true,
+          "actionable": true,
+          "no_deadline_reason": "a_definir"
+        }
+      ],
+      "expected_candidates": [
+        {
+          "expected_normalized_roles": {
+            "financial": [],
+            "temporal": [],
+            "geography": [],
+            "taxonomy": [],
+            "organizations": []
+          },
+          "expected_diagnostic_codes": [
+            "consistency_no_conflict_detected"
+          ],
+          "expected_validation_constraints": {
+            "decision": "REVIEW",
+            "promotable": false,
+            "temporal_status": "nao_determinada",
+            "required_issue_codes": [
+              "trusted_review_required",
+              "intent_rule_not_approved"
+            ]
+          },
+          "expected_evidence_scope": "candidate_record_only",
+          "expected_audit_behavior": "full_replay_and_retained_digest",
+          "expected_operational_status": "integrated"
+        },
+        {
+          "expected_normalized_roles": {
+            "financial": [],
+            "temporal": [],
+            "geography": [],
+            "taxonomy": [],
+            "organizations": []
+          },
+          "expected_diagnostic_codes": [
+            "consistency_no_conflict_detected"
+          ],
+          "expected_validation_constraints": {
+            "decision": "REVIEW",
+            "promotable": false,
+            "temporal_status": "nao_determinada",
+            "required_issue_codes": [
+              "trusted_review_required",
+              "intent_rule_not_approved"
+            ]
+          },
+          "expected_evidence_scope": "candidate_record_only",
+          "expected_audit_behavior": "full_replay_and_retained_digest",
+          "expected_operational_status": "integrated"
+        }
+      ],
+      "expected_identity_behavior": [
+        {
+          "decision": "distinct_cycles",
+          "codes": [
+            "url_is_not_opportunity_identity",
+            "distinct_publication_cycles",
+            "contextual_key_reused_across_cycles"
+          ]
+        },
+        {
+          "decision": "distinct_cycles",
+          "codes": [
+            "url_is_not_opportunity_identity",
+            "distinct_publication_cycles",
+            "contextual_key_reused_across_cycles"
+          ]
+        }
+      ],
+      "identity_comparisons": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "include_url_identifiers": true
+    },
+    {
+      "case_id": "M23C-I-005",
+      "scenario_category": "I",
+      "records": [
+        {
+          "title": "Programa sintético de pesquisa tecnológica 2026",
+          "official_url": "https://example.org/programa/2026",
+          "official_identifier": "FUND-2026-01",
+          "publication_cycle": "2026",
+          "content_kind": "instrument",
+          "specific_instrument": true,
+          "actionable": true,
+          "no_deadline_reason": "a_definir"
+        },
+        {
+          "title": "Programa sintético de pesquisa tecnológica 2026",
+          "official_url": "https://example.org/annex",
+          "official_identifier": "FUND-2026-01",
+          "publication_cycle": "2026",
+          "content_kind": "instrument",
+          "specific_instrument": true,
+          "actionable": true,
+          "no_deadline_reason": "a_definir"
+        }
+      ],
+      "expected_candidates": [
+        {
+          "expected_normalized_roles": {
+            "financial": [],
+            "temporal": [],
+            "geography": [],
+            "taxonomy": [],
+            "organizations": []
+          },
+          "expected_diagnostic_codes": [
+            "consistency_no_conflict_detected"
+          ],
+          "expected_validation_constraints": {
+            "decision": "REVIEW",
+            "promotable": false,
+            "temporal_status": "nao_determinada",
+            "required_issue_codes": [
+              "trusted_review_required",
+              "intent_rule_not_approved"
+            ]
+          },
+          "expected_evidence_scope": "candidate_record_only",
+          "expected_audit_behavior": "full_replay_and_retained_digest",
+          "expected_operational_status": "integrated"
+        },
+        {
+          "expected_normalized_roles": {
+            "financial": [],
+            "temporal": [],
+            "geography": [],
+            "taxonomy": [],
+            "organizations": []
+          },
+          "expected_diagnostic_codes": [
+            "consistency_no_conflict_detected"
+          ],
+          "expected_validation_constraints": {
+            "decision": "REVIEW",
+            "promotable": false,
+            "temporal_status": "nao_determinada",
+            "required_issue_codes": [
+              "trusted_review_required",
+              "intent_rule_not_approved"
+            ]
+          },
+          "expected_evidence_scope": "candidate_record_only",
+          "expected_audit_behavior": "full_replay_and_retained_digest",
+          "expected_operational_status": "integrated"
+        }
+      ],
+      "expected_identity_behavior": [
+        {
+          "decision": "exact_match",
+          "codes": [
+            "official_identifier_cycle_match"
+          ]
+        },
+        {
+          "decision": "exact_match",
+          "codes": [
+            "official_identifier_cycle_match"
+          ]
+        }
+      ],
+      "identity_comparisons": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "case_id": "M23C-I-006",
+      "scenario_category": "I",
+      "records": [
+        {
+          "title": "Programa sintético de pesquisa tecnológica 2026",
+          "official_url": "https://example.org/programa/2026",
+          "official_identifier": "FUND-2026-01",
+          "publication_cycle": "2026",
+          "content_kind": "instrument",
+          "specific_instrument": true,
+          "actionable": true,
+          "no_deadline_reason": "a_definir"
+        },
+        {
+          "title": "Programa sintético de pesquisa tecnológica 2026",
+          "official_url": "https://example.org/programa/2026",
+          "official_identifier": "FUND-2026-01",
+          "publication_cycle": "2026",
+          "content_kind": "instrument",
+          "specific_instrument": true,
+          "actionable": true,
+          "no_deadline_reason": "a_definir"
+        }
+      ],
+      "expected_candidates": [
+        {
+          "expected_normalized_roles": {
+            "financial": [],
+            "temporal": [],
+            "geography": [],
+            "taxonomy": [],
+            "organizations": []
+          },
+          "expected_diagnostic_codes": [
+            "consistency_no_conflict_detected"
+          ],
+          "expected_validation_constraints": {
+            "decision": "REVIEW",
+            "promotable": false,
+            "temporal_status": "nao_determinada",
+            "required_issue_codes": [
+              "trusted_review_required",
+              "intent_rule_not_approved"
+            ]
+          },
+          "expected_evidence_scope": "candidate_record_only",
+          "expected_audit_behavior": "full_replay_and_retained_digest",
+          "expected_operational_status": "integrated"
+        },
+        {
+          "expected_normalized_roles": {
+            "financial": [],
+            "temporal": [],
+            "geography": [],
+            "taxonomy": [],
+            "organizations": []
+          },
+          "expected_diagnostic_codes": [
+            "consistency_no_conflict_detected"
+          ],
+          "expected_validation_constraints": {
+            "decision": "REVIEW",
+            "promotable": false,
+            "temporal_status": "nao_determinada",
+            "required_issue_codes": [
+              "trusted_review_required",
+              "intent_rule_not_approved"
+            ]
+          },
+          "expected_evidence_scope": "candidate_record_only",
+          "expected_audit_behavior": "full_replay_and_retained_digest",
+          "expected_operational_status": "integrated"
+        }
+      ],
+      "expected_identity_behavior": [
+        {
+          "decision": "insufficient_information",
+          "codes": [
+            "official_identifier_missing"
+          ]
+        },
+        {
+          "decision": "insufficient_information",
+          "codes": [
+            "official_identifier_missing"
+          ]
+        }
+      ],
+      "identity_comparisons": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "omit_identifiers": true
+    },
+    {
+      "case_id": "M23C-I-007",
+      "scenario_category": "I",
+      "records": [
+        {
+          "title": "Programa sintético de pesquisa tecnológica 2026",
+          "official_url": "https://example.org/programa/2026",
+          "official_identifier": "FUND-2026-01",
+          "publication_cycle": "2026",
+          "content_kind": "instrument",
+          "specific_instrument": true,
+          "actionable": true,
+          "no_deadline_reason": "a_definir"
+        },
+        {
+          "title": "Programa sintético de pesquisa tecnológica 2026",
+          "official_url": "https://example.org/programa/2026",
+          "official_identifier": "FUND-2026-01",
+          "publication_cycle": "2026",
+          "content_kind": "instrument",
+          "specific_instrument": true,
+          "actionable": true,
+          "no_deadline_reason": "a_definir"
+        }
+      ],
+      "expected_candidates": [
+        {
+          "expected_normalized_roles": {
+            "financial": [],
+            "temporal": [],
+            "geography": [],
+            "taxonomy": [],
+            "organizations": []
+          },
+          "expected_diagnostic_codes": [
+            "consistency_no_conflict_detected"
+          ],
+          "expected_validation_constraints": {
+            "decision": "REVIEW",
+            "promotable": false,
+            "temporal_status": "nao_determinada",
+            "required_issue_codes": [
+              "trusted_review_required",
+              "intent_rule_not_approved"
+            ]
+          },
+          "expected_evidence_scope": "candidate_record_only",
+          "expected_audit_behavior": "full_replay_and_retained_digest",
+          "expected_operational_status": "integrated"
+        },
+        {
+          "expected_normalized_roles": {
+            "financial": [],
+            "temporal": [],
+            "geography": [],
+            "taxonomy": [],
+            "organizations": []
+          },
+          "expected_diagnostic_codes": [
+            "consistency_no_conflict_detected"
+          ],
+          "expected_validation_constraints": {
+            "decision": "REVIEW",
+            "promotable": false,
+            "temporal_status": "nao_determinada",
+            "required_issue_codes": [
+              "trusted_review_required",
+              "intent_rule_not_approved"
+            ]
+          },
+          "expected_evidence_scope": "candidate_record_only",
+          "expected_audit_behavior": "full_replay_and_retained_digest",
+          "expected_operational_status": "integrated"
+        }
+      ],
+      "expected_identity_behavior": [
+        {
+          "decision": "insufficient_information",
+          "codes": [
+            "identity_evidence_invalid"
+          ]
+        },
+        {
+          "decision": "insufficient_information",
+          "codes": [
+            "identity_evidence_invalid"
+          ]
+        }
+      ],
+      "identity_comparisons": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "foreign_identity_proof": true
+    }
+  ]
+}

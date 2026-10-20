@@ -1,0 +1,2460 @@
+{
+  "diagnostics": [
+    "passive_not_rendered_DOM",
+    "unfrozen_attachments_unavailable"
+  ],
+  "document_id": "M30-N04",
+  "error_cases": [
+    {
+      "case_id": "M30-N04-R1:segmentation",
+      "certainty": "supported_observation",
+      "dimension": "structural",
+      "document_id": "M30-N04",
+      "error_codes": [
+        "SEGMENTATION_OVER"
+      ],
+      "expected_behavior": "A meaningful record should retain its own associated context; whitespace-only boundary differences are not semantic defects.",
+      "next_action": "Inspect semantic usefulness of boundaries before changing segmentation.",
+      "observed": {
+        "coverage": {
+          "denominator": 3215,
+          "numerator": 3190,
+          "value": 0.9922239502332815
+        },
+        "fragmentation": 12
+      },
+      "record_id": "M30-N04-R1",
+      "reference": {
+        "discovery_label": "unrelated_or_non_actionable",
+        "modality": "fomento",
+        "opportunity_label": "not_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "not_applicable"
+      },
+      "review_status": "provisional",
+      "root_cause": "Structure-derived units differ from provisional annotated record spans.",
+      "root_cause_confidence": "high",
+      "segment_id": "segment-0006",
+      "severity": "medium",
+      "supporting_evidence": {
+        "edges": [
+          {
+            "end": 2885,
+            "exact": false,
+            "intersection": 107,
+            "intersection_end": 2885,
+            "intersection_start": 2778,
+            "iou": 0.03328149300155521,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.03328149300155521,
+            "segment_id": "segment-0000",
+            "start": 2778
+          },
+          {
+            "end": 2897,
+            "exact": false,
+            "intersection": 11,
+            "intersection_end": 2897,
+            "intersection_start": 2886,
+            "iou": 0.003421461897356143,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.003421461897356143,
+            "segment_id": "segment-0001",
+            "start": 2886
+          },
+          {
+            "end": 2912,
+            "exact": false,
+            "intersection": 14,
+            "intersection_end": 2912,
+            "intersection_start": 2898,
+            "iou": 0.004354587869362364,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.004354587869362364,
+            "segment_id": "segment-0002",
+            "start": 2898
+          },
+          {
+            "end": 2919,
+            "exact": false,
+            "intersection": 6,
+            "intersection_end": 2919,
+            "intersection_start": 2913,
+            "iou": 0.0018662519440124418,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.0018662519440124418,
+            "segment_id": "segment-0003",
+            "start": 2913
+          },
+          {
+            "end": 2925,
+            "exact": false,
+            "intersection": 5,
+            "intersection_end": 2925,
+            "intersection_start": 2920,
+            "iou": 0.0015552099533437014,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.0015552099533437014,
+            "segment_id": "segment-0004",
+            "start": 2920
+          },
+          {
+            "end": 3054,
+            "exact": false,
+            "intersection": 114,
+            "intersection_end": 3054,
+            "intersection_start": 2940,
+            "iou": 0.03545878693623639,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.03545878693623639,
+            "segment_id": "segment-0005",
+            "start": 2940
+          },
+          {
+            "end": 3982,
+            "exact": false,
+            "intersection": 927,
+            "intersection_end": 3982,
+            "intersection_start": 3055,
+            "iou": 0.28833592534992225,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.28833592534992225,
+            "segment_id": "segment-0006",
+            "start": 3055
+          },
+          {
+            "end": 4407,
+            "exact": false,
+            "intersection": 424,
+            "intersection_end": 4407,
+            "intersection_start": 3983,
+            "iou": 0.13188180404354588,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.13188180404354588,
+            "segment_id": "segment-0007",
+            "start": 3983
+          },
+          {
+            "end": 4730,
+            "exact": false,
+            "intersection": 322,
+            "intersection_end": 4730,
+            "intersection_start": 4408,
+            "iou": 0.10015552099533437,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.10015552099533437,
+            "segment_id": "segment-0008",
+            "start": 4408
+          },
+          {
+            "end": 5019,
+            "exact": false,
+            "intersection": 288,
+            "intersection_end": 5019,
+            "intersection_start": 4731,
+            "iou": 0.0895800933125972,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.0895800933125972,
+            "segment_id": "segment-0009",
+            "start": 4731
+          },
+          {
+            "end": 5411,
+            "exact": false,
+            "intersection": 391,
+            "intersection_end": 5411,
+            "intersection_start": 5020,
+            "iou": 0.12161741835147745,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.12161741835147745,
+            "segment_id": "segment-0010",
+            "start": 5020
+          },
+          {
+            "end": 5993,
+            "exact": false,
+            "intersection": 581,
+            "intersection_end": 5993,
+            "intersection_start": 5412,
+            "iou": 0.1807153965785381,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.1807153965785381,
+            "segment_id": "segment-0011",
+            "start": 5412
+          }
+        ],
+        "reference_span": [
+          2778,
+          5993
+        ]
+      }
+    },
+    {
+      "case_id": "M30-N04:segment-0010:field:0",
+      "certainty": "confirmed_defect",
+      "claim_kind": "field",
+      "context_evidence": [
+        {
+          "end": 5993,
+          "page": null,
+          "quote": "MCTI e Finep anunciam aporte de R$ 450 milhões para 114 empresas das regiões Norte, Nordeste e Centro-Oeste\nPostado em:\n16/10/26 08:18\nTemas:\nTags:\nCompartilhar:\nEdital, com volume inicial de R$ 300 milhões, receberá suplementação de 50% para incluir mais projetos das regiões\nA ministra Luciana Santos, do Ministério da Ciência, Tecnologia e Inovação (MCTI) anunciou hoje (16), no auditório da Sudene, no Recife (PE), os resultados da segunda rodada da chamada Mais Inovação Brasil Subvenção Econômica, edital da Finep (Financiadora de Estudos e Projetos, agência de inovação vinculada ao MCTI) que direcionava, inicialmente, R$ 300 milhões em recursos não reembolsáveis para empresas de todos os portes que atuam nas regiões Norte, Nordeste e Centro-Oeste. O financiamento irá fomentar 78 projetos inovadores e de risco tecnológico com impacto no desenvolvimento regional e relevância social. A ministra também anunciou a complementação de R$ 150 milhões para a chamada, que deve beneficiar mais 36 projetos já analisados e com recomendação de contratação, mas que ficaram fora do orçamento original. Com os novos recursos, serão 114 propostas beneficiadas e 50% de aumento no volume total de recursos.\nLançada em fevereiro de 2026, a chamada recebeu 587 propostas de empresas das regiões. Destes, 400 projetos foram habilitados para avaliação dos técnicos da Finep em parceria inédita com analistas do Sebrae e das três Superintendências Regionais, Sudeco (Superintendência de Desenvolvimento do Centro-Oeste), Sudene (Superintendência de Desenvolvimento do Nordeste) e Sudam (Superintendência de Desenvolvimento da Amazônia).\nEntre os projetos aprovados inicialmente, 75% são de microempresas (faturamento abaixo de R$ 1 milhão) e empresas de pequeno porte (faturamento de R$ 1 milhão até R$ 4,8 milhões). A chamada também vai beneficiar 44 empresas que, pela primeira vez, receberão subvenção da agência, representando 56% das propostas aprovadas.\nEmpresas sediadas em 35 cidades das regiões serão beneficiadas pelo edital, sendo que sete cidades serão atendidas pela primeira vez em uma chamada da Finep (Inhumas/GO, Santa Bárbara do Pará/PA, Salgueiro/PE, Campo Novo do Parecis/MT, Luís Eduardo Magalhães/BA,Goiana/PE e Agrestina/PE).\nTodos os projetos estão enquadrados dentro de uma ou mais missões da Nova Indústria Brasil (NIB). Do valor total da chamada, a região Norte recebeu R$ 50 milhões; a região Centro-Oeste, R$ 100 milhões; e a região Nordeste, R$ 150 milhões. Os limites de subvenção para cada proposta partiam de R$ 2 milhões a R$ 5 milhões, sendo que o valor médio dos projetos aprovados foi de R$ 3,8 milhões.\n“O foco primordial desta chamada é o amadurecimento das vocações produtivas dessas regiões, promovendo um crescimento econômico que seja sustentável e inclusivo. Com este resultado, a Finep revoluciona a capilaridade e o alcance da Subvenção Econômica direta nas três regiões que serão atendidas e intensifica parceria das empresas selecionadas com Instituições de Ciência e Tecnologia de diversos pontos do país. São 36 instituições participando, em uma expectativa de 15% do valor da chamada serem comprometidos nestas parcerias”, afirmou Luiz Antônio Elias, presidente da Finep.",
+          "start": 2778
+        }
+      ],
+      "document_id": "M30-N04",
+      "end": 5411,
+      "error_codes": [
+        "FINANCIAL_ROLE_CONFUSION",
+        "EVIDENCE_SEMANTIC_MISMATCH"
+      ],
+      "expected_behavior": "Separar alocação regional, faixa por proposta e média de projetos; preservar qualificadores.",
+      "expected_claim": "R$ 50 milhões",
+      "field_index": 0,
+      "field_name": "proposal_amount_expression",
+      "judgment": "unsupported",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "observed": "R$ 50 milhões",
+      "quote": "Todos os projetos estão enquadrados dentro de uma ou mais missões da Nova Indústria Brasil (NIB). Do valor total da chamada, a região Norte recebeu R$ 50 milhões; a região Centro-Oeste, R$ 100 milhões; e a região Nordeste, R$ 150 milhões. Os limites de subvenção para cada proposta partiam de R$ 2 milhões a R$ 5 milhões, sendo que o valor médio dos projetos aprovados foi de R$ 3,8 milhões.",
+      "rationale": "R$ 50/100/150 milhões são alocações regionais do total da chamada. O mesmo parágrafo menciona limites POR PROPOSTA de R$ 2 a 5 milhões. Os três primeiros não são valores por proposta.",
+      "review_status": "provisional",
+      "root_cause": "rules.py:133-153 usa janela +/-120 caracteres e detecta cada proposta posterior à alocação regional.",
+      "root_cause_confidence": "high",
+      "segment_id": "segment-0010",
+      "severity": "high",
+      "start": 5020,
+      "supporting_evidence": {
+        "end": 5411,
+        "quote": "Todos os projetos estão enquadrados dentro de uma ou mais missões da Nova Indústria Brasil (NIB). Do valor total da chamada, a região Norte recebeu R$ 50 milhões; a região Centro-Oeste, R$ 100 milhões; e a região Nordeste, R$ 150 milhões. Os limites de subvenção para cada proposta partiam de R$ 2 milhões a R$ 5 milhões, sendo que o valor médio dos projetos aprovados foi de R$ 3,8 milhões.",
+        "start": 5020
+      }
+    },
+    {
+      "case_id": "M30-N04:segment-0010:field:1",
+      "certainty": "confirmed_defect",
+      "claim_kind": "field",
+      "context_evidence": [
+        {
+          "end": 5993,
+          "page": null,
+          "quote": "MCTI e Finep anunciam aporte de R$ 450 milhões para 114 empresas das regiões Norte, Nordeste e Centro-Oeste\nPostado em:\n16/10/26 08:18\nTemas:\nTags:\nCompartilhar:\nEdital, com volume inicial de R$ 300 milhões, receberá suplementação de 50% para incluir mais projetos das regiões\nA ministra Luciana Santos, do Ministério da Ciência, Tecnologia e Inovação (MCTI) anunciou hoje (16), no auditório da Sudene, no Recife (PE), os resultados da segunda rodada da chamada Mais Inovação Brasil Subvenção Econômica, edital da Finep (Financiadora de Estudos e Projetos, agência de inovação vinculada ao MCTI) que direcionava, inicialmente, R$ 300 milhões em recursos não reembolsáveis para empresas de todos os portes que atuam nas regiões Norte, Nordeste e Centro-Oeste. O financiamento irá fomentar 78 projetos inovadores e de risco tecnológico com impacto no desenvolvimento regional e relevância social. A ministra também anunciou a complementação de R$ 150 milhões para a chamada, que deve beneficiar mais 36 projetos já analisados e com recomendação de contratação, mas que ficaram fora do orçamento original. Com os novos recursos, serão 114 propostas beneficiadas e 50% de aumento no volume total de recursos.\nLançada em fevereiro de 2026, a chamada recebeu 587 propostas de empresas das regiões. Destes, 400 projetos foram habilitados para avaliação dos técnicos da Finep em parceria inédita com analistas do Sebrae e das três Superintendências Regionais, Sudeco (Superintendência de Desenvolvimento do Centro-Oeste), Sudene (Superintendência de Desenvolvimento do Nordeste) e Sudam (Superintendência de Desenvolvimento da Amazônia).\nEntre os projetos aprovados inicialmente, 75% são de microempresas (faturamento abaixo de R$ 1 milhão) e empresas de pequeno porte (faturamento de R$ 1 milhão até R$ 4,8 milhões). A chamada também vai beneficiar 44 empresas que, pela primeira vez, receberão subvenção da agência, representando 56% das propostas aprovadas.\nEmpresas sediadas em 35 cidades das regiões serão beneficiadas pelo edital, sendo que sete cidades serão atendidas pela primeira vez em uma chamada da Finep (Inhumas/GO, Santa Bárbara do Pará/PA, Salgueiro/PE, Campo Novo do Parecis/MT, Luís Eduardo Magalhães/BA,Goiana/PE e Agrestina/PE).\nTodos os projetos estão enquadrados dentro de uma ou mais missões da Nova Indústria Brasil (NIB). Do valor total da chamada, a região Norte recebeu R$ 50 milhões; a região Centro-Oeste, R$ 100 milhões; e a região Nordeste, R$ 150 milhões. Os limites de subvenção para cada proposta partiam de R$ 2 milhões a R$ 5 milhões, sendo que o valor médio dos projetos aprovados foi de R$ 3,8 milhões.\n“O foco primordial desta chamada é o amadurecimento das vocações produtivas dessas regiões, promovendo um crescimento econômico que seja sustentável e inclusivo. Com este resultado, a Finep revoluciona a capilaridade e o alcance da Subvenção Econômica direta nas três regiões que serão atendidas e intensifica parceria das empresas selecionadas com Instituições de Ciência e Tecnologia de diversos pontos do país. São 36 instituições participando, em uma expectativa de 15% do valor da chamada serem comprometidos nestas parcerias”, afirmou Luiz Antônio Elias, presidente da Finep.",
+          "start": 2778
+        }
+      ],
+      "document_id": "M30-N04",
+      "end": 5411,
+      "error_codes": [
+        "FINANCIAL_ROLE_CONFUSION",
+        "EVIDENCE_SEMANTIC_MISMATCH"
+      ],
+      "expected_behavior": "Separar alocação regional, faixa por proposta e média de projetos; preservar qualificadores.",
+      "expected_claim": "R$ 100 milhões",
+      "field_index": 1,
+      "field_name": "proposal_amount_expression",
+      "judgment": "unsupported",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "observed": "R$ 100 milhões",
+      "quote": "Todos os projetos estão enquadrados dentro de uma ou mais missões da Nova Indústria Brasil (NIB). Do valor total da chamada, a região Norte recebeu R$ 50 milhões; a região Centro-Oeste, R$ 100 milhões; e a região Nordeste, R$ 150 milhões. Os limites de subvenção para cada proposta partiam de R$ 2 milhões a R$ 5 milhões, sendo que o valor médio dos projetos aprovados foi de R$ 3,8 milhões.",
+      "rationale": "R$ 50/100/150 milhões são alocações regionais do total da chamada. O mesmo parágrafo menciona limites POR PROPOSTA de R$ 2 a 5 milhões. Os três primeiros não são valores por proposta.",
+      "review_status": "provisional",
+      "root_cause": "rules.py:133-153 usa janela +/-120 caracteres e detecta cada proposta posterior à alocação regional.",
+      "root_cause_confidence": "high",
+      "segment_id": "segment-0010",
+      "severity": "high",
+      "start": 5020,
+      "supporting_evidence": {
+        "end": 5411,
+        "quote": "Todos os projetos estão enquadrados dentro de uma ou mais missões da Nova Indústria Brasil (NIB). Do valor total da chamada, a região Norte recebeu R$ 50 milhões; a região Centro-Oeste, R$ 100 milhões; e a região Nordeste, R$ 150 milhões. Os limites de subvenção para cada proposta partiam de R$ 2 milhões a R$ 5 milhões, sendo que o valor médio dos projetos aprovados foi de R$ 3,8 milhões.",
+        "start": 5020
+      }
+    },
+    {
+      "case_id": "M30-N04:segment-0010:field:2",
+      "certainty": "confirmed_defect",
+      "claim_kind": "field",
+      "context_evidence": [
+        {
+          "end": 5993,
+          "page": null,
+          "quote": "MCTI e Finep anunciam aporte de R$ 450 milhões para 114 empresas das regiões Norte, Nordeste e Centro-Oeste\nPostado em:\n16/10/26 08:18\nTemas:\nTags:\nCompartilhar:\nEdital, com volume inicial de R$ 300 milhões, receberá suplementação de 50% para incluir mais projetos das regiões\nA ministra Luciana Santos, do Ministério da Ciência, Tecnologia e Inovação (MCTI) anunciou hoje (16), no auditório da Sudene, no Recife (PE), os resultados da segunda rodada da chamada Mais Inovação Brasil Subvenção Econômica, edital da Finep (Financiadora de Estudos e Projetos, agência de inovação vinculada ao MCTI) que direcionava, inicialmente, R$ 300 milhões em recursos não reembolsáveis para empresas de todos os portes que atuam nas regiões Norte, Nordeste e Centro-Oeste. O financiamento irá fomentar 78 projetos inovadores e de risco tecnológico com impacto no desenvolvimento regional e relevância social. A ministra também anunciou a complementação de R$ 150 milhões para a chamada, que deve beneficiar mais 36 projetos já analisados e com recomendação de contratação, mas que ficaram fora do orçamento original. Com os novos recursos, serão 114 propostas beneficiadas e 50% de aumento no volume total de recursos.\nLançada em fevereiro de 2026, a chamada recebeu 587 propostas de empresas das regiões. Destes, 400 projetos foram habilitados para avaliação dos técnicos da Finep em parceria inédita com analistas do Sebrae e das três Superintendências Regionais, Sudeco (Superintendência de Desenvolvimento do Centro-Oeste), Sudene (Superintendência de Desenvolvimento do Nordeste) e Sudam (Superintendência de Desenvolvimento da Amazônia).\nEntre os projetos aprovados inicialmente, 75% são de microempresas (faturamento abaixo de R$ 1 milhão) e empresas de pequeno porte (faturamento de R$ 1 milhão até R$ 4,8 milhões). A chamada também vai beneficiar 44 empresas que, pela primeira vez, receberão subvenção da agência, representando 56% das propostas aprovadas.\nEmpresas sediadas em 35 cidades das regiões serão beneficiadas pelo edital, sendo que sete cidades serão atendidas pela primeira vez em uma chamada da Finep (Inhumas/GO, Santa Bárbara do Pará/PA, Salgueiro/PE, Campo Novo do Parecis/MT, Luís Eduardo Magalhães/BA,Goiana/PE e Agrestina/PE).\nTodos os projetos estão enquadrados dentro de uma ou mais missões da Nova Indústria Brasil (NIB). Do valor total da chamada, a região Norte recebeu R$ 50 milhões; a região Centro-Oeste, R$ 100 milhões; e a região Nordeste, R$ 150 milhões. Os limites de subvenção para cada proposta partiam de R$ 2 milhões a R$ 5 milhões, sendo que o valor médio dos projetos aprovados foi de R$ 3,8 milhões.\n“O foco primordial desta chamada é o amadurecimento das vocações produtivas dessas regiões, promovendo um crescimento econômico que seja sustentável e inclusivo. Com este resultado, a Finep revoluciona a capilaridade e o alcance da Subvenção Econômica direta nas três regiões que serão atendidas e intensifica parceria das empresas selecionadas com Instituições de Ciência e Tecnologia de diversos pontos do país. São 36 instituições participando, em uma expectativa de 15% do valor da chamada serem comprometidos nestas parcerias”, afirmou Luiz Antônio Elias, presidente da Finep.",
+          "start": 2778
+        }
+      ],
+      "document_id": "M30-N04",
+      "end": 5411,
+      "error_codes": [
+        "FINANCIAL_ROLE_CONFUSION",
+        "EVIDENCE_SEMANTIC_MISMATCH"
+      ],
+      "expected_behavior": "Separar alocação regional, faixa por proposta e média de projetos; preservar qualificadores.",
+      "expected_claim": "R$ 150 milhões",
+      "field_index": 2,
+      "field_name": "proposal_amount_expression",
+      "judgment": "unsupported",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "observed": "R$ 150 milhões",
+      "quote": "Todos os projetos estão enquadrados dentro de uma ou mais missões da Nova Indústria Brasil (NIB). Do valor total da chamada, a região Norte recebeu R$ 50 milhões; a região Centro-Oeste, R$ 100 milhões; e a região Nordeste, R$ 150 milhões. Os limites de subvenção para cada proposta partiam de R$ 2 milhões a R$ 5 milhões, sendo que o valor médio dos projetos aprovados foi de R$ 3,8 milhões.",
+      "rationale": "R$ 50/100/150 milhões são alocações regionais do total da chamada. O mesmo parágrafo menciona limites POR PROPOSTA de R$ 2 a 5 milhões. Os três primeiros não são valores por proposta.",
+      "review_status": "provisional",
+      "root_cause": "rules.py:133-153 usa janela +/-120 caracteres e detecta cada proposta posterior à alocação regional.",
+      "root_cause_confidence": "high",
+      "segment_id": "segment-0010",
+      "severity": "high",
+      "start": 5020,
+      "supporting_evidence": {
+        "end": 5411,
+        "quote": "Todos os projetos estão enquadrados dentro de uma ou mais missões da Nova Indústria Brasil (NIB). Do valor total da chamada, a região Norte recebeu R$ 50 milhões; a região Centro-Oeste, R$ 100 milhões; e a região Nordeste, R$ 150 milhões. Os limites de subvenção para cada proposta partiam de R$ 2 milhões a R$ 5 milhões, sendo que o valor médio dos projetos aprovados foi de R$ 3,8 milhões.",
+        "start": 5020
+      }
+    }
+  ],
+  "extracted_claims": [
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-N04",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "monetary_expression_unresolved",
+      "original": "R$ 450 milhões",
+      "reference_records": [
+        "M30-N04-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0000",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-N04",
+        "end": 2885,
+        "page": null,
+        "quote": "MCTI e Finep anunciam aporte de R$ 450 milhões para 114 empresas das regiões Norte, Nordeste e Centro-Oeste",
+        "raw_sha256": "98318fd47d92b74fcdc3a251e5fc79fe6625d92e18c04d43dfc287448a476dce",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0000",
+        "start": 2778,
+        "text_sha256": "2258b3625a2c1dac226c633f0a3aba28eb638bb59505baf7a632ede9901f4ed3"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-N04",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "program_budget",
+      "original": "R$ 300 milhões",
+      "reference_records": [
+        "M30-N04-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0005",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-N04",
+        "end": 3054,
+        "page": null,
+        "quote": "Edital, com volume inicial de R$ 300 milhões, receberá suplementação de 50% para incluir mais projetos das regiões",
+        "raw_sha256": "98318fd47d92b74fcdc3a251e5fc79fe6625d92e18c04d43dfc287448a476dce",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0005",
+        "start": 2940,
+        "text_sha256": "2258b3625a2c1dac226c633f0a3aba28eb638bb59505baf7a632ede9901f4ed3"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-N04",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "monetary_expression_unresolved",
+      "original": "R$ 300 milhões",
+      "reference_records": [
+        "M30-N04-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0006",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-N04",
+        "end": 3982,
+        "page": null,
+        "quote": "A ministra Luciana Santos, do Ministério da Ciência, Tecnologia e Inovação (MCTI) anunciou hoje (16), no auditório da Sudene, no Recife (PE), os resultados da segunda rodada da chamada Mais Inovação Brasil Subvenção Econômica, edital da Finep (Financiadora de Estudos e Projetos, agência de inovação vinculada ao MCTI) que direcionava, inicialmente, R$ 300 milhões em recursos não reembolsáveis para empresas de todos os portes que atuam nas regiões Norte, Nordeste e Centro-Oeste. O financiamento irá fomentar 78 projetos inovadores e de risco tecnológico com impacto no desenvolvimento regional e relevância social. A ministra também anunciou a complementação de R$ 150 milhões para a chamada, que deve beneficiar mais 36 projetos já analisados e com recomendação de contratação, mas que ficaram fora do orçamento original. Com os novos recursos, serão 114 propostas beneficiadas e 50% de aumento no volume total de recursos.",
+        "raw_sha256": "98318fd47d92b74fcdc3a251e5fc79fe6625d92e18c04d43dfc287448a476dce",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0006",
+        "start": 3055,
+        "text_sha256": "2258b3625a2c1dac226c633f0a3aba28eb638bb59505baf7a632ede9901f4ed3"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-N04",
+      "field_index": 1,
+      "method_version": "m31-deterministic-v2",
+      "name": "monetary_expression_unresolved",
+      "original": "R$ 150 milhões",
+      "reference_records": [
+        "M30-N04-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0006",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-N04",
+        "end": 3982,
+        "page": null,
+        "quote": "A ministra Luciana Santos, do Ministério da Ciência, Tecnologia e Inovação (MCTI) anunciou hoje (16), no auditório da Sudene, no Recife (PE), os resultados da segunda rodada da chamada Mais Inovação Brasil Subvenção Econômica, edital da Finep (Financiadora de Estudos e Projetos, agência de inovação vinculada ao MCTI) que direcionava, inicialmente, R$ 300 milhões em recursos não reembolsáveis para empresas de todos os portes que atuam nas regiões Norte, Nordeste e Centro-Oeste. O financiamento irá fomentar 78 projetos inovadores e de risco tecnológico com impacto no desenvolvimento regional e relevância social. A ministra também anunciou a complementação de R$ 150 milhões para a chamada, que deve beneficiar mais 36 projetos já analisados e com recomendação de contratação, mas que ficaram fora do orçamento original. Com os novos recursos, serão 114 propostas beneficiadas e 50% de aumento no volume total de recursos.",
+        "raw_sha256": "98318fd47d92b74fcdc3a251e5fc79fe6625d92e18c04d43dfc287448a476dce",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0006",
+        "start": 3055,
+        "text_sha256": "2258b3625a2c1dac226c633f0a3aba28eb638bb59505baf7a632ede9901f4ed3"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-N04",
+      "field_index": 2,
+      "method_version": "m31-deterministic-v2",
+      "name": "beneficiary_expression",
+      "original": "A ministra Luciana Santos, do Ministério da Ciência, Tecnologia e Inovação (MCTI) anunciou hoje (16), no auditório da Sudene, no Recife (PE), os resultados da segunda rodada da chamada Mais Inovação Brasil Subvenção Econômica, edital da Finep (Financiadora de Estudos e Projetos, agência de inovação vinculada ao MCTI) que direcionava, inicialmente, R$ 300 milhões em recursos não reembolsáveis para empresas de todos os portes que atuam nas regiões Norte, Nordeste e Centro-Oeste. O financiamento irá fomentar 78 projetos inovadores e de risco tecnológico com impacto no desenvolvimento regional e relevância social. A ministra também anunciou a complementação de R$ 150 milhões para a chamada, que deve beneficiar mais 36 projetos já analisados e com recomendação de contratação, mas que ficaram fora do orçamento original. Com os novos recursos, serão 114 propostas beneficiadas e 50% de aumento no volume total de recursos.",
+      "reference_records": [
+        "M30-N04-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0006",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-N04",
+        "end": 3982,
+        "page": null,
+        "quote": "A ministra Luciana Santos, do Ministério da Ciência, Tecnologia e Inovação (MCTI) anunciou hoje (16), no auditório da Sudene, no Recife (PE), os resultados da segunda rodada da chamada Mais Inovação Brasil Subvenção Econômica, edital da Finep (Financiadora de Estudos e Projetos, agência de inovação vinculada ao MCTI) que direcionava, inicialmente, R$ 300 milhões em recursos não reembolsáveis para empresas de todos os portes que atuam nas regiões Norte, Nordeste e Centro-Oeste. O financiamento irá fomentar 78 projetos inovadores e de risco tecnológico com impacto no desenvolvimento regional e relevância social. A ministra também anunciou a complementação de R$ 150 milhões para a chamada, que deve beneficiar mais 36 projetos já analisados e com recomendação de contratação, mas que ficaram fora do orçamento original. Com os novos recursos, serão 114 propostas beneficiadas e 50% de aumento no volume total de recursos.",
+        "raw_sha256": "98318fd47d92b74fcdc3a251e5fc79fe6625d92e18c04d43dfc287448a476dce",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0006",
+        "start": 3055,
+        "text_sha256": "2258b3625a2c1dac226c633f0a3aba28eb638bb59505baf7a632ede9901f4ed3"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-N04",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "borrower_revenue_requirement",
+      "original": "R$ 1 milhão",
+      "reference_records": [
+        "M30-N04-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0008",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-N04",
+        "end": 4730,
+        "page": null,
+        "quote": "Entre os projetos aprovados inicialmente, 75% são de microempresas (faturamento abaixo de R$ 1 milhão) e empresas de pequeno porte (faturamento de R$ 1 milhão até R$ 4,8 milhões). A chamada também vai beneficiar 44 empresas que, pela primeira vez, receberão subvenção da agência, representando 56% das propostas aprovadas.",
+        "raw_sha256": "98318fd47d92b74fcdc3a251e5fc79fe6625d92e18c04d43dfc287448a476dce",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0008",
+        "start": 4408,
+        "text_sha256": "2258b3625a2c1dac226c633f0a3aba28eb638bb59505baf7a632ede9901f4ed3"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-N04",
+      "field_index": 1,
+      "method_version": "m31-deterministic-v2",
+      "name": "borrower_revenue_requirement",
+      "original": "R$ 1 milhão",
+      "reference_records": [
+        "M30-N04-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0008",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-N04",
+        "end": 4730,
+        "page": null,
+        "quote": "Entre os projetos aprovados inicialmente, 75% são de microempresas (faturamento abaixo de R$ 1 milhão) e empresas de pequeno porte (faturamento de R$ 1 milhão até R$ 4,8 milhões). A chamada também vai beneficiar 44 empresas que, pela primeira vez, receberão subvenção da agência, representando 56% das propostas aprovadas.",
+        "raw_sha256": "98318fd47d92b74fcdc3a251e5fc79fe6625d92e18c04d43dfc287448a476dce",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0008",
+        "start": 4408,
+        "text_sha256": "2258b3625a2c1dac226c633f0a3aba28eb638bb59505baf7a632ede9901f4ed3"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-N04",
+      "field_index": 2,
+      "method_version": "m31-deterministic-v2",
+      "name": "borrower_revenue_requirement",
+      "original": "R$ 4,8 milhões",
+      "reference_records": [
+        "M30-N04-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0008",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-N04",
+        "end": 4730,
+        "page": null,
+        "quote": "Entre os projetos aprovados inicialmente, 75% são de microempresas (faturamento abaixo de R$ 1 milhão) e empresas de pequeno porte (faturamento de R$ 1 milhão até R$ 4,8 milhões). A chamada também vai beneficiar 44 empresas que, pela primeira vez, receberão subvenção da agência, representando 56% das propostas aprovadas.",
+        "raw_sha256": "98318fd47d92b74fcdc3a251e5fc79fe6625d92e18c04d43dfc287448a476dce",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0008",
+        "start": 4408,
+        "text_sha256": "2258b3625a2c1dac226c633f0a3aba28eb638bb59505baf7a632ede9901f4ed3"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-N04",
+      "field_index": 3,
+      "method_version": "m31-deterministic-v2",
+      "name": "beneficiary_expression",
+      "original": "Entre os projetos aprovados inicialmente, 75% são de microempresas (faturamento abaixo de R$ 1 milhão) e empresas de pequeno porte (faturamento de R$ 1 milhão até R$ 4,8 milhões). A chamada também vai beneficiar 44 empresas que, pela primeira vez, receberão subvenção da agência, representando 56% das propostas aprovadas.",
+      "reference_records": [
+        "M30-N04-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0008",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-N04",
+        "end": 4730,
+        "page": null,
+        "quote": "Entre os projetos aprovados inicialmente, 75% são de microempresas (faturamento abaixo de R$ 1 milhão) e empresas de pequeno porte (faturamento de R$ 1 milhão até R$ 4,8 milhões). A chamada também vai beneficiar 44 empresas que, pela primeira vez, receberão subvenção da agência, representando 56% das propostas aprovadas.",
+        "raw_sha256": "98318fd47d92b74fcdc3a251e5fc79fe6625d92e18c04d43dfc287448a476dce",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0008",
+        "start": 4408,
+        "text_sha256": "2258b3625a2c1dac226c633f0a3aba28eb638bb59505baf7a632ede9901f4ed3"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-N04",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "geographic_eligibility",
+      "original": "Empresas sediadas em 35 cidades das regiões serão beneficiadas pelo edital, sendo que sete cidades serão atendidas pela primeira vez em uma chamada da Finep (Inhumas/GO, Santa Bárbara do Pará/PA, Salgueiro/PE, Campo Novo do Parecis/MT, Luís Eduardo Magalhães/BA,Goiana/PE e Agrestina/PE).",
+      "reference_records": [
+        "M30-N04-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0009",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-N04",
+        "end": 5019,
+        "page": null,
+        "quote": "Empresas sediadas em 35 cidades das regiões serão beneficiadas pelo edital, sendo que sete cidades serão atendidas pela primeira vez em uma chamada da Finep (Inhumas/GO, Santa Bárbara do Pará/PA, Salgueiro/PE, Campo Novo do Parecis/MT, Luís Eduardo Magalhães/BA,Goiana/PE e Agrestina/PE).",
+        "raw_sha256": "98318fd47d92b74fcdc3a251e5fc79fe6625d92e18c04d43dfc287448a476dce",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0009",
+        "start": 4731,
+        "text_sha256": "2258b3625a2c1dac226c633f0a3aba28eb638bb59505baf7a632ede9901f4ed3"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-N04",
+      "field_index": 1,
+      "method_version": "m31-deterministic-v2",
+      "name": "beneficiary_expression",
+      "original": "Empresas sediadas em 35 cidades das regiões serão beneficiadas pelo edital, sendo que sete cidades serão atendidas pela primeira vez em uma chamada da Finep (Inhumas/GO, Santa Bárbara do Pará/PA, Salgueiro/PE, Campo Novo do Parecis/MT, Luís Eduardo Magalhães/BA,Goiana/PE e Agrestina/PE).",
+      "reference_records": [
+        "M30-N04-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0009",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-N04",
+        "end": 5019,
+        "page": null,
+        "quote": "Empresas sediadas em 35 cidades das regiões serão beneficiadas pelo edital, sendo que sete cidades serão atendidas pela primeira vez em uma chamada da Finep (Inhumas/GO, Santa Bárbara do Pará/PA, Salgueiro/PE, Campo Novo do Parecis/MT, Luís Eduardo Magalhães/BA,Goiana/PE e Agrestina/PE).",
+        "raw_sha256": "98318fd47d92b74fcdc3a251e5fc79fe6625d92e18c04d43dfc287448a476dce",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0009",
+        "start": 4731,
+        "text_sha256": "2258b3625a2c1dac226c633f0a3aba28eb638bb59505baf7a632ede9901f4ed3"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-N04",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "proposal_amount_expression",
+      "original": "R$ 50 milhões",
+      "reference_records": [
+        "M30-N04-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0010",
+      "semantic_case_id": "M30-N04:segment-0010:field:0",
+      "semantic_support": "unsupported",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-N04",
+        "end": 5411,
+        "page": null,
+        "quote": "Todos os projetos estão enquadrados dentro de uma ou mais missões da Nova Indústria Brasil (NIB). Do valor total da chamada, a região Norte recebeu R$ 50 milhões; a região Centro-Oeste, R$ 100 milhões; e a região Nordeste, R$ 150 milhões. Os limites de subvenção para cada proposta partiam de R$ 2 milhões a R$ 5 milhões, sendo que o valor médio dos projetos aprovados foi de R$ 3,8 milhões.",
+        "raw_sha256": "98318fd47d92b74fcdc3a251e5fc79fe6625d92e18c04d43dfc287448a476dce",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0010",
+        "start": 5020,
+        "text_sha256": "2258b3625a2c1dac226c633f0a3aba28eb638bb59505baf7a632ede9901f4ed3"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-N04",
+      "field_index": 1,
+      "method_version": "m31-deterministic-v2",
+      "name": "proposal_amount_expression",
+      "original": "R$ 100 milhões",
+      "reference_records": [
+        "M30-N04-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0010",
+      "semantic_case_id": "M30-N04:segment-0010:field:1",
+      "semantic_support": "unsupported",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-N04",
+        "end": 5411,
+        "page": null,
+        "quote": "Todos os projetos estão enquadrados dentro de uma ou mais missões da Nova Indústria Brasil (NIB). Do valor total da chamada, a região Norte recebeu R$ 50 milhões; a região Centro-Oeste, R$ 100 milhões; e a região Nordeste, R$ 150 milhões. Os limites de subvenção para cada proposta partiam de R$ 2 milhões a R$ 5 milhões, sendo que o valor médio dos projetos aprovados foi de R$ 3,8 milhões.",
+        "raw_sha256": "98318fd47d92b74fcdc3a251e5fc79fe6625d92e18c04d43dfc287448a476dce",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0010",
+        "start": 5020,
+        "text_sha256": "2258b3625a2c1dac226c633f0a3aba28eb638bb59505baf7a632ede9901f4ed3"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-N04",
+      "field_index": 2,
+      "method_version": "m31-deterministic-v2",
+      "name": "proposal_amount_expression",
+      "original": "R$ 150 milhões",
+      "reference_records": [
+        "M30-N04-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0010",
+      "semantic_case_id": "M30-N04:segment-0010:field:2",
+      "semantic_support": "unsupported",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-N04",
+        "end": 5411,
+        "page": null,
+        "quote": "Todos os projetos estão enquadrados dentro de uma ou mais missões da Nova Indústria Brasil (NIB). Do valor total da chamada, a região Norte recebeu R$ 50 milhões; a região Centro-Oeste, R$ 100 milhões; e a região Nordeste, R$ 150 milhões. Os limites de subvenção para cada proposta partiam de R$ 2 milhões a R$ 5 milhões, sendo que o valor médio dos projetos aprovados foi de R$ 3,8 milhões.",
+        "raw_sha256": "98318fd47d92b74fcdc3a251e5fc79fe6625d92e18c04d43dfc287448a476dce",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0010",
+        "start": 5020,
+        "text_sha256": "2258b3625a2c1dac226c633f0a3aba28eb638bb59505baf7a632ede9901f4ed3"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-N04",
+      "field_index": 3,
+      "method_version": "m31-deterministic-v2",
+      "name": "proposal_amount_expression",
+      "original": "R$ 2 milhões",
+      "reference_records": [
+        "M30-N04-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0010",
+      "semantic_case_id": "M30-N04:segment-0010:field:3",
+      "semantic_support": "supported",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-N04",
+        "end": 5411,
+        "page": null,
+        "quote": "Todos os projetos estão enquadrados dentro de uma ou mais missões da Nova Indústria Brasil (NIB). Do valor total da chamada, a região Norte recebeu R$ 50 milhões; a região Centro-Oeste, R$ 100 milhões; e a região Nordeste, R$ 150 milhões. Os limites de subvenção para cada proposta partiam de R$ 2 milhões a R$ 5 milhões, sendo que o valor médio dos projetos aprovados foi de R$ 3,8 milhões.",
+        "raw_sha256": "98318fd47d92b74fcdc3a251e5fc79fe6625d92e18c04d43dfc287448a476dce",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0010",
+        "start": 5020,
+        "text_sha256": "2258b3625a2c1dac226c633f0a3aba28eb638bb59505baf7a632ede9901f4ed3"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-N04",
+      "field_index": 4,
+      "method_version": "m31-deterministic-v2",
+      "name": "proposal_amount_expression",
+      "original": "R$ 5 milhões",
+      "reference_records": [
+        "M30-N04-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0010",
+      "semantic_case_id": "M30-N04:segment-0010:field:4",
+      "semantic_support": "supported",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-N04",
+        "end": 5411,
+        "page": null,
+        "quote": "Todos os projetos estão enquadrados dentro de uma ou mais missões da Nova Indústria Brasil (NIB). Do valor total da chamada, a região Norte recebeu R$ 50 milhões; a região Centro-Oeste, R$ 100 milhões; e a região Nordeste, R$ 150 milhões. Os limites de subvenção para cada proposta partiam de R$ 2 milhões a R$ 5 milhões, sendo que o valor médio dos projetos aprovados foi de R$ 3,8 milhões.",
+        "raw_sha256": "98318fd47d92b74fcdc3a251e5fc79fe6625d92e18c04d43dfc287448a476dce",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0010",
+        "start": 5020,
+        "text_sha256": "2258b3625a2c1dac226c633f0a3aba28eb638bb59505baf7a632ede9901f4ed3"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-N04",
+      "field_index": 5,
+      "method_version": "m31-deterministic-v2",
+      "name": "proposal_amount_expression",
+      "original": "R$ 3,8 milhões",
+      "reference_records": [
+        "M30-N04-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0010",
+      "semantic_case_id": "M30-N04:segment-0010:field:5",
+      "semantic_support": "supported",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-N04",
+        "end": 5411,
+        "page": null,
+        "quote": "Todos os projetos estão enquadrados dentro de uma ou mais missões da Nova Indústria Brasil (NIB). Do valor total da chamada, a região Norte recebeu R$ 50 milhões; a região Centro-Oeste, R$ 100 milhões; e a região Nordeste, R$ 150 milhões. Os limites de subvenção para cada proposta partiam de R$ 2 milhões a R$ 5 milhões, sendo que o valor médio dos projetos aprovados foi de R$ 3,8 milhões.",
+        "raw_sha256": "98318fd47d92b74fcdc3a251e5fc79fe6625d92e18c04d43dfc287448a476dce",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0010",
+        "start": 5020,
+        "text_sha256": "2258b3625a2c1dac226c633f0a3aba28eb638bb59505baf7a632ede9901f4ed3"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-N04",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "monetary_expression_unresolved",
+      "original": "R$ 450 milhões",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0014",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-N04",
+        "end": 6126,
+        "page": null,
+        "quote": "MCTI e Finep anunciam aporte de R$ 450 milhões para 114 empresas das regiões Norte, Nordeste e Centro-Oeste",
+        "raw_sha256": "98318fd47d92b74fcdc3a251e5fc79fe6625d92e18c04d43dfc287448a476dce",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0014",
+        "start": 6019,
+        "text_sha256": "2258b3625a2c1dac226c633f0a3aba28eb638bb59505baf7a632ede9901f4ed3"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-N04",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "program_budget",
+      "original": "R$ 300 milhões",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0015",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-N04",
+        "end": 6223,
+        "page": null,
+        "quote": "Edital, com volume inicial de R$ 300 milhões, receberá suplementação de 50% para incluir mais...",
+        "raw_sha256": "98318fd47d92b74fcdc3a251e5fc79fe6625d92e18c04d43dfc287448a476dce",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0015",
+        "start": 6127,
+        "text_sha256": "2258b3625a2c1dac226c633f0a3aba28eb638bb59505baf7a632ede9901f4ed3"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-N04",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "unknown_temporal_expression",
+      "original": "16/10/2026",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0017",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-N04",
+        "end": 6246,
+        "page": null,
+        "quote": "16/10/2026",
+        "raw_sha256": "98318fd47d92b74fcdc3a251e5fc79fe6625d92e18c04d43dfc287448a476dce",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0017",
+        "start": 6236,
+        "text_sha256": "2258b3625a2c1dac226c633f0a3aba28eb638bb59505baf7a632ede9901f4ed3"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-N04",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "unknown_temporal_expression",
+      "original": "16/10/2026",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0021",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-N04",
+        "end": 6442,
+        "page": null,
+        "quote": "16/10/2026",
+        "raw_sha256": "98318fd47d92b74fcdc3a251e5fc79fe6625d92e18c04d43dfc287448a476dce",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0021",
+        "start": 6432,
+        "text_sha256": "2258b3625a2c1dac226c633f0a3aba28eb638bb59505baf7a632ede9901f4ed3"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-N04",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "monetary_expression_unresolved",
+      "original": "R$ 3,6 milhões",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0023",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-N04",
+        "end": 6592,
+        "page": null,
+        "quote": "Sétima edição do edital recebeu 638 propostas e prevê R$ 3,6 milhões em investimentos para...",
+        "raw_sha256": "98318fd47d92b74fcdc3a251e5fc79fe6625d92e18c04d43dfc287448a476dce",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0023",
+        "start": 6499,
+        "text_sha256": "2258b3625a2c1dac226c633f0a3aba28eb638bb59505baf7a632ede9901f4ed3"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-N04",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "unknown_temporal_expression",
+      "original": "14/10/2026",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0025",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-N04",
+        "end": 6615,
+        "page": null,
+        "quote": "14/10/2026",
+        "raw_sha256": "98318fd47d92b74fcdc3a251e5fc79fe6625d92e18c04d43dfc287448a476dce",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0025",
+        "start": 6605,
+        "text_sha256": "2258b3625a2c1dac226c633f0a3aba28eb638bb59505baf7a632ede9901f4ed3"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-N04",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "title",
+      "original": "Finep abre chamada de R$ 7 milhões da rede EUREKA para financiar projetos de resiliência a desastres",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0026",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-N04",
+        "end": 6716,
+        "page": null,
+        "quote": "Finep abre chamada de R$ 7 milhões da rede EUREKA para financiar projetos de resiliência a desastres",
+        "raw_sha256": "98318fd47d92b74fcdc3a251e5fc79fe6625d92e18c04d43dfc287448a476dce",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0026",
+        "start": 6616,
+        "text_sha256": "2258b3625a2c1dac226c633f0a3aba28eb638bb59505baf7a632ede9901f4ed3"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-N04",
+      "field_index": 1,
+      "method_version": "m31-deterministic-v2",
+      "name": "monetary_expression_unresolved",
+      "original": "R$ 7 milhões",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0026",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-N04",
+        "end": 6716,
+        "page": null,
+        "quote": "Finep abre chamada de R$ 7 milhões da rede EUREKA para financiar projetos de resiliência a desastres",
+        "raw_sha256": "98318fd47d92b74fcdc3a251e5fc79fe6625d92e18c04d43dfc287448a476dce",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0026",
+        "start": 6616,
+        "text_sha256": "2258b3625a2c1dac226c633f0a3aba28eb638bb59505baf7a632ede9901f4ed3"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-N04",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "unknown_temporal_expression",
+      "original": "07/10/2026",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0029",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-N04",
+        "end": 6831,
+        "page": null,
+        "quote": "07/10/2026",
+        "raw_sha256": "98318fd47d92b74fcdc3a251e5fc79fe6625d92e18c04d43dfc287448a476dce",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0029",
+        "start": 6821,
+        "text_sha256": "2258b3625a2c1dac226c633f0a3aba28eb638bb59505baf7a632ede9901f4ed3"
+      }
+    }
+  ],
+  "provenance": {
+    "byte_length": 216104,
+    "category_evidence": "MCTI e Finep anunciam aporte de R$ 450 milhões para 114 empresas das regiões Norte, Nordeste e Centro-Oeste\nPostado em:\n16/10/26 08:18\nTemas:\nTags:\nCompartilhar:\nEdital, com volume inicial de R$ 300 milhões, receberá suplementação de 50% para incluir mais projetos das regiões\nA ministra Luciana Santos, do Ministério da Ciência, Tecnologia e Inovação (MCTI) anunciou hoje (16), no auditório da Sudene, no Recife (PE), os resultados da segunda rodada da chamada Mais Inovação Brasil Subvenção Econômica, edital da Finep (Financiadora de Estudos e Projetos, agência de inovação vinculada ao MCTI) que direcionava, inicialmente, R$ 300 milhões em recursos não reembolsáveis para empresas de todos os portes que atuam nas regiões Norte, Nordeste e Centro-Oeste. O financiamento irá fomentar 78 projetos inovadores e de risco tecnológico com impacto no desenvolvimento regional e relevância social. A ministra também anunciou a complementação de R$ 150 milhões para a chamada, que deve beneficiar mais 36 projetos já analisados e com recomendação de contratação, mas que ficaram fora do orçamento original. Com os novos recursos, serão 114 propostas beneficiadas e 50% de aumento no volume total de recursos.\nLançada em fevereiro de 2026, a chamada recebeu 587 propostas de empresas das regiões. Destes, 400 projetos foram habilitados para avaliação dos técnicos da Finep em parceria inédita com analistas do Sebrae e das três Superintendências Regionais, Sudeco (Superintendência de Desenvolvimento do Centro-Oeste), Sudene (Superintendência de Desenvolvimento do Nordeste) e Sudam (Superintendência de Desenvolvimento da Amazônia).\nEntre os projetos aprovados inicialmente, 75% são de microempresas (faturamento abaixo de R$ 1 milhão) e empresas de pequeno porte (faturamento de R$ 1 milhão até R$ 4,8 milhões). A chamada também vai beneficiar 44 empresas que, pela primeira vez, receberão subvenção da agência, representando 56% das propostas aprovadas.\nEmpresas sediadas em 35 cidades das regiões serão beneficiadas pelo edital, sendo que sete cidades serão atendidas pela primeira vez em uma chamada da Finep (Inhumas/GO, Santa Bárbara do Pará/PA, Salgueiro/PE, Campo Novo do Parecis/MT, Luís Eduardo Magalhães/BA,Goiana/PE e Agrestina/PE).\nTodos os projetos estão enquadrados dentro de uma ou mais missões da Nova Indústria Brasil (NIB). Do valor total da chamada, a região Norte recebeu R$ 50 milhões; a região Centro-Oeste, R$ 100 milhões; e a região Nordeste, R$ 150 milhões. Os limites de subvenção para cada proposta partiam de R$ 2 milhões a R$ 5 milhões, sendo que o valor médio dos projetos aprovados foi de R$ 3,8 milhões.\n“O foco primordial desta chamada é o amadurecimento das vocações produtivas dessas regiões, promovendo um crescimento econômico que seja sustentável e inclusivo. Com este resultado, a Finep revoluciona a capilaridade e o alcance da Subvenção Econômica direta nas três regiões que serão atendidas e intensifica parceria das empresas selecionadas com Instituições de Ciência e Tecnologia de diversos pontos do país. São 36 instituições participando, em uma expectativa de 15% do valor da chamada serem comprometidos nestas parcerias”, afirmou Luiz Antônio Elias, presidente da Finep.",
+    "content_type": "text/html",
+    "derivation_method": "stdlib-HTMLParser-data-whitespace-v1; excludes script/style/noscript/template; not rendered DOM",
+    "document_category": "institutional_news",
+    "document_id": "M30-N04",
+    "document_version": null,
+    "final_url": "https://finep.gov.br/w/mcti-e-finep-anunciam-aporte-de-r-450-milh%C3%B5es-para-114-empresas-das-regi%C3%B5es-norte-nordeste-e-centro-oeste",
+    "original_filename": "mcti-e-finep-anunciam-aporte-de-r-450-milhões-para-114-empresas-das-regiões-norte-nordeste-e-centro-oeste",
+    "original_url": "https://finep.gov.br/w/mcti-e-finep-anunciam-aporte-de-r-450-milh%C3%B5es-para-114-empresas-das-regi%C3%B5es-norte-nordeste-e-centro-oeste",
+    "publication_date": "2026-10-16",
+    "raw_path": "raw/M30-N04.html",
+    "restrictions": "Research pilot local frozen copy only; no redistribution license inferred. No scripts executed, no forms submitted, no applicant records intentionally collected. Public navigation/staff attribution may remain in original bytes.",
+    "retrieval_status": "acquired",
+    "retrieved_at": "2026-10-19T04:38:20.619257+00:00",
+    "sha256": "98318fd47d92b74fcdc3a251e5fc79fe6625d92e18c04d43dfc287448a476dce",
+    "source_authority_notes": "Public HTTPS page hosted by the named institution; authorship asserted by host/content, not cryptographically authenticated. Not source-readiness approval.",
+    "source_organization": "Finep",
+    "text_path": "text/M30-N04.txt",
+    "text_sha256": "2258b3625a2c1dac226c633f0a3aba28eb638bb59505baf7a632ede9901f4ed3"
+  },
+  "records": [
+    {
+      "all_overlap_predictions": [
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0000",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0001",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0002",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0003",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0004",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0005",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "unrelated_or_non_actionable",
+          "modality": "fomento",
+          "segment_id": "segment-0006",
+          "temporal": "not_applicable"
+        },
+        {
+          "discovery": "opportunity_signal",
+          "modality": "undetermined",
+          "segment_id": "segment-0007",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "unrelated_or_non_actionable",
+          "modality": "fomento",
+          "segment_id": "segment-0008",
+          "temporal": "not_applicable"
+        },
+        {
+          "discovery": "opportunity_signal",
+          "modality": "undetermined",
+          "segment_id": "segment-0009",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "unrelated_or_non_actionable",
+          "modality": "fomento",
+          "segment_id": "segment-0010",
+          "temporal": "not_applicable"
+        },
+        {
+          "discovery": "opportunity_signal",
+          "modality": "fomento",
+          "segment_id": "segment-0011",
+          "temporal": "undetermined"
+        }
+      ],
+      "any_exact_boundary": false,
+      "coverage": {
+        "denominator": 3215,
+        "numerator": 3190,
+        "value": 0.9922239502332815
+      },
+      "covered_characters": 3190,
+      "disagreements": [],
+      "discovery_histogram": {
+        "abstain": 6,
+        "opportunity_signal": 3,
+        "unrelated_or_non_actionable": 3
+      },
+      "document_id": "M30-N04",
+      "edges": [
+        {
+          "end": 2885,
+          "exact": false,
+          "intersection": 107,
+          "intersection_end": 2885,
+          "intersection_start": 2778,
+          "iou": 0.03328149300155521,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.03328149300155521,
+          "segment_id": "segment-0000",
+          "start": 2778
+        },
+        {
+          "end": 2897,
+          "exact": false,
+          "intersection": 11,
+          "intersection_end": 2897,
+          "intersection_start": 2886,
+          "iou": 0.003421461897356143,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.003421461897356143,
+          "segment_id": "segment-0001",
+          "start": 2886
+        },
+        {
+          "end": 2912,
+          "exact": false,
+          "intersection": 14,
+          "intersection_end": 2912,
+          "intersection_start": 2898,
+          "iou": 0.004354587869362364,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.004354587869362364,
+          "segment_id": "segment-0002",
+          "start": 2898
+        },
+        {
+          "end": 2919,
+          "exact": false,
+          "intersection": 6,
+          "intersection_end": 2919,
+          "intersection_start": 2913,
+          "iou": 0.0018662519440124418,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.0018662519440124418,
+          "segment_id": "segment-0003",
+          "start": 2913
+        },
+        {
+          "end": 2925,
+          "exact": false,
+          "intersection": 5,
+          "intersection_end": 2925,
+          "intersection_start": 2920,
+          "iou": 0.0015552099533437014,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.0015552099533437014,
+          "segment_id": "segment-0004",
+          "start": 2920
+        },
+        {
+          "end": 3054,
+          "exact": false,
+          "intersection": 114,
+          "intersection_end": 3054,
+          "intersection_start": 2940,
+          "iou": 0.03545878693623639,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.03545878693623639,
+          "segment_id": "segment-0005",
+          "start": 2940
+        },
+        {
+          "end": 3982,
+          "exact": false,
+          "intersection": 927,
+          "intersection_end": 3982,
+          "intersection_start": 3055,
+          "iou": 0.28833592534992225,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.28833592534992225,
+          "segment_id": "segment-0006",
+          "start": 3055
+        },
+        {
+          "end": 4407,
+          "exact": false,
+          "intersection": 424,
+          "intersection_end": 4407,
+          "intersection_start": 3983,
+          "iou": 0.13188180404354588,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.13188180404354588,
+          "segment_id": "segment-0007",
+          "start": 3983
+        },
+        {
+          "end": 4730,
+          "exact": false,
+          "intersection": 322,
+          "intersection_end": 4730,
+          "intersection_start": 4408,
+          "iou": 0.10015552099533437,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.10015552099533437,
+          "segment_id": "segment-0008",
+          "start": 4408
+        },
+        {
+          "end": 5019,
+          "exact": false,
+          "intersection": 288,
+          "intersection_end": 5019,
+          "intersection_start": 4731,
+          "iou": 0.0895800933125972,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.0895800933125972,
+          "segment_id": "segment-0009",
+          "start": 4731
+        },
+        {
+          "end": 5411,
+          "exact": false,
+          "intersection": 391,
+          "intersection_end": 5411,
+          "intersection_start": 5020,
+          "iou": 0.12161741835147745,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.12161741835147745,
+          "segment_id": "segment-0010",
+          "start": 5020
+        },
+        {
+          "end": 5993,
+          "exact": false,
+          "intersection": 581,
+          "intersection_end": 5993,
+          "intersection_start": 5412,
+          "iou": 0.1807153965785381,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.1807153965785381,
+          "segment_id": "segment-0011",
+          "start": 5412
+        }
+      ],
+      "end": 5993,
+      "fields": [
+        {
+          "candidates": [],
+          "name": "title",
+          "reason": "no corresponding field; absence is not explicit field abstention",
+          "reference_evidence": [
+            {
+              "end": 5993,
+              "evidence_id": "M30-N04-R1-E1",
+              "page": null,
+              "quote": "MCTI e Finep anunciam aporte de R$ 450 milhões para 114 empresas das regiões Norte, Nordeste e Centro-Oeste\nPostado em:\n16/10/26 08:18\nTemas:\nTags:\nCompartilhar:\nEdital, com volume inicial de R$ 300 milhões, receberá suplementação de 50% para incluir mais projetos das regiões\nA ministra Luciana Santos, do Ministério da Ciência, Tecnologia e Inovação (MCTI) anunciou hoje (16), no auditório da Sudene, no Recife (PE), os resultados da segunda rodada da chamada Mais Inovação Brasil Subvenção Econômica, edital da Finep (Financiadora de Estudos e Projetos, agência de inovação vinculada ao MCTI) que direcionava, inicialmente, R$ 300 milhões em recursos não reembolsáveis para empresas de todos os portes que atuam nas regiões Norte, Nordeste e Centro-Oeste. O financiamento irá fomentar 78 projetos inovadores e de risco tecnológico com impacto no desenvolvimento regional e relevância social. A ministra também anunciou a complementação de R$ 150 milhões para a chamada, que deve beneficiar mais 36 projetos já analisados e com recomendação de contratação, mas que ficaram fora do orçamento original. Com os novos recursos, serão 114 propostas beneficiadas e 50% de aumento no volume total de recursos.\nLançada em fevereiro de 2026, a chamada recebeu 587 propostas de empresas das regiões. Destes, 400 projetos foram habilitados para avaliação dos técnicos da Finep em parceria inédita com analistas do Sebrae e das três Superintendências Regionais, Sudeco (Superintendência de Desenvolvimento do Centro-Oeste), Sudene (Superintendência de Desenvolvimento do Nordeste) e Sudam (Superintendência de Desenvolvimento da Amazônia).\nEntre os projetos aprovados inicialmente, 75% são de microempresas (faturamento abaixo de R$ 1 milhão) e empresas de pequeno porte (faturamento de R$ 1 milhão até R$ 4,8 milhões). A chamada também vai beneficiar 44 empresas que, pela primeira vez, receberão subvenção da agência, representando 56% das propostas aprovadas.\nEmpresas sediadas em 35 cidades das regiões serão beneficiadas pelo edital, sendo que sete cidades serão atendidas pela primeira vez em uma chamada da Finep (Inhumas/GO, Santa Bárbara do Pará/PA, Salgueiro/PE, Campo Novo do Parecis/MT, Luís Eduardo Magalhães/BA,Goiana/PE e Agrestina/PE).\nTodos os projetos estão enquadrados dentro de uma ou mais missões da Nova Indústria Brasil (NIB). Do valor total da chamada, a região Norte recebeu R$ 50 milhões; a região Centro-Oeste, R$ 100 milhões; e a região Nordeste, R$ 150 milhões. Os limites de subvenção para cada proposta partiam de R$ 2 milhões a R$ 5 milhões, sendo que o valor médio dos projetos aprovados foi de R$ 3,8 milhões.\n“O foco primordial desta chamada é o amadurecimento das vocações produtivas dessas regiões, promovendo um crescimento econômico que seja sustentável e inclusivo. Com este resultado, a Finep revoluciona a capilaridade e o alcance da Subvenção Econômica direta nas três regiões que serão atendidas e intensifica parceria das empresas selecionadas com Instituições de Ciência e Tecnologia de diversos pontos do país. São 36 instituições participando, em uma expectativa de 15% do valor da chamada serem comprometidos nestas parcerias”, afirmou Luiz Antônio Elias, presidente da Finep.",
+              "start": 2778
+            }
+          ],
+          "reference_value": "MCTI e Finep anunciam aporte de R$ 450 milhões para 114 empresas das regiões Norte, Nordeste e Centro-Oeste",
+          "scope_supported": true,
+          "semantic_adjudication": "not_certified",
+          "status": "MISSING",
+          "strict_role_value": false
+        },
+        {
+          "candidates": [
+            {
+              "diagnostic_status": "traceable_not_semantically_certified",
+              "field_index": 1,
+              "method_version": "m31-deterministic-v2",
+              "name": "monetary_expression_unresolved",
+              "original": "R$ 150 milhões",
+              "schema_version": "m31-extraction-v1",
+              "segment_id": "segment-0006",
+              "uncertainty": "heuristic role assignment; not authenticated or normalized",
+              "witness": {
+                "document_id": "M30-N04",
+                "end": 3982,
+                "page": null,
+                "quote": "A ministra Luciana Santos, do Ministério da Ciência, Tecnologia e Inovação (MCTI) anunciou hoje (16), no auditório da Sudene, no Recife (PE), os resultados da segunda rodada da chamada Mais Inovação Brasil Subvenção Econômica, edital da Finep (Financiadora de Estudos e Projetos, agência de inovação vinculada ao MCTI) que direcionava, inicialmente, R$ 300 milhões em recursos não reembolsáveis para empresas de todos os portes que atuam nas regiões Norte, Nordeste e Centro-Oeste. O financiamento irá fomentar 78 projetos inovadores e de risco tecnológico com impacto no desenvolvimento regional e relevância social. A ministra também anunciou a complementação de R$ 150 milhões para a chamada, que deve beneficiar mais 36 projetos já analisados e com recomendação de contratação, mas que ficaram fora do orçamento original. Com os novos recursos, serão 114 propostas beneficiadas e 50% de aumento no volume total de recursos.",
+                "raw_sha256": "98318fd47d92b74fcdc3a251e5fc79fe6625d92e18c04d43dfc287448a476dce",
+                "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+                "schema_version": "m31-extraction-v1",
+                "segment_id": "segment-0006",
+                "start": 3055,
+                "text_sha256": "2258b3625a2c1dac226c633f0a3aba28eb638bb59505baf7a632ede9901f4ed3"
+              }
+            },
+            {
+              "diagnostic_status": "traceable_not_semantically_certified",
+              "field_index": 2,
+              "method_version": "m31-deterministic-v2",
+              "name": "proposal_amount_expression",
+              "original": "R$ 150 milhões",
+              "schema_version": "m31-extraction-v1",
+              "segment_id": "segment-0010",
+              "uncertainty": "heuristic role assignment; not authenticated or normalized",
+              "witness": {
+                "document_id": "M30-N04",
+                "end": 5411,
+                "page": null,
+                "quote": "Todos os projetos estão enquadrados dentro de uma ou mais missões da Nova Indústria Brasil (NIB). Do valor total da chamada, a região Norte recebeu R$ 50 milhões; a região Centro-Oeste, R$ 100 milhões; e a região Nordeste, R$ 150 milhões. Os limites de subvenção para cada proposta partiam de R$ 2 milhões a R$ 5 milhões, sendo que o valor médio dos projetos aprovados foi de R$ 3,8 milhões.",
+                "raw_sha256": "98318fd47d92b74fcdc3a251e5fc79fe6625d92e18c04d43dfc287448a476dce",
+                "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+                "schema_version": "m31-extraction-v1",
+                "segment_id": "segment-0010",
+                "start": 5020,
+                "text_sha256": "2258b3625a2c1dac226c633f0a3aba28eb638bb59505baf7a632ede9901f4ed3"
+              }
+            }
+          ],
+          "name": "supplement_for_existing_proposals",
+          "reason": "requested target role outside implemented M31 field scope",
+          "reference_evidence": [
+            {
+              "end": 5993,
+              "evidence_id": "M30-N04-R1-E1",
+              "page": null,
+              "quote": "MCTI e Finep anunciam aporte de R$ 450 milhões para 114 empresas das regiões Norte, Nordeste e Centro-Oeste\nPostado em:\n16/10/26 08:18\nTemas:\nTags:\nCompartilhar:\nEdital, com volume inicial de R$ 300 milhões, receberá suplementação de 50% para incluir mais projetos das regiões\nA ministra Luciana Santos, do Ministério da Ciência, Tecnologia e Inovação (MCTI) anunciou hoje (16), no auditório da Sudene, no Recife (PE), os resultados da segunda rodada da chamada Mais Inovação Brasil Subvenção Econômica, edital da Finep (Financiadora de Estudos e Projetos, agência de inovação vinculada ao MCTI) que direcionava, inicialmente, R$ 300 milhões em recursos não reembolsáveis para empresas de todos os portes que atuam nas regiões Norte, Nordeste e Centro-Oeste. O financiamento irá fomentar 78 projetos inovadores e de risco tecnológico com impacto no desenvolvimento regional e relevância social. A ministra também anunciou a complementação de R$ 150 milhões para a chamada, que deve beneficiar mais 36 projetos já analisados e com recomendação de contratação, mas que ficaram fora do orçamento original. Com os novos recursos, serão 114 propostas beneficiadas e 50% de aumento no volume total de recursos.\nLançada em fevereiro de 2026, a chamada recebeu 587 propostas de empresas das regiões. Destes, 400 projetos foram habilitados para avaliação dos técnicos da Finep em parceria inédita com analistas do Sebrae e das três Superintendências Regionais, Sudeco (Superintendência de Desenvolvimento do Centro-Oeste), Sudene (Superintendência de Desenvolvimento do Nordeste) e Sudam (Superintendência de Desenvolvimento da Amazônia).\nEntre os projetos aprovados inicialmente, 75% são de microempresas (faturamento abaixo de R$ 1 milhão) e empresas de pequeno porte (faturamento de R$ 1 milhão até R$ 4,8 milhões). A chamada também vai beneficiar 44 empresas que, pela primeira vez, receberão subvenção da agência, representando 56% das propostas aprovadas.\nEmpresas sediadas em 35 cidades das regiões serão beneficiadas pelo edital, sendo que sete cidades serão atendidas pela primeira vez em uma chamada da Finep (Inhumas/GO, Santa Bárbara do Pará/PA, Salgueiro/PE, Campo Novo do Parecis/MT, Luís Eduardo Magalhães/BA,Goiana/PE e Agrestina/PE).\nTodos os projetos estão enquadrados dentro de uma ou mais missões da Nova Indústria Brasil (NIB). Do valor total da chamada, a região Norte recebeu R$ 50 milhões; a região Centro-Oeste, R$ 100 milhões; e a região Nordeste, R$ 150 milhões. Os limites de subvenção para cada proposta partiam de R$ 2 milhões a R$ 5 milhões, sendo que o valor médio dos projetos aprovados foi de R$ 3,8 milhões.\n“O foco primordial desta chamada é o amadurecimento das vocações produtivas dessas regiões, promovendo um crescimento econômico que seja sustentável e inclusivo. Com este resultado, a Finep revoluciona a capilaridade e o alcance da Subvenção Econômica direta nas três regiões que serão atendidas e intensifica parceria das empresas selecionadas com Instituições de Ciência e Tecnologia de diversos pontos do país. São 36 instituições participando, em uma expectativa de 15% do valor da chamada serem comprometidos nestas parcerias”, afirmou Luiz Antônio Elias, presidente da Finep.",
+              "start": 2778
+            }
+          ],
+          "reference_value": "R$ 150 milhões",
+          "scope_supported": false,
+          "semantic_adjudication": "not_certified",
+          "status": "UNRESOLVED",
+          "strict_role_value": false
+        }
+      ],
+      "fragmentation": 12,
+      "location_convention": "html_unicode_codepoints",
+      "physical_reference_evidence_pages": [],
+      "rationale": "The additional R$150m is explicitly for 36 proposals ALREADY analyzed and recommended for contracting. Supplementing the budget for existing proposals does not announce a new application window. This is a deliberately difficult monetary-press-release negative.",
+      "record_id": "M30-N04-R1",
+      "reference": {
+        "discovery_label": "unrelated_or_non_actionable",
+        "modality": "fomento",
+        "opportunity_label": "not_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "not_applicable"
+      },
+      "reference_characters": 3215,
+      "reference_evidence": [
+        {
+          "end": 5993,
+          "evidence_id": "M30-N04-R1-E1",
+          "page": null,
+          "quote": "MCTI e Finep anunciam aporte de R$ 450 milhões para 114 empresas das regiões Norte, Nordeste e Centro-Oeste\nPostado em:\n16/10/26 08:18\nTemas:\nTags:\nCompartilhar:\nEdital, com volume inicial de R$ 300 milhões, receberá suplementação de 50% para incluir mais projetos das regiões\nA ministra Luciana Santos, do Ministério da Ciência, Tecnologia e Inovação (MCTI) anunciou hoje (16), no auditório da Sudene, no Recife (PE), os resultados da segunda rodada da chamada Mais Inovação Brasil Subvenção Econômica, edital da Finep (Financiadora de Estudos e Projetos, agência de inovação vinculada ao MCTI) que direcionava, inicialmente, R$ 300 milhões em recursos não reembolsáveis para empresas de todos os portes que atuam nas regiões Norte, Nordeste e Centro-Oeste. O financiamento irá fomentar 78 projetos inovadores e de risco tecnológico com impacto no desenvolvimento regional e relevância social. A ministra também anunciou a complementação de R$ 150 milhões para a chamada, que deve beneficiar mais 36 projetos já analisados e com recomendação de contratação, mas que ficaram fora do orçamento original. Com os novos recursos, serão 114 propostas beneficiadas e 50% de aumento no volume total de recursos.\nLançada em fevereiro de 2026, a chamada recebeu 587 propostas de empresas das regiões. Destes, 400 projetos foram habilitados para avaliação dos técnicos da Finep em parceria inédita com analistas do Sebrae e das três Superintendências Regionais, Sudeco (Superintendência de Desenvolvimento do Centro-Oeste), Sudene (Superintendência de Desenvolvimento do Nordeste) e Sudam (Superintendência de Desenvolvimento da Amazônia).\nEntre os projetos aprovados inicialmente, 75% são de microempresas (faturamento abaixo de R$ 1 milhão) e empresas de pequeno porte (faturamento de R$ 1 milhão até R$ 4,8 milhões). A chamada também vai beneficiar 44 empresas que, pela primeira vez, receberão subvenção da agência, representando 56% das propostas aprovadas.\nEmpresas sediadas em 35 cidades das regiões serão beneficiadas pelo edital, sendo que sete cidades serão atendidas pela primeira vez em uma chamada da Finep (Inhumas/GO, Santa Bárbara do Pará/PA, Salgueiro/PE, Campo Novo do Parecis/MT, Luís Eduardo Magalhães/BA,Goiana/PE e Agrestina/PE).\nTodos os projetos estão enquadrados dentro de uma ou mais missões da Nova Indústria Brasil (NIB). Do valor total da chamada, a região Norte recebeu R$ 50 milhões; a região Centro-Oeste, R$ 100 milhões; e a região Nordeste, R$ 150 milhões. Os limites de subvenção para cada proposta partiam de R$ 2 milhões a R$ 5 milhões, sendo que o valor médio dos projetos aprovados foi de R$ 3,8 milhões.\n“O foco primordial desta chamada é o amadurecimento das vocações produtivas dessas regiões, promovendo um crescimento econômico que seja sustentável e inclusivo. Com este resultado, a Finep revoluciona a capilaridade e o alcance da Subvenção Econômica direta nas três regiões que serão atendidas e intensifica parceria das empresas selecionadas com Instituições de Ciência e Tecnologia de diversos pontos do país. São 36 instituições participando, em uma expectativa de 15% do valor da chamada serem comprometidos nestas parcerias”, afirmou Luiz Antônio Elias, presidente da Finep.",
+          "start": 2778
+        }
+      ],
+      "representative": "segment-0006",
+      "representative_prediction": {
+        "discovery": "unrelated_or_non_actionable",
+        "end": 3982,
+        "modality": "fomento",
+        "segment_id": "segment-0006",
+        "start": 3055,
+        "temporal": "not_applicable"
+      },
+      "representative_quote": "A ministra Luciana Santos, do Ministério da Ciência, Tecnologia e Inovação (MCTI) anunciou hoje (16), no auditório da Sudene, no Recife (PE), os resultados da segunda rodada da chamada Mais Inovação Brasil Subvenção Econômica, edital da Finep (Financiadora de Estudos e Projetos, agência de inovação vinculada ao MCTI) que direcionava, inicialmente, R$ 300 milhões em recursos não reembolsáveis para empresas de todos os portes que atuam nas regiões Norte, Nordeste e Centro-Oeste. O financiamento irá fomentar 78 projetos inovadores e de risco tecnológico com impacto no desenvolvimento regional e relevância social. A ministra também anunciou a complementação de R$ 150 milhões para a chamada, que deve beneficiar mais 36 projetos já analisados e com recomendação de contratação, mas que ficaram fora do orçamento original. Com os novos recursos, serão 114 propostas beneficiadas e 50% de aumento no volume total de recursos.",
+      "start": 2778,
+      "status": "overlap",
+      "uncertainty_notes": [
+        "Negative applies to this record as a distinct new/current/future opportunity; it does not erase the existence of the underlying program. No new application is supported by these paragraphs."
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 2885,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-N04-R1"
+      ],
+      "segment_id": "segment-0000",
+      "start": 2778,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 2897,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-N04-R1"
+      ],
+      "segment_id": "segment-0001",
+      "start": 2886,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 2912,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-N04-R1"
+      ],
+      "segment_id": "segment-0002",
+      "start": 2898,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 2919,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-N04-R1"
+      ],
+      "segment_id": "segment-0003",
+      "start": 2913,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 2925,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-N04-R1"
+      ],
+      "segment_id": "segment-0004",
+      "start": 2920,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 3054,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-N04-R1"
+      ],
+      "segment_id": "segment-0005",
+      "start": 2940,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "completed_event_not_new_access"
+      ],
+      "discovery": "unrelated_or_non_actionable",
+      "end": 3982,
+      "field_count": 3,
+      "modality": "fomento",
+      "physical_page": null,
+      "reference_records": [
+        "M30-N04-R1"
+      ],
+      "segment_id": "segment-0006",
+      "start": 3055,
+      "temporal": "not_applicable",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 4407,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-N04-R1"
+      ],
+      "segment_id": "segment-0007",
+      "start": 3983,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "completed_event_not_new_access"
+      ],
+      "discovery": "unrelated_or_non_actionable",
+      "end": 4730,
+      "field_count": 4,
+      "modality": "fomento",
+      "physical_page": null,
+      "reference_records": [
+        "M30-N04-R1"
+      ],
+      "segment_id": "segment-0008",
+      "start": 4408,
+      "temporal": "not_applicable",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 5019,
+      "field_count": 2,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-N04-R1"
+      ],
+      "segment_id": "segment-0009",
+      "start": 4731,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "completed_event_not_new_access"
+      ],
+      "discovery": "unrelated_or_non_actionable",
+      "end": 5411,
+      "field_count": 6,
+      "modality": "fomento",
+      "physical_page": null,
+      "reference_records": [
+        "M30-N04-R1"
+      ],
+      "segment_id": "segment-0010",
+      "start": 5020,
+      "temporal": "not_applicable",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 5993,
+      "field_count": 0,
+      "modality": "fomento",
+      "physical_page": null,
+      "reference_records": [
+        "M30-N04-R1"
+      ],
+      "segment_id": "segment-0011",
+      "start": 5412,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 6009,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0012",
+      "start": 5994,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 6018,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0013",
+      "start": 6010,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 6126,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0014",
+      "start": 6019,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 6223,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0015",
+      "start": 6127,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 6235,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0016",
+      "start": 6224,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 6246,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0017",
+      "start": 6236,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 6320,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0018",
+      "start": 6247,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 6419,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0019",
+      "start": 6321,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 6431,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0020",
+      "start": 6420,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 6442,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0021",
+      "start": 6432,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "completed_event_not_new_access"
+      ],
+      "discovery": "unrelated_or_non_actionable",
+      "end": 6498,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0022",
+      "start": 6443,
+      "temporal": "not_applicable",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 6592,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0023",
+      "start": 6499,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 6604,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0024",
+      "start": 6593,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 6615,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0025",
+      "start": 6605,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 6716,
+      "field_count": 2,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0026",
+      "start": 6616,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 6808,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0027",
+      "start": 6717,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 6820,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0028",
+      "start": 6809,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 6831,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0029",
+      "start": 6821,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 6846,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0030",
+      "start": 6832,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 6862,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0031",
+      "start": 6847,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 7786,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0032",
+      "start": 7778,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 7818,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0033",
+      "start": 7787,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 7823,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0034",
+      "start": 7819,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 7832,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0035",
+      "start": 7824,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 7847,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0036",
+      "start": 7833,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 7849,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0037",
+      "start": 7848,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 7852,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0038",
+      "start": 7850,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 7861,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0039",
+      "start": 7853,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 7887,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0040",
+      "start": 7862,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 7902,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0041",
+      "start": 7888,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 7916,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0042",
+      "start": 7903,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 8032,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0043",
+      "start": 8015,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 8074,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0044",
+      "start": 8033,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 8081,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0045",
+      "start": 8075,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 8401,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0046",
+      "start": 8082,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 8438,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0047",
+      "start": 8402,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 8451,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0048",
+      "start": 8439,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 8464,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0049",
+      "start": 8452,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 8477,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0050",
+      "start": 8465,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    }
+  ],
+  "semantic_reviews": [
+    {
+      "case_id": "M30-N04:segment-0010:field:0",
+      "certainty": "confirmed_defect",
+      "claim_kind": "field",
+      "context_evidence": [
+        {
+          "end": 5993,
+          "page": null,
+          "quote": "MCTI e Finep anunciam aporte de R$ 450 milhões para 114 empresas das regiões Norte, Nordeste e Centro-Oeste\nPostado em:\n16/10/26 08:18\nTemas:\nTags:\nCompartilhar:\nEdital, com volume inicial de R$ 300 milhões, receberá suplementação de 50% para incluir mais projetos das regiões\nA ministra Luciana Santos, do Ministério da Ciência, Tecnologia e Inovação (MCTI) anunciou hoje (16), no auditório da Sudene, no Recife (PE), os resultados da segunda rodada da chamada Mais Inovação Brasil Subvenção Econômica, edital da Finep (Financiadora de Estudos e Projetos, agência de inovação vinculada ao MCTI) que direcionava, inicialmente, R$ 300 milhões em recursos não reembolsáveis para empresas de todos os portes que atuam nas regiões Norte, Nordeste e Centro-Oeste. O financiamento irá fomentar 78 projetos inovadores e de risco tecnológico com impacto no desenvolvimento regional e relevância social. A ministra também anunciou a complementação de R$ 150 milhões para a chamada, que deve beneficiar mais 36 projetos já analisados e com recomendação de contratação, mas que ficaram fora do orçamento original. Com os novos recursos, serão 114 propostas beneficiadas e 50% de aumento no volume total de recursos.\nLançada em fevereiro de 2026, a chamada recebeu 587 propostas de empresas das regiões. Destes, 400 projetos foram habilitados para avaliação dos técnicos da Finep em parceria inédita com analistas do Sebrae e das três Superintendências Regionais, Sudeco (Superintendência de Desenvolvimento do Centro-Oeste), Sudene (Superintendência de Desenvolvimento do Nordeste) e Sudam (Superintendência de Desenvolvimento da Amazônia).\nEntre os projetos aprovados inicialmente, 75% são de microempresas (faturamento abaixo de R$ 1 milhão) e empresas de pequeno porte (faturamento de R$ 1 milhão até R$ 4,8 milhões). A chamada também vai beneficiar 44 empresas que, pela primeira vez, receberão subvenção da agência, representando 56% das propostas aprovadas.\nEmpresas sediadas em 35 cidades das regiões serão beneficiadas pelo edital, sendo que sete cidades serão atendidas pela primeira vez em uma chamada da Finep (Inhumas/GO, Santa Bárbara do Pará/PA, Salgueiro/PE, Campo Novo do Parecis/MT, Luís Eduardo Magalhães/BA,Goiana/PE e Agrestina/PE).\nTodos os projetos estão enquadrados dentro de uma ou mais missões da Nova Indústria Brasil (NIB). Do valor total da chamada, a região Norte recebeu R$ 50 milhões; a região Centro-Oeste, R$ 100 milhões; e a região Nordeste, R$ 150 milhões. Os limites de subvenção para cada proposta partiam de R$ 2 milhões a R$ 5 milhões, sendo que o valor médio dos projetos aprovados foi de R$ 3,8 milhões.\n“O foco primordial desta chamada é o amadurecimento das vocações produtivas dessas regiões, promovendo um crescimento econômico que seja sustentável e inclusivo. Com este resultado, a Finep revoluciona a capilaridade e o alcance da Subvenção Econômica direta nas três regiões que serão atendidas e intensifica parceria das empresas selecionadas com Instituições de Ciência e Tecnologia de diversos pontos do país. São 36 instituições participando, em uma expectativa de 15% do valor da chamada serem comprometidos nestas parcerias”, afirmou Luiz Antônio Elias, presidente da Finep.",
+          "start": 2778
+        }
+      ],
+      "document_id": "M30-N04",
+      "end": 5411,
+      "error_codes": [
+        "FINANCIAL_ROLE_CONFUSION",
+        "EVIDENCE_SEMANTIC_MISMATCH"
+      ],
+      "expected_behavior": "Separar alocação regional, faixa por proposta e média de projetos; preservar qualificadores.",
+      "expected_claim": "R$ 50 milhões",
+      "field_index": 0,
+      "field_name": "proposal_amount_expression",
+      "judgment": "unsupported",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "quote": "Todos os projetos estão enquadrados dentro de uma ou mais missões da Nova Indústria Brasil (NIB). Do valor total da chamada, a região Norte recebeu R$ 50 milhões; a região Centro-Oeste, R$ 100 milhões; e a região Nordeste, R$ 150 milhões. Os limites de subvenção para cada proposta partiam de R$ 2 milhões a R$ 5 milhões, sendo que o valor médio dos projetos aprovados foi de R$ 3,8 milhões.",
+      "rationale": "R$ 50/100/150 milhões são alocações regionais do total da chamada. O mesmo parágrafo menciona limites POR PROPOSTA de R$ 2 a 5 milhões. Os três primeiros não são valores por proposta.",
+      "root_cause": "rules.py:133-153 usa janela +/-120 caracteres e detecta cada proposta posterior à alocação regional.",
+      "root_cause_confidence": "high",
+      "segment_id": "segment-0010",
+      "severity": "high",
+      "start": 5020
+    },
+    {
+      "case_id": "M30-N04:segment-0010:field:1",
+      "certainty": "confirmed_defect",
+      "claim_kind": "field",
+      "context_evidence": [
+        {
+          "end": 5993,
+          "page": null,
+          "quote": "MCTI e Finep anunciam aporte de R$ 450 milhões para 114 empresas das regiões Norte, Nordeste e Centro-Oeste\nPostado em:\n16/10/26 08:18\nTemas:\nTags:\nCompartilhar:\nEdital, com volume inicial de R$ 300 milhões, receberá suplementação de 50% para incluir mais projetos das regiões\nA ministra Luciana Santos, do Ministério da Ciência, Tecnologia e Inovação (MCTI) anunciou hoje (16), no auditório da Sudene, no Recife (PE), os resultados da segunda rodada da chamada Mais Inovação Brasil Subvenção Econômica, edital da Finep (Financiadora de Estudos e Projetos, agência de inovação vinculada ao MCTI) que direcionava, inicialmente, R$ 300 milhões em recursos não reembolsáveis para empresas de todos os portes que atuam nas regiões Norte, Nordeste e Centro-Oeste. O financiamento irá fomentar 78 projetos inovadores e de risco tecnológico com impacto no desenvolvimento regional e relevância social. A ministra também anunciou a complementação de R$ 150 milhões para a chamada, que deve beneficiar mais 36 projetos já analisados e com recomendação de contratação, mas que ficaram fora do orçamento original. Com os novos recursos, serão 114 propostas beneficiadas e 50% de aumento no volume total de recursos.\nLançada em fevereiro de 2026, a chamada recebeu 587 propostas de empresas das regiões. Destes, 400 projetos foram habilitados para avaliação dos técnicos da Finep em parceria inédita com analistas do Sebrae e das três Superintendências Regionais, Sudeco (Superintendência de Desenvolvimento do Centro-Oeste), Sudene (Superintendência de Desenvolvimento do Nordeste) e Sudam (Superintendência de Desenvolvimento da Amazônia).\nEntre os projetos aprovados inicialmente, 75% são de microempresas (faturamento abaixo de R$ 1 milhão) e empresas de pequeno porte (faturamento de R$ 1 milhão até R$ 4,8 milhões). A chamada também vai beneficiar 44 empresas que, pela primeira vez, receberão subvenção da agência, representando 56% das propostas aprovadas.\nEmpresas sediadas em 35 cidades das regiões serão beneficiadas pelo edital, sendo que sete cidades serão atendidas pela primeira vez em uma chamada da Finep (Inhumas/GO, Santa Bárbara do Pará/PA, Salgueiro/PE, Campo Novo do Parecis/MT, Luís Eduardo Magalhães/BA,Goiana/PE e Agrestina/PE).\nTodos os projetos estão enquadrados dentro de uma ou mais missões da Nova Indústria Brasil (NIB). Do valor total da chamada, a região Norte recebeu R$ 50 milhões; a região Centro-Oeste, R$ 100 milhões; e a região Nordeste, R$ 150 milhões. Os limites de subvenção para cada proposta partiam de R$ 2 milhões a R$ 5 milhões, sendo que o valor médio dos projetos aprovados foi de R$ 3,8 milhões.\n“O foco primordial desta chamada é o amadurecimento das vocações produtivas dessas regiões, promovendo um crescimento econômico que seja sustentável e inclusivo. Com este resultado, a Finep revoluciona a capilaridade e o alcance da Subvenção Econômica direta nas três regiões que serão atendidas e intensifica parceria das empresas selecionadas com Instituições de Ciência e Tecnologia de diversos pontos do país. São 36 instituições participando, em uma expectativa de 15% do valor da chamada serem comprometidos nestas parcerias”, afirmou Luiz Antônio Elias, presidente da Finep.",
+          "start": 2778
+        }
+      ],
+      "document_id": "M30-N04",
+      "end": 5411,
+      "error_codes": [
+        "FINANCIAL_ROLE_CONFUSION",
+        "EVIDENCE_SEMANTIC_MISMATCH"
+      ],
+      "expected_behavior": "Separar alocação regional, faixa por proposta e média de projetos; preservar qualificadores.",
+      "expected_claim": "R$ 100 milhões",
+      "field_index": 1,
+      "field_name": "proposal_amount_expression",
+      "judgment": "unsupported",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "quote": "Todos os projetos estão enquadrados dentro de uma ou mais missões da Nova Indústria Brasil (NIB). Do valor total da chamada, a região Norte recebeu R$ 50 milhões; a região Centro-Oeste, R$ 100 milhões; e a região Nordeste, R$ 150 milhões. Os limites de subvenção para cada proposta partiam de R$ 2 milhões a R$ 5 milhões, sendo que o valor médio dos projetos aprovados foi de R$ 3,8 milhões.",
+      "rationale": "R$ 50/100/150 milhões são alocações regionais do total da chamada. O mesmo parágrafo menciona limites POR PROPOSTA de R$ 2 a 5 milhões. Os três primeiros não são valores por proposta.",
+      "root_cause": "rules.py:133-153 usa janela +/-120 caracteres e detecta cada proposta posterior à alocação regional.",
+      "root_cause_confidence": "high",
+      "segment_id": "segment-0010",
+      "severity": "high",
+      "start": 5020
+    },
+    {
+      "case_id": "M30-N04:segment-0010:field:2",
+      "certainty": "confirmed_defect",
+      "claim_kind": "field",
+      "context_evidence": [
+        {
+          "end": 5993,
+          "page": null,
+          "quote": "MCTI e Finep anunciam aporte de R$ 450 milhões para 114 empresas das regiões Norte, Nordeste e Centro-Oeste\nPostado em:\n16/10/26 08:18\nTemas:\nTags:\nCompartilhar:\nEdital, com volume inicial de R$ 300 milhões, receberá suplementação de 50% para incluir mais projetos das regiões\nA ministra Luciana Santos, do Ministério da Ciência, Tecnologia e Inovação (MCTI) anunciou hoje (16), no auditório da Sudene, no Recife (PE), os resultados da segunda rodada da chamada Mais Inovação Brasil Subvenção Econômica, edital da Finep (Financiadora de Estudos e Projetos, agência de inovação vinculada ao MCTI) que direcionava, inicialmente, R$ 300 milhões em recursos não reembolsáveis para empresas de todos os portes que atuam nas regiões Norte, Nordeste e Centro-Oeste. O financiamento irá fomentar 78 projetos inovadores e de risco tecnológico com impacto no desenvolvimento regional e relevância social. A ministra também anunciou a complementação de R$ 150 milhões para a chamada, que deve beneficiar mais 36 projetos já analisados e com recomendação de contratação, mas que ficaram fora do orçamento original. Com os novos recursos, serão 114 propostas beneficiadas e 50% de aumento no volume total de recursos.\nLançada em fevereiro de 2026, a chamada recebeu 587 propostas de empresas das regiões. Destes, 400 projetos foram habilitados para avaliação dos técnicos da Finep em parceria inédita com analistas do Sebrae e das três Superintendências Regionais, Sudeco (Superintendência de Desenvolvimento do Centro-Oeste), Sudene (Superintendência de Desenvolvimento do Nordeste) e Sudam (Superintendência de Desenvolvimento da Amazônia).\nEntre os projetos aprovados inicialmente, 75% são de microempresas (faturamento abaixo de R$ 1 milhão) e empresas de pequeno porte (faturamento de R$ 1 milhão até R$ 4,8 milhões). A chamada também vai beneficiar 44 empresas que, pela primeira vez, receberão subvenção da agência, representando 56% das propostas aprovadas.\nEmpresas sediadas em 35 cidades das regiões serão beneficiadas pelo edital, sendo que sete cidades serão atendidas pela primeira vez em uma chamada da Finep (Inhumas/GO, Santa Bárbara do Pará/PA, Salgueiro/PE, Campo Novo do Parecis/MT, Luís Eduardo Magalhães/BA,Goiana/PE e Agrestina/PE).\nTodos os projetos estão enquadrados dentro de uma ou mais missões da Nova Indústria Brasil (NIB). Do valor total da chamada, a região Norte recebeu R$ 50 milhões; a região Centro-Oeste, R$ 100 milhões; e a região Nordeste, R$ 150 milhões. Os limites de subvenção para cada proposta partiam de R$ 2 milhões a R$ 5 milhões, sendo que o valor médio dos projetos aprovados foi de R$ 3,8 milhões.\n“O foco primordial desta chamada é o amadurecimento das vocações produtivas dessas regiões, promovendo um crescimento econômico que seja sustentável e inclusivo. Com este resultado, a Finep revoluciona a capilaridade e o alcance da Subvenção Econômica direta nas três regiões que serão atendidas e intensifica parceria das empresas selecionadas com Instituições de Ciência e Tecnologia de diversos pontos do país. São 36 instituições participando, em uma expectativa de 15% do valor da chamada serem comprometidos nestas parcerias”, afirmou Luiz Antônio Elias, presidente da Finep.",
+          "start": 2778
+        }
+      ],
+      "document_id": "M30-N04",
+      "end": 5411,
+      "error_codes": [
+        "FINANCIAL_ROLE_CONFUSION",
+        "EVIDENCE_SEMANTIC_MISMATCH"
+      ],
+      "expected_behavior": "Separar alocação regional, faixa por proposta e média de projetos; preservar qualificadores.",
+      "expected_claim": "R$ 150 milhões",
+      "field_index": 2,
+      "field_name": "proposal_amount_expression",
+      "judgment": "unsupported",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "quote": "Todos os projetos estão enquadrados dentro de uma ou mais missões da Nova Indústria Brasil (NIB). Do valor total da chamada, a região Norte recebeu R$ 50 milhões; a região Centro-Oeste, R$ 100 milhões; e a região Nordeste, R$ 150 milhões. Os limites de subvenção para cada proposta partiam de R$ 2 milhões a R$ 5 milhões, sendo que o valor médio dos projetos aprovados foi de R$ 3,8 milhões.",
+      "rationale": "R$ 50/100/150 milhões são alocações regionais do total da chamada. O mesmo parágrafo menciona limites POR PROPOSTA de R$ 2 a 5 milhões. Os três primeiros não são valores por proposta.",
+      "root_cause": "rules.py:133-153 usa janela +/-120 caracteres e detecta cada proposta posterior à alocação regional.",
+      "root_cause_confidence": "high",
+      "segment_id": "segment-0010",
+      "severity": "high",
+      "start": 5020
+    },
+    {
+      "case_id": "M30-N04:segment-0010:field:3",
+      "certainty": "supported_observation",
+      "claim_kind": "field",
+      "context_evidence": [
+        {
+          "end": 5993,
+          "page": null,
+          "quote": "MCTI e Finep anunciam aporte de R$ 450 milhões para 114 empresas das regiões Norte, Nordeste e Centro-Oeste\nPostado em:\n16/10/26 08:18\nTemas:\nTags:\nCompartilhar:\nEdital, com volume inicial de R$ 300 milhões, receberá suplementação de 50% para incluir mais projetos das regiões\nA ministra Luciana Santos, do Ministério da Ciência, Tecnologia e Inovação (MCTI) anunciou hoje (16), no auditório da Sudene, no Recife (PE), os resultados da segunda rodada da chamada Mais Inovação Brasil Subvenção Econômica, edital da Finep (Financiadora de Estudos e Projetos, agência de inovação vinculada ao MCTI) que direcionava, inicialmente, R$ 300 milhões em recursos não reembolsáveis para empresas de todos os portes que atuam nas regiões Norte, Nordeste e Centro-Oeste. O financiamento irá fomentar 78 projetos inovadores e de risco tecnológico com impacto no desenvolvimento regional e relevância social. A ministra também anunciou a complementação de R$ 150 milhões para a chamada, que deve beneficiar mais 36 projetos já analisados e com recomendação de contratação, mas que ficaram fora do orçamento original. Com os novos recursos, serão 114 propostas beneficiadas e 50% de aumento no volume total de recursos.\nLançada em fevereiro de 2026, a chamada recebeu 587 propostas de empresas das regiões. Destes, 400 projetos foram habilitados para avaliação dos técnicos da Finep em parceria inédita com analistas do Sebrae e das três Superintendências Regionais, Sudeco (Superintendência de Desenvolvimento do Centro-Oeste), Sudene (Superintendência de Desenvolvimento do Nordeste) e Sudam (Superintendência de Desenvolvimento da Amazônia).\nEntre os projetos aprovados inicialmente, 75% são de microempresas (faturamento abaixo de R$ 1 milhão) e empresas de pequeno porte (faturamento de R$ 1 milhão até R$ 4,8 milhões). A chamada também vai beneficiar 44 empresas que, pela primeira vez, receberão subvenção da agência, representando 56% das propostas aprovadas.\nEmpresas sediadas em 35 cidades das regiões serão beneficiadas pelo edital, sendo que sete cidades serão atendidas pela primeira vez em uma chamada da Finep (Inhumas/GO, Santa Bárbara do Pará/PA, Salgueiro/PE, Campo Novo do Parecis/MT, Luís Eduardo Magalhães/BA,Goiana/PE e Agrestina/PE).\nTodos os projetos estão enquadrados dentro de uma ou mais missões da Nova Indústria Brasil (NIB). Do valor total da chamada, a região Norte recebeu R$ 50 milhões; a região Centro-Oeste, R$ 100 milhões; e a região Nordeste, R$ 150 milhões. Os limites de subvenção para cada proposta partiam de R$ 2 milhões a R$ 5 milhões, sendo que o valor médio dos projetos aprovados foi de R$ 3,8 milhões.\n“O foco primordial desta chamada é o amadurecimento das vocações produtivas dessas regiões, promovendo um crescimento econômico que seja sustentável e inclusivo. Com este resultado, a Finep revoluciona a capilaridade e o alcance da Subvenção Econômica direta nas três regiões que serão atendidas e intensifica parceria das empresas selecionadas com Instituições de Ciência e Tecnologia de diversos pontos do país. São 36 instituições participando, em uma expectativa de 15% do valor da chamada serem comprometidos nestas parcerias”, afirmou Luiz Antônio Elias, presidente da Finep.",
+          "start": 2778
+        }
+      ],
+      "document_id": "M30-N04",
+      "end": 5411,
+      "error_codes": [],
+      "expected_behavior": "Separar alocação regional, faixa por proposta e média de projetos; preservar qualificadores.",
+      "expected_claim": "R$ 2 milhões",
+      "field_index": 3,
+      "field_name": "proposal_amount_expression",
+      "judgment": "supported",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "quote": "Todos os projetos estão enquadrados dentro de uma ou mais missões da Nova Indústria Brasil (NIB). Do valor total da chamada, a região Norte recebeu R$ 50 milhões; a região Centro-Oeste, R$ 100 milhões; e a região Nordeste, R$ 150 milhões. Os limites de subvenção para cada proposta partiam de R$ 2 milhões a R$ 5 milhões, sendo que o valor médio dos projetos aprovados foi de R$ 3,8 milhões.",
+      "rationale": "R$ 2/5 milhões são extremos do limite por proposta, e R$ 3,8 milhões é média dos projetos aprovados. O papel genérico proposal_amount_expression é suportado; não implica que qualquer deles seja ticket garantido.",
+      "root_cause": "rules.py:133-153 usa janela +/-120 caracteres e detecta cada proposta posterior à alocação regional.",
+      "root_cause_confidence": "high",
+      "segment_id": "segment-0010",
+      "severity": "info",
+      "start": 5020
+    },
+    {
+      "case_id": "M30-N04:segment-0010:field:4",
+      "certainty": "supported_observation",
+      "claim_kind": "field",
+      "context_evidence": [
+        {
+          "end": 5993,
+          "page": null,
+          "quote": "MCTI e Finep anunciam aporte de R$ 450 milhões para 114 empresas das regiões Norte, Nordeste e Centro-Oeste\nPostado em:\n16/10/26 08:18\nTemas:\nTags:\nCompartilhar:\nEdital, com volume inicial de R$ 300 milhões, receberá suplementação de 50% para incluir mais projetos das regiões\nA ministra Luciana Santos, do Ministério da Ciência, Tecnologia e Inovação (MCTI) anunciou hoje (16), no auditório da Sudene, no Recife (PE), os resultados da segunda rodada da chamada Mais Inovação Brasil Subvenção Econômica, edital da Finep (Financiadora de Estudos e Projetos, agência de inovação vinculada ao MCTI) que direcionava, inicialmente, R$ 300 milhões em recursos não reembolsáveis para empresas de todos os portes que atuam nas regiões Norte, Nordeste e Centro-Oeste. O financiamento irá fomentar 78 projetos inovadores e de risco tecnológico com impacto no desenvolvimento regional e relevância social. A ministra também anunciou a complementação de R$ 150 milhões para a chamada, que deve beneficiar mais 36 projetos já analisados e com recomendação de contratação, mas que ficaram fora do orçamento original. Com os novos recursos, serão 114 propostas beneficiadas e 50% de aumento no volume total de recursos.\nLançada em fevereiro de 2026, a chamada recebeu 587 propostas de empresas das regiões. Destes, 400 projetos foram habilitados para avaliação dos técnicos da Finep em parceria inédita com analistas do Sebrae e das três Superintendências Regionais, Sudeco (Superintendência de Desenvolvimento do Centro-Oeste), Sudene (Superintendência de Desenvolvimento do Nordeste) e Sudam (Superintendência de Desenvolvimento da Amazônia).\nEntre os projetos aprovados inicialmente, 75% são de microempresas (faturamento abaixo de R$ 1 milhão) e empresas de pequeno porte (faturamento de R$ 1 milhão até R$ 4,8 milhões). A chamada também vai beneficiar 44 empresas que, pela primeira vez, receberão subvenção da agência, representando 56% das propostas aprovadas.\nEmpresas sediadas em 35 cidades das regiões serão beneficiadas pelo edital, sendo que sete cidades serão atendidas pela primeira vez em uma chamada da Finep (Inhumas/GO, Santa Bárbara do Pará/PA, Salgueiro/PE, Campo Novo do Parecis/MT, Luís Eduardo Magalhães/BA,Goiana/PE e Agrestina/PE).\nTodos os projetos estão enquadrados dentro de uma ou mais missões da Nova Indústria Brasil (NIB). Do valor total da chamada, a região Norte recebeu R$ 50 milhões; a região Centro-Oeste, R$ 100 milhões; e a região Nordeste, R$ 150 milhões. Os limites de subvenção para cada proposta partiam de R$ 2 milhões a R$ 5 milhões, sendo que o valor médio dos projetos aprovados foi de R$ 3,8 milhões.\n“O foco primordial desta chamada é o amadurecimento das vocações produtivas dessas regiões, promovendo um crescimento econômico que seja sustentável e inclusivo. Com este resultado, a Finep revoluciona a capilaridade e o alcance da Subvenção Econômica direta nas três regiões que serão atendidas e intensifica parceria das empresas selecionadas com Instituições de Ciência e Tecnologia de diversos pontos do país. São 36 instituições participando, em uma expectativa de 15% do valor da chamada serem comprometidos nestas parcerias”, afirmou Luiz Antônio Elias, presidente da Finep.",
+          "start": 2778
+        }
+      ],
+      "document_id": "M30-N04",
+      "end": 5411,
+      "error_codes": [],
+      "expected_behavior": "Separar alocação regional, faixa por proposta e média de projetos; preservar qualificadores.",
+      "expected_claim": "R$ 5 milhões",
+      "field_index": 4,
+      "field_name": "proposal_amount_expression",
+      "judgment": "supported",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "quote": "Todos os projetos estão enquadrados dentro de uma ou mais missões da Nova Indústria Brasil (NIB). Do valor total da chamada, a região Norte recebeu R$ 50 milhões; a região Centro-Oeste, R$ 100 milhões; e a região Nordeste, R$ 150 milhões. Os limites de subvenção para cada proposta partiam de R$ 2 milhões a R$ 5 milhões, sendo que o valor médio dos projetos aprovados foi de R$ 3,8 milhões.",
+      "rationale": "R$ 2/5 milhões são extremos do limite por proposta, e R$ 3,8 milhões é média dos projetos aprovados. O papel genérico proposal_amount_expression é suportado; não implica que qualquer deles seja ticket garantido.",
+      "root_cause": "rules.py:133-153 usa janela +/-120 caracteres e detecta cada proposta posterior à alocação regional.",
+      "root_cause_confidence": "high",
+      "segment_id": "segment-0010",
+      "severity": "info",
+      "start": 5020
+    },
+    {
+      "case_id": "M30-N04:segment-0010:field:5",
+      "certainty": "supported_observation",
+      "claim_kind": "field",
+      "context_evidence": [
+        {
+          "end": 5993,
+          "page": null,
+          "quote": "MCTI e Finep anunciam aporte de R$ 450 milhões para 114 empresas das regiões Norte, Nordeste e Centro-Oeste\nPostado em:\n16/10/26 08:18\nTemas:\nTags:\nCompartilhar:\nEdital, com volume inicial de R$ 300 milhões, receberá suplementação de 50% para incluir mais projetos das regiões\nA ministra Luciana Santos, do Ministério da Ciência, Tecnologia e Inovação (MCTI) anunciou hoje (16), no auditório da Sudene, no Recife (PE), os resultados da segunda rodada da chamada Mais Inovação Brasil Subvenção Econômica, edital da Finep (Financiadora de Estudos e Projetos, agência de inovação vinculada ao MCTI) que direcionava, inicialmente, R$ 300 milhões em recursos não reembolsáveis para empresas de todos os portes que atuam nas regiões Norte, Nordeste e Centro-Oeste. O financiamento irá fomentar 78 projetos inovadores e de risco tecnológico com impacto no desenvolvimento regional e relevância social. A ministra também anunciou a complementação de R$ 150 milhões para a chamada, que deve beneficiar mais 36 projetos já analisados e com recomendação de contratação, mas que ficaram fora do orçamento original. Com os novos recursos, serão 114 propostas beneficiadas e 50% de aumento no volume total de recursos.\nLançada em fevereiro de 2026, a chamada recebeu 587 propostas de empresas das regiões. Destes, 400 projetos foram habilitados para avaliação dos técnicos da Finep em parceria inédita com analistas do Sebrae e das três Superintendências Regionais, Sudeco (Superintendência de Desenvolvimento do Centro-Oeste), Sudene (Superintendência de Desenvolvimento do Nordeste) e Sudam (Superintendência de Desenvolvimento da Amazônia).\nEntre os projetos aprovados inicialmente, 75% são de microempresas (faturamento abaixo de R$ 1 milhão) e empresas de pequeno porte (faturamento de R$ 1 milhão até R$ 4,8 milhões). A chamada também vai beneficiar 44 empresas que, pela primeira vez, receberão subvenção da agência, representando 56% das propostas aprovadas.\nEmpresas sediadas em 35 cidades das regiões serão beneficiadas pelo edital, sendo que sete cidades serão atendidas pela primeira vez em uma chamada da Finep (Inhumas/GO, Santa Bárbara do Pará/PA, Salgueiro/PE, Campo Novo do Parecis/MT, Luís Eduardo Magalhães/BA,Goiana/PE e Agrestina/PE).\nTodos os projetos estão enquadrados dentro de uma ou mais missões da Nova Indústria Brasil (NIB). Do valor total da chamada, a região Norte recebeu R$ 50 milhões; a região Centro-Oeste, R$ 100 milhões; e a região Nordeste, R$ 150 milhões. Os limites de subvenção para cada proposta partiam de R$ 2 milhões a R$ 5 milhões, sendo que o valor médio dos projetos aprovados foi de R$ 3,8 milhões.\n“O foco primordial desta chamada é o amadurecimento das vocações produtivas dessas regiões, promovendo um crescimento econômico que seja sustentável e inclusivo. Com este resultado, a Finep revoluciona a capilaridade e o alcance da Subvenção Econômica direta nas três regiões que serão atendidas e intensifica parceria das empresas selecionadas com Instituições de Ciência e Tecnologia de diversos pontos do país. São 36 instituições participando, em uma expectativa de 15% do valor da chamada serem comprometidos nestas parcerias”, afirmou Luiz Antônio Elias, presidente da Finep.",
+          "start": 2778
+        }
+      ],
+      "document_id": "M30-N04",
+      "end": 5411,
+      "error_codes": [],
+      "expected_behavior": "Separar alocação regional, faixa por proposta e média de projetos; preservar qualificadores.",
+      "expected_claim": "R$ 3,8 milhões",
+      "field_index": 5,
+      "field_name": "proposal_amount_expression",
+      "judgment": "supported",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "quote": "Todos os projetos estão enquadrados dentro de uma ou mais missões da Nova Indústria Brasil (NIB). Do valor total da chamada, a região Norte recebeu R$ 50 milhões; a região Centro-Oeste, R$ 100 milhões; e a região Nordeste, R$ 150 milhões. Os limites de subvenção para cada proposta partiam de R$ 2 milhões a R$ 5 milhões, sendo que o valor médio dos projetos aprovados foi de R$ 3,8 milhões.",
+      "rationale": "R$ 2/5 milhões são extremos do limite por proposta, e R$ 3,8 milhões é média dos projetos aprovados. O papel genérico proposal_amount_expression é suportado; não implica que qualquer deles seja ticket garantido.",
+      "root_cause": "rules.py:133-153 usa janela +/-120 caracteres e detecta cada proposta posterior à alocação regional.",
+      "root_cause_confidence": "high",
+      "segment_id": "segment-0010",
+      "severity": "info",
+      "start": 5020
+    }
+  ],
+  "status": "processed"
+}

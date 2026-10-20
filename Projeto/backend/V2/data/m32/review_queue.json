@@ -1,0 +1,1798 @@
+{
+  "items": [
+    {
+      "current_review_status": "provisional_pending_authorized_adjudication",
+      "document_id": "M30-C07",
+      "error_codes": [
+        "OPPORTUNITY_EXISTENCE_CONFUSION",
+        "EVIDENCE_SEMANTIC_MISMATCH"
+      ],
+      "frozen_source_evidence": {
+        "end": 2746,
+        "quote": "Referência nacional em turismo rural pedagógico e educação ambiental, a Quinta da Estância, localizada em Viamão, está entre as novas empresas contempladas através do programa CrediTur RS, voltado ao fortalecimento do setor turístico em diferentes regiões do estado. Nesta terça-feira (dia 6/10), a partir da parceria entre o Banco Regional de Desenvolvimento do Extremo Sul (BRDE) e a Sicredi Origens RS, ocorreu a celebração do financiamento de R$ 2 milhões, recursos que serão destinados ao capital de giro e à ampliação da capacidade de atendimento da empresa.",
+        "start": 2182
+      },
+      "item_id": "adjudicate:M30-C07:segment-0001:discovery:classification",
+      "machine_locator_validity_is_not_semantic_approval": true,
+      "prediction": "opportunity_signal",
+      "proposed_severity": "high",
+      "question": "Does the frozen context support the asserted role/stage/access for this audience, or should prediction/reference remain unresolved? A unidade é financiamento já celebrado a Quinta da Estância; sinal como nova oportunidade é excessivo. A manchete anterior contém celebram financiamento, enquanto o maior parágrafo isolado perde esse gatilho.",
+      "record_id": null,
+      "reference_label": null,
+      "segment_id": "segment-0001"
+    },
+    {
+      "current_review_status": "provisional_pending_authorized_adjudication",
+      "document_id": "M30-I05",
+      "error_codes": [
+        "FINANCIAL_ROLE_CONFUSION",
+        "EVIDENCE_SEMANTIC_MISMATCH"
+      ],
+      "frozen_source_evidence": {
+        "end": 2234,
+        "quote": "O FIP tem estimativa de mobilizar até R$ 250 milhões para investir em startups em fase inicial. A BNDESPAR, subsidiária integral do BNDES, comprometerá até R$ 100 milhões. Já a Finep, com recursos do Fundo Nacional de Desenvolvimento Científico e Tecnológico (FNDCT), irá comprometer R$ 50 milhões. Caberá ao gestor selecionado mobilizar outros investidores para complementar o capital do fundo.",
+        "start": 1839
+      },
+      "item_id": "adjudicate:M30-I05:segment-0019:field:2",
+      "machine_locator_validity_is_not_semantic_approval": true,
+      "prediction": "R$ 50 milhões",
+      "proposed_severity": "high",
+      "question": "Does the frozen context support the asserted role/stage/access for this audience, or should prediction/reference remain unresolved? R$ 50 milhões é compromisso da Finep/FNDCT como investidor; a meta de capital do fundo é até R$ 250 milhões. O label fund_capital_estimate aplicado aos 50 milhões troca o papel.",
+      "record_id": null,
+      "reference_label": null,
+      "segment_id": "segment-0019"
+    },
+    {
+      "current_review_status": "provisional_pending_authorized_adjudication",
+      "document_id": "M30-N01",
+      "error_codes": [
+        "OPPORTUNITY_EXISTENCE_CONFUSION",
+        "EVIDENCE_SEMANTIC_MISMATCH"
+      ],
+      "frozen_source_evidence": {
+        "end": 2652,
+        "quote": "A aprovação do financiamento ocorreu no âmbito do Produto BNDES FINEM – Programa BNDES Mais Inovação, iniciativa voltada à digitalização, pesquisa e desenvolvimento tecnológico, com recursos do FAT (Fundo de Amparo ao Trabalhador). “O desenvolvimento de novas tecnologias para veículos híbridos flex contribui para deixar o país bem-posicionado no processo de transição energética pelo qual passa o setor automotivo. A descarbonização e a industrialização verde são pilares estratégicos para construir um futuro mais sustentável e garantir qualidade de vida para as próximas gerações”, afirmou o presidente do BNDES, Aloizio Mercadante.",
+        "start": 2016
+      },
+      "item_id": "adjudicate:M30-N01:segment-0019:discovery:classification",
+      "machine_locator_validity_is_not_semantic_approval": true,
+      "prediction": "opportunity_signal",
+      "proposed_severity": "high",
+      "question": "Does the frozen context support the asserted role/stage/access for this audience, or should prediction/reference remain unresolved? Financiamento já aprovado para Renault e lançamento de veículo em 2027 não são futura chamada pública. O sinal de acesso para outro leitor não se sustenta neste registro.",
+      "record_id": null,
+      "reference_label": null,
+      "segment_id": "segment-0019"
+    },
+    {
+      "current_review_status": "provisional_pending_authorized_adjudication",
+      "document_id": "M30-N04",
+      "error_codes": [
+        "FINANCIAL_ROLE_CONFUSION",
+        "EVIDENCE_SEMANTIC_MISMATCH"
+      ],
+      "frozen_source_evidence": {
+        "end": 5411,
+        "quote": "Todos os projetos estão enquadrados dentro de uma ou mais missões da Nova Indústria Brasil (NIB). Do valor total da chamada, a região Norte recebeu R$ 50 milhões; a região Centro-Oeste, R$ 100 milhões; e a região Nordeste, R$ 150 milhões. Os limites de subvenção para cada proposta partiam de R$ 2 milhões a R$ 5 milhões, sendo que o valor médio dos projetos aprovados foi de R$ 3,8 milhões.",
+        "start": 5020
+      },
+      "item_id": "adjudicate:M30-N04:segment-0010:field:0",
+      "machine_locator_validity_is_not_semantic_approval": true,
+      "prediction": "R$ 50 milhões",
+      "proposed_severity": "high",
+      "question": "Does the frozen context support the asserted role/stage/access for this audience, or should prediction/reference remain unresolved? R$ 50/100/150 milhões são alocações regionais do total da chamada. O mesmo parágrafo menciona limites POR PROPOSTA de R$ 2 a 5 milhões. Os três primeiros não são valores por proposta.",
+      "record_id": null,
+      "reference_label": null,
+      "segment_id": "segment-0010"
+    },
+    {
+      "current_review_status": "provisional_pending_authorized_adjudication",
+      "document_id": "M30-N04",
+      "error_codes": [
+        "FINANCIAL_ROLE_CONFUSION",
+        "EVIDENCE_SEMANTIC_MISMATCH"
+      ],
+      "frozen_source_evidence": {
+        "end": 5411,
+        "quote": "Todos os projetos estão enquadrados dentro de uma ou mais missões da Nova Indústria Brasil (NIB). Do valor total da chamada, a região Norte recebeu R$ 50 milhões; a região Centro-Oeste, R$ 100 milhões; e a região Nordeste, R$ 150 milhões. Os limites de subvenção para cada proposta partiam de R$ 2 milhões a R$ 5 milhões, sendo que o valor médio dos projetos aprovados foi de R$ 3,8 milhões.",
+        "start": 5020
+      },
+      "item_id": "adjudicate:M30-N04:segment-0010:field:1",
+      "machine_locator_validity_is_not_semantic_approval": true,
+      "prediction": "R$ 100 milhões",
+      "proposed_severity": "high",
+      "question": "Does the frozen context support the asserted role/stage/access for this audience, or should prediction/reference remain unresolved? R$ 50/100/150 milhões são alocações regionais do total da chamada. O mesmo parágrafo menciona limites POR PROPOSTA de R$ 2 a 5 milhões. Os três primeiros não são valores por proposta.",
+      "record_id": null,
+      "reference_label": null,
+      "segment_id": "segment-0010"
+    },
+    {
+      "current_review_status": "provisional_pending_authorized_adjudication",
+      "document_id": "M30-N04",
+      "error_codes": [
+        "FINANCIAL_ROLE_CONFUSION",
+        "EVIDENCE_SEMANTIC_MISMATCH"
+      ],
+      "frozen_source_evidence": {
+        "end": 5411,
+        "quote": "Todos os projetos estão enquadrados dentro de uma ou mais missões da Nova Indústria Brasil (NIB). Do valor total da chamada, a região Norte recebeu R$ 50 milhões; a região Centro-Oeste, R$ 100 milhões; e a região Nordeste, R$ 150 milhões. Os limites de subvenção para cada proposta partiam de R$ 2 milhões a R$ 5 milhões, sendo que o valor médio dos projetos aprovados foi de R$ 3,8 milhões.",
+        "start": 5020
+      },
+      "item_id": "adjudicate:M30-N04:segment-0010:field:2",
+      "machine_locator_validity_is_not_semantic_approval": true,
+      "prediction": "R$ 150 milhões",
+      "proposed_severity": "high",
+      "question": "Does the frozen context support the asserted role/stage/access for this audience, or should prediction/reference remain unresolved? R$ 50/100/150 milhões são alocações regionais do total da chamada. O mesmo parágrafo menciona limites POR PROPOSTA de R$ 2 a 5 milhões. Os três primeiros não são valores por proposta.",
+      "record_id": null,
+      "reference_label": null,
+      "segment_id": "segment-0010"
+    },
+    {
+      "current_review_status": "provisional_pending_authorized_adjudication",
+      "document_id": "M30-C01",
+      "error_codes": [
+        "OPPORTUNITY_EXISTENCE_CONFUSION",
+        "REFERENCE_AMBIGUITY"
+      ],
+      "frozen_source_evidence": {
+        "end": 2455,
+        "quote": "cada instituição financeira credenciada pode aderir ou não às linhas de financiamento do BNDES, de acordo com suas políticas próprias para concessão do crédito. A decisão final sobre a aceitação ou recusa das propostas protocoladas é de exclusiva responsabilidade do agente financeiro envolvido.",
+        "start": 2160
+      },
+      "item_id": "adjudicate:M30-C01-R1:discovery_label",
+      "machine_locator_validity_is_not_semantic_approval": true,
+      "prediction": {
+        "discovery": "opportunity_signal",
+        "end": 2455,
+        "modality": "credito",
+        "segment_id": "segment-0043",
+        "start": 2160,
+        "temporal": "undetermined"
+      },
+      "proposed_severity": "medium",
+      "question": "Does the frozen context support the asserted role/stage/access for this audience, or should prediction/reference remain unresolved? ",
+      "record_id": "M30-C01-R1",
+      "reference_label": {
+        "discovery_label": "confirmed_opportunity",
+        "modality": "credito",
+        "opportunity_label": "genuine_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "undetermined"
+      },
+      "segment_id": "segment-0043"
+    },
+    {
+      "current_review_status": "provisional_pending_authorized_adjudication",
+      "document_id": "M30-C01",
+      "error_codes": [
+        "EXTRACTION_OMISSION"
+      ],
+      "frozen_source_evidence": {
+        "end": 468,
+        "quote": "Financiamento de até R$ 150 milhões para projetos de investimento de empresas de todos os setores.",
+        "start": 370
+      },
+      "item_id": "adjudicate:M30-C01:segment-0012:field:0",
+      "machine_locator_validity_is_not_semantic_approval": true,
+      "prediction": "R$ 150 milhões",
+      "proposed_severity": "medium",
+      "question": "Does the frozen context support the asserted role/stage/access for this audience, or should prediction/reference remain unresolved? O numeral e o papel são relacionados ao campo correto, mas o literal perde até, que qualifica o valor como teto/estimativa. Não equiparar o numeral isolado ao valor com qualificador.",
+      "record_id": null,
+      "reference_label": null,
+      "segment_id": "segment-0012"
+    },
+    {
+      "current_review_status": "provisional_pending_authorized_adjudication",
+      "document_id": "M30-C02",
+      "error_codes": [
+        "OPPORTUNITY_EXISTENCE_CONFUSION",
+        "REFERENCE_AMBIGUITY"
+      ],
+      "frozen_source_evidence": {
+        "end": 2177,
+        "quote": "Apoio a Investimentos e gastos em difusão tecnológica, incluindo contratação de serviços tecnológicos, aquisição de máquinas e equipamentos com características inovadoras e aquisição de bens de informática e automação, abarcados pela Lei de Informática, que possuam tecnologia nacional, na forma da Portaria MCT nº 950, de 12.12.2006, e cumpram Processo Produtivo Básico - PPB (Lei nº 8.387/1991).",
+        "start": 1780
+      },
+      "item_id": "adjudicate:M30-C02-R1:discovery_label",
+      "machine_locator_validity_is_not_semantic_approval": true,
+      "prediction": {
+        "discovery": "abstain",
+        "end": 2177,
+        "modality": "undetermined",
+        "segment_id": "segment-0021",
+        "start": 1780,
+        "temporal": "undetermined"
+      },
+      "proposed_severity": "medium",
+      "question": "Does the frozen context support the asserted role/stage/access for this audience, or should prediction/reference remain unresolved? ",
+      "record_id": "M30-C02-R1",
+      "reference_label": {
+        "discovery_label": "confirmed_opportunity",
+        "modality": "credito",
+        "opportunity_label": "genuine_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "undetermined"
+      },
+      "segment_id": "segment-0021"
+    },
+    {
+      "current_review_status": "provisional_pending_authorized_adjudication",
+      "document_id": "M30-C02",
+      "error_codes": [
+        "MODALITY_CONFUSION",
+        "REFERENCE_AMBIGUITY"
+      ],
+      "frozen_source_evidence": {
+        "end": 2177,
+        "quote": "Apoio a Investimentos e gastos em difusão tecnológica, incluindo contratação de serviços tecnológicos, aquisição de máquinas e equipamentos com características inovadoras e aquisição de bens de informática e automação, abarcados pela Lei de Informática, que possuam tecnologia nacional, na forma da Portaria MCT nº 950, de 12.12.2006, e cumpram Processo Produtivo Básico - PPB (Lei nº 8.387/1991).",
+        "start": 1780
+      },
+      "item_id": "adjudicate:M30-C02-R1:modality",
+      "machine_locator_validity_is_not_semantic_approval": true,
+      "prediction": {
+        "discovery": "abstain",
+        "end": 2177,
+        "modality": "undetermined",
+        "segment_id": "segment-0021",
+        "start": 1780,
+        "temporal": "undetermined"
+      },
+      "proposed_severity": "medium",
+      "question": "Does the frozen context support the asserted role/stage/access for this audience, or should prediction/reference remain unresolved? ",
+      "record_id": "M30-C02-R1",
+      "reference_label": {
+        "discovery_label": "confirmed_opportunity",
+        "modality": "credito",
+        "opportunity_label": "genuine_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "undetermined"
+      },
+      "segment_id": "segment-0021"
+    },
+    {
+      "current_review_status": "provisional_pending_authorized_adjudication",
+      "document_id": "M30-C03",
+      "error_codes": [
+        "OPPORTUNITY_EXISTENCE_CONFUSION",
+        "REFERENCE_AMBIGUITY"
+      ],
+      "frozen_source_evidence": {
+        "end": 1602,
+        "quote": "cada instituição financeira credenciada pode aderir ou não às linhas de financiamento do BNDES, de acordo com suas políticas próprias para concessão do crédito. A decisão final sobre a aceitação ou recusa das propostas protocoladas é de exclusiva responsabilidade do agente financeiro envolvido.",
+        "start": 1307
+      },
+      "item_id": "adjudicate:M30-C03-R1:discovery_label",
+      "machine_locator_validity_is_not_semantic_approval": true,
+      "prediction": {
+        "discovery": "opportunity_signal",
+        "end": 1602,
+        "modality": "credito",
+        "segment_id": "segment-0026",
+        "start": 1307,
+        "temporal": "undetermined"
+      },
+      "proposed_severity": "medium",
+      "question": "Does the frozen context support the asserted role/stage/access for this audience, or should prediction/reference remain unresolved? ",
+      "record_id": "M30-C03-R1",
+      "reference_label": {
+        "discovery_label": "confirmed_opportunity",
+        "modality": "credito",
+        "opportunity_label": "genuine_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "undetermined"
+      },
+      "segment_id": "segment-0026"
+    },
+    {
+      "current_review_status": "provisional_pending_authorized_adjudication",
+      "document_id": "M30-C04",
+      "error_codes": [
+        "OPPORTUNITY_EXISTENCE_CONFUSION",
+        "REFERENCE_AMBIGUITY"
+      ],
+      "frozen_source_evidence": {
+        "end": 633,
+        "quote": "Apoiar a conservação, recuperação e gestão responsável de florestas e promover a mitigação climática, a sustentabilidade ambiental, a disponibilidade de água, a proteção e uso sustentável da biodiversidade e a resiliência às mudanças climáticas.",
+        "start": 388
+      },
+      "item_id": "adjudicate:M30-C04-R1:discovery_label",
+      "machine_locator_validity_is_not_semantic_approval": true,
+      "prediction": {
+        "discovery": "abstain",
+        "end": 633,
+        "modality": "undetermined",
+        "segment_id": "segment-0012",
+        "start": 388,
+        "temporal": "undetermined"
+      },
+      "proposed_severity": "medium",
+      "question": "Does the frozen context support the asserted role/stage/access for this audience, or should prediction/reference remain unresolved? ",
+      "record_id": "M30-C04-R1",
+      "reference_label": {
+        "discovery_label": "confirmed_opportunity",
+        "modality": "credito",
+        "opportunity_label": "genuine_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "undetermined"
+      },
+      "segment_id": "segment-0012"
+    },
+    {
+      "current_review_status": "provisional_pending_authorized_adjudication",
+      "document_id": "M30-C04",
+      "error_codes": [
+        "MODALITY_CONFUSION",
+        "REFERENCE_AMBIGUITY"
+      ],
+      "frozen_source_evidence": {
+        "end": 633,
+        "quote": "Apoiar a conservação, recuperação e gestão responsável de florestas e promover a mitigação climática, a sustentabilidade ambiental, a disponibilidade de água, a proteção e uso sustentável da biodiversidade e a resiliência às mudanças climáticas.",
+        "start": 388
+      },
+      "item_id": "adjudicate:M30-C04-R1:modality",
+      "machine_locator_validity_is_not_semantic_approval": true,
+      "prediction": {
+        "discovery": "abstain",
+        "end": 633,
+        "modality": "undetermined",
+        "segment_id": "segment-0012",
+        "start": 388,
+        "temporal": "undetermined"
+      },
+      "proposed_severity": "medium",
+      "question": "Does the frozen context support the asserted role/stage/access for this audience, or should prediction/reference remain unresolved? ",
+      "record_id": "M30-C04-R1",
+      "reference_label": {
+        "discovery_label": "confirmed_opportunity",
+        "modality": "credito",
+        "opportunity_label": "genuine_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "undetermined"
+      },
+      "segment_id": "segment-0012"
+    },
+    {
+      "current_review_status": "provisional_pending_authorized_adjudication",
+      "document_id": "M30-C05",
+      "error_codes": [
+        "OPPORTUNITY_EXISTENCE_CONFUSION",
+        "REFERENCE_AMBIGUITY"
+      ],
+      "frozen_source_evidence": {
+        "end": 836,
+        "quote": "Acompanhe o desempenho das linhas do BNDES Finame, com números de operações e valores aprovados por região, ranking dos agentes financeiros e outros dados",
+        "start": 682
+      },
+      "item_id": "adjudicate:M30-C05-R1:discovery_label",
+      "machine_locator_validity_is_not_semantic_approval": true,
+      "prediction": {
+        "discovery": "abstain",
+        "end": 836,
+        "modality": "undetermined",
+        "segment_id": "segment-0019",
+        "start": 682,
+        "temporal": "undetermined"
+      },
+      "proposed_severity": "medium",
+      "question": "Does the frozen context support the asserted role/stage/access for this audience, or should prediction/reference remain unresolved? ",
+      "record_id": "M30-C05-R1",
+      "reference_label": {
+        "discovery_label": "opportunity_signal",
+        "modality": "credito",
+        "opportunity_label": "uncertain",
+        "review_status": "provisional",
+        "temporal_status": "undetermined"
+      },
+      "segment_id": "segment-0019"
+    },
+    {
+      "current_review_status": "provisional_pending_authorized_adjudication",
+      "document_id": "M30-C05",
+      "error_codes": [
+        "MODALITY_CONFUSION",
+        "REFERENCE_AMBIGUITY"
+      ],
+      "frozen_source_evidence": {
+        "end": 836,
+        "quote": "Acompanhe o desempenho das linhas do BNDES Finame, com números de operações e valores aprovados por região, ranking dos agentes financeiros e outros dados",
+        "start": 682
+      },
+      "item_id": "adjudicate:M30-C05-R1:modality",
+      "machine_locator_validity_is_not_semantic_approval": true,
+      "prediction": {
+        "discovery": "abstain",
+        "end": 836,
+        "modality": "undetermined",
+        "segment_id": "segment-0019",
+        "start": 682,
+        "temporal": "undetermined"
+      },
+      "proposed_severity": "medium",
+      "question": "Does the frozen context support the asserted role/stage/access for this audience, or should prediction/reference remain unresolved? ",
+      "record_id": "M30-C05-R1",
+      "reference_label": {
+        "discovery_label": "opportunity_signal",
+        "modality": "credito",
+        "opportunity_label": "uncertain",
+        "review_status": "provisional",
+        "temporal_status": "undetermined"
+      },
+      "segment_id": "segment-0019"
+    },
+    {
+      "current_review_status": "provisional_pending_authorized_adjudication",
+      "document_id": "M30-C06",
+      "error_codes": [
+        "OPPORTUNITY_EXISTENCE_CONFUSION",
+        "REFERENCE_AMBIGUITY"
+      ],
+      "frozen_source_evidence": {
+        "end": 2275,
+        "quote": "Apoio aos projetos de inovação apresentados por empresas arrojadas; fortalecimento das parcerias e atuação de forma articulada e conjunta com entes públicos e privados responsáveis pela promoção do desenvolvimento científico, tecnológico e educacional da região sul.",
+        "start": 2009
+      },
+      "item_id": "adjudicate:M30-C06-R1:discovery_label",
+      "machine_locator_validity_is_not_semantic_approval": true,
+      "prediction": {
+        "discovery": "abstain",
+        "end": 2275,
+        "modality": "undetermined",
+        "segment_id": "segment-0004",
+        "start": 2009,
+        "temporal": "undetermined"
+      },
+      "proposed_severity": "medium",
+      "question": "Does the frozen context support the asserted role/stage/access for this audience, or should prediction/reference remain unresolved? ",
+      "record_id": "M30-C06-R1",
+      "reference_label": {
+        "discovery_label": "confirmed_opportunity",
+        "modality": "credito",
+        "opportunity_label": "genuine_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "undetermined"
+      },
+      "segment_id": "segment-0004"
+    },
+    {
+      "current_review_status": "provisional_pending_authorized_adjudication",
+      "document_id": "M30-C06",
+      "error_codes": [
+        "MODALITY_CONFUSION",
+        "REFERENCE_AMBIGUITY"
+      ],
+      "frozen_source_evidence": {
+        "end": 2275,
+        "quote": "Apoio aos projetos de inovação apresentados por empresas arrojadas; fortalecimento das parcerias e atuação de forma articulada e conjunta com entes públicos e privados responsáveis pela promoção do desenvolvimento científico, tecnológico e educacional da região sul.",
+        "start": 2009
+      },
+      "item_id": "adjudicate:M30-C06-R1:modality",
+      "machine_locator_validity_is_not_semantic_approval": true,
+      "prediction": {
+        "discovery": "abstain",
+        "end": 2275,
+        "modality": "undetermined",
+        "segment_id": "segment-0004",
+        "start": 2009,
+        "temporal": "undetermined"
+      },
+      "proposed_severity": "medium",
+      "question": "Does the frozen context support the asserted role/stage/access for this audience, or should prediction/reference remain unresolved? ",
+      "record_id": "M30-C06-R1",
+      "reference_label": {
+        "discovery_label": "confirmed_opportunity",
+        "modality": "credito",
+        "opportunity_label": "genuine_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "undetermined"
+      },
+      "segment_id": "segment-0004"
+    },
+    {
+      "current_review_status": "provisional_pending_authorized_adjudication",
+      "document_id": "M30-C07",
+      "error_codes": [
+        "OPPORTUNITY_EXISTENCE_CONFUSION",
+        "REFERENCE_AMBIGUITY"
+      ],
+      "frozen_source_evidence": {
+        "end": 2746,
+        "quote": "Referência nacional em turismo rural pedagógico e educação ambiental, a Quinta da Estância, localizada em Viamão, está entre as novas empresas contempladas através do programa CrediTur RS, voltado ao fortalecimento do setor turístico em diferentes regiões do estado. Nesta terça-feira (dia 6/10), a partir da parceria entre o Banco Regional de Desenvolvimento do Extremo Sul (BRDE) e a Sicredi Origens RS, ocorreu a celebração do financiamento de R$ 2 milhões, recursos que serão destinados ao capital de giro e à ampliação da capacidade de atendimento da empresa.",
+        "start": 2182
+      },
+      "item_id": "adjudicate:M30-C07-R1:discovery_label",
+      "machine_locator_validity_is_not_semantic_approval": true,
+      "prediction": {
+        "discovery": "opportunity_signal",
+        "end": 2746,
+        "modality": "credito",
+        "segment_id": "segment-0001",
+        "start": 2182,
+        "temporal": "undetermined"
+      },
+      "proposed_severity": "medium",
+      "question": "Does the frozen context support the asserted role/stage/access for this audience, or should prediction/reference remain unresolved? ",
+      "record_id": "M30-C07-R1",
+      "reference_label": {
+        "discovery_label": "unrelated_or_non_actionable",
+        "modality": "credito",
+        "opportunity_label": "not_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "not_applicable"
+      },
+      "segment_id": "segment-0001"
+    },
+    {
+      "current_review_status": "provisional_pending_authorized_adjudication",
+      "document_id": "M30-C07",
+      "error_codes": [
+        "TEMPORAL_AVAILABILITY_INFERENCE",
+        "REFERENCE_AMBIGUITY"
+      ],
+      "frozen_source_evidence": {
+        "end": 2746,
+        "quote": "Referência nacional em turismo rural pedagógico e educação ambiental, a Quinta da Estância, localizada em Viamão, está entre as novas empresas contempladas através do programa CrediTur RS, voltado ao fortalecimento do setor turístico em diferentes regiões do estado. Nesta terça-feira (dia 6/10), a partir da parceria entre o Banco Regional de Desenvolvimento do Extremo Sul (BRDE) e a Sicredi Origens RS, ocorreu a celebração do financiamento de R$ 2 milhões, recursos que serão destinados ao capital de giro e à ampliação da capacidade de atendimento da empresa.",
+        "start": 2182
+      },
+      "item_id": "adjudicate:M30-C07-R1:temporal_status",
+      "machine_locator_validity_is_not_semantic_approval": true,
+      "prediction": {
+        "discovery": "opportunity_signal",
+        "end": 2746,
+        "modality": "credito",
+        "segment_id": "segment-0001",
+        "start": 2182,
+        "temporal": "undetermined"
+      },
+      "proposed_severity": "medium",
+      "question": "Does the frozen context support the asserted role/stage/access for this audience, or should prediction/reference remain unresolved? ",
+      "record_id": "M30-C07-R1",
+      "reference_label": {
+        "discovery_label": "unrelated_or_non_actionable",
+        "modality": "credito",
+        "opportunity_label": "not_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "not_applicable"
+      },
+      "segment_id": "segment-0001"
+    },
+    {
+      "current_review_status": "provisional_pending_authorized_adjudication",
+      "document_id": "M30-C07",
+      "error_codes": [
+        "OPPORTUNITY_EXISTENCE_CONFUSION",
+        "REFERENCE_AMBIGUITY"
+      ],
+      "frozen_source_evidence": {
+        "end": 3344,
+        "quote": "Conforme o secretário estadual de Turismo, Raphael Ayub, o CrediTur RS foi estruturado justamente para ampliar o acesso ao crédito e incentivar novos investimentos no setor. “Queremos dar condições para que os nossos empreendedores possam crescer, qualificar seus negócios e ampliar a capacidade de atendimento. A Quinta da Estância é um exemplo muito importante, porque une turismo, educação e preservação ambiental. É esse tipo de investimento que fortalece os destinos, gera oportunidades e faz o turismo contribuir cada vez mais para o desenvolvimento econômico do nosso estado”, afirmou Auyb.",
+        "start": 2747
+      },
+      "item_id": "adjudicate:M30-C07-R2:discovery_label",
+      "machine_locator_validity_is_not_semantic_approval": true,
+      "prediction": {
+        "discovery": "opportunity_signal",
+        "end": 3344,
+        "modality": "credito",
+        "segment_id": "segment-0002",
+        "start": 2747,
+        "temporal": "undetermined"
+      },
+      "proposed_severity": "medium",
+      "question": "Does the frozen context support the asserted role/stage/access for this audience, or should prediction/reference remain unresolved? ",
+      "record_id": "M30-C07-R2",
+      "reference_label": {
+        "discovery_label": "confirmed_opportunity",
+        "modality": "credito",
+        "opportunity_label": "genuine_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "undetermined"
+      },
+      "segment_id": "segment-0002"
+    },
+    {
+      "current_review_status": "provisional_pending_authorized_adjudication",
+      "document_id": "M30-C07",
+      "error_codes": [
+        "EXTRACTION_OMISSION"
+      ],
+      "frozen_source_evidence": {
+        "end": 3344,
+        "quote": "Conforme o secretário estadual de Turismo, Raphael Ayub, o CrediTur RS foi estruturado justamente para ampliar o acesso ao crédito e incentivar novos investimentos no setor. “Queremos dar condições para que os nossos empreendedores possam crescer, qualificar seus negócios e ampliar a capacidade de atendimento. A Quinta da Estância é um exemplo muito importante, porque une turismo, educação e preservação ambiental. É esse tipo de investimento que fortalece os destinos, gera oportunidades e faz o turismo contribuir cada vez mais para o desenvolvimento econômico do nosso estado”, afirmou Auyb.",
+        "start": 2747
+      },
+      "item_id": "adjudicate:M30-C07:segment-0002:discovery:classification",
+      "machine_locator_validity_is_not_semantic_approval": true,
+      "prediction": "opportunity_signal",
+      "proposed_severity": "medium",
+      "question": "Does the frozen context support the asserted role/stage/access for this audience, or should prediction/reference remain unresolved? O programa tem Cadastur, teto por empresa e condições na mesma unidade anotada; apenas sinal é conservador, possivelmente incompleto, sem inventar janela.",
+      "record_id": null,
+      "reference_label": null,
+      "segment_id": "segment-0002"
+    },
+    {
+      "current_review_status": "provisional_pending_authorized_adjudication",
+      "document_id": "M30-F01",
+      "error_codes": [
+        "ORGANIZATION_ROLE_CONFUSION",
+        "EVIDENCE_SEMANTIC_MISMATCH"
+      ],
+      "frozen_source_evidence": {
+        "end": 6525,
+        "quote": "A edição de 2026 do Programa de Mestrado e Doutorado para Inovação (MAI/DAI), que estimula a realização de pesquisas de mestrado e doutorado em universidades em parceria com empresas, recebe propostas até o dia 11 de dezembro. A chamada é realizada pelo Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq) e conta com a parceria da Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES).",
+        "start": 6108
+      },
+      "item_id": "adjudicate:M30-F01:segment-0008:field:3",
+      "machine_locator_validity_is_not_semantic_approval": true,
+      "prediction": "A edição de 2026 do Programa de Mestrado e Doutorado para Inovação (MAI/DAI), que estimula a realização de pesquisas de mestrado e doutorado em universidades em parceria com empresas, recebe propostas até o dia 11 de dezembro. A chamada é realizada pelo Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq) e conta com a parceria da Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES).",
+      "proposed_severity": "medium",
+      "question": "Does the frozen context support the asserted role/stage/access for this audience, or should prediction/reference remain unresolved? realizada pelo CNPq e parceria CAPES comprovam organização/realização. Isoladamente não discriminam emissor e financiador de cada componente. Não certificar instituição financiadora só por esse gatilho.",
+      "record_id": null,
+      "reference_label": null,
+      "segment_id": "segment-0008"
+    },
+    {
+      "current_review_status": "provisional_pending_authorized_adjudication",
+      "document_id": "M30-F03",
+      "error_codes": [
+        "OPPORTUNITY_EXISTENCE_CONFUSION",
+        "REFERENCE_AMBIGUITY"
+      ],
+      "frozen_source_evidence": {
+        "end": 5838,
+        "quote": "Chamada Pública CNPq/CAPES Nº 30/2026 – Programa de Mestrado e Doutorado Acadêmico para Inovação – MAI/DAI",
+        "start": 5732
+      },
+      "item_id": "adjudicate:M30-F03-R1:discovery_label",
+      "machine_locator_validity_is_not_semantic_approval": true,
+      "prediction": null,
+      "proposed_severity": "medium",
+      "question": "Does the frozen context support the asserted role/stage/access for this audience, or should prediction/reference remain unresolved? ",
+      "record_id": "M30-F03-R1",
+      "reference_label": {
+        "discovery_label": "opportunity_signal",
+        "modality": "fomento",
+        "opportunity_label": "uncertain",
+        "review_status": "provisional",
+        "temporal_status": "undetermined"
+      },
+      "segment_id": null
+    },
+    {
+      "current_review_status": "provisional_pending_authorized_adjudication",
+      "document_id": "M30-F03",
+      "error_codes": [
+        "MODALITY_CONFUSION",
+        "REFERENCE_AMBIGUITY"
+      ],
+      "frozen_source_evidence": {
+        "end": 5838,
+        "quote": "Chamada Pública CNPq/CAPES Nº 30/2026 – Programa de Mestrado e Doutorado Acadêmico para Inovação – MAI/DAI",
+        "start": 5732
+      },
+      "item_id": "adjudicate:M30-F03-R1:modality",
+      "machine_locator_validity_is_not_semantic_approval": true,
+      "prediction": null,
+      "proposed_severity": "medium",
+      "question": "Does the frozen context support the asserted role/stage/access for this audience, or should prediction/reference remain unresolved? ",
+      "record_id": "M30-F03-R1",
+      "reference_label": {
+        "discovery_label": "opportunity_signal",
+        "modality": "fomento",
+        "opportunity_label": "uncertain",
+        "review_status": "provisional",
+        "temporal_status": "undetermined"
+      },
+      "segment_id": null
+    },
+    {
+      "current_review_status": "provisional_pending_authorized_adjudication",
+      "document_id": "M30-F03",
+      "error_codes": [
+        "TEMPORAL_AVAILABILITY_INFERENCE",
+        "REFERENCE_AMBIGUITY"
+      ],
+      "frozen_source_evidence": {
+        "end": 5838,
+        "quote": "Chamada Pública CNPq/CAPES Nº 30/2026 – Programa de Mestrado e Doutorado Acadêmico para Inovação – MAI/DAI",
+        "start": 5732
+      },
+      "item_id": "adjudicate:M30-F03-R1:temporal_status",
+      "machine_locator_validity_is_not_semantic_approval": true,
+      "prediction": null,
+      "proposed_severity": "medium",
+      "question": "Does the frozen context support the asserted role/stage/access for this audience, or should prediction/reference remain unresolved? ",
+      "record_id": "M30-F03-R1",
+      "reference_label": {
+        "discovery_label": "opportunity_signal",
+        "modality": "fomento",
+        "opportunity_label": "uncertain",
+        "review_status": "provisional",
+        "temporal_status": "undetermined"
+      },
+      "segment_id": null
+    },
+    {
+      "current_review_status": "provisional_pending_authorized_adjudication",
+      "document_id": "M30-F05",
+      "error_codes": [
+        "TEMPORAL_AVAILABILITY_INFERENCE",
+        "REFERENCE_AMBIGUITY"
+      ],
+      "frozen_source_evidence": {
+        "end": 9803,
+        "quote": "Chamada para projetos de transformação mineral recebe propostas até 30 de novembro\nSeleção conta com orçamento de mais de R$ 200 milhões e contempla cinco linhas temáticas de pesquisa, desenvolvimento tecnológico e inovação\nCompartilhe:\nCompartilhe por Facebook\nCompartilhe por Twitter\nCompartilhe por LinkedIn\nCompartilhe por WhatsApp\nlink para Copiar para área de transferência\nPublicado em\n24/09/2026 16h35\nFoto: Gil Leonardi/Agência Minas\nA Financiadora de Estudos e Projetos (Finep) prorrogou até 30 de novembro o prazo para que empresas apresentem propostas à chamada pública\nFinep Mais Inovação Brasil, Rodada 2, Transformação Mineral\n. A seleção conta com orçamento de R$ 215 milhões em recursos de subvenção econômica destinado a\nprojetos de pesquisa, desenvolvimento tecnológico e inovação\nA chamada apoia projetos com riscos tecnológicos e potencial de impacto para o desenvolvimento da indústria mineral brasileira, distribuídos em cinco linhas: minerais e materiais críticos; mineração urbana, ímãs de terras raras; tecnologias sustentáveis para mineração; e\ndescarbonização\nda transformação mineral.\nAs propostas devem ser executadas por empresas, em parceria com Instituições Científic",
+        "start": 8603
+      },
+      "item_id": "adjudicate:M30-F05-R1:temporal_status",
+      "machine_locator_validity_is_not_semantic_approval": true,
+      "prediction": {
+        "discovery": "confirmed_opportunity",
+        "end": 10879,
+        "modality": "fomento",
+        "segment_id": "segment-0003",
+        "start": 8603,
+        "temporal": "undetermined"
+      },
+      "proposed_severity": "medium",
+      "question": "Does the frozen context support the asserted role/stage/access for this audience, or should prediction/reference remain unresolved? ",
+      "record_id": "M30-F05-R1",
+      "reference_label": {
+        "discovery_label": "confirmed_opportunity",
+        "modality": "fomento",
+        "opportunity_label": "genuine_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "open"
+      },
+      "segment_id": "segment-0003"
+    },
+    {
+      "current_review_status": "provisional_pending_authorized_adjudication",
+      "document_id": "M30-F06",
+      "error_codes": [
+        "TEMPORAL_AVAILABILITY_INFERENCE",
+        "REFERENCE_AMBIGUITY"
+      ],
+      "frozen_source_evidence": {
+        "end": 9811,
+        "quote": "Chamada Eureka recebe propostas para projetos de resiliência e resposta a desastres\nEmpresas brasileiras com projetos aprovados na etapa internacional podem enviar propostas à Finep até 6 de novembro\nCompartilhe:\nCompartilhe por Facebook\nCompartilhe por Twitter\nCompartilhe por LinkedIn\nCompartilhe por WhatsApp\nlink para Copiar para área de transferência\nPublicado em\n15/10/2026 17h18\nO Ministério da Ciência, Tecnologia e Inovação (MCTI) e a Financiadora de Estudos e Projetos (Finep) recebem, até 6 de novembro, propostas para a fase nacional da chamada do\nPrograma de Cooperação para Inovação da Rede Eureka\nvoltada à resiliência, resposta e recuperação de desastres. A seleção conta com recursos não reembolsáveis do Fundo Nacional de Desenvolvimento Científico e Tecnológico (FNDCT) e é destinada a empresas brasileiras participantes de projetos aprovados na etapa internacional e contemplados com o Selo Eureka.\nA chamada prevê até R$ 7 milhões em recursos de subvenção econômica para a participação brasileira nos projetos. O valor solicitado à Finep em cada proposta deve girar em torno de R$ 1 milhão e R$ 5 milhões, de acordo com o porte da empresa e as regras estabelecidas no edital.\nPod",
+        "start": 8611
+      },
+      "item_id": "adjudicate:M30-F06-R1:temporal_status",
+      "machine_locator_validity_is_not_semantic_approval": true,
+      "prediction": {
+        "discovery": "confirmed_opportunity",
+        "end": 12437,
+        "modality": "fomento",
+        "segment_id": "segment-0003",
+        "start": 8611,
+        "temporal": "undetermined"
+      },
+      "proposed_severity": "medium",
+      "question": "Does the frozen context support the asserted role/stage/access for this audience, or should prediction/reference remain unresolved? ",
+      "record_id": "M30-F06-R1",
+      "reference_label": {
+        "discovery_label": "confirmed_opportunity",
+        "modality": "fomento",
+        "opportunity_label": "genuine_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "open"
+      },
+      "segment_id": "segment-0003"
+    },
+    {
+      "current_review_status": "provisional_pending_authorized_adjudication",
+      "document_id": "M30-F07",
+      "error_codes": [
+        "OPPORTUNITY_EXISTENCE_CONFUSION",
+        "REFERENCE_AMBIGUITY"
+      ],
+      "frozen_source_evidence": {
+        "end": 5732,
+        "quote": "a) ter sido bolsista de Produtividade em Pesquisa (PQ) ou de Desenvolvimento Tecnológico e\nExtensão Inovadora (DT) por pelo menos 20 (vinte) anos, consecutivos ou não;\nb) continuar ativo no desenvolvimento de pesquisas científicas e/ou tecnológicas e na formação\nde pesquisadores em diversos níveis.\n3.2.3.1 – Os critérios específicos de cada Comitê de Assessoramento, quando houver, disponíveis no\nAnexo I e parte integrante desta Chamada, serão observados quanto aos requisitos mínimos para\nclassificação dos pesquisadores como Bolsistas PQ-Sr.\n3.2.4 - O pesquisador, se aposentado, deve manter atividades acadêmico-científicas oficialmente\nvinculadas a instituições de ensino e pesquisa.\n3.2.5 - No momento de submissão da proposta, o proponente não deverá possuir qualquer\ninadimplência com o CNPq e com a Administração Pública Federal, direta ou indireta, sob pena de\nindeferimento.\n3.2.5.1 - Caso constatada, a qualquer tempo, a falsidade da declaração, o CNPq adotará as\nprovidências cabíveis diante dos indícios de crime de falsidade ideológica.\n3.3 - Quanto à Instituição de Execução do Projeto:\n3.3.1 - A instituição de execução do projeto deverá estar cadastrada no Diretório de Instituiçõ",
+        "start": 4532
+      },
+      "item_id": "adjudicate:M30-F07-R1:discovery_label",
+      "machine_locator_validity_is_not_semantic_approval": true,
+      "prediction": {
+        "discovery": "opportunity_signal",
+        "end": 7632,
+        "modality": "fomento",
+        "segment_id": "segment-0013",
+        "start": 4532,
+        "temporal": "undetermined"
+      },
+      "proposed_severity": "medium",
+      "question": "Does the frozen context support the asserted role/stage/access for this audience, or should prediction/reference remain unresolved? ",
+      "record_id": "M30-F07-R1",
+      "reference_label": {
+        "discovery_label": "confirmed_opportunity",
+        "modality": "fomento",
+        "opportunity_label": "genuine_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "open"
+      },
+      "segment_id": "segment-0013"
+    },
+    {
+      "current_review_status": "provisional_pending_authorized_adjudication",
+      "document_id": "M30-F07",
+      "error_codes": [
+        "TEMPORAL_AVAILABILITY_INFERENCE",
+        "REFERENCE_AMBIGUITY"
+      ],
+      "frozen_source_evidence": {
+        "end": 5732,
+        "quote": "a) ter sido bolsista de Produtividade em Pesquisa (PQ) ou de Desenvolvimento Tecnológico e\nExtensão Inovadora (DT) por pelo menos 20 (vinte) anos, consecutivos ou não;\nb) continuar ativo no desenvolvimento de pesquisas científicas e/ou tecnológicas e na formação\nde pesquisadores em diversos níveis.\n3.2.3.1 – Os critérios específicos de cada Comitê de Assessoramento, quando houver, disponíveis no\nAnexo I e parte integrante desta Chamada, serão observados quanto aos requisitos mínimos para\nclassificação dos pesquisadores como Bolsistas PQ-Sr.\n3.2.4 - O pesquisador, se aposentado, deve manter atividades acadêmico-científicas oficialmente\nvinculadas a instituições de ensino e pesquisa.\n3.2.5 - No momento de submissão da proposta, o proponente não deverá possuir qualquer\ninadimplência com o CNPq e com a Administração Pública Federal, direta ou indireta, sob pena de\nindeferimento.\n3.2.5.1 - Caso constatada, a qualquer tempo, a falsidade da declaração, o CNPq adotará as\nprovidências cabíveis diante dos indícios de crime de falsidade ideológica.\n3.3 - Quanto à Instituição de Execução do Projeto:\n3.3.1 - A instituição de execução do projeto deverá estar cadastrada no Diretório de Instituiçõ",
+        "start": 4532
+      },
+      "item_id": "adjudicate:M30-F07-R1:temporal_status",
+      "machine_locator_validity_is_not_semantic_approval": true,
+      "prediction": {
+        "discovery": "opportunity_signal",
+        "end": 7632,
+        "modality": "fomento",
+        "segment_id": "segment-0013",
+        "start": 4532,
+        "temporal": "undetermined"
+      },
+      "proposed_severity": "medium",
+      "question": "Does the frozen context support the asserted role/stage/access for this audience, or should prediction/reference remain unresolved? ",
+      "record_id": "M30-F07-R1",
+      "reference_label": {
+        "discovery_label": "confirmed_opportunity",
+        "modality": "fomento",
+        "opportunity_label": "genuine_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "open"
+      },
+      "segment_id": "segment-0013"
+    },
+    {
+      "current_review_status": "provisional_pending_authorized_adjudication",
+      "document_id": "M30-F07",
+      "error_codes": [
+        "EVIDENCE_SEMANTIC_MISMATCH"
+      ],
+      "frozen_source_evidence": {
+        "end": 14130,
+        "quote": "6.6.4 - Caso seja necessário utilizar figuras, gráficos, fotos e/ou outros, para esclarecer a\nargumentação da proposta, estes não devem comprometer a capacidade do arquivo, pois as\npropostas que excederem o tamanho estipulado não serão recebidas pelo guichê eletrônico do\nCNPq.\n6.7 - Após o envio, será gerado um recibo eletrônico de protocolo da proposta submetida, o qual\nservirá como comprovante da transmissão.\n6.8 - Será aceita uma única proposta por proponente, vinculada a apenas uma das Linhas indicadas\nno item 1.2, sendo vedado o remanejamento de propostas entre as Linhas.\n6.9 - Na hipótese de envio de mais de uma proposta pelo mesmo proponente, respeitando-se o\nprazo limite estipulado para submissão das propostas, será considerada para análise somente a\núltima proposta recebida.\n6.10 - Constatado o envio de propostas idênticas, apresentadas por diferentes proponentes, todas\nas propostas nesta condição serão indeferidas.\n6.11 - O proponente deve se assegurar de que seu Currículo Lattes possui informações completas,\ncorretas e atualizadas, evitando especialmente a duplicação de itens ou sua classificação de maneira\nequivocada.\n6.11.1 - A classificação incorreta da produção científica poderá prejudicar a análise de mérito do\npedido.\n7 - Julgamento\n7.1 - Critérios do Julgamento\n7.1.1 - Os critérios para classificação das propostas quanto ao mérito técnico-científico e sua\nadequação orçamentária são:\nCritérios para Julgamento para Bolsas PQ e PQ-Sr",
+        "start": 12658
+      },
+      "item_id": "adjudicate:M30-F07:segment-0016:discovery:classification",
+      "machine_locator_validity_is_not_semantic_approval": true,
+      "prediction": "confirmed_opportunity",
+      "proposed_severity": "medium",
+      "question": "Does the frozen context support the asserted role/stage/access for this audience, or should prediction/reference remain unresolved? A página contém condições de submissão de uma chamada real, mas isoladamente é trecho procedimental sem identidade completa. A confirmação é defensável no documento, menos sustentada só nesta unidade.",
+      "record_id": null,
+      "reference_label": null,
+      "segment_id": "segment-0016"
+    },
+    {
+      "current_review_status": "provisional_pending_authorized_adjudication",
+      "document_id": "M30-I01",
+      "error_codes": [
+        "OPPORTUNITY_EXISTENCE_CONFUSION",
+        "REFERENCE_AMBIGUITY"
+      ],
+      "frozen_source_evidence": {
+        "end": 1331,
+        "quote": "O Fundo Criatec 4 possui como objetivo proporcionar uma combinação de capital para aceleração e expertise complementar de uma equipe de gestão especializada, proporcionando uma combinação perfeita para o empreendedor que busca ajuda para acelerar o seu crescimento.",
+        "start": 1066
+      },
+      "item_id": "adjudicate:M30-I01-R1:discovery_label",
+      "machine_locator_validity_is_not_semantic_approval": true,
+      "prediction": {
+        "discovery": "abstain",
+        "end": 1331,
+        "modality": "undetermined",
+        "segment_id": "segment-0017",
+        "start": 1066,
+        "temporal": "undetermined"
+      },
+      "proposed_severity": "medium",
+      "question": "Does the frozen context support the asserted role/stage/access for this audience, or should prediction/reference remain unresolved? ",
+      "record_id": "M30-I01-R1",
+      "reference_label": {
+        "discovery_label": "opportunity_signal",
+        "modality": "investimentos",
+        "opportunity_label": "uncertain",
+        "review_status": "provisional",
+        "temporal_status": "undetermined"
+      },
+      "segment_id": "segment-0017"
+    },
+    {
+      "current_review_status": "provisional_pending_authorized_adjudication",
+      "document_id": "M30-I01",
+      "error_codes": [
+        "MODALITY_CONFUSION",
+        "REFERENCE_AMBIGUITY"
+      ],
+      "frozen_source_evidence": {
+        "end": 1331,
+        "quote": "O Fundo Criatec 4 possui como objetivo proporcionar uma combinação de capital para aceleração e expertise complementar de uma equipe de gestão especializada, proporcionando uma combinação perfeita para o empreendedor que busca ajuda para acelerar o seu crescimento.",
+        "start": 1066
+      },
+      "item_id": "adjudicate:M30-I01-R1:modality",
+      "machine_locator_validity_is_not_semantic_approval": true,
+      "prediction": {
+        "discovery": "abstain",
+        "end": 1331,
+        "modality": "undetermined",
+        "segment_id": "segment-0017",
+        "start": 1066,
+        "temporal": "undetermined"
+      },
+      "proposed_severity": "medium",
+      "question": "Does the frozen context support the asserted role/stage/access for this audience, or should prediction/reference remain unresolved? ",
+      "record_id": "M30-I01-R1",
+      "reference_label": {
+        "discovery_label": "opportunity_signal",
+        "modality": "investimentos",
+        "opportunity_label": "uncertain",
+        "review_status": "provisional",
+        "temporal_status": "undetermined"
+      },
+      "segment_id": "segment-0017"
+    },
+    {
+      "current_review_status": "provisional_pending_authorized_adjudication",
+      "document_id": "M30-I02",
+      "error_codes": [
+        "OPPORTUNITY_EXISTENCE_CONFUSION",
+        "REFERENCE_AMBIGUITY"
+      ],
+      "frozen_source_evidence": {
+        "end": 666,
+        "quote": "Em cada uma das regiões do Brasil, o Criatec 4 tem um representante responsável pela prospecção, análise, investimento e suporte ao desenvolvimento de negócios em empresas e projetos inovadores. A equipe do Criatec 4 é composta por profissionais com grande capacidade de gestão e desenvolvimento de negócios, o que proporciona ao empreendedor um grande suporte nas tomadas de decisões necessárias para o sucesso do seu empreendimento.",
+        "start": 232
+      },
+      "item_id": "adjudicate:M30-I02-R1:discovery_label",
+      "machine_locator_validity_is_not_semantic_approval": true,
+      "prediction": {
+        "discovery": "abstain",
+        "end": 666,
+        "modality": "undetermined",
+        "segment_id": "segment-0004",
+        "start": 232,
+        "temporal": "undetermined"
+      },
+      "proposed_severity": "medium",
+      "question": "Does the frozen context support the asserted role/stage/access for this audience, or should prediction/reference remain unresolved? ",
+      "record_id": "M30-I02-R1",
+      "reference_label": {
+        "discovery_label": "confirmed_opportunity",
+        "modality": "investimentos",
+        "opportunity_label": "genuine_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "undetermined"
+      },
+      "segment_id": "segment-0004"
+    },
+    {
+      "current_review_status": "provisional_pending_authorized_adjudication",
+      "document_id": "M30-I02",
+      "error_codes": [
+        "MODALITY_CONFUSION",
+        "REFERENCE_AMBIGUITY"
+      ],
+      "frozen_source_evidence": {
+        "end": 666,
+        "quote": "Em cada uma das regiões do Brasil, o Criatec 4 tem um representante responsável pela prospecção, análise, investimento e suporte ao desenvolvimento de negócios em empresas e projetos inovadores. A equipe do Criatec 4 é composta por profissionais com grande capacidade de gestão e desenvolvimento de negócios, o que proporciona ao empreendedor um grande suporte nas tomadas de decisões necessárias para o sucesso do seu empreendimento.",
+        "start": 232
+      },
+      "item_id": "adjudicate:M30-I02-R1:modality",
+      "machine_locator_validity_is_not_semantic_approval": true,
+      "prediction": {
+        "discovery": "abstain",
+        "end": 666,
+        "modality": "undetermined",
+        "segment_id": "segment-0004",
+        "start": 232,
+        "temporal": "undetermined"
+      },
+      "proposed_severity": "medium",
+      "question": "Does the frozen context support the asserted role/stage/access for this audience, or should prediction/reference remain unresolved? ",
+      "record_id": "M30-I02-R1",
+      "reference_label": {
+        "discovery_label": "confirmed_opportunity",
+        "modality": "investimentos",
+        "opportunity_label": "genuine_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "undetermined"
+      },
+      "segment_id": "segment-0004"
+    },
+    {
+      "current_review_status": "provisional_pending_authorized_adjudication",
+      "document_id": "M30-I02",
+      "error_codes": [
+        "SEGMENTATION_OVER",
+        "EXTRACTION_OMISSION"
+      ],
+      "frozen_source_evidence": {
+        "end": 666,
+        "quote": "Em cada uma das regiões do Brasil, o Criatec 4 tem um representante responsável pela prospecção, análise, investimento e suporte ao desenvolvimento de negócios em empresas e projetos inovadores. A equipe do Criatec 4 é composta por profissionais com grande capacidade de gestão e desenvolvimento de negócios, o que proporciona ao empreendedor um grande suporte nas tomadas de decisões necessárias para o sucesso do seu empreendimento.",
+        "start": 232
+      },
+      "item_id": "adjudicate:M30-I02:segment-0004:discovery:classification",
+      "machine_locator_validity_is_not_semantic_approval": true,
+      "prediction": "abstain",
+      "proposed_severity": "medium",
+      "question": "Does the frozen context support the asserted role/stage/access for this audience, or should prediction/reference remain unresolved? Fonte convida projeto/empresa inovadora a ter Criatec 4 como sócio e preencher formulário. Ausência de confirmação no representative é uma omissão de contexto; não prova ausência do instrumento.",
+      "record_id": null,
+      "reference_label": null,
+      "segment_id": "segment-0004"
+    },
+    {
+      "current_review_status": "provisional_pending_authorized_adjudication",
+      "document_id": "M30-I03",
+      "error_codes": [
+        "OPPORTUNITY_EXISTENCE_CONFUSION",
+        "REFERENCE_AMBIGUITY"
+      ],
+      "frozen_source_evidence": {
+        "end": 172,
+        "quote": "Estes são alguns dos principais investimentos feitos pelo time do Fundo e que viraram cases de sucesso",
+        "start": 70
+      },
+      "item_id": "adjudicate:M30-I03-R1:discovery_label",
+      "machine_locator_validity_is_not_semantic_approval": true,
+      "prediction": {
+        "discovery": "abstain",
+        "end": 172,
+        "modality": "undetermined",
+        "segment_id": "segment-0003",
+        "start": 70,
+        "temporal": "undetermined"
+      },
+      "proposed_severity": "medium",
+      "question": "Does the frozen context support the asserted role/stage/access for this audience, or should prediction/reference remain unresolved? ",
+      "record_id": "M30-I03-R1",
+      "reference_label": {
+        "discovery_label": "unrelated_or_non_actionable",
+        "modality": "investimentos",
+        "opportunity_label": "not_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "not_applicable"
+      },
+      "segment_id": "segment-0003"
+    },
+    {
+      "current_review_status": "provisional_pending_authorized_adjudication",
+      "document_id": "M30-I03",
+      "error_codes": [
+        "MODALITY_CONFUSION",
+        "REFERENCE_AMBIGUITY"
+      ],
+      "frozen_source_evidence": {
+        "end": 172,
+        "quote": "Estes são alguns dos principais investimentos feitos pelo time do Fundo e que viraram cases de sucesso",
+        "start": 70
+      },
+      "item_id": "adjudicate:M30-I03-R1:modality",
+      "machine_locator_validity_is_not_semantic_approval": true,
+      "prediction": {
+        "discovery": "abstain",
+        "end": 172,
+        "modality": "undetermined",
+        "segment_id": "segment-0003",
+        "start": 70,
+        "temporal": "undetermined"
+      },
+      "proposed_severity": "medium",
+      "question": "Does the frozen context support the asserted role/stage/access for this audience, or should prediction/reference remain unresolved? ",
+      "record_id": "M30-I03-R1",
+      "reference_label": {
+        "discovery_label": "unrelated_or_non_actionable",
+        "modality": "investimentos",
+        "opportunity_label": "not_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "not_applicable"
+      },
+      "segment_id": "segment-0003"
+    },
+    {
+      "current_review_status": "provisional_pending_authorized_adjudication",
+      "document_id": "M30-I03",
+      "error_codes": [
+        "TEMPORAL_AVAILABILITY_INFERENCE",
+        "REFERENCE_AMBIGUITY"
+      ],
+      "frozen_source_evidence": {
+        "end": 172,
+        "quote": "Estes são alguns dos principais investimentos feitos pelo time do Fundo e que viraram cases de sucesso",
+        "start": 70
+      },
+      "item_id": "adjudicate:M30-I03-R1:temporal_status",
+      "machine_locator_validity_is_not_semantic_approval": true,
+      "prediction": {
+        "discovery": "abstain",
+        "end": 172,
+        "modality": "undetermined",
+        "segment_id": "segment-0003",
+        "start": 70,
+        "temporal": "undetermined"
+      },
+      "proposed_severity": "medium",
+      "question": "Does the frozen context support the asserted role/stage/access for this audience, or should prediction/reference remain unresolved? ",
+      "record_id": "M30-I03-R1",
+      "reference_label": {
+        "discovery_label": "unrelated_or_non_actionable",
+        "modality": "investimentos",
+        "opportunity_label": "not_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "not_applicable"
+      },
+      "segment_id": "segment-0003"
+    },
+    {
+      "current_review_status": "provisional_pending_authorized_adjudication",
+      "document_id": "M30-I03",
+      "error_codes": [
+        "REFERENCE_AMBIGUITY"
+      ],
+      "frozen_source_evidence": {
+        "end": 172,
+        "quote": "Estes são alguns dos principais investimentos feitos pelo time do Fundo e que viraram cases de sucesso",
+        "start": 70
+      },
+      "item_id": "adjudicate:M30-I03:segment-0003:discovery:classification",
+      "machine_locator_validity_is_not_semantic_approval": true,
+      "prediction": "abstain",
+      "proposed_severity": "medium",
+      "question": "Does the frozen context support the asserted role/stage/access for this audience, or should prediction/reference remain unresolved? Portfólio concluído não é nova oferta. Abstenção do maior trecho não é falsa confirmação; outros trechos classificam portfólio corretamente.",
+      "record_id": null,
+      "reference_label": null,
+      "segment_id": "segment-0003"
+    },
+    {
+      "current_review_status": "provisional_pending_authorized_adjudication",
+      "document_id": "M30-I04",
+      "error_codes": [
+        "OPPORTUNITY_EXISTENCE_CONFUSION",
+        "REFERENCE_AMBIGUITY"
+      ],
+      "frozen_source_evidence": {
+        "end": 305,
+        "quote": "Escolha a região onde a sede da sua empresa está localizada e preencha os campos abaixo com o seu plano de negócios. Nossa equipe de análise fará a avaliação da oportunidade e, caso se encaixe na tese do fundo, faremos contato.",
+        "start": 78
+      },
+      "item_id": "adjudicate:M30-I04-R1:discovery_label",
+      "machine_locator_validity_is_not_semantic_approval": true,
+      "prediction": {
+        "discovery": "abstain",
+        "end": 305,
+        "modality": "undetermined",
+        "segment_id": "segment-0003",
+        "start": 78,
+        "temporal": "undetermined"
+      },
+      "proposed_severity": "medium",
+      "question": "Does the frozen context support the asserted role/stage/access for this audience, or should prediction/reference remain unresolved? ",
+      "record_id": "M30-I04-R1",
+      "reference_label": {
+        "discovery_label": "confirmed_opportunity",
+        "modality": "investimentos",
+        "opportunity_label": "genuine_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "undetermined"
+      },
+      "segment_id": "segment-0003"
+    },
+    {
+      "current_review_status": "provisional_pending_authorized_adjudication",
+      "document_id": "M30-I04",
+      "error_codes": [
+        "MODALITY_CONFUSION",
+        "REFERENCE_AMBIGUITY"
+      ],
+      "frozen_source_evidence": {
+        "end": 305,
+        "quote": "Escolha a região onde a sede da sua empresa está localizada e preencha os campos abaixo com o seu plano de negócios. Nossa equipe de análise fará a avaliação da oportunidade e, caso se encaixe na tese do fundo, faremos contato.",
+        "start": 78
+      },
+      "item_id": "adjudicate:M30-I04-R1:modality",
+      "machine_locator_validity_is_not_semantic_approval": true,
+      "prediction": {
+        "discovery": "abstain",
+        "end": 305,
+        "modality": "undetermined",
+        "segment_id": "segment-0003",
+        "start": 78,
+        "temporal": "undetermined"
+      },
+      "proposed_severity": "medium",
+      "question": "Does the frozen context support the asserted role/stage/access for this audience, or should prediction/reference remain unresolved? ",
+      "record_id": "M30-I04-R1",
+      "reference_label": {
+        "discovery_label": "confirmed_opportunity",
+        "modality": "investimentos",
+        "opportunity_label": "genuine_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "undetermined"
+      },
+      "segment_id": "segment-0003"
+    },
+    {
+      "current_review_status": "provisional_pending_authorized_adjudication",
+      "document_id": "M30-I04",
+      "error_codes": [
+        "SEGMENTATION_OVER",
+        "EXTRACTION_OMISSION"
+      ],
+      "frozen_source_evidence": {
+        "end": 305,
+        "quote": "Escolha a região onde a sede da sua empresa está localizada e preencha os campos abaixo com o seu plano de negócios. Nossa equipe de análise fará a avaliação da oportunidade e, caso se encaixe na tese do fundo, faremos contato.",
+        "start": 78
+      },
+      "item_id": "adjudicate:M30-I04:segment-0003:discovery:classification",
+      "machine_locator_validity_is_not_semantic_approval": true,
+      "prediction": "abstain",
+      "proposed_severity": "medium",
+      "question": "Does the frozen context support the asserted role/stage/access for this audience, or should prediction/reference remain unresolved? Fonte solicita plano de negócios para avaliação pela tese do fundo. Confirmação é de acesso à avaliação, não promessa de investimento ou janela contínua. Maior bloco abstém.",
+      "record_id": null,
+      "reference_label": null,
+      "segment_id": "segment-0003"
+    },
+    {
+      "current_review_status": "provisional_pending_authorized_adjudication",
+      "document_id": "M30-I05",
+      "error_codes": [
+        "MODALITY_CONFUSION",
+        "REFERENCE_AMBIGUITY"
+      ],
+      "frozen_source_evidence": {
+        "end": 1838,
+        "quote": "A iniciativa busca estruturar um fundo de investimento em participações voltado a startups em estágio inicial, especialmente aquelas que tenham recebido apoio de programas de fomento à inovação, subvenção ou aceleração realizados no país. O objetivo é ampliar a conversão dessas empresas em oportunidades aptas a receber investimentos de fundos de capital semente, venture capital e outros investidores institucionais.",
+        "start": 1420
+      },
+      "item_id": "adjudicate:M30-I05-R1:modality",
+      "machine_locator_validity_is_not_semantic_approval": true,
+      "prediction": {
+        "discovery": "opportunity_signal",
+        "end": 1838,
+        "modality": "undetermined",
+        "segment_id": "segment-0018",
+        "start": 1420,
+        "temporal": "undetermined"
+      },
+      "proposed_severity": "medium",
+      "question": "Does the frozen context support the asserted role/stage/access for this audience, or should prediction/reference remain unresolved? ",
+      "record_id": "M30-I05-R1",
+      "reference_label": {
+        "discovery_label": "opportunity_signal",
+        "modality": "investimentos",
+        "opportunity_label": "uncertain",
+        "review_status": "provisional",
+        "temporal_status": "undetermined"
+      },
+      "segment_id": "segment-0018"
+    },
+    {
+      "current_review_status": "provisional_pending_authorized_adjudication",
+      "document_id": "M30-I05",
+      "error_codes": [
+        "EXTRACTION_OMISSION"
+      ],
+      "frozen_source_evidence": {
+        "end": 2234,
+        "quote": "O FIP tem estimativa de mobilizar até R$ 250 milhões para investir em startups em fase inicial. A BNDESPAR, subsidiária integral do BNDES, comprometerá até R$ 100 milhões. Já a Finep, com recursos do Fundo Nacional de Desenvolvimento Científico e Tecnológico (FNDCT), irá comprometer R$ 50 milhões. Caberá ao gestor selecionado mobilizar outros investidores para complementar o capital do fundo.",
+        "start": 1839
+      },
+      "item_id": "adjudicate:M30-I05:segment-0019:field:0",
+      "machine_locator_validity_is_not_semantic_approval": true,
+      "prediction": "R$ 250 milhões",
+      "proposed_severity": "medium",
+      "question": "Does the frozen context support the asserted role/stage/access for this audience, or should prediction/reference remain unresolved? O numeral e o papel são relacionados ao campo correto, mas o literal perde até, que qualifica o valor como teto/estimativa. Não equiparar o numeral isolado ao valor com qualificador.",
+      "record_id": null,
+      "reference_label": null,
+      "segment_id": "segment-0019"
+    },
+    {
+      "current_review_status": "provisional_pending_authorized_adjudication",
+      "document_id": "M30-I06",
+      "error_codes": [
+        "OPPORTUNITY_EXISTENCE_CONFUSION",
+        "REFERENCE_AMBIGUITY"
+      ],
+      "frozen_source_evidence": {
+        "end": 3490,
+        "quote": "Serão alvos do investimento startups que tenham como diferencial competitivo a incorporação estruturante da inteligência artificial à sua proposta de valor, e cujo desenvolvimento, adaptação e operação das soluções de inteligência artificial demandem investimentos em dados, modelos, infraestrutura computacional e profissionais especializados, indo além do simples consumo pontual ou acessório de soluções de inteligência artificial prontas.",
+        "start": 3048
+      },
+      "item_id": "adjudicate:M30-I06-R1:discovery_label",
+      "machine_locator_validity_is_not_semantic_approval": true,
+      "prediction": {
+        "discovery": "opportunity_signal",
+        "end": 3490,
+        "modality": "investimentos",
+        "segment_id": "segment-0024",
+        "start": 3048,
+        "temporal": "undetermined"
+      },
+      "proposed_severity": "medium",
+      "question": "Does the frozen context support the asserted role/stage/access for this audience, or should prediction/reference remain unresolved? ",
+      "record_id": "M30-I06-R1",
+      "reference_label": {
+        "discovery_label": "announced_future_opportunity",
+        "modality": "investimentos",
+        "opportunity_label": "uncertain",
+        "review_status": "provisional",
+        "temporal_status": "undetermined"
+      },
+      "segment_id": "segment-0024"
+    },
+    {
+      "current_review_status": "provisional_pending_authorized_adjudication",
+      "document_id": "M30-I06",
+      "error_codes": [
+        "EXTRACTION_OMISSION"
+      ],
+      "frozen_source_evidence": {
+        "end": 1935,
+        "quote": "O novo fundo, que tem estimativa de mobilizar até R$ 500 milhões, é voltado ao apoio a startups intensivas no uso de inteligência artificial, tendo como desafio central ampliar o número, o faturamento e a presença global de startups brasileiras que tenham IA como elemento central do modelo de negócios e geração de valor, e não apenas como ferramenta acessória ou complementar.",
+        "start": 1557
+      },
+      "item_id": "adjudicate:M30-I06:segment-0018:field:0",
+      "machine_locator_validity_is_not_semantic_approval": true,
+      "prediction": "R$ 500 milhões",
+      "proposed_severity": "medium",
+      "question": "Does the frozen context support the asserted role/stage/access for this audience, or should prediction/reference remain unresolved? O numeral e o papel são relacionados ao campo correto, mas o literal perde até, que qualifica o valor como teto/estimativa. Não equiparar o numeral isolado ao valor com qualificador.",
+      "record_id": null,
+      "reference_label": null,
+      "segment_id": "segment-0018"
+    },
+    {
+      "current_review_status": "provisional_pending_authorized_adjudication",
+      "document_id": "M30-I06",
+      "error_codes": [
+        "FUTURE_SIGNAL_CONFUSION",
+        "REFERENCE_POSSIBLE_ERROR"
+      ],
+      "frozen_source_evidence": {
+        "end": 3490,
+        "quote": "Serão alvos do investimento startups que tenham como diferencial competitivo a incorporação estruturante da inteligência artificial à sua proposta de valor, e cujo desenvolvimento, adaptação e operação das soluções de inteligência artificial demandem investimentos em dados, modelos, infraestrutura computacional e profissionais especializados, indo além do simples consumo pontual ou acessório de soluções de inteligência artificial prontas.",
+        "start": 3048
+      },
+      "item_id": "adjudicate:M30-I06:segment-0024:discovery:classification",
+      "machine_locator_validity_is_not_semantic_approval": true,
+      "prediction": "opportunity_signal",
+      "proposed_severity": "medium",
+      "question": "Does the frozen context support the asserted role/stage/access for this audience, or should prediction/reference remain unresolved? Fundo futuro de IA está em análise/diligência/estruturação. Sinal é defensável e anúncio futuro também pode ser: o protocolo exige compromisso de acesso futuro. Nada estabelece candidaturas abertas de startups. A divergência é de nível de confirmação, não de janela future.",
+      "record_id": null,
+      "reference_label": null,
+      "segment_id": "segment-0024"
+    },
+    {
+      "current_review_status": "provisional_pending_authorized_adjudication",
+      "document_id": "M30-I07",
+      "error_codes": [
+        "OPPORTUNITY_EXISTENCE_CONFUSION",
+        "REFERENCE_AMBIGUITY"
+      ],
+      "frozen_source_evidence": {
+        "end": 12376,
+        "quote": "O Fundo Sul Ventures nasceu com o propósito\nde impulsionar e desenvolver o ecossistema de\ninovação da região Sul do Brasil, por meio de uma\nestratégia estruturada de investimentos em Venture\nCapital, operando de forma transversal e hands-on,\nacompanhando de perto cada investimento para\nmaximizar seu potencial de crescimento. O Fundo é\nfocado os ecossistemas dos três estados do Sul do Brasil,\ncom setores estratégicos definidos, incluindo Adtech &\nRetail Tech, Healthtech, Fintech, Smart Infra e SaaS.",
+        "start": 11873
+      },
+      "item_id": "adjudicate:M30-I07-R1:discovery_label",
+      "machine_locator_validity_is_not_semantic_approval": true,
+      "prediction": {
+        "discovery": "abstain",
+        "end": 12376,
+        "modality": "undetermined",
+        "segment_id": "segment-0074",
+        "start": 11873,
+        "temporal": "undetermined"
+      },
+      "proposed_severity": "medium",
+      "question": "Does the frozen context support the asserted role/stage/access for this audience, or should prediction/reference remain unresolved? ",
+      "record_id": "M30-I07-R1",
+      "reference_label": {
+        "discovery_label": "opportunity_signal",
+        "modality": "investimentos",
+        "opportunity_label": "uncertain",
+        "review_status": "provisional",
+        "temporal_status": "undetermined"
+      },
+      "segment_id": "segment-0074"
+    },
+    {
+      "current_review_status": "provisional_pending_authorized_adjudication",
+      "document_id": "M30-I07",
+      "error_codes": [
+        "MODALITY_CONFUSION",
+        "REFERENCE_AMBIGUITY"
+      ],
+      "frozen_source_evidence": {
+        "end": 12376,
+        "quote": "O Fundo Sul Ventures nasceu com o propósito\nde impulsionar e desenvolver o ecossistema de\ninovação da região Sul do Brasil, por meio de uma\nestratégia estruturada de investimentos em Venture\nCapital, operando de forma transversal e hands-on,\nacompanhando de perto cada investimento para\nmaximizar seu potencial de crescimento. O Fundo é\nfocado os ecossistemas dos três estados do Sul do Brasil,\ncom setores estratégicos definidos, incluindo Adtech &\nRetail Tech, Healthtech, Fintech, Smart Infra e SaaS.",
+        "start": 11873
+      },
+      "item_id": "adjudicate:M30-I07-R1:modality",
+      "machine_locator_validity_is_not_semantic_approval": true,
+      "prediction": {
+        "discovery": "abstain",
+        "end": 12376,
+        "modality": "undetermined",
+        "segment_id": "segment-0074",
+        "start": 11873,
+        "temporal": "undetermined"
+      },
+      "proposed_severity": "medium",
+      "question": "Does the frozen context support the asserted role/stage/access for this audience, or should prediction/reference remain unresolved? ",
+      "record_id": "M30-I07-R1",
+      "reference_label": {
+        "discovery_label": "opportunity_signal",
+        "modality": "investimentos",
+        "opportunity_label": "uncertain",
+        "review_status": "provisional",
+        "temporal_status": "undetermined"
+      },
+      "segment_id": "segment-0074"
+    },
+    {
+      "current_review_status": "provisional_pending_authorized_adjudication",
+      "document_id": "M30-I07",
+      "error_codes": [
+        "SEGMENTATION_OVER",
+        "EXCESSIVE_ABSTENTION"
+      ],
+      "frozen_source_evidence": {
+        "end": 12376,
+        "quote": "O Fundo Sul Ventures nasceu com o propósito\nde impulsionar e desenvolver o ecossistema de\ninovação da região Sul do Brasil, por meio de uma\nestratégia estruturada de investimentos em Venture\nCapital, operando de forma transversal e hands-on,\nacompanhando de perto cada investimento para\nmaximizar seu potencial de crescimento. O Fundo é\nfocado os ecossistemas dos três estados do Sul do Brasil,\ncom setores estratégicos definidos, incluindo Adtech &\nRetail Tech, Healthtech, Fintech, Smart Infra e SaaS.",
+        "start": 11873
+      },
+      "item_id": "adjudicate:M30-I07:segment-0074:discovery:classification",
+      "machine_locator_validity_is_not_semantic_approval": true,
+      "prediction": "abstain",
+      "proposed_severity": "medium",
+      "question": "Does the frozen context support the asserted role/stage/access for this audience, or should prediction/reference remain unresolved? Há fundo Sul Ventures e estágio de captação na página física 12. O maior fragmento abstém apesar de irmãos emitirem sinal; captação de veículo não é oferta de ticket para startup.",
+      "record_id": null,
+      "reference_label": null,
+      "segment_id": "segment-0074"
+    },
+    {
+      "current_review_status": "provisional_pending_authorized_adjudication",
+      "document_id": "M30-I08",
+      "error_codes": [
+        "OPPORTUNITY_EXISTENCE_CONFUSION",
+        "REFERENCE_AMBIGUITY"
+      ],
+      "frozen_source_evidence": {
+        "end": 2344,
+        "quote": "Após o processo de seleção, a proposta vencedora é submetida aos trâmites de enquadramento de operações do Sistema BNDES. Uma vez enquadrada, a proposta passa para a fase de análise, na qual são discutidos aspectos jurídicos e gerenciais, bem como regulamento do fundo. É verificada a exequibilidade da proposta apresentada, cabendo ao gestor vencedor o ônus de comprová-la. Posteriormente, a proposta vencedora tem a sua contratação submetida à apreciação da Diretoria da BNDESPAR.",
+        "start": 1862
+      },
+      "item_id": "adjudicate:M30-I08-R1:discovery_label",
+      "machine_locator_validity_is_not_semantic_approval": true,
+      "prediction": {
+        "discovery": "abstain",
+        "end": 2344,
+        "modality": "undetermined",
+        "segment_id": "segment-0026",
+        "start": 1862,
+        "temporal": "undetermined"
+      },
+      "proposed_severity": "medium",
+      "question": "Does the frozen context support the asserted role/stage/access for this audience, or should prediction/reference remain unresolved? ",
+      "record_id": "M30-I08-R1",
+      "reference_label": {
+        "discovery_label": "opportunity_signal",
+        "modality": "investimentos",
+        "opportunity_label": "uncertain",
+        "review_status": "provisional",
+        "temporal_status": "undetermined"
+      },
+      "segment_id": "segment-0026"
+    },
+    {
+      "current_review_status": "provisional_pending_authorized_adjudication",
+      "document_id": "M30-I08",
+      "error_codes": [
+        "MODALITY_CONFUSION",
+        "REFERENCE_AMBIGUITY"
+      ],
+      "frozen_source_evidence": {
+        "end": 2344,
+        "quote": "Após o processo de seleção, a proposta vencedora é submetida aos trâmites de enquadramento de operações do Sistema BNDES. Uma vez enquadrada, a proposta passa para a fase de análise, na qual são discutidos aspectos jurídicos e gerenciais, bem como regulamento do fundo. É verificada a exequibilidade da proposta apresentada, cabendo ao gestor vencedor o ônus de comprová-la. Posteriormente, a proposta vencedora tem a sua contratação submetida à apreciação da Diretoria da BNDESPAR.",
+        "start": 1862
+      },
+      "item_id": "adjudicate:M30-I08-R1:modality",
+      "machine_locator_validity_is_not_semantic_approval": true,
+      "prediction": {
+        "discovery": "abstain",
+        "end": 2344,
+        "modality": "undetermined",
+        "segment_id": "segment-0026",
+        "start": 1862,
+        "temporal": "undetermined"
+      },
+      "proposed_severity": "medium",
+      "question": "Does the frozen context support the asserted role/stage/access for this audience, or should prediction/reference remain unresolved? ",
+      "record_id": "M30-I08-R1",
+      "reference_label": {
+        "discovery_label": "opportunity_signal",
+        "modality": "investimentos",
+        "opportunity_label": "uncertain",
+        "review_status": "provisional",
+        "temporal_status": "undetermined"
+      },
+      "segment_id": "segment-0026"
+    },
+    {
+      "current_review_status": "provisional_pending_authorized_adjudication",
+      "document_id": "M30-N01",
+      "error_codes": [
+        "OPPORTUNITY_EXISTENCE_CONFUSION",
+        "REFERENCE_AMBIGUITY"
+      ],
+      "frozen_source_evidence": {
+        "end": 2652,
+        "quote": "A aprovação do financiamento ocorreu no âmbito do Produto BNDES FINEM – Programa BNDES Mais Inovação, iniciativa voltada à digitalização, pesquisa e desenvolvimento tecnológico, com recursos do FAT (Fundo de Amparo ao Trabalhador). “O desenvolvimento de novas tecnologias para veículos híbridos flex contribui para deixar o país bem-posicionado no processo de transição energética pelo qual passa o setor automotivo. A descarbonização e a industrialização verde são pilares estratégicos para construir um futuro mais sustentável e garantir qualidade de vida para as próximas gerações”, afirmou o presidente do BNDES, Aloizio Mercadante.",
+        "start": 2016
+      },
+      "item_id": "adjudicate:M30-N01-R1:discovery_label",
+      "machine_locator_validity_is_not_semantic_approval": true,
+      "prediction": {
+        "discovery": "opportunity_signal",
+        "end": 2652,
+        "modality": "credito",
+        "segment_id": "segment-0019",
+        "start": 2016,
+        "temporal": "undetermined"
+      },
+      "proposed_severity": "medium",
+      "question": "Does the frozen context support the asserted role/stage/access for this audience, or should prediction/reference remain unresolved? ",
+      "record_id": "M30-N01-R1",
+      "reference_label": {
+        "discovery_label": "unrelated_or_non_actionable",
+        "modality": "credito",
+        "opportunity_label": "not_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "not_applicable"
+      },
+      "segment_id": "segment-0019"
+    },
+    {
+      "current_review_status": "provisional_pending_authorized_adjudication",
+      "document_id": "M30-N01",
+      "error_codes": [
+        "TEMPORAL_AVAILABILITY_INFERENCE",
+        "REFERENCE_AMBIGUITY"
+      ],
+      "frozen_source_evidence": {
+        "end": 2652,
+        "quote": "A aprovação do financiamento ocorreu no âmbito do Produto BNDES FINEM – Programa BNDES Mais Inovação, iniciativa voltada à digitalização, pesquisa e desenvolvimento tecnológico, com recursos do FAT (Fundo de Amparo ao Trabalhador). “O desenvolvimento de novas tecnologias para veículos híbridos flex contribui para deixar o país bem-posicionado no processo de transição energética pelo qual passa o setor automotivo. A descarbonização e a industrialização verde são pilares estratégicos para construir um futuro mais sustentável e garantir qualidade de vida para as próximas gerações”, afirmou o presidente do BNDES, Aloizio Mercadante.",
+        "start": 2016
+      },
+      "item_id": "adjudicate:M30-N01-R1:temporal_status",
+      "machine_locator_validity_is_not_semantic_approval": true,
+      "prediction": {
+        "discovery": "opportunity_signal",
+        "end": 2652,
+        "modality": "credito",
+        "segment_id": "segment-0019",
+        "start": 2016,
+        "temporal": "undetermined"
+      },
+      "proposed_severity": "medium",
+      "question": "Does the frozen context support the asserted role/stage/access for this audience, or should prediction/reference remain unresolved? ",
+      "record_id": "M30-N01-R1",
+      "reference_label": {
+        "discovery_label": "unrelated_or_non_actionable",
+        "modality": "credito",
+        "opportunity_label": "not_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "not_applicable"
+      },
+      "segment_id": "segment-0019"
+    },
+    {
+      "current_review_status": "provisional_pending_authorized_adjudication",
+      "document_id": "M30-N02",
+      "error_codes": [
+        "OPPORTUNITY_EXISTENCE_CONFUSION",
+        "REFERENCE_AMBIGUITY"
+      ],
+      "frozen_source_evidence": {
+        "end": 3515,
+        "quote": "O Centro vai integrar de forma inédita e em larga escala tecnologias de ponta que representam avanço significativo no processamento final de imunobiológicos, como as linhas de envase com isoladores, que permitirão a produção de mais de 600 milhões de doses por ano na forma líquida, num modelo ainda sem similar no país. Além disso, a implementação de tecnologia moderna para envase, oferecendo maior segurança, precisão na dosagem e conveniência para campanhas de vacinação em massa.",
+        "start": 3031
+      },
+      "item_id": "adjudicate:M30-N02-R1:discovery_label",
+      "machine_locator_validity_is_not_semantic_approval": true,
+      "prediction": {
+        "discovery": "abstain",
+        "end": 3515,
+        "modality": "undetermined",
+        "segment_id": "segment-0023",
+        "start": 3031,
+        "temporal": "undetermined"
+      },
+      "proposed_severity": "medium",
+      "question": "Does the frozen context support the asserted role/stage/access for this audience, or should prediction/reference remain unresolved? ",
+      "record_id": "M30-N02-R1",
+      "reference_label": {
+        "discovery_label": "unrelated_or_non_actionable",
+        "modality": "credito",
+        "opportunity_label": "not_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "not_applicable"
+      },
+      "segment_id": "segment-0023"
+    },
+    {
+      "current_review_status": "provisional_pending_authorized_adjudication",
+      "document_id": "M30-N02",
+      "error_codes": [
+        "MODALITY_CONFUSION",
+        "REFERENCE_AMBIGUITY"
+      ],
+      "frozen_source_evidence": {
+        "end": 3515,
+        "quote": "O Centro vai integrar de forma inédita e em larga escala tecnologias de ponta que representam avanço significativo no processamento final de imunobiológicos, como as linhas de envase com isoladores, que permitirão a produção de mais de 600 milhões de doses por ano na forma líquida, num modelo ainda sem similar no país. Além disso, a implementação de tecnologia moderna para envase, oferecendo maior segurança, precisão na dosagem e conveniência para campanhas de vacinação em massa.",
+        "start": 3031
+      },
+      "item_id": "adjudicate:M30-N02-R1:modality",
+      "machine_locator_validity_is_not_semantic_approval": true,
+      "prediction": {
+        "discovery": "abstain",
+        "end": 3515,
+        "modality": "undetermined",
+        "segment_id": "segment-0023",
+        "start": 3031,
+        "temporal": "undetermined"
+      },
+      "proposed_severity": "medium",
+      "question": "Does the frozen context support the asserted role/stage/access for this audience, or should prediction/reference remain unresolved? ",
+      "record_id": "M30-N02-R1",
+      "reference_label": {
+        "discovery_label": "unrelated_or_non_actionable",
+        "modality": "credito",
+        "opportunity_label": "not_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "not_applicable"
+      },
+      "segment_id": "segment-0023"
+    },
+    {
+      "current_review_status": "provisional_pending_authorized_adjudication",
+      "document_id": "M30-N02",
+      "error_codes": [
+        "TEMPORAL_AVAILABILITY_INFERENCE",
+        "REFERENCE_AMBIGUITY"
+      ],
+      "frozen_source_evidence": {
+        "end": 3515,
+        "quote": "O Centro vai integrar de forma inédita e em larga escala tecnologias de ponta que representam avanço significativo no processamento final de imunobiológicos, como as linhas de envase com isoladores, que permitirão a produção de mais de 600 milhões de doses por ano na forma líquida, num modelo ainda sem similar no país. Além disso, a implementação de tecnologia moderna para envase, oferecendo maior segurança, precisão na dosagem e conveniência para campanhas de vacinação em massa.",
+        "start": 3031
+      },
+      "item_id": "adjudicate:M30-N02-R1:temporal_status",
+      "machine_locator_validity_is_not_semantic_approval": true,
+      "prediction": {
+        "discovery": "abstain",
+        "end": 3515,
+        "modality": "undetermined",
+        "segment_id": "segment-0023",
+        "start": 3031,
+        "temporal": "undetermined"
+      },
+      "proposed_severity": "medium",
+      "question": "Does the frozen context support the asserted role/stage/access for this audience, or should prediction/reference remain unresolved? ",
+      "record_id": "M30-N02-R1",
+      "reference_label": {
+        "discovery_label": "unrelated_or_non_actionable",
+        "modality": "credito",
+        "opportunity_label": "not_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "not_applicable"
+      },
+      "segment_id": "segment-0023"
+    },
+    {
+      "current_review_status": "provisional_pending_authorized_adjudication",
+      "document_id": "M30-N03",
+      "error_codes": [
+        "OPPORTUNITY_EXISTENCE_CONFUSION",
+        "REFERENCE_AMBIGUITY"
+      ],
+      "frozen_source_evidence": {
+        "end": 5081,
+        "quote": "A divulgação do edital mobilizou equipes da Finep em diferentes partes do país. Foram realizados mais de 20 eventos presenciais e on-line em instituições públicas e privadas, como parques tecnológicos, secretarias, hubs e aceleradoras, alcançando mais de 15 estados. A equipe do Departamento de Ambientes de Inovação e Empreendedorismo (DAIE) atuou em conjunto com os Escritórios Regionais da Finep na articulação institucional, na mobilização de parceiros e na promoção das atividades de divulgação. A iniciativa também contou com a parceria da APEX, da Rede Mulher Empreendedora (RME) e do MCTI.",
+        "start": 4484
+      },
+      "item_id": "adjudicate:M30-N03-R1:discovery_label",
+      "machine_locator_validity_is_not_semantic_approval": true,
+      "prediction": {
+        "discovery": "abstain",
+        "end": 5081,
+        "modality": "undetermined",
+        "segment_id": "segment-0013",
+        "start": 4484,
+        "temporal": "undetermined"
+      },
+      "proposed_severity": "medium",
+      "question": "Does the frozen context support the asserted role/stage/access for this audience, or should prediction/reference remain unresolved? ",
+      "record_id": "M30-N03-R1",
+      "reference_label": {
+        "discovery_label": "unrelated_or_non_actionable",
+        "modality": "fomento",
+        "opportunity_label": "not_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "not_applicable"
+      },
+      "segment_id": "segment-0013"
+    },
+    {
+      "current_review_status": "provisional_pending_authorized_adjudication",
+      "document_id": "M30-N03",
+      "error_codes": [
+        "MODALITY_CONFUSION",
+        "REFERENCE_AMBIGUITY"
+      ],
+      "frozen_source_evidence": {
+        "end": 5081,
+        "quote": "A divulgação do edital mobilizou equipes da Finep em diferentes partes do país. Foram realizados mais de 20 eventos presenciais e on-line em instituições públicas e privadas, como parques tecnológicos, secretarias, hubs e aceleradoras, alcançando mais de 15 estados. A equipe do Departamento de Ambientes de Inovação e Empreendedorismo (DAIE) atuou em conjunto com os Escritórios Regionais da Finep na articulação institucional, na mobilização de parceiros e na promoção das atividades de divulgação. A iniciativa também contou com a parceria da APEX, da Rede Mulher Empreendedora (RME) e do MCTI.",
+        "start": 4484
+      },
+      "item_id": "adjudicate:M30-N03-R1:modality",
+      "machine_locator_validity_is_not_semantic_approval": true,
+      "prediction": {
+        "discovery": "abstain",
+        "end": 5081,
+        "modality": "undetermined",
+        "segment_id": "segment-0013",
+        "start": 4484,
+        "temporal": "undetermined"
+      },
+      "proposed_severity": "medium",
+      "question": "Does the frozen context support the asserted role/stage/access for this audience, or should prediction/reference remain unresolved? ",
+      "record_id": "M30-N03-R1",
+      "reference_label": {
+        "discovery_label": "unrelated_or_non_actionable",
+        "modality": "fomento",
+        "opportunity_label": "not_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "not_applicable"
+      },
+      "segment_id": "segment-0013"
+    },
+    {
+      "current_review_status": "provisional_pending_authorized_adjudication",
+      "document_id": "M30-N03",
+      "error_codes": [
+        "TEMPORAL_AVAILABILITY_INFERENCE",
+        "REFERENCE_AMBIGUITY"
+      ],
+      "frozen_source_evidence": {
+        "end": 5081,
+        "quote": "A divulgação do edital mobilizou equipes da Finep em diferentes partes do país. Foram realizados mais de 20 eventos presenciais e on-line em instituições públicas e privadas, como parques tecnológicos, secretarias, hubs e aceleradoras, alcançando mais de 15 estados. A equipe do Departamento de Ambientes de Inovação e Empreendedorismo (DAIE) atuou em conjunto com os Escritórios Regionais da Finep na articulação institucional, na mobilização de parceiros e na promoção das atividades de divulgação. A iniciativa também contou com a parceria da APEX, da Rede Mulher Empreendedora (RME) e do MCTI.",
+        "start": 4484
+      },
+      "item_id": "adjudicate:M30-N03-R1:temporal_status",
+      "machine_locator_validity_is_not_semantic_approval": true,
+      "prediction": {
+        "discovery": "abstain",
+        "end": 5081,
+        "modality": "undetermined",
+        "segment_id": "segment-0013",
+        "start": 4484,
+        "temporal": "undetermined"
+      },
+      "proposed_severity": "medium",
+      "question": "Does the frozen context support the asserted role/stage/access for this audience, or should prediction/reference remain unresolved? ",
+      "record_id": "M30-N03-R1",
+      "reference_label": {
+        "discovery_label": "unrelated_or_non_actionable",
+        "modality": "fomento",
+        "opportunity_label": "not_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "not_applicable"
+      },
+      "segment_id": "segment-0013"
+    }
+  ],
+  "review_status": "provisional",
+  "schema_version": "m32-review-queue-v1"
+}

@@ -1,0 +1,933 @@
+{
+  "diagnostics": [
+    "passive_not_rendered_DOM",
+    "unfrozen_attachments_unavailable"
+  ],
+  "document_id": "M30-F02",
+  "error_cases": [
+    {
+      "case_id": "M30-F02-R1:segmentation",
+      "certainty": "supported_observation",
+      "dimension": "structural",
+      "document_id": "M30-F02",
+      "error_codes": [
+        "SEGMENTATION_OVER"
+      ],
+      "expected_behavior": "A meaningful record should retain its own associated context; whitespace-only boundary differences are not semantic defects.",
+      "next_action": "Inspect semantic usefulness of boundaries before changing segmentation.",
+      "observed": {
+        "coverage": {
+          "denominator": 6957,
+          "numerator": 1368,
+          "value": 0.19663648124191463
+        },
+        "fragmentation": 2
+      },
+      "record_id": "M30-F02-R1",
+      "reference": {
+        "discovery_label": "confirmed_opportunity",
+        "modality": "fomento",
+        "opportunity_label": "genuine_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "open"
+      },
+      "review_status": "provisional",
+      "root_cause": "Structure-derived units differ from provisional annotated record spans.",
+      "root_cause_confidence": "high",
+      "segment_id": "segment-0001",
+      "severity": "medium",
+      "supporting_evidence": {
+        "edges": [
+          {
+            "end": 5592,
+            "exact": false,
+            "intersection": 4,
+            "intersection_end": 5592,
+            "intersection_start": 5588,
+            "iou": 0.0005749604714675866,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.0005749604714675866,
+            "segment_id": "segment-0000",
+            "start": 5588
+          },
+          {
+            "end": 6982,
+            "exact": false,
+            "intersection": 1364,
+            "intersection_end": 6957,
+            "intersection_start": 5593,
+            "iou": 0.19535949584646234,
+            "predicted_purity": 0.9820014398848093,
+            "reference_fraction": 0.19606152077044703,
+            "segment_id": "segment-0001",
+            "start": 5593
+          }
+        ],
+        "reference_span": [
+          0,
+          6957
+        ]
+      }
+    }
+  ],
+  "extracted_claims": [
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F02",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "title",
+      "original": "Chamada CNPq nº 33/2026 - Bolsas de Produtividade do CNPq",
+      "reference_records": [
+        "M30-F02-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0001",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F02",
+        "end": 5650,
+        "page": null,
+        "quote": "Chamada CNPq nº 33/2026 - Bolsas de Produtividade do CNPq",
+        "raw_sha256": "09915d1c39db9e2a4e27f32cf77d5a4c54ad282fb9c8498a503d665e011b920f",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0001",
+        "start": 5593,
+        "text_sha256": "3d700ea9dacfe38d3d847aa5517cd31adfc6c771f9f5722ffe80baa57b08f316"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F02",
+      "field_index": 1,
+      "method_version": "m31-deterministic-v2",
+      "name": "unknown_temporal_expression",
+      "original": "07/10/2026",
+      "reference_records": [
+        "M30-F02-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0001",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F02",
+        "end": 5836,
+        "page": null,
+        "quote": "07/10/2026 10h29",
+        "raw_sha256": "09915d1c39db9e2a4e27f32cf77d5a4c54ad282fb9c8498a503d665e011b920f",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0001",
+        "start": 5820,
+        "text_sha256": "3d700ea9dacfe38d3d847aa5517cd31adfc6c771f9f5722ffe80baa57b08f316"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F02",
+      "field_index": 2,
+      "method_version": "m31-deterministic-v2",
+      "name": "unknown_temporal_expression",
+      "original": "13/10/2026",
+      "reference_records": [
+        "M30-F02-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0001",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F02",
+        "end": 5867,
+        "page": null,
+        "quote": "13/10/2026 17h16",
+        "raw_sha256": "09915d1c39db9e2a4e27f32cf77d5a4c54ad282fb9c8498a503d665e011b920f",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0001",
+        "start": 5851,
+        "text_sha256": "3d700ea9dacfe38d3d847aa5517cd31adfc6c771f9f5722ffe80baa57b08f316"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F02",
+      "field_index": 3,
+      "method_version": "m31-deterministic-v2",
+      "name": "publishing_organization_expression",
+      "original": "O CNPq torna pública a Chamada CNPq nº 33/2026, que tem por objeto conceder bolsas nas seguintes modalidades: Produtividade em Desenvolvimento Tecnológico e Extensão Inovadora (DT), Produtividade em Pesquisa (PQ) e Produtividade em Pesquisa Sênior (PQSr).",
+      "reference_records": [
+        "M30-F02-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0001",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F02",
+        "end": 6123,
+        "page": null,
+        "quote": "O CNPq torna pública a Chamada CNPq nº 33/2026, que tem por objeto conceder bolsas nas seguintes modalidades: Produtividade em Desenvolvimento Tecnológico e Extensão Inovadora (DT), Produtividade em Pesquisa (PQ) e Produtividade em Pesquisa Sênior (PQSr).",
+        "raw_sha256": "09915d1c39db9e2a4e27f32cf77d5a4c54ad282fb9c8498a503d665e011b920f",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0001",
+        "start": 5868,
+        "text_sha256": "3d700ea9dacfe38d3d847aa5517cd31adfc6c771f9f5722ffe80baa57b08f316"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F02",
+      "field_index": 4,
+      "method_version": "m31-deterministic-v2",
+      "name": "attachment_unavailable",
+      "original": "Anexo I - Critérios para avaliação de Bolsas de Produtividade",
+      "reference_records": [
+        "M30-F02-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0001",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F02",
+        "end": 6633,
+        "page": null,
+        "quote": "Anexo I - Critérios para avaliação de Bolsas de Produtividade",
+        "raw_sha256": "09915d1c39db9e2a4e27f32cf77d5a4c54ad282fb9c8498a503d665e011b920f",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0001",
+        "start": 6572,
+        "text_sha256": "3d700ea9dacfe38d3d847aa5517cd31adfc6c771f9f5722ffe80baa57b08f316"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F02",
+      "field_index": 5,
+      "method_version": "m31-deterministic-v2",
+      "name": "rectification_date_expression",
+      "original": "13/10/2026",
+      "reference_records": [
+        "M30-F02-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0001",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F02",
+        "end": 6729,
+        "page": null,
+        "quote": "Anexo I - Critérios para avaliação de Bolsas de Produtividade - versão atualizada em 13/10/2026",
+        "raw_sha256": "09915d1c39db9e2a4e27f32cf77d5a4c54ad282fb9c8498a503d665e011b920f",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0001",
+        "start": 6634,
+        "text_sha256": "3d700ea9dacfe38d3d847aa5517cd31adfc6c771f9f5722ffe80baa57b08f316"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F02",
+      "field_index": 6,
+      "method_version": "m31-deterministic-v2",
+      "name": "attachment_unavailable",
+      "original": "Anexo I - Critérios para avaliação de Bolsas de Produtividade - versão atualizada em 13/10/2026",
+      "reference_records": [
+        "M30-F02-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0001",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F02",
+        "end": 6729,
+        "page": null,
+        "quote": "Anexo I - Critérios para avaliação de Bolsas de Produtividade - versão atualizada em 13/10/2026",
+        "raw_sha256": "09915d1c39db9e2a4e27f32cf77d5a4c54ad282fb9c8498a503d665e011b920f",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0001",
+        "start": 6634,
+        "text_sha256": "3d700ea9dacfe38d3d847aa5517cd31adfc6c771f9f5722ffe80baa57b08f316"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F02",
+      "field_index": 7,
+      "method_version": "m31-deterministic-v2",
+      "name": "rectification_date_expression",
+      "original": "13/10/2026",
+      "reference_records": [
+        "M30-F02-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0001",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F02",
+        "end": 6758,
+        "page": null,
+        "quote": "Errata nº 1 - 13/10/2026",
+        "raw_sha256": "09915d1c39db9e2a4e27f32cf77d5a4c54ad282fb9c8498a503d665e011b920f",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0001",
+        "start": 6734,
+        "text_sha256": "3d700ea9dacfe38d3d847aa5517cd31adfc6c771f9f5722ffe80baa57b08f316"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F02",
+      "field_index": 8,
+      "method_version": "m31-deterministic-v2",
+      "name": "attachment_unavailable",
+      "original": "O CNPq informa alteração no critério de julgamento do CA-DT, constante do Anexo I da Chamada. A versão atualizada consta com a modificação assinalada em vermelho.",
+      "reference_records": [
+        "M30-F02-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0001",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F02",
+        "end": 6921,
+        "page": null,
+        "quote": "O CNPq informa alteração no critério de julgamento do CA-DT, constante do Anexo I da Chamada. A versão atualizada consta com a modificação assinalada em vermelho.",
+        "raw_sha256": "09915d1c39db9e2a4e27f32cf77d5a4c54ad282fb9c8498a503d665e011b920f",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0001",
+        "start": 6759,
+        "text_sha256": "3d700ea9dacfe38d3d847aa5517cd31adfc6c771f9f5722ffe80baa57b08f316"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F02",
+      "field_index": 9,
+      "method_version": "m31-deterministic-v2",
+      "name": "opening_date",
+      "original": "07/10/2026",
+      "reference_records": [
+        "M30-F02-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0001",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F02",
+        "end": 6957,
+        "page": null,
+        "quote": "07/10/2026 a 07/01/2027",
+        "raw_sha256": "09915d1c39db9e2a4e27f32cf77d5a4c54ad282fb9c8498a503d665e011b920f",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0001",
+        "start": 6934,
+        "text_sha256": "3d700ea9dacfe38d3d847aa5517cd31adfc6c771f9f5722ffe80baa57b08f316"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-F02",
+      "field_index": 10,
+      "method_version": "m31-deterministic-v2",
+      "name": "submission_deadline",
+      "original": "07/01/2027",
+      "reference_records": [
+        "M30-F02-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0001",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-F02",
+        "end": 6957,
+        "page": null,
+        "quote": "07/10/2026 a 07/01/2027",
+        "raw_sha256": "09915d1c39db9e2a4e27f32cf77d5a4c54ad282fb9c8498a503d665e011b920f",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0001",
+        "start": 6934,
+        "text_sha256": "3d700ea9dacfe38d3d847aa5517cd31adfc6c771f9f5722ffe80baa57b08f316"
+      }
+    }
+  ],
+  "provenance": {
+    "byte_length": 132334,
+    "category_evidence": "Chamada CNPq nº 33/2026 - Bolsas de Produtividade do CNPq",
+    "content_type": "text/html",
+    "derivation_method": "stdlib-HTMLParser-data-whitespace-v1; excludes script/style/noscript/template; not rendered DOM",
+    "document_category": "application_call",
+    "document_id": "M30-F02",
+    "document_version": null,
+    "final_url": "https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-33-2026/chamada-publica-cnpq-N-33-2026",
+    "original_filename": "chamada-publica-cnpq-N-33-2026",
+    "original_url": "https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-33-2026/chamada-publica-cnpq-N-33-2026",
+    "publication_date": "2026-10-07",
+    "raw_path": "raw/M30-F02.html",
+    "restrictions": "Research pilot local frozen copy only; no redistribution license inferred. No scripts executed, no forms submitted, no applicant records intentionally collected. Public navigation/staff attribution may remain in original bytes.",
+    "retrieval_status": "acquired",
+    "retrieved_at": "2026-10-19T04:37:42.966366+00:00",
+    "sha256": "09915d1c39db9e2a4e27f32cf77d5a4c54ad282fb9c8498a503d665e011b920f",
+    "source_authority_notes": "Public HTTPS page hosted by the named institution; authorship asserted by host/content, not cryptographically authenticated. Not source-readiness approval.",
+    "source_organization": "CNPq",
+    "text_path": "text/M30-F02.txt",
+    "text_sha256": "3d700ea9dacfe38d3d847aa5517cd31adfc6c771f9f5722ffe80baa57b08f316"
+  },
+  "records": [
+    {
+      "all_overlap_predictions": [
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0000",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "confirmed_opportunity",
+          "modality": "fomento",
+          "segment_id": "segment-0001",
+          "temporal": "open"
+        }
+      ],
+      "any_exact_boundary": false,
+      "coverage": {
+        "denominator": 6957,
+        "numerator": 1368,
+        "value": 0.19663648124191463
+      },
+      "covered_characters": 1368,
+      "disagreements": [],
+      "discovery_histogram": {
+        "abstain": 1,
+        "confirmed_opportunity": 1
+      },
+      "document_id": "M30-F02",
+      "edges": [
+        {
+          "end": 5592,
+          "exact": false,
+          "intersection": 4,
+          "intersection_end": 5592,
+          "intersection_start": 5588,
+          "iou": 0.0005749604714675866,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.0005749604714675866,
+          "segment_id": "segment-0000",
+          "start": 5588
+        },
+        {
+          "end": 6982,
+          "exact": false,
+          "intersection": 1364,
+          "intersection_end": 6957,
+          "intersection_start": 5593,
+          "iou": 0.19535949584646234,
+          "predicted_purity": 0.9820014398848093,
+          "reference_fraction": 0.19606152077044703,
+          "segment_id": "segment-0001",
+          "start": 5593
+        }
+      ],
+      "end": 6957,
+      "fields": [
+        {
+          "candidates": [
+            {
+              "diagnostic_status": "traceable_not_semantically_certified",
+              "field_index": 0,
+              "method_version": "m31-deterministic-v2",
+              "name": "title",
+              "original": "Chamada CNPq nº 33/2026 - Bolsas de Produtividade do CNPq",
+              "schema_version": "m31-extraction-v1",
+              "segment_id": "segment-0001",
+              "uncertainty": "heuristic role assignment; not authenticated or normalized",
+              "witness": {
+                "document_id": "M30-F02",
+                "end": 5650,
+                "page": null,
+                "quote": "Chamada CNPq nº 33/2026 - Bolsas de Produtividade do CNPq",
+                "raw_sha256": "09915d1c39db9e2a4e27f32cf77d5a4c54ad282fb9c8498a503d665e011b920f",
+                "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+                "schema_version": "m31-extraction-v1",
+                "segment_id": "segment-0001",
+                "start": 5593,
+                "text_sha256": "3d700ea9dacfe38d3d847aa5517cd31adfc6c771f9f5722ffe80baa57b08f316"
+              }
+            }
+          ],
+          "name": "title",
+          "reason": "same literal and role in record; entailment remains unreviewed",
+          "reference_evidence": [
+            {
+              "end": 57,
+              "evidence_id": "M30-F02-R1-E1",
+              "page": null,
+              "quote": "Chamada CNPq nº 33/2026 - Bolsas de Produtividade do CNPq",
+              "start": 0
+            }
+          ],
+          "reference_value": "Chamada CNPq nº 33/2026 - Bolsas de Produtividade do CNPq",
+          "scope_supported": true,
+          "semantic_adjudication": "not_certified",
+          "status": "MATCH",
+          "strict_role_value": true
+        },
+        {
+          "candidates": [
+            {
+              "diagnostic_status": "traceable_not_semantically_certified",
+              "field_index": 3,
+              "method_version": "m31-deterministic-v2",
+              "name": "publishing_organization_expression",
+              "original": "O CNPq torna pública a Chamada CNPq nº 33/2026, que tem por objeto conceder bolsas nas seguintes modalidades: Produtividade em Desenvolvimento Tecnológico e Extensão Inovadora (DT), Produtividade em Pesquisa (PQ) e Produtividade em Pesquisa Sênior (PQSr).",
+              "schema_version": "m31-extraction-v1",
+              "segment_id": "segment-0001",
+              "uncertainty": "heuristic role assignment; not authenticated or normalized",
+              "witness": {
+                "document_id": "M30-F02",
+                "end": 6123,
+                "page": null,
+                "quote": "O CNPq torna pública a Chamada CNPq nº 33/2026, que tem por objeto conceder bolsas nas seguintes modalidades: Produtividade em Desenvolvimento Tecnológico e Extensão Inovadora (DT), Produtividade em Pesquisa (PQ) e Produtividade em Pesquisa Sênior (PQSr).",
+                "raw_sha256": "09915d1c39db9e2a4e27f32cf77d5a4c54ad282fb9c8498a503d665e011b920f",
+                "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+                "schema_version": "m31-extraction-v1",
+                "segment_id": "segment-0001",
+                "start": 5868,
+                "text_sha256": "3d700ea9dacfe38d3d847aa5517cd31adfc6c771f9f5722ffe80baa57b08f316"
+              }
+            }
+          ],
+          "name": "objective",
+          "reason": "requested target role outside implemented M31 field scope",
+          "reference_evidence": [
+            {
+              "end": 6123,
+              "evidence_id": "M30-F02-R1-E2",
+              "page": null,
+              "quote": "O CNPq torna pública a Chamada CNPq nº 33/2026, que tem por objeto conceder bolsas nas seguintes modalidades: Produtividade em Desenvolvimento Tecnológico e Extensão Inovadora (DT), Produtividade em Pesquisa (PQ) e Produtividade em Pesquisa Sênior (PQSr).",
+              "start": 5868
+            }
+          ],
+          "reference_value": "O CNPq torna pública a Chamada CNPq nº 33/2026, que tem por objeto conceder bolsas nas seguintes modalidades: Produtividade em Desenvolvimento Tecnológico e Extensão Inovadora (DT), Produtividade em Pesquisa (PQ) e Produtividade em Pesquisa Sênior (PQSr).",
+          "scope_supported": false,
+          "semantic_adjudication": "not_certified",
+          "status": "UNRESOLVED",
+          "strict_role_value": false
+        },
+        {
+          "candidates": [
+            {
+              "diagnostic_status": "traceable_not_semantically_certified",
+              "field_index": 10,
+              "method_version": "m31-deterministic-v2",
+              "name": "submission_deadline",
+              "original": "07/01/2027",
+              "schema_version": "m31-extraction-v1",
+              "segment_id": "segment-0001",
+              "uncertainty": "heuristic role assignment; not authenticated or normalized",
+              "witness": {
+                "document_id": "M30-F02",
+                "end": 6957,
+                "page": null,
+                "quote": "07/10/2026 a 07/01/2027",
+                "raw_sha256": "09915d1c39db9e2a4e27f32cf77d5a4c54ad282fb9c8498a503d665e011b920f",
+                "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+                "schema_version": "m31-extraction-v1",
+                "segment_id": "segment-0001",
+                "start": 6934,
+                "text_sha256": "3d700ea9dacfe38d3d847aa5517cd31adfc6c771f9f5722ffe80baa57b08f316"
+              }
+            }
+          ],
+          "name": "submission_deadline",
+          "reason": "same literal and role in record; entailment remains unreviewed",
+          "reference_evidence": [
+            {
+              "end": 6957,
+              "evidence_id": "M30-F02-R1-E3",
+              "page": null,
+              "quote": "Inscrições:\n07/10/2026 a 07/01/2027",
+              "start": 6922
+            }
+          ],
+          "reference_value": "07/01/2027",
+          "scope_supported": true,
+          "semantic_adjudication": "not_certified",
+          "status": "MATCH",
+          "strict_role_value": true
+        },
+        {
+          "candidates": [],
+          "name": "official_identifier",
+          "reason": "requested target role outside implemented M31 field scope",
+          "reference_evidence": [
+            {
+              "end": 57,
+              "evidence_id": "M30-F02-R1-E1",
+              "page": null,
+              "quote": "Chamada CNPq nº 33/2026 - Bolsas de Produtividade do CNPq",
+              "start": 0
+            }
+          ],
+          "reference_value": "33/2026",
+          "scope_supported": false,
+          "semantic_adjudication": "not_certified",
+          "status": "UNRESOLVED",
+          "strict_role_value": false
+        },
+        {
+          "candidates": [
+            {
+              "diagnostic_status": "traceable_not_semantically_certified",
+              "field_index": 1,
+              "method_version": "m31-deterministic-v2",
+              "name": "unknown_temporal_expression",
+              "original": "07/10/2026",
+              "schema_version": "m31-extraction-v1",
+              "segment_id": "segment-0001",
+              "uncertainty": "heuristic role assignment; not authenticated or normalized",
+              "witness": {
+                "document_id": "M30-F02",
+                "end": 5836,
+                "page": null,
+                "quote": "07/10/2026 10h29",
+                "raw_sha256": "09915d1c39db9e2a4e27f32cf77d5a4c54ad282fb9c8498a503d665e011b920f",
+                "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+                "schema_version": "m31-extraction-v1",
+                "segment_id": "segment-0001",
+                "start": 5820,
+                "text_sha256": "3d700ea9dacfe38d3d847aa5517cd31adfc6c771f9f5722ffe80baa57b08f316"
+              }
+            },
+            {
+              "diagnostic_status": "traceable_not_semantically_certified",
+              "field_index": 9,
+              "method_version": "m31-deterministic-v2",
+              "name": "opening_date",
+              "original": "07/10/2026",
+              "schema_version": "m31-extraction-v1",
+              "segment_id": "segment-0001",
+              "uncertainty": "heuristic role assignment; not authenticated or normalized",
+              "witness": {
+                "document_id": "M30-F02",
+                "end": 6957,
+                "page": null,
+                "quote": "07/10/2026 a 07/01/2027",
+                "raw_sha256": "09915d1c39db9e2a4e27f32cf77d5a4c54ad282fb9c8498a503d665e011b920f",
+                "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+                "schema_version": "m31-extraction-v1",
+                "segment_id": "segment-0001",
+                "start": 6934,
+                "text_sha256": "3d700ea9dacfe38d3d847aa5517cd31adfc6c771f9f5722ffe80baa57b08f316"
+              }
+            }
+          ],
+          "name": "opening_date",
+          "reason": "same literal and role in record; entailment remains unreviewed",
+          "reference_evidence": [
+            {
+              "end": 6957,
+              "evidence_id": "M30-F02-R1-E3",
+              "page": null,
+              "quote": "Inscrições:\n07/10/2026 a 07/01/2027",
+              "start": 6922
+            }
+          ],
+          "reference_value": "07/10/2026",
+          "scope_supported": true,
+          "semantic_adjudication": "not_certified",
+          "status": "MATCH",
+          "strict_role_value": true
+        },
+        {
+          "candidates": [
+            {
+              "diagnostic_status": "traceable_not_semantically_certified",
+              "field_index": 3,
+              "method_version": "m31-deterministic-v2",
+              "name": "publishing_organization_expression",
+              "original": "O CNPq torna pública a Chamada CNPq nº 33/2026, que tem por objeto conceder bolsas nas seguintes modalidades: Produtividade em Desenvolvimento Tecnológico e Extensão Inovadora (DT), Produtividade em Pesquisa (PQ) e Produtividade em Pesquisa Sênior (PQSr).",
+              "schema_version": "m31-extraction-v1",
+              "segment_id": "segment-0001",
+              "uncertainty": "heuristic role assignment; not authenticated or normalized",
+              "witness": {
+                "document_id": "M30-F02",
+                "end": 6123,
+                "page": null,
+                "quote": "O CNPq torna pública a Chamada CNPq nº 33/2026, que tem por objeto conceder bolsas nas seguintes modalidades: Produtividade em Desenvolvimento Tecnológico e Extensão Inovadora (DT), Produtividade em Pesquisa (PQ) e Produtividade em Pesquisa Sênior (PQSr).",
+                "raw_sha256": "09915d1c39db9e2a4e27f32cf77d5a4c54ad282fb9c8498a503d665e011b920f",
+                "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+                "schema_version": "m31-extraction-v1",
+                "segment_id": "segment-0001",
+                "start": 5868,
+                "text_sha256": "3d700ea9dacfe38d3d847aa5517cd31adfc6c771f9f5722ffe80baa57b08f316"
+              }
+            }
+          ],
+          "name": "publishing_organization",
+          "reason": "same/aliased role with related literal; qualifiers may be missing or extra",
+          "reference_evidence": [
+            {
+              "end": 6123,
+              "evidence_id": "M30-F02-R1-E2",
+              "page": null,
+              "quote": "O CNPq torna pública a Chamada CNPq nº 33/2026, que tem por objeto conceder bolsas nas seguintes modalidades: Produtividade em Desenvolvimento Tecnológico e Extensão Inovadora (DT), Produtividade em Pesquisa (PQ) e Produtividade em Pesquisa Sênior (PQSr).",
+              "start": 5868
+            }
+          ],
+          "reference_value": "CNPq",
+          "scope_supported": true,
+          "semantic_adjudication": "not_certified",
+          "status": "PARTIAL",
+          "strict_role_value": false
+        }
+      ],
+      "fragmentation": 2,
+      "location_convention": "html_unicode_codepoints",
+      "physical_reference_evidence_pages": [],
+      "rationale": "Provisional AI source reading: Call offers named productivity scholarships and explicit live application interval, not merely an existing page.",
+      "record_id": "M30-F02-R1",
+      "reference": {
+        "discovery_label": "confirmed_opportunity",
+        "modality": "fomento",
+        "opportunity_label": "genuine_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "open"
+      },
+      "reference_characters": 6957,
+      "reference_evidence": [
+        {
+          "end": 57,
+          "evidence_id": "M30-F02-R1-E1",
+          "page": null,
+          "quote": "Chamada CNPq nº 33/2026 - Bolsas de Produtividade do CNPq",
+          "start": 0
+        },
+        {
+          "end": 6123,
+          "evidence_id": "M30-F02-R1-E2",
+          "page": null,
+          "quote": "O CNPq torna pública a Chamada CNPq nº 33/2026, que tem por objeto conceder bolsas nas seguintes modalidades: Produtividade em Desenvolvimento Tecnológico e Extensão Inovadora (DT), Produtividade em Pesquisa (PQ) e Produtividade em Pesquisa Sênior (PQSr).",
+          "start": 5868
+        },
+        {
+          "end": 6957,
+          "evidence_id": "M30-F02-R1-E3",
+          "page": null,
+          "quote": "Inscrições:\n07/10/2026 a 07/01/2027",
+          "start": 6922
+        }
+      ],
+      "representative": "segment-0001",
+      "representative_prediction": {
+        "discovery": "confirmed_opportunity",
+        "end": 6982,
+        "modality": "fomento",
+        "segment_id": "segment-0001",
+        "start": 5593,
+        "temporal": "open"
+      },
+      "representative_quote": "Chamada CNPq nº 33/2026 - Bolsas de Produtividade do CNPq\nCompartilhe:\nCompartilhe por Facebook\nCompartilhe por Twitter\nCompartilhe por LinkedIn\nCompartilhe por WhatsApp\nlink para Copiar para área de transferência\nPublicado em\n07/10/2026 10h29\nAtualizado em\n13/10/2026 17h16\nO CNPq torna pública a Chamada CNPq nº 33/2026, que tem por objeto conceder bolsas nas seguintes modalidades: Produtividade em Desenvolvimento Tecnológico e Extensão Inovadora (DT), Produtividade em Pesquisa (PQ) e Produtividade em Pesquisa Sênior (PQSr).\nSão objetivos desta chamada:\na) valorizar pesquisadores que possuam produção científica, tecnológica e de inovação de destaque em suas respectivas áreas do conhecimento;\nb) incentivar o aumento da produção científica, tecnológica e de inovação de qualidade;\nc) selecionar projetos de pesquisa que sejam propostos considerando o rigor e o método científico, bem como outros conceitos fundamentais para a produção do conhecimento científico.\nChamada\nAnexo I - Critérios para avaliação de Bolsas de Produtividade\nAnexo I - Critérios para avaliação de Bolsas de Produtividade - versão atualizada em 13/10/2026\nFAQ\nErrata nº 1 - 13/10/2026\nO CNPq informa alteração no critério de julgamento do CA-DT, constante do Anexo I da Chamada. A versão atualizada consta com a modificação assinalada em vermelho.\nInscrições:\n07/10/2026 a 07/01/2027\nTags:\n#chamadas\n#abertas",
+      "start": 0,
+      "status": "overlap",
+      "uncertainty_notes": [
+        "Apparent same-call relationship (unverified, no merge) with M30-F01-R4 and M30-F07-R1; documents are not unique opportunities.",
+        "Page notes a 13/10/2026 Annex I correction; annex not independently frozen."
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 5592,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-F02-R1"
+      ],
+      "segment_id": "segment-0000",
+      "start": 5588,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "call-heading-local-v1",
+        "access_heuristic_not_review_authority",
+        "application_stage_and_cutoff_timezone_unverified"
+      ],
+      "discovery": "confirmed_opportunity",
+      "end": 6982,
+      "field_count": 11,
+      "modality": "fomento",
+      "physical_page": null,
+      "reference_records": [
+        "M30-F02-R1"
+      ],
+      "segment_id": "segment-0001",
+      "start": 5593,
+      "temporal": "open",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 10868,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0002",
+      "start": 10860,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 10879,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0003",
+      "start": 10869,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 10895,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0004",
+      "start": 10880,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    }
+  ],
+  "semantic_reviews": [
+    {
+      "case_id": "M30-F02:segment-0001:discovery:classification",
+      "certainty": "supported_observation",
+      "claim_kind": "discovery",
+      "context_evidence": [
+        {
+          "end": 57,
+          "page": null,
+          "quote": "Chamada CNPq nº 33/2026 - Bolsas de Produtividade do CNPq",
+          "start": 0
+        },
+        {
+          "end": 6123,
+          "page": null,
+          "quote": "O CNPq torna pública a Chamada CNPq nº 33/2026, que tem por objeto conceder bolsas nas seguintes modalidades: Produtividade em Desenvolvimento Tecnológico e Extensão Inovadora (DT), Produtividade em Pesquisa (PQ) e Produtividade em Pesquisa Sênior (PQSr).",
+          "start": 5868
+        },
+        {
+          "end": 6957,
+          "page": null,
+          "quote": "Inscrições:\n07/10/2026 a 07/01/2027",
+          "start": 6922
+        }
+      ],
+      "document_id": "M30-F02",
+      "end": 6982,
+      "error_codes": [],
+      "expected_behavior": "Exigir contexto do instrumento e preservar incerteza de acesso/condições.",
+      "expected_claim": "confirmed_opportunity",
+      "field_index": null,
+      "field_name": null,
+      "judgment": "supported",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "quote": "Chamada CNPq nº 33/2026 - Bolsas de Produtividade do CNPq\nCompartilhe:\nCompartilhe por Facebook\nCompartilhe por Twitter\nCompartilhe por LinkedIn\nCompartilhe por WhatsApp\nlink para Copiar para área de transferência\nPublicado em\n07/10/2026 10h29\nAtualizado em\n13/10/2026 17h16\nO CNPq torna pública a Chamada CNPq nº 33/2026, que tem por objeto conceder bolsas nas seguintes modalidades: Produtividade em Desenvolvimento Tecnológico e Extensão Inovadora (DT), Produtividade em Pesquisa (PQ) e Produtividade em Pesquisa Sênior (PQSr).\nSão objetivos desta chamada:\na) valorizar pesquisadores que possuam produção científica, tecnológica e de inovação de destaque em suas respectivas áreas do conhecimento;\nb) incentivar o aumento da produção científica, tecnológica e de inovação de qualidade;\nc) selecionar projetos de pesquisa que sejam propostos considerando o rigor e o método científico, bem como outros conceitos fundamentais para a produção do conhecimento científico.\nChamada\nAnexo I - Critérios para avaliação de Bolsas de Produtividade\nAnexo I - Critérios para avaliação de Bolsas de Produtividade - versão atualizada em 13/10/2026\nFAQ\nErrata nº 1 - 13/10/2026\nO CNPq informa alteração no critério de julgamento do CA-DT, constante do Anexo I da Chamada. A versão atualizada consta com a modificação assinalada em vermelho.\nInscrições:\n07/10/2026 a 07/01/2027\nTags:\n#chamadas\n#abertas",
+      "rationale": "O trecho identifica suporte/financiamento e rota ou intervalo de submissão. Confirmação de instrumento não é garantia de aprovação, elegibilidade completa ou janela aberta.",
+      "root_cause": "classify usa conjunções locais de instrumento/acesso; hierarquia entre páginas não existe.",
+      "root_cause_confidence": "high",
+      "segment_id": "segment-0001",
+      "severity": "info",
+      "start": 5593
+    },
+    {
+      "case_id": "M30-F02:segment-0001:temporal:classification",
+      "certainty": "supported_observation",
+      "claim_kind": "temporal",
+      "context_evidence": [
+        {
+          "end": 57,
+          "page": null,
+          "quote": "Chamada CNPq nº 33/2026 - Bolsas de Produtividade do CNPq",
+          "start": 0
+        },
+        {
+          "end": 6123,
+          "page": null,
+          "quote": "O CNPq torna pública a Chamada CNPq nº 33/2026, que tem por objeto conceder bolsas nas seguintes modalidades: Produtividade em Desenvolvimento Tecnológico e Extensão Inovadora (DT), Produtividade em Pesquisa (PQ) e Produtividade em Pesquisa Sênior (PQSr).",
+          "start": 5868
+        },
+        {
+          "end": 6957,
+          "page": null,
+          "quote": "Inscrições:\n07/10/2026 a 07/01/2027",
+          "start": 6922
+        }
+      ],
+      "document_id": "M30-F02",
+      "end": 6982,
+      "error_codes": [],
+      "expected_behavior": "Comparar apenas a janela de inscrições deste registro com a data civil fixa.",
+      "expected_claim": "open",
+      "field_index": null,
+      "field_name": null,
+      "judgment": "supported",
+      "next_action": "Adjudicar contexto/papel antes de modificar qualquer label; testes gerais e correção só em M3.3.",
+      "quote": "Chamada CNPq nº 33/2026 - Bolsas de Produtividade do CNPq\nCompartilhe:\nCompartilhe por Facebook\nCompartilhe por Twitter\nCompartilhe por LinkedIn\nCompartilhe por WhatsApp\nlink para Copiar para área de transferência\nPublicado em\n07/10/2026 10h29\nAtualizado em\n13/10/2026 17h16\nO CNPq torna pública a Chamada CNPq nº 33/2026, que tem por objeto conceder bolsas nas seguintes modalidades: Produtividade em Desenvolvimento Tecnológico e Extensão Inovadora (DT), Produtividade em Pesquisa (PQ) e Produtividade em Pesquisa Sênior (PQSr).\nSão objetivos desta chamada:\na) valorizar pesquisadores que possuam produção científica, tecnológica e de inovação de destaque em suas respectivas áreas do conhecimento;\nb) incentivar o aumento da produção científica, tecnológica e de inovação de qualidade;\nc) selecionar projetos de pesquisa que sejam propostos considerando o rigor e o método científico, bem como outros conceitos fundamentais para a produção do conhecimento científico.\nChamada\nAnexo I - Critérios para avaliação de Bolsas de Produtividade\nAnexo I - Critérios para avaliação de Bolsas de Produtividade - versão atualizada em 13/10/2026\nFAQ\nErrata nº 1 - 13/10/2026\nO CNPq informa alteração no critério de julgamento do CA-DT, constante do Anexo I da Chamada. A versão atualizada consta com a modificação assinalada em vermelho.\nInscrições:\n07/10/2026 a 07/01/2027\nTags:\n#chamadas\n#abertas",
+      "rationale": "Intervalo numérico de inscrição contém 2026-10-19. Nenhuma hora/cutoff/timezone foi inferida; anexos não congelados permanecem indisponíveis.",
+      "root_cause": "predict reconhece intervalo Inscrições no contêiner local.",
+      "root_cause_confidence": "high",
+      "segment_id": "segment-0001",
+      "severity": "info",
+      "start": 5593
+    }
+  ],
+  "status": "processed"
+}

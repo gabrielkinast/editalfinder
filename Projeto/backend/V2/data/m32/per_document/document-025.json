@@ -1,0 +1,2177 @@
+{
+  "diagnostics": [
+    "passive_not_rendered_DOM",
+    "unfrozen_attachments_unavailable"
+  ],
+  "document_id": "M30-N03",
+  "error_cases": [
+    {
+      "case_id": "M30-N03-R1:discovery_label",
+      "certainty": "unresolved_disagreement",
+      "dimension": "discovery_label",
+      "document_id": "M30-N03",
+      "error_codes": [
+        "OPPORTUNITY_EXISTENCE_CONFUSION",
+        "REFERENCE_AMBIGUITY"
+      ],
+      "expected_behavior": "Resolve this dimension from same-record evidence; provisional label is comparison, not authority.",
+      "next_action": "Compare full frozen context and request authorized adjudication; do not rewrite labels.",
+      "observed": {
+        "discovery": "abstain",
+        "end": 5081,
+        "modality": "undetermined",
+        "segment_id": "segment-0013",
+        "start": 4484,
+        "temporal": "undetermined"
+      },
+      "record_id": "M30-N03-R1",
+      "reference": {
+        "discovery_label": "unrelated_or_non_actionable",
+        "modality": "fomento",
+        "opportunity_label": "not_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "not_applicable"
+      },
+      "review_status": "provisional",
+      "root_cause": "Context fragmentation or semantic rule/reference ambiguity; see all-overlap graph before adjudication.",
+      "root_cause_confidence": "low",
+      "segment_id": "segment-0013",
+      "severity": "medium",
+      "supporting_evidence": {
+        "end": 5081,
+        "quote": "A divulgação do edital mobilizou equipes da Finep em diferentes partes do país. Foram realizados mais de 20 eventos presenciais e on-line em instituições públicas e privadas, como parques tecnológicos, secretarias, hubs e aceleradoras, alcançando mais de 15 estados. A equipe do Departamento de Ambientes de Inovação e Empreendedorismo (DAIE) atuou em conjunto com os Escritórios Regionais da Finep na articulação institucional, na mobilização de parceiros e na promoção das atividades de divulgação. A iniciativa também contou com a parceria da APEX, da Rede Mulher Empreendedora (RME) e do MCTI.",
+        "start": 4484
+      }
+    },
+    {
+      "case_id": "M30-N03-R1:modality",
+      "certainty": "unresolved_disagreement",
+      "dimension": "modality",
+      "document_id": "M30-N03",
+      "error_codes": [
+        "MODALITY_CONFUSION",
+        "REFERENCE_AMBIGUITY"
+      ],
+      "expected_behavior": "Resolve this dimension from same-record evidence; provisional label is comparison, not authority.",
+      "next_action": "Compare full frozen context and request authorized adjudication; do not rewrite labels.",
+      "observed": {
+        "discovery": "abstain",
+        "end": 5081,
+        "modality": "undetermined",
+        "segment_id": "segment-0013",
+        "start": 4484,
+        "temporal": "undetermined"
+      },
+      "record_id": "M30-N03-R1",
+      "reference": {
+        "discovery_label": "unrelated_or_non_actionable",
+        "modality": "fomento",
+        "opportunity_label": "not_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "not_applicable"
+      },
+      "review_status": "provisional",
+      "root_cause": "Context fragmentation or semantic rule/reference ambiguity; see all-overlap graph before adjudication.",
+      "root_cause_confidence": "low",
+      "segment_id": "segment-0013",
+      "severity": "medium",
+      "supporting_evidence": {
+        "end": 5081,
+        "quote": "A divulgação do edital mobilizou equipes da Finep em diferentes partes do país. Foram realizados mais de 20 eventos presenciais e on-line em instituições públicas e privadas, como parques tecnológicos, secretarias, hubs e aceleradoras, alcançando mais de 15 estados. A equipe do Departamento de Ambientes de Inovação e Empreendedorismo (DAIE) atuou em conjunto com os Escritórios Regionais da Finep na articulação institucional, na mobilização de parceiros e na promoção das atividades de divulgação. A iniciativa também contou com a parceria da APEX, da Rede Mulher Empreendedora (RME) e do MCTI.",
+        "start": 4484
+      }
+    },
+    {
+      "case_id": "M30-N03-R1:temporal_status",
+      "certainty": "unresolved_disagreement",
+      "dimension": "temporal_status",
+      "document_id": "M30-N03",
+      "error_codes": [
+        "TEMPORAL_AVAILABILITY_INFERENCE",
+        "REFERENCE_AMBIGUITY"
+      ],
+      "expected_behavior": "Resolve this dimension from same-record evidence; provisional label is comparison, not authority.",
+      "next_action": "Compare full frozen context and request authorized adjudication; do not rewrite labels.",
+      "observed": {
+        "discovery": "abstain",
+        "end": 5081,
+        "modality": "undetermined",
+        "segment_id": "segment-0013",
+        "start": 4484,
+        "temporal": "undetermined"
+      },
+      "record_id": "M30-N03-R1",
+      "reference": {
+        "discovery_label": "unrelated_or_non_actionable",
+        "modality": "fomento",
+        "opportunity_label": "not_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "not_applicable"
+      },
+      "review_status": "provisional",
+      "root_cause": "Context fragmentation or semantic rule/reference ambiguity; see all-overlap graph before adjudication.",
+      "root_cause_confidence": "low",
+      "segment_id": "segment-0013",
+      "severity": "medium",
+      "supporting_evidence": {
+        "end": 5081,
+        "quote": "A divulgação do edital mobilizou equipes da Finep em diferentes partes do país. Foram realizados mais de 20 eventos presenciais e on-line em instituições públicas e privadas, como parques tecnológicos, secretarias, hubs e aceleradoras, alcançando mais de 15 estados. A equipe do Departamento de Ambientes de Inovação e Empreendedorismo (DAIE) atuou em conjunto com os Escritórios Regionais da Finep na articulação institucional, na mobilização de parceiros e na promoção das atividades de divulgação. A iniciativa também contou com a parceria da APEX, da Rede Mulher Empreendedora (RME) e do MCTI.",
+        "start": 4484
+      }
+    },
+    {
+      "case_id": "M30-N03-R1:segmentation",
+      "certainty": "supported_observation",
+      "dimension": "structural",
+      "document_id": "M30-N03",
+      "error_codes": [
+        "SEGMENTATION_OVER"
+      ],
+      "expected_behavior": "A meaningful record should retain its own associated context; whitespace-only boundary differences are not semantic defects.",
+      "next_action": "Inspect semantic usefulness of boundaries before changing segmentation.",
+      "observed": {
+        "coverage": {
+          "denominator": 3183,
+          "numerator": 3154,
+          "value": 0.9908890983349041
+        },
+        "fragmentation": 16
+      },
+      "record_id": "M30-N03-R1",
+      "reference": {
+        "discovery_label": "unrelated_or_non_actionable",
+        "modality": "fomento",
+        "opportunity_label": "not_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "not_applicable"
+      },
+      "review_status": "provisional",
+      "root_cause": "Structure-derived units differ from provisional annotated record spans.",
+      "root_cause_confidence": "high",
+      "segment_id": "segment-0013",
+      "severity": "medium",
+      "supporting_evidence": {
+        "edges": [
+          {
+            "end": 2781,
+            "exact": false,
+            "intersection": 55,
+            "intersection_end": 2781,
+            "intersection_start": 2726,
+            "iou": 0.017279296261388626,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.017279296261388626,
+            "segment_id": "segment-0000",
+            "start": 2726
+          },
+          {
+            "end": 2961,
+            "exact": false,
+            "intersection": 179,
+            "intersection_end": 2961,
+            "intersection_start": 2782,
+            "iou": 0.05623625510524662,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.05623625510524662,
+            "segment_id": "segment-0001",
+            "start": 2782
+          },
+          {
+            "end": 2973,
+            "exact": false,
+            "intersection": 11,
+            "intersection_end": 2973,
+            "intersection_start": 2962,
+            "iou": 0.0034558592522777255,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.0034558592522777255,
+            "segment_id": "segment-0002",
+            "start": 2962
+          },
+          {
+            "end": 2988,
+            "exact": false,
+            "intersection": 14,
+            "intersection_end": 2988,
+            "intersection_start": 2974,
+            "iou": 0.004398366321080742,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.004398366321080742,
+            "segment_id": "segment-0003",
+            "start": 2974
+          },
+          {
+            "end": 2995,
+            "exact": false,
+            "intersection": 6,
+            "intersection_end": 2995,
+            "intersection_start": 2989,
+            "iou": 0.001885014137606032,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.001885014137606032,
+            "segment_id": "segment-0004",
+            "start": 2989
+          },
+          {
+            "end": 3001,
+            "exact": false,
+            "intersection": 5,
+            "intersection_end": 3001,
+            "intersection_start": 2996,
+            "iou": 0.0015708451146716933,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.0015708451146716933,
+            "segment_id": "segment-0005",
+            "start": 2996
+          },
+          {
+            "end": 3071,
+            "exact": false,
+            "intersection": 55,
+            "intersection_end": 3071,
+            "intersection_start": 3016,
+            "iou": 0.017279296261388626,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.017279296261388626,
+            "segment_id": "segment-0006",
+            "start": 3016
+          },
+          {
+            "end": 3152,
+            "exact": false,
+            "intersection": 80,
+            "intersection_end": 3152,
+            "intersection_start": 3072,
+            "iou": 0.025133521834747093,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.025133521834747093,
+            "segment_id": "segment-0007",
+            "start": 3072
+          },
+          {
+            "end": 3568,
+            "exact": false,
+            "intersection": 415,
+            "intersection_end": 3568,
+            "intersection_start": 3153,
+            "iou": 0.13038014451775054,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.13038014451775054,
+            "segment_id": "segment-0008",
+            "start": 3153
+          },
+          {
+            "end": 3920,
+            "exact": false,
+            "intersection": 351,
+            "intersection_end": 3920,
+            "intersection_start": 3569,
+            "iou": 0.11027332704995288,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.11027332704995288,
+            "segment_id": "segment-0009",
+            "start": 3569
+          },
+          {
+            "end": 4263,
+            "exact": false,
+            "intersection": 342,
+            "intersection_end": 4263,
+            "intersection_start": 3921,
+            "iou": 0.10744580584354382,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.10744580584354382,
+            "segment_id": "segment-0010",
+            "start": 3921
+          },
+          {
+            "end": 4438,
+            "exact": false,
+            "intersection": 174,
+            "intersection_end": 4438,
+            "intersection_start": 4264,
+            "iou": 0.05466540999057493,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.05466540999057493,
+            "segment_id": "segment-0011",
+            "start": 4264
+          },
+          {
+            "end": 4483,
+            "exact": false,
+            "intersection": 44,
+            "intersection_end": 4483,
+            "intersection_start": 4439,
+            "iou": 0.013823437009110902,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.013823437009110902,
+            "segment_id": "segment-0012",
+            "start": 4439
+          },
+          {
+            "end": 5081,
+            "exact": false,
+            "intersection": 597,
+            "intersection_end": 5081,
+            "intersection_start": 4484,
+            "iou": 0.1875589066918002,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.1875589066918002,
+            "segment_id": "segment-0013",
+            "start": 4484
+          },
+          {
+            "end": 5460,
+            "exact": false,
+            "intersection": 378,
+            "intersection_end": 5460,
+            "intersection_start": 5082,
+            "iou": 0.11875589066918002,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.11875589066918002,
+            "segment_id": "segment-0014",
+            "start": 5082
+          },
+          {
+            "end": 5909,
+            "exact": false,
+            "intersection": 448,
+            "intersection_end": 5909,
+            "intersection_start": 5461,
+            "iou": 0.14074772227458374,
+            "predicted_purity": 1.0,
+            "reference_fraction": 0.14074772227458374,
+            "segment_id": "segment-0015",
+            "start": 5461
+          }
+        ],
+        "reference_span": [
+          2726,
+          5909
+        ]
+      }
+    }
+  ],
+  "extracted_claims": [
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-N03",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "monetary_expression_unresolved",
+      "original": "R$ 3,6 milhões",
+      "reference_records": [
+        "M30-N03-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0001",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-N03",
+        "end": 2961,
+        "page": null,
+        "quote": "Sétima edição do edital recebeu 638 propostas e prevê R$ 3,6 milhões em investimentos para premiar 50 startups lideradas por mulheres, com duas vencedoras em cada região do Brasil",
+        "raw_sha256": "7a789a993223baa14716ae70a0f015eee089550b4f8a11815c1e2cecbe55fb07",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0001",
+        "start": 2782,
+        "text_sha256": "e27c76a5aafb7cc7b5615c047bcebb53eaf7694cba8661565ff51a9f1bac90f5"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-N03",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "monetary_expression_unresolved",
+      "original": "R$ 3,6 milhões",
+      "reference_records": [
+        "M30-N03-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0008",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-N03",
+        "end": 3568,
+        "page": null,
+        "quote": "A Finep anuncia hoje (14/10) as vencedoras da 7ª edição do Prêmio Mulheres Inovadoras. Das 638 propostas apresentadas, 50 foram selecionadas para a fase de aceleração, sendo dez no total - duas de cada região do Brasil. A iniciativa busca fortalecer o empreendedorismo feminino inovador no país, apoiando negócios em diferentes estágios de desenvolvimento. Ao todo, a Finep investirá R$ 3,6 milhões nessas empresas.",
+        "raw_sha256": "7a789a993223baa14716ae70a0f015eee089550b4f8a11815c1e2cecbe55fb07",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0008",
+        "start": 3153,
+        "text_sha256": "e27c76a5aafb7cc7b5615c047bcebb53eaf7694cba8661565ff51a9f1bac90f5"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-N03",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "monetary_expression_unresolved",
+      "original": "R$ 120 mil",
+      "reference_records": [
+        "M30-N03-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0010",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-N03",
+        "end": 4263,
+        "page": null,
+        "quote": "As duas startups vencedoras de cada região do país receberão da Finep R$ 120 mil cada, e as demais selecionadas receberão R$ 60 mil cada. A distinção considera o estágio de maturidade dos negócios, desde aqueles que ainda validam suas soluções até os que já possuem produtos ou serviços desenvolvidos e buscam ampliar sua presença no mercado.",
+        "raw_sha256": "7a789a993223baa14716ae70a0f015eee089550b4f8a11815c1e2cecbe55fb07",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0010",
+        "start": 3921,
+        "text_sha256": "e27c76a5aafb7cc7b5615c047bcebb53eaf7694cba8661565ff51a9f1bac90f5"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-N03",
+      "field_index": 1,
+      "method_version": "m31-deterministic-v2",
+      "name": "monetary_expression_unresolved",
+      "original": "R$ 60 mil",
+      "reference_records": [
+        "M30-N03-R1"
+      ],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0010",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-N03",
+        "end": 4263,
+        "page": null,
+        "quote": "As duas startups vencedoras de cada região do país receberão da Finep R$ 120 mil cada, e as demais selecionadas receberão R$ 60 mil cada. A distinção considera o estágio de maturidade dos negócios, desde aqueles que ainda validam suas soluções até os que já possuem produtos ou serviços desenvolvidos e buscam ampliar sua presença no mercado.",
+        "raw_sha256": "7a789a993223baa14716ae70a0f015eee089550b4f8a11815c1e2cecbe55fb07",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0010",
+        "start": 3921,
+        "text_sha256": "e27c76a5aafb7cc7b5615c047bcebb53eaf7694cba8661565ff51a9f1bac90f5"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-N03",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "beneficiary_expression",
+      "original": "a relação das empresas contempladas e conheça as soluções desenvolvidas pelas empreendedoras. A data da cerimônia de premiação, com entrega de troféus, será divulgada posteriormente nos canais oficiais da Finep.",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0017",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-N03",
+        "end": 6126,
+        "page": null,
+        "quote": "a relação das empresas contempladas e conheça as soluções desenvolvidas pelas empreendedoras. A data da cerimônia de premiação, com entrega de troféus, será divulgada posteriormente nos canais oficiais da Finep.",
+        "raw_sha256": "7a789a993223baa14716ae70a0f015eee089550b4f8a11815c1e2cecbe55fb07",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0017",
+        "start": 5915,
+        "text_sha256": "e27c76a5aafb7cc7b5615c047bcebb53eaf7694cba8661565ff51a9f1bac90f5"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-N03",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "monetary_expression_unresolved",
+      "original": "R$ 450 milhões",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0020",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-N03",
+        "end": 6259,
+        "page": null,
+        "quote": "MCTI e Finep anunciam aporte de R$ 450 milhões para 114 empresas das regiões Norte, Nordeste e Centro-Oeste",
+        "raw_sha256": "7a789a993223baa14716ae70a0f015eee089550b4f8a11815c1e2cecbe55fb07",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0020",
+        "start": 6152,
+        "text_sha256": "e27c76a5aafb7cc7b5615c047bcebb53eaf7694cba8661565ff51a9f1bac90f5"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-N03",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "program_budget",
+      "original": "R$ 300 milhões",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0021",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-N03",
+        "end": 6356,
+        "page": null,
+        "quote": "Edital, com volume inicial de R$ 300 milhões, receberá suplementação de 50% para incluir mais...",
+        "raw_sha256": "7a789a993223baa14716ae70a0f015eee089550b4f8a11815c1e2cecbe55fb07",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0021",
+        "start": 6260,
+        "text_sha256": "e27c76a5aafb7cc7b5615c047bcebb53eaf7694cba8661565ff51a9f1bac90f5"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-N03",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "unknown_temporal_expression",
+      "original": "16/10/2026",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0023",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-N03",
+        "end": 6379,
+        "page": null,
+        "quote": "16/10/2026",
+        "raw_sha256": "7a789a993223baa14716ae70a0f015eee089550b4f8a11815c1e2cecbe55fb07",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0023",
+        "start": 6369,
+        "text_sha256": "e27c76a5aafb7cc7b5615c047bcebb53eaf7694cba8661565ff51a9f1bac90f5"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-N03",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "unknown_temporal_expression",
+      "original": "16/10/2026",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0027",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-N03",
+        "end": 6575,
+        "page": null,
+        "quote": "16/10/2026",
+        "raw_sha256": "7a789a993223baa14716ae70a0f015eee089550b4f8a11815c1e2cecbe55fb07",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0027",
+        "start": 6565,
+        "text_sha256": "e27c76a5aafb7cc7b5615c047bcebb53eaf7694cba8661565ff51a9f1bac90f5"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-N03",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "monetary_expression_unresolved",
+      "original": "R$ 3,6 milhões",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0029",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-N03",
+        "end": 6725,
+        "page": null,
+        "quote": "Sétima edição do edital recebeu 638 propostas e prevê R$ 3,6 milhões em investimentos para...",
+        "raw_sha256": "7a789a993223baa14716ae70a0f015eee089550b4f8a11815c1e2cecbe55fb07",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0029",
+        "start": 6632,
+        "text_sha256": "e27c76a5aafb7cc7b5615c047bcebb53eaf7694cba8661565ff51a9f1bac90f5"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-N03",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "unknown_temporal_expression",
+      "original": "14/10/2026",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0031",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-N03",
+        "end": 6748,
+        "page": null,
+        "quote": "14/10/2026",
+        "raw_sha256": "7a789a993223baa14716ae70a0f015eee089550b4f8a11815c1e2cecbe55fb07",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0031",
+        "start": 6738,
+        "text_sha256": "e27c76a5aafb7cc7b5615c047bcebb53eaf7694cba8661565ff51a9f1bac90f5"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-N03",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "title",
+      "original": "Finep abre chamada de R$ 7 milhões da rede EUREKA para financiar projetos de resiliência a desastres",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0032",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-N03",
+        "end": 6849,
+        "page": null,
+        "quote": "Finep abre chamada de R$ 7 milhões da rede EUREKA para financiar projetos de resiliência a desastres",
+        "raw_sha256": "7a789a993223baa14716ae70a0f015eee089550b4f8a11815c1e2cecbe55fb07",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0032",
+        "start": 6749,
+        "text_sha256": "e27c76a5aafb7cc7b5615c047bcebb53eaf7694cba8661565ff51a9f1bac90f5"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-N03",
+      "field_index": 1,
+      "method_version": "m31-deterministic-v2",
+      "name": "monetary_expression_unresolved",
+      "original": "R$ 7 milhões",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0032",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-N03",
+        "end": 6849,
+        "page": null,
+        "quote": "Finep abre chamada de R$ 7 milhões da rede EUREKA para financiar projetos de resiliência a desastres",
+        "raw_sha256": "7a789a993223baa14716ae70a0f015eee089550b4f8a11815c1e2cecbe55fb07",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0032",
+        "start": 6749,
+        "text_sha256": "e27c76a5aafb7cc7b5615c047bcebb53eaf7694cba8661565ff51a9f1bac90f5"
+      }
+    },
+    {
+      "diagnostic_status": "traceable_not_semantically_certified",
+      "document_id": "M30-N03",
+      "field_index": 0,
+      "method_version": "m31-deterministic-v2",
+      "name": "unknown_temporal_expression",
+      "original": "07/10/2026",
+      "reference_records": [],
+      "schema_version": "m31-extraction-v1",
+      "segment_id": "segment-0035",
+      "semantic_support": "unreviewed",
+      "uncertainty": "heuristic role assignment; not authenticated or normalized",
+      "witness": {
+        "document_id": "M30-N03",
+        "end": 6964,
+        "page": null,
+        "quote": "07/10/2026",
+        "raw_sha256": "7a789a993223baa14716ae70a0f015eee089550b4f8a11815c1e2cecbe55fb07",
+        "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+        "schema_version": "m31-extraction-v1",
+        "segment_id": "segment-0035",
+        "start": 6954,
+        "text_sha256": "e27c76a5aafb7cc7b5615c047bcebb53eaf7694cba8661565ff51a9f1bac90f5"
+      }
+    }
+  ],
+  "provenance": {
+    "byte_length": 214972,
+    "category_evidence": "Finep divulga o resultado do Prêmio Mulheres Inovadoras\nSétima edição do edital recebeu 638 propostas e prevê R$ 3,6 milhões em investimentos para premiar 50 startups lideradas por mulheres, com duas vencedoras em cada região do Brasil\nPostado em:\n14/10/26 02:15\nTemas:\nTags:\nCompartilhar:\nCerimônia de entrega do Prêmio Mulheres Inovadoras 2025\nCerimônia de entrega do Prêmio Mulheres Inovadoras 2025 - créditos: Lucas Landau\nA Finep anuncia hoje (14/10) as vencedoras da 7ª edição do Prêmio Mulheres Inovadoras. Das 638 propostas apresentadas, 50 foram selecionadas para a fase de aceleração, sendo dez no total - duas de cada região do Brasil. A iniciativa busca fortalecer o empreendedorismo feminino inovador no país, apoiando negócios em diferentes estágios de desenvolvimento. Ao todo, a Finep investirá R$ 3,6 milhões nessas empresas.\n“Cada edição do Mulheres Inovadoras revela empreendedoras com negócios inovadores e de impacto para a sociedade. Apoiar essas lideranças é investir em um ecossistema com mais diversidade, competitivo e preparado para os desafios do futuro”, frisa Mauricio Syrio, gerente substituto do Departamento de Ambientes de Inovação e Empreendedorismo da Finep.\nAs duas startups vencedoras de cada região do país receberão da Finep R$ 120 mil cada, e as demais selecionadas receberão R$ 60 mil cada. A distinção considera o estágio de maturidade dos negócios, desde aqueles que ainda validam suas soluções até os que já possuem produtos ou serviços desenvolvidos e buscam ampliar sua presença no mercado.\nEntre os temas dos dez vencedores regionais estão saúde, bioeconomia e agro, além de iniciativas de monitoramento, prevenção e recuperação de desastres naturais e ambientais.\nMobilização nacional e participação regional\nA divulgação do edital mobilizou equipes da Finep em diferentes partes do país. Foram realizados mais de 20 eventos presenciais e on-line em instituições públicas e privadas, como parques tecnológicos, secretarias, hubs e aceleradoras, alcançando mais de 15 estados. A equipe do Departamento de Ambientes de Inovação e Empreendedorismo (DAIE) atuou em conjunto com os Escritórios Regionais da Finep na articulação institucional, na mobilização de parceiros e na promoção das atividades de divulgação. A iniciativa também contou com a parceria da APEX, da Rede Mulher Empreendedora (RME) e do MCTI.\nO alcance nacional também se reflete na distribuição das 638 inscrições recebidas. Nordeste, Norte e Centro-Oeste responderam por 43% das inscrições com, respectivamente, 20%, 11% e 12% das inscrições, demonstrando a capilaridade da iniciativa e a participação de empreendedoras de diferentes territórios brasileiros. O Sudeste teve 34% das propostas, seguido pelo Sul, com 23%.\nDurante oito semanas e meia, as representantes das startups selecionadas participaram de uma jornada de aceleração com mentorias individuais, palestras e atividades de capacitação e conexão com o ecossistema de empreendedorismo inovador. Ao todo, o programa contou com 50 mentoras e mais de 300 sessões de mentoria. As bancas regionais foram compostas por avaliadoras com atuação relevante nos ecossistemas de inovação de cada região. Confira neste",
+    "content_type": "text/html",
+    "derivation_method": "stdlib-HTMLParser-data-whitespace-v1; excludes script/style/noscript/template; not rendered DOM",
+    "document_category": "selection_result",
+    "document_id": "M30-N03",
+    "document_version": null,
+    "final_url": "https://finep.gov.br/w/finep-divulga-o-resultado-do-pr%C3%AAmio-mulheres-inovadoras",
+    "original_filename": "finep-divulga-o-resultado-do-prêmio-mulheres-inovadoras",
+    "original_url": "https://finep.gov.br/w/finep-divulga-o-resultado-do-pr%C3%AAmio-mulheres-inovadoras",
+    "publication_date": "2026-10-14",
+    "raw_path": "raw/M30-N03.html",
+    "restrictions": "Research pilot local frozen copy only; no redistribution license inferred. No scripts executed, no forms submitted, no applicant records intentionally collected. Public navigation/staff attribution may remain in original bytes.",
+    "retrieval_status": "acquired",
+    "retrieved_at": "2026-10-19T04:38:19.356350+00:00",
+    "sha256": "7a789a993223baa14716ae70a0f015eee089550b4f8a11815c1e2cecbe55fb07",
+    "source_authority_notes": "Public HTTPS page hosted by the named institution; authorship asserted by host/content, not cryptographically authenticated. Not source-readiness approval.",
+    "source_organization": "Finep",
+    "text_path": "text/M30-N03.txt",
+    "text_sha256": "e27c76a5aafb7cc7b5615c047bcebb53eaf7694cba8661565ff51a9f1bac90f5"
+  },
+  "records": [
+    {
+      "all_overlap_predictions": [
+        {
+          "discovery": "unrelated_or_non_actionable",
+          "modality": "undetermined",
+          "segment_id": "segment-0000",
+          "temporal": "not_applicable"
+        },
+        {
+          "discovery": "opportunity_signal",
+          "modality": "investimentos",
+          "segment_id": "segment-0001",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0002",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0003",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0004",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0005",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0006",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "opportunity_signal",
+          "modality": "credito",
+          "segment_id": "segment-0007",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0008",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0009",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0010",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0011",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0012",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0013",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "abstain",
+          "modality": "undetermined",
+          "segment_id": "segment-0014",
+          "temporal": "undetermined"
+        },
+        {
+          "discovery": "opportunity_signal",
+          "modality": "undetermined",
+          "segment_id": "segment-0015",
+          "temporal": "undetermined"
+        }
+      ],
+      "any_exact_boundary": false,
+      "coverage": {
+        "denominator": 3183,
+        "numerator": 3154,
+        "value": 0.9908890983349041
+      },
+      "covered_characters": 3154,
+      "disagreements": [
+        "discovery_label",
+        "modality",
+        "temporal_status"
+      ],
+      "discovery_histogram": {
+        "abstain": 12,
+        "opportunity_signal": 3,
+        "unrelated_or_non_actionable": 1
+      },
+      "document_id": "M30-N03",
+      "edges": [
+        {
+          "end": 2781,
+          "exact": false,
+          "intersection": 55,
+          "intersection_end": 2781,
+          "intersection_start": 2726,
+          "iou": 0.017279296261388626,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.017279296261388626,
+          "segment_id": "segment-0000",
+          "start": 2726
+        },
+        {
+          "end": 2961,
+          "exact": false,
+          "intersection": 179,
+          "intersection_end": 2961,
+          "intersection_start": 2782,
+          "iou": 0.05623625510524662,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.05623625510524662,
+          "segment_id": "segment-0001",
+          "start": 2782
+        },
+        {
+          "end": 2973,
+          "exact": false,
+          "intersection": 11,
+          "intersection_end": 2973,
+          "intersection_start": 2962,
+          "iou": 0.0034558592522777255,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.0034558592522777255,
+          "segment_id": "segment-0002",
+          "start": 2962
+        },
+        {
+          "end": 2988,
+          "exact": false,
+          "intersection": 14,
+          "intersection_end": 2988,
+          "intersection_start": 2974,
+          "iou": 0.004398366321080742,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.004398366321080742,
+          "segment_id": "segment-0003",
+          "start": 2974
+        },
+        {
+          "end": 2995,
+          "exact": false,
+          "intersection": 6,
+          "intersection_end": 2995,
+          "intersection_start": 2989,
+          "iou": 0.001885014137606032,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.001885014137606032,
+          "segment_id": "segment-0004",
+          "start": 2989
+        },
+        {
+          "end": 3001,
+          "exact": false,
+          "intersection": 5,
+          "intersection_end": 3001,
+          "intersection_start": 2996,
+          "iou": 0.0015708451146716933,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.0015708451146716933,
+          "segment_id": "segment-0005",
+          "start": 2996
+        },
+        {
+          "end": 3071,
+          "exact": false,
+          "intersection": 55,
+          "intersection_end": 3071,
+          "intersection_start": 3016,
+          "iou": 0.017279296261388626,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.017279296261388626,
+          "segment_id": "segment-0006",
+          "start": 3016
+        },
+        {
+          "end": 3152,
+          "exact": false,
+          "intersection": 80,
+          "intersection_end": 3152,
+          "intersection_start": 3072,
+          "iou": 0.025133521834747093,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.025133521834747093,
+          "segment_id": "segment-0007",
+          "start": 3072
+        },
+        {
+          "end": 3568,
+          "exact": false,
+          "intersection": 415,
+          "intersection_end": 3568,
+          "intersection_start": 3153,
+          "iou": 0.13038014451775054,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.13038014451775054,
+          "segment_id": "segment-0008",
+          "start": 3153
+        },
+        {
+          "end": 3920,
+          "exact": false,
+          "intersection": 351,
+          "intersection_end": 3920,
+          "intersection_start": 3569,
+          "iou": 0.11027332704995288,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.11027332704995288,
+          "segment_id": "segment-0009",
+          "start": 3569
+        },
+        {
+          "end": 4263,
+          "exact": false,
+          "intersection": 342,
+          "intersection_end": 4263,
+          "intersection_start": 3921,
+          "iou": 0.10744580584354382,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.10744580584354382,
+          "segment_id": "segment-0010",
+          "start": 3921
+        },
+        {
+          "end": 4438,
+          "exact": false,
+          "intersection": 174,
+          "intersection_end": 4438,
+          "intersection_start": 4264,
+          "iou": 0.05466540999057493,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.05466540999057493,
+          "segment_id": "segment-0011",
+          "start": 4264
+        },
+        {
+          "end": 4483,
+          "exact": false,
+          "intersection": 44,
+          "intersection_end": 4483,
+          "intersection_start": 4439,
+          "iou": 0.013823437009110902,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.013823437009110902,
+          "segment_id": "segment-0012",
+          "start": 4439
+        },
+        {
+          "end": 5081,
+          "exact": false,
+          "intersection": 597,
+          "intersection_end": 5081,
+          "intersection_start": 4484,
+          "iou": 0.1875589066918002,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.1875589066918002,
+          "segment_id": "segment-0013",
+          "start": 4484
+        },
+        {
+          "end": 5460,
+          "exact": false,
+          "intersection": 378,
+          "intersection_end": 5460,
+          "intersection_start": 5082,
+          "iou": 0.11875589066918002,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.11875589066918002,
+          "segment_id": "segment-0014",
+          "start": 5082
+        },
+        {
+          "end": 5909,
+          "exact": false,
+          "intersection": 448,
+          "intersection_end": 5909,
+          "intersection_start": 5461,
+          "iou": 0.14074772227458374,
+          "predicted_purity": 1.0,
+          "reference_fraction": 0.14074772227458374,
+          "segment_id": "segment-0015",
+          "start": 5461
+        }
+      ],
+      "end": 5909,
+      "fields": [
+        {
+          "candidates": [],
+          "name": "title",
+          "reason": "no corresponding field; absence is not explicit field abstention",
+          "reference_evidence": [
+            {
+              "end": 5909,
+              "evidence_id": "M30-N03-R1-E1",
+              "page": null,
+              "quote": "Finep divulga o resultado do Prêmio Mulheres Inovadoras\nSétima edição do edital recebeu 638 propostas e prevê R$ 3,6 milhões em investimentos para premiar 50 startups lideradas por mulheres, com duas vencedoras em cada região do Brasil\nPostado em:\n14/10/26 02:15\nTemas:\nTags:\nCompartilhar:\nCerimônia de entrega do Prêmio Mulheres Inovadoras 2025\nCerimônia de entrega do Prêmio Mulheres Inovadoras 2025 - créditos: Lucas Landau\nA Finep anuncia hoje (14/10) as vencedoras da 7ª edição do Prêmio Mulheres Inovadoras. Das 638 propostas apresentadas, 50 foram selecionadas para a fase de aceleração, sendo dez no total - duas de cada região do Brasil. A iniciativa busca fortalecer o empreendedorismo feminino inovador no país, apoiando negócios em diferentes estágios de desenvolvimento. Ao todo, a Finep investirá R$ 3,6 milhões nessas empresas.\n“Cada edição do Mulheres Inovadoras revela empreendedoras com negócios inovadores e de impacto para a sociedade. Apoiar essas lideranças é investir em um ecossistema com mais diversidade, competitivo e preparado para os desafios do futuro”, frisa Mauricio Syrio, gerente substituto do Departamento de Ambientes de Inovação e Empreendedorismo da Finep.\nAs duas startups vencedoras de cada região do país receberão da Finep R$ 120 mil cada, e as demais selecionadas receberão R$ 60 mil cada. A distinção considera o estágio de maturidade dos negócios, desde aqueles que ainda validam suas soluções até os que já possuem produtos ou serviços desenvolvidos e buscam ampliar sua presença no mercado.\nEntre os temas dos dez vencedores regionais estão saúde, bioeconomia e agro, além de iniciativas de monitoramento, prevenção e recuperação de desastres naturais e ambientais.\nMobilização nacional e participação regional\nA divulgação do edital mobilizou equipes da Finep em diferentes partes do país. Foram realizados mais de 20 eventos presenciais e on-line em instituições públicas e privadas, como parques tecnológicos, secretarias, hubs e aceleradoras, alcançando mais de 15 estados. A equipe do Departamento de Ambientes de Inovação e Empreendedorismo (DAIE) atuou em conjunto com os Escritórios Regionais da Finep na articulação institucional, na mobilização de parceiros e na promoção das atividades de divulgação. A iniciativa também contou com a parceria da APEX, da Rede Mulher Empreendedora (RME) e do MCTI.\nO alcance nacional também se reflete na distribuição das 638 inscrições recebidas. Nordeste, Norte e Centro-Oeste responderam por 43% das inscrições com, respectivamente, 20%, 11% e 12% das inscrições, demonstrando a capilaridade da iniciativa e a participação de empreendedoras de diferentes territórios brasileiros. O Sudeste teve 34% das propostas, seguido pelo Sul, com 23%.\nDurante oito semanas e meia, as representantes das startups selecionadas participaram de uma jornada de aceleração com mentorias individuais, palestras e atividades de capacitação e conexão com o ecossistema de empreendedorismo inovador. Ao todo, o programa contou com 50 mentoras e mais de 300 sessões de mentoria. As bancas regionais foram compostas por avaliadoras com atuação relevante nos ecossistemas de inovação de cada região. Confira neste",
+              "start": 2726
+            }
+          ],
+          "reference_value": "Finep divulga o resultado do Prêmio Mulheres Inovadoras",
+          "scope_supported": true,
+          "semantic_adjudication": "not_certified",
+          "status": "MISSING",
+          "strict_role_value": false
+        },
+        {
+          "candidates": [
+            {
+              "diagnostic_status": "traceable_not_semantically_certified",
+              "field_index": 0,
+              "method_version": "m31-deterministic-v2",
+              "name": "monetary_expression_unresolved",
+              "original": "R$ 3,6 milhões",
+              "schema_version": "m31-extraction-v1",
+              "segment_id": "segment-0001",
+              "uncertainty": "heuristic role assignment; not authenticated or normalized",
+              "witness": {
+                "document_id": "M30-N03",
+                "end": 2961,
+                "page": null,
+                "quote": "Sétima edição do edital recebeu 638 propostas e prevê R$ 3,6 milhões em investimentos para premiar 50 startups lideradas por mulheres, com duas vencedoras em cada região do Brasil",
+                "raw_sha256": "7a789a993223baa14716ae70a0f015eee089550b4f8a11815c1e2cecbe55fb07",
+                "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+                "schema_version": "m31-extraction-v1",
+                "segment_id": "segment-0001",
+                "start": 2782,
+                "text_sha256": "e27c76a5aafb7cc7b5615c047bcebb53eaf7694cba8661565ff51a9f1bac90f5"
+              }
+            },
+            {
+              "diagnostic_status": "traceable_not_semantically_certified",
+              "field_index": 0,
+              "method_version": "m31-deterministic-v2",
+              "name": "monetary_expression_unresolved",
+              "original": "R$ 3,6 milhões",
+              "schema_version": "m31-extraction-v1",
+              "segment_id": "segment-0008",
+              "uncertainty": "heuristic role assignment; not authenticated or normalized",
+              "witness": {
+                "document_id": "M30-N03",
+                "end": 3568,
+                "page": null,
+                "quote": "A Finep anuncia hoje (14/10) as vencedoras da 7ª edição do Prêmio Mulheres Inovadoras. Das 638 propostas apresentadas, 50 foram selecionadas para a fase de aceleração, sendo dez no total - duas de cada região do Brasil. A iniciativa busca fortalecer o empreendedorismo feminino inovador no país, apoiando negócios em diferentes estágios de desenvolvimento. Ao todo, a Finep investirá R$ 3,6 milhões nessas empresas.",
+                "raw_sha256": "7a789a993223baa14716ae70a0f015eee089550b4f8a11815c1e2cecbe55fb07",
+                "run_id": "058769ea62a82a76167a86a6802ea3c785c54223136f69689ec6590d331345f9",
+                "schema_version": "m31-extraction-v1",
+                "segment_id": "segment-0008",
+                "start": 3153,
+                "text_sha256": "e27c76a5aafb7cc7b5615c047bcebb53eaf7694cba8661565ff51a9f1bac90f5"
+              }
+            }
+          ],
+          "name": "completed_program_budget",
+          "reason": "requested target role outside implemented M31 field scope",
+          "reference_evidence": [
+            {
+              "end": 5909,
+              "evidence_id": "M30-N03-R1-E1",
+              "page": null,
+              "quote": "Finep divulga o resultado do Prêmio Mulheres Inovadoras\nSétima edição do edital recebeu 638 propostas e prevê R$ 3,6 milhões em investimentos para premiar 50 startups lideradas por mulheres, com duas vencedoras em cada região do Brasil\nPostado em:\n14/10/26 02:15\nTemas:\nTags:\nCompartilhar:\nCerimônia de entrega do Prêmio Mulheres Inovadoras 2025\nCerimônia de entrega do Prêmio Mulheres Inovadoras 2025 - créditos: Lucas Landau\nA Finep anuncia hoje (14/10) as vencedoras da 7ª edição do Prêmio Mulheres Inovadoras. Das 638 propostas apresentadas, 50 foram selecionadas para a fase de aceleração, sendo dez no total - duas de cada região do Brasil. A iniciativa busca fortalecer o empreendedorismo feminino inovador no país, apoiando negócios em diferentes estágios de desenvolvimento. Ao todo, a Finep investirá R$ 3,6 milhões nessas empresas.\n“Cada edição do Mulheres Inovadoras revela empreendedoras com negócios inovadores e de impacto para a sociedade. Apoiar essas lideranças é investir em um ecossistema com mais diversidade, competitivo e preparado para os desafios do futuro”, frisa Mauricio Syrio, gerente substituto do Departamento de Ambientes de Inovação e Empreendedorismo da Finep.\nAs duas startups vencedoras de cada região do país receberão da Finep R$ 120 mil cada, e as demais selecionadas receberão R$ 60 mil cada. A distinção considera o estágio de maturidade dos negócios, desde aqueles que ainda validam suas soluções até os que já possuem produtos ou serviços desenvolvidos e buscam ampliar sua presença no mercado.\nEntre os temas dos dez vencedores regionais estão saúde, bioeconomia e agro, além de iniciativas de monitoramento, prevenção e recuperação de desastres naturais e ambientais.\nMobilização nacional e participação regional\nA divulgação do edital mobilizou equipes da Finep em diferentes partes do país. Foram realizados mais de 20 eventos presenciais e on-line em instituições públicas e privadas, como parques tecnológicos, secretarias, hubs e aceleradoras, alcançando mais de 15 estados. A equipe do Departamento de Ambientes de Inovação e Empreendedorismo (DAIE) atuou em conjunto com os Escritórios Regionais da Finep na articulação institucional, na mobilização de parceiros e na promoção das atividades de divulgação. A iniciativa também contou com a parceria da APEX, da Rede Mulher Empreendedora (RME) e do MCTI.\nO alcance nacional também se reflete na distribuição das 638 inscrições recebidas. Nordeste, Norte e Centro-Oeste responderam por 43% das inscrições com, respectivamente, 20%, 11% e 12% das inscrições, demonstrando a capilaridade da iniciativa e a participação de empreendedoras de diferentes territórios brasileiros. O Sudeste teve 34% das propostas, seguido pelo Sul, com 23%.\nDurante oito semanas e meia, as representantes das startups selecionadas participaram de uma jornada de aceleração com mentorias individuais, palestras e atividades de capacitação e conexão com o ecossistema de empreendedorismo inovador. Ao todo, o programa contou com 50 mentoras e mais de 300 sessões de mentoria. As bancas regionais foram compostas por avaliadoras com atuação relevante nos ecossistemas de inovação de cada região. Confira neste",
+              "start": 2726
+            }
+          ],
+          "reference_value": "R$ 3,6 milhões",
+          "scope_supported": false,
+          "semantic_adjudication": "not_certified",
+          "status": "UNRESOLVED",
+          "strict_role_value": false
+        }
+      ],
+      "fragmentation": 16,
+      "location_convention": "html_unicode_codepoints",
+      "physical_reference_evidence_pages": [],
+      "rationale": "This scoped result announcement concerns already selected prize winners and award amounts. A future award ceremony or payment does not reopen the competition. No applicant-level results table was acquired.",
+      "record_id": "M30-N03-R1",
+      "reference": {
+        "discovery_label": "unrelated_or_non_actionable",
+        "modality": "fomento",
+        "opportunity_label": "not_opportunity",
+        "review_status": "provisional",
+        "temporal_status": "not_applicable"
+      },
+      "reference_characters": 3183,
+      "reference_evidence": [
+        {
+          "end": 5909,
+          "evidence_id": "M30-N03-R1-E1",
+          "page": null,
+          "quote": "Finep divulga o resultado do Prêmio Mulheres Inovadoras\nSétima edição do edital recebeu 638 propostas e prevê R$ 3,6 milhões em investimentos para premiar 50 startups lideradas por mulheres, com duas vencedoras em cada região do Brasil\nPostado em:\n14/10/26 02:15\nTemas:\nTags:\nCompartilhar:\nCerimônia de entrega do Prêmio Mulheres Inovadoras 2025\nCerimônia de entrega do Prêmio Mulheres Inovadoras 2025 - créditos: Lucas Landau\nA Finep anuncia hoje (14/10) as vencedoras da 7ª edição do Prêmio Mulheres Inovadoras. Das 638 propostas apresentadas, 50 foram selecionadas para a fase de aceleração, sendo dez no total - duas de cada região do Brasil. A iniciativa busca fortalecer o empreendedorismo feminino inovador no país, apoiando negócios em diferentes estágios de desenvolvimento. Ao todo, a Finep investirá R$ 3,6 milhões nessas empresas.\n“Cada edição do Mulheres Inovadoras revela empreendedoras com negócios inovadores e de impacto para a sociedade. Apoiar essas lideranças é investir em um ecossistema com mais diversidade, competitivo e preparado para os desafios do futuro”, frisa Mauricio Syrio, gerente substituto do Departamento de Ambientes de Inovação e Empreendedorismo da Finep.\nAs duas startups vencedoras de cada região do país receberão da Finep R$ 120 mil cada, e as demais selecionadas receberão R$ 60 mil cada. A distinção considera o estágio de maturidade dos negócios, desde aqueles que ainda validam suas soluções até os que já possuem produtos ou serviços desenvolvidos e buscam ampliar sua presença no mercado.\nEntre os temas dos dez vencedores regionais estão saúde, bioeconomia e agro, além de iniciativas de monitoramento, prevenção e recuperação de desastres naturais e ambientais.\nMobilização nacional e participação regional\nA divulgação do edital mobilizou equipes da Finep em diferentes partes do país. Foram realizados mais de 20 eventos presenciais e on-line em instituições públicas e privadas, como parques tecnológicos, secretarias, hubs e aceleradoras, alcançando mais de 15 estados. A equipe do Departamento de Ambientes de Inovação e Empreendedorismo (DAIE) atuou em conjunto com os Escritórios Regionais da Finep na articulação institucional, na mobilização de parceiros e na promoção das atividades de divulgação. A iniciativa também contou com a parceria da APEX, da Rede Mulher Empreendedora (RME) e do MCTI.\nO alcance nacional também se reflete na distribuição das 638 inscrições recebidas. Nordeste, Norte e Centro-Oeste responderam por 43% das inscrições com, respectivamente, 20%, 11% e 12% das inscrições, demonstrando a capilaridade da iniciativa e a participação de empreendedoras de diferentes territórios brasileiros. O Sudeste teve 34% das propostas, seguido pelo Sul, com 23%.\nDurante oito semanas e meia, as representantes das startups selecionadas participaram de uma jornada de aceleração com mentorias individuais, palestras e atividades de capacitação e conexão com o ecossistema de empreendedorismo inovador. Ao todo, o programa contou com 50 mentoras e mais de 300 sessões de mentoria. As bancas regionais foram compostas por avaliadoras com atuação relevante nos ecossistemas de inovação de cada região. Confira neste",
+          "start": 2726
+        }
+      ],
+      "representative": "segment-0013",
+      "representative_prediction": {
+        "discovery": "abstain",
+        "end": 5081,
+        "modality": "undetermined",
+        "segment_id": "segment-0013",
+        "start": 4484,
+        "temporal": "undetermined"
+      },
+      "representative_quote": "A divulgação do edital mobilizou equipes da Finep em diferentes partes do país. Foram realizados mais de 20 eventos presenciais e on-line em instituições públicas e privadas, como parques tecnológicos, secretarias, hubs e aceleradoras, alcançando mais de 15 estados. A equipe do Departamento de Ambientes de Inovação e Empreendedorismo (DAIE) atuou em conjunto com os Escritórios Regionais da Finep na articulação institucional, na mobilização de parceiros e na promoção das atividades de divulgação. A iniciativa também contou com a parceria da APEX, da Rede Mulher Empreendedora (RME) e do MCTI.",
+      "start": 2726,
+      "status": "overlap",
+      "uncertainty_notes": [
+        "Negative applies to this record as a distinct new/current/future opportunity; it does not erase the existence of the underlying program. No new application is supported by these paragraphs."
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "completed_event_not_new_access"
+      ],
+      "discovery": "unrelated_or_non_actionable",
+      "end": 2781,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-N03-R1"
+      ],
+      "segment_id": "segment-0000",
+      "start": 2726,
+      "temporal": "not_applicable",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 2961,
+      "field_count": 1,
+      "modality": "investimentos",
+      "physical_page": null,
+      "reference_records": [
+        "M30-N03-R1"
+      ],
+      "segment_id": "segment-0001",
+      "start": 2782,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 2973,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-N03-R1"
+      ],
+      "segment_id": "segment-0002",
+      "start": 2962,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 2988,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-N03-R1"
+      ],
+      "segment_id": "segment-0003",
+      "start": 2974,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 2995,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-N03-R1"
+      ],
+      "segment_id": "segment-0004",
+      "start": 2989,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 3001,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-N03-R1"
+      ],
+      "segment_id": "segment-0005",
+      "start": 2996,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 3071,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-N03-R1"
+      ],
+      "segment_id": "segment-0006",
+      "start": 3016,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 3152,
+      "field_count": 0,
+      "modality": "credito",
+      "physical_page": null,
+      "reference_records": [
+        "M30-N03-R1"
+      ],
+      "segment_id": "segment-0007",
+      "start": 3072,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 3568,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-N03-R1"
+      ],
+      "segment_id": "segment-0008",
+      "start": 3153,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 3920,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-N03-R1"
+      ],
+      "segment_id": "segment-0009",
+      "start": 3569,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 4263,
+      "field_count": 2,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-N03-R1"
+      ],
+      "segment_id": "segment-0010",
+      "start": 3921,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 4438,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-N03-R1"
+      ],
+      "segment_id": "segment-0011",
+      "start": 4264,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 4483,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-N03-R1"
+      ],
+      "segment_id": "segment-0012",
+      "start": 4439,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 5081,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-N03-R1"
+      ],
+      "segment_id": "segment-0013",
+      "start": 4484,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 5460,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-N03-R1"
+      ],
+      "segment_id": "segment-0014",
+      "start": 5082,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 5909,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [
+        "M30-N03-R1"
+      ],
+      "segment_id": "segment-0015",
+      "start": 5461,
+      "temporal": "undetermined",
+      "unannotated_not_negative": false
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 5914,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0016",
+      "start": 5910,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 6126,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0017",
+      "start": 5915,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 6142,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0018",
+      "start": 6127,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 6151,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0019",
+      "start": 6143,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 6259,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0020",
+      "start": 6152,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 6356,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0021",
+      "start": 6260,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 6368,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0022",
+      "start": 6357,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 6379,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0023",
+      "start": 6369,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 6453,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0024",
+      "start": 6380,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 6552,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0025",
+      "start": 6454,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 6564,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0026",
+      "start": 6553,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 6575,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0027",
+      "start": 6565,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "completed_event_not_new_access"
+      ],
+      "discovery": "unrelated_or_non_actionable",
+      "end": 6631,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0028",
+      "start": 6576,
+      "temporal": "not_applicable",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 6725,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0029",
+      "start": 6632,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 6737,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0030",
+      "start": 6726,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 6748,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0031",
+      "start": 6738,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "application_access_not_established"
+      ],
+      "discovery": "opportunity_signal",
+      "end": 6849,
+      "field_count": 2,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0032",
+      "start": 6749,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 6941,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0033",
+      "start": 6850,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 6953,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0034",
+      "start": 6942,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 6964,
+      "field_count": 1,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0035",
+      "start": 6954,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 6979,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0036",
+      "start": 6965,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 6995,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0037",
+      "start": 6980,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 7919,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0038",
+      "start": 7911,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 7951,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0039",
+      "start": 7920,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 7956,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0040",
+      "start": 7952,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 7965,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0041",
+      "start": 7957,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 7980,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0042",
+      "start": 7966,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 7982,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0043",
+      "start": 7981,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 7985,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0044",
+      "start": 7983,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 7994,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0045",
+      "start": 7986,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 8020,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0046",
+      "start": 7995,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 8035,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0047",
+      "start": 8021,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 8049,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0048",
+      "start": 8036,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 8165,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0049",
+      "start": 8148,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 8207,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0050",
+      "start": 8166,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 8214,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0051",
+      "start": 8208,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 8534,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0052",
+      "start": 8215,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 8571,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0053",
+      "start": 8535,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 8584,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0054",
+      "start": 8572,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 8597,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0055",
+      "start": 8585,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    },
+    {
+      "diagnostics": [
+        "passive-block-local-v1",
+        "mixed_or_missing_financial_modality",
+        "insufficient_context"
+      ],
+      "discovery": "abstain",
+      "end": 8610,
+      "field_count": 0,
+      "modality": "undetermined",
+      "physical_page": null,
+      "reference_records": [],
+      "segment_id": "segment-0056",
+      "start": 8598,
+      "temporal": "undetermined",
+      "unannotated_not_negative": true
+    }
+  ],
+  "semantic_reviews": [],
+  "status": "processed"
+}
